@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "missing_source",
+  "sources": [],
+  "records": [],
+  "unresolved": [
+    "Story Bible and chapter/scene IDs absent."
+  ],
+  "expected_count": null
+}

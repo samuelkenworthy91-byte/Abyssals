@@ -1,0 +1,73 @@
+{
+  "project": "Abyssals",
+  "status": "pre-programming canon handoff",
+  "target": {
+    "platform": "mobile-first offline PWA",
+    "desktop_browser": true,
+    "level_cap": 200
+  },
+  "party": {
+    "active_max": 6,
+    "reserve_unlimited": true,
+    "reserve_access_npc": "Chaplain Aeric Solm",
+    "reserve_heal_on_access": true,
+    "reserve_access_character_id": "CHR-AERIC"
+  },
+  "xp": {
+    "xp_per_level": 100,
+    "participant_level_gap_individual": true
+  },
+  "growth": {
+    "mean_growth": "32 + 0.06*(BST-300)",
+    "mean_stat": "BST/6",
+    "stat_growth_percent": "max(10, round(mean_growth*(base_stat/mean_stat)^2.25))",
+    "hp_baseline_per_level": 10,
+    "seeded": true,
+    "above_100_can_plus2": true
+  },
+  "battle": {
+    "view": "first_person_enemy_front_sprite",
+    "player_active_rendered": false,
+    "exact_hp_numbers": true,
+    "damage_math_family": "Gen III-style locked foundation",
+    "simultaneous_ko_batched": true,
+    "leader_mutual_ko_player_victory": true
+  },
+  "capture": {
+    "theme": "food",
+    "deterministic_reload_protection": true,
+    "presentation_progress_0_100": true
+  },
+  "world": {
+    "directions": 4,
+    "diagonal": false,
+    "logic_grid_px": 16,
+    "walk_run_px_per_s": [
+      64,
+      112
+    ],
+    "phase_minutes": 10,
+    "mortal_phases": [
+      "DAY",
+      "NIGHT"
+    ],
+    "hell_phases": [
+      "PALE",
+      "DARK"
+    ]
+  },
+  "ironman": {
+    "slots": 3,
+    "recovery_generations": 2,
+    "journal": true,
+    "rollback_selection": false,
+    "single_writer": true
+  },
+  "species": {
+    "count": 187,
+    "evolution_paths": 98,
+    "back_sprites_required": false,
+    "front_sprites_complete_in_project_history": true,
+    "runtime_assets_verified_in_this_import": false
+  }
+}

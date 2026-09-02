@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/handoff_v1/data/canon/warden_fields.json"
+  ],
+  "records": [
+    {
+      "id": "FIELD-NAMEFOG",
+      "id_origin": "import_assigned_name_key",
+      "name": "Namefog",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-GILDED-DUST",
+      "id_origin": "import_assigned_name_key",
+      "name": "Gilded Dust",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-BLOOD-SUN",
+      "id_origin": "import_assigned_name_key",
+      "name": "Blood Sun",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-IRON-DECREE",
+      "id_origin": "import_assigned_name_key",
+      "name": "Iron Decree",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-TWIN-RADIANCE",
+      "id_origin": "import_assigned_name_key",
+      "name": "Twin Radiance",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-MOURNING-RAIN",
+      "id_origin": "import_assigned_name_key",
+      "name": "Mourning Rain",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-COCYTUS-HAIL",
+      "id_origin": "import_assigned_name_key",
+      "name": "Cocytus Hail",
+      "warden_id": null,
+      "effects": null
+    },
+    {
+      "id": "FIELD-QUIET-NIGHT",
+      "id_origin": "import_assigned_name_key",
+      "name": "Quiet Night",
+      "warden_id": null,
+      "effects": null
+    }
+  ],
+  "unresolved": [
+    "Field effects, defensive multipliers and Warden mapping absent."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "invariants_only_not_a_runtime_save_format",
+  "slots": 3,
+  "hidden_recovery_generations": 2,
+  "journal_required": true,
+  "single_writer_required": true,
+  "monotonic_commit_seq": true,
+  "idempotent_transaction_ids": true,
+  "irreversible_boundaries": [
+    "death",
+    "starter_life_loss_and_pending_return",
+    "capture",
+    "sacrifice_and_resurrection",
+    "evolution",
+    "move_choice",
+    "item_ownership",
+    "leader_fate",
+    "story_choice",
+    "chapter_completion"
+  ],
+  "sources": [
+    "docs/canon/SAVE_IRONMAN.md"
+  ],
+  "unresolved": [
+    "Full Checklist 15 serialization, migration and recovery details absent."
+  ]
+}

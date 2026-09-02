@@ -1,0 +1,1165 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json"
+  ],
+  "records": [
+    {
+      "id": "CIV-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CIV-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CIV-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CIV-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CIV-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CIV-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CIV-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CIV-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "DOR-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "DOR-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-05-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-05",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PHI-05-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PHI-05",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CYB-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CYB-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CYB-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CYB-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CYB-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CYB-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CYB-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CYB-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CYB-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CYB-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CYB-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CYB-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "COS-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "COS-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "COS-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "COS-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "COS-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "COS-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "COS-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "COS-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "COS-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "COS-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "COS-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "COS-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "MAR-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "MAR-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "BOT-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "BOT-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-05-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-05",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "CAY-05-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "CAY-05",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-05-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-05",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-05-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-05",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-06-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-06",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-06-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-06",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-07-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-07",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "RAM-07-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "RAM-07",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H01-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H01-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H01-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H01-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H01-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H01-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H01-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H01-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H01-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H01-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H01-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H01-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H02-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H02-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H02-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H02-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H02-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H02-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H02-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H02-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H02-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H02-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H02-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H02-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H03-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H03-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H03-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H03-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H03-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H03-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H03-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H03-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H03-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H03-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H03-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H03-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H04-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H04-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H04-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H04-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H04-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H04-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H04-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H04-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H04-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H04-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H04-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H04-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-04-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-04",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H05-04-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H05-04",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H06-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H06-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H06-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H06-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H06-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H06-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H06-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H06-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H06-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H06-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H06-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H06-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H07-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H07-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H07-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H07-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H07-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H07-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H07-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H07-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H07-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H07-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H07-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H07-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-04-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-04",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H08-04-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H08-04",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H09-01-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H09-01",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H09-01-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H09-01",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H09-02-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H09-02",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H09-02-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H09-02",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H09-03-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H09-03",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "H09-03-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "H09-03",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-01-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-01",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-01-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-01",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-02-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-02",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-02-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-02",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-03-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-03",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-03-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-03",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-04-DAY",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-04",
+      "phase": "DAY",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-04-NIGHT",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-04",
+      "phase": "NIGHT",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-05-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-05",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-05-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-05",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-06-PALE",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-06",
+      "phase": "PALE",
+      "slots": null,
+      "status": "missing_slots"
+    },
+    {
+      "id": "PG-06-DARK",
+      "id_origin": "import_assigned_area_phase_key",
+      "area_id": "PG-06",
+      "phase": "DARK",
+      "slots": null,
+      "status": "missing_slots"
+    }
+  ],
+  "unresolved": [
+    "144 weighted slot tables absent."
+  ],
+  "expected_count": 144
+}

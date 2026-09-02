@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/handoff_v1/data/canon/locations.json",
+    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json"
+  ],
+  "records": [
+    {
+      "id": "LOC-CIVETON",
+      "name": "Civeton",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-DORELEM",
+      "name": "Dorelem",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-PHILOMERE",
+      "name": "Philomere",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CYBRESSA",
+      "name": "Cybressa",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-COSSENNE",
+      "name": "Cossenne",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-MARASEN",
+      "name": "Marasen",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-BOTRUNE",
+      "name": "Botrune",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CAYFEN",
+      "name": "Cayfen",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-RAMELLE",
+      "name": "Ramelle",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-JEROS",
+      "name": "Jeros",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-I-THRESHOLD",
+      "name": "Circle I — Threshold",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-II-WANT",
+      "name": "Circle II — Want",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-III-WRATH",
+      "name": "Circle III — Wrath",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-IV-DOMINION",
+      "name": "Circle IV — Dominion",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-V-DOGMA",
+      "name": "Circle V — Dogma",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-VI-GRIEF",
+      "name": "Circle VI — Grief",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-VII-BETRAYAL",
+      "name": "Circle VII — Betrayal",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-VIII-SILENCE",
+      "name": "Circle VIII — Silence",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-CIRCLE-IX-FAILING-RECORD",
+      "name": "Circle IX — Failing Record",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-PRIMEVAL-REACH",
+      "name": "Primeval Reach",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    },
+    {
+      "id": "LOC-REORDERED-UNDERWORLD",
+      "name": "Reordered Underworld",
+      "id_origin": "import_assigned_name_key",
+      "map_data": null
+    }
+  ],
+  "unresolved": [
+    "Replace/alias import-assigned keys against original location IDs; map graph absent."
+  ]
+}

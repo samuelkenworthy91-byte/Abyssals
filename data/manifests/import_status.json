@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "stage": "repository_preparation",
+  "game_implemented": false,
+  "content_ready": false,
+  "supplied_files": 234,
+  "monster_source_files": 89,
+  "portrait_source_files": 91,
+  "canonical_portrait_targets_present": 78,
+  "canonical_portrait_targets_expected": 100,
+  "missing_portrait_targets": 22,
+  "named_characters_with_canonical_ids": 99,
+  "unresolved_core_identity": "Nharos",
+  "expected_species": 187,
+  "verified_species": 0
+}

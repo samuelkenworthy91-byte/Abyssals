@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "missing_source",
+  "sources": [],
+  "records": [],
+  "unresolved": [
+    "Regional Dex Stats/Abilities v2 and canonical Dex IDs absent."
+  ],
+  "expected_count": 187
+}

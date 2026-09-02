@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "path": "data/characters/characters.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "partial",
+      "record_count": 99,
+      "record_schema": "data/schemas/character.schema.json"
+    },
+    {
+      "path": "data/trainers/trainers.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "partial",
+      "record_count": 75,
+      "record_schema": "data/schemas/trainer.schema.json"
+    },
+    {
+      "path": "data/factions/factions.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 3,
+      "record_schema": "data/schemas/faction.schema.json"
+    },
+    {
+      "path": "data/locations/locations.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "partial",
+      "record_count": 21,
+      "record_schema": "data/schemas/location.schema.json"
+    },
+    {
+      "path": "data/encounters/areas.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 72,
+      "record_schema": "data/schemas/area.schema.json"
+    },
+    {
+      "path": "data/encounters/tables.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "partial",
+      "record_count": 144,
+      "record_schema": "data/schemas/encounter.schema.json"
+    },
+    {
+      "path": "data/terrain/fields.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "partial",
+      "record_count": 8,
+      "record_schema": "data/schemas/field.schema.json"
+    },
+    {
+      "path": "data/species/species.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/species.schema.json"
+    },
+    {
+      "path": "data/evolutions/evolutions.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/evolution.schema.json"
+    },
+    {
+      "path": "data/moves/moves.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/move.schema.json"
+    },
+    {
+      "path": "data/moves/learnsets.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/learnset.schema.json"
+    },
+    {
+      "path": "data/types/types.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/type.schema.json"
+    },
+    {
+      "path": "data/trainer_classes/classes.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/trainer_class.schema.json"
+    },
+    {
+      "path": "data/items/items.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/item.schema.json"
+    },
+    {
+      "path": "data/shops/shops.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/shop.schema.json"
+    },
+    {
+      "path": "data/story/scenes.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/scene.schema.json"
+    },
+    {
+      "path": "data/dialogue/dialogue.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/dialogue.schema.json"
+    },
+    {
+      "path": "data/battles/battles.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "missing_source",
+      "record_count": 0,
+      "record_schema": "data/schemas/battle.schema.json"
+    }
+  ]
+}

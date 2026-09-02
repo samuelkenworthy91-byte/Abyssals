@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "missing_source",
+  "sources": [],
+  "records": [],
+  "unresolved": [
+    "Canonical type IDs and complete matchup chart absent."
+  ],
+  "expected_count": 18
+}

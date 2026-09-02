@@ -1,0 +1,27 @@
+{
+  "move_categories": [
+    "PHYSICAL",
+    "SPECIAL",
+    "STATUS"
+  ],
+  "accuracy_bands": [
+    100,
+    95,
+    90
+  ],
+  "status_non_hit_accuracy": "ALWAYS",
+  "priority": {
+    "Plain Dash": 1,
+    "Frost Shard": 1,
+    "default": 0
+  },
+  "targeting": "explicit enum",
+  "signature_moves": "evolutionary-family exclusive",
+  "relearner": "free via Aeric at reserve access",
+  "evolution": {
+    "preserve_current_four": true,
+    "offer_evolution_move_separately": true,
+    "declined_move_to_relearner_pool": true
+  },
+  "story_branch_move_leakage_blocked": true
+}

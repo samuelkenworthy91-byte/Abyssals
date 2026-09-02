@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/handoff_v1/data/canon/characters.json",
+    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv"
+  ],
+  "records": [
+    {
+      "id": "CHR-AIMON",
+      "name": "Aimon",
+      "role": "Renamable protagonist"
+    },
+    {
+      "id": "CHR-PATE",
+      "name": "Pateric 'Pate' Vann",
+      "role": "Core companion/rival"
+    },
+    {
+      "id": "CHR-TRADE",
+      "name": "Traden 'Trade' Cor",
+      "role": "Core companion/rival"
+    },
+    {
+      "id": "CHR-KURG",
+      "name": "General Kurg Halbrecht",
+      "role": "General / story character"
+    },
+    {
+      "id": "CHR-SEVERIN",
+      "name": "Severin Vale",
+      "role": "Guide; later Underworld King / King Below"
+    },
+    {
+      "id": "CHR-ILLYR",
+      "name": "Illyr",
+      "role": "Cosmic god-being"
+    },
+    {
+      "id": "CHR-AERIC",
+      "name": "Chaplain Aeric Solm",
+      "role": "Recurring reserve access / relearning NPC"
+    },
+    {
+      "id": "CHR-RHOSWEN",
+      "name": "Dame Rhoswen Vey",
+      "role": "Supporting named character"
+    },
+    {
+      "id": "LDR-01",
+      "name": "Ser Aldren March",
+      "role": "Mortal leader",
+      "leader_code": "L01"
+    },
+    {
+      "id": "LDR-02",
+      "name": "Abbess Yselle Marot",
+      "role": "Mortal leader",
+      "leader_code": "L02"
+    },
+    {
+      "id": "LDR-03",
+      "name": "Provost Corvin Sair",
+      "role": "Mortal leader",
+      "leader_code": "L03"
+    },
+    {
+      "id": "LDR-04",
+      "name": "Warden Samiel Elow",
+      "role": "Mortal leader",
+      "leader_code": "L04"
+    },
+    {
+      "id": "LDR-05",
+      "name": "Castellan Braska Morn",
+      "role": "Mortal leader",
+      "leader_code": "L05"
+    },
+    {
+      "id": "LDR-06",
+      "name": "Canon Mirelle Avin",
+      "role": "Mortal leader",
+      "leader_code": "L06"
+    },
+    {
+      "id": "LDR-07",
+      "name": "Marshal Oren Talv",
+      "role": "Mortal leader",
+      "leader_code": "L07"
+    },
+    {
+      "id": "LDR-08",
+      "name": "Hierophant Lucain Serault",
+      "role": "Mortal leader",
+      "leader_code": "L08"
+    },
+    {
+      "id": "TRN-C01-001",
+      "name": "Instructor Beric",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C01-002",
+      "name": "Recruit Elsen",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C01-003",
+      "name": "Scout Maela",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-001",
+      "name": "Scout Rell",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-002",
+      "name": "Soldier Varo",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-003",
+      "name": "Hunter Neris",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-004",
+      "name": "Officer Halven",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-005",
+      "name": "Sapper Corren",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-006",
+      "name": "Guard Ysarn",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-007",
+      "name": "Beastkeeper Selka",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-008",
+      "name": "Veteran Brann",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C02-009",
+      "name": "Ferryman Pella",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-001",
+      "name": "Guard Ansel",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-002",
+      "name": "Ferryman Mera",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-003",
+      "name": "Hospitaller Ione",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-004",
+      "name": "Pilgrim Tomas",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-005",
+      "name": "Smuggler Jarek",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-006",
+      "name": "Field Nurse Selene",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-007",
+      "name": "Officer Reth",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-008",
+      "name": "Shrine Keeper Elia",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C03-009",
+      "name": "Riverhand Marrec",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-001",
+      "name": "Caravan Guard Tovin",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-002",
+      "name": "Merchant Sella",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-003",
+      "name": "Smuggler Caro",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-004",
+      "name": "Mercenary Joss",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-005",
+      "name": "Ledger Guard Perrin",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-006",
+      "name": "Fixer Vael",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-007",
+      "name": "Captain Niva",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C04-008",
+      "name": "Relic Broker Ors",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-001",
+      "name": "Orchard Keeper Rene",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-002",
+      "name": "Pilgrim Ada",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-003",
+      "name": "Shrine Guard Lucen",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-004",
+      "name": "Hunter Mirek",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-005",
+      "name": "Grove Warden Sera",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-006",
+      "name": "Peacekeeper Olan",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-007",
+      "name": "Relic Keeper Noa",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C05-008",
+      "name": "Veteran Vaun",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-001",
+      "name": "Quarry Guard Dorr",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-002",
+      "name": "Sapper Helka",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-003",
+      "name": "Overseer Malk",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-004",
+      "name": "Prison Guard Veer",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-005",
+      "name": "Mason Edda",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-006",
+      "name": "Officer Sorn",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-007",
+      "name": "Enforcer Kelm",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-008",
+      "name": "Defector Mara",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-009",
+      "name": "Prospector Venn",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C06-010",
+      "name": "War Captain Drask",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-001",
+      "name": "Scribe Lio",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-002",
+      "name": "Archive Guard Fenn",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-003",
+      "name": "Scholar Yara",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-004",
+      "name": "Looting Mercenary Kerr",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-005",
+      "name": "Archivist Sorel",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-006",
+      "name": "Guard Captain Vessa",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-007",
+      "name": "Heretic Scribe Omel",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-008",
+      "name": "Relic Keeper Cael",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-009",
+      "name": "Tide Scribe Hessa",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C07-010",
+      "name": "Antiquarian Nox",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-001",
+      "name": "Soldier Arven",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-002",
+      "name": "Deserter Jula",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-003",
+      "name": "Field Captain Mor",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-004",
+      "name": "Siege Crew Pell",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-005",
+      "name": "Veteran Tars",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-006",
+      "name": "Hospitaller Senn",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-007",
+      "name": "War Captain Elric",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-008",
+      "name": "Duelist Avel",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C08-009",
+      "name": "Duelist Caia",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-001",
+      "name": "Temple Guard Aurel",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-002",
+      "name": "Sacred Knight Moira",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-003",
+      "name": "Scholar-Guard Nere",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-004",
+      "name": "Zealot Caldus",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-005",
+      "name": "Marshal Retainer Jorin",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-006",
+      "name": "Temple Captain Erys",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-007",
+      "name": "Relic Keeper Sava",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-008",
+      "name": "Antiquarian Sol",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "TRN-C09-009",
+      "name": "Champion Daven",
+      "role": "Named mortal trainer",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-01",
+      "name": "Veyr, Keeper of Names",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-02",
+      "name": "Ossael, the Gatherer",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-03",
+      "name": "Mordren, Drum of War",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-04",
+      "name": "Caelor, Last Magistrate",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-05",
+      "name": "Asterion, Voice of Certainty",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-06",
+      "name": "Mirra, Kindly Shape",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-07",
+      "name": "Velcar, Oath-Eater",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    },
+    {
+      "id": "WRD-08",
+      "name": "Nema, the Unremembered",
+      "role": "Hell Warden",
+      "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "story_details_status": "not_supplied"
+    }
+  ],
+  "unresolved": [
+    "Nharos has no canonical game ID/role; full Story Bible absent."
+  ],
+  "unresolved_identities": [
+    {
+      "packaging_id": "CORE-007",
+      "name": "Nharos",
+      "game_id": null
+    }
+  ]
+}

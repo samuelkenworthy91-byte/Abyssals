@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "U01",
+      "subject": "Species register",
+      "impact": "M2 loaders can proceed with fixtures; M5/content release blocked",
+      "required_source_or_decision": "Supply Regional Dex Stats/Abilities v2 with all 187 canonical IDs, names, types, stats, abilities, catch rates. None of those canonical records is supplied here.",
+      "status": "open"
+    },
+    {
+      "id": "U02",
+      "subject": "Evolution/learnsets/moves/types",
+      "impact": "M4–M7 content blocked",
+      "required_source_or_decision": "Supply Progression & Learnsets v3: 98 paths, 1,893 learnsets, complete move data/target enums/type chart, exact promotion/growth/XP formulas. Do not infer IDs from art labels.",
+      "status": "open"
+    },
+    {
+      "id": "U03",
+      "subject": "Encounter slots",
+      "impact": "M6 content blocked",
+      "required_source_or_decision": "Supply ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx. 72 area summaries exist, but all 144 six-slot tables and conditional resolvers are absent.",
+      "status": "open"
+    },
+    {
+      "id": "U04",
+      "subject": "Trainers/classes",
+      "impact": "M7 blocked",
+      "required_source_or_decision": "Supply locked Checklist 04 trainer/team data and full 39-class catalogue. Portrait queue supplies 75 names/IDs, not combat teams, AI tiers or class IDs.",
+      "status": "open"
+    },
+    {
+      "id": "U05",
+      "subject": "Items/shops/terrain",
+      "impact": "M10/M13 blocked",
+      "required_source_or_decision": "Supply locked Checklists 05/06: item IDs/values, shop stock, Trial Contracts, field-to-Warden mapping and numerical effects.",
+      "status": "open"
+    },
+    {
+      "id": "U06",
+      "subject": "Story/maps/dialogue",
+      "impact": "M11–M13 blocked",
+      "required_source_or_decision": "Supply Story Bible LOCKED v1.0, Checklists 09 v1.1/10/17 and scene/flag/location IDs, map links, authored text and epitaphs. Known state enums are preserved.",
+      "status": "open"
+    },
+    {
+      "id": "U07",
+      "subject": "Monster sprite isolation",
+      "impact": "Production battle art blocked",
+      "required_source_or_decision": "89 supplied WebPs are labelled white-background sheets/single illustrations. Keep pristine. Need canonical register and source cutouts or reviewed per-figure extraction coordinates/mattes; no ID guessing, background erasure of white creature details, or redraw.",
+      "status": "open"
+    },
+    {
+      "id": "U08",
+      "subject": "Portrait backgrounds/text",
+      "impact": "Production portraits blocked",
+      "required_source_or_decision": "All 91 files have non-exact opaque border colours. Exact RGB removal cannot remove these backgrounds. Need originals truly using #FF00FF or approval of precise reviewed masks/colour correction outside this exact-only pass. Baked labels and scale anchors also need review.",
+      "status": "open"
+    },
+    {
+      "id": "U09",
+      "subject": "Missing named portraits",
+      "impact": "22 current target assets absent",
+      "required_source_or_decision": "See exact IDs/names below. No replacements generated. All 39 reusable class-template portraits are also absent.",
+      "status": "open"
+    },
+    {
+      "id": "U10",
+      "subject": "Nharos identity",
+      "impact": "One current target cannot be named with canonical runtime ID",
+      "required_source_or_decision": "CORE-007 is packaging-only. Nharos is in portrait queue but omitted from handoff characters; preserve name/source and do not invent CHR ID or conflate with Severin/Illyr.",
+      "status": "open"
+    },
+    {
+      "id": "U11",
+      "subject": "Detailed mechanical locks",
+      "impact": "Dependent game implementation blocked",
+      "required_source_or_decision": "Full locked 01/07/08/11/12/13/14/15/16/17 source documents are absent. Summaries are authoritative where explicit but do not define every numerical equation, timing, exceptional roll, save serialization or clock background policy.",
+      "status": "open"
+    },
+    {
+      "id": "U12",
+      "subject": "Other presentation assets",
+      "impact": "M3/M14 production art blocked",
+      "required_source_or_decision": "Overworld/environment/UI/VFX/audio not supplied; keep separate future production requirements. No canonical back-sprite set required.",
+      "status": "open"
+    }
+  ]
+}

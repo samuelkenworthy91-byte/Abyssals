@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv"
+  ],
+  "records": [
+    {
+      "id": "TRN-C01-001",
+      "character_id": "TRN-C01-001",
+      "name": "Instructor Beric",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C01-002",
+      "character_id": "TRN-C01-002",
+      "name": "Recruit Elsen",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C01-003",
+      "character_id": "TRN-C01-003",
+      "name": "Scout Maela",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-001",
+      "character_id": "TRN-C02-001",
+      "name": "Scout Rell",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-002",
+      "character_id": "TRN-C02-002",
+      "name": "Soldier Varo",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-003",
+      "character_id": "TRN-C02-003",
+      "name": "Hunter Neris",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-004",
+      "character_id": "TRN-C02-004",
+      "name": "Officer Halven",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-005",
+      "character_id": "TRN-C02-005",
+      "name": "Sapper Corren",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-006",
+      "character_id": "TRN-C02-006",
+      "name": "Guard Ysarn",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-007",
+      "character_id": "TRN-C02-007",
+      "name": "Beastkeeper Selka",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-008",
+      "character_id": "TRN-C02-008",
+      "name": "Veteran Brann",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C02-009",
+      "character_id": "TRN-C02-009",
+      "name": "Ferryman Pella",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-001",
+      "character_id": "TRN-C03-001",
+      "name": "Guard Ansel",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-002",
+      "character_id": "TRN-C03-002",
+      "name": "Ferryman Mera",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-003",
+      "character_id": "TRN-C03-003",
+      "name": "Hospitaller Ione",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-004",
+      "character_id": "TRN-C03-004",
+      "name": "Pilgrim Tomas",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-005",
+      "character_id": "TRN-C03-005",
+      "name": "Smuggler Jarek",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-006",
+      "character_id": "TRN-C03-006",
+      "name": "Field Nurse Selene",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-007",
+      "character_id": "TRN-C03-007",
+      "name": "Officer Reth",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-008",
+      "character_id": "TRN-C03-008",
+      "name": "Shrine Keeper Elia",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C03-009",
+      "character_id": "TRN-C03-009",
+      "name": "Riverhand Marrec",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-001",
+      "character_id": "TRN-C04-001",
+      "name": "Caravan Guard Tovin",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-002",
+      "character_id": "TRN-C04-002",
+      "name": "Merchant Sella",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-003",
+      "character_id": "TRN-C04-003",
+      "name": "Smuggler Caro",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-004",
+      "character_id": "TRN-C04-004",
+      "name": "Mercenary Joss",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-005",
+      "character_id": "TRN-C04-005",
+      "name": "Ledger Guard Perrin",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-006",
+      "character_id": "TRN-C04-006",
+      "name": "Fixer Vael",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-007",
+      "character_id": "TRN-C04-007",
+      "name": "Captain Niva",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C04-008",
+      "character_id": "TRN-C04-008",
+      "name": "Relic Broker Ors",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-001",
+      "character_id": "TRN-C05-001",
+      "name": "Orchard Keeper Rene",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-002",
+      "character_id": "TRN-C05-002",
+      "name": "Pilgrim Ada",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-003",
+      "character_id": "TRN-C05-003",
+      "name": "Shrine Guard Lucen",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-004",
+      "character_id": "TRN-C05-004",
+      "name": "Hunter Mirek",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-005",
+      "character_id": "TRN-C05-005",
+      "name": "Grove Warden Sera",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-006",
+      "character_id": "TRN-C05-006",
+      "name": "Peacekeeper Olan",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-007",
+      "character_id": "TRN-C05-007",
+      "name": "Relic Keeper Noa",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C05-008",
+      "character_id": "TRN-C05-008",
+      "name": "Veteran Vaun",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-001",
+      "character_id": "TRN-C06-001",
+      "name": "Quarry Guard Dorr",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-002",
+      "character_id": "TRN-C06-002",
+      "name": "Sapper Helka",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-003",
+      "character_id": "TRN-C06-003",
+      "name": "Overseer Malk",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-004",
+      "character_id": "TRN-C06-004",
+      "name": "Prison Guard Veer",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-005",
+      "character_id": "TRN-C06-005",
+      "name": "Mason Edda",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-006",
+      "character_id": "TRN-C06-006",
+      "name": "Officer Sorn",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-007",
+      "character_id": "TRN-C06-007",
+      "name": "Enforcer Kelm",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-008",
+      "character_id": "TRN-C06-008",
+      "name": "Defector Mara",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-009",
+      "character_id": "TRN-C06-009",
+      "name": "Prospector Venn",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C06-010",
+      "character_id": "TRN-C06-010",
+      "name": "War Captain Drask",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-001",
+      "character_id": "TRN-C07-001",
+      "name": "Scribe Lio",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-002",
+      "character_id": "TRN-C07-002",
+      "name": "Archive Guard Fenn",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-003",
+      "character_id": "TRN-C07-003",
+      "name": "Scholar Yara",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-004",
+      "character_id": "TRN-C07-004",
+      "name": "Looting Mercenary Kerr",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-005",
+      "character_id": "TRN-C07-005",
+      "name": "Archivist Sorel",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-006",
+      "character_id": "TRN-C07-006",
+      "name": "Guard Captain Vessa",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-007",
+      "character_id": "TRN-C07-007",
+      "name": "Heretic Scribe Omel",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-008",
+      "character_id": "TRN-C07-008",
+      "name": "Relic Keeper Cael",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-009",
+      "character_id": "TRN-C07-009",
+      "name": "Tide Scribe Hessa",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C07-010",
+      "character_id": "TRN-C07-010",
+      "name": "Antiquarian Nox",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-001",
+      "character_id": "TRN-C08-001",
+      "name": "Soldier Arven",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-002",
+      "character_id": "TRN-C08-002",
+      "name": "Deserter Jula",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-003",
+      "character_id": "TRN-C08-003",
+      "name": "Field Captain Mor",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-004",
+      "character_id": "TRN-C08-004",
+      "name": "Siege Crew Pell",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-005",
+      "character_id": "TRN-C08-005",
+      "name": "Veteran Tars",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-006",
+      "character_id": "TRN-C08-006",
+      "name": "Hospitaller Senn",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-007",
+      "character_id": "TRN-C08-007",
+      "name": "War Captain Elric",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-008",
+      "character_id": "TRN-C08-008",
+      "name": "Duelist Avel",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C08-009",
+      "character_id": "TRN-C08-009",
+      "name": "Duelist Caia",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-001",
+      "character_id": "TRN-C09-001",
+      "name": "Temple Guard Aurel",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-002",
+      "character_id": "TRN-C09-002",
+      "name": "Sacred Knight Moira",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-003",
+      "character_id": "TRN-C09-003",
+      "name": "Scholar-Guard Nere",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-004",
+      "character_id": "TRN-C09-004",
+      "name": "Zealot Caldus",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-005",
+      "character_id": "TRN-C09-005",
+      "name": "Marshal Retainer Jorin",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-006",
+      "character_id": "TRN-C09-006",
+      "name": "Temple Captain Erys",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-007",
+      "character_id": "TRN-C09-007",
+      "name": "Relic Keeper Sava",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-008",
+      "character_id": "TRN-C09-008",
+      "name": "Antiquarian Sol",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    },
+    {
+      "id": "TRN-C09-009",
+      "character_id": "TRN-C09-009",
+      "name": "Champion Daven",
+      "trainer_class_id": null,
+      "ai_tier": null,
+      "team": null,
+      "status": "identity_only"
+    }
+  ],
+  "unresolved": [
+    "Trainer database, classes, tiers, teams, items and moves missing."
+  ]
+}
