@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "move",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "type_id",
+    "category",
+    "target",
+    "priority",
+    "accuracy",
+    "pp"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "enum": [
+        "PHYSICAL",
+        "SPECIAL",
+        "STATUS"
+      ]
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "accuracy": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "const": "ALWAYS"
+        }
+      ]
+    },
+    "pp": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

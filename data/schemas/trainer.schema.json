@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "trainer",
+  "type": "object",
+  "required": [
+    "id",
+    "character_id",
+    "name",
+    "trainer_class_id",
+    "ai_tier",
+    "team",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "character_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trainer_class_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ai_tier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "species_id",
+          "level"
+        ],
+        "properties": {
+          "species_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "move_ids": {
+            "type": "array",
+            "maxItems": 4,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "held_item_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "identity_only",
+        "complete"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "complete"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "trainer_class_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ai_tier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "team": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  ]
+}

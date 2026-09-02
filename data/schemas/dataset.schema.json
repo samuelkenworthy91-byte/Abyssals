@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Explicit partial dataset",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "sources",
+    "records",
+    "unresolved"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "enum": [
+        "complete_for_supplied_source",
+        "partial",
+        "missing_source"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "expected_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "missing_source"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "records": {
+            "maxItems": 0
+          },
+          "unresolved": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

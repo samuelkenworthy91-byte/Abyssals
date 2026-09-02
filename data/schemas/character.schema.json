@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "character",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "role"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "leader_code": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

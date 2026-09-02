@@ -1,0 +1,13 @@
+{
+  "name": "abyssals",
+  "version": "0.1.0-preparation",
+  "private": true,
+  "description": "Canonical source import and validation; application shell starts at M1",
+  "scripts": {
+    "validate": "python3 tools/validation/validate.py",
+    "validate:content": "python3 tools/validation/validate.py --content",
+    "test": "python3 -m unittest discover -s tests/unit -v",
+    "art:audit": "python3 tools/art/process_portraits.py --report .reports/portrait_audit.json",
+    "validate:sources": "python3 tools/data/verify_derivations.py"
+  }
+}

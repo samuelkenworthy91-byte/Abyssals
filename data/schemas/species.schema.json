@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "species",
+  "type": "object",
+  "required": [
+    "id",
+    "dex_number",
+    "name",
+    "base_stats",
+    "types",
+    "capture_rate"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dex_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 187
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base_stats": {
+      "type": "object",
+      "required": [
+        "hp",
+        "attack",
+        "defence",
+        "sp_attack",
+        "sp_defence",
+        "speed"
+      ],
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minProperties": 6,
+      "maxProperties": 6
+    },
+    "types": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "capture_rate": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

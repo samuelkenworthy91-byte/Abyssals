@@ -1,0 +1,45 @@
+name: Repository integrity
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-tools.txt
+      - run: python -m pip install -r requirements-tools.txt
+      - run: python tools/validation/validate.py --json-report .reports/integrity.json
+      - run: python tools/data/verify_derivations.py
+      - run: python -m unittest discover -s tests/unit -v
+      - name: Report strict content readiness
+        run: |
+          python tools/validation/validate.py --content --json-report .reports/content.json || status=$?
+          python - <<'PY'
+          import json, os
+          report = json.load(open('.reports/content.json'))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('## Content readiness: ' + ('PASS' if report['passed'] else 'BLOCKED') + '\n\n')
+              f.write('Integrity is separate from content completeness.\n\n')
+              for issue in report['errors'][:25]: f.write('- '+issue+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-reports
+          path: .reports/*.json
+
+  full-content:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-tools.txt
+      - run: python tools/validation/validate.py --content

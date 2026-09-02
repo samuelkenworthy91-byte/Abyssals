@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "data/battles/battles.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/characters/characters.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/dialogue/dialogue.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/encounters/areas.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/encounters/tables.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/evolutions/evolutions.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/factions/factions.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/items/items.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/locations/locations.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/manifests/abyssal_art.json",
+      "schema": "data/schemas/abyssal_art.schema.json"
+    },
+    {
+      "path": "data/manifests/datasets.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/id_aliases.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/import_status.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/portraits.json",
+      "schema": "data/schemas/portraits.schema.json"
+    },
+    {
+      "path": "data/manifests/source_files.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/unresolved_items.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/moves/learnsets.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/moves/moves.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/progression/core_rules.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/progression/learnset_rules.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/save_schema/contracts.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/shops/shops.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/species/species.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/story/scenes.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/story/state_model.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/terrain/fields.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainer_classes/classes.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainers/trainers.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/types/types.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/manifests/schema_registry.json",
+      "schema": "data/schemas/metadata.schema.json"
+    }
+  ]
+}
