@@ -1,0 +1,1525 @@
+{
+  "schema_version": 1,
+  "expected_species_count": 187,
+  "verified_canonical_species_count": 0,
+  "source_file_count": 89,
+  "runtime_file_count": 0,
+  "records": [
+    {
+      "asset_id": "MONSRC-ACREMINK",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Acremink",
+      "source_filename": "assets/abyssals/source/Acremink.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "8f727fab4c5e033d08930bfa9d82f24d35aef3675b91c2ee64a31fef5b7938ed",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-AMPLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Amplet",
+      "source_filename": "assets/abyssals/source/Amplet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "2f784de49cdecad366afd625bb2d853d3d52a252a93f721f57121a429a1da709",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-BANTISK",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Bantisk",
+      "source_filename": "assets/abyssals/source/Bantisk.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "cffd81342686b004da596f4134af7552a04ac35514cc459d87809212ff91db3b",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-BRACKHOUND",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Brackhound",
+      "source_filename": "assets/abyssals/source/Brackhound.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c0383fba2648bd2ec7bc893c86c5255e0030cae87c287003b0ef568bb1f5d9a2",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CAELYNX",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Caelynx",
+      "source_filename": "assets/abyssals/source/Caelynx.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c5effa1635c10f4480043842c501ff30768ab90f8106a05f8879d2cc78221270",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CAIRANT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Cairant",
+      "source_filename": "assets/abyssals/source/Cairant.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "d572d9603d104535078a1164ef09045c593a37390017c429a60c1998118c7d4d",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CALIBRIT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Calibrit",
+      "source_filename": "assets/abyssals/source/Calibrit.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "362467cde5bf1eb773207b44eeea23d8f4063ec3fef32ee2719ffcef22dc8fc6",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CAPRUNE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Caprune",
+      "source_filename": "assets/abyssals/source/Caprune.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "df6411cdb7dcc12e5f300f61ecb219f2efb643e92402dff261d3cd41398238ae",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CENSMOKE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Censmoke",
+      "source_filename": "assets/abyssals/source/Censmoke.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "9c3f166558bbb157b20f227865636e9e201edeb2c97424857eb8071e05a75b67",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CHALKIT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Chalkit",
+      "source_filename": "assets/abyssals/source/Chalkit.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "a05f66318119ac623a9a49271ea7a2140718967075850960e4797426d0608b84",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CHANTLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Chantlet",
+      "source_filename": "assets/abyssals/source/Chantlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "b648f00d60d94a807e799dd0ae280d3b62ef3d021acee4d7b767b39bc58b2f06",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CHIPKID",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Chipkid",
+      "source_filename": "assets/abyssals/source/Chipkid.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "406a47fab480e6ae448258e21bff74b119ff2bb751191e032651efda58e73286",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CHOUGHLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Choughlet",
+      "source_filename": "assets/abyssals/source/Choughlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "53df3d1c205454432483a3d454b793ba28a405337705cae0216bb4786b429daf",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-COURSTOAT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Courstoat",
+      "source_filename": "assets/abyssals/source/Courstoat.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "8ebe2317b990d37885c12fcbc1c6e5a73720d0d3d73376c265ef7f0a13473b7f",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CRUXWYRM",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Cruxwyrm",
+      "source_filename": "assets/abyssals/source/Cruxwyrm.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "4de5302af1491f2016cd7dc357cb231865eda64954fde8eb7e87b64064f5f4b1",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-CUBANNER",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Cubanner",
+      "source_filename": "assets/abyssals/source/Cubanner.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "a29deeeecb68c8a1251dd765c91da8adf2fe4eb8cb77643ea1aa620aaead31bb",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-DARTFIN",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Dartfin",
+      "source_filename": "assets/abyssals/source/Dartfin.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "df83acbe46e46c0c6763876007664025fac99773ce147c3052d3cd765b768679",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-DECIMITE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Decimite",
+      "source_filename": "assets/abyssals/source/Decimite.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "41bd7dde7bcf6236ea440bcf0f17ddec3c9f8e83c526f96be7400e32d24fcbe7",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-DROMBLE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Dromble",
+      "source_filename": "assets/abyssals/source/Dromble.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "70dcfa815011f034e55df957780ab00558f991d8e412d06eaf7a45a9820f8cc2",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-DUNETUFT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Dunetuft",
+      "source_filename": "assets/abyssals/source/Dunetuft.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "b3247dc74bf4c666f84764ff8936e731c24ae3c10581b87148e437c2ee4fb6e2",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-DUSTISK",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Dustisk",
+      "source_filename": "assets/abyssals/source/Dustisk.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "0785e09c0140b83c0ce4de41543f54c72c5cf1b97511baf0854e1e15ee4206e3",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-EMBERTLE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Embertle",
+      "source_filename": "assets/abyssals/source/Embertle.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "28e9ca1da8fc1b25eef1a3e35fbf66bdc8feb9e5750bdbbabff069223628a7d4",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-EYRET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Eyret",
+      "source_filename": "assets/abyssals/source/Eyret.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "2d45f5851415a822f724b9303310e55a0015378c911cdc2642bcf5b03b2c8f27",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-FEIGNID",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Feignid",
+      "source_filename": "assets/abyssals/source/Feignid.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "4ada0c0d06a1c60704a1f68a64aed4a8129e6cdaa637a2abc8abf4bd0e624e73",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-FEIRONG",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Feirong",
+      "source_filename": "assets/abyssals/source/Feirong.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "76ebc0cfe72c7ea15abd054e9753395851d20aa1f693cc0d8ff04374db31127a",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-FIEFLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Fieflet",
+      "source_filename": "assets/abyssals/source/Fieflet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "2833fa1b290edac50c3ccd81caf673faee083e3c18a6788cf28f580e483cd8fb",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-FLAGGRIM",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Flaggrim",
+      "source_filename": "assets/abyssals/source/Flaggrim.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "d928795e9bdeb01b8e8ed465b22cc126747c65a1d38018b5b683534c2c3cc5da",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 5,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-FOAMWHELP",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Foamwhelp",
+      "source_filename": "assets/abyssals/source/Foamwhelp.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c4f9e34a09d1e25c198bfc5a4630de184643e3187319e6efb9588c9c86418fc2",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-GEHENNUAR",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Gehennuar",
+      "source_filename": "assets/abyssals/source/Gehennuar.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "52652c32d7b9c6a6c8e3f62f4d992ff1b82bc3097ad8d9fc47fee5f95e931f4b",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-GRAILHARE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Grailhare",
+      "source_filename": "assets/abyssals/source/Grailhare.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "87443fe969a2d22c07fea121a907f6cd940316fea462dd9f01cb958bf9bd8957",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-GRAVODO",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Gravodo",
+      "source_filename": "assets/abyssals/source/Gravodo.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "5d180608632d8730052d74f8e6ee19aa23b1b776263f319191cc19804199f97e",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-GUANRONG",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Guanrong",
+      "source_filename": "assets/abyssals/source/Guanrong.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "1f7117a61c66a6b9c47e300aa911a52c6cd831754241cb670c3817af8e0e6b30",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-HEXAMUSE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Hexamuse",
+      "source_filename": "assets/abyssals/source/Hexamuse.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "0deb9e7105a1d423673ff270a442b7c0cd7139c3ff7ae9ae6dad314fb59854ec",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-JERBUNE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Jerbune",
+      "source_filename": "assets/abyssals/source/Jerbune.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "95a87f8440195aba38483589e72022ef1584fa0106fd698d37b4f4e4298405d3",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-KEELCRAB",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Keelcrab",
+      "source_filename": "assets/abyssals/source/Keelcrab.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "9a10589911899ae221128953988e630accfdea6a0291190a4bd38757218e085b",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-KINCOIL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Kincoil",
+      "source_filename": "assets/abyssals/source/Kincoil.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "6f6d4ac99daa3338ccd92f7507f7fe4480ae9ddcc36d8d2583400822ce1e2296",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-LANSPUP",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Lanspup",
+      "source_filename": "assets/abyssals/source/Lanspup.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "0936e2a7c530381b21109bf0786a2bec2cdcb4ce3210258f1c69bc310bfa9887",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-LIMBUD",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Limbud",
+      "source_filename": "assets/abyssals/source/Limbud.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "f4c0b0a9830306dabe7176745ecc175cbbabc7f219cac213e3785d13cf9a0777",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-LIUBEIROW",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Liubeirow",
+      "source_filename": "assets/abyssals/source/Liubeirow.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "e2f674c73a2c1e4b1e088fc702996cef91fd4a77e9d67b34d14c92a0ed174262",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-LYRLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Lyrlet",
+      "source_filename": "assets/abyssals/source/Lyrlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c2c4d1900f9be151583854a3732d021123efecd8b7f8682392caa5984701d6cf",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-MIRASCAL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Mirascal",
+      "source_filename": "assets/abyssals/source/Mirascal.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "1bace3a6798b2cf8b8ff5cc09eaa6b6103565e06137259f330598d5081b38111",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-MORTARGEK",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Mortargek",
+      "source_filename": "assets/abyssals/source/Mortargek.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "7287bde221691130d6f43de744d5f3a34c814eeec743171f74e91c4e1996cf56",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-MOTTLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Mottlet",
+      "source_filename": "assets/abyssals/source/Mottlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "ac4df4ad55e32b317d695ab3367ed0d1288ed9930f3e618a474e90770460aee8",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-MURMITE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Murmite",
+      "source_filename": "assets/abyssals/source/Murmite.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "593bc3e789352c5684609db58730ae5ea6f0a9a9a0ce5f3fb1b715fd3a6ab6aa",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-NIBBLUB",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Nibblub",
+      "source_filename": "assets/abyssals/source/Nibblub.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "271dbcb5c617bb1e382a9c9076ce7ae389c2a15f7ea50fa6d976984bf98912bf",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-NIBLUST",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Niblust",
+      "source_filename": "assets/abyssals/source/Niblust.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "7f8454aab8538fec16ec4e27e3121962476b2a454046e7738fd0cc0541ff2faa",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-OATHLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Oathlet",
+      "source_filename": "assets/abyssals/source/Oathlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "fbd68c812871d30fb85f1c36117629dc913e76065d9ba9f4abd58022c8857863",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PALEURSA",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Paleursa",
+      "source_filename": "assets/abyssals/source/Paleursa.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c3c910a015971a2026315275aa570a04c1d7ef555db7a9bbb2844c6ed90d258d",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PAXIBIS",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Paxibis",
+      "source_filename": "assets/abyssals/source/Paxibis.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "89847f921716a82cc0dbee22a56dd7a3b80abdf1d572387800eda40448d60bad",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PEARLFROND",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Pearlfrond",
+      "source_filename": "assets/abyssals/source/Pearlfrond.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "0b0ac2392802c219bf0347c9c516059276e63ce0833174af3f61cd420f656b50",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PEBBETTLE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Pebbettle",
+      "source_filename": "assets/abyssals/source/Pebbettle.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "cd04484127e0cb4e075737b2cce5b7ee23b79643b78ac737ec1a40c48d5a6b48",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PENNKIT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Pennkit",
+      "source_filename": "assets/abyssals/source/Pennkit.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "2dc1e0061e42e7dd93b0723385ba1a7f927778ea27aa8386631aefffc84a97bd",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PENNMOT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Pennmot",
+      "source_filename": "assets/abyssals/source/Pennmot.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "543e89bd1a179e20b1540267d966f6fa30912c2b81b0180d161e3ecc292adbbc",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-PILGRIMP",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Pilgrimp",
+      "source_filename": "assets/abyssals/source/Pilgrimp.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "59887ca4afd86b4f36f93c36e5a6530f172eae41f67e37015851a6139f453cc5",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-POMLING",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Pomling",
+      "source_filename": "assets/abyssals/source/Pomling.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "8b98b52d3039f725fd010ec828ed2b20829381d0dbbcee4cf498ab12c2383478",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-RAPTYRALE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Raptyrale",
+      "source_filename": "assets/abyssals/source/Raptyrale.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "502ed9113bb6b2d029e165e54c72f4246c8623ded16966d75489db53e7ffebe2",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-REEDILE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Reedile",
+      "source_filename": "assets/abyssals/source/Reedile.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "e83d282a11122dfad5794e7e644452cbd8303fa8b6e0cde3b113fdd79ed80983",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-REGULET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Regulet",
+      "source_filename": "assets/abyssals/source/Regulet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "36b746795f3112fdb817645e38be4c49ca7b9b651749a4e77d792a6023a89538",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-RILLIP",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Rillip",
+      "source_filename": "assets/abyssals/source/Rillip.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "a8a994cfe69bdf4fa69e1292e1f4eb396604cc03e34a0e2c45eeaa829a909f1a",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-ROUNCOLT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Rouncolt",
+      "source_filename": "assets/abyssals/source/Rouncolt.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "f94cdda12d1b294ba0f239a011ac79662aab187a7486b5fa02016edb6da21fee",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-RUFFURN",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Ruffurn",
+      "source_filename": "assets/abyssals/source/Ruffurn.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "665961f4461b83ce8fb5927f7e5b4b045e33396b499ee82c3775feecee80d7b4",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-RUFRAM",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Rufram",
+      "source_filename": "assets/abyssals/source/Rufram.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "59ddb0096a0760a0eb2f446f6c721d3b6c5906ea0ef4dbb5c3db745e06d8e177",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-RUTLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Rutlet",
+      "source_filename": "assets/abyssals/source/Rutlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "4970f07153622115a42a14083fd5fe02c13090390c73c0edb96ea53d6aadaeed",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SALTINEL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Saltinel",
+      "source_filename": "assets/abyssals/source/Saltinel.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "e56c4ad368815684957107f57bc870ce2d0d5083c43fa1ae062cac369fa11b1e",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SCARABEL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Scarabel",
+      "source_filename": "assets/abyssals/source/Scarabel.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "a0cf63fd0e511b7817b76c693ea673cd782323443c30580a4d60166d6b5c1ea6",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SCARIMP",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Scarimp",
+      "source_filename": "assets/abyssals/source/Scarimp.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "d9875646eb8fe87a7369ed6036abe7fab200b6eec3e097ef94aa6e94f499357b",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SCRIPQUID",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Scripquid",
+      "source_filename": "assets/abyssals/source/Scripquid.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "19ce7b7823ab8f5f6e6365dcd398fcebc742bf27aa4c0a538fef23dbdb92e16a",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SIDERMITE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Sidermite",
+      "source_filename": "assets/abyssals/source/Sidermite.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "21b65b7a32ca404f4184d14b66ef46f8cb860435df6210cf83bdddd3b297440b",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SKATELK",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Skatelk",
+      "source_filename": "assets/abyssals/source/Skatelk.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "990d1e7d7f0f3b7f14edb33f7915ac9865c1db21822c6d57bfa42c58d043f9bd",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SNICKAL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Snickal",
+      "source_filename": "assets/abyssals/source/Snickal.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "f3dd2001a7f5fbcfb257be4d722bc114a04c25a2a03d934352f02478e5d45691",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SPRIGFAWN",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Sprigfawn",
+      "source_filename": "assets/abyssals/source/Sprigfawn.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "3fccc8d798ccfd4228c45f058b854384dbdf8e7ee5d684a19942f9e939145a69",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-STINGLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Stinglet",
+      "source_filename": "assets/abyssals/source/Stinglet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "8cf25e641aedbde398d35a0dc0f3d71cf40085bd68fac9ee6ad866bc5ca2159b",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-STYXLET",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Styxlet",
+      "source_filename": "assets/abyssals/source/Styxlet.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "08b5f56002215b6d728fec4228e875bac34df10e554584950b0d019d4d92771e",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 3,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-SUNCUB",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Suncub",
+      "source_filename": "assets/abyssals/source/Suncub.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "a69b17c314ce4bc434db91174b6e8446d56f4be8f593463f6d4cb2320dea3f7a",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TATTEROOK",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Tatterook",
+      "source_filename": "assets/abyssals/source/Tatterook.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "568c826417a8bebf55bab82fe3864d2704547afd238b077c053c57fb46e1756e",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TELLURION",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Tellurion",
+      "source_filename": "assets/abyssals/source/Tellurion.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "8d1c92f80c329ce3a1ba23070653c73fafceb99b54e84bdf0aab070f72605a43",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TEMPESTREL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Tempestrel",
+      "source_filename": "assets/abyssals/source/Tempestrel.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c8d3015fb9426e63deec6374b462e9625c015cd62eff1dce025be8de50bedaf4",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TIANZHAR",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Tianzhar",
+      "source_filename": "assets/abyssals/source/Tianzhar.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "55e59bacfd51a3f9d1ec6a433f57a57f0c3a1cb46fd739ee56b02e9c4ed6446f",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TOKENAIL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Tokenail",
+      "source_filename": "assets/abyssals/source/Tokenail.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "dab631acba7a513eadd0b1138792a9d857954f325b4e493c848c400ec71ededd",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TRISKIT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Triskit",
+      "source_filename": "assets/abyssals/source/Triskit.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "0441420ba991155612345a53c032b55e769e293d3ce322f789f3ae1fe8c25cca",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 4,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TRUCEPOE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Trucepoe",
+      "source_filename": "assets/abyssals/source/Trucepoe.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "12800e0d94cd80c4cbb3fad525077c16a5347e2b3fe0c1f1143be80911d3be53",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-TYRQUILL",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Tyrquill",
+      "source_filename": "assets/abyssals/source/Tyrquill.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c846a7d43103e97b692749992a51aeebca44d4850f1c45a067ac960de664d669",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-VEILTERN",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Veiltern",
+      "source_filename": "assets/abyssals/source/Veiltern.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "f13d4405fe81b9a763c983125976f4443ac9f2a54ece3f39e82c31fa4969c21a",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-VOTRESS",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Votress",
+      "source_filename": "assets/abyssals/source/Votress.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "e0400672396467c05e636de32deb88771b5db3fab5cb1865125d26ab7128017f",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 4,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-VOWCOLT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Vowcolt",
+      "source_filename": "assets/abyssals/source/Vowcolt.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "c0345387187407cd8dfaf75224d24befde1afcc43fbe5a382b4ba96151221176",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-WADOPOT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Wadopot",
+      "source_filename": "assets/abyssals/source/Wadopot.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "5d2cb1d3f07feef78c1c0b402ab158a51eabb7507be822463b275036ff28e7f9",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-WARANWEI",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Waranwei",
+      "source_filename": "assets/abyssals/source/Waranwei.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "629c4087b99d348a8399275200744f03c6e8fcfa396f8e7312ef8a3aa4daf9b4",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 1,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-WHISBAT",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Whisbat",
+      "source_filename": "assets/abyssals/source/Whisbat.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "96945872916a4ed12435a1924ee269b7daf2d6c2a507bc2f23f43cbfa44130c0",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    },
+    {
+      "asset_id": "MONSRC-WICKMIDGE",
+      "species_id": null,
+      "canonical_name": null,
+      "source_label": "Wickmidge",
+      "source_filename": "assets/abyssals/source/Wickmidge.webp",
+      "runtime_filename": null,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "file_type": "WEBP",
+      "sha256": "8019a489352d4ebe4980783ebd3daa3d4e8ec36c2ac3dd95821f529af478c4d8",
+      "status": "unresolved_sheet_without_species_register",
+      "visible_figure_count_observation": 2,
+      "uncertainty": "Labelled white-background evolution sheet/single illustration. Sheet labels and figure counts are not canonical Dex assignments."
+    }
+  ],
+  "unresolved": [
+    "Canonical Dex ID/name register and individual runtime cutouts absent."
+  ]
+}
