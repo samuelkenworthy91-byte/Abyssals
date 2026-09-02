@@ -1,0 +1,7 @@
+* text=auto
+*.png binary
+*.jpg binary
+*.webp binary
+*.docx binary
+docs/source_archive/** -text
+assets/**/source/** -text

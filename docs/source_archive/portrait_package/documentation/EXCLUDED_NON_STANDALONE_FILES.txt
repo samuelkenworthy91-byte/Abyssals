@@ -1,0 +1,16 @@
+Excluded because they are collages/contact sheets/analysis sheets rather than standalone portraits:
+
+a_clean_bright_character_lineup_concept_art_image.png
+a_clean_character_roster_sheet_collage_on_a_brig.png
+a_clean_character_sheet_lineup_style_image_overal.png
+a_clean_character_sheet_sprite_style_compilation.png
+a_clean_composite_image_character_sheet_a_grid.png
+a_clean_flat_graphic_composite_image_of_ten_fantas.png
+a_clean_graphic_compilation_image_overall_scene_s.png
+a_grid_like_compilation_character_sheet_portrait.png
+sheet_1.jpg
+sheet_2.jpg
+sheet_3.jpg
+sheet_4.jpg
+sheet_5.jpg
+uploaded_sheet.jpg

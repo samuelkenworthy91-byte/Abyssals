@@ -1,0 +1,101 @@
+﻿queue_no,id_or_packaging_label,name,category,standalone_present,canonical_package_path
+001,CORE-001,Aimon,core,YES,canonical/core/CORE-001__Aimon.png
+002,CORE-002,Pateric “Pate” Vann,core,YES,canonical/core/CORE-002__Pateric_Pate_Vann.png
+003,CORE-003,Traden “Trade” Cor,core,YES,canonical/core/CORE-003__Traden_Trade_Cor.png
+004,CORE-004,General Kurg Halbrecht,core,YES,canonical/core/CORE-004__General_Kurg_Halbrecht.png
+005,CORE-005,Severin Vale — Guide Form,core,YES,canonical/core/CORE-005__Severin_Vale_Guide_Form.png
+006,CORE-006,Illyr,core,YES,canonical/core/CORE-006__Illyr.png
+007,CORE-007,Nharos,core,YES,canonical/core/CORE-007__Nharos.png
+008,CORE-008,Ser Aldren March,core,NO,
+009,CORE-009,Abbess Yselle Marot,core,YES,canonical/core/CORE-009__Abbess_Yselle_Marot.png
+010,CORE-010,Provost Corvin Sair,core,YES,canonical/core/CORE-010__Provost_Corvin_Sair.png
+011,CORE-011,Warden Samiel Elow,core,NO,
+012,CORE-012,Castellan Braska Morn,core,YES,canonical/core/CORE-012__Castellan_Braska_Morn.png
+013,CORE-013,Canon Mirelle Avin,core,YES,canonical/core/CORE-013__Canon_Mirelle_Avin.png
+014,CORE-014,Marshal Oren Talv,core,YES,canonical/core/CORE-014__Marshal_Oren_Talv.png
+015,CORE-015,Hierophant Lucain Serault,core,YES,canonical/core/CORE-015__Hierophant_Lucain_Serault.png
+016,CORE-016,Chaplain Aeric Solm,core,YES,canonical/core/CORE-016__Chaplain_Aeric_Solm.png
+017,CORE-017,Dame Rhoswen Vey,core,NO,
+018,TRN-C01-001,Instructor Beric,trainer,YES,canonical/trainers/TRN-C01-001__Instructor_Beric.png
+019,TRN-C01-002,Recruit Elsen,trainer,YES,canonical/trainers/TRN-C01-002__Recruit_Elsen.png
+020,TRN-C01-003,Scout Maela,trainer,YES,canonical/trainers/TRN-C01-003__Scout_Maela.png
+021,TRN-C02-001,Scout Rell,trainer,YES,canonical/trainers/TRN-C02-001__Scout_Rell.png
+022,TRN-C02-002,Soldier Varo,trainer,YES,canonical/trainers/TRN-C02-002__Soldier_Varo.png
+023,TRN-C02-003,Hunter Neris,trainer,YES,canonical/trainers/TRN-C02-003__Hunter_Neris.png
+024,TRN-C02-004,Officer Halven,trainer,YES,canonical/trainers/TRN-C02-004__Officer_Halven.png
+025,TRN-C02-005,Sapper Corren,trainer,YES,canonical/trainers/TRN-C02-005__Sapper_Corren.png
+026,TRN-C02-006,Guard Ysarn,trainer,YES,canonical/trainers/TRN-C02-006__Guard_Ysarn.png
+027,TRN-C02-007,Beastkeeper Selka,trainer,YES,canonical/trainers/TRN-C02-007__Beastkeeper_Selka.png
+028,TRN-C02-008,Veteran Brann,trainer,YES,canonical/trainers/TRN-C02-008__Veteran_Brann.png
+029,TRN-C02-009,Ferryman Pella,trainer,YES,canonical/trainers/TRN-C02-009__Ferryman_Pella.png
+030,TRN-C03-001,Guard Ansel,trainer,YES,canonical/trainers/TRN-C03-001__Guard_Ansel.png
+031,TRN-C03-002,Ferryman Mera,trainer,YES,canonical/trainers/TRN-C03-002__Ferryman_Mera.png
+032,TRN-C03-003,Hospitaller Ione,trainer,YES,canonical/trainers/TRN-C03-003__Hospitaller_Ione.png
+033,TRN-C03-004,Pilgrim Tomas,trainer,YES,canonical/trainers/TRN-C03-004__Pilgrim_Tomas.png
+034,TRN-C03-005,Smuggler Jarek,trainer,YES,canonical/trainers/TRN-C03-005__Smuggler_Jarek.png
+035,TRN-C03-006,Field Nurse Selene,trainer,YES,canonical/trainers/TRN-C03-006__Field_Nurse_Selene.png
+036,TRN-C03-007,Officer Reth,trainer,YES,canonical/trainers/TRN-C03-007__Officer_Reth.png
+037,TRN-C03-008,Shrine Keeper Elia,trainer,YES,canonical/trainers/TRN-C03-008__Shrine_Keeper_Elia.png
+038,TRN-C03-009,Riverhand Marrec,trainer,YES,canonical/trainers/TRN-C03-009__Riverhand_Marrec.png
+039,TRN-C04-001,Caravan Guard Tovin,trainer,NO,
+040,TRN-C04-002,Merchant Sella,trainer,YES,canonical/trainers/TRN-C04-002__Merchant_Sella.png
+041,TRN-C04-003,Smuggler Caro,trainer,NO,
+042,TRN-C04-004,Mercenary Joss,trainer,YES,canonical/trainers/TRN-C04-004__Mercenary_Joss.png
+043,TRN-C04-005,Ledger Guard Perrin,trainer,YES,canonical/trainers/TRN-C04-005__Ledger_Guard_Perrin.png
+044,TRN-C04-006,Fixer Vael,trainer,YES,canonical/trainers/TRN-C04-006__Fixer_Vael.png
+045,TRN-C04-007,Captain Niva,trainer,NO,
+046,TRN-C04-008,Relic Broker Ors,trainer,NO,
+047,TRN-C05-001,Orchard Keeper Rene,trainer,NO,
+048,TRN-C05-002,Pilgrim Ada,trainer,NO,
+049,TRN-C05-003,Shrine Guard Lucen,trainer,NO,
+050,TRN-C05-004,Hunter Mirek,trainer,NO,
+051,TRN-C05-005,Grove Warden Sera,trainer,NO,
+052,TRN-C05-006,Peacekeeper Olan,trainer,YES,canonical/trainers/TRN-C05-006__Peacekeeper_Olan.png
+053,TRN-C05-007,Relic Keeper Noa,trainer,YES,canonical/trainers/TRN-C05-007__Relic_Keeper_Noa.png
+054,TRN-C05-008,Veteran Vaun,trainer,YES,canonical/trainers/TRN-C05-008__Veteran_Vaun.png
+055,TRN-C06-001,Quarry Guard Dorr,trainer,YES,canonical/trainers/TRN-C06-001__Quarry_Guard_Dorr.png
+056,TRN-C06-002,Sapper Helka,trainer,YES,canonical/trainers/TRN-C06-002__Sapper_Helka.png
+057,TRN-C06-003,Overseer Malk,trainer,YES,canonical/trainers/TRN-C06-003__Overseer_Malk.png
+058,TRN-C06-004,Prison Guard Veer,trainer,YES,canonical/trainers/TRN-C06-004__Prison_Guard_Veer.png
+059,TRN-C06-005,Mason Edda,trainer,YES,canonical/trainers/TRN-C06-005__Mason_Edda.png
+060,TRN-C06-006,Officer Sorn,trainer,YES,canonical/trainers/TRN-C06-006__Officer_Sorn.png
+061,TRN-C06-007,Enforcer Kelm,trainer,YES,canonical/trainers/TRN-C06-007__Enforcer_Kelm.png
+062,TRN-C06-008,Defector Mara,trainer,YES,canonical/trainers/TRN-C06-008__Defector_Mara.png
+063,TRN-C06-009,Prospector Venn,trainer,YES,canonical/trainers/TRN-C06-009__Prospector_Venn.png
+064,TRN-C06-010,War Captain Drask,trainer,NO,
+065,TRN-C07-001,Scribe Lio,trainer,YES,canonical/trainers/TRN-C07-001__Scribe_Lio.png
+066,TRN-C07-002,Archive Guard Fenn,trainer,YES,canonical/trainers/TRN-C07-002__Archive_Guard_Fenn.png
+067,TRN-C07-003,Scholar Yara,trainer,YES,canonical/trainers/TRN-C07-003__Scholar_Yara.png
+068,TRN-C07-004,Looting Mercenary Kerr,trainer,NO,
+069,TRN-C07-005,Archivist Sorel,trainer,NO,
+070,TRN-C07-006,Guard Captain Vessa,trainer,YES,canonical/trainers/TRN-C07-006__Guard_Captain_Vessa.png
+071,TRN-C07-007,Heretic Scribe Omel,trainer,YES,canonical/trainers/TRN-C07-007__Heretic_Scribe_Omel.png
+072,TRN-C07-008,Relic Keeper Cael,trainer,NO,
+073,TRN-C07-009,Tide Scribe Hessa,trainer,NO,
+074,TRN-C07-010,Antiquarian Nox,trainer,NO,
+075,TRN-C08-001,Soldier Arven,trainer,YES,canonical/trainers/TRN-C08-001__Soldier_Arven.png
+076,TRN-C08-002,Deserter Jula,trainer,NO,
+077,TRN-C08-003,Field Captain Mor,trainer,YES,canonical/trainers/TRN-C08-003__Field_Captain_Mor.png
+078,TRN-C08-004,Siege Crew Pell,trainer,YES,canonical/trainers/TRN-C08-004__Siege_Crew_Pell.png
+079,TRN-C08-005,Veteran Tars,trainer,NO,
+080,TRN-C08-006,Hospitaller Senn,trainer,YES,canonical/trainers/TRN-C08-006__Hospitaller_Senn.png
+081,TRN-C08-007,War Captain Elric,trainer,YES,canonical/trainers/TRN-C08-007__War_Captain_Elric.png
+082,TRN-C08-008,Duelist Avel,trainer,YES,canonical/trainers/TRN-C08-008__Duelist_Avel.png
+083,TRN-C08-009,Duelist Caia,trainer,YES,canonical/trainers/TRN-C08-009__Duelist_Caia.png
+084,TRN-C09-001,Temple Guard Aurel,trainer,YES,canonical/trainers/TRN-C09-001__Temple_Guard_Aurel.png
+085,TRN-C09-002,Sacred Knight Moira,trainer,NO,
+086,TRN-C09-003,Scholar-Guard Nere,trainer,YES,canonical/trainers/TRN-C09-003__Scholar-Guard_Nere.png
+087,TRN-C09-004,Zealot Caldus,trainer,YES,canonical/trainers/TRN-C09-004__Zealot_Caldus.png
+088,TRN-C09-005,Marshal Retainer Jorin,trainer,YES,canonical/trainers/TRN-C09-005__Marshal_Retainer_Jorin.png
+089,TRN-C09-006,Temple Captain Erys,trainer,YES,canonical/trainers/TRN-C09-006__Temple_Captain_Erys.png
+090,TRN-C09-007,Relic Keeper Sava,trainer,YES,canonical/trainers/TRN-C09-007__Relic_Keeper_Sava.png
+091,TRN-C09-008,Antiquarian Sol,trainer,YES,canonical/trainers/TRN-C09-008__Antiquarian_Sol.png
+092,TRN-C09-009,Champion Daven,trainer,NO,
+093,WRD-01,"Veyr, Keeper of Names",warden,YES,canonical/wardens/WRD-01__Veyr_Keeper_of_Names.jpg
+094,WRD-02,"Ossael, the Gatherer",warden,YES,canonical/wardens/WRD-02__Ossael_the_Gatherer.jpg
+095,WRD-03,"Mordren, Drum of War",warden,YES,canonical/wardens/WRD-03__Mordren_Drum_of_War.jpg
+096,WRD-04,"Caelor, Last Magistrate",warden,YES,canonical/wardens/WRD-04__Caelor_Last_Magistrate.jpg
+097,WRD-05,"Asterion, Voice of Certainty",warden,YES,canonical/wardens/WRD-05__Asterion_Voice_of_Certainty.jpg
+098,WRD-06,"Mirra, Kindly Shape",warden,YES,canonical/wardens/WRD-06__Mirra_Kindly_Shape.jpg
+099,WRD-07,"Velcar, Oath-Eater",warden,YES,canonical/wardens/WRD-07__Velcar_Oath_Eater.jpg
+100,WRD-08,"Nema, the Unremembered",warden,YES,canonical/wardens/WRD-08__Nema_the_Unremembered.jpg

@@ -1,0 +1,14 @@
+{
+  "named_targets": 100,
+  "core_story_characters": 17,
+  "named_mortal_world_trainers": 75,
+  "hell_wardens": 8,
+  "reusable_class_templates": 39,
+  "source_background": "#FF00FF",
+  "one_generation_per_target": true,
+  "runtime_use": [
+    "dialogue",
+    "pre-battle/send-out presentation"
+  ],
+  "current_status": "generation in progress; source files must be added to assets/generated/characters then processed"
+}
