@@ -4,86 +4,86 @@
     {
       "id": "U01",
       "subject": "Species register",
-      "impact": "M2 loaders can proceed with fixtures; M5/content release blocked",
-      "required_source_or_decision": "Supply Regional Dex Stats/Abilities v2 with all 187 canonical IDs, names, types, stats, abilities, catch rates. None of those canonical records is supplied here.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "187 numeric Dex IDs/names and full base-stat/ability records are recovered in Stats/Abilities COMPLETE v2; consolidate in Phase E and map art in B.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U02",
       "subject": "Evolution/learnsets/moves/types",
-      "impact": "M4–M7 content blocked",
-      "required_source_or_decision": "Supply Progression & Learnsets v3: 98 paths, 1,893 learnsets, complete move data/target enums/type chart, exact promotion/growth/XP formulas. Do not infer IDs from art labels.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "98 evolution paths, 1,893 learnset entries, validated growth/evolution v4, the move catalogue and Checklist 12 are recovered. Audit remaining per-field gaps during extraction.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U03",
       "subject": "Encounter slots",
-      "impact": "M6 content blocked",
-      "required_source_or_decision": "Supply ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx. 72 area summaries exist, but all 144 six-slot tables and conditional resolvers are absent.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "Completed encounter workbook recovered: 72 areas, 144 tables, 864 slots. Convert weights, species references and conditional resolvers; no slot authoring required.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U04",
       "subject": "Trainers/classes",
-      "impact": "M7 blocked",
-      "required_source_or_decision": "Supply locked Checklist 04 trainer/team data and full 39-class catalogue. Portrait queue supplies 75 names/IDs, not combat teams, AI tiers or class IDs.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "Checklist 04 and full human portrait/class manifest recovered; extract trainer teams, AI tiers, classes and identity mapping.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U05",
       "subject": "Items/shops/terrain",
-      "impact": "M10/M13 blocked",
-      "required_source_or_decision": "Supply locked Checklists 05/06: item IDs/values, shop stock, Trial Contracts, field-to-Warden mapping and numerical effects.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "Checklists 05/06 and Progression v3 recovered. Extract fields, values, items, shops and contracts with exact citations.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U06",
       "subject": "Story/maps/dialogue",
-      "impact": "M11–M13 blocked",
-      "required_source_or_decision": "Supply Story Bible LOCKED v1.0, Checklists 09 v1.1/10/17 and scene/flag/location IDs, map links, authored text and epitaphs. Known state enums are preserved.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "Locked story bible, character roster, Checklists 09 v1.1 + v1.2 correction, 10 and 17, and world references recovered. Distinguish authored narrative from unprovided final dialogue/map geometry.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U07",
       "subject": "Monster sprite isolation",
-      "impact": "Production battle art blocked",
-      "required_source_or_decision": "89 supplied WebPs are labelled white-background sheets/single illustrations. Keep pristine. Need canonical register and source cutouts or reviewed per-figure extraction coordinates/mattes; no ID guessing, background erasure of white creature details, or redraw.",
-      "status": "open"
+      "impact": "Preparation B/C; M1 on hold",
+      "required_source_or_decision": "The 89 source files contain the complete 187-species art set per owner correction. Map every figure to the canonical Dex, extract fronts non-destructively, validate 187/187; do not claim missing species from file count.",
+      "status": "processing_required"
     },
     {
       "id": "U08",
       "subject": "Portrait backgrounds/text",
-      "impact": "Production portraits blocked",
-      "required_source_or_decision": "All 91 files have non-exact opaque border colours. Exact RGB removal cannot remove these backgrounds. Need originals truly using #FF00FF or approval of precise reviewed masks/colour correction outside this exact-only pass. Baked labels and scale anchors also need review.",
-      "status": "open"
+      "impact": "Preparation D; M1 on hold",
+      "required_source_or_decision": "Process supplied production portraits using exact magenta removal plus constrained reviewed background/edge cleanup. Preserve interior colours, full bodies and props; record body-scale anchors and inspect every output.",
+      "status": "processing_required"
     },
     {
       "id": "U09",
       "subject": "Missing named portraits",
-      "impact": "22 current target assets absent",
-      "required_source_or_decision": "See exact IDs/names below. No replacements generated. All 39 reusable class-template portraits are also absent.",
-      "status": "open"
+      "impact": "Preparation D; M1 on hold",
+      "required_source_or_decision": "Package metadata currently records 22 absent named targets; verify against recovered 100-target manifest and supplied bytes. Do not fabricate missing portraits.",
+      "status": "recheck_in_phase_d"
     },
     {
       "id": "U10",
       "subject": "Nharos identity",
-      "impact": "One current target cannot be named with canonical runtime ID",
-      "required_source_or_decision": "CORE-007 is packaging-only. Nharos is in portrait queue but omitted from handoff characters; preserve name/source and do not invent CHR ID or conflate with Severin/Illyr.",
-      "status": "open"
+      "impact": "Preparation D; M1 on hold",
+      "required_source_or_decision": "Nharos is explicitly the underworld sovereign in the recovered locked story bible, character roster and portrait manifest. Reconcile stable ID convention; do not confuse him with Severin.",
+      "status": "identity_recovered_id_reconciliation_pending"
     },
     {
       "id": "U11",
       "subject": "Detailed mechanical locks",
-      "impact": "Dependent game implementation blocked",
-      "required_source_or_decision": "Full locked 01/07/08/11/12/13/14/15/16/17 source documents are absent. Summaries are authoritative where explicit but do not define every numerical equation, timing, exceptional roll, save serialization or clock background policy.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "Detailed Checklists 01/07/08/11/12/13/14/15/16/17 are recovered. Resolve HP increment versus summary baseline wording against the exact locked growth authority, then consolidate mechanical contracts.",
+      "status": "source_recovered_pending_extraction"
     },
     {
       "id": "U12",
       "subject": "Other presentation assets",
-      "impact": "M3/M14 production art blocked",
-      "required_source_or_decision": "Overworld/environment/UI/VFX/audio not supplied; keep separate future production requirements. No canonical back-sprite set required.",
-      "status": "open"
+      "impact": "Preparation E/F; M1 on hold",
+      "required_source_or_decision": "Overworld, environments, UI, VFX and audio remain separate production requirements; they do not justify declaring supplied species/portrait art absent. No back sprites required.",
+      "status": "future_asset_requirement"
     }
   ]
 }

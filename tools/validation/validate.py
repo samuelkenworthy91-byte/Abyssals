@@ -138,7 +138,7 @@ def validate(root=ROOT, content=False):
     if set(seen_phases)!=expected or any(n!=1 for n in seen_phases.values()):errors.append('Encounter phase coverage mismatch/duplicate')
     sources=parsed['data/manifests/source_files.json']
     unique(sources['files'],'source_id','source inventory',errors)
-    for row in [*sources['files'],*sources['prior_repository_files']]:
+    for row in [*sources['files'],*sources['prior_repository_files'],*sources.get('recovered_canon_sources',[])]:
         try:
             p=resolve_path(root,row['repository_path'])
             if not p.is_file():errors.append('Missing source '+row['repository_path']);continue
@@ -205,7 +205,7 @@ def main():
     report={'mode':'content' if args.content else 'integrity','passed':not errors,'errors':errors,'warnings':warnings}
     if args.json_report:
         args.json_report.parent.mkdir(parents=True,exist_ok=True);args.json_report.write_text(json.dumps(report,indent=2)+'\n')
-    print(('PASS' if not errors else 'FAIL')+' — '+report['mode']+f'; {len(errors)} errors, {len(warnings)} explicit source gaps')
+    print(('PASS' if not errors else 'FAIL')+' — '+report['mode']+f'; {len(errors)} errors, {len(warnings)} incomplete datasets')
     for x in (errors[:20] if errors else warnings):print('- '+x)
     if len(errors)>20:print(f'- {len(errors)-20} further errors; use --json-report for all.')
     return 1 if errors else 0

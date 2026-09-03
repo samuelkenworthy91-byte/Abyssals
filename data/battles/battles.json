@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "status": "missing_source",
-  "sources": [],
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx"
+  ],
   "records": [],
   "unresolved": [
-    "Authored encounter/team battle definitions absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "expected_count": null
 }

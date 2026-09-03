@@ -1,10 +1,12 @@
 {
   "schema_version": 1,
-  "status": "missing_source",
-  "sources": [],
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx"
+  ],
   "records": [],
   "unresolved": [
-    "Shop IDs, stock, prices and schedules absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "expected_count": null
 }

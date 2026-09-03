@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "status": "missing_source",
-  "sources": [],
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+    "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx"
+  ],
   "records": [],
   "unresolved": [
-    "Regional Dex Stats/Abilities v2 and canonical Dex IDs absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "expected_count": 187
 }

@@ -12,5 +12,21 @@
   "named_characters_with_canonical_ids": 99,
   "unresolved_core_identity": "Nharos",
   "expected_species": 187,
-  "verified_species": 0
+  "verified_species": 0,
+  "preparation_phase": "A",
+  "implementation_on_hold": true,
+  "merge_on_hold": true,
+  "recovered_canon_source_files": 35,
+  "source_species_records_verified": 187,
+  "source_evolution_records_verified": 98,
+  "source_learnset_records_verified": 1893,
+  "source_encounter_slots_verified": 864,
+  "source_monster_species_expected": 187,
+  "source_art_coverage_basis": "Owner-confirmed complete set; individual figure-to-Dex mapping pending Phase B",
+  "readiness": {
+    "source_preserved": true,
+    "canon_extracted": false,
+    "runtime_ready": false,
+    "implementation_ready": false
+  }
 }

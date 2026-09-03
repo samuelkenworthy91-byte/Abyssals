@@ -2,7 +2,8 @@
   "schema_version": 1,
   "status": "partial",
   "sources": [
-    "docs/source_archive/handoff_v1/data/canon/warden_fields.json"
+    "docs/source_archive/handoff_v1/data/canon/warden_fields.json",
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx"
   ],
   "records": [
     {
@@ -63,6 +64,6 @@
     }
   ],
   "unresolved": [
-    "Field effects, defensive multipliers and Warden mapping absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ]
 }

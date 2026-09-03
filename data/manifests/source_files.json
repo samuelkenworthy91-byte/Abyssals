@@ -4827,5 +4827,252 @@
       "sha256": "bb3bb25c63875a4ad7293853d4d1cb9c0cfa1a524460574aeeb3553958b06b97",
       "size": 10
     }
+  ],
+  "recovered_canon_sources": [
+    {
+      "filename": "ABYSSALS_CANON_CLEANUP_ADDENDUM_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CANON_CLEANUP_ADDENDUM_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 40918,
+      "sha256": "ad750df590f785637a4ea5f66bee8680a8c70b93a24a84e731bf758fcbb1b7e8"
+    },
+    {
+      "filename": "ABYSSALS_CANON_SOURCE_INDEX_LOCKED_v1.0.md",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CANON_SOURCE_INDEX_LOCKED_v1.0.md",
+      "authority": "active_authority_chain",
+      "size": 3636,
+      "sha256": "45c8065cdc49086b78d7a66cc6f65e420141070ec55ed6dc4b8ba7c027101410"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 42364,
+      "sha256": "3e766e108d42874ffd01ba5d5489758f458223b2ab5a956c74a09a697dd70c09"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+      "authority": "active_authority_chain",
+      "size": 104477,
+      "sha256": "58f62c700a36e5a39b22e1d8b8f380438a1fb87b019b8928a1d20648f599efc5"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 67274,
+      "sha256": "85ed568c013babd0b6d57dcffbe77b3135452b5587b496ebd7f31f3893c28271"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 53455,
+      "sha256": "6bd3160a6340b952916e68cd91da1f933fd107163c83418d52ca3615f0e2833f"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 55832,
+      "sha256": "21ab61e672c6e5830558384859f0c94b4593e28fd1a72ba5690ff036b6df09a0"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 48444,
+      "sha256": "363e795260c2dd5cc006e7f789d693d132bca96845dea5ee848d15f11af1e604"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 47401,
+      "sha256": "9757d2362e606da421bb766558d64dcd62ac8fd2f8cb1406e25fb7b4c97efd3e"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.docx",
+      "authority": "superseded_reference_only",
+      "size": 49381,
+      "sha256": "c2a9424f7afe6f056030f32e9e2fed62d240f33ec7838e03297d5725fd8e36b5"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx",
+      "authority": "active_authority_chain",
+      "size": 48574,
+      "sha256": "6140da69422d5b153142ade8d10e8cf19ae9dcefb001436f329440885d54063a"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
+      "authority": "active_authority_chain",
+      "size": 40664,
+      "sha256": "3dd30d8cc5e6a36107cf8a1b23431b99d57446a8d4048150f0b94468fa42c0cd"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 57265,
+      "sha256": "36e27692bbb85bb576792a0a51b263779a9af438725070ccfcd4e86cf4f8ad4c"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 50375,
+      "sha256": "e02b0358ba6dd9e0796443b4b652ecfb9d96a503aebc8deac2d5b0228e74b5ac"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 55817,
+      "sha256": "31d1e39ee7f4765ba94fffe1517dac180bda7a91edbff7ecc67afba92a0617ec"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 54324,
+      "sha256": "20c5955bd54999a9011977b4d98e546630c6ddf2b933e5d38d6b27d2b8b00092"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 49494,
+      "sha256": "d448fb66eba92ea87a973d8bf06c3bd7b8a9d400fa13b120e432c202755ce18d"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 54782,
+      "sha256": "bfe17dd1a6a030638920b92810c1001a39a4f6224709cb377bdfc389573cc1b2"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_16_Battle_Presentation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_16_Battle_Presentation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 51794,
+      "sha256": "1c4c9e05d556430f9042bcaf800d6587351890ef679230709bdf5be00b1da536"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 47012,
+      "sha256": "067931de32c2365df2c6794d1383e8470dc2636a7698d9ff604ecd0c0d198678"
+    },
+    {
+      "filename": "ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 44341,
+      "sha256": "908f1044fcc2fa6a76ce03e773f9c6dbb1580f7617f2428617ffc516ba06946c"
+    },
+    {
+      "filename": "ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 73929,
+      "sha256": "da8620cd85b1b244338ae1471edcc71f852e574aba816a6967649a49f215d1fd"
+    },
+    {
+      "filename": "CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.md",
+      "repository_path": "docs/source_archive/canon_sources/active/CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.md",
+      "authority": "active_authority_chain",
+      "size": 11194,
+      "sha256": "c5a95aefd9e771d58f26d8b8d694cd2badd54d1ed3ab04cb72c5bea12ffb2a2d"
+    },
+    {
+      "filename": "ENCOUNTER_TABLE_REFERENCE_v1.1.md",
+      "repository_path": "docs/source_archive/canon_sources/active/ENCOUNTER_TABLE_REFERENCE_v1.1.md",
+      "authority": "active_authority_chain",
+      "size": 9721,
+      "sha256": "202e8e2a1d537d1f9ab802daae757efebf5b2102ee9f211ed38b437201be3277"
+    },
+    {
+      "filename": "Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+      "authority": "active_authority_chain",
+      "size": 24586,
+      "sha256": "b621315c5891425a40fa385e7f8a7b63700076b4b9f606cf7c7d9c256da55411"
+    },
+    {
+      "filename": "Pokemon_Fan_Game_AI_VFX_Prompt_Log_354_Moves.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_AI_VFX_Prompt_Log_354_Moves.xlsx",
+      "authority": "active_authority_chain",
+      "size": 46377,
+      "sha256": "894fe49964c3073ef31b56d4bb42de9eef2363d6f0e2b01f4c92bde282c3061c"
+    },
+    {
+      "filename": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/Pokemon_Pre_Programming_Planning_Checklists_Reference.docx",
+      "authority": "superseded_reference_only",
+      "size": 49248,
+      "sha256": "67090b61709f0f7feb184eef6b0562d1a62713e8f7b51f432cdc3fc44f5ff9ef"
+    },
+    {
+      "filename": "Pokemon_Story_Bible_Character_Roster_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Character_Roster_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 53458,
+      "sha256": "9430bfe9a6c54ead52eb40332e3466a1f5218a32f1c40e11606a295a18d1fe42"
+    },
+    {
+      "filename": "Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 76743,
+      "sha256": "3035be45916658587e1309f4219599343b995d4fabd9597d936cafd8b683bb40"
+    },
+    {
+      "filename": "Pokemon_Story_Bible_Full_Plot_QC_v0.1.docx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/Pokemon_Story_Bible_Full_Plot_QC_v0.1.docx",
+      "authority": "superseded_reference_only",
+      "size": 76512,
+      "sha256": "073e83c09a2b127bdc54ebf4aaa9c415bacb658824a97b964304be4fdf8f583e"
+    },
+    {
+      "filename": "Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+      "authority": "active_authority_chain",
+      "size": 61100,
+      "sha256": "94c2e81eccae37f86965d3ccbacdf2202b23f0797850c45665cede0540d72040"
+    },
+    {
+      "filename": "Regional_Dex_Progression_Learnsets_v3.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+      "authority": "active_authority_chain",
+      "size": 99235,
+      "sha256": "c93115399f4ede890a202a160c096577d2f341cf11754ae699c05bd4c8812b1c"
+    },
+    {
+      "filename": "Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+      "authority": "active_authority_chain",
+      "size": 89383,
+      "sha256": "4e97ca8a3784106693ed8da9437868b0925fee92a358798ddea2656dce5578fe"
+    },
+    {
+      "filename": "Regional_Dex_Stats_and_Abilities_v1.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/Regional_Dex_Stats_and_Abilities_v1.xlsx",
+      "authority": "superseded_reference_only",
+      "size": 35018,
+      "sha256": "f028fe39c3cc7f54326f2a5d2b6ab170a6b35442c1246652c55ad0f22dda2ca7"
+    },
+    {
+      "filename": "WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+      "repository_path": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+      "authority": "active_authority_chain",
+      "size": 7649,
+      "sha256": "873ee4b1557b6b6abb9cb978eb04b74082aad9a5221cd9fa453479c2511398cc"
+    }
   ]
 }

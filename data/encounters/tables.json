@@ -2,7 +2,8 @@
   "schema_version": 1,
   "status": "partial",
   "sources": [
-    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json"
+    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json",
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx"
   ],
   "records": [
     {
@@ -1159,7 +1160,7 @@
     }
   ],
   "unresolved": [
-    "144 weighted slot tables absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "expected_count": 144
 }

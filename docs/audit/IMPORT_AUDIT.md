@@ -1,3 +1,5 @@
+> Phase A update (3 September 2026): see [PHASE_A_REAUDIT.md](PHASE_A_REAUDIT.md). The original file accounting below remains valid; earlier source-absence and exact-only cleanup conclusions are superseded. M1 is on hold.
+
 # Import audit — 2026-09-02
 
 ## Scope and evidence
@@ -21,15 +23,15 @@ data/manifests/source_files.json lists all 234 archive members (archive, origina
 Two exact duplicate groups: three empty handoff .gitkeep files; Brann canonical and ALT-01 portrait. Brann has two source records but one active target. Seven superseded C03 names are retained only as legacy. Five alternate images and one Severin form variant are not additional unique characters. CORE queue labels are translated to CHR/LDR IDs where the handoff establishes identity; Nharos remains unresolved. All 75 trainer and eight Warden queue IDs/names are preserved, without inferred classes or teams.
 
 ## Art readiness
-Cannot confirm exactly 187 canonical species: the species ID/name register is missing, and supplied sheets are not isolated runtime sprites. No back sprites generated. All 91 portrait backgrounds fail exact-only keying; zero runtime portraits are emitted. There are 22 missing named portrait targets and no 39-class template artwork. Full-body source sheets include labels and possible faction/role departures; no unrequested repainting was performed.
+The owner confirms the 89 sheets represent all 187 species. The numeric Dex is recovered; individual mapping and extraction are pending B/C. All 91 supplied portraits remain production sources for constrained cleanup in D. The package records 22 absent named targets; no replacements have been fabricated.
 
 ## Structured data coverage
 Existing machine-readable material: 16 core character records; faction palette rules; core mechanics constants; state enums; move/relearn rules; ten major location names; 72 encounter-area summaries; eight field names; portrait production totals. Converted from prose: transaction boundary contract, topic-based canon, explicit implementation gates. Portrait CSV adds 75 named trainers/eight Wardens and packaging aliases, producing 99 established character IDs plus unresolved Nharos.
 
-Missing detailed datasets: 187 species stats/abilities; 98 evolution paths; 1,893 learnsets; complete moves/types; 144 weighted encounter slot tables; trainer teams/AI/classes; items/shops; Story Bible scenes/dialogue/maps; field numeric effects. Partial JSON uses null/empty records with missing_source status. No fake entries stand in for missing content.
+Detailed source files are now recovered for 187 species, 98 paths, 1,893 learnsets, 354 moves, 144 encounter tables, trainer teams/AI/classes, items/shops, story/flags and field effects. Phase E will replace stale missing_source envelopes through deterministic extraction. See the Phase A evidence table.
 
 ## Superseded and normalization decisions
-Twelve documented resolutions are in CONFLICTS_AND_RESOLUTIONS.md. Source filenames remain pristine, including punctuation. Runtime filenames use canonical ID + sanitized readable name only when identity is known. Canon docs and active scripts use the new layout; archived agents, old asset paths, fuzzy-key defaults and fake-ready build commands are explicitly NON-AUTHORITATIVE.
+Twelve documented resolutions are in CONFLICTS_AND_RESOLUTIONS.md. Source filenames remain pristine, including punctuation. Runtime filenames use canonical ID + sanitized readable name only when identity is known. Canon docs and active scripts use the new layout; archived agents, old asset paths, unreviewed global colour-key defaults and fake-ready build commands are explicitly NON-AUTHORITATIVE.
 
 ## Validation interpretation
-`npm run validate` checks import integrity, schemas, paths, IDs, references and source checksums. `npm run validate:content` additionally requires complete canonical content and runtime assets, and must fail on this partial source set. This separation permits safe M1 infrastructure work while preventing a false claim of full implementation readiness. See VALIDATION_REPORT.md for actual executed results.
+`npm run validate` checks import integrity, schemas, paths, IDs, references and source checksums. `npm run validate:content` additionally requires complete canonical content and runtime assets, and must report unfinished extraction and runtime processing accurately. M1 remains on hold until owner review. See VALIDATION_REPORT.md for actual executed results.

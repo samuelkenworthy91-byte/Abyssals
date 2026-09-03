@@ -2,7 +2,8 @@
   "schema_version": 1,
   "status": "partial",
   "sources": [
-    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv"
+    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx"
   ],
   "records": [
     {
@@ -682,6 +683,6 @@
     }
   ],
   "unresolved": [
-    "Trainer database, classes, tiers, teams, items and moves missing."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ]
 }

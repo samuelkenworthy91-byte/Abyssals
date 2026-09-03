@@ -2,11 +2,11 @@
 1. Root AGENTS.md and current explicit user decisions.
 2. This canon directory: concise implementation rules and SUPERSESSIONS.md.
 3. Structured datasets named in data/manifests/datasets.json, with per-dataset completeness and provenance. Null is unknown, never a default game value.
-4. Pristine historical sources under docs/source_archive/ only as cited evidence. Superseded source prompts and scripts never govern new development.
+4. Pristine authorities under `docs/source_archive/canon_sources/active/`, following the recovered Canon Source Index and its explicit amendments. These remain content authority while being consolidated. Superseded source prompts and scripts never govern new development.
 
 On conflict: later explicitly LOCKED decision, then higher version, then explicit supersession. Record evidence and resolution in docs/audit/CONFLICTS_AND_RESOLUTIONS.md. Timestamps alone do not establish design authority. If no defensible resolution exists, record an unresolved item and block the dependent behaviour.
 
-Each topic below points to its handoff evidence. The handoff summarizes locks but omits most detailed workbooks/checklists. An agent must not assume those originals were inspected or that their exact numeric data is available.
+Each topic below points to its handoff evidence. Phase A recovered the detailed workbooks/checklists cited by the handoff. Their evidence takes precedence over mistaken missing-source markers. Reconciliation and structured extraction continue in Phase E; consult `docs/audit/PHASE_A_REAUDIT.md` for known discrepancies. M1 remains on hold.
 
 This preparation pass may choose reversible engineering conventions (folder layout, technical namespaced IDs, schemas and canvas), but never gameplay values. No full game has been implemented.
 

@@ -3,7 +3,9 @@
   "status": "partial",
   "sources": [
     "docs/source_archive/handoff_v1/data/canon/characters.json",
-    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv"
+    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+    "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Character_Roster_v1.0.docx"
   ],
   "records": [
     {
@@ -677,7 +679,7 @@
     }
   ],
   "unresolved": [
-    "Nharos has no canonical game ID/role; full Story Bible absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "unresolved_identities": [
     {

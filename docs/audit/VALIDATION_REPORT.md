@@ -1,3 +1,5 @@
+> Phase A update: import integrity, recovered source checksums, source derivations and all 12 existing tooling tests pass. Strict runtime/content readiness remains incomplete pending B–F. The detailed report below is the historical initial-import baseline.
+
 # Validation report — 2026-09-02
 
 This records the actual local preparation checks. It is not a gameplay/build certificate.

@@ -1,21 +1,17 @@
-# Portrait pipeline and current gate
-All 91 originals are preserved in assets/portraits/source/. Package evidence establishes 78 current targets, one Severin King Below form variant, five alternates and seven superseded C03 portraits. Of the 78 current targets, 77 map to known game IDs; Nharos has only a packaging label. Brann's alternate is a byte-for-byte duplicate. Legacy files are never allowed to overwrite current TRN IDs.
+# Portrait production pipeline
 
-## Measured problem
-Every supplied image has opaque border pixels other than RGB (255,0,255). Most have almost no exact-magenta pixels. Even the newly supplied Beric's dominant border is (255,0,254). The JPG Wardens also vary substantially. Simply deleting exact magenta leaves the background; a tolerance would exceed this task's explicit rule. Some sources include baked-in name labels. No clean runtime portraits are claimed or emitted.
+Phase A correction: supplied portraits are production art. Preserve all 91 originals; do not require replacement exact-magenta sources. Current package accounting is 78 named targets, one Severin King Below form variant, five alternates and seven superseded portraits. Reconcile identities and classes against the recovered full portrait manifest in Phase D.
 
-## Selected engineering convention
-Transparent RGBA PNG canvas: **1536×2048**; common body crown-to-soles height **1536 px**; soles baseline **y=1920**; minimum outer padding **64 px**. This is a reversible asset convention, not a new game-design lock. Record reviewed crown_y, soles_y and body_center_x in source-pixel coordinates. Use body height excluding raised weapons/hats to compute one uniform scale; keep every opaque prop on the canvas. Do not stretch width/height separately or shrink a character just to fit a tall weapon. If any reviewed figure cannot fit, expand the common canvas for the batch or explicitly review the convention.
+## Cleanup contract
 
-Exact keying changes alpha only for RGB=(255,0,255); every other source pixel keeps its original channels. Crop only transparent margins. Resize with Pillow LANCZOS and place at the computed baseline/centre. A completely clean source with no label and confirmed full body/props is required before output. A background-border test is a conservative rejection gate, not proof that the whole image is clean; explicit visual review flags remain required.
+Remove exact #FF00FF background pixels where present. For compression and antialiasing, use source-specific, constrained background masks connected to the image boundary, with reviewed treatment of enclosed background gaps. Near-magenta colour alone is never sufficient to remove interior costume pixels. Preserve full head-to-toe artwork and props. Exclude baked labels with reviewed regions that do not touch the figure. Inspect outputs against originals on light and dark backgrounds and a transparency checkerboard.
 
-## Reproduce
-```bash
-python3 tools/art/process_portraits.py --report .reports/portrait_audit.json
-python3 tools/art/process_portraits.py --write --report .reports/portrait_processing.json
-npm run validate
-```
-The current --write run reports blocked records and writes zero image outputs. Planned runtime filenames in the manifest become actual runtime_filename values only after successful output. No original is edited. Processing status and checksums remain reviewable; no placeholders or empty PNGs are used.
+The current processor implements only the earlier exact-key gate and is awaiting replacement in Phase D. A rejection by that old gate means processing is unfinished, not that the source portrait is unusable.
 
-## What is needed next
-Obtain pristine exact-background originals, or obtain explicit authorization for individually reviewed precise mattes; do not broadly erase similar pink/purple costume colours. Remove baked labels only through a reviewed matte that preserves all body/props. Add body anchors, verify side-by-side scale, run processor and inspect each output against its source on dark/light checkerboards. Keep this work separate from the M1 app shell.
+## Common canvas and body scale
+
+Current engineering convention: transparent RGBA PNG, 1536×2048, body crown-to-soles height 1536 px, soles baseline y=1920, outer padding at least 64 px. Record source-pixel crown, soles and body-centre anchors. Compute one uniform scale from the body, excluding raised props and costume extensions; preserve aspect ratio and all intentional props. If the convention cannot contain the complete collection at a consistent body scale, revise the shared canvas with measured evidence.
+
+## Runtime release gate
+
+Each output must have a canonical or explicitly unresolved identity, classification (canonical / variant / alternate / superseded), reproducible cleanup parameters/masks and body anchors, source/runtime checksums, and full-body visual QA. Missing targets remain missing. No source image is overwritten. No generated substitutes are allowed.

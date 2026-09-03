@@ -1,10 +1,12 @@
 {
   "schema_version": 1,
-  "status": "missing_source",
-  "sources": [],
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx"
+  ],
   "records": [],
   "unresolved": [
-    "Canonical type IDs and complete matchup chart absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "expected_count": 18
 }

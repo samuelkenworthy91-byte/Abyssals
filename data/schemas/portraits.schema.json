@@ -79,7 +79,8 @@
             "enum": [
               "source_only",
               "blocked_nonexact_background",
-              "ready"
+              "ready",
+              "pending_constrained_background_cleanup"
             ]
           },
           "selection_status": {

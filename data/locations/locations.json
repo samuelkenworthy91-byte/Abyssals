@@ -3,7 +3,8 @@
   "status": "partial",
   "sources": [
     "docs/source_archive/handoff_v1/data/canon/locations.json",
-    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json"
+    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json",
+    "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md"
   ],
   "records": [
     {
@@ -68,55 +69,55 @@
     },
     {
       "id": "LOC-CIRCLE-I-THRESHOLD",
-      "name": "Circle I — Threshold",
+      "name": "Circle I \u2014 Threshold",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-II-WANT",
-      "name": "Circle II — Want",
+      "name": "Circle II \u2014 Want",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-III-WRATH",
-      "name": "Circle III — Wrath",
+      "name": "Circle III \u2014 Wrath",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-IV-DOMINION",
-      "name": "Circle IV — Dominion",
+      "name": "Circle IV \u2014 Dominion",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-V-DOGMA",
-      "name": "Circle V — Dogma",
+      "name": "Circle V \u2014 Dogma",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-VI-GRIEF",
-      "name": "Circle VI — Grief",
+      "name": "Circle VI \u2014 Grief",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-VII-BETRAYAL",
-      "name": "Circle VII — Betrayal",
+      "name": "Circle VII \u2014 Betrayal",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-VIII-SILENCE",
-      "name": "Circle VIII — Silence",
+      "name": "Circle VIII \u2014 Silence",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-IX-FAILING-RECORD",
-      "name": "Circle IX — Failing Record",
+      "name": "Circle IX \u2014 Failing Record",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
@@ -134,6 +135,6 @@
     }
   ],
   "unresolved": [
-    "Replace/alias import-assigned keys against original location IDs; map graph absent."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ]
 }

@@ -1,10 +1,14 @@
 {
   "schema_version": 1,
-  "status": "missing_source",
-  "sources": [],
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+    "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx"
+  ],
   "records": [],
   "unresolved": [
-    "Progression & Learnsets v3 absent; do not infer evolution conditions from sheet arrows."
+    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
   ],
   "expected_count": 98
 }

@@ -29,7 +29,7 @@
       "file_type": "JPEG",
       "source_sha256": "5e1caf6182673723145848bdf7ef12a35398f4109bb60f7c7e2c052976a9730b",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 15347,
@@ -51,9 +51,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -77,7 +77,7 @@
       "file_type": "JPEG",
       "source_sha256": "f4ecd45b75f644e33f7d59c226fe1a43df73fd0efdf80cff961fe26ae755f521",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -115,10 +115,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -127,7 +126,7 @@
       "id": "CHR-PATE",
       "source_identity_label": "CORE-002",
       "canonical_name": "Pateric 'Pate' Vann",
-      "source_name": "Pateric “Pate” Vann",
+      "source_name": "Pateric \u201cPate\u201d Vann",
       "role": "Core companion/rival",
       "trainer_class_id": null,
       "selection_status": "canonical",
@@ -142,7 +141,7 @@
       "file_type": "JPEG",
       "source_sha256": "9cd4b325e6013c1c88f468efb8ac1fc2d33692f2b094cb3e52359b05a5c3b910",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -180,9 +179,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -206,7 +205,7 @@
       "file_type": "JPEG",
       "source_sha256": "5ca3fe0d0ee964e731dc362125a9d6d49c72d4fe04788b50f9697c4719fa9703",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -244,9 +243,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -255,7 +254,7 @@
       "id": "CHR-TRADE",
       "source_identity_label": "CORE-003",
       "canonical_name": "Traden 'Trade' Cor",
-      "source_name": "Traden “Trade” Cor",
+      "source_name": "Traden \u201cTrade\u201d Cor",
       "role": "Core companion/rival",
       "trainer_class_id": null,
       "selection_status": "canonical",
@@ -270,7 +269,7 @@
       "file_type": "JPEG",
       "source_sha256": "fc45933c29fff9874c9ea887d52a548c3d1009158580b69736a51447d125fed1",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -308,9 +307,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -334,7 +333,7 @@
       "file_type": "JPEG",
       "source_sha256": "524c7df87903c8377164a689c31870be19d79021f3f9487e6380f9294c8e03f5",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -372,11 +371,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Nharos: packaging label only; canonical game ID and role absent.",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -400,7 +397,7 @@
       "file_type": "JPEG",
       "source_sha256": "cf997245ef0303ac549c4848c293dc27f1f0cc0534cc547d4028dc10067cf759",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -438,8 +435,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -463,7 +460,7 @@
       "file_type": "JPEG",
       "source_sha256": "839bc19a4314f02c7157192ebf0e7d34a305e6e63419e69034b41597b36fd428",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -501,8 +498,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -526,7 +523,7 @@
       "file_type": "JPEG",
       "source_sha256": "d1c02224b307cd41c2779e5b39f0922cd239386f7f1e40fa9811a4fbfdade7fa",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -564,8 +561,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -589,7 +586,7 @@
       "file_type": "JPEG",
       "source_sha256": "f49f53644fff1922299171a22b67d79a7e76a77dadb2ef6dd86ab0aeaef7f3fb",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -627,8 +624,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -652,7 +649,7 @@
       "file_type": "JPEG",
       "source_sha256": "253896b9e3c9d845a620c05033b746295f7a953c554281428e78b3063a978111",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -690,9 +687,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -716,7 +713,7 @@
       "file_type": "JPEG",
       "source_sha256": "b36e8d17d3849144eff22abd22be4d3379fdd6160db7c1edb2a5862295be6e0e",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -754,8 +751,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -779,7 +776,7 @@
       "file_type": "JPEG",
       "source_sha256": "4edc8c751409a9b87b3f2c457fc606309d81c845da5a878e6ed9437de5b549ae",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -817,8 +814,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -842,7 +839,7 @@
       "file_type": "JPEG",
       "source_sha256": "dd50423cab692b2654e8a89deeb5d5b6390b766e841862e7deb42f089c4abbd9",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -880,8 +877,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -905,7 +902,7 @@
       "file_type": "PNG",
       "source_sha256": "f909b2fe264642915217da3fc81780b1c95da449321e0eb6b86ba94edb02d2a5",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -943,8 +940,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -968,7 +965,7 @@
       "file_type": "PNG",
       "source_sha256": "58e094e2f0a19dfd1741f0853e3476ed757ed3b5780b2be3bd719aa89d5971bf",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1006,8 +1003,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1031,7 +1028,7 @@
       "file_type": "PNG",
       "source_sha256": "e1c477c8c2111192f44ba031864ef13abb9d5b7e55f29ed909a810d4e2c6d8fe",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1069,8 +1066,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1094,7 +1091,7 @@
       "file_type": "PNG",
       "source_sha256": "431c913a07524e6b336fa1c0d3ba834ac4a71c3961aea932b29b9fdff4695527",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1132,8 +1129,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1157,7 +1154,7 @@
       "file_type": "PNG",
       "source_sha256": "a584ecea6974a79485a50a0812f426b8cd05f81a37aa3f048def9975b78d79a2",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1195,8 +1192,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1220,7 +1217,7 @@
       "file_type": "PNG",
       "source_sha256": "04493a6239a525b09d5c39cd725a9e335978eb1ee025830a0601d996aeccb00f",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1258,8 +1255,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1283,7 +1280,7 @@
       "file_type": "PNG",
       "source_sha256": "7e58c08a64377a34c3f3ac29a21078819dba90d8b7d8acb086af4d98f277baf8",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1321,8 +1318,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1346,7 +1343,7 @@
       "file_type": "PNG",
       "source_sha256": "176e7b41c1aaaea1ec3ce1ed14c689519a298711f126a0489e263474db24ff56",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1384,8 +1381,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1409,7 +1406,7 @@
       "file_type": "PNG",
       "source_sha256": "ed07fc0105ad13cbc948ce6fcb87a3f067beca820064f4fc9dbe31303711b880",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1447,8 +1444,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1472,7 +1469,7 @@
       "file_type": "PNG",
       "source_sha256": "099d66956872031bf4f307294732d3d670632588eb55fc2666a6e37fb53283dd",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1510,8 +1507,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1535,7 +1532,7 @@
       "file_type": "PNG",
       "source_sha256": "af0ac5c88c9967f65da49f886141db5b8a6efec2929f1b45f81abfbe9bee366d",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1573,10 +1570,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -1600,7 +1596,7 @@
       "file_type": "PNG",
       "source_sha256": "14edc09ee1fb92ca61c9c23b8cb60d8b64bf9b237efccb723e33db68a3597b11",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1638,8 +1634,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1663,7 +1659,7 @@
       "file_type": "PNG",
       "source_sha256": "0988cfa98fc8bdb72f7544f0850fd4d68b59fba0f4fe91a55be20729f5411749",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1701,9 +1697,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -1727,7 +1723,7 @@
       "file_type": "PNG",
       "source_sha256": "5cf2a2d3c9fe1e0a7243cccb57be1c23aae5aaa918af80e2124497b5c5ad28b8",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -1765,8 +1761,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1790,7 +1786,7 @@
       "file_type": "PNG",
       "source_sha256": "f0553460d47cf92e3b2c898483680bf6c004edea61344b470950af1a9e287526",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 12,
@@ -1828,8 +1824,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1853,7 +1849,7 @@
       "file_type": "PNG",
       "source_sha256": "18e1067df88037ed402a595a7cdbb8c5b2b27cf571deb62bba8d9a8c1bbc0aa5",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 33,
@@ -1891,8 +1887,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1916,7 +1912,7 @@
       "file_type": "PNG",
       "source_sha256": "8f0143293d62aaadd5f860caa396542923dba262c93803019bab0a0e709763ec",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 87,
@@ -1954,8 +1950,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -1979,7 +1975,7 @@
       "file_type": "PNG",
       "source_sha256": "f709329ec95a697dc797ef94bac11173438d70868226183c5e474112886b9947",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2017,10 +2013,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -2044,7 +2039,7 @@
       "file_type": "PNG",
       "source_sha256": "49c9b5dc449942f3a6351ea60860b3b25fb2e789cdb7e73edf938b48adea8c8b",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2082,9 +2077,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": [
         "PORTRAIT-VARIANTS_AND_ALTERNATES_TRAINERS_TRN_C02_008_VETERAN_BRANN_ALT_01_PNG"
@@ -2110,7 +2105,7 @@
       "file_type": "PNG",
       "source_sha256": "fb23349fde11d208f425cf2daf73f4024ac129af8c21f39cfa305cb260b29fe1",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2148,8 +2143,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2173,7 +2168,7 @@
       "file_type": "PNG",
       "source_sha256": "008e2a357463e40047646c9b9a5e38b714c8991fc68b86410ac30d96e45f0111",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2211,9 +2206,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -2237,7 +2232,7 @@
       "file_type": "PNG",
       "source_sha256": "964ca117426955367d28556eb5e5a5c5fce996cb2ddec2fcbb03e58f0d04197d",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 2,
@@ -2275,8 +2270,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2300,7 +2295,7 @@
       "file_type": "PNG",
       "source_sha256": "8d38f7bb192fefbb773e7f1ba362c6991e57f9c275944e9558864ba9801d16aa",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2338,9 +2333,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -2364,7 +2359,7 @@
       "file_type": "PNG",
       "source_sha256": "97fad809ecc73a3f1eb74230da8cb7bfc9f62f09e478ba80f9542419a6b62b0f",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2402,11 +2397,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -2430,7 +2423,7 @@
       "file_type": "PNG",
       "source_sha256": "fbb52bebdb7f47500e7f346051c164266e4276df5c17d5ea47021567b649778d",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2468,8 +2461,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2493,7 +2486,7 @@
       "file_type": "PNG",
       "source_sha256": "b4192974f39e3e7b7ef5398c16c0a38d8ee285b83876ea5b6f3d068b4895946b",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2531,8 +2524,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2556,7 +2549,7 @@
       "file_type": "PNG",
       "source_sha256": "efa22709e46fe828f118ed3e98ad5a4607059a5580f7674c0ecebdc2d9928fa0",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2594,8 +2587,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2619,7 +2612,7 @@
       "file_type": "PNG",
       "source_sha256": "fa285157bf411f80efb43ebe3019008431905cf5d48348678abd43b8bbc3076b",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2657,8 +2650,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2682,7 +2675,7 @@
       "file_type": "PNG",
       "source_sha256": "f99d6728833a32eda96bd2e8e5fc6e857488beb2d5ec53d168b647773a1551a4",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2720,8 +2713,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2745,7 +2738,7 @@
       "file_type": "PNG",
       "source_sha256": "9b935ab63e6c6739536b15a8eaa2fce92d9518542378f7eea1a2b28f801447ed",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2783,8 +2776,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2808,7 +2801,7 @@
       "file_type": "PNG",
       "source_sha256": "c724118f9577d2c268e224ce3693461416a7c0364d604f45787705cc7e6f6dae",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2846,8 +2839,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2871,7 +2864,7 @@
       "file_type": "PNG",
       "source_sha256": "1c65ae07b3f20a6c1ab1ff524b41be73fbafea44aca6730e8c5d120e5a831e2c",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2909,8 +2902,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2934,7 +2927,7 @@
       "file_type": "PNG",
       "source_sha256": "d7d17018f0773f913a2020230ef672f0265c7366a78e02f2ac77f39dc34082f9",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -2972,8 +2965,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -2997,7 +2990,7 @@
       "file_type": "PNG",
       "source_sha256": "82d9a6e7868f4e89048acd56fbe3df703d54de51cfd8dbd011deb0fb4f4e6515",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3035,8 +3028,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3060,7 +3053,7 @@
       "file_type": "PNG",
       "source_sha256": "65c7ea28dab6674dcb17d11d08de511258a680ec1a1932947ad52ceb6f25743c",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3098,8 +3091,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3123,7 +3116,7 @@
       "file_type": "PNG",
       "source_sha256": "107fb4289b0cc0d8ce7e216a2dc4924a270b5ad9e51e79e59242022302f3c07d",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3161,8 +3154,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3186,7 +3179,7 @@
       "file_type": "PNG",
       "source_sha256": "84e876ec0c7540026ad74042e83391245e83ef16caa1ff11ee1d4a02aa265fd7",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3224,8 +3217,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3234,7 +3227,7 @@
       "id": "CHR-SEVERIN",
       "source_identity_label": "CORE-005-VARIANT",
       "canonical_name": "Severin Vale",
-      "source_name": "Severin Vale — King Below",
+      "source_name": "Severin Vale \u2014 King Below",
       "role": "Guide; later Underworld King / King Below",
       "trainer_class_id": null,
       "selection_status": "variant",
@@ -3249,7 +3242,7 @@
       "file_type": "PNG",
       "source_sha256": "846b338bcef6de0e478cf2da362cf0707202aa676c9958df4e66a006e20bf7fb",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 6,
@@ -3287,8 +3280,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3312,7 +3305,7 @@
       "file_type": "PNG",
       "source_sha256": "e0531adca8f5c6a0d2b439362965715492c9a6e8e4c226505d6c122f7e7a9b0b",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3350,9 +3343,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -3376,7 +3369,7 @@
       "file_type": "PNG",
       "source_sha256": "73ae9d867e7b60c16b3ac9aba988a71db72ba7949e99b66b893a686633feae68",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3414,11 +3407,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -3442,7 +3433,7 @@
       "file_type": "PNG",
       "source_sha256": "49c9b5dc449942f3a6351ea60860b3b25fb2e789cdb7e73edf938b48adea8c8b",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3480,10 +3471,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": [
         "PORTRAIT-CANONICAL_TRAINERS_TRN_C02_008_VETERAN_BRANN_PNG"
@@ -3509,7 +3499,7 @@
       "file_type": "PNG",
       "source_sha256": "5886070ad72d1c4746c51c2d2485198e1f378c0aa51644e229400fe3b4f082d4",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 41,
@@ -3547,8 +3537,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3572,7 +3562,7 @@
       "file_type": "PNG",
       "source_sha256": "2d466b1a4db212f84e517ff3ee5f282c86997182a534157a9cced61f46b7ed82",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3610,11 +3600,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -3638,7 +3626,7 @@
       "file_type": "PNG",
       "source_sha256": "45b9165878a03967e2f44b6f2d6e92dd9b22278fe785c1a8602732af7e16c553",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 72,
@@ -3676,8 +3664,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3701,7 +3689,7 @@
       "file_type": "PNG",
       "source_sha256": "ea8b7b2ec55e7d9635333278954e45d29f1a488ede59d0131cc6e34e35154f75",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 101,
@@ -3739,8 +3727,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3764,7 +3752,7 @@
       "file_type": "PNG",
       "source_sha256": "db61d128a5f44206665a8e8d6a8e674d52d6a58900066cc76677ccc1f00bcda5",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3802,9 +3790,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -3828,7 +3816,7 @@
       "file_type": "PNG",
       "source_sha256": "1ae9301f290bdf44f2dc35130586fcca866cd93ee01b59e94b2a5e320183241a",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 91,
@@ -3866,8 +3854,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3891,7 +3879,7 @@
       "file_type": "PNG",
       "source_sha256": "ce53cbdb5e0ee31eaa9c53ae9bcf02b7c46fba0d6d23a8d4d556b0e63f723af9",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 31,
@@ -3929,8 +3917,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -3954,7 +3942,7 @@
       "file_type": "PNG",
       "source_sha256": "602c8a741756bc7ba04a4fe26543002d1684e3704907e5fae72faf56f019a84c",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -3992,11 +3980,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -4020,7 +4006,7 @@
       "file_type": "PNG",
       "source_sha256": "3ef606377165018256ea534a523a6d3b8f87ad998f20ec6d7fa697e583fa13fe",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -4058,9 +4044,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -4084,7 +4070,7 @@
       "file_type": "PNG",
       "source_sha256": "77de388baaa96124154be8fbbb69ecdeda3b2262de8ae1f80da4d56f488a0fb8",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -4122,9 +4108,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -4148,7 +4134,7 @@
       "file_type": "PNG",
       "source_sha256": "5faaf9bb04edfefcd21cf38da783bb120109cb2f6a7fa880325b8fc33e1d5e71",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 16,
@@ -4186,8 +4172,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4211,7 +4197,7 @@
       "file_type": "PNG",
       "source_sha256": "5f8dc0c0d3d05314abc42ffefd5473e949dac62b06f165459f73521d7c019418",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 20,
@@ -4249,8 +4235,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4274,7 +4260,7 @@
       "file_type": "PNG",
       "source_sha256": "1e1db894c397c64aeb03f58a89539353d1d614c285815163b249d0dd5a040e69",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 30,
@@ -4312,8 +4298,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4337,7 +4323,7 @@
       "file_type": "PNG",
       "source_sha256": "4d87372135e31b4cd183815ca2ae01f55939ce66be872eb28ea4eca9937cbf10",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 1,
@@ -4375,8 +4361,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4400,7 +4386,7 @@
       "file_type": "PNG",
       "source_sha256": "181b692c148f08c98ffc042d76a40f98041fe4f77f83071677d0395ac819ecc3",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -4438,8 +4424,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4463,7 +4449,7 @@
       "file_type": "PNG",
       "source_sha256": "2432cf8a18650446be12ca58b25a48921ac7db2ff23d214150d38b8b31866f83",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 24,
@@ -4501,8 +4487,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4526,7 +4512,7 @@
       "file_type": "PNG",
       "source_sha256": "f109832e126598b607cc571c387f33ed2a3317f60c574c9a1b44ead1fe1f4778",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 4,
@@ -4564,8 +4550,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4589,7 +4575,7 @@
       "file_type": "PNG",
       "source_sha256": "7671f8ae7564b4e5f0a8d0ecaa3e14b36c8d09c90b43184bafd18df7d04a97e3",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 29,
@@ -4627,8 +4613,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4652,7 +4638,7 @@
       "file_type": "PNG",
       "source_sha256": "8974557291ffb0fff9ce47294fa1547d9175b4bbae4cc4d499976d5543d3230a",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 2,
@@ -4690,8 +4676,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4715,7 +4701,7 @@
       "file_type": "PNG",
       "source_sha256": "a392ab9845006c5a13f904704bebc0d7594843e59564ec40c4257dd67613101d",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -4753,9 +4739,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Nharos: packaging label only; canonical game ID and role absent.",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4764,7 +4749,7 @@
       "id": "CHR-SEVERIN",
       "source_identity_label": "CORE-005",
       "canonical_name": "Severin Vale",
-      "source_name": "Severin Vale — Guide Form",
+      "source_name": "Severin Vale \u2014 Guide Form",
       "role": "Guide; later Underworld King / King Below",
       "trainer_class_id": null,
       "selection_status": "canonical",
@@ -4779,7 +4764,7 @@
       "file_type": "PNG",
       "source_sha256": "3583a5d12d48d537da86c610fcd05f1cdaf2237f7ac365ff407c3c4e4b4a22aa",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 4,
@@ -4817,8 +4802,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -4842,7 +4827,7 @@
       "file_type": "PNG",
       "source_sha256": "597006c14e505580c0660bc1063c3795164b82c74b80109b624a0fc1f16532e7",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -4880,9 +4865,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -4906,7 +4891,7 @@
       "file_type": "PNG",
       "source_sha256": "a478ecb2136a6a3e0b083098478640265af321e8879886a721f7dc4b40295ff5",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -4944,11 +4929,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -4972,7 +4955,7 @@
       "file_type": "PNG",
       "source_sha256": "ef232d5ffc53a8d89768ee23ab099e27545591f25d2ebb4c9006d34fd6abefe4",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 40,
@@ -5010,8 +4993,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5035,7 +5018,7 @@
       "file_type": "PNG",
       "source_sha256": "38b4dc7e3c63ecf7e168dc5429846b03b54d2648b787006c6c21413a323bf0e5",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -5073,9 +5056,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -5099,7 +5082,7 @@
       "file_type": "PNG",
       "source_sha256": "c9c76a119ce439951d4804aee5e4827ce7bc479a0997b2349cb1300ade4e0f33",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -5137,11 +5120,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -5165,7 +5146,7 @@
       "file_type": "PNG",
       "source_sha256": "478d4f54d459666374cf642fcd56a44f67aeefc9b53aa85ef32803795053f213",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 4,
@@ -5203,8 +5184,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5228,7 +5209,7 @@
       "file_type": "PNG",
       "source_sha256": "295d31bf240a95961f63d80b3c03db841330a104f5b71ce9808d848206348ed6",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 83,
@@ -5266,8 +5247,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5291,7 +5272,7 @@
       "file_type": "PNG",
       "source_sha256": "b7f7bad491af32b88e59f595717b1229ed8b0e7c9d0f8ba975b373bbb6b77860",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 18,
@@ -5329,8 +5310,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5354,7 +5335,7 @@
       "file_type": "PNG",
       "source_sha256": "0a54ed2d782b7d61b735525db1ad29a5c072272615e2d699fb0cbab2d9289bce",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -5392,9 +5373,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -5418,7 +5399,7 @@
       "file_type": "PNG",
       "source_sha256": "fdbdff3e3a401b4f68745ecd93977b75bcb973b192222ed433f16b49fa240ec8",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -5456,8 +5437,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5481,7 +5462,7 @@
       "file_type": "PNG",
       "source_sha256": "4d9aab1019a068faee275b6a8772e1af0be33e6ac1c35842be83114b9d01eb58",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 81,
@@ -5519,8 +5500,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5544,7 +5525,7 @@
       "file_type": "PNG",
       "source_sha256": "694733c8ee644374e7f1949196bb7d343c64604c47088489b60ec35b3dc77d4e",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 40,
@@ -5582,8 +5563,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5607,7 +5588,7 @@
       "file_type": "PNG",
       "source_sha256": "451e806f076af20a906655e86af159267c6f334c1ac6934c74eee62bf56dbb15",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 5,
@@ -5645,8 +5626,8 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": false,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D."
       ],
       "duplicate_asset_ids": []
     },
@@ -5670,7 +5651,7 @@
       "file_type": "PNG",
       "source_sha256": "2c9a19da0f91693f05d42f20393ba2d46a9140e0bdc0c86a50a1eedbfead1db4",
       "runtime_sha256": null,
-      "processing_status": "blocked_nonexact_background",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -5708,9 +5689,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     },
@@ -5734,7 +5715,7 @@
       "file_type": "PNG",
       "source_sha256": "c26161e8ecd5474cb68c3658cf9ecefa0eb886da5be71e0e43dfb651cd066ac2",
       "runtime_sha256": null,
-      "processing_status": "source_only",
+      "processing_status": "pending_constrained_background_cleanup",
       "anchors": null,
       "pixel_audit": {
         "exact_magenta_pixels": 0,
@@ -5772,11 +5753,9 @@
       "visual_review": "contact_sheet_full_set_reviewed",
       "baked_text_observed": true,
       "uncertainty": [
-        "Superseded identity: not an active character",
-        "Background contains non-#FF00FF opaque border pixels; exact-only keying cannot clean it.",
-        "Not selected for runtime.",
-        "Body crown/soles/centre anchors need review after a compliant source or precise matte is available.",
-        "Baked-in text observed in visual sheet review; keep source intact and exclude text from any future approved matte."
+        "Exact-magenta plus reviewed constrained boundary cleanup required; preserve interior colours.",
+        "Body crown/soles/centre anchors and full-body/props output review pending Phase D.",
+        "Baked text must be excluded through a reviewed mask."
       ],
       "duplicate_asset_ids": []
     }
@@ -5894,7 +5873,7 @@
     }
   ],
   "unresolved": [
-    "All supplied backgrounds fail exact-only removal gate; no runtime portraits released.",
-    "CORE-007 Nharos has no canonical game ID."
+    "Background cleanup, body-scale anchors and visual review pending Phase D; constrained cleanup is authorized.",
+    "Reconcile identities and classes against recovered full portrait manifest."
   ]
 }
