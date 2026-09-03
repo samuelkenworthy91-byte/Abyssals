@@ -13,7 +13,7 @@
   "unresolved_core_identity": "Nharos",
   "expected_species": 187,
   "verified_species": 187,
-  "preparation_phase": "B",
+  "preparation_phase": "C",
   "implementation_on_hold": true,
   "merge_on_hold": true,
   "recovered_canon_source_files": 35,
@@ -30,5 +30,7 @@
     "implementation_ready": false
   },
   "species_art_mapped": 187,
-  "unlabelled_supplemental_monster_illustrations": 2
+  "unlabelled_supplemental_monster_illustrations": 2,
+  "species_runtime_sprites": 187,
+  "abyssal_runtime_ready": true
 }

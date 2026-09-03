@@ -17,13 +17,13 @@ Audit completed before reorganizing: ZIP listing/CRC-safe reads, SHA-256 for eve
 Main was inspected at `2fdcc0c96a59490df47c4d5787ea64814e7659d8`. No game code or existing active AGENTS file was present. All 19 fetched blobs were verified against their Git SHA. Both prior encoded chunk sets fail ZIP assembly. They move to docs/source_archive/prior_repository/; no main history is rewritten.
 
 ## Complete inventories
-data/manifests/source_files.json lists all 234 archive members (archive, original path, size, timestamp, SHA-256, imported path, duplicate IDs and normalization notes), plus all 19 prior repository files. data/manifests/abyssal_art.json lists all 89 sheets; portraits.json lists all 91 portrait images and exact missing targets. No source asset was silently deduplicated or discarded.
+data/manifests/source_files.json lists all 234 archive members (archive, original path, size, timestamp, SHA-256, imported path, duplicate IDs and normalization notes), plus all 19 prior repository files. data/manifests/abyssal_art.json maps 187 species across all 89 sheets; portraits.json lists all 91 portrait images and exact missing targets. No source asset was silently deduplicated or discarded.
 
 ## Duplicates and identity conflicts
 Two exact duplicate groups: three empty handoff .gitkeep files; Brann canonical and ALT-01 portrait. Brann has two source records but one active target. Seven superseded C03 names are retained only as legacy. Five alternate images and one Severin form variant are not additional unique characters. CORE queue labels are translated to CHR/LDR IDs where the handoff establishes identity; Nharos remains unresolved. All 75 trainer and eight Warden queue IDs/names are preserved, without inferred classes or teams.
 
 ## Art readiness
-The owner confirms the 89 sheets represent all 187 species. The numeric Dex is recovered; individual mapping and extraction are pending B/C. All 91 supplied portraits remain production sources for constrained cleanup in D. The package records 22 absent named targets; no replacements have been fabricated.
+The owner confirms the 89 sheets represent all 187 species. The numeric Dex is recovered; Phase B mapped 187/187 species and Phase C extracted 187 individual runtime fronts. See PHASE_C_RUNTIME_ART.md. All 91 supplied portraits remain production sources for constrained cleanup in D. The package records 22 absent named targets; no replacements have been fabricated.
 
 ## Structured data coverage
 Existing machine-readable material: 16 core character records; faction palette rules; core mechanics constants; state enums; move/relearn rules; ten major location names; 72 encounter-area summaries; eight field names; portrait production totals. Converted from prose: transaction boundary contract, topic-based canon, explicit implementation gates. Portrait CSV adds 75 named trainers/eight Wardens and packaging aliases, producing 99 established character IDs plus unresolved Nharos.

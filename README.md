@@ -2,7 +2,7 @@
 
 Original story-led monster-capture RPG for a mobile-first offline PWA and desktop browsers. Explore an authored mortal crusade route, capture Abyssals with food, develop a six-member party, make irreversible choices, then descend through nine Circles of Hell.
 
-**Status: repository preparation re-audit; no playable game yet. M1 is paused.** The three supplied packages are preserved. The 89 monster files are source sheets representing the complete 187-species front-art set; they must be reconciled and split into individual runtime assets. Canonical Dex, progression, encounter, trainer, economy, terrain, story and checklist sources have been recovered for deterministic extraction. Portrait processing remains a production task, not a reason to discard the supplied art.
+**Status: repository preparation re-audit; no playable game yet. M1 is paused.** The three supplied packages are preserved. The 89 monster files are source sheets representing the complete 187-species front-art set; Phases B/C reconcile them to the canonical Dex and provide all 187 individual runtime fronts. Canonical Dex, progression, encounter, trainer, economy, terrain, story and checklist sources have been recovered for deterministic extraction. Portrait processing remains a production task, not a reason to discard the supplied art.
 
 ## Start here
 1. Every coding agent: read [AGENTS.md](AGENTS.md).

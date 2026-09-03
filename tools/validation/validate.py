@@ -185,6 +185,16 @@ def validate(root=ROOT, content=False):
             if not path.is_file():errors.append('Missing runtime '+rel);continue
             if hashlib.sha256(path.read_bytes()).hexdigest()!=row.get('runtime_sha256'):errors.append('Runtime checksum mismatch '+rel)
             with Image.open(path) as image:
+                image.load()
+                if kind=='abyssals':
+                    if image.mode!='RGBA' or image.size!=(1024,1024) or image.format!='PNG':errors.append('Abyssal canvas/mode mismatch '+rel)
+                    alpha=image.convert('RGBA').getchannel('A');bbox=alpha.getbbox()
+                    if not bbox or alpha.getextrema()[0]!=0:errors.append('Abyssal has no figure/transparency '+rel)
+                    elif min(bbox[0],bbox[1],1024-bbox[2],1024-bbox[3])<32:errors.append('Abyssal padding/clipping failure '+rel)
+                    if row.get('status')!='ready' or row.get('visual_review')!='approved':errors.append('Unreviewed Abyssal used at runtime '+rel)
+                    if row.get('runtime_dimensions')!=[1024,1024]:errors.append('Abyssal manifest canvas mismatch '+rel)
+                    if not row.get('processing_config') or not resolve_path(root,row['processing_config']).is_file():errors.append('Missing reproducible sprite extraction config '+rel)
+                    elif row.get('processing_config_sha256')!=hashlib.sha256(resolve_path(root,row['processing_config']).read_bytes()).hexdigest():errors.append('Sprite extraction configuration changed without regeneration '+rel)
                 if kind=='portraits':
                     if image.mode!='RGBA' or image.size!=(pm['canvas']['width'],pm['canvas']['height']):errors.append('Portrait canvas/mode mismatch '+rel)
                     rgba=image.convert('RGBA');alpha=rgba.getchannel('A')

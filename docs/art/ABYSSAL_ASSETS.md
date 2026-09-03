@@ -1,11 +1,26 @@
-# Abyssal source art and identity mapping
+# Abyssal artwork: 187 canonical fronts
 
-All 89 supplied WebP sheets are preserved unchanged, 1448×1086 RGB. Phase B reconciles **187/187** labelled species to the numeric Dex. The 98 canonical evolution links form exactly 89 families; every source filename matches its family root. There are no unresolved canonical species identities.
+All **89 original WebP sheets** remain byte-identical under `assets/abyssals/source/`. The 187 named figures map to the canonical numeric Dex and 98 evolution links. `data/manifests/abyssal_art.json` maps every species to its source checksum, figure position, extraction configuration, runtime filename/checksum and canvas transform.
 
-`data/manifests/abyssal_art.json` has one record per canonical species, source file/checksum, figure position, identity evidence and deterministic planned runtime filename. `data/species/species.json` carries the 187 established identities, exact base stats and ability names. A zero-padded string such as `001` serializes canonical numeric Dex #1; it is not a replacement numbering system.
+Runtime files live under `assets/abyssals/runtime/abyssal_<three-digit-Dex>_<name>.png`. Each is RGBA, **1024 × 1024**, centred horizontally, with its complete artwork ending at y=976 (48 pixels of bottom padding). Artwork fits within 944 × 944, preserving aspect ratio. Native source pixels are retained without enlargement; only figures exceeding that envelope are reduced with Lanczos. Source sheets share one resolution, so this keeps their drawn size relationships instead of making small first forms fill the canvas like large evolved forms. This is a technical presentation convention, not newly invented species heights. Future battle layout must use the canvas transform and retain relative scale.
 
-The Flaggrim sheet includes two extra unlabelled illustrations at far right. Preserve these as unassigned supplemental artwork; the three explicitly named figures match Flaggrim, Oriflamme and Tattereign. Do not invent two new species or infer evolution edges from illustration arrows. Regalisk’s source type strip includes Flying in addition to Poison/Dragon; the locked Dex controls its actual two types.
+The reproducible configuration is `tools/art/species_extraction.json`. It records source hashes, selected connected components, reviewed annotation exclusions, enclosed-background seeds and limited ground-shadow regions. OCR assisted locating labels during audit; reproduction does not require OCR and does not reinterpret identities.
 
-Phase C must extract each named figure non-destructively, remove labels/arrows and intended background, retain all body details/effects, use a shared transparent canvas and documented scale/padding, and verify every output visually and programmatically. Original source files must remain byte-identical. No back/player sprites are required.
+Processing removes boundary-connected near-white paper, reviewed name/type strips and evolution arrows. Enclosed white regions are inspected individually: background gaps become transparent; eyes, reflective armour, pale fur, ice, fire cores and intentional effects remain. White antialiasing is unmixed only along a two-pixel exterior band. Within reviewed floor rectangles, boundary-connected neutral shadows are converted from white-matted shading to translucent shadows; dark outlines prevent the flood entering the figure. No drawing, generated replacements, mirrored art or back sprites are used. Rocks, scenic bases, detached effects and props that belong to the supplied figure are preserved.
 
-Reproduce the identity extraction before runtime processing with `python3 tools/data/extract_species_identity.py`. This is a preparation importer; after downstream enrichment use the consolidated import workflow to avoid replacing enriched records with an earlier-stage snapshot.
+The Flaggrim sheet contains two additional unlabelled illustrations. They remain preserved in the source and recorded as supplemental, unassigned artwork; they are not two new species. The three named figures supply Flaggrim, Oriflamme and Tattereign. Regalisk’s printed strip adds Flying; the locked Dex controls its actual Poison/Dragon types. Runtime extraction removes that strip without changing the source.
+
+## Reproduce and inspect
+
+With the preparation virtual environment activated:
+
+```bash
+python3 tools/art/process_abyssals.py
+python3 tools/art/process_abyssals.py --write
+python3 tools/art/contact_sheets.py --kind abyssals
+npm run validate
+```
+
+The first command produces drafts in `.reports/abyssal_drafts/`. The second requires all 187 configuration records to have completed visual review and updates the runtime manifest. Contact sheets fit each figure into a review cell; they are for checking extraction, **not comparing displayed scale**. Review full runtime canvases at the same zoom to compare scale. Generated previews stay untracked.
+
+Never rerun the earlier Phase B identity importer over enriched data without reviewing its output. It is a source-extraction snapshot, not the downstream asset pipeline.

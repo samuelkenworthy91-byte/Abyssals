@@ -5,4 +5,4 @@ Git LFS was assessed but is not required for this bounded snapshot. Ordinary Git
 
 Reassess before adding large PSDs, audio/video or many revised high-resolution versions. LFS keeps pointers in Git and image bytes separately, so any adoption must configure .gitattributes, upload actual LFS objects, verify a fresh clone with `git lfs install` and `git lfs pull`, and set CI checkout LFS support. Do not commit pointer files without accessible objects. [GitHub LFS documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
 
-No LFS setup is needed for this branch. Runtime PNG output will be versioned only when approved. PWA packaging should include necessary runtime assets, never source sheets or archived design documents.
+No LFS setup is needed for this branch. Phase C adds the reviewed 187 runtime PNG fronts (approximately 67 MiB). This remains a bounded snapshot with individual files well below the existing largest source portrait. PWA packaging should include necessary runtime assets, never source sheets or archived design documents.

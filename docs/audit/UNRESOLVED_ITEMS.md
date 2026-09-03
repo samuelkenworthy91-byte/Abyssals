@@ -4,7 +4,7 @@ Updated in Phase A. Earlier missing-source claims are superseded by recovered ev
 
 ## U01 — Species register
 
-**source_recovered_pending_extraction**. 187 numeric Dex IDs/names and full base-stat/ability records are recovered in Stats/Abilities COMPLETE v2; consolidate in Phase E and map art in B.
+**source_recovered_pending_extraction**. 187 numeric Dex IDs/names, base stats and ability names were extracted in Phase B. Phase E will add remaining sourced implementation fields and document genuine per-field gaps.
 
 ## U02 — Evolution/learnsets/moves/types
 
@@ -28,7 +28,7 @@ Updated in Phase A. Earlier missing-source claims are superseded by recovered ev
 
 ## U07 — Monster sprite isolation
 
-**processing_required**. The 89 source files contain the complete 187-species art set per owner correction. Map every figure to the canonical Dex, extract fronts non-destructively, validate 187/187; do not claim missing species from file count.
+**Resolved in Phases B/C.** 187/187 canonical species have individual runtime fronts from 89 unchanged source sheets. Two unlabelled supplemental illustrations remain preserved and unassigned; they do not reduce canonical coverage.
 
 ## U08 — Portrait backgrounds/text
 

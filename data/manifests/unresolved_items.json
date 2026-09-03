@@ -5,7 +5,7 @@
       "id": "U01",
       "subject": "Species register",
       "impact": "Preparation E/F; M1 on hold",
-      "required_source_or_decision": "187 numeric Dex IDs/names and full base-stat/ability records are recovered in Stats/Abilities COMPLETE v2; consolidate in Phase E and map art in B.",
+      "required_source_or_decision": "187 numeric Dex IDs/names, base stats and ability names extracted in Phase B. Phase E will add remaining sourced implementation fields and document genuine per-field gaps.",
       "status": "source_recovered_pending_extraction"
     },
     {
@@ -46,9 +46,9 @@
     {
       "id": "U07",
       "subject": "Monster sprite isolation",
-      "impact": "Preparation B/C; M1 on hold",
-      "required_source_or_decision": "The 89 source files contain the complete 187-species art set per owner correction. Map every figure to the canonical Dex, extract fronts non-destructively, validate 187/187; do not claim missing species from file count.",
-      "status": "processing_required"
+      "impact": "No remaining canonical species-art blocker",
+      "required_source_or_decision": "Resolved in B/C: 187/187 named species mapped and extracted into individual runtime fronts from 89 unchanged source sheets. Two unlabelled supplemental illustrations remain preserved without invented identities.",
+      "status": "resolved"
     },
     {
       "id": "U08",
