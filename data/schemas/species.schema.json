@@ -52,8 +52,35 @@
       }
     },
     "capture_rate": {
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 0
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "capture_rate": {
+            "type": "null"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "unresolved_fields"
+        ],
+        "properties": {
+          "unresolved_fields": {
+            "type": "array",
+            "contains": {
+              "const": "capture_rate"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

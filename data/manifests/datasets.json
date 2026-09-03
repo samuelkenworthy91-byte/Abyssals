@@ -54,7 +54,7 @@
       "path": "data/species/species.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 187,
       "record_schema": "data/schemas/species.schema.json"
     },
     {
@@ -82,7 +82,7 @@
       "path": "data/types/types.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 18,
       "record_schema": "data/schemas/type.schema.json"
     },
     {

@@ -1,6 +1,11 @@
-# Abyssal source art
-The 89 supplied WebPs are all 1448×1086 RGB and remain byte-for-byte unchanged. Each source filename is the first/featured label on a sheet; many sheets contain several evolution-stage figures, arrows, names and type labels on white. Seventeen reviewed sheets have one figure; the remaining 72 contain multiple figures. Counting files does not establish coverage of 187 unique canonical species.
+# Abyssal source art and identity mapping
 
-The owner's correction establishes that these sheets contain the completed 187-species set. `data/manifests/abyssal_art.json` currently inventories source files; species mapping is pending Phase B. The numeric Dex register has been recovered. Observed figure counts are audit aids, not canonical record counts.
+All 89 supplied WebP sheets are preserved unchanged, 1448×1086 RGB. Phase B reconciles **187/187** labelled species to the numeric Dex. The 98 canonical evolution links form exactly 89 families; every source filename matches its family root. There are no unresolved canonical species identities.
 
-Match each labelled figure to the recovered 187-ID register, record source bounds and provenance, and extract runtime fronts in Phase C. Verify all 187 IDs exactly once in the production manifest; count alternate/form art separately. Do not erase white details, redraw, stretch or fabricate sprites. No player/back sprites are required.
+`data/manifests/abyssal_art.json` has one record per canonical species, source file/checksum, figure position, identity evidence and deterministic planned runtime filename. `data/species/species.json` carries the 187 established identities, exact base stats and ability names. A zero-padded string such as `001` serializes canonical numeric Dex #1; it is not a replacement numbering system.
+
+The Flaggrim sheet includes two extra unlabelled illustrations at far right. Preserve these as unassigned supplemental artwork; the three explicitly named figures match Flaggrim, Oriflamme and Tattereign. Do not invent two new species or infer evolution edges from illustration arrows. Regalisk’s source type strip includes Flying in addition to Poison/Dragon; the locked Dex controls its actual two types.
+
+Phase C must extract each named figure non-destructively, remove labels/arrows and intended background, retain all body details/effects, use a shared transparent canvas and documented scale/padding, and verify every output visually and programmatically. Original source files must remain byte-identical. No back/player sprites are required.
+
+Reproduce the identity extraction before runtime processing with `python3 tools/data/extract_species_identity.py`. This is a preparation importer; after downstream enrichment use the consolidated import workflow to avoid replacing enriched records with an earlier-stage snapshot.

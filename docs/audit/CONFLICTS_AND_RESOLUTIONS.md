@@ -22,5 +22,8 @@ Decisions preserve later locks and current explicit instructions. No missing gam
 | C15 | M1 timing | Earlier first-session prompt starts app shell | Superseded: finish preparation A–G, stop for review at H; no M1, gameplay or merge. | Owner correction sections 6–7 |
 | C16 | HP growth | Handoff summary says guaranteed +10 baseline; Checklist 01 says +10 per successful increment | Reconciliation required in Phase E; do not implement either interpretation while preparation is on hold. | canon_sources/active/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx sections 2–3 versus handoff ACTIVE_CANON section 4 |
 
+| C17 | Extra Flaggrim illustrations | Five pictured figures versus three canonical species in this family | Map the three named figures; preserve two unlabelled extras as unassigned supplemental art. Do not add species/evolution edges. | Flaggrim.webp labels; numeric Dex #73–75; Evolution Paths |
+| C18 | Regalisk type strip | Source sheet prints Poison/Flying/Dragon | Dex #32 defines Poison/Dragon. Preserve artwork; remove the printed strip in runtime extraction. | Bantisk.webp versus Stats/Abilities v2 Full Dex row 34 |
+
 ## Remaining reconciliation
 See PHASE_A_REAUDIT.md and UNRESOLVED_ITEMS.md. The creature register and detailed rule sources are recovered. Nharos identity/role is established; stable ID mapping remains to reconcile. Artwork labels do not override locked identity/type data.

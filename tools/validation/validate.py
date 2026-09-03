@@ -146,6 +146,17 @@ def validate(root=ROOT, content=False):
         except ValueError as e:errors.append(str(e))
     pm=parsed['data/manifests/portraits.json'];am=parsed['data/manifests/abyssal_art.json']
     unique(pm['records'],'asset_id','portrait assets',errors);unique(am['records'],'asset_id','monster assets',errors)
+    if am.get('identity_status')=='complete':
+        unique(am['records'],'species_id','canonical species art',errors)
+        if len(am['records'])!=187 or {r['species_id'] for r in am['records']}!=registries['species']:
+            errors.append('Species art identity coverage must be exactly 187/187')
+        if len({r['source_filename'] for r in am['records']})!=am['source_file_count']:
+            errors.append('Monster source-sheet count does not match mapping')
+        species_by_id={r['id']:r for r in parsed['data/species/species.json']['records']}
+        for row in am['records']:
+            species=species_by_id.get(row['species_id'],{})
+            if row['canonical_name']!=species.get('name') or row['dex_number']!=species.get('dex_number'):
+                errors.append('Species artwork identity/name mismatch '+row['asset_id'])
     active=[r for r in pm['records'] if r['selection_status']=='canonical']
     unique(active,'id','canonical portraits',errors)
     runtime=[]

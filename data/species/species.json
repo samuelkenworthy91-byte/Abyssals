@@ -3,11 +3,6292 @@
   "status": "partial",
   "sources": [
     "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
-    "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx"
+    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx"
   ],
-  "records": [],
+  "expected_count": 187,
+  "records": [
+    {
+      "id": "001",
+      "dex_number": 1,
+      "name": "Scarimp",
+      "types": [
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 65,
+        "defence": 30,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 65
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Wayfarer",
+        "hidden": "Improviser"
+      },
+      "role": "Starter Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 3
+      }
+    },
+    {
+      "id": "002",
+      "dex_number": 2,
+      "name": "Grimscar",
+      "types": [
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "attack": 85,
+        "defence": 50,
+        "sp_attack": 65,
+        "sp_defence": 60,
+        "speed": 85
+      },
+      "bst": 410,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Ambush",
+        "hidden": "Improviser"
+      },
+      "role": "Starter Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 4
+      }
+    },
+    {
+      "id": "003",
+      "dex_number": 3,
+      "name": "Noctafey",
+      "types": [
+        "DARK",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 105,
+        "defence": 65,
+        "sp_attack": 105,
+        "sp_defence": 75,
+        "speed": 105
+      },
+      "bst": 530,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Ambush",
+        "hidden": "Improviser"
+      },
+      "role": "Starter Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 5
+      }
+    },
+    {
+      "id": "004",
+      "dex_number": 4,
+      "name": "Calibrit",
+      "types": [
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 65,
+        "sp_defence": 50,
+        "speed": 55
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Focus Edge",
+        "hidden": "Proof by Cut"
+      },
+      "role": "Starter Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 6
+      }
+    },
+    {
+      "id": "005",
+      "dex_number": 5,
+      "name": "Severyn",
+      "types": [
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 85,
+        "sp_defence": 60,
+        "speed": 85
+      },
+      "bst": 410,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Focus Edge",
+        "hidden": "Proof by Cut"
+      },
+      "role": "Starter Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 7
+      }
+    },
+    {
+      "id": "006",
+      "dex_number": 6,
+      "name": "Axiomaro",
+      "types": [
+        "PSYCHIC",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 100,
+        "defence": 100,
+        "sp_attack": 100,
+        "sp_defence": 75,
+        "speed": 85
+      },
+      "bst": 530,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Focus Edge",
+        "hidden": "Proof by Cut"
+      },
+      "role": "Starter Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 8
+      }
+    },
+    {
+      "id": "007",
+      "dex_number": 7,
+      "name": "Ruffurn",
+      "types": [
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 70,
+        "defence": 50,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "Hard Head",
+        "hidden": "Stored Charge"
+      },
+      "role": "Starter Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 9
+      }
+    },
+    {
+      "id": "008",
+      "dex_number": 8,
+      "name": "Revhound",
+      "types": [
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 85,
+        "defence": 75,
+        "sp_attack": 40,
+        "sp_defence": 60,
+        "speed": 65
+      },
+      "bst": 410,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "Hard Head",
+        "hidden": "Stored Charge"
+      },
+      "role": "Starter Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 10
+      }
+    },
+    {
+      "id": "009",
+      "dex_number": 9,
+      "name": "Revault",
+      "types": [
+        "FIGHTING",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 125,
+        "defence": 100,
+        "sp_attack": 45,
+        "sp_defence": 75,
+        "speed": 85
+      },
+      "bst": 530,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "Hard Head",
+        "hidden": "Stored Charge"
+      },
+      "role": "Starter Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 11
+      }
+    },
+    {
+      "id": "010",
+      "dex_number": 10,
+      "name": "Pennkit",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 55,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Foresight",
+        "hidden": "First Strike"
+      },
+      "role": "Early Route Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 12
+      }
+    },
+    {
+      "id": "011",
+      "dex_number": 11,
+      "name": "Hareald",
+      "types": [
+        "NORMAL",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 70,
+        "defence": 60,
+        "sp_attack": 70,
+        "sp_defence": 80,
+        "speed": 95
+      },
+      "bst": 445,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Foresight",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Early Route Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 13
+      }
+    },
+    {
+      "id": "012",
+      "dex_number": 12,
+      "name": "Tatterook",
+      "types": [
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 35,
+        "sp_attack": 45,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Scavenger",
+        "secondary": "Safekeep",
+        "hidden": "Opportunist"
+      },
+      "role": "Early Route Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 14
+      }
+    },
+    {
+      "id": "013",
+      "dex_number": 13,
+      "name": "Corvassal",
+      "types": [
+        "FLYING",
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 95,
+        "defence": 70,
+        "sp_attack": 55,
+        "sp_defence": 70,
+        "speed": 95
+      },
+      "bst": 455,
+      "ability_names": {
+        "primary": "Scavenger",
+        "secondary": "Safekeep",
+        "hidden": "Opportunist"
+      },
+      "role": "Early Route Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 15
+      }
+    },
+    {
+      "id": "014",
+      "dex_number": 14,
+      "name": "Mottlet",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 50,
+        "defence": 70,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Trailblazer",
+        "secondary": "Firm Stance",
+        "hidden": "Siege Breaker"
+      },
+      "role": "Burrower Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 16
+      }
+    },
+    {
+      "id": "015",
+      "dex_number": 15,
+      "name": "Bastimole",
+      "types": [
+        "GROUND",
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 120,
+        "sp_attack": 45,
+        "sp_defence": 70,
+        "speed": 45
+      },
+      "bst": 470,
+      "ability_names": {
+        "primary": "Trailblazer",
+        "secondary": "Firm Stance",
+        "hidden": "Siege Breaker"
+      },
+      "role": "Burrower Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 17
+      }
+    },
+    {
+      "id": "016",
+      "dex_number": 16,
+      "name": "Tokenail",
+      "types": [
+        "BUG"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 40,
+        "defence": 55,
+        "sp_attack": 35,
+        "sp_defence": 75,
+        "speed": 25
+      },
+      "bst": 285,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Berry Hoard",
+        "hidden": "Medicinal Sap"
+      },
+      "role": "Hoarder Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 18
+      }
+    },
+    {
+      "id": "017",
+      "dex_number": 17,
+      "name": "Ampullusk",
+      "types": [
+        "BUG",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 45,
+        "defence": 100,
+        "sp_attack": 70,
+        "sp_defence": 120,
+        "speed": 30
+      },
+      "bst": 465,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Berry Hoard",
+        "hidden": "Medicinal Sap"
+      },
+      "role": "Hoarder Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 19
+      }
+    },
+    {
+      "id": "018",
+      "dex_number": 18,
+      "name": "Rouncolt",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 55,
+        "defence": 45,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 60
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Surefoot",
+        "hidden": "First Strike"
+      },
+      "role": "Courier Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 20
+      }
+    },
+    {
+      "id": "019",
+      "dex_number": 19,
+      "name": "Coursire",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "attack": 85,
+        "defence": 65,
+        "sp_attack": 40,
+        "sp_defence": 65,
+        "speed": 85
+      },
+      "bst": 405,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Surefoot",
+        "hidden": "First Strike"
+      },
+      "role": "Courier Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 21
+      }
+    },
+    {
+      "id": "020",
+      "dex_number": 20,
+      "name": "Destridon",
+      "types": [
+        "GROUND",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 100,
+        "defence": 100,
+        "sp_attack": 50,
+        "sp_defence": 90,
+        "speed": 75
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Hard Head",
+        "hidden": "First Strike"
+      },
+      "role": "Courier Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 22
+      }
+    },
+    {
+      "id": "021",
+      "dex_number": 21,
+      "name": "Keelcrab",
+      "types": [
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 55,
+        "defence": 70,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Stoneplate",
+        "secondary": "Safekeep",
+        "hidden": "Ghost Hull"
+      },
+      "role": "Wreck Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 23
+      }
+    },
+    {
+      "id": "022",
+      "dex_number": 22,
+      "name": "Galleonid",
+      "types": [
+        "WATER",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 100,
+        "defence": 95,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 45
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Stoneplate",
+        "secondary": "Safekeep",
+        "hidden": "Ghost Hull"
+      },
+      "role": "Wreck Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 24
+      }
+    },
+    {
+      "id": "023",
+      "dex_number": 23,
+      "name": "Wickmidge",
+      "types": [
+        "BUG",
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 35,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 70,
+        "sp_defence": 55,
+        "speed": 70
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Cinderhide",
+        "secondary": "Feintstep",
+        "hidden": "Battle Rush"
+      },
+      "role": "Night Ember Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 25
+      }
+    },
+    {
+      "id": "024",
+      "dex_number": 24,
+      "name": "Vesperyre",
+      "types": [
+        "BUG",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 50,
+        "defence": 60,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 105
+      },
+      "bst": 490,
+      "ability_names": {
+        "primary": "Cinderhide",
+        "secondary": "Ambush",
+        "hidden": "Battle Rush"
+      },
+      "role": "Night Ember Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 26
+      }
+    },
+    {
+      "id": "025",
+      "dex_number": 25,
+      "name": "Caprune",
+      "types": [
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 55,
+        "defence": 65,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 55
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Trailblazer",
+        "hidden": "Foresight"
+      },
+      "role": "Oracle Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 27
+      }
+    },
+    {
+      "id": "026",
+      "dex_number": 26,
+      "name": "Ibracle",
+      "types": [
+        "ROCK",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 90,
+        "attack": 90,
+        "defence": 90,
+        "sp_attack": 80,
+        "sp_defence": 90,
+        "speed": 70
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Trailblazer",
+        "hidden": "Foresight"
+      },
+      "role": "Oracle Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 28
+      }
+    },
+    {
+      "id": "027",
+      "dex_number": 27,
+      "name": "Snickal",
+      "types": [
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 55,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 70
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Ambush",
+        "hidden": "Opportunist"
+      },
+      "role": "Scavenger Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 29
+      }
+    },
+    {
+      "id": "028",
+      "dex_number": 28,
+      "name": "Cackena",
+      "types": [
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "attack": 85,
+        "defence": 60,
+        "sp_attack": 40,
+        "sp_defence": 60,
+        "speed": 85
+      },
+      "bst": 395,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Ambush",
+        "hidden": "Opportunist"
+      },
+      "role": "Scavenger Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 30
+      }
+    },
+    {
+      "id": "029",
+      "dex_number": 29,
+      "name": "Carriena",
+      "types": [
+        "DARK",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 100,
+        "defence": 75,
+        "sp_attack": 60,
+        "sp_defence": 85,
+        "speed": 100
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Opportunist",
+        "hidden": "Last Stand"
+      },
+      "role": "Scavenger Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 31
+      }
+    },
+    {
+      "id": "030",
+      "dex_number": 30,
+      "name": "Bantisk",
+      "types": [
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 35,
+        "attack": 55,
+        "defence": 35,
+        "sp_attack": 55,
+        "sp_defence": 55,
+        "speed": 70
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Keen Sense",
+        "hidden": "Surefoot"
+      },
+      "role": "Gaze Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 32
+      }
+    },
+    {
+      "id": "031",
+      "dex_number": 31,
+      "name": "Cockatrix",
+      "types": [
+        "POISON",
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 85,
+        "defence": 50,
+        "sp_attack": 75,
+        "sp_defence": 65,
+        "speed": 85
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Keen Sense",
+        "hidden": "Surefoot"
+      },
+      "role": "Gaze Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 33
+      }
+    },
+    {
+      "id": "032",
+      "dex_number": 32,
+      "name": "Regalisk",
+      "types": [
+        "POISON",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 100,
+        "defence": 70,
+        "sp_attack": 100,
+        "sp_defence": 85,
+        "speed": 95
+      },
+      "bst": 535,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Keen Sense",
+        "hidden": "Royal Glare"
+      },
+      "role": "Gaze Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 34
+      }
+    },
+    {
+      "id": "033",
+      "dex_number": 33,
+      "name": "Eyret",
+      "types": [
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 60,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 70
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Focus Edge",
+        "hidden": "First Strike"
+      },
+      "role": "Falcon Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 35
+      }
+    },
+    {
+      "id": "034",
+      "dex_number": 34,
+      "name": "Falchawk",
+      "types": [
+        "FLYING",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 105,
+        "defence": 65,
+        "sp_attack": 50,
+        "sp_defence": 75,
+        "speed": 130
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Focus Edge",
+        "hidden": "First Strike"
+      },
+      "role": "Falcon Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 36
+      }
+    },
+    {
+      "id": "035",
+      "dex_number": 35,
+      "name": "Dromble",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 55,
+        "defence": 55,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 35
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Sandcoat",
+        "secondary": "Forager",
+        "hidden": "Safekeep"
+      },
+      "role": "Caravan Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 37
+      }
+    },
+    {
+      "id": "036",
+      "dex_number": 36,
+      "name": "Caskamel",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 75,
+        "defence": 65,
+        "sp_attack": 40,
+        "sp_defence": 85,
+        "speed": 55
+      },
+      "bst": 405,
+      "ability_names": {
+        "primary": "Sandcoat",
+        "secondary": "Forager",
+        "hidden": "Safekeep"
+      },
+      "role": "Caravan Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 38
+      }
+    },
+    {
+      "id": "037",
+      "dex_number": 37,
+      "name": "Cisternel",
+      "types": [
+        "GROUND",
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 120,
+        "attack": 85,
+        "defence": 95,
+        "sp_attack": 70,
+        "sp_defence": 100,
+        "speed": 45
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Sandcoat",
+        "secondary": "Reservoir",
+        "hidden": "Medicinal Sap"
+      },
+      "role": "Caravan Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 39
+      }
+    },
+    {
+      "id": "038",
+      "dex_number": 38,
+      "name": "Stinglet",
+      "types": [
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 70,
+        "defence": 55,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Patience",
+        "hidden": "Siege Breaker"
+      },
+      "role": "Siege Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 40
+      }
+    },
+    {
+      "id": "039",
+      "dex_number": 39,
+      "name": "Trebuchor",
+      "types": [
+        "POISON",
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 125,
+        "defence": 100,
+        "sp_attack": 50,
+        "sp_defence": 75,
+        "speed": 50
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Patience",
+        "hidden": "Siege Breaker"
+      },
+      "role": "Siege Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 41
+      }
+    },
+    {
+      "id": "040",
+      "dex_number": 40,
+      "name": "Niblust",
+      "types": [
+        "BUG"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 55,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 75
+      },
+      "bst": 285,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Ambush",
+        "hidden": "Battle Rush"
+      },
+      "role": "Locust Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 42
+      }
+    },
+    {
+      "id": "041",
+      "dex_number": 41,
+      "name": "Locruin",
+      "types": [
+        "BUG",
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 100,
+        "defence": 60,
+        "sp_attack": 60,
+        "sp_defence": 75,
+        "speed": 125
+      },
+      "bst": 480,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Ambush",
+        "hidden": "Battle Rush"
+      },
+      "role": "Locust Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 43
+      }
+    },
+    {
+      "id": "042",
+      "dex_number": 42,
+      "name": "Sprigfawn",
+      "types": [
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 40,
+        "sp_attack": 50,
+        "sp_defence": 55,
+        "speed": 55
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Renewal",
+        "secondary": "Medicinal Sap",
+        "hidden": "Truce"
+      },
+      "role": "Peace Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 44
+      }
+    },
+    {
+      "id": "043",
+      "dex_number": 43,
+      "name": "Olehart",
+      "types": [
+        "GRASS",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 70,
+        "defence": 70,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 70
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Renewal",
+        "secondary": "Medicinal Sap",
+        "hidden": "Truce"
+      },
+      "role": "Peace Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 45
+      }
+    },
+    {
+      "id": "044",
+      "dex_number": 44,
+      "name": "Cubanner",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 70,
+        "defence": 55,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Battle Nerve",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Lion Standard Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 46
+      }
+    },
+    {
+      "id": "045",
+      "dex_number": 45,
+      "name": "Prideguard",
+      "types": [
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 90,
+        "defence": 75,
+        "sp_attack": 40,
+        "sp_defence": 65,
+        "speed": 65
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Battle Nerve",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Lion Standard Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 47
+      }
+    },
+    {
+      "id": "046",
+      "dex_number": 46,
+      "name": "Leonarch",
+      "types": [
+        "FIGHTING",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 100,
+        "defence": 100,
+        "sp_attack": 60,
+        "sp_defence": 100,
+        "speed": 75
+      },
+      "bst": 535,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Battle Nerve",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Lion Standard Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 48
+      }
+    },
+    {
+      "id": "047",
+      "dex_number": 47,
+      "name": "Rutlet",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 70,
+        "defence": 50,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 40
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Hard Head",
+        "secondary": "Countercharge",
+        "hidden": "Siege Breaker"
+      },
+      "role": "Ram Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 49
+      }
+    },
+    {
+      "id": "048",
+      "dex_number": 48,
+      "name": "Ramporque",
+      "types": [
+        "GROUND",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 125,
+        "defence": 100,
+        "sp_attack": 45,
+        "sp_defence": 75,
+        "speed": 60
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Hard Head",
+        "secondary": "Countercharge",
+        "hidden": "Siege Breaker"
+      },
+      "role": "Ram Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 50
+      }
+    },
+    {
+      "id": "049",
+      "dex_number": 49,
+      "name": "Mirascal",
+      "types": [
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 70,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Sunstride",
+        "hidden": "Camouflage"
+      },
+      "role": "Mirage Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 51
+      }
+    },
+    {
+      "id": "050",
+      "dex_number": 50,
+      "name": "Sunscint",
+      "types": [
+        "FIRE",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 125,
+        "sp_defence": 90,
+        "speed": 100
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Sunstride",
+        "hidden": "Camouflage"
+      },
+      "role": "Mirage Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 52
+      }
+    },
+    {
+      "id": "051",
+      "dex_number": 51,
+      "name": "Rillip",
+      "types": [
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 35,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 60,
+        "sp_defence": 55,
+        "speed": 70
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Rainrunner",
+        "secondary": "Static Hide",
+        "hidden": "Alternator"
+      },
+      "role": "Current Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 53
+      }
+    },
+    {
+      "id": "052",
+      "dex_number": 52,
+      "name": "Galvaneel",
+      "types": [
+        "WATER",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 105,
+        "sp_defence": 75,
+        "speed": 125
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Rainrunner",
+        "secondary": "Capacitor",
+        "hidden": "Alternator"
+      },
+      "role": "Current Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 54
+      }
+    },
+    {
+      "id": "053",
+      "dex_number": 53,
+      "name": "Scripquid",
+      "types": [
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 30,
+        "defence": 40,
+        "sp_attack": 70,
+        "sp_defence": 60,
+        "speed": 50
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Foresight",
+        "hidden": "Palimpsest"
+      },
+      "role": "Scribe Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 55
+      }
+    },
+    {
+      "id": "054",
+      "dex_number": 54,
+      "name": "Palimopus",
+      "types": [
+        "WATER",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 50,
+        "defence": 75,
+        "sp_attack": 105,
+        "sp_defence": 105,
+        "speed": 75
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Foresight",
+        "hidden": "Palimpsest"
+      },
+      "role": "Scribe Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 56
+      }
+    },
+    {
+      "id": "055",
+      "dex_number": 55,
+      "name": "Chalkit",
+      "types": [
+        "ROCK",
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 60,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Trailblazer",
+        "secondary": "Surefoot",
+        "hidden": "Foresight"
+      },
+      "role": "Cliff Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 57
+      }
+    },
+    {
+      "id": "056",
+      "dex_number": 56,
+      "name": "Albannor",
+      "types": [
+        "ROCK",
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 85,
+        "defence": 100,
+        "sp_attack": 60,
+        "sp_defence": 70,
+        "speed": 100
+      },
+      "bst": 490,
+      "ability_names": {
+        "primary": "Trailblazer",
+        "secondary": "Surefoot",
+        "hidden": "Stormsense"
+      },
+      "role": "Cliff Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 58
+      }
+    },
+    {
+      "id": "057",
+      "dex_number": 57,
+      "name": "Censmoke",
+      "types": [
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 35,
+        "defence": 45,
+        "sp_attack": 70,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Renewal",
+        "secondary": "Cinderhide",
+        "hidden": "Camouflage"
+      },
+      "role": "Smoke Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 59
+      }
+    },
+    {
+      "id": "058",
+      "dex_number": 58,
+      "name": "Thurafume",
+      "types": [
+        "FIRE",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 90,
+        "attack": 50,
+        "defence": 75,
+        "sp_attack": 105,
+        "sp_defence": 105,
+        "speed": 75
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Renewal",
+        "secondary": "Medicinal Sap",
+        "hidden": "Truce"
+      },
+      "role": "Purifying Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 60
+      }
+    },
+    {
+      "id": "059",
+      "dex_number": 59,
+      "name": "Malifume",
+      "types": [
+        "FIRE",
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 65,
+        "defence": 75,
+        "sp_attack": 105,
+        "sp_defence": 75,
+        "speed": 105
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Cinderhide",
+        "secondary": "Ambush",
+        "hidden": "Opportunist"
+      },
+      "role": "Corrupt Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 61
+      }
+    },
+    {
+      "id": "060",
+      "dex_number": 60,
+      "name": "Pomling",
+      "types": [
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 35,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Renewal",
+        "hidden": "Truce"
+      },
+      "role": "Orchard Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 62
+      }
+    },
+    {
+      "id": "061",
+      "dex_number": 61,
+      "name": "Granadove",
+      "types": [
+        "GRASS",
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 70,
+        "defence": 60,
+        "sp_attack": 85,
+        "sp_defence": 100,
+        "speed": 95
+      },
+      "bst": 480,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Renewal",
+        "hidden": "Truce"
+      },
+      "role": "Orchard Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 63
+      }
+    },
+    {
+      "id": "062",
+      "dex_number": 62,
+      "name": "Votress",
+      "types": [
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 35,
+        "defence": 55,
+        "sp_attack": 60,
+        "sp_defence": 70,
+        "speed": 50
+      },
+      "bst": 320,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Calm Guard",
+        "hidden": "Foresight"
+      },
+      "role": "Vow Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 64
+      }
+    },
+    {
+      "id": "063",
+      "dex_number": 63,
+      "name": "Sigilume",
+      "types": [
+        "PSYCHIC",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 45,
+        "defence": 100,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 60
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Calm Guard",
+        "hidden": "Screenmender"
+      },
+      "role": "Ordered Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 65
+      }
+    },
+    {
+      "id": "064",
+      "dex_number": 64,
+      "name": "Sepulshade",
+      "types": [
+        "PSYCHIC",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 90,
+        "attack": 50,
+        "defence": 75,
+        "sp_attack": 105,
+        "sp_defence": 125,
+        "speed": 60
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Calm Guard",
+        "secondary": "Foresight",
+        "hidden": "Palimpsest"
+      },
+      "role": "Memorial Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 66
+      }
+    },
+    {
+      "id": "065",
+      "dex_number": 65,
+      "name": "Idolure",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 50,
+        "defence": 65,
+        "sp_attack": 105,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Foresight",
+        "hidden": "Covetous Mirror"
+      },
+      "role": "Idol Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 67
+      }
+    },
+    {
+      "id": "066",
+      "dex_number": 66,
+      "name": "Brackhound",
+      "types": [
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 65,
+        "defence": 50,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 60
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Unfazed",
+        "hidden": "Gatekeeper"
+      },
+      "role": "Gatehound Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 68
+      }
+    },
+    {
+      "id": "067",
+      "dex_number": 67,
+      "name": "Mastigrim",
+      "types": [
+        "DARK",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 85,
+        "defence": 85,
+        "sp_attack": 40,
+        "sp_defence": 65,
+        "speed": 60
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Unfazed",
+        "hidden": "Gatekeeper"
+      },
+      "role": "Gatehound Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 69
+      }
+    },
+    {
+      "id": "068",
+      "dex_number": 68,
+      "name": "Cerberrood",
+      "types": [
+        "DARK",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 120,
+        "attack": 100,
+        "defence": 100,
+        "sp_attack": 45,
+        "sp_defence": 100,
+        "speed": 60
+      },
+      "bst": 525,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Unfazed",
+        "hidden": "Gatekeeper"
+      },
+      "role": "Gatehound Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 70
+      }
+    },
+    {
+      "id": "069",
+      "dex_number": 69,
+      "name": "Murmite",
+      "types": [
+        "BUG",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 45,
+        "defence": 60,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 100
+      },
+      "bst": 430,
+      "ability_names": {
+        "primary": "Soundproof",
+        "secondary": "Chorus",
+        "hidden": "Foresight"
+      },
+      "role": "Atmosphere Single-stage",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 71
+      }
+    },
+    {
+      "id": "070",
+      "dex_number": 70,
+      "name": "Cairant",
+      "types": [
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 55,
+        "defence": 55,
+        "sp_attack": 55,
+        "sp_defence": 55,
+        "speed": 55
+      },
+      "bst": 330,
+      "ability_names": {
+        "primary": "Adaptable Hide",
+        "secondary": "Renewal",
+        "hidden": "Wayfarer"
+      },
+      "role": "Dragon Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 72
+      }
+    },
+    {
+      "id": "071",
+      "dex_number": 71,
+      "name": "Serapine",
+      "types": [
+        "FAIRY",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 60,
+        "defence": 75,
+        "sp_attack": 100,
+        "sp_defence": 120,
+        "speed": 85
+      },
+      "bst": 540,
+      "ability_names": {
+        "primary": "Renewal",
+        "secondary": "Calm Guard",
+        "hidden": "Stable Core"
+      },
+      "role": "Pure Split Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 73
+      }
+    },
+    {
+      "id": "072",
+      "dex_number": 72,
+      "name": "Pandemne",
+      "types": [
+        "DARK",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 105,
+        "defence": 75,
+        "sp_attack": 105,
+        "sp_defence": 75,
+        "speed": 105
+      },
+      "bst": 540,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Ambush",
+        "hidden": "Covetous Mirror"
+      },
+      "role": "Corrupt Split Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 74
+      }
+    },
+    {
+      "id": "073",
+      "dex_number": 73,
+      "name": "Flaggrim",
+      "types": [
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 70,
+        "defence": 50,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 60
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "First Strike",
+        "secondary": "Rallying Cry",
+        "hidden": "Protector"
+      },
+      "role": "Banner Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 75
+      }
+    },
+    {
+      "id": "074",
+      "dex_number": 74,
+      "name": "Oriflamme",
+      "types": [
+        "FIGHTING",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 80,
+        "attack": 95,
+        "defence": 70,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 95
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Rallying Cry",
+        "secondary": "Sunstride",
+        "hidden": "Protector"
+      },
+      "role": "Radiant Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 76
+      }
+    },
+    {
+      "id": "075",
+      "dex_number": 75,
+      "name": "Tattereign",
+      "types": [
+        "DARK",
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 100,
+        "defence": 60,
+        "sp_attack": 70,
+        "sp_defence": 75,
+        "speed": 125
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Ambush",
+        "secondary": "Wayfarer",
+        "hidden": "Stormsense"
+      },
+      "role": "Broken Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 77
+      }
+    },
+    {
+      "id": "076",
+      "dex_number": 76,
+      "name": "Grailhare",
+      "types": [
+        "NORMAL",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 70,
+        "defence": 55,
+        "sp_attack": 95,
+        "sp_defence": 95,
+        "speed": 115
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Foresight",
+        "hidden": "Keen Sense"
+      },
+      "role": "Rare Single-stage",
+      "power_class": "Single-stage",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 78
+      }
+    },
+    {
+      "id": "077",
+      "dex_number": 77,
+      "name": "Saltinel",
+      "types": [
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 50,
+        "defence": 70,
+        "sp_attack": 30,
+        "sp_defence": 60,
+        "speed": 35
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Toxinproof",
+        "secondary": "Stoneplate",
+        "hidden": "Reservoir"
+      },
+      "role": "Holy-stone Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 79
+      }
+    },
+    {
+      "id": "078",
+      "dex_number": 78,
+      "name": "Bethlisk",
+      "types": [
+        "ROCK",
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 95,
+        "sp_attack": 70,
+        "sp_defence": 100,
+        "speed": 45
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Toxinproof",
+        "secondary": "Reservoir",
+        "hidden": "Medicinal Sap"
+      },
+      "role": "Holy-stone Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 80
+      }
+    },
+    {
+      "id": "079",
+      "dex_number": 79,
+      "name": "Foamwhelp",
+      "types": [
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 70,
+        "defence": 50,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "First Strike",
+        "hidden": "Protector"
+      },
+      "role": "Heroic Sea-lion Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 81
+      }
+    },
+    {
+      "id": "080",
+      "dex_number": 80,
+      "name": "Liontide",
+      "types": [
+        "WATER",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 120,
+        "defence": 100,
+        "sp_attack": 45,
+        "sp_defence": 85,
+        "speed": 75
+      },
+      "bst": 525,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "Hard Head",
+        "hidden": "Battle Nerve"
+      },
+      "role": "Heroic Sea-lion Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 82
+      }
+    },
+    {
+      "id": "081",
+      "dex_number": 81,
+      "name": "Dunetuft",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 40,
+        "sp_attack": 50,
+        "sp_defence": 60,
+        "speed": 65
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Foresight",
+        "secondary": "Patience",
+        "hidden": "Truce"
+      },
+      "role": "Diplomat Cat Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 83
+      }
+    },
+    {
+      "id": "082",
+      "dex_number": 82,
+      "name": "Accordacal",
+      "types": [
+        "GROUND",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 80,
+        "attack": 85,
+        "defence": 70,
+        "sp_attack": 95,
+        "sp_defence": 95,
+        "speed": 95
+      },
+      "bst": 520,
+      "ability_names": {
+        "primary": "Foresight",
+        "secondary": "Patience",
+        "hidden": "Truce"
+      },
+      "role": "Diplomat Cat Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 84
+      }
+    },
+    {
+      "id": "083",
+      "dex_number": 83,
+      "name": "Rufram",
+      "types": [
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 65,
+        "defence": 60,
+        "sp_attack": 40,
+        "sp_defence": 50,
+        "speed": 40
+      },
+      "bst": 315,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Cinderhide",
+        "hidden": "Steamheart"
+      },
+      "role": "Red-beard Ram Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 85
+      }
+    },
+    {
+      "id": "084",
+      "dex_number": 84,
+      "name": "Fordossa",
+      "types": [
+        "FIRE",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 95,
+        "sp_attack": 95,
+        "sp_defence": 80,
+        "speed": 55
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Cinderhide",
+        "hidden": "Steamheart"
+      },
+      "role": "Drowned-flame Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 86
+      }
+    },
+    {
+      "id": "085",
+      "dex_number": 85,
+      "name": "Tyrquill",
+      "types": [
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 90,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 35
+      },
+      "bst": 315,
+      "ability_names": {
+        "primary": "Thornhide",
+        "secondary": "Stoneplate",
+        "hidden": "Gatekeeper"
+      },
+      "role": "Fortress Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 87
+      }
+    },
+    {
+      "id": "086",
+      "dex_number": 86,
+      "name": "Wraithrone",
+      "types": [
+        "STEEL",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 100,
+        "defence": 120,
+        "sp_attack": 60,
+        "sp_defence": 95,
+        "speed": 45
+      },
+      "bst": 520,
+      "ability_names": {
+        "primary": "Thornhide",
+        "secondary": "Stoneplate",
+        "hidden": "Gatekeeper"
+      },
+      "role": "Uncrowned Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 88
+      }
+    },
+    {
+      "id": "087",
+      "dex_number": 87,
+      "name": "Regulet",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 55,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Camouflage",
+        "secondary": "Adaptable Hide",
+        "hidden": "Wayfarer"
+      },
+      "role": "Crown Chameleon Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 89
+      }
+    },
+    {
+      "id": "088",
+      "dex_number": 88,
+      "name": "Thronelorn",
+      "types": [
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 70,
+        "sp_defence": 85,
+        "speed": 70
+      },
+      "bst": 405,
+      "ability_names": {
+        "primary": "Camouflage",
+        "secondary": "Adaptable Hide",
+        "hidden": "Ambush"
+      },
+      "role": "Crown Chameleon Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 90
+      }
+    },
+    {
+      "id": "089",
+      "dex_number": 89,
+      "name": "Cyprigon",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 95,
+        "sp_attack": 85,
+        "sp_defence": 95,
+        "speed": 70
+      },
+      "bst": 535,
+      "ability_names": {
+        "primary": "Firm Stance",
+        "secondary": "Adaptable Hide",
+        "hidden": "Sandcoat"
+      },
+      "role": "Crown Chameleon Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 91
+      }
+    },
+    {
+      "id": "090",
+      "dex_number": 90,
+      "name": "Oathlet",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 40,
+        "defence": 60,
+        "sp_attack": 35,
+        "sp_defence": 70,
+        "speed": 45
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Calm Guard",
+        "secondary": "Firm Stance",
+        "hidden": "Truce"
+      },
+      "role": "Parley Hedgehog Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 92
+      }
+    },
+    {
+      "id": "091",
+      "dex_number": 91,
+      "name": "Parlethorn",
+      "types": [
+        "STEEL",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 75,
+        "defence": 125,
+        "sp_attack": 45,
+        "sp_defence": 125,
+        "speed": 35
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Calm Guard",
+        "secondary": "Firm Stance",
+        "hidden": "Truce"
+      },
+      "role": "Parley Hedgehog Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 93
+      }
+    },
+    {
+      "id": "092",
+      "dex_number": 92,
+      "name": "Jerbune",
+      "types": [
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 70,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Foresight",
+        "secondary": "Wayfarer",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Alliance Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 94
+      }
+    },
+    {
+      "id": "093",
+      "dex_number": 93,
+      "name": "Concordune",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 50,
+        "defence": 75,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 100
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Medicinal Sap",
+        "secondary": "Foresight",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Alliance Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 95
+      }
+    },
+    {
+      "id": "094",
+      "dex_number": 94,
+      "name": "Sundune",
+      "types": [
+        "PSYCHIC",
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 70,
+        "defence": 60,
+        "sp_attack": 120,
+        "sp_defence": 70,
+        "speed": 120
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Ambush",
+        "secondary": "Foresight",
+        "hidden": "Opportunist"
+      },
+      "role": "Solitary Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 96
+      }
+    },
+    {
+      "id": "095",
+      "dex_number": 95,
+      "name": "Pennmot",
+      "types": [
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 65,
+        "defence": 60,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 40
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Revenge Mark",
+        "secondary": "Coldproof",
+        "hidden": "Countercharge"
+      },
+      "role": "Grudge Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 97
+      }
+    },
+    {
+      "id": "096",
+      "dex_number": 96,
+      "name": "Grudgemont",
+      "types": [
+        "DARK",
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 120,
+        "defence": 100,
+        "sp_attack": 45,
+        "sp_defence": 85,
+        "speed": 60
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Revenge Mark",
+        "secondary": "Coldproof",
+        "hidden": "Marked Quarry"
+      },
+      "role": "Grudge Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 98
+      }
+    },
+    {
+      "id": "097",
+      "dex_number": 97,
+      "name": "Courstoat",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 35,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Feintstep",
+        "hidden": "Foresight"
+      },
+      "role": "Reversal Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 99
+      }
+    },
+    {
+      "id": "098",
+      "dex_number": 98,
+      "name": "Reversire",
+      "types": [
+        "PSYCHIC",
+        "DARK"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 80,
+        "defence": 60,
+        "sp_attack": 95,
+        "sp_defence": 80,
+        "speed": 120
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Feintstep",
+        "hidden": "Foresight"
+      },
+      "role": "Reversal Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 100
+      }
+    },
+    {
+      "id": "099",
+      "dex_number": 99,
+      "name": "Whisbat",
+      "types": [
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 35,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 60,
+        "sp_defence": 55,
+        "speed": 70
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Soundproof",
+        "secondary": "Chorus",
+        "hidden": "Mimic Ear"
+      },
+      "role": "Echo Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 101
+      }
+    },
+    {
+      "id": "100",
+      "dex_number": 100,
+      "name": "Pactecho",
+      "types": [
+        "FLYING",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 50,
+        "defence": 60,
+        "sp_attack": 100,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 495,
+      "ability_names": {
+        "primary": "Soundproof",
+        "secondary": "Chorus",
+        "hidden": "Mimic Ear"
+      },
+      "role": "Echo Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 102
+      }
+    },
+    {
+      "id": "101",
+      "dex_number": 101,
+      "name": "Limbud",
+      "types": [
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 35,
+        "defence": 50,
+        "sp_attack": 50,
+        "sp_defence": 70,
+        "speed": 35
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Calm Guard",
+        "secondary": "Renewal",
+        "hidden": "Truce"
+      },
+      "role": "Laurel Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 103
+      }
+    },
+    {
+      "id": "102",
+      "dex_number": 102,
+      "name": "Laureveil",
+      "types": [
+        "GRASS",
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 105,
+        "attack": 50,
+        "defence": 105,
+        "sp_attack": 75,
+        "sp_defence": 130,
+        "speed": 35
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Calm Guard",
+        "secondary": "Renewal",
+        "hidden": "Stable Core"
+      },
+      "role": "Laurel Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 104
+      }
+    },
+    {
+      "id": "103",
+      "dex_number": 103,
+      "name": "Amplet",
+      "types": [
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 35,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 70,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Static Hide",
+        "secondary": "Wayfarer",
+        "hidden": "Capacitor"
+      },
+      "role": "Magnet Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 105
+      }
+    },
+    {
+      "id": "104",
+      "dex_number": 104,
+      "name": "Vortamor",
+      "types": [
+        "ELECTRIC",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 45,
+        "defence": 60,
+        "sp_attack": 125,
+        "sp_defence": 85,
+        "speed": 120
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Static Hide",
+        "secondary": "Wayfarer",
+        "hidden": "Capacitor"
+      },
+      "role": "Magnet Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 106
+      }
+    },
+    {
+      "id": "105",
+      "dex_number": 105,
+      "name": "Nibblub",
+      "types": [
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Berry Hoard",
+        "hidden": "Feast"
+      },
+      "role": "Gourmand Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 107
+      }
+    },
+    {
+      "id": "106",
+      "dex_number": 106,
+      "name": "Gourbog",
+      "types": [
+        "GRASS",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 120,
+        "attack": 80,
+        "defence": 95,
+        "sp_attack": 95,
+        "sp_defence": 95,
+        "speed": 30
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Berry Hoard",
+        "hidden": "Feast"
+      },
+      "role": "Gourmand Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 108
+      }
+    },
+    {
+      "id": "107",
+      "dex_number": 107,
+      "name": "Pebbettle",
+      "types": [
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 50,
+        "defence": 70,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Stoneplate",
+        "hidden": "Scavenger"
+      },
+      "role": "Hoard Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 109
+      }
+    },
+    {
+      "id": "108",
+      "dex_number": 108,
+      "name": "Avaroll",
+      "types": [
+        "ROCK",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 115,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 30
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Stoneplate",
+        "hidden": "Scavenger"
+      },
+      "role": "Hoard Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 110
+      }
+    },
+    {
+      "id": "109",
+      "dex_number": 109,
+      "name": "Prodiglow",
+      "types": [
+        "STEEL",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 90,
+        "defence": 95,
+        "sp_attack": 95,
+        "sp_defence": 70,
+        "speed": 80
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Static Hide",
+        "hidden": "Alternator"
+      },
+      "role": "Spent Wealth Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 111
+      }
+    },
+    {
+      "id": "110",
+      "dex_number": 110,
+      "name": "Styxlet",
+      "types": [
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Toxinproof",
+        "secondary": "Adaptable Hide",
+        "hidden": "Patience"
+      },
+      "role": "Temper Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 112
+      }
+    },
+    {
+      "id": "111",
+      "dex_number": 111,
+      "name": "Ragegill",
+      "types": [
+        "WATER",
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 95,
+        "defence": 70,
+        "sp_attack": 95,
+        "sp_defence": 60,
+        "speed": 95
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "Steamheart",
+        "hidden": "Battle Rush"
+      },
+      "role": "Rage Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 113
+      }
+    },
+    {
+      "id": "112",
+      "dex_number": 112,
+      "name": "Sulkoad",
+      "types": [
+        "WATER",
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 70,
+        "defence": 95,
+        "sp_attack": 85,
+        "sp_defence": 120,
+        "speed": 35
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Coldproof",
+        "secondary": "Patience",
+        "hidden": "Stoneplate"
+      },
+      "role": "Sulk Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 114
+      }
+    },
+    {
+      "id": "113",
+      "dex_number": 113,
+      "name": "Embertle",
+      "types": [
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 50,
+        "defence": 65,
+        "sp_attack": 50,
+        "sp_defence": 60,
+        "speed": 20
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Foresight",
+        "secondary": "Stoneplate",
+        "hidden": "Keen Sense"
+      },
+      "role": "Forecast Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 115
+      }
+    },
+    {
+      "id": "114",
+      "dex_number": 114,
+      "name": "Sepulchel",
+      "types": [
+        "FIRE",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 70,
+        "defence": 120,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 30
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Foresight",
+        "secondary": "Stoneplate",
+        "hidden": "Calm Guard"
+      },
+      "role": "Forecast Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 116
+      }
+    },
+    {
+      "id": "115",
+      "dex_number": 115,
+      "name": "Triskit",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 55,
+        "defence": 55,
+        "sp_attack": 55,
+        "sp_defence": 55,
+        "speed": 50
+      },
+      "bst": 320,
+      "ability_names": {
+        "primary": "Adaptable Hide",
+        "secondary": "Wayfarer",
+        "hidden": "Foresight"
+      },
+      "role": "Three-way Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 117
+      }
+    },
+    {
+      "id": "116",
+      "dex_number": 116,
+      "name": "Phlegacorn",
+      "types": [
+        "FIGHTING",
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 100,
+        "sp_attack": 70,
+        "sp_defence": 85,
+        "speed": 70
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Countercharge",
+        "secondary": "Hard Head",
+        "hidden": "Battle Rush"
+      },
+      "role": "Aggression Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 118
+      }
+    },
+    {
+      "id": "117",
+      "dex_number": 117,
+      "name": "Harpbriar",
+      "types": [
+        "GRASS",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 80,
+        "sp_attack": 95,
+        "sp_defence": 95,
+        "speed": 55
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Medicinal Sap",
+        "secondary": "Thornhide",
+        "hidden": "Earthroot"
+      },
+      "role": "Root Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 119
+      }
+    },
+    {
+      "id": "118",
+      "dex_number": 118,
+      "name": "Searwaste",
+      "types": [
+        "GROUND",
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 100,
+        "defence": 120,
+        "sp_attack": 75,
+        "sp_defence": 75,
+        "speed": 45
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Cinderhide",
+        "secondary": "Stoneplate",
+        "hidden": "Firm Stance"
+      },
+      "role": "Glass Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 120
+      }
+    },
+    {
+      "id": "119",
+      "dex_number": 119,
+      "name": "Feignid",
+      "types": [
+        "BUG"
+      ],
+      "base_stats": {
+        "hp": 35,
+        "attack": 40,
+        "defence": 35,
+        "sp_attack": 60,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Ambush",
+        "hidden": "Camouflage"
+      },
+      "role": "Decoy Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 121
+      }
+    },
+    {
+      "id": "120",
+      "dex_number": 120,
+      "name": "Malebolace",
+      "types": [
+        "BUG",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 70,
+        "defence": 70,
+        "sp_attack": 95,
+        "sp_defence": 100,
+        "speed": 100
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Feintstep",
+        "secondary": "Poison Barbs",
+        "hidden": "Ambush"
+      },
+      "role": "Decoy Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 122
+      }
+    },
+    {
+      "id": "121",
+      "dex_number": 121,
+      "name": "Kincoil",
+      "types": [
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "attack": 55,
+        "defence": 70,
+        "sp_attack": 35,
+        "sp_defence": 60,
+        "speed": 35
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Coldproof",
+        "secondary": "Pack Guard",
+        "hidden": "Surefoot"
+      },
+      "role": "Pact Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 123
+      }
+    },
+    {
+      "id": "122",
+      "dex_number": 122,
+      "name": "Pactolin",
+      "types": [
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 75,
+        "defence": 85,
+        "sp_attack": 40,
+        "sp_defence": 85,
+        "speed": 50
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "Coldproof",
+        "secondary": "Pack Guard",
+        "hidden": "Surefoot"
+      },
+      "role": "Pact Stage 2",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 124
+      }
+    },
+    {
+      "id": "123",
+      "dex_number": 123,
+      "name": "Cocytalon",
+      "types": [
+        "ICE",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 125,
+        "defence": 125,
+        "sp_attack": 50,
+        "sp_defence": 100,
+        "speed": 50
+      },
+      "bst": 550,
+      "ability_names": {
+        "primary": "Coldproof",
+        "secondary": "Pack Guard",
+        "hidden": "Protector"
+      },
+      "role": "Pact Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 125
+      }
+    },
+    {
+      "id": "124",
+      "dex_number": 124,
+      "name": "Hexamuse",
+      "types": [
+        "NORMAL",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 50,
+        "defence": 75,
+        "sp_attack": 85,
+        "sp_defence": 100,
+        "speed": 85
+      },
+      "bst": 470,
+      "ability_names": {
+        "primary": "Soundproof",
+        "secondary": "Unfazed",
+        "hidden": "Wayfarer"
+      },
+      "role": "Rare Single-stage",
+      "power_class": "Single-stage",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 126
+      }
+    },
+    {
+      "id": "125",
+      "dex_number": 125,
+      "name": "Scarabel",
+      "types": [
+        "BUG"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 60,
+        "defence": 70,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 40
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Thornhide",
+        "secondary": "Protector",
+        "hidden": "Bulwark"
+      },
+      "role": "Bulwark Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 127
+      }
+    },
+    {
+      "id": "126",
+      "dex_number": 126,
+      "name": "Bulwarkab",
+      "types": [
+        "BUG",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 100,
+        "defence": 125,
+        "sp_attack": 45,
+        "sp_defence": 100,
+        "speed": 35
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Thornhide",
+        "secondary": "Protector",
+        "hidden": "Bulwark"
+      },
+      "role": "Bulwark Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 128
+      }
+    },
+    {
+      "id": "127",
+      "dex_number": 127,
+      "name": "Mortargek",
+      "types": [
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 45,
+        "defence": 45,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 65
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Siege Breaker",
+        "hidden": "Focus Edge"
+      },
+      "role": "Breach Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 129
+      }
+    },
+    {
+      "id": "128",
+      "dex_number": 128,
+      "name": "Sallyskink",
+      "types": [
+        "ROCK",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 85,
+        "defence": 70,
+        "sp_attack": 100,
+        "sp_defence": 70,
+        "speed": 100
+      },
+      "bst": 495,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Siege Breaker",
+        "hidden": "Poison Barbs"
+      },
+      "role": "Breach Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 130
+      }
+    },
+    {
+      "id": "129",
+      "dex_number": 129,
+      "name": "Paxibis",
+      "types": [
+        "FLYING",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 50,
+        "defence": 60,
+        "sp_attack": 75,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 470,
+      "ability_names": {
+        "primary": "Truce",
+        "secondary": "Rallying Cry",
+        "hidden": "Protector"
+      },
+      "role": "Truce Single-stage",
+      "power_class": "Single-stage",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 131
+      }
+    },
+    {
+      "id": "130",
+      "dex_number": 130,
+      "name": "Veiltern",
+      "types": [
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 35,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Wayfarer",
+        "hidden": "Stormsense"
+      },
+      "role": "Weather Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 132
+      }
+    },
+    {
+      "id": "131",
+      "dex_number": 131,
+      "name": "Galebrass",
+      "types": [
+        "FLYING",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 80,
+        "defence": 70,
+        "sp_attack": 70,
+        "sp_defence": 90,
+        "speed": 95
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Keen Sense",
+        "secondary": "Trailblazer",
+        "hidden": "Stormsense"
+      },
+      "role": "Weather Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 133
+      }
+    },
+    {
+      "id": "132",
+      "dex_number": 132,
+      "name": "Trucepoe",
+      "types": [
+        "FLYING",
+        "PSYCHIC"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 60,
+        "defence": 70,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 100
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Truce",
+        "secondary": "Foresight",
+        "hidden": "Patience"
+      },
+      "role": "Truce Single-stage",
+      "power_class": "Single-stage",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 134
+      }
+    },
+    {
+      "id": "133",
+      "dex_number": 133,
+      "name": "Wadopot",
+      "types": [
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 310,
+      "ability_names": {
+        "primary": "Bindproof",
+        "secondary": "Firm Stance",
+        "hidden": "Surefoot"
+      },
+      "role": "Bound Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 135
+      }
+    },
+    {
+      "id": "134",
+      "dex_number": 134,
+      "name": "Fetterpot",
+      "types": [
+        "WATER",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 125,
+        "attack": 100,
+        "defence": 105,
+        "sp_attack": 50,
+        "sp_defence": 100,
+        "speed": 35
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Bindproof",
+        "secondary": "Firm Stance",
+        "hidden": "Surefoot"
+      },
+      "role": "Bound Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 136
+      }
+    },
+    {
+      "id": "135",
+      "dex_number": 135,
+      "name": "Pearlfrond",
+      "types": [
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 35,
+        "defence": 50,
+        "sp_attack": 60,
+        "sp_defence": 70,
+        "speed": 35
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Medicinal Sap",
+        "secondary": "Firm Stance",
+        "hidden": "Heartwood Core"
+      },
+      "role": "Core Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 137
+      }
+    },
+    {
+      "id": "136",
+      "dex_number": 136,
+      "name": "Regnacra",
+      "types": [
+        "GRASS",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 70,
+        "defence": 95,
+        "sp_attack": 95,
+        "sp_defence": 120,
+        "speed": 35
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Medicinal Sap",
+        "secondary": "Firm Stance",
+        "hidden": "Heartwood Core"
+      },
+      "role": "Core Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 138
+      }
+    },
+    {
+      "id": "137",
+      "dex_number": 137,
+      "name": "Skatelk",
+      "types": [
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 60,
+        "defence": 50,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 60
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Snowfoot",
+        "secondary": "Surefoot",
+        "hidden": "Hard Head"
+      },
+      "role": "Ice-runner Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 139
+      }
+    },
+    {
+      "id": "138",
+      "dex_number": 138,
+      "name": "Rimehart",
+      "types": [
+        "ICE",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 100,
+        "defence": 85,
+        "sp_attack": 45,
+        "sp_defence": 75,
+        "speed": 100
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Snowfoot",
+        "secondary": "Surefoot",
+        "hidden": "Hard Head"
+      },
+      "role": "Ice-runner Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 140
+      }
+    },
+    {
+      "id": "139",
+      "dex_number": 139,
+      "name": "Reedile",
+      "types": [
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 50,
+        "defence": 65,
+        "sp_attack": 40,
+        "sp_defence": 50,
+        "speed": 40
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Stormsense",
+        "secondary": "Reservoir",
+        "hidden": "Floodplain"
+      },
+      "role": "Delta Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 141
+      }
+    },
+    {
+      "id": "140",
+      "dex_number": 140,
+      "name": "Deltacroc",
+      "types": [
+        "WATER",
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 95,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 55
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Stormsense",
+        "secondary": "Reservoir",
+        "hidden": "Floodplain"
+      },
+      "role": "Delta Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 142
+      }
+    },
+    {
+      "id": "141",
+      "dex_number": 141,
+      "name": "Pilgrimp",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 50,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Rallying Cry",
+        "hidden": "Trailblazer"
+      },
+      "role": "Pilgrim Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 143
+      }
+    },
+    {
+      "id": "142",
+      "dex_number": 142,
+      "name": "Ganderiel",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 85,
+        "defence": 70,
+        "sp_attack": 70,
+        "sp_defence": 85,
+        "speed": 100
+      },
+      "bst": 485,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Rallying Cry",
+        "hidden": "Protector"
+      },
+      "role": "Goose Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 144
+      }
+    },
+    {
+      "id": "143",
+      "dex_number": 143,
+      "name": "Caproclaim",
+      "types": [
+        "NORMAL",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 70,
+        "defence": 85,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 70
+      },
+      "bst": 485,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Forager",
+        "hidden": "Chorus"
+      },
+      "role": "Goat Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 145
+      }
+    },
+    {
+      "id": "144",
+      "dex_number": 144,
+      "name": "Dartfin",
+      "types": [
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 30,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 70,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Stormsense",
+        "secondary": "Rainrunner",
+        "hidden": "Alternator"
+      },
+      "role": "Voyage Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 146
+      }
+    },
+    {
+      "id": "145",
+      "dex_number": 145,
+      "name": "Lusivolt",
+      "types": [
+        "ELECTRIC",
+        "WATER"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 105,
+        "sp_defence": 75,
+        "speed": 125
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Stormsense",
+        "secondary": "Rainrunner",
+        "hidden": "Alternator"
+      },
+      "role": "Voyage Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 147
+      }
+    },
+    {
+      "id": "146",
+      "dex_number": 146,
+      "name": "Fieflet",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 55,
+        "defence": 70,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Firm Stance",
+        "hidden": "Wayfarer"
+      },
+      "role": "Pledged Land Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 148
+      }
+    },
+    {
+      "id": "147",
+      "dex_number": 147,
+      "name": "Pledrake",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 95,
+        "sp_attack": 70,
+        "sp_defence": 95,
+        "speed": 80
+      },
+      "bst": 530,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Firm Stance",
+        "hidden": "Wayfarer"
+      },
+      "role": "Pledged Land Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 149
+      }
+    },
+    {
+      "id": "148",
+      "dex_number": 148,
+      "name": "Decimite",
+      "types": [
+        "BUG"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 60
+      },
+      "bst": 290,
+      "ability_names": {
+        "primary": "Forager",
+        "secondary": "Safekeep",
+        "hidden": "Capacitor"
+      },
+      "role": "Tithe Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 150
+      }
+    },
+    {
+      "id": "149",
+      "dex_number": 149,
+      "name": "Tithelect",
+      "types": [
+        "BUG",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 70,
+        "defence": 90,
+        "sp_attack": 90,
+        "sp_defence": 95,
+        "speed": 55
+      },
+      "bst": 495,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Static Hide",
+        "hidden": "Tithe Charge"
+      },
+      "role": "Tithe Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 151
+      }
+    },
+    {
+      "id": "150",
+      "dex_number": 150,
+      "name": "Lyrlet",
+      "types": [
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 30,
+        "defence": 40,
+        "sp_attack": 65,
+        "sp_defence": 60,
+        "speed": 70
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Chorus",
+        "secondary": "Soundproof",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Song-drake Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 152
+      }
+    },
+    {
+      "id": "151",
+      "dex_number": 151,
+      "name": "Aquilore",
+      "types": [
+        "FAIRY",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 60,
+        "defence": 75,
+        "sp_attack": 105,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 535,
+      "ability_names": {
+        "primary": "Chorus",
+        "secondary": "Soundproof",
+        "hidden": "Rallying Cry"
+      },
+      "role": "Song-drake Final",
+      "power_class": "Elite Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 153
+      }
+    },
+    {
+      "id": "152",
+      "dex_number": 152,
+      "name": "Acremink",
+      "types": [
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 40,
+        "sp_defence": 55,
+        "speed": 65
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Toxinproof",
+        "secondary": "Renewal",
+        "hidden": "Foresight"
+      },
+      "role": "Poison Split Base",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 154
+      }
+    },
+    {
+      "id": "153",
+      "dex_number": 153,
+      "name": "Longspurr",
+      "types": [
+        "FIGHTING",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 100,
+        "defence": 90,
+        "sp_attack": 50,
+        "sp_defence": 75,
+        "speed": 100
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Toxinproof",
+        "secondary": "Battle Nerve",
+        "hidden": "Revenge Mark"
+      },
+      "role": "Endurance Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 155
+      }
+    },
+    {
+      "id": "154",
+      "dex_number": 154,
+      "name": "Elixirine",
+      "types": [
+        "FAIRY",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 90,
+        "attack": 50,
+        "defence": 75,
+        "sp_attack": 85,
+        "sp_defence": 100,
+        "speed": 100
+      },
+      "bst": 500,
+      "ability_names": {
+        "primary": "Toxinproof",
+        "secondary": "Medicinal Sap",
+        "hidden": "Renewal"
+      },
+      "role": "Care Split Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 156
+      }
+    },
+    {
+      "id": "155",
+      "dex_number": 155,
+      "name": "Lanspup",
+      "types": [
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 45,
+        "attack": 70,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 70
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "First Strike",
+        "secondary": "Pursuit Instinct",
+        "hidden": "Last Stand"
+      },
+      "role": "Last Advance Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 157
+      }
+    },
+    {
+      "id": "156",
+      "dex_number": 156,
+      "name": "Dirgehound",
+      "types": [
+        "FIGHTING",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 75,
+        "attack": 105,
+        "defence": 60,
+        "sp_attack": 60,
+        "sp_defence": 75,
+        "speed": 130
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "First Strike",
+        "secondary": "Pursuit Instinct",
+        "hidden": "Last Stand"
+      },
+      "role": "Last Advance Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 158
+      }
+    },
+    {
+      "id": "157",
+      "dex_number": 157,
+      "name": "Choughlet",
+      "types": [
+        "ROCK"
+      ],
+      "base_stats": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 40,
+        "sp_defence": 50,
+        "speed": 65
+      },
+      "bst": 295,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Scavenger",
+        "hidden": "Screenmender"
+      },
+      "role": "Builder-bird Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 159
+      }
+    },
+    {
+      "id": "158",
+      "dex_number": 158,
+      "name": "Ascalough",
+      "types": [
+        "ROCK",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 80,
+        "defence": 95,
+        "sp_attack": 70,
+        "sp_defence": 90,
+        "speed": 90
+      },
+      "bst": 495,
+      "ability_names": {
+        "primary": "Safekeep",
+        "secondary": "Scavenger",
+        "hidden": "Screenmender"
+      },
+      "role": "Builder-bird Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 160
+      }
+    },
+    {
+      "id": "159",
+      "dex_number": 159,
+      "name": "Tempestrel",
+      "types": [
+        "GHOST",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 50,
+        "defence": 60,
+        "sp_attack": 100,
+        "sp_defence": 100,
+        "speed": 125
+      },
+      "bst": 495,
+      "ability_names": {
+        "primary": "Stormsense",
+        "secondary": "Soundproof",
+        "hidden": "Weather Calm"
+      },
+      "role": "Storm Omen Single-stage",
+      "power_class": "Single-stage",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 161
+      }
+    },
+    {
+      "id": "160",
+      "dex_number": 160,
+      "name": "Vowcolt",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 30,
+        "sp_defence": 55,
+        "speed": 60
+      },
+      "bst": 305,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Unfazed",
+        "hidden": "Marked Quarry"
+      },
+      "role": "Inherited Vow Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 162
+      }
+    },
+    {
+      "id": "161",
+      "dex_number": 161,
+      "name": "Oathcourser",
+      "types": [
+        "NORMAL",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 80,
+        "sp_attack": 45,
+        "sp_defence": 95,
+        "speed": 95
+      },
+      "bst": 505,
+      "ability_names": {
+        "primary": "Wayfarer",
+        "secondary": "Unfazed",
+        "hidden": "Marked Quarry"
+      },
+      "role": "Inherited Vow Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 163
+      }
+    },
+    {
+      "id": "162",
+      "dex_number": 162,
+      "name": "Chantlet",
+      "types": [
+        "NORMAL"
+      ],
+      "base_stats": {
+        "hp": 30,
+        "attack": 40,
+        "defence": 35,
+        "sp_attack": 60,
+        "sp_defence": 50,
+        "speed": 70
+      },
+      "bst": 285,
+      "ability_names": {
+        "primary": "Chorus",
+        "secondary": "Mimic Ear",
+        "hidden": "Adaptable Hide"
+      },
+      "role": "Settler Bird Stage 1",
+      "power_class": "Base / Early",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 164
+      }
+    },
+    {
+      "id": "163",
+      "dex_number": 163,
+      "name": "Sarumoss",
+      "types": [
+        "NORMAL",
+        "GRASS"
+      ],
+      "base_stats": {
+        "hp": 70,
+        "attack": 55,
+        "defence": 70,
+        "sp_attack": 95,
+        "sp_defence": 95,
+        "speed": 95
+      },
+      "bst": 480,
+      "ability_names": {
+        "primary": "Chorus",
+        "secondary": "Renewal",
+        "hidden": "Medicinal Sap"
+      },
+      "role": "Settler Bird Final",
+      "power_class": "Standard Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 165
+      }
+    },
+    {
+      "id": "164",
+      "dex_number": 164,
+      "name": "Caelynx",
+      "types": [
+        "ICE",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 80,
+        "defence": 95,
+        "sp_attack": 95,
+        "sp_defence": 120,
+        "speed": 95
+      },
+      "bst": 580,
+      "ability_names": {
+        "primary": "Calm Guard",
+        "secondary": "Keen Sense",
+        "hidden": "Clear Judgment"
+      },
+      "role": "Legendary Watcher: Heaven",
+      "power_class": "Legendary Watcher",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 166
+      }
+    },
+    {
+      "id": "165",
+      "dex_number": 165,
+      "name": "Tellurion",
+      "types": [
+        "GRASS",
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 125,
+        "attack": 105,
+        "defence": 125,
+        "sp_attack": 75,
+        "sp_defence": 100,
+        "speed": 50
+      },
+      "bst": 580,
+      "ability_names": {
+        "primary": "Firm Stance",
+        "secondary": "Earthroot",
+        "hidden": "World Anchor"
+      },
+      "role": "Legendary Watcher: Earth",
+      "power_class": "Legendary Watcher",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 167
+      }
+    },
+    {
+      "id": "166",
+      "dex_number": 166,
+      "name": "Gehennuar",
+      "types": [
+        "FIRE",
+        "GHOST"
+      ],
+      "base_stats": {
+        "hp": 80,
+        "attack": 95,
+        "defence": 70,
+        "sp_attack": 120,
+        "sp_defence": 95,
+        "speed": 120
+      },
+      "bst": 580,
+      "ability_names": {
+        "primary": "Ambush",
+        "secondary": "Cinderhide",
+        "hidden": "Sinmark"
+      },
+      "role": "Legendary Watcher: Hell",
+      "power_class": "Legendary Watcher",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 168
+      }
+    },
+    {
+      "id": "167",
+      "dex_number": 167,
+      "name": "Dustisk",
+      "types": [
+        "GROUND"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 50
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Trailblazer",
+        "secondary": "Sandcoat",
+        "hidden": "Waystone Master"
+      },
+      "role": "Pseudo Stage 1",
+      "power_class": "Pseudo Base",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 169
+      }
+    },
+    {
+      "id": "168",
+      "dex_number": 168,
+      "name": "Cairisk",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 80,
+        "attack": 80,
+        "defence": 80,
+        "sp_attack": 50,
+        "sp_defence": 70,
+        "speed": 60
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "Trailblazer",
+        "secondary": "Firm Stance",
+        "hidden": "Waystone Master"
+      },
+      "role": "Pseudo Stage 2",
+      "power_class": "Pseudo Middle",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 170
+      }
+    },
+    {
+      "id": "169",
+      "dex_number": 169,
+      "name": "Mausolisk",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 105,
+        "attack": 130,
+        "defence": 130,
+        "sp_attack": 50,
+        "sp_defence": 105,
+        "speed": 80
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "Firm Stance",
+        "secondary": "Stoneplate",
+        "hidden": "Waystone Master"
+      },
+      "role": "Pseudo Final",
+      "power_class": "Pseudo Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 171
+      }
+    },
+    {
+      "id": "170",
+      "dex_number": 170,
+      "name": "Chipkid",
+      "types": [
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 65,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 55
+      },
+      "bst": 300,
+      "ability_names": {
+        "primary": "Snowfoot",
+        "secondary": "Surefoot",
+        "hidden": "Bulwark"
+      },
+      "role": "Pseudo Stage 1",
+      "power_class": "Pseudo Base",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 172
+      }
+    },
+    {
+      "id": "171",
+      "dex_number": 171,
+      "name": "Rimebex",
+      "types": [
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 80,
+        "attack": 85,
+        "defence": 85,
+        "sp_attack": 40,
+        "sp_defence": 70,
+        "speed": 60
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "Snowfoot",
+        "secondary": "Surefoot",
+        "hidden": "Bulwark"
+      },
+      "role": "Pseudo Stage 2",
+      "power_class": "Pseudo Middle",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 173
+      }
+    },
+    {
+      "id": "172",
+      "dex_number": 172,
+      "name": "Aegishorn",
+      "types": [
+        "ICE",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 110,
+        "attack": 135,
+        "defence": 135,
+        "sp_attack": 50,
+        "sp_defence": 105,
+        "speed": 65
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "Snowfoot",
+        "secondary": "Hard Head",
+        "hidden": "Bulwark"
+      },
+      "role": "Pseudo Final",
+      "power_class": "Pseudo Final",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 174
+      }
+    },
+    {
+      "id": "173",
+      "dex_number": 173,
+      "name": "Tianzhar",
+      "types": [
+        "DRAGON",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 105,
+        "attack": 105,
+        "defence": 105,
+        "sp_attack": 130,
+        "sp_defence": 105,
+        "speed": 130
+      },
+      "bst": 680,
+      "ability_names": {
+        "primary": "Stormsense",
+        "secondary": "Alternator",
+        "hidden": "Celestial Tempest"
+      },
+      "role": "Eastern Box Legendary",
+      "power_class": "Box Legendary",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 175
+      }
+    },
+    {
+      "id": "174",
+      "dex_number": 174,
+      "name": "Cruxwyrm",
+      "types": [
+        "DRAGON",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 110,
+        "attack": 135,
+        "defence": 135,
+        "sp_attack": 110,
+        "sp_defence": 110,
+        "speed": 80
+      },
+      "bst": 680,
+      "ability_names": {
+        "primary": "Firm Stance",
+        "secondary": "Stable Core",
+        "hidden": "Sovereign Decree"
+      },
+      "role": "Western Box Legendary",
+      "power_class": "Box Legendary",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 176
+      }
+    },
+    {
+      "id": "175",
+      "dex_number": 175,
+      "name": "Feirong",
+      "types": [
+        "GRASS",
+        "FIGHTING"
+      ],
+      "base_stats": {
+        "hp": 105,
+        "attack": 105,
+        "defence": 90,
+        "sp_attack": 90,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Chorus",
+        "hidden": "Oath Roar"
+      },
+      "role": "Mythic",
+      "power_class": "Mythic",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 177
+      }
+    },
+    {
+      "id": "176",
+      "dex_number": 176,
+      "name": "Paleursa",
+      "types": [
+        "ROCK",
+        "ICE"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 125,
+        "defence": 125,
+        "sp_attack": 45,
+        "sp_defence": 75,
+        "speed": 45
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Thick Pelt",
+        "secondary": "Hard Head",
+        "hidden": "Countercharge"
+      },
+      "role": "Fossil Single-stage",
+      "power_class": "Fossil Final/Single",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 178
+      }
+    },
+    {
+      "id": "177",
+      "dex_number": 177,
+      "name": "Raptyrale",
+      "types": [
+        "ROCK",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "attack": 125,
+        "defence": 75,
+        "sp_attack": 50,
+        "sp_defence": 75,
+        "speed": 125
+      },
+      "bst": 515,
+      "ability_names": {
+        "primary": "Focus Edge",
+        "secondary": "Pursuit Instinct",
+        "hidden": "Weakpoint Hunter"
+      },
+      "role": "Fossil Single-stage",
+      "power_class": "Fossil Final/Single",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 179
+      }
+    },
+    {
+      "id": "178",
+      "dex_number": 178,
+      "name": "Sidermite",
+      "types": [
+        "ROCK",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "attack": 35,
+        "defence": 70,
+        "sp_attack": 60,
+        "sp_defence": 70,
+        "speed": 45
+      },
+      "bst": 330,
+      "ability_names": {
+        "primary": "Static Hide",
+        "secondary": "Capacitor",
+        "hidden": "Hovercore"
+      },
+      "role": "Alien Fossil Stage 1",
+      "power_class": "Fossil Base",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 180
+      }
+    },
+    {
+      "id": "179",
+      "dex_number": 179,
+      "name": "Xenolithid",
+      "types": [
+        "ROCK",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 95,
+        "attack": 55,
+        "defence": 95,
+        "sp_attack": 115,
+        "sp_defence": 95,
+        "speed": 55
+      },
+      "bst": 510,
+      "ability_names": {
+        "primary": "Capacitor",
+        "secondary": "Keen Sense",
+        "hidden": "Hovercore"
+      },
+      "role": "Alien Fossil Final",
+      "power_class": "Fossil Final/Single",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 181
+      }
+    },
+    {
+      "id": "180",
+      "dex_number": 180,
+      "name": "Gravodo",
+      "types": [
+        "ROCK",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 60,
+        "defence": 75,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 35
+      },
+      "bst": 320,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Ambush",
+        "hidden": "Septic Hunger"
+      },
+      "role": "Komodo Fossil Stage 1",
+      "power_class": "Fossil Base",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 182
+      }
+    },
+    {
+      "id": "181",
+      "dex_number": 181,
+      "name": "Cairnodo",
+      "types": [
+        "ROCK",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "attack": 85,
+        "defence": 90,
+        "sp_attack": 40,
+        "sp_defence": 75,
+        "speed": 40
+      },
+      "bst": 415,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Patience",
+        "hidden": "Septic Hunger"
+      },
+      "role": "Komodo Fossil Stage 2",
+      "power_class": "Fossil Middle",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 183
+      }
+    },
+    {
+      "id": "182",
+      "dex_number": 182,
+      "name": "Kronodo",
+      "types": [
+        "ROCK",
+        "POISON"
+      ],
+      "base_stats": {
+        "hp": 100,
+        "attack": 125,
+        "defence": 125,
+        "sp_attack": 50,
+        "sp_defence": 100,
+        "speed": 35
+      },
+      "bst": 535,
+      "ability_names": {
+        "primary": "Poison Barbs",
+        "secondary": "Ambush",
+        "hidden": "Septic Hunger"
+      },
+      "role": "Komodo Fossil Final",
+      "power_class": "Fossil Final/Single",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 184
+      }
+    },
+    {
+      "id": "183",
+      "dex_number": 183,
+      "name": "Guanrong",
+      "types": [
+        "GRASS",
+        "STEEL"
+      ],
+      "base_stats": {
+        "hp": 105,
+        "attack": 110,
+        "defence": 110,
+        "sp_attack": 80,
+        "sp_defence": 105,
+        "speed": 90
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "Protector",
+        "secondary": "Countercharge",
+        "hidden": "Oathkeeper"
+      },
+      "role": "Mythic",
+      "power_class": "Mythic",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 185
+      }
+    },
+    {
+      "id": "184",
+      "dex_number": 184,
+      "name": "Liubeirow",
+      "types": [
+        "GRASS",
+        "FAIRY"
+      ],
+      "base_stats": {
+        "hp": 105,
+        "attack": 90,
+        "defence": 90,
+        "sp_attack": 105,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "Medicinal Sap",
+        "secondary": "Rallying Cry",
+        "hidden": "Many Banners"
+      },
+      "role": "Mythic",
+      "power_class": "Mythic",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 186
+      }
+    },
+    {
+      "id": "185",
+      "dex_number": 185,
+      "name": "Waranwei",
+      "types": [
+        "POISON",
+        "DRAGON"
+      ],
+      "base_stats": {
+        "hp": 90,
+        "attack": 105,
+        "defence": 90,
+        "sp_attack": 105,
+        "sp_defence": 105,
+        "speed": 105
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "Foresight",
+        "secondary": "Marked Quarry",
+        "hidden": "Strategem"
+      },
+      "role": "Mythic",
+      "power_class": "Mythic",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 187
+      }
+    },
+    {
+      "id": "186",
+      "dex_number": 186,
+      "name": "Suncub",
+      "types": [
+        "FIRE"
+      ],
+      "base_stats": {
+        "hp": 60,
+        "attack": 85,
+        "defence": 60,
+        "sp_attack": 70,
+        "sp_defence": 60,
+        "speed": 85
+      },
+      "bst": 420,
+      "ability_names": {
+        "primary": "First Strike",
+        "secondary": "Hard Head",
+        "hidden": "Battle Rush"
+      },
+      "role": "Evolving Mythic Stage 1",
+      "power_class": "Middle / Evolving",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 188
+      }
+    },
+    {
+      "id": "187",
+      "dex_number": 187,
+      "name": "Cehong",
+      "types": [
+        "FIRE",
+        "ELECTRIC"
+      ],
+      "base_stats": {
+        "hp": 90,
+        "attack": 105,
+        "defence": 80,
+        "sp_attack": 105,
+        "sp_defence": 90,
+        "speed": 130
+      },
+      "bst": 600,
+      "ability_names": {
+        "primary": "First Strike",
+        "secondary": "Alternator",
+        "hidden": "Conqueror's Spark"
+      },
+      "role": "Evolving Mythic Final",
+      "power_class": "Mythic",
+      "capture_rate": null,
+      "unresolved_fields": [
+        "capture_rate"
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Full Dex",
+        "row": 189
+      }
+    }
+  ],
   "unresolved": [
-    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
-  ],
-  "expected_count": 187
+    "Species identities, types, exact stats and ability names extracted. Capture rates and remaining runtime bindings must be audited in Phase E; null is not a capture rule."
+  ]
 }
