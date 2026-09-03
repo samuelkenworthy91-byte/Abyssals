@@ -5,9 +5,517 @@
     "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
     "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx"
   ],
-  "records": [],
+  "records": [
+    {
+      "id": "CLASS-VILLAGER",
+      "name": "Villager",
+      "family": "Civilian",
+      "default_ai": "Basic",
+      "species_preference": "Normal / local common species",
+      "moveset_identity": "Balanced; simple offence",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 2
+      }
+    },
+    {
+      "id": "CLASS-PILGRIM",
+      "name": "Pilgrim",
+      "family": "Civilian",
+      "default_ai": "Basic",
+      "species_preference": "Normal, Fairy, Flying, Psychic",
+      "moveset_identity": "Balanced / support",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 3
+      }
+    },
+    {
+      "id": "CLASS-MERCHANT",
+      "name": "Merchant",
+      "family": "Civilian",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Normal, Bug, Steel; hoarder/safekeep identities",
+      "moveset_identity": "Resource / pivot",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 4
+      }
+    },
+    {
+      "id": "CLASS-COURIER",
+      "name": "Courier",
+      "family": "Civilian",
+      "default_ai": "Basic",
+      "species_preference": "Normal, Ground, Flying; fast species",
+      "moveset_identity": "Tempo",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 5
+      }
+    },
+    {
+      "id": "CLASS-REFUGEE",
+      "name": "Refugee",
+      "family": "Civilian",
+      "default_ai": "Basic",
+      "species_preference": "Local habitat species; intentionally imperfect teams",
+      "moveset_identity": "Balanced",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 6
+      }
+    },
+    {
+      "id": "CLASS-SCOUT",
+      "name": "Scout",
+      "family": "Wilderness",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Flying, Ground, Normal; fast utility",
+      "moveset_identity": "Tempo / scouting",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 7
+      }
+    },
+    {
+      "id": "CLASS-FORAGER",
+      "name": "Forager",
+      "family": "Wilderness",
+      "default_ai": "Basic",
+      "species_preference": "Grass, Bug, Poison",
+      "moveset_identity": "Sustain / status-light",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 8
+      }
+    },
+    {
+      "id": "CLASS-HUNTER",
+      "name": "Hunter",
+      "family": "Wilderness",
+      "default_ai": "Advanced",
+      "species_preference": "Dark, Flying, Poison, Bug",
+      "moveset_identity": "Control / finishing",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 9
+      }
+    },
+    {
+      "id": "CLASS-BEASTKEEPER",
+      "name": "Beastkeeper",
+      "family": "Wilderness",
+      "default_ai": "Advanced",
+      "species_preference": "Local ecology; mixed typing; fewer duplicates",
+      "moveset_identity": "Balanced / switching",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 10
+      }
+    },
+    {
+      "id": "CLASS-FERRYMAN",
+      "name": "Ferryman",
+      "family": "Wilderness",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Water, Flying, Electric",
+      "moveset_identity": "Tempo / Water",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 11
+      }
+    },
+    {
+      "id": "CLASS-OUTLAW",
+      "name": "Outlaw",
+      "family": "Criminal",
+      "default_ai": "Advanced",
+      "species_preference": "Dark, Fighting, Normal",
+      "moveset_identity": "Aggressive / opportunist",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 12
+      }
+    },
+    {
+      "id": "CLASS-SMUGGLER",
+      "name": "Smuggler",
+      "family": "Criminal",
+      "default_ai": "Advanced",
+      "species_preference": "Water, Dark, Poison, Flying",
+      "moveset_identity": "Pivot / control",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 13
+      }
+    },
+    {
+      "id": "CLASS-DESERTER",
+      "name": "Deserter",
+      "family": "Criminal",
+      "default_ai": "Advanced",
+      "species_preference": "Military species with mixed coverage",
+      "moveset_identity": "Balanced / disciplined",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 14
+      }
+    },
+    {
+      "id": "CLASS-GRAVE_ROBBER",
+      "name": "Grave Robber",
+      "family": "Criminal",
+      "default_ai": "Advanced",
+      "species_preference": "Ghost, Dark, Ground, Rock",
+      "moveset_identity": "Control / attrition",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 15
+      }
+    },
+    {
+      "id": "CLASS-RECRUIT",
+      "name": "Recruit",
+      "family": "Military",
+      "default_ai": "Basic",
+      "species_preference": "Normal, Fighting, Flying",
+      "moveset_identity": "Direct",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 16
+      }
+    },
+    {
+      "id": "CLASS-SOLDIER",
+      "name": "Soldier",
+      "family": "Military",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Fighting, Steel, Ground, Normal",
+      "moveset_identity": "Direct / fundamentals",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 17
+      }
+    },
+    {
+      "id": "CLASS-PATROL",
+      "name": "Patrol",
+      "family": "Military",
+      "default_ai": "Advanced",
+      "species_preference": "Fast lead + two coverage partners",
+      "moveset_identity": "Balanced / tempo",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 18
+      }
+    },
+    {
+      "id": "CLASS-OFFICER",
+      "name": "Officer",
+      "family": "Military",
+      "default_ai": "Advanced",
+      "species_preference": "Mixed military roster; defensive pivot",
+      "moveset_identity": "Plan-based",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 19
+      }
+    },
+    {
+      "id": "CLASS-KNIGHT",
+      "name": "Knight",
+      "family": "Military",
+      "default_ai": "Advanced",
+      "species_preference": "Steel, Fighting, Rock; bulky ace",
+      "moveset_identity": "Direct / guarded",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 20
+      }
+    },
+    {
+      "id": "CLASS-SIEGE_ENGINEER",
+      "name": "Siege Engineer",
+      "family": "Military",
+      "default_ai": "Advanced",
+      "species_preference": "Rock, Ground, Steel, Poison",
+      "moveset_identity": "Siege / attrition",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 21
+      }
+    },
+    {
+      "id": "CLASS-HOSPITALLER",
+      "name": "Hospitaller",
+      "family": "Medical / religious",
+      "default_ai": "Advanced",
+      "species_preference": "Grass, Fairy, Water, Steel",
+      "moveset_identity": "Sustain / protection",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 22
+      }
+    },
+    {
+      "id": "CLASS-CHAPLAIN",
+      "name": "Chaplain",
+      "family": "Medical / religious",
+      "default_ai": "Advanced",
+      "species_preference": "Fairy, Psychic, Normal, Grass",
+      "moveset_identity": "Support / control",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 23
+      }
+    },
+    {
+      "id": "CLASS-SHRINE_KEEPER",
+      "name": "Shrine Keeper",
+      "family": "Medical / religious",
+      "default_ai": "Advanced",
+      "species_preference": "Grass, Fairy, Psychic, Flying",
+      "moveset_identity": "Sustain / status",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 24
+      }
+    },
+    {
+      "id": "CLASS-CANON",
+      "name": "Canon",
+      "family": "Medical / religious",
+      "default_ai": "Advanced",
+      "species_preference": "Psychic, Fairy, Ghost, Steel",
+      "moveset_identity": "Control / analysis",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 25
+      }
+    },
+    {
+      "id": "CLASS-ORCHARD_KEEPER",
+      "name": "Orchard Keeper",
+      "family": "Regional",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Grass, Bug, Fairy, Ground",
+      "moveset_identity": "Sustain / local ecology",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 26
+      }
+    },
+    {
+      "id": "CLASS-RIVERHAND",
+      "name": "Riverhand",
+      "family": "Regional",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Water, Electric, Flying",
+      "moveset_identity": "Tempo / Water",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 27
+      }
+    },
+    {
+      "id": "CLASS-QUARRY_WORKER",
+      "name": "Quarry Worker",
+      "family": "Regional",
+      "default_ai": "Basic→Advanced",
+      "species_preference": "Rock, Ground, Fighting",
+      "moveset_identity": "Direct / slow power",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 28
+      }
+    },
+    {
+      "id": "CLASS-MASON",
+      "name": "Mason",
+      "family": "Regional",
+      "default_ai": "Advanced",
+      "species_preference": "Rock, Ground, Steel",
+      "moveset_identity": "Guard / attrition",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 29
+      }
+    },
+    {
+      "id": "CLASS-SCRIBE",
+      "name": "Scribe",
+      "family": "Regional",
+      "default_ai": "Advanced",
+      "species_preference": "Psychic, Normal, Ghost",
+      "moveset_identity": "Control / setup",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 30
+      }
+    },
+    {
+      "id": "CLASS-ARCHIVIST",
+      "name": "Archivist",
+      "family": "Regional",
+      "default_ai": "Advanced",
+      "species_preference": "Psychic, Steel, Ghost, Fairy",
+      "moveset_identity": "Control / defensive",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 31
+      }
+    },
+    {
+      "id": "CLASS-CHAMPION",
+      "name": "Champion",
+      "family": "Elite",
+      "default_ai": "Leader-lite",
+      "species_preference": "No type restriction; coherent win condition",
+      "moveset_identity": "Plan / ace preservation",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 32
+      }
+    },
+    {
+      "id": "CLASS-VETERAN",
+      "name": "Veteran",
+      "family": "Elite",
+      "default_ai": "Leader-lite",
+      "species_preference": "Mixed coverage; evolved, reliable species",
+      "moveset_identity": "Fundamentals / switching",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 33
+      }
+    },
+    {
+      "id": "CLASS-RELIC_SEEKER",
+      "name": "Relic Seeker",
+      "family": "Elite",
+      "default_ai": "Leader-lite",
+      "species_preference": "Rock, Ghost, Psychic, Steel, rare species",
+      "moveset_identity": "Control / anti-setup",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 34
+      }
+    },
+    {
+      "id": "CLASS-MASTER_HANDLER",
+      "name": "Master Handler",
+      "family": "Elite",
+      "default_ai": "Leader-lite",
+      "species_preference": "Ecology-driven high-BST non-mythic roster",
+      "moveset_identity": "Balanced / prediction",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 35
+      }
+    },
+    {
+      "id": "CLASS-LOST_SOLDIER",
+      "name": "Lost Soldier",
+      "family": "Underworld",
+      "default_ai": "Advanced",
+      "species_preference": "Former military roster; Dark/Ghost additions possible",
+      "moveset_identity": "Attrition",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 36
+      }
+    },
+    {
+      "id": "CLASS-DEAD_PILGRIM",
+      "name": "Dead Pilgrim",
+      "family": "Underworld",
+      "default_ai": "Advanced",
+      "species_preference": "Fairy, Ghost, Psychic, Normal",
+      "moveset_identity": "Control / sustain",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 37
+      }
+    },
+    {
+      "id": "CLASS-PETITIONER",
+      "name": "Petitioner",
+      "family": "Underworld",
+      "default_ai": "Advanced",
+      "species_preference": "Psychic, Steel, Normal, Ghost",
+      "moveset_identity": "Defensive / control",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 38
+      }
+    },
+    {
+      "id": "CLASS-OATHBOUND_SHADE",
+      "name": "Oathbound Shade",
+      "family": "Underworld",
+      "default_ai": "Leader-lite",
+      "species_preference": "Steel, Ice, Dark, Ghost",
+      "moveset_identity": "Punish switching / status",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 39
+      }
+    },
+    {
+      "id": "CLASS-FORMER_LEADER",
+      "name": "Former Leader",
+      "family": "Underworld",
+      "default_ai": "Leader",
+      "species_preference": "Exact mortal identity/theme, remixed only if a rematch is authored",
+      "moveset_identity": "Leader plan",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 21,
+        "row": 40
+      }
+    }
+  ],
   "unresolved": [
-    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
+    "Phase E: consolidate AI tier behavior and team/profile references."
   ],
   "expected_count": 39
 }

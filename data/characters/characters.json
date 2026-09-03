@@ -676,6 +676,16 @@
       "role": "Hell Warden",
       "identity_source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
       "story_details_status": "not_supplied"
+    },
+    {
+      "id": "CHR-NHAROS",
+      "name": "Nharos",
+      "role": "Underworld sovereign",
+      "source": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
+        "queue_number": 7
+      },
+      "id_convention": "Technical CHR namespace; source name/identity established."
     }
   ],
   "unresolved": [

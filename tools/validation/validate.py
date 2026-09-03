@@ -5,6 +5,7 @@ from pathlib import Path
 try:
     from jsonschema import Draft202012Validator
     from PIL import Image
+    import numpy as np
 except ImportError as e:
     raise SystemExit('Missing tooling dependency. Activate .venv and run python3 -m pip install -r requirements-tools.txt: '+str(e))
 
@@ -118,7 +119,7 @@ def validate(root=ROOT, content=False):
     validate_references(rules,registries,errors,'core_rules')
     if rules['species']['count']!=187:errors.append('Locked species count must remain 187')
     if rules['species']['back_sprites_required'] or rules['battle']['player_active_rendered']:errors.append('First-person/back-sprite lock violated')
-    if len(registries['characters'])!=99: warnings.append('Character count changed from 99 imported known IDs; reconcile portrait queue.')
+    if len(registries['characters'])!=100: warnings.append('Character count differs from the 100-target canonical portrait queue, including recovered Nharos.')
     if {f'LDR-{i:02}' for i in range(1,9)}-registries['characters']:errors.append('Missing canonical leader IDs')
     areas=parsed['data/encounters/areas.json']['records'];tables=parsed['data/encounters/tables.json']['records']
     if len(areas)!=72 or len(tables)!=144:errors.append('Expected 72 area summaries and 144 phase descriptors')
@@ -159,6 +160,10 @@ def validate(root=ROOT, content=False):
                 errors.append('Species artwork identity/name mismatch '+row['asset_id'])
     active=[r for r in pm['records'] if r['selection_status']=='canonical']
     unique(active,'id','canonical portraits',errors)
+    unique(pm['missing_targets'],'id','missing portrait targets',errors)
+    if {r['id'] for r in active} & {r['id'] for r in pm['missing_targets']}:errors.append('Portrait target marked both supplied and missing')
+    for target in pm['missing_targets']:
+        if target['id'] not in registries['characters']:errors.append('Missing portrait target has unknown character '+target['id'])
     runtime=[]
     for manifest,kind in [(pm,'portraits'),(am,'abyssals')]:
         for row in manifest['records']:
@@ -199,8 +204,21 @@ def validate(root=ROOT, content=False):
                     if image.mode!='RGBA' or image.size!=(pm['canvas']['width'],pm['canvas']['height']):errors.append('Portrait canvas/mode mismatch '+rel)
                     rgba=image.convert('RGBA');alpha=rgba.getchannel('A')
                     if alpha.getbbox() is None or alpha.getextrema()[0]==255:errors.append('Portrait has no figure/transparency '+rel)
-                    if any(a and (r,g,b)==(255,0,255) for r,g,b,a in rgba.get_flattened_data()):errors.append('Opaque exact magenta remains '+rel)
+                    pixels=np.asarray(rgba)
+                    if np.any(np.all(pixels[:,:,:3]==(255,0,255),axis=2) & (pixels[:,:,3]>0)):errors.append('Opaque exact magenta remains '+rel)
                     if row['processing_status']!='ready':errors.append('Unready portrait used at runtime '+rel)
+                    bbox=alpha.getbbox()
+                    if bbox and min(bbox[0],bbox[1],image.width-bbox[2],image.height-bbox[3])<pm['canvas']['padding_px']:errors.append('Portrait padding/clipping failure '+rel)
+                    if row.get('visual_review')!='approved':errors.append('Unreviewed portrait used at runtime '+rel)
+                    config=row.get('processing_config')
+                    if not config or not resolve_path(root,config).is_file():errors.append('Missing portrait processing configuration '+rel)
+                    elif hashlib.sha256(resolve_path(root,config).read_bytes()).hexdigest()!=row.get('processing_config_sha256'):errors.append('Portrait configuration changed without regeneration '+rel)
+                    anchors=row.get('anchors',{});transform=row.get('transform',{})
+                    span=anchors.get('soles_y',0)-anchors.get('crown_y',0)
+                    if abs(span*transform.get('scale',0)-pm['canvas']['body_height_px'])>.01:errors.append('Portrait body scale mismatch '+rel)
+                    bounds=transform.get('source_opaque_bounds',[0,0,0,0]);offset=transform.get('offset',[0,0]);scale=transform.get('scale',0)
+                    if abs(offset[1]+(anchors.get('soles_y',0)-bounds[1])*scale-pm['canvas']['soles_baseline_y'])>1:errors.append('Portrait baseline mismatch '+rel)
+                    if abs(offset[0]+(anchors.get('body_center_x',0)-bounds[0])*scale-image.width/2)>1:errors.append('Portrait body centering mismatch '+rel)
     unique([{'path':x} for x in runtime],'path','runtime manifest',errors)
     actual_runtime={str(p.relative_to(root)) for kind in ['portraits','abyssals'] for p in (root/'assets'/kind/'runtime').glob('*') if p.suffix.lower() in ['.png','.webp','.jpg']}
     if actual_runtime!=set(runtime):errors.append('Runtime files and manifests differ')

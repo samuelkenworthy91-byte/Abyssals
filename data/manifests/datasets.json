@@ -5,7 +5,7 @@
       "path": "data/characters/characters.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 99,
+      "record_count": 100,
       "record_schema": "data/schemas/character.schema.json"
     },
     {
@@ -89,7 +89,7 @@
       "path": "data/trainer_classes/classes.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 39,
       "record_schema": "data/schemas/trainer_class.schema.json"
     },
     {

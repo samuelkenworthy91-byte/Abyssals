@@ -58,6 +58,27 @@ class PortraitTests(unittest.TestCase):
         self.assertFalse(art.inspect(im)['background_gate_passed'])
         with self.assertRaises(ValueError):art.normalize(im,{'reviewed_full_body_and_props':True,'reviewed_no_baked_text':True})
 
+    def test_reviewed_near_magenta_boundary_preserves_enclosed_costume(self):
+        im=Image.new('RGB',(100,100),(249,3,247))
+        for y in range(15,85):
+            for x in range(15,85):im.putpixel((x,y),(30,40,60))
+        for y in range(35,65):
+            for x in range(35,65):im.putpixel((x,y),(246,9,243))
+        out,_=art.clean_background(im,{'reviewed_background':True})
+        self.assertEqual(out.getpixel((0,0))[3],0)
+        self.assertEqual(out.getpixel((50,50)),(246,9,243,255))
+        self.assertEqual(out.getpixel((25,25)),(30,40,60,255))
+
+    def test_label_region_cannot_cut_connected_feet(self):
+        im=Image.new('RGB',(100,100),(249,3,247))
+        for y in range(10,91):
+            for x in range(45,56):im.putpixel((x,y),(30,40,60))
+        for y in range(85,90):
+            for x in range(10,20):im.putpixel((x,y),(240,240,240))
+        out,_=art.clean_background(im,{'reviewed_background':True,'excluded_label_rectangles':[[0,80,100,100]]})
+        self.assertEqual(out.getpixel((50,88)),(30,40,60,255))
+        self.assertEqual(out.getpixel((15,87))[3],0)
+
     def test_body_scale_preserves_proportions_and_baseline(self):
         im=Image.new('RGB',(100,200),(255,0,255))
         for y in range(20,181):

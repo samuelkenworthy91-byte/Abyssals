@@ -32,15 +32,15 @@ Updated in Phase A. Earlier missing-source claims are superseded by recovered ev
 
 ## U08 — Portrait backgrounds/text
 
-**processing_required**. Process supplied production portraits using exact magenta removal plus constrained reviewed background/edge cleanup. Preserve interior colours, full bodies and props; record body-scale anchors and inspect every output.
+**Resolved in Phase D.** 78/78 canonical supplied portraits and one Severin variant have reviewed transparent runtime PNGs with common body scale, complete props and checksums. Five alternates and seven superseded originals remain source-only.
 
 ## U09 — Missing named portraits
 
-**recheck_in_phase_d**. Package metadata currently records 22 absent named targets; verify against recovered 100-target manifest and supplied bytes. Do not fabricate missing portraits.
+**Genuinely missing: 22 named portraits.** The 100-target source manifest and all 91 supplied images reconcile to 78 canonical supplied targets. Exact missing IDs remain listed below and in the portrait manifest.
 
 ## U10 — Nharos identity
 
-**identity_recovered_id_reconciliation_pending**. Nharos is explicitly the underworld sovereign in the recovered locked story bible, character roster and portrait manifest. Reconcile stable ID convention; do not confuse him with Severin.
+**Resolved in Phase D.** Nharos is explicitly the underworld sovereign in the recovered sources. Technical ID CHR-NHAROS follows the existing CHR namespace and maps CORE-007; he remains separate from Severin.
 
 ## U11 — Detailed mechanical locks
 

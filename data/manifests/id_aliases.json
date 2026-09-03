@@ -45,10 +45,11 @@
     },
     {
       "source_id": "CORE-007",
-      "canonical_id": null,
+      "canonical_id": "CHR-NHAROS",
       "name": "Nharos",
       "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
-      "status": "unresolved_no_game_id"
+      "status": "resolved_technical_id",
+      "identity_source": "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx"
     },
     {
       "source_id": "CORE-008",

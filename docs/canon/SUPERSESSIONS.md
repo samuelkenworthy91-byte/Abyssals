@@ -19,4 +19,4 @@ Where earlier working notes conflict with a later lock, remove the superseded wo
 
 
 ## Import corrections (2026-09-02)
-Current user requires exact #FF00FF only; older near-exact/tolerance defaults are superseded. Actual supplied asset counts replace claims that all individual runtime assets are present. CORE queue labels are not runtime character IDs. Root build instructions are replaced because no app entry point exists. See ../audit/CONFLICTS_AND_RESOLUTIONS.md.
+Current owner instructions authorize exact #FF00FF removal plus constrained, reviewed background/edge cleanup for compression and antialiasing. Never globally erase similar costume colours. See ../art/PORTRAIT_PIPELINE.md. Actual supplied asset counts replace claims that all individual runtime assets are present. CORE queue labels are not runtime character IDs. Root build instructions are replaced because no app entry point exists. See ../audit/CONFLICTS_AND_RESOLUTIONS.md.

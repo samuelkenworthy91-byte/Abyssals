@@ -1,17 +1,37 @@
 # Portrait production pipeline
 
-Phase A correction: supplied portraits are production art. Preserve all 91 originals; do not require replacement exact-magenta sources. Current package accounting is 78 named targets, one Severin King Below form variant, five alternates and seven superseded portraits. Reconcile identities and classes against the recovered full portrait manifest in Phase D.
+All 91 supplied originals remain untouched. Classification is unchanged: 78 canonical named targets, one Severin King Below form variant, five alternates retained as references, and seven superseded legacy images retained as source only. Only the 79 selected canonical/variant images enter runtime. The 22 absent targets remain in `data/manifests/portraits.json`; no substitutes are generated.
 
-## Cleanup contract
+## Reproduce
 
-Remove exact #FF00FF background pixels where present. For compression and antialiasing, use source-specific, constrained background masks connected to the image boundary, with reviewed treatment of enclosed background gaps. Near-magenta colour alone is never sufficient to remove interior costume pixels. Preserve full head-to-toe artwork and props. Exclude baked labels with reviewed regions that do not touch the figure. Inspect outputs against originals on light and dark backgrounds and a transparency checkerboard.
+With the repository Python environment active:
 
-The current processor implements only the earlier exact-key gate and is awaiting replacement in Phase D. A rejection by that old gate means processing is unfinished, not that the source portrait is unusable.
+```bash
+python3 tools/art/process_portraits.py --write --report .reports/portrait_processing.json
+python3 tools/art/contact_sheets.py --kind portraits --background light
+python3 tools/art/contact_sheets.py --kind portraits --background dark
+npm run validate
+npm test
+```
 
-## Common canvas and body scale
+`--drafts` writes review copies without publishing manifest readiness. `--only 0 6` restricts a focused review to stable source-manifest indices. Do not mark output approved until reviewing the full processed set. Review previews remain outside Git.
 
-Current engineering convention: transparent RGBA PNG, 1536×2048, body crown-to-soles height 1536 px, soles baseline y=1920, outer padding at least 64 px. Record source-pixel crown, soles and body-centre anchors. Compute one uniform scale from the body, excluding raised props and costume extensions; preserve aspect ratio and all intentional props. If the convention cannot contain the complete collection at a consistent body scale, revise the shared canvas with measured evidence.
+## Cleanup
 
-## Runtime release gate
+`tools/art/portrait_processing.json` stores source hashes, individual body anchors, approved background seeds, label regions and review decisions. Remove exact #FF00FF. Model the actual background using each row's outer four columns, accommodating supplied gradients. Flood only boundary-connected pixels within the recorded tolerance; enclosed gaps require individually reviewed seeds. Tiny compression slivers may be cleared only within four pixels of an approved boundary and within eight RGB units of the background.
 
-Each output must have a canonical or explicitly unresolved identity, classification (canonical / variant / alternate / superseded), reproducible cleanup parameters/masks and body anchors, source/runtime checksums, and full-body visual QA. Missing targets remain missing. No source image is overwritten. No generated substitutes are allowed.
+The 860 enclosed candidate regions were visually inspected: 848 approved background seeds; 12 retained colour regions. A narrow 6-pixel edge band (8 for complex spectral/halo images) is unmatted using nearby background and interior samples, with a residual gate. Interior costume colours are not globally keyed. Reviewed retained regions preserve source colour. Six individually reviewed floor regions remove magenta shadow contamination without touching the character's upper costume.
+
+Baked captions are removed through reviewed regions while protecting the connected character silhouette, so a decorative label sharing the feet's Y range cannot crop the feet. No inpainting, redrawing, back sprites or generated placeholders are involved. PNGs are written atomically and decoded before publication.
+
+## Canvas and body scale — engineering convention
+
+Transparent RGBA PNG, **2048×2048**; **1536-pixel head-crown-to-soles span**, **soles baseline y=1920**, **body centre x=1024**, minimum outer padding 64. The previous 1536-wide proposal was widened to accommodate Illyr's lateral ribbons at the same body scale. This is a presentation convention, not a claim that all characters have the same canonical physical height.
+
+Each portrait has reviewed source-pixel head crown, soles and body-centre anchors, excluding tall crowns, halos and raised weapons. Apply one uniform scale `1536 / (soles_y - crown_y)` to the complete art, preserving aspect ratio and props. Align the measured body centre and soles; never stretch or individually shrink a character to fit. Robed/spectral figures use the visible foot tip or lowest body hem when feet are intentionally concealed by the production art. Crop only empty transparent space for compositing, then place the whole figure on the shared canvas. Validation checks scale, centre, baseline and padding.
+
+## Identity and release
+
+Canonical runtime filenames use canonical ID plus readable canonical name; the Severin form adds `King_Below`. CORE labels remain source queue aliases. Nharos is the established underworld sovereign; `CHR-NHAROS` follows the existing technical CHR namespace, with explicit source provenance. Superseded legacy names do not become new characters.
+
+The manifest records actual input formats (including JPEG bytes with .png filenames), source/runtime checksums, transformation, processing-configuration checksum and visual approval. `npm run validate` rejects stale configurations, missing files, invalid identities, wrong canvas/scale, clipped padding or unreviewed runtime assets. This does not waive the strict gate's 22 missing portrait targets.
