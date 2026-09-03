@@ -1,9 +1,8 @@
 {
   "schema_version": 1,
-  "status": "partial",
+  "status": "complete_for_supplied_source",
   "sources": [
-    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
-    "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx"
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx"
   ],
   "records": [
     {
@@ -17,7 +16,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 2
-      }
+      },
+      "class_family": "Civilian"
     },
     {
       "id": "CLASS-PILGRIM",
@@ -30,7 +30,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 3
-      }
+      },
+      "class_family": "Civilian"
     },
     {
       "id": "CLASS-MERCHANT",
@@ -43,7 +44,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 4
-      }
+      },
+      "class_family": "Civilian"
     },
     {
       "id": "CLASS-COURIER",
@@ -56,7 +58,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 5
-      }
+      },
+      "class_family": "Civilian"
     },
     {
       "id": "CLASS-REFUGEE",
@@ -69,7 +72,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 6
-      }
+      },
+      "class_family": "Civilian"
     },
     {
       "id": "CLASS-SCOUT",
@@ -82,7 +86,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 7
-      }
+      },
+      "class_family": "Wilderness"
     },
     {
       "id": "CLASS-FORAGER",
@@ -95,7 +100,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 8
-      }
+      },
+      "class_family": "Wilderness"
     },
     {
       "id": "CLASS-HUNTER",
@@ -108,7 +114,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 9
-      }
+      },
+      "class_family": "Wilderness"
     },
     {
       "id": "CLASS-BEASTKEEPER",
@@ -121,7 +128,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 10
-      }
+      },
+      "class_family": "Wilderness"
     },
     {
       "id": "CLASS-FERRYMAN",
@@ -134,7 +142,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 11
-      }
+      },
+      "class_family": "Wilderness"
     },
     {
       "id": "CLASS-OUTLAW",
@@ -147,7 +156,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 12
-      }
+      },
+      "class_family": "Criminal"
     },
     {
       "id": "CLASS-SMUGGLER",
@@ -160,7 +170,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 13
-      }
+      },
+      "class_family": "Criminal"
     },
     {
       "id": "CLASS-DESERTER",
@@ -173,7 +184,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 14
-      }
+      },
+      "class_family": "Criminal"
     },
     {
       "id": "CLASS-GRAVE_ROBBER",
@@ -186,7 +198,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 15
-      }
+      },
+      "class_family": "Criminal"
     },
     {
       "id": "CLASS-RECRUIT",
@@ -199,7 +212,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 16
-      }
+      },
+      "class_family": "Military"
     },
     {
       "id": "CLASS-SOLDIER",
@@ -212,7 +226,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 17
-      }
+      },
+      "class_family": "Military"
     },
     {
       "id": "CLASS-PATROL",
@@ -225,7 +240,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 18
-      }
+      },
+      "class_family": "Military"
     },
     {
       "id": "CLASS-OFFICER",
@@ -238,7 +254,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 19
-      }
+      },
+      "class_family": "Military"
     },
     {
       "id": "CLASS-KNIGHT",
@@ -251,7 +268,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 20
-      }
+      },
+      "class_family": "Military"
     },
     {
       "id": "CLASS-SIEGE_ENGINEER",
@@ -264,7 +282,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 21
-      }
+      },
+      "class_family": "Military"
     },
     {
       "id": "CLASS-HOSPITALLER",
@@ -277,7 +296,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 22
-      }
+      },
+      "class_family": "Medical / religious"
     },
     {
       "id": "CLASS-CHAPLAIN",
@@ -290,7 +310,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 23
-      }
+      },
+      "class_family": "Medical / religious"
     },
     {
       "id": "CLASS-SHRINE_KEEPER",
@@ -303,7 +324,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 24
-      }
+      },
+      "class_family": "Medical / religious"
     },
     {
       "id": "CLASS-CANON",
@@ -316,7 +338,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 25
-      }
+      },
+      "class_family": "Medical / religious"
     },
     {
       "id": "CLASS-ORCHARD_KEEPER",
@@ -329,7 +352,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 26
-      }
+      },
+      "class_family": "Regional"
     },
     {
       "id": "CLASS-RIVERHAND",
@@ -342,7 +366,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 27
-      }
+      },
+      "class_family": "Regional"
     },
     {
       "id": "CLASS-QUARRY_WORKER",
@@ -355,7 +380,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 28
-      }
+      },
+      "class_family": "Regional"
     },
     {
       "id": "CLASS-MASON",
@@ -368,7 +394,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 29
-      }
+      },
+      "class_family": "Regional"
     },
     {
       "id": "CLASS-SCRIBE",
@@ -381,7 +408,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 30
-      }
+      },
+      "class_family": "Regional"
     },
     {
       "id": "CLASS-ARCHIVIST",
@@ -394,7 +422,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 31
-      }
+      },
+      "class_family": "Regional"
     },
     {
       "id": "CLASS-CHAMPION",
@@ -407,7 +436,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 32
-      }
+      },
+      "class_family": "Elite"
     },
     {
       "id": "CLASS-VETERAN",
@@ -420,7 +450,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 33
-      }
+      },
+      "class_family": "Elite"
     },
     {
       "id": "CLASS-RELIC_SEEKER",
@@ -433,7 +464,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 34
-      }
+      },
+      "class_family": "Elite"
     },
     {
       "id": "CLASS-MASTER_HANDLER",
@@ -446,7 +478,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 35
-      }
+      },
+      "class_family": "Elite"
     },
     {
       "id": "CLASS-LOST_SOLDIER",
@@ -459,7 +492,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 36
-      }
+      },
+      "class_family": "Underworld"
     },
     {
       "id": "CLASS-DEAD_PILGRIM",
@@ -472,7 +506,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 37
-      }
+      },
+      "class_family": "Underworld"
     },
     {
       "id": "CLASS-PETITIONER",
@@ -485,7 +520,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 38
-      }
+      },
+      "class_family": "Underworld"
     },
     {
       "id": "CLASS-OATHBOUND_SHADE",
@@ -498,7 +534,8 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 39
-      }
+      },
+      "class_family": "Underworld"
     },
     {
       "id": "CLASS-FORMER_LEADER",
@@ -511,11 +548,9 @@
         "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
         "body_index": 21,
         "row": 40
-      }
+      },
+      "class_family": "Underworld"
     }
   ],
-  "unresolved": [
-    "Phase E: consolidate AI tier behavior and team/profile references."
-  ],
-  "expected_count": 39
+  "unresolved": []
 }

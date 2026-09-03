@@ -1,0 +1,949 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx",
+  "source_sha256": "363e795260c2dd5cc006e7f789d693d132bca96845dea5ee848d15f11af1e604",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 07"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Memorial & Resurrection System"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS\nCOMPLETE / LOCKED at implementation-design level. This document closes CHECKLIST 07. It fixes when the Civeton memorial appears, the visible memorial ledger, exact death-state preservation, costly resurrection, ten-distinct-species sacrifice rules, confirmation safeguards, human memorial handling and Mirra/Grief integration. Later implementation may refine presentation or correct defects, but mechanical changes require an explicit Checklist 07 revision rather than silent drift."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "Canonical creature terminology: Abyssal / Abyssals. Legacy source filenames may still contain older project wording."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "The memorial is not present at game start. After the first permanent Abyssal death, it is established when the player next revisits Civeton. The visible Abyssal memorial contains only currently dead Abyssals; resurrection removes the restored individual from that list. Resurrection restores the exact original instance and costs the permanent sacrifice of exactly ten living Abyssals representing ten different Dex species IDs. Sacrificed Abyssals never enter the memorial. Starred/favourite Abyssals and starters remain legal sacrifices, but receive explicit extra warnings. Human memorial entries are separate, pre-written and non-resurrectable. Mirra/Grief content may react to the player’s actual death, resurrection and sacrifice history."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01 remains the sole authority for deterministic stat growth, immutable growth seeds, historical growth rolls and evolution-growth behaviour. Checklist 07 preserves that exact individual state; resurrection never rerolls it."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06 remains the sole authority for items, held equipment and stat-growth training effects. There are no resurrection consumables. Checklist 07 preserves unexpired active training effects across death and resurrection, while held equipment is returned to inventory at death."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08 owns the broader party/reserve interface and reserve capacity rules. Checklist 07 only specifies the destination of a resurrected Abyssal: active party if space exists, otherwise reserve."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "CHECKLIST 10 owns exact story flags, scene triggers and Mirra dialogue bindings. Checklist 07 defines the state that those events must read."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "CHECKLIST 14 owns the starter three-life state machine. A starter that has reached final death is eligible for memorial resurrection; Checklist 14 must define the exact life-count state restored."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "CHECKLIST 15 owns Ironman persistence, autosave timing and anti-rollback enforcement. Checklist 07 requires death, resurrection and sacrifice events to be serialisable and irreversible under that save contract."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "IMPLEMENTATION PRINCIPLE"
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "Permanent death should matter emotionally and mechanically without making recovery impossible. The memorial is a visible record of unresolved loss; resurrection is deliberately costly, requires roster diversity rather than disposable duplicate catches, and always restores the same individual rather than generating a replacement."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "2. Memorial unlock and world-state behaviour"
+    },
+    {
+      "body_index": 19,
+      "kind": "table",
+      "rows": [
+        [
+          "Rule",
+          "Locked value"
+        ],
+        [
+          "Initial state",
+          "No memorial is present or interactable at the start of the game."
+        ],
+        [
+          "Trigger condition",
+          "The first permanent Abyssal death sets a pending memorial-establishment state."
+        ],
+        [
+          "World appearance",
+          "The memorial is established when the player next revisits Civeton after that first permanent death."
+        ],
+        [
+          "Persistence",
+          "Once established, the memorial remains permanently available for the rest of the save."
+        ],
+        [
+          "Visible Abyssal list",
+          "Contains currently dead, resurrection-eligible Abyssals only."
+        ],
+        [
+          "After resurrection",
+          "The restored Abyssal is removed from the visible Abyssal memorial immediately."
+        ]
+      ]
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "A death that occurs before the memorial physically exists is still recorded immediately in save data; the pending memorial simply has not yet appeared in Civeton."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "The memorial does not require a second death, quest purchase or special item to become functional once it is established."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "3. Memorial visual interaction"
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "3.1 Abyssal memorial"
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "Interacting with the established memorial opens a simple memorial list. No separate Details page is required."
+    },
+    {
+      "body_index": 26,
+      "kind": "table",
+      "rows": [
+        [
+          "Visible field",
+          "Requirement"
+        ],
+        [
+          "Sprite",
+          "Display the dead Abyssal’s species/form sprite."
+        ],
+        [
+          "Nickname",
+          "Display the individual nickname when present."
+        ],
+        [
+          "Species",
+          "Display the current species name."
+        ],
+        [
+          "Level",
+          "Display level at death."
+        ],
+        [
+          "Place of death",
+          "Display the authored location name captured at death."
+        ],
+        [
+          "Epitaph",
+          "Display one deterministic authored-template epitaph."
+        ],
+        [
+          "Action",
+          "Provide Resurrect when the entry is legally eligible."
+        ]
+      ]
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "The visible screen intentionally omits a deep statistics/details panel. Required restoration data is stored internally, not exposed merely because it exists."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "Ordering is deterministic. Default implementation should sort by most recent unresolved death first, using the stored death-order index as the authoritative tie-break."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "3.2 Human memorial"
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "Humans use a separate memorial section. Human entries are authored narrative records, not dynamic creature records."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "Each relevant named human has a pre-written memorial entry that appears or remains absent according to story/fate flags."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "Human entries may show name, portrait where available, and authored memorial text/circumstances appropriate to that character."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Humans cannot be resurrected through the memorial and never display a resurrection action."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "The human section must not imply that trainer surrender and human death are the same event; story flags remain authoritative."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "4. Dead-Abyssal ledger data contract"
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "Every permanent death creates or updates an exact instance record sufficient to restore that individual without reconstruction guesses. The memorial UI may display only a subset of these fields."
+    },
+    {
+      "body_index": 38,
+      "kind": "table",
+      "rows": [
+        [
+          "Stored field",
+          "Locked rule"
+        ],
+        [
+          "instanceId",
+          "Preserve the permanent unique Abyssal instance ID."
+        ],
+        [
+          "speciesId",
+          "Current canonical Dex/species ID at death."
+        ],
+        [
+          "nickname",
+          "Current nickname, including blank/no nickname."
+        ],
+        [
+          "level / XP",
+          "Exact current level and XP progress."
+        ],
+        [
+          "growthSeed",
+          "Immutable individual growth seed; never rerolled."
+        ],
+        [
+          "rolledStats",
+          "Exact six current rolled stats: HP, Attack, Defence, Sp. Atk, Sp. Def, Speed."
+        ],
+        [
+          "abilityId",
+          "Exact current ability."
+        ],
+        [
+          "moveIds[4]",
+          "Current four moves only. Former/forgotten move history is not recorded for memorial purposes."
+        ],
+        [
+          "evolutionHistory",
+          "Preserve the individual’s existing evolution-history data needed by canonical progression rules."
+        ],
+        [
+          "trainingEffects",
+          "Preserve all still-active Checklist 06 stat-growth training effects and each effect’s remaining level duration."
+        ],
+        [
+          "deathLocationId",
+          "Stable location ID plus player-facing place name snapshot if needed for display."
+        ],
+        [
+          "deathChapter",
+          "Current chapter/story segment at death."
+        ],
+        [
+          "deathOrder",
+          "Monotonic death-event sequence number used for deterministic ordering/history."
+        ],
+        [
+          "sprite/form key",
+          "Exact current visual form reference required to display the memorial sprite."
+        ],
+        [
+          "epitaphKey",
+          "Deterministically selected authored-template/result key; does not reroll on reload."
+        ]
+      ]
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "Current move PP does not need to be preserved because resurrection explicitly returns all four restored moves at full PP."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "No record of every move ever learned is required."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "A resurrected individual is removed from the visible dead ledger but its completed death/resurrection event history remains available internally for story logic and persistence."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "5. Deterministic epitaphs"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Epitaph text is selected from authored templates/rules, not generated by a live language model or free-form runtime text system."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "Selection may use stable recorded facts such as species/form, place of death, chapter and other approved history flags, but must always resolve deterministically from stored state."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "Reloading the same death state cannot produce a different epitaph."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "Epitaphs are flavour only and never change resurrection cost or eligibility."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "6. Resurrection eligibility and exact restoration"
+    },
+    {
+      "body_index": 49,
+      "kind": "table",
+      "rows": [
+        [
+          "Rule",
+          "Locked value"
+        ],
+        [
+          "Eligible target",
+          "A currently dead Abyssal represented in the visible memorial, including a starter that has reached its final death."
+        ],
+        [
+          "Cost",
+          "Exactly ten living Abyssals are permanently sacrificed for one resurrection."
+        ],
+        [
+          "Species diversity",
+          "The ten sacrifices must represent ten different canonical Dex/species IDs."
+        ],
+        [
+          "Duplicate rule",
+          "Two or more Abyssals sharing the same speciesId cannot both count toward the same resurrection."
+        ],
+        [
+          "Evolution distinction",
+          "Different Dex/species IDs count as different species even when they belong to the same evolutionary family."
+        ],
+        [
+          "Cosmetic forms",
+          "Forms sharing one speciesId count as the same species unless the canonical Dex deliberately gives them separate species IDs."
+        ],
+        [
+          "Currency/item substitute",
+          "None. Money, Trial Marks and items cannot replace any of the ten sacrifices."
+        ]
+      ]
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "This distinct-species rule is deliberate anti-trivialisation: the player cannot satisfy the cost by catching ten copies of one easy low-level grass encounter."
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "7. Sacrifice-selection interface and safeguards"
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "The resurrection flow must make irreversible deletion difficult to trigger accidentally while preserving the player’s right to sacrifice any legally eligible living Abyssal."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "Choose the dead Abyssal to resurrect from the memorial."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "Open the sacrifice-selection screen."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Select exactly ten living Abyssals. The interface must enforce ten distinct species IDs and reject/disable a second selection from an already represented species."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Show a final review of all ten selected sacrifices before execution."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Require an explicit irreversible-action confirmation before committing the transaction."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "7.1 Star/favourite safeguard"
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "Party/reserve management uses a simple star/favourite flag."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "A starred Abyssal remains legally sacrificable."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Selecting or confirming a starred Abyssal for sacrifice produces an additional clear warning that the player is about to permanently sacrifice a favourite."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "The player may deliberately continue after the warning; starring is protection against mistakes, not an absolute lock."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "7.2 Starter safeguard"
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "A starter remains legally sacrificable."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "Selecting or confirming a starter for sacrifice produces an additional explicit “Are you sure?” warning identifying it as the player’s starter."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "The player may deliberately continue after that warning."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "If an Abyssal is both starred and a starter, the UI may combine the warnings provided both facts and the irreversible consequence are unmistakable."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "8. Sacrifice transaction semantics"
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "All ten selected living Abyssal instances are permanently deleted as one committed resurrection transaction."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "Sacrificed Abyssals do not create dead-ledger entries, memorial graves or future resurrection targets."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "Sacrifice is mechanically distinct from battle death and must be recorded with a sacrifice event type rather than a death event type."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "The transaction must be atomic: either all ten sacrifices and the resurrection commit together, or none of them do. A crash/interruption must not leave a half-completed exchange."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "Checklist 15 will define the exact autosave/rollback enforcement required to make the committed result permanent."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "9. Resurrected instance state"
+    },
+    {
+      "body_index": 76,
+      "kind": "table",
+      "rows": [
+        [
+          "State component",
+          "Locked result"
+        ],
+        [
+          "Identity",
+          "Restore the same original instanceId; never spawn a replacement of the same species."
+        ],
+        [
+          "Species/form",
+          "Restore the exact species/form held at death."
+        ],
+        [
+          "Level / XP",
+          "Restore exactly."
+        ],
+        [
+          "Growth history",
+          "Restore the same immutable growthSeed and already-resolved growth history; never reroll."
+        ],
+        [
+          "Stats",
+          "Restore the exact six rolled stats recorded at death."
+        ],
+        [
+          "Ability",
+          "Restore the exact ability."
+        ],
+        [
+          "Moves",
+          "Restore the four move IDs held at death."
+        ],
+        [
+          "Move PP",
+          "All four restored moves return at full PP."
+        ],
+        [
+          "HP",
+          "Return at full HP."
+        ],
+        [
+          "Status",
+          "Clear all temporary/persistent battle status conditions carried at death."
+        ],
+        [
+          "Evolution history",
+          "Restore existing evolution-history data exactly."
+        ],
+        [
+          "Training effects",
+          "Restore all unexpired Checklist 06 active training effects with the same remaining level durations."
+        ],
+        [
+          "Visible memorial entry",
+          "Remove immediately after successful resurrection."
+        ]
+      ]
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "10. Held equipment on death"
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "Any held item is automatically returned to the player’s inventory when the Abyssal permanently dies."
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "The held item is therefore not stored as an equipped object on the dead instance and is not recreated on resurrection."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "Resurrection cannot duplicate held equipment."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "If desired for flavour/debugging, the death event may log the held-item ID at the moment of death, but that field has no ownership effect."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "11. Party/reserve placement after resurrection"
+    },
+    {
+      "body_index": 84,
+      "kind": "table",
+      "rows": [
+        [
+          "Condition",
+          "Destination"
+        ],
+        [
+          "Active party has fewer than six members",
+          "Place the resurrected Abyssal into the active party."
+        ],
+        [
+          "Active party is full",
+          "Place the resurrected Abyssal directly into reserve."
+        ]
+      ]
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "The memorial does not force the player to discard or swap another party member as part of resurrection."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "If Checklist 08 later defines reserve capacity constraints, that checklist must provide a safe destination/selection flow without changing the resurrection cost or restored state defined here."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "12. Starter final-death interaction"
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "A starter that has exhausted its special three-life allowance and reached final death may appear in the Abyssal memorial and may be resurrected under the same ten-distinct-species cost."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "Checklist 14 remains responsible for defining the starter life counter/state after resurrection. Checklist 07 does not silently grant a particular number of renewed lives."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "Once Checklist 14 supplies that state rule, the resurrection transaction must restore the starter using that rule while preserving the same underlying instance identity."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "13. Mirra / Grief integration"
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "Mirra’s Grief content may read the player’s actual memorial history. This is narrative reactivity, not a hidden battle modifier or alternate resurrection economy."
+    },
+    {
+      "body_index": 94,
+      "kind": "table",
+      "rows": [
+        [
+          "Readable state",
+          "Use"
+        ],
+        [
+          "totalPermanentDeaths",
+          "How many permanent Abyssal death events have occurred."
+        ],
+        [
+          "currentMemorialCount",
+          "How many Abyssals are currently dead/unresolved."
+        ],
+        [
+          "totalResurrections",
+          "How many successful memorial resurrections have occurred."
+        ],
+        [
+          "totalSacrifices",
+          "How many living Abyssals have been permanently sacrificed through resurrection transactions."
+        ],
+        [
+          "hasResurrected",
+          "Simple branch flag for at least one resurrection."
+        ],
+        [
+          "hasSacrificed",
+          "Simple branch flag for at least one sacrifice."
+        ]
+      ]
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Exact dialogue, scene placement and thresholds belong to Checklist 10/story-event scripting."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "Mirra may acknowledge a no-death run, unresolved grief, resurrection use or the scale of sacrifice, but cannot secretly alter resurrection cost or eligibility."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "14. Internal event history and persistence contract"
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "The visible memorial is not the complete historical record. Runtime/save data should maintain an append-only logical history sufficient for narrative reactions, auditing and Ironman integrity."
+    },
+    {
+      "body_index": 100,
+      "kind": "table",
+      "rows": [
+        [
+          "Event type",
+          "Minimum payload"
+        ],
+        [
+          "DEATH",
+          "instanceId, deathOrder, chapter, location, timestamp/order key as appropriate"
+        ],
+        [
+          "RESURRECTION",
+          "instanceId, linked deathOrder, resurrection order, ten sacrificed instanceIds"
+        ],
+        [
+          "SACRIFICE",
+          "sacrificed instanceId, speciesId, linked resurrection transaction ID"
+        ],
+        [
+          "STARTER_FINAL_DEATH",
+          "When Checklist 14 requires a distinct starter-state event; may coexist with DEATH rather than replace it."
+        ]
+      ]
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "Removing a resurrected Abyssal from the visible memorial must not erase the historical DEATH or RESURRECTION events used by Mirra/story logic."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "Stable transaction/event IDs are implementation identifiers, not new player-facing mechanics."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "15. Validation gates and Checklist 07 completion"
+    },
+    {
+      "body_index": 105,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Checklist item / handoff"
+        ],
+        [
+          "COMPLETE",
+          "Memorial appears only after the first permanent death and the player’s next Civeton revisit."
+        ],
+        [
+          "COMPLETE",
+          "Simple visible Abyssal memorial interaction fixed; no Details page required."
+        ],
+        [
+          "COMPLETE",
+          "Dead-instance ledger stores unique ID, species, nickname, level/XP, ability, exact stats, current four moves, evolution history, place/chapter/order, sprite/form, growth seed and active training state."
+        ],
+        [
+          "COMPLETE",
+          "Deterministic authored-template epitaphs fixed."
+        ],
+        [
+          "COMPLETE",
+          "Resurrection restores the exact original individual and removes it from the visible memorial."
+        ],
+        [
+          "COMPLETE",
+          "Exactly ten living Abyssals of ten distinct Dex species IDs are required per resurrection."
+        ],
+        [
+          "COMPLETE",
+          "Starred/favourite and starter sacrifices remain legal but receive explicit extra warnings."
+        ],
+        [
+          "COMPLETE",
+          "Sacrificed Abyssals are permanently deleted and never enter the memorial."
+        ],
+        [
+          "COMPLETE",
+          "Resurrection returns full HP, full PP, no status; party if space, reserve if full."
+        ],
+        [
+          "COMPLETE",
+          "Held items return to inventory on death and are not duplicated on resurrection."
+        ],
+        [
+          "COMPLETE",
+          "Separate pre-written human memorial section fixed; no human resurrection."
+        ],
+        [
+          "COMPLETE",
+          "Mirra/Grief may react to actual death/resurrection/sacrifice history."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 08 finalises reserve-capacity/access behaviour without changing the resurrection destination rule."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 10 binds exact memorial-establishment and Mirra/human-memorial story flags/scenes."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 14 defines the starter life-count state after final-death resurrection."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 15 defines autosave, atomic persistence and anti-rollback enforcement."
+        ],
+        [
+          "VALIDATION ONLY",
+          "Implementation playtest verifies UI clarity, distinct-species enforcement, warning safety and save-transaction integrity. Mechanical changes require explicit revision."
+        ]
+      ]
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "FINAL STATUS"
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "CHECKLIST 07 — MEMORIAL & RESURRECTION SYSTEM: COMPLETE / LOCKED. Later work may bind UI assets, map objects, story flags and save serialization, but must not silently alter the memorial unlock timing, visible-dead-list semantics, ten-distinct-species sacrifice cost, exact-instance restoration, warnings, human memorial separation or Mirra-state contract in this specification."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "16. Source authority used for this lock"
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "Pre-Programming Planning Checklists Reference v1.0 — Checklist 07 scope and completion criteria."
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01 — Exact Stat Growth Algorithm — locked deterministic growth/seed/history rules."
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06 — Items, Shops & Economy — no resurrection consumables; held-item ownership and five-slot stat-training state."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "Full Story Bible — LOCKED v1.0 — Civeton, chapter sequence, human fate state and Mirra/Grief narrative context."
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "User-approved Checklist 07 decision pass — memorial timing, visible-entry removal on resurrection, ten distinct species cost, starter/favourite warnings, final-dead starter eligibility, deterministic epitaphs, human memorial, Mirra integration, current-four-move storage, Dex-ID species rule, held-item return, full-health restoration and reserve placement."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 07 — LOCKED v1.0"
+    }
+  ]
+}

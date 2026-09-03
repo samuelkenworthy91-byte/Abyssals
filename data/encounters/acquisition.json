@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx"
+  ],
+  "records": [
+    {
+      "id": "ACQUISITION-001",
+      "name": "Scarimp",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 2
+      },
+      "species_id": "001"
+    },
+    {
+      "id": "ACQUISITION-002",
+      "name": "Grimscar",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 3
+      },
+      "species_id": "002"
+    },
+    {
+      "id": "ACQUISITION-003",
+      "name": "Noctafey",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 4
+      },
+      "species_id": "003"
+    },
+    {
+      "id": "ACQUISITION-004",
+      "name": "Calibrit",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 5
+      },
+      "species_id": "004"
+    },
+    {
+      "id": "ACQUISITION-005",
+      "name": "Severyn",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 6
+      },
+      "species_id": "005"
+    },
+    {
+      "id": "ACQUISITION-006",
+      "name": "Axiomaro",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 7
+      },
+      "species_id": "006"
+    },
+    {
+      "id": "ACQUISITION-007",
+      "name": "Ruffurn",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 8
+      },
+      "species_id": "007"
+    },
+    {
+      "id": "ACQUISITION-008",
+      "name": "Revhound",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 9
+      },
+      "species_id": "008"
+    },
+    {
+      "id": "ACQUISITION-009",
+      "name": "Revault",
+      "acquisition_class": "Starter family",
+      "acquisition_text": "Opening story assignment / evolution",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 10
+      },
+      "species_id": "009"
+    },
+    {
+      "id": "ACQUISITION-164",
+      "name": "Caelynx",
+      "acquisition_class": "Legendary Watcher",
+      "acquisition_text": "Bespoke authored legendary encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 11
+      },
+      "species_id": "164"
+    },
+    {
+      "id": "ACQUISITION-165",
+      "name": "Tellurion",
+      "acquisition_class": "Legendary Watcher",
+      "acquisition_text": "Bespoke authored legendary encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 12
+      },
+      "species_id": "165"
+    },
+    {
+      "id": "ACQUISITION-166",
+      "name": "Gehennuar",
+      "acquisition_class": "Legendary Watcher",
+      "acquisition_text": "Bespoke authored legendary encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 13
+      },
+      "species_id": "166"
+    },
+    {
+      "id": "ACQUISITION-173",
+      "name": "Tianzhar",
+      "acquisition_class": "Box Legendary",
+      "acquisition_text": "Bespoke authored late-story/postgame encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 14
+      },
+      "species_id": "173"
+    },
+    {
+      "id": "ACQUISITION-174",
+      "name": "Cruxwyrm",
+      "acquisition_class": "Box Legendary",
+      "acquisition_text": "Bespoke authored late-story/postgame encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 15
+      },
+      "species_id": "174"
+    },
+    {
+      "id": "ACQUISITION-175",
+      "name": "Feirong",
+      "acquisition_class": "Mythic",
+      "acquisition_text": "Bespoke authored optional encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 16
+      },
+      "species_id": "175"
+    },
+    {
+      "id": "ACQUISITION-183",
+      "name": "Guanrong",
+      "acquisition_class": "Mythic",
+      "acquisition_text": "Bespoke authored optional encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 17
+      },
+      "species_id": "183"
+    },
+    {
+      "id": "ACQUISITION-184",
+      "name": "Liubeirow",
+      "acquisition_class": "Mythic",
+      "acquisition_text": "Bespoke authored optional encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 18
+      },
+      "species_id": "184"
+    },
+    {
+      "id": "ACQUISITION-185",
+      "name": "Waranwei",
+      "acquisition_class": "Mythic",
+      "acquisition_text": "Bespoke authored optional encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 19
+      },
+      "species_id": "185"
+    },
+    {
+      "id": "ACQUISITION-186",
+      "name": "Suncub",
+      "acquisition_class": "Mythic",
+      "acquisition_text": "Bespoke authored optional encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 20
+      },
+      "species_id": "186"
+    },
+    {
+      "id": "ACQUISITION-187",
+      "name": "Cehong",
+      "acquisition_class": "Mythic",
+      "acquisition_text": "Bespoke authored optional encounter",
+      "rule_text": "No normal random encounter",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 21
+      },
+      "species_id": "187"
+    },
+    {
+      "id": "ACQUISITION-176",
+      "name": "Paleursa",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 22
+      },
+      "species_id": "176"
+    },
+    {
+      "id": "ACQUISITION-177",
+      "name": "Raptyrale",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 23
+      },
+      "species_id": "177"
+    },
+    {
+      "id": "ACQUISITION-178",
+      "name": "Sidermite",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 24
+      },
+      "species_id": "178"
+    },
+    {
+      "id": "ACQUISITION-179",
+      "name": "Xenolithid",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 25
+      },
+      "species_id": "179"
+    },
+    {
+      "id": "ACQUISITION-180",
+      "name": "Gravodo",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 26
+      },
+      "species_id": "180"
+    },
+    {
+      "id": "ACQUISITION-181",
+      "name": "Cairnodo",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 27
+      },
+      "species_id": "181"
+    },
+    {
+      "id": "ACQUISITION-182",
+      "name": "Kronodo",
+      "acquisition_class": "Fossil",
+      "acquisition_text": "Main campaign fossil discovery/restoration; postgame living population",
+      "rule_text": "Primeval Reach wild access is alternate, not first access",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 28
+      },
+      "species_id": "182"
+    },
+    {
+      "id": "ACQUISITION-BLOCKED_CENSMOKE_FINAL",
+      "name": "Blocked Censmoke Final",
+      "acquisition_class": "Postgame story-branch resolver",
+      "acquisition_text": "Primeval Reach random slot",
+      "rule_text": "SANCTIFIED → Malifume; REFUSED → Thurafume",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 29
+      },
+      "resolver": {
+        "state_field": "censmoke_relic_choice",
+        "cases": [
+          {
+            "equals": "SANCTIFIED",
+            "species_id": "059"
+          },
+          {
+            "equals": "REFUSED",
+            "species_id": "058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ACQUISITION-BLOCKED_CAIRANT_FINAL",
+      "name": "Blocked Cairant Final",
+      "acquisition_class": "Postgame story-branch resolver",
+      "acquisition_text": "Primeval Reach random slot",
+      "rule_text": "KEPT → Pandemne; BROKEN → Serapine",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 30
+      },
+      "resolver": {
+        "state_field": "cairant_oath_choice",
+        "cases": [
+          {
+            "equals": "KEPT",
+            "species_id": "072"
+          },
+          {
+            "equals": "BROKEN",
+            "species_id": "071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ACQUISITION-BLOCKED_FLAGGRIM_FINAL",
+      "name": "Blocked Flaggrim Final",
+      "acquisition_class": "Postgame story-branch resolver",
+      "acquisition_text": "Primeval Reach random slot",
+      "rule_text": "RAISED → Tattereign; TORN → Oriflamme",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 31
+      },
+      "resolver": {
+        "state_field": "flaggrim_banner_choice",
+        "cases": [
+          {
+            "equals": "RAISED",
+            "species_id": "075"
+          },
+          {
+            "equals": "TORN",
+            "species_id": "074"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ACQUISITION-BLOCKED_JERBUNE_FINAL",
+      "name": "Blocked Jerbune Final",
+      "acquisition_class": "Postgame story-branch resolver",
+      "acquisition_text": "Primeval Reach random slot",
+      "rule_text": "ACCEPTED → Sundune; REJECTED → Concordune",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Special Non-Random",
+        "row": 32
+      },
+      "resolver": {
+        "state_field": "jerbune_alliance_choice",
+        "cases": [
+          {
+            "equals": "ACCEPTED",
+            "species_id": "094"
+          },
+          {
+            "equals": "REJECTED",
+            "species_id": "093"
+          }
+        ]
+      }
+    }
+  ],
+  "unresolved": []
+}

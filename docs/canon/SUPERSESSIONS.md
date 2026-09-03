@@ -20,3 +20,13 @@ Where earlier working notes conflict with a later lock, remove the superseded wo
 
 ## Import corrections (2026-09-02)
 Current owner instructions authorize exact #FF00FF removal plus constrained, reviewed background/edge cleanup for compression and antialiasing. Never globally erase similar costume colours. See ../art/PORTRAIT_PIPELINE.md. Actual supplied asset counts replace claims that all individual runtime assets are present. CORE queue labels are not runtime character IDs. Root build instructions are replaced because no app entry point exists. See ../audit/CONFLICTS_AND_RESOLUTIONS.md.
+
+## Recovered mechanical overlays (Phase E)
+
+- Checklist 01 bodies 24–27: +10 HP per successful increment, zero for failure, no baseline or pity growth (C16).
+- Checklist 13 body 81: evolution preserves HP percentage with integer half-up rounding (C19).
+- Checklist 12: only moves #5 Plain Dash and #106 Frost Shard have priority +1; all others, including #310, have 0 (C20).
+- Checklist 11/addendum and world reference v1.1: 183 species are available to a main-game save; the four opposite story-branch finals are direct postgame captures. Old all-187-by-Circle-II table text is historical evidence only.
+- Checklist 07 overrides the original Story Bible prohibition on ordinary Abyssal resurrection; the exact-instance memorial costs ten distinct living reserve species.
+- Checklist 09 v1.2 plus Checklist 10 override all automatic companion restoration text, including original Story Bible CH21 staging. Five uses are elective.
+- Checklist 16 overrides side-view wording in the VFX prompt log. Visual-action descriptions may inform move intent, never camera layout.

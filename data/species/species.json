@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "partial",
   "sources": [
-    "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
-    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx"
+    "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+    "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx"
   ],
-  "expected_count": 187,
   "records": [
     {
       "id": "001",
@@ -38,6 +38,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 3
+      },
+      "family_id": "FAMILY-001",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 5
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 55,
+        "defence": 10,
+        "sp_attack": 30,
+        "sp_defence": 30,
+        "speed": 55
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 4
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_IMPROVISER"
       }
     },
     {
@@ -71,6 +96,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 4
+      },
+      "family_id": "FAMILY-001",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 6
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 63,
+        "defence": 19,
+        "sp_attack": 34,
+        "sp_defence": 29,
+        "speed": 63
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 5
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_IMPROVISER"
       }
     },
     {
@@ -105,6 +155,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 5
+      },
+      "family_id": "FAMILY-001",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 7
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 68,
+        "defence": 23,
+        "sp_attack": 68,
+        "sp_defence": 32,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 6
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_IMPROVISER"
       }
     },
     {
@@ -138,6 +213,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 6
+      },
+      "family_id": "FAMILY-004",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 8
+      },
+      "growth_percent": {
+        "hp": 18,
+        "attack": 30,
+        "defence": 30,
+        "sp_attack": 55,
+        "sp_defence": 30,
+        "speed": 38
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 7
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_FOCUS_EDGE",
+        "hidden": "ABILITY_PROOF_BY_CUT"
       }
     },
     {
@@ -171,6 +271,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 7
+      },
+      "family_id": "FAMILY-004",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 9
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 29,
+        "defence": 29,
+        "sp_attack": 63,
+        "sp_defence": 29,
+        "speed": 63
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 8
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_FOCUS_EDGE",
+        "hidden": "ABILITY_PROOF_BY_CUT"
       }
     },
     {
@@ -205,6 +330,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 8
+      },
+      "family_id": "FAMILY-004",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 10
+      },
+      "growth_percent": {
+        "hp": 27,
+        "attack": 61,
+        "defence": 61,
+        "sp_attack": 61,
+        "sp_defence": 32,
+        "speed": 42
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 9
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_FOCUS_EDGE",
+        "hidden": "ABILITY_PROOF_BY_CUT"
       }
     },
     {
@@ -238,6 +388,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 9
+      },
+      "family_id": "FAMILY-007",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 11
+      },
+      "growth_percent": {
+        "hp": 46,
+        "attack": 65,
+        "defence": 30,
+        "sp_attack": 10,
+        "sp_defence": 30,
+        "speed": 30
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 10
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_STORED_CHARGE"
       }
     },
     {
@@ -271,6 +446,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 10
+      },
+      "family_id": "FAMILY-007",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 12
+      },
+      "growth_percent": {
+        "hp": 63,
+        "attack": 63,
+        "defence": 48,
+        "sp_attack": 12,
+        "sp_defence": 29,
+        "speed": 34
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 11
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_STORED_CHARGE"
       }
     },
     {
@@ -305,6 +505,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 11
+      },
+      "family_id": "FAMILY-007",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 13
+      },
+      "growth_percent": {
+        "hp": 61,
+        "attack": 100,
+        "defence": 61,
+        "sp_attack": 10,
+        "sp_defence": 32,
+        "speed": 42
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 12
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_STORED_CHARGE"
       }
     },
     {
@@ -338,6 +563,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 12
+      },
+      "family_id": "FAMILY-010",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 14
+      },
+      "growth_percent": {
+        "hp": 27,
+        "attack": 42,
+        "defence": 15,
+        "sp_attack": 15,
+        "sp_defence": 34,
+        "speed": 72
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 13
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_FIRST_STRIKE"
       }
     },
     {
@@ -372,6 +622,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 13
+      },
+      "family_id": "FAMILY-010",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 15
+      },
+      "growth_percent": {
+        "hp": 36,
+        "attack": 36,
+        "defence": 25,
+        "sp_attack": 36,
+        "sp_defence": 48,
+        "speed": 71
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 14
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -405,6 +680,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 14
+      },
+      "family_id": "FAMILY-012",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 16
+      },
+      "growth_percent": {
+        "hp": 21,
+        "attack": 34,
+        "defence": 15,
+        "sp_attack": 27,
+        "sp_defence": 34,
+        "speed": 72
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 15
+      },
+      "abilities": {
+        "primary": "ABILITY_SCAVENGER",
+        "secondary": "ABILITY_SAFEKEEP",
+        "hidden": "ABILITY_OPPORTUNIST"
       }
     },
     {
@@ -439,6 +739,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 15
+      },
+      "family_id": "FAMILY-012",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 17
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 69,
+        "defence": 34,
+        "sp_attack": 20,
+        "sp_defence": 34,
+        "speed": 69
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 16
+      },
+      "abilities": {
+        "primary": "ABILITY_SCAVENGER",
+        "secondary": "ABILITY_SAFEKEEP",
+        "hidden": "ABILITY_OPPORTUNIST"
       }
     },
     {
@@ -472,6 +797,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 16
+      },
+      "family_id": "FAMILY-014",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 18
+      },
+      "growth_percent": {
+        "hp": 48,
+        "attack": 32,
+        "defence": 68,
+        "sp_attack": 14,
+        "sp_defence": 32,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 17
+      },
+      "abilities": {
+        "primary": "ABILITY_TRAILBLAZER",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_SIEGE_BREAKER"
       }
     },
     {
@@ -506,6 +856,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 17
+      },
+      "family_id": "FAMILY-014",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 19
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 65,
+        "defence": 110,
+        "sp_attack": 12,
+        "sp_defence": 33,
+        "speed": 12
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 18
+      },
+      "abilities": {
+        "primary": "ABILITY_TRAILBLAZER",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_SIEGE_BREAKER"
       }
     },
     {
@@ -539,6 +914,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 18
+      },
+      "family_id": "FAMILY-016",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 20
+      },
+      "growth_percent": {
+        "hp": 43,
+        "attack": 21,
+        "defence": 43,
+        "sp_attack": 16,
+        "sp_defence": 87,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 19
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_BERRY_HOARD",
+        "hidden": "ABILITY_MEDICINAL_SAP"
       }
     },
     {
@@ -573,6 +973,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 19
+      },
+      "family_id": "FAMILY-016",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 21
+      },
+      "growth_percent": {
+        "hp": 74,
+        "attack": 12,
+        "defence": 74,
+        "sp_attack": 33,
+        "sp_defence": 112,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 20
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_BERRY_HOARD",
+        "hidden": "ABILITY_MEDICINAL_SAP"
       }
     },
     {
@@ -606,6 +1031,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 20
+      },
+      "family_id": "FAMILY-018",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 22
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 40,
+        "defence": 25,
+        "sp_attack": 14,
+        "sp_defence": 40,
+        "speed": 48
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 21
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_FIRST_STRIKE"
       }
     },
     {
@@ -639,6 +1089,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 21
+      },
+      "family_id": "FAMILY-018",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 23
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 64,
+        "defence": 35,
+        "sp_attack": 12,
+        "sp_defence": 35,
+        "speed": 64
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 22
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_FIRST_STRIKE"
       }
     },
     {
@@ -673,6 +1148,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 22
+      },
+      "family_id": "FAMILY-018",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 24
+      },
+      "growth_percent": {
+        "hp": 63,
+        "attack": 63,
+        "defence": 63,
+        "sp_attack": 13,
+        "sp_defence": 50,
+        "speed": 33
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 23
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_FIRST_STRIKE"
       }
     },
     {
@@ -706,6 +1206,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 23
+      },
+      "family_id": "FAMILY-021",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 25
+      },
+      "growth_percent": {
+        "hp": 40,
+        "attack": 40,
+        "defence": 68,
+        "sp_attack": 14,
+        "sp_defence": 32,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 24
+      },
+      "abilities": {
+        "primary": "ABILITY_STONEPLATE",
+        "secondary": "ABILITY_SAFEKEEP",
+        "hidden": "ABILITY_GHOST_HULL"
       }
     },
     {
@@ -740,6 +1265,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 24
+      },
+      "family_id": "FAMILY-021",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 26
+      },
+      "growth_percent": {
+        "hp": 59,
+        "attack": 66,
+        "defence": 59,
+        "sp_attack": 30,
+        "sp_defence": 59,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 25
+      },
+      "abilities": {
+        "primary": "ABILITY_STONEPLATE",
+        "secondary": "ABILITY_SAFEKEEP",
+        "hidden": "ABILITY_GHOST_HULL"
       }
     },
     {
@@ -774,6 +1324,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 25
+      },
+      "family_id": "FAMILY-023",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 27
+      },
+      "growth_percent": {
+        "hp": 14,
+        "attack": 14,
+        "defence": 14,
+        "sp_attack": 68,
+        "sp_defence": 40,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 26
+      },
+      "abilities": {
+        "primary": "ABILITY_CINDERHIDE",
+        "secondary": "ABILITY_FEINTSTEP",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -808,6 +1383,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 26
+      },
+      "family_id": "FAMILY-023",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 28
+      },
+      "growth_percent": {
+        "hp": 36,
+        "attack": 14,
+        "defence": 22,
+        "sp_attack": 68,
+        "sp_defence": 68,
+        "speed": 76
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 27
+      },
+      "abilities": {
+        "primary": "ABILITY_CINDERHIDE",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -841,6 +1441,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 27
+      },
+      "family_id": "FAMILY-025",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 29
+      },
+      "growth_percent": {
+        "hp": 31,
+        "attack": 39,
+        "defence": 56,
+        "sp_attack": 10,
+        "sp_defence": 31,
+        "speed": 39
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 28
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_TRAILBLAZER",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -875,6 +1500,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 28
+      },
+      "family_id": "FAMILY-025",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 30
+      },
+      "growth_percent": {
+        "hp": 51,
+        "attack": 51,
+        "defence": 51,
+        "sp_attack": 39,
+        "sp_defence": 51,
+        "speed": 29
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 29
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_TRAILBLAZER",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -908,6 +1558,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 29
+      },
+      "family_id": "FAMILY-027",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 31
+      },
+      "growth_percent": {
+        "hp": 26,
+        "attack": 41,
+        "defence": 15,
+        "sp_attack": 15,
+        "sp_defence": 41,
+        "speed": 70
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 30
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_OPPORTUNIST"
       }
     },
     {
@@ -941,6 +1616,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 30
+      },
+      "family_id": "FAMILY-027",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 32
+      },
+      "growth_percent": {
+        "hp": 37,
+        "attack": 67,
+        "defence": 31,
+        "sp_attack": 12,
+        "sp_defence": 31,
+        "speed": 67
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 31
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_OPPORTUNIST"
       }
     },
     {
@@ -975,6 +1675,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 31
+      },
+      "family_id": "FAMILY-027",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 33
+      },
+      "growth_percent": {
+        "hp": 45,
+        "attack": 65,
+        "defence": 34,
+        "sp_attack": 21,
+        "sp_defence": 45,
+        "speed": 65
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 32
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_OPPORTUNIST",
+        "hidden": "ABILITY_LAST_STAND"
       }
     },
     {
@@ -1008,6 +1733,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 32
+      },
+      "family_id": "FAMILY-030",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 34
+      },
+      "growth_percent": {
+        "hp": 14,
+        "attack": 39,
+        "defence": 14,
+        "sp_attack": 39,
+        "sp_defence": 39,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 33
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_KEEN_SENSE",
+        "hidden": "ABILITY_SUREFOOT"
       }
     },
     {
@@ -1042,6 +1792,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 33
+      },
+      "family_id": "FAMILY-030",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 35
+      },
+      "growth_percent": {
+        "hp": 28,
+        "attack": 61,
+        "defence": 18,
+        "sp_attack": 46,
+        "sp_defence": 33,
+        "speed": 61
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 34
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_KEEN_SENSE",
+        "hidden": "ABILITY_SUREFOOT"
       }
     },
     {
@@ -1076,6 +1851,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 34
+      },
+      "family_id": "FAMILY-030",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 36
+      },
+      "growth_percent": {
+        "hp": 41,
+        "attack": 60,
+        "defence": 27,
+        "sp_attack": 60,
+        "sp_defence": 41,
+        "speed": 53
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 35
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_KEEN_SENSE",
+        "hidden": "ABILITY_ROYAL_GLARE"
       }
     },
     {
@@ -1109,6 +1909,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 35
+      },
+      "family_id": "FAMILY-033",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 37
+      },
+      "growth_percent": {
+        "hp": 25,
+        "attack": 48,
+        "defence": 14,
+        "sp_attack": 14,
+        "sp_defence": 40,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 36
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_FOCUS_EDGE",
+        "hidden": "ABILITY_FIRST_STRIKE"
       }
     },
     {
@@ -1143,6 +1968,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 36
+      },
+      "family_id": "FAMILY-033",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 38
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 74,
+        "defence": 25,
+        "sp_attack": 14,
+        "sp_defence": 35,
+        "speed": 120
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 37
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_FOCUS_EDGE",
+        "hidden": "ABILITY_FIRST_STRIKE"
       }
     },
     {
@@ -1176,6 +2026,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 37
+      },
+      "family_id": "FAMILY-035",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 39
+      },
+      "growth_percent": {
+        "hp": 66,
+        "attack": 39,
+        "defence": 39,
+        "sp_attack": 14,
+        "sp_defence": 39,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 38
+      },
+      "abilities": {
+        "primary": "ABILITY_SANDCOAT",
+        "secondary": "ABILITY_FORAGER",
+        "hidden": "ABILITY_SAFEKEEP"
       }
     },
     {
@@ -1209,6 +2084,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 38
+      },
+      "family_id": "FAMILY-035",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 40
+      },
+      "growth_percent": {
+        "hp": 64,
+        "attack": 49,
+        "defence": 35,
+        "sp_attack": 12,
+        "sp_defence": 64,
+        "speed": 24
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 39
+      },
+      "abilities": {
+        "primary": "ABILITY_SANDCOAT",
+        "secondary": "ABILITY_FORAGER",
+        "hidden": "ABILITY_SAFEKEEP"
       }
     },
     {
@@ -1243,6 +2143,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 39
+      },
+      "family_id": "FAMILY-035",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 41
+      },
+      "growth_percent": {
+        "hp": 95,
+        "attack": 44,
+        "defence": 56,
+        "sp_attack": 28,
+        "sp_defence": 63,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 40
+      },
+      "abilities": {
+        "primary": "ABILITY_SANDCOAT",
+        "secondary": "ABILITY_RESERVOIR",
+        "hidden": "ABILITY_MEDICINAL_SAP"
       }
     },
     {
@@ -1276,6 +2201,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 40
+      },
+      "family_id": "FAMILY-038",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 42
+      },
+      "growth_percent": {
+        "hp": 40,
+        "attack": 68,
+        "defence": 40,
+        "sp_attack": 14,
+        "sp_defence": 32,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 41
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_PATIENCE",
+        "hidden": "ABILITY_SIEGE_BREAKER"
       }
     },
     {
@@ -1310,6 +2260,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 41
+      },
+      "family_id": "FAMILY-038",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 43
+      },
+      "growth_percent": {
+        "hp": 66,
+        "attack": 110,
+        "defence": 66,
+        "sp_attack": 14,
+        "sp_defence": 35,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 42
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_PATIENCE",
+        "hidden": "ABILITY_SIEGE_BREAKER"
       }
     },
     {
@@ -1343,6 +2318,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 42
+      },
+      "family_id": "FAMILY-040",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 44
+      },
+      "growth_percent": {
+        "hp": 21,
+        "attack": 43,
+        "defence": 16,
+        "sp_attack": 16,
+        "sp_defence": 28,
+        "speed": 87
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 43
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -1377,6 +2377,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 43
+      },
+      "family_id": "FAMILY-040",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 45
+      },
+      "growth_percent": {
+        "hp": 22,
+        "attack": 71,
+        "defence": 22,
+        "sp_attack": 22,
+        "sp_defence": 37,
+        "speed": 117
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 44
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -1410,6 +2435,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 44
+      },
+      "family_id": "FAMILY-042",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 46
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 32,
+        "defence": 19,
+        "sp_attack": 32,
+        "sp_defence": 40,
+        "speed": 40
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 45
+      },
+      "abilities": {
+        "primary": "ABILITY_RENEWAL",
+        "secondary": "ABILITY_MEDICINAL_SAP",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -1444,6 +2494,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 45
+      },
+      "family_id": "FAMILY-042",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 47
+      },
+      "growth_percent": {
+        "hp": 58,
+        "attack": 29,
+        "defence": 29,
+        "sp_attack": 65,
+        "sp_defence": 65,
+        "speed": 29
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 46
+      },
+      "abilities": {
+        "primary": "ABILITY_RENEWAL",
+        "secondary": "ABILITY_MEDICINAL_SAP",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -1477,6 +2552,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 46
+      },
+      "family_id": "FAMILY-044",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 48
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 65,
+        "defence": 38,
+        "sp_attack": 14,
+        "sp_defence": 30,
+        "speed": 30
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 47
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_BATTLE_NERVE",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -1510,6 +2610,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 47
+      },
+      "family_id": "FAMILY-044",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 49
+      },
+      "growth_percent": {
+        "hp": 61,
+        "attack": 69,
+        "defence": 46,
+        "sp_attack": 11,
+        "sp_defence": 33,
+        "speed": 33
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 48
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_BATTLE_NERVE",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -1544,6 +2669,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 48
+      },
+      "family_id": "FAMILY-044",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 50
+      },
+      "growth_percent": {
+        "hp": 60,
+        "attack": 60,
+        "defence": 60,
+        "sp_attack": 19,
+        "sp_defence": 60,
+        "speed": 31
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 49
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_BATTLE_NERVE",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -1577,6 +2727,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 49
+      },
+      "family_id": "FAMILY-047",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 51
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 66,
+        "defence": 31,
+        "sp_attack": 14,
+        "sp_defence": 31,
+        "speed": 19
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 50
+      },
+      "abilities": {
+        "primary": "ABILITY_HARD_HEAD",
+        "secondary": "ABILITY_COUNTERCHARGE",
+        "hidden": "ABILITY_SIEGE_BREAKER"
       }
     },
     {
@@ -1611,6 +2786,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 50
+      },
+      "family_id": "FAMILY-047",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 52
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 108,
+        "defence": 65,
+        "sp_attack": 11,
+        "sp_defence": 34,
+        "speed": 21
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 51
+      },
+      "abilities": {
+        "primary": "ABILITY_HARD_HEAD",
+        "secondary": "ABILITY_COUNTERCHARGE",
+        "hidden": "ABILITY_SIEGE_BREAKER"
       }
     },
     {
@@ -1644,6 +2844,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 51
+      },
+      "family_id": "FAMILY-049",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 53
+      },
+      "growth_percent": {
+        "hp": 19,
+        "attack": 14,
+        "defence": 14,
+        "sp_attack": 68,
+        "sp_defence": 32,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 52
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_SUNSTRIDE",
+        "hidden": "ABILITY_CAMOUFLAGE"
       }
     },
     {
@@ -1678,6 +2903,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 52
+      },
+      "family_id": "FAMILY-049",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 54
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 20,
+        "defence": 20,
+        "sp_attack": 106,
+        "sp_defence": 51,
+        "speed": 64
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 53
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_SUNSTRIDE",
+        "hidden": "ABILITY_CAMOUFLAGE"
       }
     },
     {
@@ -1711,6 +2961,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 53
+      },
+      "family_id": "FAMILY-051",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 55
+      },
+      "growth_percent": {
+        "hp": 15,
+        "attack": 15,
+        "defence": 15,
+        "sp_attack": 51,
+        "sp_defence": 42,
+        "speed": 72
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 54
+      },
+      "abilities": {
+        "primary": "ABILITY_RAINRUNNER",
+        "secondary": "ABILITY_STATIC_HIDE",
+        "hidden": "ABILITY_ALTERNATOR"
       }
     },
     {
@@ -1745,6 +3020,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 54
+      },
+      "family_id": "FAMILY-051",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 56
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 21,
+        "defence": 21,
+        "sp_attack": 74,
+        "sp_defence": 35,
+        "speed": 110
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 55
+      },
+      "abilities": {
+        "primary": "ABILITY_RAINRUNNER",
+        "secondary": "ABILITY_CAPACITOR",
+        "hidden": "ABILITY_ALTERNATOR"
       }
     },
     {
@@ -1778,6 +3078,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 55
+      },
+      "family_id": "FAMILY-053",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 57
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 10,
+        "defence": 19,
+        "sp_attack": 68,
+        "sp_defence": 48,
+        "speed": 32
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 56
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_PALIMPSEST"
       }
     },
     {
@@ -1812,6 +3137,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 56
+      },
+      "family_id": "FAMILY-053",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 58
+      },
+      "growth_percent": {
+        "hp": 64,
+        "attack": 14,
+        "defence": 34,
+        "sp_attack": 72,
+        "sp_defence": 72,
+        "speed": 34
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 57
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_PALIMPSEST"
       }
     },
     {
@@ -1846,6 +3196,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 57
+      },
+      "family_id": "FAMILY-055",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 59
+      },
+      "growth_percent": {
+        "hp": 19,
+        "attack": 32,
+        "defence": 48,
+        "sp_attack": 10,
+        "sp_defence": 32,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 58
+      },
+      "abilities": {
+        "primary": "ABILITY_TRAILBLAZER",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -1880,6 +3255,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 58
+      },
+      "family_id": "FAMILY-055",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 60
+      },
+      "growth_percent": {
+        "hp": 36,
+        "attack": 47,
+        "defence": 68,
+        "sp_attack": 22,
+        "sp_defence": 31,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 59
+      },
+      "abilities": {
+        "primary": "ABILITY_TRAILBLAZER",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_STORMSENSE"
       }
     },
     {
@@ -1913,6 +3313,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 59
+      },
+      "family_id": "FAMILY-057",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 61
+      },
+      "growth_percent": {
+        "hp": 39,
+        "attack": 14,
+        "defence": 25,
+        "sp_attack": 66,
+        "sp_defence": 31,
+        "speed": 31
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 60
+      },
+      "abilities": {
+        "primary": "ABILITY_RENEWAL",
+        "secondary": "ABILITY_CINDERHIDE",
+        "hidden": "ABILITY_CAMOUFLAGE"
       }
     },
     {
@@ -1947,6 +3372,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 60
+      },
+      "family_id": "FAMILY-057",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 62
+      },
+      "growth_percent": {
+        "hp": 52,
+        "attack": 14,
+        "defence": 35,
+        "sp_attack": 74,
+        "sp_defence": 74,
+        "speed": 35
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 61
+      },
+      "abilities": {
+        "primary": "ABILITY_RENEWAL",
+        "secondary": "ABILITY_MEDICINAL_SAP",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -1981,6 +3431,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 61
+      },
+      "family_id": "FAMILY-057",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 63
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 25,
+        "defence": 35,
+        "sp_attack": 74,
+        "sp_defence": 35,
+        "speed": 74
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 62
+      },
+      "abilities": {
+        "primary": "ABILITY_CINDERHIDE",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_OPPORTUNIST"
       }
     },
     {
@@ -2014,6 +3489,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 62
+      },
+      "family_id": "FAMILY-060",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 64
+      },
+      "growth_percent": {
+        "hp": 20,
+        "attack": 33,
+        "defence": 15,
+        "sp_attack": 33,
+        "sp_defence": 33,
+        "speed": 70
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 63
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -2048,6 +3548,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 63
+      },
+      "family_id": "FAMILY-060",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 65
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 32,
+        "defence": 22,
+        "sp_attack": 49,
+        "sp_defence": 71,
+        "speed": 63
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 64
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -2081,6 +3606,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 64
+      },
+      "family_id": "FAMILY-062",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 66
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 13,
+        "defence": 36,
+        "sp_attack": 43,
+        "sp_defence": 61,
+        "speed": 29
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 65
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_CALM_GUARD",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -2115,6 +3665,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 65
+      },
+      "family_id": "FAMILY-062",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 67
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 11,
+        "defence": 65,
+        "sp_attack": 65,
+        "sp_defence": 65,
+        "speed": 21
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 66
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_CALM_GUARD",
+        "hidden": "ABILITY_SCREENMENDER"
       }
     },
     {
@@ -2149,6 +3724,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 66
+      },
+      "family_id": "FAMILY-062",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 68
+      },
+      "growth_percent": {
+        "hp": 52,
+        "attack": 14,
+        "defence": 34,
+        "sp_attack": 73,
+        "sp_defence": 108,
+        "speed": 21
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 67
+      },
+      "abilities": {
+        "primary": "ABILITY_CALM_GUARD",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_PALIMPSEST"
       }
     },
     {
@@ -2183,6 +3783,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 67
+      },
+      "family_id": "FAMILY-062",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 69
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 14,
+        "defence": 25,
+        "sp_attack": 73,
+        "sp_defence": 73,
+        "speed": 73
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 68
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_COVETOUS_MIRROR"
       }
     },
     {
@@ -2216,6 +3841,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 68
+      },
+      "family_id": "FAMILY-066",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 70
+      },
+      "growth_percent": {
+        "hp": 31,
+        "attack": 56,
+        "defence": 31,
+        "sp_attack": 10,
+        "sp_defence": 31,
+        "speed": 47
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 69
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_UNFAZED",
+        "hidden": "ABILITY_GATEKEEPER"
       }
     },
     {
@@ -2250,6 +3900,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 69
+      },
+      "family_id": "FAMILY-066",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 71
+      },
+      "growth_percent": {
+        "hp": 61,
+        "attack": 61,
+        "defence": 61,
+        "sp_attack": 11,
+        "sp_defence": 33,
+        "speed": 28
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 70
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_UNFAZED",
+        "hidden": "ABILITY_GATEKEEPER"
       }
     },
     {
@@ -2284,6 +3959,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 70
+      },
+      "family_id": "FAMILY-066",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 72
+      },
+      "growth_percent": {
+        "hp": 93,
+        "attack": 61,
+        "defence": 61,
+        "sp_attack": 10,
+        "sp_defence": 61,
+        "speed": 19
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 71
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_UNFAZED",
+        "hidden": "ABILITY_GATEKEEPER"
       }
     },
     {
@@ -2318,6 +4018,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 71
+      },
+      "family_id": "FAMILY-069",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 73
+      },
+      "growth_percent": {
+        "hp": 27,
+        "attack": 14,
+        "defence": 27,
+        "sp_attack": 38,
+        "sp_defence": 75,
+        "speed": 84
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 72
+      },
+      "abilities": {
+        "primary": "ABILITY_SOUNDPROOF",
+        "secondary": "ABILITY_CHORUS",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -2351,6 +4076,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 72
+      },
+      "family_id": "FAMILY-070",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 74
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 34,
+        "defence": 34,
+        "sp_attack": 34,
+        "sp_defence": 34,
+        "speed": 34
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 73
+      },
+      "abilities": {
+        "primary": "ABILITY_ADAPTABLE_HIDE",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_WAYFARER"
       }
     },
     {
@@ -2385,6 +4135,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 73
+      },
+      "family_id": "FAMILY-070",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 75
+      },
+      "growth_percent": {
+        "hp": 59,
+        "attack": 19,
+        "defence": 31,
+        "sp_attack": 59,
+        "sp_defence": 89,
+        "speed": 41
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 74
+      },
+      "abilities": {
+        "primary": "ABILITY_RENEWAL",
+        "secondary": "ABILITY_CALM_GUARD",
+        "hidden": "ABILITY_STABLE_CORE"
       }
     },
     {
@@ -2419,6 +4194,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 74
+      },
+      "family_id": "FAMILY-070",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 76
+      },
+      "growth_percent": {
+        "hp": 31,
+        "attack": 66,
+        "defence": 31,
+        "sp_attack": 66,
+        "sp_defence": 31,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 75
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_COVETOUS_MIRROR"
       }
     },
     {
@@ -2452,6 +4252,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 75
+      },
+      "family_id": "FAMILY-073",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 77
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 65,
+        "defence": 30,
+        "sp_attack": 10,
+        "sp_defence": 30,
+        "speed": 46
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 76
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRST_STRIKE",
+        "secondary": "ABILITY_RALLYING_CRY",
+        "hidden": "ABILITY_PROTECTOR"
       }
     },
     {
@@ -2486,6 +4311,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 76
+      },
+      "family_id": "FAMILY-073",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 78
+      },
+      "growth_percent": {
+        "hp": 40,
+        "attack": 58,
+        "defence": 29,
+        "sp_attack": 29,
+        "sp_defence": 58,
+        "speed": 58
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 77
+      },
+      "abilities": {
+        "primary": "ABILITY_RALLYING_CRY",
+        "secondary": "ABILITY_SUNSTRIDE",
+        "hidden": "ABILITY_PROTECTOR"
       }
     },
     {
@@ -2520,6 +4370,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 77
+      },
+      "family_id": "FAMILY-073",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 79
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 65,
+        "defence": 21,
+        "sp_attack": 29,
+        "sp_defence": 34,
+        "speed": 108
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 78
+      },
+      "abilities": {
+        "primary": "ABILITY_AMBUSH",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_STORMSENSE"
       }
     },
     {
@@ -2554,6 +4429,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 78
+      },
+      "family_id": "FAMILY-076",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 80
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 30,
+        "defence": 17,
+        "sp_attack": 59,
+        "sp_defence": 59,
+        "speed": 91
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 79
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_KEEN_SENSE"
       }
     },
     {
@@ -2587,6 +4487,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 79
+      },
+      "family_id": "FAMILY-077",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 81
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 31,
+        "defence": 66,
+        "sp_attack": 10,
+        "sp_defence": 47,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 80
+      },
+      "abilities": {
+        "primary": "ABILITY_TOXINPROOF",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_RESERVOIR"
       }
     },
     {
@@ -2621,6 +4546,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 80
+      },
+      "family_id": "FAMILY-077",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 82
+      },
+      "growth_percent": {
+        "hp": 59,
+        "attack": 59,
+        "defence": 59,
+        "sp_attack": 30,
+        "sp_defence": 66,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 81
+      },
+      "abilities": {
+        "primary": "ABILITY_TOXINPROOF",
+        "secondary": "ABILITY_RESERVOIR",
+        "hidden": "ABILITY_MEDICINAL_SAP"
       }
     },
     {
@@ -2654,6 +4604,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 81
+      },
+      "family_id": "FAMILY-079",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 83
+      },
+      "growth_percent": {
+        "hp": 46,
+        "attack": 65,
+        "defence": 30,
+        "sp_attack": 10,
+        "sp_defence": 30,
+        "speed": 30
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 82
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_FIRST_STRIKE",
+        "hidden": "ABILITY_PROTECTOR"
       }
     },
     {
@@ -2688,6 +4663,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 82
+      },
+      "family_id": "FAMILY-079",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 84
+      },
+      "growth_percent": {
+        "hp": 61,
+        "attack": 93,
+        "defence": 61,
+        "sp_attack": 10,
+        "sp_defence": 43,
+        "speed": 32
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 83
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_BATTLE_NERVE"
       }
     },
     {
@@ -2721,6 +4721,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 83
+      },
+      "family_id": "FAMILY-081",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 85
+      },
+      "growth_percent": {
+        "hp": 19,
+        "attack": 31,
+        "defence": 19,
+        "sp_attack": 31,
+        "sp_defence": 47,
+        "speed": 56
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 84
+      },
+      "abilities": {
+        "primary": "ABILITY_FORESIGHT",
+        "secondary": "ABILITY_PATIENCE",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -2755,6 +4780,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 84
+      },
+      "family_id": "FAMILY-081",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 86
+      },
+      "growth_percent": {
+        "hp": 38,
+        "attack": 43,
+        "defence": 28,
+        "sp_attack": 56,
+        "sp_defence": 56,
+        "speed": 56
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 85
+      },
+      "abilities": {
+        "primary": "ABILITY_FORESIGHT",
+        "secondary": "ABILITY_PATIENCE",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -2788,6 +4838,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 85
+      },
+      "family_id": "FAMILY-083",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 87
+      },
+      "growth_percent": {
+        "hp": 44,
+        "attack": 53,
+        "defence": 44,
+        "sp_attack": 18,
+        "sp_defence": 29,
+        "speed": 18
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 86
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_CINDERHIDE",
+        "hidden": "ABILITY_STEAMHEART"
       }
     },
     {
@@ -2822,6 +4897,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 86
+      },
+      "family_id": "FAMILY-083",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 88
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 56,
+        "defence": 56,
+        "sp_attack": 56,
+        "sp_defence": 38,
+        "speed": 16
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 87
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_CINDERHIDE",
+        "hidden": "ABILITY_STEAMHEART"
       }
     },
     {
@@ -2855,6 +4955,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 87
+      },
+      "family_id": "FAMILY-085",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 89
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 29,
+        "defence": 111,
+        "sp_attack": 13,
+        "sp_defence": 37,
+        "speed": 13
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 88
+      },
+      "abilities": {
+        "primary": "ABILITY_THORNHIDE",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_GATEKEEPER"
       }
     },
     {
@@ -2889,6 +5014,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 88
+      },
+      "family_id": "FAMILY-085",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 90
+      },
+      "growth_percent": {
+        "hp": 62,
+        "attack": 62,
+        "defence": 94,
+        "sp_attack": 20,
+        "sp_defence": 56,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 89
+      },
+      "abilities": {
+        "primary": "ABILITY_THORNHIDE",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_GATEKEEPER"
       }
     },
     {
@@ -2922,6 +5072,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 89
+      },
+      "family_id": "FAMILY-087",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 91
+      },
+      "growth_percent": {
+        "hp": 31,
+        "attack": 31,
+        "defence": 39,
+        "sp_attack": 31,
+        "sp_defence": 31,
+        "speed": 31
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 90
+      },
+      "abilities": {
+        "primary": "ABILITY_CAMOUFLAGE",
+        "secondary": "ABILITY_ADAPTABLE_HIDE",
+        "hidden": "ABILITY_WAYFARER"
       }
     },
     {
@@ -2955,6 +5130,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 90
+      },
+      "family_id": "FAMILY-087",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 92
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 29,
+        "defence": 29,
+        "sp_attack": 42,
+        "sp_defence": 64,
+        "speed": 42
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 91
+      },
+      "abilities": {
+        "primary": "ABILITY_CAMOUFLAGE",
+        "secondary": "ABILITY_ADAPTABLE_HIDE",
+        "hidden": "ABILITY_AMBUSH"
       }
     },
     {
@@ -2989,6 +5189,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 91
+      },
+      "family_id": "FAMILY-087",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 93
+      },
+      "growth_percent": {
+        "hp": 53,
+        "attack": 53,
+        "defence": 53,
+        "sp_attack": 41,
+        "sp_defence": 53,
+        "speed": 27
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 92
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRM_STANCE",
+        "secondary": "ABILITY_ADAPTABLE_HIDE",
+        "hidden": "ABILITY_SANDCOAT"
       }
     },
     {
@@ -3022,6 +5247,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 92
+      },
+      "family_id": "FAMILY-090",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 94
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 19,
+        "defence": 48,
+        "sp_attack": 14,
+        "sp_defence": 68,
+        "speed": 25
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 93
+      },
+      "abilities": {
+        "primary": "ABILITY_CALM_GUARD",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -3056,6 +5306,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 93
+      },
+      "family_id": "FAMILY-090",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 95
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 34,
+        "defence": 108,
+        "sp_attack": 11,
+        "sp_defence": 108,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 94
+      },
+      "abilities": {
+        "primary": "ABILITY_CALM_GUARD",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -3089,6 +5364,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 94
+      },
+      "family_id": "FAMILY-092",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 96
+      },
+      "growth_percent": {
+        "hp": 25,
+        "attack": 14,
+        "defence": 14,
+        "sp_attack": 66,
+        "sp_defence": 31,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 95
+      },
+      "abilities": {
+        "primary": "ABILITY_FORESIGHT",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -3123,6 +5423,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 95
+      },
+      "family_id": "FAMILY-092",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 97
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 14,
+        "defence": 35,
+        "sp_attack": 66,
+        "sp_defence": 66,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 96
+      },
+      "abilities": {
+        "primary": "ABILITY_MEDICINAL_SAP",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -3157,6 +5482,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 96
+      },
+      "family_id": "FAMILY-092",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 98
+      },
+      "growth_percent": {
+        "hp": 21,
+        "attack": 30,
+        "defence": 21,
+        "sp_attack": 100,
+        "sp_defence": 30,
+        "speed": 100
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 97
+      },
+      "abilities": {
+        "primary": "ABILITY_AMBUSH",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_OPPORTUNIST"
       }
     },
     {
@@ -3190,6 +5540,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 97
+      },
+      "family_id": "FAMILY-095",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 99
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 56,
+        "defence": 47,
+        "sp_attack": 10,
+        "sp_defence": 31,
+        "speed": 19
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 98
+      },
+      "abilities": {
+        "primary": "ABILITY_REVENGE_MARK",
+        "secondary": "ABILITY_COLDPROOF",
+        "hidden": "ABILITY_COUNTERCHARGE"
       }
     },
     {
@@ -3224,6 +5599,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 98
+      },
+      "family_id": "FAMILY-095",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 100
+      },
+      "growth_percent": {
+        "hp": 64,
+        "attack": 97,
+        "defence": 64,
+        "sp_attack": 11,
+        "sp_defence": 45,
+        "speed": 20
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 99
+      },
+      "abilities": {
+        "primary": "ABILITY_REVENGE_MARK",
+        "secondary": "ABILITY_COLDPROOF",
+        "hidden": "ABILITY_MARKED_QUARRY"
       }
     },
     {
@@ -3257,6 +5657,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 99
+      },
+      "family_id": "FAMILY-097",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 101
+      },
+      "growth_percent": {
+        "hp": 20,
+        "attack": 33,
+        "defence": 15,
+        "sp_attack": 33,
+        "sp_defence": 33,
+        "speed": 70
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 100
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_FEINTSTEP",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -3291,6 +5716,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 100
+      },
+      "family_id": "FAMILY-097",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 102
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 40,
+        "defence": 21,
+        "sp_attack": 58,
+        "sp_defence": 40,
+        "speed": 98
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 101
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_FEINTSTEP",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -3324,6 +5774,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 101
+      },
+      "family_id": "FAMILY-099",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 103
+      },
+      "growth_percent": {
+        "hp": 15,
+        "attack": 15,
+        "defence": 15,
+        "sp_attack": 51,
+        "sp_defence": 42,
+        "speed": 72
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 102
+      },
+      "abilities": {
+        "primary": "ABILITY_SOUNDPROOF",
+        "secondary": "ABILITY_CHORUS",
+        "hidden": "ABILITY_MIMIC_EAR"
       }
     },
     {
@@ -3358,6 +5833,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 102
+      },
+      "family_id": "FAMILY-099",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 104
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 14,
+        "defence": 21,
+        "sp_attack": 67,
+        "sp_defence": 75,
+        "speed": 75
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 103
+      },
+      "abilities": {
+        "primary": "ABILITY_SOUNDPROOF",
+        "secondary": "ABILITY_CHORUS",
+        "hidden": "ABILITY_MIMIC_EAR"
       }
     },
     {
@@ -3391,6 +5891,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 103
+      },
+      "family_id": "FAMILY-101",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 105
+      },
+      "growth_percent": {
+        "hp": 48,
+        "attack": 14,
+        "defence": 32,
+        "sp_attack": 32,
+        "sp_defence": 68,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 104
+      },
+      "abilities": {
+        "primary": "ABILITY_CALM_GUARD",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_TRUCE"
       }
     },
     {
@@ -3425,6 +5950,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 104
+      },
+      "family_id": "FAMILY-101",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 106
+      },
+      "growth_percent": {
+        "hp": 74,
+        "attack": 14,
+        "defence": 74,
+        "sp_attack": 35,
+        "sp_defence": 120,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 105
+      },
+      "abilities": {
+        "primary": "ABILITY_CALM_GUARD",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_STABLE_CORE"
       }
     },
     {
@@ -3458,6 +6008,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 105
+      },
+      "family_id": "FAMILY-103",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 107
+      },
+      "growth_percent": {
+        "hp": 15,
+        "attack": 15,
+        "defence": 15,
+        "sp_attack": 70,
+        "sp_defence": 33,
+        "speed": 70
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 106
+      },
+      "abilities": {
+        "primary": "ABILITY_STATIC_HIDE",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_CAPACITOR"
       }
     },
     {
@@ -3492,6 +6067,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 106
+      },
+      "family_id": "FAMILY-103",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 108
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 11,
+        "defence": 20,
+        "sp_attack": 106,
+        "sp_defence": 45,
+        "speed": 97
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 107
+      },
+      "abilities": {
+        "primary": "ABILITY_STATIC_HIDE",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_CAPACITOR"
       }
     },
     {
@@ -3525,6 +6125,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 107
+      },
+      "family_id": "FAMILY-105",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 109
+      },
+      "growth_percent": {
+        "hp": 66,
+        "attack": 31,
+        "defence": 31,
+        "sp_attack": 31,
+        "sp_defence": 31,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 108
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_BERRY_HOARD",
+        "hidden": "ABILITY_FEAST"
       }
     },
     {
@@ -3559,6 +6184,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 108
+      },
+      "family_id": "FAMILY-105",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 110
+      },
+      "growth_percent": {
+        "hp": 95,
+        "attack": 38,
+        "defence": 56,
+        "sp_attack": 56,
+        "sp_defence": 56,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 109
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_BERRY_HOARD",
+        "hidden": "ABILITY_FEAST"
       }
     },
     {
@@ -3592,6 +6242,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 109
+      },
+      "family_id": "FAMILY-107",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 111
+      },
+      "growth_percent": {
+        "hp": 41,
+        "attack": 33,
+        "defence": 70,
+        "sp_attack": 15,
+        "sp_defence": 33,
+        "speed": 15
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 110
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_SCAVENGER"
       }
     },
     {
@@ -3626,6 +6301,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 110
+      },
+      "family_id": "FAMILY-107",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 112
+      },
+      "growth_percent": {
+        "hp": 59,
+        "attack": 59,
+        "defence": 91,
+        "sp_attack": 30,
+        "sp_defence": 59,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 111
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_SCAVENGER"
       }
     },
     {
@@ -3660,6 +6360,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 111
+      },
+      "family_id": "FAMILY-107",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 113
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 52,
+        "defence": 59,
+        "sp_attack": 59,
+        "sp_defence": 30,
+        "speed": 40
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 112
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_STATIC_HIDE",
+        "hidden": "ABILITY_ALTERNATOR"
       }
     },
     {
@@ -3693,6 +6418,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 112
+      },
+      "family_id": "FAMILY-110",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 114
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 32,
+        "defence": 32,
+        "sp_attack": 32,
+        "sp_defence": 32,
+        "speed": 32
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 113
+      },
+      "abilities": {
+        "primary": "ABILITY_TOXINPROOF",
+        "secondary": "ABILITY_ADAPTABLE_HIDE",
+        "hidden": "ABILITY_PATIENCE"
       }
     },
     {
@@ -3727,6 +6477,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 113
+      },
+      "family_id": "FAMILY-110",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 115
+      },
+      "growth_percent": {
+        "hp": 46,
+        "attack": 59,
+        "defence": 30,
+        "sp_attack": 59,
+        "sp_defence": 21,
+        "speed": 59
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 114
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_STEAMHEART",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -3761,6 +6536,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 114
+      },
+      "family_id": "FAMILY-110",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 116
+      },
+      "growth_percent": {
+        "hp": 59,
+        "attack": 30,
+        "defence": 59,
+        "sp_attack": 46,
+        "sp_defence": 100,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 115
+      },
+      "abilities": {
+        "primary": "ABILITY_COLDPROOF",
+        "secondary": "ABILITY_PATIENCE",
+        "hidden": "ABILITY_STONEPLATE"
       }
     },
     {
@@ -3794,6 +6594,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 115
+      },
+      "family_id": "FAMILY-113",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 117
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 31,
+        "defence": 56,
+        "sp_attack": 31,
+        "sp_defence": 47,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 116
+      },
+      "abilities": {
+        "primary": "ABILITY_FORESIGHT",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_KEEN_SENSE"
       }
     },
     {
@@ -3828,6 +6653,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 116
+      },
+      "family_id": "FAMILY-113",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 118
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 28,
+        "defence": 95,
+        "sp_attack": 63,
+        "sp_defence": 63,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 117
+      },
+      "abilities": {
+        "primary": "ABILITY_FORESIGHT",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_CALM_GUARD"
       }
     },
     {
@@ -3861,6 +6711,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 117
+      },
+      "family_id": "FAMILY-115",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 119
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 36,
+        "defence": 36,
+        "sp_attack": 36,
+        "sp_defence": 36,
+        "speed": 29
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 118
+      },
+      "abilities": {
+        "primary": "ABILITY_ADAPTABLE_HIDE",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -3895,6 +6770,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 118
+      },
+      "family_id": "FAMILY-115",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 120
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 56,
+        "defence": 63,
+        "sp_attack": 28,
+        "sp_defence": 44,
+        "speed": 28
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 119
+      },
+      "abilities": {
+        "primary": "ABILITY_COUNTERCHARGE",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -3929,6 +6829,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 119
+      },
+      "family_id": "FAMILY-115",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 121
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 56,
+        "defence": 38,
+        "sp_attack": 56,
+        "sp_defence": 56,
+        "speed": 16
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 120
+      },
+      "abilities": {
+        "primary": "ABILITY_MEDICINAL_SAP",
+        "secondary": "ABILITY_THORNHIDE",
+        "hidden": "ABILITY_EARTHROOT"
       }
     },
     {
@@ -3963,6 +6888,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 120
+      },
+      "family_id": "FAMILY-115",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 122
+      },
+      "growth_percent": {
+        "hp": 63,
+        "attack": 63,
+        "defence": 95,
+        "sp_attack": 33,
+        "sp_defence": 33,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 121
+      },
+      "abilities": {
+        "primary": "ABILITY_CINDERHIDE",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_FIRM_STANCE"
       }
     },
     {
@@ -3996,6 +6946,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 121
+      },
+      "family_id": "FAMILY-119",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 123
+      },
+      "growth_percent": {
+        "hp": 15,
+        "attack": 21,
+        "defence": 15,
+        "sp_attack": 51,
+        "sp_defence": 34,
+        "speed": 72
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 122
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_CAMOUFLAGE"
       }
     },
     {
@@ -4030,6 +7005,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 122
+      },
+      "family_id": "FAMILY-119",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 124
+      },
+      "growth_percent": {
+        "hp": 29,
+        "attack": 29,
+        "defence": 29,
+        "sp_attack": 58,
+        "sp_defence": 65,
+        "speed": 65
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 123
+      },
+      "abilities": {
+        "primary": "ABILITY_FEINTSTEP",
+        "secondary": "ABILITY_POISON_BARBS",
+        "hidden": "ABILITY_AMBUSH"
       }
     },
     {
@@ -4063,6 +7063,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 123
+      },
+      "family_id": "FAMILY-121",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 125
+      },
+      "growth_percent": {
+        "hp": 38,
+        "attack": 38,
+        "defence": 65,
+        "sp_attack": 14,
+        "sp_defence": 46,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 124
+      },
+      "abilities": {
+        "primary": "ABILITY_COLDPROOF",
+        "secondary": "ABILITY_PACK_GUARD",
+        "hidden": "ABILITY_SUREFOOT"
       }
     },
     {
@@ -4096,6 +7121,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 124
+      },
+      "family_id": "FAMILY-121",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 126
+      },
+      "growth_percent": {
+        "hp": 61,
+        "attack": 46,
+        "defence": 61,
+        "sp_attack": 11,
+        "sp_defence": 61,
+        "speed": 18
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 125
+      },
+      "abilities": {
+        "primary": "ABILITY_COLDPROOF",
+        "secondary": "ABILITY_PACK_GUARD",
+        "hidden": "ABILITY_SUREFOOT"
       }
     },
     {
@@ -4130,6 +7180,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 125
+      },
+      "family_id": "FAMILY-121",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 127
+      },
+      "growth_percent": {
+        "hp": 57,
+        "attack": 94,
+        "defence": 94,
+        "sp_attack": 12,
+        "sp_defence": 57,
+        "speed": 12
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 126
+      },
+      "abilities": {
+        "primary": "ABILITY_COLDPROOF",
+        "secondary": "ABILITY_PACK_GUARD",
+        "hidden": "ABILITY_PROTECTOR"
       }
     },
     {
@@ -4164,6 +7239,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 126
+      },
+      "family_id": "FAMILY-124",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 128
+      },
+      "growth_percent": {
+        "hp": 38,
+        "attack": 15,
+        "defence": 38,
+        "sp_attack": 51,
+        "sp_defence": 73,
+        "speed": 51
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 127
+      },
+      "abilities": {
+        "primary": "ABILITY_SOUNDPROOF",
+        "secondary": "ABILITY_UNFAZED",
+        "hidden": "ABILITY_WAYFARER"
       }
     },
     {
@@ -4197,6 +7297,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 127
+      },
+      "family_id": "FAMILY-125",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 129
+      },
+      "growth_percent": {
+        "hp": 31,
+        "attack": 47,
+        "defence": 66,
+        "sp_attack": 14,
+        "sp_defence": 31,
+        "speed": 19
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 128
+      },
+      "abilities": {
+        "primary": "ABILITY_THORNHIDE",
+        "secondary": "ABILITY_PROTECTOR",
+        "hidden": "ABILITY_BULWARK"
       }
     },
     {
@@ -4231,6 +7356,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 128
+      },
+      "family_id": "FAMILY-125",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 130
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 65,
+        "defence": 108,
+        "sp_attack": 11,
+        "sp_defence": 65,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 129
+      },
+      "abilities": {
+        "primary": "ABILITY_THORNHIDE",
+        "secondary": "ABILITY_PROTECTOR",
+        "hidden": "ABILITY_BULWARK"
       }
     },
     {
@@ -4264,6 +7414,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 129
+      },
+      "family_id": "FAMILY-127",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 131
+      },
+      "growth_percent": {
+        "hp": 20,
+        "attack": 26,
+        "defence": 26,
+        "sp_attack": 33,
+        "sp_defence": 33,
+        "speed": 59
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 130
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_SIEGE_BREAKER",
+        "hidden": "ABILITY_FOCUS_EDGE"
       }
     },
     {
@@ -4298,6 +7473,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 130
+      },
+      "family_id": "FAMILY-127",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 132
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 47,
+        "defence": 30,
+        "sp_attack": 67,
+        "sp_defence": 30,
+        "speed": 67
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 131
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_SIEGE_BREAKER",
+        "hidden": "ABILITY_POISON_BARBS"
       }
     },
     {
@@ -4332,6 +7532,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 131
+      },
+      "family_id": "FAMILY-129",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 133
+      },
+      "growth_percent": {
+        "hp": 38,
+        "attack": 15,
+        "defence": 23,
+        "sp_attack": 38,
+        "sp_defence": 82,
+        "speed": 82
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 132
+      },
+      "abilities": {
+        "primary": "ABILITY_TRUCE",
+        "secondary": "ABILITY_RALLYING_CRY",
+        "hidden": "ABILITY_PROTECTOR"
       }
     },
     {
@@ -4365,6 +7590,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 132
+      },
+      "family_id": "FAMILY-130",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 134
+      },
+      "growth_percent": {
+        "hp": 20,
+        "attack": 33,
+        "defence": 15,
+        "sp_attack": 33,
+        "sp_defence": 33,
+        "speed": 70
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 133
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_WAYFARER",
+        "hidden": "ABILITY_STORMSENSE"
       }
     },
     {
@@ -4399,6 +7649,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 133
+      },
+      "family_id": "FAMILY-130",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 135
+      },
+      "growth_percent": {
+        "hp": 59,
+        "attack": 40,
+        "defence": 30,
+        "sp_attack": 30,
+        "sp_defence": 52,
+        "speed": 59
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 134
+      },
+      "abilities": {
+        "primary": "ABILITY_KEEN_SENSE",
+        "secondary": "ABILITY_TRAILBLAZER",
+        "hidden": "ABILITY_STORMSENSE"
       }
     },
     {
@@ -4433,6 +7708,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 134
+      },
+      "family_id": "FAMILY-132",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 136
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 21,
+        "defence": 30,
+        "sp_attack": 66,
+        "sp_defence": 66,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 135
+      },
+      "abilities": {
+        "primary": "ABILITY_TRUCE",
+        "secondary": "ABILITY_FORESIGHT",
+        "hidden": "ABILITY_PATIENCE"
       }
     },
     {
@@ -4466,6 +7766,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 135
+      },
+      "family_id": "FAMILY-133",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 137
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 46,
+        "defence": 46,
+        "sp_attack": 14,
+        "sp_defence": 30,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 136
+      },
+      "abilities": {
+        "primary": "ABILITY_BINDPROOF",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_SUREFOOT"
       }
     },
     {
@@ -4500,6 +7825,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 136
+      },
+      "family_id": "FAMILY-133",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 138
+      },
+      "growth_percent": {
+        "hp": 105,
+        "attack": 63,
+        "defence": 71,
+        "sp_attack": 13,
+        "sp_defence": 63,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 137
+      },
+      "abilities": {
+        "primary": "ABILITY_BINDPROOF",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_SUREFOOT"
       }
     },
     {
@@ -4533,6 +7883,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 137
+      },
+      "family_id": "FAMILY-135",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 139
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 14,
+        "defence": 32,
+        "sp_attack": 48,
+        "sp_defence": 68,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 138
+      },
+      "abilities": {
+        "primary": "ABILITY_MEDICINAL_SAP",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_HEARTWOOD_CORE"
       }
     },
     {
@@ -4567,6 +7942,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 138
+      },
+      "family_id": "FAMILY-135",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 140
+      },
+      "growth_percent": {
+        "hp": 57,
+        "attack": 29,
+        "defence": 57,
+        "sp_attack": 57,
+        "sp_defence": 97,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 139
+      },
+      "abilities": {
+        "primary": "ABILITY_MEDICINAL_SAP",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_HEARTWOOD_CORE"
       }
     },
     {
@@ -4600,6 +8000,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 139
+      },
+      "family_id": "FAMILY-137",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 141
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 48,
+        "defence": 32,
+        "sp_attack": 10,
+        "sp_defence": 32,
+        "speed": 48
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 140
+      },
+      "abilities": {
+        "primary": "ABILITY_SNOWFOOT",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_HARD_HEAD"
       }
     },
     {
@@ -4634,6 +8059,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 140
+      },
+      "family_id": "FAMILY-137",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 142
+      },
+      "growth_percent": {
+        "hp": 65,
+        "attack": 65,
+        "defence": 45,
+        "sp_attack": 11,
+        "sp_defence": 34,
+        "speed": 65
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 141
+      },
+      "abilities": {
+        "primary": "ABILITY_SNOWFOOT",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_HARD_HEAD"
       }
     },
     {
@@ -4667,6 +8117,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 141
+      },
+      "family_id": "FAMILY-139",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 143
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 31,
+        "defence": 56,
+        "sp_attack": 19,
+        "sp_defence": 31,
+        "speed": 19
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 142
+      },
+      "abilities": {
+        "primary": "ABILITY_STORMSENSE",
+        "secondary": "ABILITY_RESERVOIR",
+        "hidden": "ABILITY_FLOODPLAIN"
       }
     },
     {
@@ -4701,6 +8176,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 142
+      },
+      "family_id": "FAMILY-139",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 144
+      },
+      "growth_percent": {
+        "hp": 58,
+        "attack": 58,
+        "defence": 58,
+        "sp_attack": 29,
+        "sp_defence": 58,
+        "speed": 17
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 143
+      },
+      "abilities": {
+        "primary": "ABILITY_STORMSENSE",
+        "secondary": "ABILITY_RESERVOIR",
+        "hidden": "ABILITY_FLOODPLAIN"
       }
     },
     {
@@ -4734,6 +8234,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 143
+      },
+      "family_id": "FAMILY-141",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 145
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 32,
+        "defence": 32,
+        "sp_attack": 32,
+        "sp_defence": 32,
+        "speed": 32
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 144
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_RALLYING_CRY",
+        "hidden": "ABILITY_TRAILBLAZER"
       }
     },
     {
@@ -4768,6 +8293,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 144
+      },
+      "family_id": "FAMILY-141",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 146
+      },
+      "growth_percent": {
+        "hp": 36,
+        "attack": 48,
+        "defence": 31,
+        "sp_attack": 31,
+        "sp_defence": 48,
+        "speed": 70
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 145
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_RALLYING_CRY",
+        "hidden": "ABILITY_PROTECTOR"
       }
     },
     {
@@ -4802,6 +8352,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 145
+      },
+      "family_id": "FAMILY-141",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 147
+      },
+      "growth_percent": {
+        "hp": 62,
+        "attack": 31,
+        "defence": 48,
+        "sp_attack": 31,
+        "sp_defence": 62,
+        "speed": 31
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 146
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_FORAGER",
+        "hidden": "ABILITY_CHORUS"
       }
     },
     {
@@ -4835,6 +8410,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 146
+      },
+      "family_id": "FAMILY-144",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 148
+      },
+      "growth_percent": {
+        "hp": 11,
+        "attack": 15,
+        "defence": 15,
+        "sp_attack": 72,
+        "sp_defence": 34,
+        "speed": 72
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 147
+      },
+      "abilities": {
+        "primary": "ABILITY_STORMSENSE",
+        "secondary": "ABILITY_RAINRUNNER",
+        "hidden": "ABILITY_ALTERNATOR"
       }
     },
     {
@@ -4869,6 +8469,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 147
+      },
+      "family_id": "FAMILY-144",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 149
+      },
+      "growth_percent": {
+        "hp": 35,
+        "attack": 21,
+        "defence": 21,
+        "sp_attack": 74,
+        "sp_defence": 35,
+        "speed": 110
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 148
+      },
+      "abilities": {
+        "primary": "ABILITY_STORMSENSE",
+        "secondary": "ABILITY_RAINRUNNER",
+        "hidden": "ABILITY_ALTERNATOR"
       }
     },
     {
@@ -4902,6 +8527,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 148
+      },
+      "family_id": "FAMILY-146",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 150
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 39,
+        "defence": 66,
+        "sp_attack": 14,
+        "sp_defence": 31,
+        "speed": 14
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 149
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_WAYFARER"
       }
     },
     {
@@ -4936,6 +8586,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 149
+      },
+      "family_id": "FAMILY-146",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 151
+      },
+      "growth_percent": {
+        "hp": 54,
+        "attack": 54,
+        "defence": 54,
+        "sp_attack": 27,
+        "sp_defence": 54,
+        "speed": 37
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 150
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_WAYFARER"
       }
     },
     {
@@ -4969,6 +8644,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 150
+      },
+      "family_id": "FAMILY-148",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 152
+      },
+      "growth_percent": {
+        "hp": 27,
+        "attack": 34,
+        "defence": 34,
+        "sp_attack": 15,
+        "sp_defence": 34,
+        "speed": 51
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 151
+      },
+      "abilities": {
+        "primary": "ABILITY_FORAGER",
+        "secondary": "ABILITY_SAFEKEEP",
+        "hidden": "ABILITY_CAPACITOR"
       }
     },
     {
@@ -5003,6 +8703,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 151
+      },
+      "family_id": "FAMILY-148",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 153
+      },
+      "growth_percent": {
+        "hp": 60,
+        "attack": 30,
+        "defence": 53,
+        "sp_attack": 53,
+        "sp_defence": 60,
+        "speed": 18
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 152
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_STATIC_HIDE",
+        "hidden": "ABILITY_TITHE_CHARGE"
       }
     },
     {
@@ -5036,6 +8761,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 152
+      },
+      "family_id": "FAMILY-150",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 154
+      },
+      "growth_percent": {
+        "hp": 19,
+        "attack": 10,
+        "defence": 19,
+        "sp_attack": 56,
+        "sp_defence": 47,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 153
+      },
+      "abilities": {
+        "primary": "ABILITY_CHORUS",
+        "secondary": "ABILITY_SOUNDPROOF",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -5070,6 +8820,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 153
+      },
+      "family_id": "FAMILY-150",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 155
+      },
+      "growth_percent": {
+        "hp": 41,
+        "attack": 19,
+        "defence": 31,
+        "sp_attack": 67,
+        "sp_defence": 67,
+        "speed": 67
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 154
+      },
+      "abilities": {
+        "primary": "ABILITY_CHORUS",
+        "secondary": "ABILITY_SOUNDPROOF",
+        "hidden": "ABILITY_RALLYING_CRY"
       }
     },
     {
@@ -5103,6 +8878,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 154
+      },
+      "family_id": "FAMILY-152",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 156
+      },
+      "growth_percent": {
+        "hp": 25,
+        "attack": 31,
+        "defence": 31,
+        "sp_attack": 19,
+        "sp_defence": 39,
+        "speed": 56
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 155
+      },
+      "abilities": {
+        "primary": "ABILITY_TOXINPROOF",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_FORESIGHT"
       }
     },
     {
@@ -5137,6 +8937,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 155
+      },
+      "family_id": "FAMILY-152",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 157
+      },
+      "growth_percent": {
+        "hp": 46,
+        "attack": 66,
+        "defence": 52,
+        "sp_attack": 14,
+        "sp_defence": 35,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 156
+      },
+      "abilities": {
+        "primary": "ABILITY_TOXINPROOF",
+        "secondary": "ABILITY_BATTLE_NERVE",
+        "hidden": "ABILITY_REVENGE_MARK"
       }
     },
     {
@@ -5171,6 +8996,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 156
+      },
+      "family_id": "FAMILY-152",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 158
+      },
+      "growth_percent": {
+        "hp": 52,
+        "attack": 14,
+        "defence": 35,
+        "sp_attack": 46,
+        "sp_defence": 66,
+        "speed": 66
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 157
+      },
+      "abilities": {
+        "primary": "ABILITY_TOXINPROOF",
+        "secondary": "ABILITY_MEDICINAL_SAP",
+        "hidden": "ABILITY_RENEWAL"
       }
     },
     {
@@ -5204,6 +9054,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 157
+      },
+      "family_id": "FAMILY-155",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 159
+      },
+      "growth_percent": {
+        "hp": 25,
+        "attack": 68,
+        "defence": 14,
+        "sp_attack": 14,
+        "sp_defence": 25,
+        "speed": 68
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 158
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRST_STRIKE",
+        "secondary": "ABILITY_PURSUIT_INSTINCT",
+        "hidden": "ABILITY_LAST_STAND"
       }
     },
     {
@@ -5238,6 +9113,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 158
+      },
+      "family_id": "FAMILY-155",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 160
+      },
+      "growth_percent": {
+        "hp": 34,
+        "attack": 73,
+        "defence": 21,
+        "sp_attack": 21,
+        "sp_defence": 34,
+        "speed": 118
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 159
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRST_STRIKE",
+        "secondary": "ABILITY_PURSUIT_INSTINCT",
+        "hidden": "ABILITY_LAST_STAND"
       }
     },
     {
@@ -5271,6 +9171,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 159
+      },
+      "family_id": "FAMILY-157",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 161
+      },
+      "growth_percent": {
+        "hp": 20,
+        "attack": 33,
+        "defence": 33,
+        "sp_attack": 20,
+        "sp_defence": 33,
+        "speed": 59
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 160
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_SCAVENGER",
+        "hidden": "ABILITY_SCREENMENDER"
       }
     },
     {
@@ -5305,6 +9230,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 160
+      },
+      "family_id": "FAMILY-157",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 162
+      },
+      "growth_percent": {
+        "hp": 30,
+        "attack": 41,
+        "defence": 60,
+        "sp_attack": 30,
+        "sp_defence": 53,
+        "speed": 53
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 161
+      },
+      "abilities": {
+        "primary": "ABILITY_SAFEKEEP",
+        "secondary": "ABILITY_SCAVENGER",
+        "hidden": "ABILITY_SCREENMENDER"
       }
     },
     {
@@ -5339,6 +9289,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 161
+      },
+      "family_id": "FAMILY-159",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 163
+      },
+      "growth_percent": {
+        "hp": 21,
+        "attack": 14,
+        "defence": 21,
+        "sp_attack": 67,
+        "sp_defence": 67,
+        "speed": 111
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 162
+      },
+      "abilities": {
+        "primary": "ABILITY_STORMSENSE",
+        "secondary": "ABILITY_SOUNDPROOF",
+        "hidden": "ABILITY_WEATHER_CALM"
       }
     },
     {
@@ -5372,6 +9347,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 162
+      },
+      "family_id": "FAMILY-160",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 164
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 31,
+        "defence": 31,
+        "sp_attack": 10,
+        "sp_defence": 39,
+        "speed": 47
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 163
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_UNFAZED",
+        "hidden": "ABILITY_MARKED_QUARRY"
       }
     },
     {
@@ -5406,6 +9406,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 163
+      },
+      "family_id": "FAMILY-160",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 165
+      },
+      "growth_percent": {
+        "hp": 58,
+        "attack": 58,
+        "defence": 40,
+        "sp_attack": 11,
+        "sp_defence": 58,
+        "speed": 58
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 164
+      },
+      "abilities": {
+        "primary": "ABILITY_WAYFARER",
+        "secondary": "ABILITY_UNFAZED",
+        "hidden": "ABILITY_MARKED_QUARRY"
       }
     },
     {
@@ -5439,6 +9464,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 164
+      },
+      "family_id": "FAMILY-162",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 166
+      },
+      "growth_percent": {
+        "hp": 11,
+        "attack": 21,
+        "defence": 16,
+        "sp_attack": 53,
+        "sp_defence": 35,
+        "speed": 74
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 165
+      },
+      "abilities": {
+        "primary": "ABILITY_CHORUS",
+        "secondary": "ABILITY_MIMIC_EAR",
+        "hidden": "ABILITY_ADAPTABLE_HIDE"
       }
     },
     {
@@ -5473,6 +9523,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 165
+      },
+      "family_id": "FAMILY-162",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 167
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 18,
+        "defence": 32,
+        "sp_attack": 63,
+        "sp_defence": 63,
+        "speed": 63
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 166
+      },
+      "abilities": {
+        "primary": "ABILITY_CHORUS",
+        "secondary": "ABILITY_RENEWAL",
+        "hidden": "ABILITY_MEDICINAL_SAP"
       }
     },
     {
@@ -5507,6 +9582,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 166
+      },
+      "family_id": "FAMILY-164",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 168
+      },
+      "growth_percent": {
+        "hp": 47,
+        "attack": 32,
+        "defence": 47,
+        "sp_attack": 47,
+        "sp_defence": 79,
+        "speed": 47
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 167
+      },
+      "abilities": {
+        "primary": "ABILITY_CALM_GUARD",
+        "secondary": "ABILITY_KEEN_SENSE",
+        "hidden": "ABILITY_CLEAR_JUDGMENT"
       }
     },
     {
@@ -5541,6 +9641,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 167
+      },
+      "family_id": "FAMILY-165",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 169
+      },
+      "growth_percent": {
+        "hp": 87,
+        "attack": 59,
+        "defence": 87,
+        "sp_attack": 28,
+        "sp_defence": 53,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 168
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRM_STANCE",
+        "secondary": "ABILITY_EARTHROOT",
+        "hidden": "ABILITY_WORLD_ANCHOR"
       }
     },
     {
@@ -5575,6 +9700,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 168
+      },
+      "family_id": "FAMILY-166",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 170
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 47,
+        "defence": 24,
+        "sp_attack": 79,
+        "sp_defence": 47,
+        "speed": 79
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 169
+      },
+      "abilities": {
+        "primary": "ABILITY_AMBUSH",
+        "secondary": "ABILITY_CINDERHIDE",
+        "hidden": "ABILITY_SINMARK"
       }
     },
     {
@@ -5608,6 +9758,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 169
+      },
+      "family_id": "FAMILY-167",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 171
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 48,
+        "defence": 48,
+        "sp_attack": 10,
+        "sp_defence": 32,
+        "speed": 32
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 170
+      },
+      "abilities": {
+        "primary": "ABILITY_TRAILBLAZER",
+        "secondary": "ABILITY_SANDCOAT",
+        "hidden": "ABILITY_WAYSTONE_MASTER"
       }
     },
     {
@@ -5642,6 +9817,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 170
+      },
+      "family_id": "FAMILY-167",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 172
+      },
+      "growth_percent": {
+        "hp": 53,
+        "attack": 53,
+        "defence": 53,
+        "sp_attack": 18,
+        "sp_defence": 39,
+        "speed": 28
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 171
+      },
+      "abilities": {
+        "primary": "ABILITY_TRAILBLAZER",
+        "secondary": "ABILITY_FIRM_STANCE",
+        "hidden": "ABILITY_WAYSTONE_MASTER"
       }
     },
     {
@@ -5676,6 +9876,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 171
+      },
+      "family_id": "FAMILY-167",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 173
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 90,
+        "defence": 90,
+        "sp_attack": 11,
+        "sp_defence": 56,
+        "speed": 30
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 172
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRM_STANCE",
+        "secondary": "ABILITY_STONEPLATE",
+        "hidden": "ABILITY_WAYSTONE_MASTER"
       }
     },
     {
@@ -5709,6 +9934,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 172
+      },
+      "family_id": "FAMILY-170",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 174
+      },
+      "growth_percent": {
+        "hp": 32,
+        "attack": 32,
+        "defence": 58,
+        "sp_attack": 10,
+        "sp_defence": 32,
+        "speed": 40
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 173
+      },
+      "abilities": {
+        "primary": "ABILITY_SNOWFOOT",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_BULWARK"
       }
     },
     {
@@ -5742,6 +9992,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 173
+      },
+      "family_id": "FAMILY-170",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 175
+      },
+      "growth_percent": {
+        "hp": 53,
+        "attack": 61,
+        "defence": 61,
+        "sp_attack": 11,
+        "sp_defence": 39,
+        "speed": 28
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 174
+      },
+      "abilities": {
+        "primary": "ABILITY_SNOWFOOT",
+        "secondary": "ABILITY_SUREFOOT",
+        "hidden": "ABILITY_BULWARK"
       }
     },
     {
@@ -5776,6 +10051,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 174
+      },
+      "family_id": "FAMILY-170",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 176
+      },
+      "growth_percent": {
+        "hp": 62,
+        "attack": 98,
+        "defence": 98,
+        "sp_attack": 11,
+        "sp_defence": 56,
+        "speed": 19
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 175
+      },
+      "abilities": {
+        "primary": "ABILITY_SNOWFOOT",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_BULWARK"
       }
     },
     {
@@ -5810,6 +10110,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 175
+      },
+      "family_id": "FAMILY-173",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 177
+      },
+      "growth_percent": {
+        "hp": 46,
+        "attack": 46,
+        "defence": 46,
+        "sp_attack": 75,
+        "sp_defence": 46,
+        "speed": 75
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 176
+      },
+      "abilities": {
+        "primary": "ABILITY_STORMSENSE",
+        "secondary": "ABILITY_ALTERNATOR",
+        "hidden": "ABILITY_CELESTIAL_TEMPEST"
       }
     },
     {
@@ -5844,6 +10169,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 176
+      },
+      "family_id": "FAMILY-174",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 178
+      },
+      "growth_percent": {
+        "hp": 51,
+        "attack": 81,
+        "defence": 81,
+        "sp_attack": 51,
+        "sp_defence": 51,
+        "speed": 25
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 177
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRM_STANCE",
+        "secondary": "ABILITY_STABLE_CORE",
+        "hidden": "ABILITY_SOVEREIGN_DECREE"
       }
     },
     {
@@ -5878,6 +10228,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 177
+      },
+      "family_id": "FAMILY-175",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 179
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 56,
+        "defence": 39,
+        "sp_attack": 39,
+        "sp_defence": 56,
+        "speed": 56
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 178
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_CHORUS",
+        "hidden": "ABILITY_OATH_ROAR"
       }
     },
     {
@@ -5912,6 +10287,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 178
+      },
+      "family_id": "FAMILY-176",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 180
+      },
+      "growth_percent": {
+        "hp": 63,
+        "attack": 105,
+        "defence": 105,
+        "sp_attack": 11,
+        "sp_defence": 33,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 179
+      },
+      "abilities": {
+        "primary": "ABILITY_THICK_PELT",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_COUNTERCHARGE"
       }
     },
     {
@@ -5946,6 +10346,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 179
+      },
+      "family_id": "FAMILY-177",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 181
+      },
+      "growth_percent": {
+        "hp": 24,
+        "attack": 105,
+        "defence": 33,
+        "sp_attack": 13,
+        "sp_defence": 33,
+        "speed": 105
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 180
+      },
+      "abilities": {
+        "primary": "ABILITY_FOCUS_EDGE",
+        "secondary": "ABILITY_PURSUIT_INSTINCT",
+        "hidden": "ABILITY_WEAKPOINT_HUNTER"
       }
     },
     {
@@ -5980,6 +10405,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 180
+      },
+      "family_id": "FAMILY-178",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 182
+      },
+      "growth_percent": {
+        "hp": 27,
+        "attack": 12,
+        "defence": 58,
+        "sp_attack": 41,
+        "sp_defence": 58,
+        "speed": 22
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 181
+      },
+      "abilities": {
+        "primary": "ABILITY_STATIC_HIDE",
+        "secondary": "ABILITY_CAPACITOR",
+        "hidden": "ABILITY_HOVERCORE"
       }
     },
     {
@@ -6014,6 +10464,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 181
+      },
+      "family_id": "FAMILY-178",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 183
+      },
+      "growth_percent": {
+        "hp": 57,
+        "attack": 17,
+        "defence": 57,
+        "sp_attack": 88,
+        "sp_defence": 57,
+        "speed": 17
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 182
+      },
+      "abilities": {
+        "primary": "ABILITY_CAPACITOR",
+        "secondary": "ABILITY_KEEN_SENSE",
+        "hidden": "ABILITY_HOVERCORE"
       }
     },
     {
@@ -6048,6 +10523,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 182
+      },
+      "family_id": "FAMILY-180",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 184
+      },
+      "growth_percent": {
+        "hp": 43,
+        "attack": 43,
+        "defence": 71,
+        "sp_attack": 13,
+        "sp_defence": 36,
+        "speed": 13
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 183
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_SEPTIC_HUNGER"
       }
     },
     {
@@ -6082,6 +10582,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 183
+      },
+      "family_id": "FAMILY-180",
+      "stage": "Middle",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 185
+      },
+      "growth_percent": {
+        "hp": 62,
+        "attack": 62,
+        "defence": 70,
+        "sp_attack": 11,
+        "sp_defence": 47,
+        "speed": 11
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 184
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_PATIENCE",
+        "hidden": "ABILITY_SEPTIC_HUNGER"
       }
     },
     {
@@ -6116,6 +10641,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 184
+      },
+      "family_id": "FAMILY-180",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 186
+      },
+      "growth_percent": {
+        "hp": 60,
+        "attack": 99,
+        "defence": 99,
+        "sp_attack": 13,
+        "sp_defence": 60,
+        "speed": 10
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 185
+      },
+      "abilities": {
+        "primary": "ABILITY_POISON_BARBS",
+        "secondary": "ABILITY_AMBUSH",
+        "hidden": "ABILITY_SEPTIC_HUNGER"
       }
     },
     {
@@ -6150,6 +10700,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 185
+      },
+      "family_id": "FAMILY-183",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 187
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 62,
+        "defence": 62,
+        "sp_attack": 30,
+        "sp_defence": 56,
+        "speed": 39
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 186
+      },
+      "abilities": {
+        "primary": "ABILITY_PROTECTOR",
+        "secondary": "ABILITY_COUNTERCHARGE",
+        "hidden": "ABILITY_OATHKEEPER"
       }
     },
     {
@@ -6184,6 +10759,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 186
+      },
+      "family_id": "FAMILY-184",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 188
+      },
+      "growth_percent": {
+        "hp": 56,
+        "attack": 39,
+        "defence": 39,
+        "sp_attack": 56,
+        "sp_defence": 56,
+        "speed": 56
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 187
+      },
+      "abilities": {
+        "primary": "ABILITY_MEDICINAL_SAP",
+        "secondary": "ABILITY_RALLYING_CRY",
+        "hidden": "ABILITY_MANY_BANNERS"
       }
     },
     {
@@ -6218,6 +10818,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 187
+      },
+      "family_id": "FAMILY-185",
+      "stage": "Single-stage",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 189
+      },
+      "growth_percent": {
+        "hp": 39,
+        "attack": 56,
+        "defence": 39,
+        "sp_attack": 56,
+        "sp_defence": 56,
+        "speed": 56
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 188
+      },
+      "abilities": {
+        "primary": "ABILITY_FORESIGHT",
+        "secondary": "ABILITY_MARKED_QUARRY",
+        "hidden": "ABILITY_STRATEGEM"
       }
     },
     {
@@ -6251,6 +10876,31 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 188
+      },
+      "family_id": "FAMILY-186",
+      "stage": "Base",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 190
+      },
+      "growth_percent": {
+        "hp": 28,
+        "attack": 61,
+        "defence": 28,
+        "sp_attack": 39,
+        "sp_defence": 28,
+        "speed": 61
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 189
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRST_STRIKE",
+        "secondary": "ABILITY_HARD_HEAD",
+        "hidden": "ABILITY_BATTLE_RUSH"
       }
     },
     {
@@ -6285,10 +10935,35 @@
         "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
         "sheet": "Full Dex",
         "row": 189
+      },
+      "family_id": "FAMILY-186",
+      "stage": "Final",
+      "progression_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Dex Progression",
+        "row": 191
+      },
+      "growth_percent": {
+        "hp": 39,
+        "attack": 56,
+        "defence": 30,
+        "sp_attack": 56,
+        "sp_defence": 39,
+        "speed": 90
+      },
+      "growth_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Full Dex + Growth",
+        "row": 190
+      },
+      "abilities": {
+        "primary": "ABILITY_FIRST_STRIKE",
+        "secondary": "ABILITY_ALTERNATOR",
+        "hidden": "ABILITY_CONQUEROR_S_SPARK"
       }
     }
   ],
   "unresolved": [
-    "Species identities, types, exact stats and ability names extracted. Capture rates and remaining runtime bindings must be audited in Phase E; null is not a capture rule."
+    "capture_rate: no per-species numeric catch-rate table appears in the 35 detailed references or original handoff. Supply an approved 187-row catch-rate table; do not derive rates from BST or rarity."
   ]
 }

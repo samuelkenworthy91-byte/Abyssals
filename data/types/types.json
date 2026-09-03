@@ -3,9 +3,8 @@
   "status": "partial",
   "sources": [
     "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
-    "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx"
+    "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx"
   ],
-  "expected_count": 18,
   "records": [
     {
       "id": "NORMAL",
@@ -81,6 +80,6 @@
     }
   ],
   "unresolved": [
-    "Type identities are complete; effectiveness matrix and exact interaction authority to be audited in Phase E."
+    "All 18 canonical type identities are recovered. The source package names a Gen III-style battle foundation but does not supply an explicit 18x18 effectiveness matrix (including Fairy) or a versioned import contract. Supply/approve that exact matrix; do not assume a conventional generation."
   ]
 }

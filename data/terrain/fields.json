@@ -1,69 +1,224 @@
 {
   "schema_version": 1,
-  "status": "partial",
+  "status": "complete_for_supplied_source",
   "sources": [
-    "docs/source_archive/handoff_v1/data/canon/warden_fields.json",
     "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx"
   ],
   "records": [
     {
-      "id": "FIELD-NAMEFOG",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_NAMEFOG",
       "name": "Namefog",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-01",
+      "effects": [
+        {
+          "operation": "damage_multiplier",
+          "type_id": "GHOST",
+          "multiplier": 1.5
+        },
+        {
+          "operation": "damage_multiplier",
+          "type_id": "PSYCHIC",
+          "multiplier": 0.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 2
+      }
     },
     {
-      "id": "FIELD-GILDED-DUST",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_GILDED_DUST",
       "name": "Gilded Dust",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-02",
+      "effects": [
+        {
+          "operation": "end_turn_damage",
+          "max_hp_fraction": [
+            1,
+            16
+          ],
+          "immune_types": [
+            "ROCK",
+            "GROUND",
+            "STEEL"
+          ]
+        },
+        {
+          "operation": "effective_stat",
+          "stat": "sp_defence",
+          "type_id": "ROCK",
+          "multiplier": 1.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 3
+      }
     },
     {
-      "id": "FIELD-BLOOD-SUN",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_BLOOD_SUN",
       "name": "Blood Sun",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-03",
+      "effects": [
+        {
+          "operation": "damage_multiplier",
+          "type_id": "FIRE",
+          "multiplier": 1.5
+        },
+        {
+          "operation": "damage_multiplier",
+          "type_id": "WATER",
+          "multiplier": 0.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 4
+      }
     },
     {
-      "id": "FIELD-IRON-DECREE",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_IRON_DECREE",
       "name": "Iron Decree",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-04",
+      "effects": [
+        {
+          "operation": "damage_multiplier",
+          "type_id": "STEEL",
+          "multiplier": 1.5
+        },
+        {
+          "operation": "damage_multiplier",
+          "type_id": "FIGHTING",
+          "multiplier": 0.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 5
+      }
     },
     {
-      "id": "FIELD-TWIN-RADIANCE",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_TWIN_RADIANCE",
       "name": "Twin Radiance",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-05",
+      "effects": [
+        {
+          "operation": "damage_multiplier",
+          "type_id": "FAIRY",
+          "multiplier": 1.5
+        },
+        {
+          "operation": "damage_multiplier",
+          "type_id": "DARK",
+          "multiplier": 0.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 6
+      }
     },
     {
-      "id": "FIELD-MOURNING-RAIN",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_MOURNING_RAIN",
       "name": "Mourning Rain",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-06",
+      "effects": [
+        {
+          "operation": "damage_multiplier",
+          "type_id": "WATER",
+          "multiplier": 1.5
+        },
+        {
+          "operation": "damage_multiplier",
+          "type_id": "FIRE",
+          "multiplier": 0.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 7
+      }
     },
     {
-      "id": "FIELD-COCYTUS-HAIL",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_COCYTUS_HAIL",
       "name": "Cocytus Hail",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-07",
+      "effects": [
+        {
+          "operation": "end_turn_damage",
+          "max_hp_fraction": [
+            1,
+            16
+          ],
+          "immune_types": [
+            "ICE"
+          ]
+        },
+        {
+          "operation": "effective_stat",
+          "stat": "defence",
+          "type_id": "ICE",
+          "multiplier": 1.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 8
+      }
     },
     {
-      "id": "FIELD-QUIET-NIGHT",
-      "id_origin": "import_assigned_name_key",
+      "id": "FIELD_HELL_QUIET_NIGHT",
       "name": "Quiet Night",
-      "warden_id": null,
-      "effects": null
+      "warden_id": "WRD-08",
+      "effects": [
+        {
+          "operation": "damage_multiplier",
+          "type_id": "DARK",
+          "multiplier": 1.5
+        },
+        {
+          "operation": "damage_multiplier",
+          "type_id": "FAIRY",
+          "multiplier": 0.5
+        }
+      ],
+      "symmetric": true,
+      "native_persistent": true,
+      "replacement": "dormant_until_temporary_expires_or_clears",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+        "body_index": 151,
+        "table_row": 9
+      }
     }
   ],
-  "unresolved": [
-    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
-  ]
+  "unresolved": []
 }

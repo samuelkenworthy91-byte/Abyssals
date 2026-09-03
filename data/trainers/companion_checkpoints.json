@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "COMPANION-001",
+      "fields": {
+        "Checkpoint": "STARTER MAPPING",
+        "Character / player choice": "Aimon chooses Scarimp",
+        "Roster / assignment": "Pate receives Ruffurn",
+        "Trade / secondary": "Trade receives Calibrit",
+        "Implementation note": "Pate preference: bold physical heroism; Trade preference: technical control"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "COMPANION-002",
+      "fields": {
+        "Checkpoint": "STARTER MAPPING",
+        "Character / player choice": "Aimon chooses Calibrit",
+        "Roster / assignment": "Pate receives Ruffurn",
+        "Trade / secondary": "Trade receives Scarimp",
+        "Implementation note": "Ruffurn remains Pate's strongest personality fit"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "COMPANION-003",
+      "fields": {
+        "Checkpoint": "STARTER MAPPING",
+        "Character / player choice": "Aimon chooses Ruffurn",
+        "Roster / assignment": "Pate receives Scarimp",
+        "Trade / secondary": "Trade receives Calibrit",
+        "Implementation note": "Trade receives Calibrit whenever it remains available"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "COMPANION-004",
+      "fields": {
+        "Checkpoint": "Ch.1 departure",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "Assigned starter@12",
+        "Trade / secondary": "",
+        "Implementation note": "Permanent named seed; starter Ability 1"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "COMPANION-005",
+      "fields": {
+        "Checkpoint": "Ch.1 departure",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "Assigned starter@12",
+        "Trade / secondary": "",
+        "Implementation note": "Permanent named seed; starter Ability 2"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "COMPANION-006",
+      "fields": {
+        "Checkpoint": "Dorelem checkpoint",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "starter@28; Cubanner@26",
+        "Trade / secondary": "",
+        "Implementation note": "2-member active roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "COMPANION-007",
+      "fields": {
+        "Checkpoint": "Dorelem checkpoint",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "starter@28; Courstoat@26",
+        "Trade / secondary": "",
+        "Implementation note": "2-member active roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "COMPANION-008",
+      "fields": {
+        "Checkpoint": "Philomere checkpoint",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "starter@38; Prideguard@36; Foamwhelp@35",
+        "Trade / secondary": "",
+        "Implementation note": "3-member active roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "COMPANION-009",
+      "fields": {
+        "Checkpoint": "Philomere checkpoint",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "starter@38; Reversire@36; Pactecho@35",
+        "Trade / secondary": "",
+        "Implementation note": "3-member active roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "COMPANION-010",
+      "fields": {
+        "Checkpoint": "Cossenne checkpoint",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "starter final@58; Leonarch@57; Liontide@56; Flaggrim@55",
+        "Trade / secondary": "",
+        "Implementation note": "4-member roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "COMPANION-011",
+      "fields": {
+        "Checkpoint": "Cossenne checkpoint",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "starter final@58; Reversire@57; Pactecho@56; Palimopus@55",
+        "Trade / secondary": "",
+        "Implementation note": "4-member roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 12
+      }
+    },
+    {
+      "id": "COMPANION-012",
+      "fields": {
+        "Checkpoint": "Botrune checkpoint",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "starter final@78; Leonarch@77; Liontide@76; Oriflamme@75; Albannor@74",
+        "Trade / secondary": "",
+        "Implementation note": "5-member roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 13
+      }
+    },
+    {
+      "id": "COMPANION-013",
+      "fields": {
+        "Checkpoint": "Botrune checkpoint",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "starter final@78; Reversire@77; Pactecho@76; Palimopus@75; Sigilume@74",
+        "Trade / secondary": "",
+        "Implementation note": "5-member roster"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 14
+      }
+    },
+    {
+      "id": "COMPANION-014",
+      "fields": {
+        "Checkpoint": "Emmara final mortal roster",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "starter final@96; Leonarch@95; Liontide@94; Oriflamme@93; Albannor@92; Destridon@91",
+        "Trade / secondary": "",
+        "Implementation note": "Forward momentum; 2 held roles; no scripted player battle"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 15
+      }
+    },
+    {
+      "id": "COMPANION-015",
+      "fields": {
+        "Checkpoint": "Emmara final mortal roster",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "starter final@96; Reversire@95; Pactecho@94; Palimopus@93; Sigilume@92; Trucepoe@91",
+        "Trade / secondary": "",
+        "Implementation note": "Controlled coverage; 2 held roles; no scripted player battle"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 16
+      }
+    },
+    {
+      "id": "COMPANION-016",
+      "fields": {
+        "Checkpoint": "Postgame exhibition",
+        "Character / player choice": "Pate",
+        "Roster / assignment": "All six canonical species identities @200",
+        "Trade / secondary": "",
+        "Implementation note": "Non-lethal exhibition; Advanced+ direct AI; 3 held roles; 0 bag"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 17
+      }
+    },
+    {
+      "id": "COMPANION-017",
+      "fields": {
+        "Checkpoint": "Postgame exhibition",
+        "Character / player choice": "Trade",
+        "Roster / assignment": "All six canonical species identities @200",
+        "Trade / secondary": "",
+        "Implementation note": "Non-lethal exhibition; Leader tactical AI; 3 held roles; 0 bag"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 101,
+        "table_row": 18
+      }
+    }
+  ],
+  "unresolved": []
+}

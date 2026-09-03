@@ -45,6 +45,9 @@ REFERENCE_FIELDS = {
     'item_id':'items', 'held_item_id':'items', 'item_ids':'items', 'shop_id':'shops',
     'scene_id':'scenes', 'scene_ids':'scenes', 'next_scene_id':'scenes', 'required_scene_id':'scenes',
     'faction_id':'factions', 'field_id':'fields', 'battle_id':'battles', 'table_id':'tables',
+    'family_id':'families', 'signature_owner_family':'families', 'member_species_ids':'species',
+    'anchor_scene_ids':'scenes', 'world_event_id':'scenes', 'current_form_legal_move_ids':'moves',
+    'bag_item_id':'items', 'then_item_id':'items', 'else_item_id':'items',
 }
 
 def validate_references(value, registries, errors, trail='data'):
@@ -54,7 +57,7 @@ def validate_references(value, registries, errors, trail='data'):
             if key in REFERENCE_FIELDS and v is not None:
                 refs = v if isinstance(v, list) else [v]
                 for ref_ in refs:
-                    if isinstance(ref_, str) and ref_ not in registries.get(REFERENCE_FIELDS[key], set()):
+                    if isinstance(ref_, (str,int)) and not isinstance(ref_,bool) and ref_ not in registries.get(REFERENCE_FIELDS[key], set()):
                         errors.append(f'{at}: unknown {REFERENCE_FIELDS[key]} reference {ref_}')
             validate_references(v, registries, errors, at)
     elif isinstance(value, list):

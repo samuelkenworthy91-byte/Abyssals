@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "MODE-SUPERVISED_NONLETHAL",
+      "fields": {
+        "Mode": "SUPERVISED_NONLETHAL",
+        "Used by": "Enlistment test, optional friendly sparring",
+        "0 HP / surrender handling": "Final enemy partner is clamped to 1 HP and trainer surrenders; no permanent enemy death."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 121,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "MODE-RIVAL_NONLETHAL",
+      "fields": {
+        "Mode": "RIVAL_NONLETHAL",
+        "Used by": "Rhoswen; postgame Pate/Trade exhibitions",
+        "0 HP / surrender handling": "Final enemy partner is clamped to 1 HP; battle ends by acknowledgement/surrender."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 121,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "MODE-FORMAL_LEADER",
+      "fields": {
+        "Mode": "FORMAL_LEADER",
+        "Used by": "All eight mortal leaders",
+        "0 HP / surrender handling": "Final enemy partner is clamped to 1 HP; leader yields and fate scene follows."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 121,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "MODE-HOSTILE_LETHAL",
+      "fields": {
+        "Mode": "HOSTILE_LETHAL",
+        "Used by": "Military ambushes, criminals, hostile route trainers where authored",
+        "0 HP / surrender handling": "0 HP applies normal permanent Abyssal death. Human survival is a separate story/fate question."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 121,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "MODE-WARDEN_BOSS",
+      "fields": {
+        "Mode": "WARDEN_BOSS",
+        "Used by": "All 8 Wardens",
+        "0 HP / surrender handling": "Player permadeath rules remain active; enemy defeat resolves Warden scripting. Player Run/retreat edge case is owned by Checklist 13."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 121,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "MODE-COSMIC_BOSS",
+      "fields": {
+        "Mode": "COSMIC_BOSS",
+        "Used by": "Illyr/Nharos",
+        "0 HP / surrender handling": "Boss-phase defeat rules; player permadeath active; retreat rules owned by Checklist 13."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 121,
+        "table_row": 7
+      }
+    }
+  ],
+  "unresolved": []
+}

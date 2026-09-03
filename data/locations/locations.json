@@ -2,8 +2,7 @@
   "schema_version": 1,
   "status": "partial",
   "sources": [
-    "docs/source_archive/handoff_v1/data/canon/locations.json",
-    "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json",
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
     "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md"
   ],
   "records": [
@@ -69,55 +68,55 @@
     },
     {
       "id": "LOC-CIRCLE-I-THRESHOLD",
-      "name": "Circle I \u2014 Threshold",
+      "name": "Circle I — Threshold",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-II-WANT",
-      "name": "Circle II \u2014 Want",
+      "name": "Circle II — Want",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-III-WRATH",
-      "name": "Circle III \u2014 Wrath",
+      "name": "Circle III — Wrath",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-IV-DOMINION",
-      "name": "Circle IV \u2014 Dominion",
+      "name": "Circle IV — Dominion",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-V-DOGMA",
-      "name": "Circle V \u2014 Dogma",
+      "name": "Circle V — Dogma",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-VI-GRIEF",
-      "name": "Circle VI \u2014 Grief",
+      "name": "Circle VI — Grief",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-VII-BETRAYAL",
-      "name": "Circle VII \u2014 Betrayal",
+      "name": "Circle VII — Betrayal",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-VIII-SILENCE",
-      "name": "Circle VIII \u2014 Silence",
+      "name": "Circle VIII — Silence",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
     {
       "id": "LOC-CIRCLE-IX-FAILING-RECORD",
-      "name": "Circle IX \u2014 Failing Record",
+      "name": "Circle IX — Failing Record",
       "id_origin": "import_assigned_name_key",
       "map_data": null
     },
@@ -132,9 +131,729 @@
       "name": "Reordered Underworld",
       "id_origin": "import_assigned_name_key",
       "map_data": null
+    },
+    {
+      "id": "LOC-CIV-01",
+      "name": "Civeton March",
+      "area_id": "CIV-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CIV-02",
+      "name": "Mere of First Light",
+      "area_id": "CIV-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-DOR-01",
+      "name": "Dorelem Scrub",
+      "area_id": "DOR-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-DOR-02",
+      "name": "Dorelem Service Tunnels",
+      "area_id": "DOR-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-DOR-03",
+      "name": "Marchwood Hollow",
+      "area_id": "DOR-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-DOR-04",
+      "name": "Reedcut Cave",
+      "area_id": "DOR-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PHI-01",
+      "name": "North Scrub Road",
+      "area_id": "PHI-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PHI-02",
+      "name": "Hospice Road",
+      "area_id": "PHI-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PHI-03",
+      "name": "Flooded Medicine Path",
+      "area_id": "PHI-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PHI-04",
+      "name": "Sanctuary Reeds",
+      "area_id": "PHI-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PHI-05",
+      "name": "Philomere Backwaters",
+      "area_id": "PHI-05",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CYB-01",
+      "name": "Rivercause Road",
+      "area_id": "CYB-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CYB-02",
+      "name": "Smugglers' Weir",
+      "area_id": "CYB-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CYB-03",
+      "name": "Drainage Basin",
+      "area_id": "CYB-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-COS-01",
+      "name": "Orchard Way",
+      "area_id": "COS-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-COS-02",
+      "name": "Old Pilgrim Grove",
+      "area_id": "COS-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-COS-03",
+      "name": "Sunken Shrine",
+      "area_id": "COS-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-MAR-01",
+      "name": "Stonecut Pass / Quarry Road",
+      "area_id": "MAR-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-MAR-02",
+      "name": "Quarry Tunnels",
+      "area_id": "MAR-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-MAR-03",
+      "name": "Prison Galleries",
+      "area_id": "MAR-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-MAR-04",
+      "name": "Fossil Cut",
+      "area_id": "MAR-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-BOT-01",
+      "name": "Scribes' Road",
+      "area_id": "BOT-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-BOT-02",
+      "name": "Buried Pre-Schism Archive",
+      "area_id": "BOT-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-BOT-03",
+      "name": "Scribe's Cistern",
+      "area_id": "BOT-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-BOT-04",
+      "name": "Tide Caves",
+      "area_id": "BOT-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CAY-01",
+      "name": "War Road",
+      "area_id": "CAY-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CAY-02",
+      "name": "Burned Approaches",
+      "area_id": "CAY-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CAY-03",
+      "name": "No-Man's Field",
+      "area_id": "CAY-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CAY-04",
+      "name": "Ceasefire Field",
+      "area_id": "CAY-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-CAY-05",
+      "name": "Ash Culvert",
+      "area_id": "CAY-05",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-01",
+      "name": "Pilgrim's Reach",
+      "area_id": "RAM-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-02",
+      "name": "Sacred Boundary Farms",
+      "area_id": "RAM-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-03",
+      "name": "Emmara Approach Field — Revisit",
+      "area_id": "RAM-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-04",
+      "name": "Washed Crossing",
+      "area_id": "RAM-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-05",
+      "name": "Pilgrim Caves",
+      "area_id": "RAM-05",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-06",
+      "name": "Bellglass Ruins",
+      "area_id": "RAM-06",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-RAM-07",
+      "name": "Old Catacombs",
+      "area_id": "RAM-07",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H01-01",
+      "name": "Roads of the Newly Dead",
+      "area_id": "H01-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H01-02",
+      "name": "Registry of Names",
+      "area_id": "H01-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H01-03",
+      "name": "Lost Queue",
+      "area_id": "H01-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H02-01",
+      "name": "Unfinished Rooms",
+      "area_id": "H02-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H02-02",
+      "name": "Hoard Galleries",
+      "area_id": "H02-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H02-03",
+      "name": "Medal Vault",
+      "area_id": "H02-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H03-01",
+      "name": "Endless Battlefield",
+      "area_id": "H03-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H03-02",
+      "name": "Anchor Trenches",
+      "area_id": "H03-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H03-03",
+      "name": "Medic's Truce",
+      "area_id": "H03-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H04-01",
+      "name": "Court of Petitions",
+      "area_id": "H04-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H04-02",
+      "name": "Command Arcade",
+      "area_id": "H04-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H04-03",
+      "name": "Empty Chair",
+      "area_id": "H04-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H05-01",
+      "name": "True Light Heaven",
+      "area_id": "H05-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H05-02",
+      "name": "Dawn Bloom Heaven",
+      "area_id": "H05-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H05-03",
+      "name": "Old Hymn Chamber",
+      "area_id": "H05-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H05-04",
+      "name": "Shared Hymn Gate",
+      "area_id": "H05-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H06-01",
+      "name": "Memory Orchards",
+      "area_id": "H06-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H06-02",
+      "name": "Mirror Pond",
+      "area_id": "H06-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H06-03",
+      "name": "Memorial Grove",
+      "area_id": "H06-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H07-01",
+      "name": "Promise Hall",
+      "area_id": "H07-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H07-02",
+      "name": "Closed-Door Maze",
+      "area_id": "H07-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H07-03",
+      "name": "Brothers' Threshold",
+      "area_id": "H07-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H08-01",
+      "name": "Blank Shore",
+      "area_id": "H08-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H08-02",
+      "name": "Silent Crossing",
+      "area_id": "H08-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H08-03",
+      "name": "Drowned Monuments",
+      "area_id": "H08-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H08-04",
+      "name": "Missing Stanza Islet",
+      "area_id": "H08-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H09-01",
+      "name": "Failing Record Halls",
+      "area_id": "H09-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H09-02",
+      "name": "Last-Name Chambers",
+      "area_id": "H09-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-H09-03",
+      "name": "Misfiled Records",
+      "area_id": "H09-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PG-01",
+      "name": "Fern Basin",
+      "area_id": "PG-01",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PG-02",
+      "name": "Fossil Cliffs",
+      "area_id": "PG-02",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PG-03",
+      "name": "Primeval Jungle",
+      "area_id": "PG-03",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PG-04",
+      "name": "Caldera / Nesting Grounds",
+      "area_id": "PG-04",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PG-05",
+      "name": "King's Causeway",
+      "area_id": "PG-05",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
+    },
+    {
+      "id": "LOC-PG-06",
+      "name": "Remixed Circle Fragments",
+      "area_id": "PG-06",
+      "map_data": null,
+      "id_origin": "technical_area_key",
+      "provenance": {
+        "file": "data/encounters/areas.json"
+      }
     }
   ],
   "unresolved": [
-    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
+    "Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources."
   ]
 }

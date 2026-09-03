@@ -64,8 +64,9 @@
             "maxItems": 4,
             "uniqueItems": true,
             "items": {
-              "type": "string",
-              "minLength": 1
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 354
             }
           },
           "held_item_id": {
@@ -80,7 +81,8 @@
     "status": {
       "enum": [
         "identity_only",
-        "complete"
+        "complete",
+        "team_and_contract_recovered"
       ]
     }
   },

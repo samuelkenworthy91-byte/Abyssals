@@ -19,7 +19,7 @@ Current explicit user instructions and the newest explicitly LOCKED rules win, t
 ## Locked design — do not redesign
 - 187 canonical species, 98 evolution paths; four story-choice families locked until postgame. Never invent Dex IDs.
 - First-person DWM battle: enemy/wild front art only; do not add player/back sprites. Preserve finished artwork.
-- 100 XP per level; cap 200; per-participant level-gap XP; seeded independent BST-weighted growth and +10 HP baseline; evolution promotion with no retroactive reroll.
+- 100 XP per level; cap 200; per-participant level-gap XP; seeded independent BST-weighted growth; HP gains +10 only per successful increment; evolution promotion with no retroactive reroll.
 - Food capture, no reload rerolls; ordinary 0 HP is permanent death.
 - Only three original starter individuals have three lives; non-final return at end of round, ceil(10% max HP), before wipe classification.
 - Party six; unlimited reserve accessed only through Chaplain Aeric Solm in towns.

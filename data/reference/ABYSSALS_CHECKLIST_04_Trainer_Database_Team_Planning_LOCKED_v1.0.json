@@ -1,0 +1,2589 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+  "source_sha256": "85ed568c013babd0b6d57dcffbe77b3135452b5587b496ebd7f31f3893c28271",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 04"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Trainer Database & Team Planning"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 5,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS\nCOMPLETE / LOCKED. This document closes CHECKLIST 04 at implementation-design level. Exact player-facing names and prices of held/healing items remain owned by Checklist 06, and exact Warden field modifiers remain owned by Checklist 05; those later documents must map into the frozen trainer slots and team plans here rather than reopening trainer design."
+        ]
+      ]
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Canonical creature terminology: Abyssal / Abyssals. Legacy source filenames may still contain older project wording."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Use the locked story sequence, location names, eight mortal leaders, Hell Wardens and postgame structure as fixed narrative canon."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Use the complete 187-species dex, exact base stats/abilities, deterministic growth algorithm, validated evolution timing and species level-up learnsets as data authorities."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Trainer levels are authored and never dynamically scaled to the player."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "Trainer-owned Abyssals use the same stat-growth rules as player Abyssals. There are no hidden boss IVs, secret flat stat bonuses or difficulty-only growth multipliers."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "Pate and Trade receive the two starters not chosen by Aimon; Aimon never has a canonical fixed team."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Every mortal leader battle ends in surrender/defeat before the human fate decision. Human death is never inferred from team defeat."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "The true level cap is 200. Ramelle deliberately looks like a conventional Level-100 endgame; Hell reveals the second half of progression."
+    },
+    {
+      "body_index": 17,
+      "kind": "table",
+      "rows": [
+        [
+          "IMPLEMENTATION PRINCIPLE\nDifficulty is created by species choice, level, legal moves, held items, terrain, team ordering and AI. The engine must never secretly alter trainer stats after the battle starts."
+        ]
+      ]
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "2. Trainer archetypes and class behaviour"
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "Class affects team flavour, preferred species roles and move-profile weighting. Class never overrides the trainer’s explicit AI tier. Faction is a separate tag: the same class can exist on True Light, Dawn Bloom, neutral or underworld NPCs."
+    },
+    {
+      "body_index": 21,
+      "kind": "table",
+      "rows": [
+        [
+          "Family",
+          "Class",
+          "Default AI",
+          "Species preference",
+          "Moveset identity"
+        ],
+        [
+          "Civilian",
+          "Villager",
+          "Basic",
+          "Normal / local common species",
+          "Balanced; simple offence"
+        ],
+        [
+          "Civilian",
+          "Pilgrim",
+          "Basic",
+          "Normal, Fairy, Flying, Psychic",
+          "Balanced / support"
+        ],
+        [
+          "Civilian",
+          "Merchant",
+          "Basic→Advanced",
+          "Normal, Bug, Steel; hoarder/safekeep identities",
+          "Resource / pivot"
+        ],
+        [
+          "Civilian",
+          "Courier",
+          "Basic",
+          "Normal, Ground, Flying; fast species",
+          "Tempo"
+        ],
+        [
+          "Civilian",
+          "Refugee",
+          "Basic",
+          "Local habitat species; intentionally imperfect teams",
+          "Balanced"
+        ],
+        [
+          "Wilderness",
+          "Scout",
+          "Basic→Advanced",
+          "Flying, Ground, Normal; fast utility",
+          "Tempo / scouting"
+        ],
+        [
+          "Wilderness",
+          "Forager",
+          "Basic",
+          "Grass, Bug, Poison",
+          "Sustain / status-light"
+        ],
+        [
+          "Wilderness",
+          "Hunter",
+          "Advanced",
+          "Dark, Flying, Poison, Bug",
+          "Control / finishing"
+        ],
+        [
+          "Wilderness",
+          "Beastkeeper",
+          "Advanced",
+          "Local ecology; mixed typing; fewer duplicates",
+          "Balanced / switching"
+        ],
+        [
+          "Wilderness",
+          "Ferryman",
+          "Basic→Advanced",
+          "Water, Flying, Electric",
+          "Tempo / Water"
+        ],
+        [
+          "Criminal",
+          "Outlaw",
+          "Advanced",
+          "Dark, Fighting, Normal",
+          "Aggressive / opportunist"
+        ],
+        [
+          "Criminal",
+          "Smuggler",
+          "Advanced",
+          "Water, Dark, Poison, Flying",
+          "Pivot / control"
+        ],
+        [
+          "Criminal",
+          "Deserter",
+          "Advanced",
+          "Military species with mixed coverage",
+          "Balanced / disciplined"
+        ],
+        [
+          "Criminal",
+          "Grave Robber",
+          "Advanced",
+          "Ghost, Dark, Ground, Rock",
+          "Control / attrition"
+        ],
+        [
+          "Military",
+          "Recruit",
+          "Basic",
+          "Normal, Fighting, Flying",
+          "Direct"
+        ],
+        [
+          "Military",
+          "Soldier",
+          "Basic→Advanced",
+          "Fighting, Steel, Ground, Normal",
+          "Direct / fundamentals"
+        ],
+        [
+          "Military",
+          "Patrol",
+          "Advanced",
+          "Fast lead + two coverage partners",
+          "Balanced / tempo"
+        ],
+        [
+          "Military",
+          "Officer",
+          "Advanced",
+          "Mixed military roster; defensive pivot",
+          "Plan-based"
+        ],
+        [
+          "Military",
+          "Knight",
+          "Advanced",
+          "Steel, Fighting, Rock; bulky ace",
+          "Direct / guarded"
+        ],
+        [
+          "Military",
+          "Siege Engineer",
+          "Advanced",
+          "Rock, Ground, Steel, Poison",
+          "Siege / attrition"
+        ],
+        [
+          "Medical / religious",
+          "Hospitaller",
+          "Advanced",
+          "Grass, Fairy, Water, Steel",
+          "Sustain / protection"
+        ],
+        [
+          "Medical / religious",
+          "Chaplain",
+          "Advanced",
+          "Fairy, Psychic, Normal, Grass",
+          "Support / control"
+        ],
+        [
+          "Medical / religious",
+          "Shrine Keeper",
+          "Advanced",
+          "Grass, Fairy, Psychic, Flying",
+          "Sustain / status"
+        ],
+        [
+          "Medical / religious",
+          "Canon",
+          "Advanced",
+          "Psychic, Fairy, Ghost, Steel",
+          "Control / analysis"
+        ],
+        [
+          "Regional",
+          "Orchard Keeper",
+          "Basic→Advanced",
+          "Grass, Bug, Fairy, Ground",
+          "Sustain / local ecology"
+        ],
+        [
+          "Regional",
+          "Riverhand",
+          "Basic→Advanced",
+          "Water, Electric, Flying",
+          "Tempo / Water"
+        ],
+        [
+          "Regional",
+          "Quarry Worker",
+          "Basic→Advanced",
+          "Rock, Ground, Fighting",
+          "Direct / slow power"
+        ],
+        [
+          "Regional",
+          "Mason",
+          "Advanced",
+          "Rock, Ground, Steel",
+          "Guard / attrition"
+        ],
+        [
+          "Regional",
+          "Scribe",
+          "Advanced",
+          "Psychic, Normal, Ghost",
+          "Control / setup"
+        ],
+        [
+          "Regional",
+          "Archivist",
+          "Advanced",
+          "Psychic, Steel, Ghost, Fairy",
+          "Control / defensive"
+        ],
+        [
+          "Elite",
+          "Champion",
+          "Leader-lite",
+          "No type restriction; coherent win condition",
+          "Plan / ace preservation"
+        ],
+        [
+          "Elite",
+          "Veteran",
+          "Leader-lite",
+          "Mixed coverage; evolved, reliable species",
+          "Fundamentals / switching"
+        ],
+        [
+          "Elite",
+          "Relic Seeker",
+          "Leader-lite",
+          "Rock, Ghost, Psychic, Steel, rare species",
+          "Control / anti-setup"
+        ],
+        [
+          "Elite",
+          "Master Handler",
+          "Leader-lite",
+          "Ecology-driven high-BST non-mythic roster",
+          "Balanced / prediction"
+        ],
+        [
+          "Underworld",
+          "Lost Soldier",
+          "Advanced",
+          "Former military roster; Dark/Ghost additions possible",
+          "Attrition"
+        ],
+        [
+          "Underworld",
+          "Dead Pilgrim",
+          "Advanced",
+          "Fairy, Ghost, Psychic, Normal",
+          "Control / sustain"
+        ],
+        [
+          "Underworld",
+          "Petitioner",
+          "Advanced",
+          "Psychic, Steel, Normal, Ghost",
+          "Defensive / control"
+        ],
+        [
+          "Underworld",
+          "Oathbound Shade",
+          "Leader-lite",
+          "Steel, Ice, Dark, Ghost",
+          "Punish switching / status"
+        ],
+        [
+          "Underworld",
+          "Former Leader",
+          "Leader",
+          "Exact mortal identity/theme, remixed only if a rematch is authored",
+          "Leader plan"
+        ]
+      ]
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "3. AI tiers — final behaviour contract"
+    },
+    {
+      "body_index": 24,
+      "kind": "table",
+      "rows": [
+        [
+          "Tier",
+          "Typical users",
+          "Switching",
+          "Bag heals",
+          "Prediction / knowledge",
+          "Setup & status",
+          "Fairness rule"
+        ],
+        [
+          "Wild",
+          "Wild encounters",
+          "No",
+          "0",
+          "None beyond immediate move legality; cannot infer switches",
+          "Uses damaging moves most often; status/setup only from species behaviour weights",
+          "Seeded weighted choice; never reads player input"
+        ],
+        [
+          "Basic",
+          "Recruit / civilian / early route",
+          "No proactive switching",
+          "0",
+          "Recognises current type immunity and obvious super-effective damage only",
+          "Uses straightforward status/setup when immediately sensible; no long combo plan",
+          "No action-reading; imperfect choices preserved"
+        ],
+        [
+          "Advanced",
+          "Mid/late generic / specialists",
+          "Yes: immunity, near-certain defeat, or clear tactical benefit; max 2 voluntary switches",
+          "0–1",
+          "KO and Speed-order reads; current typing; revealed ability/moves only",
+          "Can set status, heal by move, boost, pivot, and preserve a useful counter",
+          "Top-choice bias with seeded variation; no hidden data"
+        ],
+        [
+          "Leader",
+          "Mortal leaders",
+          "Yes; max 3 voluntary switches; preserve ace; anti-loop rule",
+          "1 early, 2 late",
+          "Tracks revealed moves, Speed order, likely switch value, and type matchups",
+          "Executes authored plan; setup/status has role and stop conditions",
+          "No input-reading; cannot know unrevealed moves or future RNG"
+        ],
+        [
+          "Warden",
+          "All 8 Hell Wardens",
+          "Yes; unrestricted except anti-loop / no pointless pair cycling",
+          "0",
+          "Leader knowledge + terrain state and revealed counterplay",
+          "Terrain plan is primary; can sacrifice position but not cheat stats",
+          "Terrain-aware, deterministic scoring; no external bag items"
+        ],
+        [
+          "Final Boss",
+          "Illyr / Nharos manifestations",
+          "N/A unless encounter phase explicitly uses switching",
+          "0",
+          "Boss-script knowledge of visible battle state only",
+          "Bespoke phase logic; not trainer-team logic",
+          "No hidden player-action read; telegraph lethal patterns"
+        ],
+        [
+          "Severin",
+          "King Below superboss",
+          "Yes; unrestricted except anti-loop",
+          "2",
+          "Best legal inference: all revealed moves, types, Speed, statuses, field state; never unrevealed moves",
+          "Full setup/status/pivot logic; baiting and ace preservation",
+          "Hardest fair AI; seeded tie-breaks only"
+        ]
+      ]
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "Anti-loop: an AI cannot voluntarily alternate the same two Abyssals on consecutive decision cycles unless a new field/status/KO state materially changes the score."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "No action-reading: the AI commits using the visible battle state before the player command is known. It may infer likely choices from revealed information, never inspect the selected command."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "No unrevealed-moveset knowledge: Advanced and above may remember moves the player has already shown in that battle. They cannot query hidden player move slots."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "All stochastic tie-breaking uses the battle seed so reloading does not create an exploitable different AI line without a changed game state."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "4. Team construction, seeds, abilities and legal moves"
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "4.1 Deterministic trainer individuals"
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "1. Generic trainer growth seed key = `trainerId | teamVersion | teamSlot`. The game hashes that key using the same stable seed function used elsewhere for generated Abyssals."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "2. Named characters use permanent authored seed keys and keep the same individual Abyssals across roster checkpoints unless the story explicitly records a replacement or death."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "3. Higher-level trainer Abyssals simulate all historical growth rolls exactly like higher-level wild/player-generated individuals."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "4. Evolution applies the normal fixed promotion delta and immediately changes future growth weights. Trainer data cannot use an under-level evolution unless the canonical evolution table allows it."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "4.2 Ability assignment"
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "Ordinary trainers: each team slot resolves permanently to Ability 1 or Ability 2 using the stable trainer-slot hash. It is never rerolled at battle start."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "Elite/rare trainers: the ace uses the species Hidden Ability; all other slots use the ordinary deterministic A1/A2 rule unless explicitly stated."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "Mortal leaders: ace uses Hidden Ability; additional hidden abilities appear only where listed in the leader loadout, keeping hidden abilities uncommon."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "Wardens: team slots 3 and 6 use Hidden Abilities; other slots use fixed A1/A2 assignments from the authored Warden seed."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "Severin: fixed ability-slot sequence HA / A2 / HA / A1 / HA / HA."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "Pate’s assigned starter uses Ability 1; Trade’s assigned starter uses Ability 2. Their other ordinary checkpoint partners use authored A1/A2 seeds."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "4.3 Exact legal move resolver"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Trainer moves are compiled from the canonical species learnset, not rolled at runtime. This lets Checklist 12 validate legality without redesigning any trainer. Build output must materialise the final four move IDs for each trainer slot."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "1. Legal pool = all level-up/evolution/relearn moves legally available to that species at or below the trainer level. No unlisted TM/tutor move is assumed."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "2. Remove duplicate move IDs. Preserve normal PP exactly as defined in the move catalogue."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "3. Guarantee at least one damaging STAB move when the legal pool contains one. Dual types should receive both STAB types when doing so does not destroy the trainer plan."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "4. Select candidates using the trainer move profile below; tie-break by profile score, then later learn level, then lower canonical move ID. Therefore the result is deterministic."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "5. Keep at least two damaging moves on ordinary trainers. CONTROL/SUSTAIN specialists may run two non-damaging moves; only authored bosses may exceed that."
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "6. A move that is illegal after Checklist 12 validation is replaced by the next legal candidate under the same frozen resolver; species, level and trainer identity do not change."
+    },
+    {
+      "body_index": 51,
+      "kind": "table",
+      "rows": [
+        [
+          "Profile",
+          "Selection priority",
+          "Primary users"
+        ],
+        [
+          "DIRECT",
+          "Highest-value legal STAB first; coverage second; utility only when it creates immediate advantage",
+          "Soldier, Knight, Pate, Aldren"
+        ],
+        [
+          "BALANCED",
+          "Two reliable attacks + one coverage + one utility/recovery/status option",
+          "General-purpose trainers"
+        ],
+        [
+          "TEMPO",
+          "Priority/speed control/pivot utility weighted above raw power when it preserves momentum",
+          "Scout, Courier, Riverhand"
+        ],
+        [
+          "CONTROL",
+          "Status, accuracy, debuff and setup moves get higher value; still keeps at least two damaging options",
+          "Scribe, Canon, Mirelle"
+        ],
+        [
+          "SUSTAIN",
+          "Recovery/protection is retained when legal; avoids two redundant healing moves",
+          "Hospitaller, Yselle, Samiel"
+        ],
+        [
+          "SIEGE",
+          "Bulky STAB, defence break, recoil/drain where appropriate, lower switching preference",
+          "Siege Engineer, Braska, Oren"
+        ],
+        [
+          "TERRAIN",
+          "Moves benefiting from the active Warden field are scored first without forcing mono-type teams",
+          "Wardens"
+        ]
+      ]
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "5. Held items and trainer bag items"
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "The trainer-side loadout decision is locked now; Checklist 06 supplies player-facing item names, economy and final item IDs. The semantic role is already frozen, so later item naming cannot change which trainer slots are equipped or their intended function."
+    },
+    {
+      "body_index": 55,
+      "kind": "table",
+      "rows": [
+        [
+          "Role code",
+          "Checklist 06 mapping contract",
+          "Constraint"
+        ],
+        [
+          "OFFENSE",
+          "Best compatible offensive held item from Checklist 06 pool",
+          "Damage pressure; never a hidden flat boss-only multiplier"
+        ],
+        [
+          "GUARD",
+          "Best compatible defensive held item",
+          "Bulk / mitigation; must be player-obtainable or explicitly trainer-only for fiction"
+        ],
+        [
+          "SPEED",
+          "Speed / initiative compatible held item",
+          "Tempo, not guaranteed first move if stats disagree"
+        ],
+        [
+          "STATUS",
+          "Status accuracy/resistance/utility compatible held item",
+          "Supports control identity"
+        ],
+        [
+          "SUSTAIN",
+          "Recovery/resource compatible held item",
+          "No infinite loops"
+        ],
+        [
+          "TERRAIN",
+          "Weather/terrain compatible held item",
+          "Mostly Warden synergy; exact item identity resolves after Checklist 05/06"
+        ]
+      ]
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Ordinary Basic trainers: no held items; no bag items."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Advanced trainers: normally one held role on the ace from midgame onward; specialist elites may equip two. Bag heal allowance is 0–1 and is listed per record."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "Mortal leaders: held slots ramp 1 / 1 / 2 / 2 / 3 / 3 / 4 / 4 from Aldren through Lucain. Bag heals ramp 1 for leaders 1–4 and 2 for leaders 5–8."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "Wardens: three held-role slots each; zero external bag items. Their sustain must come from moves, abilities and terrain."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Severin: all six Abyssals equipped; two bag heals."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Cosmic Illyr/Nharos manifestations use bespoke boss mechanics and no trainer inventory."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "No trainer-only held item may secretly reproduce a forbidden stat cheat. Any trainer-only item must be visible in battle data and obey its written effect."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "6. Expected level curve and team-size progression"
+    },
+    {
+      "body_index": 65,
+      "kind": "table",
+      "rows": [
+        [
+          "Chapter",
+          "Region",
+          "Expected player / route band",
+          "Major battle target",
+          "Team-size rule"
+        ],
+        [
+          "0",
+          "Three Crusaders",
+          "Tutorial only",
+          "No persistent trainer levels",
+          "Imaginary / scripted"
+        ],
+        [
+          "1",
+          "Left Behind",
+          "Lv 5–15",
+          "Enlistment test ace Lv 10",
+          "2-Abyssal supervised non-lethal test"
+        ],
+        [
+          "2",
+          "Dorelem",
+          "Lv 16–30",
+          "Aldren ace Lv 30",
+          "Early-route 1–3; leader 6"
+        ],
+        [
+          "3",
+          "Philomere",
+          "Lv 30–40",
+          "Yselle ace Lv 40",
+          "2–4; leader 6"
+        ],
+        [
+          "4",
+          "Cybressa",
+          "Lv 40–50",
+          "Corvin ace Lv 50",
+          "2–4; leader 6"
+        ],
+        [
+          "5",
+          "Cossenne",
+          "Lv 50–60",
+          "Samiel ace Lv 60",
+          "2–4; leader 6"
+        ],
+        [
+          "6",
+          "Marasen",
+          "Lv 60–70",
+          "Braska ace Lv 70",
+          "3–5; leader 6"
+        ],
+        [
+          "7",
+          "Botrune",
+          "Lv 70–80",
+          "Mirelle ace Lv 80",
+          "3–5; leader 6"
+        ],
+        [
+          "8",
+          "Cayfen",
+          "Lv 80–90",
+          "Rhoswen ace Lv 88; Oren ace Lv 90",
+          "4–6; leader 6"
+        ],
+        [
+          "9",
+          "Ramelle / Holy Land",
+          "Lv 90–100",
+          "Lucain ace Lv 100",
+          "4–6; leader 6; apparent mortal cap"
+        ],
+        [
+          "10",
+          "The Dead Stay Dead",
+          "~Lv 100",
+          "No mandatory trainer boss",
+          "Breathing / transition chapter"
+        ],
+        [
+          "11",
+          "Circle I — Threshold",
+          "Lv 100–110",
+          "Veyr ace Lv 110",
+          "Warden 6"
+        ],
+        [
+          "12",
+          "Circle II — Want",
+          "Lv 110–120",
+          "Ossael ace Lv 120",
+          "Warden 6; all 187 obtainable by end"
+        ],
+        [
+          "13",
+          "Circle III — Wrath",
+          "Lv 120–132",
+          "Mordren ace Lv 132",
+          "Warden 6"
+        ],
+        [
+          "14",
+          "Circle IV — Dominion",
+          "Lv 132–144",
+          "Caelor ace Lv 144",
+          "Warden 6"
+        ],
+        [
+          "15",
+          "Circle V — Dogma",
+          "Lv 144–156",
+          "Asterion ace Lv 156",
+          "Warden 6"
+        ],
+        [
+          "16",
+          "Circle VI — Grief",
+          "Lv 156–166",
+          "Mirra ace Lv 166",
+          "Warden 6"
+        ],
+        [
+          "17",
+          "Circle VII — Betrayal",
+          "Lv 166–176",
+          "Velcar ace Lv 176",
+          "Warden 6"
+        ],
+        [
+          "18",
+          "Circle VIII — Silence",
+          "Lv 176–184",
+          "Nema ace Lv 184",
+          "Warden 6"
+        ],
+        [
+          "19–20",
+          "Circle IX / Throne / Gods",
+          "Lv 184–200",
+          "Nharos / Illyr manifestations span Lv-equivalent 188–200",
+          "True cap revealed as 200"
+        ],
+        [
+          "Postgame",
+          "World After / King Below",
+          "Lv 190–200",
+          "Pate / Trade exhibitions Lv 200; Severin Lv 200",
+          "No level scaling above 200"
+        ]
+      ]
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 67,
+      "kind": "table",
+      "rows": [
+        [
+          "FALSE ENDGAME RULE\nRamelle’s Level-100 Lucain battle is intentionally presented like the expected cap/finale. The Pale Gate then reveals that Level 101–200 progression exists. No UI should advertise the 200 cap before the underworld reveal unless a postgame/system menu explicitly requires it."
+        ]
+      ]
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "7. Mortal-world trainer database"
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "These are the authored combat-capable generic/elite human opponents. “Core” means placed on the critical-route map, not necessarily unavoidable: local route branching may let the player bypass some. Optional/rare trainers are never required for story completion."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "Chapter 1 — Civeton / Enlistment"
+    },
+    {
+      "body_index": 72,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C01-001",
+          "Mustering camp",
+          "Instructor Beric",
+          "Soldier • Basic • supervised",
+          "Pennkit@8; Mottlet@10",
+          "0 held • 0 bag"
+        ],
+        [
+          "TRN-C01-002",
+          "Mustering camp",
+          "Recruit Elsen",
+          "Recruit • Basic • optional spar",
+          "Tatterook@9; Pennkit@9",
+          "0 • 0"
+        ],
+        [
+          "TRN-C01-003",
+          "Civeton March",
+          "Scout Maela",
+          "Scout • Basic • optional",
+          "Rouncolt@11; Eyret@12",
+          "0 • 0"
+        ]
+      ]
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "Chapter 2 — Dorelem"
+    },
+    {
+      "body_index": 75,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C02-001",
+          "Dorelem Scrub",
+          "Scout Rell",
+          "Scout • Basic • core",
+          "Tatterook@16; Pennkit@17",
+          "0 • 0"
+        ],
+        [
+          "TRN-C02-002",
+          "Dorelem Scrub",
+          "Soldier Varo",
+          "Soldier • Basic • core",
+          "Mottlet@18; Rouncolt@18",
+          "0 • 0"
+        ],
+        [
+          "TRN-C02-003",
+          "Dorelem Scrub",
+          "Hunter Neris",
+          "Hunter • Advanced • optional",
+          "Snickal@19; Bantisk@19; Caprune@20",
+          "0 • 0"
+        ],
+        [
+          "TRN-C02-004",
+          "Dorelem Scrub",
+          "Officer Halven",
+          "Officer • Advanced • elite route",
+          "Cackena@20; Cockatrix@21; Caprune@22",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C02-005",
+          "Service Tunnels",
+          "Sapper Corren",
+          "Siege Engineer • Advanced • core",
+          "Mottlet@21; Keelcrab@22; Cackena@22",
+          "0 • 0"
+        ],
+        [
+          "TRN-C02-006",
+          "Service Tunnels",
+          "Guard Ysarn",
+          "Soldier • Basic • core",
+          "Cackena@22; Cockatrix@23",
+          "0 • 0"
+        ],
+        [
+          "TRN-C02-007",
+          "Marchwood Hollow",
+          "Beastkeeper Selka",
+          "Beastkeeper • Advanced • optional",
+          "Sprigfawn@22; Snickal@23; Tatterook@23",
+          "0 • 0"
+        ],
+        [
+          "TRN-C02-008",
+          "Marchwood Hollow",
+          "Veteran Brann",
+          "Veteran • Leader-lite • rare",
+          "Caprune@24; Cackena@25; Albannor@26",
+          "ace GUARD + slot2 SPEED • 1 bag"
+        ],
+        [
+          "TRN-C02-009",
+          "Reedcut Cave",
+          "Ferryman Pella",
+          "Ferryman • Advanced • optional",
+          "Keelcrab@24; Rillip@24; Galleonid@26",
+          "ace SUSTAIN • 0 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "Chapter 3 — Philomere"
+    },
+    {
+      "body_index": 78,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C03-001",
+          "North Scrub Road",
+          "Guard Ansel",
+          "Soldier • Advanced • core",
+          "Bastimole@31; Hareald@32; Cackena@32",
+          "ace GUARD • 0 bag"
+        ],
+        [
+          "TRN-C03-002",
+          "Hospice Road",
+          "Ferryman Mera",
+          "Ferryman • Advanced • core",
+          "Galleonid@31; Galvaneel@32",
+          "ace SPEED • 0 bag"
+        ],
+        [
+          "TRN-C03-003",
+          "Hospice Road",
+          "Hospitaller Ione",
+          "Hospitaller • Advanced • optional non-lethal",
+          "Olehart@32; Pearlfrond@31; Pactecho@33",
+          "ace SUSTAIN • 1 bag"
+        ],
+        [
+          "TRN-C03-004",
+          "Hospice Road",
+          "Pilgrim Tomas",
+          "Pilgrim • Basic • optional",
+          "Caprune@30; Sprigfawn@31; Ganderiel@32",
+          "0 • 0"
+        ],
+        [
+          "TRN-C03-005",
+          "Flooded Medicine Path",
+          "Smuggler Jarek",
+          "Smuggler • Advanced • core",
+          "Corvassal@33; Galvaneel@34; Snickal@32",
+          "ace SPEED • 0 bag"
+        ],
+        [
+          "TRN-C03-006",
+          "Flooded Medicine Path",
+          "Field Nurse Selene",
+          "Hospitaller • Advanced • optional spar",
+          "Regnacra@34; Fetterpot@35",
+          "ace SUSTAIN • 1 bag"
+        ],
+        [
+          "TRN-C03-007",
+          "Flooded Medicine Path",
+          "Officer Reth",
+          "Officer • Advanced • core",
+          "Bastimole@34; Albannor@35; Reversire@36",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C03-008",
+          "Sanctuary Reeds",
+          "Shrine Keeper Elia",
+          "Shrine Keeper • Advanced • optional",
+          "Olehart@35; Deltacroc@36; Pactecho@36",
+          "ace SUSTAIN • 0 bag"
+        ],
+        [
+          "TRN-C03-009",
+          "Philomere Backwaters",
+          "Riverhand Marrec",
+          "Riverhand • Advanced • rare",
+          "Galvaneel@37; Galleonid@37; Liontide@38",
+          "ace OFFENSE • 1 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Chapter 4 — Cybressa"
+    },
+    {
+      "body_index": 81,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C04-001",
+          "Rivercause Road",
+          "Caravan Guard Tovin",
+          "Soldier • Advanced • core",
+          "Destridon@41; Corvassal@41; Bastimole@42",
+          "ace GUARD • 0 bag"
+        ],
+        [
+          "TRN-C04-002",
+          "Rivercause Road",
+          "Merchant Sella",
+          "Merchant • Advanced • optional",
+          "Ampullusk@41; Hareald@42; Galleonid@42",
+          "ace SUSTAIN • 0 bag"
+        ],
+        [
+          "TRN-C04-003",
+          "Rivercause Road",
+          "Smuggler Caro",
+          "Smuggler • Advanced • core",
+          "Reversire@42; Galvaneel@42; Corvassal@43",
+          "ace SPEED • 0 bag"
+        ],
+        [
+          "TRN-C04-004",
+          "Rivercause Road",
+          "Mercenary Joss",
+          "Outlaw • Advanced • core",
+          "Ramporque@43; Rimehart@44; Carriena@44",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C04-005",
+          "Cybressa market ward",
+          "Ledger Guard Perrin",
+          "Officer • Advanced • core",
+          "Ampullusk@44; Fetterpot@45; Bastimole@45",
+          "ace GUARD • 0 bag"
+        ],
+        [
+          "TRN-C04-006",
+          "Cybressa market ward",
+          "Fixer Vael",
+          "Smuggler • Advanced • optional",
+          "Reversire@45; Vortamor@46; Corvassal@46",
+          "ace SPEED • 0 bag"
+        ],
+        [
+          "TRN-C04-007",
+          "Smugglers' Weir",
+          "Captain Niva",
+          "Smuggler • Advanced • optional",
+          "Galleonid@46; Deltacroc@46; Galvaneel@47; Corvassal@48",
+          "ace SPEED • 1 bag"
+        ],
+        [
+          "TRN-C04-008",
+          "Smugglers' Weir",
+          "Relic Broker Ors",
+          "Relic Seeker • Leader-lite • rare",
+          "Cyprigon@48; Reversire@48; Ampullusk@49; Ibracle@49",
+          "ace STATUS + slot2 GUARD • 1 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "Chapter 5 — Cossenne"
+    },
+    {
+      "body_index": 84,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C05-001",
+          "Orchard Way",
+          "Orchard Keeper Rene",
+          "Orchard Keeper • Advanced • core",
+          "Olehart@51; Sarumoss@52; Deltacroc@52",
+          "ace SUSTAIN • 0 bag"
+        ],
+        [
+          "TRN-C05-002",
+          "Orchard Way",
+          "Pilgrim Ada",
+          "Pilgrim • Advanced • core",
+          "Ganderiel@51; Caproclaim@52; Pactecho@53",
+          "ace STATUS • 0 bag"
+        ],
+        [
+          "TRN-C05-003",
+          "Orchard Way",
+          "Shrine Guard Lucen",
+          "Shrine Keeper • Advanced • core",
+          "Oriflamme@53; Liontide@53; Rimehart@54",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C05-004",
+          "Orchard Way",
+          "Hunter Mirek",
+          "Hunter • Advanced • optional",
+          "Locruin@53; Carriena@54; Corvassal@54",
+          "ace OFFENSE • 0 bag"
+        ],
+        [
+          "TRN-C05-005",
+          "Old Pilgrim Grove",
+          "Grove Warden Sera",
+          "Shrine Keeper • Advanced • optional",
+          "Olehart@54; Regnacra@55; Deltacroc@56",
+          "ace SUSTAIN • 0 bag"
+        ],
+        [
+          "TRN-C05-006",
+          "Old Pilgrim Grove",
+          "Peacekeeper Olan",
+          "Chaplain • Advanced • optional non-lethal",
+          "Trucepoe@55; Pactecho@56; Caproclaim@56",
+          "ace STATUS • 1 bag"
+        ],
+        [
+          "TRN-C05-007",
+          "Sunken Shrine",
+          "Relic Keeper Noa",
+          "Relic Seeker • Leader-lite • rare",
+          "Bethlisk@56; Galleonid@57; Sepulshade@58; Ibracle@58",
+          "ace STATUS + slot2 GUARD • 1 bag"
+        ],
+        [
+          "TRN-C05-008",
+          "Sunken Shrine",
+          "Veteran Vaun",
+          "Veteran • Leader-lite • rare",
+          "Grailhare@57; Ganderiel@58; Oriflamme@59; Rimehart@59",
+          "ace OFFENSE + slot2 SPEED • 1 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "Chapter 6 — Marasen"
+    },
+    {
+      "body_index": 87,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C06-001",
+          "Stonecut Pass",
+          "Quarry Guard Dorr",
+          "Quarry Worker • Advanced • core",
+          "Bastimole@61; Trebuchor@61; Fetterpot@62",
+          "ace GUARD • 0 bag"
+        ],
+        [
+          "TRN-C06-002",
+          "Quarry Road",
+          "Sapper Helka",
+          "Siege Engineer • Advanced • core",
+          "Destridon@62; Regnacra@62; Ramporque@63",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C06-003",
+          "Quarry Road",
+          "Overseer Malk",
+          "Officer • Advanced • core",
+          "Cerberrood@63; Bastimole@64; Ampullusk@64; Trebuchor@65",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C06-004",
+          "Quarry Road",
+          "Prison Guard Veer",
+          "Soldier • Advanced • core",
+          "Carriena@63; Trebuchor@64; Cerberrood@65",
+          "ace OFFENSE • 0 bag"
+        ],
+        [
+          "TRN-C06-005",
+          "Quarry Tunnels",
+          "Mason Edda",
+          "Mason • Advanced • core",
+          "Ibracle@64; Bastimole@65; Trebuchor@65",
+          "ace GUARD • 0 bag"
+        ],
+        [
+          "TRN-C06-006",
+          "Quarry Tunnels",
+          "Officer Sorn",
+          "Officer • Advanced • core",
+          "Destridon@65; Fetterpot@66; Ramporque@66; Cerberrood@67",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C06-007",
+          "Quarry Tunnels",
+          "Enforcer Kelm",
+          "Outlaw • Advanced • core",
+          "Cerberrood@66; Liontide@67; Rimehart@67; Carriena@68",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C06-008",
+          "Prison Galleries",
+          "Defector Mara",
+          "Deserter • Advanced • optional non-lethal",
+          "Pactecho@66; Trucepoe@67; Oriflamme@68",
+          "ace STATUS • 0 bag"
+        ],
+        [
+          "TRN-C06-009",
+          "Fossil Cut",
+          "Prospector Venn",
+          "Relic Seeker • Leader-lite • optional",
+          "Ibracle@67; Trebuchor@68; Bastimole@69; Bethlisk@69",
+          "ace GUARD + slot2 STATUS • 1 bag"
+        ],
+        [
+          "TRN-C06-010",
+          "Fossil Cut",
+          "War Captain Drask",
+          "Veteran • Leader-lite • rare",
+          "Destridon@68; Cerberrood@69; Ramporque@69; Aegishorn@70",
+          "ace GUARD + slot2 OFFENSE • 2 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "Chapter 7 — Botrune"
+    },
+    {
+      "body_index": 90,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C07-001",
+          "Scribes' Road",
+          "Scribe Lio",
+          "Scribe • Advanced • core",
+          "Reversire@71; Pactecho@71; Palimopus@72",
+          "ace STATUS • 0 bag"
+        ],
+        [
+          "TRN-C07-002",
+          "Scribes' Road",
+          "Archive Guard Fenn",
+          "Officer • Advanced • core",
+          "Sigilume@72; Regnacra@72; Trucepoe@73",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C07-003",
+          "Scribes' Road",
+          "Scholar Yara",
+          "Canon • Advanced • optional",
+          "Grailhare@72; Idolure@73; Pactecho@74",
+          "ace STATUS • 0 bag"
+        ],
+        [
+          "TRN-C07-004",
+          "Scribes' Road",
+          "Looting Mercenary Kerr",
+          "Outlaw • Advanced • core",
+          "Carriena@73; Ramporque@74; Cerberrood@74; Corvassal@75",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C07-005",
+          "Buried Archive",
+          "Archivist Sorel",
+          "Archivist • Advanced • core",
+          "Sigilume@74; Sepulshade@75; Reversire@75",
+          "ace STATUS • 1 bag"
+        ],
+        [
+          "TRN-C07-006",
+          "Buried Archive",
+          "Guard Captain Vessa",
+          "Veteran • Leader-lite • core elite",
+          "Aegishorn@75; Destridon@76; Fetterpot@76; Regnacra@77",
+          "ace GUARD + slot2 SUSTAIN • 1 bag"
+        ],
+        [
+          "TRN-C07-007",
+          "Buried Archive",
+          "Heretic Scribe Omel",
+          "Scribe • Advanced • optional",
+          "Sepulshade@76; Reversire@77; Pandemne@78",
+          "ace STATUS • 0 bag"
+        ],
+        [
+          "TRN-C07-008",
+          "Buried Archive",
+          "Relic Keeper Cael",
+          "Relic Seeker • Leader-lite • rare",
+          "Sigilume@77; Idolure@77; Palimopus@78; Sepulshade@79",
+          "ace STATUS + slot2 GUARD • 1 bag"
+        ],
+        [
+          "TRN-C07-009",
+          "Scribe's Cistern",
+          "Tide Scribe Hessa",
+          "Scribe • Advanced • optional",
+          "Galleonid@77; Palimopus@78; Pactecho@78",
+          "ace SUSTAIN • 0 bag"
+        ],
+        [
+          "TRN-C07-010",
+          "Tide Caves",
+          "Antiquarian Nox",
+          "Relic Seeker • Leader-lite • rare",
+          "Cyprigon@78; Serapine@79; Trucepoe@79; Ibracle@80",
+          "ace STATUS + slot2 SPEED • 2 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "Chapter 8 — Cayfen"
+    },
+    {
+      "body_index": 93,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C08-001",
+          "War Road",
+          "Soldier Arven",
+          "Soldier • Advanced • core",
+          "Destridon@81; Cerberrood@81; Rimehart@82; Ramporque@82",
+          "ace OFFENSE • 0 bag"
+        ],
+        [
+          "TRN-C08-002",
+          "Burned Approaches",
+          "Deserter Jula",
+          "Deserter • Advanced • optional non-lethal",
+          "Oriflamme@81; Liontide@82; Trucepoe@82; Ganderiel@83",
+          "ace STATUS • 0 bag"
+        ],
+        [
+          "TRN-C08-003",
+          "Burned Approaches",
+          "Field Captain Mor",
+          "Officer • Advanced • core",
+          "Aegishorn@82; Destridon@83; Ramporque@83; Cerberrood@84",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C08-004",
+          "Burned Approaches",
+          "Siege Crew Pell",
+          "Siege Engineer • Advanced • core",
+          "Bastimole@82; Trebuchor@83; Fetterpot@84; Destridon@84",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C08-005",
+          "No-Man's Field",
+          "Veteran Tars",
+          "Veteran • Leader-lite • core elite",
+          "Carriena@84; Regalisk@84; Rimehart@85; Destridon@85; Cerberrood@86",
+          "ace OFFENSE + slot2 SPEED • 1 bag"
+        ],
+        [
+          "TRN-C08-006",
+          "No-Man's Field",
+          "Hospitaller Senn",
+          "Hospitaller • Advanced • core",
+          "Regnacra@84; Fetterpot@85; Olehart@85; Trucepoe@86",
+          "ace SUSTAIN • 1 bag"
+        ],
+        [
+          "TRN-C08-007",
+          "No-Man's Field",
+          "War Captain Elric",
+          "Champion • Leader-lite • rare",
+          "Aegishorn@85; Cerberrood@86; Destridon@86; Ramporque@87; Rimehart@87",
+          "ace GUARD + slot2 OFFENSE • 2 bag"
+        ],
+        [
+          "TRN-C08-008",
+          "Ceasefire Field",
+          "Duelist Avel",
+          "Champion • Leader-lite • optional",
+          "Oriflamme@85; Serapine@86; Rimehart@87; Grailhare@87",
+          "ace OFFENSE + slot2 SPEED • 1 bag"
+        ],
+        [
+          "TRN-C08-009",
+          "Ceasefire Field",
+          "Duelist Caia",
+          "Champion • Leader-lite • optional",
+          "Tattereign@85; Pandemne@86; Carriena@87; Reversire@87",
+          "ace SPEED + slot2 STATUS • 1 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "Chapter 9 — Ramelle / Holy Land"
+    },
+    {
+      "body_index": 96,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer ID",
+          "Location",
+          "Trainer",
+          "Class / AI / role",
+          "Exact team",
+          "Held roles / bag"
+        ],
+        [
+          "TRN-C09-001",
+          "Pilgrim's Reach",
+          "Temple Guard Aurel",
+          "Knight • Advanced • core",
+          "Serapine@91; Caproclaim@91; Sigilume@92; Regnacra@92",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C09-002",
+          "Pilgrim's Reach",
+          "Sacred Knight Moira",
+          "Knight • Advanced • core",
+          "Oriflamme@91; Aegishorn@92; Liontide@92; Cerberrood@93",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C09-003",
+          "Pilgrim's Reach",
+          "Scholar-Guard Nere",
+          "Canon • Advanced • core",
+          "Idolure@92; Sepulshade@92; Trucepoe@93; Reversire@93",
+          "ace STATUS • 1 bag"
+        ],
+        [
+          "TRN-C09-004",
+          "Pilgrim's Reach",
+          "Zealot Caldus",
+          "Chaplain • Advanced • optional",
+          "Regalisk@93; Vortamor@93; Tattereign@94; Caproclaim@94",
+          "ace OFFENSE • 1 bag"
+        ],
+        [
+          "TRN-C09-005",
+          "Sacred Boundary Farms",
+          "Marshal Retainer Jorin",
+          "Officer • Advanced • core",
+          "Destridon@93; Fetterpot@94; Aegishorn@94; Cerberrood@95; Ramporque@95",
+          "ace GUARD • 1 bag"
+        ],
+        [
+          "TRN-C09-006",
+          "Sacred Boundary Farms",
+          "Temple Captain Erys",
+          "Veteran • Leader-lite • core elite",
+          "Serapine@94; Sigilume@94; Caproclaim@95; Regalisk@95; Oriflamme@96",
+          "ace OFFENSE + slot2 STATUS • 2 bag"
+        ],
+        [
+          "TRN-C09-007",
+          "Pilgrim Caves",
+          "Relic Keeper Sava",
+          "Relic Seeker • Leader-lite • optional",
+          "Bethlisk@94; Sepulshade@95; Cyprigon@95; Grailhare@96",
+          "ace STATUS + slot2 GUARD • 1 bag"
+        ],
+        [
+          "TRN-C09-008",
+          "Bellglass Ruins",
+          "Antiquarian Sol",
+          "Archivist • Advanced • optional",
+          "Sigilume@95; Idolure@96; Trucepoe@96; Serapine@97",
+          "ace STATUS • 1 bag"
+        ],
+        [
+          "TRN-C09-009",
+          "Bellglass Ruins",
+          "Champion Daven",
+          "Champion • Leader-lite • rare",
+          "Pandemne@96; Regalisk@97; Aegishorn@97; Serapine@98; Mausolisk@99",
+          "ace OFFENSE + slot2 GUARD • 2 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "8. Pate and Trade — canonical roster progression"
+    },
+    {
+      "body_index": 99,
+      "kind": "table",
+      "rows": [
+        [
+          "CONTINUITY RULE\nThese are roster checkpoints used by story scenes, off-screen battle references, records and any authorised exhibition battle. They are not an instruction to add new mandatory Pate/Trade fights to the locked story."
+        ]
+      ]
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 101,
+      "kind": "table",
+      "rows": [
+        [
+          "Checkpoint",
+          "Character / player choice",
+          "Roster / assignment",
+          "Trade / secondary",
+          "Implementation note"
+        ],
+        [
+          "STARTER MAPPING",
+          "Aimon chooses Scarimp",
+          "Pate receives Ruffurn",
+          "Trade receives Calibrit",
+          "Pate preference: bold physical heroism; Trade preference: technical control"
+        ],
+        [
+          "STARTER MAPPING",
+          "Aimon chooses Calibrit",
+          "Pate receives Ruffurn",
+          "Trade receives Scarimp",
+          "Ruffurn remains Pate's strongest personality fit"
+        ],
+        [
+          "STARTER MAPPING",
+          "Aimon chooses Ruffurn",
+          "Pate receives Scarimp",
+          "Trade receives Calibrit",
+          "Trade receives Calibrit whenever it remains available"
+        ],
+        [
+          "Ch.1 departure",
+          "Pate",
+          "Assigned starter@12",
+          "",
+          "Permanent named seed; starter Ability 1"
+        ],
+        [
+          "Ch.1 departure",
+          "Trade",
+          "Assigned starter@12",
+          "",
+          "Permanent named seed; starter Ability 2"
+        ],
+        [
+          "Dorelem checkpoint",
+          "Pate",
+          "starter@28; Cubanner@26",
+          "",
+          "2-member active roster"
+        ],
+        [
+          "Dorelem checkpoint",
+          "Trade",
+          "starter@28; Courstoat@26",
+          "",
+          "2-member active roster"
+        ],
+        [
+          "Philomere checkpoint",
+          "Pate",
+          "starter@38; Prideguard@36; Foamwhelp@35",
+          "",
+          "3-member active roster"
+        ],
+        [
+          "Philomere checkpoint",
+          "Trade",
+          "starter@38; Reversire@36; Pactecho@35",
+          "",
+          "3-member active roster"
+        ],
+        [
+          "Cossenne checkpoint",
+          "Pate",
+          "starter final@58; Leonarch@57; Liontide@56; Flaggrim@55",
+          "",
+          "4-member roster"
+        ],
+        [
+          "Cossenne checkpoint",
+          "Trade",
+          "starter final@58; Reversire@57; Pactecho@56; Palimopus@55",
+          "",
+          "4-member roster"
+        ],
+        [
+          "Botrune checkpoint",
+          "Pate",
+          "starter final@78; Leonarch@77; Liontide@76; Oriflamme@75; Albannor@74",
+          "",
+          "5-member roster"
+        ],
+        [
+          "Botrune checkpoint",
+          "Trade",
+          "starter final@78; Reversire@77; Pactecho@76; Palimopus@75; Sigilume@74",
+          "",
+          "5-member roster"
+        ],
+        [
+          "Emmara final mortal roster",
+          "Pate",
+          "starter final@96; Leonarch@95; Liontide@94; Oriflamme@93; Albannor@92; Destridon@91",
+          "",
+          "Forward momentum; 2 held roles; no scripted player battle"
+        ],
+        [
+          "Emmara final mortal roster",
+          "Trade",
+          "starter final@96; Reversire@95; Pactecho@94; Palimopus@93; Sigilume@92; Trucepoe@91",
+          "",
+          "Controlled coverage; 2 held roles; no scripted player battle"
+        ],
+        [
+          "Postgame exhibition",
+          "Pate",
+          "All six canonical species identities @200",
+          "",
+          "Non-lethal exhibition; Advanced+ direct AI; 3 held roles; 0 bag"
+        ],
+        [
+          "Postgame exhibition",
+          "Trade",
+          "All six canonical species identities @200",
+          "",
+          "Non-lethal exhibition; Leader tactical AI; 3 held roles; 0 bag"
+        ]
+      ]
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "9. Recurring named-character teams"
+    },
+    {
+      "body_index": 104,
+      "kind": "table",
+      "rows": [
+        [
+          "ID",
+          "Character",
+          "Use",
+          "Exact team",
+          "AI / items",
+          "Story boundary"
+        ],
+        [
+          "NAM-KURG",
+          "General Kurg Halbrecht",
+          "Battle-ready reference roster at Ramelle",
+          "Destridon@95; Fetterpot@96; Regnacra@96; Cerberrood@97; Mausolisk@98; Aegishorn@100",
+          "Leader AI if ever fought; military reliability; ace HA; 4 held roles; 2 bag",
+          "No mandatory fight is added by this document."
+        ],
+        [
+          "NAM-RHOSWEN",
+          "Dame Rhoswen Vey",
+          "Mandatory Chapter 8 rival duel",
+          "Leonarch@83; Destridon@84; Cerberrood@85; Oriflamme@86; Rimehart@87; Aegishorn@88",
+          "Leader AI; aggressive disciplined; 3 held roles; 1 bag",
+          "Rival non-lethal surrender rules."
+        ],
+        [
+          "NAM-AERIC",
+          "Chaplain Aeric Solm",
+          "Support character; no trainer battle",
+          "Olehart@70; Trucepoe@72; Pactecho@74",
+          "Advanced support profile if used for scripted demonstrations only",
+          "Not a combat gate; no new fight authored."
+        ],
+        [
+          "NAM-SEVERIN",
+          "Severin Vale / King Below",
+          "Postgame superboss",
+          "Reversire@200; Sepulshade@200; Serapine@200; Pandemne@200; Mausolisk@200; Aegishorn@200",
+          "Severin AI; all six held; 2 bag; ability slots HA/A2/HA/A1/HA/HA",
+          "No hidden stat bonuses; difficulty comes from team, loadout, AI and postgame context."
+        ]
+      ]
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "10. All 8 mortal leader teams — final"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "All eight leaders use six Abyssals. The last living enemy Abyssal in each leader battle is protected by formal-surrender battle mode so the post-battle SPARE / EXECUTE decision cannot be pre-empted by an accidental critical hit on the final partner."
+    },
+    {
+      "body_index": 108,
+      "kind": "table",
+      "rows": [
+        [
+          "ID",
+          "Leader",
+          "Location",
+          "Plan",
+          "Exact six-Abyssal team",
+          "Bag",
+          "Held / ability highlights",
+          "Surrender behaviour"
+        ],
+        [
+          "LDR-01",
+          "Ser Aldren March",
+          "Dorelem",
+          "Leader • disciplined/direct",
+          "Cackena@25; Cockatrix@26; Ibracle@27; Albannor@28; Hareald@29; Bastimole@30",
+          "1 bag",
+          "Bastimole: HA + GUARD",
+          "Formal surrender; no enemy death on final slot"
+        ],
+        [
+          "LDR-02",
+          "Abbess Yselle Marot",
+          "Philomere",
+          "Leader • defensive/restorative",
+          "Olehart@35; Regnacra@36; Fetterpot@37; Pactecho@38; Deltacroc@39; Sarumoss@40",
+          "1 bag",
+          "Pactecho STATUS; Sarumoss HA+SUSTAIN",
+          "Endurance plan; prioritises healing moves, not sacrifice"
+        ],
+        [
+          "LDR-03",
+          "Provost Corvin Sair",
+          "Cybressa",
+          "Leader • opportunistic/pivot",
+          "Ampullusk@45; Reversire@46; Corvassal@47; Cyprigon@48; Vortamor@49; Galleonid@50",
+          "1 bag",
+          "Reversire SPEED; Galleonid HA+SUSTAIN",
+          "Switches often; preserves whichever piece has market-value utility"
+        ],
+        [
+          "LDR-04",
+          "Warden Samiel Elow",
+          "Cossenne",
+          "Leader • graceful nature/support",
+          "Olehart@55; Ganderiel@56; Caproclaim@57; Deltacroc@58; Sarumoss@59; Regnacra@60",
+          "1 bag",
+          "Olehart SUSTAIN; Regnacra HA+GUARD",
+          "Surrenders before a partner dies once defeat is decisive"
+        ],
+        [
+          "LDR-05",
+          "Castellan Braska Morn",
+          "Marasen",
+          "Leader • heavy attrition/ruthless",
+          "Bastimole@65; Trebuchor@66; Fetterpot@67; Regnacra@68; Cerberrood@69; Aegishorn@70",
+          "2 bag",
+          "Trebuchor STATUS; Fetterpot GUARD; Aegishorn HA+OFFENSE",
+          "RUTHLESS flag: may refuse protective switch and accept partner death"
+        ],
+        [
+          "LDR-06",
+          "Canon Mirelle Avin",
+          "Botrune",
+          "Leader • analysis/control",
+          "Pactecho@75; Palimopus@76; Idolure@77; Reversire@78; Sigilume@79; Sepulshade@80",
+          "2 bag",
+          "Idolure STATUS; Sigilume GUARD; Sepulshade HA+STATUS",
+          "Uses status/setup to test patterns, then switches into answers"
+        ],
+        [
+          "LDR-07",
+          "Marshal Oren Talv",
+          "Cayfen",
+          "Leader • siege/efficient",
+          "Destridon@85; Ramporque@86; Rimehart@87; Cerberrood@88; Fetterpot@89; Aegishorn@90",
+          "2 bag",
+          "Ramporque OFFENSE; Fetterpot GUARD; Aegishorn HA+GUARD",
+          "Strategically clear surrender; will not spend partners for symbolism"
+        ],
+        [
+          "LDR-08",
+          "Hierophant Lucain Serault",
+          "Ramelle",
+          "Leader • ceremonial/endgame",
+          "Caproclaim@95; Serapine@96; Vortamor@97; Regalisk@98; Pandemne@99; Mausolisk@100",
+          "2 bag",
+          "Serapine SUSTAIN; Pandemne SPEED; Regalisk STATUS; Mausolisk HA+OFFENSE",
+          "Conventional mortal endgame climax; formal surrender at defeat"
+        ]
+      ]
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "11. Hell Warden teams — final trainer-side rosters"
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "The exact terrain modifiers remain Checklist 05 authority, but these six-member teams and their terrain intention are locked. Checklist 05 must tune the fields around viable player counters without replacing the Warden roster."
+    },
+    {
+      "body_index": 112,
+      "kind": "table",
+      "rows": [
+        [
+          "ID",
+          "Warden",
+          "Field",
+          "Exact six-Abyssal team",
+          "Held-role set",
+          "Ability policy",
+          "Team job"
+        ],
+        [
+          "WRD-01",
+          "Veyr, Keeper of Names",
+          "Namefog",
+          "Trucepoe@105; Reversire@106; Idolure@107; Sigilume@108; Sepulshade@109; Pandemne@110",
+          "STATUS / SPEED / STATUS",
+          "Slots 3 & 6 HA",
+          "Break certainty, obscure identity, punish rote targeting"
+        ],
+        [
+          "WRD-02",
+          "Ossael, the Gatherer",
+          "Gilded Dust",
+          "Ampullusk@115; Bastimole@116; Ibracle@117; Trebuchor@118; Cyprigon@119; Mausolisk@120",
+          "SUSTAIN / GUARD / TERRAIN",
+          "Slots 3 & 6 HA",
+          "Sand/hoard pressure; slow denial into heavy ace"
+        ],
+        [
+          "WRD-03",
+          "Mordren, Drum of War",
+          "Blood Sun",
+          "Sunscint@127; Cehong@128; Liontide@129; Oriflamme@130; Regnacra@131; Gehennuar@132",
+          "TERRAIN / OFFENSE / SUSTAIN",
+          "Slots 3 & 6 HA",
+          "Sun-style aggression with mixed Fire and non-Fire beneficiaries"
+        ],
+        [
+          "WRD-04",
+          "Caelor, Last Magistrate",
+          "Iron Decree",
+          "Fetterpot@139; Regnacra@140; Sigilume@141; Destridon@142; Cerberrood@143; Aegishorn@144",
+          "GUARD / STATUS / TERRAIN",
+          "Slots 3 & 6 HA",
+          "Steel/Fighting structure, forced order, defensive pivots"
+        ],
+        [
+          "WRD-05",
+          "Asterion, Voice of Certainty",
+          "Twin Radiance",
+          "Caproclaim@151; Vortamor@152; Oriflamme@153; Tattereign@154; Pandemne@155; Serapine@156",
+          "TERRAIN / SPEED / OFFENSE",
+          "Slots 3 & 6 HA",
+          "Fairy/Dark mirrored pressure; punishes false binary answers"
+        ],
+        [
+          "WRD-06",
+          "Mirra, Kindly Shape",
+          "Mourning Rain",
+          "Deltacroc@161; Galvaneel@162; Galleonid@163; Palimopus@164; Fetterpot@165; Liontide@166",
+          "TERRAIN / SUSTAIN / GUARD",
+          "Slots 3 & 6 HA",
+          "Rain sustain, deceptive recovery, repeated pressure"
+        ],
+        [
+          "WRD-07",
+          "Velcar, Oath-Eater",
+          "Cocytus Hail",
+          "Grudgemont@171; Laureveil@172; Rimehart@173; Paleursa@174; Aegishorn@175; Tattereign@176",
+          "TERRAIN / GUARD / SPEED",
+          "Slots 3 & 6 HA",
+          "Ice attrition and punishment for predictable commitments"
+        ],
+        [
+          "WRD-08",
+          "Nema, the Unremembered",
+          "Quiet Night",
+          "Vesperyre@179; Carriena@180; Galleonid@181; Murmite@182; Pandemne@183; Noctafey@184",
+          "TERRAIN / STATUS / OFFENSE",
+          "Slots 3 & 6 HA",
+          "Dark/Ghost suppression, silence and late-game switching pressure"
+        ]
+      ]
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "12. Severin and final-boss AI boundary"
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "Severin Vale / King Below is a true trainer superboss: six Level-200 Abyssals, all six equipped, two bag heals, permanent authored seeds and the Severin AI tier."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "Severin has no hidden stat multipliers. The challenge is the Level-200 roster, legal moves, six held items, two heals, strong switching and the best fair prediction tier."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "Illyr and Nharos are not human trainers with six-Abyssal parties. They are paired cosmic boss manifestations using the Final Boss AI contract. Their effective progression spans roughly Level 188–200, with the true Level-200 climax reserved for the final phase."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "Cosmic bosses cannot inspect the player’s selected command, unrevealed moves or future RNG. Dangerous effects must be telegraphed through the normal readable battle UI."
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "13. Surrender, retreat and permadeath-aware difficulty"
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "13.1 Battle-mode flags"
+    },
+    {
+      "body_index": 121,
+      "kind": "table",
+      "rows": [
+        [
+          "Mode",
+          "Used by",
+          "0 HP / surrender handling"
+        ],
+        [
+          "SUPERVISED_NONLETHAL",
+          "Enlistment test, optional friendly sparring",
+          "Final enemy partner is clamped to 1 HP and trainer surrenders; no permanent enemy death."
+        ],
+        [
+          "RIVAL_NONLETHAL",
+          "Rhoswen; postgame Pate/Trade exhibitions",
+          "Final enemy partner is clamped to 1 HP; battle ends by acknowledgement/surrender."
+        ],
+        [
+          "FORMAL_LEADER",
+          "All eight mortal leaders",
+          "Final enemy partner is clamped to 1 HP; leader yields and fate scene follows."
+        ],
+        [
+          "HOSTILE_LETHAL",
+          "Military ambushes, criminals, hostile route trainers where authored",
+          "0 HP applies normal permanent Abyssal death. Human survival is a separate story/fate question."
+        ],
+        [
+          "WARDEN_BOSS",
+          "All 8 Wardens",
+          "Player permadeath rules remain active; enemy defeat resolves Warden scripting. Player Run/retreat edge case is owned by Checklist 13."
+        ],
+        [
+          "COSMIC_BOSS",
+          "Illyr/Nharos",
+          "Boss-phase defeat rules; player permadeath active; retreat rules owned by Checklist 13."
+        ]
+      ]
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "13.2 Player surrender from human trainer battles"
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "The Run command becomes Surrender / Parley in trainer battles where retreat is allowed. It is a legitimate failure state, not player death."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "Key items can never be taken."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "Money and eligible non-key possessions may be lost as the price of parley, including meaningful risk to equipment, unique treasure or evolution items. The exact probability/value algorithm is frozen later by Checklist 06 and Checklist 13 without reopening trainer teams."
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "Surrender never counts as defeating the trainer, never advances a leader fate flag, and does not grant victory XP/rewards."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "13.3 Permadeath safeguards"
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "No dynamic enemy level scaling. A player who prepares, explores and trains can become stronger than a fixed encounter."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "No hidden boss stat cheating. All trainer stats can be reproduced from species, level, seed and the locked growth algorithm."
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "Rare/elite trainers are optional and visually/narratively signposted. They may sit up to roughly four levels above surrounding core trainers, but do not block progression."
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "Basic trainers do not switch proactively or use bag healing. Early route teams remain 1–3 members, limiting attrition spikes before the player has a deep reserve."
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "Advanced AI only switches for a clear reason; it does not endlessly cycle immunities. Leaders and Wardens use an anti-loop rule."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "Except Braska’s explicit RUTHLESS identity, competent human AI will prefer a viable protective switch over knowingly spending a critically injured partner for negligible benefit."
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "Leader, rival and supervised battles use non-lethal final-slot protection so narrative surrender is not undermined by damage variance."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "Warden fields must have at least two viable counter approaches after Checklist 05. No Warden team may cover every intended counter simultaneously."
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "Ordinary humans do not own mythic/box-legend tier Abyssals. High-tier species are reserved for exceptional late bosses, Wardens, Severin or explicitly authored rare encounters."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "14. Programming handoff schema"
+    },
+    {
+      "body_index": 139,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Type / example",
+          "Rule"
+        ],
+        [
+          "trainerId",
+          "string — TRN-C06-004",
+          "Permanent unique ID. Never recycled."
+        ],
+        [
+          "displayName",
+          "string",
+          "Human-facing trainer name."
+        ],
+        [
+          "classId",
+          "enum",
+          "One of the locked class archetypes."
+        ],
+        [
+          "factionId",
+          "enum / null",
+          "True Light, Dawn Bloom, neutral, underworld, etc.; separate from class."
+        ],
+        [
+          "aiTier",
+          "enum",
+          "WILD / BASIC / ADVANCED / LEADER / WARDEN / FINAL / SEVERIN."
+        ],
+        [
+          "battleMode",
+          "enum",
+          "SUPERVISED_NONLETHAL / RIVAL_NONLETHAL / FORMAL_LEADER / HOSTILE_LETHAL / WARDEN_BOSS / COSMIC_BOSS."
+        ],
+        [
+          "teamVersion",
+          "integer",
+          "Increment only when an authored named roster changes."
+        ],
+        [
+          "team[]",
+          "array length 1–6",
+          "speciesId, level, abilitySlot, moveProfile, resolvedMoveIds[4], heldRole/itemId, seedKey."
+        ],
+        [
+          "bagHealCount",
+          "integer 0–2",
+          "Follows tier/record; actual item IDs map from Checklist 06."
+        ],
+        [
+          "switchBudget",
+          "integer / unlimited",
+          "Tier contract; still subject to anti-loop."
+        ],
+        [
+          "surrenderRule",
+          "enum",
+          "Defines whether/when human yields and whether final-slot clamp applies."
+        ],
+        [
+          "rewardProfile",
+          "reference",
+          "Owned by Checklist 06; trainer ID remains stable."
+        ],
+        [
+          "storyFlags",
+          "array",
+          "Owned by Checklist 10; leader/rival IDs bind to existing story events."
+        ]
+      ]
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "15. Validation gates and Checklist 04 completion"
+    },
+    {
+      "body_index": 142,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Checklist item / handoff"
+        ],
+        [
+          "COMPLETE",
+          "Normal trainer archetypes/classes defined."
+        ],
+        [
+          "COMPLETE",
+          "Class effect on AI and Abyssal preferences defined."
+        ],
+        [
+          "COMPLETE",
+          "Early, midgame, late, dungeon, optional and elite trainer populations authored."
+        ],
+        [
+          "COMPLETE",
+          "Expected level curve locked through Level 200."
+        ],
+        [
+          "COMPLETE",
+          "Every authored trainer has fixed team size, exact species/levels, deterministic ability assignment, deterministic legal-move resolution and held-item role allocation."
+        ],
+        [
+          "COMPLETE",
+          "Pate and Trade roster progression and starter mapping locked."
+        ],
+        [
+          "COMPLETE",
+          "Recurring named-character combat rosters locked without adding unauthorised mandatory story fights."
+        ],
+        [
+          "COMPLETE",
+          "All eight mortal leader teams locked."
+        ],
+        [
+          "COMPLETE",
+          "Severin superboss team locked."
+        ],
+        [
+          "COMPLETE",
+          "All eight Warden teams locked and paired to their field identity."
+        ],
+        [
+          "COMPLETE",
+          "Wild / Basic / Advanced / Leader / Warden / Final / Severin AI defined."
+        ],
+        [
+          "COMPLETE",
+          "Switching, healing-item counts, type prediction and setup/status behaviour defined."
+        ],
+        [
+          "COMPLETE",
+          "Permadeath-aware difficulty safeguards defined."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 05 supplies exact Warden field numbers; it may not replace these teams."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 06 maps semantic held/heal roles to final item IDs, prices and economy."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 10 binds stable trainer IDs to story flags/events."
+        ],
+        [
+          "VALIDATION ONLY",
+          "Checklist 12 compiler materialises/validates resolved move IDs; failed legality swaps to next legal move under the frozen resolver."
+        ],
+        [
+          "VALIDATION ONLY",
+          "Checklist 13 finalises retreat/run edge cases for Warden/cosmic fights and the exact parley-loss transaction."
+        ]
+      ]
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 144,
+      "kind": "table",
+      "rows": [
+        [
+          "FINAL STATUS\nCHECKLIST 04 — TRAINER DATABASE & TEAM PLANNING: COMPLETE / LOCKED. Later checklist work may populate linked item IDs, field modifiers, event flags and legality-audit outputs, but must not silently alter the trainer identities, level curve, team species, team sizes, AI contracts or named-character progression in this specification."
+        ]
+      ]
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "16. Source authority used for this lock"
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "Pre-Programming Planning Checklists Reference v1.0 — Checklist 04 scope and completion criteria."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "Full Story Bible — LOCKED v1.0 — chapter order, leaders, Wardens, surrender/fate logic, Pate/Trade allocation and postgame structure."
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "Story Bible Character Roster v1.0 — Pate, Trade, Kurg, Severin, leader and Rhoswen battle identities."
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "World Towns & Routes Reference — LOCKED functional map skeleton and optional-area placement."
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "Regional Dex Stats & Abilities COMPLETE v2 — 187-species identity, exact stats and ability slots."
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "Regional Dex Growth & Evolution VALIDATED v4 — growth/evolution legality authority."
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "Regional Dex Progression Learnsets v3 + 354 Move Catalogue — legal move pool and move properties."
+    }
+  ]
+}

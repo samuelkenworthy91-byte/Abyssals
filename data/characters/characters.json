@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
-  "status": "partial",
+  "status": "complete_for_supplied_source",
   "sources": [
-    "docs/source_archive/handoff_v1/data/canon/characters.json",
-    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
     "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
-    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Character_Roster_v1.0.docx"
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Character_Roster_v1.0.docx",
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+    "docs/source_archive/handoff_v1/data/canon/characters.json",
+    "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv"
   ],
   "records": [
     {
@@ -688,14 +689,5 @@
       "id_convention": "Technical CHR namespace; source name/identity established."
     }
   ],
-  "unresolved": [
-    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
-  ],
-  "unresolved_identities": [
-    {
-      "packaging_id": "CORE-007",
-      "name": "Nharos",
-      "game_id": null
-    }
-  ]
+  "unresolved": []
 }

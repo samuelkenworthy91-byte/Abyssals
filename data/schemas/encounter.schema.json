@@ -49,8 +49,11 @@
         ],
         "properties": {
           "species_id": {
-            "type": "string",
-            "minLength": 1
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{3}$"
           },
           "weight": {
             "type": "integer",
@@ -72,6 +75,23 @@
               "object",
               "null"
             ]
+          },
+          "resolver": {
+            "type": "object",
+            "required": [
+              "state_field",
+              "cases"
+            ],
+            "properties": {
+              "state_field": {
+                "type": "string"
+              },
+              "cases": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
           }
         }
       }

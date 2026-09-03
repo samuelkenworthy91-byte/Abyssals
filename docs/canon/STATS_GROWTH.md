@@ -11,7 +11,7 @@ Authority: supplied handoff v1.0 ACTIVE_CANON sections 4. Original: ../source_ar
 - Mean Stat = `BST / 6`.
 - Stat growth % = `max(10, round(Mean Growth × (BaseStat / MeanStat)^2.25))`.
 - Growth over 100% allows deterministic exceptional +2 outcomes according to the locked roll logic.
-- HP receives +10 baseline per level in addition to its roll behaviour.
+- Checklist 01 is the sole growth authority: HP gains +10 per successful increment; a failed roll adds zero. There is no guaranteed baseline or minimum growth per level. See conflict C16.
 - Evolution applies fixed promotion jumps and reweights future growth; it does not retroactively reroll the individual.
 - Wild growth is seeded/deterministic.
 

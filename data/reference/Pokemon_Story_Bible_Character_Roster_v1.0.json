@@ -1,0 +1,2133 @@
+{
+  "source": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Character_Roster_v1.0.docx",
+  "source_sha256": "9430bfe9a6c54ead52eb40332e3466a1f5218a32f1c40e11606a295a18d1fe42",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "POKEMON PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "Story BibleCharacter Roster"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "v1.0  •  LOCKED CORE CAST"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "Numbered reference for narrative development and character-art production"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "Story Thematic Locks"
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "These principles are canonical unless explicitly reopened later. They should govern character writing, scene construction, faction portrayal and the final metaphysical reveal."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Morality belongs to the individual. No institution can make a person moral by giving them orders."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "Organised religion can divide people who are fundamentally very similar and often agree on far more than they realise."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "Good and bad people exist on every side. The story must never reveal one faith or faction as secretly the morally correct one."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "The True Light and Dawn Bloom are rival human names and traditions centred on the same cosmic being: Illyr."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Human cultures also possess competing names and stories for the same underworld ruler, Nharos, without understanding that they refer to one being."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "If gods exist, humanity is insignificant to them. Illyr and Nharos do not direct human religious institutions and do not care about wars fought in their names."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "The crusade is therefore tragic not because the wrong god was chosen, but because people killed one another over human interpretations that the cosmic beings themselves barely notice."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "Naming Direction"
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Names combine a Crusade-era / medieval continental flavour with JRPG readability: short, distinctive forms; sturdy consonants; selective Latin, Frankish and ecclesiastical echoes; and titles that make social role immediately legible. Holy-land names may sound slightly softer or more lyrical, but not so alien that the cultures feel like different species of people."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "Roster Index"
+    },
+    {
+      "body_index": 17,
+      "kind": "table",
+      "rows": [
+        [
+          "No.",
+          "Name",
+          "Narrative role"
+        ],
+        [
+          "1",
+          "Aimon",
+          "Renamable protagonist"
+        ],
+        [
+          "2",
+          "Pateric “Pate” Vann",
+          "Older childhood friend / big-brother figure"
+        ],
+        [
+          "3",
+          "Traden “Trade” Cor",
+          "Older childhood friend / big-brother figure"
+        ],
+        [
+          "4",
+          "General Kurg Halbrecht",
+          "True Light field commander"
+        ],
+        [
+          "5",
+          "Severin Vale",
+          "The Poet; guide through Hell; postgame ruler"
+        ],
+        [
+          "6",
+          "Illyr",
+          "Cosmic being worshipped as The True Light and Dawn Bloom"
+        ],
+        [
+          "7",
+          "Nharos",
+          "Underworld ruler"
+        ],
+        [
+          "8",
+          "Ser Aldren March",
+          "1st town leader"
+        ],
+        [
+          "9",
+          "Abbess Yselle Marot",
+          "2nd town leader"
+        ],
+        [
+          "10",
+          "Provost Corvin Sair",
+          "3rd town leader"
+        ],
+        [
+          "11",
+          "Warden Samiel Elow",
+          "4th town leader"
+        ],
+        [
+          "12",
+          "Castellan Braska Morn",
+          "5th town leader"
+        ],
+        [
+          "13",
+          "Canon Mirelle Avin",
+          "6th town leader"
+        ],
+        [
+          "14",
+          "Marshal Oren Talv",
+          "7th town leader"
+        ],
+        [
+          "15",
+          "Hierophant Lucain Serault",
+          "8th town leader / Holy Land authority"
+        ],
+        [
+          "16",
+          "Chaplain Aeric Solm",
+          "Recurring True Light cleric"
+        ],
+        [
+          "17",
+          "Dame Rhoswen Vey",
+          "Recurring crusader / moral foil"
+        ]
+      ]
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "Scope note: Exact monster line-ups, levels, moves and abilities are maintained with the dex/combat material rather than this story-focused character reference. Aimon never has a fixed canon team because the player builds it."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "1. Aimon"
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "THE PROTAGONIST"
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "AGE: 14–15"
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "FACTION AT START: True Light Crusade"
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "PLAYER NAMING: Renamable; Aimon is the default / development name"
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "NARRATIVE FUNCTION: The player’s viewpoint on inherited morality, religious division, grief and eventual moral independence"
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "Core Personality"
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "Aimon is earnest, sensitive and determined. He is not initially rebellious; he desperately wants to be accepted by the people he admires. Because Pate and Trade are older, stronger and apparently fearless, he assumes that becoming like them means becoming a good man."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "His greatest early insecurity is being regarded as the little brother who needs protecting. That makes him vulnerable to heroic language about duty, strength and proving himself. When authority tells him that courage means fighting, conquering and killing for the True Light, he begins with very little reason to question it."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "Aimon is naturally compassionate, however, and lived experience gradually collides with what he has been taught. His arc is not from believer to cynic; it is from obedience to moral independence."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "Something is not right merely because someone stronger, older, holier or more powerful says that it is."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "Personality Traits"
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "Earnest and loyal"
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "Empathetic and emotionally transparent"
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Quietly stubborn"
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "Initially insecure about being weak"
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "Brave when someone else needs him"
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "Uncomfortable with unnecessary cruelty"
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "Prone to blaming himself"
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "Increasingly willing to question authority"
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "Character Flaw"
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "Aimon initially confuses obedience with goodness. Later this threatens to swing toward another extreme: believing determination alone gives him the right to defy any boundary, including death. His descent into Hell is therefore not a purely rational heroic act. It is love, grief, rage and stubbornness colliding."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "Voice"
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "Because the player needs room for projection, Aimon should not constantly deliver long speeches. He speaks sincerely, asks questions and is more emotionally direct than Trade or Kurg. Early in the story he tends to say versions of “But that’s what we’re supposed to do.” Late in the story the defining word becomes “Why?”"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "Male; mid-teens; slim adolescent build; slightly undersized beside older soldiers."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "Ash-brown, somewhat unruly hair falling around the forehead; warm brown or hazel eyes; soft youthful face; expressive eyebrows."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "Starting clothes: cream undershirt, brown trousers, worn leather boots, short travelling cloak, small satchel and belt pouch."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "After enlistment: a red-gold True Light ribbon or cloth marker and practical pieces of borrowed or slightly oversized protective gear."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "Campaign progression should accumulate rather than replace gear: leather shoulder guard, reinforced gloves, weathered cloak, repaired straps and eventually a worn True Light tabard."
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "In Hell: torn cloak, stained and damaged tabard, mismatched repairs, tired eyes, slightly longer hair and small scars. He does not theatrically discard the religious emblem; it simply stops defining him."
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "Visual Read"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "Aimon must not look like a chosen hero. Early on, if he stands among crusaders, the viewer should wonder why this boy is there. His silhouette is the smallest of the core five: youthful, cloak-heavy, travel-equipped and leaning slightly forward, as though still growing into the space he occupies."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "Relationships"
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "Pate: Aimon idolises his courage and desperately wants to hear that he no longer needs protecting."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "Trade: Aimon trusts his judgement almost completely. Questioning Trade’s assumptions later is therefore particularly painful."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Kurg: Initially represents legitimate adult authority and validation. Aimon’s growth requires learning that Kurg’s approval never determined whether an action was right."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Severin: The first major adult who consistently asks what Aimon thinks rather than telling him what to think. This becomes intoxicating after a lifetime of instruction, but Severin’s own agenda proves that independence still requires responsibility."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Battle / Team Story Note"
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "Aimon has no fixed canon monster line-up. His player-built team is part of his personal journey. The starter remains narratively significant, but no legendary or predetermined final six is required."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "2. Pateric “Pate” Vann"
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "THE HEROIC BROTHER"
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "AGE: 17"
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "FACTION: True Light Crusade"
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "NARRATIVE FUNCTION: Embodies genuine goodness trapped inside romanticised war and inherited certainty"
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "Core Personality"
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "Pate is enormously likeable: funny, loud, brave, physically affectionate and instinctively protective. As children, when Aimon falls, Pate is the first one running over. If someone mocks Aimon for being younger, Pate is the one most likely to start the argument."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "He genuinely believes heroes protect people. The tragedy is that he has been taught that becoming a crusader is the highest expression of that ideal. Pate does not enlist because he hates Dawn Bloom believers. He enlists because he believes good men are supposed to go."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "Personality Traits"
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "Charismatic and loud"
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "Playfully boastful"
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Courageous and optimistic"
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "Protective and affectionate"
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "Impulsive"
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "Emotionally open"
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "Easily inspired by heroic rhetoric"
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "Poor at questioning the premise of a situation"
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "Character Flaw"
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Pate believes courage is inherently virtuous. If something frightens him, overcoming that fear feels like proof that he is doing the right thing. Honour, shame, duty and heroic language can therefore manipulate him even though his underlying motives are decent. This weakness eventually contributes to the meaningless mill assault."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "Voice"
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "Pate speaks casually, jokes often, gives people nicknames and uses friendly insults. Despite being sincerely religious, he rarely sounds theological. He makes the crusade sound like an adventure because that is how he initially experiences it."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "We’ll be legends."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "Male; 17; around 178 cm; broad-shouldered and naturally athletic."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "Warm tan complexion; sandy-brown hair pushed roughly away from the face; strong eyebrows; warm amber-brown eyes."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "Wide grin and a slightly crooked nose from an old childhood accident."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "Young-crusader look rather than polished knight: cream gambeson, light mail or scale, red-gold True Light surcoat, heavy boots, leather gloves and a short travelling cape."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "Gear is functional but personalised and a little messy. Pate treats uniform as something that can still belong to him."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "Signature item: a simple braided friendship cord made by the three boys as children, worn beneath his gauntlet."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "Visual Read"
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "Pate should visually feel safe. He has the physique and open posture of someone Aimon would instinctively hide behind. His standard art should be relaxed and broad, with an easy grin and equipment carried casually. He looks completely convinced that things are going to work out."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "Relationship with Aimon"
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "Pate loves Aimon as a younger brother. His mistake is believing love gives him the right to decide what Aimon can handle. He supports leaving without him because he thinks Aimon will be furious but alive. He never abandoned Aimon; he tried to save him."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "Relationship with Trade"
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Pate and Trade function almost like brothers. Pate is instinct; Trade is planning. Pate complains about Trade overthinking everything but trusts his plans. Trade relies on Pate to keep morale alive. Their final stand together is tragic because neither would ever abandon the other."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "Battle / Team Story Note"
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "Pate’s fixed team belongs to the dex/combat reference. Story rule: he uses one of the two starters not chosen by Aimon. His battle identity is forward momentum—bold, direct, heroic-looking monsters and an ace that a teenage would-be knight would think is the coolest creature alive."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "3. Traden “Trade” Cor"
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "THE RESPONSIBLE BROTHER"
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "AGE: 18"
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "FACTION: True Light Crusade"
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "NARRATIVE FUNCTION: Represents intelligent and compassionate people who still fail morally because they never question inherited foundational assumptions"
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "Core Personality"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "Trade is quieter than Pate. Where Pate protects Aimon by physically stepping between him and danger, Trade protects him through planning. He remembers supplies, checks routes, notices exhaustion and makes sure everyone gets home."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "Because Trade is sensible in almost every ordinary situation, Aimon assumes his judgement can be trusted in extraordinary ones too. That is what makes Trade thematically important. He is not ignorant, bloodthirsty or foolish. He simply never seriously considers that the basic religious assumptions underpinning his society might be wrong."
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "Personality Traits"
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "Intelligent and patient"
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "Dryly funny"
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "Reserved"
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "Deeply loyal"
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "Highly observant"
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "Responsible"
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "More openly devout than Pate"
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "Emotionally restrained"
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "Capable of rationalising increasingly troubling choices"
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "Character Flaw"
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "Trade can explain almost anything once he accepts the initial premise. If the crusade is righteous, casualties become unfortunate necessities, strategic mistakes become sacrifices and cruel orders become difficult duties. His intelligence often helps him rationalise the system instead of escaping it."
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "Voice"
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "Trade rarely wastes words. His humour is understated, his advice is quiet and he becomes slightly more formal when discussing religion. He hates melodrama."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "I’d settle for coming home."
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "Male; 18; around 183 cm; tall and lean with an athletic rather than bulky build."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "Dark brown hair, shoulder length or slightly shorter, normally tied back; grey-brown eyes; narrow face; straight nose; serious resting expression."
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "Darker cream gambeson, fitted mail, structured True Light surcoat, dark green-grey cloak and meticulously organised belts and travelling equipment."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "Signature item: a small bound field notebook containing routes, supplies, monster observations, fragments of scripture and thoughts he does not say aloud."
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "His equipment is noticeably better maintained than Pate’s. Everything has a place."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "Visual Read"
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "Trade’s silhouette is tall, narrow and orderly. His standard character art should communicate competence before anything else: straight posture, controlled expression, one hand near the notebook or neatly arranged equipment."
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "Relationship with Aimon"
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "Trade’s affection is quieter than Pate’s. He checks whether Aimon has eaten, repairs his things and remembers promises. He is the principal architect of leaving Aimon behind because he genuinely believes Aimon is not ready to see what war is like. Tragically, he is correct."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "Relationship with Pate"
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "Trade plans and Pate commits. Their different temperaments make them more effective together, but also make separation almost impossible. The field notebook should eventually reveal that Trade had begun to doubt the crusade before his death, but never enough to leave Pate behind."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "Battle / Team Story Note"
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "Trade’s fixed team belongs to the dex/combat reference. Story rule: he uses the remaining starter not chosen by Aimon or Pate. His battle identity is control before commitment: thoughtful switching, status, resistances and calculated finishers."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "4. General Kurg Halbrecht"
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "THE GOOD MAN WHO GIVES BAD ORDERS"
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 142,
+      "kind": "paragraph",
+      "text": "AGE: Approximately 54"
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "FACTION: True Light Crusade"
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "NARRATIVE FUNCTION: Senior military authority and embodiment of institutional duty without cartoon villainy"
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": "Core Personality"
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "Kurg must never become the easy answer to “Who was the villain?” He is disciplined, competent and genuinely concerned for the people under his command. He hates wasting soldiers, punishes looting, dislikes cruelty for entertainment and remembers the names of dead officers."
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "He has also ordered countless people to their deaths. Kurg believes institutions exist because individuals cannot see the whole picture. A soldier’s responsibility is to obey; a commander’s responsibility is to decide. This worldview is almost exactly what Aimon eventually rejects."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "Personality Traits"
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "Severe and patient"
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "Highly disciplined"
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "Strategically intelligent"
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "Stoic"
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "Protective of subordinates"
+    },
+    {
+      "body_index": 154,
+      "kind": "paragraph",
+      "text": "Personally modest"
+    },
+    {
+      "body_index": 155,
+      "kind": "paragraph",
+      "text": "Religiously sincere"
+    },
+    {
+      "body_index": 156,
+      "kind": "paragraph",
+      "text": "Capable of immense compartmentalisation"
+    },
+    {
+      "body_index": 157,
+      "kind": "paragraph",
+      "text": "Carries substantial suppressed guilt"
+    },
+    {
+      "body_index": 158,
+      "kind": "paragraph",
+      "text": "Character Flaw"
+    },
+    {
+      "body_index": 159,
+      "kind": "paragraph",
+      "text": "Kurg believes a necessary evil becomes morally acceptable if the person ordering it carries the burden seriously enough. He does terrible things without enjoying them. That does not make the things less terrible."
+    },
+    {
+      "body_index": 160,
+      "kind": "paragraph",
+      "text": "Connection to Pate, Trade and Aimon"
+    },
+    {
+      "body_index": 161,
+      "kind": "paragraph",
+      "text": "Kurg knows Pate and Trade personally and respects them for different reasons: Pate for courage, Trade for competence. Before leaving they specifically ask him not to let Aimon follow. Kurg initially honours that request and refuses Aimon more than once."
+    },
+    {
+      "body_index": 162,
+      "kind": "paragraph",
+      "text": "He eventually concludes that Aimon will attempt to follow independently anyway. Better armed, trained and supervised than alone. That is why he permits the starter selection. He never seriously considers that the morally correct decision might have been refusing to support the campaign itself."
+    },
+    {
+      "body_index": 163,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 164,
+      "kind": "paragraph",
+      "text": "Male; early-to-mid 50s; around 188 cm; very broad and still physically powerful."
+    },
+    {
+      "body_index": 165,
+      "kind": "paragraph",
+      "text": "Heavy weathered face; cropped iron-grey hair; closely maintained grey beard; deep-set dark eyes."
+    },
+    {
+      "body_index": 166,
+      "kind": "paragraph",
+      "text": "Broken nose healed badly; several visible scars; one eyebrow split by an old wound."
+    },
+    {
+      "body_index": 167,
+      "kind": "paragraph",
+      "text": "Functional command equipment rather than ornate JRPG general regalia: dark plate over chain, heavy gambeson, muted red commander mantle, battered steel, broad leather belt and military cloak."
+    },
+    {
+      "body_index": 168,
+      "kind": "paragraph",
+      "text": "His command insignia is the only deliberately ornate piece."
+    },
+    {
+      "body_index": 169,
+      "kind": "paragraph",
+      "text": "Visual Read"
+    },
+    {
+      "body_index": 170,
+      "kind": "paragraph",
+      "text": "Kurg should look monumental. Early Aimon standing beside him should visually underline the imbalance in age, size and authority. His pose is rooted and still—hands behind his back or resting on a weapon pommel, expression difficult to read, no flashy movement."
+    },
+    {
+      "body_index": 171,
+      "kind": "paragraph",
+      "text": "Arc"
+    },
+    {
+      "body_index": 172,
+      "kind": "paragraph",
+      "text": "Kurg gradually receives more troubling reports. A player who repeatedly spares leaders may initially irritate him, then force him to protect Aimon quietly from institutional consequences. He does not need a dramatic ideological conversion. A restrained admission such as “I don’t know if we should have come” is enormous for a man like him."
+    },
+    {
+      "body_index": 173,
+      "kind": "paragraph",
+      "text": "Battle / Team Story Note"
+    },
+    {
+      "body_index": 174,
+      "kind": "paragraph",
+      "text": "Kurg’s fixed team belongs to the dex/combat reference. His battle identity is military reliability: veteran monsters with defined battlefield roles, strong fundamentals, coverage and defensive utility rather than theatrical gimmicks."
+    },
+    {
+      "body_index": 175,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 176,
+      "kind": "paragraph",
+      "text": "5. Severin Vale"
+    },
+    {
+      "body_index": 177,
+      "kind": "paragraph",
+      "text": "THE POET / FUTURE KING OF THE UNDERWORLD"
+    },
+    {
+      "body_index": 178,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 179,
+      "kind": "paragraph",
+      "text": "AGE: Appears approximately 35–45; actual age unclear"
+    },
+    {
+      "body_index": 180,
+      "kind": "paragraph",
+      "text": "FACTION: None"
+    },
+    {
+      "body_index": 181,
+      "kind": "paragraph",
+      "text": "NARRATIVE FUNCTION: Guide through the Nine Circles, ambiguous ally, beneficiary of the protagonist’s destruction of the old underworld hierarchy, secret superboss"
+    },
+    {
+      "body_index": 182,
+      "kind": "paragraph",
+      "text": "Core Personality"
+    },
+    {
+      "body_index": 183,
+      "kind": "paragraph",
+      "text": "Severin is the hardest major character to understand. He is charming without exuberance, kind without being comforting, funny without being cheerful. He seems permanently aware of a joke everyone else has yet to understand."
+    },
+    {
+      "body_index": 184,
+      "kind": "paragraph",
+      "text": "Unlike Illyr and Nharos, Severin cares intensely about individual human experience. But caring and being good are not the same thing. He believes suffering produces insight, systems become vulnerable once understood, and any throne occupied long enough eventually becomes indistinguishable from habit."
+    },
+    {
+      "body_index": 185,
+      "kind": "paragraph",
+      "text": "Personality Traits"
+    },
+    {
+      "body_index": 186,
+      "kind": "paragraph",
+      "text": "Cultured and witty"
+    },
+    {
+      "body_index": 187,
+      "kind": "paragraph",
+      "text": "Patient"
+    },
+    {
+      "body_index": 188,
+      "kind": "paragraph",
+      "text": "Melancholic"
+    },
+    {
+      "body_index": 189,
+      "kind": "paragraph",
+      "text": "Deeply curious"
+    },
+    {
+      "body_index": 190,
+      "kind": "paragraph",
+      "text": "Manipulative"
+    },
+    {
+      "body_index": 191,
+      "kind": "paragraph",
+      "text": "Surprisingly empathetic"
+    },
+    {
+      "body_index": 192,
+      "kind": "paragraph",
+      "text": "Never hurried"
+    },
+    {
+      "body_index": 193,
+      "kind": "paragraph",
+      "text": "Rarely angry"
+    },
+    {
+      "body_index": 194,
+      "kind": "paragraph",
+      "text": "Ambitious without looking conventionally power-hungry"
+    },
+    {
+      "body_index": 195,
+      "kind": "paragraph",
+      "text": "Central Ambiguity"
+    },
+    {
+      "body_index": 196,
+      "kind": "paragraph",
+      "text": "Severin genuinely helps Aimon. Without him, Aimon does not retrieve Pate and Trade. He never betrays Aimon in the conventional sense. He simply neglects to mention that helping Aimon destroy Hell’s existing hierarchy also serves him perfectly."
+    },
+    {
+      "body_index": 197,
+      "kind": "paragraph",
+      "text": "I promised to lead you to your friends. I did."
+    },
+    {
+      "body_index": 198,
+      "kind": "paragraph",
+      "text": "Philosophy"
+    },
+    {
+      "body_index": 199,
+      "kind": "paragraph",
+      "text": "Where institutions say “obey the order of the universe,” Severin asks “who decided it was an order?” This is intellectually seductive after Aimon’s disillusionment. Severin also represents the danger in Aimon’s new independence: rejecting authority does not automatically make a person virtuous. Sometimes the person challenging the throne simply wants the throne."
+    },
+    {
+      "body_index": 200,
+      "kind": "paragraph",
+      "text": "Voice"
+    },
+    {
+      "body_index": 201,
+      "kind": "paragraph",
+      "text": "Elegant but readable. Occasional metaphor, dry observation, little raised volume. Severin often answers questions indirectly but should never lapse into incomprehensible pseudo-philosophy. Aimon eventually becomes one of the few people willing to tell him, “That doesn’t actually answer me,” which Severin enjoys."
+    },
+    {
+      "body_index": 202,
+      "kind": "paragraph",
+      "text": "Appearance — Guide Form"
+    },
+    {
+      "body_index": 203,
+      "kind": "paragraph",
+      "text": "Male-presenting; appears late 30s to early 40s; around 185 cm; very lean, almost gaunt."
+    },
+    {
+      "body_index": 204,
+      "kind": "paragraph",
+      "text": "Pale olive or sallow complexion; long dark hair with slight wave around jaw or neck length; a few premature silver strands."
+    },
+    {
+      "body_index": 205,
+      "kind": "paragraph",
+      "text": "Dark intelligent eyes; narrow face; pronounced cheekbones; long fingers; permanently faintly tired look."
+    },
+    {
+      "body_index": 206,
+      "kind": "paragraph",
+      "text": "Long black-brown travelling coat over layered charcoal clothing, high collar, narrow boots and occasional dark gloves."
+    },
+    {
+      "body_index": 207,
+      "kind": "paragraph",
+      "text": "Carries a small leather notebook, loose pages and writing tools. No armour and no obvious religious symbol."
+    },
+    {
+      "body_index": 208,
+      "kind": "paragraph",
+      "text": "Signature detail: ink-stained fingers, even in Hell."
+    },
+    {
+      "body_index": 209,
+      "kind": "paragraph",
+      "text": "Appearance — Underworld King"
+    },
+    {
+      "body_index": 210,
+      "kind": "paragraph",
+      "text": "The guide costume evolves rather than being replaced by a generic demon form."
+    },
+    {
+      "body_index": 211,
+      "kind": "paragraph",
+      "text": "The coat expands into a mantle-like silhouette with almost liquid edges."
+    },
+    {
+      "body_index": 212,
+      "kind": "paragraph",
+      "text": "A subtle crown forms from floating script, iron fragments or pieces of underworld architecture."
+    },
+    {
+      "body_index": 213,
+      "kind": "paragraph",
+      "text": "Eyes become unnaturally bright; loose pages orbit him; ink stains climb the hands like veins; shadows fall incorrectly."
+    },
+    {
+      "body_index": 214,
+      "kind": "paragraph",
+      "text": "The intention is not “a demon wearing Severin,” but “Severin finally occupying the environment that suits him.”"
+    },
+    {
+      "body_index": 215,
+      "kind": "paragraph",
+      "text": "Relationship with Aimon"
+    },
+    {
+      "body_index": 216,
+      "kind": "paragraph",
+      "text": "Severin takes Aimon seriously immediately. No “you’re only a child,” no “you wouldn’t understand.” He asks what Aimon thinks. At first Aimon is a fascinating subject; over time Severin becomes genuinely fond of him. That affection survives into the postgame superboss encounter. Severin is almost delighted that Aimon has returned to challenge him."
+    },
+    {
+      "body_index": 217,
+      "kind": "paragraph",
+      "text": "Relationship with Pate and Trade"
+    },
+    {
+      "body_index": 218,
+      "kind": "paragraph",
+      "text": "Severin knows where they are from early in the descent but does not reveal everything immediately because reaching them still requires passing through the circles. Pate distrusts him almost instantly. Trade is more disturbed because he recognises how intelligent Severin really is."
+    },
+    {
+      "body_index": 219,
+      "kind": "paragraph",
+      "text": "Battle / Team Story Note"
+    },
+    {
+      "body_index": 220,
+      "kind": "paragraph",
+      "text": "During the descent, Severin should appear to have only an incomplete or modest team, encouraging the player to believe he is not truly a trainer. The postgame battle overturns that assumption: he has studied the player, the circles and the battle system itself. His final team should feel curated, synergistic and unsettlingly efficient."
+    },
+    {
+      "body_index": 221,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 222,
+      "kind": "paragraph",
+      "text": "6. Illyr"
+    },
+    {
+      "body_index": 223,
+      "kind": "paragraph",
+      "text": "THE INDIFFERENT RADIANCE"
+    },
+    {
+      "body_index": 224,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 225,
+      "kind": "paragraph",
+      "text": "NATURE: Cosmic god-being"
+    },
+    {
+      "body_index": 226,
+      "kind": "paragraph",
+      "text": "HUMAN IDENTITIES: The True Light and Dawn Bloom"
+    },
+    {
+      "body_index": 227,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 228,
+      "kind": "paragraph",
+      "text": "Illyr is the actual being behind both rival religions. Neither faith understands this. Illyr is ancient, calm and emotionally remote, neither loving nor hateful in human terms. Humans are not enemies, children or chosen servants; they are simply too small to occupy much of Illyr’s attention."
+    },
+    {
+      "body_index": 229,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 230,
+      "kind": "paragraph",
+      "text": "Androgynous or beyond human sex; human beauty used only as an approximate shape."
+    },
+    {
+      "body_index": 231,
+      "kind": "paragraph",
+      "text": "Radiant, solar, floral and dawn-like imagery, but never soft or maternal."
+    },
+    {
+      "body_index": 232,
+      "kind": "paragraph",
+      "text": "The beauty should be unsettling because it lacks intimacy."
+    },
+    {
+      "body_index": 233,
+      "kind": "paragraph",
+      "text": "Scale and presence matter more than conventional clothing; the design should suggest a manifestation rather than a person."
+    },
+    {
+      "body_index": 234,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 235,
+      "kind": "paragraph",
+      "text": "Illyr’s final reveal destroys the protagonist’s remaining assumption that religious conflict has cosmic stakes. Illyr does not know what “True Light” means until Aimon explains it, and is equally surprised to learn that “Dawn Bloom” is also supposed to mean Illyr."
+    },
+    {
+      "body_index": 236,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 237,
+      "kind": "paragraph",
+      "text": "7. Nharos"
+    },
+    {
+      "body_index": 238,
+      "kind": "paragraph",
+      "text": "THE UNDERWORLD SOVEREIGN"
+    },
+    {
+      "body_index": 239,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 240,
+      "kind": "paragraph",
+      "text": "NATURE: Cosmic underworld ruler"
+    },
+    {
+      "body_index": 241,
+      "kind": "paragraph",
+      "text": "HUMAN IDENTITIES: Known by multiple competing demon-names and traditions"
+    },
+    {
+      "body_index": 242,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 243,
+      "kind": "paragraph",
+      "text": "Nharos is regal, dryly amused and somewhat more familiar with humans than Illyr, but not morally aligned with human ideas of evil. Nharos rules the underworld because that is what Nharos does, not because a human religion correctly described a cosmic moral war."
+    },
+    {
+      "body_index": 244,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 245,
+      "kind": "paragraph",
+      "text": "Majestic rather than bestial; black, ash, ember, iron and smoke motifs."
+    },
+    {
+      "body_index": 246,
+      "kind": "paragraph",
+      "text": "Crowned silhouette; horns are optional and should feel kingly rather than generic."
+    },
+    {
+      "body_index": 247,
+      "kind": "paragraph",
+      "text": "The throne and bearing matter as much as the body."
+    },
+    {
+      "body_index": 248,
+      "kind": "paragraph",
+      "text": "Should look like the ruler of a realm, not a rampaging monster."
+    },
+    {
+      "body_index": 249,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 250,
+      "kind": "paragraph",
+      "text": "Humans cast Illyr and Nharos as opposites. In reality their relationship is far stranger and more mundane: ancient peers, perhaps rivals, but fundamentally capable of friendship. Illyr arrives in Hell because Nharos called, not because Aimon prayed."
+    },
+    {
+      "body_index": 251,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 252,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 253,
+      "kind": "paragraph",
+      "text": "8. Ser Aldren March"
+    },
+    {
+      "body_index": 254,
+      "kind": "paragraph",
+      "text": "FIRST TOWN LEADER — BORDER KEEP COMMANDER"
+    },
+    {
+      "body_index": 255,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 256,
+      "kind": "paragraph",
+      "text": "ROLE: 1st conquest leader"
+    },
+    {
+      "body_index": 257,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom-aligned local authority"
+    },
+    {
+      "body_index": 258,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 259,
+      "kind": "paragraph",
+      "text": "Aldren is stern, dutiful and soldierly. He respects courage and performs his role seriously. He is the first major enemy who behaves like an ordinary professional defender rather than the monstrous infidel Aimon was taught to expect."
+    },
+    {
+      "body_index": 260,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 261,
+      "kind": "paragraph",
+      "text": "Young knight-captain; tawny hair; practical frontier armour."
+    },
+    {
+      "body_index": 262,
+      "kind": "paragraph",
+      "text": "Green-grey cloak; little ornament."
+    },
+    {
+      "body_index": 263,
+      "kind": "paragraph",
+      "text": "Weathered enough to look experienced, but still young enough to mirror what Pate and Trade may become."
+    },
+    {
+      "body_index": 264,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 265,
+      "kind": "paragraph",
+      "text": "His purpose is subtle: the first crack in the idea that the enemy is fundamentally different. He does not need to be especially sympathetic, only recognisably human and competent."
+    },
+    {
+      "body_index": 266,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 267,
+      "kind": "paragraph",
+      "text": "9. Abbess Yselle Marot"
+    },
+    {
+      "body_index": 268,
+      "kind": "paragraph",
+      "text": "SECOND TOWN LEADER — HOSPICE ABBESS"
+    },
+    {
+      "body_index": 269,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 270,
+      "kind": "paragraph",
+      "text": "ROLE: 2nd conquest leader"
+    },
+    {
+      "body_index": 271,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom"
+    },
+    {
+      "body_index": 272,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 273,
+      "kind": "paragraph",
+      "text": "Yselle is patient, compassionate and quietly brave. She sincerely believes her faith and has spent her life caring for the sick, wounded and displaced. Fighting her should be the first victory that feels emotionally wrong rather than triumphant."
+    },
+    {
+      "body_index": 274,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 275,
+      "kind": "paragraph",
+      "text": "Middle-aged; silver-blonde or pale hair worn in braids."
+    },
+    {
+      "body_index": 276,
+      "kind": "paragraph",
+      "text": "Dawn-toned robes adapted for practical medical work."
+    },
+    {
+      "body_index": 277,
+      "kind": "paragraph",
+      "text": "Calm, kind face; gentle posture; medical satchel or healer’s implements."
+    },
+    {
+      "body_index": 278,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 279,
+      "kind": "paragraph",
+      "text": "Yselle is the first major proof that sincere religious conviction on the other side can produce the same generosity Aimon associates with his own community."
+    },
+    {
+      "body_index": 280,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 281,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 282,
+      "kind": "paragraph",
+      "text": "10. Provost Corvin Sair"
+    },
+    {
+      "body_index": 283,
+      "kind": "paragraph",
+      "text": "THIRD TOWN LEADER — MERCHANT-GOVERNOR"
+    },
+    {
+      "body_index": 284,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 285,
+      "kind": "paragraph",
+      "text": "ROLE: 3rd conquest leader"
+    },
+    {
+      "body_index": 286,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom-aligned civic authority"
+    },
+    {
+      "body_index": 287,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 288,
+      "kind": "paragraph",
+      "text": "Corvin is sharp, urbane, charming and self-serving. He will compromise with almost anyone if it preserves his position. He is not especially devout and represents opportunism rather than theology."
+    },
+    {
+      "body_index": 289,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 290,
+      "kind": "paragraph",
+      "text": "Neatly groomed; rich but tasteful civic robes."
+    },
+    {
+      "body_index": 291,
+      "kind": "paragraph",
+      "text": "Rings, seals, ledger straps or an expensive sash."
+    },
+    {
+      "body_index": 292,
+      "kind": "paragraph",
+      "text": "A pleasant smile that never fully establishes trust."
+    },
+    {
+      "body_index": 293,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 294,
+      "kind": "paragraph",
+      "text": "Corvin prevents the Dawn Bloom side from becoming uniformly noble. Not every participant is motivated by faith; some exploit war, trade and ideology for status."
+    },
+    {
+      "body_index": 295,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 296,
+      "kind": "paragraph",
+      "text": "11. Warden Samiel Elow"
+    },
+    {
+      "body_index": 297,
+      "kind": "paragraph",
+      "text": "FOURTH TOWN LEADER — ORCHARD SHRINE WARDEN"
+    },
+    {
+      "body_index": 298,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 299,
+      "kind": "paragraph",
+      "text": "ROLE: 4th conquest leader"
+    },
+    {
+      "body_index": 300,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom"
+    },
+    {
+      "body_index": 301,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 302,
+      "kind": "paragraph",
+      "text": "Samiel is gentle, reflective and peace-seeking. He is a sincere believer whose theology increasingly sounds almost identical to True Light teachings once different vocabulary is stripped away."
+    },
+    {
+      "body_index": 303,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 304,
+      "kind": "paragraph",
+      "text": "Lean and serene; dark curls or softly waved hair."
+    },
+    {
+      "body_index": 305,
+      "kind": "paragraph",
+      "text": "Blossom-patterned outer robe over simple working clothing."
+    },
+    {
+      "body_index": 306,
+      "kind": "paragraph",
+      "text": "Shrinekeeper elegance rather than aristocratic wealth."
+    },
+    {
+      "body_index": 307,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 308,
+      "kind": "paragraph",
+      "text": "Samiel is where the story can stop implying and start making the religious similarity difficult for Aimon to ignore."
+    },
+    {
+      "body_index": 309,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 310,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 311,
+      "kind": "paragraph",
+      "text": "12. Castellan Braska Morn"
+    },
+    {
+      "body_index": 312,
+      "kind": "paragraph",
+      "text": "FIFTH TOWN LEADER — QUARRY FORTRESS CASTELLAN"
+    },
+    {
+      "body_index": 313,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 314,
+      "kind": "paragraph",
+      "text": "ROLE: 5th conquest leader"
+    },
+    {
+      "body_index": 315,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom"
+    },
+    {
+      "body_index": 316,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 317,
+      "kind": "paragraph",
+      "text": "Braska is harsh, suspicious and genuinely cruel. Braska rules by fear and uses religious legitimacy when convenient. This character is essential because the story must never reverse into “Dawn Bloom were the good side all along.”"
+    },
+    {
+      "body_index": 318,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 319,
+      "kind": "paragraph",
+      "text": "Stocky, blunt-featured, scarred; shaven or closely cropped head."
+    },
+    {
+      "body_index": 320,
+      "kind": "paragraph",
+      "text": "Heavy stone-coloured armour designed for fortress defence."
+    },
+    {
+      "body_index": 321,
+      "kind": "paragraph",
+      "text": "Square, immovable silhouette."
+    },
+    {
+      "body_index": 322,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 323,
+      "kind": "paragraph",
+      "text": "Braska demonstrates the story’s individualist moral thesis: cruelty remains cruelty regardless of which prayer accompanies it."
+    },
+    {
+      "body_index": 324,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 325,
+      "kind": "paragraph",
+      "text": "13. Canon Mirelle Avin"
+    },
+    {
+      "body_index": 326,
+      "kind": "paragraph",
+      "text": "SIXTH TOWN LEADER — SCHOLAR-CLERIC"
+    },
+    {
+      "body_index": 327,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 328,
+      "kind": "paragraph",
+      "text": "ROLE: 6th conquest leader"
+    },
+    {
+      "body_index": 329,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom"
+    },
+    {
+      "body_index": 330,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 331,
+      "kind": "paragraph",
+      "text": "Mirelle is precise, learned, kind but unsentimental. She values truth over propaganda and is willing to observe the uncomfortable similarities between the rival faiths aloud."
+    },
+    {
+      "body_index": 332,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 333,
+      "kind": "paragraph",
+      "text": "Fine-featured; controlled posture."
+    },
+    {
+      "body_index": 334,
+      "kind": "paragraph",
+      "text": "Pale scholar-cleric robes with manuscript belts, scroll cases or archival tools."
+    },
+    {
+      "body_index": 335,
+      "kind": "paragraph",
+      "text": "Visual blend of theologian, historian and archivist."
+    },
+    {
+      "body_index": 336,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 337,
+      "kind": "paragraph",
+      "text": "Mirelle gives the protagonist intellectual language for what he has already begun to feel: many doctrinal differences are human constructions layered over essentially the same impulses and symbols."
+    },
+    {
+      "body_index": 338,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 339,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 340,
+      "kind": "paragraph",
+      "text": "14. Marshal Oren Talv"
+    },
+    {
+      "body_index": 341,
+      "kind": "paragraph",
+      "text": "SEVENTH TOWN LEADER — WAR-WEARY MARSHAL"
+    },
+    {
+      "body_index": 342,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 343,
+      "kind": "paragraph",
+      "text": "ROLE: 7th conquest leader"
+    },
+    {
+      "body_index": 344,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom military"
+    },
+    {
+      "body_index": 345,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 346,
+      "kind": "paragraph",
+      "text": "Oren is honourable, exhausted and bitterly realistic. He has seen enough death to lose interest in heroic rhetoric. He knows of Pate and Trade and begins preparing Aimon for the possibility that their story is not glorious."
+    },
+    {
+      "body_index": 347,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 348,
+      "kind": "paragraph",
+      "text": "Gaunt veteran; tired eyes; worn layered armour."
+    },
+    {
+      "body_index": 349,
+      "kind": "paragraph",
+      "text": "Rust or maroon scarf; visible repairs and campaign wear."
+    },
+    {
+      "body_index": 350,
+      "kind": "paragraph",
+      "text": "A posture that suggests years of lost sleep."
+    },
+    {
+      "body_index": 351,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 352,
+      "kind": "paragraph",
+      "text": "Oren represents what prolonged war does to decent professionals. He is neither pacifist nor zealot; he simply understands that most battlefield deaths are smaller and sadder than the stories told afterward."
+    },
+    {
+      "body_index": 353,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 354,
+      "kind": "paragraph",
+      "text": "15. Hierophant Lucain Serault"
+    },
+    {
+      "body_index": 355,
+      "kind": "paragraph",
+      "text": "EIGHTH TOWN LEADER — HOLY LAND AUTHORITY"
+    },
+    {
+      "body_index": 356,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 357,
+      "kind": "paragraph",
+      "text": "ROLE: 8th and final conquest leader"
+    },
+    {
+      "body_index": 358,
+      "kind": "paragraph",
+      "text": "FACTION: Dawn Bloom"
+    },
+    {
+      "body_index": 359,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 360,
+      "kind": "paragraph",
+      "text": "Lucain is austere, intelligent and calm. He is not sadistic and has no interest in humiliating Aimon. His defining act is telling the truth about Pate and Trade: they died taking a mill, in a strategically pointless action later dressed up with heroic language."
+    },
+    {
+      "body_index": 361,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 362,
+      "kind": "paragraph",
+      "text": "Elderly but imposing; tall, narrow build."
+    },
+    {
+      "body_index": 363,
+      "kind": "paragraph",
+      "text": "White hair or partially bald crown with long remaining hair."
+    },
+    {
+      "body_index": 364,
+      "kind": "paragraph",
+      "text": "Gold-cream ceremonial vestments; parchment-and-stone severity in the face."
+    },
+    {
+      "body_index": 365,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 366,
+      "kind": "paragraph",
+      "text": "Lucain is not the final ideological villain. He is the person who strips away the final comforting story and leaves Aimon with grief too raw to rationalise."
+    },
+    {
+      "body_index": 367,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 368,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 369,
+      "kind": "paragraph",
+      "text": "16. Chaplain Aeric Solm"
+    },
+    {
+      "body_index": 370,
+      "kind": "paragraph",
+      "text": "RECURRING TRUE LIGHT CLERIC"
+    },
+    {
+      "body_index": 371,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 372,
+      "kind": "paragraph",
+      "text": "ROLE: Recurring support character"
+    },
+    {
+      "body_index": 373,
+      "kind": "paragraph",
+      "text": "FACTION: True Light"
+    },
+    {
+      "body_index": 374,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 375,
+      "kind": "paragraph",
+      "text": "Aeric is gentle, sincere and compassionate. He believes deeply but never treats faith as permission for cruelty. He is important because the story critiques organised certainty, not the mere existence of personal belief or community."
+    },
+    {
+      "body_index": 376,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 377,
+      "kind": "paragraph",
+      "text": "Soft-eyed, approachable face."
+    },
+    {
+      "body_index": 378,
+      "kind": "paragraph",
+      "text": "Warm, worn travelling robes rather than grand ecclesiastical clothing."
+    },
+    {
+      "body_index": 379,
+      "kind": "paragraph",
+      "text": "Field shrine, satchel and practical supplies for soldiers and civilians."
+    },
+    {
+      "body_index": 380,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 381,
+      "kind": "paragraph",
+      "text": "Aeric should remain a genuinely good man even as the protagonist rejects institutional claims to divine authority. His existence prevents the narrative from becoming a simple “religious people are foolish” argument."
+    },
+    {
+      "body_index": 382,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 383,
+      "kind": "paragraph",
+      "text": "17. Dame Rhoswen Vey"
+    },
+    {
+      "body_index": 384,
+      "kind": "paragraph",
+      "text": "RECURRING CRUSADER / MORAL FOIL"
+    },
+    {
+      "body_index": 385,
+      "kind": "paragraph",
+      "text": "STATUS: LOCKED"
+    },
+    {
+      "body_index": 386,
+      "kind": "paragraph",
+      "text": "ROLE: Recurring rival / hardline foil"
+    },
+    {
+      "body_index": 387,
+      "kind": "paragraph",
+      "text": "FACTION: True Light Crusade"
+    },
+    {
+      "body_index": 388,
+      "kind": "paragraph",
+      "text": "Personality / Identity"
+    },
+    {
+      "body_index": 389,
+      "kind": "paragraph",
+      "text": "Rhoswen is capable, ruthless and sincerely devout. She is not sadistic, but she believes mercy creates weakness and future bloodshed. Her certainty allows her to do things Aimon increasingly cannot accept."
+    },
+    {
+      "body_index": 390,
+      "kind": "paragraph",
+      "text": "Appearance"
+    },
+    {
+      "body_index": 391,
+      "kind": "paragraph",
+      "text": "Athletic; practical heavy armour."
+    },
+    {
+      "body_index": 392,
+      "kind": "paragraph",
+      "text": "Severe or tightly bound hairstyle."
+    },
+    {
+      "body_index": 393,
+      "kind": "paragraph",
+      "text": "Strong, disciplined silhouette; minimal ornament."
+    },
+    {
+      "body_index": 394,
+      "kind": "paragraph",
+      "text": "Should visually look like the hardened crusader Aimon might become if he never questions the system."
+    },
+    {
+      "body_index": 395,
+      "kind": "paragraph",
+      "text": "Story Function"
+    },
+    {
+      "body_index": 396,
+      "kind": "paragraph",
+      "text": "Rhoswen provides a living comparison point for player choices. She can react to patterns of mercy or execution and gives the crusade an articulate defender who is more complex than a villainous fanatic."
+    },
+    {
+      "body_index": 397,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 398,
+      "kind": "paragraph",
+      "text": "Character-Art Handoff Rules"
+    },
+    {
+      "body_index": 399,
+      "kind": "paragraph",
+      "text": "Keep every numbered character visually distinct in height, silhouette, hair shape, posture and clothing mass."
+    },
+    {
+      "body_index": 400,
+      "kind": "paragraph",
+      "text": "Religious factions should share enough visual language to show cultural difference without implying different species or moral alignments."
+    },
+    {
+      "body_index": 401,
+      "kind": "paragraph",
+      "text": "True Light and Dawn Bloom iconography should be meaningfully parallel because both traditions unknowingly point toward Illyr."
+    },
+    {
+      "body_index": 402,
+      "kind": "paragraph",
+      "text": "Do not make Dawn Bloom characters uniformly softer or True Light characters uniformly harsher; moral alignment belongs to individuals."
+    },
+    {
+      "body_index": 403,
+      "kind": "paragraph",
+      "text": "Illyr and Nharos must feel cosmically old and emotionally non-human even when using recognisable humanoid forms."
+    },
+    {
+      "body_index": 404,
+      "kind": "paragraph",
+      "text": "Severin’s later king form must preserve his poet identity rather than becoming a generic demon redesign."
+    },
+    {
+      "body_index": 405,
+      "kind": "paragraph",
+      "text": "Aimon, Pate and Trade must read immediately as an emotionally connected trio despite different body language and equipment."
+    },
+    {
+      "body_index": 406,
+      "kind": "paragraph",
+      "text": "END — CHARACTER ROSTER v1.0"
+    }
+  ]
+}

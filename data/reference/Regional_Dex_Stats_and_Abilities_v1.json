@@ -1,0 +1,6130 @@
+{
+  "source": "docs/source_archive/canon_sources/superseded/Regional_Dex_Stats_and_Abilities_v1.xlsx",
+  "source_sha256": "f028fe39c3cc7f54326f2a5d2b6ab170a6b35442c1246652c55ad0f22dda2ca7",
+  "authority": "NON-AUTHORITATIVE superseded history",
+  "sheets": {
+    "Read Me": [
+      {
+        "row": 1,
+        "cells": [
+          "Regional Dex — Stats & Abilities Balance Pass v1",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          "Workbook status",
+          "Partial roster recovery — balance complete for every identity recoverable from current project files"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 4,
+        "cells": [
+          "Target regional roster",
+          187
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 5,
+        "cells": [
+          "Recovered monster identities",
+          45
+        ],
+        "formulas": {
+          "B5": "COUNTA('Dex Stats & Abilities'!B3:B189)-COUNTIF('Dex Stats & Abilities'!B3:B189,\"—\")"
+        }
+      },
+      {
+        "row": 6,
+        "cells": [
+          "Remaining roster identities",
+          142
+        ],
+        "formulas": {
+          "B6": "B4-B5"
+        }
+      },
+      {
+        "row": 7,
+        "cells": [
+          "Ability definitions used",
+          30
+        ],
+        "formulas": {
+          "B7": "COUNTA('Ability Glossary'!A3:A100)"
+        }
+      },
+      {
+        "row": 9,
+        "cells": [
+          "Balance rules used",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 10,
+        "cells": [
+          "Rule",
+          "Guideline"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 11,
+        "cells": [
+          "Ordinary base / early forms",
+          "Usually ~240–330 BST; low-route bugs/rodents can sit below this, starter-like bases near 310–320."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 12,
+        "cells": [
+          "Middle evolutions",
+          "Usually ~350–420 BST so evolution feels immediately meaningful without becoming final-form strength."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 13,
+        "cells": [
+          "Ordinary final evolutions",
+          "Usually ~440–520 BST; strong ace-style finals may reach roughly 525–540."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 14,
+        "cells": [
+          "Fossils / elite single stages",
+          "Generally ~500–535 BST, with sharper stat specialisation rather than free all-round bulk."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 15,
+        "cells": [
+          "Mythic / legendary tier",
+          "Roughly 580–600 BST for true mythic/legendary designs; 680 is reserved for an apex Mewtwo-like exception."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 17,
+        "cells": [
+          "FireRed / Gen III BST reference points",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 18,
+        "cells": [
+          "Reference",
+          "BST",
+          "Why it matters"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 19,
+        "cells": [
+          "Caterpie",
+          195,
+          "Very weak early-stage benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 20,
+        "cells": [
+          "Rattata",
+          253,
+          "Common early-route single/base benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 21,
+        "cells": [
+          "Pidgey",
+          251,
+          "Common early-route base benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 22,
+        "cells": [
+          "Bulbasaur",
+          318,
+          "Starter first-stage benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 23,
+        "cells": [
+          "Ivysaur",
+          405,
+          "Starter middle-stage benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 24,
+        "cells": [
+          "Charizard",
+          534,
+          "Starter final-stage benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 25,
+        "cells": [
+          "Lapras",
+          535,
+          "Strong single-stage benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 26,
+        "cells": [
+          "Snorlax",
+          540,
+          "Strong single-stage benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 27,
+        "cells": [
+          "Articuno",
+          580,
+          "Legendary benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 28,
+        "cells": [
+          "Dragonite",
+          600,
+          "Pseudo-legendary benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 29,
+        "cells": [
+          "Mew",
+          600,
+          "Mythical benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 30,
+        "cells": [
+          "Mewtwo",
+          680,
+          "Apex legendary benchmark"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 32,
+        "cells": [
+          "Important roster note",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 33,
+        "cells": [
+          "The available project files confirm a 187-monster regional roster, but they do not expose one consolidated list of all 187 identities. To protect the dex from made-up names/types, this workbook fully balances every recoverable monster and leaves the other working slots explicitly unresolved. Working Slot is an internal workbook tracker, not final Pokédex numbering. Once the canonical roster list is available, the blank rows can be populated without changing the balance framework.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 34,
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 35,
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 36,
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      }
+    ],
+    "Dex Stats & Abilities": [
+      {
+        "row": 1,
+        "cells": [
+          "Regional Dex — Base Stats, BST & Abilities",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 2,
+        "cells": [
+          "Working Slot",
+          "Monster",
+          "Evolution Line",
+          "Stage",
+          "Evolves From",
+          "Type 1",
+          "Type 2",
+          "Ability 1",
+          "Ability 2",
+          "HP",
+          "Attack",
+          "Defense",
+          "Sp. Atk",
+          "Sp. Def",
+          "Speed",
+          "BST",
+          "Combat Role",
+          "Inspiration / Design Basis",
+          "Source Status",
+          "Balance Note"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          1,
+          "Foamwhelp",
+          "Foamwhelp",
+          "Base (2-stage)",
+          null,
+          "Water",
+          null,
+          "Tideheart",
+          "Thick Pelt",
+          65,
+          55,
+          50,
+          55,
+          55,
+          35,
+          315,
+          "Bulky early-game Water all-rounder",
+          "Richard I / sea-lion cub at Jaffa",
+          "Direct concept source",
+          "HP and mixed bulk lead; deliberately slow before evolving."
+        ],
+        "formulas": {
+          "P3": "IF(COUNT(J3:O3)=6,SUM(J3:O3),\"\")"
+        }
+      },
+      {
+        "row": 4,
+        "cells": [
+          2,
+          "Liontide",
+          "Foamwhelp",
+          "Final (2-stage)",
+          "Foamwhelp",
+          "Water",
+          "Fighting",
+          "Tideheart",
+          "Unfazed",
+          90,
+          110,
+          80,
+          65,
+          80,
+          85,
+          510,
+          "Physical bruiser",
+          "Richard I / Lionheart assault from the sea",
+          "Direct concept source",
+          "High Attack and good Speed; enough bulk to feel fearless without reaching pseudo-legend power."
+        ],
+        "formulas": {
+          "P4": "IF(COUNT(J4:O4)=6,SUM(J4:O4),\"\")"
+        }
+      },
+      {
+        "row": 5,
+        "cells": [
+          3,
+          "Dunetuft",
+          "Dunetuft",
+          "Base (2-stage)",
+          null,
+          "Ground",
+          null,
+          "Sandcoat",
+          "Keen Sense",
+          55,
+          50,
+          45,
+          65,
+          55,
+          45,
+          315,
+          "Cautious special-leaning base",
+          "Saladin / desert fennec-caracal strategist",
+          "Direct concept source",
+          "Early Special Attack lead foreshadows a tactical final evolution."
+        ],
+        "formulas": {
+          "P5": "IF(COUNT(J5:O5)=6,SUM(J5:O5),\"\")"
+        }
+      },
+      {
+        "row": 6,
+        "cells": [
+          4,
+          "Accordacal",
+          "Dunetuft",
+          "Final (2-stage)",
+          "Dunetuft",
+          "Ground",
+          "Psychic",
+          "Tactician",
+          "Calm Guard",
+          75,
+          65,
+          70,
+          105,
+          100,
+          85,
+          500,
+          "Special strategist / special tank",
+          "Saladin / generous, watchful sultan",
+          "Direct concept source",
+          "Special Attack and Sp. Def are the identity stats; Speed stays respectable rather than dominant."
+        ],
+        "formulas": {
+          "P6": "IF(COUNT(J6:O6)=6,SUM(J6:O6),\"\")"
+        }
+      },
+      {
+        "row": 7,
+        "cells": [
+          5,
+          "Rufram",
+          "Rufram",
+          "Base (2-stage)",
+          null,
+          "Fire",
+          null,
+          "Cinderheart",
+          "Hard Head",
+          60,
+          70,
+          55,
+          55,
+          45,
+          35,
+          320,
+          "Slow physical Fire base",
+          "Frederick Barbarossa / red-bearded ram",
+          "Direct concept source",
+          "Physical Attack leads, with low Speed reflecting the heavy ram silhouette."
+        ],
+        "formulas": {
+          "P7": "IF(COUNT(J7:O7)=6,SUM(J7:O7),\"\")"
+        }
+      },
+      {
+        "row": 8,
+        "cells": [
+          6,
+          "Fordossa",
+          "Rufram",
+          "Final (2-stage)",
+          "Rufram",
+          "Fire",
+          "Ghost",
+          "Cinderheart",
+          "Ghostwalk",
+          80,
+          85,
+          70,
+          100,
+          85,
+          80,
+          500,
+          "Mixed spectral attacker",
+          "Barbarossa drowning / spectral ram",
+          "Direct concept source",
+          "Evolution shifts power toward Sp. Atk while retaining physical horn strength."
+        ],
+        "formulas": {
+          "P8": "IF(COUNT(J8:O8)=6,SUM(J8:O8),\"\")"
+        }
+      },
+      {
+        "row": 9,
+        "cells": [
+          7,
+          "Tyrquill",
+          "Tyrquill",
+          "Base (2-stage)",
+          null,
+          "Steel",
+          null,
+          "Thornhide",
+          "Stoneplate",
+          55,
+          65,
+          85,
+          35,
+          50,
+          20,
+          310,
+          "Physical wall base",
+          "Conrad of Montferrat / steel-quilled hedgehog",
+          "Direct concept source",
+          "Defense is intentionally far ahead of Speed and Sp. Atk."
+        ],
+        "formulas": {
+          "P9": "IF(COUNT(J9:O9)=6,SUM(J9:O9),\"\")"
+        }
+      },
+      {
+        "row": 10,
+        "cells": [
+          8,
+          "Wraithrone",
+          "Tyrquill",
+          "Final (2-stage)",
+          "Tyrquill",
+          "Steel",
+          "Ghost",
+          "Thornhide",
+          "Ghostwalk",
+          75,
+          95,
+          125,
+          60,
+          90,
+          50,
+          495,
+          "Physical wall / bruiser",
+          "Uncrowned king / spectral crown-quills",
+          "Direct concept source",
+          "125 Defense is the defining stat; offensive power is solid but not sweeper-level."
+        ],
+        "formulas": {
+          "P10": "IF(COUNT(J10:O10)=6,SUM(J10:O10),\"\")"
+        }
+      },
+      {
+        "row": 11,
+        "cells": [
+          9,
+          "Regulet",
+          "Regulet",
+          "Base (3-stage)",
+          null,
+          "Normal",
+          null,
+          "Keen Sense",
+          "Surefoot",
+          50,
+          45,
+          45,
+          45,
+          55,
+          60,
+          300,
+          "Mobile utility base",
+          "Guy of Lusignan / small crowned chameleon",
+          "Direct concept source",
+          "Speed and Sp. Def lead a deliberately modest first-stage spread."
+        ],
+        "formulas": {
+          "P11": "IF(COUNT(J11:O11)=6,SUM(J11:O11),\"\")"
+        }
+      },
+      {
+        "row": 12,
+        "cells": [
+          10,
+          "Thronelorn",
+          "Regulet",
+          "Middle (3-stage)",
+          "Regulet",
+          "Dark",
+          null,
+          "Ambush",
+          "Surefoot",
+          60,
+          65,
+          60,
+          60,
+          70,
+          75,
+          390,
+          "Fast opportunist",
+          "King without a kingdom / darker chameleon",
+          "Direct concept source",
+          "Middle stage grows into Speed and opportunistic Attack without final-stage bulk."
+        ],
+        "formulas": {
+          "P12": "IF(COUNT(J12:O12)=6,SUM(J12:O12),\"\")"
+        }
+      },
+      {
+        "row": 13,
+        "cells": [
+          11,
+          "Cyprigon",
+          "Regulet",
+          "Final (3-stage)",
+          "Thronelorn",
+          "Ground",
+          "Dragon",
+          "Rock Anchor",
+          "Royal Bearing",
+          90,
+          105,
+          100,
+          70,
+          85,
+          70,
+          520,
+          "Bulky physical dragon",
+          "Guy of Lusignan / island ruler of Cyprus",
+          "Direct concept source",
+          "A crown-like all-round physical profile: strong Attack/Defense, but no extreme 120+ stat."
+        ],
+        "formulas": {
+          "P13": "IF(COUNT(J13:O13)=6,SUM(J13:O13),\"\")"
+        }
+      },
+      {
+        "row": 14,
+        "cells": [
+          12,
+          "Oathlet",
+          "Oathlet",
+          "Base (2-stage)",
+          null,
+          "Normal",
+          null,
+          "Unfazed",
+          "Thornhide",
+          60,
+          55,
+          65,
+          45,
+          55,
+          25,
+          305,
+          "Defensive base",
+          "Balian of Ibelin / oath-bound hedgehog",
+          "Direct concept source",
+          "Low Speed and reliable defenses establish the defender identity early."
+        ],
+        "formulas": {
+          "P14": "IF(COUNT(J14:O14)=6,SUM(J14:O14),\"\")"
+        }
+      },
+      {
+        "row": 15,
+        "cells": [
+          13,
+          "Parlethorn",
+          "Oathlet",
+          "Final (2-stage)",
+          "Oathlet",
+          "Steel",
+          "Fairy",
+          "Protector",
+          "Steady Guard",
+          85,
+          85,
+          120,
+          65,
+          100,
+          45,
+          500,
+          "Team protector / mixed wall",
+          "Balian / defender and diplomat",
+          "Direct concept source",
+          "Defense and Sp. Def dominate; Attack is deliberately only good, not elite."
+        ],
+        "formulas": {
+          "P15": "IF(COUNT(J15:O15)=6,SUM(J15:O15),\"\")"
+        }
+      },
+      {
+        "row": 16,
+        "cells": [
+          14,
+          "Jerbune",
+          "Jerbune",
+          "Base (branching)",
+          null,
+          "Psychic",
+          null,
+          "Keen Sense",
+          "Tactician",
+          55,
+          45,
+          45,
+          75,
+          60,
+          30,
+          310,
+          "Special utility base",
+          "Joan of England / proposed alliance with al-Adil",
+          "Direct concept source",
+          "Special Attack is the seed stat; physical stats remain modest before the branch choice."
+        ],
+        "formulas": {
+          "P16": "IF(COUNT(J16:O16)=6,SUM(J16:O16),\"\")"
+        }
+      },
+      {
+        "row": 17,
+        "cells": [
+          15,
+          "Concordune",
+          "Jerbune",
+          "Final branch",
+          "Jerbune",
+          "Psychic",
+          "Fairy",
+          "Mercy",
+          "Calm Guard",
+          80,
+          55,
+          70,
+          95,
+          110,
+          85,
+          495,
+          "Supportive special tank",
+          "Alliance fulfilled / concord branch",
+          "Direct concept source",
+          "Sp. Def and support utility lead, with enough Speed to play proactively."
+        ],
+        "formulas": {
+          "P17": "IF(COUNT(J17:O17)=6,SUM(J17:O17),\"\")"
+        }
+      },
+      {
+        "row": 18,
+        "cells": [
+          16,
+          "Sundune",
+          "Jerbune",
+          "Final branch",
+          "Jerbune",
+          "Psychic",
+          "Dark",
+          "Ambush",
+          "Grudge",
+          70,
+          85,
+          65,
+          100,
+          80,
+          95,
+          495,
+          "Fast mixed disruptor",
+          "Alliance broken / darker branch",
+          "Direct concept source",
+          "Faster and more offensive than Concordune, trading away bulk for mixed pressure."
+        ],
+        "formulas": {
+          "P18": "IF(COUNT(J18:O18)=6,SUM(J18:O18),\"\")"
+        }
+      },
+      {
+        "row": 19,
+        "cells": [
+          17,
+          "Pennmot",
+          "Pennmot",
+          "Base (2-stage)",
+          null,
+          "Fighting",
+          null,
+          "Battle Nerve",
+          "Surefoot",
+          65,
+          75,
+          60,
+          35,
+          45,
+          35,
+          315,
+          "Physical fighter base",
+          "Leopold V / banner-bearing marmot",
+          "Direct concept source",
+          "Attack is strong for a base form, offset by low Speed and special stats."
+        ],
+        "formulas": {
+          "P19": "IF(COUNT(J19:O19)=6,SUM(J19:O19),\"\")"
+        }
+      },
+      {
+        "row": 20,
+        "cells": [
+          18,
+          "Grudgemont",
+          "Pennmot",
+          "Final (2-stage)",
+          "Pennmot",
+          "Dark",
+          "Ice",
+          "Grudge",
+          "Coldproof",
+          90,
+          105,
+          90,
+          55,
+          75,
+          80,
+          495,
+          "Physical revenge bruiser",
+          "Leopold V / Grudge of Acre",
+          "Direct concept source",
+          "High Attack with balanced physical bulk; Speed is good rather than extreme."
+        ],
+        "formulas": {
+          "P20": "IF(COUNT(J20:O20)=6,SUM(J20:O20),\"\")"
+        }
+      },
+      {
+        "row": 21,
+        "cells": [
+          19,
+          "Courstoat",
+          "Courstoat",
+          "Base (2-stage)",
+          null,
+          "Normal",
+          null,
+          "Keen Sense",
+          "Surefoot",
+          45,
+          55,
+          45,
+          50,
+          50,
+          55,
+          300,
+          "Light utility attacker",
+          "Philip II / calculating stoat",
+          "Direct concept source",
+          "Even, low-BST spread with just enough Speed to hint at the calculating final form."
+        ],
+        "formulas": {
+          "P21": "IF(COUNT(J21:O21)=6,SUM(J21:O21),\"\")"
+        }
+      },
+      {
+        "row": 22,
+        "cells": [
+          20,
+          "Reversire",
+          "Courstoat",
+          "Final (2-stage)",
+          "Courstoat",
+          "Psychic",
+          "Dark",
+          "Tactician",
+          "Ambush",
+          65,
+          75,
+          65,
+          100,
+          80,
+          100,
+          485,
+          "Fast special tactician",
+          "Philip II / long-game strategist",
+          "Direct concept source",
+          "Twin 100s in Sp. Atk and Speed create the chess-player identity without excessive bulk."
+        ],
+        "formulas": {
+          "P22": "IF(COUNT(J22:O22)=6,SUM(J22:O22),\"\")"
+        }
+      },
+      {
+        "row": 23,
+        "cells": [
+          21,
+          "Whisbat",
+          "Whisbat",
+          "Base (2-stage)",
+          null,
+          "Flying",
+          null,
+          "Surefoot",
+          "Keen Sense",
+          45,
+          45,
+          40,
+          55,
+          45,
+          55,
+          285,
+          "Fast utility base",
+          "Hubert Walter / messenger-peacemaker bat",
+          "Direct concept source",
+          "Speed and Sp. Atk lead a deliberately low early-route style BST."
+        ],
+        "formulas": {
+          "P23": "IF(COUNT(J23:O23)=6,SUM(J23:O23),\"\")"
+        }
+      },
+      {
+        "row": 24,
+        "cells": [
+          22,
+          "Pactecho",
+          "Whisbat",
+          "Final (2-stage)",
+          "Whisbat",
+          "Flying",
+          "Psychic",
+          "Tactician",
+          "Calm Guard",
+          70,
+          60,
+          60,
+          100,
+          85,
+          105,
+          480,
+          "Fast special support",
+          "Hubert Walter / pilgrim peace and communication",
+          "Direct concept source",
+          "Speed is the highest stat, backed by Sp. Atk; physical power is intentionally low."
+        ],
+        "formulas": {
+          "P24": "IF(COUNT(J24:O24)=6,SUM(J24:O24),\"\")"
+        }
+      },
+      {
+        "row": 25,
+        "cells": [
+          23,
+          "Paleursa",
+          "Paleursa",
+          "Single-stage fossil",
+          null,
+          "Rock",
+          "Ice",
+          "Thick Pelt",
+          "Stoneplate",
+          100,
+          110,
+          120,
+          50,
+          85,
+          60,
+          525,
+          "Bulky physical fossil",
+          "Prehistoric bear / glacier fossil",
+          "Latest canonical batch source",
+          "Fossil power budget goes into HP, Attack and Defense; Speed and Sp. Atk stay limited."
+        ],
+        "formulas": {
+          "P25": "IF(COUNT(J25:O25)=6,SUM(J25:O25),\"\")"
+        }
+      },
+      {
+        "row": 26,
+        "cells": [
+          24,
+          "Raptyrale",
+          "Raptyrale",
+          "Single-stage fossil",
+          null,
+          "Rock",
+          "Dragon",
+          "Predator's Eye",
+          "Battle Rush",
+          70,
+          120,
+          70,
+          70,
+          75,
+          110,
+          515,
+          "Fast physical fossil sweeper",
+          "Velociraptor / feathered prehistoric predator",
+          "Latest canonical batch source",
+          "Attack and Speed are both elite, paid for with only average bulk."
+        ],
+        "formulas": {
+          "P26": "IF(COUNT(J26:O26)=6,SUM(J26:O26),\"\")"
+        }
+      },
+      {
+        "row": 27,
+        "cells": [
+          25,
+          "Sidermite",
+          "Sidermite",
+          "Base (2-stage fossil)",
+          null,
+          "Rock",
+          "Electric",
+          "Static Hide",
+          "Stoneplate",
+          55,
+          45,
+          75,
+          80,
+          70,
+          30,
+          355,
+          "Slow special fossil base",
+          "Ancient alien fossil / floating rock-eye organism",
+          "Latest canonical batch source",
+          "Special Attack and Defense dominate; Speed is intentionally very low."
+        ],
+        "formulas": {
+          "P27": "IF(COUNT(J27:O27)=6,SUM(J27:O27),\"\")"
+        }
+      },
+      {
+        "row": 28,
+        "cells": [
+          26,
+          "Xenolithid",
+          "Sidermite",
+          "Final (2-stage fossil)",
+          "Sidermite",
+          "Rock",
+          "Electric",
+          "Stable Core",
+          "Static Hide",
+          80,
+          70,
+          110,
+          115,
+          95,
+          45,
+          515,
+          "Special tank / alien artillery",
+          "Ancient alien fossil / levitating crystalline entity",
+          "Latest canonical batch source",
+          "High Sp. Atk and Defense with stable all-round bulk; low Speed prevents it becoming oppressive."
+        ],
+        "formulas": {
+          "P28": "IF(COUNT(J28:O28)=6,SUM(J28:O28),\"\")"
+        }
+      },
+      {
+        "row": 29,
+        "cells": [
+          27,
+          "Gravodo",
+          "Gravodo",
+          "Base (3-stage fossil)",
+          null,
+          "Rock",
+          "Poison",
+          "Poison Barbs",
+          "Stoneplate",
+          60,
+          70,
+          80,
+          35,
+          45,
+          30,
+          320,
+          "Physical tank base",
+          "Prehistoric Komodo / rocky monitor lizard",
+          "Latest canonical batch source",
+          "Defense and Attack lead; slow, low-special profile is maintained through the line."
+        ],
+        "formulas": {
+          "P29": "IF(COUNT(J29:O29)=6,SUM(J29:O29),\"\")"
+        }
+      },
+      {
+        "row": 30,
+        "cells": [
+          28,
+          "Cairnodo",
+          "Gravodo",
+          "Middle (3-stage fossil)",
+          "Gravodo",
+          "Rock",
+          "Poison",
+          "Poison Barbs",
+          "Stoneplate",
+          75,
+          90,
+          100,
+          45,
+          55,
+          40,
+          405,
+          "Physical tank middle",
+          "Armoured fossil monitor",
+          "Latest canonical batch source",
+          "A clear mid-stage jump in physical stats without prematurely reaching final-stage HP."
+        ],
+        "formulas": {
+          "P30": "IF(COUNT(J30:O30)=6,SUM(J30:O30),\"\")"
+        }
+      },
+      {
+        "row": 31,
+        "cells": [
+          29,
+          "Kronodo",
+          "Gravodo",
+          "Final (3-stage fossil)",
+          "Cairnodo",
+          "Rock",
+          "Poison",
+          "Poison Barbs",
+          "Rock Anchor",
+          105,
+          120,
+          125,
+          50,
+          75,
+          50,
+          525,
+          "Massive physical tank",
+          "Ancient Komodo titan",
+          "Latest canonical batch source",
+          "Huge HP/Attack/Defense define the titan; weak Sp. Atk and middling Speed keep the 525 BST fair."
+        ],
+        "formulas": {
+          "P31": "IF(COUNT(J31:O31)=6,SUM(J31:O31),\"\")"
+        }
+      },
+      {
+        "row": 32,
+        "cells": [
+          30,
+          "Guanrong",
+          "Guanrong",
+          "Single-stage mythic",
+          null,
+          "Grass",
+          "Steel",
+          "Protector",
+          "Battle Nerve",
+          100,
+          125,
+          115,
+          70,
+          105,
+          85,
+          600,
+          "Mythic physical guardian",
+          "Guan Yu-inspired binturong / oathkeeper",
+          "Latest canonical batch source",
+          "600 BST is weighted toward Attack and both defenses; Speed remains useful but not legendary-fast."
+        ],
+        "formulas": {
+          "P32": "IF(COUNT(J32:O32)=6,SUM(J32:O32),\"\")"
+        }
+      },
+      {
+        "row": 33,
+        "cells": [
+          31,
+          "Liubeirow",
+          "Liubeirow",
+          "Single-stage mythic",
+          null,
+          "Grass",
+          "Fairy",
+          "Mercy",
+          "Refreshing Spirit",
+          105,
+          75,
+          90,
+          115,
+          125,
+          90,
+          600,
+          "Mythic special support",
+          "Liu Bei-inspired binturong / benevolence and virtue",
+          "Latest canonical batch source",
+          "Sp. Def and Sp. Atk lead; HP supports healing play while Attack is the deliberate dump stat."
+        ],
+        "formulas": {
+          "P33": "IF(COUNT(J33:O33)=6,SUM(J33:O33),\"\")"
+        }
+      },
+      {
+        "row": 34,
+        "cells": [
+          32,
+          "Waranwei",
+          "Waranwei",
+          "Single-stage mythic",
+          null,
+          "Poison",
+          "Dragon",
+          "Tactician",
+          "Venomproof",
+          95,
+          115,
+          95,
+          120,
+          100,
+          75,
+          600,
+          "Mythic mixed strategist",
+          "Cao Cao-inspired Komodo / calculated ambition",
+          "Latest canonical batch source",
+          "Both attacking stats are high, with Sp. Atk narrowly leading; lower Speed suits deliberate strategy."
+        ],
+        "formulas": {
+          "P34": "IF(COUNT(J34:O34)=6,SUM(J34:O34),\"\")"
+        }
+      },
+      {
+        "row": 35,
+        "cells": [
+          33,
+          "Suncub",
+          "Suncub",
+          "Base (2-stage mythic line)",
+          null,
+          "Fire",
+          null,
+          "Cinderheart",
+          "Surefoot",
+          55,
+          65,
+          45,
+          50,
+          45,
+          60,
+          320,
+          "Fast physical-leaning base",
+          "Sun Ce-inspired red panda / young conqueror",
+          "Latest canonical batch source",
+          "Attack and Speed lead a starter-like 320 BST."
+        ],
+        "formulas": {
+          "P35": "IF(COUNT(J35:O35)=6,SUM(J35:O35),\"\")"
+        }
+      },
+      {
+        "row": 36,
+        "cells": [
+          34,
+          "Cehong",
+          "Suncub",
+          "Final (2-stage mythic line)",
+          "Suncub",
+          "Fire",
+          "Electric",
+          "Cinderheart",
+          "Battle Rush",
+          80,
+          115,
+          70,
+          90,
+          75,
+          90,
+          520,
+          "Fast physical/mixed attacker",
+          "Sun Ce-inspired red panda / Little Conqueror",
+          "Latest canonical batch source",
+          "Attack is the headline stat, with twin 90 special/speed values supporting an aggressive hybrid kit."
+        ],
+        "formulas": {
+          "P36": "IF(COUNT(J36:O36)=6,SUM(J36:O36),\"\")"
+        }
+      },
+      {
+        "row": 37,
+        "cells": [
+          35,
+          "Frostlynx",
+          "Frostlynx",
+          "Base (3-stage)",
+          null,
+          "Ice",
+          null,
+          "Coldproof",
+          "Keen Sense",
+          55,
+          50,
+          45,
+          65,
+          65,
+          30,
+          310,
+          "Special defensive base",
+          "Celestial snow-lynx line",
+          "Recovered roster reference",
+          "Sp. Atk and Sp. Def lead while low Speed preserves a young snow-cat feel."
+        ],
+        "formulas": {
+          "P37": "IF(COUNT(J37:O37)=6,SUM(J37:O37),\"\")"
+        }
+      },
+      {
+        "row": 38,
+        "cells": [
+          36,
+          "Glacelynx",
+          "Frostlynx",
+          "Middle (3-stage)",
+          "Frostlynx",
+          "Ice",
+          "Fairy",
+          "Coldproof",
+          "Surefoot",
+          70,
+          60,
+          60,
+          90,
+          80,
+          50,
+          410,
+          "Special attacker middle",
+          "Celestial snow-lynx line",
+          "Recovered roster reference",
+          "Middle evolution shifts toward Sp. Atk while remaining balanced."
+        ],
+        "formulas": {
+          "P38": "IF(COUNT(J38:O38)=6,SUM(J38:O38),\"\")"
+        }
+      },
+      {
+        "row": 39,
+        "cells": [
+          37,
+          "Caelynx",
+          "Frostlynx",
+          "Final (3-stage)",
+          "Glacelynx",
+          "Ice",
+          "Fairy",
+          "Calm Guard",
+          "Coldproof",
+          85,
+          75,
+          80,
+          120,
+          105,
+          70,
+          535,
+          "Strong special attacker / special tank",
+          "Celestial lynx; signature move Celestial Rime",
+          "Recovered roster + move reference",
+          "120 Sp. Atk and 105 Sp. Def create a rare celestial ace without entering the 580+ legendary band."
+        ],
+        "formulas": {
+          "P39": "IF(COUNT(J39:O39)=6,SUM(J39:O39),\"\")"
+        }
+      },
+      {
+        "row": 40,
+        "cells": [
+          38,
+          "Leafpaw",
+          "Leafpaw",
+          "Base (3-stage)",
+          null,
+          "Grass",
+          null,
+          "Wildheart",
+          "Thick Pelt",
+          65,
+          65,
+          60,
+          45,
+          50,
+          30,
+          315,
+          "Physical defensive base",
+          "Forest lion / guardian line",
+          "Recovered roster reference",
+          "HP, Attack and Defense lead; special offense is intentionally low."
+        ],
+        "formulas": {
+          "P40": "IF(COUNT(J40:O40)=6,SUM(J40:O40),\"\")"
+        }
+      },
+      {
+        "row": 41,
+        "cells": [
+          39,
+          "Verdalion",
+          "Leafpaw",
+          "Middle (3-stage)",
+          "Leafpaw",
+          "Grass",
+          "Ground",
+          "Wildheart",
+          "Sandcoat",
+          80,
+          85,
+          80,
+          55,
+          65,
+          45,
+          410,
+          "Physical bruiser middle",
+          "Forest lion / earth guardian",
+          "Recovered roster reference",
+          "Attack and physical bulk grow evenly before the final tank form."
+        ],
+        "formulas": {
+          "P41": "IF(COUNT(J41:O41)=6,SUM(J41:O41),\"\")"
+        }
+      },
+      {
+        "row": 42,
+        "cells": [
+          40,
+          "Tellurion",
+          "Leafpaw",
+          "Final (3-stage)",
+          "Verdalion",
+          "Grass",
+          "Ground",
+          "Rock Anchor",
+          "Steady Guard",
+          105,
+          110,
+          110,
+          60,
+          85,
+          55,
+          525,
+          "Bulky physical guardian",
+          "Forest lion / rooted pride",
+          "Recovered roster + move reference",
+          "Symmetrical 110 Attack/Defense and high HP make it sturdy without mythic-level BST."
+        ],
+        "formulas": {
+          "P42": "IF(COUNT(J42:O42)=6,SUM(J42:O42),\"\")"
+        }
+      },
+      {
+        "row": 43,
+        "cells": [
+          41,
+          "Ashkit",
+          "Ashkit",
+          "Base (3-stage)",
+          null,
+          "Fire",
+          "Ghost",
+          "Cinderheart",
+          "Ghostwalk",
+          55,
+          60,
+          45,
+          70,
+          45,
+          40,
+          315,
+          "Mixed offensive base",
+          "Infernal panther line",
+          "Recovered roster reference",
+          "Sp. Atk leads slightly, with Attack close enough to support a mixed identity."
+        ],
+        "formulas": {
+          "P43": "IF(COUNT(J43:O43)=6,SUM(J43:O43),\"\")"
+        }
+      },
+      {
+        "row": 44,
+        "cells": [
+          42,
+          "Umbralit",
+          "Ashkit",
+          "Middle (3-stage)",
+          "Ashkit",
+          "Fire",
+          "Ghost",
+          "Cinderheart",
+          "Ghostwalk",
+          70,
+          75,
+          55,
+          95,
+          65,
+          50,
+          410,
+          "Mixed special attacker middle",
+          "Infernal panther line",
+          "Recovered roster reference",
+          "Sp. Atk becomes the clear lead while physical Attack remains useful."
+        ],
+        "formulas": {
+          "P44": "IF(COUNT(J44:O44)=6,SUM(J44:O44),\"\")"
+        }
+      },
+      {
+        "row": 45,
+        "cells": [
+          43,
+          "Gehennuar",
+          "Ashkit",
+          "Final (3-stage)",
+          "Umbralit",
+          "Fire",
+          "Ghost",
+          "Ambush",
+          "Ghostwalk",
+          85,
+          105,
+          70,
+          115,
+          75,
+          80,
+          530,
+          "Fast mixed infernal attacker",
+          "Infernal panther; signature move Infernal Prowl",
+          "Recovered roster + move reference",
+          "High mixed offenses and good Speed are balanced by only average defensive stats."
+        ],
+        "formulas": {
+          "P45": "IF(COUNT(J45:O45)=6,SUM(J45:O45),\"\")"
+        }
+      },
+      {
+        "row": 46,
+        "cells": [
+          44,
+          "Scarimp",
+          "Scarimp",
+          "Base (3-stage; middle identity missing)",
+          null,
+          "Dark",
+          null,
+          "Battle Nerve",
+          "Surefoot",
+          55,
+          70,
+          45,
+          55,
+          45,
+          40,
+          310,
+          "Cheeky physical base",
+          "Dante-inspired rebellious imp line",
+          "Direct named line endpoint",
+          "Attack leads to match the rebellious close-range concept; total stays in starter-like territory."
+        ],
+        "formulas": {
+          "P46": "IF(COUNT(J46:O46)=6,SUM(J46:O46),\"\")"
+        }
+      },
+      {
+        "row": 47,
+        "cells": [
+          45,
+          "Noctafey",
+          "Scarimp",
+          "Final (3-stage)",
+          "Middle stage identity unavailable",
+          "Dark",
+          "Fairy",
+          "Ambush",
+          "Unfazed",
+          80,
+          110,
+          75,
+          105,
+          80,
+          85,
+          535,
+          "Fast mixed trickster",
+          "Dante-inspired dark-fairy final; signature move Devilish Encore",
+          "Direct named line endpoint + move reference",
+          "Strong mixed offenses with good Speed; 535 BST marks it as an elite final without pseudo-legend status."
+        ],
+        "formulas": {
+          "P47": "IF(COUNT(J47:O47)=6,SUM(J47:O47),\"\")"
+        }
+      },
+      {
+        "row": 48,
+        "cells": [
+          46,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P48": "IF(COUNT(J48:O48)=6,SUM(J48:O48),\"\")"
+        }
+      },
+      {
+        "row": 49,
+        "cells": [
+          47,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P49": "IF(COUNT(J49:O49)=6,SUM(J49:O49),\"\")"
+        }
+      },
+      {
+        "row": 50,
+        "cells": [
+          48,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P50": "IF(COUNT(J50:O50)=6,SUM(J50:O50),\"\")"
+        }
+      },
+      {
+        "row": 51,
+        "cells": [
+          49,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P51": "IF(COUNT(J51:O51)=6,SUM(J51:O51),\"\")"
+        }
+      },
+      {
+        "row": 52,
+        "cells": [
+          50,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P52": "IF(COUNT(J52:O52)=6,SUM(J52:O52),\"\")"
+        }
+      },
+      {
+        "row": 53,
+        "cells": [
+          51,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P53": "IF(COUNT(J53:O53)=6,SUM(J53:O53),\"\")"
+        }
+      },
+      {
+        "row": 54,
+        "cells": [
+          52,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P54": "IF(COUNT(J54:O54)=6,SUM(J54:O54),\"\")"
+        }
+      },
+      {
+        "row": 55,
+        "cells": [
+          53,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P55": "IF(COUNT(J55:O55)=6,SUM(J55:O55),\"\")"
+        }
+      },
+      {
+        "row": 56,
+        "cells": [
+          54,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P56": "IF(COUNT(J56:O56)=6,SUM(J56:O56),\"\")"
+        }
+      },
+      {
+        "row": 57,
+        "cells": [
+          55,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P57": "IF(COUNT(J57:O57)=6,SUM(J57:O57),\"\")"
+        }
+      },
+      {
+        "row": 58,
+        "cells": [
+          56,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P58": "IF(COUNT(J58:O58)=6,SUM(J58:O58),\"\")"
+        }
+      },
+      {
+        "row": 59,
+        "cells": [
+          57,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P59": "IF(COUNT(J59:O59)=6,SUM(J59:O59),\"\")"
+        }
+      },
+      {
+        "row": 60,
+        "cells": [
+          58,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P60": "IF(COUNT(J60:O60)=6,SUM(J60:O60),\"\")"
+        }
+      },
+      {
+        "row": 61,
+        "cells": [
+          59,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P61": "IF(COUNT(J61:O61)=6,SUM(J61:O61),\"\")"
+        }
+      },
+      {
+        "row": 62,
+        "cells": [
+          60,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P62": "IF(COUNT(J62:O62)=6,SUM(J62:O62),\"\")"
+        }
+      },
+      {
+        "row": 63,
+        "cells": [
+          61,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P63": "IF(COUNT(J63:O63)=6,SUM(J63:O63),\"\")"
+        }
+      },
+      {
+        "row": 64,
+        "cells": [
+          62,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P64": "IF(COUNT(J64:O64)=6,SUM(J64:O64),\"\")"
+        }
+      },
+      {
+        "row": 65,
+        "cells": [
+          63,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P65": "IF(COUNT(J65:O65)=6,SUM(J65:O65),\"\")"
+        }
+      },
+      {
+        "row": 66,
+        "cells": [
+          64,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P66": "IF(COUNT(J66:O66)=6,SUM(J66:O66),\"\")"
+        }
+      },
+      {
+        "row": 67,
+        "cells": [
+          65,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P67": "IF(COUNT(J67:O67)=6,SUM(J67:O67),\"\")"
+        }
+      },
+      {
+        "row": 68,
+        "cells": [
+          66,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P68": "IF(COUNT(J68:O68)=6,SUM(J68:O68),\"\")"
+        }
+      },
+      {
+        "row": 69,
+        "cells": [
+          67,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P69": "IF(COUNT(J69:O69)=6,SUM(J69:O69),\"\")"
+        }
+      },
+      {
+        "row": 70,
+        "cells": [
+          68,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P70": "IF(COUNT(J70:O70)=6,SUM(J70:O70),\"\")"
+        }
+      },
+      {
+        "row": 71,
+        "cells": [
+          69,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P71": "IF(COUNT(J71:O71)=6,SUM(J71:O71),\"\")"
+        }
+      },
+      {
+        "row": 72,
+        "cells": [
+          70,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P72": "IF(COUNT(J72:O72)=6,SUM(J72:O72),\"\")"
+        }
+      },
+      {
+        "row": 73,
+        "cells": [
+          71,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P73": "IF(COUNT(J73:O73)=6,SUM(J73:O73),\"\")"
+        }
+      },
+      {
+        "row": 74,
+        "cells": [
+          72,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P74": "IF(COUNT(J74:O74)=6,SUM(J74:O74),\"\")"
+        }
+      },
+      {
+        "row": 75,
+        "cells": [
+          73,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P75": "IF(COUNT(J75:O75)=6,SUM(J75:O75),\"\")"
+        }
+      },
+      {
+        "row": 76,
+        "cells": [
+          74,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P76": "IF(COUNT(J76:O76)=6,SUM(J76:O76),\"\")"
+        }
+      },
+      {
+        "row": 77,
+        "cells": [
+          75,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P77": "IF(COUNT(J77:O77)=6,SUM(J77:O77),\"\")"
+        }
+      },
+      {
+        "row": 78,
+        "cells": [
+          76,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P78": "IF(COUNT(J78:O78)=6,SUM(J78:O78),\"\")"
+        }
+      },
+      {
+        "row": 79,
+        "cells": [
+          77,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P79": "IF(COUNT(J79:O79)=6,SUM(J79:O79),\"\")"
+        }
+      },
+      {
+        "row": 80,
+        "cells": [
+          78,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P80": "IF(COUNT(J80:O80)=6,SUM(J80:O80),\"\")"
+        }
+      },
+      {
+        "row": 81,
+        "cells": [
+          79,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P81": "IF(COUNT(J81:O81)=6,SUM(J81:O81),\"\")"
+        }
+      },
+      {
+        "row": 82,
+        "cells": [
+          80,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P82": "IF(COUNT(J82:O82)=6,SUM(J82:O82),\"\")"
+        }
+      },
+      {
+        "row": 83,
+        "cells": [
+          81,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P83": "IF(COUNT(J83:O83)=6,SUM(J83:O83),\"\")"
+        }
+      },
+      {
+        "row": 84,
+        "cells": [
+          82,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P84": "IF(COUNT(J84:O84)=6,SUM(J84:O84),\"\")"
+        }
+      },
+      {
+        "row": 85,
+        "cells": [
+          83,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P85": "IF(COUNT(J85:O85)=6,SUM(J85:O85),\"\")"
+        }
+      },
+      {
+        "row": 86,
+        "cells": [
+          84,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P86": "IF(COUNT(J86:O86)=6,SUM(J86:O86),\"\")"
+        }
+      },
+      {
+        "row": 87,
+        "cells": [
+          85,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P87": "IF(COUNT(J87:O87)=6,SUM(J87:O87),\"\")"
+        }
+      },
+      {
+        "row": 88,
+        "cells": [
+          86,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P88": "IF(COUNT(J88:O88)=6,SUM(J88:O88),\"\")"
+        }
+      },
+      {
+        "row": 89,
+        "cells": [
+          87,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P89": "IF(COUNT(J89:O89)=6,SUM(J89:O89),\"\")"
+        }
+      },
+      {
+        "row": 90,
+        "cells": [
+          88,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P90": "IF(COUNT(J90:O90)=6,SUM(J90:O90),\"\")"
+        }
+      },
+      {
+        "row": 91,
+        "cells": [
+          89,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P91": "IF(COUNT(J91:O91)=6,SUM(J91:O91),\"\")"
+        }
+      },
+      {
+        "row": 92,
+        "cells": [
+          90,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P92": "IF(COUNT(J92:O92)=6,SUM(J92:O92),\"\")"
+        }
+      },
+      {
+        "row": 93,
+        "cells": [
+          91,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P93": "IF(COUNT(J93:O93)=6,SUM(J93:O93),\"\")"
+        }
+      },
+      {
+        "row": 94,
+        "cells": [
+          92,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P94": "IF(COUNT(J94:O94)=6,SUM(J94:O94),\"\")"
+        }
+      },
+      {
+        "row": 95,
+        "cells": [
+          93,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P95": "IF(COUNT(J95:O95)=6,SUM(J95:O95),\"\")"
+        }
+      },
+      {
+        "row": 96,
+        "cells": [
+          94,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P96": "IF(COUNT(J96:O96)=6,SUM(J96:O96),\"\")"
+        }
+      },
+      {
+        "row": 97,
+        "cells": [
+          95,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P97": "IF(COUNT(J97:O97)=6,SUM(J97:O97),\"\")"
+        }
+      },
+      {
+        "row": 98,
+        "cells": [
+          96,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P98": "IF(COUNT(J98:O98)=6,SUM(J98:O98),\"\")"
+        }
+      },
+      {
+        "row": 99,
+        "cells": [
+          97,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P99": "IF(COUNT(J99:O99)=6,SUM(J99:O99),\"\")"
+        }
+      },
+      {
+        "row": 100,
+        "cells": [
+          98,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P100": "IF(COUNT(J100:O100)=6,SUM(J100:O100),\"\")"
+        }
+      },
+      {
+        "row": 101,
+        "cells": [
+          99,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P101": "IF(COUNT(J101:O101)=6,SUM(J101:O101),\"\")"
+        }
+      },
+      {
+        "row": 102,
+        "cells": [
+          100,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P102": "IF(COUNT(J102:O102)=6,SUM(J102:O102),\"\")"
+        }
+      },
+      {
+        "row": 103,
+        "cells": [
+          101,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P103": "IF(COUNT(J103:O103)=6,SUM(J103:O103),\"\")"
+        }
+      },
+      {
+        "row": 104,
+        "cells": [
+          102,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P104": "IF(COUNT(J104:O104)=6,SUM(J104:O104),\"\")"
+        }
+      },
+      {
+        "row": 105,
+        "cells": [
+          103,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P105": "IF(COUNT(J105:O105)=6,SUM(J105:O105),\"\")"
+        }
+      },
+      {
+        "row": 106,
+        "cells": [
+          104,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P106": "IF(COUNT(J106:O106)=6,SUM(J106:O106),\"\")"
+        }
+      },
+      {
+        "row": 107,
+        "cells": [
+          105,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P107": "IF(COUNT(J107:O107)=6,SUM(J107:O107),\"\")"
+        }
+      },
+      {
+        "row": 108,
+        "cells": [
+          106,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P108": "IF(COUNT(J108:O108)=6,SUM(J108:O108),\"\")"
+        }
+      },
+      {
+        "row": 109,
+        "cells": [
+          107,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P109": "IF(COUNT(J109:O109)=6,SUM(J109:O109),\"\")"
+        }
+      },
+      {
+        "row": 110,
+        "cells": [
+          108,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P110": "IF(COUNT(J110:O110)=6,SUM(J110:O110),\"\")"
+        }
+      },
+      {
+        "row": 111,
+        "cells": [
+          109,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P111": "IF(COUNT(J111:O111)=6,SUM(J111:O111),\"\")"
+        }
+      },
+      {
+        "row": 112,
+        "cells": [
+          110,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P112": "IF(COUNT(J112:O112)=6,SUM(J112:O112),\"\")"
+        }
+      },
+      {
+        "row": 113,
+        "cells": [
+          111,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P113": "IF(COUNT(J113:O113)=6,SUM(J113:O113),\"\")"
+        }
+      },
+      {
+        "row": 114,
+        "cells": [
+          112,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P114": "IF(COUNT(J114:O114)=6,SUM(J114:O114),\"\")"
+        }
+      },
+      {
+        "row": 115,
+        "cells": [
+          113,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P115": "IF(COUNT(J115:O115)=6,SUM(J115:O115),\"\")"
+        }
+      },
+      {
+        "row": 116,
+        "cells": [
+          114,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P116": "IF(COUNT(J116:O116)=6,SUM(J116:O116),\"\")"
+        }
+      },
+      {
+        "row": 117,
+        "cells": [
+          115,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P117": "IF(COUNT(J117:O117)=6,SUM(J117:O117),\"\")"
+        }
+      },
+      {
+        "row": 118,
+        "cells": [
+          116,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P118": "IF(COUNT(J118:O118)=6,SUM(J118:O118),\"\")"
+        }
+      },
+      {
+        "row": 119,
+        "cells": [
+          117,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P119": "IF(COUNT(J119:O119)=6,SUM(J119:O119),\"\")"
+        }
+      },
+      {
+        "row": 120,
+        "cells": [
+          118,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P120": "IF(COUNT(J120:O120)=6,SUM(J120:O120),\"\")"
+        }
+      },
+      {
+        "row": 121,
+        "cells": [
+          119,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P121": "IF(COUNT(J121:O121)=6,SUM(J121:O121),\"\")"
+        }
+      },
+      {
+        "row": 122,
+        "cells": [
+          120,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P122": "IF(COUNT(J122:O122)=6,SUM(J122:O122),\"\")"
+        }
+      },
+      {
+        "row": 123,
+        "cells": [
+          121,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P123": "IF(COUNT(J123:O123)=6,SUM(J123:O123),\"\")"
+        }
+      },
+      {
+        "row": 124,
+        "cells": [
+          122,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P124": "IF(COUNT(J124:O124)=6,SUM(J124:O124),\"\")"
+        }
+      },
+      {
+        "row": 125,
+        "cells": [
+          123,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P125": "IF(COUNT(J125:O125)=6,SUM(J125:O125),\"\")"
+        }
+      },
+      {
+        "row": 126,
+        "cells": [
+          124,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P126": "IF(COUNT(J126:O126)=6,SUM(J126:O126),\"\")"
+        }
+      },
+      {
+        "row": 127,
+        "cells": [
+          125,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P127": "IF(COUNT(J127:O127)=6,SUM(J127:O127),\"\")"
+        }
+      },
+      {
+        "row": 128,
+        "cells": [
+          126,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P128": "IF(COUNT(J128:O128)=6,SUM(J128:O128),\"\")"
+        }
+      },
+      {
+        "row": 129,
+        "cells": [
+          127,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P129": "IF(COUNT(J129:O129)=6,SUM(J129:O129),\"\")"
+        }
+      },
+      {
+        "row": 130,
+        "cells": [
+          128,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P130": "IF(COUNT(J130:O130)=6,SUM(J130:O130),\"\")"
+        }
+      },
+      {
+        "row": 131,
+        "cells": [
+          129,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P131": "IF(COUNT(J131:O131)=6,SUM(J131:O131),\"\")"
+        }
+      },
+      {
+        "row": 132,
+        "cells": [
+          130,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P132": "IF(COUNT(J132:O132)=6,SUM(J132:O132),\"\")"
+        }
+      },
+      {
+        "row": 133,
+        "cells": [
+          131,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P133": "IF(COUNT(J133:O133)=6,SUM(J133:O133),\"\")"
+        }
+      },
+      {
+        "row": 134,
+        "cells": [
+          132,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P134": "IF(COUNT(J134:O134)=6,SUM(J134:O134),\"\")"
+        }
+      },
+      {
+        "row": 135,
+        "cells": [
+          133,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P135": "IF(COUNT(J135:O135)=6,SUM(J135:O135),\"\")"
+        }
+      },
+      {
+        "row": 136,
+        "cells": [
+          134,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P136": "IF(COUNT(J136:O136)=6,SUM(J136:O136),\"\")"
+        }
+      },
+      {
+        "row": 137,
+        "cells": [
+          135,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P137": "IF(COUNT(J137:O137)=6,SUM(J137:O137),\"\")"
+        }
+      },
+      {
+        "row": 138,
+        "cells": [
+          136,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P138": "IF(COUNT(J138:O138)=6,SUM(J138:O138),\"\")"
+        }
+      },
+      {
+        "row": 139,
+        "cells": [
+          137,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P139": "IF(COUNT(J139:O139)=6,SUM(J139:O139),\"\")"
+        }
+      },
+      {
+        "row": 140,
+        "cells": [
+          138,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P140": "IF(COUNT(J140:O140)=6,SUM(J140:O140),\"\")"
+        }
+      },
+      {
+        "row": 141,
+        "cells": [
+          139,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P141": "IF(COUNT(J141:O141)=6,SUM(J141:O141),\"\")"
+        }
+      },
+      {
+        "row": 142,
+        "cells": [
+          140,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P142": "IF(COUNT(J142:O142)=6,SUM(J142:O142),\"\")"
+        }
+      },
+      {
+        "row": 143,
+        "cells": [
+          141,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P143": "IF(COUNT(J143:O143)=6,SUM(J143:O143),\"\")"
+        }
+      },
+      {
+        "row": 144,
+        "cells": [
+          142,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P144": "IF(COUNT(J144:O144)=6,SUM(J144:O144),\"\")"
+        }
+      },
+      {
+        "row": 145,
+        "cells": [
+          143,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P145": "IF(COUNT(J145:O145)=6,SUM(J145:O145),\"\")"
+        }
+      },
+      {
+        "row": 146,
+        "cells": [
+          144,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P146": "IF(COUNT(J146:O146)=6,SUM(J146:O146),\"\")"
+        }
+      },
+      {
+        "row": 147,
+        "cells": [
+          145,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P147": "IF(COUNT(J147:O147)=6,SUM(J147:O147),\"\")"
+        }
+      },
+      {
+        "row": 148,
+        "cells": [
+          146,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P148": "IF(COUNT(J148:O148)=6,SUM(J148:O148),\"\")"
+        }
+      },
+      {
+        "row": 149,
+        "cells": [
+          147,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P149": "IF(COUNT(J149:O149)=6,SUM(J149:O149),\"\")"
+        }
+      },
+      {
+        "row": 150,
+        "cells": [
+          148,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P150": "IF(COUNT(J150:O150)=6,SUM(J150:O150),\"\")"
+        }
+      },
+      {
+        "row": 151,
+        "cells": [
+          149,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P151": "IF(COUNT(J151:O151)=6,SUM(J151:O151),\"\")"
+        }
+      },
+      {
+        "row": 152,
+        "cells": [
+          150,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P152": "IF(COUNT(J152:O152)=6,SUM(J152:O152),\"\")"
+        }
+      },
+      {
+        "row": 153,
+        "cells": [
+          151,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P153": "IF(COUNT(J153:O153)=6,SUM(J153:O153),\"\")"
+        }
+      },
+      {
+        "row": 154,
+        "cells": [
+          152,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P154": "IF(COUNT(J154:O154)=6,SUM(J154:O154),\"\")"
+        }
+      },
+      {
+        "row": 155,
+        "cells": [
+          153,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P155": "IF(COUNT(J155:O155)=6,SUM(J155:O155),\"\")"
+        }
+      },
+      {
+        "row": 156,
+        "cells": [
+          154,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P156": "IF(COUNT(J156:O156)=6,SUM(J156:O156),\"\")"
+        }
+      },
+      {
+        "row": 157,
+        "cells": [
+          155,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P157": "IF(COUNT(J157:O157)=6,SUM(J157:O157),\"\")"
+        }
+      },
+      {
+        "row": 158,
+        "cells": [
+          156,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P158": "IF(COUNT(J158:O158)=6,SUM(J158:O158),\"\")"
+        }
+      },
+      {
+        "row": 159,
+        "cells": [
+          157,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P159": "IF(COUNT(J159:O159)=6,SUM(J159:O159),\"\")"
+        }
+      },
+      {
+        "row": 160,
+        "cells": [
+          158,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P160": "IF(COUNT(J160:O160)=6,SUM(J160:O160),\"\")"
+        }
+      },
+      {
+        "row": 161,
+        "cells": [
+          159,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P161": "IF(COUNT(J161:O161)=6,SUM(J161:O161),\"\")"
+        }
+      },
+      {
+        "row": 162,
+        "cells": [
+          160,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P162": "IF(COUNT(J162:O162)=6,SUM(J162:O162),\"\")"
+        }
+      },
+      {
+        "row": 163,
+        "cells": [
+          161,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P163": "IF(COUNT(J163:O163)=6,SUM(J163:O163),\"\")"
+        }
+      },
+      {
+        "row": 164,
+        "cells": [
+          162,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P164": "IF(COUNT(J164:O164)=6,SUM(J164:O164),\"\")"
+        }
+      },
+      {
+        "row": 165,
+        "cells": [
+          163,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P165": "IF(COUNT(J165:O165)=6,SUM(J165:O165),\"\")"
+        }
+      },
+      {
+        "row": 166,
+        "cells": [
+          164,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P166": "IF(COUNT(J166:O166)=6,SUM(J166:O166),\"\")"
+        }
+      },
+      {
+        "row": 167,
+        "cells": [
+          165,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P167": "IF(COUNT(J167:O167)=6,SUM(J167:O167),\"\")"
+        }
+      },
+      {
+        "row": 168,
+        "cells": [
+          166,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P168": "IF(COUNT(J168:O168)=6,SUM(J168:O168),\"\")"
+        }
+      },
+      {
+        "row": 169,
+        "cells": [
+          167,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P169": "IF(COUNT(J169:O169)=6,SUM(J169:O169),\"\")"
+        }
+      },
+      {
+        "row": 170,
+        "cells": [
+          168,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P170": "IF(COUNT(J170:O170)=6,SUM(J170:O170),\"\")"
+        }
+      },
+      {
+        "row": 171,
+        "cells": [
+          169,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P171": "IF(COUNT(J171:O171)=6,SUM(J171:O171),\"\")"
+        }
+      },
+      {
+        "row": 172,
+        "cells": [
+          170,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P172": "IF(COUNT(J172:O172)=6,SUM(J172:O172),\"\")"
+        }
+      },
+      {
+        "row": 173,
+        "cells": [
+          171,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P173": "IF(COUNT(J173:O173)=6,SUM(J173:O173),\"\")"
+        }
+      },
+      {
+        "row": 174,
+        "cells": [
+          172,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P174": "IF(COUNT(J174:O174)=6,SUM(J174:O174),\"\")"
+        }
+      },
+      {
+        "row": 175,
+        "cells": [
+          173,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P175": "IF(COUNT(J175:O175)=6,SUM(J175:O175),\"\")"
+        }
+      },
+      {
+        "row": 176,
+        "cells": [
+          174,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P176": "IF(COUNT(J176:O176)=6,SUM(J176:O176),\"\")"
+        }
+      },
+      {
+        "row": 177,
+        "cells": [
+          175,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P177": "IF(COUNT(J177:O177)=6,SUM(J177:O177),\"\")"
+        }
+      },
+      {
+        "row": 178,
+        "cells": [
+          176,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P178": "IF(COUNT(J178:O178)=6,SUM(J178:O178),\"\")"
+        }
+      },
+      {
+        "row": 179,
+        "cells": [
+          177,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P179": "IF(COUNT(J179:O179)=6,SUM(J179:O179),\"\")"
+        }
+      },
+      {
+        "row": 180,
+        "cells": [
+          178,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P180": "IF(COUNT(J180:O180)=6,SUM(J180:O180),\"\")"
+        }
+      },
+      {
+        "row": 181,
+        "cells": [
+          179,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P181": "IF(COUNT(J181:O181)=6,SUM(J181:O181),\"\")"
+        }
+      },
+      {
+        "row": 182,
+        "cells": [
+          180,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P182": "IF(COUNT(J182:O182)=6,SUM(J182:O182),\"\")"
+        }
+      },
+      {
+        "row": 183,
+        "cells": [
+          181,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P183": "IF(COUNT(J183:O183)=6,SUM(J183:O183),\"\")"
+        }
+      },
+      {
+        "row": 184,
+        "cells": [
+          182,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P184": "IF(COUNT(J184:O184)=6,SUM(J184:O184),\"\")"
+        }
+      },
+      {
+        "row": 185,
+        "cells": [
+          183,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P185": "IF(COUNT(J185:O185)=6,SUM(J185:O185),\"\")"
+        }
+      },
+      {
+        "row": 186,
+        "cells": [
+          184,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P186": "IF(COUNT(J186:O186)=6,SUM(J186:O186),\"\")"
+        }
+      },
+      {
+        "row": 187,
+        "cells": [
+          185,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P187": "IF(COUNT(J187:O187)=6,SUM(J187:O187),\"\")"
+        }
+      },
+      {
+        "row": 188,
+        "cells": [
+          186,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P188": "IF(COUNT(J188:O188)=6,SUM(J188:O188),\"\")"
+        }
+      },
+      {
+        "row": 189,
+        "cells": [
+          187,
+          "—",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Roster identity source not available",
+          "Reserved for canonical dex identity; no stats or abilities invented."
+        ],
+        "formulas": {
+          "P189": "IF(COUNT(J189:O189)=6,SUM(J189:O189),\"\")"
+        }
+      }
+    ],
+    "Ability Glossary": [
+      {
+        "row": 1,
+        "cells": [
+          "Ability Glossary",
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 2,
+        "cells": [
+          "Ability",
+          "Class",
+          "Battle Effect",
+          "Balance Intent"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          "Ambush",
+          "Reusable",
+          "First damaging move used after this monster enters battle deals 10% more damage.",
+          "Small tempo reward; no ongoing multiplier."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 4,
+        "cells": [
+          "Battle Nerve",
+          "Reusable",
+          "Opponents cannot lower this monster's Attack.",
+          "Simple anti-debuff ability."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 5,
+        "cells": [
+          "Battle Rush",
+          "Reusable",
+          "After this monster knocks out an opposing monster, its Speed rises by 1 stage.",
+          "Strong on sweepers; assigned sparingly."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 6,
+        "cells": [
+          "Calm Guard",
+          "Reusable",
+          "Opponents cannot lower this monster's Sp. Def.",
+          "Simple anti-debuff ability."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 7,
+        "cells": [
+          "Cinderheart",
+          "Reusable",
+          "Fire-type moves deal 1.5× damage while this monster is at one-third HP or less.",
+          "Gen III-style low-HP type boost."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 8,
+        "cells": [
+          "Coldproof",
+          "Reusable",
+          "This monster cannot be frozen.",
+          "Pure status immunity."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 9,
+        "cells": [
+          "Ghostwalk",
+          "Reusable",
+          "This monster cannot be trapped and may always switch out normally.",
+          "Utility only; no damage bonus."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 10,
+        "cells": [
+          "Grudge",
+          "Reusable",
+          "After this monster is damaged by a critical hit, its Attack rises by 1 stage.",
+          "Reactive rather than always-on."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 11,
+        "cells": [
+          "Hard Head",
+          "Reusable",
+          "This monster takes no recoil damage from its own damaging moves.",
+          "Useful but only relevant to recoil moves."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 12,
+        "cells": [
+          "Keen Sense",
+          "Reusable",
+          "This monster's accuracy cannot be lowered by an opponent.",
+          "Gen III-style simple protection."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 13,
+        "cells": [
+          "Mercy",
+          "Reusable",
+          "Healing moves used by this monster restore 10% more HP, capped at maximum HP.",
+          "Support-oriented, intentionally modest."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 14,
+        "cells": [
+          "Poison Barbs",
+          "Reusable",
+          "A foe that makes contact has a 20% chance to become poisoned.",
+          "Contact punishment."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 15,
+        "cells": [
+          "Predator's Eye",
+          "Rare",
+          "Moves with an increased critical-hit ratio gain one additional critical-hit stage.",
+          "Narrow offensive specialist ability."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 16,
+        "cells": [
+          "Protector",
+          "Reusable",
+          "When sent in immediately after an ally faints, this monster's Defense rises by 1 stage.",
+          "Works in normal singles play and team battles."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 17,
+        "cells": [
+          "Refreshing Spirit",
+          "Rare",
+          "Non-volatile status conditions are cured when this monster switches out.",
+          "Powerful support trait, assigned very sparingly."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 18,
+        "cells": [
+          "Rock Anchor",
+          "Reusable",
+          "An opponent cannot force this monster to switch out.",
+          "Defensive utility; voluntary switching still works."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 19,
+        "cells": [
+          "Royal Bearing",
+          "Rare",
+          "When this monster enters battle, the opposing active monster's Attack falls by 1 stage.",
+          "High-impact entry ability; reserved for a very small number of finals."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 20,
+        "cells": [
+          "Sandcoat",
+          "Reusable",
+          "This monster takes no damage from sandstorm weather.",
+          "Environmental immunity only."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 21,
+        "cells": [
+          "Stable Core",
+          "Rare",
+          "Opponents cannot lower any of this monster's stats.",
+          "Strong anti-control ability; reserved for Xenolithid."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 22,
+        "cells": [
+          "Static Hide",
+          "Reusable",
+          "A foe that makes contact has a 20% chance to become paralyzed.",
+          "Contact punishment."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 23,
+        "cells": [
+          "Steady Guard",
+          "Reusable",
+          "Opponents cannot lower this monster's Defense.",
+          "Simple anti-debuff ability."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 24,
+        "cells": [
+          "Stoneplate",
+          "Reusable",
+          "Damage this monster receives from critical hits is reduced by 25%.",
+          "Does not prevent critical hits; only softens them."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 25,
+        "cells": [
+          "Surefoot",
+          "Reusable",
+          "Opponents cannot lower this monster's Speed.",
+          "Simple anti-debuff ability."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 26,
+        "cells": [
+          "Thick Pelt",
+          "Reusable",
+          "Damage taken from Fire- and Ice-type moves is reduced by 25%.",
+          "Broad but modest defensive resistance."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 27,
+        "cells": [
+          "Thornhide",
+          "Reusable",
+          "A foe that makes contact loses 1/16 of its maximum HP.",
+          "Chip-damage defensive ability."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 28,
+        "cells": [
+          "Tideheart",
+          "Reusable",
+          "Water-type moves deal 1.5× damage while this monster is at one-third HP or less.",
+          "Gen III-style low-HP type boost."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 29,
+        "cells": [
+          "Tactician",
+          "Reusable",
+          "Status moves used by this monster gain 10 percentage points of accuracy, up to 100%.",
+          "Helps strategic kits without increasing direct damage."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 30,
+        "cells": [
+          "Unfazed",
+          "Reusable",
+          "This monster cannot flinch.",
+          "Simple status protection."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 31,
+        "cells": [
+          "Venomproof",
+          "Reusable",
+          "This monster cannot be poisoned or badly poisoned.",
+          "Pure status immunity."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 32,
+        "cells": [
+          "Wildheart",
+          "Reusable",
+          "Grass-type moves deal 1.5× damage while this monster is at one-third HP or less.",
+          "Gen III-style low-HP type boost."
+        ],
+        "formulas": {}
+      }
+    ],
+    "Source Coverage": [
+      {
+        "row": 1,
+        "cells": [
+          "Roster Source Coverage & Provenance",
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 2,
+        "cells": [
+          "Project source",
+          "What it establishes",
+          "How used in this workbook",
+          "Status"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          "Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+          "Confirms the current regional roster contains 187 monsters and states the mechanical baseline is tuned in the spirit of FireRed-era pacing.",
+          "Authoritative for roster total / move-era design philosophy.",
+          "Used"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 4,
+        "cells": [
+          "Medieval-Inspired Creature Evolution Compendium.png",
+          "Provides the Batch 04 Third Crusade line names, types, evolution structures and historical inspirations used here.",
+          "Direct concept source for Foamwhelp through Pactecho.",
+          "Used"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 5,
+        "cells": [
+          "Fossils and Mythics Dex Compendium.png / Fossil and Mythic Monster Compendium.png",
+          "Provides the latest fossil + Three Kingdoms mythic batch and confirms the 12-monster batch ending at 187 total.",
+          "Latest canonical batch source; overrides contradictory later concept-sheet stage hallucinations.",
+          "Used"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 6,
+        "cells": [
+          "Creature Evolution Roster Sheet.png",
+          "Provides non-contradictory recovered stage names for the Caelynx, Tellurion and Gehennuar lines.",
+          "Used only where it does not conflict with the latest canonical fossil/mythic sheet.",
+          "Used"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 7,
+        "cells": [
+          "Scarimp to Noctafey Evolution Chart.png",
+          "Confirms the Dante-inspired Dark line starts with Scarimp and ends in Dark/Fairy Noctafey.",
+          "Middle-stage identity was not recoverable from the available source text.",
+          "Used"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 8,
+        "cells": [
+          "Pokemon_Fan_Game_354_Move_Catalogue.xlsx / AI VFX Prompt Log",
+          "Signature-move names corroborate combat identities for monsters such as Caelynx, Tellurion, Gehennuar, Cehong, Waranwei, Paleursa and Raptyrale.",
+          "Used as concept support, not to invent missing species.",
+          "Used"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 10,
+        "cells": [
+          "Coverage audit",
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 11,
+        "cells": [
+          "Target roster",
+          187
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 12,
+        "cells": [
+          "Fully balanced identities",
+          45
+        ],
+        "formulas": {
+          "B12": "COUNTA('Dex Stats & Abilities'!B3:B189)-COUNTIF('Dex Stats & Abilities'!B3:B189,\"—\")"
+        }
+      },
+      {
+        "row": 13,
+        "cells": [
+          "Unresolved identities",
+          142
+        ],
+        "formulas": {
+          "B13": "B11-B12"
+        }
+      },
+      {
+        "row": 14,
+        "cells": [
+          "Direct / latest canonical identities",
+          34
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 15,
+        "cells": [
+          "Recovered/corroborated additional identities",
+          11
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 17,
+        "cells": [
+          "Canonical-over-speculative rule",
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 18,
+        "cells": [
+          "Where a later generated roster sheet added extra fossil stages that conflict with the latest fossil/mythic dex compendium, the latest canonical batch sheet wins. Paleursa and Raptyrale remain single-stage fossils, Sidermite → Xenolithid remains a two-stage line, and Suncub → Cehong remains a two-stage mythic line. The speculative extra stage names are not included.",
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 19,
+        "cells": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 20,
+        "cells": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 21,
+        "cells": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "formulas": {}
+      }
+    ]
+  }
+}

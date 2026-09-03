@@ -14,8 +14,9 @@
   ],
   "properties": {
     "id": {
-      "type": "string",
-      "minLength": 1
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 354
     },
     "name": {
       "type": "string",
@@ -29,7 +30,8 @@
       "enum": [
         "PHYSICAL",
         "SPECIAL",
-        "STATUS"
+        "STATUS",
+        null
       ]
     },
     "target": {
@@ -54,6 +56,22 @@
     "pp": {
       "type": "integer",
       "minimum": 1
+    },
+    "power": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "effects": {
+      "type": "array"
+    },
+    "unresolved_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

@@ -1,0 +1,299 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
+  "source_sha256": "3dd30d8cc5e6a36107cf8a1b23431b99d57446a8d4048150f0b94468fa42c0cd",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 09Leader & Trainer Fate System"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "LOCKED CANON CORRECTION v1.2"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "STATUS — COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": "This correction resolves the remaining human-restoration contradiction in Checklist 09 and incorporates the already-approved v1.1 eighteen-type execution correction. It supersedes Checklist 09 v1.0 and v1.1 only where stated below. All other Checklist 09 v1.1 mechanics, leader identities, mercy rules, SPARE/EXECUTE semantics, Hell consequences and postgame rules remain unchanged."
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "1. Version precedence"
+    },
+    {
+      "body_index": 6,
+      "kind": "table",
+      "rows": [
+        [
+          "Source",
+          "Status / interpretation"
+        ],
+        [
+          "Checklist 09 v1.0",
+          "SUPERSEDED. Historical only. Its twelve-proxy execution wording and automatic Pate/Trade restoration wording are not active canon."
+        ],
+        [
+          "Checklist 09 v1.1",
+          "SUPERSEDED AS A STANDALONE ACTIVE VERSION. Its eighteen-proxy correction is incorporated here; its automatic Pate/Trade restoration wording is replaced."
+        ],
+        [
+          "Checklist 09 v1.2 correction",
+          "ACTIVE Checklist 09 authority when read together with the unchanged body of v1.1."
+        ],
+        [
+          "Checklist 10 v1.0",
+          "Authoritative state model for the five-use elective human-restoration system; v1.2 aligns Checklist 09 to it."
+        ]
+      ]
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "2. EXECUTE presentation — eighteen proxies confirmed"
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "• The project uses exactly eighteen generic execution presentation proxies: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dragon, Dark, Steel and Fairy."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "• The proxy is selected deterministically from the executing Abyssal's primary / Type 1."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "• Dual typing creates no player choice and no RNG roll."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "• The proxy represents the actual active Abyssal narratively; it is not a separate creature."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "• No 187-species execution-sprite set is required."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "3. Human restoration — corrected final rule"
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "Human restoration is an authored finale/postgame exception separate from the Civeton Abyssal memorial. There are exactly five total human restoration uses, and every use is elective."
+    },
+    {
+      "body_index": 15,
+      "kind": "table",
+      "rows": [
+        [
+          "Eligible target",
+          "Eligibility",
+          "Cost",
+          "Persistent result"
+        ],
+        [
+          "Pateric \"Pate\" Vann",
+          "Historical mill death; restoration system unlocked; currently DEAD",
+          "1 use",
+          "human_life_state = REVIVED; historical memorial remains"
+        ],
+        [
+          "Traden \"Trade\" Cor",
+          "Historical mill death; restoration system unlocked; currently DEAD",
+          "1 use",
+          "human_life_state = REVIVED; historical memorial remains"
+        ],
+        [
+          "Mortal leader",
+          "leader_fate = EXECUTED and current human life state = DEAD",
+          "1 use each",
+          "leader_fate remains EXECUTED; human_life_state = REVIVED; no automatic return to office"
+        ]
+      ]
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "• Pate and Trade are not automatically restored."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "• The player may restore neither, one, or both."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "• Each eligible human consumes exactly one of the five uses."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "• The same human cannot consume a second use."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "• The player is never required to spend all five uses."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "• Unused capacity disappears and cannot become money, items, Abyssal resurrection, Trial Marks, stat bonuses or any other reward."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "• Restoration does not erase historical death, execution or memorial records."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "4. Resulting maximum executed-leader restorations"
+    },
+    {
+      "body_index": 24,
+      "kind": "table",
+      "rows": [
+        [
+          "Player choice",
+          "Maximum executed leaders restorable"
+        ],
+        [
+          "Restore both Pate and Trade",
+          "3"
+        ],
+        [
+          "Restore exactly one of Pate / Trade",
+          "4"
+        ],
+        [
+          "Restore neither",
+          "5"
+        ]
+      ]
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "5. Corrected runtime-state interpretation"
+    },
+    {
+      "body_index": 26,
+      "kind": "table",
+      "rows": [
+        [
+          "State",
+          "Locked meaning"
+        ],
+        [
+          "human_restoration_budget_total",
+          "Constant 5"
+        ],
+        [
+          "human_restored_ids",
+          "Set of unique eligible human IDs successfully restored; maximum size 5"
+        ],
+        [
+          "human_restoration_uses_spent",
+          "Derived as size(human_restored_ids)"
+        ],
+        [
+          "human_restoration_uses_remaining",
+          "Derived as 5 − size(human_restored_ids)"
+        ],
+        [
+          "leader_fate[8]",
+          "UNRESOLVED / SPARED / EXECUTED; restoration never rewrites this history"
+        ],
+        [
+          "human_life_state",
+          "ALIVE / DEAD / REVIVED as owned by Checklist 10"
+        ]
+      ]
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "Any older implementation guidance that assumes humanRestorationsRemaining begins at 3 after automatic Pate/Trade restoration is deprecated."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "6. Cross-checklist cleanup"
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "• Checklist 10 already matches this rule and requires no mechanical change."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "• Checklist 15's documented discrepancy note is now resolved: persistence should simply serialize Checklist 10's five-use elective state."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "• Checklist 16's eighteen-proxy presentation rule remains correct; references to Checklist 09 v1.1 should be normalized to this v1.2 authority during the repository rewrite."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "• Checklist 13 and Checklist 15 references to Checklist 09 v1.0 should likewise be normalized to this v1.2 authority during the repository rewrite."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "7. Final locked status"
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "CHECKLIST 09 — LEADER & TRAINER FATE SYSTEM: COMPLETE / LOCKED v1.2"
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "The active contract is: eight mortal-leader fate choices; neutral SPARE/EXECUTE; Samiel's unique early surrender; eighteen Type-1 execution proxies; deterministic mercy outcomes; executed-leader Hell return; and exactly five elective human restorations."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "8. Source authority"
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "• ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx — unchanged Checklist 09 body and approved eighteen-type correction."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "• ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx — five total elective human restorations and authoritative human life-state model."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "• User-approved canon ruling, 27 August 2026 — Pate and Trade restoration is elective; five-use pool remains total."
+    }
+  ]
+}

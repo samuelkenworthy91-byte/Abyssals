@@ -4,7 +4,7 @@
     {
       "path": "data/characters/characters.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
+      "status": "complete_for_supplied_source",
       "record_count": 100,
       "record_schema": "data/schemas/character.schema.json"
     },
@@ -12,7 +12,7 @@
       "path": "data/trainers/trainers.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 75,
+      "record_count": 95,
       "record_schema": "data/schemas/trainer.schema.json"
     },
     {
@@ -26,7 +26,7 @@
       "path": "data/locations/locations.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 21,
+      "record_count": 93,
       "record_schema": "data/schemas/location.schema.json"
     },
     {
@@ -39,14 +39,14 @@
     {
       "path": "data/encounters/tables.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
+      "status": "complete_for_supplied_source",
       "record_count": 144,
       "record_schema": "data/schemas/encounter.schema.json"
     },
     {
       "path": "data/terrain/fields.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
+      "status": "complete_for_supplied_source",
       "record_count": 8,
       "record_schema": "data/schemas/field.schema.json"
     },
@@ -60,22 +60,22 @@
     {
       "path": "data/evolutions/evolutions.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
-      "record_count": 0,
+      "status": "complete_for_supplied_source",
+      "record_count": 98,
       "record_schema": "data/schemas/evolution.schema.json"
     },
     {
       "path": "data/moves/moves.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 354,
       "record_schema": "data/schemas/move.schema.json"
     },
     {
       "path": "data/moves/learnsets.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
-      "record_count": 0,
+      "status": "complete_for_supplied_source",
+      "record_count": 1893,
       "record_schema": "data/schemas/learnset.schema.json"
     },
     {
@@ -88,44 +88,149 @@
     {
       "path": "data/trainer_classes/classes.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
+      "status": "complete_for_supplied_source",
       "record_count": 39,
       "record_schema": "data/schemas/trainer_class.schema.json"
     },
     {
       "path": "data/items/items.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
-      "record_count": 0,
+      "status": "complete_for_supplied_source",
+      "record_count": 102,
       "record_schema": "data/schemas/item.schema.json"
     },
     {
       "path": "data/shops/shops.json",
       "schema": "data/schemas/dataset.schema.json",
-      "status": "partial",
-      "record_count": 0,
+      "status": "complete_for_supplied_source",
+      "record_count": 12,
       "record_schema": "data/schemas/shop.schema.json"
     },
     {
       "path": "data/story/scenes.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 150,
       "record_schema": "data/schemas/scene.schema.json"
     },
     {
       "path": "data/dialogue/dialogue.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 7,
       "record_schema": "data/schemas/dialogue.schema.json"
     },
     {
       "path": "data/battles/battles.json",
       "schema": "data/schemas/dataset.schema.json",
       "status": "partial",
-      "record_count": 0,
+      "record_count": 93,
       "record_schema": "data/schemas/battle.schema.json"
+    },
+    {
+      "path": "data/evolutions/families.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 89,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/species/abilities.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "partial",
+      "record_count": 87,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/encounters/acquisition.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 31,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/trainers/ai_tiers.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 7,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/trainers/profiles.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 7,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/progression/chapter_bands.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 21,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/battles/modes.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 6,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/trainers/companion_checkpoints.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 17,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/shops/threshold_stock.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 1,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/progression/trial_contracts.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 5,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/story/chapters.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 24,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/story/state_contracts.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 109,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/progression/locked_contracts.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 685,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/encounters/species_availability.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 187,
+      "record_schema": "data/schemas/record.schema.json"
+    },
+    {
+      "path": "data/locations/world_routes.json",
+      "schema": "data/schemas/dataset.schema.json",
+      "status": "complete_for_supplied_source",
+      "record_count": 25,
+      "record_schema": "data/schemas/record.schema.json"
     }
   ]
 }

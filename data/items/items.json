@@ -1,13 +1,2213 @@
 {
   "schema_version": 1,
-  "status": "partial",
+  "status": "complete_for_supplied_source",
   "sources": [
-    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
-    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx"
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx"
   ],
-  "records": [],
-  "unresolved": [
-    "Source recovered in Phase A; structured consolidation and exact per-field completeness audit pending Phase E."
+  "records": [
+    {
+      "id": "ITEM_HEAL_POULTICE",
+      "name": "Poultice",
+      "category": "healing",
+      "buy_price": 300,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Restore 20 HP to one living Abyssal.",
+      "effect": {
+        "operation": "restore_hp",
+        "amount": 20,
+        "living_only": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "ITEM_HEAL_FIELD_SALVE",
+      "name": "Field Salve",
+      "category": "healing",
+      "buy_price": 700,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Restore 50 HP to one living Abyssal.",
+      "effect": {
+        "operation": "restore_hp",
+        "amount": 50,
+        "living_only": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "ITEM_HEAL_GREATER_REMEDY",
+      "name": "Greater Remedy",
+      "category": "healing",
+      "buy_price": 1500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Restore 200 HP to one living Abyssal.",
+      "effect": {
+        "operation": "restore_hp",
+        "amount": 200,
+        "living_only": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "ITEM_HEAL_GRAND_RESTORATIVE",
+      "name": "Grand Restorative",
+      "category": "healing",
+      "buy_price": 3000,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Restore all HP to one living Abyssal.",
+      "effect": {
+        "operation": "restore_hp",
+        "amount": "ALL",
+        "living_only": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "ITEM_CURE_ANTIVENOM",
+      "name": "Antivenom",
+      "category": "status_cure",
+      "buy_price": 200,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Cure Poison.",
+      "effect": {
+        "operation": "cure_status",
+        "status": "POISON"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 29,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "ITEM_CURE_COOLING_BALM",
+      "name": "Cooling Balm",
+      "category": "status_cure",
+      "buy_price": 250,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Cure Burn.",
+      "effect": {
+        "operation": "cure_status",
+        "status": "BURN"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 29,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "ITEM_CURE_NERVE_TONIC",
+      "name": "Nerve Tonic",
+      "category": "status_cure",
+      "buy_price": 200,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Cure Paralysis.",
+      "effect": {
+        "operation": "cure_status",
+        "status": "PARALYSIS"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 29,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "ITEM_CURE_WAKING_SALTS",
+      "name": "Waking Salts",
+      "category": "status_cure",
+      "buy_price": 200,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Cure Sleep.",
+      "effect": {
+        "operation": "cure_status",
+        "status": "SLEEP"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 29,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "ITEM_CURE_THAWING_DRAUGHT",
+      "name": "Thawing Draught",
+      "category": "status_cure",
+      "buy_price": 250,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Cure Freeze.",
+      "effect": {
+        "operation": "cure_status",
+        "status": "FREEZE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 29,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "ITEM_CURE_PANACEA",
+      "name": "Panacea",
+      "category": "status_cure",
+      "buy_price": 800,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Cure any standard persistent status condition.",
+      "effect": {
+        "operation": "cure_status",
+        "status": "ANY_PERSISTENT"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 29,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "ITEM_PP_FOCUS_TONIC",
+      "name": "Focus Tonic",
+      "category": "pp",
+      "buy_price": 1000,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+10 PP to one move.",
+      "effect": {
+        "operation": "restore_pp",
+        "amount": 10,
+        "scope": "ONE_MOVE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 31,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "ITEM_PP_DEEP_TONIC",
+      "name": "Deep Tonic",
+      "category": "pp",
+      "buy_price": 2500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Fully restore one move's PP.",
+      "effect": {
+        "operation": "restore_pp",
+        "amount": "ALL",
+        "scope": "ONE_MOVE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 31,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "ITEM_PP_ELIXIR",
+      "name": "Elixir",
+      "category": "pp",
+      "buy_price": 4500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+10 PP to every move.",
+      "effect": {
+        "operation": "restore_pp",
+        "amount": 10,
+        "scope": "ALL_MOVES"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 31,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "ITEM_PP_GRAND_ELIXIR",
+      "name": "Grand Elixir",
+      "category": "pp",
+      "buy_price": 8000,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Fully restore all moves.",
+      "effect": {
+        "operation": "restore_pp",
+        "amount": "ALL",
+        "scope": "ALL_MOVES"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 31,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "ITEM_BATTLE_MIGHT",
+      "name": "Might Draught",
+      "category": "battle_stat",
+      "buy_price": 500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+1 Attack stage.",
+      "effect": {
+        "operation": "stat_stage",
+        "stat": "attack",
+        "stages": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 33,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "ITEM_BATTLE_GUARD",
+      "name": "Guard Draught",
+      "category": "battle_stat",
+      "buy_price": 500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+1 Defence stage.",
+      "effect": {
+        "operation": "stat_stage",
+        "stat": "defence",
+        "stages": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 33,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "ITEM_BATTLE_MYSTIC",
+      "name": "Mystic Draught",
+      "category": "battle_stat",
+      "buy_price": 500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+1 Special Attack stage.",
+      "effect": {
+        "operation": "stat_stage",
+        "stat": "sp_attack",
+        "stages": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 33,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "ITEM_BATTLE_RESOLVE",
+      "name": "Resolve Draught",
+      "category": "battle_stat",
+      "buy_price": 500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+1 Special Defence stage.",
+      "effect": {
+        "operation": "stat_stage",
+        "stat": "sp_defence",
+        "stages": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 33,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "ITEM_BATTLE_HASTE",
+      "name": "Haste Draught",
+      "category": "battle_stat",
+      "buy_price": 500,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "+1 Speed stage.",
+      "effect": {
+        "operation": "stat_stage",
+        "stat": "speed",
+        "stages": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 33,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "ITEM_UTILITY_SMOKE_BOMB",
+      "name": "Smoke Bomb",
+      "category": "utility",
+      "buy_price": 400,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Guarantees escape only from escapable ordinary wild encounters.",
+      "effect": {
+        "operation": "escape",
+        "requires": "ordinary_wild_and_escape_allowed"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 37,
+        "table_row": 1
+      }
+    },
+    {
+      "id": "ITEM_CAPTURE_TRAIL_BREAD",
+      "name": "Trail Bread",
+      "category": "capture_food",
+      "buy_price": 200,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "1×; Always",
+      "effect": {
+        "kind": "constant",
+        "value": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 2
+      },
+      "first_stock": "Civeton"
+    },
+    {
+      "id": "ITEM_CAPTURE_SEASONED_JERKY",
+      "name": "Seasoned Jerky",
+      "category": "capture_food",
+      "buy_price": 600,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "1.5×; Always",
+      "effect": {
+        "kind": "constant",
+        "value": 1.5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 3
+      },
+      "first_stock": "Dorelem"
+    },
+    {
+      "id": "ITEM_CAPTURE_ROYAL_FEAST",
+      "name": "Royal Feast",
+      "category": "capture_food",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "2×; Always",
+      "effect": {
+        "kind": "constant",
+        "value": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 4
+      },
+      "first_stock": "Marasen"
+    },
+    {
+      "id": "ITEM_CAPTURE_SAINTS_BANQUET",
+      "name": "Saint's Banquet",
+      "category": "capture_food",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Guaranteed; Always",
+      "effect": {
+        "kind": "guaranteed"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 5
+      },
+      "first_stock": "Authored finite sources"
+    },
+    {
+      "id": "ITEM_CAPTURE_RIVER_GRUB",
+      "name": "River Grub",
+      "category": "capture_food",
+      "buy_price": 800,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "3×; Water or Bug target; otherwise 1×",
+      "effect": {
+        "kind": "target_type",
+        "types": [
+          "WATER",
+          "BUG"
+        ],
+        "match": 3,
+        "otherwise": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 6
+      },
+      "first_stock": "Philomere"
+    },
+    {
+      "id": "ITEM_CAPTURE_FAMILIAR_STEW",
+      "name": "Familiar Stew",
+      "category": "capture_food",
+      "buy_price": 800,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "3×; Species already registered as caught; otherwise 1×",
+      "effect": {
+        "kind": "previously_caught_species",
+        "match": 3,
+        "otherwise": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 7
+      },
+      "first_stock": "Cybressa"
+    },
+    {
+      "id": "ITEM_CAPTURE_PATIENT_RATION",
+      "name": "Patient Ration",
+      "category": "capture_food",
+      "buy_price": 800,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "min((turns+10)/10,4)×; 1× at turn 0; reaches 4× at 30 turns",
+      "effect": {
+        "kind": "turns",
+        "expression": "min((turns+10)/10,4)"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 8
+      },
+      "first_stock": "Cossenne"
+    },
+    {
+      "id": "ITEM_CAPTURE_YOUNGROOT_MASH",
+      "name": "Youngroot Mash",
+      "category": "capture_food",
+      "buy_price": 600,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "max((40-target level)/10,1)×; Lv1 = 3.9×; Lv30+ = 1×",
+      "effect": {
+        "kind": "target_level",
+        "expression": "max((40-level)/10,1)"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 9
+      },
+      "first_stock": "Botrune"
+    },
+    {
+      "id": "ITEM_EVOLUTION_IRON_SIGIL",
+      "name": "Iron Sigil",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Votress → Sigilume",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "062",
+        "to_species_id": "063",
+        "minimum_level": 30,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 2
+      },
+      "guaranteed_source": "Dorelem Service Tunnels — sealed armory reliquary",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_GRAVE_SALT",
+      "name": "Grave Salt",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Votress → Sepulshade",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "062",
+        "to_species_id": "064",
+        "minimum_level": 30,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 3
+      },
+      "guaranteed_source": "Marchwood Hollow — grave-marker cache",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_GILDED_IDOL",
+      "name": "Gilded Idol",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Votress → Idolure",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "062",
+        "to_species_id": "065",
+        "minimum_level": 30,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 4
+      },
+      "guaranteed_source": "Dorelem — post-leader keep treasury reward",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_GILDED_NODULE",
+      "name": "Gilded Nodule",
+      "category": "evolution",
+      "buy_price": 3500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Pebbettle → Avaroll",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "107",
+        "to_species_id": "108",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 5
+      },
+      "guaranteed_source": "Rivercause Road — prospector cache",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_STORMGLASS",
+      "name": "Stormglass",
+      "category": "evolution",
+      "buy_price": 3500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Pebbettle → Prodiglow",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "107",
+        "to_species_id": "109",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 6
+      },
+      "guaranteed_source": "Cybressa drainage / river-basin branch — charged sluice cache",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_BLOODSTONE",
+      "name": "Bloodstone",
+      "category": "evolution",
+      "buy_price": 3500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Styxlet → Ragegill",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "110",
+        "to_species_id": "111",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 7
+      },
+      "guaranteed_source": "Cybressa Smugglers' Weir — contraband strongbox",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_GRIEF_PEARL",
+      "name": "Grief Pearl",
+      "category": "evolution",
+      "buy_price": 3500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Styxlet → Sulkoad",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "110",
+        "to_species_id": "112",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 8
+      },
+      "guaranteed_source": "Philomere Backwaters — drowned memorial cache",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_TIDE_PEARL",
+      "name": "Tide Pearl",
+      "category": "evolution",
+      "buy_price": 4500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Triskit → Phlegacorn",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "115",
+        "to_species_id": "116",
+        "minimum_level": 30,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 9
+      },
+      "guaranteed_source": "Philomere Backwaters — watercraft-only deep alcove",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_MOURNING_BRIAR",
+      "name": "Mourning Briar",
+      "category": "evolution",
+      "buy_price": 4500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Triskit → Harpbriar",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "115",
+        "to_species_id": "117",
+        "minimum_level": 30,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 10
+      },
+      "guaranteed_source": "Sanctuary Reeds — living shrine reward",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_SUNSCAR_GLASS",
+      "name": "Sunscar Glass",
+      "category": "evolution",
+      "buy_price": 4500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Triskit → Searwaste",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "115",
+        "to_species_id": "118",
+        "minimum_level": 30,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 11
+      },
+      "guaranteed_source": "Dorelem Scrub — heat-blasted roadside shrine cache",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_WAYFARER_FEATHER",
+      "name": "Wayfarer Feather",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Pilgrimp → Ganderiel",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "141",
+        "to_species_id": "142",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 12
+      },
+      "guaranteed_source": "Hospice Road — pilgrimage side-quest reward",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_PILGRIM_BELL",
+      "name": "Pilgrim Bell",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Pilgrimp → Caproclaim",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "141",
+        "to_species_id": "143",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 13
+      },
+      "guaranteed_source": "Cossenne Old Pilgrim Grove — ritual bell cache",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_TRIAL_TOXIN",
+      "name": "Trial Toxin",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Acremink → Longspurr",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "152",
+        "to_species_id": "153",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 14
+      },
+      "guaranteed_source": "Cybressa market ward — alchemist trial quest reward",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_SAINT_S_TONIC",
+      "name": "Saint's Tonic",
+      "category": "evolution",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Acremink → Elixirine",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "152",
+        "to_species_id": "154",
+        "minimum_level": 28,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 15
+      },
+      "guaranteed_source": "Philomere — medicine-chain authored reward",
+      "renewable_source": "Ramelle relic/alchemy specialist"
+    },
+    {
+      "id": "ITEM_EVOLUTION_SUN_RELIC",
+      "name": "Sun Relic",
+      "category": "evolution",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Suncub → Cehong",
+      "effect": {
+        "operation": "evolve",
+        "from_species_id": "186",
+        "to_species_id": "187",
+        "minimum_level": 40,
+        "consumed": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 16
+      },
+      "guaranteed_source": "Ramelle Bellglass Ruins — authored late relic source",
+      "renewable_source": "Postgame one-time replacement through Ramelle relic registrar if needed"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_NORMAL",
+      "name": "Normal Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "NORMAL",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_FIRE",
+      "name": "Fire Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "FIRE",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_WATER",
+      "name": "Water Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "WATER",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_ELECTRIC",
+      "name": "Electric Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "ELECTRIC",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_GRASS",
+      "name": "Grass Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "GRASS",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_ICE",
+      "name": "Ice Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "ICE",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_FIGHTING",
+      "name": "Fighting Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "FIGHTING",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_POISON",
+      "name": "Poison Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "POISON",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_GROUND",
+      "name": "Ground Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "GROUND",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_FLYING",
+      "name": "Flying Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "FLYING",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_PSYCHIC",
+      "name": "Psychic Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "PSYCHIC",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_BUG",
+      "name": "Bug Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "BUG",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_ROCK",
+      "name": "Rock Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "ROCK",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_GHOST",
+      "name": "Ghost Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "GHOST",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_DRAGON",
+      "name": "Dragon Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "DRAGON",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_DARK",
+      "name": "Dark Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "DARK",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_STEEL",
+      "name": "Steel Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "STEEL",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_TYPE_SIGIL_FAIRY",
+      "name": "Fairy Type Sigil",
+      "category": "held",
+      "buy_price": 1200,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's damaging moves of that type deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "type_id": "FAIRY",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      },
+      "held_role": "OFFENSE"
+    },
+    {
+      "id": "HELD_IRON_MANTLE",
+      "name": "Iron Mantle",
+      "category": "held",
+      "buy_price": 2500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's Defence ×1.10 as an effective-stat modifier.",
+      "effect": {
+        "operation": "effective_stat",
+        "stat": "defence",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 3
+      },
+      "held_role": "GUARD"
+    },
+    {
+      "id": "HELD_VEIL_CHARM",
+      "name": "Veil Charm",
+      "category": "held",
+      "buy_price": 2500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's Special Defence ×1.10 as an effective-stat modifier.",
+      "effect": {
+        "operation": "effective_stat",
+        "stat": "sp_defence",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 4
+      },
+      "held_role": "GUARD"
+    },
+    {
+      "id": "HELD_COURIERS_SPUR",
+      "name": "Courier's Spur",
+      "category": "held",
+      "buy_price": 2500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's Speed ×1.10 as an effective-stat modifier.",
+      "effect": {
+        "operation": "effective_stat",
+        "stat": "speed",
+        "multiplier": 1.1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 5
+      },
+      "held_role": "SPEED"
+    },
+    {
+      "id": "HELD_VOTIVE_THREAD",
+      "name": "Votive Thread",
+      "category": "held",
+      "buy_price": 2500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "Holder's status moves gain +10 percentage points accuracy, capped at 100%.",
+      "effect": {
+        "operation": "status_accuracy",
+        "add_points": 10,
+        "cap": 100
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 6
+      },
+      "held_role": "STATUS"
+    },
+    {
+      "id": "HELD_PILGRIM_CUP",
+      "name": "Pilgrim Cup",
+      "category": "held",
+      "buy_price": 4000,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "At end of turn, restore 1/16 maximum HP if the holder is living.",
+      "effect": {
+        "operation": "end_turn_heal",
+        "max_hp_fraction": [
+          1,
+          16
+        ],
+        "living_only": true
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 7
+      },
+      "held_role": "SUSTAIN"
+    },
+    {
+      "id": "HELD_FIELDGLASS",
+      "name": "Fieldglass",
+      "category": "held",
+      "buy_price": 3500,
+      "currency": "STANDARD",
+      "stack_limit": 99,
+      "effect_text": "While any non-neutral field/weather is active, holder's damaging moves deal ×1.10 damage.",
+      "effect": {
+        "operation": "damage_multiplier",
+        "multiplier": 1.1,
+        "requires": "non_neutral_field"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 8
+      },
+      "held_role": "TERRAIN"
+    },
+    {
+      "id": "TRAIN_VITAL_I",
+      "name": "Vital Draught I",
+      "category": "growth_training",
+      "buy_price": 2,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "hp",
+        "modifier_points": 20,
+        "remaining_levels": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 2
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRAIN_VITAL_II",
+      "name": "Vital Draught II",
+      "category": "growth_training",
+      "buy_price": 4,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "hp",
+        "modifier_points": 20,
+        "remaining_levels": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 2
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRAIN_VITAL_III",
+      "name": "Vital Draught III",
+      "category": "growth_training",
+      "buy_price": 6,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "hp",
+        "modifier_points": 20,
+        "remaining_levels": 3
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 2
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRAIN_VITAL_IV",
+      "name": "Vital Draught IV",
+      "category": "growth_training",
+      "buy_price": 8,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "hp",
+        "modifier_points": 20,
+        "remaining_levels": 4
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 2
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRAIN_VITAL_V",
+      "name": "Vital Draught V",
+      "category": "growth_training",
+      "buy_price": 10,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "hp",
+        "modifier_points": 20,
+        "remaining_levels": 5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 2
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "TRAIN_TEMPER_I",
+      "name": "Temper Draught I",
+      "category": "growth_training",
+      "buy_price": 2,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "attack",
+        "modifier_points": 20,
+        "remaining_levels": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 3
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRAIN_TEMPER_II",
+      "name": "Temper Draught II",
+      "category": "growth_training",
+      "buy_price": 4,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "attack",
+        "modifier_points": 20,
+        "remaining_levels": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 3
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRAIN_TEMPER_III",
+      "name": "Temper Draught III",
+      "category": "growth_training",
+      "buy_price": 6,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "attack",
+        "modifier_points": 20,
+        "remaining_levels": 3
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 3
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRAIN_TEMPER_IV",
+      "name": "Temper Draught IV",
+      "category": "growth_training",
+      "buy_price": 8,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "attack",
+        "modifier_points": 20,
+        "remaining_levels": 4
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 3
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRAIN_TEMPER_V",
+      "name": "Temper Draught V",
+      "category": "growth_training",
+      "buy_price": 10,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "attack",
+        "modifier_points": 20,
+        "remaining_levels": 5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 3
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "TRAIN_WARD_I",
+      "name": "Ward Draught I",
+      "category": "growth_training",
+      "buy_price": 2,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "defence",
+        "modifier_points": 20,
+        "remaining_levels": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 4
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRAIN_WARD_II",
+      "name": "Ward Draught II",
+      "category": "growth_training",
+      "buy_price": 4,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "defence",
+        "modifier_points": 20,
+        "remaining_levels": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 4
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRAIN_WARD_III",
+      "name": "Ward Draught III",
+      "category": "growth_training",
+      "buy_price": 6,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "defence",
+        "modifier_points": 20,
+        "remaining_levels": 3
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 4
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRAIN_WARD_IV",
+      "name": "Ward Draught IV",
+      "category": "growth_training",
+      "buy_price": 8,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "defence",
+        "modifier_points": 20,
+        "remaining_levels": 4
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 4
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRAIN_WARD_V",
+      "name": "Ward Draught V",
+      "category": "growth_training",
+      "buy_price": 10,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "defence",
+        "modifier_points": 20,
+        "remaining_levels": 5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 4
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "TRAIN_INSIGHT_I",
+      "name": "Insight Draught I",
+      "category": "growth_training",
+      "buy_price": 2,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_attack",
+        "modifier_points": 20,
+        "remaining_levels": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 5
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRAIN_INSIGHT_II",
+      "name": "Insight Draught II",
+      "category": "growth_training",
+      "buy_price": 4,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_attack",
+        "modifier_points": 20,
+        "remaining_levels": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 5
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRAIN_INSIGHT_III",
+      "name": "Insight Draught III",
+      "category": "growth_training",
+      "buy_price": 6,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_attack",
+        "modifier_points": 20,
+        "remaining_levels": 3
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 5
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRAIN_INSIGHT_IV",
+      "name": "Insight Draught IV",
+      "category": "growth_training",
+      "buy_price": 8,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_attack",
+        "modifier_points": 20,
+        "remaining_levels": 4
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 5
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRAIN_INSIGHT_V",
+      "name": "Insight Draught V",
+      "category": "growth_training",
+      "buy_price": 10,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_attack",
+        "modifier_points": 20,
+        "remaining_levels": 5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 5
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "TRAIN_RESOLVE_I",
+      "name": "Resolve Draught I",
+      "category": "growth_training",
+      "buy_price": 2,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_defence",
+        "modifier_points": 20,
+        "remaining_levels": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 6
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRAIN_RESOLVE_II",
+      "name": "Resolve Draught II",
+      "category": "growth_training",
+      "buy_price": 4,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_defence",
+        "modifier_points": 20,
+        "remaining_levels": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 6
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRAIN_RESOLVE_III",
+      "name": "Resolve Draught III",
+      "category": "growth_training",
+      "buy_price": 6,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_defence",
+        "modifier_points": 20,
+        "remaining_levels": 3
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 6
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRAIN_RESOLVE_IV",
+      "name": "Resolve Draught IV",
+      "category": "growth_training",
+      "buy_price": 8,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_defence",
+        "modifier_points": 20,
+        "remaining_levels": 4
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 6
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRAIN_RESOLVE_V",
+      "name": "Resolve Draught V",
+      "category": "growth_training",
+      "buy_price": 10,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "sp_defence",
+        "modifier_points": 20,
+        "remaining_levels": 5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 6
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "TRAIN_FLEET_I",
+      "name": "Fleet Draught I",
+      "category": "growth_training",
+      "buy_price": 2,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "speed",
+        "modifier_points": 20,
+        "remaining_levels": 1
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 7
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRAIN_FLEET_II",
+      "name": "Fleet Draught II",
+      "category": "growth_training",
+      "buy_price": 4,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "speed",
+        "modifier_points": 20,
+        "remaining_levels": 2
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 7
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRAIN_FLEET_III",
+      "name": "Fleet Draught III",
+      "category": "growth_training",
+      "buy_price": 6,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "speed",
+        "modifier_points": 20,
+        "remaining_levels": 3
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 7
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRAIN_FLEET_IV",
+      "name": "Fleet Draught IV",
+      "category": "growth_training",
+      "buy_price": 8,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "speed",
+        "modifier_points": 20,
+        "remaining_levels": 4
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 7
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRAIN_FLEET_V",
+      "name": "Fleet Draught V",
+      "category": "growth_training",
+      "buy_price": 10,
+      "currency": "CURRENCY_TRIAL_MARK",
+      "stack_limit": 999,
+      "effect_text": "+20 percentage points",
+      "effect": {
+        "operation": "growth_training",
+        "stat": "speed",
+        "modifier_points": 20,
+        "remaining_levels": 5
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 88,
+        "table_row": 7
+      },
+      "duration_provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 89,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "TREASURE_SILVER_RELIC",
+      "name": "Silver Relic",
+      "category": "treasure",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Sell-only treasure",
+      "effect": {
+        "operation": "sell",
+        "value": 500
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 113,
+        "table_row": 2
+      },
+      "sell_price": 500
+    },
+    {
+      "id": "TREASURE_GILDED_RELIQUARY",
+      "name": "Gilded Reliquary",
+      "category": "treasure",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Sell-only treasure",
+      "effect": {
+        "operation": "sell",
+        "value": 1500
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 113,
+        "table_row": 3
+      },
+      "sell_price": 1500
+    },
+    {
+      "id": "TREASURE_ROYAL_ICON",
+      "name": "Royal Icon",
+      "category": "treasure",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Sell-only treasure",
+      "effect": {
+        "operation": "sell",
+        "value": 4000
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 113,
+        "table_row": 4
+      },
+      "sell_price": 4000
+    },
+    {
+      "id": "TREASURE_ANCIENT_TREASURY",
+      "name": "Ancient Treasury Piece",
+      "category": "treasure",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Sell-only treasure",
+      "effect": {
+        "operation": "sell",
+        "value": 10000
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 113,
+        "table_row": 5
+      },
+      "sell_price": 10000
+    },
+    {
+      "id": "TREASURE_HELL_RELIC",
+      "name": "Hell Relic",
+      "category": "treasure",
+      "buy_price": null,
+      "currency": "STANDARD",
+      "stack_limit": 999,
+      "effect_text": "Sell-only treasure",
+      "effect": {
+        "operation": "sell",
+        "value": 20000
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 113,
+        "table_row": 6
+      },
+      "sell_price": 20000
+    }
   ],
-  "expected_count": null
+  "unresolved": []
 }

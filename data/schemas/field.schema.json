@@ -24,10 +24,14 @@
       ]
     },
     "effects": {
-      "type": [
-        "object",
-        "null"
-      ]
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "operation"
+        ]
+      }
     }
   }
 }

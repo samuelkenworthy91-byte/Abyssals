@@ -1,0 +1,1412 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "STATE-025-001",
+      "fields": {
+        "Domain": "Saved fields",
+        "Canonical form": "lower_snake_case",
+        "Example / rule": "current_story_chapter, memorial_state"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-025-002",
+      "fields": {
+        "Domain": "Stable character / leader IDs",
+        "Canonical form": "UPPER-Kebab / existing registry IDs",
+        "Example / rule": "LDR-01 … LDR-08; character IDs remain stable"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-025-003",
+      "fields": {
+        "Domain": "Story Bible scenes",
+        "Canonical form": "CHxx-Eyy / CHxx-Oyy",
+        "Example / rule": "Preserved exactly; E = mandatory, O = optional"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-025-004",
+      "fields": {
+        "Domain": "System events",
+        "Canonical form": "SYS-<DOMAIN>-nnn",
+        "Example / rule": "SYS-MEM-001, SYS-HRS-001"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-025-005",
+      "fields": {
+        "Domain": "Quest events",
+        "Canonical form": "QST-<SLUG>-nnn",
+        "Example / rule": "Stable slug + sequence; never reused"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-025-006",
+      "fields": {
+        "Domain": "World one-offs",
+        "Canonical form": "WLD-<MAP>-nnn",
+        "Example / rule": "One-time authored interactions"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "STATE-025-007",
+      "fields": {
+        "Domain": "Treasure / pickup IDs",
+        "Canonical form": "TRS-<MAP>-nnn",
+        "Example / rule": "Persistent claimed-object identity"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "STATE-025-008",
+      "fields": {
+        "Domain": "Door / shortcut IDs",
+        "Canonical form": "DOR-… / SCT-…",
+        "Example / rule": "Persistent map-state registries"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "STATE-025-009",
+      "fields": {
+        "Domain": "Story evolution triggers",
+        "Canonical form": "EVO-<STABLE-ID>",
+        "Example / rule": "Stored as earned historical triggers; species binding belongs to Checklist 11"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 25,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "STATE-032-001",
+      "fields": {
+        "Field": "chapter_state[00..23]",
+        "Type / values": "LOCKED / AVAILABLE / STARTED / COMPLETE",
+        "Locked rule": "One authoritative state per chapter."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 32,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-032-002",
+      "fields": {
+        "Field": "current_story_chapter",
+        "Type / values": "0–23",
+        "Locked rule": "Navigation/debugging pointer; not a substitute for chapter_state."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 32,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-032-003",
+      "fields": {
+        "Field": "chapter_started(ch)",
+        "Type / values": "Derived query",
+        "Locked rule": "True when STARTED or COMPLETE; never saved separately."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 32,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-032-004",
+      "fields": {
+        "Field": "chapter_complete(ch)",
+        "Type / values": "Derived query",
+        "Locked rule": "True only when COMPLETE; never saved separately."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 32,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-037-001",
+      "fields": {
+        "State": "UNREACHED",
+        "Meaning": "The tracked settlement has not yet entered the player’s critical-path state."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 37,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-037-002",
+      "fields": {
+        "State": "CONTESTED",
+        "Meaning": "The relevant chapter / conflict is active."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 37,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-037-003",
+      "fields": {
+        "State": "CONQUERED",
+        "Meaning": "The leader conflict and fate resolution are complete; occupation aftermath is active."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 37,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-037-004",
+      "fields": {
+        "State": "RESTORING",
+        "Meaning": "Later recovery content has begun but the final restoration state is not yet active."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 37,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-037-005",
+      "fields": {
+        "State": "RESTORED",
+        "Meaning": "Postwar / epilogue restoration version is active."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 37,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-042-001",
+      "fields": {
+        "Field": "leader_fate[LDR-01..08]",
+        "Values": "UNRESOLVED / SPARED / EXECUTED",
+        "Purpose": "Immutable historical decision after commit."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-042-002",
+      "fields": {
+        "Field": "human_life_state[id]",
+        "Values": "ALIVE / DEAD / REVIVED",
+        "Purpose": "Current physical condition for restoration-eligible humans."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-042-003",
+      "fields": {
+        "Field": "hell_leader_encounters",
+        "Values": "Set / bitset of LDR IDs",
+        "Purpose": "Executed leaders actually encountered below."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-042-004",
+      "fields": {
+        "Field": "leader_spared_count",
+        "Values": "Derived",
+        "Purpose": "Count of leader_fate == SPARED; dialogue use only."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-042-005",
+      "fields": {
+        "Field": "leader_executed_count",
+        "Values": "Derived",
+        "Purpose": "Count of leader_fate == EXECUTED; dialogue use only."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 42,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-047-001",
+      "fields": {
+        "Field": "player_starter_species_id",
+        "Type": "Species/Dex ID",
+        "Commit rule": "Written once at CH01-E05."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 47,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-047-002",
+      "fields": {
+        "Field": "pate_starter_species_id",
+        "Type": "Species/Dex ID",
+        "Commit rule": "Written atomically with player choice."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 47,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-047-003",
+      "fields": {
+        "Field": "trade_starter_species_id",
+        "Type": "Species/Dex ID",
+        "Commit rule": "Written atomically with player choice."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 47,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-052-001",
+      "fields": {
+        "Field": "pate_progress_state",
+        "Values": "ABSENT / TRACKED / CONFIRMED_DEAD / FOUND_BELOW / RESTORATION_AVAILABLE / RESOLVED"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 52,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-052-002",
+      "fields": {
+        "Field": "trade_progress_state",
+        "Values": "ABSENT / TRACKED / CONFIRMED_DEAD / FOUND_BELOW / RESTORATION_AVAILABLE / RESOLVED"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 52,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-052-003",
+      "fields": {
+        "Field": "pate_clues_found",
+        "Values": "Integer counter with Story Bible-defined maximum / provenance"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 52,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-052-004",
+      "fields": {
+        "Field": "trade_clues_found",
+        "Values": "Integer counter with Story Bible-defined maximum / provenance"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 52,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-052-005",
+      "fields": {
+        "Field": "trade_notebook_pages",
+        "Values": "Set/bitset of discovered page IDs"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 52,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-058-001",
+      "fields": {
+        "Field": "aeric_state",
+        "Named ordered values (0→5 semantic mapping)": "CERTAINTY → DISCOMFORT → QUESTIONING → DOUBT → FAITH_WITHOUT_CLAIMED_CERTAINTY → RESOLVED_SERVICE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-058-002",
+      "fields": {
+        "Field": "rhoswen_state",
+        "Named ordered values (0→5 semantic mapping)": "HARDLINE_CERTAINTY → CHALLENGED → FRACTURE → SELF_QUESTIONING → INDEPENDENT_CHOICE → CHOSEN_DUTY"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-058-003",
+      "fields": {
+        "Field": "kurg_state",
+        "Named ordered values (0→5 semantic mapping)": "INSTITUTIONAL_CERTAINTY → DISCOMFORT → RESPONSIBILITY → CRISIS → POSTWAR_DOUBT → UNCERTAINTY"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-058-004",
+      "fields": {
+        "Field": "refugee_chain_state",
+        "Named ordered values (0→5 semantic mapping)": "Named ordered states defined by the recurring civilian chain data"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-058-005",
+      "fields": {
+        "Field": "severin_state",
+        "Named ordered values (0→5 semantic mapping)": "UNMET → SIGHTED → GUIDE → PARTIAL_REVEAL → FULL_REVEAL → MISSING → KING_REVEALED → SUPERBOSS_DEFEATED"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 58,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-063-001",
+      "fields": {
+        "Field": "hell_circle_state[01..09]",
+        "Values / scope": "LOCKED / ENTERED / CLIMAX_DEFEATED / COMPLETE",
+        "Rule": "Nine circles tracked independently."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 63,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-063-002",
+      "fields": {
+        "Field": "warden_defeated[01..08]",
+        "Values / scope": "Boolean/bitset by Warden ID",
+        "Rule": "Eight Warden defeat facts only; Circle IX uses its own climax."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 63,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-063-003",
+      "fields": {
+        "Field": "hell_circle_complete(circle)",
+        "Values / scope": "Derived query",
+        "Rule": "True only when the circle state is COMPLETE."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 63,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-063-004",
+      "fields": {
+        "Field": "hell_leader_encounters",
+        "Values / scope": "Set of LDR IDs",
+        "Rule": "Conditional gauntlet history for executed leaders."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 63,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-067-001",
+      "fields": {
+        "Field": "memorial_state",
+        "Values / type": "ABSENT / PENDING_ESTABLISHMENT / ESTABLISHED",
+        "Locked use": "First permanent Abyssal death sets PENDING; next Civeton revisit establishes it."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-067-002",
+      "fields": {
+        "Field": "resurrection_tutorial_state",
+        "Values / type": "NOT_AVAILABLE / AVAILABLE / SEEN",
+        "Locked use": "Becomes AVAILABLE with the established memorial; first interaction can show it."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-067-003",
+      "fields": {
+        "Field": "total_permanent_deaths",
+        "Values / type": "Counter",
+        "Locked use": "Append-only death history."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-067-004",
+      "fields": {
+        "Field": "current_memorial_count",
+        "Values / type": "Derived / maintained count",
+        "Locked use": "Currently dead, unresolved Abyssals on visible Abyssal memorial."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-067-005",
+      "fields": {
+        "Field": "total_resurrections",
+        "Values / type": "Counter",
+        "Locked use": "Successful Abyssal memorial restorations."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-067-006",
+      "fields": {
+        "Field": "total_sacrifices",
+        "Values / type": "Counter",
+        "Locked use": "Abyssals permanently sacrificed through resurrection transactions."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "STATE-067-007",
+      "fields": {
+        "Field": "memorial_reflection_count",
+        "Values / type": "Counter",
+        "Locked use": "Renamed Story Bible optional memorial/reflection interaction count."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 67,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "STATE-072-001",
+      "fields": {
+        "Registry / field": "quest_state[quest_id]",
+        "Type": "LOCKED / AVAILABLE / ACTIVE / COMPLETE / FAILED",
+        "Rule": "FAILED exists only for quests explicitly authored to permit permanent failure."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-072-002",
+      "fields": {
+        "Registry / field": "story_evolution_triggers",
+        "Type": "Set of EVO IDs",
+        "Rule": "Historical triggers, permanently earned once the relevant story event occurs."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-072-003",
+      "fields": {
+        "Registry / field": "unique_pickups_claimed",
+        "Type": "Set of TRS IDs",
+        "Rule": "Tracks one-time acquisition independently of current inventory ownership."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-072-004",
+      "fields": {
+        "Registry / field": "completed_one_time_encounters",
+        "Type": "Set of WLD/ENC IDs",
+        "Rule": "Prevents replay of authored one-offs."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-072-005",
+      "fields": {
+        "Registry / field": "opened_persistent_doors",
+        "Type": "Set of DOR IDs",
+        "Rule": "Persistent open/unlocked state."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-072-006",
+      "fields": {
+        "Registry / field": "unlocked_shortcuts",
+        "Type": "Set of SCT IDs",
+        "Rule": "Persistent traversal unlocks."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "STATE-072-007",
+      "fields": {
+        "Registry / field": "mill_foreshadow_seen",
+        "Type": "Set/bitset",
+        "Rule": "Tracks which authored early mill references were seen."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "STATE-072-008",
+      "fields": {
+        "Registry / field": "religious_parallels_found",
+        "Type": "Counter + provenance where required",
+        "Rule": "Tracks matched religious echoes without exposing a score."
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "STATE-079-001",
+      "fields": {
+        "Target": "Pate",
+        "Eligibility": "Historical mill death; restoration system unlocked",
+        "Cost from pool": "1",
+        "After restoration": "human_life_state = REVIVED; memorial entry remains"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 79,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-079-002",
+      "fields": {
+        "Target": "Trade",
+        "Eligibility": "Historical mill death; restoration system unlocked",
+        "Cost from pool": "1",
+        "After restoration": "human_life_state = REVIVED; memorial entry remains"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 79,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-079-003",
+      "fields": {
+        "Target": "Any mortal leader",
+        "Eligibility": "leader_fate == EXECUTED and current life state == DEAD",
+        "Cost from pool": "1 each",
+        "After restoration": "leader_fate stays EXECUTED; human_life_state = REVIVED; no automatic return to office"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 79,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-083-001",
+      "fields": {
+        "Field": "human_restoration_budget_total",
+        "Type / rule": "Constant = 5"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 83,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-083-002",
+      "fields": {
+        "Field": "human_restored_ids",
+        "Type / rule": "Set of eligible human IDs; maximum size 5"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 83,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-083-003",
+      "fields": {
+        "Field": "human_restoration_uses_spent",
+        "Type / rule": "Derived = size(human_restored_ids)"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 83,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-083-004",
+      "fields": {
+        "Field": "human_restoration_uses_remaining",
+        "Type / rule": "Derived = 5 − size(human_restored_ids)"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 83,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-083-005",
+      "fields": {
+        "Field": "human_memorial_entries",
+        "Type / rule": "Historical authored entry set; restoration does not remove an entry"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 83,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-090-001",
+      "fields": {
+        "Predecessor / convenience name": "prologue_complete",
+        "Authoritative replacement": "chapter_state[00] == COMPLETE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-090-002",
+      "fields": {
+        "Predecessor / convenience name": "chapter_started_X",
+        "Authoritative replacement": "chapter_state[X] in {STARTED, COMPLETE}"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-090-003",
+      "fields": {
+        "Predecessor / convenience name": "chapter_complete_X",
+        "Authoritative replacement": "chapter_state[X] == COMPLETE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-090-004",
+      "fields": {
+        "Predecessor / convenience name": "town_conquered_X",
+        "Authoritative replacement": "town_state[X] in {CONQUERED, RESTORING, RESTORED}"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-090-005",
+      "fields": {
+        "Predecessor / convenience name": "town_restored_X",
+        "Authoritative replacement": "town_state[X] == RESTORED"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-090-006",
+      "fields": {
+        "Predecessor / convenience name": "leader_01_spared … leader_08_spared",
+        "Authoritative replacement": "leader_fate[LDR-01..08]"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "STATE-090-007",
+      "fields": {
+        "Predecessor / convenience name": "pate_trade_recovered",
+        "Authoritative replacement": "Separate Pate/Trade progress + human_life_state"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "STATE-090-008",
+      "fields": {
+        "Predecessor / convenience name": "aeric_arc_state / rhoswen_arc_state / kurg_doubt_state numbers",
+        "Authoritative replacement": "Named enum states with stable serialized ordinal"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "STATE-090-009",
+      "fields": {
+        "Predecessor / convenience name": "monster_memorial_count",
+        "Authoritative replacement": "memorial_reflection_count"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "STATE-090-010",
+      "fields": {
+        "Predecessor / convenience name": "severin_king_revealed",
+        "Authoritative replacement": "severin_state in {KING_REVEALED, SUPERBOSS_DEFEATED}"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "STATE-090-011",
+      "fields": {
+        "Predecessor / convenience name": "grief_clear / betrayal_clear / silence_clear etc.",
+        "Authoritative replacement": "Matching hell_circle_state == COMPLETE"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 12
+      }
+    },
+    {
+      "id": "STATE-090-012",
+      "fields": {
+        "Predecessor / convenience name": "has_resurrected / has_sacrificed",
+        "Authoritative replacement": "Derived from total_resurrections > 0 / total_sacrifices > 0"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 13
+      }
+    },
+    {
+      "id": "STATE-096-001",
+      "fields": {
+        "Pattern": "CHxx-Eyy",
+        "Meaning": "Mandatory authored Story Bible event",
+        "One-time default": "Yes unless explicitly repeatable"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-096-002",
+      "fields": {
+        "Pattern": "CHxx-Oyy",
+        "Meaning": "Optional authored Story Bible event",
+        "One-time default": "Yes unless explicitly repeatable"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-096-003",
+      "fields": {
+        "Pattern": "SYS-MEM-nnn",
+        "Meaning": "Memorial lifecycle / tutorial event",
+        "One-time default": "Yes"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-096-004",
+      "fields": {
+        "Pattern": "SYS-RES-nnn",
+        "Meaning": "Abyssal resurrection system-level story binding",
+        "One-time default": "Transaction/event history"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-096-005",
+      "fields": {
+        "Pattern": "SYS-HRS-nnn",
+        "Meaning": "Human restoration unlock / use event",
+        "One-time default": "Unlock once; uses individually logged"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-096-006",
+      "fields": {
+        "Pattern": "QST-<slug>-nnn",
+        "Meaning": "Optional quest step",
+        "One-time default": "Per quest design"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "STATE-096-007",
+      "fields": {
+        "Pattern": "WLD-<map>-nnn",
+        "Meaning": "One-time world narrative interaction",
+        "One-time default": "Yes"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "STATE-096-008",
+      "fields": {
+        "Pattern": "TRS-<map>-nnn",
+        "Meaning": "Unique treasure acquisition",
+        "One-time default": "Yes"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "STATE-096-009",
+      "fields": {
+        "Pattern": "DOR-<map>-nnn",
+        "Meaning": "Persistent door state",
+        "One-time default": "Yes"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "STATE-096-010",
+      "fields": {
+        "Pattern": "SCT-<map>-nnn",
+        "Meaning": "Persistent shortcut unlock",
+        "One-time default": "Yes"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "STATE-104-001",
+      "fields": {
+        "Event / class": "CH00-E03 — prologue endpoint",
+        "Prerequisite / trigger": "CH00-E01/E02 resolved",
+        "Authoritative writes": "chapter_state[00]=COMPLETE; chapter_state[01]=AVAILABLE",
+        "Important reads / consequence": "Unlock adult-era opening"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-104-002",
+      "fields": {
+        "Event / class": "CH01-E05 — starter choice",
+        "Prerequisite / trigger": "CH01 enlistment sequence active",
+        "Authoritative writes": "player/pate/trade starter species IDs atomically",
+        "Important reads / consequence": "Rival teams; later starter dialogue"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-104-003",
+      "fields": {
+        "Event / class": "Each mortal leader fate commit",
+        "Prerequisite / trigger": "Leader battle/surrender resolved; fate still UNRESOLVED",
+        "Authoritative writes": "leader_fate[LDR]=SPARED or EXECUTED; human_life_state; town_state→CONQUERED",
+        "Important reads / consequence": "Town dialogue; Kurg/Aeric/Rhoswen reactions; Hell eligibility"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-104-004",
+      "fields": {
+        "Event / class": "First permanent Abyssal death",
+        "Prerequisite / trigger": "Checklist 07 death transaction",
+        "Authoritative writes": "memorial_state: ABSENT→PENDING_ESTABLISHMENT; death history increments",
+        "Important reads / consequence": "Next Civeton arrival can establish memorial"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-104-005",
+      "fields": {
+        "Event / class": "SYS-MEM-001 — establish memorial",
+        "Prerequisite / trigger": "memorial_state=PENDING + arrival in Civeton",
+        "Authoritative writes": "memorial_state=ESTABLISHED; resurrection_tutorial_state=AVAILABLE",
+        "Important reads / consequence": "Memorial world object/UI becomes active"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "STATE-104-006",
+      "fields": {
+        "Event / class": "SYS-MEM-002 — first memorial interaction",
+        "Prerequisite / trigger": "memorial established; tutorial not seen",
+        "Authoritative writes": "resurrection_tutorial_state=SEEN",
+        "Important reads / consequence": "Explain ten-distinct-species system; no forced resurrection"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "STATE-104-007",
+      "fields": {
+        "Event / class": "Story-evolution scene",
+        "Prerequisite / trigger": "Relevant CH/QST event resolves",
+        "Authoritative writes": "Add EVO trigger ID to story_evolution_triggers",
+        "Important reads / consequence": "Checklist 11 species evolution eligibility"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "STATE-104-008",
+      "fields": {
+        "Event / class": "Unique pickup",
+        "Prerequisite / trigger": "Interact with unclaimed TRS object",
+        "Authoritative writes": "Add TRS ID to unique_pickups_claimed; inventory transaction separately",
+        "Important reads / consequence": "Object disappears permanently; item may later be spent"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "STATE-104-009",
+      "fields": {
+        "Event / class": "Warden victory 01–08",
+        "Prerequisite / trigger": "Matching Warden battle resolves",
+        "Authoritative writes": "warden_defeated[id]=true; advance matching hell_circle_state",
+        "Important reads / consequence": "Circle progression; later dialogue"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "STATE-104-010",
+      "fields": {
+        "Event / class": "Circle IX climax",
+        "Prerequisite / trigger": "Authored throne climax resolves",
+        "Authoritative writes": "hell_circle_state[09] advances to COMPLETE",
+        "Important reads / consequence": "Act V availability"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "STATE-104-011",
+      "fields": {
+        "Event / class": "Executed-leader Hell encounter",
+        "Prerequisite / trigger": "leader_fate=EXECUTED; correct Hell placement",
+        "Authoritative writes": "Add LDR ID to hell_leader_encounters",
+        "Important reads / consequence": "Prevents duplicate one-time gauntlet event; dialogue history"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 12
+      }
+    },
+    {
+      "id": "STATE-104-012",
+      "fields": {
+        "Event / class": "Mirra / Grief dialogue",
+        "Prerequisite / trigger": "Chapter 16 authored trigger",
+        "Authoritative writes": "No new morality state required",
+        "Important reads / consequence": "Reads total deaths, current memorial, resurrections, sacrifices, memorial reflections"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 13
+      }
+    },
+    {
+      "id": "STATE-104-013",
+      "fields": {
+        "Event / class": "Pate or Trade confirmed dead",
+        "Prerequisite / trigger": "Authored mill/death reveal",
+        "Authoritative writes": "progress state→CONFIRMED_DEAD; human_life_state=DEAD; human memorial entry unlock",
+        "Important reads / consequence": "Later Hell search and restoration eligibility"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 14
+      }
+    },
+    {
+      "id": "STATE-104-014",
+      "fields": {
+        "Event / class": "Pate / Trade found below",
+        "Prerequisite / trigger": "Matching authored encounter",
+        "Authoritative writes": "individual progress state→FOUND_BELOW",
+        "Important reads / consequence": "Restoration sequence availability later"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 15
+      }
+    },
+    {
+      "id": "STATE-104-015",
+      "fields": {
+        "Event / class": "SYS-HRS-001 — human restoration unlock",
+        "Prerequisite / trigger": "Authored finale/postgame unlock",
+        "Authoritative writes": "Restoration system available; budget constant 5",
+        "Important reads / consequence": "Pate/Trade + executed leaders become selectable if eligible"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 16
+      }
+    },
+    {
+      "id": "STATE-104-016",
+      "fields": {
+        "Event / class": "SYS-HRS-use — restore human",
+        "Prerequisite / trigger": "Eligible target; uses_remaining>0",
+        "Authoritative writes": "Add human ID to human_restored_ids; human_life_state=REVIVED; progress→RESOLVED where applicable",
+        "Important reads / consequence": "Memorial entry remains; leader fate stays EXECUTED; no office restoration"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 17
+      }
+    },
+    {
+      "id": "STATE-104-017",
+      "fields": {
+        "Event / class": "CH22 epilogue endpoint",
+        "Prerequisite / trigger": "Required World After events complete",
+        "Authoritative writes": "chapter_state[22]=COMPLETE; postgame_state=UNLOCKED; chapter_state[23]=AVAILABLE",
+        "Important reads / consequence": "King Below / postgame systems"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 18
+      }
+    },
+    {
+      "id": "STATE-104-018",
+      "fields": {
+        "Event / class": "Severin king reveal",
+        "Prerequisite / trigger": "CH23 authored reveal",
+        "Authoritative writes": "severin_state=KING_REVEALED",
+        "Important reads / consequence": "Secret superboss availability"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 19
+      }
+    },
+    {
+      "id": "STATE-104-019",
+      "fields": {
+        "Event / class": "Severin superboss victory",
+        "Prerequisite / trigger": "King reveal + battle victory",
+        "Authoritative writes": "severin_state=SUPERBOSS_DEFEATED",
+        "Important reads / consequence": "Postgame completion record"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 20
+      }
+    },
+    {
+      "id": "STATE-128-001",
+      "fields": {
+        "Field": "postgame_state",
+        "Values / rule": "LOCKED / UNLOCKED"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 128,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "STATE-128-002",
+      "fields": {
+        "Field": "severin_state",
+        "Values / rule": "Carries King Below reveal and superboss completion"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 128,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "STATE-128-003",
+      "fields": {
+        "Field": "human_restoration system",
+        "Values / rule": "Unlocked by its authored finale/postgame event; independent of Chapter 23 completion"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 128,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "STATE-128-004",
+      "fields": {
+        "Field": "postgame leader availability",
+        "Values / rule": "Derived from leader_fate + human_life_state; living/restored leaders can appear in living-world content, dead executed leaders remain underworld-only as authored"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 128,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "STATE-128-005",
+      "fields": {
+        "Field": "postgame rematch/tournament state",
+        "Values / rule": "Own later system state; Checklist 10 only provides prerequisite flags"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 128,
+        "table_row": 6
+      }
+    }
+  ],
+  "unresolved": []
+}

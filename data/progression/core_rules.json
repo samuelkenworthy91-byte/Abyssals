@@ -21,9 +21,18 @@
     "mean_growth": "32 + 0.06*(BST-300)",
     "mean_stat": "BST/6",
     "stat_growth_percent": "max(10, round(mean_growth*(base_stat/mean_stat)^2.25))",
-    "hp_baseline_per_level": 10,
     "seeded": true,
-    "above_100_can_plus2": true
+    "above_100_can_plus2": true,
+    "hp_per_success": 10,
+    "other_stat_per_success": 1,
+    "failed_roll_increment": 0,
+    "minimum_successes_per_level": 0,
+    "rounding": "nearest_half_up",
+    "immutable_instance_seed": true,
+    "authority": {
+      "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx",
+      "body_index": 18
+    }
   },
   "battle": {
     "view": "first_person_enemy_front_sprite",
@@ -31,7 +40,15 @@
     "exact_hp_numbers": true,
     "damage_math_family": "Gen III-style locked foundation",
     "simultaneous_ko_batched": true,
-    "leader_mutual_ko_player_victory": true
+    "leader_mutual_ko_player_victory": "only_if_living_reserve_exists_after_starter_life_resolution",
+    "replacement_style": "SET",
+    "residual_layer_order": [
+      "FIELD",
+      "PERSISTENT_STATUS",
+      "HELD_SUSTAIN",
+      "OTHER_AUTHORED",
+      "CLEANUP"
+    ]
   },
   "capture": {
     "theme": "food",
@@ -68,6 +85,135 @@
     "evolution_paths": 98,
     "back_sprites_required": false,
     "front_sprites_complete_in_project_history": true,
-    "runtime_assets_verified_in_this_import": false
+    "runtime_assets_verified_in_this_import": true
+  },
+  "evolution": {
+    "promotion": "signed_target_minus_source_base_stats",
+    "preserve_current_hp": "clamp(1,new_max,half_up(old_current*new_max/old_max))",
+    "rolls_at_evolution": 0
+  },
+  "training": {
+    "slots_per_instance": 5,
+    "modifier_points_per_slot": 20,
+    "durations": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "tick": "after_each_level_growth",
+    "allow_same_stat_stacking": true,
+    "clear_on_evolution": false,
+    "usable_at_cap": false
+  },
+  "economy": {
+    "starting_money": 2000,
+    "wild_money": 0,
+    "routine_stack_limit": 999,
+    "held_evolution_stack_limit": 99,
+    "ordinary_sell_ratio": 0.5,
+    "sell_rounding": "floor",
+    "rare_sale_confirmation": true,
+    "trial_mark_money_exchange": false,
+    "trainer_payout": {
+      "Basic": [
+        10,
+        50
+      ],
+      "Advanced": [
+        16,
+        50
+      ],
+      "Leader-lite": [
+        24,
+        75
+      ],
+      "Leader": [
+        50,
+        50
+      ],
+      "Rival": [
+        50,
+        50
+      ],
+      "Warden": [
+        0,
+        0
+      ],
+      "Final": [
+        0,
+        0
+      ],
+      "Severin": [
+        0,
+        0
+      ]
+    },
+    "payout_formula": "round_to_nearest_10(level_coefficient * highest_team_level + size_coefficient * team_size)"
+  },
+  "escape": {
+    "formula": "floor(128*A/max(1,B))+30*C",
+    "automatic_threshold": 255,
+    "rng_integer_inclusive": [
+      0,
+      254
+    ],
+    "success": "r < score"
+  },
+  "parley": {
+    "weights": {
+      "MONEY": 50,
+      "HELD": 25,
+      "EVOLUTION": 15,
+      "OTHER": 10
+    },
+    "money_loss_fraction": 0.15,
+    "money_rounding": "floor",
+    "remove_empty_categories": true,
+    "renormalize_remaining": true,
+    "immune": [
+      "KEY_ITEMS",
+      "TRIAL_MARKS"
+    ]
+  },
+  "memorial": {
+    "restore_same_instance": true,
+    "cost_distinct_living_reserve_species": 10,
+    "sacrifices_enter_memorial": false,
+    "unlock": "first permanent Abyssal death followed by Civeton revisit",
+    "separate_from_human_restoration": true
+  },
+  "human_restoration": {
+    "total_uses": 5,
+    "elective": true,
+    "pate_trade_optional": true,
+    "preserve_historical_fate": true,
+    "eligible": [
+      "CHR-PATE",
+      "CHR-TRADE",
+      "LDR-01",
+      "LDR-02",
+      "LDR-03",
+      "LDR-04",
+      "LDR-05",
+      "LDR-06",
+      "LDR-07",
+      "LDR-08"
+    ]
+  },
+  "starter_lives": {
+    "initial": 3,
+    "bound_to_original_instances": true,
+    "return_timing": "round_end_before_wipe",
+    "return_hp": "max(1,ceil(max_hp*0.10))",
+    "max_lives_lost_per_action": 1,
+    "clear_lethal_status_on_return": true,
+    "preserve_pp": true,
+    "retain_held_item_on_nonfinal_loss": true,
+    "return_to_same_active_slot": true,
+    "lost_queued_action_remains_lost": true,
+    "memorial_resurrection_lives": 1,
+    "bonus_lives_regenerate": false
   }
 }

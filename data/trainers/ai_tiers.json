@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "AI-WILD",
+      "fields": {
+        "Tier": "Wild",
+        "Typical users": "Wild encounters",
+        "Switching": "No",
+        "Bag heals": "0",
+        "Prediction / knowledge": "None beyond immediate move legality; cannot infer switches",
+        "Setup & status": "Uses damaging moves most often; status/setup only from species behaviour weights",
+        "Fairness rule": "Seeded weighted choice; never reads player input"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "AI-BASIC",
+      "fields": {
+        "Tier": "Basic",
+        "Typical users": "Recruit / civilian / early route",
+        "Switching": "No proactive switching",
+        "Bag heals": "0",
+        "Prediction / knowledge": "Recognises current type immunity and obvious super-effective damage only",
+        "Setup & status": "Uses straightforward status/setup when immediately sensible; no long combo plan",
+        "Fairness rule": "No action-reading; imperfect choices preserved"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "AI-ADVANCED",
+      "fields": {
+        "Tier": "Advanced",
+        "Typical users": "Mid/late generic / specialists",
+        "Switching": "Yes: immunity, near-certain defeat, or clear tactical benefit; max 2 voluntary switches",
+        "Bag heals": "0–1",
+        "Prediction / knowledge": "KO and Speed-order reads; current typing; revealed ability/moves only",
+        "Setup & status": "Can set status, heal by move, boost, pivot, and preserve a useful counter",
+        "Fairness rule": "Top-choice bias with seeded variation; no hidden data"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "AI-LEADER",
+      "fields": {
+        "Tier": "Leader",
+        "Typical users": "Mortal leaders",
+        "Switching": "Yes; max 3 voluntary switches; preserve ace; anti-loop rule",
+        "Bag heals": "1 early, 2 late",
+        "Prediction / knowledge": "Tracks revealed moves, Speed order, likely switch value, and type matchups",
+        "Setup & status": "Executes authored plan; setup/status has role and stop conditions",
+        "Fairness rule": "No input-reading; cannot know unrevealed moves or future RNG"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "AI-WARDEN",
+      "fields": {
+        "Tier": "Warden",
+        "Typical users": "All 8 Hell Wardens",
+        "Switching": "Yes; unrestricted except anti-loop / no pointless pair cycling",
+        "Bag heals": "0",
+        "Prediction / knowledge": "Leader knowledge + terrain state and revealed counterplay",
+        "Setup & status": "Terrain plan is primary; can sacrifice position but not cheat stats",
+        "Fairness rule": "Terrain-aware, deterministic scoring; no external bag items"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "AI-FINAL_BOSS",
+      "fields": {
+        "Tier": "Final Boss",
+        "Typical users": "Illyr / Nharos manifestations",
+        "Switching": "N/A unless encounter phase explicitly uses switching",
+        "Bag heals": "0",
+        "Prediction / knowledge": "Boss-script knowledge of visible battle state only",
+        "Setup & status": "Bespoke phase logic; not trainer-team logic",
+        "Fairness rule": "No hidden player-action read; telegraph lethal patterns"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "AI-SEVERIN",
+      "fields": {
+        "Tier": "Severin",
+        "Typical users": "King Below superboss",
+        "Switching": "Yes; unrestricted except anti-loop",
+        "Bag heals": "2",
+        "Prediction / knowledge": "Best legal inference: all revealed moves, types, Speed, statuses, field state; never unrevealed moves",
+        "Setup & status": "Full setup/status/pivot logic; baiting and ace preservation",
+        "Fairness rule": "Hardest fair AI; seeded tie-breaks only"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 24,
+        "table_row": 8
+      }
+    }
+  ],
+  "unresolved": []
+}
