@@ -164,6 +164,20 @@ def build_world(g, local):
         'clear_lethal_status_on_return':True,'preserve_pp':True,'retain_held_item_on_nonfinal_loss':True,
         'return_to_same_active_slot':True,'lost_queued_action_remains_lost':True,
         'memorial_resurrection_lives':1,'bonus_lives_regenerate':False}
+    core['world'].update(camera='fixed_authored_screens',step_tiles=1,footprint_tiles=1,
+        walk_tiles_per_second=4,run_tiles_per_second=7,run_unlock='after_starter_and_opening_release',
+        interaction='single_tile_in_front',clear_buffered_input_after_modal=True,
+        trainer_sight_tiles=[1,6],trainer_sight='straight_cardinal_ray_blocked_by_solids',
+        collision_authority='authored_grid_and_objects_not_art',
+        npc_modes=['STATIONARY','BOUNDED_RANDOM_WALK','PATROL_LOOP','SCRIPTED'],
+        carriage={'hell':False,'unlock':'physical_town_visit_and_courier_introduction','fare':'small_nonzero_authored_tuning'},
+        watercraft={'unlock':'after_Philomere','embark_disembark':'authored_access_tiles','party_species_gate':False})
+    core['encounters']={'check_on':'completed_eligible_tile_step','initial_tuning_percent':{'LOW':6,'NORMAL':10,'HIGH':14},
+        'rates_status':'source_approved_initial_tuning_not_immutable_constants',
+        'rate_authority':prov(source('ABYSSALS_CHECKLIST_17_*'),body_index=68),
+        'no_checks_on':['WALL_BUMP','TURN_IN_PLACE','IDLE','MENU','DIALOGUE','SCRIPTED_MOVEMENT','WARP_ENTRY'],
+        'resonator':'generate_once_then_suppress_if_wild_level<=first_living_party_level-5','reroll_suppressed':False,
+        'phase_selected_at':'encounter_creation','dynamic_level_scaling':False}
     write('data/progression/core_rules.json',core)
     savep,saveb=doc('ABYSSALS_CHECKLIST_15_*')
     save=read('data/save_schema/contracts.json')

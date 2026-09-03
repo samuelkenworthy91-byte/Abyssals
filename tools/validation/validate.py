@@ -65,7 +65,7 @@ def validate_references(value, registries, errors, trail='data'):
             validate_references(v, registries, errors, f'{trail}[{i}]')
 
 def content_counts(registries, errors):
-    for key, n in [('species',187),('evolutions',98),('learnsets',1893),('types',18)]:
+    for key, n in [('species',187),('evolutions',98),('moves',354),('learnsets',1893),('tables',144),('types',18)]:
         if len(registries.get(key,set())) != n:
             errors.append(f'CONTENT: {key} requires {n} records; found {len(registries.get(key,set()))}')
 
@@ -109,6 +109,8 @@ def validate(root=ROOT, content=False):
         registries[key] = {r['id'] for r in rows if 'id' in r}
         unique(rows,'id',d['path'],errors)
         if len(rows)!=d['record_count'] or value['status']!=d['status']:errors.append('Stale dataset index '+d['path'])
+        if value['status']=='complete_for_supplied_source' and (value['unresolved'] or any(r.get('unresolved_fields') for r in rows)):
+            errors.append('Complete dataset contains unresolved fields '+d['path'])
         for row in rows:
             for e in Draft202012Validator(parsed[d['record_schema']]).iter_errors(row):
                 errors.append(f'{d["path"]} {row.get("id")} {e.json_path}: {e.message}')
@@ -231,6 +233,12 @@ def validate(root=ROOT, content=False):
         if a['canonical_id'] and a['canonical_id'] not in registries['characters']:errors.append('Unresolved canonical alias '+a['source_id'])
     if content:
         content_counts(registries,errors)
+        blockers=parsed['data/manifests/readiness_blockers.json']
+        for missing in blockers['genuinely_missing_fields']:
+            errors.append('CONTENT: '+missing['field']+' — '+missing['required_source'])
+        for group in blockers['dataset_blockers']:
+            for question in group['unresolved']:
+                errors.append('CONTENT: '+group['dataset']+' — '+question)
         dex=[r['dex_number'] for r in parsed['data/species/species.json']['records']]
         if set(dex)!=set(range(1,188)) or len(dex)!=187:errors.append('CONTENT: canonical Dex numbers must be exactly 1..187')
         mapped=[r['species_id'] for r in am['records'] if r['species_id'] and r['runtime_filename']]

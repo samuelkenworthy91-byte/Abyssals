@@ -71,7 +71,37 @@
     "hell_phases": [
       "PALE",
       "DARK"
-    ]
+    ],
+    "camera": "fixed_authored_screens",
+    "step_tiles": 1,
+    "footprint_tiles": 1,
+    "walk_tiles_per_second": 4,
+    "run_tiles_per_second": 7,
+    "run_unlock": "after_starter_and_opening_release",
+    "interaction": "single_tile_in_front",
+    "clear_buffered_input_after_modal": true,
+    "trainer_sight_tiles": [
+      1,
+      6
+    ],
+    "trainer_sight": "straight_cardinal_ray_blocked_by_solids",
+    "collision_authority": "authored_grid_and_objects_not_art",
+    "npc_modes": [
+      "STATIONARY",
+      "BOUNDED_RANDOM_WALK",
+      "PATROL_LOOP",
+      "SCRIPTED"
+    ],
+    "carriage": {
+      "hell": false,
+      "unlock": "physical_town_visit_and_courier_introduction",
+      "fare": "small_nonzero_authored_tuning"
+    },
+    "watercraft": {
+      "unlock": "after_Philomere",
+      "embark_disembark": "authored_access_tiles",
+      "party_species_gate": false
+    }
   },
   "ironman": {
     "slots": 3,
@@ -215,5 +245,31 @@
     "lost_queued_action_remains_lost": true,
     "memorial_resurrection_lives": 1,
     "bonus_lives_regenerate": false
+  },
+  "encounters": {
+    "check_on": "completed_eligible_tile_step",
+    "initial_tuning_percent": {
+      "LOW": 6,
+      "NORMAL": 10,
+      "HIGH": 14
+    },
+    "rates_status": "source_approved_initial_tuning_not_immutable_constants",
+    "rate_authority": {
+      "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.docx",
+      "body_index": 68
+    },
+    "no_checks_on": [
+      "WALL_BUMP",
+      "TURN_IN_PLACE",
+      "IDLE",
+      "MENU",
+      "DIALOGUE",
+      "SCRIPTED_MOVEMENT",
+      "WARP_ENTRY"
+    ],
+    "resonator": "generate_once_then_suppress_if_wild_level<=first_living_party_level-5",
+    "reroll_suppressed": false,
+    "phase_selected_at": "encounter_creation",
+    "dynamic_level_scaling": false
   }
 }

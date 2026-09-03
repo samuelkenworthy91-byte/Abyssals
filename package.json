@@ -8,6 +8,7 @@
     "validate:content": "python3 tools/validation/validate.py --content",
     "test": "python3 -m unittest discover -s tests/unit -v",
     "art:audit": "python3 tools/art/process_portraits.py --report .reports/portrait_audit.json",
-    "validate:sources": "python3 tools/data/verify_derivations.py"
+    "validate:sources": "python3 tools/data/verify_derivations.py",
+    "validate:reconcile": "python3 tools/validation/reconcile_sources.py"
   }
 }

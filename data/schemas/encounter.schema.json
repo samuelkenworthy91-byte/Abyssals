@@ -93,7 +93,31 @@
               }
             }
           }
-        }
+        },
+        "oneOf": [
+          {
+            "properties": {
+              "species_id": {
+                "type": "string"
+              }
+            },
+            "not": {
+              "required": [
+                "resolver"
+              ]
+            }
+          },
+          {
+            "properties": {
+              "species_id": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "resolver"
+            ]
+          }
+        ]
       }
     }
   },
