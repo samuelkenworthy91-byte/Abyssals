@@ -1,0 +1,56 @@
+{
+  "chapter_state": {
+    "type": "array[0..23]",
+    "values": [
+      "LOCKED",
+      "AVAILABLE",
+      "STARTED",
+      "COMPLETE"
+    ]
+  },
+  "town_state": {
+    "values": [
+      "UNREACHED",
+      "CONTESTED",
+      "CONQUERED",
+      "RESTORING",
+      "RESTORED"
+    ]
+  },
+  "leader_fate": {
+    "keys": "LDR-01..LDR-08",
+    "values": [
+      "UNRESOLVED",
+      "SPARED",
+      "EXECUTED"
+    ],
+    "historical_immutable": true
+  },
+  "human_life_state": {
+    "values": [
+      "ALIVE",
+      "DEAD",
+      "REVIVED"
+    ]
+  },
+  "human_restorations": {
+    "total_elective": 5,
+    "pate_trade_optional": true
+  },
+  "starter_assignment": [
+    "player_starter_species_id",
+    "pate_starter_species_id",
+    "trade_starter_species_id"
+  ],
+  "starter_lives": {
+    "initial": 3,
+    "nonfinal_return_hp": "max(1, ceil(max_hp*0.10))"
+  },
+  "save": {
+    "campaign_slots": 3,
+    "commit_seq_monotonic": true,
+    "idempotent_transaction_ids": true,
+    "backup_generations": 2,
+    "journal": true
+  }
+}

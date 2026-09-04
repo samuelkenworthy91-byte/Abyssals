@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "DIALOGUE-STORY-103",
+      "speaker_id": "CHR-TRADE",
+      "text": "If you’re ready.",
+      "scene_id": "CH00-E03",
+      "delivery": "speech",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 103
+      }
+    },
+    {
+      "id": "DIALOGUE-STORY-123",
+      "speaker_id": "CHR-TRADE",
+      "text": "Don’t follow us.",
+      "scene_id": "CH01-E03",
+      "delivery": "written_note",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 123
+      }
+    },
+    {
+      "id": "DIALOGUE-STORY-292",
+      "speaker_id": "LDR-04",
+      "text": "If your light teaches mercy and mine teaches mercy, what exactly are we killing one another over?",
+      "scene_id": "CH05-E03",
+      "delivery": "speech",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 292
+      }
+    },
+    {
+      "id": "DIALOGUE-STORY-308",
+      "speaker_id": "CHR-KURG",
+      "text": "Duty is what remains when certainty fails.",
+      "scene_id": "CH05-E06",
+      "delivery": "speech",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 308
+      }
+    },
+    {
+      "id": "DIALOGUE-STORY-388",
+      "speaker_id": "LDR-07",
+      "text": "It was.",
+      "scene_id": "CH08-E03",
+      "delivery": "speech",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 388
+      }
+    },
+    {
+      "id": "DIALOGUE-STORY-570",
+      "speaker_id": "CHR-KURG",
+      "text": "Duty is what remains when certainty fails.",
+      "scene_id": "CH14-E02",
+      "delivery": "memory_echo",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 570
+      }
+    },
+    {
+      "id": "DIALOGUE-STORY-745",
+      "speaker_id": "CHR-PATE",
+      "text": "Aimon?",
+      "scene_id": "CH21-E04",
+      "delivery": "speech",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 745
+      }
+    }
+  ],
+  "unresolved": [
+    "Seven explicitly attributed verbatim lines extracted. The story is predominantly scene direction rather than a complete spoken script; remaining dialogue, branch-specific line wording, Checklist 07 epitaph templates and the approximately 40 farewell messages requested by Checklist 16 require authored text."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Encounter Table",
+  "type": "object",
+  "required": [
+    "table_id",
+    "area_id",
+    "phase",
+    "rate",
+    "slots"
+  ],
+  "properties": {
+    "table_id": {
+      "type": "string"
+    },
+    "area_id": {
+      "type": "string"
+    },
+    "phase": {
+      "enum": [
+        "DAY",
+        "NIGHT",
+        "PALE",
+        "DARK"
+      ]
+    },
+    "rate": {
+      "enum": [
+        "LOW",
+        "NORMAL",
+        "HIGH"
+      ]
+    },
+    "slots": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "species_or_resolver",
+          "weight",
+          "min_level",
+          "max_level"
+        ],
+        "properties": {
+          "species_or_resolver": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "min_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "max_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "condition": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "U001",
+      "subject": "species.capture_rate",
+      "status": "genuinely_missing_field_contract",
+      "required_source_or_decision": "Approved 187-species numeric catch-rate table. No such values occur in the supplied complete references."
+    },
+    {
+      "id": "U002",
+      "subject": "types.effectiveness",
+      "status": "genuinely_missing_field_contract",
+      "required_source_or_decision": "Approved 18x18 interaction table, including Fairy, or exact versioned rule import."
+    },
+    {
+      "id": "U003",
+      "subject": "xp.participant_level_gap_formula",
+      "status": "genuinely_missing_field_contract",
+      "required_source_or_decision": "Exact level-gap XP amount/formula, rounding and any participation adjustment. Sources specify 100 XP per level and per-participant comparison only."
+    },
+    {
+      "id": "U004",
+      "subject": "battle.core_numeric_contract",
+      "status": "genuinely_missing_field_contract",
+      "required_source_or_decision": "Exact versioned damage, critical-hit, status-duration, accuracy/evasion and capture/shake integer contracts, plus level-1 instance initialization. Gen III-style alone does not resolve all custom-18-type and growth-model bindings."
+    },
+    {
+      "id": "U005",
+      "subject": "encounters.WRONG_SHIFT",
+      "status": "genuinely_missing_field_contract",
+      "required_source_or_decision": "Original handoff ACTIVE_CANON section 12 names this rare anomaly category; recovered world and encounter references do not define its trigger, rate or resolver. An authored anomaly contract is required."
+    },
+    {
+      "id": "U006",
+      "subject": "world.phase_clock_lifecycle",
+      "status": "genuinely_missing_field_contract",
+      "required_source_or_decision": "Cleanup Addendum and Checklist 17 specify ten real-time minutes per phase, but do not specify whether suspended/offline time advances the cycle or how pause/background transitions persist. Confirm this lifecycle policy before implementing the clock; do not infer wall-clock catch-up."
+    },
+    {
+      "id": "U007",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "All 95 fixed rosters and current-form legal move pools are recovered. Final four-move loadouts require unresolved move metadata plus a documented deterministic implementation of Checklist 04 qualitative profiles; numeric profile scores are not authored in the sources. Leader-lite tier switch/knowledge inheritance is not explicitly assigned in the seven-tier table."
+    },
+    {
+      "id": "U008",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "NAM-KURG: Named roster specifies held count but not all held-role/slot assignments (Checklist 04 body 104)."
+    },
+    {
+      "id": "U009",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "NAM-RHOSWEN: Named roster specifies held count but not all held-role/slot assignments (Checklist 04 body 104)."
+    },
+    {
+      "id": "U010",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "NAM-SEVERIN: Named roster specifies held count but not all held-role/slot assignments (Checklist 04 body 104)."
+    },
+    {
+      "id": "U011",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "LDR-02: Checklist 04 body 59 specifies 1 held slots; body 108 names 2. Resolve exact slot allocations without deleting authored highlights."
+    },
+    {
+      "id": "U012",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "LDR-07: Checklist 04 body 59 specifies 4 held slots; body 108 names 3. Resolve exact slot allocations without deleting authored highlights."
+    },
+    {
+      "id": "U013",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-01: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U014",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-02: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U015",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-03: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U016",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-04: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U017",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-05: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U018",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-06: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U019",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-07: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U020",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "WRD-08: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+    },
+    {
+      "id": "U021",
+      "subject": "data/trainers/trainers.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "Checklist 09 v1.1 bodies 54–61 explicitly defer separate Hell rematch team versions (levels, moves, held items) and postgame tournament venue/rewards/rotation to a later addendum. The conditional zero-to-eight executed-leader gauntlet is locked; its exact upgraded rosters are not supplied."
+    },
+    {
+      "id": "U022",
+      "subject": "data/locations/locations.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources."
+    },
+    {
+      "id": "U023",
+      "subject": "data/locations/locations.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "LOC-JEROS occurs in the original handoff but is absent from the recovered locked world graph and Story Bible. An approved reconciliation or explicit retirement is required; do not silently alias it to Ramelle."
+    },
+    {
+      "id": "U024",
+      "subject": "data/species/species.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "capture_rate: no per-species numeric catch-rate table appears in the 35 detailed references or original handoff. Supply an approved 187-row catch-rate table; do not derive rates from BST or rarity."
+    },
+    {
+      "id": "U025",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 3 (Plain Call): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U026",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 4 (Plain Clap): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U027",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 9 (Plain Swipe): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U028",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 13 (Swift Clap): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U029",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 14 (Swift Dash): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U030",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 22 (Ash Lash): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U031",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 24 (Ash Rush): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U032",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 29 (Cinder Lash): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U033",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 30 (Cinder Pounce): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U034",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 45 (Foam Lance): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U035",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 48 (Foam Sweep): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U036",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 54 (Tide Lance): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U037",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 58 (Tide Sweep): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U038",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 65 (Spark Crash): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U039",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 67 (Spark Fang): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U040",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 68 (Spark Jolt): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U041",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 74 (Volt Jolt): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U042",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 77 (Storm of Youth): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U043",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 89 (Root Grip): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U044",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 95 (Thorn Guard): effect.contact_retaliation: source does not identify whose maximum HP supplies the 1/8 basis"
+    },
+    {
+      "id": "U045",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 105 (Frost Rush): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U046",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 106 (Frost Shard): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U047",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 107 (Frost Spire): effect.high_critical_ratio: exact stage/critical formula absent, category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U048",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 108 (Frost Sweep): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U049",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 113 (Rime Shard): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U050",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 121 (Brave Palm): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U051",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 124 (Firm Footing): effect.prevent_forced_switch: duration/expiry is not specified"
+    },
+    {
+      "id": "U052",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 126 (Iron Blow): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U053",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 139 (Toxin Lash): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U054",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 140 (Toxin Spray): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U055",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 148 (Venom Spray): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U056",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 149 (Venom Sting): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U057",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 151 (Venom Cairn): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U058",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 156 (Dune Drop): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U059",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 160 (Dune Surge): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U060",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 168 (Earth Surge): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U061",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 177 (Gale Crash): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U062",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 179 (Gale Dive): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U063",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 233 (Crag Spire): effect.high_critical_ratio: exact stage/critical formula absent, category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U064",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 237 (Stone Break): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U065",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 241 (Stone Fang): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U066",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 248 (Sickle Talon): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U067",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 255 (Shade Lash): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U068",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 257 (Shade Rush): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U069",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 264 (Wraith Lash): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U070",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 266 (Wraith Rush): category: authored action does not unambiguously establish physical versus special damage"
+    },
+    {
+      "id": "U071",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 274 (Drake Fang): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U072",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 281 (Wyrm Burst): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U073",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 282 (Wyrm Claw): effect.recoil: damage-dealt versus maximum-HP basis is unspecified"
+    },
+    {
+      "id": "U074",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 297 (Night Slash): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U075",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 298 (Night Strike): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U076",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 314 (Iron Crash): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U077",
+      "subject": "data/moves/moves.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "move 325 (Steel Cut): effect.high_critical_ratio: exact stage/critical formula absent"
+    },
+    {
+      "id": "U078",
+      "subject": "data/types/types.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "All 18 canonical type identities are recovered. The source package names a Gen III-style battle foundation but does not supply an explicit 18x18 effectiveness matrix (including Fairy) or a versioned import contract. Supply/approve that exact matrix; do not assume a conventional generation."
+    },
+    {
+      "id": "U079",
+      "subject": "data/story/scenes.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "All authored CHxx scene IDs and four WLD story-evolution events are extracted. Per-screen trigger bindings, full conditional dialogue and executable event actions remain to be authored against these scene specifications; legacy source-state text must use Checklist 10 translations."
+    },
+    {
+      "id": "U080",
+      "subject": "data/dialogue/dialogue.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "Seven explicitly attributed verbatim lines extracted. The story is predominantly scene direction rather than a complete spoken script; remaining dialogue, branch-specific line wording, Checklist 07 epitaph templates and the approximately 40 farewell messages requested by Checklist 16 require authored text."
+    },
+    {
+      "id": "U081",
+      "subject": "data/battles/battles.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "Fixed trainer encounters are indexed. Illyr/Nharos manifestation numeric phase payloads and Mirra illusion trigger timings are not specified by the source story/terrain contracts. Tutorial dummy stats and complete map-trigger bindings also remain unauthored."
+    },
+    {
+      "id": "U082",
+      "subject": "data/species/abilities.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "ABILITY_ADAPTABLE_HIDE: The source does not specify whether remembered types accumulate or only the latest type persists."
+    },
+    {
+      "id": "U083",
+      "subject": "data/species/abilities.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "ABILITY_COVETOUS_MIRROR: Which stat/stage is copied when the opponent raises multiple stats simultaneously is unspecified."
+    },
+    {
+      "id": "U084",
+      "subject": "data/species/abilities.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "ABILITY_PALIMPSEST: The source does not specify whether remembered moves accumulate or only the latest move persists."
+    },
+    {
+      "id": "U085",
+      "subject": "data/species/abilities.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "ABILITY_STORED_CHARGE: Contact hits do not specify receiving versus dealing contact damage."
+    },
+    {
+      "id": "U086",
+      "subject": "data/species/abilities.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "ABILITY_WAYSTONE_MASTER: Which hazard layer is removed if multiple distinct hazards are present is unspecified."
+    },
+    {
+      "id": "U087",
+      "subject": "data/species/abilities.json",
+      "status": "partial_exact_question",
+      "required_source_or_decision": "Move contact/sound tags and generic weather/hazard/screen/berry contracts are not fully enumerated by the supplied catalogue. Preserve these authored ability dependencies; do not invent Berry items or copy conventional battle defaults."
+    },
+    {
+      "id": "U088",
+      "subject": "LDR-01 Ser Aldren March",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U089",
+      "subject": "LDR-04 Warden Samiel Elow",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U090",
+      "subject": "CHR-RHOSWEN Dame Rhoswen Vey",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U091",
+      "subject": "TRN-C04-001 Caravan Guard Tovin",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U092",
+      "subject": "TRN-C04-003 Smuggler Caro",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U093",
+      "subject": "TRN-C04-007 Captain Niva",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U094",
+      "subject": "TRN-C04-008 Relic Broker Ors",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U095",
+      "subject": "TRN-C05-001 Orchard Keeper Rene",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U096",
+      "subject": "TRN-C05-002 Pilgrim Ada",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U097",
+      "subject": "TRN-C05-003 Shrine Guard Lucen",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U098",
+      "subject": "TRN-C05-004 Hunter Mirek",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U099",
+      "subject": "TRN-C05-005 Grove Warden Sera",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U100",
+      "subject": "TRN-C06-010 War Captain Drask",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U101",
+      "subject": "TRN-C07-004 Looting Mercenary Kerr",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U102",
+      "subject": "TRN-C07-005 Archivist Sorel",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U103",
+      "subject": "TRN-C07-008 Relic Keeper Cael",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U104",
+      "subject": "TRN-C07-009 Tide Scribe Hessa",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U105",
+      "subject": "TRN-C07-010 Antiquarian Nox",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U106",
+      "subject": "TRN-C08-002 Deserter Jula",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U107",
+      "subject": "TRN-C08-005 Veteran Tars",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U108",
+      "subject": "TRN-C09-002 Sacred Knight Moira",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    },
+    {
+      "id": "U109",
+      "subject": "TRN-C09-009 Champion Daven",
+      "status": "missing_portrait",
+      "required_source_or_decision": "Supply approved canonical production portrait; do not fabricate."
+    }
+  ],
+  "active_portrait_unresolved_identities": [],
+  "supplemental_monster_art": "Two unlabelled Flaggrim-family supplemental illustrations are source-only; they are not missing canonical species."
+}

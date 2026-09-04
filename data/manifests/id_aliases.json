@@ -1,0 +1,707 @@
+{
+  "schema_version": 1,
+  "character_aliases": [
+    {
+      "source_id": "CORE-001",
+      "canonical_id": "CHR-AIMON",
+      "name": "Aimon",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-002",
+      "canonical_id": "CHR-PATE",
+      "name": "Pateric “Pate” Vann",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-003",
+      "canonical_id": "CHR-TRADE",
+      "name": "Traden “Trade” Cor",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-004",
+      "canonical_id": "CHR-KURG",
+      "name": "General Kurg Halbrecht",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-005",
+      "canonical_id": "CHR-SEVERIN",
+      "name": "Severin Vale — Guide Form",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-006",
+      "canonical_id": "CHR-ILLYR",
+      "name": "Illyr",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-007",
+      "canonical_id": "CHR-NHAROS",
+      "name": "Nharos",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved_technical_id",
+      "identity_source": "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx"
+    },
+    {
+      "source_id": "CORE-008",
+      "canonical_id": "LDR-01",
+      "name": "Ser Aldren March",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-009",
+      "canonical_id": "LDR-02",
+      "name": "Abbess Yselle Marot",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-010",
+      "canonical_id": "LDR-03",
+      "name": "Provost Corvin Sair",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-011",
+      "canonical_id": "LDR-04",
+      "name": "Warden Samiel Elow",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-012",
+      "canonical_id": "LDR-05",
+      "name": "Castellan Braska Morn",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-013",
+      "canonical_id": "LDR-06",
+      "name": "Canon Mirelle Avin",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-014",
+      "canonical_id": "LDR-07",
+      "name": "Marshal Oren Talv",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-015",
+      "canonical_id": "LDR-08",
+      "name": "Hierophant Lucain Serault",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-016",
+      "canonical_id": "CHR-AERIC",
+      "name": "Chaplain Aeric Solm",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "CORE-017",
+      "canonical_id": "CHR-RHOSWEN",
+      "name": "Dame Rhoswen Vey",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C01-001",
+      "canonical_id": "TRN-C01-001",
+      "name": "Instructor Beric",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C01-002",
+      "canonical_id": "TRN-C01-002",
+      "name": "Recruit Elsen",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C01-003",
+      "canonical_id": "TRN-C01-003",
+      "name": "Scout Maela",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-001",
+      "canonical_id": "TRN-C02-001",
+      "name": "Scout Rell",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-002",
+      "canonical_id": "TRN-C02-002",
+      "name": "Soldier Varo",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-003",
+      "canonical_id": "TRN-C02-003",
+      "name": "Hunter Neris",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-004",
+      "canonical_id": "TRN-C02-004",
+      "name": "Officer Halven",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-005",
+      "canonical_id": "TRN-C02-005",
+      "name": "Sapper Corren",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-006",
+      "canonical_id": "TRN-C02-006",
+      "name": "Guard Ysarn",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-007",
+      "canonical_id": "TRN-C02-007",
+      "name": "Beastkeeper Selka",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-008",
+      "canonical_id": "TRN-C02-008",
+      "name": "Veteran Brann",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C02-009",
+      "canonical_id": "TRN-C02-009",
+      "name": "Ferryman Pella",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-001",
+      "canonical_id": "TRN-C03-001",
+      "name": "Guard Ansel",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-002",
+      "canonical_id": "TRN-C03-002",
+      "name": "Ferryman Mera",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-003",
+      "canonical_id": "TRN-C03-003",
+      "name": "Hospitaller Ione",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-004",
+      "canonical_id": "TRN-C03-004",
+      "name": "Pilgrim Tomas",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-005",
+      "canonical_id": "TRN-C03-005",
+      "name": "Smuggler Jarek",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-006",
+      "canonical_id": "TRN-C03-006",
+      "name": "Field Nurse Selene",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-007",
+      "canonical_id": "TRN-C03-007",
+      "name": "Officer Reth",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-008",
+      "canonical_id": "TRN-C03-008",
+      "name": "Shrine Keeper Elia",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C03-009",
+      "canonical_id": "TRN-C03-009",
+      "name": "Riverhand Marrec",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-001",
+      "canonical_id": "TRN-C04-001",
+      "name": "Caravan Guard Tovin",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-002",
+      "canonical_id": "TRN-C04-002",
+      "name": "Merchant Sella",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-003",
+      "canonical_id": "TRN-C04-003",
+      "name": "Smuggler Caro",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-004",
+      "canonical_id": "TRN-C04-004",
+      "name": "Mercenary Joss",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-005",
+      "canonical_id": "TRN-C04-005",
+      "name": "Ledger Guard Perrin",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-006",
+      "canonical_id": "TRN-C04-006",
+      "name": "Fixer Vael",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-007",
+      "canonical_id": "TRN-C04-007",
+      "name": "Captain Niva",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C04-008",
+      "canonical_id": "TRN-C04-008",
+      "name": "Relic Broker Ors",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-001",
+      "canonical_id": "TRN-C05-001",
+      "name": "Orchard Keeper Rene",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-002",
+      "canonical_id": "TRN-C05-002",
+      "name": "Pilgrim Ada",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-003",
+      "canonical_id": "TRN-C05-003",
+      "name": "Shrine Guard Lucen",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-004",
+      "canonical_id": "TRN-C05-004",
+      "name": "Hunter Mirek",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-005",
+      "canonical_id": "TRN-C05-005",
+      "name": "Grove Warden Sera",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-006",
+      "canonical_id": "TRN-C05-006",
+      "name": "Peacekeeper Olan",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-007",
+      "canonical_id": "TRN-C05-007",
+      "name": "Relic Keeper Noa",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C05-008",
+      "canonical_id": "TRN-C05-008",
+      "name": "Veteran Vaun",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-001",
+      "canonical_id": "TRN-C06-001",
+      "name": "Quarry Guard Dorr",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-002",
+      "canonical_id": "TRN-C06-002",
+      "name": "Sapper Helka",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-003",
+      "canonical_id": "TRN-C06-003",
+      "name": "Overseer Malk",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-004",
+      "canonical_id": "TRN-C06-004",
+      "name": "Prison Guard Veer",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-005",
+      "canonical_id": "TRN-C06-005",
+      "name": "Mason Edda",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-006",
+      "canonical_id": "TRN-C06-006",
+      "name": "Officer Sorn",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-007",
+      "canonical_id": "TRN-C06-007",
+      "name": "Enforcer Kelm",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-008",
+      "canonical_id": "TRN-C06-008",
+      "name": "Defector Mara",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-009",
+      "canonical_id": "TRN-C06-009",
+      "name": "Prospector Venn",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C06-010",
+      "canonical_id": "TRN-C06-010",
+      "name": "War Captain Drask",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-001",
+      "canonical_id": "TRN-C07-001",
+      "name": "Scribe Lio",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-002",
+      "canonical_id": "TRN-C07-002",
+      "name": "Archive Guard Fenn",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-003",
+      "canonical_id": "TRN-C07-003",
+      "name": "Scholar Yara",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-004",
+      "canonical_id": "TRN-C07-004",
+      "name": "Looting Mercenary Kerr",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-005",
+      "canonical_id": "TRN-C07-005",
+      "name": "Archivist Sorel",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-006",
+      "canonical_id": "TRN-C07-006",
+      "name": "Guard Captain Vessa",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-007",
+      "canonical_id": "TRN-C07-007",
+      "name": "Heretic Scribe Omel",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-008",
+      "canonical_id": "TRN-C07-008",
+      "name": "Relic Keeper Cael",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-009",
+      "canonical_id": "TRN-C07-009",
+      "name": "Tide Scribe Hessa",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C07-010",
+      "canonical_id": "TRN-C07-010",
+      "name": "Antiquarian Nox",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-001",
+      "canonical_id": "TRN-C08-001",
+      "name": "Soldier Arven",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-002",
+      "canonical_id": "TRN-C08-002",
+      "name": "Deserter Jula",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-003",
+      "canonical_id": "TRN-C08-003",
+      "name": "Field Captain Mor",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-004",
+      "canonical_id": "TRN-C08-004",
+      "name": "Siege Crew Pell",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-005",
+      "canonical_id": "TRN-C08-005",
+      "name": "Veteran Tars",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-006",
+      "canonical_id": "TRN-C08-006",
+      "name": "Hospitaller Senn",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-007",
+      "canonical_id": "TRN-C08-007",
+      "name": "War Captain Elric",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-008",
+      "canonical_id": "TRN-C08-008",
+      "name": "Duelist Avel",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C08-009",
+      "canonical_id": "TRN-C08-009",
+      "name": "Duelist Caia",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-001",
+      "canonical_id": "TRN-C09-001",
+      "name": "Temple Guard Aurel",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-002",
+      "canonical_id": "TRN-C09-002",
+      "name": "Sacred Knight Moira",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-003",
+      "canonical_id": "TRN-C09-003",
+      "name": "Scholar-Guard Nere",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-004",
+      "canonical_id": "TRN-C09-004",
+      "name": "Zealot Caldus",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-005",
+      "canonical_id": "TRN-C09-005",
+      "name": "Marshal Retainer Jorin",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-006",
+      "canonical_id": "TRN-C09-006",
+      "name": "Temple Captain Erys",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-007",
+      "canonical_id": "TRN-C09-007",
+      "name": "Relic Keeper Sava",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-008",
+      "canonical_id": "TRN-C09-008",
+      "name": "Antiquarian Sol",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "TRN-C09-009",
+      "canonical_id": "TRN-C09-009",
+      "name": "Champion Daven",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-01",
+      "canonical_id": "WRD-01",
+      "name": "Veyr, Keeper of Names",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-02",
+      "canonical_id": "WRD-02",
+      "name": "Ossael, the Gatherer",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-03",
+      "canonical_id": "WRD-03",
+      "name": "Mordren, Drum of War",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-04",
+      "canonical_id": "WRD-04",
+      "name": "Caelor, Last Magistrate",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-05",
+      "canonical_id": "WRD-05",
+      "name": "Asterion, Voice of Certainty",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-06",
+      "canonical_id": "WRD-06",
+      "name": "Mirra, Kindly Shape",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-07",
+      "canonical_id": "WRD-07",
+      "name": "Velcar, Oath-Eater",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    },
+    {
+      "source_id": "WRD-08",
+      "canonical_id": "WRD-08",
+      "name": "Nema, the Unremembered",
+      "source": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "status": "resolved"
+    }
+  ],
+  "technical_id_policy": "LOC-*, FIELD-* and combined area-phase table keys are import-assigned identifiers, not original canon IDs. Stable species IDs are never assigned from alphabetical filenames."
+}

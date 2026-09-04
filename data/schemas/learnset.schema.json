@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "learnset",
+  "type": "object",
+  "required": [
+    "id",
+    "species_id",
+    "move_id",
+    "method"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "species_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "move_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 354
+    },
+    "method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    }
+  }
+}

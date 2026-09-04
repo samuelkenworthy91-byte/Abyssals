@@ -1,0 +1,1678 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "SHOP_CIVETON",
+      "name": "Civeton standard stock",
+      "location_id": "LOC-CIVETON",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Civeton",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "SHOP_DORELEM",
+      "name": "Dorelem standard stock",
+      "location_id": "LOC-DORELEM",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Dorelem",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "SHOP_PHILOMERE",
+      "name": "Philomere standard stock",
+      "location_id": "LOC-PHILOMERE",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Philomere",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "SHOP_CYBRESSA",
+      "name": "Cybressa standard stock",
+      "location_id": "LOC-CYBRESSA",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Cybressa",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "SHOP_COSSENNE",
+      "name": "Cossenne standard stock",
+      "location_id": "LOC-COSSENNE",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_PATIENT_RATION",
+          "price": 800
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Cossenne",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "SHOP_MARASEN",
+      "name": "Marasen standard stock",
+      "location_id": "LOC-MARASEN",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_PATIENT_RATION",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_ROYAL_FEAST",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_HEAL_GREATER_REMEDY",
+          "price": 1500
+        },
+        {
+          "item_id": "HELD_IRON_MANTLE",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VEIL_CHARM",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_NORMAL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIRE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_WATER",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ELECTRIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GRASS",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ICE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIGHTING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_POISON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GROUND",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FLYING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_PSYCHIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_BUG",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ROCK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GHOST",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DRAGON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DARK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_STEEL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FAIRY",
+          "price": 1200
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Marasen",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "SHOP_BOTRUNE",
+      "name": "Botrune standard stock",
+      "location_id": "LOC-BOTRUNE",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_PATIENT_RATION",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_ROYAL_FEAST",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_HEAL_GREATER_REMEDY",
+          "price": 1500
+        },
+        {
+          "item_id": "HELD_IRON_MANTLE",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VEIL_CHARM",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_NORMAL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIRE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_WATER",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ELECTRIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GRASS",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ICE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIGHTING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_POISON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GROUND",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FLYING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_PSYCHIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_BUG",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ROCK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GHOST",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DRAGON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DARK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_STEEL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FAIRY",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_CAPTURE_YOUNGROOT_MASH",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_PP_DEEP_TONIC",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_COURIERS_SPUR",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VOTIVE_THREAD",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_PILGRIM_CUP",
+          "price": 4000
+        },
+        {
+          "item_id": "HELD_FIELDGLASS",
+          "price": 3500
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Botrune",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "SHOP_CAYFEN",
+      "name": "Cayfen standard stock",
+      "location_id": "LOC-CAYFEN",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_PATIENT_RATION",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_ROYAL_FEAST",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_HEAL_GREATER_REMEDY",
+          "price": 1500
+        },
+        {
+          "item_id": "HELD_IRON_MANTLE",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VEIL_CHARM",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_NORMAL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIRE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_WATER",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ELECTRIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GRASS",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ICE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIGHTING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_POISON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GROUND",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FLYING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_PSYCHIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_BUG",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ROCK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GHOST",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DRAGON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DARK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_STEEL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FAIRY",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_CAPTURE_YOUNGROOT_MASH",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_PP_DEEP_TONIC",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_COURIERS_SPUR",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VOTIVE_THREAD",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_PILGRIM_CUP",
+          "price": 4000
+        },
+        {
+          "item_id": "HELD_FIELDGLASS",
+          "price": 3500
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Cayfen",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "SHOP_RAMELLE",
+      "name": "Ramelle standard stock",
+      "location_id": "LOC-RAMELLE",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_PATIENT_RATION",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_ROYAL_FEAST",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_HEAL_GREATER_REMEDY",
+          "price": 1500
+        },
+        {
+          "item_id": "HELD_IRON_MANTLE",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VEIL_CHARM",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_NORMAL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIRE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_WATER",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ELECTRIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GRASS",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ICE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIGHTING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_POISON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GROUND",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FLYING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_PSYCHIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_BUG",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ROCK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GHOST",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DRAGON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DARK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_STEEL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FAIRY",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_CAPTURE_YOUNGROOT_MASH",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_PP_DEEP_TONIC",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_COURIERS_SPUR",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VOTIVE_THREAD",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_PILGRIM_CUP",
+          "price": 4000
+        },
+        {
+          "item_id": "HELD_FIELDGLASS",
+          "price": 3500
+        },
+        {
+          "item_id": "ITEM_HEAL_GRAND_RESTORATIVE",
+          "price": 3000
+        },
+        {
+          "item_id": "ITEM_PP_ELIXIR",
+          "price": 4500
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Ramelle",
+        "postgame_required": false
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "SHOP_POSTGAME_RAMELLE",
+      "name": "Postgame Ramelle standard stock",
+      "location_id": "LOC-RAMELLE",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_CAPTURE_TRAIL_BREAD",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_HEAL_POULTICE",
+          "price": 300
+        },
+        {
+          "item_id": "ITEM_CURE_ANTIVENOM",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_COOLING_BALM",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_CURE_NERVE_TONIC",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_WAKING_SALTS",
+          "price": 200
+        },
+        {
+          "item_id": "ITEM_CURE_THAWING_DRAUGHT",
+          "price": 250
+        },
+        {
+          "item_id": "ITEM_UTILITY_SMOKE_BOMB",
+          "price": 400
+        },
+        {
+          "item_id": "ITEM_CAPTURE_SEASONED_JERKY",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_HEAL_FIELD_SALVE",
+          "price": 700
+        },
+        {
+          "item_id": "ITEM_BATTLE_MIGHT",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_GUARD",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_MYSTIC",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_RESOLVE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_BATTLE_HASTE",
+          "price": 500
+        },
+        {
+          "item_id": "ITEM_CAPTURE_RIVER_GRUB",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_PP_FOCUS_TONIC",
+          "price": 1000
+        },
+        {
+          "item_id": "ITEM_CAPTURE_FAMILIAR_STEW",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CURE_PANACEA",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_PATIENT_RATION",
+          "price": 800
+        },
+        {
+          "item_id": "ITEM_CAPTURE_ROYAL_FEAST",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_HEAL_GREATER_REMEDY",
+          "price": 1500
+        },
+        {
+          "item_id": "HELD_IRON_MANTLE",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VEIL_CHARM",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_NORMAL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIRE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_WATER",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ELECTRIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GRASS",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ICE",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FIGHTING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_POISON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GROUND",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FLYING",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_PSYCHIC",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_BUG",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_ROCK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_GHOST",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DRAGON",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_DARK",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_STEEL",
+          "price": 1200
+        },
+        {
+          "item_id": "HELD_TYPE_SIGIL_FAIRY",
+          "price": 1200
+        },
+        {
+          "item_id": "ITEM_CAPTURE_YOUNGROOT_MASH",
+          "price": 600
+        },
+        {
+          "item_id": "ITEM_PP_DEEP_TONIC",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_COURIERS_SPUR",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_VOTIVE_THREAD",
+          "price": 2500
+        },
+        {
+          "item_id": "HELD_PILGRIM_CUP",
+          "price": 4000
+        },
+        {
+          "item_id": "HELD_FIELDGLASS",
+          "price": 3500
+        },
+        {
+          "item_id": "ITEM_HEAL_GRAND_RESTORATIVE",
+          "price": 3000
+        },
+        {
+          "item_id": "ITEM_PP_ELIXIR",
+          "price": 4500
+        },
+        {
+          "item_id": "ITEM_PP_GRAND_ELIXIR",
+          "price": 8000
+        }
+      ],
+      "unlock": {
+        "kind": "settlement_access",
+        "settlement": "Ramelle",
+        "postgame_required": true
+      },
+      "essential_stock_survives_fate": true,
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 65,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "SHOP_RAMELLE_RELICS",
+      "name": "Ramelle relic/alchemy specialist",
+      "location_id": "LOC-RAMELLE",
+      "currency": "STANDARD",
+      "inventory": [
+        {
+          "item_id": "ITEM_EVOLUTION_IRON_SIGIL",
+          "price": 4000
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_GRAVE_SALT",
+          "price": 4000
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_GILDED_IDOL",
+          "price": 4000
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_GILDED_NODULE",
+          "price": 3500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_STORMGLASS",
+          "price": 3500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_BLOODSTONE",
+          "price": 3500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_GRIEF_PEARL",
+          "price": 3500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_TIDE_PEARL",
+          "price": 4500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_MOURNING_BRIAR",
+          "price": 4500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_SUNSCAR_GLASS",
+          "price": 4500
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_WAYFARER_FEATHER",
+          "price": 4000
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_PILGRIM_BELL",
+          "price": 4000
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_TRIAL_TOXIN",
+          "price": 4000
+        },
+        {
+          "item_id": "ITEM_EVOLUTION_SAINT_S_TONIC",
+          "price": 4000
+        }
+      ],
+      "unlock": {
+        "kind": "ramelle_specialist_access"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 54
+      }
+    },
+    {
+      "id": "SHOP_CYBRESSA_PROVEN_GROUNDS",
+      "name": "The Proven Grounds",
+      "location_id": "LOC-CYBRESSA",
+      "currency": "CURRENCY_TRIAL_MARK",
+      "inventory": [
+        {
+          "item_id": "TRAIN_VITAL_I",
+          "price": 2
+        },
+        {
+          "item_id": "TRAIN_VITAL_II",
+          "price": 4
+        },
+        {
+          "item_id": "TRAIN_VITAL_III",
+          "price": 6
+        },
+        {
+          "item_id": "TRAIN_VITAL_IV",
+          "price": 8
+        },
+        {
+          "item_id": "TRAIN_VITAL_V",
+          "price": 10
+        },
+        {
+          "item_id": "TRAIN_TEMPER_I",
+          "price": 2
+        },
+        {
+          "item_id": "TRAIN_TEMPER_II",
+          "price": 4
+        },
+        {
+          "item_id": "TRAIN_TEMPER_III",
+          "price": 6
+        },
+        {
+          "item_id": "TRAIN_TEMPER_IV",
+          "price": 8
+        },
+        {
+          "item_id": "TRAIN_TEMPER_V",
+          "price": 10
+        },
+        {
+          "item_id": "TRAIN_WARD_I",
+          "price": 2
+        },
+        {
+          "item_id": "TRAIN_WARD_II",
+          "price": 4
+        },
+        {
+          "item_id": "TRAIN_WARD_III",
+          "price": 6
+        },
+        {
+          "item_id": "TRAIN_WARD_IV",
+          "price": 8
+        },
+        {
+          "item_id": "TRAIN_WARD_V",
+          "price": 10
+        },
+        {
+          "item_id": "TRAIN_INSIGHT_I",
+          "price": 2
+        },
+        {
+          "item_id": "TRAIN_INSIGHT_II",
+          "price": 4
+        },
+        {
+          "item_id": "TRAIN_INSIGHT_III",
+          "price": 6
+        },
+        {
+          "item_id": "TRAIN_INSIGHT_IV",
+          "price": 8
+        },
+        {
+          "item_id": "TRAIN_INSIGHT_V",
+          "price": 10
+        },
+        {
+          "item_id": "TRAIN_RESOLVE_I",
+          "price": 2
+        },
+        {
+          "item_id": "TRAIN_RESOLVE_II",
+          "price": 4
+        },
+        {
+          "item_id": "TRAIN_RESOLVE_III",
+          "price": 6
+        },
+        {
+          "item_id": "TRAIN_RESOLVE_IV",
+          "price": 8
+        },
+        {
+          "item_id": "TRAIN_RESOLVE_V",
+          "price": 10
+        },
+        {
+          "item_id": "TRAIN_FLEET_I",
+          "price": 2
+        },
+        {
+          "item_id": "TRAIN_FLEET_II",
+          "price": 4
+        },
+        {
+          "item_id": "TRAIN_FLEET_III",
+          "price": 6
+        },
+        {
+          "item_id": "TRAIN_FLEET_IV",
+          "price": 8
+        },
+        {
+          "item_id": "TRAIN_FLEET_V",
+          "price": 10
+        }
+      ],
+      "unlock": {
+        "kind": "cybressa_market_access"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 133
+      }
+    }
+  ],
+  "unresolved": []
+}

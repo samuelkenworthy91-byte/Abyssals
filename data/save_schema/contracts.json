@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "status": "locked_persistence_contract_extracted_not_runtime_save_format",
+  "slots": 3,
+  "hidden_recovery_generations": 2,
+  "journal_required": true,
+  "single_writer_required": true,
+  "monotonic_commit_seq": true,
+  "idempotent_transaction_ids": true,
+  "irreversible_boundaries": [
+    "death",
+    "starter_life_loss_and_pending_return",
+    "capture",
+    "sacrifice_and_resurrection",
+    "evolution",
+    "move_choice",
+    "item_ownership",
+    "leader_fate",
+    "story_choice",
+    "chapter_completion"
+  ],
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.docx"
+  ],
+  "unresolved": [],
+  "ordering_key": "commit_seq",
+  "timestamp_is_ordering_authority": false,
+  "transaction_states": [
+    "PREPARED",
+    "COMMITTED"
+  ],
+  "write_order": [
+    "PREPARE_JOURNAL",
+    "BUILD_CANDIDATE_WITHOUT_MUTATING_CURRENT",
+    "WRITE_AND_VERIFY_CANDIDATE",
+    "ATOMIC_ADVANCE_POINTER_AND_COMMIT",
+    "ROTATE_BACKUPS_AND_COMPACT"
+  ],
+  "acknowledgement": "only_after_durable_verified_commit",
+  "storage_failure": "pause_at_boundary_and_retry_or_recover",
+  "recovery": "highest_valid_commit_seq_with_deterministic_journal_replay",
+  "battle_prepared_state": [
+    "selected_command",
+    "targets",
+    "move_or_item",
+    "action_transaction_id",
+    "pre_action_rng_state"
+  ],
+  "migrations": {
+    "direction": "forward_only",
+    "verify_before_current": true,
+    "protect_pre_migration_generation": true,
+    "failure": "leave_original_untouched",
+    "unsupported_newer": "refuse_destructive_downgrade"
+  },
+  "writer": {
+    "per_slot": 1,
+    "lease_required": true,
+    "stale_lock_recovery": true,
+    "revalidate_commit_before_grant": true
+  },
+  "manual_save": {
+    "rollback_point_created": false,
+    "battle": "stable_command_boundary",
+    "during_action": "queue_until_durable_boundary"
+  },
+  "softlock_recovery": {
+    "relocation_only": true,
+    "restore_losses": false,
+    "free_abyssal": false
+  },
+  "source_tables": {
+    "19": [
+      [
+        "Rule",
+        "Locked result"
+      ],
+      [
+        "Campaign slots",
+        "Exactly three independent Ironman campaign slots."
+      ],
+      [
+        "Authoritative state",
+        "Each occupied slot has one authoritative latest state identified by monotonically increasing commit_seq."
+      ],
+      [
+        "Historical saves",
+        "No player-facing history browser, checkpoint list or backup chooser."
+      ],
+      [
+        "New run in occupied slot",
+        "Requires explicit erase/restart confirmation. Starting a new run does not preserve a selectable rollback copy."
+      ],
+      [
+        "Display timestamp",
+        "May be shown for convenience, but ordering and recovery use commit_seq, not device clock time."
+      ],
+      [
+        "Ended run",
+        "May remain visible as an ended-run record until the player deliberately erases the slot; it is not normally resumable."
+      ]
+    ],
+    "23": [
+      [
+        "Field / concept",
+        "Purpose"
+      ],
+      [
+        "commit_seq",
+        "Monotonic per-slot integer. It is the authoritative ordering key."
+      ],
+      [
+        "transaction_id",
+        "Unique stable ID for one logical mutation/action resolution. Recovery is idempotent by this ID."
+      ],
+      [
+        "schema_version",
+        "Save data schema version used by the migration layer."
+      ],
+      [
+        "integrity_version",
+        "Version of checksum/hash representation so implementation can evolve without ambiguity."
+      ],
+      [
+        "previous_commit_hash",
+        "Links the new commit to the previous verified commit when hash chaining is enabled."
+      ],
+      [
+        "state_hash / checksum",
+        "Integrity value for the candidate snapshot and/or journal payload."
+      ],
+      [
+        "transaction_state",
+        "At minimum PREPARED or COMMITTED semantics; implementation may use additional internal states."
+      ]
+    ],
+    "37": [
+      [
+        "Component",
+        "Locked role"
+      ],
+      [
+        "CURRENT",
+        "Newest verified authoritative snapshot."
+      ],
+      [
+        "BACKUP A",
+        "Previous verified full generation. Hidden from normal UI."
+      ],
+      [
+        "BACKUP B",
+        "Second previous verified full generation. Hidden from normal UI."
+      ],
+      [
+        "TRANSACTION JOURNAL",
+        "Write-ahead/recovery records sufficient to complete or discard an interrupted candidate deterministically."
+      ],
+      [
+        "EVENT HISTORY",
+        "Canonical gameplay history such as deaths/resurrections remains ordinary authoritative state and is not erased merely because the technical journal is compacted."
+      ]
+    ],
+    "45": [
+      [
+        "Barrier",
+        "Locked transaction"
+      ],
+      [
+        "Permanent Abyssal death",
+        "Commit the whole KO batch consequence: dead/unusable state, death ledger/history, held-item return and any immediate memorial-state mutation before another player choice."
+      ],
+      [
+        "Non-final starter life loss",
+        "Commit life decrement plus pending end-of-round revival state together. Crash cannot refund, double-spend or suppress the pending return."
+      ],
+      [
+        "Final starter death",
+        "Commit lives to 0 and ordinary permanent-death transaction under Checklists 07/14."
+      ],
+      [
+        "Capture",
+        "Selected food consumption, deterministic capture result, new instance, party/reserve destination and battle consequence are one transaction."
+      ],
+      [
+        "Sacrifice + resurrection",
+        "Exactly one indivisible transaction: all ten sacrifices plus exact-instance restoration, or none. Separate UI steps do not create separately durable half-results."
+      ],
+      [
+        "Evolution",
+        "Species/form, signed promotion delta, evolution history, target growth weights and any consumed evolution item commit together."
+      ],
+      [
+        "Move learning / replacement",
+        "After confirmation, the four-move set commits atomically. If the prompt is still unresolved at crash, reload the same unresolved offer."
+      ],
+      [
+        "Major / unique item acquisition",
+        "Item ownership and claimed-object/event flag commit together."
+      ],
+      [
+        "Evolution-item consumption",
+        "Consumption never commits without its corresponding evolution result."
+      ],
+      [
+        "Leader SPARE / EXECUTE",
+        "Final confirmed choice commits before post-choice presentation continues. Reload never reopens the choice as unresolved."
+      ],
+      [
+        "Other irreversible story choice",
+        "Choice state, directly dependent authoritative flags and continuation marker commit together."
+      ],
+      [
+        "Chapter completion",
+        "Completion plus directly unlocked authoritative state commits as one story transaction."
+      ]
+    ],
+    "58": [
+      [
+        "Battle state",
+        "Persistence rule"
+      ],
+      [
+        "Player command",
+        "Persist selected command, targets, item/move identity, transaction/action ID and relevant pre-action RNG state before resolution is allowed to become non-repeatable."
+      ],
+      [
+        "Enemy/AI command",
+        "AI choice must be deterministic from saved state or persisted as a prepared action before animation/resolution."
+      ],
+      [
+        "Mid-animation crash",
+        "Reload resumes or deterministically replays the prepared action. It does not return to an earlier tactical choice."
+      ],
+      [
+        "Encounter creation",
+        "Once a random encounter is generated, encounter identity/composition/levels and encounter seed are fixed until the encounter ends."
+      ],
+      [
+        "Battle RNG",
+        "Persist deterministic RNG state/counter. Reopening cannot reroll hits, crits, escape checks, captures, AI choices or other battle randomness already reached."
+      ],
+      [
+        "Growth seed",
+        "Immutable individual growth seed is preserved permanently; historical level growth is never rerolled."
+      ],
+      [
+        "Capture result",
+        "Once the capture action is confirmed/prepared, closing the app cannot change its probability result."
+      ],
+      [
+        "Starter pending revival",
+        "Pending non-final return survives crash and resolves exactly once before battle-end/wipe classification."
+      ],
+      [
+        "Fate/mercy outcome",
+        "Checklist 09 deterministic mercy state/result is persisted so the same qualifying defeat cannot be reopened for another mercy roll."
+      ],
+      [
+        "Parley loss",
+        "When a random loss candidate is determined for surrender/parley, persist that candidate before it is shown. Cancelling and reopening surrender in the same encounter does not reroll a more favourable loss."
+      ]
+    ],
+    "63": [
+      [
+        "Failure",
+        "Locked behaviour"
+      ],
+      [
+        "Browser/app crash",
+        "Load highest valid commit. Complete any deterministically replayable PREPARED action/transaction; never silently return to an earlier choice if the later choice was durably prepared/committed."
+      ],
+      [
+        "Device shutdown / battery loss",
+        "Same semantics as an application crash."
+      ],
+      [
+        "Interrupted candidate write",
+        "Ignore an unverified orphan candidate or finish it from the journal according to transaction state; never expose a partially written state."
+      ],
+      [
+        "Corrupt CURRENT",
+        "Validate BACKUP A/B and journal, reconstruct highest valid state available."
+      ],
+      [
+        "Corrupt backup",
+        "Skip invalid generation; backups are never authoritative merely because they are older."
+      ],
+      [
+        "Persistence failure during irreversible event",
+        "Pause progress and retry/recover. Do not acknowledge the event then continue without a durable commit."
+      ]
+    ],
+    "68": [
+      [
+        "Function",
+        "Locked behaviour"
+      ],
+      [
+        "Save Now",
+        "Available at normal safe interaction boundaries. It forces/compacts the current authoritative state to durable storage but creates no separately loadable restore point."
+      ],
+      [
+        "Save Now in battle",
+        "May operate only at a stable command boundary. If requested during resolution/animation, queue it until the next safe boundary rather than rewinding."
+      ],
+      [
+        "Save & Quit",
+        "Durably commits the same authoritative state, then returns to title/quit state. In a browser it need not literally close the browser tab."
+      ],
+      [
+        "Save & Quit during action",
+        "Queue until the current prepared/resolving action has reached a valid durable boundary."
+      ],
+      [
+        "Continue",
+        "Loads the newest valid authoritative state for the chosen campaign slot; it never offers CURRENT versus hidden backups."
+      ]
+    ],
+    "71": [
+      [
+        "Migration rule",
+        "Locked result"
+      ],
+      [
+        "schema_version",
+        "Required in every authoritative snapshot."
+      ],
+      [
+        "Migration direction",
+        "Ordered forward-only transforms from supported older schema to current schema."
+      ],
+      [
+        "Pre-migration protection",
+        "Create/retain a hidden verified pre-migration generation before destructive replacement."
+      ],
+      [
+        "Atomicity",
+        "Migration output must validate fully before it becomes CURRENT."
+      ],
+      [
+        "Failure",
+        "Leave original save untouched and report migration failure; do not partially upgrade in place."
+      ],
+      [
+        "Newer unsupported save",
+        "Refuse destructive downgrade. Do not silently strip unknown state."
+      ],
+      [
+        "Deprecated fields",
+        "May be read by migration/debug adapters, but must not be re-saved as competing authoritative state when Checklist 10 has replaced them."
+      ]
+    ],
+    "74": [
+      [
+        "Case",
+        "Locked result"
+      ],
+      [
+        "Technical soft-lock",
+        "A defect leaves Aimon stuck by position, collision, broken transition or equivalent implementation fault while canonical progression should still be possible."
+      ],
+      [
+        "Allowed recovery",
+        "Relocate to the last authored safe position/entrance compatible with current authoritative story state."
+      ],
+      [
+        "Forbidden recovery",
+        "Do not restore dead Abyssals, spent starter lives, consumed items/currency, sacrificed roster members, fate/story choices, defeated enemies or already-committed progression."
+      ],
+      [
+        "No legal living roster / no legal route",
+        "Do not conjure a free Abyssal or rewind canonical losses merely to make the run playable."
+      ],
+      [
+        "Protagonist permadeath",
+        "Run ends under the owning battle/story rule and remains ended."
+      ],
+      [
+        "Legitimately unwinnable run",
+        "May be marked ended/unwinnable and retained as a record. Normal Continue does not rewind it; player may explicitly erase the slot for a new run."
+      ]
+    ],
+    "83": [
+      [
+        "Test ID",
+        "Scenario",
+        "Required result"
+      ],
+      [
+        "B15-01",
+        "Crash immediately after ordinary permanent death",
+        "Death, held-item return and death history remain; no resurrection-by-reload."
+      ],
+      [
+        "B15-02",
+        "Crash after starter life decrement before cleanup",
+        "Spent life remains spent; exactly one pending 10% return survives."
+      ],
+      [
+        "B15-03",
+        "Crash during multi-hit lethal action",
+        "Same action resolves once; no duplicate hit sequence or multiple starter-life consumption."
+      ],
+      [
+        "B15-04",
+        "Successful capture then crash before next command",
+        "Food/result/new instance/destination persist exactly once."
+      ],
+      [
+        "B15-05",
+        "Failed capture then force-close",
+        "Same failure and food cost remain; reopening does not reroll."
+      ],
+      [
+        "B15-06",
+        "Crash during ten-sacrifice resurrection",
+        "Either all ten sacrifices + exact resurrection exist, or none; no half-state."
+      ],
+      [
+        "B15-07",
+        "Crash during item evolution",
+        "Item and evolution cannot separate; signed promotion/history/growth-weight state is consistent."
+      ],
+      [
+        "B15-08",
+        "Crash on unresolved move offer",
+        "Reload same unresolved prompt; no automatic forget/learn decision."
+      ],
+      [
+        "B15-09",
+        "Crash after confirmed move replacement",
+        "Confirmed four-move set persists; prompt does not reopen."
+      ],
+      [
+        "B15-10",
+        "Crash after confirmed leader fate before scene ends",
+        "Same SPARE/EXECUTE result persists; choice is not shown again."
+      ],
+      [
+        "B15-11",
+        "Force-close after miss/crit/escape result",
+        "Prepared battle action and RNG reproduce the same result."
+      ],
+      [
+        "B15-12",
+        "Generate encounter then close before first command",
+        "Same generated encounter payload/seed resumes."
+      ],
+      [
+        "B15-13",
+        "Open/cancel/reopen parley after loss candidate shown",
+        "Same persisted loss candidate is shown; no surrender shopping."
+      ],
+      [
+        "B15-14",
+        "Qualifying leader wipe then force-close",
+        "Checklist 09 mercy result does not reroll."
+      ],
+      [
+        "B15-15",
+        "Corrupt CURRENT only",
+        "Recover newest valid state using backup/journal without player backup selection."
+      ],
+      [
+        "B15-16",
+        "Interrupt candidate snapshot write",
+        "Previous verified state remains usable; orphan/partial candidate never loads."
+      ],
+      [
+        "B15-17",
+        "Migration fails validation",
+        "Original save remains untouched and loadable by the prior supported schema path."
+      ],
+      [
+        "B15-18",
+        "Use Save Now repeatedly",
+        "No historical rollback points appear; commit sequence remains monotonic."
+      ],
+      [
+        "B15-19",
+        "Save & Quit during battle animation",
+        "Quit waits for next valid durable boundary; resume does not rewind the action."
+      ],
+      [
+        "B15-20",
+        "Technical collision/script trap",
+        "Recovery relocates only; all canonical losses and choices remain unchanged."
+      ],
+      [
+        "B15-21",
+        "Spared wipe with no living reserve / legitimate no-path state",
+        "No free creature or rollback is created; run may become legitimately ended/unwinnable."
+      ],
+      [
+        "B15-22",
+        "Open same campaign in two browser tabs",
+        "Only one writer may mutate; second session cannot create split-brain state."
+      ],
+      [
+        "B15-23",
+        "Storage quota/write failure at irreversible barrier",
+        "Gameplay does not advance past an unacknowledged commit; retry/recovery path is offered."
+      ]
+    ],
+    "89": [
+      [
+        "Suggested field",
+        "Purpose"
+      ],
+      [
+        "campaign_slot_id",
+        "Stable slot identifier 1..3."
+      ],
+      [
+        "commit_seq",
+        "Monotonic authoritative commit number."
+      ],
+      [
+        "schema_version",
+        "Current save schema version."
+      ],
+      [
+        "integrity_version",
+        "Checksum/hash contract version."
+      ],
+      [
+        "current_snapshot_ref",
+        "Pointer/key to latest verified snapshot."
+      ],
+      [
+        "backup_snapshot_refs[2]",
+        "Two hidden verified previous generations."
+      ],
+      [
+        "journal_head / journal_checkpoint_seq",
+        "Recovery/compaction metadata."
+      ],
+      [
+        "active_transaction",
+        "Optional PREPARED transaction/action record with transaction_id and deterministic payload."
+      ],
+      [
+        "battle_rng_state",
+        "Deterministic battle RNG state/counter."
+      ],
+      [
+        "encounter_seed / encounter_payload",
+        "Fixed generated encounter state while active."
+      ],
+      [
+        "writer_session_id / lease",
+        "Single-writer protection metadata."
+      ],
+      [
+        "run_state / run_end_reason",
+        "Implementation guidance for ACTIVE versus legitimately ended run state."
+      ]
+    ]
+  },
+  "engineering_choices": [
+    "storage engine",
+    "checksum/hash algorithm",
+    "journal encoding",
+    "versioned runtime payload schema"
+  ]
+}

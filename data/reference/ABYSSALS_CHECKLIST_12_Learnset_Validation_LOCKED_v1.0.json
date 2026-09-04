@@ -1,0 +1,1405 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx",
+  "source_sha256": "31d1e39ee7f4765ba94fffe1517dac180bda7a91edbff7ecc67afba92a0617ec",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 12"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Learnset Validation"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS — COMPLETE / LOCKED AT IMPLEMENTATION-DESIGN LEVEL\nThis document closes CHECKLIST 12. It fixes the move-data schema, Physical/Special/Status split, accuracy and targeting conventions, the deliberately scarce priority pool, learnset balance gates, signature ownership, move relearning, evolution-move behaviour, trainer/Warden legality compilation and the hard validation tests that imported content must pass. No unresolved learnset-design decision remains."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "The existing 354-move catalogue and 187-species / 1,893-entry learnset workbook remain the authored content baseline. Checklist 12 does not replace those sources with a second competing move system; it adds the metadata and validation contract required to make them implementation-ready."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "Every move receives an explicit category: PHYSICAL, SPECIAL or STATUS. Category is per move, never inferred from type at runtime."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "Accuracy uses a narrow, readable 100 / 95 / 90 scheme for damaging moves, with ALWAYS for self/side/field status effects and 90 only for direct hard-control status effects."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Priority is intentionally scarce. Plain Dash and Frost Shard are the v1.0 +1 priority attacks; all other existing moves default to 0 unless a later explicit revision changes the catalogue. There are no +2 or negative-priority moves in v1.0."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Named signature moves are exclusive to the named evolutionary family; actual stage access remains controlled by the learnset."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Move relearning is free through Chaplain Aeric whenever normal reserve access is available. No currency, consumable or remote hostile-area relearning is added."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "Evolution preserves the four equipped moves. An explicit evolution move is offered once; declining it preserves relearner eligibility. Passed lower-level moves become relearner-eligible without a chain of forced prompts."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "The trainer move resolver from Checklist 04 remains authoritative. Checklist 12 can invalidate a move and force deterministic replacement, but cannot silently change trainer species or levels."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx defines Checklist 12 as the final balance and legality pass over all 187 species learnsets."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "Pokemon_Fan_Game_354_Move_Catalogue.xlsx remains authority for the fixed 354 move identities, names, types, PP, base power, effect text and original Signature / Best Fit field. Checklist 12 supplies the previously deferred category, accuracy, priority and targeting contract."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Progression_Learnsets_v3.xlsx remains authority for the 187 species learnset rows and their authored learn levels/acquisition entries, subject to the validation and repair rules below."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx remains authority for exact typing, six base stats, BST, role and ability identity used by learnset-role validation."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "Checklist 04 remains authority for deterministic trainer move compilation and AI profiles. Checklist 05 remains authority for Hell terrain. Checklist 11 remains authority for evolution methods, timing, story-branch locks and postgame opposite-form access."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "Checklist 08 remains authority for reserve access and Aeric as the normal reserve caretaker. Checklist 07 remains authority for death/resurrection state and restoring the four moves held at death."
+    },
+    {
+      "body_index": 22,
+      "kind": "table",
+      "rows": [
+        [
+          "NON-GOAL\nChecklist 12 does not create TMs, tutors, new shops or new evolution methods. A future TM/tutor system may expand legal acquisition only through an explicit later specification; it cannot be assumed by the trainer resolver."
+        ]
+      ]
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "2. Canonical move data record"
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "Every move imported into implementation must materialise the following stable fields. Display text may be localised later; identifiers and mechanics remain stable."
+    },
+    {
+      "body_index": 26,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Locked form",
+          "Rule"
+        ],
+        [
+          "move_id",
+          "Integer 1–354",
+          "Existing Move #; unique and immutable."
+        ],
+        [
+          "display_name",
+          "String",
+          "Existing move name; unique within the catalogue."
+        ],
+        [
+          "type",
+          "18-type enum",
+          "Must match the catalogue type."
+        ],
+        [
+          "pp",
+          "Integer > 0",
+          "Existing Uses (PP)."
+        ],
+        [
+          "power",
+          "Integer or null",
+          "Null for non-damaging status moves."
+        ],
+        [
+          "category",
+          "PHYSICAL / SPECIAL / STATUS",
+          "Explicit per move; never type-derived."
+        ],
+        [
+          "accuracy",
+          "ALWAYS / 100 / 95 / 90",
+          "Resolved before battle; ALWAYS does not roll accuracy."
+        ],
+        [
+          "priority",
+          "Integer",
+          "v1.0 values are +1 or 0 only."
+        ],
+        [
+          "target",
+          "Target enum",
+          "SELF, SINGLE_FOE, ALLY_OR_SELF, ACTIVE_SIDE, FOE_SIDE, ALL_FOES or FIELD."
+        ],
+        [
+          "effect_id / effect parameters",
+          "Structured mechanic",
+          "Effect text is presentation; runtime uses structured effect data."
+        ],
+        [
+          "signature_owner_family",
+          "Family ID or null",
+          "Derived from named Signature / Best Fit; General = null."
+        ]
+      ]
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "3. Physical / Special / Status classification"
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "The game uses the modern per-move damage-category split. There is no Generation III type-wide Physical/Special split."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "STATUS: every move whose base power is absent/dash. A status move cannot deal ordinary direct attack damage through the damage formula."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "PHYSICAL: damaging moves whose authored action is a bodily strike, bite, claw, cut, kick, rush, grapple, projectile weapon impact or other contact/force-led attack."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "SPECIAL: damaging moves whose authored action is a projected elemental, psychic, spectral, magical, pulse, beam, cloud, wave or similar non-contact energy attack."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "Ambiguous names are resolved by authored action/effect intent, not by string matching. The data file stores the final answer explicitly; runtime code never guesses category from a move name."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Role QA uses the stat spread: Attack at least 15 above Sp. Atk = physical-leaning; Sp. Atk at least 15 above Attack = special-leaning; otherwise mixed. This is a validation heuristic, not a battle modifier."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "4. Accuracy, priority and targeting"
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "4.1 Accuracy"
+    },
+    {
+      "body_index": 37,
+      "kind": "table",
+      "rows": [
+        [
+          "Move class",
+          "Accuracy",
+          "Locked rationale"
+        ],
+        [
+          "Self / ally / side / field status",
+          "ALWAYS",
+          "No accuracy roll when the move does not target an opposing individual."
+        ],
+        [
+          "Opponent-target status — ordinary debuff/control",
+          "100",
+          "Reliable utility unless the effect is hard control."
+        ],
+        [
+          "Opponent-target status — direct sleep/freeze or equivalent hard disable",
+          "90",
+          "Hard control retains meaningful failure risk."
+        ],
+        [
+          "Damaging, 40–90 BP",
+          "100",
+          "Common attacks are dependable."
+        ],
+        [
+          "Damaging, 95–100 BP",
+          "95",
+          "Strong attacks carry a small accuracy tax."
+        ],
+        [
+          "Damaging, 110–120 BP",
+          "90",
+          "Highest generic power band carries a visible risk."
+        ]
+      ]
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "Recoil, self-stat drops, drain and secondary proc chances do not automatically alter accuracy; they are already part of the move budget."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "A signature move follows the same baseline unless its authored identity explicitly requires an exception. Any exception must be stored on that move, never inferred at runtime."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "4.2 Priority"
+    },
+    {
+      "body_index": 42,
+      "kind": "table",
+      "rows": [
+        [
+          "Move",
+          "Type",
+          "BP",
+          "PP",
+          "Priority",
+          "Rule"
+        ],
+        [
+          "Plain Dash",
+          "Normal",
+          "45",
+          "35",
+          "+1",
+          "Generic low-power tempo/revenge option."
+        ],
+        [
+          "Frost Shard",
+          "Ice",
+          "45",
+          "35",
+          "+1",
+          "Ice-family priority identity; low power prevents it becoming a universal finisher."
+        ],
+        [
+          "All other existing moves",
+          "—",
+          "—",
+          "—",
+          "0",
+          "No name-based priority inference. Swift-, Quick-, Rush- and Flash-named moves remain priority 0 unless explicitly revised."
+        ]
+      ]
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "No +2, +3 or negative-priority moves exist in the v1.0 catalogue."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "Priority access is intentionally not equal across types. Fast Abyssals may gain tempo through Speed, utility or the small priority pool rather than every type receiving its own Quick Attack analogue."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "4.3 Targeting"
+    },
+    {
+      "body_index": 47,
+      "kind": "table",
+      "rows": [
+        [
+          "Target enum",
+          "Meaning",
+          "Use"
+        ],
+        [
+          "SELF",
+          "User only",
+          "Self buffs, self-healing, protective stances."
+        ],
+        [
+          "SINGLE_FOE",
+          "One opposing active target",
+          "Default for ordinary damaging attacks and direct foe debuffs."
+        ],
+        [
+          "ALLY_OR_SELF",
+          "One legal friendly target",
+          "Support moves that may choose the user or an ally."
+        ],
+        [
+          "ACTIVE_SIDE",
+          "User’s active side",
+          "Party-side healing/buffs such as Kindness Gathers in doubles."
+        ],
+        [
+          "FOE_SIDE",
+          "Opposing active side",
+          "Persistent hostile-side effects such as Static Field."
+        ],
+        [
+          "ALL_FOES",
+          "All opposing active targets",
+          "Only where an authored move explicitly hits all foes."
+        ],
+        [
+          "FIELD",
+          "Battlefield state",
+          "Terrain/weather/global field actions if authored later."
+        ]
+      ]
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "Damaging moves default to SINGLE_FOE in the authoring pass, but the stored target field is still mandatory."
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "5. Learn levels, Level 0, relearning and evolution moves"
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "5.1 Level 0 semantics"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "Learn Level 0 means “species-entry move”, not a conventional level-up tick. It is immediately legal for a newly obtained instance of that species, is relearner-eligible, and is offered when evolution first creates that species if the move is tagged as an evolution/signature entry. It is never silently injected by overwriting an equipped move."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "5.2 Free move relearning through Aeric"
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "Relearning is available through Chaplain Aeric whenever the player has ordinary reserve access under Checklist 08."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "Cost: free. No money, Trial Marks, item, sacrifice, cooldown or consumable."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Unavailable during battle and unavailable as a remote hostile-area service."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "The selectable pool contains moves legally available to the current species at or below current level plus legal moves inherited from the instance’s actual evolution history/path."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "A branch evolution never grants the opposite branch’s moves. Checklist 11 story-choice locks and actual evolution history are authoritative."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "The four-active-move limit remains absolute. Relearning means choosing a replacement when all four slots are occupied."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "The memorial does not need to store an all-time move history. Checklist 07 restores the four moves held at death; relearner eligibility is regenerated from species, level and preserved evolution history."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "5.3 Evolution move transaction"
+    },
+    {
+      "body_index": 62,
+      "kind": "table",
+      "rows": [
+        [
+          "Step",
+          "Locked behaviour"
+        ],
+        [
+          "1",
+          "Apply Checklist 11 evolution transaction; keep the current four equipped moves unchanged."
+        ],
+        [
+          "2",
+          "If the target species has an explicit Level 0 / Evolution entry, offer that move once immediately."
+        ],
+        [
+          "3",
+          "If fewer than four moves are equipped, the player may add it. If four are equipped, choose one to forget or decline the new move."
+        ],
+        [
+          "4",
+          "Declining never permanently loses the move; it remains relearner-eligible."
+        ],
+        [
+          "5",
+          "All target-species level-up moves whose learn levels are already below/equal to current level become relearner-eligible without a cascade of automatic prompts."
+        ],
+        [
+          "6",
+          "Branch-specific legality uses the actual branch reached; no opposite-branch move leakage."
+        ]
+      ]
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "6. Learnset balance validation gates"
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "6.1 Early offence and STAB"
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "Ordinary base species: at least one damaging move by Level 5 and at least one damaging STAB move by Level 8."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "By Level 10, an ordinary base species must have a genuinely usable offensive option; a single weak gimmick or status-only kit does not satisfy the gate."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "Evolved, fossil, mythic and later-acquired single-stage species are evaluated at effective first access, not as if they were caught at Level 1. They must have a legal damaging STAB option immediately through their current learnset/relearner pool."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "Intentional support/defensive exceptions are allowed only when the species already functions in battle and the exception is documented as a balance warning, not silently ignored."
+    },
+    {
+      "body_index": 70,
+      "kind": "table",
+      "rows": [
+        [
+          "STARTER CHECK\nThe starter source data passes the early-offence principle in the indexed evidence: Scarimp has Dark damage at Levels 1 and 4, Calibrit has Psychic damage at Level 1, and Ruffurn has Fighting damage by Level 4. Their final forms add their secondary STABs through their evolved learnsets without changing the locked 16 → 36 evolution cadence."
+        ]
+      ]
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "6.2 Dual-type coverage"
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Equal move counts are not required. Primary identity may remain dominant."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "A dual-type final should normally have at least one meaningful move of each type in its legal pool by effective access + 8 levels, and preferably immediately when the secondary typing is central to the evolution identity."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "A secondary type may be expressed through utility rather than damage only when the line’s authored combat identity clearly supports that asymmetry."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "6.3 Physical / special role compatibility"
+    },
+    {
+      "body_index": 77,
+      "kind": "table",
+      "rows": [
+        [
+          "Role",
+          "QA classifier",
+          "Validation expectation"
+        ],
+        [
+          "Physical-leaning",
+          "Attack ≥ Sp. Atk + 15",
+          "At least two credible Physical damaging options in the mature legal pool; main STAB cannot be Special-only."
+        ],
+        [
+          "Special-leaning",
+          "Sp. Atk ≥ Attack + 15",
+          "At least two credible Special damaging options; main STAB cannot be Physical-only."
+        ],
+        [
+          "Mixed",
+          "Difference < 15",
+          "Both categories should be usable where the species concept supports mixed offence; no forced symmetry."
+        ],
+        [
+          "Defensive/support",
+          "Role text/stat shape indicates tank/support",
+          "At least two meaningful non-damage tools across sustain, protection, debuff, status or setup by mature access; direct healing is not mandatory."
+        ]
+      ]
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "6.4 Power timing"
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Power timing is evaluated by effective access level: the later of the move’s learn level and the earliest level at which that species/form can legally exist. This prevents a final form’s Level 1 relearn move from being misclassified as an early-game 100+ BP grant."
+    },
+    {
+      "body_index": 81,
+      "kind": "table",
+      "rows": [
+        [
+          "Power band",
+          "Audit threshold",
+          "Rule"
+        ],
+        [
+          "≤ 90 BP",
+          "No special late gate",
+          "Normal progression band."
+        ],
+        [
+          "95–100 BP",
+          "Warning if effectively available before ~Lv24",
+          "Allowed earlier only for a deliberate signature/role reason."
+        ],
+        [
+          "110 BP",
+          "Warning if effectively available before ~Lv32",
+          "Expected to be late or drawback-bearing."
+        ],
+        [
+          "120 BP",
+          "Warning if effectively available before ~Lv40",
+          "Expected to be late, drawback-bearing, signature, rare-acquisition or delayed-evolution compensation."
+        ]
+      ]
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "These are balance warnings, not blind hard deletes. Deliberately unevolved forms may retain a late strong move as delayed-evolution compensation; the validator reports it for review rather than automatically moving it."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "Weak attacks of 55 BP or lower learned after Level 40 are flagged unless their secondary effect, priority, drain, critical identity or other utility keeps them strategically relevant."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "7. Status, healing, setup, priority, recoil and drain distribution"
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "No universal quotas. Distribution is tested against role, typing and line identity."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "Healing remains selective. A sustain-oriented line with no sustain is a warning; a generic attacker is not required to receive healing."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "Setup must align with usable stats: physical attackers should not rely solely on Sp. Atk setup, and special attackers should not rely solely on Attack setup unless deliberately mixed."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "Speed-oriented designs may use Speed control, pivoting, accuracy/evasion tools or the scarce priority pool; priority itself is not mandatory for every fast species."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "Recoil and self-stat-drop moves are valid high-power trade-offs. A species whose entire practical STAB pool damages itself is a warning."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "Drain remains identity-limited. Drain access should not make ordinary healing items or dedicated sustain roles irrelevant."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "8. Signature move ownership and timing"
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "A catalogue row whose Signature / Best Fit value names an Abyssal receives signature_owner_family equal to that Abyssal’s canonical evolution family."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "No species outside that family may learn, relearn, inherit or be assigned that move by trainer compilation unless a future explicit lore/design exception is documented."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "Family exclusivity does not mean every stage learns the signature. The learnset remains authority for stage and level access."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Final-form signatures should normally become available at/after the relevant evolution or through a Level 0 evolution offer. Earlier family-stage signatures are allowed where they are intentionally weaker or define the whole line."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "Trainer compilation treats an illegal cross-family signature exactly like any other illegal move: reject it and deterministically select the next legal candidate."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "9. Starter, fossil and mythic validation"
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "9.1 Starters"
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "All three starters retain the locked Level 16 → 36 evolution cadence from Checklist 11."
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "Their early competence must be comparable, not mirrored. Each receives early STAB, a usable offensive path and role-appropriate category support."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "Final secondary typings must become mechanically relevant through learnset access rather than existing only on the stat sheet."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "No starter receives uniquely perfect early coverage or a materially stronger power band simply because its source inspiration is more combat-focused."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "9.2 Fossils"
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "Fossils are judged from actual acquisition/evolution timing. Paleursa and Raptyrale are single-stage; Sidermite → Xenolithid remains Level 40; Gravodo → Cairnodo → Kronodo remains 28 → 48."
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "Their mature learnsets may be stronger than ordinary early-route lines, but must still preserve role weaknesses and not arrive with perfect four-move coverage by default."
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "9.3 Mythics"
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "Guanrong, Liubeirow and Waranwei remain single-stage 600-BST mythics; Suncub → Cehong remains Sun Relic at minimum Level 40."
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "Mythics may have unusually coherent/signature-heavy kits, but still obey category, accuracy, targeting and signature-family data rules."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "Level 1 entries on a late-obtained mythic are relearner pool entries at acquisition, not proof that the move is available in the early campaign."
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "10. Trainer and Hell Warden move compiler"
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "Checklist 04’s deterministic resolver remains unchanged, with Checklist 12 metadata inserted before scoring."
+    },
+    {
+      "body_index": 113,
+      "kind": "table",
+      "rows": [
+        [
+          "Stage",
+          "Locked action"
+        ],
+        [
+          "1. Build legal pool",
+          "Current species + actual evolution-history path; moves legally available at/below trainer level, including valid relearner/evolution entries. No unlisted TM/tutor assumptions."
+        ],
+        [
+          "2. Validate move records",
+          "Every candidate must resolve one canonical move_id with valid type, PP, category, accuracy, priority, target and effect data."
+        ],
+        [
+          "3. Enforce signatures",
+          "Reject signature moves whose owner family does not match the trainer species family."
+        ],
+        [
+          "4. Apply Checklist 04 profile",
+          "DIRECT / BALANCED / TEMPO / CONTROL / SUSTAIN / SIEGE / TERRAIN scoring remains authoritative."
+        ],
+        [
+          "5. STAB/damage constraints",
+          "Guarantee available damaging STAB; ordinary trainer sets retain the Checklist 04 damage/status composition rules."
+        ],
+        [
+          "6. Deterministic ties",
+          "Profile score, then later learn level, then lower move_id as already locked."
+        ],
+        [
+          "7. Illegal candidate",
+          "Discard and take the next legal candidate. Never change trainer species or level to rescue a move."
+        ]
+      ]
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "Hell Wardens use the same legal compiler plus TERRAIN scoring. Their persistent fields from Checklist 05 change move value, not move legality."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "Because Warden battle levels are far beyond ordinary learnset completion, their main legality risks are branch/signature restrictions and bad metadata—not insufficient level access."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "11. Automated validation contract"
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "The implementation/import pipeline must separate hard errors from balance warnings. Hard errors fail the content build. Warnings require an explicit KEEP / ADJUST disposition so they cannot disappear silently."
+    },
+    {
+      "body_index": 119,
+      "kind": "table",
+      "rows": [
+        [
+          "Test ID",
+          "Hard-error assertion"
+        ],
+        [
+          "MOVE-001",
+          "Exactly 354 move records; move_id is unique and contiguous 1–354."
+        ],
+        [
+          "MOVE-002",
+          "Every move name is nonblank and resolves to one move_id."
+        ],
+        [
+          "MOVE-003",
+          "Type is one canonical type; PP is positive; damaging power is positive numeric; status power is null."
+        ],
+        [
+          "MOVE-004",
+          "Every move has category, accuracy, priority, target and structured effect data."
+        ],
+        [
+          "MOVE-005",
+          "STATUS iff no ordinary direct-damage power; damaging move category must be PHYSICAL or SPECIAL."
+        ],
+        [
+          "MOVE-006",
+          "v1.0 priority whitelist: Plain Dash +1, Frost Shard +1, all others 0 unless document version changes."
+        ],
+        [
+          "SIG-001",
+          "Non-General signature row maps to exactly one canonical owner family."
+        ],
+        [
+          "DEX-001",
+          "Exactly 187 species records and every Dex # is unique."
+        ],
+        [
+          "LSET-001",
+          "Every species has at least one learnset entry."
+        ],
+        [
+          "LSET-002",
+          "Every learnset move resolves exactly one catalogue move_id."
+        ],
+        [
+          "LSET-003",
+          "Learnset Move Type equals the canonical move type."
+        ],
+        [
+          "LSET-004",
+          "Learn level is integer 0–200; acquisition is a recognised enum."
+        ],
+        [
+          "LSET-005",
+          "No cross-family signature access."
+        ],
+        [
+          "EVO-001",
+          "Relearner pool follows actual evolution history and cannot include opposite branch moves."
+        ],
+        [
+          "TRN-001",
+          "Every compiled trainer slot has four unique legal moves after deterministic resolution."
+        ],
+        [
+          "TRN-002",
+          "Checklist 04 STAB/damaging/status constraints pass for every trainer slot."
+        ]
+      ]
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 121,
+      "kind": "table",
+      "rows": [
+        [
+          "Warning ID",
+          "Review condition"
+        ],
+        [
+          "BAL-001",
+          "Ordinary base lacks damaging move by Lv5."
+        ],
+        [
+          "BAL-002",
+          "Ordinary base lacks damaging STAB by Lv8."
+        ],
+        [
+          "BAL-003",
+          "No meaningful offence by Lv10."
+        ],
+        [
+          "BAL-004",
+          "Dual type lacks useful expression of one type by the expected access window."
+        ],
+        [
+          "BAL-005",
+          "Physical/special role materially mismatches damaging categories."
+        ],
+        [
+          "BAL-006",
+          "Defensive/support role lacks meaningful non-damage tools."
+        ],
+        [
+          "BAL-007",
+          "95–120 BP move appears unusually early after effective-access calculation."
+        ],
+        [
+          "BAL-008",
+          "≤55 BP attack appears unusually late without compensating utility."
+        ],
+        [
+          "BAL-009",
+          "Healing/setup/priority/drain/recoil distribution contradicts role identity."
+        ],
+        [
+          "BAL-010",
+          "Signature timing is earlier/later than its evolution identity reasonably supports."
+        ]
+      ]
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "12. Validation and test evidence for this lock"
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "The File Library source index exposes workbook contents for inspection but does not mount the original XLSX packages into the active runtime as editable raw files. Accordingly, this pass performs source-structure validation and cross-source rule testing now, and makes the complete raw-row validator a mandatory content-import gate. This is an implementation execution detail, not an unresolved design choice."
+    },
+    {
+      "body_index": 125,
+      "kind": "table",
+      "rows": [
+        [
+          "Test",
+          "Result",
+          "Evidence / consequence"
+        ],
+        [
+          "Source inventory",
+          "PASS",
+          "Progression workbook reports 187 species and 1,893 learnset entries; move catalogue reports 354 moves."
+        ],
+        [
+          "Move type allocation",
+          "PASS",
+          "Catalogue type allocation totals exactly 354 across the 18 canonical types."
+        ],
+        [
+          "Stat authority",
+          "PASS",
+          "Complete stats workbook reports 187 exact stat spreads and 0 BST mismatches."
+        ],
+        [
+          "Learnset schema",
+          "PASS",
+          "Indexed rows expose Dex #, species, learn level, move, move type, acquisition and implementation note consistently across early, middle and late portions of the sheet."
+        ],
+        [
+          "Relearner baseline",
+          "PASS",
+          "Progression workbook already states earlier legal moves remain relearnable; Checklist 12 supplies access/service semantics."
+        ],
+        [
+          "Starter early offence",
+          "PASS",
+          "Scarimp has Dark damage at Lv1/Lv4; Calibrit Psychic damage at Lv1; Ruffurn Fighting damage at Lv4 in indexed source rows."
+        ],
+        [
+          "Starter secondary STAB",
+          "PASS",
+          "Noctafey, Axiomaro and Revault source rows expose Fairy, Steel and Electric moves respectively in their evolved learnsets."
+        ],
+        [
+          "Priority candidates",
+          "PASS",
+          "Plain Dash and Frost Shard are both 45 BP / 35 PP general moves, fitting the intentionally scarce +1 pool without making priority a high-power default."
+        ],
+        [
+          "Evolution compatibility",
+          "PASS",
+          "Checklist 11 explicitly hands evolution-move/relearn behaviour to Checklist 12 and locks branch history; the new pool rules preserve that boundary."
+        ],
+        [
+          "Memorial compatibility",
+          "PASS",
+          "Checklist 07 restores current four moves plus evolution history; free relearning can be regenerated without storing every forgotten move."
+        ],
+        [
+          "Trainer compiler compatibility",
+          "PASS",
+          "Checklist 04 already defines legal-pool construction and deterministic replacement; Checklist 12 adds metadata/signature checks before scoring."
+        ],
+        [
+          "Full raw 1,893-row join",
+          "MANDATORY BUILD GATE",
+          "Must run MOVE/LSET/BAL/TRN tests against the raw imported workbooks before shipping. A nonzero hard-error count blocks the content build."
+        ]
+      ]
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 127,
+      "kind": "table",
+      "rows": [
+        [
+          "NO SILENT “PASS”\nA search/indexed view is enough to validate the design contract and representative source structure, but it is not represented here as a byte-for-byte execution over all 1,893 rows. The build/import validator above is therefore mandatory and must report exact failing row IDs if any hard error is found."
+        ]
+      ]
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "13. Repair semantics when validation finds a problem"
+    },
+    {
+      "body_index": 130,
+      "kind": "table",
+      "rows": [
+        [
+          "Failure",
+          "Locked repair rule"
+        ],
+        [
+          "Unknown/misspelled move",
+          "Correct to the intended existing canonical move only when unambiguous; otherwise stop and request design review. Do not invent a 355th move."
+        ],
+        [
+          "Move type mismatch",
+          "Catalogue type wins unless the catalogue itself is demonstrably the typo; record the correction once at source."
+        ],
+        [
+          "Illegal signature access",
+          "Remove/replace the learnset assignment; do not relax family exclusivity silently."
+        ],
+        [
+          "Role/category mismatch",
+          "Prefer reclassifying the move only if its authored action was mis-categorised; otherwise replace/re-time the species move rather than falsifying category to fit stats."
+        ],
+        [
+          "High-power too early",
+          "First consider effective-access/evolution timing and drawbacks. If still excessive, move the learn level later or substitute the next lower-band move."
+        ],
+        [
+          "Weak move too late",
+          "Keep it in relearner history but replace the late level-up reward unless utility justifies it."
+        ],
+        [
+          "Trainer illegal move",
+          "Use Checklist 04 next-legal-candidate rule. Species and trainer level remain fixed."
+        ]
+      ]
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "14. Cross-checklist handoffs"
+    },
+    {
+      "body_index": 133,
+      "kind": "table",
+      "rows": [
+        [
+          "Later workstream",
+          "May define without reopening Checklist 12"
+        ],
+        [
+          "Checklist 13 — Battle Edge Cases",
+          "May define resolution order for recoil, simultaneous KOs, move-learning prompts after battle and unusual battle-end evolution timing. It may not change move legality/category/priority."
+        ],
+        [
+          "Checklist 14 — Starter Three-Life System",
+          "May define starter life-state transitions; it does not alter starter learnsets."
+        ],
+        [
+          "Checklist 15 — Ironman Save & Persistence",
+          "Stores equipped move IDs and any move-change transaction state required for crash safety. It cannot create rollback-based move duplication."
+        ],
+        [
+          "Checklist 16 — Battle Presentation",
+          "May present category/accuracy/priority/target information in UI; it does not change the mechanics."
+        ],
+        [
+          "Checklist 17 — Overworld Interaction",
+          "May define Aeric interaction choreography and menu presentation; free/non-remote relearning remains fixed."
+        ],
+        [
+          "Future TM/tutor work if authorised",
+          "Must add explicit acquisition records and rerun the same legality/compiler validation. No implicit TM/tutor pool exists today."
+        ]
+      ]
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "15. Checklist 12 completion matrix"
+    },
+    {
+      "body_index": 136,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist requirement",
+          "Status",
+          "Locked result"
+        ],
+        [
+          "Check every species has a legal learnset",
+          "COMPLETE",
+          "187-species source registry retained; hard validation gate fixed."
+        ],
+        [
+          "Check every move exists in the 354-move catalogue",
+          "COMPLETE",
+          "Exact-ID resolution is a hard error gate; no 355th move may be invented."
+        ],
+        [
+          "Check every move's type",
+          "COMPLETE",
+          "Catalogue type is canonical; mismatch is hard error."
+        ],
+        [
+          "Usable early offence / early STAB",
+          "COMPLETE",
+          "Lv5 offence / Lv8 STAB / Lv10 meaningful offence gates fixed with acquisition exceptions."
+        ],
+        [
+          "Dual-type usefulness",
+          "COMPLETE",
+          "Both types must have meaningful expression where appropriate; not forced 50/50."
+        ],
+        [
+          "Physical / special attacker support",
+          "COMPLETE",
+          "Modern per-move split + 15-point role QA classifier fixed."
+        ],
+        [
+          "Defensive / fast utility",
+          "COMPLETE",
+          "Role-based support/tempo audit fixed; priority remains scarce."
+        ],
+        [
+          "High-power early / weak late",
+          "COMPLETE",
+          "Effective-access warning bands and late-weak warning fixed."
+        ],
+        [
+          "Status / healing / setup / priority / recoil / drain",
+          "COMPLETE",
+          "Role/distribution audits fixed."
+        ],
+        [
+          "Signature moves / timing",
+          "COMPLETE",
+          "Evolution-family exclusivity and timing rules fixed."
+        ],
+        [
+          "Starters / fossils / mythics",
+          "COMPLETE",
+          "Special audit rules fixed without changing Checklist 11 timing."
+        ],
+        [
+          "Hell Warden learnsets",
+          "COMPLETE",
+          "TERRAIN compiler legality contract preserved."
+        ],
+        [
+          "All planned trainer move legality",
+          "COMPLETE",
+          "Checklist 04 resolver + Checklist 12 metadata/signature validation fixed."
+        ],
+        [
+          "Move relearner rules",
+          "COMPLETE",
+          "Free through Aeric at normal reserve access; no remote use."
+        ],
+        [
+          "Evolution move rules",
+          "COMPLETE",
+          "Keep four; offer explicit evolution move; missed lower-level moves become relearnable."
+        ],
+        [
+          "Finalise all 187 learnsets as implementation data",
+          "COMPLETE / BUILD-GATED",
+          "Canonical baseline + complete schema/validator fixed; raw import must produce zero hard errors before content build can ship."
+        ]
+      ]
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "16. Final status"
+    },
+    {
+      "body_index": 139,
+      "kind": "table",
+      "rows": [
+        [
+          "CHECKLIST 12 — LEARNSET VALIDATION: COMPLETE / LOCKED\nNo unresolved learnset-design decision remains. Later implementation may encode the catalogue in JSON/TypeScript/database form, add UI presentation, or correct a demonstrable source-data defect found by the mandatory validator. It may not silently change the per-move category system, accuracy bands, priority whitelist, signature-family exclusivity, free Aeric relearning, evolution-move semantics, balance gates or deterministic trainer legality contract."
+        ]
+      ]
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "17. Source authority used for this lock"
+    },
+    {
+      "body_index": 142,
+      "kind": "paragraph",
+      "text": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx — Checklist 12 scope and completion criteria."
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "Pokemon_Fan_Game_354_Move_Catalogue.xlsx — 354 move identities, type/PP/power/effects and signature/best-fit field; design note explicitly deferred accuracy/category/priority/targeting to a later pass."
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Progression_Learnsets_v3.xlsx — 187 species, 1,893 authored learnset entries, four-move limit and existing relearnable principle."
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx — 187 exact stat spreads, typing, roles and 0 BST mismatches."
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx — deterministic trainer legal-pool resolver and profile selection."
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx — Warden field identities and terrain-only battle contract."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx — exact four-move restoration and evolution-history persistence."
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx — Aeric normal reserve-access role and no remote hostile-area reserve service."
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx — final evolution timing, story-branch locking and explicit Checklist 12 handoff."
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "User-approved Checklist 12 decision pass — modern category split, scarce priority, signature-family exclusivity, free Aeric relearning, evolution-move flow and early offence/STAB thresholds."
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 12 — LOCKED v1.0"
+    }
+  ]
+}

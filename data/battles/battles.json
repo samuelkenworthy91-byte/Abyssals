@@ -1,0 +1,1222 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "BATTLE-TRN-C01-001",
+      "name": "Instructor Beric",
+      "trainer_id": "TRN-C01-001",
+      "mode": "SUPERVISED_NONLETHAL",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C01-002",
+      "name": "Recruit Elsen",
+      "trainer_id": "TRN-C01-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C01-003",
+      "name": "Scout Maela",
+      "trainer_id": "TRN-C01-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 72,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-001",
+      "name": "Scout Rell",
+      "trainer_id": "TRN-C02-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-002",
+      "name": "Soldier Varo",
+      "trainer_id": "TRN-C02-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-003",
+      "name": "Hunter Neris",
+      "trainer_id": "TRN-C02-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-004",
+      "name": "Officer Halven",
+      "trainer_id": "TRN-C02-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-005",
+      "name": "Sapper Corren",
+      "trainer_id": "TRN-C02-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-006",
+      "name": "Guard Ysarn",
+      "trainer_id": "TRN-C02-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-007",
+      "name": "Beastkeeper Selka",
+      "trainer_id": "TRN-C02-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-008",
+      "name": "Veteran Brann",
+      "trainer_id": "TRN-C02-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C02-009",
+      "name": "Ferryman Pella",
+      "trainer_id": "TRN-C02-009",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 75,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-001",
+      "name": "Guard Ansel",
+      "trainer_id": "TRN-C03-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-002",
+      "name": "Ferryman Mera",
+      "trainer_id": "TRN-C03-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-003",
+      "name": "Hospitaller Ione",
+      "trainer_id": "TRN-C03-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-004",
+      "name": "Pilgrim Tomas",
+      "trainer_id": "TRN-C03-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-005",
+      "name": "Smuggler Jarek",
+      "trainer_id": "TRN-C03-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-006",
+      "name": "Field Nurse Selene",
+      "trainer_id": "TRN-C03-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-007",
+      "name": "Officer Reth",
+      "trainer_id": "TRN-C03-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-008",
+      "name": "Shrine Keeper Elia",
+      "trainer_id": "TRN-C03-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C03-009",
+      "name": "Riverhand Marrec",
+      "trainer_id": "TRN-C03-009",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 78,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-001",
+      "name": "Caravan Guard Tovin",
+      "trainer_id": "TRN-C04-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-002",
+      "name": "Merchant Sella",
+      "trainer_id": "TRN-C04-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-003",
+      "name": "Smuggler Caro",
+      "trainer_id": "TRN-C04-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-004",
+      "name": "Mercenary Joss",
+      "trainer_id": "TRN-C04-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-005",
+      "name": "Ledger Guard Perrin",
+      "trainer_id": "TRN-C04-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-006",
+      "name": "Fixer Vael",
+      "trainer_id": "TRN-C04-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-007",
+      "name": "Captain Niva",
+      "trainer_id": "TRN-C04-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C04-008",
+      "name": "Relic Broker Ors",
+      "trainer_id": "TRN-C04-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 81,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-001",
+      "name": "Orchard Keeper Rene",
+      "trainer_id": "TRN-C05-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-002",
+      "name": "Pilgrim Ada",
+      "trainer_id": "TRN-C05-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-003",
+      "name": "Shrine Guard Lucen",
+      "trainer_id": "TRN-C05-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-004",
+      "name": "Hunter Mirek",
+      "trainer_id": "TRN-C05-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-005",
+      "name": "Grove Warden Sera",
+      "trainer_id": "TRN-C05-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-006",
+      "name": "Peacekeeper Olan",
+      "trainer_id": "TRN-C05-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-007",
+      "name": "Relic Keeper Noa",
+      "trainer_id": "TRN-C05-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C05-008",
+      "name": "Veteran Vaun",
+      "trainer_id": "TRN-C05-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 84,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-001",
+      "name": "Quarry Guard Dorr",
+      "trainer_id": "TRN-C06-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-002",
+      "name": "Sapper Helka",
+      "trainer_id": "TRN-C06-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-003",
+      "name": "Overseer Malk",
+      "trainer_id": "TRN-C06-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-004",
+      "name": "Prison Guard Veer",
+      "trainer_id": "TRN-C06-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-005",
+      "name": "Mason Edda",
+      "trainer_id": "TRN-C06-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-006",
+      "name": "Officer Sorn",
+      "trainer_id": "TRN-C06-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-007",
+      "name": "Enforcer Kelm",
+      "trainer_id": "TRN-C06-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-008",
+      "name": "Defector Mara",
+      "trainer_id": "TRN-C06-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-009",
+      "name": "Prospector Venn",
+      "trainer_id": "TRN-C06-009",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C06-010",
+      "name": "War Captain Drask",
+      "trainer_id": "TRN-C06-010",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 87,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-001",
+      "name": "Scribe Lio",
+      "trainer_id": "TRN-C07-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-002",
+      "name": "Archive Guard Fenn",
+      "trainer_id": "TRN-C07-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-003",
+      "name": "Scholar Yara",
+      "trainer_id": "TRN-C07-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-004",
+      "name": "Looting Mercenary Kerr",
+      "trainer_id": "TRN-C07-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-005",
+      "name": "Archivist Sorel",
+      "trainer_id": "TRN-C07-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-006",
+      "name": "Guard Captain Vessa",
+      "trainer_id": "TRN-C07-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-007",
+      "name": "Heretic Scribe Omel",
+      "trainer_id": "TRN-C07-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-008",
+      "name": "Relic Keeper Cael",
+      "trainer_id": "TRN-C07-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-009",
+      "name": "Tide Scribe Hessa",
+      "trainer_id": "TRN-C07-009",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C07-010",
+      "name": "Antiquarian Nox",
+      "trainer_id": "TRN-C07-010",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 90,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-001",
+      "name": "Soldier Arven",
+      "trainer_id": "TRN-C08-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-002",
+      "name": "Deserter Jula",
+      "trainer_id": "TRN-C08-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-003",
+      "name": "Field Captain Mor",
+      "trainer_id": "TRN-C08-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-004",
+      "name": "Siege Crew Pell",
+      "trainer_id": "TRN-C08-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-005",
+      "name": "Veteran Tars",
+      "trainer_id": "TRN-C08-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-006",
+      "name": "Hospitaller Senn",
+      "trainer_id": "TRN-C08-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-007",
+      "name": "War Captain Elric",
+      "trainer_id": "TRN-C08-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-008",
+      "name": "Duelist Avel",
+      "trainer_id": "TRN-C08-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C08-009",
+      "name": "Duelist Caia",
+      "trainer_id": "TRN-C08-009",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 93,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-001",
+      "name": "Temple Guard Aurel",
+      "trainer_id": "TRN-C09-001",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-002",
+      "name": "Sacred Knight Moira",
+      "trainer_id": "TRN-C09-002",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-003",
+      "name": "Scholar-Guard Nere",
+      "trainer_id": "TRN-C09-003",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-004",
+      "name": "Zealot Caldus",
+      "trainer_id": "TRN-C09-004",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-005",
+      "name": "Marshal Retainer Jorin",
+      "trainer_id": "TRN-C09-005",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-006",
+      "name": "Temple Captain Erys",
+      "trainer_id": "TRN-C09-006",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-007",
+      "name": "Relic Keeper Sava",
+      "trainer_id": "TRN-C09-007",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-008",
+      "name": "Antiquarian Sol",
+      "trainer_id": "TRN-C09-008",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-TRN-C09-009",
+      "name": "Champion Daven",
+      "trainer_id": "TRN-C09-009",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 96,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "BATTLE-NAM-RHOSWEN",
+      "name": "Dame Rhoswen Vey",
+      "trainer_id": "NAM-RHOSWEN",
+      "mode": "RIVAL_NONLETHAL",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-NAM-SEVERIN",
+      "name": "Severin Vale / King Below",
+      "trainer_id": "NAM-SEVERIN",
+      "mode": "TRAINER",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 104,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-LDR-01",
+      "name": "Ser Aldren March",
+      "trainer_id": "LDR-01",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-LDR-02",
+      "name": "Abbess Yselle Marot",
+      "trainer_id": "LDR-02",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-LDR-03",
+      "name": "Provost Corvin Sair",
+      "trainer_id": "LDR-03",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-LDR-04",
+      "name": "Warden Samiel Elow",
+      "trainer_id": "LDR-04",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-LDR-05",
+      "name": "Castellan Braska Morn",
+      "trainer_id": "LDR-05",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-LDR-06",
+      "name": "Canon Mirelle Avin",
+      "trainer_id": "LDR-06",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-LDR-07",
+      "name": "Marshal Oren Talv",
+      "trainer_id": "LDR-07",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-LDR-08",
+      "name": "Hierophant Lucain Serault",
+      "trainer_id": "LDR-08",
+      "mode": "MORTAL_LEADER",
+      "capture_allowed": false,
+      "retreat_mode": "PARLEY",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 108,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "BATTLE-WRD-01",
+      "name": "Veyr, Keeper of Names",
+      "trainer_id": "WRD-01",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "BATTLE-WRD-02",
+      "name": "Ossael, the Gatherer",
+      "trainer_id": "WRD-02",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "BATTLE-WRD-03",
+      "name": "Mordren, Drum of War",
+      "trainer_id": "WRD-03",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "BATTLE-WRD-04",
+      "name": "Caelor, Last Magistrate",
+      "trainer_id": "WRD-04",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "BATTLE-WRD-05",
+      "name": "Asterion, Voice of Certainty",
+      "trainer_id": "WRD-05",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "BATTLE-WRD-06",
+      "name": "Mirra, Kindly Shape",
+      "trainer_id": "WRD-06",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "BATTLE-WRD-07",
+      "name": "Velcar, Oath-Eater",
+      "trainer_id": "WRD-07",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "BATTLE-WRD-08",
+      "name": "Nema, the Unremembered",
+      "trainer_id": "WRD-08",
+      "mode": "WARDEN",
+      "capture_allowed": false,
+      "retreat_mode": "FORBIDDEN",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 112,
+        "table_row": 9
+      }
+    }
+  ],
+  "unresolved": [
+    "Fixed trainer encounters are indexed. Illyr/Nharos manifestation numeric phase payloads and Mirra illusion trigger timings are not specified by the source story/terrain contracts. Tutorial dummy stats and complete map-trigger bindings also remain unauthored."
+  ]
+}

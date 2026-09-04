@@ -1,0 +1,2 @@
+# Archive scope
+These files are immutable source evidence. `canon_sources/active/` contains active locked authorities whose unchanged clauses remain canon; consolidate them into `docs/canon/` and `data/` rather than editing them. `canon_sources/superseded/`, prior repositories, embedded agent prompts, archived scripts and archived schemas are historical evidence only. Root `AGENTS.md` governs work.

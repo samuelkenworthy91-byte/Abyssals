@@ -1,0 +1,896 @@
+{
+  "source": "docs/source_archive/canon_sources/superseded/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.docx",
+  "source_sha256": "c2a9424f7afe6f056030f32e9e2fed62d240f33ec7838e03297d5725fd8e36b5",
+  "authority": "NON-AUTHORITATIVE superseded history",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 09"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Leader & Trainer Fate System"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS — COMPLETE / LOCKED\nThis document closes CHECKLIST 09 at implementation-design level. It fixes the eight mortal-leader fate choices, the separation of battle defeat from human death, SPARE/EXECUTE presentation, leader world-state consequences, executed-leader Hell encounters, player-defeat mercy logic, and the one-off human restoration exception. Later work may bind exact event IDs, animations, team versions and save serialization, but may not silently alter these rules."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Only the eight mortal leaders receive the explicit SPARE / EXECUTE choice. Seven fight through the battle result; Warden Samiel Elow alone may formally surrender early once defeat is decisive. SPARE removes the leader from power without Aimon personally killing them; authored NPCs escort, imprison, guard, medically retain, supervise or permit exile as appropriate. EXECUTE is a deliberate overworld order by Aimon: the currently active Abyssal is represented by one of twelve generic primary-type sprites and attacks the human leader. Fate decisions are irreversible, autosaved and stored as UNRESOLVED / SPARED / EXECUTED. Executed leaders return in Hell as upgraded trainer encounters. In lethal leader battles, Aimon may be killed or spared according to leader personality plus his previous leader-fate record. A spared wipe still kills all six expeditionary Abyssals and returns Aimon to the previous safe town to rebuild and retraverse. The finale grants five one-off human restorations: Pate and Trade consume two automatically, leaving exactly three optional restorations for leaders Aimon personally executed."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "• The Pre-Programming Planning Checklists Reference defines Checklist 09 as the workstream that fully separates battle defeat from human death and owns post-battle leader fate resolution."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 04 remains authority for mortal-leader teams, levels, AI and ordinary battle behaviour. Its FORMAL_LEADER/non-lethal final-slot protection remains mechanically valid, but this document clarifies the narrative presentation: only Samiel formally surrenders before his final partner is defeated; the other seven reach the normal leader battle-resolution point first."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 06 remains authority for economy and essential shop parity. SPARE / EXECUTE may alter NPCs, operators and dialogue but may not remove equivalent core services or create superior fate-specific loot."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 07 remains authority for the Civeton Abyssal memorial and ordinary resurrection system. Humans still cannot be resurrected through that memorial. Checklist 09 explicitly authorises one authored finale-only human restoration event outside the memorial."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 08 remains authority for party/reserve behaviour after an authored spared wipe. Reserve Abyssals do not auto-deploy during the wipe and all six expeditionary Abyssals remain dead."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 10 owns exact flag names, event IDs, scene placement, speaker placement and postgame unlock wiring."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 13 owns simultaneous-KO and other battle-end edge cases that could affect which living Abyssal is available for an execution scene."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 15 owns atomic autosave ordering, anti-rollback behaviour and deterministic persistence of mercy outcomes."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 16 owns final fate-screen art, execution VFX, attack flashes and leader-removal presentation."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 17 owns exact overworld movement, escort paths, NPC exits and map-object removal after fate scenes."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "IMPLEMENTATION PRINCIPLE"
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "Winning a monster battle determines combat control; it does not itself determine whether a human lives. Human death occurs only through explicit authored events. The game remembers choices without exposing a morality score."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "2. Fate-resolution scope"
+    },
+    {
+      "body_index": 22,
+      "kind": "table",
+      "rows": [
+        [
+          "ID",
+          "Leader",
+          "Location",
+          "Resolution rule"
+        ],
+        [
+          "LDR-01",
+          "Ser Aldren March",
+          "Dorelem",
+          "Fate choice after leader battle result"
+        ],
+        [
+          "LDR-02",
+          "Abbess Yselle Marot",
+          "Philomere",
+          "Fate choice after leader battle result"
+        ],
+        [
+          "LDR-03",
+          "Provost Corvin Sair",
+          "Cybressa",
+          "Fate choice after leader battle result"
+        ],
+        [
+          "LDR-04",
+          "Warden Samiel Elow",
+          "Cossenne",
+          "Sole early formal surrender when defeat is decisive"
+        ],
+        [
+          "LDR-05",
+          "Castellan Braska Morn",
+          "Marasen",
+          "Fate choice after leader battle result; ruthless partner-loss behaviour remains"
+        ],
+        [
+          "LDR-06",
+          "Canon Mirelle Avin",
+          "Botrune",
+          "Fate choice after leader battle result"
+        ],
+        [
+          "LDR-07",
+          "Marshal Oren Talv",
+          "Cayfen",
+          "Fate choice after leader battle result"
+        ],
+        [
+          "LDR-08",
+          "Hierophant Lucain Serault",
+          "Ramelle",
+          "Fate choice after leader battle result"
+        ]
+      ]
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "No ordinary trainer, hostile soldier, supervised spar, rival duel, Hell Warden, cosmic boss or Severin encounter opens the leader fate menu unless a future authored revision explicitly adds one."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "For the seven non-Samiel leaders, final-slot non-lethal protection is a battle-engine safety rule, not a narrative surrender. The human fate scene begins only after the leader battle has been resolved."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "3. SPARE"
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "• SPARE means Aimon refuses to personally kill the defeated leader."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "• The leader is removed from ruling authority. SPARE never automatically restores them to office."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "• An authored aftermath resolves their physical departure/status: allied guards, local personnel or medical staff may escort the overworld sprite away; alternatively the leader may be placed under supervised local service or allowed/forced into exile where appropriate."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "• A spared leader may speak directly to Aimon before removal. Later appearances remain character-specific."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "• SPARE does not erase consequences of the battle or conquest."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "4. EXECUTE and the twelve-sprite execution system"
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "• EXECUTE is not part of the battle damage calculation. It is a separate deliberate post-battle human-death decision."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "• After confirmation, Aimon orders the Abyssal currently active at the end of the battle to attack the human leader in the overworld scene."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "• The game does not require 187 species-specific overworld Abyssal sprites. It uses exactly twelve generic execution sprites: one for each canonical type in the final type chart."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "• The generic sprite is selected deterministically from the actual active Abyssal's primary / Type 1. Dual typing never creates a choice or RNG roll."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "• The generic sprite is only a presentation proxy. Narratively, Aimon is ordering that actual individual Abyssal."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "• The type sprite appears, performs its type-appropriate attack/lunge/VFX, the leader sprite is struck and removed/destroyed, and the scene continues."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "• The exact animation, screen flash, sound and edge-case fallback when no normal active sprite is available belong to Checklists 13 and 16."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "5. Fate-choice UI, confirmation and state"
+    },
+    {
+      "body_index": 40,
+      "kind": "table",
+      "rows": [
+        [
+          "Component",
+          "Locked rule"
+        ],
+        [
+          "Entry",
+          "Short post-battle conversation, then the fate menu."
+        ],
+        [
+          "Visible options",
+          "SPARE / EXECUTE only."
+        ],
+        [
+          "Framing",
+          "No good/evil labels, no red/green moral coding, no reward preview, no recommended option."
+        ],
+        [
+          "Confirmation",
+          "Both options receive equivalent irreversible confirmation. EXECUTE must state clearly that the leader will die."
+        ],
+        [
+          "Cancellation",
+          "The player may back out of the confirmation screen, but cannot resume ordinary play while the leader remains unresolved."
+        ],
+        [
+          "Commit",
+          "Final confirmation commits the fate state and triggers immediate autosave before ordinary play resumes."
+        ],
+        [
+          "Primary fate state",
+          "Per leader: UNRESOLVED / SPARED / EXECUTED."
+        ],
+        [
+          "Restoration state",
+          "Tracked separately so EXECUTED + RESTORED remains historically distinct from SPARED."
+        ]
+      ]
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "Checklist 10 will assign final stable identifiers. The earlier Story Bible boolean spare flags are implementation-predecessors; the three-state fate value is the authoritative model for new code."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "6. Immediate dialogue, town state and later NPC consequences"
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "• If a leader is spared, their final direct dialogue may occur before escort, custody, medical placement, supervision or exile."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "• If a leader is executed, an authored aftermath may bring in General Kurg Halbrecht or Chaplain Aeric Solm to react to what Aimon has done."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "• Kurg and Aeric are not morality meters. Each judges the specific person and circumstance according to his own personality; either may support or condemn a particular decision."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "• Town state uses binary fate-reactive dialogue and small NPC/guard/prop placement changes. Rebuilding whole map geometry is unnecessary."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "• Later Kurg, Aeric, Rhoswen and local NPCs may react to individual fates and to the player's overall pattern. Counts are derived from the eight fate states and are never exposed as a morality score."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "• Equivalent essential shops, healing and progression access remain available regardless of fate."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "7. Mortal-world leader consequence baseline"
+    },
+    {
+      "body_index": 50,
+      "kind": "table",
+      "rows": [
+        [
+          "Leader",
+          "SPARED baseline",
+          "EXECUTED baseline"
+        ],
+        [
+          "Aldren",
+          "Imprisoned; later may advise on preventing reprisals.",
+          "Flowers/hostile graffiti can form a martyr response near the keep."
+        ],
+        [
+          "Yselle",
+          "Remains under guard as a medical administrator.",
+          "Hospice loses experienced coordination until Aeric/local staff rebuild it."
+        ],
+        [
+          "Corvin",
+          "Removed from office and held for investigation.",
+          "Some victims approve, but his death makes exposing collaborators harder."
+        ],
+        [
+          "Samiel",
+          "Supervised community representative; mediates occupation disputes.",
+          "Town responds quietly; shrine flowers become a memorial rather than a riot."
+        ],
+        [
+          "Braska",
+          "Shackled and imprisoned; never resumes authority.",
+          "Several former prisoners openly approve."
+        ],
+        [
+          "Mirelle",
+          "Remains archivist under guarantees protecting the archive from both factions.",
+          "Dawn Bloom mourners and some True Light scholars condemn the loss; archive protection continues."
+        ],
+        [
+          "Oren",
+          "Helps enforce local ceasefire/withdrawal.",
+          "Command decentralises and skirmishing temporarily worsens."
+        ],
+        [
+          "Lucain",
+          "Survives deposed/controlled; personally delivers the truth about Pate and Trade.",
+          "An alternate authorised witness/record delivers the truth; main plot cannot be blocked."
+        ]
+      ]
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "8. Hell consequences: executed-leader gauntlet"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "• Every mortal leader whose fate is EXECUTED must appear in Hell."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "• The executed leaders form a conditional gauntlet containing every executed leader on that save, from zero to eight encounters."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "• These are high-level trainer battles, not new Hell Wardens and not boss-category replacements."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "• Each returning leader uses an improved / higher-level team appropriate to Hell progression. These are separate later team-version records and do not overwrite the frozen mortal-world teams in Checklist 04."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "• Exact Hell rematch levels, move packages and held items may be authored in a trainer-data addendum without reopening the mortal-team lock."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "• Dialogue remains individual. A dead leader may be angry, accepting, curious, ashamed, practical or still concerned about their town; Hell is not a morality scoreboard."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "9. Postgame leader rematches"
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "All eight mortal leaders are eligible for postgame rematch content. Spared leaders and executed-then-restored leaders may appear in living-world postgame content; executed leaders left dead remain available through underworld/postgame Hell content. A repeatable or effectively infinite tournament with authored opponent pools/set lists is an approved direction, but its exact venue, reward table and rotation logic are deferred to later postgame design."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "10. Aimon defeat: safe battles and character-specific mercy"
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Aimon does not die merely because the player loses an explicitly supervised/non-lethal battle. Rival, training and other authored safe encounters resolve using their own non-lethal rules."
+    },
+    {
+      "body_index": 62,
+      "kind": "table",
+      "rows": [
+        [
+          "Leader",
+          "Base spare chance after total wipe",
+          "Rule"
+        ],
+        [
+          "Ser Aldren March",
+          "100%",
+          "Always spares; ignores modifier."
+        ],
+        [
+          "Abbess Yselle Marot",
+          "100%",
+          "Always spares; ignores modifier."
+        ],
+        [
+          "Provost Corvin Sair",
+          "35%",
+          "Probabilistic."
+        ],
+        [
+          "Warden Samiel Elow",
+          "80%",
+          "Probabilistic."
+        ],
+        [
+          "Castellan Braska Morn",
+          "0%",
+          "Always kills; ignores modifier."
+        ],
+        [
+          "Canon Mirelle Avin",
+          "70%",
+          "Probabilistic."
+        ],
+        [
+          "Marshal Oren Talv",
+          "55%",
+          "Probabilistic."
+        ],
+        [
+          "Hierophant Lucain Serault",
+          "65%",
+          "Probabilistic."
+        ]
+      ]
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "Probabilistic formula"
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "Effective spare chance = base chance + 15 percentage points for each previously SPARED mortal leader − 15 percentage points for each previously EXECUTED mortal leader. Only leaders resolved before the current battle count. Clamp the result to 10%–90%. Aldren, Yselle and Braska use their fixed absolute outcomes instead."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "The mercy outcome is hidden and deterministic against reload abuse. Checklist 15 will bind it to persistent save/leader seed state so reopening the same defeat cannot be used to reroll quarter."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "11. Consequence of being spared after a total wipe"
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "• The leader has spared Aimon, not his defeated Abyssals. All six Abyssals used in the expedition/battle remain permanently dead."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "• Reserve Abyssals do not auto-deploy and do not retroactively prevent the wipe."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "• Aimon is returned to the last authored safe settlement before the current leader encounter, normally the previous town rather than a convenient point outside the boss room."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "• Aimon must manually rebuild a new active party through Aeric's reserve access."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "• The route/dungeon/approach to the leader must then be traversed again with the replacement team."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "• The undefeated leader's fate remains UNRESOLVED. A rematch is required."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "• If no living reserve roster exists, this document does not conjure a free replacement Abyssal; Checklist 15 owns the genuine-soft-lock/emergency-recovery rule."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "If the victorious leader chooses to kill Aimon, protagonist permadeath/run-end rules apply."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "12. One-off human restoration at the finale"
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "• Human restoration is not a repeatable system and is not available through the Civeton memorial."
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "• The authored finale provides a total capacity of exactly five human restorations."
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "• Pateric 'Pate' Vann and Traden 'Trade' Cor are restored automatically as part of the main story and consume two of the five."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "• Exactly three discretionary human restorations remain after Pate and Trade."
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "• Only mortal leaders whom Aimon personally EXECUTED are eligible for those three discretionary restorations."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "• Each eligible leader is offered an individual RESTORE / LEAVE DEAD decision."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "• At most three executed leaders can be restored. If fewer than three were executed, all may be restored and unused capacity simply disappears."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "• Unused capacity cannot become money, items, Abyssal resurrection, stats, currency or another reward."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "• Restoration does not rewrite history: the leader fate remains EXECUTED and a separate restored state records that the human later returned to life."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "• An EXECUTED + RESTORED leader remembers Aimon's execution, death and Hell, does not automatically regain political office, and is narratively distinct from a leader who was SPARED."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "13. Recommended runtime state contract"
+    },
+    {
+      "body_index": 87,
+      "kind": "table",
+      "rows": [
+        [
+          "State",
+          "Minimum representation",
+          "Purpose"
+        ],
+        [
+          "leaderFate[8]",
+          "UNRESOLVED / SPARED / EXECUTED",
+          "Authoritative mortal-leader decision state."
+        ],
+        [
+          "leaderRestored[8]",
+          "Boolean",
+          "Distinguishes EXECUTED + RESTORED from SPARED."
+        ],
+        [
+          "hellLeaderEncountered[8]",
+          "Boolean / bitset",
+          "Tracks conditional dead-leader gauntlet completion."
+        ],
+        [
+          "humanRestorationsRemaining",
+          "Integer",
+          "Finale-only capacity; effectively 3 after automatic Pate/Trade restoration."
+        ],
+        [
+          "mercyOutcomeState",
+          "Deterministic per-save/per-leader seed/result",
+          "Prevents reload rerolling of player mercy."
+        ],
+        [
+          "recoveryTownId",
+          "Authored location reference",
+          "Returns spared Aimon to the intended previous safe town."
+        ]
+      ]
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "These names are implementation guidance only. Checklist 10 may rename them while preserving the semantics above and avoiding redundant duplicate booleans."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "14. Checklist 09 completion matrix"
+    },
+    {
+      "body_index": 90,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Checklist item",
+          "Locked result / handoff"
+        ],
+        [
+          "COMPLETE",
+          "Identify every battle requiring post-battle fate resolution.",
+          "Only the eight mortal leaders."
+        ],
+        [
+          "COMPLETE",
+          "Identify all eight leader fate scenes.",
+          "LDR-01 through LDR-08."
+        ],
+        [
+          "COMPLETE",
+          "Define SPARE.",
+          "No personal killing; removal/custody/supervision/exile authored per leader."
+        ],
+        [
+          "COMPLETE",
+          "Define EXECUTE.",
+          "Explicit overworld kill ordered by Aimon using primary-type generic sprite."
+        ],
+        [
+          "COMPLETE",
+          "Define special authored exceptions.",
+          "Samiel early surrender; safe/non-lethal battles; Braska ruthless identity; Lucain plot cannot be blocked."
+        ],
+        [
+          "COMPLETE",
+          "Ensure party defeat never automatically kills a human.",
+          "Hard separation locked."
+        ],
+        [
+          "COMPLETE",
+          "Decide when surrender occurs.",
+          "Samiel alone may formally surrender early; seven others reach battle resolution."
+        ],
+        [
+          "COMPLETE",
+          "Decide whether every important opponent is physically captured first.",
+          "No; custody, escort, supervision or exile may vary."
+        ],
+        [
+          "COMPLETE",
+          "Create fate-choice UI specification.",
+          "Neutral SPARE / EXECUTE."
+        ],
+        [
+          "COMPLETE",
+          "Create irreversible-choice confirmation behaviour.",
+          "Equivalent confirmations; no unresolved exit."
+        ],
+        [
+          "COMPLETE",
+          "Autosave immediately after fate decision.",
+          "Required; exact transaction owned by Checklist 15."
+        ],
+        [
+          "COMPLETE",
+          "Create one state value / flag per leader fate.",
+          "Three-state enum plus separate restoration state."
+        ],
+        [
+          "COMPLETE",
+          "Define immediate dialogue consequences.",
+          "Spared leader dialogue; executed aftermath may use Kurg/Aeric."
+        ],
+        [
+          "COMPLETE",
+          "Define town-state consequences.",
+          "Binary dialogue/NPC/guard/prop branches; core services preserved."
+        ],
+        [
+          "COMPLETE",
+          "Define later NPC consequences.",
+          "Specific and pattern-reactive dialogue without morality meter."
+        ],
+        [
+          "COMPLETE",
+          "Define Hell consequences.",
+          "Conditional executed-leader gauntlet."
+        ],
+        [
+          "COMPLETE",
+          "Mark executed characters eligible to appear in Hell.",
+          "All eight if EXECUTED."
+        ],
+        [
+          "COMPLETE",
+          "Mark spared characters eligible for restoration/postgame appearances.",
+          "Spared survive; all leaders have postgame rematch eligibility under life/death state."
+        ],
+        [
+          "COMPLETE",
+          "Ensure neither option simply gives superior mechanical rewards.",
+          "No direct fate-specific loot/reward superiority."
+        ],
+        [
+          "COMPLETE",
+          "Define Aimon/player defeat outcomes in scripted major battles.",
+          "Safe-battle exception plus lethal leader mercy table/formula."
+        ],
+        [
+          "COMPLETE",
+          "Define story-controlled cases where an enemy spares the player.",
+          "Aldren/Yselle fixed spare, Braska fixed kill, five probabilistic leaders."
+        ]
+      ]
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "15. Dependency-only handoffs"
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 10: exact stable flag/event IDs, per-leader escort/exile scene mapping, immediate Kurg/Aeric speaker assignment, Hell-gauntlet scene order and human-restoration scene flow."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 13: simultaneous battle-end edge cases and execution-active-Abyssal fallback resolution."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 15: atomic fate autosave, anti-rollback, mercy determinism and no-living-reserve soft-lock handling."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 16: final SPARE/EXECUTE screen art, execution VFX, generic type-sprite animations and human restoration presentation."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 17: overworld escort/removal paths, object-state swaps and recovery-town arrival positioning."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "• Trainer-data addendum: separate Hell/postgame leader team versions may be authored without altering the frozen mortal-world leader teams."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "FINAL STATUS"
+    },
+    {
+      "body_index": 99,
+      "kind": "table",
+      "rows": [
+        [
+          "CHECKLIST 09 — LEADER & TRAINER FATE SYSTEM: COMPLETE / LOCKED\nLater implementation may refine dialogue, assets, exact Hell rematch teams and save identifiers, but mechanical or narrative changes to the eight-leader fate scope, Samiel's unique early surrender, SPARE/EXECUTE definitions, twelve-type execution-sprite rule, mercy probabilities/formula, spared-wipe consequence, executed-leader Hell return or five-total/three-discretionary human restoration contract require an explicit Checklist 09 revision."
+        ]
+      ]
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "16. Source authority used for this lock"
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "• Pre-Programming Planning Checklists Reference v1.0 — Checklist 09 scope and completion criteria."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 04 — Trainer Database & Team Planning — mortal leader IDs, teams, levels, AI and battle-mode safeguards."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 06 — Items, Shops & Economy — no fate-dependent superior core economy and essential-service parity."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 07 — Memorial & Resurrection System — human memorial separation and non-resurrection through the memorial."
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 08 — Party & Reserve Management — authored spared-wipe compatibility and manual reserve rebuild."
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "• Full Story Bible — LOCKED v1.0 — leader identities, mortal-town consequences, underworld remembrance and Pate/Trade recovery."
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "• Character Roster v1.0 — leader/Aeric/Kurg/Rhoswen personality authority."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "• User-approved Checklist 09 decision pass — final surrender rule, execution presentation, mercy probabilities, wiped-party recovery, Hell gauntlet, postgame rematch eligibility and limited human restoration."
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 09 — LOCKED v1.0"
+    }
+  ]
+}

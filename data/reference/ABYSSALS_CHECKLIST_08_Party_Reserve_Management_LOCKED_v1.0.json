@@ -1,0 +1,791 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx",
+  "source_sha256": "9757d2362e606da421bb766558d64dcd62ac8fd2f8cb1406e25fb7b4c97efd3e",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Party & Reserve Management"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS — COMPLETE / LOCKED"
+        ],
+        [
+          "This document closes CHECKLIST 08 at implementation-design level. It fixes active-party capacity, effectively unlimited reserve storage, capture destinations, party/reserve UI, Aeric-only reserve access, instant reserve healing, alchemist boundaries, wipe behaviour, manual replacement after losses and clean permanent-death removal. Mechanical changes require an explicit Checklist 08 revision rather than silent drift."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "Canonical creature terminology: Abyssal / Abyssals."
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Aimon may travel with at most six active Abyssals. The off-party reserve is effectively unlimited and is managed only through Chaplain Aeric Solm, who is the reserve caretaker. Any living Abyssal that enters reserve is restored immediately to full HP and full PP with ordinary temporary battle status cleared. Alchemists heal the active travelling party only and never provide reserve access. Reserve Abyssals do not automatically replace fallen party members or rescue Aimon from a total wipe. A full wipe normally causes protagonist permadeath, except where an explicit authored story event spares Aimon; in such a case he may later rebuild a party through Aeric from surviving reserve Abyssals or acquire new Abyssals through still-available game content."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 01 remains the sole authority for deterministic stat growth, immutable growth seeds and rolled-stat history."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 06 remains the sole authority for items, held equipment, capture-food rules and active stat-growth training effects. Checklist 08 only defines how those states are displayed or preserved while an Abyssal moves between party and reserve."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 07 remains the sole authority for memorial death records, resurrection cost and exact-instance restoration. Checklist 08 supplies the reserve capacity/access rules required by that lock."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 09 owns exact story-controlled player-defeat and sparing outcomes in scripted major battles; Checklist 08 defines the generic roster behaviour after such an authored sparing event."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 10 owns exact event flags and scene placement for Aeric availability and any story-controlled wipe exception."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 14 remains the sole authority for the starter three-life state machine; Checklist 08 reserves the UI field needed to display its remaining lives."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 15 owns autosave, anti-rollback and transaction persistence. Checklist 08 requires roster transfers, deaths and deletions to be serialisable without stale references."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 17 will define the exact overworld interaction and map placement for Aeric reserve access without changing the access rule locked here."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "2. Party and reserve capacity"
+    },
+    {
+      "body_index": 18,
+      "kind": "table",
+      "rows": [
+        [
+          "Rule",
+          "Locked value"
+        ],
+        [
+          "Active party maximum",
+          "Six Abyssals. This maximum does not increase later in the game."
+        ],
+        [
+          "Minimum party size",
+          "The party may contain fewer than six living Abyssals after losses or by deliberate roster choice, subject to the rule that the player cannot voluntarily leave Aeric with zero living active Abyssals unless an authored state explicitly allows it."
+        ],
+        [
+          "Reserve maximum",
+          "No player-facing gameplay maximum."
+        ],
+        [
+          "Technical interpretation",
+          "Reserve storage is dynamically sized and effectively unlimited for legitimate play. An unreachable implementation sanity ceiling may exist but is not a gameplay rule."
+        ]
+      ]
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "3. Capture destination rules"
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "1. Party has fewer than six members"
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "A newly captured living Abyssal joins the next available active-party slot. The result is communicated clearly to the player."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "2. Party is full"
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "A newly captured living Abyssal is sent directly to reserve. No forced post-capture party swap occurs."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "3. Reserve arrival state"
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "Because reserve healing is instant, a captured Abyssal sent directly to reserve is immediately restored to full HP and full PP and has ordinary temporary battle status cleared. It cannot be withdrawn until the player next reaches Aeric."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "4. Capture does not create remote reserve access"
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "The automatic destination of a full-party capture is a one-way transfer into reserve. It does not open the reserve screen and does not allow the player to withdraw another Abyssal from the field."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "4. Active-party screen specification"
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "• Display six fixed party slots, with empty slots clearly distinguished from occupied slots."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "• Each occupied slot shows: sprite, nickname if present, species name, level, current/max HP, HP bar, current status, typing, ability, held item and star/favourite marker where applicable."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "• Starter-life pips are shown only on the special starter instance and must support a future three-state/four-state representation required by Checklist 14."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "• Selecting an Abyssal opens a detailed information/actions view. This view may show exact stats, moves, ability description, held item detail, active Checklist 06 training effects and other already-canonical instance data."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "• The main list must remain readable on mobile-sized layouts and must accommodate three-digit levels through Level 200."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "• Colour can supplement typing/status/HP information but must not be the sole carrier of meaning."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "5. Reserve screen specification"
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "• Use a continuous scrollable roster rather than arbitrary numbered storage boxes."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "• Each entry shows enough information to identify the individual without opening it: sprite, nickname/species, level, HP state (normally full because of reserve healing), typing, ability, and star/favourite marker."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "• Provide search by nickname/species and sorting/filtering by at least Dex/species number, species name, level, type, ability, capture/acquisition order and favourite status."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "• Selecting an entry opens the same underlying individual-summary structure used by the active-party screen."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "• Reserve management supports moving a reserve Abyssal into an empty party slot or swapping one-for-one with an active party member."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "• The reserve screen never exposes dead memorial entries as usable roster members."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "6. Party ordering and swaps"
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "• Party order may be changed freely outside battle."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "• Slot 1 is the lead Abyssal for encounter-facing systems, including any lead-level checks already defined elsewhere."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "• Reordering must work through dependable button/menu controls; drag-and-drop may be added as a convenience but cannot be the only control method."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "• Party/reserve swaps are available only while interacting with Aeric."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "• A swap may place an active Abyssal into reserve and a reserve Abyssal into the vacated slot as one committed roster transaction."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "• Placing an active Abyssal into reserve triggers the instant reserve-heal rule before the transaction completes."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "7. Required displayed information"
+    },
+    {
+      "body_index": 50,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Main party/reserve display",
+          "Detail behaviour"
+        ],
+        [
+          "HP",
+          "Current / maximum plus bar",
+          "Exact numeric value remains visible; reserve entries will normally be full."
+        ],
+        [
+          "Level",
+          "Always visible",
+          "UI supports 1–200 without layout change."
+        ],
+        [
+          "Status",
+          "Icon/abbreviation when affected",
+          "Full status name in detail; healthy need not show a redundant label."
+        ],
+        [
+          "Typing",
+          "Both types visible where applicable",
+          "Use text/icon plus colour, not colour alone."
+        ],
+        [
+          "Ability",
+          "Ability name visible",
+          "Full mechanical description available on selection."
+        ],
+        [
+          "Starter lives",
+          "Visible only for the starter instance",
+          "Exact state semantics supplied by Checklist 14."
+        ],
+        [
+          "Held item",
+          "Visible",
+          "Full item detail on selection; ownership rules remain Checklist 06."
+        ],
+        [
+          "Favourite/star",
+          "Visible",
+          "Used by Checklist 07 sacrifice warnings; it does not make an Abyssal mechanically unsacrificable."
+        ]
+      ]
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "8. Instant reserve healing"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "LOCKED RULE: Every living Abyssal heals instantly on entering reserve."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "• HP is restored to maximum."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "• All move PP is restored to maximum."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "• Ordinary temporary battle status conditions are cleared."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "• Healing occurs at the moment the reserve transfer commits; there is no timer, step count or gradual recovery."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "• The rule applies whether the Abyssal entered reserve from the active party, arrived because a capture occurred while the party was full, or was otherwise legally transferred into reserve."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "• A resurrected Abyssal that is routed to reserve under Checklist 07 is already restored to full HP/full PP/no status by that checklist; Checklist 08 does not double-apply or alter its restored permanent state."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "• Permanent progression state is never reset by reserve healing: level, XP, immutable growth seed, rolled stats, ability, evolution history, moves known/equipped, held-item ownership rules, and active Checklist 06 training effects remain unchanged except where another checklist explicitly says otherwise."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "9. Aeric reserve-caretaker role and alchemist boundary"
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Chaplain Aeric Solm is the reserve caretaker and the sole normal reserve-access NPC. This ties the mechanical reserve to an in-world person who is actually looking after the off-party Abyssals rather than treating them as remote computer storage."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "• Only Aeric can open the reserve-management interface for normal play."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "• Aeric allows deposits, withdrawals, party/reserve swaps, reserve sorting/search and individual reserve inspection."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "• Alchemists do not provide reserve access, do not withdraw or deposit Abyssals, and do not offer party/reserve swapping."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "• Alchemists may heal the active travelling party according to the healing-service rules defined elsewhere. Their healing target is the current active party only."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "• There is no need for alchemists to heal reserve Abyssals because all living reserve Abyssals are already restored by the instant reserve-heal rule."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "• Exact locations, chapters and scenes in which Aeric is physically available are story/overworld implementation details for Checklists 10 and 17. Those later checklists may place Aeric but may not silently give reserve access to another ordinary NPC."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "10. Hostile-area reserve restriction"
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "• There is no remote reserve screen in routes, caves, dungeons, active hostile zones or battles."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "• The player may inspect and reorder the active travelling party where the wider menu rules allow, but cannot withdraw replacements from reserve without Aeric."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "• A full-party capture may still be sent safely into reserve from a hostile area; this is an automatic deposit only."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "• This restriction is the balancing reason instant reserve healing does not become a field-healing exploit: the player cannot deposit and immediately retrieve party members while adventuring."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "11. Active-party wipe and protagonist survival"
+    },
+    {
+      "body_index": 74,
+      "kind": "table",
+      "rows": [
+        [
+          "Condition",
+          "Locked outcome"
+        ],
+        [
+          "At least one active Abyssal remains living after the encounter",
+          "The run continues with the surviving active party. Dead slots are not auto-filled from reserve."
+        ],
+        [
+          "All active Abyssals are permanently lost and no authored sparing event applies",
+          "Normal protagonist permadeath / run-ending outcome."
+        ],
+        [
+          "All active Abyssals are permanently lost but an explicit authored character or plot event spares Aimon",
+          "The run continues with Aimon alive and zero living active Abyssals until the authored recovery flow permits him to rebuild."
+        ],
+        [
+          "Living Abyssals exist in reserve during a wipe",
+          "They do not automatically deploy and do not themselves prevent the wipe or protagonist-death check."
+        ]
+      ]
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "Authored sparing principle. A story-controlled sparing event saves the protagonist, not the defeated expeditionary party. Reserve Abyssals remain wherever Aeric is caring for them. If the story permits continued play, Aimon must later reach Aeric to form a new party from surviving reserve members, or obtain new Abyssals through still-available authored/wild/capture content."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "12. Replacement after losses"
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "• The reserve never auto-fills empty active-party slots after a death."
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "• If the party loses one or more Abyssals but at least one remains living, the player continues with the reduced party."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "• The player manually chooses replacements on the next legal interaction with Aeric."
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "• A newly captured Abyssal encountered before returning to Aeric may fill an empty active-party slot under the capture rule in Section 3."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "• The game should communicate the reduced party clearly rather than collapsing the UI in a way that hides the loss."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "13. Permanent death and clean roster deletion"
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "• A permanently dead Abyssal becomes immediately unusable for battle, party ordering and reserve selection."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "• After battle resolution, surviving active-party members retain their relative order. Dead entries are removed and the party count decreases."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "• Checklist 07 receives the exact dead-instance record required for the memorial/resurrection system; removing the instance from the usable roster must not destroy that historical/death data."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "• Any held item on a permanently dead Abyssal returns to inventory under Checklist 07; Checklist 08 must not leave an equipped-item reference on the removed party entry."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "• Sacrificed Abyssals are deleted through Checklist 07's sacrifice transaction and never become memorial entries."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "• A non-final starter life loss is not processed as ordinary permanent deletion. Checklist 14 owns that life-loss transition."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "• All roster references must be updated atomically so a death, reserve transfer, resurrection or sacrifice cannot leave a duplicate or stale instance pointer."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "14. Checklist 07 resurrection compatibility"
+    },
+    {
+      "body_index": 91,
+      "kind": "table",
+      "rows": [
+        [
+          "Post-resurrection party state",
+          "Destination"
+        ],
+        [
+          "Active party has fewer than six members",
+          "Place the resurrected exact instance into the active party."
+        ],
+        [
+          "Active party has six members",
+          "Place the resurrected exact instance directly into reserve."
+        ]
+      ]
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "• Checklist 08's effectively unlimited reserve guarantees that a full-party resurrection always has a valid reserve destination."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "• No forced party discard or swap is required by resurrection."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "• A resurrected Abyssal entering reserve remains the exact restored instance; reserve healing does not reroll, regenerate or otherwise alter permanent instance state."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "15. Recommended runtime data contract"
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "The following identifiers are implementation guidance rather than new player-facing mechanics. They provide a simple contract for later code and save work."
+    },
+    {
+      "body_index": 97,
+      "kind": "table",
+      "rows": [
+        [
+          "State / operation",
+          "Minimum representation",
+          "Purpose"
+        ],
+        [
+          "activeParty",
+          "Ordered list of 0–6 living/temporarily-valid instance IDs",
+          "Battle roster and lead ordering."
+        ],
+        [
+          "reserveRoster",
+          "Dynamic ordered collection of living instance IDs",
+          "Effectively unlimited off-party storage."
+        ],
+        [
+          "reserveAccessProvider",
+          "AERIC",
+          "Prevents accidental alternate access through alchemists/menus."
+        ],
+        [
+          "transferToReserve(instanceId)",
+          "Atomic roster move + heal-on-entry",
+          "Removes from party if present, adds to reserve, restores HP/PP/status."
+        ],
+        [
+          "withdrawFromReserve(instanceId, partySlot)",
+          "Atomic roster move",
+          "Moves reserve member into an empty/selected active slot."
+        ],
+        [
+          "swapPartyReserve(partyInstanceId, reserveInstanceId)",
+          "Atomic two-way transaction",
+          "Deposited party member heals on reserve entry."
+        ],
+        [
+          "partyWipeState",
+          "NORMAL_DEATH or AUTHORED_SPARED",
+          "Separates generic permadeath from story-controlled survival."
+        ],
+        [
+          "favouriteFlag",
+          "Boolean per living instance",
+          "UI/star protection and Checklist 07 sacrifice warning."
+        ]
+      ]
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "16. Validation gates and Checklist 08 completion"
+    },
+    {
+      "body_index": 99,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Checklist item / handoff"
+        ],
+        [
+          "COMPLETE",
+          "Active party maximum fixed at six; reduced parties are valid after losses."
+        ],
+        [
+          "COMPLETE",
+          "Reserve has no player-facing maximum and is effectively unlimited."
+        ],
+        [
+          "COMPLETE",
+          "Capture joins party if space exists; otherwise deposits directly to reserve."
+        ],
+        [
+          "COMPLETE",
+          "Party and reserve screen information, search, sorting, detail and favourite visibility fixed."
+        ],
+        [
+          "COMPLETE",
+          "Party ordering and manual party/reserve swaps fixed."
+        ],
+        [
+          "COMPLETE",
+          "HP, level, status, typing, ability and starter-life display requirements fixed."
+        ],
+        [
+          "COMPLETE",
+          "Every living Abyssal entering reserve heals instantly to full HP/full PP and clears ordinary temporary status."
+        ],
+        [
+          "COMPLETE",
+          "Chaplain Aeric Solm is the sole normal reserve-access caretaker."
+        ],
+        [
+          "COMPLETE",
+          "Alchemists heal the active travelling party only and never access reserve."
+        ],
+        [
+          "COMPLETE",
+          "No hostile-area or remote reserve withdrawal; full-party captures may still deposit automatically."
+        ],
+        [
+          "COMPLETE",
+          "Reserve Abyssals never auto-deploy during a wipe and do not by themselves prevent protagonist permadeath."
+        ],
+        [
+          "COMPLETE",
+          "Explicit authored character/plot sparing may keep Aimon alive after a total party wipe; exact scenes belong to Checklists 09/10."
+        ],
+        [
+          "COMPLETE",
+          "Replacement after losses is manual through Aeric; empty party slots are not auto-filled."
+        ],
+        [
+          "COMPLETE",
+          "Permanent death removes the usable roster entry cleanly while preserving Checklist 07 memorial data."
+        ],
+        [
+          "COMPLETE",
+          "Checklist 07 resurrection destination is fully supported: party if space, reserve if full."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 09 defines exact major-battle player-defeat and enemy-sparing outcomes."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 10/17 define Aeric's exact scene/map availability without changing sole-access authority."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 14 defines exact starter life-count display/state transitions."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 15 defines persistence, autosave and anti-rollback enforcement."
+        ],
+        [
+          "VALIDATION ONLY",
+          "Implementation playtest reserve transfers, heal-on-entry, wipe handling, mobile readability and stale-reference prevention. Mechanical changes require explicit revision."
+        ]
+      ]
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "FINAL STATUS"
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08 — PARTY & RESERVE MANAGEMENT: COMPLETE / LOCKED. Later work may refine visual layout, exact Aeric placement, controller/touch interaction and save serialization, but must not silently alter the six-member active maximum, effectively unlimited reserve, instant reserve healing, Aeric-only reserve access, alchemist boundary, manual replacement rule, wipe semantics or clean-death handling defined here."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "17. Source authority used for this lock"
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "• Pre-Programming Planning Checklists Reference v1.0 — CHECKLIST 08 scope and completion criteria."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 07 — Memorial & Resurrection System — locked resurrection destination, death handling, held-item return and favourite/star integration."
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "• Full Story Bible — locked Aimon default/dev identity and Chaplain Aeric Solm's canonical role as recurring True Light cleric/support character."
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "• User-approved Checklist 08 decision pass — all twenty-four proposed rules accepted, with final amendments: reserve healing is instant; alchemists do not access reserve; Aeric/the priest is the sole reserve caretaker/access point; and authored plot/character sparing may preserve Aimon after a total wipe."
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "• Canonical terminology amendment — Pokémon/Pokemon creature references are interpreted as Abyssals."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 08 — LOCKED v1.0"
+    }
+  ]
+}

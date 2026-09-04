@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+dist/
+coverage/
+.art-work/
+.reports/
+*.zip
+*.tar
+*.tar.gz
+.env
+.env.*
+!.env.example

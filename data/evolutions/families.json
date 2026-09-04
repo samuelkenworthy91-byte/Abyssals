@@ -1,0 +1,731 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx"
+  ],
+  "records": [
+    {
+      "id": "FAMILY-001",
+      "name": "Scarimp / Grimscar / Noctafey",
+      "member_species_ids": [
+        "001",
+        "002",
+        "003"
+      ]
+    },
+    {
+      "id": "FAMILY-004",
+      "name": "Calibrit / Severyn / Axiomaro",
+      "member_species_ids": [
+        "004",
+        "005",
+        "006"
+      ]
+    },
+    {
+      "id": "FAMILY-007",
+      "name": "Ruffurn / Revhound / Revault",
+      "member_species_ids": [
+        "007",
+        "008",
+        "009"
+      ]
+    },
+    {
+      "id": "FAMILY-010",
+      "name": "Pennkit / Hareald",
+      "member_species_ids": [
+        "010",
+        "011"
+      ]
+    },
+    {
+      "id": "FAMILY-012",
+      "name": "Tatterook / Corvassal",
+      "member_species_ids": [
+        "012",
+        "013"
+      ]
+    },
+    {
+      "id": "FAMILY-014",
+      "name": "Mottlet / Bastimole",
+      "member_species_ids": [
+        "014",
+        "015"
+      ]
+    },
+    {
+      "id": "FAMILY-016",
+      "name": "Tokenail / Ampullusk",
+      "member_species_ids": [
+        "016",
+        "017"
+      ]
+    },
+    {
+      "id": "FAMILY-018",
+      "name": "Rouncolt / Coursire / Destridon",
+      "member_species_ids": [
+        "018",
+        "019",
+        "020"
+      ]
+    },
+    {
+      "id": "FAMILY-021",
+      "name": "Keelcrab / Galleonid",
+      "member_species_ids": [
+        "021",
+        "022"
+      ]
+    },
+    {
+      "id": "FAMILY-023",
+      "name": "Wickmidge / Vesperyre",
+      "member_species_ids": [
+        "023",
+        "024"
+      ]
+    },
+    {
+      "id": "FAMILY-025",
+      "name": "Caprune / Ibracle",
+      "member_species_ids": [
+        "025",
+        "026"
+      ]
+    },
+    {
+      "id": "FAMILY-027",
+      "name": "Snickal / Cackena / Carriena",
+      "member_species_ids": [
+        "027",
+        "028",
+        "029"
+      ]
+    },
+    {
+      "id": "FAMILY-030",
+      "name": "Bantisk / Cockatrix / Regalisk",
+      "member_species_ids": [
+        "030",
+        "031",
+        "032"
+      ]
+    },
+    {
+      "id": "FAMILY-033",
+      "name": "Eyret / Falchawk",
+      "member_species_ids": [
+        "033",
+        "034"
+      ]
+    },
+    {
+      "id": "FAMILY-035",
+      "name": "Dromble / Caskamel / Cisternel",
+      "member_species_ids": [
+        "035",
+        "036",
+        "037"
+      ]
+    },
+    {
+      "id": "FAMILY-038",
+      "name": "Stinglet / Trebuchor",
+      "member_species_ids": [
+        "038",
+        "039"
+      ]
+    },
+    {
+      "id": "FAMILY-040",
+      "name": "Niblust / Locruin",
+      "member_species_ids": [
+        "040",
+        "041"
+      ]
+    },
+    {
+      "id": "FAMILY-042",
+      "name": "Sprigfawn / Olehart",
+      "member_species_ids": [
+        "042",
+        "043"
+      ]
+    },
+    {
+      "id": "FAMILY-044",
+      "name": "Cubanner / Prideguard / Leonarch",
+      "member_species_ids": [
+        "044",
+        "045",
+        "046"
+      ]
+    },
+    {
+      "id": "FAMILY-047",
+      "name": "Rutlet / Ramporque",
+      "member_species_ids": [
+        "047",
+        "048"
+      ]
+    },
+    {
+      "id": "FAMILY-049",
+      "name": "Mirascal / Sunscint",
+      "member_species_ids": [
+        "049",
+        "050"
+      ]
+    },
+    {
+      "id": "FAMILY-051",
+      "name": "Rillip / Galvaneel",
+      "member_species_ids": [
+        "051",
+        "052"
+      ]
+    },
+    {
+      "id": "FAMILY-053",
+      "name": "Scripquid / Palimopus",
+      "member_species_ids": [
+        "053",
+        "054"
+      ]
+    },
+    {
+      "id": "FAMILY-055",
+      "name": "Chalkit / Albannor",
+      "member_species_ids": [
+        "055",
+        "056"
+      ]
+    },
+    {
+      "id": "FAMILY-057",
+      "name": "Censmoke / Thurafume / Malifume",
+      "member_species_ids": [
+        "057",
+        "058",
+        "059"
+      ]
+    },
+    {
+      "id": "FAMILY-060",
+      "name": "Pomling / Granadove",
+      "member_species_ids": [
+        "060",
+        "061"
+      ]
+    },
+    {
+      "id": "FAMILY-062",
+      "name": "Votress / Sigilume / Sepulshade / Idolure",
+      "member_species_ids": [
+        "062",
+        "063",
+        "064",
+        "065"
+      ]
+    },
+    {
+      "id": "FAMILY-066",
+      "name": "Brackhound / Mastigrim / Cerberrood",
+      "member_species_ids": [
+        "066",
+        "067",
+        "068"
+      ]
+    },
+    {
+      "id": "FAMILY-069",
+      "name": "Murmite",
+      "member_species_ids": [
+        "069"
+      ]
+    },
+    {
+      "id": "FAMILY-070",
+      "name": "Cairant / Serapine / Pandemne",
+      "member_species_ids": [
+        "070",
+        "071",
+        "072"
+      ]
+    },
+    {
+      "id": "FAMILY-073",
+      "name": "Flaggrim / Oriflamme / Tattereign",
+      "member_species_ids": [
+        "073",
+        "074",
+        "075"
+      ]
+    },
+    {
+      "id": "FAMILY-076",
+      "name": "Grailhare",
+      "member_species_ids": [
+        "076"
+      ]
+    },
+    {
+      "id": "FAMILY-077",
+      "name": "Saltinel / Bethlisk",
+      "member_species_ids": [
+        "077",
+        "078"
+      ]
+    },
+    {
+      "id": "FAMILY-079",
+      "name": "Foamwhelp / Liontide",
+      "member_species_ids": [
+        "079",
+        "080"
+      ]
+    },
+    {
+      "id": "FAMILY-081",
+      "name": "Dunetuft / Accordacal",
+      "member_species_ids": [
+        "081",
+        "082"
+      ]
+    },
+    {
+      "id": "FAMILY-083",
+      "name": "Rufram / Fordossa",
+      "member_species_ids": [
+        "083",
+        "084"
+      ]
+    },
+    {
+      "id": "FAMILY-085",
+      "name": "Tyrquill / Wraithrone",
+      "member_species_ids": [
+        "085",
+        "086"
+      ]
+    },
+    {
+      "id": "FAMILY-087",
+      "name": "Regulet / Thronelorn / Cyprigon",
+      "member_species_ids": [
+        "087",
+        "088",
+        "089"
+      ]
+    },
+    {
+      "id": "FAMILY-090",
+      "name": "Oathlet / Parlethorn",
+      "member_species_ids": [
+        "090",
+        "091"
+      ]
+    },
+    {
+      "id": "FAMILY-092",
+      "name": "Jerbune / Concordune / Sundune",
+      "member_species_ids": [
+        "092",
+        "093",
+        "094"
+      ]
+    },
+    {
+      "id": "FAMILY-095",
+      "name": "Pennmot / Grudgemont",
+      "member_species_ids": [
+        "095",
+        "096"
+      ]
+    },
+    {
+      "id": "FAMILY-097",
+      "name": "Courstoat / Reversire",
+      "member_species_ids": [
+        "097",
+        "098"
+      ]
+    },
+    {
+      "id": "FAMILY-099",
+      "name": "Whisbat / Pactecho",
+      "member_species_ids": [
+        "099",
+        "100"
+      ]
+    },
+    {
+      "id": "FAMILY-101",
+      "name": "Limbud / Laureveil",
+      "member_species_ids": [
+        "101",
+        "102"
+      ]
+    },
+    {
+      "id": "FAMILY-103",
+      "name": "Amplet / Vortamor",
+      "member_species_ids": [
+        "103",
+        "104"
+      ]
+    },
+    {
+      "id": "FAMILY-105",
+      "name": "Nibblub / Gourbog",
+      "member_species_ids": [
+        "105",
+        "106"
+      ]
+    },
+    {
+      "id": "FAMILY-107",
+      "name": "Pebbettle / Avaroll / Prodiglow",
+      "member_species_ids": [
+        "107",
+        "108",
+        "109"
+      ]
+    },
+    {
+      "id": "FAMILY-110",
+      "name": "Styxlet / Ragegill / Sulkoad",
+      "member_species_ids": [
+        "110",
+        "111",
+        "112"
+      ]
+    },
+    {
+      "id": "FAMILY-113",
+      "name": "Embertle / Sepulchel",
+      "member_species_ids": [
+        "113",
+        "114"
+      ]
+    },
+    {
+      "id": "FAMILY-115",
+      "name": "Triskit / Phlegacorn / Harpbriar / Searwaste",
+      "member_species_ids": [
+        "115",
+        "116",
+        "117",
+        "118"
+      ]
+    },
+    {
+      "id": "FAMILY-119",
+      "name": "Feignid / Malebolace",
+      "member_species_ids": [
+        "119",
+        "120"
+      ]
+    },
+    {
+      "id": "FAMILY-121",
+      "name": "Kincoil / Pactolin / Cocytalon",
+      "member_species_ids": [
+        "121",
+        "122",
+        "123"
+      ]
+    },
+    {
+      "id": "FAMILY-124",
+      "name": "Hexamuse",
+      "member_species_ids": [
+        "124"
+      ]
+    },
+    {
+      "id": "FAMILY-125",
+      "name": "Scarabel / Bulwarkab",
+      "member_species_ids": [
+        "125",
+        "126"
+      ]
+    },
+    {
+      "id": "FAMILY-127",
+      "name": "Mortargek / Sallyskink",
+      "member_species_ids": [
+        "127",
+        "128"
+      ]
+    },
+    {
+      "id": "FAMILY-129",
+      "name": "Paxibis",
+      "member_species_ids": [
+        "129"
+      ]
+    },
+    {
+      "id": "FAMILY-130",
+      "name": "Veiltern / Galebrass",
+      "member_species_ids": [
+        "130",
+        "131"
+      ]
+    },
+    {
+      "id": "FAMILY-132",
+      "name": "Trucepoe",
+      "member_species_ids": [
+        "132"
+      ]
+    },
+    {
+      "id": "FAMILY-133",
+      "name": "Wadopot / Fetterpot",
+      "member_species_ids": [
+        "133",
+        "134"
+      ]
+    },
+    {
+      "id": "FAMILY-135",
+      "name": "Pearlfrond / Regnacra",
+      "member_species_ids": [
+        "135",
+        "136"
+      ]
+    },
+    {
+      "id": "FAMILY-137",
+      "name": "Skatelk / Rimehart",
+      "member_species_ids": [
+        "137",
+        "138"
+      ]
+    },
+    {
+      "id": "FAMILY-139",
+      "name": "Reedile / Deltacroc",
+      "member_species_ids": [
+        "139",
+        "140"
+      ]
+    },
+    {
+      "id": "FAMILY-141",
+      "name": "Pilgrimp / Ganderiel / Caproclaim",
+      "member_species_ids": [
+        "141",
+        "142",
+        "143"
+      ]
+    },
+    {
+      "id": "FAMILY-144",
+      "name": "Dartfin / Lusivolt",
+      "member_species_ids": [
+        "144",
+        "145"
+      ]
+    },
+    {
+      "id": "FAMILY-146",
+      "name": "Fieflet / Pledrake",
+      "member_species_ids": [
+        "146",
+        "147"
+      ]
+    },
+    {
+      "id": "FAMILY-148",
+      "name": "Decimite / Tithelect",
+      "member_species_ids": [
+        "148",
+        "149"
+      ]
+    },
+    {
+      "id": "FAMILY-150",
+      "name": "Lyrlet / Aquilore",
+      "member_species_ids": [
+        "150",
+        "151"
+      ]
+    },
+    {
+      "id": "FAMILY-152",
+      "name": "Acremink / Longspurr / Elixirine",
+      "member_species_ids": [
+        "152",
+        "153",
+        "154"
+      ]
+    },
+    {
+      "id": "FAMILY-155",
+      "name": "Lanspup / Dirgehound",
+      "member_species_ids": [
+        "155",
+        "156"
+      ]
+    },
+    {
+      "id": "FAMILY-157",
+      "name": "Choughlet / Ascalough",
+      "member_species_ids": [
+        "157",
+        "158"
+      ]
+    },
+    {
+      "id": "FAMILY-159",
+      "name": "Tempestrel",
+      "member_species_ids": [
+        "159"
+      ]
+    },
+    {
+      "id": "FAMILY-160",
+      "name": "Vowcolt / Oathcourser",
+      "member_species_ids": [
+        "160",
+        "161"
+      ]
+    },
+    {
+      "id": "FAMILY-162",
+      "name": "Chantlet / Sarumoss",
+      "member_species_ids": [
+        "162",
+        "163"
+      ]
+    },
+    {
+      "id": "FAMILY-164",
+      "name": "Caelynx",
+      "member_species_ids": [
+        "164"
+      ]
+    },
+    {
+      "id": "FAMILY-165",
+      "name": "Tellurion",
+      "member_species_ids": [
+        "165"
+      ]
+    },
+    {
+      "id": "FAMILY-166",
+      "name": "Gehennuar",
+      "member_species_ids": [
+        "166"
+      ]
+    },
+    {
+      "id": "FAMILY-167",
+      "name": "Dustisk / Cairisk / Mausolisk",
+      "member_species_ids": [
+        "167",
+        "168",
+        "169"
+      ]
+    },
+    {
+      "id": "FAMILY-170",
+      "name": "Chipkid / Rimebex / Aegishorn",
+      "member_species_ids": [
+        "170",
+        "171",
+        "172"
+      ]
+    },
+    {
+      "id": "FAMILY-173",
+      "name": "Tianzhar",
+      "member_species_ids": [
+        "173"
+      ]
+    },
+    {
+      "id": "FAMILY-174",
+      "name": "Cruxwyrm",
+      "member_species_ids": [
+        "174"
+      ]
+    },
+    {
+      "id": "FAMILY-175",
+      "name": "Feirong",
+      "member_species_ids": [
+        "175"
+      ]
+    },
+    {
+      "id": "FAMILY-176",
+      "name": "Paleursa",
+      "member_species_ids": [
+        "176"
+      ]
+    },
+    {
+      "id": "FAMILY-177",
+      "name": "Raptyrale",
+      "member_species_ids": [
+        "177"
+      ]
+    },
+    {
+      "id": "FAMILY-178",
+      "name": "Sidermite / Xenolithid",
+      "member_species_ids": [
+        "178",
+        "179"
+      ]
+    },
+    {
+      "id": "FAMILY-180",
+      "name": "Gravodo / Cairnodo / Kronodo",
+      "member_species_ids": [
+        "180",
+        "181",
+        "182"
+      ]
+    },
+    {
+      "id": "FAMILY-183",
+      "name": "Guanrong",
+      "member_species_ids": [
+        "183"
+      ]
+    },
+    {
+      "id": "FAMILY-184",
+      "name": "Liubeirow",
+      "member_species_ids": [
+        "184"
+      ]
+    },
+    {
+      "id": "FAMILY-185",
+      "name": "Waranwei",
+      "member_species_ids": [
+        "185"
+      ]
+    },
+    {
+      "id": "FAMILY-186",
+      "name": "Suncub / Cehong",
+      "member_species_ids": [
+        "186",
+        "187"
+      ]
+    }
+  ],
+  "unresolved": []
+}

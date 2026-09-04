@@ -1,0 +1,1332 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+  "source_sha256": "6bd3160a6340b952916e68cd91da1f933fd107163c83418d52ca3615f0e2833f",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 05"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Hell Terrain Finalisation"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS\nCOMPLETE / LOCKED at implementation-design level. This document closes CHECKLIST 05. Exact Warden teams remain owned by CHECKLIST 04 and are reproduced here only as frozen dependencies. Runtime battle testing remains a validation gate: any later mechanical change requires an explicit Checklist 05 revision rather than silent tuning."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "Canonical creature terminology: Abyssal / Abyssals. Legacy source filenames may still contain older project wording."
+    },
+    {
+      "body_index": 6,
+      "kind": "table",
+      "rows": [
+        [
+          "LOCK SUMMARY\nEight persistent Warden native fields are fixed. All field effects are symmetric and readable. Gilded Dust includes the Rock Special Defence boost; Cocytus Hail includes the Ice Defence boost. Standard field/weather moves or abilities may temporarily replace a native Warden field, after which the native field automatically resumes."
+        ]
+      ]
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "• Use the locked story sequence, Warden identities, Circle order and themes as fixed narrative canon."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "• Use CHECKLIST 04 as the sole authority for each Warden’s six-Abyssal roster, levels, held-role allocations, deterministic abilities, legal-move resolution and Warden AI tier."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 05 owns the exact native field modifiers, persistence, replacement/resumption rules, HUD/readability requirements and terrain-specific counterplay."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "• Warden difficulty must come from the visible field plus the frozen team and AI. There are no hidden Warden-only stat multipliers, secret accuracy penalties or input-reading effects."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "• Every native field rule applies equally to both sides whenever its condition is met. A player Abyssal receives the same type modifier, immunity or defensive field bonus as an enemy Abyssal."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "• Boss-specific story presentation may sit beside a native field, but it may not silently add extra terrain mechanics."
+    },
+    {
+      "body_index": 15,
+      "kind": "table",
+      "rows": [
+        [
+          "IMPLEMENTATION PRINCIPLE\nWarden fields are normal readable battle fields with roughly Sun/Rain/Sand/Hail complexity. Their purpose is to distort familiar matchup assumptions without turning any fight into a separate minigame or hiding core battle information."
+        ]
+      ]
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "2. Global Warden-field contract"
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "• Native field timing: the Warden’s field is active before Turn 1. The battle intro must announce it before the player selects the first command."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "• Native duration: indefinite for the Warden battle. It has no natural turn countdown and is not tied to a particular enemy party slot."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "• No stacking: only one active field/weather ruleset applies at a time. A temporary replacement completely suspends the native Warden field; it does not sit underneath and continue applying bonuses or chip."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "• Temporary replacement: any otherwise-legal field/weather-setting move or ability may replace the active native Warden field according to that move/ability’s normal duration or rule."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "• Automatic resumption: when a temporary replacement expires or is cleared, the native Warden field returns immediately and indefinitely. It does not need to be recast by the Warden."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "• No permanent dispel: a move that only clears weather cannot create a permanent neutral battlefield. Clearing a temporary replacement causes the native Warden field to reassert; attempting to clear the native field itself leaves it active."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "• Replacement chaining: a new temporary field replaces the previous temporary field by normal battle rules. When the final temporary field ends, the native Warden field resumes."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "• Battle-end priority: once the Warden’s final Abyssal is defeated and the battle has resolved as won, no additional native-field chip tick is processed purely after victory."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "3. Locked field quick reference"
+    },
+    {
+      "body_index": 27,
+      "kind": "table",
+      "rows": [
+        [
+          "Circle",
+          "Warden",
+          "Field",
+          "Exact active effect",
+          "Counter families"
+        ],
+        [
+          "I",
+          "Veyr",
+          "Namefog",
+          "Ghost damage ×1.5; Psychic damage ×0.5",
+          "Normal immunity to Ghost; Dark or neutral offence; temporary field replacement"
+        ],
+        [
+          "II",
+          "Ossael",
+          "Gilded Dust",
+          "Non-Rock/Ground/Steel: 1/16 max HP chip; Rock Sp. Def ×1.5",
+          "Rock/Ground/Steel chip immunity; exploit team typings; replacement/recovery"
+        ],
+        [
+          "III",
+          "Mordren",
+          "Blood Sun",
+          "Fire damage ×1.5; Water damage ×0.5",
+          "Ground/Rock/neutral offence; temporary Rain/other field; strong Water still legal"
+        ],
+        [
+          "IV",
+          "Caelor",
+          "Iron Decree",
+          "Steel damage ×1.5; Fighting damage ×0.5",
+          "Fire/Ground/status/special pressure; Fighting remains usable when matchup warrants"
+        ],
+        [
+          "V",
+          "Asterion",
+          "Twin Radiance",
+          "Fairy damage ×1.5; Dark damage ×0.5",
+          "Steel/Poison; strong neutral coverage; avoid overreliance on Dark"
+        ],
+        [
+          "VI",
+          "Mirra",
+          "Mourning Rain",
+          "Water damage ×1.5; Fire damage ×0.5",
+          "Electric/Grass; anti-sustain pressure; temporary Sun/other field"
+        ],
+        [
+          "VII",
+          "Velcar",
+          "Cocytus Hail",
+          "Non-Ice: 1/16 max HP chip; Ice Defence ×1.5",
+          "Ice chip immunity; Fire/Fighting/Rock/Steel offence; replacement"
+        ],
+        [
+          "VIII",
+          "Nema",
+          "Quiet Night",
+          "Dark damage ×1.5; Fairy damage ×0.5",
+          "Fighting/Bug/neutral bulk; Fairy remains legal but suppressed"
+        ]
+      ]
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "4. Veyr, Keeper of Names — Namefog"
+    },
+    {
+      "body_index": 30,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "I"
+        ],
+        [
+          "Theme",
+          "Threshold"
+        ],
+        [
+          "Native field",
+          "Namefog"
+        ],
+        [
+          "Locked team",
+          "Trucepoe Lv105; Reversire Lv106; Idolure Lv107; Sigilume Lv108; Sepulshade Lv109; Pandemne Lv110"
+        ],
+        [
+          "Held-role set",
+          "STATUS / SPEED / STATUS"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Break certainty, obscure identity and punish rote targeting without hiding the actual battle interface."
+        ]
+      ]
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "• All Ghost-type damaging moves deal ×1.5 damage."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "• All Psychic-type damaging moves deal ×0.5 damage."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "• Namefog does not alter accuracy, evasion, command labels, party information, target selection or move names."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "• Type immunities remain absolute. A Ghost move into a normal immunity still deals 0 damage before the field multiplier matters."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "• Normal-type immunity can blank boosted Ghost damage where the normal type chart grants that immunity."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "• Dark pressure and strong neutral coverage avoid dependence on the suppressed Psychic channel."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "• A legal temporary field replacement turns Namefog off for its duration."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "5. Ossael, the Gatherer — Gilded Dust"
+    },
+    {
+      "body_index": 42,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "II"
+        ],
+        [
+          "Theme",
+          "Want"
+        ],
+        [
+          "Native field",
+          "Gilded Dust"
+        ],
+        [
+          "Locked team",
+          "Ampullusk Lv115; Bastimole Lv116; Ibracle Lv117; Trebuchor Lv118; Cyprigon Lv119; Mausolisk Lv120"
+        ],
+        [
+          "Held-role set",
+          "SUSTAIN / GUARD / TERRAIN"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Sand/hoard pressure: slow denial, recovery and defensive switching into a heavy ace."
+        ]
+      ]
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "• At the normal end-of-turn field-damage step, every non-Rock/Ground/Steel active Abyssal loses 1/16 of maximum HP."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "• Rock, Ground and Steel Abyssals are immune to Gilded Dust chip damage."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "• While Gilded Dust is active, Rock Abyssals receive a ×1.5 Special Defence effective-stat modifier."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "• The ×1.5 Rock Special Defence modifier is a field modifier, not a visible stat stage. It applies to either side and disappears immediately while Gilded Dust is suppressed."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "• Ground and Steel receive chip immunity only; they do not receive the Rock Special Defence bonus unless their actual typing also includes Rock."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "• Rock/Ground/Steel party members ignore the chip component; player Rock types also gain the Special Defence bonus."
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "• Pressure the frozen roster through its actual weaknesses rather than trying to race chip with fragile neutral units."
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "• Recovery, protection and a legal temporary field replacement are valid answers; replacing Gilded Dust suspends both chip and the Rock Special Defence bonus."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "6. Mordren, Drum of War — Blood Sun"
+    },
+    {
+      "body_index": 55,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "III"
+        ],
+        [
+          "Theme",
+          "Wrath"
+        ],
+        [
+          "Native field",
+          "Blood Sun"
+        ],
+        [
+          "Locked team",
+          "Sunscint Lv127; Cehong Lv128; Liontide Lv129; Oriflamme Lv130; Regnacra Lv131; Gehennuar Lv132"
+        ],
+        [
+          "Held-role set",
+          "TERRAIN / OFFENSE / SUSTAIN"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Sun-style aggression with mixed Fire and non-Fire beneficiaries."
+        ]
+      ]
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "• All Fire-type damaging moves deal ×1.5 damage."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "• All Water-type damaging moves deal ×0.5 damage."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "• Blood Sun does not automatically add unrelated later-generation Sun side effects. Move-specific effects continue to follow the move catalogue."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "• The modifier is symmetric: player Fire is also boosted and player Water is also suppressed."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "• Ground, Rock and strong neutral attacks avoid relying on the weakened Water channel."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "• Water remains legal and can still be correct when raw matchup advantage is large enough; it is reduced, not disabled."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "• A temporary Rain or other legal replacement removes both Blood Sun modifiers for its duration."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "7. Caelor, the Last Magistrate — Iron Decree"
+    },
+    {
+      "body_index": 67,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "IV"
+        ],
+        [
+          "Theme",
+          "Dominion"
+        ],
+        [
+          "Native field",
+          "Iron Decree"
+        ],
+        [
+          "Locked team",
+          "Fetterpot Lv139; Regnacra Lv140; Sigilume Lv141; Destridon Lv142; Cerberrood Lv143; Aegishorn Lv144"
+        ],
+        [
+          "Held-role set",
+          "GUARD / STATUS / TERRAIN"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Steel/Fighting structure, forced order and defensive pivots."
+        ]
+      ]
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "• All Steel-type damaging moves deal ×1.5 damage."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "• All Fighting-type damaging moves deal ×0.5 damage."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "• Iron Decree does not add a hidden Defence or Special Defence bonus. Caelor’s bulk comes from the frozen roster, held roles, legal moves and AI."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "• The field modifies move damage only; it does not rewrite the type chart."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "• Fire, Ground, status and special pressure are natural alternatives to the suppressed Fighting channel."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "• Fighting remains usable when the underlying type matchup is strong enough; it is never forbidden."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "• A temporary field replacement removes the Steel boost and Fighting suppression together."
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "8. Asterion, Voice of Certainty — Twin Radiance"
+    },
+    {
+      "body_index": 79,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "V"
+        ],
+        [
+          "Theme",
+          "Dogma"
+        ],
+        [
+          "Native field",
+          "Twin Radiance"
+        ],
+        [
+          "Locked team",
+          "Caproclaim Lv151; Vortamor Lv152; Oriflamme Lv153; Tattereign Lv154; Pandemne Lv155; Serapine Lv156"
+        ],
+        [
+          "Held-role set",
+          "TERRAIN / SPEED / OFFENSE"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Fairy/Dark mirrored pressure that punishes the obvious Dark answer without removing counterplay."
+        ]
+      ]
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "• All Fairy-type damaging moves deal ×1.5 damage."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "• All Dark-type damaging moves deal ×0.5 damage."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "• Twin Radiance has no extra binary-choice, command-lock or forced-target mechanic. Its pressure is entirely represented by the visible damage modifiers."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "• The field is symmetric and does not secretly favour the Warden’s individual stats."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "• Steel and Poison pressure attack Fairy-heavy structures without leaning on the suppressed Dark channel."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "• Strong neutral coverage remains a valid line."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "• Temporary field replacement restores ordinary Dark/Fairy damage relationships for its duration."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "9. Mirra, the Kindly Shape — Mourning Rain"
+    },
+    {
+      "body_index": 91,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "VI"
+        ],
+        [
+          "Theme",
+          "Grief"
+        ],
+        [
+          "Native field",
+          "Mourning Rain"
+        ],
+        [
+          "Locked team",
+          "Deltacroc Lv161; Galvaneel Lv162; Galleonid Lv163; Palimopus Lv164; Fetterpot Lv165; Liontide Lv166"
+        ],
+        [
+          "Held-role set",
+          "TERRAIN / SUSTAIN / GUARD"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Rain sustain, deceptive recovery and repeated pressure."
+        ]
+      ]
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "• All Water-type damaging moves deal ×1.5 damage."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "• All Fire-type damaging moves deal ×0.5 damage."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "• Mourning Rain itself contains no healing multiplier, accuracy change or illusion rule. Recovery comes from legal moves, abilities, held roles and the separate Mirra boss script."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "• The field is symmetric: player Water benefits and player Fire is suppressed while active."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "• Electric and Grass offence are obvious starting counters, while the frozen Water/Grass sustain structure is allowed to cover them."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "• Anti-sustain status, pressure and strong neutral damage can win without using a single prescribed counter type."
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "• A temporary Sun or other legal replacement turns off Mourning Rain for its duration."
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "Boss-specific note"
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "• Mirra’s deceptive duplicates/healing illusions are separate authored boss scripting, not part of Mourning Rain’s field rules."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "• That script may create false visual copies or healing deception, but the real mechanical target must remain determinable through clear authored cues; core commands, move text and accessibility information stay readable."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "• Exact event trigger/presentation belongs to story-event and battle-presentation implementation. It may not add an unlisted hidden field multiplier."
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "10. Velcar, the Oath-Eater — Cocytus Hail"
+    },
+    {
+      "body_index": 107,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "VII"
+        ],
+        [
+          "Theme",
+          "Betrayal"
+        ],
+        [
+          "Native field",
+          "Cocytus Hail"
+        ],
+        [
+          "Locked team",
+          "Grudgemont Lv171; Laureveil Lv172; Rimehart Lv173; Paleursa Lv174; Aegishorn Lv175; Tattereign Lv176"
+        ],
+        [
+          "Held-role set",
+          "TERRAIN / GUARD / SPEED"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Ice attrition and punishment for predictable commitments."
+        ]
+      ]
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "• At the normal end-of-turn field-damage step, every non-Ice active Abyssal loses 1/16 of maximum HP."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "• Ice Abyssals are immune to Cocytus Hail chip damage."
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "• While Cocytus Hail is active, Ice Abyssals receive a ×1.5 Defence effective-stat modifier."
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "• The ×1.5 Ice Defence modifier is a field modifier, not a visible stat stage. It applies equally to player and enemy Ice Abyssals and disappears immediately while the field is suppressed."
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "• Cocytus Hail intentionally combines classic Hail chip with the modern Snow-style Ice Defence reward; it does not add other automatic Hail/Snow effects unless separately defined in the move/ability catalogue."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "• Ice party members avoid chip and gain the same Defence bonus as the Warden’s Ice types."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "• Fire, Fighting, Rock and Steel offence are natural pressure families where the actual species matchup supports them."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "• A legal temporary field replacement suspends both Hail chip and the Ice Defence bonus."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "11. Nema, the Unremembered — Quiet Night"
+    },
+    {
+      "body_index": 120,
+      "kind": "table",
+      "rows": [
+        [
+          "Key",
+          "Locked value"
+        ],
+        [
+          "Circle",
+          "VIII"
+        ],
+        [
+          "Theme",
+          "Silence"
+        ],
+        [
+          "Native field",
+          "Quiet Night"
+        ],
+        [
+          "Locked team",
+          "Vesperyre Lv179; Carriena Lv180; Galleonid Lv181; Murmite Lv182; Pandemne Lv183; Noctafey Lv184"
+        ],
+        [
+          "Held-role set",
+          "TERRAIN / STATUS / OFFENSE"
+        ],
+        [
+          "Ability policy",
+          "Slots 3 and 6 use Hidden Abilities; all other slots follow the frozen Checklist 04 authored assignments."
+        ],
+        [
+          "Team job",
+          "Dark/Ghost suppression, silence and late-game switching pressure."
+        ]
+      ]
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "Field contract"
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "• All Dark-type damaging moves deal ×1.5 damage."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "• All Fairy-type damaging moves deal ×0.5 damage."
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "• Quiet Night does not hide, rename or disable commands, move labels, target indicators, status icons or accessibility tooltips."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "• Atmospheric loss of names may affect decorative world/battle presentation, but never the semantic information required to make a legal battle decision."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "Viable counterplay"
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "• Fighting, Bug and strong neutral pressure avoid overreliance on the weakened Fairy channel."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "• Fairy is suppressed rather than prohibited and can remain correct when type advantage is large enough."
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "• Temporary field replacement turns off both Quiet Night modifiers for its duration."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "12. Field replacement and resumption state machine"
+    },
+    {
+      "body_index": 132,
+      "kind": "table",
+      "rows": [
+        [
+          "Trigger",
+          "Resulting active state",
+          "Locked behaviour"
+        ],
+        [
+          "Battle starts",
+          "Native Warden field",
+          "Native field is active and announced before Turn 1."
+        ],
+        [
+          "Move/ability sets another legal field",
+          "Temporary replacement",
+          "Native field becomes dormant; none of its damage, chip or defensive modifiers apply."
+        ],
+        [
+          "Another temporary field is set",
+          "Newest temporary replacement",
+          "Normal replacement semantics apply. The discarded temporary field does not resume later."
+        ],
+        [
+          "Temporary field expires",
+          "Native Warden field",
+          "Native field automatically returns at once with indefinite duration."
+        ],
+        [
+          "Temporary field is cleared",
+          "Native Warden field",
+          "Clearing does not create permanent neutrality; native field immediately reasserts."
+        ],
+        [
+          "Attempt to clear native field without replacement",
+          "Native Warden field",
+          "Native field remains. It cannot be permanently dispelled during its Warden battle."
+        ],
+        [
+          "Warden final Abyssal defeated",
+          "Battle ended",
+          "Victory resolution wins priority; no extra native-field chip tick is added after the battle is already won."
+        ]
+      ]
+    },
+    {
+      "body_index": 133,
+      "kind": "table",
+      "rows": [
+        [
+          "NO UNDERLAY STACKING\nA dormant Warden field contributes nothing while a temporary replacement is active. This includes Ossael’s Rock Special Defence bonus and Velcar’s Ice Defence bonus. The moment the native field resumes, all of its listed rules resume together."
+        ]
+      ]
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "13. Damage, chip and defensive-modifier semantics"
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "• Type-damage fields modify the damage of the move’s resolved attacking type. They do not alter the attacker’s type, defender’s type or the effectiveness chart."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "• Ordinary type effectiveness is resolved first as a logical matchup. A true immunity remains 0 damage; multiplying 0 by a field bonus never breaks an immunity."
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "• Field multipliers are dedicated multiplicative damage modifiers inside the canonical battle-damage pipeline. Exact integer rounding remains governed by the project’s core battle-math implementation, not redefined separately per Warden."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "• Gilded Dust and Cocytus Hail chip uses 1/16 maximum HP at the normal field-damage step and affects both sides under the same eligibility rule."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "• Rock Special Defence ×1.5 and Ice Defence ×1.5 are effective-stat field modifiers rather than +1/+2 stat stages. They therefore do not consume a stage, display as a stage, or get removed by a generic stat-stage reset. They end only when their field is not active."
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "• Field defensive modifiers combine with ordinary stat stages, abilities, items and other legal battle modifiers through the normal battle-math system; there is no Warden-only stacking exception."
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "14. HUD, readability and accessibility"
+    },
+    {
+      "body_index": 142,
+      "kind": "paragraph",
+      "text": "• A persistent field indicator is visible throughout every Warden battle. It shows the active field name and an icon distinct from status-condition icons."
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "• Inspecting/holding the indicator displays the exact mechanical text in plain language, including numeric multipliers, chip fraction, immunities and any defensive field bonus."
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "• When a temporary replacement is active, the HUD shows that field as ACTIVE and the native Warden field as DORMANT / RETURNS AFTER REPLACEMENT. If the replacement has a turn countdown, the remaining turns are shown."
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": "• Opening field text is concise and mechanical. The player never has to remember pre-battle dialogue to know what the field does."
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "• Nema may distort decorative labels or world presentation for theme, but battle commands and semantic move information remain readable. Veyr likewise cannot obscure core target or move data."
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "• Colour is never the only carrier of field state. Name, icon and text are all available."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "15. Implementation data contract"
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "Recommended stable data fields below are implementation identifiers, not additional game mechanics. They exist so the battle engine can represent every Warden field with the same generic field system."
+    },
+    {
+      "body_index": 151,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable field ID",
+          "Mechanical payload",
+          "Battle owner"
+        ],
+        [
+          "FIELD_HELL_NAMEFOG",
+          "damage_mult:GHOST=1.5; damage_mult:PSYCHIC=0.5",
+          "WRD-01"
+        ],
+        [
+          "FIELD_HELL_GILDED_DUST",
+          "chip=1/16; chip_immune=ROCK|GROUND|STEEL; spdef_mult_if_type:ROCK=1.5",
+          "WRD-02"
+        ],
+        [
+          "FIELD_HELL_BLOOD_SUN",
+          "damage_mult:FIRE=1.5; damage_mult:WATER=0.5",
+          "WRD-03"
+        ],
+        [
+          "FIELD_HELL_IRON_DECREE",
+          "damage_mult:STEEL=1.5; damage_mult:FIGHTING=0.5",
+          "WRD-04"
+        ],
+        [
+          "FIELD_HELL_TWIN_RADIANCE",
+          "damage_mult:FAIRY=1.5; damage_mult:DARK=0.5",
+          "WRD-05"
+        ],
+        [
+          "FIELD_HELL_MOURNING_RAIN",
+          "damage_mult:WATER=1.5; damage_mult:FIRE=0.5",
+          "WRD-06"
+        ],
+        [
+          "FIELD_HELL_COCYTUS_HAIL",
+          "chip=1/16; chip_immune=ICE; def_mult_if_type:ICE=1.5",
+          "WRD-07"
+        ],
+        [
+          "FIELD_HELL_QUIET_NIGHT",
+          "damage_mult:DARK=1.5; damage_mult:FAIRY=0.5",
+          "WRD-08"
+        ]
+      ]
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "• Every Warden battle references one nativeFieldId and sets nativeFieldPersistent=true."
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "• Runtime state tracks activeFieldId separately from nativeFieldId so temporary replacement never destroys the native reference."
+    },
+    {
+      "body_index": 154,
+      "kind": "paragraph",
+      "text": "• When activeFieldId is cleared/expired and the battle owner is a Warden with an undefeated battle state, activeFieldId resets to nativeFieldId."
+    },
+    {
+      "body_index": 155,
+      "kind": "paragraph",
+      "text": "• UI text must be generated from the same numeric data used by battle calculation so the displayed rule cannot drift from the implemented rule."
+    },
+    {
+      "body_index": 156,
+      "kind": "paragraph",
+      "text": "16. Validation gates and Checklist 05 completion"
+    },
+    {
+      "body_index": 157,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Checklist item / handoff"
+        ],
+        [
+          "COMPLETE",
+          "Veyr / Namefog exact modifiers and viable counter families locked."
+        ],
+        [
+          "COMPLETE",
+          "Ossael / Gilded Dust chip, immunities and Rock ×1.5 Special Defence locked."
+        ],
+        [
+          "COMPLETE",
+          "Mordren / Blood Sun Fire/Water modifiers locked."
+        ],
+        [
+          "COMPLETE",
+          "Caelor / Iron Decree Steel/Fighting modifiers locked."
+        ],
+        [
+          "COMPLETE",
+          "Asterion / Twin Radiance Fairy/Dark modifiers locked."
+        ],
+        [
+          "COMPLETE",
+          "Mirra / Mourning Rain Water/Fire modifiers locked; illusion scripting separated from terrain."
+        ],
+        [
+          "COMPLETE",
+          "Velcar / Cocytus Hail chip, Ice immunity and Ice ×1.5 Defence locked."
+        ],
+        [
+          "COMPLETE",
+          "Nema / Quiet Night Dark/Fairy modifiers locked; normal readable commands preserved."
+        ],
+        [
+          "COMPLETE",
+          "All eight frozen Checklist 04 teams are mapped to their native field without roster changes."
+        ],
+        [
+          "COMPLETE",
+          "Native-field indefinite duration, temporary replacement, weather-ability override and automatic resumption locked."
+        ],
+        [
+          "COMPLETE",
+          "Persistent HUD/readability/accessibility requirements locked."
+        ],
+        [
+          "VALIDATION ONLY",
+          "Runtime playtest all eight fights for fairness, counter viability, end-of-turn order and permadeath pressure after implementation. Test findings do not silently change this lock; mechanical changes require an explicit revision."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 10 may define exact event flags/triggers around Warden scenes, including Mirra’s separate illusion presentation."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 13 finalises generic battle edge cases/rounding/retreat behaviour without changing the eight field payloads."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 16 owns final VFX, animation and screen presentation while preserving the readable HUD contract here."
+        ]
+      ]
+    },
+    {
+      "body_index": 158,
+      "kind": "table",
+      "rows": [
+        [
+          "FINAL STATUS\nCHECKLIST 05 — HELL TERRAIN FINALISATION: COMPLETE / LOCKED. Later implementation may bind event IDs, VFX, move IDs and generic battle-order details, but must not silently alter the eight native field payloads, symmetry rules, persistence, replacement/resumption behaviour or readable-UI contract in this specification."
+        ]
+      ]
+    },
+    {
+      "body_index": 159,
+      "kind": "paragraph",
+      "text": "17. Source authority used for this lock"
+    },
+    {
+      "body_index": 160,
+      "kind": "paragraph",
+      "text": "• Pre-Programming Planning Checklists Reference v1.0 — Checklist 05 scope and completion criteria."
+    },
+    {
+      "body_index": 161,
+      "kind": "paragraph",
+      "text": "• ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0 — frozen Warden rosters, levels, held-role sets, ability policy, AI contract and terrain team jobs."
+    },
+    {
+      "body_index": 162,
+      "kind": "paragraph",
+      "text": "• Regional Dex / Progression / Learnsets workbook — existing Hell Terrains sheet used as the pre-lock mechanical baseline."
+    },
+    {
+      "body_index": 163,
+      "kind": "paragraph",
+      "text": "• Full Story Bible — LOCKED v1.0 — Warden identities, Circle themes and Mirra/Nema narrative presentation constraints."
+    },
+    {
+      "body_index": 164,
+      "kind": "paragraph",
+      "text": "• Checklist 05 approval pass, 26 August 2026 — approved simple field model, counterplay, temporary replacement/resumption, readable HUD and added defensive weather-style stat boosts for Gilded Dust and Cocytus Hail."
+    }
+  ]
+}
