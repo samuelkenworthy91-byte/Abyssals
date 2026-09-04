@@ -1,8 +1,11 @@
 # Ui Expectations
 
-Authority: supplied handoff v1.0 ACTIVE_CANON / CHECKLIST_INDEX / AGENTS. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
+## Authority and structured data
 
+Authority: Checklists 07, 09, 15–17. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
 
+Repository paths: `data/progression/locked_contracts.json`; `data/manifests/portraits.json`; `data/save_schema/contracts.json`.
 
-## Implementation boundary
-Mobile-first touch UI and desktop/Steam Deck browser compatibility; exact HP numbers plus bars; visible starter life pips; deterministic capture progress; readable field HUD; irreversible fate/sacrifice confirmations; no visible morality score; no selectable save rollback. Portraits support dialogue and pre-battle/send-out. Mechanical outcomes belong in state, not animation. Detailed menu wireframes, font sizes and controller bindings are implementation tasks, not newly locked design.
+## Implementation contract and remaining boundary
+
+Mobile-first touch UI with desktop/Steam Deck compatibility. Show exact HP and bars, starter life pips, deterministic capture progress, readable native/replaced field state, clear irreversible confirmations and canonical portrait presentation. Do not expose a morality score or selectable rollback. Menu wireframes, fonts and bindings are future implementation choices; outcomes belong in state rather than animation.

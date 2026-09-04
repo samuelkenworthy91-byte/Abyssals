@@ -48,7 +48,9 @@
       "HELD_SUSTAIN",
       "OTHER_AUTHORED",
       "CLEANUP"
-    ]
+    ],
+    "mutual_final_ko_player_victory": "only_if_living_reserve_exists_after_starter_life_resolution",
+    "legacy_field_note": "leader_mutual_ko_player_victory is a compatibility alias, not a leader-only restriction; Checklist 13 body 8 applies to mutual final KOs generally."
   },
   "capture": {
     "theme": "food",
@@ -271,5 +273,35 @@
     "reroll_suppressed": false,
     "phase_selected_at": "encounter_creation",
     "dynamic_level_scaling": false
+  },
+  "leader_mercy": {
+    "base_spare_percent": {
+      "LDR-01": 100,
+      "LDR-02": 100,
+      "LDR-03": 35,
+      "LDR-04": 80,
+      "LDR-05": 0,
+      "LDR-06": 70,
+      "LDR-07": 55,
+      "LDR-08": 65
+    },
+    "absolute_outcomes_ignore_modifier": [
+      "LDR-01",
+      "LDR-02",
+      "LDR-05"
+    ],
+    "probabilistic_modifier_per_previous_spared": 15,
+    "probabilistic_modifier_per_previous_executed": -15,
+    "probabilistic_clamp_percent": [
+      10,
+      90
+    ],
+    "persist_result_before_resolution": true,
+    "reload_reroll": false,
+    "spared_wipe": "dead party remains dead; return to last safe town and rebuild through Aeric",
+    "provenance": {
+      "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx",
+      "body_index": 64
+    }
   }
 }

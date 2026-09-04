@@ -1,7 +1,5 @@
 # Traversal World Map
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 12, 16. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 - Linear critical spine with local branching and optional areas.
 - First travel is manual. Paid carriage fast travel unlocks between discovered settlements; couriers are thematically equivalent but individually presented.
 - Free backtracking; no HM-style traversal requirements.
@@ -20,5 +18,12 @@ Authority: supplied handoff v1.0 ACTIVE_CANON sections 12, 16. Original: ../sour
 - Moving off a map edge transitions to the adjacent authored map/screen in classic Pokémon/Dragon Warrior Monsters style rather than maintaining a giant seamless world.
 - Checklist 17 owns exact overworld object movement, escort paths, NPC exits and map-object removal after story/fate scenes.
 
-## Implementation boundary
-data/locations/locations.json has import-assigned IDs for names only where no original ID exists; these are explicitly marked and must be reconciled against the Story Bible. No map adjacency, tile layers, courier prices or screen exits are fabricated.
+## Authority and structured data
+
+Authority: World towns/routes reference v1.1; Checklist 17. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/locations/world_routes.json`; `data/locations/locations.json`; `data/progression/core_rules.json`.
+
+## Implementation contract and remaining boundary
+
+The authored world graph is recovered. First travel is physical; carriage unlock requires physical town visit and courier introduction. Carriage fares are small nonzero authored tuning; no Hell carriage. Watercraft unlocks after Philomere and uses authored embark/disembark tiles without party-species gates. Actual geometry, exit coordinates and fares need implementation/content authoring; do not call the route graph missing.

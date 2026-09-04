@@ -1,5 +1,7 @@
 # Phase D — portrait production checkpoint
 
+> Historical phase checkpoint. Current coverage and blockers: [FINAL_PREPARATION_REPORT.md](FINAL_PREPARATION_REPORT.md). Earlier pending/missing statements are superseded by that report.
+
 Baseline: accepted Phase A–C commit `08b82148532b7bb58dc022b0aad86ce1a675d1b9`. No species mapping, original monster art or runtime monster fronts were changed.
 
 | Measure | Result |

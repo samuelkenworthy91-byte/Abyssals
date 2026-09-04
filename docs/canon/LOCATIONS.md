@@ -1,7 +1,11 @@
 # Locations
 
-Source: handoff data/canon/locations.json and encounter_area_summary.json.
+## Authority and structured data
 
-Ten named mortal major locations: Civeton, Dorelem, Philomere, Cybressa, Cossenne, Marasen, Botrune, Cayfen, Ramelle, Jeros. All 72 encounter areas retain their canonical area IDs and original area-level ranges/access text in data/encounters/areas.json.
+Authority: World towns/routes reference v1.1; Story Bible; encounter areas; original handoff IDs. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
 
-No map geometry or connection graph is supplied. Name-derived LOC-* keys are explicitly import-assigned, not claimed as Story Bible IDs. See data/manifests/id_aliases.json before importing additional data.
+Repository paths: `data/locations/locations.json`; `data/locations/world_routes.json`; `data/encounters/areas.json`.
+
+## Implementation contract and remaining boundary
+
+93 location records, 72 ecological areas and 25 authored world-reference sections preserve the route graph and settlement/route specifications. Technical LOC-* aliases are explicitly marked; retain original canonical area/scene IDs. Tile maps, collision grids, screen dimensions, doorway coordinates and trigger placement need authoring within that graph. LOC-JEROS survives only from the older handoff and lacks a locked-world counterpart; do not invent a Ramelle alias. See the exact unresolved record.

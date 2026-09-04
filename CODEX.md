@@ -1,34 +1,23 @@
-# CODEX — working contract
+# Codex working handoff
 
-## Preparation hold — owner instruction, 3 September 2026
-
-Continue `handoff/structured-import` and update PR #1. Complete preparation phases A–G, then stop at H for owner review. **Do not start M1, implement gameplay, or merge PR #1.** The earlier M1 prompt is superseded for the current task.
-
-AGENTS.md is the primary instruction file for this and every other agent.
-
-1. Read AGENTS.md and the relevant canon topic for the requested system.
-2. Inspect existing code, data, schemas and tests before editing.
-3. Never change locked game design to make coding easier.
-4. Work in small reviewable milestones; complete the current preparation phase.
-5. Add/update meaningful tests for system changes.
-6. Run validation, applicable tests and build before finishing; report exact failures.
-7. Report unresolved source/design questions without inventing canon.
-8. Preserve save determinism, single-writer protection and Ironman transaction rules.
-9. Preserve finished art; no generated placeholders or canonical back sprites.
-10. For later high-risk state changes, obtain independent review of the diff and crash tests before acceptance.
+AGENTS.md is the primary instruction document for every agent. Preparation is at **Phase H owner review** on `handoff/structured-import`, PR #1. Do not start M1, implement gameplay or merge until explicitly instructed by the owner.
 
 ## First-session prompt
+
 ```text
-Read AGENTS.md, docs/audit/PHASE_A_REAUDIT.md and docs/canon/README.md.
-Inspect the current preparation status before editing. Finish the next
-preparation phase from A–G on handoff/structured-import, preserving originals
-and every locked decision. Read the full relevant source authority chain;
-extract established records instead of leaving missing_source placeholders.
-Validate data, provenance, references and assets. Commit the phase and report
-numeric coverage, unresolved items, commit SHA and preparation percentage.
-Do not start M1, implement gameplay, merge PR #1, generate replacement art or
-invent canon. Stop at Phase H for the owner's review.
+Read AGENTS.md and docs/audit/FINAL_PREPARATION_REPORT.md.
+Confirm the owner has authorized a specific next task; otherwise stop at the review hold.
+Read the relevant docs/canon/ topic and SUPERSESSIONS.md, then the dataset,
+schema, provenance, exact unresolved fields and existing code/tests.
+Work on one small reviewable milestone. Preserve locked design, canonical IDs,
+finished artwork, deterministic growth and Ironman transaction rules.
+Do not invent content or treat historical source wording as current authority.
+Add/update meaningful tests for system changes. Run integrity, source
+reconciliation, tests and the strict content gate; report exact failures.
+Do not weaken checks, substitute generated art or silently supply defaults.
+Stop at the agreed acceptance criteria and report the next bounded task.
 ```
 
-## Session handoff
-End with: milestone/scope, canon read, files changed, tests/build and exact outcomes, unresolved items with IDs, and next small task. A clean shell build is not proof of complete game content. Current next work is repository preparation, not M1.
+All 187 monster fronts and 79 active portraits are available. The 22 missing portrait targets and nine partial datasets remain explicit. The 685 checklist table records are a searchable source-contract index, not ready-to-execute runtime logic. A green integrity badge does not clear the full-content gate.
+
+After explicit M1 release, use [FIRST_CODEX_TASK.md](docs/implementation/FIRST_CODEX_TASK.md). Final reports must include scope, canon read, changed files, tests/build actually run, unresolved questions and next task. Never claim gameplay playtesting when no playable game exists.

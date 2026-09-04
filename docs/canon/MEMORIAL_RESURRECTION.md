@@ -1,7 +1,5 @@
 # Memorial Resurrection
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 10. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 - Civeton memorial is absent at game start.
 - First permanent Abyssal death creates pending establishment; memorial appears on the next Civeton revisit and stays thereafter.
 - Visible Abyssal memorial contains only currently dead/unresolved Abyssals; restored individuals are removed from the visible list.
@@ -16,5 +14,12 @@ Authority: supplied handoff v1.0 ACTIVE_CANON sections 10. Original: ../source_a
 - Resurrected target returns to party if there is room, otherwise reserve.
 - Human memorial is separate and historical; humans are never resurrected through the Abyssal memorial.
 
-## Implementation boundary
-Selection must be validated against living reserve ownership and ten distinct species IDs. Never infer missing epitaph templates. Exact sacrifice selection interaction requires the original locked checklist.
+## Authority and structured data
+
+Authority: Checklist 07; Checklist 08; Checklist 15. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/progression/core_rules.json`; `data/progression/locked_contracts.json`; `data/save_schema/contracts.json`.
+
+## Implementation contract and remaining boundary
+
+The complete selection/confirmation and ledger contracts are recovered in Checklist 07 and indexed as LOCK-07 records. Validate living reserve ownership and ten distinct species IDs, then commit all sacrifices and exact-instance restoration together. Authored epitaph wording remains absent. A resurrected original starter has one life; bonus lives never regenerate.

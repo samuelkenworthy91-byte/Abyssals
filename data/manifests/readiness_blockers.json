@@ -19,7 +19,8 @@
         "WRD-05: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112.",
         "WRD-06: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112.",
         "WRD-07: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112.",
-        "WRD-08: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112."
+        "WRD-08: Three held roles are authored, but their team-slot allocation is not specified by Checklist 04 body 112.",
+        "Checklist 09 v1.1 bodies 54–61 explicitly defer separate Hell rematch team versions (levels, moves, held items) and postgame tournament venue/rewards/rotation to a later addendum. The conditional zero-to-eight executed-leader gauntlet is locked; its exact upgraded rosters are not supplied."
       ]
     },
     {
@@ -27,7 +28,8 @@
       "classification": "PARTIAL",
       "record_count": 93,
       "unresolved": [
-        "Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources."
+        "Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources.",
+        "LOC-JEROS occurs in the original handoff but is absent from the recovered locked world graph and Story Bible. An approved reconciliation or explicit retirement is required; do not silently alias it to Ramelle."
       ]
     },
     {
@@ -119,7 +121,7 @@
       "classification": "PARTIAL",
       "record_count": 7,
       "unresolved": [
-        "Seven explicitly attributed verbatim lines extracted. The story is predominantly scene direction rather than a complete spoken script; remaining dialogue, branch-specific line wording and the approximately 40 farewell messages requested by Checklist 16 require authored text."
+        "Seven explicitly attributed verbatim lines extracted. The story is predominantly scene direction rather than a complete spoken script; remaining dialogue, branch-specific line wording, Checklist 07 epitaph templates and the approximately 40 farewell messages requested by Checklist 16 require authored text."
       ]
     },
     {
@@ -160,6 +162,14 @@
     {
       "field": "battle.core_numeric_contract",
       "required_source": "Exact versioned damage, critical-hit, status-duration, accuracy/evasion and capture/shake integer contracts, plus level-1 instance initialization. Gen III-style alone does not resolve all custom-18-type and growth-model bindings."
+    },
+    {
+      "field": "encounters.WRONG_SHIFT",
+      "required_source": "Original handoff ACTIVE_CANON section 12 names this rare anomaly category; recovered world and encounter references do not define its trigger, rate or resolver. An authored anomaly contract is required."
+    },
+    {
+      "field": "world.phase_clock_lifecycle",
+      "required_source": "Cleanup Addendum and Checklist 17 specify ten real-time minutes per phase, but do not specify whether suspended/offline time advances the cycle or how pause/background transitions persist. Confirm this lifecycle policy before implementing the clock; do not infer wall-clock catch-up."
     }
   ],
   "missing_portrait_ids": [

@@ -1,7 +1,5 @@
 # Human Restoration
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 13. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 Only the eight mortal leaders receive explicit **SPARE / EXECUTE**.
 - Seven resolve fate after the leader battle result.
 - **Warden Samiel Elow** alone may formally surrender before final partner defeat once defeat is decisive.
@@ -13,5 +11,12 @@ Only the eight mortal leaders receive explicit **SPARE / EXECUTE**.
 - Equivalent essential services remain available regardless of fate.
 - Current human restoration rule: **five elective uses total**; Pate/Trade consume a use only if chosen for restoration. Restoring an executed leader changes current life state but never rewrites historical `EXECUTED` fate.
 
-## Implementation boundary
-Five total elective uses; CHR-PATE and CHR-TRADE each consume one only if chosen. Keep historical fate separate from ALIVE/DEAD/REVIVED current state. This system is separate from Abyssal memorial sacrifice.
+## Authority and structured data
+
+Authority: Checklist 09 v1.2 correction and Checklist 10. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/progression/core_rules.json`; `data/story/state_contracts.json`.
+
+## Implementation contract and remaining boundary
+
+Exactly five elective human restorations total. Pate and Trade each consume one only if chosen; unused uses can restore eligible mortal leaders Aimon personally executed. Preserve historical EXECUTED separately from current REVIVED life state. This replaces automatic-companion-restoration prose and is separate from Abyssal memorial sacrifice.

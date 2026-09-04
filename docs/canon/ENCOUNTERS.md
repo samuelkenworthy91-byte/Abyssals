@@ -1,7 +1,5 @@
 # Encounters
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 12. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 - Linear critical spine with local branching and optional areas.
 - First travel is manual. Paid carriage fast travel unlocks between discovered settlements; couriers are thematically equivalent but individually presented.
 - Free backtracking; no HM-style traversal requirements.
@@ -14,5 +12,12 @@ Authority: supplied handoff v1.0 ACTIVE_CANON sections 12. Original: ../source_a
 - Starters, Watchers, box legends and mythics are excluded from ordinary random encounters. Fossils use authored main-game restoration and postgame Primeval wild populations.
 - WRONG_SHIFT remains a rare authored anomaly category.
 
-## Implementation boundary
-data/encounters/areas.json preserves all 72 area summaries. data/encounters/tables.json contains 144 phase descriptors with null slots, not invented weighted tables. Level ranges are summary limits, not replacements for slot-specific levels or conditional resolvers. WRONG_SHIFT parameters/conditions are absent in the supplied handoff.
+## Authority and structured data
+
+Authority: Checklist 02 completed workbook; world/encounter references v1.1; Checklist 17. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/encounters/areas.json`; `data/encounters/tables.json`; `data/encounters/acquisition.json`; `data/encounters/species_availability.json`.
+
+## Implementation contract and remaining boundary
+
+All 72 areas, 144 tables and 864 weighted slots are extracted: 856 direct species slots and eight conditional resolver slots. Every table has six slots totalling 100%; per-slot levels and source provenance are preserved. Thirty-one special acquisition/resolver contracts and availability for 187 species are indexed. Check only eligible completed steps; no checks on wall bumps, turning, menus, dialogue or warp entry. WRONG_SHIFT is named in the old handoff but its authored trigger/rate/resolver is not provided.

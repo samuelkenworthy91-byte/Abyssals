@@ -1,5 +1,7 @@
 # Phase A — source re-audit and corrected assumptions
 
+> Historical phase checkpoint. Current coverage and blockers: [FINAL_PREPARATION_REPORT.md](FINAL_PREPARATION_REPORT.md). Earlier pending/missing statements are superseded by that report.
+
 Date: 3 September 2026. Starting branch head: `b99779560128b69de2dd3111a6a2134278ffaaaf`. Work stays on `handoff/structured-import`, PR #1. **No M1, gameplay implementation or merge.**
 
 ## Corrected conclusions

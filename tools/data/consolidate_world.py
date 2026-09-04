@@ -24,7 +24,8 @@ def build_world(g, local):
     # Re-running the importer must not duplicate previously derived locations.
     locations=list({r['id']:r for r in locations}.values())
     dataset('data/locations/locations.json',locations,[wp,local['ap']],
-        ['Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources.'],schema='location')
+        ['Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources.',
+         'LOC-JEROS occurs in the original handoff but is absent from the recovered locked world graph and Story Bible. An approved reconciliation or explicit retirement is required; do not silently alias it to Ramelle.'],schema='location')
     # Stock additions are explicit; later towns inherit all preceding routine stock.
     names={i['name']:i for i in items}
     itemids={i['id']:i for i in items}
@@ -103,7 +104,7 @@ def build_world(g, local):
             'delivery':'memory_echo' if index==570 else 'written_note' if index==123 else 'speech',
             'provenance':prov(storyp,body_index=index)})
     dataset('data/dialogue/dialogue.json',dialogue,[storyp],
-        ['Seven explicitly attributed verbatim lines extracted. The story is predominantly scene direction rather than a complete spoken script; remaining dialogue, branch-specific line wording and the approximately 40 farewell messages requested by Checklist 16 require authored text.'],schema='dialogue')
+        ['Seven explicitly attributed verbatim lines extracted. The story is predominantly scene direction rather than a complete spoken script; remaining dialogue, branch-specific line wording, Checklist 07 epitaph templates and the approximately 40 farewell messages requested by Checklist 16 require authored text.'],schema='dialogue')
     characters=read('data/characters/characters.json')['records']
     dataset('data/characters/characters.json',characters,
         read('data/characters/characters.json')['sources']+[str(storyp.relative_to(g['ROOT']))],schema='character')
@@ -144,6 +145,8 @@ def build_world(g, local):
         authority=prov(source('ABYSSALS_CHECKLIST_01_*'),body_index=18))
     core['species']['runtime_assets_verified_in_this_import']=True
     core['battle']['leader_mutual_ko_player_victory']='only_if_living_reserve_exists_after_starter_life_resolution'
+    core['battle']['mutual_final_ko_player_victory']='only_if_living_reserve_exists_after_starter_life_resolution'
+    core['battle']['legacy_field_note']='leader_mutual_ko_player_victory is a compatibility alias, not a leader-only restriction; Checklist 13 body 8 applies to mutual final KOs generally.'
     core['battle'].update(replacement_style='SET',residual_layer_order=['FIELD','PERSISTENT_STATUS','HELD_SUSTAIN','OTHER_AUTHORED','CLEANUP'])
     core['evolution']={'promotion':'signed_target_minus_source_base_stats','preserve_current_hp':'clamp(1,new_max,half_up(old_current*new_max/old_max))','rolls_at_evolution':0}
     core['training']={'slots_per_instance':5,'modifier_points_per_slot':20,'durations':[1,2,3,4,5],
@@ -159,6 +162,12 @@ def build_world(g, local):
         'unlock':'first permanent Abyssal death followed by Civeton revisit','separate_from_human_restoration':True}
     core['human_restoration']={'total_uses':5,'elective':True,'pate_trade_optional':True,'preserve_historical_fate':True,
         'eligible':['CHR-PATE','CHR-TRADE']+[f'LDR-{i:02}' for i in range(1,9)]}
+    core['leader_mercy']={'base_spare_percent':{f'LDR-{i:02}':p for i,p in enumerate([100,100,35,80,0,70,55,65],1)},
+        'absolute_outcomes_ignore_modifier':['LDR-01','LDR-02','LDR-05'],
+        'probabilistic_modifier_per_previous_spared':15,'probabilistic_modifier_per_previous_executed':-15,
+        'probabilistic_clamp_percent':[10,90],'persist_result_before_resolution':True,'reload_reroll':False,
+        'spared_wipe':'dead party remains dead; return to last safe town and rebuild through Aeric',
+        'provenance':prov(source('ABYSSALS_CHECKLIST_09_*v1.1.docx'),body_index=64)}
     core['starter_lives']={'initial':3,'bound_to_original_instances':True,'return_timing':'round_end_before_wipe',
         'return_hp':'max(1,ceil(max_hp*0.10))','max_lives_lost_per_action':1,
         'clear_lethal_status_on_return':True,'preserve_pp':True,'retain_held_item_on_nonfinal_loss':True,

@@ -1,7 +1,7 @@
 # Build and run — Steam Deck/Linux
 
 ## Current status
-This branch contains preparation, data and validation tooling. **There is no playable game, app entry point or production game build yet.** npm run validate and npm test work after tooling setup. M1 adds dev/build/preview commands and the offline PWA. Do not run archived seed scripts as current instructions.
+This branch contains preparation, data and validation tooling. **There is no playable game, app entry point or production game build yet.** npm run validate and npm test work after tooling setup. M1 will add dev/build/preview commands and the offline PWA only after explicit owner release from Phase H. Do not run archived seed scripts as current instructions.
 
 ## 1. Clone and select the preparation branch
 In Steam Deck Desktop Mode, open Konsole. Use a writable home-directory project folder. Git and Python 3.12+ are needed for tooling; Node 22 is the inherited recommended application baseline. If using a development container/Distrobox, run these commands inside that environment; do not modify SteamOS system partitions.
@@ -27,19 +27,20 @@ Re-run `source .venv/bin/activate` in each new terminal. If Python venv or Git i
 ## 3. Validate the import
 ```bash
 npm run validate
+npm run validate:sources
+npm run validate:reconcile
 npm test
-python3 tools/art/process_portraits.py --report .reports/portrait_audit.json
 ```
-Integrity should pass with explicit source-gap warnings. Tests check the validation and exact-colour processing behaviour, not unimplemented game mechanics.
+Integrity and complete source reconciliation should pass. The 24 tooling tests check validation, deterministic extraction and art processing; they are not gameplay tests.
 
 ## 4. Check full-content readiness
 ```bash
 npm run validate:content
 ```
-This currently exits nonzero because full species/evolution/move/encounter/trainer/story data and ready runtime art were not supplied. Read docs/audit/UNRESOLVED_ITEMS.md. Do not suppress or “fix” this by adding guessed entries. It is safe to build M1 while those content gates remain blocked.
+This exits nonzero for the exact field questions and 22 missing portraits listed in docs/audit/UNRESOLVED_ITEMS.md. The 187 species, 98 paths, 354 moves, 1,893 learnsets, 144 encounter tables and 266 active runtime images are extracted/present. Do not suppress the gate or add guessed entries. Phase H owner review must release the implementation hold.
 
-## 5. Start implementation
-Give the agent docs/implementation/FIRST_CODEX_TASK.md. M1 must add and verify real commands for install, dev, build, preview and browser tests. Until then, npm run dev/npm run build are intentionally not advertised as available.
+## 5. Await owner review
+Only after explicit owner release, give the agent docs/implementation/FIRST_CODEX_TASK.md. M1 must add and verify real commands for install, dev, build, preview and browser tests. Until then, npm run dev/npm run build are intentionally not advertised as available.
 
 ## After M1 and later playable milestones
 Use the agent's updated actual commands; test the locally built app before deployment. Install PWA from the browser, close it, disable networking, relaunch and check all required assets load. On Deck, verify both touch and assigned keyboard/controller input in Desktop Mode. Record commit SHA (`git rev-parse HEAD`), browser/device and test results. Do not treat browser Back/reload or recovery backups as game rollback features.

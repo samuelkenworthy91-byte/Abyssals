@@ -1,7 +1,5 @@
 # Hell Postgame
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 14. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 Warden fields are persistent, symmetric and active before Turn 1. Temporary field replacement may occur, after which the native field resumes according to the locked field system. UI must make the current field readable. The locked field identities include:
 - Namefog
 - Gilded Dust
@@ -14,5 +12,12 @@ Warden fields are persistent, symmetric and active before Turn 1. Temporary fiel
 
 The terrain specification also locks its special Rock Sp. Def and Ice Defence boost interactions. Do not silently replace these with standard Pokémon weather defaults.
 
-## Implementation boundary
-Nine Circles; eight Wardens. Executed mortal leaders may return as upgraded Hell trainers, never replacement Wardens. Prime Archive unlocks opposite story-choice branches; Primeval Reach and Reordered Underworld are separately named in area summaries. Their exact relationship/scene sequence requires the Story Bible. Warden names and field names are known, but their mapping/effects are not supplied.
+## Authority and structured data
+
+Authority: Checklist 05; Checklist 09 v1.1 bodies 54–61; Story Bible; world reference v1.1. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/terrain/fields.json`; `data/trainers/trainers.json`; `data/story/scenes.json`; `data/locations/world_routes.json`.
+
+## Implementation contract and remaining boundary
+
+All eight native field mappings/effects are extracted, including locked Rock Sp. Def and Ice Defence interactions. Nine Circles contain eight Wardens; executed mortal leaders form a separate conditional zero-to-eight gauntlet. Primeval Reach supplies opposite story-branch final-form captures; historical branch state never flips. Reordered Underworld is an authored postgame region. Exact upgraded leader rematch teams and tournament venue/rewards/rotation are explicitly deferred in Checklist 09; Illyr/Nharos phase numbers and Mirra timing also remain unresolved.

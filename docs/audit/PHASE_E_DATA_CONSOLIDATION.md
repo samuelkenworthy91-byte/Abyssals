@@ -1,5 +1,7 @@
 # Phase E — source-backed game data consolidation
 
+> Historical phase checkpoint. Current coverage and blockers: [FINAL_PREPARATION_REPORT.md](FINAL_PREPARATION_REPORT.md). Earlier pending/missing statements are superseded by that report.
+
 Eight of the original sixteen partial datasets are now complete for their supplied source. 24 of 33 registered datasets are complete; 9 are partial (including the newly recovered ability dataset). COMPLETE means the specified source content is extracted, not that gameplay exists. No gameplay was implemented.
 
 35 detailed files are now searchable JSON evidence (31 active, four explicitly superseded). Original source files remain byte-preserved. The extraction retains sheet/row or OOXML body/table-row coordinates.

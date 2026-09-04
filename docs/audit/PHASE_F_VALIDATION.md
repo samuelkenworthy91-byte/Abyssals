@@ -1,5 +1,7 @@
 # Phase F — full preparation validation
 
+> Historical phase checkpoint. Current coverage and blockers: [FINAL_PREPARATION_REPORT.md](FINAL_PREPARATION_REPORT.md). Earlier pending/missing statements are superseded by that report.
+
 Repository integrity and source reconciliation pass. Full-content readiness remains **BLOCKED**; the strict gate was strengthened and was not weakened to hide missing content.
 
 | Check | Result |

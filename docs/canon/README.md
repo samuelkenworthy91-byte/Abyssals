@@ -1,22 +1,23 @@
 # Canon authority and read order
-1. Root AGENTS.md and current explicit user decisions.
-2. This canon directory: concise implementation rules and SUPERSESSIONS.md.
-3. Structured datasets named in data/manifests/datasets.json, with per-dataset completeness and provenance. Null is unknown, never a default game value.
-4. Pristine authorities under `docs/source_archive/canon_sources/active/`, following the recovered Canon Source Index and its explicit amendments. These remain content authority while being consolidated. Superseded source prompts and scripts never govern new development.
 
-On conflict: later explicitly LOCKED decision, then higher version, then explicit supersession. Record evidence and resolution in docs/audit/CONFLICTS_AND_RESOLUTIONS.md. Timestamps alone do not establish design authority. If no defensible resolution exists, record an unresolved item and block the dependent behaviour.
+1. Read root AGENTS.md and current explicit owner instructions.
+2. Read this directory’s relevant topic and SUPERSESSIONS.md.
+3. Inspect data/manifests/datasets.json, the relevant structured records, provenance and exact unresolved fields.
+4. Verify detail against pristine docs/source_archive/canon_sources/active/ or its lossless data/reference/ extraction.
 
-Each topic below points to its handoff evidence. Phase A recovered the detailed workbooks/checklists cited by the handoff. Their evidence takes precedence over mistaken missing-source markers. Reconciliation and structured extraction continue in Phase E; consult `docs/audit/PHASE_A_REAUDIT.md` for known discrepancies. M1 remains on hold.
+Later explicitly LOCKED decisions win, then higher versions, then explicit supersession. Record conflicts and evidence in docs/audit/CONFLICTS_AND_RESOLUTIONS.md. Timestamps alone do not establish canon. Technical namespaced IDs, schemas and asset canvases are implementation conventions, not new game design.
 
-This preparation pass may choose reversible engineering conventions (folder layout, technical namespaced IDs, schemas and canvas), but never gameplay values. No full game has been implemented.
+All 35 recovered references have been extracted. Of 33 registered datasets, 24 are complete for supplied source and nine are explicitly partial. COMPLETE describes the stated representation: source-contract indexes and scene specifications are not executable game code. Null never means a default gameplay value. Consult docs/audit/FINAL_PREPARATION_REPORT.md and UNRESOLVED_ITEMS.md for current readiness; older phase audits are historical checkpoints.
 
-## Topic index
+Preparation is at Phase H: stop for owner review. Do not start M1, implement gameplay or merge PR #1 without the owner’s next instruction.
+
+## Topics
+
 - [Art Direction](ART_DIRECTION.md)
 - [Battle Presentation](BATTLE_PRESENTATION.md)
 - [Battle System](BATTLE_SYSTEM.md)
 - [Capture](CAPTURE.md)
 - [Characters Factions](CHARACTERS_FACTIONS.md)
-- [Checklist Index](CHECKLIST_INDEX.md)
 - [Core Vision](CORE_VISION.md)
 - [Day Night](DAY_NIGHT.md)
 - [Encounters](ENCOUNTERS.md)
@@ -26,7 +27,6 @@ This preparation pass may choose reversible engineering conventions (folder layo
 - [Leader Fate](LEADER_FATE.md)
 - [Locations](LOCATIONS.md)
 - [Memorial Resurrection](MEMORIAL_RESURRECTION.md)
-- [Moves Types](MOVES_TYPES.md)
 - [Overworld Presentation](OVERWORLD_PRESENTATION.md)
 - [Party Reserve](PARTY_RESERVE.md)
 - [Permadeath](PERMADEATH.md)
@@ -35,8 +35,9 @@ This preparation pass may choose reversible engineering conventions (folder layo
 - [Starter Lives](STARTER_LIVES.md)
 - [Stats Growth](STATS_GROWTH.md)
 - [Story World](STORY_WORLD.md)
-- [Supersessions](SUPERSESSIONS.md)
 - [Trainers Ai](TRAINERS_AI.md)
 - [Traversal World Map](TRAVERSAL_WORLD_MAP.md)
 - [Ui Expectations](UI_EXPECTATIONS.md)
 - [Xp Levelling](XP_LEVELLING.md)
+- [Checklist index](CHECKLIST_INDEX.md)
+- [Supersessions](SUPERSESSIONS.md)

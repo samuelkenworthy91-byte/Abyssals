@@ -1,6 +1,6 @@
 # Conflicts and resolutions
 
-Decisions preserve later locks and current explicit instructions. No missing game values have been guessed. Paths below are relative to docs/source_archive/ unless stated.
+Later explicit locks and current owner instructions govern. Original evidence remains preserved. Of 24 recorded conflicts, 22 are resolved and two remain explicitly unresolved (C22, C24). Paths are relative to docs/source_archive/ unless stated.
 
 | ID | Subject | Conflicting/old material | Resolution | Evidence |
 |---|---|---|---|---|
@@ -16,19 +16,17 @@ Decisions preserve later locks and current explicit instructions. No missing gam
 | C10 | Portrait target count vs images | 91 files could imply 91 current targets | 78/100 targets plus one form variant, five alternates and seven superseded images. Brann alternate duplicates canonical bytes. | portrait_package/README.txt and checksums |
 | C11 | Active build/tool commands | Vite scripts without entry point; latest dependencies; permissive checks | Preparation has real validation/tests only. M1 adds application entry/build commands and pinned lockfile. | handoff_v1/package.json and src inventory |
 | C12 | Prior repository fragments | Encoded archive chunks at root | Preserve all 19 files in docs/source_archive/prior_repository; both chunk sets fail ZIP assembly. Do not use as design authority. | Existing main 2fdcc0c96a59490df47c4d5787ea64814e7659d8 |
-
 | C13 | Active Checklist 09 | Handoff index cites v1.1 alone | Apply recovered v1.2 correction to unchanged v1.1 body: five elective restorations, eighteen proxies. | canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx sections 1–6 |
 | C14 | Archived authority | Blanket historical-only classification | Pristine active locked clauses retain content authority; archived agent prompts/tools and explicitly superseded clauses do not govern work. | Canon Source Index; owner correction section 5 |
 | C15 | M1 timing | Earlier first-session prompt starts app shell | Superseded: finish preparation A–G, stop for review at H; no M1, gameplay or merge. | Owner correction sections 6–7 |
 | C16 | HP growth | Handoff summary says guaranteed +10 baseline; Checklist 01 says +10 per successful increment | Resolved: Checklist 01 expressly owns growth; body 24 gives +10 per HP success, body 26 permits zero-success levels, and body 27 prohibits guarantees. The compiled baseline summary is superseded. | canon_sources/active/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx sections 2–3 versus handoff ACTIVE_CANON section 4 |
-
 | C17 | Extra Flaggrim illustrations | Five pictured figures versus three canonical species in this family | Map the three named figures; preserve two unlabelled extras as unassigned supplemental art. Do not add species/evolution edges. | Flaggrim.webp labels; numeric Dex #73–75; Evolution Paths |
 | C18 | Regalisk type strip | Source sheet prints Poison/Flying/Dragon | Dex #32 defines Poison/Dragon. Preserve artwork; remove the printed strip in runtime extraction. | Bantisk.webp versus Stats/Abilities v2 Full Dex row 34 |
-
-## Remaining reconciliation
-See PHASE_A_REAUDIT.md and UNRESOLVED_ITEMS.md. The creature register and detailed rule sources are recovered. Nharos identity and CHR-NHAROS mapping are resolved in Phase D. Artwork labels do not override locked identity/type data.
-
 | C19 | Evolution current HP | Checklist 11/addendum cap-only wording | Checklist 13 body 79–81 explicitly supersedes this with HP-percentage preservation and integer half-up rounding. | Checklist 13 body 81 |
 | C20 | Rebellious Jab priority | Move catalogue #310 grants conditional pre-normal action | Checklist 12 body 42 expressly limits priority +1 to Plain Dash and Frost Shard and assigns all others 0. #310 conditional priority is superseded, retained in source text only. | Checklist 12 priority whitelist |
 | C21 | VFX viewpoint | Legacy move VFX log requests side-view presentation | Retain action intent for metadata; Checklist 16 first-person presentation overrides all side-view framing. | Checklist 16 |
 | C22 | Leader held slots | Checklist 04 body 59 vs body 108 | UNRESOLVED: Yselle specifies 1 slot but names 2; Oren specifies 4 but names 3. Neither equal-version clause supplies a defensible final allocation. Preserve both. | Checklist 04 bodies 59,108 |
+| C23 | Mutual final KO scope | Original handoff limits victory aftermath to mortal leaders | Checklist 13 body 8 applies mutual-final-KO victory when any living reserve exists; no living Abyssal anywhere instead follows normal wipe. Resolve pending starter returns first. The old leader-named data field remains a documented compatibility alias. | Checklist 13 bodies 8, 37; Checklist 14 |
+| C24 | LOC-JEROS | Original handoff location has no counterpart in recovered locked world/story graph | UNRESOLVED: preserve the legacy record, require explicit retirement/reconciliation and do not invent a Ramelle alias. | handoff_v1/data/canon/locations.json versus WORLD_TOWNS_ROUTES_REFERENCE_v1.1 and locked Story Bible |
+
+Current coverage and exact outstanding questions: FINAL_PREPARATION_REPORT.md and UNRESOLVED_ITEMS.md. Earlier phase audits are historical checkpoints.

@@ -1,20 +1,20 @@
 # Implementation roadmap
 
-These milestones are engineering order, not redesigned gameplay. Complete one reviewable slice at a time. M0 import integrity is prepared, but full content remains blocked by the sources listed in ../audit/UNRESOLVED_ITEMS.md. M1 is the safest independent next coding task.
+These milestones are engineering order, not redesigned gameplay. Complete one reviewable slice at a time. M0 import integrity is prepared, but full content remains blocked by the sources listed in ../audit/UNRESOLVED_ITEMS.md. Preparation is at Phase H owner review. M1 is the first implementation task only after explicit owner release; do not begin it now.
 
-**Persistence dependency:** establish deterministic commands/events and a storage interface in M2. M4–M8 use disposable fixtures only; none may ship irreversible campaign state until M9 passes. A production content gate is separate from a shell build. Missing workbooks are not permission to invent species, items or rules.
+**Persistence dependency:** establish deterministic commands/events and a storage interface in M2. M4–M8 use disposable fixtures only; none may ship irreversible campaign state until M9 passes. A production content gate is separate from a shell build. All 35 recovered references are extracted; remaining field questions are not permission to invent values.
 
 For each milestone, the paths below are repository-relative: canon names under docs/canon/, data paths under data/. Choose only the modules actually required, not empty scaffolding. Tests must cover behaviour and failure conditions, not mirror implementation.
 
 ## M0 — Repository and data validation
 
-- **Objectives:** Preserve sources, authority, IDs, schemas and asset provenance. Import missing authoritative sources in independently reviewed batches.
+- **Objectives:** Preserve sources, authority, IDs, schemas and asset provenance. Maintain the audited source-backed extraction and resolve only documented content questions with approved evidence.
 - **Canon:** README.md, SPECIES_EVOLUTION.md
 - **Data:** manifests/*, schemas/*
 - **Code/modules:** tools/data/, tools/validation/
 - **Acceptance:** Integrity gate passes; every unavailable dataset and asset is explicitly blocked; strict content gate remains red until complete.
 - **Automated tests:** Schema/ref/count/checksum negative cases; source-to-derived reconciliation.
-- **Manual playtest:** Read audit, inspect one source-to-entity mapping and one deliberately missing dataset.
+- **Manual playtest:** Read audit, inspect one source-to-entity mapping and one explicit unresolved field.
 
 ## M1 — Application shell and offline PWA
 
@@ -34,7 +34,7 @@ For each milestone, the paths below are repository-relative: canon names under d
 - **Code/modules:** src/data/, src/entities/, src/state/, src/save/ interface
 - **Acceptance:** Missing content fails explicitly; no invented defaults. Domain state independent of UI; fixtures never enter production catalogues.
 - **Automated tests:** Load good/bad/null references; round-trip fixture state; stable deterministic commands/event identifiers.
-- **Manual playtest:** View loaded identity/count diagnostics; intentionally unavailable species list explains missing source.
+- **Manual playtest:** View loaded identity/count diagnostics; all 187 species identities load and partial fields fail explicitly without invented defaults.
 
 ## M3 — Overworld grid movement
 

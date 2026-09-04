@@ -1,7 +1,5 @@
 # Party Reserve
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 8. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 - Active party size: 6.
 - Reserve: unlimited.
 - Reserve access only through recurring Chaplain Aeric Solm in towns.
@@ -9,5 +7,12 @@ Authority: supplied handoff v1.0 ACTIVE_CANON sections 8. Original: ../source_ar
 - Ordinary 0 HP is lethal/permanent death unless a starter life rule intercepts it.
 - Reserves do not auto-deploy into an expeditionary wipe.
 
-## Implementation boundary
-Reserve access and free relearning occur through CHR-AERIC in towns. Do not add a reserve button usable anywhere in the wild.
+## Authority and structured data
+
+Authority: Checklist 08; Checklist 12; Checklist 17. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/progression/core_rules.json`; `data/progression/locked_contracts.json`.
+
+## Implementation contract and remaining boundary
+
+Reserve access and free relearning occur through CHR-AERIC in towns. Do not add reserve access anywhere in the wild. Capture destination and party ownership changes must commit atomically; reserves do not auto-deploy on a wipe.

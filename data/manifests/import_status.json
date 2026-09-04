@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "stage": "repository_preparation",
+  "stage": "phase_h_owner_review",
   "game_implemented": false,
   "content_ready": false,
   "supplied_files": 234,
@@ -9,11 +9,11 @@
   "canonical_portrait_targets_present": 78,
   "canonical_portrait_targets_expected": 100,
   "missing_portrait_targets": 22,
-  "named_characters_with_canonical_ids": 99,
-  "unresolved_core_identity": "Nharos",
+  "named_characters_with_canonical_ids": 100,
+  "unresolved_core_identity": null,
   "expected_species": 187,
   "verified_species": 187,
-  "preparation_phase": "C",
+  "preparation_phase": "H",
   "implementation_on_hold": true,
   "merge_on_hold": true,
   "recovered_canon_source_files": 35,
@@ -25,12 +25,30 @@
   "source_art_coverage_basis": "187 exact labelled figures visually reconciled with numeric Dex and 89 canonical evolution families",
   "readiness": {
     "source_preserved": true,
-    "canon_extracted": false,
+    "canon_extracted": true,
     "runtime_ready": false,
     "implementation_ready": false
   },
   "species_art_mapped": 187,
   "unlabelled_supplemental_monster_illustrations": 2,
   "species_runtime_sprites": 187,
-  "abyssal_runtime_ready": true
+  "abyssal_runtime_ready": true,
+  "preparation_percentage_estimate": 95,
+  "canonical_portraits_runtime": 78,
+  "variant_portraits_runtime": 1,
+  "portrait_runtime_files": 79,
+  "portrait_alternates_source_only": 5,
+  "portrait_superseded_source_only": 7,
+  "datasets_registered": 33,
+  "datasets_complete_for_supplied_source": 24,
+  "datasets_partial": 9,
+  "tooling_tests_passed": 24,
+  "source_moves_verified": 354,
+  "source_encounter_tables_verified": 144,
+  "readiness_scope": {
+    "SOURCE PRESERVED": "COMPLETE: 234 archive members + 35 recovered references + 19 prior repository files, checksum verified.",
+    "CANON EXTRACTED": "All supplied references extracted; 24 of 33 datasets complete for their stated representation; nine exact partial datasets remain.",
+    "RUNTIME READY": "187/187 monster fronts and 78/78 supplied canonical portraits + one variant; 22 absent portrait targets and future presentation assets prevent complete game asset readiness.",
+    "IMPLEMENTATION READY": "Reviewable preparation baseline. Strict full-content gate blocked; no game build exists and owner has not released M1."
+  }
 }

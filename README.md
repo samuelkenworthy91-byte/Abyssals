@@ -1,38 +1,36 @@
 # Abyssals
 
-Original story-led monster-capture RPG for a mobile-first offline PWA and desktop browsers. Explore an authored mortal crusade route, capture Abyssals with food, develop a six-member party, make irreversible choices, then descend through nine Circles of Hell.
+A story-led monster-capture RPG for a mobile-first offline PWA and desktop browsers, including Steam Deck/Linux. Explore the mortal crusade route, capture with food, develop a six-member party, make irreversible choices, then descend through nine Circles of Hell.
 
-**Status: repository preparation re-audit; no playable game yet. M1 is paused.** The three supplied packages are preserved. The 89 monster files are source sheets representing the complete 187-species front-art set; Phases B/C reconcile them to the canonical Dex and provide all 187 individual runtime fronts. Canonical Dex, progression, encounter, trainer, economy, terrain, story and checklist sources have been recovered for deterministic extraction. Portrait processing remains a production task, not a reason to discard the supplied art.
+**Repository preparation: Phase H — owner review. No playable application exists. Do not start M1, implement gameplay or merge PR #1 yet.**
 
-## Start here
-1. Every coding agent: read [AGENTS.md](AGENTS.md).
-2. Read [canon authority](docs/canon/README.md) and [unresolved sources](docs/audit/UNRESOLVED_ITEMS.md).
-3. Use [Codex instructions](CODEX.md) or [Arena AI instructions](ARENA_AI.md).
-4. Follow the active preparation phase. Do not start M1 until Phase H owner review releases the hold.
+The accepted A–C baseline is preserved. All 187 species now have individual canonical runtime front sprites. All 78 supplied canonical portraits plus one variant are processed and visually reviewed; 22 targets remain genuinely absent. All 35 recovered detailed references are preserved and extracted. Of 33 registered datasets, 24 are complete for supplied source and nine have exact unresolved fields.
 
-## Validate
-After [Linux/Steam Deck tooling setup](docs/playtesting/BUILD_AND_RUN.md):
+Read [AGENTS.md](AGENTS.md), [canon authority](docs/canon/README.md), the [final preparation report](docs/audit/FINAL_PREPARATION_REPORT.md), and [remaining questions](docs/audit/UNRESOLVED_ITEMS.md). The [roadmap](docs/implementation/IMPLEMENTATION_ROADMAP.md) defines incremental M0–M15 work. The [first coding task](docs/implementation/FIRST_CODEX_TASK.md) remains conditional on explicit owner release.
+
+With the Python tooling environment active (see [Linux/Deck setup](docs/playtesting/BUILD_AND_RUN.md)):
+
 ```bash
-source .venv/bin/activate
 npm run validate
+npm run validate:sources
+npm run validate:reconcile
 npm test
 npm run validate:content
 ```
-Integrity/tests should pass. The strict content command remains a readiness gate while source conversion and runtime art are unfinished. It must not be weakened to imply completion.
 
-## Repository map
-| Directory | Purpose |
+Integrity, source reconciliation and 24 tooling tests pass. The final command remains blocked by documented content questions and missing assets; a green integrity CI badge does not mean full-content readiness. Do not weaken the strict gate.
+
+| Path | Purpose |
 |---|---|
-| docs/canon/ | Concise authoritative rules and supersessions |
-| data/ | Structured records, rules, schemas, partial datasets and provenance/asset manifests |
-| docs/source_archive/ | Pristine source evidence, with active and superseded canon clearly separated |
-| assets/abyssals/source/ | 89 pristine source sheets representing all 187 species |
-| assets/portraits/source/ | All 91 pristine images including alternates/legacy |
-| assets/*/runtime/ | Gate-controlled production output being prepared in Phases C and D |
-| tools/ | Actual art/data validation scripts |
-| tests/ | Preparation tooling tests; future gameplay tests added by milestone |
-| src/README.md | Future code boundaries; no empty application architecture |
-| docs/implementation/ | M0–M15 roadmap and first coding task |
-| docs/playtesting/ | Build, playtest, balance, bug report and Ironman guidance |
+| docs/canon/ | Concise implementation rules and precedence |
+| docs/source_archive/ | Pristine evidence; superseded material is non-authoritative |
+| data/ | Stable entities, source-backed contracts, explicit partial fields |
+| data/reference/ | Lossless searchable extraction of all 35 detailed references |
+| data/manifests/ and data/schemas/ | Inventory, provenance, asset coverage, readiness and validation |
+| assets/abyssals/source/ → runtime/ | 89 pristine sheets → 187 individual fronts |
+| assets/portraits/source/ → runtime/ | 91 pristine images → 78 canonical + 1 variant |
+| tools/ and tests/ | Reproducible imports, art processing and preparation checks |
+| docs/implementation/ and docs/playtesting/ | Milestones, setup, QA and Ironman plans |
+| src/README.md | Future module boundaries; no gameplay scaffold |
 
-Read the [import audit](docs/audit/IMPORT_AUDIT.md), [resolutions](docs/audit/CONFLICTS_AND_RESOLUTIONS.md), [validation report](docs/audit/VALIDATION_REPORT.md) and [art storage decision](docs/art/ASSET_STORAGE.md). Ordinary Git stores this snapshot; no LFS setup is required. Finished artwork is preserved; canonical back sprites are unnecessary.
+Ordinary Git retrieves all current assets; LFS is not required for this snapshot. See [asset storage](docs/art/ASSET_STORAGE.md). No generated archives or processing previews belong in the repository.

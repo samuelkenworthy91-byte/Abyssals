@@ -1,5 +1,7 @@
 # Phase C — canonical runtime fronts
 
+> Historical phase checkpoint. Current coverage and blockers: [FINAL_PREPARATION_REPORT.md](FINAL_PREPARATION_REPORT.md). Earlier pending/missing statements are superseded by that report.
+
 | Measure | Audited result |
 |---|---:|
 | Canonical species expected | 187 |

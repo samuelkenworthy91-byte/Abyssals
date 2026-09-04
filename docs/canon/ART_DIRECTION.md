@@ -1,7 +1,5 @@
 # Art Direction
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 3, 17. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 **True Light:** white/European medieval-crusader-inspired humans; cool blue, white/ivory, silver/weathered steel, navy; sparse gold.
 
 **Dawn Bloom:** grounded Middle Eastern/West Asian-inspired fantasy clothing and appearance; deep violet/plum/aubergine, cream/sand, brass/gold, restrained teal.
@@ -12,7 +10,14 @@ Human/NPC source portraits are full-body, standalone, head-to-toe, clean 2D anim
 - Human/NPC portrait production manifest: 100 unique named targets + 39 reusable class templates.
 - Portraits serve dialogue and pre-battle/send-out presentation.
 - Environment/location art is a separate production pass.
-- Human portrait cleanup must remove exact magenta, crop/align consistently and place figures on an agreed uniform production canvas before runtime use.
+- Human portrait cleanup follows the reproducible, visually reviewed body-scale convention in ../art/PORTRAIT_PIPELINE.md.
 
-## Implementation boundary
-Source asset authority does not imply runtime readiness: 89 monster sheets and 91 portrait images were supplied. Runtime cleanup removes ONLY exact #FF00FF. No fuzzy pink/purple deletion. See docs/art/PORTRAIT_PIPELINE.md for the selected technical canvas and the current processing blockers.
+## Authority and structured data
+
+Authority: Checklist 16; human portrait manifest; owner production-art instructions. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `assets/abyssals/runtime/`; `assets/portraits/runtime/`; `data/manifests/abyssal_art.json`; `data/manifests/portraits.json`.
+
+## Implementation contract and remaining boundary
+
+All 187 monster fronts and 78 canonical portraits plus one variant are runtime ready. Portraits use a 2048×2048 transparent canvas, crown-to-soles body height 1536 px, soles Y=1920 and body centre X=1024. Full props are retained with uniform aspect-preserving scaling. Exact magenta and reviewed edge-connected near-magenta contamination are removed; interior pink/purple colours remain. Five alternates and seven superseded portraits remain source-only. See ../art/PORTRAIT_PIPELINE.md and ../art/ASSET_STORAGE.md. Twenty-two canonical portrait targets are genuinely absent; environment, overworld, UI, VFX and audio production remains future work.

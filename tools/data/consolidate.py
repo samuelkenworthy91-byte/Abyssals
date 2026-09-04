@@ -305,7 +305,8 @@ def main():
     enrich_trainers(trainers,sp,moves,learnsets)
     dataset('data/trainers/trainers.json',trainers,[tp,lp,cp],
         ['All 95 fixed rosters and current-form legal move pools are recovered. Final four-move loadouts require unresolved move metadata plus a documented deterministic implementation of Checklist 04 qualitative profiles; numeric profile scores are not authored in the sources. Leader-lite tier switch/knowledge inheritance is not explicitly assigned in the seven-tier table.']+
-        [f"{t['id']}: {issue}" for t in trainers for issue in t['unresolved_fields']],schema='trainer')
+        [f"{t['id']}: {issue}" for t in trainers for issue in t['unresolved_fields']]+
+        ['Checklist 09 v1.1 bodies 54–61 explicitly defer separate Hell rematch team versions (levels, moves, held items) and postgame tournament venue/rewards/rotation to a later addendum. The conditional zero-to-eight executed-leader gauntlet is locked; its exact upgraded rosters are not supplied.'],schema='trainer')
     dataset('data/trainers/companion_checkpoints.json',table_records(tp,tb,101,'COMPANION-'),[tp])
     from consolidate_world import build_world
     build_world(globals(),locals())
@@ -321,7 +322,9 @@ def main():
             {'field':'species.capture_rate','required_source':'Approved 187-species numeric catch-rate table. No such values occur in the supplied complete references.'},
             {'field':'types.effectiveness','required_source':'Approved 18x18 interaction table, including Fairy, or exact versioned rule import.'},
             {'field':'xp.participant_level_gap_formula','required_source':'Exact level-gap XP amount/formula, rounding and any participation adjustment. Sources specify 100 XP per level and per-participant comparison only.'},
-            {'field':'battle.core_numeric_contract','required_source':'Exact versioned damage, critical-hit, status-duration, accuracy/evasion and capture/shake integer contracts, plus level-1 instance initialization. Gen III-style alone does not resolve all custom-18-type and growth-model bindings.'}],
+            {'field':'battle.core_numeric_contract','required_source':'Exact versioned damage, critical-hit, status-duration, accuracy/evasion and capture/shake integer contracts, plus level-1 instance initialization. Gen III-style alone does not resolve all custom-18-type and growth-model bindings.'},
+            {'field':'encounters.WRONG_SHIFT','required_source':'Original handoff ACTIVE_CANON section 12 names this rare anomaly category; recovered world and encounter references do not define its trigger, rate or resolver. An authored anomaly contract is required.'},
+            {'field':'world.phase_clock_lifecycle','required_source':'Cleanup Addendum and Checklist 17 specify ten real-time minutes per phase, but do not specify whether suspended/offline time advances the cycle or how pause/background transitions persist. Confirm this lifecycle policy before implementing the clock; do not infer wall-clock catch-up.'}],
         'missing_portrait_ids':[r['id'] for r in read('data/manifests/portraits.json')['missing_targets']],
         'engineering_work_not_missing_canon':['Choose and version deterministic PRNG/hash/serialization implementations within the locked save/growth contracts.',
             'Implement qualitative trainer-profile scoring transparently; do not present chosen implementation weights as source-authored canon.',

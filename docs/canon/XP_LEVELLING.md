@@ -1,7 +1,5 @@
 # Xp Levelling
 
-Authority: supplied handoff v1.0 ACTIVE_CANON sections 4. Original: ../source_archive/handoff_v1/docs/canon/. Current user import constraints supersede processing instructions.
-
 - 187 species are in the regional/project dex; the canonical front-facing species sprites are complete.
 - 98 evolution paths.
 - 100 XP per level.
@@ -15,5 +13,12 @@ Authority: supplied handoff v1.0 ACTIVE_CANON sections 4. Original: ../source_ar
 - Evolution applies fixed promotion jumps and reweights future growth; it does not retroactively reroll the individual.
 - Wild growth is seeded/deterministic.
 
-## Implementation boundary
-100 XP is required for every level; hard cap 200. Exact level-gap award function is absent; do not supply a conventional formula.
+## Authority and structured data
+
+Authority: Checklist 01; Progression v3; handoff XP rule. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/progression/core_rules.json`; `data/progression/chapter_bands.json`; `data/moves/learnsets.json`.
+
+## Implementation contract and remaining boundary
+
+Every level costs 100 XP; hard cap 200. Evaluate each participant against the defeated enemy using that participant’s own level. Twenty-one authored progression bands and all 1,893 learnset entries are extracted. Resolve multiple gains one level at a time with required move/evolution choices. The exact XP amount/formula and rounding remain absent; do not supply a conventional formula.

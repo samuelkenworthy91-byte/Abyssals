@@ -854,6 +854,7 @@
     }
   ],
   "unresolved": [
-    "Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources."
+    "Authored settlements/routes and 72 ecological area records are recovered. Tile maps, per-screen dimensions, collision grids, doorway coordinates and trigger placements have not been authored in the supplied sources.",
+    "LOC-JEROS occurs in the original handoff but is absent from the recovered locked world graph and Story Bible. An approved reconciliation or explicit retirement is required; do not silently alias it to Ramelle."
   ]
 }
