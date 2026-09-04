@@ -4,6 +4,8 @@ A story-led monster-capture RPG for a mobile-first offline PWA and desktop brows
 
 **Repository preparation: Phase H — owner review. No playable application exists. Do not start M1, implement gameplay or merge PR #1 yet.**
 
+Repository tooling setup is complete. From a fresh clone, run `bash scripts/setup.sh`, then `source .venv/bin/activate`. Python-only validation is available without Node/npm; see the Linux/Deck setup guide below. Setup completion does not resolve the remaining game-content blockers.
+
 The accepted A–C baseline is preserved. All 187 species now have individual canonical runtime front sprites. All 78 supplied canonical portraits plus one variant are processed and visually reviewed; 22 targets remain genuinely absent. All 35 recovered detailed references are preserved and extracted. Of 33 registered datasets, 24 are complete for supplied source and nine have exact unresolved fields.
 
 Read [AGENTS.md](AGENTS.md), [canon authority](docs/canon/README.md), the [final preparation report](docs/audit/FINAL_PREPARATION_REPORT.md), and [remaining questions](docs/audit/UNRESOLVED_ITEMS.md). The [roadmap](docs/implementation/IMPLEMENTATION_ROADMAP.md) defines incremental M0–M15 work. The [first coding task](docs/implementation/FIRST_CODEX_TASK.md) remains conditional on explicit owner release.

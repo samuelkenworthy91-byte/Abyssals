@@ -12,7 +12,10 @@ jobs:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements-tools.txt
-      - run: python -m pip install -r requirements-tools.txt
+      - name: Set up preparation tooling from a fresh clone
+        run: |
+          bash scripts/setup.sh
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> "$GITHUB_PATH"
       - run: python tools/validation/validate.py --json-report .reports/integrity.json
       - run: python tools/data/verify_derivations.py
       - run: python tools/validation/reconcile_sources.py --json-report .reports/source-reconciliation.json
@@ -42,5 +45,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -r requirements-tools.txt
+      - name: Set up preparation tooling from a fresh clone
+        run: |
+          bash scripts/setup.sh
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> "$GITHUB_PATH"
       - run: python tools/validation/validate.py --content

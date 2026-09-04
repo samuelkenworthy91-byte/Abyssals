@@ -82,7 +82,7 @@ The remaining questions cover six missing field contracts (catch rates, type mat
 
 Checklists take precedence over old compiled prose. Resolutions include HP success-only growth (C16), evolution HP percentage (C19), move #310 priority removal (C20), first-person VFX authority (C21), optional human restoration and Nharos identity. There are 24 recorded conflicts: 22 resolved and two unresolved. C22 is the Yselle/Oren held-item contradiction; C24 is LOC-JEROS reconciliation. C23 records the source-backed general mutual-final-KO rule. See CONFLICTS_AND_RESOLUTIONS.md.
 
-GitHub integrity CI: Phase D run 33768994963 PASS; Phase E run 33771948984 PASS; Phase F run 33772583909 PASS. Final Phase G head CI is checked after publication and recorded in PR #1. Green integrity CI does not imply a passing strict content gate. No playable application exists; gameplay, browser shell, build and campaign playtests are not run.
+GitHub integrity CI: Phase D run 33768994963 PASS; Phase E run 33771948984 PASS; Phase F run 33772583909 PASS. Phase G head ee5840d passed run 33845576495, including 24 tooling tests and strict reporting of 97 CONTENT findings. Green integrity CI does not imply a passing strict content gate. No playable application exists; gameplay, browser shell, build and campaign playtests are not run.
 
 ## Commits and review recommendation
 
@@ -95,3 +95,9 @@ GitHub integrity CI: Phase D run 33768994963 PASS; Phase E run 33771948984 PASS;
 PR #1 is reviewable as a preserved, validated preparation baseline, but it is **not an unconditionally complete production-content handoff** while the strict gate is blocked. Merge only after owner review explicitly accepts the remaining blockers or supplies their resolution. No merge or M1 was performed.
 
 After explicit owner release, the recommended first coding task is **M1 only: minimal TypeScript/Vite offline PWA title/navigation shell, separate developer-only read-only manifest diagnostics, pinned dependencies, build/typecheck and offline relaunch checks; no gameplay or campaign saves; stop before M2**. The concrete prompt is ../implementation/FIRST_CODEX_TASK.md.
+
+## Repository tooling setup closeout
+
+`bash scripts/setup.sh` installs the pinned preparation dependencies in an isolated `.venv`, verifies Python 3.12+ and checks dependency consistency. It is repeatable and is also used by both CI jobs. The Linux/Steam Deck guide includes Python-only validation commands, so Node/npm is optional for repository preparation.
+
+Setup has passed locally; latest commit CI evidence is recorded in PR #1 after publication. All source, canon and runtime asset counts are unchanged. Repository tooling setup is complete; full-content readiness remains blocked by the exact unresolved register. No M1 work or merge is authorized by completing setup. Stop for owner review.

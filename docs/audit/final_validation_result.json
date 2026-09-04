@@ -170,12 +170,24 @@
       "run": 33772583909,
       "conclusion": "success"
     },
-    "phase_g": "Check final head on PR #1 after this commit is published."
+    "phase_g": {
+      "commit": "ee5840dbb85edf672ab7c468fcb94440ed9342ff",
+      "run": 33845576495,
+      "conclusion": "success",
+      "strict_content": "BLOCKED: 97 CONTENT findings; zero integrity errors"
+    }
   },
   "not_run": [
     "M1 app build",
     "browser offline app test",
     "gameplay and campaign playtests"
   ],
-  "note": "97 CONTENT findings: dataset summaries and detailed questions overlap; not 97 missing source files. The 109-entry unresolved register separately lists each of 22 missing portraits."
+  "note": "97 CONTENT findings: dataset summaries and detailed questions overlap; not 97 missing source files. The 109-entry unresolved register separately lists each of 22 missing portraits.",
+  "setup_closeout": {
+    "command": "bash scripts/setup.sh",
+    "local_setup": "PASS",
+    "shell_syntax": "PASS",
+    "dependency_consistency": "PASS",
+    "fresh_clone_verification": "CI now invokes the same setup script; latest setup-commit result is recorded in PR #1."
+  }
 }

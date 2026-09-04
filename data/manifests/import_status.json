@@ -50,5 +50,11 @@
     "CANON EXTRACTED": "All supplied references extracted; 24 of 33 datasets complete for their stated representation; nine exact partial datasets remain.",
     "RUNTIME READY": "187/187 monster fronts and 78/78 supplied canonical portraits + one variant; 22 absent portrait targets and future presentation assets prevent complete game asset readiness.",
     "IMPLEMENTATION READY": "Reviewable preparation baseline. Strict full-content gate blocked; no game build exists and owner has not released M1."
+  },
+  "repository_tooling_setup": {
+    "status": "complete",
+    "command": "bash scripts/setup.sh",
+    "requires": "Git and Python 3.12+ with venv; Node/npm optional for preparation",
+    "scope": "Pinned isolated tooling, CI, source/data/asset validation and handoff documentation. Does not clear content_ready or the owner review hold."
   }
 }
