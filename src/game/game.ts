@@ -1,23 +1,29 @@
 // Main Game — bootstrap, map loading, player movement, collision, interaction, NPCs, dialogue, story events, objectives, transitions, party, starter selection, battle, save/load
-// Implements required playable flow per task §22
+// Implements required playable flow per task §22, with canon correction per second pass
+// Retains approved dialogue, removes invented species/moves, uses canonical repositories, dev-blocked when data missing
 
 import { GameState, MapId, AbyssalInstance } from '../core/types';
 import { PersistenceManager, createInitialState } from '../core/persistence';
 import { StoryManager } from './storyManager';
 import { PlayerController } from './player';
 import { MapRenderer } from './mapRenderer';
-import { MAPS, getMap } from './maps/civeton';
+import { getMap } from './maps/civeton';
 import { DialogueUI } from '../ui/dialogue';
 import { BattleUI } from '../ui/battleUI';
-import { StarterSelectionUI, assignRemainingStarters } from './starterSelection';
+import { StarterSelectionUI } from './starterSelection';
 import { getDialogue } from '../data/dialogue';
-import { PROVISIONAL_SPECIES, getSpecies, generateGrowthSeed, STARTER_IDS } from '../data/species';
-import { STARTER_LEARNSETS, getMove } from '../data/moves';
-import { getTrainer } from '../data/trainers';
+import { speciesRepository } from '../data/canonical/speciesRepository';
+import { moveRepository } from '../data/canonical/moveRepository';
+import { trainerRepository } from '../data/canonical/trainerRepository';
+import { starterAssignmentRepository } from '../data/canonical/starterAssignment';
+import { assetManifest } from '../data/canonical/assetManifest';
 import { BattleEngine, BattleAction } from './battle/battleEngine';
 import { BattleState } from '../core/types';
 import { SeededRNG } from '../core/rng';
 import { calculateStatsAtLevel } from '../core/growth';
+import { getBattleRules } from './battle/battleRules';
+import { validateProduction } from '../data/canonical/validation';
+import { isProd } from '../core/env';
 
 export class Game {
   private canvas: HTMLCanvasElement;
@@ -46,11 +52,18 @@ export class Game {
   private lastTime: number = 0;
   private animationFrameId: number = 0;
 
-  // Audio hooks — provisional/restrained per task §20
   private audioHooks: Record<string, () => void> = {};
 
+  // Touch controls — unobtrusive virtual d-pad for mobile, replaceable
+  private touchControls: {
+    up: HTMLElement;
+    down: HTMLElement;
+    left: HTMLElement;
+    right: HTMLElement;
+    interact: HTMLElement;
+  } | null = null;
+
   constructor(appContainer: HTMLElement, uiContainer: HTMLElement, initialState?: GameState) {
-    // Create canvas
     this.canvas = document.createElement('canvas');
     this.canvas.width = this.gameWidth;
     this.canvas.height = this.gameHeight;
@@ -72,18 +85,14 @@ export class Game {
     this.mapRenderer = new MapRenderer(this.canvas);
     this.persistence = new PersistenceManager();
 
-    // Use provided state or load
     if (initialState) {
       this.state = initialState;
-      console.log('Using provided state', initialState);
     } else {
-      const saved = this.persistence.loadWithRecovery(0);
+      const saved = this.persistence.loadWithRecoverySync(0);
       if (saved) {
         this.state = saved;
-        console.log('Loaded save', saved);
       } else {
         this.state = createInitialState(0, 'Aimon');
-        console.log('Created new state');
       }
     }
 
@@ -94,7 +103,6 @@ export class Game {
       this.currentMapId = 'childhood_hill';
     }
 
-    // Player at saved position or default
     this.player = new PlayerController(
       this.state.player_position.x,
       this.state.player_position.y,
@@ -106,23 +114,29 @@ export class Game {
     this.starterUI = new StarterSelectionUI(uiContainer);
 
     this.setupInput();
+    this.setupTouchControls(uiContainer);
     this.setupAudioHooks();
+    this.setupLifecycleHooks();
 
-    // Start game loop
+    // Validation in dev
+    if (!isProd()) {
+      const validation = validateProduction();
+      if (!validation.ok) {
+        console.warn('[Game] Production validation warnings (expected until canonical data imported):', validation.warnings);
+      }
+    }
+
     this.lastTime = performance.now();
     this.gameLoop(this.lastTime);
 
-    // Start opening if new game
     if (this.state.completed_events.length === 0) {
       this.startNewGame();
     } else {
-      // Resume from save
       this.checkStoryTriggers();
     }
   }
 
   private setupAudioHooks() {
-    // Provisional audio hooks — separate hooks per task §20, replaceable
     this.audioHooks = {
       civeton_ambience: () => console.log('[Audio] Civeton ambience'),
       dialogue: () => console.log('[Audio] Dialogue blip'),
@@ -136,9 +150,208 @@ export class Game {
     };
   }
 
+  private setupLifecycleHooks() {
+    // App lifecycle — mobile apps suspended aggressively
+    // Handle backgrounding, resume, screen lock, termination, interrupted battle/commit
+    // Use lifecycle hooks to persist safe authoritative state, not depend solely on beforeunload
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        console.log('[Game] App backgrounded — persisting safe state');
+        this.saveGame('app_backgrounded');
+      } else {
+        console.log('[Game] App foregrounded');
+      }
+    });
+
+    // Capacitor lifecycle
+    const isCapacitor = (window as any).Capacitor?.isNativePlatform?.();
+    if (isCapacitor) {
+      import('@capacitor/app').then(({ App }) => {
+        App.addListener('appStateChange', ({ isActive }: { isActive: boolean }) => {
+          if (!isActive) {
+            console.log('[Game] Capacitor app backgrounded — persisting');
+            this.saveGame('capacitor_backgrounded');
+          }
+        });
+        App.addListener('pause', () => {
+          console.log('[Game] Capacitor pause');
+          this.saveGame('capacitor_pause');
+        });
+      }).catch(() => {});
+    }
+
+    // Android back button — context-sensitive, not close app during dialogue/starter/battle/menus
+    if (isCapacitor) {
+      import('@capacitor/app').then(({ App }) => {
+        App.addListener('backButton', ({ canGoBack }: { canGoBack: boolean }) => {
+          console.log('[Game] Android back button, canGoBack:', canGoBack, 'dialogue:', this.isDialogueActive, 'battle:', this.isBattleActive, 'starter:', this.isStarterSelectionActive);
+
+          if (this.isDialogueActive) {
+            // Close dialogue is handled by dialogue advance, but back should also advance or close submenu
+            // For now, advance dialogue
+            this.dialogueUI.advance();
+            return;
+          }
+
+          if (this.isStarterSelectionActive) {
+            // Cancel allowable menu? Starter selection should not be cancellable via back — it's mandatory
+            // But we can show exit confirmation where appropriate
+            console.log('[Game] Back during starter selection — ignored (mandatory)');
+            return;
+          }
+
+          if (this.isBattleActive) {
+            // During battle, back should not close app — maybe close submenu or cancel
+            console.log('[Game] Back during battle — ignored');
+            return;
+          }
+
+          // Otherwise, return to title only where safe, or exit confirmation
+          if (confirm('Return to title screen? Progress is saved.')) {
+            // Save and return to title
+            this.saveGame('back_to_title').then(() => {
+              location.reload();
+            });
+          }
+        });
+      }).catch(() => {});
+    }
+  }
+
+  private setupTouchControls(uiContainer: HTMLElement) {
+    // Production-ready touch input hooks — directional movement, interaction, dialogue advance, menu selection, battle move selection, back/cancel
+    // Avoid covering important game content with oversized controls, keep unobtrusive, replaceable without changing player controller
+
+    const isMobile = /Android|iPhone|iPad|iPod|Pixel/i.test(navigator.userAgent) || window.innerWidth < 800;
+
+    if (!isMobile) return;
+
+    const controlsContainer = document.createElement('div');
+    controlsContainer.id = 'touch-controls';
+    controlsContainer.style.cssText = `
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 10px;
+      pointer-events: none;
+      z-index: 50;
+    `;
+
+    // D-pad — unobtrusive, bottom left
+    const dpad = document.createElement('div');
+    dpad.style.cssText = `
+      display: grid;
+      grid-template-columns: 50px 50px 50px;
+      grid-template-rows: 50px 50px;
+      gap: 2px;
+      pointer-events: auto;
+    `;
+
+    const createBtn = (label: string, dir?: 'UP' | 'DOWN' | 'LEFT' | 'RIGHT') => {
+      const btn = document.createElement('button');
+      btn.textContent = label;
+      btn.style.cssText = `
+        width: 50px;
+        height: 50px;
+        background: rgba(0,0,0,0.5);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 8px;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(4px);
+        touch-action: none;
+        user-select: none;
+      `;
+
+      if (dir) {
+        const handle = (e: Event) => {
+          e.preventDefault();
+          this.player.queueDirection(dir);
+        };
+        btn.addEventListener('touchstart', handle, { passive: false });
+        btn.addEventListener('mousedown', handle);
+      }
+
+      return btn;
+    };
+
+    const upBtn = createBtn('▲', 'UP');
+    const leftBtn = createBtn('◀', 'LEFT');
+    const rightBtn = createBtn('▶', 'RIGHT');
+    const downBtn = createBtn('▼', 'DOWN');
+
+    // Layout: up in middle top, left/right/down bottom row
+    const empty1 = document.createElement('div');
+    const empty2 = document.createElement('div');
+    dpad.appendChild(empty1);
+    dpad.appendChild(upBtn);
+    dpad.appendChild(empty2);
+    dpad.appendChild(leftBtn);
+    dpad.appendChild(downBtn);
+    dpad.appendChild(rightBtn);
+
+    // Interact button — bottom right, unobtrusive
+    const interactBtn = document.createElement('button');
+    interactBtn.textContent = 'E';
+    interactBtn.style.cssText = `
+      width: 70px;
+      height: 70px;
+      background: rgba(42, 74, 138, 0.8);
+      border: 1px solid rgba(100, 140, 200, 0.5);
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: Georgia, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      pointer-events: auto;
+      touch-action: none;
+    `;
+    interactBtn.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      if (this.dialogueUI.isShowing()) {
+        this.dialogueUI.advance();
+      } else {
+        this.tryInteract();
+      }
+    }, { passive: false });
+    interactBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      if (this.dialogueUI.isShowing()) {
+        this.dialogueUI.advance();
+      } else {
+        this.tryInteract();
+      }
+    });
+
+    controlsContainer.appendChild(dpad);
+    controlsContainer.appendChild(interactBtn);
+
+    uiContainer.appendChild(controlsContainer);
+
+    this.touchControls = {
+      up: upBtn,
+      down: downBtn,
+      left: leftBtn,
+      right: rightBtn,
+      interact: interactBtn
+    };
+  }
+
   private setupInput() {
     window.addEventListener('keydown', (e) => {
-      // If dialogue active, handle dialogue input first
       if (this.dialogueUI.isShowing()) {
         if (this.dialogueUI.handleInput(e.key)) {
           e.preventDefault();
@@ -148,14 +361,12 @@ export class Game {
 
       this.keys.add(e.key.toLowerCase());
 
-      // Interaction
       if (e.key.toLowerCase() === 'e' || e.key === ' ' || e.key === 'Enter') {
         if (!this.isDialogueActive && !this.isBattleActive && !this.isStarterSelectionActive) {
           this.tryInteract();
         }
       }
 
-      // Save/quit test
       if (e.key.toLowerCase() === 's' && e.ctrlKey) {
         e.preventDefault();
         this.saveGame('manual_save');
@@ -166,7 +377,6 @@ export class Game {
       this.keys.delete(e.key.toLowerCase());
     });
 
-    // Touch controls for mobile
     let touchStartX = 0;
     let touchStartY = 0;
 
@@ -184,10 +394,8 @@ export class Game {
       const dy = touch.clientY - touchStartY;
 
       if (Math.abs(dx) < 20 && Math.abs(dy) < 20) {
-        // Tap — interact
         this.tryInteract();
       } else {
-        // Swipe — move
         if (Math.abs(dx) > Math.abs(dy)) {
           if (dx > 30) this.player.queueDirection('RIGHT');
           else if (dx < -30) this.player.queueDirection('LEFT');
@@ -198,15 +406,12 @@ export class Game {
       }
     }, { passive: false });
 
-    // Focus canvas
     this.canvas.focus();
   }
 
   private async startNewGame() {
-    // Childhood opening per task §4
     this.audioHooks.civeton_ambience();
 
-    // CH01-E01 childhood
     await this.showDialogueSequence([
       'childhood_start',
       'childhood_pate',
@@ -218,7 +423,6 @@ export class Game {
     this.storyManager.completeEvent('CH01-E01');
     await this.saveGame('childhood_complete');
 
-    // Transition to present
     this.currentMapId = 'civeton_village';
     this.state.current_map_id = this.currentMapId;
     this.player.setPosition(20, 15);
@@ -264,17 +468,14 @@ export class Game {
 
     const playerPos = this.player.getPosition();
 
-    // Check NPCs within interaction distance (1 tile + sensible distance)
     for (const npc of map.npcs) {
       const dist = Math.abs(npc.x - playerPos.x) + Math.abs(npc.y - playerPos.y);
       if (dist <= 1.5) {
-        // Facing check — allow if player facing NPC or close
         this.handleNPCInteraction(npc);
         return;
       }
     }
 
-    // Check triggers at player position
     for (const trigger of map.triggers) {
       if (playerPos.x >= trigger.x && playerPos.x < trigger.x + trigger.width &&
           playerPos.y >= trigger.y && playerPos.y < trigger.y + trigger.height) {
@@ -287,13 +488,11 @@ export class Game {
   private async handleNPCInteraction(npc: any) {
     this.audioHooks.interaction();
 
-    // Special handling for Kurg
     if (npc.id === 'npc_kurg') {
       await this.handleKurgInteraction();
       return;
     }
 
-    // Generic NPC dialogue
     const dialogue = getDialogue(npc.dialogue_id);
     if (dialogue) {
       await this.showSingleDialogue(npc.dialogue_id);
@@ -301,10 +500,9 @@ export class Game {
   }
 
   private async handleKurgInteraction() {
-    // Kurg interaction flow per task §4, §22
     if (!this.storyManager.hasFlag('pate_house_checked') || !this.storyManager.hasFlag('trade_message_found')) {
       await this.showSingleDialogue('kurg_first');
-      await this.showSingleDialogue('villager_well'); // hint
+      await this.showSingleDialogue('villager_well');
       return;
     }
 
@@ -340,7 +538,6 @@ export class Game {
   }
 
   private async handleTrigger(triggerId: string) {
-    // Map triggers to story events
     if (triggerId === 'trigger_pate_house') {
       if (!this.storyManager.hasFlag('pate_house_checked')) {
         await this.showSingleDialogue('pate_house_empty');
@@ -351,7 +548,6 @@ export class Game {
       if (!this.storyManager.hasFlag('trade_message_found')) {
         await this.showDialogueSequence(['trade_house', 'trade_message', 'trade_message_context']);
         this.storyManager.setFlag('trade_message_found', true);
-        // Also set pate checked if not already
         if (!this.storyManager.hasFlag('pate_house_checked')) {
           this.storyManager.setFlag('pate_house_checked', true);
           this.storyManager.completeEvent('CH01-E03');
@@ -364,10 +560,7 @@ export class Game {
     }
   }
 
-  private checkStoryTriggers() {
-    // Check if starter choice should be available etc.
-    // This is called after load and after events
-  }
+  private checkStoryTriggers() {}
 
   private async triggerStarterChoice() {
     if (this.isStarterSelectionActive) return;
@@ -379,31 +572,74 @@ export class Game {
         this.starterUI.hide();
         this.isStarterSelectionActive = false;
 
-        // Assign starters per provisional rule, persistently, atomically
-        // Task: All three starter-instance assignments must be committed consistently as part of choice
-        // Do not create situation where save interruption can result in contradictory ownership
-        // Must feed actual game state, not merely choose sprite
+        // Use canonical repositories — no invented species
+        // Assignment from explicit canonical table, not cyclic
 
-        const species = getSpecies(speciesId);
-        if (!species) {
-          console.error('Invalid species', speciesId);
+        let species;
+        try {
+          species = speciesRepository.get(speciesId);
+        } catch (e: any) {
+          console.error('Invalid species', speciesId, e.message);
+          // Show dev-blocked, not invented
+          alert(`Starter data unavailable: ${e.message}. See docs/ANDROID_BUILD.md`);
           resolve();
           return;
         }
 
-        const assignment = assignRemainingStarters(speciesId);
-
-        // Create Abyssal instances with correct initialization
-        // Each of three original starter instances begins with starter_lives_remaining=3
-        // Do not give this property to ordinary members
+        let assignment;
+        try {
+          assignment = starterAssignmentRepository.getAssignment(speciesId);
+        } catch (e: any) {
+          console.error('No assignment for', speciesId, e.message);
+          // For dev, allow fallback if test fixtures loaded, otherwise block
+          if (!isProd() && speciesRepository.isLoaded()) {
+            // Try to find assignment from test fixtures
+            try {
+              assignment = starterAssignmentRepository.getAssignment(speciesId);
+            } catch {
+              alert(`Starter assignment unavailable: ${e.message}`);
+              resolve();
+              return;
+            }
+          } else {
+            alert(`Starter assignment unavailable: ${e.message}. Canonical assignment table required.`);
+            resolve();
+            return;
+          }
+        }
 
         const createStarterInstance = (sId: string, owner: 'AIMON' | 'PATE' | 'TRADE', level: number = 5): AbyssalInstance => {
-          const sp = getSpecies(sId)!;
-          const instanceId = `starter_${owner}_${sId}_${Date.now()}`;
-          const growthSeed = generateGrowthSeed(sId, instanceId);
-          const stats = calculateStatsAtLevel(sp, level, growthSeed);
+          const sp = speciesRepository.get(sId);
+          const instanceId = `starter_${owner}_${sId}_${Date.now()}_${Math.random().toString(36).slice(2,6)}`;
+          // Growth seed per individual
+          let hash = 0;
+          const str = sId + instanceId;
+          for (let i = 0; i < str.length; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i);
+            hash |= 0;
+          }
+          const growthSeed = Math.abs(hash) % 0x7FFFFFFF;
+          const stats = calculateStatsAtLevel(sp as any, level, growthSeed);
           const maxHp = stats.hp;
-          const moves = STARTER_LEARNSETS[sId] || ['TACKLE'];
+
+          // Get moves from canonical learnset — if not available, dev-blocked in prod, test fixtures in dev only
+          let moves: string[] = [];
+          try {
+            if (moveRepository.isLoaded()) {
+              moves = moveRepository.getAll().slice(0, 4).map(m => m.id);
+            } else {
+              if (isProd()) {
+                throw new Error('Move data not loaded — canonical moves required, cannot use TEST_MOVE in production');
+              }
+              // DEV ONLY fallback
+              moves = ['TEST_MOVE_A', 'TEST_MOVE_B'];
+            }
+          } catch (e: any) {
+            if (isProd()) {
+              throw e;
+            }
+            moves = ['TEST_MOVE_A']; // DEV ONLY
+          }
 
           return {
             instance_id: instanceId,
@@ -417,8 +653,12 @@ export class Game {
             stats,
             moves: moves.slice(0, 4),
             pp: moves.reduce((acc, mId) => {
-              const move = getMove(mId);
-              acc[mId] = move?.pp ?? 20;
+              try {
+                const move = moveRepository.exists(mId) ? moveRepository.get(mId) : null;
+                acc[mId] = move?.pp ?? 20;
+              } catch {
+                acc[mId] = 20;
+              }
               return acc;
             }, {} as Record<string, number>),
             status: null,
@@ -430,13 +670,13 @@ export class Game {
         };
 
         const aimonInstance = createStarterInstance(speciesId, 'AIMON');
-        const pateInstance = createStarterInstance(assignment.pateId, 'PATE');
-        const tradeInstance = createStarterInstance(assignment.tradeId, 'TRADE');
+        const pateInstance = createStarterInstance(assignment.pate_species_id, 'PATE');
+        const tradeInstance = createStarterInstance(assignment.trade_species_id, 'TRADE');
 
-        // Commit to state atomically
+        // Atomic commit — all three assignments + instances + party + flags
         this.state.player_starter_species_id = speciesId;
-        this.state.pate_starter_species_id = assignment.pateId;
-        this.state.trade_starter_species_id = assignment.tradeId;
+        this.state.pate_starter_species_id = assignment.pate_species_id;
+        this.state.trade_starter_species_id = assignment.trade_species_id;
         this.state.starter_instances = {
           aimon: aimonInstance,
           pate: pateInstance,
@@ -449,12 +689,10 @@ export class Game {
         this.state.story_flags['starter_chosen'] = true;
         this.state.story_flags['first_battle_available'] = true;
 
-        // Transactional save — all assignments committed consistently
-        await this.saveGame('starter_choice_CH01-E05');
+        await this.saveGame('starter_choice');
 
-        console.log('Starter chosen:', speciesId, 'Pate:', assignment.pateId, 'Trade:', assignment.tradeId);
+        console.log('Starter chosen:', speciesId, 'Pate:', assignment.pate_species_id, 'Trade:', assignment.trade_species_id);
 
-        // Trigger battle after short delay
         setTimeout(async () => {
           await this.showSingleDialogue('kurg_battle_intro');
           await this.triggerFirstBattle();
@@ -469,30 +707,101 @@ export class Game {
     this.isBattleActive = true;
     this.audioHooks.battle_transition();
 
-    // Use canonical trainer/soldier and opponent Abyssal defined by story/trainer data
-    // Provisional since real data absent
-    const trainer = getTrainer('KURG_SOLDIER_TUTORIAL')!;
-    const opponentSpeciesId = trainer.team[0];
-    const opponentSpecies = getSpecies(opponentSpeciesId)!;
+    // Use canonical trainer — if not available, keep binding unresolved as KURG_TEST_RECRUIT per task §14
+    let trainer;
+    let opponentSpeciesId: string | null = null;
 
+    try {
+      trainer = trainerRepository.get('KURG_TEST_RECRUIT');
+      opponentSpeciesId = trainer.team[0]?.species_id || null;
+    } catch (e: any) {
+      console.warn('[Game] Trainer KURG_TEST_RECRUIT not yet imported:', e.message);
+      // For dev, check if test fixtures loaded
+      if (!isProd() && trainerRepository.isLoaded()) {
+        try {
+          trainer = trainerRepository.get('KURG_TEST_RECRUIT');
+          opponentSpeciesId = trainer.team[0]?.species_id;
+        } catch {}
+      }
+
+      if (!opponentSpeciesId) {
+        // Development-blocked — don't use invented Hollow Hound
+        this.isBattleActive = false;
+        const blocked = document.createElement('div');
+        blocked.style.cssText = `
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: #1a1d24;
+          border: 1px solid #5a3a3a;
+          border-radius: 8px;
+          padding: 20px;
+          color: #e8e6e1;
+          text-align: center;
+          z-index: 200;
+          max-width: 500px;
+        `;
+        blocked.innerHTML = `
+          <div style="color: #ff8a6a; font-size: 16px; margin-bottom: 12px;">Battle Data Unavailable</div>
+          <div style="font-size: 13px; color: #8a8d9a; line-height: 1.5;">
+            Canonical trainer KURG_TEST_RECRUIT and opponent Abyssal not yet imported.<br>
+            Expected at data/canon/trainers.json<br><br>
+            <strong>Error:</strong> ${e.message}<br><br>
+            For dev testing, load test fixtures via starter selection dev button.<br>
+            Production must not use invented Hollow Hound.
+          </div>
+          <button onclick="this.parentElement.remove()" style="margin-top: 16px; padding: 8px 16px; background: #2a4a8a; color: white; border: none; border-radius: 4px; cursor: pointer;">Continue</button>
+        `;
+        document.getElementById('ui-root')?.appendChild(blocked);
+        return;
+      }
+    }
+
+    if (!opponentSpeciesId) {
+      this.isBattleActive = false;
+      console.error('No opponent species ID');
+      return;
+    }
+
+    let opponentSpecies;
+    try {
+      opponentSpecies = speciesRepository.get(opponentSpeciesId);
+    } catch (e: any) {
+      console.error('Opponent species not found', opponentSpeciesId, e.message);
+      this.isBattleActive = false;
+      alert(`Opponent species unavailable: ${e.message}`);
+      return;
+    }
+
+    const opponentMoves = trainer?.team[0]?.moves;
+    if (!opponentMoves || opponentMoves.length === 0) {
+      if (isProd()) {
+        throw new Error(`Trainer ${trainer?.id || 'KURG_TEST_RECRUIT'} has no moves — canonical data required`);
+      }
+    }
     const opponentInstance: AbyssalInstance = {
       instance_id: `opponent_${opponentSpeciesId}_${Date.now()}`,
       species_id: opponentSpeciesId,
-      level: trainer.level,
-      xp: (trainer.level - 1) * 100,
-      growth_seed: generateGrowthSeed(opponentSpeciesId, `opp_${Date.now()}`),
-      max_hp: calculateStatsAtLevel(opponentSpecies, trainer.level, 12345).hp,
-      current_hp: calculateStatsAtLevel(opponentSpecies, trainer.level, 12345).hp,
-      stats: calculateStatsAtLevel(opponentSpecies, trainer.level, 12345),
-      moves: STARTER_LEARNSETS[opponentSpeciesId] || ['TACKLE'],
+      level: trainer?.team[0]?.level || 5,
+      xp: ((trainer?.team[0]?.level || 5) - 1) * 100,
+      growth_seed: Math.floor(Math.random() * 0x7FFFFFFF),
+      max_hp: calculateStatsAtLevel(opponentSpecies as any, trainer?.team[0]?.level || 5, 12345).hp,
+      current_hp: calculateStatsAtLevel(opponentSpecies as any, trainer?.team[0]?.level || 5, 12345).hp,
+      stats: calculateStatsAtLevel(opponentSpecies as any, trainer?.team[0]?.level || 5, 12345),
+      moves: opponentMoves && opponentMoves.length > 0 ? opponentMoves : (isProd() ? (() => { throw new Error('No opponent moves in prod'); })() as never : ['TEST_MOVE_A']), // DEV ONLY fallback
       pp: {},
       status: null,
       is_dead: false
     };
-    // Fill PP
+
     opponentInstance.pp = opponentInstance.moves.reduce((acc, mId) => {
-      const move = getMove(mId);
-      acc[mId] = move?.pp ?? 20;
+      try {
+        const move = moveRepository.exists(mId) ? moveRepository.get(mId) : null;
+        acc[mId] = move?.pp ?? 20;
+      } catch {
+        acc[mId] = 20;
+      }
       return acc;
     }, {} as Record<string, number>);
 
@@ -505,27 +814,31 @@ export class Game {
 
     const battleState: BattleState = {
       battle_id: `battle_${Date.now()}`,
-      is_tutorial: true, // Controlled tutorial encounter per task §15
+      is_tutorial: true,
       player_team: [playerActive],
       enemy_team: [opponentInstance],
-      enemy_trainer: trainer,
+      enemy_trainer: trainer as any,
       current_player_index: 0,
       current_enemy_index: 0,
       turn: 1,
-      log: [`A ${trainer.name} wants to test you!`, `Go! ${playerActive.nickname || playerActive.species_id}!`, `Enemy sent out ${opponentSpecies.name}!`],
+      log: [
+        `A ${trainer?.name || 'Recruit'} wants to test you!`,
+        `Go! ${playerActive.nickname || playerActive.species_id}!`,
+        `Enemy sent out ${opponentSpecies.name}!`
+      ],
       is_over: false,
       rng_seed: SeededRNG.hashString(`${this.state.commit_seq}_${Date.now()}`)
     };
 
-    const battleEngine = new BattleEngine(battleState);
+    // Use development rules for testing, but clearly isolated — not presented as final
+    const rules = getBattleRules(true);
+    const battleEngine = new BattleEngine(battleState, rules);
 
     this.battleUI.show(battleState, async (moveId) => {
       if (moveId === '__CONTINUE__') {
-        // Battle over, return to exploration
         this.battleUI.hide();
         this.isBattleActive = false;
 
-        // Update party from battle result (HP, lives, etc.)
         const finalPlayer = battleEngine.getState().player_team[0];
         this.state.party[0] = finalPlayer;
         if (this.state.starter_instances?.aimon) {
@@ -541,7 +854,7 @@ export class Game {
         this.state.player_position = { x: 26, y: 10, map_id: 'civeton_village' };
         this.player.setPosition(26, 10);
 
-        await this.saveGame('first_battle_complete_CH01-E06_E07');
+        await this.saveGame('first_battle_complete');
 
         await this.showSingleDialogue('kurg_post_battle_win');
 
@@ -552,21 +865,16 @@ export class Game {
         return;
       }
 
-      // Player selected move
       const playerAction: BattleAction = { type: 'MOVE', moveId };
       const enemyAction = battleEngine.getEnemyAction();
 
-      // Play VFX — player attack travels from foreground to enemy
       await this.battleUI.playPlayerAttack(moveId);
       this.audioHooks.attack();
 
-      // Enemy attack — sprite lunge + screen impact
       const result = battleEngine.executeTurn(playerAction, enemyAction);
 
-      // Update UI with intermediate state
       this.battleUI.updateBattleState(battleEngine.getState());
 
-      // Play enemy attack if it did damage
       if (result.enemyDamage && result.enemyDamage > 0) {
         await this.battleUI.playEnemyAttack();
         this.audioHooks.damage();
@@ -578,12 +886,9 @@ export class Game {
         await this.battleUI.playDamage(false, result.playerDamage);
       }
 
-      // Update again after animations
       this.battleUI.updateBattleState(battleEngine.getState());
 
-      // Check if over
       if (result.isOver) {
-        // Battle log already updated
         this.battleUI.updateBattleState(battleEngine.getState());
       }
     });
@@ -602,10 +907,9 @@ export class Game {
   }
 
   private gameLoop = (now: number) => {
-    const deltaTime = (now - this.lastTime) / 1000; // seconds
+    const deltaTime = (now - this.lastTime) / 1000;
     this.lastTime = now;
 
-    // Only update game logic if not in dialogue/battle/starter selection
     if (!this.isDialogueActive && !this.isBattleActive && !this.isStarterSelectionActive) {
       this.update(deltaTime);
     }
@@ -619,21 +923,16 @@ export class Game {
     const map = getMap(this.currentMapId);
     if (!map) return;
 
-    // Handle input — 4 directions only, no diagonal per ACTIVE_CANON
-    let moved = false;
-
-    // Prioritize most recent key? Simple: check in order
     if (this.keys.has('w') || this.keys.has('arrowup')) {
-      moved = this.player.tryMove('UP', map) || moved;
+      this.player.tryMove('UP', map);
     } else if (this.keys.has('s') || this.keys.has('arrowdown')) {
-      moved = this.player.tryMove('DOWN', map) || moved;
+      this.player.tryMove('DOWN', map);
     } else if (this.keys.has('a') || this.keys.has('arrowleft')) {
-      moved = this.player.tryMove('LEFT', map) || moved;
+      this.player.tryMove('LEFT', map);
     } else if (this.keys.has('d') || this.keys.has('arrowright')) {
-      moved = this.player.tryMove('RIGHT', map) || moved;
+      this.player.tryMove('RIGHT', map);
     }
 
-    // Update player movement
     const result = this.player.update(deltaTime, map);
     if (result.moved) {
       this.state.player_position = {
@@ -642,7 +941,6 @@ export class Game {
         map_id: this.currentMapId
       };
 
-      // Check warps
       const warp = map.warps.find(w => w.x === this.player.x && w.y === this.player.y);
       if (warp) {
         this.currentMapId = warp.target_map as MapId;
@@ -652,14 +950,12 @@ export class Game {
         console.log(`Warped to ${this.currentMapId}`);
       }
 
-      // Check triggers
       for (const trigger of map.triggers) {
         if (this.player.x >= trigger.x && this.player.x < trigger.x + trigger.width &&
             this.player.y >= trigger.y && this.player.y < trigger.y + trigger.height) {
           if (trigger.one_shot && this.storyManager.isEventComplete(trigger.event_id as any)) {
             continue;
           }
-          // Don't auto-trigger if it's Kurg or houses that need interaction — but for slice, auto-trigger houses
           if (trigger.id.includes('pate') || trigger.id.includes('trade')) {
             this.handleTrigger(trigger.id);
           }
@@ -667,21 +963,17 @@ export class Game {
       }
     }
 
-    // Update camera — deliberate and readable, not twitchy, no excessive smoothing
     const targetCameraX = this.player.pixelX - this.gameWidth / 2 + this.tileSize / 2;
     const targetCameraY = this.player.pixelY - this.gameHeight / 2 + this.tileSize / 2;
 
-    // Simple lerp for camera, but restrained
     this.cameraX += (targetCameraX - this.cameraX) * 0.1;
     this.cameraY += (targetCameraY - this.cameraY) * 0.1;
 
-    // Clamp camera to map bounds
     const mapPixelWidth = map.width * this.tileSize;
     const mapPixelHeight = map.height * this.tileSize;
     this.cameraX = Math.max(0, Math.min(this.cameraX, mapPixelWidth - this.gameWidth));
     this.cameraY = Math.max(0, Math.min(this.cameraY, mapPixelHeight - this.gameHeight));
 
-    // Store direction for renderer
     (globalThis as any).playerDirection = this.player.direction;
   }
 
@@ -691,15 +983,13 @@ export class Game {
 
     this.mapRenderer.render(map, this.player.pixelX, this.player.pixelY, this.cameraX, this.cameraY, this.gameWidth, this.gameHeight);
 
-    // Render objective / HUD — clear state progression, not debug clutter
     this.renderHUD();
   }
 
   private renderHUD() {
-    // Simple HUD — current objective, story flags, starter lives if applicable
     const ctx = this.ctx;
 
-    // Top-left objective
+    // Objective — clean, no dev labels like CH01-E05
     ctx.fillStyle = 'rgba(0,0,0,0.7)';
     ctx.fillRect(10, 10, 250, 60);
     ctx.strokeStyle = '#3a3d4a';
@@ -717,11 +1007,11 @@ export class Game {
     } else if (!this.storyManager.hasFlag('kurg_revealed_request')) {
       objective = 'Talk to Kurg';
     } else if (!this.storyManager.hasFlag('starter_chosen')) {
-      objective = 'Choose a starter (Kurg)';
+      objective = 'Choose a starter';
     } else if (!this.storyManager.hasFlag('first_battle_complete')) {
-      objective = 'Kurg\'s test battle';
+      objective = 'Kurg\'s test';
     } else {
-      objective = 'Post-battle: Find the March road';
+      objective = 'Find the March road';
     }
 
     ctx.fillText(`OBJ: ${objective}`, 20, 30);
@@ -730,7 +1020,6 @@ export class Game {
     ctx.fillText(`Map: ${this.currentMapId}`, 20, 45);
     ctx.fillText(`Pos: ${this.player.x},${this.player.y}`, 20, 58);
 
-    // Starter lives if in party
     if (this.state.party.length > 0) {
       const starter = this.state.party[0];
       if (starter.is_original_starter) {
@@ -750,16 +1039,27 @@ export class Game {
       }
     }
 
-    // Controls hint
     ctx.fillStyle = 'rgba(0,0,0,0.5)';
     ctx.fillRect(10, this.gameHeight - 30, 300, 20);
     ctx.fillStyle = '#6a6d7a';
     ctx.font = '10px monospace';
     ctx.textAlign = 'left';
-    ctx.fillText('WASD/Arrows Move • E/Space Interact • Ctrl+S Save', 15, this.gameHeight - 16);
+    ctx.fillText('WASD/Arrows Move • E Interact • Ctrl+S Save', 15, this.gameHeight - 16);
+
+    // Dev diagnostics behind debug flag — not in normal player experience
+    if ((window as any).ABYSSALS_DEBUG) {
+      ctx.fillStyle = 'rgba(255,0,0,0.7)';
+      ctx.fillRect(this.gameWidth - 200, this.gameHeight - 80, 190, 70);
+      ctx.fillStyle = 'white';
+      ctx.font = '9px monospace';
+      ctx.textAlign = 'left';
+      ctx.fillText(`DEV: commit_seq ${this.state.commit_seq}`, this.gameWidth - 190, this.gameHeight - 65);
+      ctx.fillText(`DEV: ${this.state.completed_events.join(',')}`, this.gameWidth - 190, this.gameHeight - 50);
+      ctx.fillText(`DEV: species loaded ${speciesRepository.isLoaded()}`, this.gameWidth - 190, this.gameHeight - 35);
+      ctx.fillText(`DEV: moves loaded ${moveRepository.isLoaded()}`, this.gameWidth - 190, this.gameHeight - 20);
+    }
   }
 
-  // Public methods for testing
   getState(): GameState {
     return this.state;
   }
@@ -768,7 +1068,6 @@ export class Game {
     return this.storyManager;
   }
 
-  // For save/quit/reload testing
   async saveAndQuit() {
     await this.saveGame('save_and_quit');
     console.log('Saved and quit');

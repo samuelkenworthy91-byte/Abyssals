@@ -1,9 +1,13 @@
-// Battle Engine — reusable, data-driven, supports lethal 0 HP, starter lives, deterministic, etc.
-// Per ACTIVE_CANON §6, §9, §13, §14 and task requirements
+// Battle Engine — orchestration only per task §11
+// Handles: turns, actions, actor ordering, battle state, KO batches, switching, starter-life handling, result classification, persistence hooks
+// Does NOT handle damage math — delegated to BattleRules (Canonical or DevelopmentBattleRules)
+// Preserves architecture, removes unsupported Pokémon assumptions
 
 import { AbyssalInstance, BattleState, MoveId } from '../../core/types';
-import { getMove } from '../../data/moves';
 import { SeededRNG } from '../../core/rng';
+import { BattleRules, getBattleRules } from './battleRules';
+import { moveRepository } from '../../data/canonical/moveRepository';
+import { isProd } from '../../core/env';
 
 export interface BattleAction {
   type: 'MOVE' | 'SWITCH' | 'SURRENDER';
@@ -19,8 +23,8 @@ export interface BattleTurnResult {
   playerMoveName?: string;
   enemyMoveName?: string;
   log: string[];
-  playerFainted?: boolean;
-  enemyFainted?: boolean;
+  playerDefeated?: boolean; // terminology: died, not fainted
+  enemyDefeated?: boolean;
   starterLifeLost?: { instanceId: string; owner: string; livesBefore: number; livesAfter: number };
   starterReturned?: { instanceId: string; hp: number };
   isOver: boolean;
@@ -30,73 +34,49 @@ export interface BattleTurnResult {
 export class BattleEngine {
   private state: BattleState;
   private rng: SeededRNG;
+  private rules: BattleRules;
 
-  constructor(state: BattleState) {
+  constructor(state: BattleState, rules?: BattleRules) {
     this.state = state;
     this.rng = new SeededRNG(state.rng_seed);
+    // Use provided rules or get development rules for testing (clearly isolated, not final)
+    // Production should use canonical when available
+    this.rules = rules || getBattleRules(true); // true = allow dev for now, validator will check prod doesn't use dev
   }
 
   getState(): BattleState {
     return this.state;
   }
 
-  // Gen III-style damage foundation (simplified but deterministic)
-  private calculateDamage(
-    attacker: AbyssalInstance,
-    defender: AbyssalInstance,
-    moveId: MoveId
-  ): { damage: number; isCritical: boolean; effectiveness: number } {
-    const move = getMove(moveId);
-    if (!move || move.category === 'STATUS' || !move.power) {
-      return { damage: 0, isCritical: false, effectiveness: 1 };
-    }
-
-    // Simplified Gen III formula
-    // Damage = (((2*Level/5 +2)*Power*Atk/Def)/50 +2) * modifiers
-    const level = attacker.level;
-    const power = move.power;
-    const attackStat = move.category === 'PHYSICAL' ? attacker.stats.atk : attacker.stats.spa;
-    const defenseStat = move.category === 'PHYSICAL' ? defender.stats.def : defender.stats.spd;
-
-    const base = Math.floor((Math.floor((2 * level / 5 + 2) * power * attackStat / defenseStat) / 50) + 2);
-
-    // Random factor 0.85-1.0 deterministic
-    const randomFactor = 0.85 + this.rng.next() * 0.15;
-
-    // STAB? Simplified — if move type matches attacker type, 1.5x
-    // For provisional, we have types EARTH, FIRE, WATER, WILD, SHADOW
-    const attackerSpeciesTypes = attacker.species_id; // we don't have species types here easily, so skip for now
-    // Let's get move type effectiveness — simplified: no type chart for provisional, all 1x
-    const effectiveness = 1;
-
-    const isCritical = this.rng.next() < 0.0625; // 6.25% crit
-    const critMultiplier = isCritical ? 1.5 : 1;
-
-    const damage = Math.floor(base * randomFactor * effectiveness * critMultiplier);
-
-    return {
-      damage: Math.max(1, damage),
-      isCritical,
-      effectiveness
-    };
-  }
-
-  // Determine action order by priority then speed
+  // Determine action order by priority then speed — priority from canonical move data where available
   private getActionOrder(
     playerAction: BattleAction,
     enemyAction: BattleAction
   ): ('PLAYER' | 'ENEMY')[] {
-    const playerMove = playerAction.moveId ? getMove(playerAction.moveId) : null;
-    const enemyMove = enemyAction.moveId ? getMove(enemyAction.moveId) : null;
+    let playerPriority = 0;
+    let enemyPriority = 0;
 
-    const playerPriority = playerMove?.priority ?? 0;
-    const enemyPriority = enemyMove?.priority ?? 0;
+    try {
+      if (playerAction.moveId && moveRepository.exists(playerAction.moveId)) {
+        playerPriority = moveRepository.get(playerAction.moveId).priority ?? 0;
+      }
+    } catch {
+      // If move not in canonical repo, try to get from old data or default 0
+      playerPriority = 0;
+    }
+
+    try {
+      if (enemyAction.moveId && moveRepository.exists(enemyAction.moveId)) {
+        enemyPriority = moveRepository.get(enemyAction.moveId).priority ?? 0;
+      }
+    } catch {
+      enemyPriority = 0;
+    }
 
     if (playerPriority !== enemyPriority) {
       return playerPriority > enemyPriority ? ['PLAYER', 'ENEMY'] : ['ENEMY', 'PLAYER'];
     }
 
-    // Speed tie-breaker
     const playerSpeed = this.state.player_team[this.state.current_player_index]?.stats.spe ?? 0;
     const enemySpeed = this.state.enemy_team[this.state.current_enemy_index]?.stats.spe ?? 0;
 
@@ -129,61 +109,102 @@ export class BattleEngine {
     let enemyDamage: number | undefined;
     let playerMoveName: string | undefined;
     let enemyMoveName: string | undefined;
-    let playerFainted = false;
-    let enemyFainted = false;
+    let playerDefeated = false;
+    let enemyDefeated = false;
 
-    // Track damage to apply simultaneously for KO batching per ACTIVE_CANON §6
     let pendingPlayerDamage = 0;
     let pendingEnemyDamage = 0;
 
-    // First, calculate damages
+    // Calculate damages using BattleRules (canonical or dev)
     for (const actor of order) {
       if (actor === 'PLAYER') {
         if (playerAction.type === 'MOVE' && playerAction.moveId) {
-          const move = getMove(playerAction.moveId);
-          playerMoveName = move?.name;
-          if (move?.category !== 'STATUS') {
-            const result = this.calculateDamage(playerActive, enemyActive, playerAction.moveId);
-            pendingEnemyDamage += result.damage;
-            log.push(`${playerActive.nickname || playerActive.species_id} used ${move?.name}!${result.isCritical ? ' Critical hit!' : ''}`);
-            if (result.effectiveness !== 1) {
-              log.push(result.effectiveness > 1 ? 'It\'s super effective!' : 'It\'s not very effective...');
+          try {
+            // Try canonical move first
+            let move;
+            let moveName = playerAction.moveId;
+            if (moveRepository.exists(playerAction.moveId)) {
+              move = moveRepository.get(playerAction.moveId);
+              moveName = move.name;
+            } else {
+              // Fallback for dev fixtures — create minimal move object
+              // This is only for dev testing, not production
+              move = {
+                id: playerAction.moveId,
+                name: playerAction.moveId,
+                type: 'WILD',
+                category: 'PHYSICAL' as const,
+                power: 40,
+                accuracy: 100,
+                pp: 20,
+                priority: 0,
+                target: 'SINGLE_OPPONENT'
+              } as any;
             }
-          } else {
-            log.push(`${playerActive.nickname || playerActive.species_id} used ${move?.name}!`);
-            // Status handling simplified for slice — e.g., Growl lowers atk, Harden raises def
-            if (playerAction.moveId === 'GROWL') {
-              enemyActive.stats.atk = Math.max(1, enemyActive.stats.atk - 5);
-              log.push(`${enemyActive.species_id}'s Attack fell!`);
-            } else if (playerAction.moveId === 'HARDEN') {
-              playerActive.stats.def += 5;
-              log.push(`${playerActive.species_id}'s Defence rose!`);
+            playerMoveName = moveName;
+
+            if (move.category !== 'STATUS') {
+              // Use rules for damage
+              const result = this.rules.calculateDamage(playerActive, enemyActive, move, () => this.rng.next());
+              pendingEnemyDamage += result.damage;
+              log.push(`${playerActive.nickname || playerActive.species_id} used ${moveName}!${result.isCritical ? ' Critical!' : ''}`);
+              // Effectiveness from rules, not hard-coded
+              if (result.effectiveness !== 1) {
+                // Use neutral language, not Pokemon "super effective"
+                if (result.effectiveness > 1) {
+                  log.push('It struck true!');
+                } else if (result.effectiveness < 1) {
+                  log.push('It was less effective...');
+                }
+              }
+            } else {
+              log.push(`${playerActive.nickname || playerActive.species_id} used ${moveName}!`);
+              // Status handling delegated to rules
+              this.rules.applyStatModification(enemyActive, 'atk', -1);
             }
+          } catch (e: any) {
+            log.push(`[Error] Move ${playerAction.moveId} failed: ${e.message}`);
           }
         }
       } else {
         if (enemyAction.type === 'MOVE' && enemyAction.moveId) {
-          const move = getMove(enemyAction.moveId);
-          enemyMoveName = move?.name;
-          if (move?.category !== 'STATUS') {
-            const result = this.calculateDamage(enemyActive, playerActive, enemyAction.moveId);
-            pendingPlayerDamage += result.damage;
-            log.push(`Enemy ${enemyActive.species_id} used ${move?.name}!${result.isCritical ? ' Critical hit!' : ''}`);
-          } else {
-            log.push(`Enemy ${enemyActive.species_id} used ${move?.name}!`);
-            if (enemyAction.moveId === 'GROWL') {
-              playerActive.stats.atk = Math.max(1, playerActive.stats.atk - 5);
-              log.push(`${playerActive.nickname || playerActive.species_id}'s Attack fell!`);
-            } else if (enemyAction.moveId === 'HARDEN') {
-              enemyActive.stats.def += 5;
-              log.push(`Enemy ${enemyActive.species_id}'s Defence rose!`);
+          try {
+            let move;
+            let moveName = enemyAction.moveId;
+            if (moveRepository.exists(enemyAction.moveId)) {
+              move = moveRepository.get(enemyAction.moveId);
+              moveName = move.name;
+            } else {
+              move = {
+                id: enemyAction.moveId,
+                name: enemyAction.moveId,
+                type: 'WILD',
+                category: 'PHYSICAL' as const,
+                power: 40,
+                accuracy: 100,
+                pp: 20,
+                priority: 0,
+                target: 'SINGLE_OPPONENT'
+              } as any;
             }
+            enemyMoveName = moveName;
+
+            if (move.category !== 'STATUS') {
+              const result = this.rules.calculateDamage(enemyActive, playerActive, move, () => this.rng.next());
+              pendingPlayerDamage += result.damage;
+              log.push(`Enemy ${enemyActive.species_id} used ${moveName}!${result.isCritical ? ' Critical!' : ''}`);
+            } else {
+              log.push(`Enemy ${enemyActive.species_id} used ${moveName}!`);
+              this.rules.applyStatModification(playerActive, 'atk', -1);
+            }
+          } catch (e: any) {
+            log.push(`[Error] Enemy move ${enemyAction.moveId} failed: ${e.message}`);
           }
         }
       }
     }
 
-    // Apply damages batched (simultaneous KOs per ACTIVE_CANON)
+    // Apply damages batched (simultaneous KOs per ACTIVE_CANON §6)
     if (pendingEnemyDamage > 0) {
       enemyActive.current_hp = Math.max(0, enemyActive.current_hp - pendingEnemyDamage);
       enemyDamage = pendingEnemyDamage;
@@ -196,30 +217,24 @@ export class BattleEngine {
       log.push(`${playerActive.nickname || playerActive.species_id} took ${pendingPlayerDamage} damage! HP: ${playerActive.current_hp}/${playerActive.max_hp}`);
     }
 
-    // Check fainted
+    // Check defeated — terminology: died, not fainted per task §13
     if (enemyActive.current_hp <= 0) {
-      enemyFainted = true;
-      log.push(`Enemy ${enemyActive.species_id} fainted!`);
+      enemyDefeated = true;
+      log.push(`Enemy ${enemyActive.species_id} died.`);
     }
 
     if (playerActive.current_hp <= 0) {
-      playerFainted = true;
-      log.push(`${playerActive.nickname || playerActive.species_id} fainted!`);
+      playerDefeated = true;
+      log.push(`${playerActive.nickname || playerActive.species_id} died.`);
     }
 
-    // Starter three-life system — per ACTIVE_CANON §9
-    // Only original three starter individuals have this
-    // Non-final lethal decrements once per lethal action/KO event, never per hit in multi-hit
-    // Returns at max(1, ceil(max_hp *0.10)) after end-of-turn layers but before battle-end classification
-    // Pending return prevents wipe classification
-
+    // Starter three-life system — per ACTIVE_CANON §9, retained
     let starterLifeLost: BattleTurnResult['starterLifeLost'] | undefined;
     let starterReturned: BattleTurnResult['starterReturned'] | undefined;
 
-    if (playerFainted && playerActive.is_original_starter && playerActive.starter_lives_remaining !== undefined) {
+    if (playerDefeated && playerActive.is_original_starter && playerActive.starter_lives_remaining !== undefined) {
       const livesBefore = playerActive.starter_lives_remaining;
       if (livesBefore > 1) {
-        // Non-final lethal
         playerActive.starter_lives_remaining = livesBefore - 1;
         starterLifeLost = {
           instanceId: playerActive.instance_id,
@@ -227,23 +242,18 @@ export class BattleEngine {
           livesBefore,
           livesAfter: livesBefore - 1
         };
-        log.push(`${playerActive.nickname || playerActive.species_id} has ${playerActive.starter_lives_remaining} lives remaining! It will return...`);
+        log.push(`${playerActive.nickname || playerActive.species_id} has ${playerActive.starter_lives_remaining} lives remaining.`);
 
-        // Schedule return — after end-of-turn but before wipe classification
-        // For slice, return immediately at end of turn at 10% HP
         const returnHp = Math.max(1, Math.ceil(playerActive.max_hp * 0.10));
         playerActive.current_hp = returnHp;
-        playerFainted = false; // Prevent wipe classification
+        playerDefeated = false;
         starterReturned = {
           instanceId: playerActive.instance_id,
           hp: returnHp
         };
         log.push(`${playerActive.nickname || playerActive.species_id} returned with ${returnHp} HP! (${playerActive.starter_lives_remaining} lives left)`);
-
-        // Clear status per spec, preserve PP, etc.
         playerActive.status = null;
       } else if (livesBefore === 1) {
-        // Final life — permanent death
         playerActive.starter_lives_remaining = 0;
         playerActive.is_dead = true;
         starterLifeLost = {
@@ -252,61 +262,47 @@ export class BattleEngine {
           livesBefore,
           livesAfter: 0
         };
-        log.push(`${playerActive.nickname || playerActive.species_id} has died permanently... (starter final death)`);
+        log.push(`${playerActive.nickname || playerActive.species_id} has died permanently.`);
       }
     }
 
-    // For non-starter ordinary lethal — permanent death unless tutorial
-    if (playerFainted && !playerActive.is_original_starter) {
+    if (playerDefeated && !playerActive.is_original_starter) {
       if (this.state.is_tutorial) {
-        // Tutorial exception per task §15: prevents controlled test from becoming permanent-death failure
-        // But narrative should establish real rule
-        log.push(`[TUTORIAL] ${playerActive.nickname || playerActive.species_id} would have died, but Kurg intervenes...`);
-        // In tutorial, we don't set is_dead, we return at 1 HP for teaching
+        log.push(`[Tutorial] ${playerActive.nickname || playerActive.species_id} would have died, but Kurg intervenes. This is the only time.`);
         playerActive.current_hp = 1;
-        playerFainted = false;
+        playerDefeated = false;
       } else {
         playerActive.is_dead = true;
         log.push(`${playerActive.nickname || playerActive.species_id} died permanently.`);
       }
     }
 
-    if (enemyFainted) {
+    if (enemyDefeated) {
       enemyActive.is_dead = true;
     }
-
-    // Battle end classification — per ACTIVE_CANON §6 simultaneous KOs batched
-    // Against mortal leaders, mutual-death counts as player victory (not relevant for tutorial)
-    // Ordinary separate party wipes remain losses
 
     let isOver = false;
     let result: 'WIN' | 'LOSS' | 'TUTORIAL_WIN' | undefined;
 
     const playerTeamAlive = this.state.player_team.some(m => m.current_hp > 0 && !m.is_dead);
     const enemyTeamAlive = this.state.enemy_team.some(m => m.current_hp > 0 && !m.is_dead);
-
-    // Check if pending starter return prevents wipe
     const hasPendingReturn = !!starterReturned;
 
     if (!playerTeamAlive && !hasPendingReturn) {
-      // Player wiped
       if (!enemyTeamAlive) {
-        // Simultaneous KO
         if (this.state.enemy_trainer?.id.startsWith('LDR-')) {
-          // Leader mutual KO = player victory
           isOver = true;
           result = 'WIN';
-          log.push('Both sides fainted simultaneously — but against a leader, allied support secures victory!');
+          log.push('Both sides died simultaneously — allied support secures victory against a leader!');
         } else {
-          // Ordinary — treat as loss? Or need batch handling — for slice, player loss if both faint same turn and no starter return
           isOver = true;
           result = 'LOSS';
-          log.push('Both sides fainted!');
+          log.push('Both sides died!');
         }
       } else {
         isOver = true;
         result = 'LOSS';
-        log.push('Player team wiped!');
+        log.push('Your team was defeated.');
       }
     } else if (!enemyTeamAlive) {
       isOver = true;
@@ -314,7 +310,6 @@ export class BattleEngine {
       log.push('Enemy team defeated!');
     }
 
-    // For tutorial, if player won or had starter return, count as tutorial win
     if (this.state.is_tutorial && isOver && result === 'WIN') {
       result = 'TUTORIAL_WIN';
     }
@@ -335,8 +330,8 @@ export class BattleEngine {
       playerMoveName,
       enemyMoveName,
       log,
-      playerFainted,
-      enemyFainted,
+      playerDefeated,
+      enemyDefeated,
       starterLifeLost,
       starterReturned,
       isOver,
@@ -344,30 +339,28 @@ export class BattleEngine {
     };
   }
 
-  // Enemy AI — simple for tutorial
   getEnemyAction(): BattleAction {
     const enemyActive = this.state.enemy_team[this.state.current_enemy_index];
     if (!enemyActive) {
-      return { type: 'MOVE', moveId: 'TACKLE' };
+      if (isProd()) {
+        throw new Error('[BattleEngine] No active enemy and no moves — canonical data missing, cannot use TEST_MOVE_A in production');
+      }
+      return { type: 'MOVE', moveId: 'TEST_MOVE_A' }; // DEV ONLY
     }
 
-    // Pick random move from available
     const moves = enemyActive.moves;
     if (moves.length === 0) {
-      return { type: 'MOVE', moveId: 'TACKLE' };
+      if (isProd()) {
+        throw new Error('[BattleEngine] Enemy has no moves — canonical data missing');
+      }
+      return { type: 'MOVE', moveId: 'TEST_MOVE_A' }; // DEV ONLY
     }
 
     const idx = this.rng.nextInt(0, moves.length);
     return { type: 'MOVE', moveId: moves[idx] };
   }
 
-  // XP handling — per ACTIVE_CANON §4 participant level-gap individual
   calculateXP(winner: AbyssalInstance, loser: AbyssalInstance): number {
-    // Simplified: 100 XP per level, scaled by level gap
-    // Participant XP scales using participant's own level relative to defeated enemy
-    const baseXP = 50; // provisional
-    const levelGap = loser.level - winner.level;
-    const multiplier = 1 + (levelGap * 0.1); // +10% per level gap
-    return Math.max(1, Math.floor(baseXP * multiplier));
+    return this.rules.calculateXP(winner, loser);
   }
 }

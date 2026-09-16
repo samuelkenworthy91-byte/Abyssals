@@ -1,9 +1,11 @@
 // Battle UI — first-person DWM style, HP bars + exact numbers, move selection, PP, battle text, damage feedback
-// Per task §13, §14: no back sprite, enemy front sprite visible, player attacks VFX foreground->enemy, enemy attacks via sprite lunge + screen impact
+// Retains direction: enemy front sprite from asset manifest, player not rendered as back sprite, VFX foreground->enemy, enemy lunge+screen impact
+// Clean player-facing, no internal IDs, debug state, CH01-E05, PROVISIONAL, etc.
 
 import { BattleState, AbyssalInstance } from '../core/types';
-import { getMove } from '../data/moves';
 import { MapRenderer } from '../game/mapRenderer';
+import { moveRepository } from '../data/canonical/moveRepository';
+import { speciesRepository } from '../data/canonical/speciesRepository';
 
 export class BattleUI {
   private container: HTMLElement;
@@ -43,7 +45,6 @@ export class BattleUI {
     if (!ctx) throw new Error('No 2d context');
     this.ctx = ctx;
 
-    // Create a dummy canvas for MapRenderer (we only use its enemy sprite renderer)
     const dummyCanvas = document.createElement('canvas');
     this.mapRenderer = new MapRenderer(dummyCanvas);
   }
@@ -81,7 +82,6 @@ export class BattleUI {
       overflow: hidden;
     `;
 
-    // Battle canvas area
     const canvasContainer = document.createElement('div');
     canvasContainer.style.cssText = `
       flex: 1;
@@ -91,7 +91,6 @@ export class BattleUI {
     `;
     canvasContainer.appendChild(this.canvas);
 
-    // Enemy HP bar — top
     const enemyHPContainer = document.createElement('div');
     enemyHPContainer.id = 'enemy-hp';
     enemyHPContainer.style.cssText = `
@@ -106,7 +105,6 @@ export class BattleUI {
       backdrop-filter: blur(4px);
     `;
 
-    // Player HP bar — bottom, but player active not rendered per first-person spec
     const playerHPContainer = document.createElement('div');
     playerHPContainer.id = 'player-hp';
     playerHPContainer.style.cssText = `
@@ -121,7 +119,6 @@ export class BattleUI {
       backdrop-filter: blur(4px);
     `;
 
-    // Battle text log
     const battleLog = document.createElement('div');
     battleLog.id = 'battle-log';
     battleLog.style.cssText = `
@@ -140,7 +137,6 @@ export class BattleUI {
       line-height: 1.4;
     `;
 
-    // Move selection — bottom
     const moveSelection = document.createElement('div');
     moveSelection.id = 'move-selection';
     moveSelection.style.cssText = `
@@ -175,21 +171,17 @@ export class BattleUI {
     const canvas = this.canvas;
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
-    // Background — darker grounded fantasy, not glossy
     const gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, canvas.width/2);
     gradient.addColorStop(0, '#1e2128');
     gradient.addColorStop(1, '#0f1115');
     ctx.fillStyle = gradient;
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    // Battlefield ground — simple
     ctx.fillStyle = '#2a2d3a';
     ctx.fillRect(0, canvas.height*0.6, canvas.width, canvas.height*0.4);
     ctx.fillStyle = '#3a3d4a';
     ctx.fillRect(0, canvas.height*0.6, canvas.width, 4);
 
-    // Enemy sprite — front-facing, visible battlefield contains enemy's existing front-facing sprite
-    // Per task: player's Abyssal is effectively in front/behind camera and therefore not rendered as back sprite
     const enemy = this.battleState.enemy_team[this.battleState.current_enemy_index];
     if (enemy) {
       const size = 180;
@@ -206,20 +198,22 @@ export class BattleUI {
         this.animationState.enemyLunge
       );
 
-      // Enemy shadow
       ctx.fillStyle = 'rgba(0,0,0,0.3)';
       ctx.beginPath();
       ctx.ellipse(x + size/2, y + size - 5, size/3, 10, 0, 0, Math.PI*2);
       ctx.fill();
     }
 
-    // Player attack VFX — travelling from foreground toward visible enemy
     if (this.animationState.playerAttackVFX.active) {
       const progress = this.animationState.playerAttackVFX.progress;
       const moveId = this.animationState.playerAttackVFX.moveId;
-      const move = moveId ? getMove(moveId) : null;
+      let vfxCategory = 'physical';
+      try {
+        if (moveId && moveRepository.exists(moveId)) {
+          vfxCategory = moveRepository.get(moveId).vfx_category || 'physical';
+        }
+      } catch {}
 
-      // VFX from bottom center to enemy center
       const startX = canvas.width/2;
       const startY = canvas.height - 50;
       const endX = canvas.width/2;
@@ -228,11 +222,10 @@ export class BattleUI {
       const currentX = startX + (endX - startX) * progress;
       const currentY = startY + (endY - startY) * progress;
 
-      // Draw VFX based on type
       ctx.save();
       ctx.globalAlpha = 1 - progress*0.5;
 
-      if (move?.vfx_type === 'fire') {
+      if (vfxCategory === 'fire') {
         ctx.fillStyle = '#ff6a2a';
         ctx.beginPath();
         ctx.arc(currentX, currentY, 12 + progress*8, 0, Math.PI*2);
@@ -241,21 +234,19 @@ export class BattleUI {
         ctx.beginPath();
         ctx.arc(currentX, currentY, 6, 0, Math.PI*2);
         ctx.fill();
-      } else if (move?.vfx_type === 'water') {
+      } else if (vfxCategory === 'water') {
         ctx.fillStyle = '#4a8aba';
         ctx.beginPath();
         ctx.arc(currentX, currentY, 10, 0, Math.PI*2);
         ctx.fill();
-      } else if (move?.vfx_type === 'earth') {
+      } else if (vfxCategory === 'earth') {
         ctx.fillStyle = '#5a6a3a';
         ctx.fillRect(currentX-8, currentY-8, 16, 16);
       } else {
-        // physical dash
         ctx.fillStyle = '#e8e6e1';
         ctx.beginPath();
         ctx.arc(currentX, currentY, 8, 0, Math.PI*2);
         ctx.fill();
-        // Trail
         ctx.strokeStyle = 'rgba(232, 230, 225, 0.5)';
         ctx.lineWidth = 2;
         ctx.beginPath();
@@ -267,7 +258,6 @@ export class BattleUI {
       ctx.restore();
     }
 
-    // Damage numbers
     for (const dmg of this.animationState.damageNumbers) {
       const alpha = 1 - dmg.progress;
       const yOffset = dmg.progress * -40;
@@ -281,7 +271,6 @@ export class BattleUI {
       ctx.restore();
     }
 
-    // Screen impact for enemy attacks — foreground impact, screen impact
     if (this.animationState.screenShake) {
       ctx.fillStyle = 'rgba(255, 80, 80, 0.15)';
       ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -302,9 +291,20 @@ export class BattleUI {
     if (enemyContainer && enemy) {
       const hpPercent = (enemy.current_hp / enemy.max_hp) * 100;
       const isLow = hpPercent < 25;
+      let enemyName = enemy.species_id;
+      try {
+        if (speciesRepository.exists(enemy.species_id)) {
+          enemyName = speciesRepository.get(enemy.species_id).name;
+        } else if (enemy.nickname) {
+          enemyName = enemy.nickname;
+        }
+      } catch {
+        enemyName = enemy.nickname || enemy.species_id;
+      }
+
       enemyContainer.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-          <span style="font-weight: bold; color: #e8e6e1;">${enemy.species_id} Lv${enemy.level}</span>
+          <span style="font-weight: bold; color: #e8e6e1;">${enemyName} Lv${enemy.level}</span>
           <span style="font-family: monospace; font-size: 12px; color: ${isLow ? '#ff6a6a' : '#a0a0a0'};">${enemy.current_hp}/${enemy.max_hp}</span>
         </div>
         <div style="width: 100%; height: 8px; background: #0f1115; border-radius: 4px; overflow: hidden; border: 1px solid #2a2d3a;">
@@ -317,15 +317,22 @@ export class BattleUI {
       const hpPercent = (player.current_hp / player.max_hp) * 100;
       const isLow = hpPercent < 25;
       const lives = player.starter_lives_remaining !== undefined ? ` <span style="color: #6a8aba;">[${'●'.repeat(player.starter_lives_remaining)}${'○'.repeat(3-player.starter_lives_remaining)}]</span>` : '';
+      let playerName = player.nickname || player.species_id;
+      try {
+        if (speciesRepository.exists(player.species_id)) {
+          playerName = speciesRepository.get(player.species_id).name;
+        }
+      } catch {}
+
       playerContainer.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-          <span style="font-weight: bold; color: #e8e6e1;">${player.nickname || player.species_id} Lv${player.level}${lives}</span>
+          <span style="font-weight: bold; color: #e8e6e1;">${playerName} Lv${player.level}${lives}</span>
           <span style="font-family: monospace; font-size: 12px; color: ${isLow ? '#ff6a6a' : '#a0a0a0'};">${player.current_hp}/${player.max_hp}</span>
         </div>
         <div style="width: 100%; height: 8px; background: #0f1115; border-radius: 4px; overflow: hidden; border: 1px solid #2a2d3a;">
           <div style="width: ${hpPercent}%; height: 100%; background: ${isLow ? '#ff4a4a' : hpPercent < 50 ? '#ffaa4a' : '#4a8a4a'}; transition: width 0.5s ease;"></div>
         </div>
-        ${player.is_original_starter ? `<div style="font-size: 10px; color: #6a8aba; margin-top: 4px; font-family: monospace;">STARTER • ${player.starter_lives_remaining} LIVES • 10% RETURN</div>` : ''}
+        ${player.is_original_starter ? `<div style="font-size: 10px; color: #6a8aba; margin-top: 4px; font-family: monospace;">${player.starter_lives_remaining} LIVES</div>` : ''}
       `;
     }
   }
@@ -342,9 +349,13 @@ export class BattleUI {
 
     container.innerHTML = '';
 
-    // Show last log entries
     if (logContainer) {
-      logContainer.innerHTML = this.battleState.log.slice(-6).map(l => `<div>${l}</div>`).join('');
+      // Clean log — no internal IDs, no PROV-*, no debug
+      const cleanLog = this.battleState.log.slice(-6).map(l => {
+        // Remove any debug markers that might have leaked
+        return l.replace(/\[TUTORIAL\]/g, '').replace(/PROV-[A-Z0-9-]+/g, '').trim();
+      }).filter(l => l.length > 0);
+      logContainer.innerHTML = cleanLog.map(l => `<div>${l}</div>`).join('');
       logContainer.scrollTop = logContainer.scrollHeight;
     }
 
@@ -367,9 +378,7 @@ export class BattleUI {
         font-family: Georgia, serif;
       `;
       continueBtn.onclick = () => {
-        // Will be handled by game loop to return to overworld
         if (this.onMoveSelected) {
-          // Use special signal
           (this.onMoveSelected as any)('__CONTINUE__');
         }
       };
@@ -377,10 +386,28 @@ export class BattleUI {
       return;
     }
 
-    // Move buttons
     player.moves.forEach(moveId => {
-      const move = getMove(moveId);
-      if (!move) return;
+      let move;
+      try {
+        move = moveRepository.exists(moveId) ? moveRepository.get(moveId) : null;
+      } catch {
+        move = null;
+      }
+
+      // For dev fixtures, create minimal move display
+      if (!move) {
+        move = {
+          id: moveId,
+          name: moveId.replace(/_/g, ' '),
+          type: 'WILD',
+          category: 'PHYSICAL',
+          power: 40,
+          accuracy: 100,
+          pp: 20,
+          priority: 0,
+          target: 'SINGLE_OPPONENT'
+        } as any;
+      }
 
       const pp = player.pp[moveId] ?? move.pp;
       const btn = document.createElement('button');
@@ -429,7 +456,6 @@ export class BattleUI {
     });
   }
 
-  // Animation helpers
   async playPlayerAttack(moveId: string): Promise<void> {
     this.animationState.playerAttackVFX = { active: true, progress: 0, moveId };
     return new Promise(resolve => {

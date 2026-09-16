@@ -1,14 +1,16 @@
-// Map renderer — provisional production-quality environment set, modular, replaceable
-// Task: avoid sterile grid, use irregular paths, worn stone, timber, plaster, fenced plots, vegetation, wells, religious iconography restrained
-// Visual standard: darker grounded fantasy, True Light blue/white/silver/navy for faction presence, not painting entire village blue
+// Map renderer — provisional environmental art acceptable, real Abyssal sprites from asset manifest
+// Visual direction: grounded medieval settlement, timber, plaster, worn stone, muted earth, irregular roads, fences, modest domestic, restrained True Light iconography blue/white/silver/navy
 
 import { MapData } from '../core/types';
+import { assetManifest } from '../data/canonical/assetManifest';
+import { isProd } from '../core/env';
 
 export class MapRenderer {
   private tileSize: number = 16;
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
   private tileset: Map<string, HTMLCanvasElement> = new Map();
+  private spriteCache: Map<string, HTMLImageElement> = new Map();
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
@@ -19,18 +21,12 @@ export class MapRenderer {
   }
 
   private generateTileset() {
-    // Provisional tileset — modular, replaceable, follows documented visual direction
-    // We'll generate small canvas tiles procedurally rather than using glossy AI fantasy
-
-    // Ground — worn earth/stone mix
     const ground = document.createElement('canvas');
     ground.width = 16;
     ground.height = 16;
     const gCtx = ground.getContext('2d')!;
-    // Base earth tone #3a352d, with variations
     gCtx.fillStyle = '#3a352d';
     gCtx.fillRect(0,0,16,16);
-    // Add noise for worn stone
     for (let i=0;i<20;i++) {
       const x = Math.random()*16;
       const y = Math.random()*16;
@@ -39,7 +35,6 @@ export class MapRenderer {
     }
     this.tileset.set('ground', ground);
 
-    // Path — irregular worn stone
     const path = document.createElement('canvas');
     path.width = 16;
     path.height = 16;
@@ -52,7 +47,6 @@ export class MapRenderer {
     pCtx.fillRect(2,10,12,2);
     this.tileset.set('path', path);
 
-    // Grass
     const grass = document.createElement('canvas');
     grass.width = 16;
     grass.height = 16;
@@ -67,24 +61,21 @@ export class MapRenderer {
     }
     this.tileset.set('grass', grass);
 
-    // House wall — timber + plaster, grounded
     const houseWall = document.createElement('canvas');
     houseWall.width = 16;
     houseWall.height = 16;
     const hCtx = houseWall.getContext('2d')!;
-    hCtx.fillStyle = '#d8c8b0'; // plaster
+    hCtx.fillStyle = '#d8c8b0';
     hCtx.fillRect(0,0,16,16);
-    hCtx.fillStyle = '#4a3728'; // timber frame
+    hCtx.fillStyle = '#4a3728';
     hCtx.fillRect(0,0,16,2);
     hCtx.fillRect(0,14,16,2);
     hCtx.fillRect(0,0,2,16);
     hCtx.fillRect(14,0,2,16);
-    // Worn
     hCtx.fillStyle = 'rgba(0,0,0,0.1)';
     hCtx.fillRect(3,3,4,2);
     this.tileset.set('house_wall', houseWall);
 
-    // Roof — old thatch/slate, slightly austere
     const roof = document.createElement('canvas');
     roof.width = 16;
     roof.height = 16;
@@ -97,7 +88,6 @@ export class MapRenderer {
     }
     this.tileset.set('roof', roof);
 
-    // Well
     const well = document.createElement('canvas');
     well.width = 16;
     well.height = 16;
@@ -110,20 +100,18 @@ export class MapRenderer {
     wCtx.fill();
     this.tileset.set('well', well);
 
-    // Shrine — True Light blue/white/silver/navy, medieval/crusader-inspired but restrained
     const shrine = document.createElement('canvas');
     shrine.width = 16;
     shrine.height = 16;
     const sCtx = shrine.getContext('2d')!;
-    sCtx.fillStyle = '#e8eef8'; // ivory/white
+    sCtx.fillStyle = '#e8eef8';
     sCtx.fillRect(0,0,16,16);
-    sCtx.fillStyle = '#2a4a8a'; // royal blue
+    sCtx.fillStyle = '#2a4a8a';
     sCtx.fillRect(6,2,4,8);
-    sCtx.fillStyle = '#c0c8d8'; // silver
+    sCtx.fillStyle = '#c0c8d8';
     sCtx.fillRect(5,10,6,2);
     this.tileset.set('shrine', shrine);
 
-    // Tree
     const tree = document.createElement('canvas');
     tree.width = 16;
     tree.height = 16;
@@ -137,23 +125,32 @@ export class MapRenderer {
     tCtx.fillStyle = '#3a2a1a';
     tCtx.fillRect(7,10,2,6);
     this.tileset.set('tree', tree);
+
+    // Missing asset debug tile — neutral, only dev builds
+    const missing = document.createElement('canvas');
+    missing.width = 16;
+    missing.height = 16;
+    const mCtx = missing.getContext('2d')!;
+    mCtx.fillStyle = '#ff00ff';
+    mCtx.fillRect(0,0,16,16);
+    mCtx.fillStyle = '#000000';
+    mCtx.font = '8px monospace';
+    mCtx.fillText('MISS', 1, 10);
+    this.tileset.set('missing_debug', missing);
   }
 
   render(map: MapData, playerPixelX: number, playerPixelY: number, cameraX: number, cameraY: number, width: number, height: number) {
     const ctx = this.ctx;
     ctx.clearRect(0,0,width,height);
 
-    // Calculate visible tile range
     const startCol = Math.floor(cameraX / this.tileSize) - 1;
     const endCol = Math.ceil((cameraX + width) / this.tileSize) + 1;
     const startRow = Math.floor(cameraY / this.tileSize) - 1;
     const endRow = Math.ceil((cameraY + height) / this.tileSize) + 1;
 
-    // Render ground first
     for (let row = startRow; row < endRow; row++) {
       for (let col = startCol; col < endCol; col++) {
         if (row < 0 || col < 0 || row >= map.height || col >= map.width) {
-          // Outside map — dark void
           ctx.fillStyle = '#0f1115';
           ctx.fillRect(col*this.tileSize - cameraX, row*this.tileSize - cameraY, this.tileSize, this.tileSize);
           continue;
@@ -163,22 +160,12 @@ export class MapRenderer {
         const screenX = col * this.tileSize - cameraX;
         const screenY = row * this.tileSize - cameraY;
 
-        // Choose tile visual based on position and type
-        // For walkable, use ground/path mix; for blocked, use house/well etc based on context
         if (tile === 0) {
-          // Walkable — determine if path or ground
-          // Simple heuristic: if near center paths, use path, else ground/grass
           const isPath = (row % 4 === 0) || (col % 6 === 0) || (Math.abs(col - map.width/2) < 3);
           const tileCanvas = this.tileset.get(isPath ? 'path' : 'ground');
           if (tileCanvas) ctx.drawImage(tileCanvas, screenX, screenY);
-          else {
-            ctx.fillStyle = '#3a352d';
-            ctx.fillRect(screenX, screenY, this.tileSize, this.tileSize);
-          }
         } else {
-          // Blocked — check what it is by map id and position
           let tileKey = 'house_wall';
-          // Well detection
           if (map.id === 'civeton_village' && ((row === 13 || row === 14) && (col === 18 || col === 19))) {
             tileKey = 'well';
           } else if (map.id === 'civeton_village' && row >=20 && row <=22 && col >=22 && col <=24) {
@@ -186,51 +173,34 @@ export class MapRenderer {
           } else if (map.id === 'childhood_hill') {
             tileKey = 'grass';
           } else {
-            // Check obstacles list for tree
             const isTree = [ [10,10], [30,8], [6,18] ].some(([x,y]) => x===col && y===row);
             if (isTree) tileKey = 'tree';
           }
 
           const tileCanvas = this.tileset.get(tileKey);
           if (tileCanvas) ctx.drawImage(tileCanvas, screenX, screenY);
-          else {
-            ctx.fillStyle = '#4a3728';
-            ctx.fillRect(screenX, screenY, this.tileSize, this.tileSize);
-          }
         }
       }
     }
 
-    // Render decorations — fenced plots, troughs, religious iconography restrained
-    // For Civeton, add some visual landmarks
     if (map.id === 'civeton_village') {
-      // Draw fence lines provisional
       ctx.strokeStyle = '#5a4a3a';
       ctx.lineWidth = 2;
-      // Fenced plot near Pate's house
       ctx.strokeRect(2*this.tileSize - cameraX, 9*this.tileSize - cameraY, 8*this.tileSize, 4*this.tileSize);
-      // Another near well
       ctx.strokeRect(16*this.tileSize - cameraX, 16*this.tileSize - cameraY, 6*this.tileSize, 4*this.tileSize);
     }
 
-    // Render NPCs
     for (const npc of map.npcs) {
       const screenX = npc.x * this.tileSize - cameraX;
       const screenY = npc.y * this.tileSize - cameraY;
 
-      // Only render if on screen
       if (screenX < -this.tileSize || screenX > width || screenY < -this.tileSize || screenY > height) continue;
 
-      // Simple NPC representation — grounded, not chibi
-      // Body: small rectangle with color per importance
-      ctx.fillStyle = npc.is_important ? '#6a8aba' : '#8a7a6a'; // True Light blue for important, earth for others
+      ctx.fillStyle = npc.is_important ? '#6a8aba' : '#8a7a6a';
       ctx.fillRect(screenX + 2, screenY + 2, 12, 12);
-
-      // Head
       ctx.fillStyle = '#d8c8a8';
       ctx.fillRect(screenX + 4, screenY, 8, 6);
 
-      // Important marker subtle
       if (npc.is_important) {
         ctx.fillStyle = 'rgba(100, 140, 200, 0.3)';
         ctx.beginPath();
@@ -239,25 +209,19 @@ export class MapRenderer {
       }
     }
 
-    // Render player — simple but readable, deliberate
     const playerScreenX = playerPixelX - cameraX;
     const playerScreenY = playerPixelY - cameraY;
 
-    // Player shadow
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
     ctx.beginPath();
     ctx.ellipse(playerScreenX + 8, playerScreenY + 14, 6, 3, 0, 0, Math.PI*2);
     ctx.fill();
 
-    // Player body — Aimon, grounded
-    ctx.fillStyle = '#4a6a8a'; // muted blue, not bright
+    ctx.fillStyle = '#4a6a8a';
     ctx.fillRect(playerScreenX + 3, playerScreenY + 4, 10, 8);
-
-    // Head
     ctx.fillStyle = '#e8d8b8';
     ctx.fillRect(playerScreenX + 5, playerScreenY, 6, 5);
 
-    // Direction indicator subtle
     ctx.fillStyle = '#2a3a4a';
     switch ((globalThis as any).playerDirection || 'DOWN') {
       case 'UP': ctx.fillRect(playerScreenX+6, playerScreenY-1, 4,2); break;
@@ -267,76 +231,72 @@ export class MapRenderer {
     }
   }
 
-  // For battle, render enemy sprite front-facing (provisional)
+  // For battle — real Abyssal front sprite from asset manifest, or debug tile in dev
   renderEnemySprite(ctx: CanvasRenderingContext2D, speciesId: string, x: number, y: number, size: number, isShaking: boolean = false, isLunging: boolean = false) {
-    // Provisional enemy sprites — darker grounded fantasy, not Pokemon-style glossy
-    // Each species has distinct silhouette
-
     const shakeX = isShaking ? (Math.random()-0.5)*10 : 0;
     const lungeY = isLunging ? -10 : 0;
-
     const drawX = x + shakeX;
     const drawY = y + lungeY;
 
-    // Base
     ctx.fillStyle = 'rgba(0,0,0,0.2)';
     ctx.beginPath();
     ctx.ellipse(drawX + size/2, drawY + size - 10, size/3, 8, 0, 0, Math.PI*2);
     ctx.fill();
 
-    // Species-specific provisional art
-    if (speciesId.includes('STARTER-01') || speciesId.includes('bramblekin')) {
-      // Bramblekin — bramble/moss
-      ctx.fillStyle = '#3a4a2a';
-      ctx.fillRect(drawX + size*0.2, drawY + size*0.3, size*0.6, size*0.5);
-      ctx.fillStyle = '#5a6a3a';
-      // Thorns
-      for (let i=0;i<5;i++) {
-        ctx.fillRect(drawX + size*0.2 + i*size*0.12, drawY + size*0.25, 2, 6);
+    // Try to get real front sprite from asset manifest
+    try {
+      const spritePath = assetManifest.getSpeciesSprite(speciesId);
+      // Check cache
+      let img = this.spriteCache.get(spritePath);
+      if (!img) {
+        img = new Image();
+        img.src = spritePath;
+        this.spriteCache.set(spritePath, img);
       }
-      ctx.fillStyle = '#2a3a1a';
-      ctx.beginPath();
-      ctx.arc(drawX + size*0.5, drawY + size*0.4, size*0.15, 0, Math.PI*2);
-      ctx.fill();
-    } else if (speciesId.includes('STARTER-02') || speciesId.includes('emberling')) {
-      // Emberling — hearth ember
-      ctx.fillStyle = '#4a2a1a';
-      ctx.fillRect(drawX + size*0.25, drawY + size*0.3, size*0.5, size*0.5);
-      ctx.fillStyle = '#8a4a2a';
-      ctx.beginPath();
-      ctx.arc(drawX + size*0.5, drawY + size*0.35, size*0.2, 0, Math.PI*2);
-      ctx.fill();
-      ctx.fillStyle = '#ffaa44';
-      ctx.beginPath();
-      ctx.arc(drawX + size*0.5, drawY + size*0.35, size*0.08, 0, Math.PI*2);
-      ctx.fill();
-    } else if (speciesId.includes('STARTER-03') || speciesId.includes('tidemaw')) {
-      // Tidemaw — water
-      ctx.fillStyle = '#2a4a5a';
-      ctx.fillRect(drawX + size*0.2, drawY + size*0.3, size*0.6, size*0.5);
-      ctx.fillStyle = '#4a6a7a';
-      ctx.beginPath();
-      ctx.arc(drawX + size*0.5, drawY + size*0.5, size*0.25, 0, Math.PI*2);
-      ctx.fill();
-    } else if (speciesId.includes('OPPONENT-01') || speciesId.includes('hound')) {
-      // Hollow Hound — lean feral
-      ctx.fillStyle = '#3a3a3a';
-      ctx.fillRect(drawX + size*0.15, drawY + size*0.4, size*0.7, size*0.3);
-      ctx.fillStyle = '#2a2a2a';
-      ctx.fillRect(drawX + size*0.7, drawY + size*0.3, size*0.2, size*0.2); // head
-      ctx.fillStyle = '#5a3a3a';
-      ctx.fillRect(drawX + size*0.75, drawY + size*0.35, 4, 2); // eye
-    } else {
-      // Default — Gloam Mite
-      ctx.fillStyle = '#2a2a3a';
-      ctx.fillRect(drawX + size*0.2, drawY + size*0.3, size*0.6, size*0.5);
-      ctx.fillStyle = '#4a4a5a';
-      for (let i=0;i<3;i++) {
-        ctx.fillRect(drawX + size*0.15 + i*size*0.25, drawY + size*0.6, 4, 10);
+
+      if (img.complete && img.naturalWidth > 0) {
+        ctx.drawImage(img, drawX, drawY, size, size);
+      } else {
+        // Loading or missing — show debug tile in dev, or placeholder
+        if (!isProd()) {
+          ctx.fillStyle = '#1a1d24';
+          ctx.fillRect(drawX, drawY, size, size);
+          ctx.fillStyle = '#6a8aba';
+          ctx.font = `${size/10}px monospace`;
+          ctx.textAlign = 'center';
+          ctx.fillText(speciesId, drawX + size/2, drawY + size/2);
+          ctx.fillText('Loading...', drawX + size/2, drawY + size/2 + 20);
+        } else {
+          throw new Error(`Sprite not loaded for ${speciesId}`);
+        }
+      }
+    } catch (e: any) {
+      // Missing canonical asset — development error requiring correction, not silent fake
+      // Neutral missing-asset debugging tile acceptable only in dev builds
+      if (!isProd()) {
+        ctx.fillStyle = '#2a1a1a';
+        ctx.fillRect(drawX, drawY, size, size);
+        ctx.strokeStyle = '#ff00ff';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(drawX, drawY, size, size);
+        ctx.fillStyle = '#ff8a6a';
+        ctx.font = '12px monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText('MISSING', drawX + size/2, drawY + size/2 - 10);
+        ctx.fillText(speciesId, drawX + size/2, drawY + size/2 + 10);
+        console.warn(`[MapRenderer] Missing sprite for ${speciesId}: ${e.message}`);
+      } else {
+        // In production, fail clearly
+        ctx.fillStyle = '#1a1d24';
+        ctx.fillRect(drawX, drawY, size, size);
+        ctx.fillStyle = '#ff4a4a';
+        ctx.font = '12px monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText('Missing Asset', drawX + size/2, drawY + size/2);
+        throw new Error(`Missing canonical front sprite for ${speciesId} — ${e.message}`);
       }
     }
 
-    // Outline for readability
     ctx.strokeStyle = 'rgba(0,0,0,0.3)';
     ctx.lineWidth = 2;
     ctx.strokeRect(drawX, drawY, size, size);

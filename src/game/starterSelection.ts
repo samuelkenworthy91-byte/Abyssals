@@ -1,14 +1,16 @@
 // Starter Selection — canonical event CH01-E05
-// Implements real species sprite, stats, type, moves, growth, evolution, canonical identifiers
-// Provisional species but architecture is data-driven and replaceable
-// Assignment: Pate gets one remaining, Trade gets other per exact rules (provisional mapping documented)
+// Framework remains, but loads actual canonical starter species from authoritative data
+// UI must support real species name, real sprite, actual typing, actual starting moves, no dev labels
 
-import { SpeciesData } from '../core/types';
-import { PROVISIONAL_SPECIES, STARTER_IDS } from '../data/species';
-import { STARTER_LEARNSETS } from '../data/moves';
+import { speciesRepository } from '../data/canonical/speciesRepository';
+import { moveRepository } from '../data/canonical/moveRepository';
+import { starterAssignmentRepository } from '../data/canonical/starterAssignment';
+import { assetManifest } from '../data/canonical/assetManifest';
+import { CanonicalSpecies } from '../data/canonical/types';
+import { isProd } from '../core/env';
 
 export interface StarterChoice {
-  species: SpeciesData;
+  species: CanonicalSpecies;
   moves: string[];
 }
 
@@ -52,7 +54,7 @@ export class StarterSelectionUI {
     `;
 
     const title = document.createElement('h2');
-    title.textContent = 'Choose One — CH01-E05';
+    title.textContent = 'Choose One';
     title.style.cssText = `
       font-family: Georgia, serif;
       color: #e8e6e1;
@@ -80,10 +82,86 @@ export class StarterSelectionUI {
       gap: 16px;
     `;
 
-    STARTER_IDS.forEach(speciesId => {
-      const species = PROVISIONAL_SPECIES[speciesId];
-      if (!species) return;
+    // Try to get starters from canonical repository
+    let starters: CanonicalSpecies[] = [];
+    let loadError: string | null = null;
 
+    try {
+      starters = speciesRepository.getStarters();
+    } catch (e: any) {
+      loadError = e.message;
+    }
+
+    // If no canonical starters yet, show development-blocked message rather than invented creatures
+    if (starters.length === 0) {
+      const blocked = document.createElement('div');
+      blocked.style.cssText = `
+        background: #1a1d24;
+        border: 1px solid #5a3a3a;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        color: #e8e6e1;
+      `;
+      blocked.innerHTML = `
+        <div style="font-size: 18px; margin-bottom: 12px; color: #ff8a6a;">Starter Data Unavailable</div>
+        <div style="font-size: 13px; color: #8a8d9a; line-height: 1.5; margin-bottom: 16px;">
+          The canonical starter species dataset has not yet been imported.<br>
+          This is a dependency to resolve, not permission to invent replacement.<br><br>
+          <strong style="color: #6a8aba;">Expected:</strong> 3 canonical starter species from 187-species roster<br>
+          <strong style="color: #6a8aba;">Location:</strong> data/canon/species.json or data/runtime/species/<br>
+          <strong style="color: #6a8aba;">Error:</strong> ${loadError || 'No starters found'}<br><br>
+          For development testing, use test fixtures under src/test/fixtures/ with names TEST_SPECIES_A/B/C<br>
+          Production must not use invented species like Bramblekin/Emberling/Tidemaw.
+        </div>
+        <div style="font-size: 11px; color: #5a5a6a; font-family: monospace;">
+          See docs/ANDROID_BUILD.md and ORIGINAL_SOURCE_INVENTORY.md<br>
+          Validation will fail loudly if PROV-* IDs exist in production.
+        </div>
+      `;
+
+      // In dev, allow test fixtures injection via console for testing
+      if (!isProd()) {
+        const devBtn = document.createElement('button');
+        devBtn.textContent = 'Load Development Test Fixtures (DEV ONLY)';
+        devBtn.style.cssText = `
+          margin-top: 16px;
+          padding: 10px 16px;
+          background: #3a3a2a;
+          color: #e8e6e1;
+          border: 1px solid #5a5a3a;
+          border-radius: 6px;
+          cursor: pointer;
+          font-family: monospace;
+          font-size: 11px;
+        `;
+        devBtn.onclick = () => {
+          // Inject test fixtures for dev testing
+          import('../test/fixtures/battleFixtures').then(mod => {
+            const { TEST_SPECIES_A, TEST_SPECIES_B, TEST_SPECIES_C, TEST_MOVE_A, TEST_MOVE_B, TEST_MOVE_STATUS, TEST_STARTER_ASSIGNMENT, TEST_TRAINER_RECRUIT } = mod;
+            speciesRepository._injectTestData([TEST_SPECIES_A, TEST_SPECIES_B, TEST_SPECIES_C]);
+            moveRepository._injectTestData([TEST_MOVE_A, TEST_MOVE_B, TEST_MOVE_STATUS]);
+            starterAssignmentRepository._injectTestData(TEST_STARTER_ASSIGNMENT);
+            // Also need trainer
+            import('../data/canonical/trainerRepository').then(trMod => {
+              trMod.trainerRepository._injectTestData([TEST_TRAINER_RECRUIT]);
+              // Re-show
+              this.show(onSelected);
+            });
+          });
+        };
+        blocked.appendChild(devBtn);
+      }
+
+      wrapper.appendChild(title);
+      wrapper.appendChild(subtitle);
+      wrapper.appendChild(blocked);
+      this.container.appendChild(wrapper);
+      return;
+    }
+
+    // Render real starters
+    starters.forEach(species => {
       const card = document.createElement('div');
       card.style.cssText = `
         background: #1a1d24;
@@ -107,7 +185,6 @@ export class StarterSelectionUI {
         card.style.boxShadow = 'none';
       };
 
-      // Sprite provisional
       const spriteContainer = document.createElement('div');
       spriteContainer.style.cssText = `
         width: 100%;
@@ -119,37 +196,48 @@ export class StarterSelectionUI {
         justify-content: center;
         margin-bottom: 12px;
         position: relative;
+        overflow: hidden;
       `;
 
-      // Draw simple sprite representation
-      const spriteCanvas = document.createElement('canvas');
-      spriteCanvas.width = 80;
-      spriteCanvas.height = 80;
-      const sCtx = spriteCanvas.getContext('2d')!;
-      // Use same rendering as battle but small
-      sCtx.fillStyle = '#0f1115';
-      sCtx.fillRect(0,0,80,80);
-      if (speciesId.includes('01')) {
-        sCtx.fillStyle = '#3a4a2a';
-        sCtx.fillRect(10,20,60,40);
-        sCtx.fillStyle = '#5a6a3a';
-        sCtx.fillRect(15,15,10,15);
-      } else if (speciesId.includes('02')) {
-        sCtx.fillStyle = '#4a2a1a';
-        sCtx.fillRect(15,25,50,35);
-        sCtx.fillStyle = '#ffaa44';
-        sCtx.beginPath();
-        sCtx.arc(40,30,12,0,Math.PI*2);
-        sCtx.fill();
-      } else {
-        sCtx.fillStyle = '#2a4a5a';
-        sCtx.fillRect(10,20,60,40);
-        sCtx.fillStyle = '#4a6a7a';
-        sCtx.beginPath();
-        sCtx.arc(40,40,18,0,Math.PI*2);
-        sCtx.fill();
+      // Try to get real front sprite from asset manifest
+      let spritePath: string | null = null;
+      try {
+        spritePath = assetManifest.getSpeciesSprite(species.id);
+      } catch {
+        // If missing, use neutral debug tile in dev only
+        if (!isProd()) {
+          spritePath = null;
+        }
       }
-      spriteContainer.appendChild(spriteCanvas);
+
+      if (spritePath && spritePath !== 'MISSING_ASSET_DEBUG_TILE') {
+        const img = document.createElement('img');
+        img.src = spritePath;
+        img.style.cssText = `max-width: 100%; max-height: 100%; image-rendering: crisp-edges;`;
+        img.onerror = () => {
+          img.style.display = 'none';
+          const fallback = document.createElement('div');
+          fallback.textContent = species.name;
+          fallback.style.cssText = `color: #6a8aba; font-family: Georgia, serif;`;
+          spriteContainer.appendChild(fallback);
+        };
+        spriteContainer.appendChild(img);
+      } else {
+        // Fallback: show name, not invented creature drawing
+        const fallback = document.createElement('div');
+        fallback.style.cssText = `
+          color: #6a8aba;
+          font-family: Georgia, serif;
+          font-size: 14px;
+          text-align: center;
+        `;
+        if (!isProd() && !assetManifest.isLoaded()) {
+          fallback.innerHTML = `${species.name}<br><span style="font-size: 10px; color: #5a5a6a;">Sprite: ${species.sprite_key}<br>Dev debug tile</span>`;
+        } else {
+          fallback.textContent = species.name;
+        }
+        spriteContainer.appendChild(fallback);
+      }
 
       const name = document.createElement('div');
       name.textContent = species.name;
@@ -173,13 +261,13 @@ export class StarterSelectionUI {
       `;
 
       const desc = document.createElement('div');
-      desc.textContent = species.description;
+      desc.textContent = species.description || 'A canonical Abyssal.';
       desc.style.cssText = `
         font-size: 12px;
         color: #8a8d9a;
         line-height: 1.4;
         margin-bottom: 12px;
-        min-height: 60px;
+        min-height: 40px;
       `;
 
       const stats = document.createElement('div');
@@ -202,17 +290,7 @@ export class StarterSelectionUI {
         <div>SPA ${species.base_stats.spa}</div>
         <div>SPD ${species.base_stats.spd}</div>
         <div>SPE ${species.base_stats.spe}</div>
-        <div style="grid-column: 1 / -1; margin-top: 4px; color: #8a8aba;">BST ${species.bst} • Provisional</div>
       `;
-
-      const moves = document.createElement('div');
-      moves.style.cssText = `
-        font-size: 11px;
-        color: #7a7d8a;
-        font-family: monospace;
-      `;
-      const learnset = STARTER_LEARNSETS[speciesId] || [];
-      moves.textContent = `Moves: ${learnset.join(', ')}`;
 
       const selectBtn = document.createElement('button');
       selectBtn.textContent = `Choose ${species.name}`;
@@ -232,11 +310,10 @@ export class StarterSelectionUI {
       selectBtn.onmouseenter = () => selectBtn.style.background = '#3a5a9a';
       selectBtn.onmouseleave = () => selectBtn.style.background = '#2a4a8a';
       selectBtn.onclick = () => {
-        // Add selection animation
         card.style.borderColor = '#6aff6a';
         card.style.background = '#1e2a1e';
         setTimeout(() => {
-          this.onSelected?.(speciesId);
+          this.onSelected?.(species.id);
         }, 300);
       };
 
@@ -245,39 +322,17 @@ export class StarterSelectionUI {
       card.appendChild(types);
       card.appendChild(desc);
       card.appendChild(stats);
-      card.appendChild(moves);
       card.appendChild(selectBtn);
 
       grid.appendChild(card);
     });
 
-    const note = document.createElement('div');
-    note.style.cssText = `
-      margin-top: 20px;
-      padding: 12px;
-      background: rgba(100, 140, 200, 0.1);
-      border: 1px solid rgba(100, 140, 200, 0.2);
-      border-radius: 6px;
-      font-size: 11px;
-      color: #6a8aba;
-      font-family: monospace;
-      line-height: 1.4;
-    `;
-    note.innerHTML = `
-      <strong>PROVISIONAL_CANON_GAP:</strong> Real starter species assets/data absent from handoff (per README_FIRST limitation — 187 sprites in ChatGPT File Library not embedded).<br>
-      Using provisional IDs PROV-STARTER-01..03 with grounded designs. Loader is data-driven and replaceable.<br>
-      Assignment rule: cyclic — player picks index N, Pate gets (N+1)%3, Trade gets (N+2)%3. Documented as provisional, easily replaceable via data file when canonical assignment rule recovered.<br>
-      All three original instances will be initialized with starter_lives_remaining=3 per ACTIVE_CANON §9.
-    `;
-
     wrapper.appendChild(title);
     wrapper.appendChild(subtitle);
     wrapper.appendChild(grid);
-    wrapper.appendChild(note);
 
     this.container.appendChild(wrapper);
 
-    // Animation style
     if (!document.getElementById('starter-style')) {
       const style = document.createElement('style');
       style.id = 'starter-style';
@@ -296,24 +351,7 @@ export class StarterSelectionUI {
   }
 }
 
-// Assignment logic — provisional but deterministic
-export function assignRemainingStarters(playerChoiceId: string): { pateId: string; tradeId: string } {
-  const idx = STARTER_IDS.indexOf(playerChoiceId as any);
-  if (idx === -1) {
-    // Fallback
-    return {
-      pateId: STARTER_IDS[1],
-      tradeId: STARTER_IDS[2]
-    };
-  }
-
-  // Cyclic assignment: player N, Pate N+1, Trade N+2
-  // This is PROVISIONAL — real canon may have different mapping
-  const pateIdx = (idx + 1) % STARTER_IDS.length;
-  const tradeIdx = (idx + 2) % STARTER_IDS.length;
-
-  return {
-    pateId: STARTER_IDS[pateIdx],
-    tradeId: STARTER_IDS[tradeIdx]
-  };
+// Assignment logic — now uses explicit canonical table, no fabricated cyclic rule
+export function getStarterAssignment(playerSpeciesId: string) {
+  return starterAssignmentRepository.getAssignment(playerSpeciesId);
 }

@@ -82,7 +82,7 @@ export class TitleScreen {
       margin-bottom: 30px;
     `;
 
-    const slots = this.persistence.listSlots();
+    const slots = this.persistence.listSlotsSync();
 
     slots.forEach(slot => {
       const slotDiv = document.createElement('div');

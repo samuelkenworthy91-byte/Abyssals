@@ -1,132 +1,53 @@
-// Provisional species data — marked as provisional due to missing canonical dex
-// Real dex has 187 species, we provide 3 starters + 1 opponent for vertical slice
-// Loader is data-driven and replaceable: future real data can replace this file without code changes
+// Species data — canonical repository wrapper
+// Production runtime must assume all Abyssals originate from canonical dataset
+// No invented species — missing data is dependency to resolve, not permission to invent
+// Real 187-species dataset should be imported via SpeciesRepository
 
-import { SpeciesData } from '../core/types';
+import { speciesRepository } from './canonical/speciesRepository';
+import { CanonicalSpecies } from './canonical/types';
+import { isProd } from '../core/env';
 
-export const PROVISIONAL_SPECIES: Record<string, SpeciesData> = {
-  // STARTER 01 — Bramblekin — Earth/Plant grounded, small but resilient
-  // Provisional ID, will be replaced by canonical starter when available
-  'PROV-STARTER-01': {
-    id: 'PROV-STARTER-01',
-    name: 'Bramblekin',
-    types: ['EARTH', 'WILD'],
-    base_stats: {
-      hp: 45,
-      atk: 55,
-      def: 50,
-      spa: 40,
-      spd: 45,
-      spe: 50
-    },
-    bst: 285,
-    description: 'A small creature of woven bramble and moss, found near old hedgerows. Its thorns harden with age. Quiet and steadfast.',
-    is_provisional: true,
-    sprite_key: 'bramblekin',
-    evolution: {
-      evolves_to: 'PROV-STARTER-01-EVO1',
-      level: 16
-    }
-  },
-  // STARTER 02 — Emberling — Fire, hearth-associated, warm but not cute
-  'PROV-STARTER-02': {
-    id: 'PROV-STARTER-02',
-    name: 'Emberling',
-    types: ['FIRE', 'WILD'],
-    base_stats: {
-      hp: 42,
-      atk: 52,
-      def: 43,
-      spa: 58,
-      spd: 45,
-      spe: 55
-    },
-    bst: 295,
-    description: 'Born from banked hearth embers, it carries a low, steady heat. Its light falters when afraid.',
-    is_provisional: true,
-    sprite_key: 'emberling',
-    evolution: {
-      evolves_to: 'PROV-STARTER-02-EVO1',
-      level: 16
-    }
-  },
-  // STARTER 03 — Tidemaw — Water, river/mere creature, grounded
-  'PROV-STARTER-03': {
-    id: 'PROV-STARTER-03',
-    name: 'Tidemaw',
-    types: ['WATER', 'WILD'],
-    base_stats: {
-      hp: 50,
-      atk: 45,
-      def: 55,
-      spa: 50,
-      spd: 55,
-      spe: 40
-    },
-    bst: 295,
-    description: 'A mere-dweller with a broad, patient gaze. It holds water in the folds of its hide, releasing it slowly.',
-    is_provisional: true,
-    sprite_key: 'tidemaw',
-    evolution: {
-      evolves_to: 'PROV-STARTER-03-EVO1',
-      level: 16
-    }
-  },
-  // OPPONENT — Hollow Hound — used for Kurg soldier test
-  'PROV-OPPONENT-01': {
-    id: 'PROV-OPPONENT-01',
-    name: 'Hollow Hound',
-    types: ['WILD', 'SHADOW'],
-    base_stats: {
-      hp: 40,
-      atk: 50,
-      def: 40,
-      spa: 35,
-      spd: 35,
-      spe: 55
-    },
-    bst: 255,
-    description: 'A lean, feral abyssal used by mustering forces for drills. Its howl is thin and hollow.',
-    is_provisional: true,
-    sprite_key: 'hollow_hound'
-  },
-  // Additional opponent for variety
-  'PROV-OPPONENT-02': {
-    id: 'PROV-OPPONENT-02',
-    name: 'Gloam Mite',
-    types: ['SHADOW', 'WILD'],
-    base_stats: {
-      hp: 35,
-      atk: 45,
-      def: 50,
-      spa: 40,
-      spd: 50,
-      spe: 45
-    },
-    bst: 265,
-    description: 'A low, skittering thing that clings to shadow. Not truly dangerous alone.',
-    is_provisional: true,
-    sprite_key: 'gloam_mite'
+// Re-export for compatibility, but now uses canonical repository
+// If canonical data not loaded, throws clear error — development-blocked, not fake creature
+
+export function getSpecies(id: string) {
+  return speciesRepository.get(id);
+}
+
+export function getAllSpecies(): CanonicalSpecies[] {
+  return speciesRepository.getAll();
+}
+
+export function getStarters(): CanonicalSpecies[] {
+  return speciesRepository.getStarters();
+}
+
+export function exists(id: string): boolean {
+  return speciesRepository.exists(id);
+}
+
+export function isLoaded(): boolean {
+  return speciesRepository.isLoaded();
+}
+
+export function getLoadError(): string | null {
+  return speciesRepository.getLoadError();
+}
+
+// For dev testing only — injection point for TEST_SPECIES_A etc., clearly excluded from production
+export function _injectTestSpeciesForDev(species: CanonicalSpecies[]) {
+  if (isProd()) {
+    throw new Error('_injectTestSpeciesForDev in production forbidden');
   }
-};
-
-// Canonical starter IDs mapping — provisional, documented as gap
-// When real starter IDs are available, replace this mapping
-export const STARTER_IDS = [
-  'PROV-STARTER-01',
-  'PROV-STARTER-02',
-  'PROV-STARTER-03'
-] as const;
-
-export function getSpecies(id: string): SpeciesData | undefined {
-  return PROVISIONAL_SPECIES[id];
+  speciesRepository._injectTestData(species);
 }
 
-export function getAllSpecies(): SpeciesData[] {
-  return Object.values(PROVISIONAL_SPECIES);
-}
+// Legacy exports that were previously provisional — now removed
+// These will cause validation to fail if still referenced
+export const PROVISIONAL_SPECIES: Record<string, any> = {};
+export const STARTER_IDS: string[] = [];
 
-// Growth seed generation per individual
+// Growth seed generation per individual — retained, not invented content
 export function generateGrowthSeed(speciesId: string, instanceId: string): number {
   let hash = 0;
   const str = speciesId + instanceId;
