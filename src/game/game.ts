@@ -622,23 +622,14 @@ export class Game {
           const stats = calculateStatsAtLevel(sp as any, level, growthSeed);
           const maxHp = stats.hp;
 
-          // Get moves from canonical learnset — if not available, dev-blocked in prod, test fixtures in dev only
+          // Get moves from canonical learnset — if not available, dev-blocked, no fallback to test fixtures
           let moves: string[] = [];
-          try {
-            if (moveRepository.isLoaded()) {
-              moves = moveRepository.getAll().slice(0, 4).map(m => m.id);
-            } else {
-              if (isProd()) {
-                throw new Error('Move data not loaded — canonical moves required, cannot use TEST_MOVE in production');
-              }
-              // DEV ONLY fallback
-              moves = ['TEST_MOVE_A', 'TEST_MOVE_B'];
-            }
-          } catch (e: any) {
-            if (isProd()) {
-              throw e;
-            }
-            moves = ['TEST_MOVE_A']; // DEV ONLY
+          if (!moveRepository.isLoaded()) {
+            throw new Error('Move data not loaded — canonical moves required. This is a dependency to resolve, not permission to invent replacement.');
+          }
+          moves = moveRepository.getAll().slice(0, 4).map(m => m.id);
+          if (moves.length === 0) {
+            throw new Error('No canonical moves available — cannot create starter instance');
           }
 
           return {
@@ -776,9 +767,7 @@ export class Game {
 
     const opponentMoves = trainer?.team[0]?.moves;
     if (!opponentMoves || opponentMoves.length === 0) {
-      if (isProd()) {
-        throw new Error(`Trainer ${trainer?.id || 'KURG_TEST_RECRUIT'} has no moves — canonical data required`);
-      }
+      throw new Error(`Trainer ${trainer?.id || 'KURG_TEST_RECRUIT'} has no moves — canonical data required. This is a dependency to resolve.`);
     }
     const opponentInstance: AbyssalInstance = {
       instance_id: `opponent_${opponentSpeciesId}_${Date.now()}`,
@@ -789,7 +778,7 @@ export class Game {
       max_hp: calculateStatsAtLevel(opponentSpecies as any, trainer?.team[0]?.level || 5, 12345).hp,
       current_hp: calculateStatsAtLevel(opponentSpecies as any, trainer?.team[0]?.level || 5, 12345).hp,
       stats: calculateStatsAtLevel(opponentSpecies as any, trainer?.team[0]?.level || 5, 12345),
-      moves: opponentMoves && opponentMoves.length > 0 ? opponentMoves : (isProd() ? (() => { throw new Error('No opponent moves in prod'); })() as never : ['TEST_MOVE_A']), // DEV ONLY fallback
+      moves: opponentMoves,
       pp: {},
       status: null,
       is_dead: false

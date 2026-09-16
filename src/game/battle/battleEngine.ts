@@ -342,18 +342,12 @@ export class BattleEngine {
   getEnemyAction(): BattleAction {
     const enemyActive = this.state.enemy_team[this.state.current_enemy_index];
     if (!enemyActive) {
-      if (isProd()) {
-        throw new Error('[BattleEngine] No active enemy and no moves — canonical data missing, cannot use TEST_MOVE_A in production');
-      }
-      return { type: 'MOVE', moveId: 'TEST_MOVE_A' }; // DEV ONLY
+      throw new Error('[BattleEngine] No active enemy and no moves — canonical data missing');
     }
 
     const moves = enemyActive.moves;
     if (moves.length === 0) {
-      if (isProd()) {
-        throw new Error('[BattleEngine] Enemy has no moves — canonical data missing');
-      }
-      return { type: 'MOVE', moveId: 'TEST_MOVE_A' }; // DEV ONLY
+      throw new Error('[BattleEngine] Enemy has no moves — canonical data missing');
     }
 
     const idx = this.rng.nextInt(0, moves.length);

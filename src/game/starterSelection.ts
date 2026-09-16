@@ -111,47 +111,14 @@ export class StarterSelectionUI {
           <strong style="color: #6a8aba;">Expected:</strong> 3 canonical starter species from 187-species roster<br>
           <strong style="color: #6a8aba;">Location:</strong> data/canon/species.json or data/runtime/species/<br>
           <strong style="color: #6a8aba;">Error:</strong> ${loadError || 'No starters found'}<br><br>
-          For development testing, use test fixtures under src/test/fixtures/ with names TEST_SPECIES_A/B/C<br>
-          Production must not use invented species like Bramblekin/Emberling/Tidemaw.
+          This section is blocked until canonical data is imported.<br>
+          Engine tests use dedicated test tooling with isolated fixtures.
         </div>
         <div style="font-size: 11px; color: #5a5a6a; font-family: monospace;">
           See docs/ANDROID_BUILD.md and ORIGINAL_SOURCE_INVENTORY.md<br>
-          Validation will fail loudly if PROV-* IDs exist in production.
+          Validation will fail loudly if provisional IDs exist in production.
         </div>
       `;
-
-      // In dev, allow test fixtures injection via console for testing
-      if (!isProd()) {
-        const devBtn = document.createElement('button');
-        devBtn.textContent = 'Load Development Test Fixtures (DEV ONLY)';
-        devBtn.style.cssText = `
-          margin-top: 16px;
-          padding: 10px 16px;
-          background: #3a3a2a;
-          color: #e8e6e1;
-          border: 1px solid #5a5a3a;
-          border-radius: 6px;
-          cursor: pointer;
-          font-family: monospace;
-          font-size: 11px;
-        `;
-        devBtn.onclick = () => {
-          // Inject test fixtures for dev testing
-          import('../test/fixtures/battleFixtures').then(mod => {
-            const { TEST_SPECIES_A, TEST_SPECIES_B, TEST_SPECIES_C, TEST_MOVE_A, TEST_MOVE_B, TEST_MOVE_STATUS, TEST_STARTER_ASSIGNMENT, TEST_TRAINER_RECRUIT } = mod;
-            speciesRepository._injectTestData([TEST_SPECIES_A, TEST_SPECIES_B, TEST_SPECIES_C]);
-            moveRepository._injectTestData([TEST_MOVE_A, TEST_MOVE_B, TEST_MOVE_STATUS]);
-            starterAssignmentRepository._injectTestData(TEST_STARTER_ASSIGNMENT);
-            // Also need trainer
-            import('../data/canonical/trainerRepository').then(trMod => {
-              trMod.trainerRepository._injectTestData([TEST_TRAINER_RECRUIT]);
-              // Re-show
-              this.show(onSelected);
-            });
-          });
-        };
-        blocked.appendChild(devBtn);
-      }
 
       wrapper.appendChild(title);
       wrapper.appendChild(subtitle);

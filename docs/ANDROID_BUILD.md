@@ -12,19 +12,19 @@ Vite/TypeScript game
 ```
 
 - **No Kotlin rewrite** — same gameplay code for browser, PWA, Android
-- **Package ID:** `com.abyssals.game` (neutral, reverse-domain, no invented company)
+- **Package ID:** `com.abyssals.game` (neutral, reverse-domain, no invented company) — acceptable for internal/debug testing for now. **Final Android package/application ID must be deliberately locked before any Play Store/public release because changing application identity later is disruptive.** Do not change during this task, but document final locking requirement.
 - **Android project:** `android/` (generated via Capacitor, committed for CI)
 - **Web assets:** `dist/` → `android/app/src/main/assets/public/` via `npx cap sync`
 
 ## Prerequisites
 
-- Node.js 20+
+- Node.js 22+ (Capacitor 8.5.2 requires Node >=22, enforced via package.json engines)
 - npm
 - Java 21 (Temurin recommended)
 - Android SDK (for local builds, or use GitHub Actions)
 - Android Studio (optional, for `npx cap open android`)
 
-For CI, GitHub Actions provides Java and Gradle.
+For CI, GitHub Actions provides Node 22, Java 21, Gradle. Local/project requirements consistent with CI via engines field.
 
 ## Local Debug Workflow
 
@@ -106,20 +106,25 @@ Triggers on push to `arena/*` and `main`, PRs to main, manual dispatch.
 
 Steps:
 1. Checkout
-2. Setup Node 20, npm ci
-3. TypeScript check (`tsc -b --noEmit`)
-4. Canonical validation (`npm run validate:canon`) — dev warnings allowed, errors fail
-5. Tests (`npm run test` if present)
-6. Vite build (`npm run build`)
-7. Cap sync android
-8. Setup Java 21, Gradle
-9. Validate Android config (package ID `com.abyssals.game`, SDK versions, permissions)
-10. Gradle `assembleDebug`
-11. Upload artifact `abyssals-debug-apk` (path `android/app/build/outputs/apk/debug/app-debug.apk`, retention 30 days)
+2. Setup Node 22 (Capacitor 8 requires >=22), verify engines requirement
+3. npm ci
+4. TypeScript check (`tsc -b`)
+5. Canonical validation DEVELOPMENT BUILD (`npm run validate:dev`) — allows incomplete datasets, fails for fabricated, PROV, test fixture imports
+6. Tests (`npm test`) — blocking, 31 tests, failures fail CI (no `|| echo`)
+7. Vite build (`npm run build`)
+8. Verify production bundle contains no test fixtures (no battleFixtures, TEST_SPECIES, TEST_MOVE, no battleFixtures chunk)
+9. Cap sync android (Node 22)
+10. Setup Java 21, Gradle
+11. Validate Android config (package ID `com.abyssals.game` debug acceptable, must be locked before Play Store release, SDK versions, permissions)
+12. Gradle `assembleDebug`
+13. Verify production validation correctly fails for missing canonical data (expected until 187 species etc imported)
+14. Upload artifact `abyssals-debug-apk` (path `android/app/build/outputs/apk/debug/app-debug.apk`, retention 30 days)
 
 Artifact name: **abyssals-debug-apk**
 
 Download from Actions tab → workflow run → Artifacts.
+
+This workflow is DEVELOPMENT BUILD — uses validate:dev. Future release workflow must use validate:production.
 
 ## Signing Placeholder (Release)
 
@@ -246,6 +251,34 @@ After correction, verify shell still supports:
 11. Save/reload (Ironman, no rollback)
 
 Where canonical creature data not yet supplied, starter/battle step marked development-blocked rather than using invented creatures — engine testable via dev fixtures under `src/test/fixtures/` with TEST_SPECIES_A etc., clearly excluded from production, validator fails if leaks.
+
+## Package ID — Final Locking Requirement
+
+- Current debug ID: `com.abyssals.game` — acceptable for internal/debug testing for now per task §5
+- **Final Android package/application ID must be deliberately locked before any Play Store/public release because changing application identity later is disruptive**
+- Changing applicationId after release breaks updates, Play Store listing, deep links, save data migration, and requires new app listing
+- Document final ID decision in `capacitor.config.ts`, `android/app/build.gradle`, and Play Console before public release
+- Do not change during this infrastructure fix task
+
+## Security / Dependency Audit (2026-09-16)
+
+Initial `npm install` reported 7 vulnerabilities (5 moderate, 1 high, 1 critical):
+
+- **esbuild <=0.24.2** moderate — dev server request forgery, via vite <=6.4.2 → vite-node → vitest. Runtime: dev dependency only (vite dev server), not in production bundle. Fixed by upgrading vite 5.4.21 → 6.4.3 (major, but compatible, requires Node >=18, we use Node 22)
+- **vite <=6.4.2** high — path traversal in optimized deps `.map` handling, launch-editor NTLMv2 hash disclosure, server.fs.deny bypass. Runtime: dev dependency, not production bundle. Fixed by vite 6.4.3
+- **vitest <=3.2.5** critical — arbitrary file read/exec when UI server listening, via vite-node. Runtime: dev dependency (test runner), not production bundle. Fixed by vitest 1.6.1 → 5.0.1 (major, Node >=20 required, we use Node 22)
+- **@vitest/mocker 2.1.0-4.1.10** moderate — path traversal via redirect mock. Runtime: dev. Fixed by vitest 5.0.1
+- **uuid <11.1.1** moderate — buffer bounds check, via xcode → @capacitor/cli 8.5.2. Runtime: @capacitor/cli is dependency (CLI tool, not app runtime bundle, used for sync/open), but still in node_modules. Fixed by overrides uuid ^11.1.1 in package.json
+- **@capacitor/cli 8.5.0-8.5.3** moderate — via xcode → uuid. Runtime: CLI tool, not app bundle. Fixed via uuid override, no need to downgrade to 8.4.3 (audit suggested breaking downgrade, we used override instead)
+
+After safe upgrades:
+- vite 5.4.21 → 6.4.3
+- vitest 1.6.1 → 5.0.1
+- overrides: uuid ^11.1.1
+
+Result: `npm audit` → **0 vulnerabilities**
+
+Remaining risk: none known. All fixed without destabilising Capacitor 8.5.2 (still compatible with Node 22). Production bundle (dist) contains only app code, no vite/vitest/uuid runtime.
 
 ## Version Control
 
