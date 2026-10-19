@@ -1,0 +1,41 @@
+name: Build and verify Marasen update
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/marasen-update.yml'
+      - 'release/v0.89.2/signature.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test layout and source
+        run: |
+          node tests/marasen-navigation.test.mjs
+          for file in dist/*.js; do node --check "$file"; done
+      - name: Recover compatible native wrapper
+        run: python3 scripts/reconstruct-base.py
+      - name: Rebuild update from current game source
+        run: python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk
+      - name: Attach approved public signature to exact payload
+        run: python3 scripts/attach-release-signature.py
+      - name: Verify Android signing and alignment
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y apksigner zipalign
+          apksigner verify --verbose --print-certs build/Abyssals-v0.89.2-Marasen-Navigation.apk | tee build/signature-verification-0.89.2.txt
+          grep -F '6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac' build/signature-verification-0.89.2.txt
+          zipalign -c 4 build/Abyssals-v0.89.2-Marasen-Navigation.apk
+      - name: Publish update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view v0.89.2 >/dev/null 2>&1 || gh release create v0.89.2 --target "$GITHUB_SHA" --title 'Abyssals v0.89.2 — Marasen navigation rebuild' --notes 'Rebuilt Marasen districts and six shop floors with shared collision geometry, clear entrances and visible bridges. Removed obstructive reservoir scenery. Update-compatible package uk.co.abyssals.game, versionCode 101. GitHub rebuilds the offline game payload and verifies the existing release certificate. Native wrapper remains unchanged; no phone installation test is claimed.'
+          gh release upload v0.89.2 build/Abyssals-v0.89.2-Marasen-Navigation.apk build/Abyssals-v0.89.2-Marasen-Navigation.apk.sha256 build/signature-verification-0.89.2.txt --clobber

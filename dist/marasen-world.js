@@ -1,4 +1,4 @@
-import {installAquaticMarasen} from './marasen-aquatic.js?v=0.89.1';
+import {installAquaticMarasen} from './marasen-aquatic.js?v=0.89.2';
 import {VERDANT_ROAD,MARASEN_BRANCHES} from './marasen-data.js?v=0.87.0';
 import {registerBiome} from './biome-world.js?v=0.87.0';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});

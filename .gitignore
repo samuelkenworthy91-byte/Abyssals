@@ -1,0 +1,7 @@
+build/
+__pycache__/
+*.idsig
+*.p12
+*.jks
+*.keystore
+signing.env
