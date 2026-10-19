@@ -1,0 +1,21 @@
+/* Carriena's painted souls: shared atlas with six distinct silhouettes. */
+.wailing-spirit,.spectral-remnant{background:url('assets/spectral/souls.webp') var(--ghost-x,0%) var(--ghost-y,0%)/300% 200% no-repeat;border-radius:0}
+.wailing-spirit{width:120px;height:160px;margin:-88px 0 0 -60px;filter:drop-shadow(0 0 7px #bc8fff66);transform-origin:50% 72%}
+.wailing-spirit:before,.wailing-spirit:after,.wailing-spirit i{display:none}
+.ghost-bursting .wailing-spirit,.ghost-washing .wailing-spirit{animation:paintedSoulFlight 2.05s cubic-bezier(.18,.52,.3,1) both;animation-delay:var(--delay)}
+.ghost-bursting .spirit-swarm,.ghost-washing .spirit-swarm{opacity:1}
+.ghost-bursting .ghost-screen-wash{background:radial-gradient(ellipse at 29% 70%,#945ccdcc,#42185be6 35%,#110e23 80%);animation:paintedSoulFlood 2s ease-out both}
+.ghost-washing .ghost-screen-wash,.title-from-ghost:not(.opening) .ghost-screen-wash{background:radial-gradient(ellipse at 45% 44%,#402253,#191126 60%,#0c101c);opacity:1;transform:scale(1);animation:none}
+.spectral-fog{position:absolute;inset:0;opacity:0;pointer-events:none;background:radial-gradient(ellipse at 20% 60%,#bc8de62b,transparent 48%),radial-gradient(ellipse at 80% 75%,#a87cd333,transparent 46%)}
+.ghost-washing .spectral-fog,.title-from-ghost .spectral-fog{opacity:1;animation:spectralMist 9s ease-in-out infinite alternate}
+.spectral-remnant{position:absolute;width:min(48vw,440px);aspect-ratio:3/4;opacity:0;pointer-events:none;filter:none}
+.remnant-0{left:-8%;top:14%;rotate:-18deg}.remnant-1{left:27%;top:35%;rotate:8deg}.remnant-2{right:-6%;top:7%;rotate:16deg}
+.ghost-washing .spectral-remnant,.title-from-ghost .spectral-remnant{opacity:.15;transition:opacity .7s ease-out}
+.title-from-ghost .spirit-swarm{opacity:0;transition:opacity .35s}
+.title-from-ghost .abyssals-logo{position:relative;filter:drop-shadow(0 3px 8px #0b071b)}
+.pwa-status{max-width:320px;margin:10px auto 0;font:11px/1.5 var(--sans);color:#d2bddd;letter-spacing:.2px}
+@keyframes paintedSoulFlight{0%{opacity:0;transform:translate(0,0) rotate(-10deg) scale(.16)}12%{opacity:.95}48%{opacity:1;transform:translate(calc(var(--sx)*.44),calc(var(--sy)*.52 - 8vh)) rotate(var(--tilt)) scale(1.75)}82%{opacity:.95}100%{opacity:0;transform:translate(var(--sx),var(--sy)) rotate(calc(var(--tilt)*1.3)) scale(4.8)}}
+@keyframes paintedSoulFlood{0%,35%{opacity:0;transform:scale(.04);border-radius:50%}75%{opacity:.68}100%{opacity:1;transform:scale(1.3);border-radius:0}}
+@keyframes spectralMist{to{transform:translate(2%,-2%);opacity:.65}}
+@media(max-width:600px){.wailing-spirit{left:24%;top:72%;width:96px;height:128px;margin:-70px 0 0 -48px}.spectral-remnant{width:70vw}.remnant-0{left:-28%;top:18%}.remnant-1{left:4%;top:44%}.remnant-2{right:-30%;top:2%}.pwa-status{font-size:10px}}
+:root[data-motion="reduced"] .spectral-fog,:root[data-motion="reduced"] .wailing-spirit,:root[data-motion="reduced"] .ghost-bursting .ghost-screen-wash{animation:none}:root[data-motion="reduced"] .spirit-swarm{display:none}:root[data-motion="reduced"] .spectral-remnant{transition:none}

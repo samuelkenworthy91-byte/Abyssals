@@ -1,0 +1,8 @@
+export const ESCORT_STEPS=200;
+export const PRIEST_RETURNS={marasen:{room:"marasen",x:22,y:20,facing:"up",name:"Walter · Marasen"},cossenne:{room:'cossenne',x:22,y:20,facing:'up',name:'Walter · Cossenne'},cybressa:{room:'cybressa',x:22,y:21,facing:'up',name:'Walter · Cybressa'},town:{room:'town',x:28,y:14,facing:'up',name:'Walter · Civeton'},dorelem:{room:'dorelem',x:28,y:21,facing:'up',name:'Walter · Dorelem'},philomere:{room:'philomere',x:22,y:21,facing:'up',name:'Walter · Philomere'}};
+export function rememberPriestRest(state,room){const point=PRIEST_RETURNS[room];if(!point)return false;state.lastPriestRest={...point};return true;}
+export function evacDestination(state){return {...(PRIEST_RETURNS[state.lastPriestRest?.room]||PRIEST_RETURNS.town)};}
+export function activateEscort(state){if(!(state.armedEscorts>0)||state.escortSteps>0)return false;state.armedEscorts--;state.escortSteps=ESCORT_STEPS;return true;}
+// The last covered tile stays protected even though its counter reaches zero.
+export function advanceEscortStep(state){if(!(state.escortSteps>0))return false;state.escortSteps=Math.max(0,Math.floor(state.escortSteps)-1);return true;}
+export function consumeEvac(state){if(!(state.emergencyEvacs>0))return false;state.emergencyEvacs--;return true;}

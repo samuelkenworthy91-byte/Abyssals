@@ -1,0 +1,39 @@
+{
+  "canonical_source_commit": "c33326e1c3f08d4f1c9c74c606683a492784bd28",
+  "presentation_only": true,
+  "assets": [
+    {
+      "name": "keep",
+      "file": "assets/pixel/tile-keep-v13.webp",
+      "mode": "imagegen new image; transparent background",
+      "normalization": "Alpha bounding-box crop; nearest-neighbour scaling; lossless WebP",
+      "size": [
+        240,
+        112
+      ],
+      "prompt": "Create ONE standalone pixel-art building sprite for the dark monster-taming RPG Abyssals. Dorelem is a medieval besieged road keep, not a modern castle. Broad frontal top-down RPG orthographic view, consistent with 16-bit Game Boy Advance overworld buildings: roof visible from above, front wall visible, no isometric sideways angle. Weathered grey stone, two stout crenellated side towers, readable arched central portcullis entrance at bottom centre, small violet/plum and brass Dawn Bloom banners. Rich meticulous crisp pixel texture, limited palette. Entire building isolated, transparent background. Sprite silhouette roughly twice as wide as tall. No people, no monsters, no ground, no backdrop, no text, no frame, no labels. A finished usable game sprite, not concept art."
+    },
+    {
+      "name": "hospice",
+      "file": "assets/pixel/tile-hospice-v13.webp",
+      "mode": "imagegen new image; transparent background",
+      "normalization": "Alpha bounding-box crop; nearest-neighbour scaling; lossless WebP",
+      "size": [
+        240,
+        112
+      ],
+      "prompt": "Create ONE standalone pixel-art building sprite for the dark monster-taming RPG Abyssals. Philomere hospice is a compassionate medieval Dawn Bloom medical complex beside a river, practical ivory/sand masonry, violet/plum tiled roofs, modest brass ornament, covered treatment verandas and an accessible entrance roughly one third of the way from the left edge along the lower facade. Broad frontal top-down RPG orthographic view, consistent with 16-bit Game Boy Advance overworld buildings: roof visible from above, front wall visible, no isometric sideways angle. Rich meticulous crisp pixel texture, limited palette, matching classic monster RPG town sprites. Entire building isolated, genuinely transparent background. Silhouette roughly twice as wide as tall. No people, no creatures, no ground or scenery, no text, no labels, no frame. A finished usable game sprite, not concept art."
+    },
+    {
+      "name": "ridge",
+      "file": "assets/pixel/tile-ridge-v13.webp",
+      "mode": "imagegen new image; transparent background",
+      "normalization": "Bounding-box crop at alpha >=32 to exclude near-transparent padding; nearest-neighbour scaling; lossless WebP",
+      "size": [
+        32,
+        48
+      ],
+      "prompt": "Create ONE standalone compact pixel-art environmental sprite for the dark monster-taming RPG Abyssals: a low craggy limestone ridge outcrop, tan grey rough rock with mossy green patches and a little scrub brush. Top-down orthographic 16-bit Game Boy Advance RPG view, with upper rock surface and south-facing cliff visible. Irregular compact silhouette, crisp pixel texture, limited palette, no smooth painted brush effects. It will be drawn repeatedly as 32 by 48 game-pixel rocks beside winding paths. Entire rocky outcrop isolated on a genuinely transparent background. No people, no buildings, no scenery, no text, no frame."
+    }
+  ]
+}

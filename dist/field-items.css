@@ -1,0 +1,2 @@
+.escort-counter{position:absolute;left:8px;bottom:8px;z-index:2;pointer-events:none;max-width:calc(100% - 16px);padding:5px 8px;border:1px solid #bba578;background:#132833e8;color:#eee0be;border-radius:3px;font:11px/1.3 var(--sans)}
+.battling .escort-counter{display:none}.field-supply+.field-supply{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}.field-supply p{font-size:12px}.field-supply .bag-item-heading h3{font-size:21px}.field-supply button{font-size:12px}

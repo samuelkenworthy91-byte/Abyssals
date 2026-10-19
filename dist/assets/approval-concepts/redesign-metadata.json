@@ -1,0 +1,67 @@
+{
+  "status": "Approval only, no runtime roster additions",
+  "concepts": [
+    {
+      "key": "goblin-shark",
+      "base": "Snubling",
+      "final": "Cragjaw",
+      "typing": "Water/Rock",
+      "ability": "Ugly Rebuke"
+    },
+    {
+      "key": "narwhal",
+      "base": "Narlit",
+      "middle": "Auracorn",
+      "final": "Oraclespear",
+      "typing": "Water/Psychic",
+      "ability": "Sage Mind"
+    },
+    {
+      "key": "sunfish",
+      "base": "Solmola",
+      "final": "Solmola",
+      "typing": "Water/Fire",
+      "ability": "Sun God's Wrath"
+    },
+    {
+      "key": "manta",
+      "base": "Finlet",
+      "middle": "Reeftalon",
+      "final": "Tideryu",
+      "typing": "Water/Fighting",
+      "ability": "Slipstream Discipline"
+    },
+    {
+      "key": "mantis",
+      "base": "Rivet",
+      "middle": "Carapex",
+      "final": "Elytrarch",
+      "typing": "Bug/Steel",
+      "item": "Chitin Core",
+      "palette": "emerald green, pearl white, silver, magenta luminous accents; starter unchanged bronze/charcoal/gold"
+    }
+  ],
+  "prompts": [
+    {
+      "key": "goblin-shark",
+      "prompt": "Create one approval concept artwork sheet for the ORIGINAL Abyssals monster RPG, high-end detailed dark fantasy creature illustration on warm parchment. Original WATER / ROCK goblin-shark evolutionary line, TWO DISTINCT STAGES side-by-side. Left labelled SNUBLING: cute ugly goblin shark pup, squat baby shark body, enormous lovable blue eyes, silly elongated flat goblin-shark snout, stubby fins, tiny crooked teeth, some pebble armour nubs. Right labelled CRAGJAW: imposing monstrous adult goblin shark, elongated real shark anatomy, dramatically protruding tooth-filled goblin shark jaws, powerful visible eyes, jagged weathered granite-and-coral stone armour plating over its back and dorsal fins, broad dark blue pectoral fins, rough chipped rock tail and snout crest, threatening powerful aquatic silhouette. Evolution markedly different and cooler, predatory jaw mechanism dramatic, mouth scary not gore. Must be recognisable goblin shark, NO humanoid anatomy, no legs, no hands, no armour knight. Beneath simple precise text 'WATER / ROCK' and 'UGLY REBUKE — CONTACT RETALIATION'. Polished painted anatomy, marine bioluminescent hints in rock cracks, face readable. Show full bodies, uncropped, no UI/stats, no franchise references."
+    },
+    {
+      "key": "narwhal",
+      "prompt": "Create one approval concept artwork sheet for ORIGINAL Abyssals monster RPG, premium polished detailed dark fantasy creature illustration on warm parchment. ORIGINAL WATER / PSYCHIC narwhal evolutionary line with THREE VERY DISTINCT STAGES across landscape. Left labelled NARLIT: cute compact blue-white baby narwhal, round seal-like body, big expressive eyes and tiny spiralling ivory tusk, little fins. Middle labelled AURACORN: elegant adolescent narwhal, sleeker long body, medium crystal-inlaid spiral tusk, lilac spectral sea-silk fins, visibly more mature eyes and mystical water-ring floating around neck, new moonlike crest. Right labelled ORACLESPEAR: majestic elder sage narwhal, colossal regal whale anatomy, graceful huge fins and sweeping tail, dramatically long luminous spiral spear tusk with runic crystal facets, flowing waterlike spectral beard filaments, forehead crown formed from translucent psychic fin rays, magnificent cosmic turquoise/lavender skin patterns, calm powerful eyes. Final looks distinctly transformed and far more awe-inspiring than middle, mature ancient sage of ocean. All have real narwhal whale anatomy: no humanoid bodies, legs, hands or armour knight. Original creature designs, polished expressive faces, full bodies shown without clipping. Restrained typography 'WATER / PSYCHIC', 'SAGE MIND' and 'DOUBLE SPECIAL POWER • SECONDARY EFFECTS REMOVED'. No game UI or unrelated details."
+    },
+    {
+      "key": "sunfish",
+      "prompt": "Create one approval concept artwork sheet for ORIGINAL Abyssals monster RPG, premium polished detailed dark fantasy creature illustration on warm parchment. ORIGINAL WATER / FIRE OCEAN SUNFISH named SOLMOLA, NO EVOLUTIONS. Show TWO FORMS of the SAME recognisable individual side by side. Left labelled SOLMOLA — NORMAL FORM: adorably odd ocean sunfish, huge broad flattened circular body with tiny tail clavus, round friendly gold eyes, small cute mouth, tall dorsal and anal fins shaped like golden sunrays, soft peach ivory and pale blue scales with solar freckles. Real mola anatomy, no long shark tail. Right labelled SOLMOLA — SUN GOD'S WRATH: dramatic transformed battle form at BELOW HALF HEALTH, same broad flattened mola body shape and exact facial identity now powerful and determined, huge radiant solar-corona ring around body, dorsal/anal fins unfurl into breathtaking molten-orange gold translucent sunray fans, white-hot golden eyes, surface shines with volcanic-glass orange/gold solar markings, swirling superheated water and steam flares around fins. Vastly more imposing transformed form yet obviously same sunfish individual; not an evolution, not a new species. Both full body uncropped and facing similar direction. No legs, hands, humanoid torso, no ordinary whale or shark body. Text exactly 'WATER / FIRE', 'ONE ABYSSAL — TWO FORMS', 'TRANSFORMS BELOW HALF HEALTH'. No stats, no franchise copies, polished readable monster faces."
+    },
+    {
+      "key": "manta",
+      "prompt": "Create one approval concept artwork sheet for ORIGINAL Abyssals monster RPG, premium polished highly detailed dark fantasy creature illustration on warm parchment. ORIGINAL WATER / FIGHTING MANTA RAY evolutionary line THREE DISTINCT STAGES across wide landscape. Left labelled FINLET: cute baby manta, round compact diamond body, stubby broad wingfins, tiny curled cephalic horns, adorable obvious eyes and mouth, sea-green/navy colouring. Middle labelled REEFTALON: athletic adolescent manta with much longer swept-back triangular wings, toned aerodynamic ray anatomy, blade-like bright cyan fin leading edges, strong focused eyes, new red coral streak markings and ribbon tail. Right labelled TIDERYU: enormous imposing martial manta ray, magnificent broad delta wings in a powerful diving posture, long serpentine whip tail, face with fierce readable luminous teal eyes and folded cephalic fins like discipline warrior brow, navy charcoal scale pattern with white/teal swept markings and crimson coral highlights, dramatic glowing WATER ENERGY BLADES extend along huge wing-fin leading edges; forceful twisting ocean currents trace a martial circular strike around body. Nonhumanoid powerful sea creature, no bipedal torso, arms, hands, legs, sword held in hand or knight armour. Every evolutionary silhouette differs greatly, final visually majestic far cooler than middle. Both fin blades are continuous wing edges. Full creatures uncropped, restrained text 'WATER / FIGHTING', 'RESISTED HIT: +2 SPEED'. No UI/stats, no franchise reference."
+    },
+    {
+      "key": "mantis",
+      "prompt": "Create an approval-only concept sheet for ORIGINAL Abyssals RPG. Images1=approved Rivet STARTER identity, keep unchanged EXACT round bronze charcoal helmet face, golden eyes and oversized gauntlet. Images2-4=STYLE/BRANCH DIVERSITY REFERENCES ONLY, do not copy their creatures. NEW BUG / STEEL praying-mantis branch with Rivet left, CARAPEX middle, ELYTRARCH right and CHITIN CORE item beneath, warm parchment artbook. REPLACE beetle identity entirely with sleek threatening PRAYING MANTIS design. CARAPEX a medium mantis squire, recognisably triangular insect head with two luminous pink compound eyes, antennae, long segmented narrow waist, armoured emerald-green and pearl-white steel plates, two folded raptorial forearms with jagged grasping blade teeth, slim agile bipedal mech stance, folded insect wing cases. ELYTRARCH final dramatically lean powerful regal mantis knight, towering elegant sharp angular silhouette, enormous pair of PRAYING MANTIS scythe forearms each has jointed grasping blade and toothed edge, triangular insect face with eyes set on wide corners, no human helmet head, four articulated mantis legs supporting lithe torso plus two raptorial forearms (SIX limbs total), translucent magenta-lilac wings fanning from unfolded emerald elytra, white-silver mirrorsteel scythes with pink energy edges, emerald forest-green pearl-white silver armour and magenta accent light; striking clean distinctive palette unrelated to bronze starter, ghost turquoise, fire orange, electricblue or darkcrimson. Far more impressive final than middle; real mantis morphological cues with high-end relic mech detail. No stag beetle antlers, round beetle shell, bulky gorilla, bronze-gold dominant evolved armour, sword held in hands, or Pokémon imitation. Starter must remain exactly reference design and palette; do not recolour it. Each full body shown uncropped. Small CHITIN CORE item separately beneath: iridescent emerald mantis egg-heart encased in pale segmented metal claws. Text exactly 'BUG / STEEL', 'RIVET', 'CARAPEX', 'ELYTRARCH', 'CHITIN CORE'. Premium highly detailed polished illustration matching branch art quality, all readable eyes/faces."
+    }
+  ],
+  "sunfishNote": "Solmola is a single species with normal and Sun God's Wrath forms, not an evolution."
+}

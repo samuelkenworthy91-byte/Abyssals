@@ -1,0 +1,236 @@
+{
+  "status": "AWAITING APPROVAL \u2014 artwork and new creature mechanics only; not in runtime roster",
+  "growth_stat_order": [
+    "HP",
+    "Attack",
+    "Defence",
+    "Special Attack",
+    "Special Defence",
+    "Speed"
+  ],
+  "concepts": [
+    {
+      "key": "goblin-shark",
+      "names": [
+        "Snubling",
+        "Cragjaw"
+      ],
+      "typing": "Water / Rock",
+      "role": "Armoured special counterattacker",
+      "evolution": "Snubling evolves at Lv. 32. Two stages.",
+      "ability": "Ugly Rebuke \u2014 contact moves damage the attacker. Proposed retaliation: 1/8 of the attacker\u2019s maximum HP per successful contact hit.",
+      "growth": [
+        [
+          40,
+          10,
+          45,
+          60,
+          30,
+          15
+        ],
+        [
+          65,
+          10,
+          70,
+          90,
+          50,
+          15
+        ]
+      ],
+      "moves": [
+        "1 \u00b7 Foam Lance",
+        "1 \u00b7 Stone Burst",
+        "8 \u00b7 Crag Guard",
+        "14 \u00b7 Undertow Pulse",
+        "20 \u00b7 Shard Screen",
+        "26 \u00b7 Tide Pulse",
+        "32 \u00b7 Gravel Gape (proposed Rock special signature, 90 power)",
+        "40 \u00b7 Crag Spire",
+        "48 \u00b7 Calm Current"
+      ],
+      "description": "A cute, decidedly ugly goblin-shark pup becomes a long-snouted predator with a projecting jaw and jagged stone armour. Both remain sharks, with strong readable eyes."
+    },
+    {
+      "key": "narwhal",
+      "names": [
+        "Narlit",
+        "Auracorn",
+        "Oraclespear"
+      ],
+      "typing": "Water / Psychic",
+      "role": "Sage special wallbreaker",
+      "evolution": "Narlit \u2192 Auracorn at Lv. 22; Auracorn \u2192 Oraclespear at Lv. 40. Three stages.",
+      "ability": "Sage Mind \u2014 damaging special attacks have double power and lose secondary effects. Status, flinch and stat-change side effects attached to those attacks are removed; standalone status moves remain available.",
+      "growth": [
+        [
+          45,
+          10,
+          30,
+          50,
+          45,
+          20
+        ],
+        [
+          55,
+          10,
+          40,
+          60,
+          60,
+          25
+        ],
+        [
+          65,
+          10,
+          45,
+          70,
+          75,
+          35
+        ]
+      ],
+      "moves": [
+        "1 \u00b7 Foam Lance",
+        "1 \u00b7 Thought Spark",
+        "8 \u00b7 Mind Screen",
+        "14 \u00b7 Aura Arc",
+        "22 \u00b7 Calm Thought",
+        "28 \u00b7 Tide Lance",
+        "34 \u00b7 Mind Pulse",
+        "40 \u00b7 Oracle Ray (proposed Psychic special signature, 90 power)",
+        "48 \u00b7 Tide Spiral"
+      ],
+      "description": "A round narwhal calf develops flowing psychic fins, then becomes an imposing elder with a crystal spear-tusk, spectral beard and psychic crown."
+    },
+    {
+      "key": "sunfish",
+      "names": [
+        "Solmola"
+      ],
+      "typing": "Water / Fire",
+      "role": "Transforming special bruiser",
+      "evolution": "No evolution. Normal form and Sun God\u2019s Wrath form are the same Abyssal.",
+      "ability": "Sun God's Wrath \u2014 transforms when HP falls below half, with separate artwork and boosts to all stats. Proposed tuning: all six stats \u00d71.25, including maximum HP while preserving the current HP fraction; one transformation per battle, lasting until that battle ends. Permanent growth is unchanged.",
+      "growth": [
+        [
+          80,
+          10,
+          65,
+          90,
+          45,
+          10
+        ]
+      ],
+      "moves": [
+        "1 \u00b7 Foam Lance",
+        "1 \u00b7 Ember Snap",
+        "8 \u00b7 Deep Breath",
+        "16 \u00b7 Ash Brand",
+        "24 \u00b7 Heat Haze",
+        "32 \u00b7 Tide Pulse",
+        "40 \u00b7 Solar Flare (proposed Fire special signature, 95 power)",
+        "48 \u00b7 Ashen Focus",
+        "56 \u00b7 Tide Spiral"
+      ],
+      "description": "A broad, flattened ocean sunfish with pale gold fins erupts into a molten solar form. The same face and silhouette remain recognisable beneath its fiery corona."
+    },
+    {
+      "key": "manta",
+      "names": [
+        "Finlet",
+        "Reeftalon",
+        "Tideryu"
+      ],
+      "typing": "Water / Fighting",
+      "role": "Resist-and-accelerate special sweeper",
+      "evolution": "Finlet \u2192 Reeftalon at Lv. 18; Reeftalon \u2192 Tideryu at Lv. 36. Three stages.",
+      "ability": "Slipstream Discipline \u2014 every successful resisted damaging hit raises Speed by two stages, subject to the normal +6 cap. Neutral, super-effective and immune hits do not trigger it.",
+      "growth": [
+        [
+          40,
+          10,
+          35,
+          55,
+          30,
+          30
+        ],
+        [
+          50,
+          10,
+          45,
+          70,
+          35,
+          40
+        ],
+        [
+          60,
+          10,
+          50,
+          85,
+          45,
+          50
+        ]
+      ],
+      "moves": [
+        "1 \u00b7 Foam Lance",
+        "1 \u00b7 Wake Palm",
+        "8 \u00b7 Guarded Breath",
+        "14 \u00b7 Undertow Pulse",
+        "18 \u00b7 Mist Screen",
+        "24 \u00b7 Sapping Spiral",
+        "30 \u00b7 Tide Lance",
+        "36 \u00b7 Breaker Aura",
+        "42 \u00b7 Focus Lance",
+        "50 \u00b7 Raincall"
+      ],
+      "description": "A friendly little ray becomes an athletic martial manta, then a sweeping ocean warrior with luminous wing-edge blades. Its body remains aquatic rather than humanoid."
+    },
+    {
+      "key": "mantis",
+      "names": [
+        "Rivet",
+        "Carapex",
+        "Elytrarch"
+      ],
+      "typing": "Bug / Steel",
+      "role": "Fast mantis armour striker",
+      "evolution": "Chitin Core on Rivet at Lv. 12+ \u2192 Carapex; Carapex \u2192 Elytrarch at Lv. 36.",
+      "ability": "Warbond \u2014 retains the shared Rivet ability: double EXP for all participants, including binocular participants.",
+      "growth": [
+        [
+          40,
+          40,
+          40,
+          20,
+          40,
+          30
+        ],
+        [
+          45,
+          80,
+          35,
+          10,
+          30,
+          65
+        ],
+        [
+          50,
+          110,
+          40,
+          10,
+          30,
+          90
+        ]
+      ],
+      "moves": [
+        "Carapex \u00b7 1 Chitin Cut",
+        "12 \u00b7 Silk Guard",
+        "18 \u00b7 Iron Cut",
+        "24 \u00b7 Chitin Needle",
+        "30 \u00b7 Forge Focus",
+        "36 \u00b7 Prayer Reap (proposed Bug physical signature, 85 power)",
+        "42 \u00b7 Shed Shell",
+        "48 \u00b7 Iron Spire"
+      ],
+      "description": "The approved bronze Rivet starter stays unchanged. The new armour becomes lean praying-mantis machinery in emerald, pearl white, silver and magenta, with triangular insect faces and jointed grasping scythes. The Chitin Core is an emerald mantis egg-heart held in pale metal claws."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "source_commit": "c33326e1c3f08d4f1c9c74c606683a492784bd28",
+  "references": {
+    "029": "assets/abyssals/runtime/abyssal_029_carriena.png",
+    "122": "assets/abyssals/runtime/abyssal_122_pactolin.png"
+  },
+  "pose_atlases": "Newly generated presentation-only frames based on canonical references. They add no gameplay moves or species data.",
+  "normalization": {
+    "duel-poses": [
+      "carriena_pactolin_combat_atlas.png",
+      [
+        [
+          [
+            10,
+            30,
+            431,
+            491
+          ],
+          [
+            434,
+            30,
+            872,
+            491
+          ],
+          [
+            872,
+            40,
+            1403,
+            491
+          ],
+          [
+            1405,
+            50,
+            1774,
+            491
+          ]
+        ],
+        [
+          [
+            8,
+            517,
+            423,
+            865
+          ],
+          [
+            424,
+            517,
+            838,
+            865
+          ],
+          [
+            839,
+            517,
+            1376,
+            865
+          ],
+          [
+            1378,
+            550,
+            1774,
+            865
+          ]
+        ]
+      ]
+    ],
+    "soldier-duel": [
+      "true_light_dawn_bloom_held_slash_atlas.png",
+      [
+        [
+          [
+            25,
+            30,
+            365,
+            445
+          ],
+          [
+            421,
+            2,
+            815,
+            445
+          ],
+          [
+            885,
+            50,
+            1477,
+            445
+          ],
+          [
+            1404,
+            8,
+            1774,
+            445
+          ]
+        ],
+        [
+          [
+            10,
+            453,
+            446,
+            854
+          ],
+          [
+            476,
+            443,
+            867,
+            854
+          ],
+          [
+            839,
+            469,
+            1400,
+            854
+          ],
+          [
+            1400,
+            447,
+            1774,
+            854
+          ]
+        ]
+      ]
+    ]
+  },
+  "faction_direction": "docs/canon/CHARACTERS_FACTIONS.md: True Light blue/ivory/silver crusaders; Dawn Bloom plum/sand/brass, restrained teal, West Asian fantasy dress."
+}

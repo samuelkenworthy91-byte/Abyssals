@@ -1,0 +1,192 @@
+/* Signature scenes use their own casts, paths and impacts; no generic burst recipe. */
+.signature-fx{position:absolute;left:0;top:0;width:0;height:0;color:var(--fx-color);pointer-events:none;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--fx-color) 70%,transparent))}.sig-layer,.signature-fx>i{position:absolute;left:0;top:0;animation-duration:var(--fx-duration);animation-fill-mode:both;animation-timing-function:linear}.sig-art{display:block;position:absolute;width:210px;height:210px;left:-105px;top:-105px;background-image:var(--atlas-url);background-size:300% 400%;background-position:var(--atlas-x) var(--atlas-y);background-repeat:no-repeat}.sig-ring{display:block;position:absolute;left:-65px;top:-65px;width:130px;height:130px;border:2px solid currentColor;border-radius:50%;box-shadow:0 0 9px currentColor}.sig-ray{position:absolute;left:0;top:-2px;width:100px;height:4px;border-radius:50%;transform-origin:0 50%;background:linear-gradient(90deg,#fff,var(--sig-accent),transparent);animation-duration:var(--fx-duration);animation-fill-mode:both}.left-half{clip-path:inset(0 50% 0 0)}.right-half{clip-path:inset(0 0 0 50%)}.sig-echo-body{position:absolute;left:-90px;top:-110px;width:180px;height:220px;object-fit:contain;filter:brightness(.4) sepia(1) saturate(4) hue-rotate(230deg);opacity:.7}.sig-critical{filter:drop-shadow(0 0 14px var(--sig-accent))}.sig-circuit,.sig-triangle{position:absolute;left:-130px;top:-110px;width:260px;height:220px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round}.sig-triangle{left:-120px;top:-120px;width:240px;height:240px}
+.drowning-ember{animation-name:emberFall}.spectral-water{animation-name:smotherWater}.spectral-water .sig-ring{border-color:#647ce5;transform:scale(1.15,.4)}.spectral-water .sig-ring:nth-child(2){transform:scale(.8,1.2) rotate(25deg)}.reignition{animation-name:ghostReignite}.ghost-fire{animation-name:ghostFireRay}
+@keyframes emberFall{0%{opacity:0;transform:translate(0,-130px) scale(.15)}15%{opacity:1}36%{transform:translate(0,0) scale(.6);opacity:1}55%,100%{opacity:0;transform:scale(.3)}}
+@keyframes smotherWater{0%,25%{opacity:0;transform:scale(1.8)}40%,55%{opacity:1;transform:scale(1)}68%,100%{opacity:0;transform:scale(.25)}}
+@keyframes ghostReignite{0%,61%{opacity:0;transform:scale(.12) rotate(-15deg)}68%{opacity:1;transform:scale(1.1)}83%{opacity:.8;transform:scale(1.5)}100%{opacity:0;transform:scale(1.7)}}
+@keyframes ghostFireRay{0%,65%{opacity:0;transform:rotate(var(--spin)) scaleX(.1)}72%{opacity:1;transform:rotate(var(--spin)) scaleX(.7)}100%{opacity:0;transform:rotate(var(--spin)) scaleX(1.3)}}
+.prowl-print{animation-name:prowlFootstep;animation-delay:calc(var(--i)*65ms)}.prowl-print .sig-art{clip-path:inset(58% 30% 12% 20%)}.prowl-claw{animation-name:prowlClaw}.claw-sparks{animation-name:clawSpark;rotate:calc(-35deg + var(--i)*20deg)}
+@keyframes prowlFootstep{0%,5%{opacity:0;transform:translate(calc(var(--source-x)*(.9 - var(--i)*.16)),calc(var(--source-y)*(.9 - var(--i)*.16) + 45px)) scale(.45)}15%,31%{opacity:.95}50%,100%{opacity:0;transform:translate(calc(var(--source-x)*(.9 - var(--i)*.16)),calc(var(--source-y)*(.9 - var(--i)*.16) + 45px)) scale(.35)}}
+@keyframes prowlClaw{0%,52%{opacity:0;transform:translate(-65px,45px) scale(.3) rotate(-35deg)}64%{opacity:1;transform:translate(0,0) scale(1.2) rotate(10deg)}90%,100%{opacity:0;transform:translate(20px,-45px) scale(1.6)}}
+@keyframes clawSpark{0%,63%{opacity:0;scale:.1 1}72%{opacity:1;scale:1 1}100%{opacity:0;scale:1.6 .1}}
+.youth-banner{animation-name:youthUnfurl}.banner-sprint{animation-name:youthSprint}.young-speed{animation-name:youngSpeed;top:calc(-25px + var(--i)*14px);width:165px;rotate:var(--travel-angle,0deg)}.young-flare{animation-name:youngFlare}.young-rays{animation-name:youngRays}
+@keyframes youthUnfurl{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.04,.6)}12%,28%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(.8,.65)}42%,100%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.35)}}
+@keyframes youthSprint{0%,28%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.85,.6)}34%{opacity:1}57%{opacity:1;transform:translate(0,0) scale(.6)}66%,100%{opacity:0;transform:scale(.15)}}
+@keyframes youngSpeed{0%,32%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scaleX(.1)}42%{opacity:.8}57%{opacity:1;transform:translate(0,0) scaleX(1)}66%,100%{opacity:0;transform:translate(25px,0) scaleX(.3)}}
+@keyframes youngFlare{0%,54%{opacity:0;transform:scale(.05) rotate(-15deg)}61%{opacity:1;transform:scale(1.6)}80%{opacity:.8;transform:scale(1.95)}100%{opacity:0;transform:scale(2.1)}}
+@keyframes youngRays{0%,56%{opacity:0;transform:rotate(var(--spin)) scaleX(.1)}64%{opacity:1;transform:rotate(var(--spin)) scaleX(.8)}100%{opacity:0;transform:rotate(var(--spin)) scaleX(1.5)}}
+.war-banner{animation-name:warBanner}.war-stream{animation-name:warStream;rotate:var(--travel-angle,0deg);width:300px;top:calc(-25px + var(--i)*10px)}.banner-whip{animation-name:bannerWhip}.war-detonation{animation-name:warDetonate}.war-shock{animation-name:warShock}
+@keyframes warBanner{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.1,1)}16%,36%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(1.55,.85)}58%{opacity:1;transform:translate(calc(var(--source-x)*.2),calc(var(--source-y)*.2)) scale(1.9,.65)}69%,100%{opacity:0;transform:translate(0,0) scale(.6)}}
+@keyframes warStream{0%,25%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scaleX(.1)}44%{opacity:.7}65%{opacity:1;transform:translate(0,0) scaleX(1.3)}75%,100%{opacity:0;transform:translate(60px,0) scaleX(.1)}}
+@keyframes bannerWhip{0%,52%{opacity:0;transform:translate(-90px,20px) scale(1.6,.5) rotate(-30deg)}66%{opacity:1;transform:translate(0,0) scale(1.8,.8) rotate(30deg)}79%,100%{opacity:0;transform:translate(80px,-30px) scale(.5) rotate(75deg)}}
+@keyframes warDetonate{0%,67%{opacity:0;transform:scale(.05)}72%{opacity:1;transform:scale(1.5)}100%{opacity:0;transform:scale(2.1)}}
+@keyframes warShock{0%,68%{opacity:0;scale:.1}75%{opacity:.9;scale:1.3}100%{opacity:0;scale:2.6}}
+.water-sun{animation-name:waterSun}.sun-segments{animation-name:waterSunRing;border-style:dashed;border-width:6px}.crescent-left{animation-name:waterCrescentLeft}.crescent-right{animation-name:waterCrescentRight}.foam-collision{animation-name:foamCollision;border-width:8px}
+@keyframes waterSun{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.3) rotate(-90deg)}28%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(1) rotate(0)}48%{opacity:1;transform:translate(0,0) scale(1.1) rotate(90deg)}57%,100%{opacity:0;transform:scale(.6) rotate(160deg)}}
+@keyframes waterSunRing{0%,10%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.2)}32%{opacity:1;transform:translate(var(--source-x),var(--source-y)) rotate(90deg)}50%{opacity:1;transform:translate(0,0) rotate(160deg)}58%,100%{opacity:0}}
+@keyframes waterCrescentLeft{0%,45%{opacity:0;transform:translate(-100px,0) rotate(-30deg) scale(1.3)}53%{opacity:1}65%{opacity:1;transform:translate(0,0) rotate(20deg)}86%,100%{opacity:0;transform:translate(30px,0) scale(.6)}}
+@keyframes waterCrescentRight{0%,45%{opacity:0;transform:translate(100px,0) rotate(30deg) scale(1.3)}53%{opacity:1}65%{opacity:1;transform:translate(0,0) rotate(-20deg)}86%,100%{opacity:0;transform:translate(-30px,0) scale(.6)}}
+@keyframes foamCollision{0%,63%{opacity:0;scale:.2}71%{opacity:.9;scale:1.1}100%{opacity:0;scale:1.9 .6}}
+.circuit-trace{animation-name:circuitFade}.sig-circuit path{stroke-dasharray:1100;stroke-dashoffset:1100;animation:circuitDraw var(--fx-duration) both}.sig-circuit .circuit-branch{stroke:var(--sig-accent);animation-delay:100ms}.circuit-nodes{animation-name:circuitNode;width:14px;height:14px;border-radius:0;transform-origin:50% 50%;background:var(--sig-accent);left:calc((var(--i) - 2.5)*38px);top:calc((var(--i) / 2 - 1.5)*24px)}.circuit-discharge{animation-name:circuitDischarge}.circuit-flash{animation-name:circuitFlash}.circuit-flash .sig-circuit{stroke:white}
+@keyframes circuitDraw{0%{stroke-dashoffset:1100}40%,72%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes circuitFade{0%{opacity:0;scale:.65}12%,65%{opacity:1;scale:1}90%,100%{opacity:0;scale:1.2}}
+@keyframes circuitNode{0%,32%{opacity:0;scale:.1}44%,62%{opacity:1;scale:.8}70%{opacity:1;scale:1.8}100%{opacity:0;scale:.1}}
+@keyframes circuitDischarge{0%,66%{opacity:0;transform:scale(.1)}72%{opacity:1;transform:scale(1.35)}100%{opacity:0;transform:scale(1.6)}}
+@keyframes circuitFlash{0%,68%{opacity:0}72%,76%{opacity:1}82%,100%{opacity:0}}
+.reckless-zigzag{animation-name:recklessZigzag}.lightning-ricochet{animation-name:lightningRicochet}.youth-thunder{animation-name:youthThunder}.backward-spark{animation-name:backwardSpark}
+@keyframes recklessZigzag{0%,7%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.45)}13%{opacity:1}30%{transform:translate(-40px,-55px) scale(.6)}39%{transform:translate(55px,35px) scale(.8)}44%,100%{opacity:0}}
+@keyframes lightningRicochet{0%,34%{opacity:0;transform:translate(55px,35px) scale(.7)}39%{opacity:1}50%{transform:translate(-70px,15px) scale(.8)}59%{transform:translate(35px,-45px) scale(.9)}68%{opacity:1;transform:translate(0,0) scale(1)}74%,100%{opacity:0}}
+@keyframes youthThunder{0%,65%{opacity:0;scale:.05}72%{opacity:1;scale:1.65}100%{opacity:0;scale:2}}
+@keyframes backwardSpark{0%,70%{opacity:0;transform:scale(.4)}78%{opacity:1;transform:translate(calc(var(--source-x)*.45),calc(var(--source-y)*.45)) scale(.3)}100%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.1)}}
+.kindness-mote{animation-name:kindMote;animation-delay:calc(var(--i)*12ms)}.gathered-kindness{animation-name:kindnessSettle}.warm-settle{animation-name:warmSettle;border-color:var(--sig-accent)}
+@keyframes kindMote{0%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.15)}20%{opacity:1}64%{opacity:1;transform:translate(0,0) scale(.28)}88%,100%{opacity:0;transform:translate(0,-20px) scale(.1)}}
+@keyframes kindnessSettle{0%,37%{opacity:0;scale:.6}64%,80%{opacity:1;scale:1.1}100%{opacity:0;scale:1.25}}
+@keyframes warmSettle{0%,53%{opacity:0;scale:1.7 .7}67%{opacity:.8;scale:1.1 .5}100%{opacity:0;scale:.5 .3}}
+.braided-edge{animation-name:braidedEdge}.disciplined-cut{animation-name:disciplinedCut}.leaf-fragment{animation-name:leafFragments;animation-delay:calc(var(--i)*8ms)}
+@keyframes braidedEdge{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.1) rotate(-45deg)}27%,40%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(.8) rotate(-45deg)}50%,100%{opacity:0}}
+@keyframes disciplinedCut{0%,38%{opacity:0;transform:translate(-95px,75px) scale(.8) rotate(-75deg)}46%{opacity:1}60%{transform:translate(0,0) scale(1.4) rotate(-15deg);opacity:1}75%{transform:translate(60px,-75px) scale(1.15) rotate(20deg);opacity:.8}100%{opacity:0}}
+@keyframes leafFragments{0%,60%{opacity:0;transform:scale(.05)}72%{opacity:1;transform:translate(calc(var(--tx)*.5),calc(var(--ty)*.5)) scale(.2) rotate(var(--spin))}100%{opacity:0;transform:translate(var(--tx),calc(var(--ty) + 40px)) scale(.15) rotate(calc(var(--spin) + 90deg))}}
+.root-anchor{animation-name:rootAnchor}.root-ground{animation-name:rootGround;transform-origin:center; border-width:5px}.proud-crest{animation-name:proudCrest}.rooted-surge{animation-name:rootedSurge}
+@keyframes rootAnchor{0%{opacity:0;transform:translate(var(--source-x),calc(var(--source-y) + 55px)) scale(.7,.05)}20%,47%{opacity:1;transform:translate(var(--source-x),calc(var(--source-y) + 55px)) scale(.85,.4)}66%,100%{opacity:0}}
+@keyframes rootGround{0%{opacity:0;transform:translate(var(--source-x),calc(var(--source-y) + 55px)) scale(.2,.15)}30%,50%{opacity:1;transform:translate(var(--source-x),calc(var(--source-y) + 55px)) scale(1,.3)}80%,100%{opacity:0}}
+@keyframes proudCrest{0%,15%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.3,.05)}30%,46%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(.9,1.1)}59%,100%{opacity:0}}
+@keyframes rootedSurge{0%,43%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.55)}50%{opacity:1}64%{opacity:1;transform:translate(0,0) scale(1.3)}100%{opacity:0;transform:scale(1.6)}}
+.frost-ridge{animation-name:frostRidges;animation-delay:calc(var(--i)*40ms)}.frost-ridge .sig-art{width:105px;height:105px;left:-52px;top:-52px}.frost-collapse{animation-name:frostCollapse}.fossil-frost{animation-name:frostShard}
+@keyframes frostRidges{0%,12%{opacity:0;transform:translate(calc(var(--source-x)*(1 - var(--i)*.18)),calc(var(--source-y)*(1 - var(--i)*.18) + 70px)) scale(1,.03)}30%,45%{opacity:1;transform:translate(calc(var(--source-x)*(1 - var(--i)*.18)),calc(var(--source-y)*(1 - var(--i)*.18) + 30px)) scale(.9,1.2)}70%,100%{opacity:0;transform:translate(calc(var(--source-x)*(1 - var(--i)*.18)),calc(var(--source-y)*(1 - var(--i)*.18) + 50px)) scale(.8,.1)}}
+@keyframes frostCollapse{0%,65%{opacity:0;transform:translate(0,40px) scale(.2)}72%{opacity:1;transform:translate(0,0) scale(1.4)}100%{opacity:0;transform:scale(1.75,.5)}}
+@keyframes frostShard{0%,68%{opacity:0;transform:scale(.05)}76%{opacity:1}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.22) rotate(var(--spin))}}
+.stellar-crystal{animation-name:stellarCrystal;animation-delay:calc(var(--i)*15ms)}.celestial-spiral{animation-name:celestialSpiral}.celestial-bloom{animation-name:celestialBloom}.star-halo{animation-name:starHalo;border-style:dotted}
+@keyframes stellarCrystal{0%{opacity:0;transform:translate(var(--tx),calc(var(--ty) - 130px)) scale(.12) rotate(var(--spin))}26%{opacity:1}48%{transform:translate(calc(var(--ty)*.55),calc(var(--tx)*.4 - 55px)) scale(.23) rotate(calc(var(--spin) + 130deg))}72%{opacity:1;transform:translate(0,0) scale(.12) rotate(calc(var(--spin) + 260deg))}80%,100%{opacity:0}}
+@keyframes celestialSpiral{0%,22%{opacity:0;transform:translate(0,-120px) scale(.35) rotate(-90deg)}38%{opacity:.8}70%{opacity:1;transform:translate(0,0) scale(1) rotate(90deg)}82%,100%{opacity:0}}
+@keyframes celestialBloom{0%,70%{opacity:0;scale:.15}77%,86%{opacity:1;scale:1.4}100%{opacity:0;scale:1.65}}
+@keyframes starHalo{0%,71%{opacity:0;scale:.1}80%{opacity:1;scale:1.3}100%{opacity:0;scale:2.1}}
+.scheme-triangle{animation-name:schemeTrace}.scheme-triangle path{stroke-dasharray:600;animation:schemeDraw var(--fx-duration) both}.scheme-tightens{animation-name:schemeTighten}.toxic-seal{animation-name:toxicSeal}.toxic-fume{animation-name:toxicFume}
+@keyframes schemeTrace{0%{opacity:0;scale:1.35}20%,48%{opacity:1;scale:1.35}66%,100%{opacity:0;scale:.2}}
+@keyframes schemeDraw{0%{stroke-dashoffset:600}42%,100%{stroke-dashoffset:0}}
+@keyframes schemeTighten{0%,40%{opacity:0;scale:1.35}46%{opacity:1}67%{opacity:1;scale:.3}78%,100%{opacity:0;scale:.1}}
+@keyframes toxicSeal{0%,65%{opacity:0;scale:.1}73%,85%{opacity:1;scale:1.15}100%{opacity:0;scale:1.35}}
+@keyframes toxicFume{0%,68%{opacity:0;transform:translate(0,20px) scale(.1)}80%{opacity:.7;transform:translate(calc(var(--tx)*.45),-30px) scale(.3)}100%{opacity:0;transform:translate(var(--tx),-75px) scale(.4)}}
+.cairn-stack{animation-name:cairnStack;animation-delay:calc(var(--i)*100ms)}.cairn-stack .sig-art{clip-path:inset(calc(12% + var(--i)*24%) 10% calc(64% - var(--i)*24%) 10%)}.cairn-topple{animation-name:cairnTopple}.toxic-shard{animation-name:toxicShard}
+@keyframes cairnStack{0%,3%{opacity:0;transform:translate(0,-80px)}19%,43%{opacity:1;transform:translate(0,0)}58%,100%{opacity:0}}
+@keyframes cairnTopple{0%,38%{opacity:0;transform:scale(1) rotate(0)}45%{opacity:1}66%{opacity:1;transform:scale(1.15) rotate(55deg)}83%,100%{opacity:0;transform:translate(20px,35px) scale(.6) rotate(100deg)}}
+@keyframes toxicShard{0%,64%{opacity:0;transform:scale(.08)}73%{opacity:1}100%{opacity:0;transform:translate(var(--tx),calc(var(--ty)*.4 + 60px)) scale(.22) rotate(var(--spin))}}
+.crown-plate{animation-name:crownPlate;animation-delay:calc(var(--i)*30ms)}.crown-plate .sig-art{width:85px;height:85px;left:-42px;top:-42px}.island-pillar{animation-name:islandPillar}.island-fracture{animation-name:islandFracture;border-width:5px}.ochre-chip{animation-name:ochreChip}
+@keyframes crownPlate{0%{opacity:0;transform:translate(var(--tx),60px) scaleY(.1)}30%,58%{opacity:1;transform:translate(var(--tx),30px) scaleY(.9)}75%,100%{opacity:0;transform:translate(calc(var(--tx)*1.5),60px) scale(.3)}}
+@keyframes islandPillar{0%,43%{opacity:0;transform:translate(0,70px) scale(.3,.01)}65%{opacity:1;transform:translate(0,-5px) scale(.85,1.7)}81%{opacity:1;transform:translate(0,0) scale(.9,1.5)}100%{opacity:0;transform:translate(0,40px) scale(.5,.4)}}
+@keyframes islandFracture{0%,63%{opacity:0;scale:.3 .1}71%{opacity:1;scale:1.25 .45}100%{opacity:0;scale:2.2 .5}}
+@keyframes ochreChip{0%,65%{opacity:0;transform:scale(.08)}73%{opacity:1}100%{opacity:0;transform:translate(var(--tx),calc(var(--ty) + 45px)) scale(.2) rotate(var(--spin))}}
+.pilgrim-ribbon{animation-name:pilgrimRibbon}.pilgrim-footstep{animation-name:pilgrimStep;animation-delay:calc(var(--i)*75ms)}.pilgrim-breeze{animation-name:pilgrimBreeze}
+@keyframes pilgrimRibbon{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.4) rotate(-25deg)}18%{opacity:.9}37%{transform:translate(calc(var(--source-x)*.5),calc(var(--source-y)*.5 - 65px)) scale(.8) rotate(0)}62%{opacity:1;transform:translate(0,0) scale(1) rotate(25deg)}83%,100%{opacity:0}}
+@keyframes pilgrimStep{0%,10%{opacity:0;transform:translate(calc(var(--source-x)*(.9 - var(--i)*.24)),calc(var(--source-y)*(.9 - var(--i)*.24) - 40px)) scale(.3,.7)}28%,46%{opacity:.65}65%,100%{opacity:0;transform:translate(calc(var(--source-x)*(.9 - var(--i)*.24)),calc(var(--source-y)*(.9 - var(--i)*.24) - 40px)) scale(.65,1.15)}}
+@keyframes pilgrimBreeze{0%,59%{opacity:0;scale:.3}67%{opacity:.8;scale:1.2}100%{opacity:0;scale:1.6}}
+.future-marker{animation-name:futureMarker;animation-delay:calc(var(--i)*45ms)}.future-marker .sig-ring{width:20px;height:20px;left:-10px;top:-10px;border-style:dotted}.planned-glint{animation-name:plannedGlint}
+@keyframes futureMarker{0%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.2)}20%,47%{opacity:.8;transform:translate(var(--tx),var(--ty)) scale(1)}73%{opacity:1;transform:translate(0,0) scale(.1)}84%,100%{opacity:0}}
+@keyframes plannedGlint{0%,68%{opacity:0;scale:.02}77%{opacity:1;scale:.7}89%{opacity:.7;scale:.8}100%{opacity:0;scale:.85}}
+.balance-ring{animation-name:balanceRings}.balance-ring .sig-ring{transform:rotateX(50deg)}.measured-halo{animation-name:measuredHalo}
+@keyframes balanceRings{0%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.1)}24%,43%{opacity:1;transform:translate(var(--tx),var(--ty)) scale(.7)}60%{opacity:1;transform:translate(calc(var(--tx)*.6),-45px) scale(.6)}72%{opacity:1;transform:translate(0,-35px) scale(1)}89%,100%{opacity:0;transform:translate(0,-35px) scale(1.2)}}
+@keyframes measuredHalo{0%,60%{opacity:0;transform:translate(0,-35px) scale(.1)}74%,85%{opacity:1;transform:translate(0,-35px) scale(1)}100%{opacity:0;transform:translate(0,-35px) scale(1.1)}}
+.prehistoric-nodule{animation-name:ancientNodule}.fossil-seams{animation-name:fossilSeam;width:70px;height:2px}.dense-stone{animation-name:denseStone}
+@keyframes ancientNodule{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.4) rotate(-30deg)}16%,42%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(.85) rotate(55deg)}61%{opacity:1;transform:translate(0,0) scale(1.15) rotate(95deg)}68%,100%{opacity:0;transform:scale(.3)}}
+@keyframes fossilSeam{0%,41%{opacity:0;transform:translate(var(--source-x),var(--source-y)) rotate(var(--spin)) scaleX(.1)}50%{opacity:1;transform:translate(var(--source-x),var(--source-y)) rotate(var(--spin)) scaleX(.7)}62%{opacity:1;transform:rotate(var(--spin)) scaleX(1)}70%,100%{opacity:0}}
+@keyframes denseStone{0%,59%{opacity:0;transform:scale(.08)}65%{opacity:1}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.3) rotate(var(--spin))}}
+.glacier-tumble{animation-name:glacierTumble}.glacier-crack{animation-name:glacierCrack;border-style:dashed}.glacier-stone{animation-name:glacierStone}.glacier-ice{animation-name:glacierIce;animation-delay:25ms}
+@keyframes glacierTumble{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.6) rotate(-90deg)}19%{opacity:1}43%{transform:translate(calc(var(--source-x)*.5),calc(var(--source-y)*.5 - 55px)) scale(.9) rotate(45deg)}68%{opacity:1;transform:translate(0,0) scale(1.2) rotate(190deg)}77%,100%{opacity:0;transform:scale(.3) rotate(240deg)}}
+@keyframes glacierCrack{0%,64%{opacity:0;scale:.6}72%{opacity:1;scale:1.4}100%{opacity:0;scale:2}}
+@keyframes glacierStone{0%,67%{opacity:0;transform:scale(.1)}74%{opacity:1}100%{opacity:0;transform:translate(var(--tx),calc(var(--ty) + 40px)) scale(.3) rotate(var(--spin))}}
+@keyframes glacierIce{0%,68%{opacity:0;transform:scale(.06)}77%{opacity:1}100%{opacity:0;transform:translate(calc(var(--tx)*1.2),calc(var(--ty)*1.2)) scale(.15) rotate(calc(var(--spin) + 50deg))}}
+.hook-left{animation-name:hookLeft}.hook-right{animation-name:hookRight}.talon-cross{animation-name:talonCross;width:100px;height:3px}.talon-chip{animation-name:talonChip}
+@keyframes hookLeft{0%,13%{opacity:0;transform:translate(-100px,-85px) scale(.8) rotate(-30deg)}26%{opacity:1}57%{opacity:1;transform:translate(0,0) scale(1.3) rotate(30deg)}78%,100%{opacity:0;transform:translate(65px,60px) scale(.65) rotate(65deg)}}
+@keyframes hookRight{0%,13%{opacity:0;transform:translate(100px,-85px) scale(.8) rotate(30deg)}26%{opacity:1}57%{opacity:1;transform:translate(0,0) scale(1.3) rotate(-30deg)}78%,100%{opacity:0;transform:translate(-65px,60px) scale(.65) rotate(-65deg)}}
+@keyframes talonCross{0%,55%{opacity:0;transform:rotate(calc(var(--spin) + 45deg)) scaleX(.1)}61%{opacity:1;transform:rotate(calc(var(--spin) + 45deg)) scaleX(1.3)}92%,100%{opacity:0;transform:rotate(calc(var(--spin) + 45deg)) scaleX(1.6)}}
+@keyframes talonChip{0%,57%{opacity:0;transform:scale(.05)}65%{opacity:1}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.2) rotate(var(--spin))}}
+.spectral-fan{animation-name:spectralFan}.quill-launch{animation-name:quillLaunch;animation-delay:calc(var(--i)*30ms)}.quill-launch .sig-art{clip-path:inset(5% calc(70% - var(--i)*10%) 45% calc(10% + var(--i)*10%))}.uncrowned-shock{animation-name:uncrownedShock}.hollow-crown{animation-name:hollowCrown;border-style:dashed;border-width:4px}
+@keyframes spectralFan{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.1)}24%,39%{opacity:1;transform:translate(var(--source-x),var(--source-y)) scale(1.1)}52%,100%{opacity:0}}
+@keyframes quillLaunch{0%,27%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.75)}35%{opacity:1}63%{opacity:1;transform:translate(var(--tx),var(--ty)) scale(.9)}75%,100%{opacity:0;transform:translate(calc(var(--tx)*.5),calc(var(--ty)*.5)) scale(.2)}}
+@keyframes uncrownedShock{0%,66%{opacity:0;transform:translate(0,-20px) scale(.1)}73%{opacity:1;transform:translate(0,-20px) scale(1.35)}100%{opacity:0;transform:translate(0,-30px) scale(1.75)}}
+@keyframes hollowCrown{0%,68%{opacity:0;transform:translate(0,-25px) scale(.1,.5)}76%{opacity:1;transform:translate(0,-25px) scale(1.1,.5)}100%{opacity:0;transform:translate(0,-35px) scale(1.75,.6)}}
+.silent-coils{animation-name:silentCoils}.crimson-compression{animation-name:crimsonCompression}.ambition-rise{animation-name:ambitionRise;height:110px;width:5px;left:calc(-35px + var(--i)*35px);top:0;background:linear-gradient(0deg,transparent,#ea526f,#ffbcc1);animation-delay:calc(var(--i)*30ms)}
+@keyframes silentCoils{0%{opacity:0;transform:scale(1.5) rotate(-60deg)}18%{opacity:1}52%{opacity:1;transform:scale(.35) rotate(90deg)}65%,100%{opacity:0;transform:scale(.1) rotate(140deg)}}
+@keyframes crimsonCompression{0%,35%{opacity:0;scale:.7}53%{opacity:1;scale:.22}68%{opacity:1;scale:.45}86%,100%{opacity:0;scale:.7}}
+@keyframes ambitionRise{0%,66%{opacity:0;transform:translateY(20px) scaleY(.1)}76%{opacity:1;transform:translateY(-90px) scaleY(1)}100%{opacity:0;transform:translateY(-145px) scaleY(.2)}}
+.linked-strands{animation-name:linkedStrands}.broken-bond{animation-name:brokenBond}.broken-bond .sig-ring{width:20px;height:20px;left:-10px;top:-10px;border-style:dashed}.alliance-left{animation-name:allianceLeft}.alliance-right{animation-name:allianceRight}
+@keyframes linkedStrands{0%{opacity:0;scale:.2}20%,35%{opacity:1;scale:1.3 .7}46%{opacity:1;scale:1.8 .35}55%,100%{opacity:0;scale:2 .1}}
+@keyframes brokenBond{0%,41%{opacity:0;scale:.3}49%{opacity:1;scale:1.6}61%,100%{opacity:0;scale:2.8}}
+@keyframes allianceLeft{0%,42%{opacity:0;transform:translate(-100px,35px) rotate(-45deg)}50%{opacity:1}65%{opacity:1;transform:translate(0,0) rotate(10deg) scale(1.4)}88%,100%{opacity:0;transform:translate(60px,-40px) rotate(45deg)}}
+@keyframes allianceRight{0%,42%{opacity:0;transform:translate(100px,-35px) rotate(45deg)}50%{opacity:1}65%{opacity:1;transform:translate(0,0) rotate(-10deg) scale(1.4)}88%,100%{opacity:0;transform:translate(-60px,40px) rotate(-45deg)}}
+.mocking-replay{animation-name:mockingReplay}.mocking-echo{animation-name:mockingEcho}.encore-shadow{animation-name:encoreShadow}.encore-cut{animation-name:encoreCut}
+@keyframes mockingReplay{0%{opacity:0;transform:translate(-30px,0) scaleX(-.75)}13%,25%{opacity:.6;transform:translate(35px,-12px) scaleX(-.85)}42%{opacity:.7;transform:translate(-35px,5px) scaleX(-.85)}54%,100%{opacity:0;transform:translate(-60px,0) scaleX(-.7)}}
+@keyframes mockingEcho{0%,23%{opacity:0;transform:translate(50px,0) scale(.8)}31%{opacity:.4}54%{opacity:.55;transform:translate(-10px,-5px) scale(.9)}66%,100%{opacity:0;transform:translate(-45px,0) scale(.7)}}
+@keyframes encoreShadow{0%,53%{opacity:0;transform:translate(90px,50px) scale(.35) rotate(-35deg)}61%{opacity:.8}72%{opacity:1;transform:translate(0,0) scale(1.4) rotate(15deg)}84%,100%{opacity:0;transform:translate(-50px,-40px) scale(1.2) rotate(35deg)}}
+@keyframes encoreCut{0%,69%{opacity:0;transform:translate(-35px,-20px) scale(.1) rotate(-40deg)}76%{opacity:1;transform:translate(0,0) scale(1.55) rotate(15deg)}100%{opacity:0;transform:translate(20px,35px) scale(1.65) rotate(45deg)}}
+.needle-jab{animation-name:needleJab}.needle-jab .sig-art{height:55px;top:-27px;filter:saturate(1.4)}.cheeky-starburst{animation-name:cheekyStar}.cheeky-ray{animation-name:cheekyRay}
+@keyframes needleJab{0%{opacity:0;transform:translate(var(--source-x),var(--source-y)) scale(.3)}5%{opacity:1}28%{opacity:1;transform:translate(0,0) scale(.65)}35%,100%{opacity:0;transform:translate(15px,0) scale(.1)}}
+@keyframes cheekyStar{0%,25%{opacity:0;scale:.03;rotate:-15deg}33%{opacity:1;scale:1.65;rotate:5deg}67%{opacity:.8;scale:1.85;rotate:15deg}100%{opacity:0;scale:1.95;rotate:20deg}}
+@keyframes cheekyRay{0%,27%{opacity:0;transform:rotate(var(--spin)) scaleX(.05)}35%{opacity:1;transform:rotate(var(--spin)) scaleX(1.2)}100%{opacity:0;transform:rotate(var(--spin)) scaleX(1.7)}}
+.tail-sweep{animation-name:tailSweep}.oath-lock{animation-name:oathLock}.oath-line{animation-name:oathLine;border-width:1px;clip-path:inset(0 0 40% 0)}
+@keyframes tailSweep{0%,10%{opacity:0;transform:translate(-80px,55px) scale(.6) rotate(-100deg)}27%{opacity:1}58%{opacity:1;transform:translate(0,0) scale(1.4) rotate(20deg)}72%,100%{opacity:0;transform:translate(45px,-40px) scale(1.15) rotate(80deg)}}
+@keyframes oathLock{0%,57%{opacity:0;transform:scale(1.3) rotate(15deg)}69%,83%{opacity:.9;transform:scale(1.05) rotate(15deg)}100%{opacity:0;transform:scale(1.1) rotate(15deg)}}
+@keyframes oathLine{0%,60%{opacity:0;transform:rotate(-30deg) scale(1.7,.8)}73%{opacity:1;transform:rotate(-30deg) scale(1.3,.65)}100%{opacity:0;transform:rotate(-30deg) scale(1.35,.7)}}
+.blossom-ground{animation-name:blossomGround}.rising-petal{animation-name:risingPetal;animation-delay:calc(var(--i)*40ms)}.green-healing{animation-name:greenHealing}
+@keyframes blossomGround{0%{opacity:0;transform:translate(0,55px) scale(.05,.03)}25%,62%{opacity:1;transform:translate(0,55px) scale(1.35,.6)}85%,100%{opacity:0;transform:translate(0,55px) scale(1.5,.7)}}
+@keyframes risingPetal{0%,19%{opacity:0;transform:translate(var(--tx),60px) scale(.2)}39%{opacity:.8;transform:translate(var(--tx),5px) scale(.5)}68%{opacity:.9;transform:translate(calc(var(--tx)*.4),-50px) scale(.4)}88%,100%{opacity:0;transform:translate(0,-65px) scale(.1)}}
+@keyframes greenHealing{0%,57%{opacity:0;scale:1.65}68%{opacity:1;scale:1.2}85%{opacity:.8;scale:.8}100%{opacity:0;scale:.6}}
+.pact-ribbon-left{animation-name:pactLeft}.pact-ribbon-right{animation-name:pactRight}.pact-knot{animation-name:pactKnot}.pact-stars{animation-name:pactStars;width:12px;height:12px;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%)}
+@keyframes pactLeft{0%{opacity:0;transform:translate(-70px,30px) rotate(-60deg) scale(.5)}20%{opacity:1}42%{transform:translate(-25px,-55px) rotate(20deg) scale(1)}68%{opacity:1;transform:translate(0,0) rotate(85deg) scale(1)}85%,100%{opacity:0}}
+@keyframes pactRight{0%{opacity:0;transform:translate(70px,-30px) rotate(60deg) scale(.5)}20%{opacity:1}42%{transform:translate(25px,55px) rotate(-20deg) scale(1)}68%{opacity:1;transform:translate(0,0) rotate(-85deg) scale(1)}85%,100%{opacity:0}}
+@keyframes pactKnot{0%,60%{opacity:0;scale:.1}72%{opacity:1;scale:1.1}91%,100%{opacity:0;scale:1.35}}
+@keyframes pactStars{0%,67%{opacity:0;transform:rotate(var(--spin)) translateX(0) scale(.1)}77%{opacity:1;transform:rotate(var(--spin)) translateX(65px) scale(1.3)}100%{opacity:0;transform:rotate(var(--spin)) translateX(110px) scale(.6)}}
+.oath-panel{animation-name:oathPanel;animation-delay:calc(var(--i)*35ms)}.oath-panel .sig-art{width:105px;height:105px;left:-52px;top:-52px;clip-path:inset(10% 20% 10% 20%)}.oath-thread{animation-name:oathThread;left:-80px;top:calc(-20px + var(--i)*17px);width:160px;height:2px}.settled-oathwall{animation-name:settledWall}
+@keyframes oathPanel{0%{opacity:0;transform:translate(var(--tx),70px) scaleY(.05)}33%,57%{opacity:1;transform:translate(var(--tx),15px) scaleY(1)}76%,100%{opacity:0;transform:translate(var(--tx),15px) scale(.95)}}
+@keyframes oathThread{0%,39%{opacity:0;scale:.05 1}54%,70%{opacity:1;scale:1 1}84%,100%{opacity:0;scale:1 1}}
+@keyframes settledWall{0%,56%{opacity:0;transform:translate(0,20px) scale(.9)}67%,88%{opacity:1;transform:translate(0,20px) scale(1.3)}100%{opacity:0;transform:translate(0,20px) scale(1.35)}}
+@media(max-width:650px){.sig-art{width:170px;height:170px;left:-85px;top:-85px}.sig-circuit{width:200px;height:170px;left:-100px;top:-85px}.sig-echo-body{width:150px;height:180px;left:-75px;top:-90px}}
+:root[data-motion="reduced"] .signature-fx .sig-layer,:root[data-motion="reduced"] .signature-fx .sig-ray,:root[data-motion="reduced"] .signature-fx .sig-ring{display:none}:root[data-motion="reduced"] .signature-fx::after{content:'';display:block;position:absolute;width:170px;height:170px;left:-85px;top:-85px;background-image:var(--atlas-url);background-size:300% 400%;background-position:var(--atlas-x) var(--atlas-y)}
+
+/* Eight approved roster signatures; each has its own staged choreography. */
+.sig-layer.bastion-orb{animation:roster-bastion-orb var(--fx-duration) both;}
+@keyframes roster-bastion-orb{0%{opacity:0;transform:translateX(-105px) scale(.1)}35%{opacity:1;transform:translateX(-50px) scale(.7)}65%{opacity:1;transform:translateX(25px) scale(1)}100%{opacity:0;transform:translateX(50px) scale(.2)}}
+.sig-layer.bastion-shield{animation:roster-bastion-shield var(--fx-duration) both;}
+@keyframes roster-bastion-shield{0%,35%{opacity:0;transform:scale(.1)}60%{opacity:1;transform:scale(1.2)}100%{opacity:0;transform:scale(1.4)}}
+.sig-layer.skitter-zig{animation:roster-skitter-zig var(--fx-duration) both;}
+@keyframes roster-skitter-zig{0%{opacity:0;transform:translate(-120px,40px) scale(.4)}20%{opacity:1;transform:translate(-70px,-35px) scale(.5)}40%{transform:translate(-15px,25px) scale(.6)}58%{opacity:1;transform:translate(40px,0) scale(.9)}80%,100%{opacity:0;transform:translate(80px,-20px) scale(.2)}}
+.sig-layer.skitter-hit{animation:roster-skitter-hit var(--fx-duration) both;}
+@keyframes roster-skitter-hit{0%,48%{opacity:0;transform:scale(.1)}58%{opacity:1;transform:scale(1.3)}100%{opacity:0;transform:scale(.3)}}
+.sig-layer.skitter-return{animation:roster-skitter-return var(--fx-duration) both;}
+@keyframes roster-skitter-return{0%,65%{opacity:0;transform:translateX(45px) scale(.3)}75%{opacity:1}100%{opacity:0;transform:translateX(-100px) scale(.1)}}
+.sig-layer.lace-left{animation:roster-lace-left var(--fx-duration) both;}
+@keyframes roster-lace-left{0%{opacity:0;transform:translate(-80px,-30px) rotate(-70deg) scale(.4)}30%{opacity:1}65%{opacity:1;transform:translate(0,0) rotate(30deg) scale(1)}100%{opacity:0;transform:translate(40px,30px) scale(.3)}}
+.sig-layer.lace-right{animation:roster-lace-right var(--fx-duration) both;}
+@keyframes roster-lace-right{0%{opacity:0;transform:translate(80px,30px) rotate(70deg) scale(.4)}30%{opacity:1}65%{opacity:1;transform:translate(0,0) rotate(-30deg) scale(1)}100%{opacity:0;transform:translate(-40px,-30px) scale(.3)}}
+.sig-layer.brine-crystal{animation:roster-brine-crystal var(--fx-duration) both;}
+@keyframes roster-brine-crystal{0%{opacity:0;transform:translate(var(--tx),-100px) scale(.2)}40%{opacity:1}65%{opacity:1;transform:translate(calc(var(--tx)*.2),0) rotate(var(--spin)) scale(.6)}100%{opacity:0;transform:translate(var(--tx),50px) scale(.1)}}
+.sig-layer.brine-venom{animation:roster-brine-venom var(--fx-duration) both;}
+@keyframes roster-brine-venom{0%,60%{opacity:0;transform:scale(.1)}70%{opacity:1;transform:scale(.7)}100%{opacity:0;transform:translateY(25px) scale(1.3)}}
+.sig-layer.wyvern-brace{animation:roster-wyvern-brace var(--fx-duration) both;}
+@keyframes roster-wyvern-brace{0%{opacity:0;transform:translateX(-90px) scale(.3)}30%{opacity:1;transform:translateX(-50px) scale(.8)}55%,100%{opacity:0;transform:scale(.2)}}
+.sig-layer.wyvern-left{animation:roster-wyvern-left var(--fx-duration) both;}
+@keyframes roster-wyvern-left{0%,30%{opacity:0;transform:translate(-90px,-70px) rotate(-45deg) scale(.5)}57%{opacity:1;transform:translate(0,0) rotate(45deg) scale(1.2)}90%,100%{opacity:0;transform:translate(80px,70px) rotate(70deg) scale(.2)}}
+.sig-layer.wyvern-right{animation:roster-wyvern-right var(--fx-duration) both;}
+@keyframes roster-wyvern-right{0%,35%{opacity:0;transform:translate(-80px,70px) rotate(45deg) scale(.5)}57%{opacity:1;transform:translate(0,0) rotate(-45deg) scale(1.2)}90%,100%{opacity:0;transform:translate(90px,-70px) rotate(-70deg) scale(.2)}}
+.sig-layer.toll-charge{animation:roster-toll-charge var(--fx-duration) both;}
+@keyframes roster-toll-charge{0%{opacity:0;transform:translateX(-80px) scale(.1)}40%{opacity:1;transform:translateX(-40px) scale(.8)}65%,100%{opacity:0;transform:scale(.2)}}
+.sig-layer.toll-hit{animation:roster-toll-hit var(--fx-duration) both;}
+@keyframes roster-toll-hit{0%,58%{opacity:0;transform:scale(.1)}66%{opacity:1;transform:scale(1.25)}100%{opacity:0;transform:scale(1.6)}}
+.sig-layer.bower-fist{animation:roster-bower-fist var(--fx-duration) both;}
+@keyframes roster-bower-fist{0%{opacity:0;transform:translateX(-70px) scale(.5)}25%{opacity:1;transform:translateX(-110px) rotate(-20deg) scale(.8)}53%{opacity:1;transform:translateX(10px) rotate(10deg) scale(1.1)}80%,100%{opacity:0;transform:translateX(40px) scale(.4)}}
+.sig-layer.bower-hit{animation:roster-bower-hit var(--fx-duration) both;}
+@keyframes roster-bower-hit{0%,45%{opacity:0;transform:scale(.1)}53%{opacity:1;transform:scale(1.2)}100%{opacity:0;transform:scale(.5)}}
+.sig-layer.bower-petal{animation:roster-bower-petal var(--fx-duration) both;}
+@keyframes roster-bower-petal{0%,55%{opacity:0;transform:scale(.1)}65%{opacity:1}100%{opacity:0;transform:translate(var(--tx),var(--ty)) rotate(var(--spin)) scale(.3)}}
+.sig-layer.ember-root{animation:roster-ember-root var(--fx-duration) both;}
+@keyframes roster-ember-root{0%{opacity:0;transform:translate(-80px,50px) scale(.2)}35%{opacity:1;transform:translate(-60px,20px) scale(.7)}65%,100%{opacity:0;transform:scale(.2)}}
+.sig-layer.ember-flower{animation:roster-ember-flower var(--fx-duration) both;}
+@keyframes roster-ember-flower{0%,35%{opacity:0;transform:scale(.1) rotate(-60deg)}64%{opacity:1;transform:scale(1.2) rotate(0)}100%{opacity:0;transform:scale(1.5) rotate(40deg)}}
+.sig-layer.ember-return{animation:roster-ember-return var(--fx-duration) both;}
+@keyframes roster-ember-return{0%,65%{opacity:0;transform:translateX(40px) scale(.2)}80%{opacity:1}100%{opacity:0;transform:translateX(-100px) scale(.6)}}
+.sig-ring.bastion-pulse{animation:roster-ring var(--fx-duration) both;animation-delay:calc(var(--i,0)*80ms);}
+.sig-ring.lace-chime{animation:roster-ring var(--fx-duration) both;animation-delay:calc(var(--i,0)*80ms);}
+.sig-ring.brine-spread{animation:roster-ring var(--fx-duration) both;animation-delay:calc(var(--i,0)*80ms);}
+.sig-ring.toll-ring{animation:roster-ring var(--fx-duration) both;animation-delay:calc(var(--i,0)*80ms);}
+.sig-ring.ember-warmth{animation:roster-ring var(--fx-duration) both;animation-delay:calc(var(--i,0)*80ms);}
+@keyframes roster-ring{0%,45%{opacity:0;transform:scale(.1)}65%{opacity:1;transform:scale(.8)}100%{opacity:0;transform:scale(1.8)}}
+.lace-motes,.wyvern-glints{animation:roster-ring var(--fx-duration) both;}

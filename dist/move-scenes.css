@@ -1,0 +1,13 @@
+/* Transparent spell artwork moves along each move's individual score. */
+.move-scene{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;z-index:5;isolation:isolate}
+.move-track{position:absolute;left:0;top:0;opacity:0;animation-duration:var(--fx-duration);animation-fill-mode:both;animation-timing-function:cubic-bezier(.22,.7,.3,1);will-change:transform,opacity}
+.move-art{display:block;width:100%;height:100%;background-image:var(--move-atlas);background-size:400% 600%;background-position:var(--cell-x) var(--cell-y);background-repeat:no-repeat;filter:drop-shadow(0 0 5px var(--fx-color))}
+.scene-attack .move-art{transform:rotate(var(--travel-angle,0deg))}
+.move-detail{clip-path:inset(12% 12% 12% 12%);filter:drop-shadow(0 0 3px var(--fx-color))}
+.role-fragment .piece-0{clip-path:polygon(10% 10%,80% 10%,50% 60%)}
+.role-fragment .piece-1{clip-path:polygon(90% 10%,90% 85%,40% 50%)}
+.role-fragment .piece-2{clip-path:polygon(90% 90%,15% 90%,50% 40%)}
+.role-fragment .piece-3{clip-path:polygon(10% 90%,10% 15%,60% 50%)}
+.role-panel .move-art{opacity:.8}.role-gather .move-art{opacity:.85}.role-return .move-art{filter:drop-shadow(0 0 8px var(--fx-color))}
+.scene-critical .move-art{filter:brightness(1.25) drop-shadow(0 0 12px var(--fx-color))}
+:root[data-motion="reduced"] .move-track{display:none}:root[data-motion="reduced"] .move-scene::after{content:'';display:block;position:absolute;left:-85px;top:-85px;width:170px;height:170px;background-image:var(--move-atlas);background-size:400% 600%;background-position:var(--cell-x) var(--cell-y);background-repeat:no-repeat}:root[data-motion="reduced"] .scene-attack::after{transform:rotate(var(--travel-angle,0deg))}

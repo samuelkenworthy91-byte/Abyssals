@@ -1,0 +1,50 @@
+import {DATA} from './data.js?v=0.87.0';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.87.0';
+import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.87.0';
+import {passObjective,PASS_ROUTES} from './mountain-pass.js?v=0.87.0';
+import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS} from './cybressa-data.js?v=0.87.0';
+import {legalMoves} from './route-roster.js?v=0.87.0';
+export const cybressaUnlocked=state=>['SPARED','EXECUTED'].includes(state.fates?.['LDR-02']);
+export function cybressaState(state){state.cybressa??={};const q=state.cybressa;q.version=1;q.evidence??=[];q.quests??={};q.trialMarks??=0;q.trialSerial??=0;return q;}
+export function acceptWarehouseQuest(state){if(!cybressaUnlocked(state))return false;const q=cybressaState(state);if(q.investigation)return false;q.investigation=true;return true;}
+export function warehouseReady(state){const q=state.cybressa;return !!q?.investigation&&q.evidence?.length===3&&['TRN-CY-WH-1','TRN-CY-WH-2'].every(id=>state.defeatedTrainers?.includes(id));}
+export function recordWarehouseEvidence(state,id){const q=cybressaState(state);if(!q.investigation||!['warehouse-evidence-1','warehouse-evidence-2','warehouse-evidence-3'].includes(id)||q.evidence.includes(id))return false;const guard=id==='warehouse-evidence-3'?'TRN-CY-WH-2':'TRN-CY-WH-1';if(!state.defeatedTrainers?.includes(guard))return false;q.evidence.push(id);return true;}
+export function allocateCybressaGrain(state,recipient){const q=cybressaState(state);if(!warehouseReady(state)||q.grain||!['families','army'].includes(recipient))return false;q.grain=recipient;state.storyChoices??={};state.storyChoices.cybressa_grain=recipient;state.money=(state.money||0)+700;state.poultices=(state.poultices||0)+3;claimChoiceReward(state,'grain',recipient);return true;}
+export function receiveWatercraft(state){if(!cybressaUnlocked(state))return false;const q=cybressaState(state);if(q.watercraft)return false;q.watercraft=true;return true;}
+export function startCybressaQuest(state,key){const q=cybressaState(state);if(!cybressaUnlocked(state)||!CYBRESSA_QUESTS[key]||q.quests[key])return false;q.quests[key]={accepted:true,done:false};return true;}
+export function cybressaQuestFinds(state,key){return (CYBRESSA_QUESTS[key]?.finds||[]).filter(id=>state.supplyClaims?.includes(id)).length;}
+export function claimCybressaCache(state,id){const q=cybressaState(state),quest=Object.entries(CYBRESSA_QUESTS).find(([,v])=>v.finds.includes(id));if(!cybressaUnlocked(state)||state.supplyClaims?.includes(id))return false;if(quest&&(!q.quests[quest[0]]?.accepted||quest[1].trainer&&!state.defeatedTrainers?.includes(quest[1].trainer)))return false;const reward=CYBRESSA_CACHE_REWARDS[id];if(!reward&&!quest)return false;state.supplyClaims??=[];state.supplyClaims.push(id);for(const [key,value]of Object.entries(reward||{})){if(key==='held'){state.heldItems??={};state.heldItems[value]=(state.heldItems[value]||0)+1;}else if(Number.isFinite(value))state[key]=(state[key]||0)+value;}return true;}
+export function finishCybressaQuest(state,key){const spec=CYBRESSA_QUESTS[key],q=cybressaState(state).quests[key];if(!spec||!q?.accepted||q.done||cybressaQuestFinds(state,key)!==spec.finds.length)return false;q.done=true;for(const [k,v]of Object.entries(spec.reward))state[k]=(state[k]||0)+v;return true;}
+export function cybressaObjective(state,room){const pass=passObjective(room);if(pass)return mountainQuestObjective(state,room)||pass;const q=cybressaState(state);if(room==='rivercause')return {spot:q.watercraft?'rivercause-forward':'cybressa-boatwright',text:q.watercraft?'Cross the foothills, tunnels and Windscar Pass to Cybressa':'Speak to the boatwright about a personal watercraft'};if(room==='rivercause2')return {spot:'cybressa-entry',text:'Reach Cybressa’s market district'};if(room==='cybressaWarehouse')return {spot:!state.defeatedTrainers?.includes('TRN-CY-WH-1')?'TRN-CY-WH-1':!state.defeatedTrainers?.includes('TRN-CY-WH-2')?'TRN-CY-WH-2':q.evidence.length<3?['warehouse-evidence-1','warehouse-evidence-2','warehouse-evidence-3'].find(id=>!q.evidence.includes(id)):'warehouse-back',text:q.evidence.length<3?'Clear the warehouse watch and inspect all three records':'Report the records to the market clerk'};if(room==='cybressa')return {spot:!q.investigation?'cybressa-clerk':!warehouseReady(state)?'cybressa-warehouse-entry':!q.grain?'cybressa-clerk':!state.fates?.['LDR-03']?'cybressa-fort-entry':'cybressa-boundary',text:!q.investigation?'Ask the clerk about Pate and Trade':!warehouseReady(state)?'Investigate the market warehouses':!q.grain?'Decide who receives the impounded grain':!state.fates?.['LDR-03']?'Enter the civic fort to challenge Provost Ahmad':'Explore Cybressa and prepare for Cossenne'};const pair=Object.entries(CYBRESSA_QUESTS).find(([,v])=>v.room===room);if(pair){const [key,spec]=pair,task=q.quests[key];return {spot:key==='cargo'?'backwaters-boatwright':key==='weir'?'weir-ferryman':'salt-merchant',text:!task?.accepted?'Speak to '+spec.npc:task.done?'Explore the habitat or return to Cybressa':cybressaQuestFinds(state,key)===spec.finds.length?'Report '+spec.title:spec.title+' · '+cybressaQuestFinds(state,key)+'/'+spec.finds.length};}if(room==='cybressaTrial')return {spot:'cybressa-trial-challenge',text:q.activeTrial?'Complete the saved Trial Contract':q.trialContinuation?'Choose whether to continue your trial run':'Draw a new Trial Contract'};return null;}
+export function cybressaJournal(state,room){if(PASS_ROUTES[room])return passObjective(room).text+'. West returns towards Philomere. '+mountainQuestHint(state,room);if(!['cybressa','cybressaWarehouse','cybressaTrial','rivercause','rivercause2','philomereBackwaters','smugglersWeir','saltFlats','cybressaFort'].includes(room))return null;const q=cybressaState(state);return 'Cybressa · Warehouse records '+q.evidence.length+'/3 · '+(q.grain?'Grain allocated to '+(q.grain==='families'?'civilian families':'the True Light army')+'.':'The market’s grain is impounded.')+' '+(q.watercraft?'Personal watercraft unlocked. ':'Speak to Alice to open ferry crossings. ')+q.trialMarks+' Trial Marks. '+Object.entries(CYBRESSA_QUESTS).map(([k,v])=>v.title+': '+(q.quests[k]?.done?'complete':cybressaQuestFinds(state,k)+'/'+v.finds.length)).join(' · ');}
+export function trialRarityChances(round=1){const n=Math.max(0,round-1);return {legendary:Math.min(.04,.004+n*.001),mythic:Math.min(.01,.001+n*.00025)};}
+export function trialSpeciesTier(s){return /mythic|mythical/i.test(s.power_class||s.role||'')?'mythic':s.legendaryRoamer||/legendary/i.test(s.power_class||s.role||'')?'legendary':'ordinary';}
+export function trialSpeciesWeight(s){return /pseudo/i.test(s.power_class||'')?.25:/rare/i.test(s.power_class||'')?.4:1;}
+export function drawTrialTeam(round,level,random=Math.random,previousIds=[]){
+ const odds=trialRarityChances(round),team=[];
+ for(let i=0;i<3;i++){
+  const roll=random(),tier=roll<odds.mythic?'mythic':roll<odds.mythic+odds.legendary?'legendary':'ordinary';
+  const pool=DATA.species.filter(s=>trialSpeciesTier(s)===tier&&!team.some(u=>u.species_id===s.id)&&s.id!==previousIds[i]);
+  let ticket=random()*pool.reduce((total,s)=>total+trialSpeciesWeight(s),0),picked=pool.at(-1);
+  for(const s of pool){ticket-=trialSpeciesWeight(s);if(ticket<0){picked=s;break;}}
+  const partnerLevel=Math.min(200,level+i);team.push({slot:i+1,species_id:picked.id,level:partnerLevel,current_form_legal_move_ids:legalMoves(picked.id,partnerLevel)});
+ }
+ return team;
+}
+export function createCybressaTrial(state,random=Math.random,continuation=false){
+ const q=cybressaState(state),previous=continuation?q.trialContinuation:null;
+ if(!cybressaUnlocked(state)||q.activeTrial||continuation&&!previous)return false;
+ const round=previous?previous.round+1:1;
+ const baseLevel=previous?.baseLevel??42+Math.min(3,Math.floor(random()*4)),level=Math.min(200,baseLevel+4*(round-1)),serial=q.trialSerial+1;
+ const team=drawTrialTeam(round,level,random,previous?.teamIds||[]);
+ const t={id:'TRN-CY-TRIAL-'+serial,name:'Proven Grounds · Simulation '+serial+' · Round '+round,portraitId:'TRN-C01-001',ai_tier:'Advanced',role:'Trial Contract',runtimeAuthored:true,simulation:true,team};
+ q.trialSerial=serial;q.activeTrial={trainer:t,text:'This chamber stands outside time and place. Its simulations can echo any known Abyssal, even a legendary or mythic. These are projections, not the unique creatures roaming the world. The simulation is real combat for your partners.',marks:round+2,round,baseLevel,earned:previous?.earned||0};q.trialContinuation=null;return true;
+}
+export function continueCybressaTrial(state,random=Math.random){
+ if(!(state.party||[]).some(u=>u.hp>0&&!u.dead)||!createCybressaTrial(state,random,true))return false;
+ for(const u of state.party)if(u.hp>0&&!u.dead){u.hp=u.maxHp;u.status=null;u.confusion=0;u.stages={};for(const m of u.moves||[])m.left=m.pp;}
+ return true;
+}
+export function finishCybressaTrialRun(state){const q=cybressaState(state);if(!q.trialContinuation||q.activeTrial)return false;q.trialContinuation=null;return true;}
+export function registerCybressaTrial(state,expansion,voices){const a=state.cybressa?.activeTrial;if(!a)return null;const t=a.trainer;if(!expansion.trainers.some(v=>v.id===t.id))expansion.trainers.push(t);voices[t.id]={before:a.text+' Defeat all three opponents to earn '+a.marks+' Trial Marks. Partners can die; retreat keeps this same contract.',after:'Round '+(a.round||1)+' complete. '+a.marks+' Trial Marks have been entered in your account. Continue for a stronger team and a larger reward, or finish here.',repeat:'This contract has been paid.'};return t;}
+export function completeCybressaTrial(state,id){const q=cybressaState(state),a=q.activeTrial;if(a?.trainer.id!==id||!state.defeatedTrainers?.includes(id))return false;q.trialMarks+=a.marks;q.trialContinuation={round:a.round||1,baseLevel:a.baseLevel??a.trainer.team[0].level,teamIds:a.trainer.team.map(u=>u.species_id),earned:(a.earned||0)+a.marks};q.activeTrial=null;return true;}

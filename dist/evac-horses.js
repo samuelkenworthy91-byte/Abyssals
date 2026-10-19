@@ -1,0 +1,3 @@
+// These transport actors are presentation only and never enter the collision grid.
+export function evacHorses(player,elapsed,reduced=false){const progress=reduced?1:Math.min(1,Math.max(0,elapsed/650));return [[-40,-18],[40,-18],[-44,12],[44,12]].map(([dx,dy],i)=>({px:player.px+dx+(i%2?1:-1)*50*(1-progress),py:player.py+dy,row:i%2?0:1,frame:reduced||progress===1?0:Math.floor(elapsed/110)%3,opacity:reduced?1:Math.min(1,elapsed/150)}));}
+export function drawEvacHorse(c,image,horse){if(!image?.naturalWidth)return;const cellW=image.naturalWidth/3,cellH=image.naturalHeight/2;c.save();c.globalAlpha=horse.opacity;c.imageSmoothingEnabled=true;c.drawImage(image,horse.frame*cellW,horse.row*cellH,cellW,cellH,horse.px-36,horse.py+4-72*244/256,72,72);c.restore();}

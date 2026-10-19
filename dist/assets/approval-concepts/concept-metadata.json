@@ -1,0 +1,83 @@
+{
+  "status": "approval-only; not runtime roster",
+  "concepts": [
+    {
+      "file": "water-psychic-tidemind.png",
+      "base": "Glimfin",
+      "evolved": "Tidemind",
+      "typing": [
+        "Water",
+        "Psychic"
+      ],
+      "role": "fast special attacker"
+    },
+    {
+      "file": "water-rock-breakwater.png",
+      "base": "Nacrel",
+      "evolved": "Breakwater",
+      "typing": [
+        "Water",
+        "Rock"
+      ],
+      "role": "bulky special attacker"
+    },
+    {
+      "file": "water-fire-ventsunder.png",
+      "base": "Simmerclaw",
+      "evolved": "Ventsunder",
+      "typing": [
+        "Water",
+        "Fire"
+      ],
+      "role": "slow special attacker"
+    },
+    {
+      "file": "water-electric-stormchoir.png",
+      "base": "Sparkletide",
+      "evolved": "Stormchoir",
+      "typing": [
+        "Water",
+        "Electric"
+      ],
+      "role": "control special attacker"
+    },
+    {
+      "file": "bug-steel-carapex-elytrarch.png",
+      "base": "Rivet",
+      "middle": "Carapex",
+      "evolved": "Elytrarch",
+      "typing": [
+        "Bug",
+        "Steel"
+      ],
+      "evolutionItem": "Chitin Core"
+    }
+  ],
+  "prompts": [
+    {
+      "key": "tidemind",
+      "prompt": "Use case: stylized-concept. Asset type: approval-only Abyssals aquatic monster concept sheet. Polished highly detailed original dark-fantasy creature illustration on warm parchment, matching a premium monster RPG artbook. Two distinct evolutionary stages side by side, cute base left, imposing evolved form right, both full body and clear silhouettes. Water/Psychic cuttlefish FAST SPECIAL ATTACKER: cute tiny round cuttlefish with large expressive eyes, translucent teal fins, violet bioluminescent freckles and a little curled tentacle; evolved form a magnificent alien cuttlefish with broad wavelike mantle fins, graceful trailing curling tentacles, luminous hypnotic eyes, intricate shifting cosmic-pattern skin, psychic halos made from rippling water and violet mist. Creature remains fully aquatic cephalopod anatomy, no humanoid body or legs, no armour knight. Evolved shape visually dramatically different and cooler, both have faces. Underwater aesthetic without background scene, no UI stats, no logos or franchise influence. Simple restrained headings 'WATER / PSYCHIC' and 'FAST SPECIAL ATTACKER', labels 'BASE' and 'EVOLVED'. No arrows. Composition wide landscape, creature designs fill canvas, no clipping."
+    },
+    {
+      "key": "breakwater",
+      "prompt": "Use case: stylized-concept. Asset type: approval-only Abyssals aquatic monster concept sheet. Polished highly detailed original dark-fantasy creature illustration on warm parchment, matching premium monster RPG artbook. Cute base left and imposing evolved form right, full body clear silhouettes, base smaller. Water/Rock nautilus BULKY SPECIAL ATTACKER: base adorable pearly spiral-shell nautilus with expressive dark-blue eyes peeking from shell opening, short soft teal tentacles, small fossil stone ridges. Evolution a formidable reef-fortress nautilus: colossal dramatic spiral shell formed from layered white limestone, cobalt crystalline mineral seams and weathered fossil armour, imposing crowned shell aperture, visible luminous sapphire eyes, muscular yet graceful fan of cephalopod tentacles, concentrated water jet forming a swirling ring. Build is dense and defensive; elegant spiral remains readable, no humanoid body, no mech-knight, no turtle. Evolved creature cooler and visibly transformed with mineral bastions integrated organically. Original biological marine monster. No franchise likeness, no UI stats. Restrained headings 'WATER / ROCK' and 'BULKY SPECIAL ATTACKER'; labels 'BASE' and 'EVOLVED'. Wide landscape, no clipping, no arrows."
+    },
+    {
+      "key": "ventsunder",
+      "prompt": "Use case: stylized-concept. Asset type: approval-only Abyssals aquatic monster concept sheet. Polished highly detailed original dark-fantasy creature illustration on warm parchment, premium monster RPG artbook style. Two fullbody evolutionary stages, cute base on left and massive imposing evolution on right. Water/Fire hydrothermal vent crab SLOW SPECIAL ATTACKER: cute base a squat orange-and-black deepsea crab with lovable bright golden eyes, soft round claws and tiny volcanic chimney on its shell giving off wispy bubbles. Evolved form an intimidating deepsea volcanic crab with heavy six-legged crustacean anatomy, huge broad basalt carapace, black glass mineral plates and orange thermal seams, clusters of organically integrated hydrothermal chimneys erupting pressurised superheated water and dark steam, broad furnace-mouth-like face with clearly visible amber eyes, asymmetric impressive claws patterned like obsidian pressure valves. It fights with scalding jets and thermal eruptions, distinctive crab creature not humanoid, no mech knight, no generic fire monster. Water curls and steam contrast magma-like thermal light. Spectacular differently shaped evolved shell and claws. No franchise copies or UI stats. Restrained headings 'WATER / FIRE' and 'SLOW SPECIAL ATTACKER'; labels 'BASE' and 'EVOLVED'. Wide landscape, no clipping, no arrows."
+    },
+    {
+      "key": "stormchoir",
+      "prompt": "Use case: stylized-concept. Asset type: approval-only Abyssals aquatic monster concept sheet. Highly polished detailed original dark-fantasy monster RPG concept art on warm parchment. Two full-body evolutionary stages side by side: cute compact baby left and imposing otherworldly evolution right. Water/Electric siphonophore CONTROL SPECIAL ATTACKER: base a tiny adorable transparent jelly-colony with one clear cute face and luminous cyan eyes under a small bell, three yellow-green glowing bead segments and dangling little ribbon-tentacles. Evolution a spectacular long floating colonial siphonophore, huge curved translucent blue segmented body made of interlocking bell-like zooids, each glowing in sequence with electric gold and cyan organs; one dominant clear beautiful alien face with eyes at its front, dramatic flowing trailing tentacles resemble arcing electrical wires and jelly ribbons, luminous net of water-and-electricity curves around it, ornate living sail-fin. Express a real marine colonial organism, NO humanoid body, no limbs or armour knight, no generic jellyfish sphere; strong elegant serpentine silhouette. Visually transformed evolutionary shape with dramatic controlled electric field. Original creature, no Pokémon likeness, no stats/UI. Restrained headings 'WATER / ELECTRIC' and 'CONTROL SPECIAL ATTACKER'; labels 'BASE' and 'EVOLVED'. Wide landscape composition, fully visible, no clipping."
+    },
+    {
+      "key": "elytrarch",
+      "prompt": "Use case: stylized-concept. Asset type: approval-only Abyssals new Bug/Steel Rivet branch concept sheet. Reference image is the EXISTING APPROVED shared Rivet starter: retain exact cute round bronze charcoal helmet face, golden eyes and oversized gauntlet for first creature left. Create two new ORIGINAL evolutions alongside it on warm parchment, premium polished detailed dark-fantasy monster illustration matching reference. MIDDLE CARAPEX: humanoid-mech-inspired beetle squire with visible golden eyes in a face, bronze charcoal segmented chitin-steel armour, broad elytra shell on back, small horn crown and swordlike mandible forearm blades. FINAL ELYTRARCH: far more imposing magnificent beetle monarch mech, dramatic stag-beetle antler-shaped horn crown, interlocking layered golden-bronze and obsidian chitin armour, two huge crescent mandible sword arms, split imposing elytra wings reveal intricate glowing gossamer insect wings, six-part insect motifs but bipedal mighty mech anatomy, readable face and radiant amber eyes. No reused Ghost/Fire/Electric/Ice/Dark finals: new Bug/Steel insect-armour identity. Strong visual transformation at every stage; no franchise copy. At bottom a small separate CHITIN CORE evolution item: beautiful faceted amber insect-heart inside tiny bronze carapace, clearly labelled. Text precisely 'BUG / STEEL', 'RIVET', 'CARAPEX', 'ELYTRARCH', 'CHITIN CORE'. Three characters full body equally separated, starter small, middle medium, final larger, item positioned in its own small margin with no overlap. No stats or arrows, no clipping."
+    },
+    {
+      "key": "bell-fragments",
+      "prompt": "Use case: stylized-concept. Asset type: actual game item sprites in a transparent horizontal atlas with EXACTLY THREE EQUAL CELLS. Draw three separate broken pieces of the SAME ancient bronze bell in polished detailed dark fantasy game asset style: LEFT cell at x=16.67% the bell CROWN, a jagged broken bronze upper dome with suspension loop and engraved sun motif; CENTRE cell at x=50% the bell RIM, a large curved fractured flared lower lip of bronze with engraved border and worn patina; RIGHT cell at x=83.33% the bell CLAPPER, hanging striker with long dark iron stem and solid bulbous bronze hammer tip. Each object alone centred in its third cell at y=50%, same apparent scale, filling at most65% cell width and80%height, very clear transparent gutters; no shape crosses cell boundary. Full objects complete and unclipped. Genuinely transparent alpha background, NO parchment, ground or shadows, NO labels or text, NO checkerboard painted in pixels. Rich warm old bronze metal with teal patina, strong readable icon silhouettes, these are fragments of one sacred bell."
+    }
+  ],
+  "rivalPrompt": "Use case: stylized-concept. Asset type: five fishing-rival character busts in one genuinely transparent horizontal game portrait atlas. Reference image Aimon is STYLE REFERENCE ONLY: match fine polished anime fantasy RPG rendering, colour texture, clothing detail and face styling, not his identity. EXACTLY FIVE EQUAL VERTICAL PANELS, readable heads and shoulders with upper torso cropped consistently, every head and body fully INSIDE OWN FIFTH CELL, clear transparent gutters; centred at x10%,30%,50%,70%,90%, eyes across same y30% line. LEFT TO RIGHT: Alice Giffard, young adult English woman, chestnut braid, blue medieval linen fishing tunic with brown leather shoulder strap, optimistic grin; Old Walter FitzHugh, elderly English man, deeply wrinkled kind face, white beard, faded green wool cap and heavy brown medieval coat, weathered wise smile; Agnes FitzRobert, middle-aged English woman, auburn hair under cream medieval coif, green practical fisherwoman tunic, confident proud expression; Robert de Vesci, middle-aged English man, dark curly hair and short dark beard, rust-red medieval tunic and dark worn leather vest, competitive knowing smile; Matilda de Montfort, young adult English woman, black wavy hair, cream embroidered headband, plum-purple medieval tunic and pale scarf, energetic playful grin. English crusade-era commoner anglers, no crowns, no armour, no modern props, subtle fishing hooks or net knot accents on clothing. Clearly distinct adult faces. All five beautiful detailed individual portraits. Transparent background with actual alpha, no panel lines, no text, no shadows, no checkerboard painted in pixels. Wide landscape, no portrait bleeds or overlap across cell boundaries."
+}

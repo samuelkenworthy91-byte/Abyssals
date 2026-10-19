@@ -1,0 +1,318 @@
+{
+  "method": "builtin imagegen transparent background extraction of exact approved local PNG sheets; generated outputs copied untouched",
+  "rectFormat": "x,y,width,height in pixels",
+  "atlases": {
+    "shark": {
+      "file": "shark.png",
+      "width": 2172,
+      "height": 724,
+      "sourceGeneratedFile": "exec-dce91667-f736-4a25-944f-d27d28043774.png",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "creatures": [
+        {
+          "name": "Snubling",
+          "rect": [
+            0,
+            0,
+            960,
+            724
+          ],
+          "alphaBounds": [
+            31,
+            57,
+            918,
+            648
+          ],
+          "visibleAlphaBounds": [
+            89,
+            205,
+            845,
+            467
+          ]
+        },
+        {
+          "name": "Cragjaw",
+          "rect": [
+            960,
+            0,
+            1212,
+            724
+          ],
+          "alphaBounds": [
+            974,
+            15,
+            1176,
+            685
+          ],
+          "visibleAlphaBounds": [
+            989,
+            17,
+            1147,
+            669
+          ]
+        }
+      ]
+    },
+    "narwhal": {
+      "file": "narwhal.png",
+      "width": 2172,
+      "height": 724,
+      "sourceGeneratedFile": "exec-59cb7e26-47d3-4226-af31-e56612477292.png",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "creatures": [
+        {
+          "name": "Narlit",
+          "rect": [
+            0,
+            0,
+            550,
+            724
+          ],
+          "alphaBounds": [
+            95,
+            355,
+            395,
+            291
+          ],
+          "visibleAlphaBounds": [
+            98,
+            358,
+            387,
+            286
+          ]
+        },
+        {
+          "name": "Auracorn",
+          "rect": [
+            550,
+            0,
+            700,
+            724
+          ],
+          "alphaBounds": [
+            580,
+            67,
+            629,
+            627
+          ],
+          "visibleAlphaBounds": [
+            599,
+            110,
+            594,
+            574
+          ]
+        },
+        {
+          "name": "Oraclespear",
+          "rect": [
+            1250,
+            0,
+            922,
+            724
+          ],
+          "alphaBounds": [
+            1294,
+            25,
+            845,
+            670
+          ],
+          "visibleAlphaBounds": [
+            1299,
+            36,
+            836,
+            657
+          ]
+        }
+      ]
+    },
+    "sunfish": {
+      "file": "sunfish.png",
+      "width": 1774,
+      "height": 887,
+      "sourceGeneratedFile": "exec-447a380c-a380-4601-afe0-cb8548f62e94.png",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "creatures": [
+        {
+          "name": "Solmola",
+          "rect": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "alphaBounds": [
+            71,
+            3,
+            816,
+            870
+          ],
+          "visibleAlphaBounds": [
+            75,
+            13,
+            740,
+            851
+          ]
+        },
+        {
+          "name": "Solmola Wrath",
+          "rect": [
+            887,
+            0,
+            887,
+            887
+          ],
+          "alphaBounds": [
+            887,
+            12,
+            850,
+            863
+          ],
+          "visibleAlphaBounds": [
+            891,
+            15,
+            842,
+            855
+          ]
+        }
+      ]
+    },
+    "manta": {
+      "file": "manta.png",
+      "width": 2172,
+      "height": 724,
+      "sourceGeneratedFile": "exec-4fd68fbf-ddc8-4666-8f7a-f882077345f2.png",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "creatures": [
+        {
+          "name": "Finlet",
+          "rect": [
+            0,
+            0,
+            724,
+            724
+          ],
+          "alphaBounds": [
+            27,
+            55,
+            652,
+            669
+          ],
+          "visibleAlphaBounds": [
+            90,
+            201,
+            587,
+            387
+          ]
+        },
+        {
+          "name": "Reeftalon",
+          "rect": [
+            724,
+            0,
+            724,
+            724
+          ],
+          "alphaBounds": [
+            733,
+            21,
+            648,
+            671
+          ],
+          "visibleAlphaBounds": [
+            738,
+            126,
+            639,
+            508
+          ]
+        },
+        {
+          "name": "Tideryu",
+          "rect": [
+            1448,
+            0,
+            724,
+            724
+          ],
+          "alphaBounds": [
+            1462,
+            41,
+            673,
+            611
+          ],
+          "visibleAlphaBounds": [
+            1468,
+            85,
+            661,
+            542
+          ]
+        }
+      ]
+    },
+    "mantis": {
+      "file": "mantis.png",
+      "width": 1774,
+      "height": 887,
+      "sourceGeneratedFile": "exec-f6f86c8f-5b5e-4345-9e2a-9a400f8c3b99.png",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "creatures": [
+        {
+          "name": "Carapex",
+          "rect": [
+            0,
+            0,
+            830,
+            887
+          ],
+          "alphaBounds": [
+            33,
+            43,
+            797,
+            826
+          ],
+          "visibleAlphaBounds": [
+            119,
+            75,
+            642,
+            785
+          ]
+        },
+        {
+          "name": "Elytrarch",
+          "rect": [
+            830,
+            0,
+            944,
+            887
+          ],
+          "alphaBounds": [
+            830,
+            10,
+            944,
+            877
+          ],
+          "visibleAlphaBounds": [
+            891,
+            22,
+            865,
+            852
+          ]
+        }
+      ]
+    }
+  }
+}

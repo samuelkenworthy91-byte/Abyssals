@@ -1,0 +1,5 @@
+export const EXPEDITION_ABILITIES=[
+ {name:'Quarry Scent',class:'Standard',text:'While this living Abyssal leads your expedition, rare and uncommon wild encounters become more likely and common encounters become less likely. Also improves rare water-biome catches in fishing competitions. Does not change encounter frequency, levels or scripted encounters.'},
+ {name:'Fortune Finder',class:'Standard',text:'Doubles the doubloons awarded for a battle this Abyssal participates in. Winning ordinary wild battles with this ability also finds salvage worth 5 doubloons per enemy level. Only the strongest participating money ability applies; multiple copies do not stack. No bonus for fleeing, losing, tutorials, repeat practice or quest prizes.'},
+ {name:'Grand Fortune',class:'Signature',text:'Quadruples the doubloons awarded for a battle this Abyssal participates in. Winning ordinary wild battles also finds salvage worth 10 doubloons per enemy level. Only the strongest participating money ability applies; multiple copies do not stack. No bonus for fleeing, losing, tutorials, repeat practice or quest prizes.'}
+];
