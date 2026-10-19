@@ -1,0 +1,273 @@
+{
+  "version": "0.89.1",
+  "versionCode": 100,
+  "filename": "Abyssals-v0.89.1-Marasen-Rebuilt.apk",
+  "size": 183746382,
+  "sha256": "5d1a90da4a821309be885aad936761c1a335e4f7c56e255ecc28495e01622ee2",
+  "parts": [
+    {
+      "name": "apk-000.bin",
+      "size": 4194304,
+      "sha256": "5ea3945cb1e657a4b0dc815c75074e98a8ae3f0144efc845e43e70e80acd5dba",
+      "git_sha": "71a6b307aa79e8f0e8eb5a9cfedb43cb8067769d"
+    },
+    {
+      "name": "apk-001.bin",
+      "size": 4194304,
+      "sha256": "6e86e317ce053ef5b33613e0d7f4e32c094904a1a21df0e3a08ecbcdede95ce7",
+      "git_sha": "34994835eb14915306fa36a3f8c21bdfe9bff621"
+    },
+    {
+      "name": "apk-002.bin",
+      "size": 4194304,
+      "sha256": "ed7ab0a4712e8069cfa4dd956d3079a43cc3a28c175e3c6c59591095816b143e",
+      "git_sha": "a748dba2a11a304a8a0e87d0f04faf9cbb6a0035"
+    },
+    {
+      "name": "apk-003.bin",
+      "size": 4194304,
+      "sha256": "dbb9a2775dfaa175f3e58ec47d79e4bc110012aee3be7e0ae8ebd5b4f4cf791b",
+      "git_sha": "3b3ca3bfcc9ccc81bcc38ba3f5db7b07320b0ec7"
+    },
+    {
+      "name": "apk-004.bin",
+      "size": 4194304,
+      "sha256": "dea813e08701bfbe1e9e3c0c39904dedb96e550794d1c8480d51abced7cadb11",
+      "git_sha": "6c4cbb27180ca46aebce550ed08aa32be1d7fb4b"
+    },
+    {
+      "name": "apk-005.bin",
+      "size": 4194304,
+      "sha256": "71e23cac72dd9f04db416518caa27e7db02759553b1180de620c6f93b304eb74",
+      "git_sha": "bc86cc68e9e97cb7471a3c5e6a13625f1b7aa300"
+    },
+    {
+      "name": "apk-006.bin",
+      "size": 4194304,
+      "sha256": "c76cd19a2272273a70881ad1d6c36c4bcb382b75d535d05beec83e0705701ca5",
+      "git_sha": "2f691273c3ddfb4c3a153d3127585e2b5f58e724"
+    },
+    {
+      "name": "apk-007.bin",
+      "size": 4194304,
+      "sha256": "2309e3adb168925d856459bee1a9acffd8df6a1bccf5bba4a82229d0cf3747ba",
+      "git_sha": "1a983362ca4dca48921d21e39472075d9a6f8662"
+    },
+    {
+      "name": "apk-008.bin",
+      "size": 4194304,
+      "sha256": "fae4dd12d75d45e2f754bfbb9443c2c08303bc260915a90a82fafe802866f806",
+      "git_sha": "425991b23d2b8dd4bf91a6b29bf14214b0556ada"
+    },
+    {
+      "name": "apk-009.bin",
+      "size": 4194304,
+      "sha256": "a4ea33e291c910eb052e1ecc1502d64e13eb2be990bce018c4816d09d997034f",
+      "git_sha": "bf4596dc14a5a98925d3c3e27afddabf7a137d17"
+    },
+    {
+      "name": "apk-010.bin",
+      "size": 4194304,
+      "sha256": "b9b803c0f9bdbd2a650b96cf891597c2572fa19ffa293f3088cf60af39ff14bb",
+      "git_sha": "9bac5dcb190dbecdacfff34b5dc50363f285b097"
+    },
+    {
+      "name": "apk-011.bin",
+      "size": 4194304,
+      "sha256": "7e06376fb4aabc10c1adfead067a30e65a1d5381c89cf1a3a76d3bf0d5b20854",
+      "git_sha": "e2e02b748ef761991f85df4471ecb62c5bc0ce6b"
+    },
+    {
+      "name": "apk-012.bin",
+      "size": 4194304,
+      "sha256": "4c0426618975afe2dd34b99361c5910085248b27230bb340dd629e1141ca73ad",
+      "git_sha": "ed14ee0633af715fddd8ae532412b8af16bc615b"
+    },
+    {
+      "name": "apk-013.bin",
+      "size": 4194304,
+      "sha256": "ffe55647d07766c5bb204db7262949080861c12ae763e8242a5418b943967abc",
+      "git_sha": "5576710d3c907b69d75d5ca5d42d2d34eeaebfce"
+    },
+    {
+      "name": "apk-014.bin",
+      "size": 4194304,
+      "sha256": "b4c06cd12b20141ea7c409a062f2ee6e284b52a8149fa9f9c0089ed97b5caab8",
+      "git_sha": "9d13a719a5fda6fddcc49251b70a6bd61e93ad3a"
+    },
+    {
+      "name": "apk-015.bin",
+      "size": 4194304,
+      "sha256": "3f46690c6704ccdf17f851290fecf9abaced6ca447d0ec775498c3db5d9e552c",
+      "git_sha": "b06a35c304bb0b3b65085377948c0d9be14eee3b"
+    },
+    {
+      "name": "apk-016.bin",
+      "size": 4194304,
+      "sha256": "c1801b7d40b5aa999b38c56887577b0debe3d560fd49f09292de3338c5d2f2c0",
+      "git_sha": "59b9b5d30fb42032658185a46c5d0b6fc5514b21"
+    },
+    {
+      "name": "apk-017.bin",
+      "size": 4194304,
+      "sha256": "d5bf3ce6d7ce9b42355dff9ccf8a859bb55cf9ec3d5fbeafc41efdec56d92637",
+      "git_sha": "98e8cf2c8dff01d01674419fa7f3bba828005d33"
+    },
+    {
+      "name": "apk-018.bin",
+      "size": 4194304,
+      "sha256": "63de2bb3ddf3b0fb1408dd31f88537e3b96c1236ef1150dc534d524435ba67a2",
+      "git_sha": "4d2abe9bd3d4b31c8a3dc4e8f40af1dfcf260840"
+    },
+    {
+      "name": "apk-019.bin",
+      "size": 4194304,
+      "sha256": "0458f2c09e2e5c73517e364e8df8a94e18172377dfdd7bb4d2ae9b5fab8b0ec6",
+      "git_sha": "b063e0b172860aee6cf8d764f3104a0056784636"
+    },
+    {
+      "name": "apk-020.bin",
+      "size": 4194304,
+      "sha256": "d152f1113804442f7c7a48603c9ce5a1d920f01a9791244ae731676d894145da",
+      "git_sha": "c1531fcf6a8af55860dfe675d1cbaa2b332969ed"
+    },
+    {
+      "name": "apk-021.bin",
+      "size": 4194304,
+      "sha256": "eaa1810b648e88bc263f44a54353da952b4e57eba4351c0d0b233fd9de0f49c4",
+      "git_sha": "896a6dc91b7d945f359dfbe57d98af3bfcfec16d"
+    },
+    {
+      "name": "apk-022.bin",
+      "size": 4194304,
+      "sha256": "0ea9dadffdc97b9711b8f9e63723ebe81dc948d6bf339a880d66fc07edd42dad",
+      "git_sha": "01762580b220135694ea94c8f569c2c0ded9071b"
+    },
+    {
+      "name": "apk-023.bin",
+      "size": 4194304,
+      "sha256": "271f0b4fc7f8eb0487b64d363a1797fbb485a2abd561df78509a29ae3ce7c12a",
+      "git_sha": "172855a4726d526ee729a0f74743323af670549f"
+    },
+    {
+      "name": "apk-024.bin",
+      "size": 4194304,
+      "sha256": "c4a091dad11bb02bb1aef4804701c858d51d701307d99c22bed333888d40f98a",
+      "git_sha": "12fd0f1f014c6fb0b8e4ea42c035b7ff00a4eb97"
+    },
+    {
+      "name": "apk-025.bin",
+      "size": 4194304,
+      "sha256": "f7e10ca8a081613ca23b93c164ba4a0ed902b2b9976a88282fc2818300cd1184",
+      "git_sha": "d9ff9c2b9b57afe5a37c8ab0690819bbdfed6ce2"
+    },
+    {
+      "name": "apk-026.bin",
+      "size": 4194304,
+      "sha256": "540fe1a21dfaeb261ae354072034e696cf2f30d16546cd7676c8dda7a842191f",
+      "git_sha": "aaccc3d6d54db57f11a4fa12d0f77fc3750ed57d"
+    },
+    {
+      "name": "apk-027.bin",
+      "size": 4194304,
+      "sha256": "22eaaf5d7fdc648ac3a9aa59356bf57bce3880ee7d9ccd9fb00add064958fdee",
+      "git_sha": "bda02320f841284471ce0e1e2b969dea5d450f48"
+    },
+    {
+      "name": "apk-028.bin",
+      "size": 4194304,
+      "sha256": "f8c42f227de7c3707d280ba705afe51f5c135220d5c57331b65fd56f78c89a91",
+      "git_sha": "ea43538bba25fa9891733bcccfb08314cc6e0e21"
+    },
+    {
+      "name": "apk-029.bin",
+      "size": 4194304,
+      "sha256": "2b06b01937588baee2f803e26763d925837ec543abcac8fb46c485f3060c697e",
+      "git_sha": "022797c39c63f243a1266d417d41af85056e15c1"
+    },
+    {
+      "name": "apk-030.bin",
+      "size": 4194304,
+      "sha256": "b133069be3046dafdbfb16be93726d863eec50e5289e1d23857fc700f901cb0d",
+      "git_sha": "d2505f4884c96ccd18d485d4e1ee17843a0482b4"
+    },
+    {
+      "name": "apk-031.bin",
+      "size": 4194304,
+      "sha256": "7d265ecdabbb5b9a219548b664291b08c0324557c103f8ad3ba52a434bbb11bf",
+      "git_sha": "9f131422afd964f6a1ed7bbcff0009e2fc7895e4"
+    },
+    {
+      "name": "apk-032.bin",
+      "size": 4194304,
+      "sha256": "e9f5360ea5b7390053c2809065d8097504837832ce0cd106362e6540c1549d94",
+      "git_sha": "48dae861212b8a43863126374fd57412975fd6f3"
+    },
+    {
+      "name": "apk-033.bin",
+      "size": 4194304,
+      "sha256": "fea2086f52b16828abf176c2d19790f4b57f986315fc40051476947b18c37897",
+      "git_sha": "176194ad150b233b82862ebffc033682b95ec638"
+    },
+    {
+      "name": "apk-034.bin",
+      "size": 4194304,
+      "sha256": "576eb90e4b118bb0cbedcc7b0de2558e9c46c442b15d3db8eb78993b417350dd",
+      "git_sha": "6b668d2cf7c085a574dc60f7610dbdff171d9841"
+    },
+    {
+      "name": "apk-035.bin",
+      "size": 4194304,
+      "sha256": "42abd47cb8980a7d6ab923622d8e84caf5c26d237ea6001a339555039c02c05d",
+      "git_sha": "9fa8ad97123e22152f704d4a989f79091ce2cf36"
+    },
+    {
+      "name": "apk-036.bin",
+      "size": 4194304,
+      "sha256": "6c3de76d244685408a446c8ac089a212553dac17cc56180ebda532a77c8793f5",
+      "git_sha": "a3ee260fe0c62bfb41a1617a324c10326a1cda3e"
+    },
+    {
+      "name": "apk-037.bin",
+      "size": 4194304,
+      "sha256": "3e1adf3d56b5a864e771fd16388808665632594470be6772af203235b123e49e",
+      "git_sha": "373657017d38ccacba8be029b5b98e0293580cf3"
+    },
+    {
+      "name": "apk-038.bin",
+      "size": 4194304,
+      "sha256": "5d00965696a053b61d9791d0f5cf6f5fb30ba25dbbbd503753bcca2233604a9a",
+      "git_sha": "b6338b784423782241abae51982c4375552e5451"
+    },
+    {
+      "name": "apk-039.bin",
+      "size": 4194304,
+      "sha256": "973185d2d31fc2fad0745e50b7547912c7542e596cc331a737b37223cd98d40c",
+      "git_sha": "30233a79e10dd12c7b00c46a7f248918662c5e05"
+    },
+    {
+      "name": "apk-040.bin",
+      "size": 4194304,
+      "sha256": "1f2abd529af23275c6b9f0fe16788d3e9683f17fbeaa7e90cfaf967739fca338",
+      "git_sha": "7e02c4d1486d219626f3c71a332fba4c5c1a1a13"
+    },
+    {
+      "name": "apk-041.bin",
+      "size": 4194304,
+      "sha256": "eb4903f0d6491d99883c0d55418334d5e8c0eb02fcd67173978add8b49081cfc",
+      "git_sha": "a1af59d212f035661ff7030f5faec7b469c09fc6"
+    },
+    {
+      "name": "apk-042.bin",
+      "size": 4194304,
+      "sha256": "5524eca55e47dc49f3e8ca84233b4ce89753fb44fa48496f53d647f8bb021a82",
+      "git_sha": "909385b990a3456044917f68388d747fe5f8bf86"
+    },
+    {
+      "name": "apk-043.bin",
+      "size": 3391310,
+      "sha256": "703f3c1f76aa8455f5fb796d4dfcb174bfe4c0130469d3ebbef0146c7a38dffa",
+      "git_sha": "9398296de02d5f212050aa125d8f309795dfe068"
+    }
+  ]
+}
