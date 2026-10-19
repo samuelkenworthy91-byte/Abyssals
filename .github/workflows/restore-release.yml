@@ -1,0 +1,44 @@
+name: Verify and publish preserved APK
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/restore-release.yml'
+      - 'scripts/restore-release.py'
+      - 'release/v0.89.1/manifest.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reconstruct signed APK and its exact source
+        run: python3 scripts/restore-release.py
+      - name: Validate source syntax
+        run: |
+          for file in dist/*.js; do node --check "$file"; done
+      - name: Verify Android signatures and update identity
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y apksigner zipalign
+          apksigner verify --verbose --print-certs build/*.apk | tee build/signature-verification.txt
+          grep -F '6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac' build/signature-verification.txt
+          zipalign -c 4 build/*.apk
+      - name: Commit current game code and artwork
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dist release/v0.89.1/game-files.json
+          git diff --cached --quiet || git commit -m 'Expose exact v0.89.1 game code and assets from preserved release'
+          git push origin HEAD:main
+      - name: Publish download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view v0.89.1 >/dev/null 2>&1 || gh release create v0.89.1 --target main --title 'Abyssals v0.89.1' --notes 'Preserved signed v0.89.1 APK, reconstructed and verified on GitHub. Same release certificate and package identity as installed updates. Source and artwork are in dist/. This preserves the existing release; it is not a fresh native compilation or a device installation test.'
+          gh release upload v0.89.1 build/*.apk build/*.sha256 build/signature-verification.txt --clobber
