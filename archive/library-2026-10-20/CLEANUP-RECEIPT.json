@@ -1,0 +1,14 @@
+{
+  "completed_at": "2026-10-20T19:06:56.569Z",
+  "original_sources_archived": 534,
+  "original_source_bytes": 1454019850,
+  "verified_import_commit": "925efeebf49781c8e9a30923eee416479ea88748",
+  "imported_files_verified": 626,
+  "preexisting_art_files_preserved": 89,
+  "trash_actions_confirmed": 534,
+  "permanent_deletion": false,
+  "listing_confirmation": "complete",
+  "entries_still_listed": [],
+  "dist_tree": "2abe27093abe59e5bc764e9b9bf185a04085c567",
+  "apk_bytes_added_by_reference_archive": 0
+}
