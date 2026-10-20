@@ -1,0 +1,12 @@
+{
+  "commit": "925efeebf49781c8e9a30923eee416479ea88748",
+  "expected": 626,
+  "verified": 626,
+  "originals": 534,
+  "source_bytes": 1454019850,
+  "existing_art_files": 89,
+  "missing": [],
+  "changedArt": [],
+  "dist_sha": "2abe27093abe59e5bc764e9b9bf185a04085c567",
+  "dist_unchanged": true
+}
