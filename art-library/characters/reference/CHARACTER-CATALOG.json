@@ -1,0 +1,839 @@
+{
+  "canonical_names": {
+    "CHR-PATE": "Peter “Pate” FitzRobert",
+    "CHR-TRADE": "Thomas “Trade” de Clare"
+  },
+  "note": "Legacy filename labels and IDs are retained for traceability. Reference files are not automatically approved live assets. Use ready/CHR-PATE.png and ready/CHR-TRADE.png for the reviewed ball-free transparent cutouts. Corrected portrait references retain the review provenance; no trainer code is guessed where the source lacks one.",
+  "assets": [
+    {
+      "file": "001_Aimon.png",
+      "character_id": "CHR-AIMON",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/001_Aimon.png",
+      "sha256": "5ca3fe0d0ee964e731dc362125a9d6d49c72d4fe04788b50f9697c4719fa9703",
+      "transparent": false,
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "file": "002_Pateric_Pate_Vann.png",
+      "character_id": "CHR-PATE",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/002_Pateric_Pate_Vann.png",
+      "sha256": "9cd4b325e6013c1c88f468efb8ac1fc2d33692f2b094cb3e52359b05a5c3b910",
+      "transparent": false,
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "file": "003_Traden_Trade_Cor.png",
+      "character_id": "CHR-TRADE",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/003_Traden_Trade_Cor.png",
+      "sha256": "fc45933c29fff9874c9ea887d52a548c3d1009158580b69736a51447d125fed1",
+      "transparent": false,
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "file": "006_Illyr.png",
+      "character_id": "CHR-ILLYR",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/006_Illyr.png",
+      "sha256": "f4ecd45b75f644e33f7d59c226fe1a43df73fd0efdf80cff961fe26ae755f521",
+      "transparent": false,
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "file": "007_Nharos.png",
+      "character_id": "007",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/007_Nharos.png",
+      "sha256": "524c7df87903c8377164a689c31870be19d79021f3f9487e6380f9294c8e03f5",
+      "transparent": false,
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "file": "TRN-C01-001_Beric_Instructor.png",
+      "character_id": "TRN-C01-001",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C01-001_Beric_Instructor.png",
+      "sha256": "b4c468a694876b3b7318c4b60e75d3c42a0b273d92b8167b8e0f695b6d06ff87",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C06-005_Mason_Edda.png",
+      "character_id": "TRN-C06-005",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C06-005_Mason_Edda.png",
+      "sha256": "ce53cbdb5e0ee31eaa9c53ae9bcf02b7c46fba0d6d23a8d4d556b0e63f723af9",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C06-006_Officer_Sorn.png",
+      "character_id": "TRN-C06-006",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C06-006_Officer_Sorn.png",
+      "sha256": "8974557291ffb0fff9ce47294fa1547d9175b4bbae4cc4d499976d5543d3230a",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "TRN-C06-007_Enforcer_Kelm.png",
+      "character_id": "TRN-C06-007",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C06-007_Enforcer_Kelm.png",
+      "sha256": "1e1db894c397c64aeb03f58a89539353d1d614c285815163b249d0dd5a040e69",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C06-008_Defector_Mara.png",
+      "character_id": "TRN-C06-008",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C06-008_Defector_Mara.png",
+      "sha256": "18e1067df88037ed402a595a7cdbb8c5b2b27cf571deb62bba8d9a8c1bbc0aa5",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C06-009_Prospector_Venn.png",
+      "character_id": "TRN-C06-009",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C06-009_Prospector_Venn.png",
+      "sha256": "4d9aab1019a068faee275b6a8772e1af0be33e6ac1c35842be83114b9d01eb58",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C07-006_Guard_Captain_Vessa.png",
+      "character_id": "TRN-C07-006",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C07-006_Guard_Captain_Vessa.png",
+      "sha256": "478d4f54d459666374cf642fcd56a44f67aeefc9b53aa85ef32803795053f213",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "TRN-C07-007_Heretic_Scribe_Omel.png",
+      "character_id": "TRN-C07-007",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C07-007_Heretic_Scribe_Omel.png",
+      "sha256": "ef232d5ffc53a8d89768ee23ab099e27545591f25d2ebb4c9006d34fd6abefe4",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C08-007_War_Captain_Elric.png",
+      "character_id": "TRN-C08-007",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C08-007_War_Captain_Elric.png",
+      "sha256": "5886070ad72d1c4746c51c2d2485198e1f378c0aa51644e229400fe3b4f082d4",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C08-008_Duelist_Avel.png",
+      "character_id": "TRN-C08-008",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C08-008_Duelist_Avel.png",
+      "sha256": "b7f7bad491af32b88e59f595717b1229ed8b0e7c9d0f8ba975b373bbb6b77860",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C08-009_Duelist_Caia.png",
+      "character_id": "TRN-C08-009",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C08-009_Duelist_Caia.png",
+      "sha256": "fdbdff3e3a401b4f68745ecd93977b75bcb973b192222ed433f16b49fa240ec8",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "TRN-C09-001_Temple_Guard_Aurel.png",
+      "character_id": "TRN-C09-001",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/TRN-C09-001_Temple_Guard_Aurel.png",
+      "sha256": "2432cf8a18650446be12ca58b25a48921ac7db2ff23d214150d38b8b31866f83",
+      "transparent": false,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "WRD-01_Veyr_Keeper_of_Names.jpg",
+      "character_id": "WRD-01",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-01_Veyr_Keeper_of_Names.jpg",
+      "sha256": "cf997245ef0303ac549c4848c293dc27f1f0cc0534cc547d4028dc10067cf759",
+      "transparent": false,
+      "width": 728,
+      "height": 1536
+    },
+    {
+      "file": "WRD-02_Ossael_the_Gatherer.jpg",
+      "character_id": "WRD-02",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-02_Ossael_the_Gatherer.jpg",
+      "sha256": "839bc19a4314f02c7157192ebf0e7d34a305e6e63419e69034b41597b36fd428",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "WRD-03_Mordren_Drum_of_War.jpg",
+      "character_id": "WRD-03",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-03_Mordren_Drum_of_War.jpg",
+      "sha256": "d1c02224b307cd41c2779e5b39f0922cd239386f7f1e40fa9811a4fbfdade7fa",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "WRD-04_Caelor_Last_Magistrate.jpg",
+      "character_id": "WRD-04",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-04_Caelor_Last_Magistrate.jpg",
+      "sha256": "4edc8c751409a9b87b3f2c457fc606309d81c845da5a878e6ed9437de5b549ae",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "WRD-05_Asterion_Voice_of_Certainty.jpg",
+      "character_id": "WRD-05",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-05_Asterion_Voice_of_Certainty.jpg",
+      "sha256": "f49f53644fff1922299171a22b67d79a7e76a77dadb2ef6dd86ab0aeaef7f3fb",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "WRD-06_Mirra_Kindly_Shape.jpg",
+      "character_id": "WRD-06",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-06_Mirra_Kindly_Shape.jpg",
+      "sha256": "dd50423cab692b2654e8a89deeb5d5b6390b766e841862e7deb42f089c4abbd9",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "WRD-07_Velcar_Oath-Eater.jpg",
+      "character_id": "WRD-07",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-07_Velcar_Oath-Eater.jpg",
+      "sha256": "253896b9e3c9d845a620c05033b746295f7a953c554281428e78b3063a978111",
+      "transparent": false,
+      "width": 863,
+      "height": 1536
+    },
+    {
+      "file": "WRD-08_Nema_the_Unremembered.jpg",
+      "character_id": "WRD-08",
+      "status": "legacy-confirmed-reference",
+      "source": "ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02_RECREATED.zip :: ABYSSALS_Portraits_Recreated_2026-09-16/02_Confirmed_ID_Named/WRD-08_Nema_the_Unremembered.jpg",
+      "sha256": "b36e8d17d3849144eff22abd22be4d3379fdd6160db7c1edb2a5862295be6e0e",
+      "transparent": false,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "TRN-C02-002_Varo_Soldier.png",
+      "character_id": "TRN-C02-002",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-002_Varo_Soldier.png",
+      "sha256": "1eb85f09c281632f8eb01510f26da0a0588161cd864e218b1d275fb469a17eb8",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C01-002_Elsen_Recruit.png",
+      "character_id": "TRN-C01-002",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C01-002_Elsen_Recruit.png",
+      "sha256": "456899070c4e5a486976cc4ffbe14b0613461a2b835699f6149e7c1715da092b",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C02-007_Selka_Beastkeeper.png",
+      "character_id": "TRN-C02-007",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-007_Selka_Beastkeeper.png",
+      "sha256": "7d56a58ea71234a32cc3a3439cf50cfb91196cbc165fc4f4416d38998422fb0e",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C01-003_Maela_Scout.png",
+      "character_id": "TRN-C01-003",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C01-003_Maela_Scout.png",
+      "sha256": "89304726f3773c7e6707bb9dea0c3e47e273aa7e93f80bfbbc67b034fa56c769",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C02-005_Corren_Siege_Engineer.png",
+      "character_id": "TRN-C02-005",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-005_Corren_Siege_Engineer.png",
+      "sha256": "ad2e3646966dd1c5159722480a6dcb9dd144118888d309e1b0f337817ab689bf",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C02-003_Neris_Hunter.png",
+      "character_id": "TRN-C02-003",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-003_Neris_Hunter.png",
+      "sha256": "9f5001b3ec4e1ca54b0b06cb1b0bf3a7f06ec85dbcd34689f922d2ad85779adf",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C02-006_Ysarn_Guard.png",
+      "character_id": "TRN-C02-006",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-006_Ysarn_Guard.png",
+      "sha256": "9f18d846c3be885283213a1e513683a26a80a3e9b99211d369f4397ce12a50ac",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C02-001_Rell_Scout.png",
+      "character_id": "TRN-C02-001",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-001_Rell_Scout.png",
+      "sha256": "aff18230a4e8b39070eb4a473c8b4ad0c7926fcfa3ad615eabeec57af317e82c",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "TRN-C02-004_Halven_Officer.png",
+      "character_id": "TRN-C02-004",
+      "status": "legacy-confirmed-reference",
+      "source": "TRN-C02-004_Halven_Officer.png",
+      "sha256": "ad618b8a072e3cd4a65061598ef725e71fbb5cf225290edde01cf83a5f34dcb7",
+      "transparent": false,
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "file": "CORRECTED-causeway-scout-robert-de-clare.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Causeway scout Robert de Clare",
+      "sha256": "c9bad015c12953614ed4e7459694289b02d36552041faba637fd88dc93d812a3",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-caravan-guard-ali-ibn-umar.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Caravan guard Ali ibn Umar",
+      "sha256": "c1789a9a495922a5602275b4117d54026000237daeb96cf222af3e630ceaffba",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-warehouse-watchman-hasan-ibn-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Warehouse watchman Hasan ibn Ahmad",
+      "sha256": "8fd995169f8e128daba13385cf4b8a299409441260a8b9b0bf9df42284d9b06a",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-warehouse-captain-zaynab-bint-umar.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Warehouse captain Zaynab bint Umar",
+      "sha256": "bc521415cf563f5ae852a39b656c74e82f4630c9254e95613b4e51f71e71a91b",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-weir-lookout-khalid-ibn-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Weir lookout Khalid ibn Hasan",
+      "sha256": "5763b5086fc4521c7c1ab97ae817289f2fb2d1d6581d819a87b2a18103263d7c",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-caravan-outrider-geoffrey-fitzhugh.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Caravan outrider Geoffrey FitzHugh",
+      "sha256": "42db773813778e549593ac3f6373dc6aa40a7ccac94405606221eecd73ea72e7",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-treasure-hunter-hugh-de-montfort.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Treasure hunter Hugh de Montfort",
+      "sha256": "ebf678278197e4edbb48df082ba59357ea4219ec29824a67b8cb01a3913988a0",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-relic-hunter-agnes-de-vesci.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Relic hunter Agnes de Vesci",
+      "sha256": "f1d2f6f23e68c280d2d934c462a1b91ff6cc14368abd7859438c849fea45c176",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-treasure-hunter-walter-fitzhenry.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Treasure hunter Walter FitzHenry",
+      "sha256": "2b232605426e6264aa085d487bc08467dd688cb315add79a49fcfdc5f3925239",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-relic-hunter-alice-de-mortimer.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Relic hunter Alice de Mortimer",
+      "sha256": "dd04e364b75722e6ccef497dfc2d1b0272467914ee3d4e9ea227bf3641e265b1",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-treasure-hunter-richard-de-beaumont.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Treasure hunter Richard de Beaumont",
+      "sha256": "7548df20d96515acd37607f1c59f0391866de231ebedb7411304f76cd48fb61e",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hugh-de-warenne.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hugh de Warenne",
+      "sha256": "26bc86516811b9b6eeb80ff4ed27f08e8fe0b877556f7780dba8ac9daeea2101",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-robert-de-warenne.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Robert de Warenne",
+      "sha256": "48afd0534759bc4f7c381ec2d0ad87928767f4457c26e10e41dc2b0661b0714a",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-agnes-de-warenne.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Agnes de Warenne",
+      "sha256": "204440facc273971e6da49a7b9f56fd947f34f963c5ecc0d80954ee4f5fe6df3",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-matilda-de-warenne.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Matilda de Warenne",
+      "sha256": "ffc04a4fc1dfdfd7564a66cff5b9fcdf1f570bffe1a437e81a0d89fb9e65a08b",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-walter-de-warenne.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Walter de Warenne",
+      "sha256": "399db7c06d57bc5f823d8a6df8e5c28ff5341cd5637a0eca61b62fd2997316d1",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-alice-de-warenne.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Alice de Warenne",
+      "sha256": "1b336d3bcbd3a7aa59dd379ad7f466357d3dacd75181c9af4d94ad79781e3fdb",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hugh-de-bohun.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hugh de Bohun",
+      "sha256": "d831e14f7332e7e362d8a3b225760eefc0df1577639f51332d803e5eb1aff34d",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-yusuf-ibn-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Yusuf ibn Ahmad",
+      "sha256": "a64ce8a3ceb4800304aefce567154c4f21a779714961de9275d46ff1efdd89e5",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-maryam-bint-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Maryam bint Ahmad",
+      "sha256": "533cecae7b3ba77a952627a0df65b286843dcabc146a0df1352ef695574bc494",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-aisha-bint-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Aisha bint Ahmad",
+      "sha256": "e4f66e56befa042f1d570e74aec5a08349c79fe9459d93841c3affda03b6fc14",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-ali-ibn-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Ali ibn Ahmad",
+      "sha256": "f40b95924361b8b537548f3cee8e7a01bb7f8cb9a95ece7eac94248d3dc47b08",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hafsa-bint-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hafsa bint Ahmad",
+      "sha256": "c78d522f307d8b965a1b69e19afaec6dfee0cf2c4640dff7b3c3ebb07ee344e1",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-salim-ibn-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Salim ibn Ahmad",
+      "sha256": "d4b1e334f2d0d7e132e64347f8fa1877ef019db24cefe6ca918090b045ad7f51",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-fatima-bint-ahmad.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Fatima bint Ahmad",
+      "sha256": "91cd4057df159d00e54319b8737d90ddbb9442fe368b721ef5365028d1e45d95",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hasan-ibn-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hasan ibn Yusuf",
+      "sha256": "f6024aa5c75a9d62513f55a3e2f143fee48ef66c311d358b393ec70c873a4d17",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-yusuf-ibn-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Yusuf ibn Yusuf",
+      "sha256": "57815dda5dd195b38871e40844ef3488ab14434f7114f5553cb1bf21c64c8ab9",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-maryam-bint-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Maryam bint Yusuf",
+      "sha256": "7e8569164501812868106c927605b57176bda2b0eac3580a8e618da4e670f075",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-aisha-bint-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Aisha bint Yusuf",
+      "sha256": "cd44656f970ac1aef2df02370bdb8d0c14323044284a3f73eca90447382615bd",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-ali-ibn-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Ali ibn Yusuf",
+      "sha256": "80f2e20294476b86885a93cb3d2d2164ee7694559f15782a9cfd4b5b9fba3d1b",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hafsa-bint-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hafsa bint Yusuf",
+      "sha256": "09157a7faee0a62cb91cf951a5180e5599e8d96af8f7c40b36ef5ed50258eb71",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-salim-ibn-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Salim ibn Yusuf",
+      "sha256": "ac80608bfd58d63c5dc02baf00b7f99fed19e66a5d419da6ffafe25f37cbe3eb",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-fatima-bint-yusuf.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Fatima bint Yusuf",
+      "sha256": "8de5e2ca5325dfab404ca0462f9e782f92a9aee6dea8b427f4443d0b6db22a15",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hasan-ibn-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hasan ibn Hasan",
+      "sha256": "92af274642d27b6d8d65aa7b58f481de3d2506c2a19ea677f7aebd679aeb5145",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-yusuf-ibn-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Yusuf ibn Hasan",
+      "sha256": "df9e8720b51a11d12882e7b1432c3f5f23be3e72afd026d8e9a713f8cbd51931",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-maryam-bint-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Maryam bint Hasan",
+      "sha256": "d8bd76daf7474b16af1ad2aebf00ea7094f3a603584fd4680c8b018a363cc5fb",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-aisha-bint-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Aisha bint Hasan",
+      "sha256": "b523673566d7ebfc92b49bff782547a833824c4f8182407e5bac0ff74eaeae7d",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-ali-ibn-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Ali ibn Hasan",
+      "sha256": "2171d365d76ffe030c78ca85925686034c6fa1e7acce0326c76aad6428b22cc8",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hafsa-bint-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hafsa bint Hasan",
+      "sha256": "00cb0365d23920967e09241e0db5323606649b734170c343cb72fc1c54f5fc51",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-salim-ibn-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Salim ibn Hasan",
+      "sha256": "a71c6476f85b1e0eb91f505e9b7fa72dedc6c1449942f93eb6116f02721e4737",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-fatima-bint-hasan.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Fatima bint Hasan",
+      "sha256": "0c51401d7f1ce4353c415b0af366ea768930774b8b4ac9b64053a7751b2afb05",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hasan-ibn-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hasan ibn Salim",
+      "sha256": "e62e41cb98b3796d9889e12c424e208a900356a33270d902b54a6442a21ff0a3",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-yusuf-ibn-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Yusuf ibn Salim",
+      "sha256": "98620c29237fb183bb4c848a40807aa2cffe0f26cba9763fdffff96c9202160b",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-maryam-bint-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Maryam bint Salim",
+      "sha256": "9df8245c27089005ca72287a1545799bb7e129220d6dbb03c0bbd1a616846f9e",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-aisha-bint-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Aisha bint Salim",
+      "sha256": "ea6053e8bb9aee58f990851f810835039d99ca8668b2d0948524dcdad51e762f",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-ali-ibn-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Ali ibn Salim",
+      "sha256": "fc5a67b31fdb8f111cab86762893d56429a0580836defa317603254d337c8e0e",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hafsa-bint-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hafsa bint Salim",
+      "sha256": "e4b24ee82befa377052bb7ec306bdef9578f22b1c343bf60c0196200ef3eea0e",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-salim-ibn-salim.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Salim ibn Salim",
+      "sha256": "50be9e6040b41fd25bd3851bbdb63cf5771d2686f4af3dd6fbe4cc0c6c86755e",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "file": "CORRECTED-path-warden-hasan-ibn-ali.webp",
+      "character_id": null,
+      "status": "corrected-portrait-reference",
+      "source": "Abyssals-Trainer-Portrait-Corrections-49-of-69.html :: Path warden Hasan ibn Ali",
+      "sha256": "66b42db86b17f64cedefe4b627d42e00b99616f4b132700119f51fa33e3e0236",
+      "transparent": true,
+      "width": 768,
+      "height": 768
+    }
+  ]
+}
