@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "import_date": "2026-10-20",
-  "original_count": 532,
-  "original_bytes": 1450235753,
+  "original_count": 534,
+  "original_bytes": 1454019850,
   "sources": [
     {
       "library_file_id": "libfile_de054a0379c08191836c0e1d8e309310",
@@ -3685,6 +3685,23 @@
       ]
     },
     {
+      "library_file_id": "libfile_9cca66bd03e481918f1fbbdd558a3b95",
+      "file_id": "file_0000000095488210be628e8707c3e7d0",
+      "name": "Bulwarkab, the gilded crown beetle.png",
+      "path": "/Abyssals/Bulwarkab, the gilded crown beetle.png",
+      "created_at": "2026-10-07T19:59:53.802640Z",
+      "size_bytes": 1777041,
+      "sha256": "e91b0961529ce129d5e9e6a68de9a6e89db05a56640ce036f7a19b7e055ed23d",
+      "files": [
+        {
+          "name": "Bulwarkab-the-gilded-crown-beetle.png",
+          "size_bytes": 1777041,
+          "sha256": "e91b0961529ce129d5e9e6a68de9a6e89db05a56640ce036f7a19b7e055ed23d",
+          "git_blob_sha1": "f0203f1c14f337aa34a18e189589aca161db94a0"
+        }
+      ]
+    },
+    {
       "library_file_id": "libfile_b92955c074c88191aa317ccd43419b32",
       "file_id": "file_00000000673481f49b583870bd8c7515",
       "name": "Bethlisk, the crystal castleback.png",
@@ -3783,6 +3800,23 @@
           "size_bytes": 1820699,
           "sha256": "251ab88aa67bfdea8f399f29eb644382cdb241dad7658fa17105b8316eb07a07",
           "git_blob_sha1": "2157dffe1b3ba3e6daa18a3ab0f89c029acda04b"
+        }
+      ]
+    },
+    {
+      "library_file_id": "libfile_b0b9c18660c081919b6c266157b588a5",
+      "file_id": "file_00000000d43881fd84a0d5a11d3ea1eb",
+      "name": "Voltrake battle and overworld sprite sheet.png",
+      "path": "/Abyssals/Voltrake battle and overworld sprite sheet.png",
+      "created_at": "2026-10-08T15:29:40.028385Z",
+      "size_bytes": 2007056,
+      "sha256": "94c70f5066290bcb656379e8571b75587109dbff6022d365cd4d0ec3202ac0ed",
+      "files": [
+        {
+          "name": "Voltrake-battle-and-overworld-sprite-sheet.png",
+          "size_bytes": 2007056,
+          "sha256": "94c70f5066290bcb656379e8571b75587109dbff6022d365cd4d0ec3202ac0ed",
+          "git_blob_sha1": "4956587d002d67b707741a6482005f19ca971f63"
         }
       ]
     },
@@ -9535,39 +9569,5 @@
       ]
     }
   ],
-  "pending_sources": [
-    {
-      "id": "file_0000000095488210be628e8707c3e7d0",
-      "kind": "file",
-      "name": "Bulwarkab, the gilded crown beetle.png",
-      "path": "/Abyssals/Bulwarkab, the gilded crown beetle.png",
-      "file_id": "file_0000000095488210be628e8707c3e7d0",
-      "library_file_id": "libfile_9cca66bd03e481918f1fbbdd558a3b95",
-      "library_artifact_type": "image",
-      "version_id": null,
-      "mime_type": "image/png",
-      "size_bytes": 1777041,
-      "created_at": "2026-10-07T19:59:53.802640Z",
-      "modified_at": "2026-10-07T19:59:53.802640Z",
-      "model_generated": true,
-      "surface": "library",
-      "transfer_issue": "Returned bytes do not match recorded source size"
-    },
-    {
-      "id": "file_00000000d43881fd84a0d5a11d3ea1eb",
-      "kind": "file",
-      "name": "Voltrake battle and overworld sprite sheet.png",
-      "path": "/Abyssals/Voltrake battle and overworld sprite sheet.png",
-      "file_id": "file_00000000d43881fd84a0d5a11d3ea1eb",
-      "library_file_id": "libfile_b0b9c18660c081919b6c266157b588a5",
-      "library_artifact_type": "image",
-      "version_id": null,
-      "mime_type": "image/png",
-      "size_bytes": 2007056,
-      "created_at": "2026-10-08T15:29:40.028385Z",
-      "modified_at": "2026-10-08T15:29:40.028385Z",
-      "model_generated": true,
-      "surface": "library"
-    }
-  ]
+  "pending_sources": []
 }
