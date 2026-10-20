@@ -29,4 +29,5 @@ Import commit: `925efeebf49781c8e9a30923eee416479ea88748`.
 
 All 626 imported reference files matched their expected Git object hashes. All 89 pre-existing character-library files were preserved. [VERIFICATION.json](VERIFICATION.json) records the result, and the migration index contains per-source hashes.
 
-Source cleanup follows successful repository verification. Redundant originals are moved only to recoverable Trash; the completed cleanup is recorded separately in this directory.
+Cleanup is complete: all 534 archived originals were moved to recoverable Trash after verification. The refreshed source listing contains none of these archived originals. [CLEANUP-RECEIPT.json](CLEANUP-RECEIPT.json) records the completed cleanup. No permanent deletion was performed.
+
