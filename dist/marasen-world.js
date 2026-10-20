@@ -1,3 +1,4 @@
+import {installSiteTablets} from './site-tablets.js?v=0.89.4';
 import {installAquaticMarasen} from './marasen-aquatic.js?v=0.89.2';
 import {VERDANT_ROAD,MARASEN_BRANCHES} from './marasen-data.js?v=0.87.0';
 import {registerBiome} from './biome-world.js?v=0.87.0';
@@ -109,4 +110,5 @@ export function installMarasenWorld(maps,doors){
  }
 
  installAquaticMarasen(maps,doors);
+ installSiteTablets(maps);
 }

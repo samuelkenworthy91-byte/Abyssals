@@ -1,4 +1,4 @@
-import {drawFarmTile,drawFarmDecor,drawFarmTown,drawFarmLife,warmFarmSprites} from './cossenne-farm.js?v=0.89.3';
+import {drawFarmTile,drawFarmDecor,drawFarmTown,drawFarmLife,warmFarmSprites} from './cossenne-farm.js?v=0.89.4';
 import {drawCompanion} from './companion.js?v=0.87.0';
 export const ORCHARD_PIXEL_ASSETS={cossenneHouse:'../cossenne/house.webp',cossenneMarket:'../cossenne/market.webp',cossenneConservatory:'../cossenne/conservatory.webp',cossenneApothecary:'../cossenne/apothecary.webp',cossenneFirewatch:'../cossenne/firewatch.webp',cossenneKeep:'../cossenne/keep.webp',biomeorchardground:'../wildfire/living-ground-v071.webp',biomeorchardashground:'../wildfire/ash-ground-v071.webp',biomeorchardpath:'../wildfire/dirt-path-v071.webp',biomeorchardgrass:'../wildfire/encounter-grass-v071.webp',biomeorchardwater:'../wildfire/shrine-water-v071.webp',orchardScenery:'../wildfire/forest-props-v071.webp',cossenneScenery:'../wildfire/city-props-v071.webp',orchardFlames:'../wildfire/flame-v071.webp'};
 const cell=n=>({x:n%4*64,y:Math.floor(n/4)*64,w:64,h:64});

@@ -1,0 +1,7 @@
+{
+  "version": "0.89.4",
+  "version_code": 103,
+  "filename": "Abyssals-v0.89.4-Farm-Tablets.apk",
+  "title": "Abyssals v0.89.4 — Farm conversations and puzzle tablets",
+  "notes": "Removed farm labels. Working farm Abyssals can be approached and spoken to, using busts cropped from their existing battle illustrations. Khadija describes Ismail protecting the harvest from both armies. Twelve site accounts on the Marasen road now have distinct low stone tablet graphics, solid collision and repeat A-button reading. Discovered accounts are copied verbatim into the journal, including existing save discoveries. Preserves the Android package, release certificate, saves and original puzzle solutions. Built and verified by GitHub Actions; no physical phone installation test is claimed."
+}

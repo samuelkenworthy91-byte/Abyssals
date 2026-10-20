@@ -1,0 +1,89 @@
+name: Build signed Android update
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'release-config.json'
+      - '.github/workflows/android-release.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: android-release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test game behavior and source
+        run: |
+          for test in tests/*.test.mjs; do node "$test"; done
+          for file in dist/*.js; do node --check "$file"; done
+          python3 scripts/validate-game.py
+      - name: Test real game interactions in Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.51.1
+          npx playwright install --with-deps chromium
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+          node tests/browser-smoke.cjs
+      - name: Retain game screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: game-visual-checks-${{ github.sha }}
+          path: build/qa/
+          if-no-files-found: ignore
+      - name: Read release configuration
+        id: config
+        run: |
+          python3 - <<'PY'
+          import json,os,re
+          c=json.load(open('release-config.json'))
+          assert re.fullmatch(r'0\.\d\d\.\d',c['version'])
+          assert isinstance(c['version_code'],int) and c['version_code']>102
+          assert re.fullmatch(r'Abyssals-v[\w.\-]+\.apk',c['filename'])
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+            f.write('version='+c['version']+'\ncode='+str(c['version_code'])+'\nfilename='+c['filename']+'\n')
+          PY
+      - name: Recover compatible native wrapper
+        run: python3 scripts/reconstruct-base.py
+      - name: Build APK from committed game source
+        run: python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version '${{ steps.config.outputs.version }}' --version-code '${{ steps.config.outputs.code }}' --output 'build/unsigned-${{ steps.config.outputs.version }}.apk'
+      - name: Retain unsigned build for signing recovery
+        uses: actions/upload-artifact@v4
+        with:
+          name: unsigned-apk-${{ steps.config.outputs.version }}-${{ github.sha }}
+          path: build/unsigned-${{ steps.config.outputs.version }}.apk
+          retention-days: 7
+      - name: Install Android signing tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y apksigner zipalign
+      - name: Sign and verify the update with the original release key
+        env:
+          ABYSSALS_KEYSTORE_BASE64: ${{ secrets.ABYSSALS_KEYSTORE_BASE64 }}
+          ABYSSALS_STORE_PASSWORD: ${{ secrets.ABYSSALS_STORE_PASSWORD }}
+          ABYSSALS_KEY_ALIAS: ${{ secrets.ABYSSALS_KEY_ALIAS }}
+        run: python3 scripts/sign-update.py
+      - name: Publish verified APK from this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ steps.config.outputs.version }}
+          APK_FILENAME: ${{ steps.config.outputs.filename }}
+        run: |
+          python3 - <<'PY'
+          import json
+          c=json.load(open('release-config.json'))
+          open('build/release-title.txt','w').write(c['title'])
+          open('build/release-notes.md','w').write(c['notes']+'\n')
+          PY
+          gh release view "v$RELEASE_VERSION" >/dev/null 2>&1 || gh release create "v$RELEASE_VERSION" --target "$GITHUB_SHA" --title "$(cat build/release-title.txt)" --notes-file build/release-notes.md
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v$RELEASE_VERSION" -f sha="$GITHUB_SHA" -F force=true >/dev/null
+          gh release upload "v$RELEASE_VERSION" "build/$APK_FILENAME" "build/$APK_FILENAME.sha256" "build/signature-verification-$RELEASE_VERSION.txt" --clobber

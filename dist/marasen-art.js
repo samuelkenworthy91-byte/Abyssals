@@ -1,3 +1,4 @@
+import {drawSiteTablet} from './site-tablets.js?v=0.89.4';
 import {AQUATIC_ASSETS,drawAquaticSurface,drawAquaticDetails} from './marasen-aquatic.js?v=0.89.2';
 import {drawCompanion} from './companion.js?v=0.87.0';
 export const MARASEN_ASSETS=Object.fromEntries(['Tree','Gate','Keep','Market','Apothecary','Archive','Mill','Binding'].map(n=>['marasen'+n,'marasen-'+n.toLowerCase()+'-v082.webp']));
@@ -49,7 +50,7 @@ export function drawMarasenDetails(c,m,asset,walkable,time=0){if(!m?.verdantKind
  if(kind==='exchange')for(const [x,y]of [[3,4],[35,4]])asset(c,'marasenPavilion',x,y,10,8);
  
 
- for(const s of m.spots){if(s.id?.includes('control')||s.id==='mr-peach-bells'){c.fillStyle='#314e45';c.fillRect(s.x*16-18,s.y*16-15,52,22);for(let i=0;i<3;i++){c.strokeStyle=['#e9ca75','#afcfce','#e7b4b8'][i];c.lineWidth=3;c.beginPath();c.arc(s.x*16-10+i*17,s.y*16-5,5,0,Math.PI*2);c.stroke();}}}
+ for(const s of m.spots){if(s.siteTablet)drawSiteTablet(c,s);if(s.id?.includes('control')||s.id==='mr-peach-bells'){c.fillStyle='#314e45';c.fillRect(s.x*16-18,s.y*16-15,52,22);for(let i=0;i<3;i++){c.strokeStyle=['#e9ca75','#afcfce','#e7b4b8'][i];c.lineWidth=3;c.beginPath();c.arc(s.x*16-10+i*17,s.y*16-5,5,0,Math.PI*2);c.stroke();}}}
  if(m.name.includes('Broken Bridle'))asset(c,'marasenBinding',29,10,10,8);if(m.name.includes('Wheelhouse'))asset(c,'marasenMill',27,3,12,8);
  c.restore();}
 

@@ -1,4 +1,4 @@
-import {installCossenneFarm} from './cossenne-farm.js?v=0.89.3';
+import {installCossenneFarm} from './cossenne-farm.js?v=0.89.4';
 import {RELIEF_POSTS} from './cossenne-services.js?v=0.87.0';
 import {ORCHARD_MAIN,ORCHARD_ROUTES} from './cossenne-data.js?v=0.87.0';
 import {registerBiome} from './biome-world.js?v=0.87.0';

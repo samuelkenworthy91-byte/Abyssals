@@ -1,15 +1,27 @@
-# Abyssals v0.89.2
+# Abyssals
 
-The current game source and artwork are in **dist/**. Download the signed update from **Releases → v0.89.2**.
+Current game source and artwork: **dist/**. Releases contain installable signed APKs produced by GitHub Actions. `release-config.json` is the next release version and description; only a successful signing/publishing workflow makes that version an installable release.
 
-Marasen has been rebuilt with four readable districts, four functional city buildings, visible bridges, unique entrances and six indoor Exchange floors. Furniture artwork and collisions share their geometry; central aisles remain open. Crown Reservoir no longer has flat cliff or waterfall overlays across the road. Existing progression, save data, encounter access, trades and shop stock are retained.
+The 0.89.4 update adds direct farm-animal conversations with battle-art busts, Khadija’s account of Ismail protecting the harvest from both armies, and distinct low stone clue tablets with collision, repeat reading and verbatim journal copies. Existing discovered clues remain available through their original save flags; original puzzle solutions and quest gates remain intact.
 
-Android package: `uk.co.abyssals.game`; versionCode **101**. Install over the existing app without uninstalling.
+## Standard update protocol
 
-## Build and verification
+1. Commit source, artwork, tests and build changes here. Bump the version and Android version_code in `release-config.json`, plus the game/offline version.
+2. **Build signed Android update** runs automatically on game/build changes to main. It tests the code, checks offline assets, reconstructs the preserved native wrapper, packages current source, signs with the original release key, verifies Android signing and alignment, and publishes the APK and checksum to Releases.
+3. Download the verified APK from Releases and install over the existing app. Keep package `uk.co.abyssals.game` and the original signing certificate to retain update/save compatibility.
 
-GitHub Actions runs `tests/marasen-navigation.test.mjs`, validates JavaScript syntax, reconstructs the preserved v0.89.1 native base, and packages the current `dist/` using `scripts/build-update.py`. Fixed ZIP metadata makes that payload deterministic. `scripts/attach-release-signature.py` attaches only the public APK signing block, and only when the exact payload hash matches the privately signed release. Android's apksigner and zipalign verify the result before publishing.
+## One-time GitHub signing setup
 
-Private signing keys/passwords are excluded. Changing game source requires a newly signed receipt. This rebuild retains the compatible compiled native wrapper; it does not claim a fresh Java compilation or a physical phone installation test.
+In **Settings → Secrets and variables → Actions**, configure:
 
-The original signed v0.89.1 is preserved in `release/v0.89.1/`, with a hash manifest. `scripts/restore-release.py` is a historical extraction tool and should not be run over the current source, because it restores the older game files.
+| Secret | Value from the existing release-signing backup |
+| --- | --- |
+| `ABYSSALS_KEYSTORE_BASE64` | Base64 encoding of `abyssals-release.p12` |
+| `ABYSSALS_STORE_PASSWORD` | Existing store password from `signing.env` |
+| `ABYSSALS_KEY_ALIAS` | Existing alias from `signing.env` |
+
+Keep secret values private. Do not paste them into issues, commits, workflow inputs or chat. When these secrets are absent, the workflow retains its unsigned build for recovery and stops before publishing. Adding the existing key and rerunning the failed workflow completes the release. A new keystore cannot update the installed game.
+
+The expected certificate SHA-256 is `6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac`; signing verifies this before publishing. The compatible compiled native wrapper is preserved in `release/v0.89.1/`. No fresh native Java compilation or physical phone installation test is claimed.
+
+The older receipt-based workflows reproduce historical signed releases. New updates use the standard workflow above. Do not run historical `scripts/restore-release.py` over current source.

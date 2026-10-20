@@ -1,4 +1,4 @@
-import {farmBlocked} from './cossenne-farm.js?v=0.89.3';
+import {farmBlocked} from './cossenne-farm.js?v=0.89.4';
 import {exchangeWalkable,aquaticWalkable,drawExchangeInterior,drawAquaticNotice} from './marasen-aquatic.js?v=0.89.2';
 import {installMarasenWorld} from './marasen-world.js?v=0.87.0';
 import {drawMarasenTile,drawMarasenDetails} from './marasen-art.js?v=0.87.0';

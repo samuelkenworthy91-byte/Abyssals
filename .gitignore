@@ -5,3 +5,4 @@ __pycache__/
 *.jks
 *.keystore
 signing.env
+node_modules/
