@@ -1,7 +1,7 @@
 {
-  "version": "0.90.0",
-  "version_code": 104,
-  "filename": "Abyssals-v0.90.0-Thunderplain-Botrune.apk",
-  "title": "Abyssals v0.90.0 \u2014 Thunderplain and the Silent Square",
-  "notes": "Scribes\u2019 Road now crosses seven storm-scarred Thunderplain screens from Marasen to Botrune, with Electric, Dark and Ground encounters, animated distant lightning, shelters and two patrol challenges. Botrune adds a persistent overworld public execution scene for Pate and Trade, witnesses to the fabricated charges, three sequential guard captains, and Canon Fatima bint Musa with six physical attackers. Includes her portrait and prepared Pok\u00e9 Ball-free Pate/Trade art, independent human life records, grief and keepsake dialogue, permanent leader judgement, protected abbey records, rest, supplies and visited-only caravans. Earlier Emmara companion-death outline is superseded by the user\u2019s revised story. Existing saves, Android package and original signing certificate preserved. Built and verified through GitHub Actions; no physical-phone installation test claimed."
+  "version": "0.90.1",
+  "version_code": 105,
+  "filename": "Abyssals-v0.90.1-Thunderplain-Botrune.apk",
+  "title": "Abyssals v0.90.1 \u2014 Thunderplain and the Silent Square",
+  "notes": "Scribes\u2019 Road now crosses seven storm-scarred Thunderplain screens from Marasen to Botrune, with Electric, Dark and Ground encounters, animated distant lightning, shelters and two patrol challenges. Botrune adds a persistent overworld public execution scene for Pate and Trade, witnesses to the fabricated charges, three sequential guard captains, and Canon Fatima bint Musa with six physical attackers. Includes her portrait and prepared Pok\u00e9 Ball-free Pate/Trade art, independent human life records, grief and keepsake dialogue, permanent leader judgement, protected abbey records, rest, supplies and visited-only caravans. Earlier Emmara companion-death outline is superseded by the user\u2019s revised story. Existing saves, Android package and original signing certificate preserved. Built and verified through GitHub Actions; no physical-phone installation test claimed. Final story-contract pass preserves canonical independent Pate/Trade life and progress fields, their permanent human memorial entries and the five-use restoration budget. Restores the Story Bible\u2019s friendship cord and field notebook keepsakes. The full locked scene list and state contracts from the older import branch are now preserved outside runtime for future storyline work."
 }

@@ -9,9 +9,9 @@ User revision: 20 October 2026. This records the requested next chapter after Ma
 - Archived `ABYSSALS_CODING_HANDOFF_v1.0.zip`: `docs/canon/STORY_IMPLEMENTATION.md`, `ACTIVE_CANON.md`, locations and character tables.
 - Archived Canon Source Index and its later five-use elective human restoration ruling. Historical execution remains separate from current life state.
 - `art-library/characters/reference/CHARACTER-CATALOG.json`, recovered `CONFIRMED_ID_INDEX.csv`, and prepared transparent, Poké Ball-free Pate/Trade assets.
-- Earlier Story Bible discussion: Marasen → Scribes’ Road → Botrune abbey/archive → War Road → Cayfen; earlier companion deaths at Emmara Mill; CH07-E02 “Mirelle’s Hypothesis” and WLD-BOTRUNE-OATH-001 are existing anchors.
+- Full locked Story Bible on `handoff/structured-import` at commit `c33326e1c3f08d4f1c9c74c606683a492784bd28`, `data/story/scenes.json` and `data/story/state_contracts.json` (now preserved alongside this note under `docs/story-bible/`): Marasen → Scribes’ Road → Botrune abbey/archive → War Road → Cayfen; earlier companion deaths at Emmara Mill; CH07-E02 “Mirelle’s Hypothesis” and WLD-BOTRUNE-OATH-001 are existing anchors.
 
-The complete Story Bible was not found in the recovered original files; the runtime data contains only Chapter 1 source excerpts. Therefore this implementation uses new `BT-*` event identifiers and does not rename or overwrite known locked CH07/WLD anchors. The buried archive and oath evolution story remain later content, not falsely marked complete here.
+The full Story Bible was located on the older structured-import branch after the initial recovered handoff review. The new chapter is an explicit user-authorized overlay. Original source records are preserved verbatim in meaning under `docs/story-bible/`; the user's 20 October revision takes priority for the execution, leader characterisation and physical team. New `BT-*` event identifiers avoid falsely marking the original CH07 archive scenes complete. The buried archive, shared religious source, Trade's marginal questions, Two Prayers and oath evolution remain reserved story content; future scripts should deliver them through protected manuscripts and civilian archivists if Fatima is dead or in custody.
 
 ## Approved story revision
 
@@ -21,7 +21,7 @@ Trade's letter warns about an exposed storm plateau and stripped conductors. Pat
 
 On first entering Botrune, Fatima reads fabricated charges to a silent crowd on the abbey stage. Three prisoners are killed first. The last two are revealed as Pate and Trade, who recognise Aimon and urge him to run. Fatima executes them, with non-graphic overworld blade/fall animation. Dialogue advances through player confirmation; each completed beat is durably saved before its animation. Reloads continue from the next beat.
 
-`BT-PUBLIC-SENTENCE-20261020` is recorded once. `humanLives['CHR-PATE']` and `humanLives['CHR-TRADE']` hold separate historical deaths and current life states. The scene does not consume human restoration uses, award companion starters, heal deaths or revive anyone. The existing memorial lists their names when dead. Future restoration must preserve history and obey the total five elective uses.
+`BT-PUBLIC-SENTENCE-20261020` is recorded once. `humanLives['CHR-PATE']` and `humanLives['CHR-TRADE']` hold separate historical deaths and current life states. The scene does not consume human restoration uses, award companion starters, heal deaths or revive anyone. Canonical `human_life_state`, `pate_progress_state`, `trade_progress_state`, `human_memorial_entries`, `human_restored_ids` and the constant five-use restoration budget are maintained. `humanLives` additionally preserves execution provenance. The existing memorial lists their names when dead. Future restoration must preserve history and obey the total five elective uses.
 
 Witnesses identify the lies after the scene. Aimon may retreat, heal and prepare. Three captains (4, 5 and 6 partners) physically block the only stage stair in sequence. Victories persist. Fatima fights on the stage with six partners at levels 74–77: Ruffellow, Ramporque, Clinchitin, Falchawk, Ragevolt, Dreadcleaver. Every battle slot uses four existing legal physical attacks; stats are unmodified.
 
@@ -36,3 +36,12 @@ The new leader's built-in generation prompt specified a Middle Eastern woman sch
 Runtime portrait sizes: Pate 55,678 bytes; Trade 57,936; Fatima 80,676. Combined 194,290 bytes versus 199,756 bytes for the previous two portraits. Net artwork reduction: 5,466 bytes. Existing quarry ground/cliffs, fort stone, banners, NPC portraits and guard artwork are reused. New rods, stage/stair geometry and weather are native canvas drawings.
 
 `archive/` and `art-library/` remain outside the APK; only selected `dist/` runtime assets are packaged.
+
+## Original source anchors affected by this overlay
+
+- CH07-E01–E05: the original neutral archive entrance, hypothesis, Trade marginalia, technical-control challenge and judgement. The user replaces the entry/challenge with the stage execution and physical gauntlet. Preserve the archive's evidence and common-origin religious material for a later civilian archive visit; never claim the old scene flags were completed by the new confrontation.
+- CH08-E03: Oren's old account of transferring the pair to Emmara must be rewritten in any future Cayfen chapter. Their deaths in Botrune are now known.
+- CH09-E03/E06–E08: the delayed Emmara death reveal and original last notebook entry must not recur. The friendship cord, field notebook, rejection of martyrdom language and grief's supernatural pivot remain usable without a second death/reveal.
+- STATE-042/052/079/083/104: independent human life/progress, persistent memorial history, restoration after its authored unlock, and five elective total uses remain in force. The historical-death location changes from Emmara to Botrune under this user overlay.
+
+Release checkout now selects runtime, scripts, tests, wrapper and docs; reference image archives are neither downloaded for the release job nor packaged into the APK.

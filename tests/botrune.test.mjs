@@ -20,7 +20,7 @@ for(let i=0;i<TRIAL_BEATS.length;i++){
  s=JSON.parse(JSON.stringify(s)); // Save/reload at every beat.
  if(i===6){assert.equal(s.humanLives['CHR-PATE'].lifeState,'DEAD');assert(!s.humanLives['CHR-TRADE']);}
 }
-assert.equal(botruneState(s).phase,'gauntlet');assert.equal(trialVictims(s).length,5);assert.equal(s.storyHistory.length,1);assert.equal(s.humanLives['CHR-TRADE'].lifeState,'DEAD');
+assert.equal(botruneState(s).phase,'gauntlet');assert.equal(trialVictims(s).length,5);assert.equal(s.storyHistory.length,1);assert.equal(s.humanLives['CHR-TRADE'].lifeState,'DEAD');assert.equal(s.human_life_state['CHR-PATE'],'DEAD');assert.equal(s.human_life_state['CHR-TRADE'],'DEAD');assert.equal(s.pate_progress_state,'CONFIRMED_DEAD');assert.equal(s.trade_progress_state,'CONFIRMED_DEAD');assert.deepEqual(s.human_memorial_entries,['CHR-PATE','CHR-TRADE']);assert.deepEqual(s.human_restored_ids,[]);assert.equal(s.human_restoration_budget_total,5);
 for(let i=0;i<3;i++){
  const seen=flood('botrune',[3,24],s);assert(near(NEW_MAPS.botrune.spots.find(p=>p.id===BOTRUNE_GUARDS[i].id),seen));assert(!seen.has('37,7'),'cannot bypass guard '+i);assert(botruneCanFight(s,BOTRUNE_GUARDS[i].id));for(const t of BOTRUNE_GUARDS.slice(i+1))assert(!botruneCanFight(s,t.id));s.defeatedTrainers.push(BOTRUNE_GUARDS[i].id);s=JSON.parse(JSON.stringify(s));
 }

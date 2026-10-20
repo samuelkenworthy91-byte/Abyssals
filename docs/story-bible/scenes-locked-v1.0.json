@@ -1,0 +1,3573 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+    "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+    "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "CH00-E01",
+      "name": "Opening tableau",
+      "chapter": 0,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 92,
+          "text": "Trigger: New game"
+        },
+        {
+          "body_index": 93,
+          "text": "Late afternoon in Civeton. Children use carved wooden monster figures and sticks to imitate adult trainers and crusaders. Pate declares that he and Trade are righteous champions of the True Light. Aimon is assigned the Dawn Bloom defenders because he is the youngest and because someone has to be the ‘enemy’. Nothing about the boys’ behaviour suggests personal hatred; the language is inherited play."
+        },
+        {
+          "body_index": 94,
+          "text": "Environmental NPC snippets should show adults treating the coming crusade as history repeating itself: old veterans, shrine stories, and parents using phrases the children later mimic without understanding them."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 90
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "trigger_text": "New game"
+    },
+    {
+      "id": "CH00-E02",
+      "name": "Pretend battle tutorial",
+      "chapter": 0,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 97,
+          "text": "Teach basic turn selection, type readability and HP with toy/imaginary monsters. At 0 HP the imaginary monster dramatically ‘falls’ and the children argue about whether the move was fair. No death language is used."
+        },
+        {
+          "body_index": 98,
+          "text": "Pate plays aggressively; Trade interrupts to clarify rules. Aimon is outnumbered but praised for improvising."
+        },
+        {
+          "body_index": 99,
+          "text": "Battle: Scripted tutorial; no persistent team state"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 95
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Scripted tutorial; no persistent team state"
+    },
+    {
+      "id": "CH00-E03",
+      "name": "The fall",
+      "chapter": 0,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 102,
+          "text": "During the game Aimon slips or is knocked over. Pate instantly drops the crusader performance and helps him up. Trade checks his hands/knees and scolds Pate for playing too hard. The thematic image is simple: ideology vanishes the moment a real person is hurt."
+        },
+        {
+          "body_index": 103,
+          "text": "Pate promises Aimon that when he is older he will come with them. Trade adds, ‘If you’re ready.’ Pate answers that of course he will be."
+        },
+        {
+          "body_index": 104,
+          "text": "State effects: prologue_complete=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 100
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "prologue_complete=true"
+    },
+    {
+      "id": "CH00-O01",
+      "name": "Childhood shrine echo",
+      "chapter": 0,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 107,
+          "text": "Optional interaction with a small True Light shrine. A local elder tells a simplified creation story. A later Dawn Bloom version will be almost identical. The player has no reason to notice this yet."
+        },
+        {
+          "body_index": 108,
+          "text": "State effects: religious_parallels_found+=1 (hidden provenance marker, not yet matchable)"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 105
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found+=1 (hidden provenance marker, not yet matchable)"
+    },
+    {
+      "id": "CH01-E01",
+      "name": "Morning of departure",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 114,
+          "text": "Trigger: prologue_complete"
+        },
+        {
+          "body_index": 115,
+          "text": "Years later. Aimon wakes to bells, flags and an unusually busy village. The crusade has formally begun. NPCs are excited, frightened or proud. The tone intentionally resembles the start of a conventional heroic RPG."
+        },
+        {
+          "body_index": 116,
+          "text": "The player is free to revisit the childhood play site. The hill feels smaller now."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 112
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "trigger_text": "prologue_complete"
+    },
+    {
+      "id": "CH01-E02",
+      "name": "Pate is gone",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 119,
+          "text": "At Pate’s home Aimon learns he departed before dawn after claiming a real monster. His family assumed Aimon had been told. A small personal item or unfinished breakfast reinforces the speed of departure."
+        },
+        {
+          "body_index": 120,
+          "text": "State effects: pate_clues_found=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 117
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found=1"
+    },
+    {
+      "id": "CH01-E03",
+      "name": "Trade’s note",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 123,
+          "text": "Trade is gone too. Aimon finds a brief note: ‘Don’t follow us.’ It reads as an order because Trade writes concisely. Later context will reveal it was protection, not rejection."
+        },
+        {
+          "body_index": 124,
+          "text": "Aimon is angry rather than tearful. His immediate goal becomes catching them."
+        },
+        {
+          "body_index": 125,
+          "text": "State effects: trade_clues_found=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 121
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "trade_clues_found=1"
+    },
+    {
+      "id": "CH01-E04",
+      "name": "Kurg refuses",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 128,
+          "text": "At the mustering camp, General Kurg Halbrecht refuses Aimon without ceremony. After repeated insistence, Kurg reveals that Pate and Trade specifically asked him not to enlist Aimon. Kurg says they were trying to keep him alive."
+        },
+        {
+          "body_index": 129,
+          "text": "Aimon interprets this as proof they still think he is weak. He states that he will follow them with or without permission. Kurg believes him."
+        },
+        {
+          "body_index": 130,
+          "text": "State effects: kurg_doubt_state=0"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 126
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "kurg_doubt_state=0"
+    },
+    {
+      "id": "CH01-E05",
+      "name": "Starter choice",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 133,
+          "text": "Kurg authorises supervised enlistment rather than letting Aimon travel alone. Three starter species are presented. The player chooses one. The two remaining starters are assigned dynamically to Pate and Trade, with personality-preferred mapping used when both mappings are possible."
+        },
+        {
+          "body_index": 134,
+          "text": "This is a genuine emotional milestone: Aimon believes he is finally becoming the kind of person Pate and Trade thought he was not ready to be."
+        },
+        {
+          "body_index": 135,
+          "text": "State effects: starter_choice set; pate_starter set; trade_starter set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 131
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "starter_choice set; pate_starter set; trade_starter set"
+    },
+    {
+      "id": "CH01-E06",
+      "name": "Aeric’s blessing",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 138,
+          "text": "Chaplain Aeric Solm gives Aimon travel supplies and a restrained blessing. He is religious, warm and worried about Aimon’s age. He never calls the Dawn Bloom people monsters or vermin. This distinction should be visible from his first appearance."
+        },
+        {
+          "body_index": 139,
+          "text": "State effects: aeric_arc_state=0"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 136
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "aeric_arc_state=0"
+    },
+    {
+      "id": "CH01-E07",
+      "name": "Rhoswen’s assessment",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 142,
+          "text": "Dame Rhoswen Vey bluntly tells Kurg that Aimon is a liability. She does not hate him; she believes unprepared soldiers get others killed. She becomes the recurring hardline foil who equates discipline and decisive force with moral seriousness."
+        },
+        {
+          "body_index": 143,
+          "text": "State effects: rhoswen_arc_state=0"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 140
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "rhoswen_arc_state=0"
+    },
+    {
+      "id": "CH01-E08",
+      "name": "Controlled enlistment battle",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 146,
+          "text": "A camp trainer tests Aimon. Before battle, Kurg explains that genuine combat has no magical fainting convention: if a monster is pushed to 0 HP, it dies. This test therefore uses formal surrender thresholds and a referee."
+        },
+        {
+          "body_index": 147,
+          "text": "The player is taught that story battles can end by surrender before lethal damage, while wilderness/hostile combat can be permanent."
+        },
+        {
+          "body_index": 148,
+          "text": "Battle: Non-lethal supervised trainer test"
+        },
+        {
+          "body_index": 149,
+          "text": "State effects: real_combat_rules_taught=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 144
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Non-lethal supervised trainer test",
+      "legacy_state_effects_text": "real_combat_rules_taught=true"
+    },
+    {
+      "id": "CH01-O01",
+      "name": "First memorial stone",
+      "chapter": 1,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 152,
+          "text": "Optional memorial near camp lists soldiers and monster partners lost in earlier border fighting. A child has left a toy monster beside one name. This seeds the monster-memorial subplot without forcing a speech."
+        },
+        {
+          "body_index": 153,
+          "text": "State effects: monster_memorial_count+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 150
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "monster_memorial_count+=1"
+    },
+    {
+      "id": "CH01-E09",
+      "name": "Departure",
+      "chapter": 1,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 156,
+          "text": "Aimon leaves Civeton with the marching road ahead. Kurg’s final instruction is practical, not inspirational: stay alive, learn before committing, report when possible. Aimon’s own private objective remains Pate and Trade."
+        },
+        {
+          "body_index": 157,
+          "text": "State effects: chapter_01_complete=true"
+        },
+        {
+          "body_index": 159,
+          "text": "ACT II — THE CRUSADE"
+        },
+        {
+          "body_index": 160,
+          "text": "Eight settlements form the mortal-world spine. Each chapter repeats a legible gameplay rhythm — arrive, explore, trace Pate/Trade, resolve local crisis, defeat leader, choose spare/execute, revisit changed town — while the moral context changes beneath that familiar structure. The repeated form is deliberate: the player’s mechanics remain stable while their interpretation of those mechanics changes."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 154
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "chapter_01_complete=true"
+    },
+    {
+      "id": "CH02-E01",
+      "name": "Border road ambush",
+      "chapter": 2,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 166,
+          "text": "A Dawn Bloom patrol attacks the True Light column after warnings are ignored. The fight is clearly military and reciprocal, allowing Aimon to read the conflict as straightforward defence versus invasion depending on perspective."
+        },
+        {
+          "body_index": 167,
+          "text": "Rhoswen praises decisive action. Aeric tends wounded from both sides if the player remains nearby."
+        },
+        {
+          "body_index": 168,
+          "text": "Battle: First lethal hostile-trainer encounter"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 164
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "First lethal hostile-trainer encounter"
+    },
+    {
+      "id": "CH02-E02",
+      "name": "Dorelem under siege",
+      "chapter": 2,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 171,
+          "text": "Aimon reaches a keep controlling the road. True Light soldiers have not breached it. Kurg authorises Aimon to seek a formal monster challenge against commander Ser Aldren March to avoid a larger assault."
+        },
+        {
+          "body_index": 172,
+          "text": "Inside-town access is gained through neutral villagers and a service tunnel rather than slaughtering the garrison."
+        },
+        {
+          "body_index": 173,
+          "text": "State effects: main_objective=challenge_aldren"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 169
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=challenge_aldren"
+    },
+    {
+      "id": "CH02-E03",
+      "name": "Pate and Trade were here",
+      "chapter": 2,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 176,
+          "text": "Stablehands remember Pate boasting that he would take the keep in an afternoon. Trade apologised for him and asked detailed questions about the northern road. The memory is affectionate and comic."
+        },
+        {
+          "body_index": 177,
+          "text": "A minor Dawn Bloom soldier recalls that the two young crusaders spared him after he surrendered. This establishes that their conduct was not uniformly brutal."
+        },
+        {
+          "body_index": 178,
+          "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 174
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "id": "CH02-O01",
+      "name": "Emmara Mill on a requisition sheet",
+      "chapter": 2,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 181,
+          "text": "Optional quartermaster ledger contains a route note: ‘Emmara Mill — reserve grain waypoint, status unverified.’ It looks like meaningless logistics. No character comments unless examined twice."
+        },
+        {
+          "body_index": 182,
+          "text": "State effects: mill_foreshadow_seen add MILL_LEDGER_1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 179
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "mill_foreshadow_seen add MILL_LEDGER_1"
+    },
+    {
+      "id": "CH02-E04",
+      "name": "Aldren challenge",
+      "chapter": 2,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 185,
+          "text": "Aldren accepts because losing one formal battle is preferable to losing the keep and civilians in a siege. He is stern and hostile but honours surrender rules. His team is disciplined and direct."
+        },
+        {
+          "body_index": 186,
+          "text": "On defeat, Aldren formally yields military control."
+        },
+        {
+          "body_index": 187,
+          "text": "Battle: Leader 1 — Ser Aldren March"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 183
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 1 — Ser Aldren March"
+    },
+    {
+      "id": "CH02-E05",
+      "name": "The first sentence",
+      "chapter": 2,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 190,
+          "text": "Rhoswen explains that Aldren remains the lawful military figurehead while alive and may become a rallying point. Aeric says a surrendered man is no longer an immediate threat. Kurg states that because Aldren surrendered to Aimon, Aimon must decide what responsibility to take for him."
+        },
+        {
+          "body_index": 191,
+          "text": "Choice: SPARE or EXECUTE. No morality label, no extra loot for either result."
+        },
+        {
+          "body_index": 192,
+          "text": "State effects: leader_01_spared set; occupation_dorelem set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 188
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_01_spared set; occupation_dorelem set"
+    },
+    {
+      "id": "CH02-E06",
+      "name": "Occupation snapshot",
+      "chapter": 2,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 195,
+          "text": "On immediate revisit the True Light flag is raised, checkpoints appear, local shops reopen unevenly, and civilians respond to Aldren’s fate. If spared he is imprisoned and later advises on preventing reprisals. If executed, flowers and hostile graffiti begin appearing near the keep."
+        },
+        {
+          "body_index": 196,
+          "text": "The world communicates consequence rather than score."
+        },
+        {
+          "body_index": 197,
+          "text": "State effects: chapter_02_complete=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 193
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "chapter_02_complete=true"
+    },
+    {
+      "id": "CH02-O02",
+      "name": "Refugees on the road",
+      "chapter": 2,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 200,
+          "text": "A small civilian group asks whether the next town is safe. Their origin is Dawn Bloom territory, but one member has a True Light-born spouse. They become a recurring subplot whose identity resists clean faction labels."
+        },
+        {
+          "body_index": 201,
+          "text": "State effects: refugee_chain_state=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 198
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "refugee_chain_state=1"
+    },
+    {
+      "id": "CH03-E01",
+      "name": "The hospice road",
+      "chapter": 3,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 207,
+          "text": "The route is crowded with wounded soldiers, displaced civilians and injured monsters. The settlement’s first visual is not a fortress but a queue for treatment."
+        },
+        {
+          "body_index": 208,
+          "text": "Dawn Bloom volunteers initially refuse armed crusaders entry but allow Aimon after he helps recover medicine from a flooded path."
+        },
+        {
+          "body_index": 209,
+          "text": "State effects: main_objective=resolve_supply_dispute"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 205
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=resolve_supply_dispute"
+    },
+    {
+      "id": "CH03-E02",
+      "name": "Whose supplies?",
+      "chapter": 3,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 212,
+          "text": "True Light quartermasters have claimed grain and medicine as military requisitions. Abbess Yselle refuses because the stores are feeding refugees and patients. Aimon is ordered to ‘secure supplies’ but can inspect the hospice before acting."
+        },
+        {
+          "body_index": 213,
+          "text": "Several patients are True Light civilians and wounded True Light soldiers. Yselle treats them exactly like Dawn Bloom patients."
+        },
+        {
+          "body_index": 214,
+          "text": "State effects: aeric_arc_state=max(current,1)"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 210
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "aeric_arc_state=max(current,1)"
+    },
+    {
+      "id": "CH03-E03",
+      "name": "First matched prayer",
+      "chapter": 3,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 217,
+          "text": "During treatment a Dawn Bloom nurse recites a morning prayer about first light revealing the road ahead. Aimon recognises the structure and moral lesson from a True Light prayer used in Civeton."
+        },
+        {
+          "body_index": 218,
+          "text": "Aeric initially explains that false traditions often imitate truth. Aimon accepts this because he still wants an explanation that preserves the hierarchy he knows."
+        },
+        {
+          "body_index": 219,
+          "text": "State effects: religious_parallels_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 215
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found+=1"
+    },
+    {
+      "id": "CH03-E04",
+      "name": "Pate’s stitches",
+      "chapter": 3,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 222,
+          "text": "Yselle recognises Aimon’s description of Pate and Trade. Pate arrived with a deep arm wound and tried to joke through treatment. Trade stayed awake helping distribute water and correcting Pate whenever he exaggerated how he was injured."
+        },
+        {
+          "body_index": 223,
+          "text": "Yselle’s simple conclusion — ‘They were boys’ — unsettles Aimon because he expected her to define them first as crusaders."
+        },
+        {
+          "body_index": 224,
+          "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 220
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "id": "CH03-O01",
+      "name": "Monster sanctuary",
+      "chapter": 3,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 227,
+          "text": "Optional side quest: return an injured wild monster to its nesting group rather than recruiting it. Completing this adds a later sanctuary NPC who discusses monsters as lives rather than resources."
+        },
+        {
+          "body_index": 228,
+          "text": "State effects: monster_memorial_count+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 225
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "monster_memorial_count+=1"
+    },
+    {
+      "id": "CH03-E05",
+      "name": "Yselle’s terms",
+      "chapter": 3,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 231,
+          "text": "Yselle agrees to a leader battle if Aimon guarantees that losing will not immediately empty the hospice stores. The player cannot promise permanent policy, but can force a compromise: military requisition is capped and civilian rations protected."
+        },
+        {
+          "body_index": 232,
+          "text": "The battle is defensive and restorative, making the player work to overcome endurance rather than aggression."
+        },
+        {
+          "body_index": 233,
+          "text": "Battle: Leader 2 — Abbess Yselle Marot"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 229
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 2 — Abbess Yselle Marot"
+    },
+    {
+      "id": "CH03-E06",
+      "name": "Spare / Execute",
+      "chapter": 3,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 236,
+          "text": "Yselle accepts defeat without pleading. If spared, she remains under guard as medical administrator because even True Light officers recognise her value. If executed, the hospice loses experienced coordination; mortality and shortages visibly worsen on revisit until Aeric and local staff rebuild it."
+        },
+        {
+          "body_index": 237,
+          "text": "State effects: leader_02_spared set; occupation_philomere set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 234
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_02_spared set; occupation_philomere set"
+    },
+    {
+      "id": "CH03-O02",
+      "name": "Refugee chain continuation",
+      "chapter": 3,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 240,
+          "text": "If the road refugees were met, they are now among the hospice patients. One family member is caring for someone wearing the opposite faction’s symbol. No special dialogue calls attention to the contradiction unless Aimon speaks to them."
+        },
+        {
+          "body_index": 241,
+          "text": "State effects: refugee_chain_state=2"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 238
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "refugee_chain_state=2"
+    },
+    {
+      "id": "CH04-E01",
+      "name": "War market",
+      "chapter": 4,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 247,
+          "text": "Cybressa is prosperous because war has made everything expensive. Merchants sell to both sides through intermediaries. Civilians resent the crusade and Corvin in equal measure."
+        },
+        {
+          "body_index": 248,
+          "text": "Aimon sees True Light weapons in a Dawn Bloom warehouse and Dawn Bloom medicines in a True Light caravan."
+        },
+        {
+          "body_index": 249,
+          "text": "State effects: main_objective=investigate_corvin"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 245
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=investigate_corvin"
+    },
+    {
+      "id": "CH04-E02",
+      "name": "Corvin’s welcome",
+      "chapter": 4,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 252,
+          "text": "Provost Corvin Sair receives Aimon politely and offers to transfer control in exchange for protection of his commercial privileges. This is the first leader who seems more interested in office than faith."
+        },
+        {
+          "body_index": 253,
+          "text": "Aimon is allowed to explore instead of immediately accepting."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 250
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH04-O01",
+      "name": "The Price of War",
+      "chapter": 4,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 256,
+          "text": "Optional investigation chain follows false invoices, warehouse seals and displaced families being charged extortionate prices. Evidence proves Corvin and True Light intermediaries both profited. The corruption is cross-factional, not a Dawn Bloom-only vice."
+        },
+        {
+          "body_index": 257,
+          "text": "Completing the chain lets the post-conquest administration break the network; ignoring it means the True Light occupation inherits it intact."
+        },
+        {
+          "body_index": 258,
+          "text": "State effects: cybressa_network_exposed=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 254
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "cybressa_network_exposed=true"
+    },
+    {
+      "id": "CH04-E03",
+      "name": "Pate overpays",
+      "chapter": 4,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 261,
+          "text": "Corvin remembers Pate purchasing equipment at an absurd markup because he wanted to reach the front quickly. Trade returned later, furious, with the receipt. Corvin refunded part of it only because Trade threatened to report him."
+        },
+        {
+          "body_index": 262,
+          "text": "The scene is funny, then sour when Corvin remarks that war makes sentimental young men excellent customers."
+        },
+        {
+          "body_index": 263,
+          "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 259
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "id": "CH04-E04",
+      "name": "Leader challenge",
+      "chapter": 4,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 266,
+          "text": "Corvin attempts to bargain until it becomes clear neither faction trusts him. He accepts a formal battle to preserve legal status and uses a disruptive, opportunistic team reflecting his personality."
+        },
+        {
+          "body_index": 267,
+          "text": "Battle: Leader 3 — Provost Corvin Sair"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 264
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 3 — Provost Corvin Sair"
+    },
+    {
+      "id": "CH04-E05",
+      "name": "Spare / Execute",
+      "chapter": 4,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 270,
+          "text": "If spared, Corvin is removed from office and held for investigation; spare does not mean leaving a corrupt ruler in charge. If executed, some victims approve while others warn that killing him conveniently removes the chance to expose collaborators."
+        },
+        {
+          "body_index": 271,
+          "text": "If the optional corruption chain was completed, documents later implicate True Light personnel as well."
+        },
+        {
+          "body_index": 272,
+          "text": "State effects: leader_03_spared set; occupation_cybressa set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 268
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_03_spared set; occupation_cybressa set"
+    },
+    {
+      "id": "CH04-O02",
+      "name": "War orphan courier",
+      "chapter": 4,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 275,
+          "text": "A recurring adolescent courier admits carrying messages for whichever army pays. Their sibling was killed by a Dawn Bloom patrol and their father by True Light shelling. They reject Aimon’s attempts to sort their grief into sides."
+        },
+        {
+          "body_index": 276,
+          "text": "State effects: civilian_choice_courier met"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 273
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "civilian_choice_courier met"
+    },
+    {
+      "id": "CH05-E01",
+      "name": "An undefended town",
+      "chapter": 5,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 282,
+          "text": "Aimon arrives expecting resistance and finds almost no soldiers. Samiel evacuated the garrison and most combatants to prevent a battle among orchards and homes."
+        },
+        {
+          "body_index": 283,
+          "text": "Rhoswen calls the withdrawal cowardice because it concedes strategically useful ground. Aimon is less certain."
+        },
+        {
+          "body_index": 284,
+          "text": "State effects: rhoswen_arc_state=max(current,1)"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 280
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "rhoswen_arc_state=max(current,1)"
+    },
+    {
+      "id": "CH05-E02",
+      "name": "Samiel’s walk",
+      "chapter": 5,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 287,
+          "text": "Instead of an immediate challenge, Samiel asks Aimon to walk through the town. This sequence is interactive: children play, farmers work, families pray, and monster partners help in orchards. The point is visual sameness with Civeton rather than exposition."
+        },
+        {
+          "body_index": 288,
+          "text": "Samiel does not ask Aimon to convert or defect. He asks what Aimon believes the war is for."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 285
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH05-E03",
+      "name": "The same story",
+      "chapter": 5,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 291,
+          "text": "At the shrine Samiel compares creation narratives. Both religions describe darkness before first light, a radiant presence, and a moral duty to guide the lost. Names, ritual gestures and later commentaries differ; foundational images are nearly identical."
+        },
+        {
+          "body_index": 292,
+          "text": "Samiel asks: ‘If your light teaches mercy and mine teaches mercy, what exactly are we killing one another over?’ Aimon has no answer."
+        },
+        {
+          "body_index": 293,
+          "text": "State effects: religious_parallels_found+=2"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 289
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found+=2"
+    },
+    {
+      "id": "CH05-O01",
+      "name": "Two Prayers collection unlock",
+      "chapter": 5,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 296,
+          "text": "Mirelle-style comparison UI/quest log unlocks. Previously collected fragments can now be paired. Each match yields lore text, not power rewards. The chain culminates in Botrune."
+        },
+        {
+          "body_index": 297,
+          "text": "State effects: two_prayers_unlocked=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 294
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "two_prayers_unlocked=true"
+    },
+    {
+      "id": "CH05-E04",
+      "name": "Samiel challenge",
+      "chapter": 5,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 300,
+          "text": "Samiel agrees to fight Aimon alone under terms that spare the town a siege. His graceful nature-oriented team reinforces that he is not a military tyrant. He accepts the result before any monster dies if defeated decisively."
+        },
+        {
+          "body_index": 301,
+          "text": "Battle: Leader 4 — Warden Samiel Elow"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 298
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 4 — Warden Samiel Elow"
+    },
+    {
+      "id": "CH05-E05",
+      "name": "Spare / Execute",
+      "chapter": 5,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 304,
+          "text": "If spared, Samiel becomes a supervised community representative and mediates occupation disputes. If executed, Rhoswen initially calls it strategically clean but is disturbed by the town’s silent response; there is no riot, only people removing shrine flowers to make a memorial."
+        },
+        {
+          "body_index": 305,
+          "text": "State effects: leader_04_spared set; occupation_cossenne set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 302
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_04_spared set; occupation_cossenne set"
+    },
+    {
+      "id": "CH05-E06",
+      "name": "Kurg’s midpoint doctrine",
+      "chapter": 5,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 308,
+          "text": "Kurg congratulates Aimon on four victories and notices he is not proud. He says doubt is normal and offers his central belief: ‘Duty is what remains when certainty fails.’ It sounds wise now. Later Aimon will recognise it as another way of outsourcing judgment."
+        },
+        {
+          "body_index": 309,
+          "text": "State effects: kurg_doubt_state=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 306
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "kurg_doubt_state=1"
+    },
+    {
+      "id": "CH06-E01",
+      "name": "The quarry road",
+      "chapter": 6,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 315,
+          "text": "Escaped labourers beg the True Light column for help. Some are Dawn Bloom believers imprisoned for criticising Castellan Braska Morn. Others are True Light captives. Braska’s cruelty is political and personal, not doctrinally exclusive."
+        },
+        {
+          "body_index": 316,
+          "text": "State effects: main_objective=free_quarry_prisoners"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 313
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=free_quarry_prisoners"
+    },
+    {
+      "id": "CH06-E02",
+      "name": "The useful invasion",
+      "chapter": 6,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 319,
+          "text": "For the first time some Dawn Bloom civilians actively welcome Aimon because they believe conquest may remove Braska. This must feel uncomfortable after previous chapters: military intervention can produce a real local good without making the crusade righteous as a whole."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 317
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH06-O01",
+      "name": "Break the cages",
+      "chapter": 6,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 322,
+          "text": "Optional route through quarry tunnels frees additional prisoners before the leader fight. Those NPCs later form part of the local council. If skipped, occupation forces eventually free them but some are transferred or lost in administrative confusion."
+        },
+        {
+          "body_index": 323,
+          "text": "State effects: marasen_prisoners_freed=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 320
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "marasen_prisoners_freed=true"
+    },
+    {
+      "id": "CH06-E03",
+      "name": "Pate and Trade’s argument",
+      "chapter": 6,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 326,
+          "text": "A former prisoner recalls Pate wanting to storm the quarry immediately after seeing labourers beaten. Trade stopped him because a frontal attack would kill prisoners. They argued badly, then worked together on a smaller rescue."
+        },
+        {
+          "body_index": 327,
+          "text": "This gives both friends moral credit while showing their different instincts."
+        },
+        {
+          "body_index": 328,
+          "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 324
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "id": "CH06-E04",
+      "name": "Braska battle",
+      "chapter": 6,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 331,
+          "text": "Braska uses heavy attrition and treats his monsters as instruments. Where possible, battle barks show disregard for their survival. This is one of the few leader fights where the opponent may knowingly allow a partner to die rather than surrender early."
+        },
+        {
+          "body_index": 332,
+          "text": "Battle: Leader 5 — Castellan Braska Morn"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 329
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 5 — Castellan Braska Morn"
+    },
+    {
+      "id": "CH06-E05",
+      "name": "Spare is not restoration",
+      "chapter": 6,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 335,
+          "text": "Choice remains SPARE / EXECUTE. If spared, Braska is shackled and imprisoned; he never resumes authority. If executed, several former prisoners openly approve. The game refuses to simplify mercy into the universally kind outcome."
+        },
+        {
+          "body_index": 336,
+          "text": "State effects: leader_05_spared set; occupation_marasen set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 333
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_05_spared set; occupation_marasen set"
+    },
+    {
+      "id": "CH06-E06",
+      "name": "Rhoswen confrontation I",
+      "chapter": 6,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 339,
+          "text": "If Aimon has spared most leaders, Rhoswen accuses him of enjoying moral purity while soldiers handle the risks of prisoners and rebellions. If Aimon has executed most, she praises his resolve but asks whether he is becoming numb. Either path opens the same deeper conflict: she wants him to justify decisions, not hide behind a pattern."
+        },
+        {
+          "body_index": 340,
+          "text": "State effects: rhoswen_arc_state=2"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 337
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "rhoswen_arc_state=2"
+    },
+    {
+      "id": "CH07-E01",
+      "name": "The archive under guard",
+      "chapter": 7,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 346,
+          "text": "Botrune refuses military entry because both faiths have previously destroyed texts considered heretical. Aimon gains access by helping protect evacuees and manuscripts from opportunistic looters rather than by forcing the front gate."
+        },
+        {
+          "body_index": 347,
+          "text": "State effects: main_objective=reach_mirelle"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 344
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=reach_mirelle"
+    },
+    {
+      "id": "CH07-E02",
+      "name": "Mirelle’s hypothesis",
+      "chapter": 7,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 350,
+          "text": "Canon Mirelle Avin shows pre-schism manuscripts whose radiant figure contains symbols later claimed separately by True Light and Dawn Bloom traditions. She does not know Illyr is real. Her scholarly claim is narrower: both religions likely descend from a shared source."
+        },
+        {
+          "body_index": 351,
+          "text": "Aimon resists not because the evidence is weak but because accepting it threatens the moral framework he has used to understand every battle so far."
+        },
+        {
+          "body_index": 352,
+          "text": "State effects: religious_parallels_found+=2"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 348
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found+=2"
+    },
+    {
+      "id": "CH07-E03",
+      "name": "Trade was here",
+      "chapter": 7,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 355,
+          "text": "Mirelle recognises Trade’s handwriting in copied marginal notes. He asked about contradictory translations, repeatedly underlined parallel passages and left a page of questions behind."
+        },
+        {
+          "body_index": 356,
+          "text": "Aimon learns for the first time that Trade’s certainty had begun cracking before his death."
+        },
+        {
+          "body_index": 357,
+          "text": "State effects: trade_clues_found+=1; trade_notebook_pages add AVIN_PAGE"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 353
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "trade_clues_found+=1; trade_notebook_pages add AVIN_PAGE"
+    },
+    {
+      "id": "CH07-O01",
+      "name": "Two Prayers completion stage",
+      "chapter": 7,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 360,
+          "text": "Optional archive puzzle pairs previously collected verses. High completion reveals that several supposed doctrinal opposites are later commentary rather than differences in foundational text. Reward is access to lore rooms and altered dialogue with Aeric/Mirelle, not combat power."
+        },
+        {
+          "body_index": 361,
+          "text": "State effects: religious_parallels_found variable"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 358
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found variable"
+    },
+    {
+      "id": "CH07-O02",
+      "name": "The man with ink-stained fingers",
+      "chapter": 7,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 364,
+          "text": "Optional Severin sighting: a thin traveller is reading in a closed gallery that should be inaccessible. When approached, he comments on a line about death being ‘a country no map survives’ and leaves before guards arrive. He is not named."
+        },
+        {
+          "body_index": 365,
+          "text": "State effects: severin_sightings+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 362
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_sightings+=1"
+    },
+    {
+      "id": "CH07-E04",
+      "name": "Mirelle’s challenge",
+      "chapter": 7,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 368,
+          "text": "Mirelle refuses to surrender the archive to an army without testing whether Aimon will preserve it. The battle is framed as custody of knowledge rather than sacred combat. Her team is technical and control-oriented."
+        },
+        {
+          "body_index": 369,
+          "text": "Battle: Leader 6 — Canon Mirelle Avin"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 366
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 6 — Canon Mirelle Avin"
+    },
+    {
+      "id": "CH07-E05",
+      "name": "Spare / Execute",
+      "chapter": 7,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 372,
+          "text": "If spared, Mirelle remains archivist under guarantees that neither faction destroys texts. If executed, both Dawn Bloom mourners and some True Light scholars condemn the loss; Kurg orders the archive protected anyway, showing institutional complexity."
+        },
+        {
+          "body_index": 373,
+          "text": "State effects: leader_06_spared set; occupation_botrune set; aeric_arc_state=max(current,2)"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 370
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_06_spared set; occupation_botrune set; aeric_arc_state=max(current,2)"
+    },
+    {
+      "id": "CH08-E01",
+      "name": "No clean battlefield",
+      "chapter": 8,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 379,
+          "text": "The approach crosses burned fields, abandoned monster nests and mixed graves. Environmental storytelling should avoid spectacle: broken carts, field surgery, soldiers too tired to cheer."
+        },
+        {
+          "body_index": 380,
+          "text": "True Light and Dawn Bloom wounded are sometimes treated in adjacent tents because medics ran out of segregated space."
+        },
+        {
+          "body_index": 381,
+          "text": "State effects: main_objective=reach_oren_lines"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 377
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=reach_oren_lines"
+    },
+    {
+      "id": "CH08-E02",
+      "name": "Oren’s dilemma",
+      "chapter": 8,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 384,
+          "text": "Marshal Oren Talv explains that he no longer believes victory will solve anything, but if he disarms while the True Light advances his people die. True Light officers say essentially the same thing about stopping. The war continues partly because neither side trusts the other to stop first."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 382
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH08-E03",
+      "name": "Emmara Mill named",
+      "chapter": 8,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 387,
+          "text": "Oren remembers Pate and Trade. They were transferred onward to a forward unit near Emmara Mill. He does not know their fate. This is the first mandatory spoken use of the mill’s name."
+        },
+        {
+          "body_index": 388,
+          "text": "If the player saw earlier requisition references, Aimon can note that the mill sounded minor. Oren agrees: ‘It was.’"
+        },
+        {
+          "body_index": 389,
+          "text": "State effects: pate_clues_found+=1; trade_clues_found+=1; mill_foreshadow_seen add MILL_NAME"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 385
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found+=1; trade_clues_found+=1; mill_foreshadow_seen add MILL_NAME"
+    },
+    {
+      "id": "CH08-O01",
+      "name": "The ceasefire hour",
+      "chapter": 8,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 392,
+          "text": "Optional quest: negotiate a one-hour local ceasefire so both sides can retrieve dead monsters and soldiers from a contested field. Rhoswen initially objects on tactical grounds; participating becomes a key input to her arc."
+        },
+        {
+          "body_index": 393,
+          "text": "State effects: rhoswen_ceasefire_seen=true; monster_memorial_count+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 390
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "rhoswen_ceasefire_seen=true; monster_memorial_count+=1"
+    },
+    {
+      "id": "CH08-E04",
+      "name": "Rhoswen duel",
+      "chapter": 8,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 396,
+          "text": "Rhoswen privately challenges Aimon under non-lethal surrender rules. She believes his growing hesitation may endanger others. Dialogue adapts to his prior choices so she attacks inconsistency rather than mercy itself."
+        },
+        {
+          "body_index": 397,
+          "text": "After defeat she admits that Aimon is not weak. If the ceasefire quest was completed, she also admits she watched enemy soldiers carry the same kinds of bodies they did."
+        },
+        {
+          "body_index": 398,
+          "text": "Battle: Rival battle — Dame Rhoswen Vey"
+        },
+        {
+          "body_index": 399,
+          "text": "State effects: rhoswen_arc_state=3"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 394
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Rival battle — Dame Rhoswen Vey",
+      "legacy_state_effects_text": "rhoswen_arc_state=3"
+    },
+    {
+      "id": "CH08-E05",
+      "name": "Oren battle",
+      "chapter": 8,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 402,
+          "text": "Oren’s team is siege-minded and efficient. He is one of the hardest mortal leaders but surrenders as soon as defeat is strategically clear, explicitly refusing to kill partners for symbolic defiance."
+        },
+        {
+          "body_index": 403,
+          "text": "Battle: Leader 7 — Marshal Oren Talv"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 400
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 7 — Marshal Oren Talv"
+    },
+    {
+      "id": "CH08-E06",
+      "name": "Spare / Execute",
+      "chapter": 8,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 406,
+          "text": "If spared, Oren becomes central to local ceasefire enforcement. If executed, his officers decentralise and skirmishing worsens temporarily because nobody can command a coherent withdrawal. Either result has understandable consequences."
+        },
+        {
+          "body_index": 407,
+          "text": "State effects: leader_07_spared set; occupation_cayfen set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 404
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_07_spared set; occupation_cayfen set"
+    },
+    {
+      "id": "CH09-E01",
+      "name": "The Holy Land looks ordinary",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 413,
+          "text": "Crossing the sacred boundary reveals farms, children, markets and working families rather than a mystical realm. Architecture is beautiful but lived-in. The banality is the point: both sides projected cosmic meaning onto other people’s homes."
+        },
+        {
+          "body_index": 414,
+          "text": "State effects: holy_land_entered=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 411
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "holy_land_entered=true"
+    },
+    {
+      "id": "CH09-E02",
+      "name": "Ramelle under strain",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 417,
+          "text": "The city expects siege. Lucain has rationed supplies and armed defenders but also opened temples as shelters. Dawn Bloom zealots demand martyrdom; pragmatic civilians demand negotiation. Again, the faction contains internal moral diversity."
+        },
+        {
+          "body_index": 418,
+          "text": "State effects: main_objective=reach_lucain"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 415
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_objective=reach_lucain"
+    },
+    {
+      "id": "CH09-O01",
+      "name": "Last pre-reveal mill clue",
+      "chapter": 9,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 421,
+          "text": "A logistics office contains an outdated map showing Emmara Mill as a reserve grain point. A newer annotation marks the crossing washed out and grain moved elsewhere. The cancellation notice was never attached to the earlier attack order."
+        },
+        {
+          "body_index": 422,
+          "text": "State effects: mill_foreshadow_seen add MILL_CANCELLED"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 419
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "mill_foreshadow_seen add MILL_CANCELLED"
+    },
+    {
+      "id": "CH09-E03",
+      "name": "Lucain’s audience",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 425,
+          "text": "Lucain does not recognise Aimon personally but recognises Pate and Trade’s names. His reaction is the first unambiguous signal that something is wrong. He refuses to explain before the city’s surrender is settled because he will not use grief as leverage."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 423
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH09-E04",
+      "name": "Final mortal leader battle",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 428,
+          "text": "Lucain’s team is ceremonial, powerful and endgame-level. The battle is the climax of the conventional monster-RPG conquest structure. On defeat he accepts that Ramelle cannot be held through a formal leader system without catastrophic civilian loss."
+        },
+        {
+          "body_index": 429,
+          "text": "Battle: Leader 8 — Hierophant Lucain Serault"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 426
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Leader 8 — Hierophant Lucain Serault"
+    },
+    {
+      "id": "CH09-E05",
+      "name": "Spare / Execute",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 432,
+          "text": "The choice remains available even here. If spared, Lucain personally delivers the truth. If executed, Mirelle/Yselle/Oren or a senior archive official delivers records after the sentence, making clear that executing the messenger cannot remove what happened."
+        },
+        {
+          "body_index": 433,
+          "text": "The death choice must never block the main plot."
+        },
+        {
+          "body_index": 434,
+          "text": "State effects: leader_08_spared set; occupation_ramelle set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 430
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "leader_08_spared set; occupation_ramelle set"
+    },
+    {
+      "id": "CH09-E06",
+      "name": "Emmara Mill",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 437,
+          "text": "Aimon is taken to the abandoned mill or shown the recovered field report and then allowed to visit the site. Pate and Trade were part of a small True Light unit ordered to take it. Old intelligence said the mill stored grain and supported a useful crossing. The grain had moved; the crossing was unusable; the cancellation never reached the assault unit."
+        },
+        {
+          "body_index": 438,
+          "text": "Dawn Bloom defenders fought because an enemy attack convinced them the position must matter. Both groups died defending a significance neither actually understood. The site was abandoned soon after."
+        },
+        {
+          "body_index": 439,
+          "text": "State effects: pate_trade_confirmed_dead=true; kurg_doubt_state=2"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 435
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_trade_confirmed_dead=true; kurg_doubt_state=2"
+    },
+    {
+      "id": "CH09-E07",
+      "name": "Personal effects",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 442,
+          "text": "Aimon receives Pate’s braided friendship cord and Trade’s field notebook. The notebook contains strategic doubts and questions from Botrune. Its final completed entry is painfully mundane: Pate thinks the mill job will be quick; Trade still doubts the objective but will not let Pate go alone."
+        },
+        {
+          "body_index": 443,
+          "text": "There is no grand final speech. Their deaths remain small, human and preventable."
+        },
+        {
+          "body_index": 444,
+          "text": "State effects: trade_notebook_pages add FINAL_PAGE"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 440
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "trade_notebook_pages add FINAL_PAGE"
+    },
+    {
+      "id": "CH09-E08",
+      "name": "No martyrdom",
+      "chapter": 9,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 447,
+          "text": "Aeric offers prayer. Military officers speak of honouring the fallen. Someone uses the word ‘martyrs’. Aimon finally rejects the language. He does not want statues, titles or meaning imposed after the fact. He wants Pate and Trade."
+        },
+        {
+          "body_index": 448,
+          "text": "The conventional crusade arc ends here. Aimon’s new objective is impossible by normal world rules."
+        },
+        {
+          "body_index": 449,
+          "text": "State effects: chapter_09_complete=true"
+        },
+        {
+          "body_index": 451,
+          "text": "ACT III — REFUSAL"
+        },
+        {
+          "body_index": 452,
+          "text": "This short act lets grief breathe before the supernatural pivot. Aimon tries normal responses first. Severin’s offer therefore feels like a genuine violation of the world rather than an obvious next quest marker."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 445
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "chapter_09_complete=true"
+    },
+    {
+      "id": "CH10-E01",
+      "name": "Funeral rites fail",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 458,
+          "text": "Aimon witnesses both True Light and Dawn Bloom funerary traditions. They use different names and gestures but promise strikingly similar rest, reunion and light. Neither offers literal return."
+        },
+        {
+          "body_index": 459,
+          "text": "The player can choose whether Aimon participates, watches or leaves; this changes flavour dialogue only."
+        },
+        {
+          "body_index": 460,
+          "text": "State effects: religious_parallels_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 456
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found+=1"
+    },
+    {
+      "id": "CH10-E02",
+      "name": "Kurg reads the order",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 463,
+          "text": "Kurg arrives or is summoned. He examines the Emmara Mill paperwork and confirms the assault arose from stale intelligence within the broader campaign he commanded. He did not personally choose Pate and Trade, but refuses to claim that absolves him."
+        },
+        {
+          "body_index": 464,
+          "text": "Aimon accuses commanders of claiming responsibility when orders succeed and hiding inside systems when they fail. Kurg has no clean response."
+        },
+        {
+          "body_index": 465,
+          "text": "State effects: kurg_doubt_state=3"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 461
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "kurg_doubt_state=3"
+    },
+    {
+      "id": "CH10-E03",
+      "name": "Aeric cannot promise",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 468,
+          "text": "Aeric begins with orthodox reassurance, stops, and admits he no longer knows what lies beyond death. For the first time he refuses to pretend certainty simply because his position expects it."
+        },
+        {
+          "body_index": 469,
+          "text": "This is progress, not loss of faith."
+        },
+        {
+          "body_index": 470,
+          "text": "State effects: aeric_arc_state=3"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 466
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "aeric_arc_state=3"
+    },
+    {
+      "id": "CH10-O01",
+      "name": "Emmara Mill memorial",
+      "chapter": 10,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 473,
+          "text": "Optional: Aimon can return alone and place Pate’s childhood wooden figure, a copy of Trade’s note, or nothing at the site. The choice changes only later dialogue and one epilogue prop."
+        },
+        {
+          "body_index": 474,
+          "text": "State effects: mill_memorial_choice set"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 471
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "mill_memorial_choice set"
+    },
+    {
+      "id": "CH10-E04",
+      "name": "Severin steps out of the background",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 477,
+          "text": "Severin Vale approaches Aimon by name. If optional sightings were found, Aimon recognises him; otherwise this is the first formal meeting. Severin knows far too much about death and asks whether Aimon wants comfort or directions."
+        },
+        {
+          "body_index": 478,
+          "text": "State effects: severin_revealed=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 475
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_revealed=true"
+    },
+    {
+      "id": "CH10-E05",
+      "name": "The rule of retrieval",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 481,
+          "text": "Severin explains that death is initially a transition of identity into the underworld. For a limited period, a coherent human self remains retrievable. Eventually identity passes beyond a boundary that cannot be reversed. Pate and Trade died recently enough that a window remains."
+        },
+        {
+          "body_index": 482,
+          "text": "This is not general resurrection. Success requires physically entering the underworld, reaching the held souls, overcoming its ruler and returning before dissolution."
+        },
+        {
+          "body_index": 483,
+          "text": "State effects: rescue_window_explained=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 479
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "rescue_window_explained=true"
+    },
+    {
+      "id": "CH10-E06",
+      "name": "Aeric’s permission is irrelevant",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 486,
+          "text": "Aeric initially calls the plan sacrilege, then catches himself. He tells Aimon he cannot claim to know that. He asks only whether Aimon understands that wanting something desperately does not automatically make it right. Aimon answers that he knows — and is going anyway."
+        },
+        {
+          "body_index": 487,
+          "text": "State effects: aeric_arc_state=4"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 484
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "aeric_arc_state=4"
+    },
+    {
+      "id": "CH10-E07",
+      "name": "Entrance below",
+      "chapter": 10,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 490,
+          "text": "Severin leads Aimon to pre-religious catacombs beneath the Holy Land. Carvings predate both True Light and Dawn Bloom iconography. The descent point reacts to Severin in a way he does not explain."
+        },
+        {
+          "body_index": 491,
+          "text": "At the threshold he states the one practical rule: if Aimon dies below, there is nobody coming after him."
+        },
+        {
+          "body_index": 492,
+          "text": "State effects: descent_unlocked=true; chapter_10_complete=true"
+        },
+        {
+          "body_index": 494,
+          "text": "ACT IV — DESCENT"
+        },
+        {
+          "body_index": 495,
+          "text": "The Nine Circles are human names for regions of the underworld. They are not divinely designed punishments for a Christian-style list of sins. Humans imposed moral categories on natural/metaphysical processes they did not understand. Each chapter nonetheless mirrors an emotional or institutional problem Aimon has encountered, because human dead reshape local space through memory and fixation."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 488
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "descent_unlocked=true; chapter_10_complete=true"
+    },
+    {
+      "id": "CH11-E01",
+      "name": "The newly dead",
+      "chapter": 11,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 501,
+          "text": "The Threshold resembles an immense transit space shaped by fragments of roads, doorways and memories. Newly dead souls often do not understand their state. True Light and Dawn Bloom dead stand in the same queues, argue, pray and search for relatives."
+        },
+        {
+          "body_index": 502,
+          "text": "No visible cosmic sorting separates them."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 499
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH11-E02",
+      "name": "First executed leader echo",
+      "chapter": 11,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 505,
+          "text": "If any earlier leader was executed, one eligible spirit may appear here. The encounter is not automatically a revenge battle. Aldren might ask whether Dorelem survived; Yselle might ask about the hospice. Their concerns continue beyond their deaths."
+        },
+        {
+          "body_index": 506,
+          "text": "If no leader died, use an ordinary trainer Aimon remembers from the campaign."
+        },
+        {
+          "body_index": 507,
+          "text": "State effects: hell_leader_encounters update"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 503
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "hell_leader_encounters update"
+    },
+    {
+      "id": "CH11-E03",
+      "name": "Severin names nothing",
+      "chapter": 11,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 510,
+          "text": "Severin explains that humans call this ‘the first circle’, but Nharos’s realm uses no such moral taxonomy. The dead brought their own metaphors with them and later living religions treated those metaphors as geography."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 508
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH11-O01",
+      "name": "Return a name",
+      "chapter": 11,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 513,
+          "text": "Optional quest: help a confused soul remember the name of their monster partner by searching memory-fragments. The partner is dead too, but their reunion is quiet rather than miraculous. This reinforces individual attachment to monsters."
+        },
+        {
+          "body_index": 514,
+          "text": "State effects: monster_memorial_count+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 511
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "monster_memorial_count+=1"
+    },
+    {
+      "id": "CH11-E04",
+      "name": "Veyr",
+      "chapter": 11,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 517,
+          "text": "Veyr is an ancient functionary that records coherent identities long enough for onward passage. It attacks because Severin and Aimon are moving against flow. Its motives are administrative, not evil."
+        },
+        {
+          "body_index": 518,
+          "text": "Defeating Veyr opens the deeper route and begins destabilising the underworld’s normal hierarchy."
+        },
+        {
+          "body_index": 519,
+          "text": "Battle: Hell Warden 1 — Veyr, Keeper of Names"
+        },
+        {
+          "body_index": 520,
+          "text": "State effects: threshold_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 515
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 1 — Veyr, Keeper of Names",
+      "legacy_state_effects_text": "threshold_clear=true"
+    },
+    {
+      "id": "CH12-E01",
+      "name": "Rooms people refuse to leave",
+      "chapter": 12,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 526,
+          "text": "The region manifests unfinished desires: homes, possessions, lovers, titles, battles not won. Souls repeat attempts to recover what they believe will make death tolerable."
+        },
+        {
+          "body_index": 527,
+          "text": "Aimon sees petty wants beside profound ones, preventing a simplistic ‘desire is bad’ message."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 524
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH12-E02",
+      "name": "Severin’s question",
+      "chapter": 12,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 530,
+          "text": "Severin asks whether taking Pate and Trade back is love or merely Aimon refusing to accept loss. Aimon cannot prove his answer. He says he will ask Pate and Trade themselves if he reaches them."
+        },
+        {
+          "body_index": 531,
+          "text": "This subtly establishes that their agency will matter after recovery."
+        },
+        {
+          "body_index": 532,
+          "text": "State effects: severin_optional_dialogue+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 528
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_optional_dialogue+=1"
+    },
+    {
+      "id": "CH12-O01",
+      "name": "The soldier’s medal",
+      "chapter": 12,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 535,
+          "text": "Optional soul begs Aimon to recover a medal that represents a supposedly glorious death. On finding the memory attached to it, Aimon learns the soldier died frightened and accidentally. The soul can choose to keep or discard the medal; Aimon does not decide for them."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 533
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH12-E03",
+      "name": "Ossael",
+      "chapter": 12,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 538,
+          "text": "Ossael has accumulated fragments people would not release. Its boss arena is cluttered with crowns, toys, weapons and letters of equal metaphysical weight because value belongs to the person who wanted them."
+        },
+        {
+          "body_index": 539,
+          "text": "Victory breaks the hoard-path and opens the next circle."
+        },
+        {
+          "body_index": 540,
+          "text": "Battle: Hell Warden 2 — Ossael, the Gatherer"
+        },
+        {
+          "body_index": 541,
+          "text": "State effects: want_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 536
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 2 — Ossael, the Gatherer",
+      "legacy_state_effects_text": "want_clear=true"
+    },
+    {
+      "id": "CH13-E01",
+      "name": "The battle that forgot itself",
+      "chapter": 13,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 547,
+          "text": "Dead soldiers fight across a shifting battlefield. Many remember which colour they wear but not the original dispute. True Light and Dawn Bloom slogans have collapsed into fragments shouted by habit."
+        },
+        {
+          "body_index": 548,
+          "text": "Some combatants are centuries old and use obsolete names for the same faiths."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 545
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH13-E02",
+      "name": "Break the loop",
+      "chapter": 13,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 551,
+          "text": "Progress requires refusing the obvious route of defeating every soldier. Aimon must destroy or silence battlefield anchors that keep recreating the same charge. This mechanically reinforces that winning another fight cannot end an endlessly self-renewing war."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 549
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH13-O01",
+      "name": "Two enemies carrying one body",
+      "chapter": 13,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 554,
+          "text": "Optional scene: two dead soldiers from opposing sides discover they are both trying to carry the same fallen medic who treated them. They cooperate without theological resolution."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 552
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH13-E03",
+      "name": "Mordren",
+      "chapter": 13,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 557,
+          "text": "Mordren is not the cause of wrath; it amplifies the rhythmic repetition of conflict. Its battle uses momentum, forced rematches or reinforcements until the player disrupts its pattern."
+        },
+        {
+          "body_index": 558,
+          "text": "Severin is visibly pleased by Aimon learning to attack the system sustaining the fight rather than the fighters themselves."
+        },
+        {
+          "body_index": 559,
+          "text": "Battle: Hell Warden 3 — Mordren, Drum of War"
+        },
+        {
+          "body_index": 560,
+          "text": "State effects: wrath_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 555
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 3 — Mordren, Drum of War",
+      "legacy_state_effects_text": "wrath_clear=true"
+    },
+    {
+      "id": "CH14-E01",
+      "name": "Dead kings still giving orders",
+      "chapter": 14,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 566,
+          "text": "Palaces, courts and command tents overlap. Dead rulers issue orders to dead subjects who often obey simply because they always did. Some subjects quietly leave when Aimon points out that punishment no longer has force."
+        },
+        {
+          "body_index": 567,
+          "text": "The visual joke is dark: authority survives because everyone keeps performing it."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 564
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH14-E02",
+      "name": "Kurg’s shadow",
+      "chapter": 14,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 570,
+          "text": "A memory-echo recreates Kurg’s phrase: ‘Duty is what remains when certainty fails.’ Aimon now answers the idea directly: duty cannot replace judgment; someone still chooses what duty is owed to."
+        },
+        {
+          "body_index": 571,
+          "text": "This is Aimon articulating his moral development without requiring Kurg to be present."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 568
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH14-O01",
+      "name": "The empty chair",
+      "chapter": 14,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 574,
+          "text": "Optional dialogue finds Severin sitting briefly on an abandoned throne ‘to see whether it improves the view.’ He dismisses it as a joke, but the composition is deliberate foreshadowing."
+        },
+        {
+          "body_index": 575,
+          "text": "State effects: severin_optional_dialogue+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 572
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_optional_dialogue+=1"
+    },
+    {
+      "id": "CH14-E03",
+      "name": "Caelor",
+      "chapter": 14,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 578,
+          "text": "Caelor attempts to bind Aimon into formal rules and hierarchies during battle. The encounter is about breaking imposed command structures and choosing actions outside expected sequences."
+        },
+        {
+          "body_index": 579,
+          "text": "Defeat causes subordinate shades simply to stop obeying."
+        },
+        {
+          "body_index": 580,
+          "text": "Battle: Hell Warden 4 — Caelor, the Last Magistrate"
+        },
+        {
+          "body_index": 581,
+          "text": "State effects: dominion_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 576
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 4 — Caelor, the Last Magistrate",
+      "legacy_state_effects_text": "dominion_clear=true"
+    },
+    {
+      "id": "CH15-E01",
+      "name": "Two heavens beside each other",
+      "chapter": 15,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 587,
+          "text": "True Light dead have built a radiant imitation heaven. Dawn Bloom dead have built another beyond a wall. Both insist the other side is a false afterlife. The environments use almost identical architecture with different symbols."
+        },
+        {
+          "body_index": 588,
+          "text": "No cosmic force built the wall. The dead did."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 585
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH15-E02",
+      "name": "The shared hymn",
+      "chapter": 15,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 591,
+          "text": "A musical/ritual puzzle reveals that two supposedly different hymns share the same melody and most of the same structure. Old souls remember a pre-schism version without either modern name."
+        },
+        {
+          "body_index": 592,
+          "text": "State effects: religious_parallels_found+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 589
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "religious_parallels_found+=1"
+    },
+    {
+      "id": "CH15-O01",
+      "name": "Executed clergy confrontation",
+      "chapter": 15,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 595,
+          "text": "If a religious leader was executed, they may appear here and respond according to their personality rather than as a generic damned spirit. Mirelle would be fascinated by the evidence; Samiel may simply ask whether Aimon finally sees the wall."
+        },
+        {
+          "body_index": 596,
+          "text": "State effects: hell_leader_encounters update"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 593
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "hell_leader_encounters update"
+    },
+    {
+      "id": "CH15-E03",
+      "name": "Asterion",
+      "chapter": 15,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 599,
+          "text": "Asterion embodies certainty as enforcement, not truth. It repeats assertions until souls conform. The boss uses mirrored versions of Aimon’s tactics or locks choices behind false binaries."
+        },
+        {
+          "body_index": 600,
+          "text": "Victory literally opens passages through both human-made heavens at once."
+        },
+        {
+          "body_index": 601,
+          "text": "Battle: Hell Warden 5 — Asterion, Voice of Certainty"
+        },
+        {
+          "body_index": 602,
+          "text": "State effects: dogma_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 597
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 5 — Asterion, Voice of Certainty",
+      "legacy_state_effects_text": "dogma_clear=true"
+    },
+    {
+      "id": "CH16-E01",
+      "name": "Everything lost can appear",
+      "chapter": 16,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 608,
+          "text": "The Garden manifests convincing recreations of lost people and monsters from memory. It is beautiful, gentle and therefore more dangerous than the violent circles."
+        },
+        {
+          "body_index": 609,
+          "text": "Aimon can encounter echoes of dead party monsters if the implementation records them; they are not recoverable, and the game avoids shaming the player for feeling attachment."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 606
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH16-E02",
+      "name": "Perfect Pate and Trade",
+      "chapter": 16,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 612,
+          "text": "Mirra offers versions of Pate and Trade who never left Aimon, never doubted, never died and say exactly what he wishes they would say. Aimon rejects them because their perfection proves they are not his friends."
+        },
+        {
+          "body_index": 613,
+          "text": "He remembers Pate being annoying and Trade being controlling. Love is attachment to actual people, not idealised functions."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 610
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH16-O01",
+      "name": "A dead monster’s echo",
+      "chapter": 16,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 616,
+          "text": "Optional encounter lets Aimon say goodbye to one recorded dead monster partner. This is a memorial, not resurrection. If no monster has died, use a generic childhood animal/monster memory instead."
+        },
+        {
+          "body_index": 617,
+          "text": "State effects: monster_memorial_count+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 614
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "monster_memorial_count+=1"
+    },
+    {
+      "id": "CH16-E03",
+      "name": "Mirra",
+      "chapter": 16,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 620,
+          "text": "Mirra attacks only after Aimon refuses the substitute. Its battle uses deceptive duplicates and healing illusions. Victory requires identifying the real target rather than simply dealing maximum damage."
+        },
+        {
+          "body_index": 621,
+          "text": "Battle: Hell Warden 6 — Mirra, the Kindly Shape"
+        },
+        {
+          "body_index": 622,
+          "text": "State effects: grief_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 618
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 6 — Mirra, the Kindly Shape",
+      "legacy_state_effects_text": "grief_clear=true"
+    },
+    {
+      "id": "CH17-E01",
+      "name": "Doors that were shut",
+      "chapter": 17,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 628,
+          "text": "Every corridor is shaped by a perceived abandonment: parents, lovers, commanders, gods. Some betrayals were real; others were protective choices that still hurt. The underworld does not adjudicate which pain is legitimate."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 626
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH17-E02",
+      "name": "Don’t follow us",
+      "chapter": 17,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 631,
+          "text": "Trade’s note reappears as a memory. Aimon finally says what he has avoided: he was furious they left him, and part of him still is. Severin does not correct him or turn the anger into a lesson."
+        },
+        {
+          "body_index": 632,
+          "text": "Aimon can love them, understand why they acted, and still believe they were wrong to decide for him."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 629
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH17-O01",
+      "name": "The other side of protection",
+      "chapter": 17,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 635,
+          "text": "Optional memory fragment reconstructs Pate and Trade asking Kurg to keep Aimon home. Pate worries Aimon will hate them. Trade answers that hatred is survivable. This confirms their motive without making the choice painless."
+        },
+        {
+          "body_index": 636,
+          "text": "State effects: pate_clues_found=max; trade_clues_found=max"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 633
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_clues_found=max; trade_clues_found=max"
+    },
+    {
+      "id": "CH17-E03",
+      "name": "Velcar",
+      "chapter": 17,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 639,
+          "text": "Velcar consumes broken promises and weaponises recorded dialogue. Its battle replays commitments from earlier chapters as taunts. Victory symbolically requires acting from present judgment rather than obeying old promises mechanically."
+        },
+        {
+          "body_index": 640,
+          "text": "Battle: Hell Warden 7 — Velcar, the Oath-Eater"
+        },
+        {
+          "body_index": 641,
+          "text": "State effects: betrayal_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 637
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 7 — Velcar, the Oath-Eater",
+      "legacy_state_effects_text": "betrayal_clear=true"
+    },
+    {
+      "id": "CH18-E01",
+      "name": "Names disappearing",
+      "chapter": 18,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 647,
+          "text": "Dialogue boxes for background souls become shorter or lose names as the region deepens. The environment contains blank monuments and half-remembered rooms. This is the point beyond which coherent identity starts failing."
+        },
+        {
+          "body_index": 648,
+          "text": "Severin confirms Pate and Trade cannot remain intact much longer."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 645
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH18-E02",
+      "name": "Severin opens a sealed path",
+      "chapter": 18,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 651,
+          "text": "A gate no mortal should understand responds to Severin. He performs a precise ritual/function and refuses to explain how he knows it. Aimon challenges him directly; Severin admits he has been below before, but not how far or why."
+        },
+        {
+          "body_index": 652,
+          "text": "State effects: severin_delay_revealed_partial=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 649
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_delay_revealed_partial=true"
+    },
+    {
+      "id": "CH18-O01",
+      "name": "The missing stanza",
+      "chapter": 18,
+      "required": false,
+      "source_blocks": [
+        {
+          "body_index": 655,
+          "text": "Optional lore reveals references to an unnamed poet/scribe who has interfered with underworld records across centuries. It does not prove Severin’s age but makes his biography suspicious."
+        },
+        {
+          "body_index": 656,
+          "text": "State effects: severin_optional_dialogue+=1"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 653
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_optional_dialogue+=1"
+    },
+    {
+      "id": "CH18-E03",
+      "name": "Nema",
+      "chapter": 18,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 659,
+          "text": "Nema erases identifiers and suppresses commands. The battle can temporarily hide move names/icons or strip familiar labels while preserving accessibility through symbols/tooltips. The thematic point is loss of categorisation, not player confusion for its own sake."
+        },
+        {
+          "body_index": 660,
+          "text": "Victory preserves Aimon’s path long enough to reach the last circle."
+        },
+        {
+          "body_index": 661,
+          "text": "Battle: Hell Warden 8 — Nema, the Unremembered"
+        },
+        {
+          "body_index": 662,
+          "text": "State effects: silence_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 657
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Hell Warden 8 — Nema, the Unremembered",
+      "legacy_state_effects_text": "silence_clear=true"
+    },
+    {
+      "id": "CH19-E01",
+      "name": "Hall of Last Names",
+      "chapter": 19,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 668,
+          "text": "The final holding region contains the last coherent identifiers of souls before they pass beyond retrieval. Aimon finds Pate and Trade weak, disoriented but unmistakably themselves."
+        },
+        {
+          "body_index": 669,
+          "text": "Their first interaction is incomplete: they recognise Aimon but cannot yet fully understand where they are."
+        },
+        {
+          "body_index": 670,
+          "text": "State effects: pate_trade_found=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 666
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_trade_found=true"
+    },
+    {
+      "id": "CH19-E02",
+      "name": "Severin’s admission",
+      "chapter": 19,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 673,
+          "text": "Aimon discovers Pate and Trade should already have passed beyond this chamber. Severin quietly delayed their processing by interfering with records or pathways. He did not cause their deaths and could not simply remove them himself, but he preserved Aimon’s chance."
+        },
+        {
+          "body_index": 674,
+          "text": "He admits he suspected Aimon might be capable of breaking the wardens that kept the old underworld order stable. Helping Aimon and using Aimon are both true."
+        },
+        {
+          "body_index": 675,
+          "text": "State effects: severin_delay_revealed=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 671
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_delay_revealed=true"
+    },
+    {
+      "id": "CH19-E03",
+      "name": "Nharos appears",
+      "chapter": 19,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 678,
+          "text": "Nharos stops the extraction. The ruler is majestic, irritated and not morally theatrical. From Nharos’s perspective Aimon has invaded, broken eight critical functions and is attempting to remove dead souls from the system."
+        },
+        {
+          "body_index": 679,
+          "text": "Nharos does not accuse Pate and Trade of sin. The objection is order and jurisdiction."
+        },
+        {
+          "body_index": 680,
+          "text": "State effects: throne_reached=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 676
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "throne_reached=true"
+    },
+    {
+      "id": "CH19-E04",
+      "name": "Nharos phase one",
+      "chapter": 19,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 683,
+          "text": "Aimon fights Nharos’s manifested battle form. The encounter ends before full resolution when Nharos calls for assistance against the increasingly anomalous human and the damaged realm."
+        },
+        {
+          "body_index": 684,
+          "text": "Battle: Nharos — phase 1 / transition boss"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 681
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "Nharos — phase 1 / transition boss"
+    },
+    {
+      "id": "CH19-E05",
+      "name": "The light arrives",
+      "chapter": 19,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 687,
+          "text": "A radiant presence manifests. Aimon recognises iconographic features from True Light art and immediately assumes divine rescue. He kneels or praises the True Light. Illyr’s first response is confusion, not judgment."
+        },
+        {
+          "body_index": 688,
+          "text": "Chapter ends on Illyr asking Nharos what the human is talking about."
+        },
+        {
+          "body_index": 689,
+          "text": "State effects: chapter_19_complete=true"
+        },
+        {
+          "body_index": 691,
+          "text": "ACT V — NO GODS, NO MASTERS"
+        },
+        {
+          "body_index": 692,
+          "text": "The finale must not reveal an evil god behind the war. The cosmic beings are indifferent, and that is more devastating. Human institutions created the conflict and therefore humans retain responsibility for ending it."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 685
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "chapter_19_complete=true"
+    },
+    {
+      "id": "CH20-E01",
+      "name": "What is the True Light?",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 698,
+          "text": "Aimon identifies Illyr as the True Light and speaks of the church, crusade and prayers. Illyr genuinely does not recognise the name or institution. After description, Illyr realises some human encounters and old imagery may refer to them."
+        },
+        {
+          "body_index": 699,
+          "text": "The emotional beat is not mockery. Illyr treats the issue with the mild attention one might give an unexpected pattern in insects."
+        },
+        {
+          "body_index": 700,
+          "text": "State effects: same_god_revealed=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 696
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "same_god_revealed=true"
+    },
+    {
+      "id": "CH20-E02",
+      "name": "Dawn Bloom too",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 703,
+          "text": "Aimon mentions Dawn Bloom. Illyr recognises the same ancient encounters and iconography. The rival religions are both human interpretations of the same cosmic being. Neither was selected, commanded or endorsed."
+        },
+        {
+          "body_index": 704,
+          "text": "Nharos confirms that human demon-names such as the Hollow Adversary and Ember Regent likewise refer to Nharos."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 701
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH20-E03",
+      "name": "Old companions",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 707,
+          "text": "Aimon learns Illyr and Nharos are not cosmic moral opposites. They are ancient peers/companions whose relationship does not map onto human good-versus-evil theology. Illyr came because Nharos called about an unusual disturbance, not because Aimon prayed."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 705
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH20-E04",
+      "name": "No one asked for the crusade",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 710,
+          "text": "Aimon asks about prayers, martyrs and generations of killing. Illyr did not request them and does not know the individuals involved. Nharos did not engineer the conflict either. There is no supernatural villain available to absorb human guilt."
+        },
+        {
+          "body_index": 711,
+          "text": "When Aimon asks which religion was right, Illyr does not understand why that question should be theirs to answer."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 708
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH20-E05",
+      "name": "Aimon refuses cosmic authority",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 714,
+          "text": "Nharos orders Aimon to leave the dead. Illyr supports the request because Aimon has destabilised a realm belonging to their friend. Aimon’s final moral step is not ‘gods are evil’; it is refusing to treat power as moral authority."
+        },
+        {
+          "body_index": 715,
+          "text": "He states, in his own simple voice, that they do not get to decide what is right for him merely because they are greater."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 712
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH20-E06",
+      "name": "Final boss",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 718,
+          "text": "Aimon fights manifested forms of Illyr and Nharos simultaneously. Mechanics should make the pair feel complementary rather than good/evil opposites: radiance and void, creation-like abundance and underworld control, old friends covering one another’s weaknesses."
+        },
+        {
+          "body_index": 719,
+          "text": "Aimon defeats their ability to stop him in this place; he does not kill or permanently surpass the total cosmic beings."
+        },
+        {
+          "body_index": 720,
+          "text": "Battle: FINAL BOSS — Illyr + Nharos"
+        },
+        {
+          "body_index": 721,
+          "text": "State effects: final_boss_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 716
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "FINAL BOSS — Illyr + Nharos",
+      "legacy_state_effects_text": "final_boss_clear=true"
+    },
+    {
+      "id": "CH20-E07",
+      "name": "The ant bites",
+      "chapter": 20,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 724,
+          "text": "Illyr is surprised enough to become personally aware of Aimon for perhaps the first time. Nharos is furious but also forced to concede the immediate contest. Neither converts to Aimon’s worldview."
+        },
+        {
+          "body_index": 725,
+          "text": "Aimon does not seek blessing. He takes Pate and Trade."
+        },
+        {
+          "body_index": 726,
+          "text": "State effects: extraction_started=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 722
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "extraction_started=true"
+    },
+    {
+      "id": "CH21-E01",
+      "name": "Extraction",
+      "chapter": 21,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 732,
+          "text": "Pate and Trade’s coherent identities are bound back to their mortal remains/anchor vessels through Severin’s route. The process is fragile and cannot be repeated once the underworld pathways collapse/reorder."
+        },
+        {
+          "body_index": 733,
+          "text": "The game explicitly distinguishes this from ordinary resurrection: Aimon retrieved them before final dissolution during a unique breakdown of the realm’s hierarchy."
+        },
+        {
+          "body_index": 734,
+          "text": "State effects: pate_trade_recovered=pending"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 730
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_trade_recovered=pending"
+    },
+    {
+      "id": "CH21-E02",
+      "name": "Severin disappears",
+      "chapter": 21,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 737,
+          "text": "During ascent Severin is briefly separated or intentionally remains behind to stabilise a route. When Aimon looks back, he is gone. His notebook page or a line of verse is the only sign he chose not to return."
+        },
+        {
+          "body_index": 738,
+          "text": "Do not reveal kingship yet."
+        },
+        {
+          "body_index": 739,
+          "text": "State effects: severin_missing=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 735
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_missing=true"
+    },
+    {
+      "id": "CH21-E03",
+      "name": "Threshold collapse",
+      "chapter": 21,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 742,
+          "text": "The party escapes as routes altered by defeated wardens rearrange. This is a short playable escape/dungeon reprise, not nine full reverse circles. Optional rescued souls are not brought to life; they simply gain clearer onward paths."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 740
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH21-E04",
+      "name": "Pate wakes",
+      "chapter": 21,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 745,
+          "text": "Back in the mortal world, Pate wakes first or reacts first. His initial response is mundane confusion followed by recognition: ‘Aimon?’ The lack of grandiosity pays off the entire quest."
+        },
+        {
+          "body_index": 746,
+          "text": "State effects: pate_trade_recovered=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 743
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "pate_trade_recovered=true"
+    },
+    {
+      "id": "CH21-E05",
+      "name": "Trade understands",
+      "chapter": 21,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 749,
+          "text": "Trade quickly realises something impossible happened. Pate asks whether Aimon really came after them. Aimon confirms it. The emotional reversal is complete: the boy they left behind to keep safe crossed the underworld to retrieve them."
+        },
+        {
+          "body_index": 750,
+          "text": "State effects: chapter_21_complete=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 747
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "chapter_21_complete=true"
+    },
+    {
+      "id": "CH22-E01",
+      "name": "No divine proclamation",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 756,
+          "text": "Illyr does not appear in the sky to end the crusade. The proof comes through Aimon, Pate, Trade, underworld evidence and surviving scholars. Some people believe immediately, some reject it, some reinterpret doctrine, and some insist the revelation changes nothing."
+        },
+        {
+          "body_index": 757,
+          "text": "The ceasefire/peace process is therefore political and human."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 754
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH22-E02",
+      "name": "Kurg asks instead of orders",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 760,
+          "text": "Kurg receives Pate and Trade alive and the evidence surrounding Emmara Mill. His decisive epilogue beat is not conversion but uncertainty. He asks Aimon, ‘What do we do now?’ Aimon refuses to become the new authority who supplies everyone’s morality."
+        },
+        {
+          "body_index": 761,
+          "text": "Kurg eventually begins ceasefire negotiations because he chooses to, not because Aimon or Illyr commands him."
+        },
+        {
+          "body_index": 762,
+          "text": "State effects: kurg_doubt_state=5"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 758
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "kurg_doubt_state=5"
+    },
+    {
+      "id": "CH22-E03",
+      "name": "Aeric’s faith after certainty",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 765,
+          "text": "Aeric remains religious. He concludes that if compassion mattered before, it does not stop mattering because Illyr never authored a church. Moral responsibility was human all along."
+        },
+        {
+          "body_index": 766,
+          "text": "He becomes a voice for faith without claims of divine military authority."
+        },
+        {
+          "body_index": 767,
+          "text": "State effects: aeric_arc_state=5"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 763
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "aeric_arc_state=5"
+    },
+    {
+      "id": "CH22-E04",
+      "name": "Rhoswen chooses a target worth fighting",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 770,
+          "text": "Rhoswen’s ending adapts to her arc. In the strongest state she helps protect refugees, enforce ceasefires and fight raiders exploiting instability. She remains hard, martial and willing to use force; the difference is that she now chooses why."
+        },
+        {
+          "body_index": 771,
+          "text": "State effects: rhoswen_arc_state=5"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 768
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "rhoswen_arc_state=5"
+    },
+    {
+      "id": "CH22-E05",
+      "name": "Pate after heroism",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 774,
+          "text": "Pate struggles with learning that his courage was used by a meaningless campaign. His recovery arc separates the reality of his bravery from the false righteousness of the cause. He can still be proud that he protected people without glorifying the mill."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 772
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH22-E06",
+      "name": "Trade after doubt",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 777,
+          "text": "Trade confronts the fact that he had enough evidence to question the war but still went because he could not leave Pate. His lesson is that private doubt without action is not moral independence. He becomes more willing to speak against consensus."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 775
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH22-E07",
+      "name": "Leader-state montage",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 780,
+          "text": "Each settlement receives an epilogue state based on leader fate and optional quests. Spared leaders may assist reconstruction, remain imprisoned or act as witnesses. Executed leaders leave political vacancies, memorials or martyrs. No single spare/execute pattern produces a perfect world."
+        },
+        {
+          "body_index": 781,
+          "text": "State effects: main_story_complete=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 778
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "main_story_complete=true"
+    },
+    {
+      "id": "CH22-E08",
+      "name": "Return to Civeton",
+      "chapter": 22,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 784,
+          "text": "The three friends revisit the childhood hill. It is small. They can joke about the pretend crusade, but the scene does not pretend innocence can simply be restored."
+        },
+        {
+          "body_index": 785,
+          "text": "The closing image mirrors the prologue: all three together, with Aimon no longer positioned as the little brother behind them."
+        },
+        {
+          "body_index": 786,
+          "text": "State effects: epilogue_complete=true"
+        },
+        {
+          "body_index": 788,
+          "text": "POSTGAME — THE POET KING"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 782
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "epilogue_complete=true"
+    },
+    {
+      "id": "CH23-E01",
+      "name": "The underworld works again",
+      "chapter": 23,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 794,
+          "text": "Trigger: epilogue_complete"
+        },
+        {
+          "body_index": 795,
+          "text": "Postgame rumours describe occult phenomena stabilising. Death rites become less erratic. Scholars report a new order below. This is unsettling because Severin may actually be competent."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 792
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "trigger_text": "epilogue_complete"
+    },
+    {
+      "id": "CH23-E02",
+      "name": "Return route",
+      "chapter": 23,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 798,
+          "text": "A new optional route to the underworld opens through the same catacombs, but the Nine Circles have been reorganised. Old wardens are absent or subordinate; signs of Severin’s administrative hand appear everywhere."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 796
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH23-E03",
+      "name": "The throne fits",
+      "chapter": 23,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 801,
+          "text": "Aimon reaches the final court and finds Severin on Nharos’s former throne in an evolved poet-king form. He does not deny using Aimon. He points out that he promised to lead Aimon to his friends and did exactly that."
+        },
+        {
+          "body_index": 802,
+          "text": "He also admits that every broken warden and challenged authority made his ascent possible."
+        },
+        {
+          "body_index": 803,
+          "text": "State effects: severin_king_revealed=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 799
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "severin_king_revealed=true"
+    },
+    {
+      "id": "CH23-E04",
+      "name": "Why rule?",
+      "chapter": 23,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 806,
+          "text": "Severin’s justification is practical and philosophically dangerous: the underworld requires coordination, old authority proved vulnerable, and he understood the system better than anyone positioned to replace it. Aimon asks whether challenging authority was merely Severin’s route to becoming authority."
+        },
+        {
+          "body_index": 807,
+          "text": "Severin considers that a fair question rather than an accusation he must dodge."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 804
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script."
+    },
+    {
+      "id": "CH23-E05",
+      "name": "Secret superboss",
+      "chapter": 23,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 810,
+          "text": "Severin wants to test the person who defeated gods and unknowingly made a king. His team is built around system mastery: control, prediction, efficient use of one apparently ordinary species, and a thematic ace."
+        },
+        {
+          "body_index": 811,
+          "text": "The fight is affectionate, dangerous and intellectually competitive rather than hateful."
+        },
+        {
+          "body_index": 812,
+          "text": "Battle: SUPERBOSS — Severin Vale, King Below"
+        },
+        {
+          "body_index": 813,
+          "text": "State effects: severin_superboss_clear=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 808
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "battle_text": "SUPERBOSS — Severin Vale, King Below",
+      "legacy_state_effects_text": "severin_superboss_clear=true"
+    },
+    {
+      "id": "CH23-E06",
+      "name": "After victory",
+      "chapter": 23,
+      "required": true,
+      "source_blocks": [
+        {
+          "body_index": 816,
+          "text": "Aimon defeats Severin but does not automatically depose him. Severin yields the contest, amused. Aimon has no desire to rule the dead and no evidence that removing Severin would improve anything."
+        },
+        {
+          "body_index": 817,
+          "text": "The ending remains uncomfortable: authority must still be judged by what it does, not by whether it calls itself divine, revolutionary or poetic."
+        },
+        {
+          "body_index": 818,
+          "text": "State effects: postgame_story_complete=true"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+        "body_index": 814
+      },
+      "state_policy": "Apply Checklist 10 state translations and later locked overlays; source prose is not an executable event script.",
+      "legacy_state_effects_text": "postgame_story_complete=true"
+    },
+    {
+      "id": "WLD-CYBRESSA-ALLIANCE-001",
+      "name": "jerbune alliance choice",
+      "required": true,
+      "anchor_scene_ids": [
+        "CH04-E01"
+      ],
+      "state_write": {
+        "field": "jerbune_alliance_choice",
+        "from": "UNRESOLVED",
+        "values": [
+          "ACCEPTED",
+          "REJECTED"
+        ]
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+        "body_index": 17
+      }
+    },
+    {
+      "id": "WLD-COSSENNE-RELIC-001",
+      "name": "censmoke relic choice",
+      "required": true,
+      "anchor_scene_ids": [
+        "CH05-E03"
+      ],
+      "state_write": {
+        "field": "censmoke_relic_choice",
+        "from": "UNRESOLVED",
+        "values": [
+          "SANCTIFIED",
+          "REFUSED"
+        ]
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+        "body_index": 17
+      }
+    },
+    {
+      "id": "WLD-MARASEN-BANNER-001",
+      "name": "flaggrim banner choice",
+      "required": true,
+      "anchor_scene_ids": [
+        "CH06-E02",
+        "CH06-E03"
+      ],
+      "state_write": {
+        "field": "flaggrim_banner_choice",
+        "from": "UNRESOLVED",
+        "values": [
+          "RAISED",
+          "TORN"
+        ]
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+        "body_index": 17
+      }
+    },
+    {
+      "id": "WLD-BOTRUNE-OATH-001",
+      "name": "cairant oath choice",
+      "required": true,
+      "anchor_scene_ids": [
+        "CH07-E02"
+      ],
+      "state_write": {
+        "field": "cairant_oath_choice",
+        "from": "UNRESOLVED",
+        "values": [
+          "KEPT",
+          "BROKEN"
+        ]
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+        "body_index": 17
+      }
+    }
+  ],
+  "unresolved": [
+    "All authored CHxx scene IDs and four WLD story-evolution events are extracted. Per-screen trigger bindings, full conditional dialogue and executable event actions remain to be authored against these scene specifications; legacy source-state text must use Checklist 10 translations."
+  ]
+}

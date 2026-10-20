@@ -6,9 +6,12 @@ export function finishTrialBeat(s,index){
  const q=botruneState(s);if(q.phase!=='trial'||index!==q.cursor||!TRIAL_BEATS[index])return false;
  const beat=TRIAL_BEATS[index];
  if(beat.death?.startsWith('CHR-')){
-  s.humanLives??={};const previous=s.humanLives[beat.death];
+  s.humanLives??={};s.human_life_state??={};s.human_memorial_entries??=[];s.human_restored_ids??=[];s.human_restoration_budget_total=5;const previous=s.humanLives[beat.death];
+  const life=s.human_life_state[beat.death]==='REVIVED'||previous?.restored?'REVIVED':'DEAD';
+  s.human_life_state[beat.death]=life;s[beat.death==='CHR-PATE'?'pate_progress_state':'trade_progress_state']=life==='REVIVED'?'RESOLVED':'CONFIRMED_DEAD';
+  if(!s.human_memorial_entries.includes(beat.death))s.human_memorial_entries.push(beat.death);
   // Preserve a future restored state and historical death independently.
-  s.humanLives[beat.death]={...previous,id:beat.death,lifeState:previous?.restored?'ALIVE':'DEAD',historicalDeath:{event:'BT-PUBLIC-SENTENCE-20261020',place:'Botrune',cause:'EXECUTED',beat:index},restorationEligible:true};
+  s.humanLives[beat.death]={...previous,id:beat.death,lifeState:life,historicalDeath:{event:'BT-PUBLIC-SENTENCE-20261020',place:'Botrune',cause:'EXECUTED',beat:index},restorationEligible:true};
  }
  q.cursor++;if(q.cursor===TRIAL_BEATS.length){q.phase='gauntlet';s.storyHistory??=[];if(!s.storyHistory.some(e=>e.id==='BT-PUBLIC-SENTENCE-20261020'))s.storyHistory.push({id:'BT-PUBLIC-SENTENCE-20261020',location:'Botrune',pate:'EXECUTED',trade:'EXECUTED',supersedes:'Earlier Emmara Mill companion-death outline'});}
  return true;
