@@ -32,3 +32,5 @@ export function resurrectPartner(state,uid,selected){
  state.starter=state.party.concat(state.reserve,state.dead).find(p=>p.originalStarter)||null;
  m.totalResurrections++;m.totalSacrifices+=q.cost;m.currentMemorialCount=state.dead.length;return u;
 }
+
+export function companionHumanMemorial(state){return ["CHR-PATE","CHR-TRADE"].filter(id=>state.humanLives?.[id]?.historicalDeath).map(id=>({name:id==="CHR-PATE"?"Peter ‘Pate’ FitzRobert":"Thomas ‘Trade’ de Clare",epitaph:"Executed in Botrune. "+(state.humanLives[id].lifeState==="DEAD"?"His place beside you remains empty.":"Restored; his death remains part of the record.")}));}

@@ -1,6 +1,6 @@
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm,legalForm,legalMoves} from './route-roster.js?v=0.87.0';
-export const EXECUTION_BOUNTIES={'LDR-01':10000,'LDR-02':18000,'LDR-03':26000,'LDR-04':34000,'LDR-05':42000};
+export const EXECUTION_BOUNTIES={'LDR-01':10000,'LDR-02':18000,'LDR-03':26000,'LDR-04':34000,'LDR-05':42000,'LDR-06':50000};
 export function leaderOutcomeState(state){state.leaderOutcomes??={version:1,bounties:{},gifts:{},rematches:{}};return state.leaderOutcomes;}
 export function leaderAceBaby(leader){const ace=[...leader.team].sort((a,b)=>b.level-a.level||b.slot-a.slot)[0];return rootForm(ace.species_id);}
 export function settleLeaderRewards(state,leader,create){if(state.fates?.[leader.id]!=='EXECUTED')return false;const q=leaderOutcomeState(state);let changed=false;if(!q.bounties[leader.id]){state.money=(state.money||0)+EXECUTION_BOUNTIES[leader.id];q.bounties[leader.id]=EXECUTION_BOUNTIES[leader.id];changed=true;}if(!q.gifts[leader.id]&&create){const id=leaderAceBaby(leader),s=DATA.species.find(s=>s.id===id);if(s&&!s.legendaryRoamer&&!(/legendary|mythic/i.test(s.power_class||'')||/^(mythic|mythical|legendary)$/i.test(s.role||''))){const u=create(id,1,'leader-legacy:'+leader.id);u.originalStarter=false;u.lives=1;u.growthMultiplier=1;u.giftOrigin=leader.name+'’s surrendered nursery';(state.party.length<6?state.party:state.reserve).push(u);q.gifts[leader.id]={uid:u.uid,speciesId:id};changed=true;}}return changed;}

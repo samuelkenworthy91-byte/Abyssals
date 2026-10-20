@@ -1,7 +1,7 @@
 {
-  "version": "0.89.4",
-  "version_code": 103,
-  "filename": "Abyssals-v0.89.4-Farm-Tablets.apk",
-  "title": "Abyssals v0.89.4 — Farm conversations and puzzle tablets",
-  "notes": "Removed farm labels. Working farm Abyssals can be approached and spoken to, using busts cropped from their existing battle illustrations. Khadija describes Ismail protecting the harvest from both armies. Twelve site accounts on the Marasen road now have distinct low stone tablet graphics, solid collision and repeat A-button reading. Discovered accounts are copied verbatim into the journal, including existing save discoveries. Preserves the Android package, release certificate, saves and original puzzle solutions. Built and verified by GitHub Actions; no physical phone installation test is claimed."
+  "version": "0.90.0",
+  "version_code": 104,
+  "filename": "Abyssals-v0.90.0-Thunderplain-Botrune.apk",
+  "title": "Abyssals v0.90.0 \u2014 Thunderplain and the Silent Square",
+  "notes": "Scribes\u2019 Road now crosses seven storm-scarred Thunderplain screens from Marasen to Botrune, with Electric, Dark and Ground encounters, animated distant lightning, shelters and two patrol challenges. Botrune adds a persistent overworld public execution scene for Pate and Trade, witnesses to the fabricated charges, three sequential guard captains, and Canon Fatima bint Musa with six physical attackers. Includes her portrait and prepared Pok\u00e9 Ball-free Pate/Trade art, independent human life records, grief and keepsake dialogue, permanent leader judgement, protected abbey records, rest, supplies and visited-only caravans. Earlier Emmara companion-death outline is superseded by the user\u2019s revised story. Existing saves, Android package and original signing certificate preserved. Built and verified through GitHub Actions; no physical-phone installation test claimed."
 }

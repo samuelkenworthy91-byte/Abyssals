@@ -1,5 +1,6 @@
 // Paid caravans open after the first leader; each destination requires a recorded visit.
 export const TRAVEL_HUBS=[
+ {id:"caravan-botrune",room:"botrune",name:"Botrune",x:36,y:24,arrival:[36,25,"up"],fare:125},
  {id:"caravan-marasen",room:"marasen",name:"Marasen",x:30,y:19,arrival:[30,20,"up"],fare:100},
  {id:'caravan-town',room:'town',name:'Civeton',x:26,y:20,arrival:[26,21,'up'],fare:100},
  {id:'caravan-dorelem',room:'dorelem',name:'Dorelem',x:30,y:20,arrival:[30,21,'up'],fare:100},
@@ -9,7 +10,7 @@ export const TRAVEL_HUBS=[
  {id:'caravan-fort',room:'waranCave1',name:'Sunken Fort',x:6,y:16,arrival:[6,17,'up'],fare:150}
 ];
 export const fastTravelUnlocked=state=>(state.defeatedTrainers||[]).includes('LDR-01')||['SPARED','EXECUTED'].includes(state.fates?.['LDR-01']);
-const townForRoom=room=>room?.startsWith('marasen')?'marasen':room==='town'||['pate','trade','shop'].includes(room)?'town':room?.startsWith('cossenne')?'cossenne':room?.startsWith('cybressa')?'cybressa':room?.startsWith('dorelem')?'dorelem':room?.startsWith('philomere')||room==='hospice'?'philomere':/^waranCave[1-5]$/.test(room||'')?'waranCave1':null;
+const townForRoom=room=>room==='botrune'?'botrune':room?.startsWith('marasen')?'marasen':room==='town'||['pate','trade','shop'].includes(room)?'town':room?.startsWith('cossenne')?'cossenne':room?.startsWith('cybressa')?'cybressa':room?.startsWith('dorelem')?'dorelem':room?.startsWith('philomere')||room==='hospice'?'philomere':/^waranCave[1-5]$/.test(room||'')?'waranCave1':null;
 export function visitedTravelRooms(state){
  if(Array.isArray(state.travelVisitedRooms))return state.travelVisitedRooms;
  // Older expeditions had no visit ledger. Recover only visits evidenced by progress.

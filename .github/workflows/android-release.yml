@@ -33,6 +33,7 @@ jobs:
           npx playwright install --with-deps chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
           node tests/browser-smoke.cjs
+          node tests/botrune-browser.cjs
       - name: Retain game screenshots
         if: always()
         uses: actions/upload-artifact@v4
@@ -87,3 +88,4 @@ jobs:
           gh release view "v$RELEASE_VERSION" >/dev/null 2>&1 || gh release create "v$RELEASE_VERSION" --target "$GITHUB_SHA" --title "$(cat build/release-title.txt)" --notes-file build/release-notes.md
           gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v$RELEASE_VERSION" -f sha="$GITHUB_SHA" -F force=true >/dev/null
           gh release upload "v$RELEASE_VERSION" "build/$APK_FILENAME" "build/$APK_FILENAME.sha256" "build/signature-verification-$RELEASE_VERSION.txt" --clobber
+
