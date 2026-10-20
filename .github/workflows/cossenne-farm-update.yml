@@ -39,4 +39,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release view v0.89.3 >/dev/null 2>&1 || gh release create v0.89.3 --target "$GITHUB_SHA" --title 'Abyssals v0.89.3 — Cossenne communal farm' --notes 'Removed pale guide lines on the Common Cause route and thin dirt overlays in Cossenne. Added a gated communal farm with roaming Caprune, Rutlet and Ganderiel, Fleecicle cold storage, and fully evolved Ramporque pulling a plough along furrows. Preserved Khadija story progression and existing town entrances. Update-compatible package uk.co.abyssals.game, versionCode 102. GitHub rebuilds the offline game payload and verifies the existing release certificate. Native wrapper remains unchanged; no phone installation test is claimed.'
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v0.89.3" -f sha="$GITHUB_SHA" -F force=true >/dev/null
           gh release upload v0.89.3 build/Abyssals-v0.89.3-Cossenne-Farm.apk build/Abyssals-v0.89.3-Cossenne-Farm.apk.sha256 build/signature-verification-0.89.3.txt --clobber
