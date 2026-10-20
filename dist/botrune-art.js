@@ -4,11 +4,13 @@ const victims=[['prisoner-1',17,'TRN-C02-001'],['prisoner-2',21,'TRN-C02-002'],[
 export function drawBotruneMap(c,m,room,asset,road,grass,walkable){
  if(!m.botruneKind)return false;
  const square=m.botruneKind==='square';
+ c.save();if(!square)c.filter='grayscale(.85) brightness(.72)';
  for(let y=0;y<32;y++)for(let x=0;x<48;x++){
   const path=road(room,x,y),walk=walkable(room,x,y);
-  asset(c,square?'fortFloor':path?'biomequarrypath':grass(room,x,y)?'biomequarrygrass':walk?'biomequarryground':'biomequarrywall',x,y);
+  asset(c,square?'fortFloor':path?'biomequarrypath':grass(room,x,y)?'biomequarrygrass':'biomequarryground',x,y);
   if(!square){c.fillStyle=path?'#95a5b011':'#18283e55';c.fillRect(x*16,y*16,16,16);}
  }
+ c.restore();
  if(square){
   c.fillStyle='#172130';c.fillRect(0,0,768,48);c.fillRect(0,48,12*16,18*16);c.fillRect(41*16,48,7*16,18*16);
   for(const [x,w]of [[12,8],[29,12]]){c.fillStyle='#292735';c.fillRect(x*16,10*16,w*16,11*16);for(let yy=10;yy<21;yy++){c.fillStyle=yy%2?'#474155':'#3b3548';c.fillRect(x*16,yy*16,w*16,3);}}
@@ -21,7 +23,8 @@ export function drawBotruneMap(c,m,room,asset,road,grass,walkable){
  }else{
   // Existing quarry ground/cliffs and fort architecture are reused; the conductor
   // structures are native pixel drawings, with collision restricted to terrain.
-  for(const x of [5,18,32,43]){const y=4+(x*3)%9;c.fillStyle='#2d3441';c.fillRect(x*16-4,y*16-45,8,49);c.fillStyle='#8e8d81';c.fillRect(x*16-2,y*16-45,3,44);c.fillStyle='#bd9b5c';c.fillRect(x*16-13,y*16-39,27,4);c.fillStyle='#8d919b';c.fillRect(x*16-13,y*16-44,3,12);c.fillRect(x*16+11,y*16-44,3,12);}
+  for(const [x,y,w,h]of m.stormBoulders||[])asset(c,'biomequarryrock',x,y-1,w,h+1);
+  for(const x of [5,18,32,43]){const y=4+(x*3)%9;c.fillStyle='#2d3441';c.fillRect(x*16-4,y*16-45,8,49);c.fillStyle='#8e8d81';c.fillRect(x*16-2,y*16-45,3,44);c.fillStyle='#bd9b5c';c.fillRect(x*16-13,y*16-39,27,4);c.fillRect(x*16-8,y*16-30,19,3);c.fillRect(x*16-6,y*16-23,15,3);c.fillStyle='#8d919b';c.fillRect(x*16-13,y*16-44,3,12);c.fillRect(x*16+11,y*16-44,3,12);}
   for(let n=0;n<9;n++){const x=3+(n*13)%42,y=3+(n*7)%25;if(!road(room,x,y)){c.strokeStyle='#a0b6b577';c.lineWidth=1;c.beginPath();c.moveTo(x*16,y*16);c.lineTo(x*16+12,y*16+5);c.lineTo(x*16+5,y*16+14);c.stroke();}}
   for(const p of m.props)asset(c,p.asset,p.x,p.y,p.w,p.h);
   for(const s of m.spots)if(s.routeSign)asset(c,'sign',s.x-1,s.y-3,4,3);

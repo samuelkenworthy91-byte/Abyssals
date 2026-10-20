@@ -9,12 +9,13 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  await page.evaluate(()=>window.__btQA.boot());await page.waitForSelector('#dialogue:not([hidden])');let transcript='',reloaded=false,pateShot=false;
  for(let i=0;i<65;i++){
   const step=await page.evaluate(()=>window.__btQA.step());if(step.phase==='gauntlet'&&!step.busy)break;
+  if(!reloaded&&step.cursor===7&&await page.locator('#dialogue').isVisible()){await page.evaluate(()=>window.__btQA.reload());reloaded=true;await page.waitForSelector('#dialogue:not([hidden])');continue;}
   if(await page.locator('#dialogue').isVisible()){
    const text=await page.locator('.dialogue-text').innerText();transcript+=text+'\n';
    if(text.includes('Aimon. No—')&&!pateShot){await page.screenshot({path:'build/qa/pate-last-warning.png'});pateShot=true;}
    await page.locator('#next-line').click();
   }else await page.waitForTimeout(150);
-  if(!reloaded&&(await page.evaluate(()=>window.__btQA.step())).cursor===7&&!(await page.evaluate(()=>window.__btQA.step())).busy){await page.evaluate(()=>window.__btQA.reload());reloaded=true;}
+
  }
  await page.waitForFunction(()=>window.__btQA.step().phase==='gauntlet'&&!window.__btQA.step().busy);
  const saved=await page.evaluate(()=>window.__btQA.copy());assert.equal(saved.state.humanLives['CHR-PATE'].lifeState,'DEAD');assert.equal(saved.state.humanLives['CHR-TRADE'].lifeState,'DEAD');assert.equal(saved.state.storyHistory.filter(e=>e.id==='BT-PUBLIC-SENTENCE-20261020').length,1);assert(reloaded&&pateShot);assert(transcript.includes('Run!')&&transcript.includes('There is no applause.'));

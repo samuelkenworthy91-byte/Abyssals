@@ -2,7 +2,7 @@
 
 Current game source and artwork: **dist/**. Releases contain installable signed APKs produced by GitHub Actions. `release-config.json` is the next release version and description; only a successful signing/publishing workflow makes that version an installable release.
 
-The 0.89.4 update adds direct farm-animal conversations with battle-art busts, Khadija’s account of Ismail protecting the harvest from both armies, and distinct low stone clue tablets with collision, repeat reading and verbatim journal copies. Existing discovered clues remain available through their original save flags; original puzzle solutions and quest gates remain intact.
+The 0.90.0 update opens the seven-screen Thunderplain from Marasen to Botrune. A public execution scene, persistent guard gauntlet and physical-power leader battle continue Pate and Trade’s story. See [the current story revision and asset provenance](docs/botrune-story.md). Existing farm conversations and puzzle tablets remain available.
 
 ## Standard update protocol
 

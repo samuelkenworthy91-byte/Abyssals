@@ -7,7 +7,7 @@ export function installBotruneWorld(maps){
  Object.assign(maps.marasen.gates.find(g=>g.id==='marasen-next'),{label:'Scribes’ Road · Thunderplain',to:'stormVerge',arrival:[3,17,'right'],action:'botrune-entry'});
  const roads=[[[1,17],[9,17],[9,9],[23,9],[23,23],[37,23],[37,17],[46,17]],[[1,17],[12,17],[12,24],[25,24],[25,8],[39,8],[39,17],[46,17]],[[1,17],[10,17],[10,8],[20,8],[20,23],[34,23],[34,17],[46,17]]];
  for(const [n,[room,name]]of STORM_ROAD.entries()){
-  maps[room]={name,area:room,bloom:true,terrain:'ridge',botruneKind:'storm',stormIndex:n,stormRods:[5,18,32,43].map(x=>[x,4+(x*3)%9]),road:roads[n%3],grass:[[5,5,16,12],[17,20,28,27],[32,5,42,12]],sidePaths:[],props:[],spots:[{id:'area-sign',label:'Read Scribes’ Road record',x:5,y:16,routeSign:true}],gates:[gate(room+'-back',n?STORM_ROAD[n-1][1]:'Marasen',1,17,n?STORM_ROAD[n-1][0]:'marasen',[44,17,'left']),gate(room+'-forward',n<6?STORM_ROAD[n+1][1]:'Botrune',46,17,n<6?STORM_ROAD[n+1][0]:'botrune',n<6?[3,17,'right']:[3,24,'right'])]};
+  maps[room]={name,area:room,bloom:true,terrain:'ridge',botruneKind:'storm',stormIndex:n,stormRods:[5,18,32,43].map(x=>[x,4+(x*3)%9]),stormBoulders:[[4,22,2,2],[17,14,2,2],[32,18,2,2],[41,4,2,2]],road:roads[n%3],grass:[[5,5,16,12],[17,20,28,27],[32,5,42,12]],sidePaths:[],props:[],spots:[{id:'area-sign',label:'Read Scribes’ Road record',x:5,y:16,routeSign:true}],gates:[gate(room+'-back',n?STORM_ROAD[n-1][1]:'Marasen',1,17,n?STORM_ROAD[n-1][0]:'marasen',[44,17,'left']),gate(room+'-forward',n<6?STORM_ROAD[n+1][1]:'Botrune',46,17,n<6?STORM_ROAD[n+1][0]:'botrune',n<6?[3,17,'right']:[3,24,'right'])]};
   registerBiome(room,'quarry');
  }
  maps.stormPylons.spots.push(person('TRN-BT-ROAD-1','Conductor watch Yusuf',25,21,'TRN-SC-stormBluffs-0'));

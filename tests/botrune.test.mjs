@@ -29,3 +29,7 @@ const leader=BOTRUNE_TRAINERS.find(t=>t.id==='LDR-06');assert.equal(leader.team.
 for(const slot of leader.team){const spec=DATA.species.find(x=>x.id===slot.species_id);assert(spec.base_stats.attack>spec.base_stats.sp_attack);assert.equal(slot.battle_move_ids.length,4);for(const id of slot.battle_move_ids){assert(legalMoves(slot.species_id,slot.level).includes(id));assert.equal(DATA.moves.find(m=>m.id===id).category,'PHYSICAL');}}
 s.fates['LDR-06']='EXECUTED';assert(settleLeaderRewards(s,leader,()=>({uid:'gift',species:{id:'373'}})));assert.equal(s.money,50000);assert(!settleLeaderRewards(s,leader,()=>({})));assert.equal(s.money,50000);assert.equal(s.humanLives['CHR-PATE'].lifeState,'DEAD');
 console.log('PASS: 7 storm maps, shelter, gate returns, 14 legal day/night tables; persistent independent deaths; all 3 unbypassable guard cordons; 6 physical leader slots; once-only judgement rewards');
+const {drawStormWeather}=await import('../dist/botrune-art.js');
+function weatherStrokes(time,reduced){let strokes=0;const c={save(){},restore(){},fillRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){strokes++;}};drawStormWeather(c,'stormGlass',time,reduced);return strokes;}
+assert.equal(weatherStrokes(200,false),33);assert.equal(weatherStrokes(1000,false),32);assert.equal(weatherStrokes(200,true),0);
+console.log('PASS: distant lightning is intermittent; reduced motion disables lightning and rain');
