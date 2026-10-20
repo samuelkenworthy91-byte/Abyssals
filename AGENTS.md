@@ -9,3 +9,5 @@
 - The preserved native wrapper in `release/v0.89.1` is the compatible base. `scripts/restore-release.py` is historical and must not overwrite current `dist/`.
 
 - Development references belong under `archive/` and `art-library/`, outside `dist/`. APK packaging must remain restricted to `dist/`. Never copy entire reference archives, historical PWAs/APKs, source packs or artwork catalogues into `dist/`; add only the selected, optimized assets required by the live game.
+
+- Before creating new character or story artwork, check `art-library/characters/reference/CHARACTER-CATALOG.json`, its `recovered-indexes/`, and `archive/library-2026-10-20/README.md`. Reuse matching existing character IDs and prepared assets; historical source names do not override current canon. Pate and Trade have transparent, Poké Ball-free PNG and smaller lossless WebP portraits under `art-library/characters/ready/`.
