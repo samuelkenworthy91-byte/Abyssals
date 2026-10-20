@@ -22,7 +22,7 @@ export function drawMarasenDetails(c,m,asset,walkable,time=0){if(!m?.verdantKind
  for(let y=3;y<29;y+=4)for(let x=3;x<44;x+=4){if(['falls','brook','cascades','watermeadow','rapids'].includes(kind)&&Math.abs(x-(24+Math.floor(4*Math.sin(y/4))))<=4)continue;if(![0,1,2].every(dx=>[0,1,2,3].every(dy=>!walkable(x+dx,y+dy)))||m.props.some(p=>x<p.x+p.w&&x+3>p.x&&y<p.y+p.h&&y+4>p.y))continue;asset(c,['brook','falls'].includes(kind)?'verdantWillow':'verdantOak',x-.1,y-.3,3.2,4.2);}
  if(kind==='city')for(const [x,y]of [[0,2],[14,1],[27,1],[45,2],[0,25],[44,25]])asset(c,'marasenTree',x,y,3.5,4.5);
  if(kind==='fort'){c.fillStyle='#687d6b';for(const x of m.name.includes('Gate Court')?[18,34]:[30])for(let y=6;y<=28;y++)if(y<16||y>18){c.fillRect(x*16,y*16,16,16);c.fillStyle='#d3cfad';c.fillRect(x*16+2,y*16+2,12,3);c.fillStyle='#687d6b';}asset(c,'marasenGate',4,3,9,7);}
- if(kind==='terrace'){c.strokeStyle='#8caa6f';c.lineWidth=3;for(const y of [5,13,27]){c.beginPath();c.moveTo(40,y*16);c.lineTo(720,y*16);c.stroke();}}
+
  for(let i=0;i<22;i++){const x=3+(i*17)%40,y=4+(i*11)%23;if([0,1,2].every(dx=>[0,1].every(dy=>!walkable(x+dx,y+dy)))&&!m.props.some(p=>x<p.x+p.w&&x+3>p.x&&y<p.y+p.h&&y+2>p.y)){const water=marasenWaterTile(m,x,y);asset(c,water?'verdantReeds':i%3===0?'verdantLog':'verdantFern',x,y,3,2.2);}}
  if(kind==='city')for(const [x,y]of [[14,3],[18,26],[26,26],[43,22]])asset(c,'verdantGarden',x,y,2.5,1.8);
  // Original multilevel art direction: turquoise cataracts, white limestone

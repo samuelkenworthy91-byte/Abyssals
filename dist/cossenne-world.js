@@ -1,3 +1,4 @@
+import {installCossenneFarm} from './cossenne-farm.js?v=0.89.3';
 import {RELIEF_POSTS} from './cossenne-services.js?v=0.87.0';
 import {ORCHARD_MAIN,ORCHARD_ROUTES} from './cossenne-data.js?v=0.87.0';
 import {registerBiome} from './biome-world.js?v=0.87.0';
@@ -25,4 +26,5 @@ export function installCossenneWorld(maps,doors){
  for(const p of RELIEF_POSTS){const m=maps[p.room];m.spots.push({id:p.id,label:p.name,x:p.x,y:p.y,questProp:true});m.sidePaths.push({points:[[p.x,p.y],[p.x,p.y+2]]});m.props.push({asset:'chest',x:p.x-.3,y:p.y-.4,w:1.5,h:1.4,decorative:true});}
  doors.cossenneConservatory={room:'cossenne',x:21,y:11,name:'Graftkeepers’ Conservatory'};doors.cossenneApothecary={room:'cossenne',x:22,y:27,name:'Orchard Apothecary'};doors.cossenneFirewatch={room:'cossenne',x:38,y:28,name:'Firewatch Cistern'};
  doors.cossenneHome={room:'cossenne',x:9,y:10,name:'Cossenne orchard house'};doors.cossenneShop={room:'cossenne',x:9,y:26,name:'Cossenne orchard supplies'};
+ installCossenneFarm(maps,registerBiome);
 }

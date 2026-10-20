@@ -1,0 +1,42 @@
+name: Build and verify Cossenne farm update
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cossenne-farm-update.yml'
+      - 'release/v0.89.3/signature.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test layout and source
+        run: |
+          node tests/marasen-navigation.test.mjs
+          node tests/cossenne-farm.test.mjs
+          for file in dist/*.js; do node --check "$file"; done
+      - name: Recover compatible native wrapper
+        run: python3 scripts/reconstruct-base.py
+      - name: Rebuild update from current game source
+        run: python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.89.3 --version-code 102 --output build/unsigned-0.89.3.apk
+      - name: Attach approved public signature to exact payload
+        run: python3 scripts/attach-release-signature.py --version 0.89.3
+      - name: Verify Android signing and alignment
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y apksigner zipalign
+          apksigner verify --verbose --print-certs build/Abyssals-v0.89.3-Cossenne-Farm.apk | tee build/signature-verification-0.89.3.txt
+          grep -F '6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac' build/signature-verification-0.89.3.txt
+          zipalign -c 4 build/Abyssals-v0.89.3-Cossenne-Farm.apk
+      - name: Publish update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view v0.89.3 >/dev/null 2>&1 || gh release create v0.89.3 --target "$GITHUB_SHA" --title 'Abyssals v0.89.3 — Cossenne communal farm' --notes 'Removed pale guide lines on the Common Cause route and thin dirt overlays in Cossenne. Added a gated communal farm with roaming Caprune, Rutlet and Ganderiel, Fleecicle cold storage, and fully evolved Ramporque pulling a plough along furrows. Preserved Khadija story progression and existing town entrances. Update-compatible package uk.co.abyssals.game, versionCode 102. GitHub rebuilds the offline game payload and verifies the existing release certificate. Native wrapper remains unchanged; no phone installation test is claimed.'
+          gh release upload v0.89.3 build/Abyssals-v0.89.3-Cossenne-Farm.apk build/Abyssals-v0.89.3-Cossenne-Farm.apk.sha256 build/signature-verification-0.89.3.txt --clobber

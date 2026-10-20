@@ -1,3 +1,4 @@
+import {FARM_NOTES} from './cossenne-farm.js?v=0.89.3';
 import {ORCHARD_BRIEFS,orchardNextStep} from './orchard-guidance.js?v=0.87.0';
 import {choiceRewardText} from './choice-rewards.js?v=0.87.0';
 import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.87.0';
@@ -7,6 +8,8 @@ export function orchardHistoryHTML(room,escape){const r=ORCHARD_ROUTES[room];if(
 export function cossenneInteract(id,a){
  const {state,room,AREA_GATES,EXPANSION,map,line,showDialogue,openModal,$,warp,refresh,buildMarkers,rewardTransaction,challengeTrainer,escapeHTML,explorationRewardText}=a;
  const q=rules.cossenneState(state),gate=AREA_GATES[room]?.find(g=>g.id===id),say=(name,text,after)=>showDialogue([line(name,text)],after),commit=fn=>{if(!rewardTransaction(fn))return false;buildMarkers();return true;},again=()=>cossenneInteract(id,a),record=(name,pages)=>openModal(name,pages.map(p=>'<p>'+escapeHTML(p)+'</p>').join(''));
+ if(gate?.action==='cossenne-farm'){void warp(gate.to,...gate.arrival);return true;}
+ if(FARM_NOTES[id]){const [name,text]=FARM_NOTES[id];say(name,text);return true;}
  if(id==='cybressa-boundary'){if(!rules.cossenneUnlocked(state))say('Cossenne road','Settle the provost’s challenge and his fate before the eastern road opens.');else void warp('orchardVerge',3,17,'right');return true;}
  if(gate?.action==='cossenne-shortcut'){if(!rules.expeditionState(state,gate.orchardQuest).choice)say('Closed return path','Restore this site from its first landing and decide its final claim to open the return shortcut.');else void warp(gate.to,...gate.arrival);return true;}
  if(gate?.action==='cossenne-watercraft'){if(!state.cybressa?.watercraft)say('Shrine landing','You need Alice’s personal river craft. Find her on the Western Causeway, west of the mountain pass.');else void warp(gate.to,...gate.arrival);return true;}
