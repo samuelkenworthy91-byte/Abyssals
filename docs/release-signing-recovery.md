@@ -10,13 +10,13 @@ Application ID: `uk.co.abyssals.game`.
 
 ## Persistent repository secrets
 
-In Settings > Secrets and variables > Actions, save:
+Configured and verified in Settings > Secrets and variables > Actions on 20 October 2026:
 
 - `ABYSSALS_KEYSTORE_BASE64`: base64 encoding of the binary `abyssals-release.p12` file, without line breaks.
 - `ABYSSALS_STORE_PASSWORD`: the corresponding value from the private `signing.env`.
 - `ABYSSALS_KEY_ALIAS`: the corresponding value from the private `signing.env`.
 
-These are the exact names already consumed by the workflow. Once configured they persist for future builds. Secret values must never appear in source, issues, release assets, screenshots or workflow logs. Base64 is an encoding, not encryption. Retain the original private backup separately because Actions secret values cannot be downloaded later.
+These are the exact names already consumed by the workflow. All three are configured and persist for future builds. Secret values must never appear in source, issues, release assets, screenshots or workflow logs. Base64 is an encoding, not encryption. Retain the original private backup separately because Actions secret values cannot be downloaded later.
 
 ## Finish the pending release
 
