@@ -1,5 +1,5 @@
 import {BREEDING_ONLY_FIRST_FORMS,TRADE_ONLY_FAMILIES,RESERVED_STARTERS} from './encounter-access.js?v=0.90.18';
-import {keepContestBait} from './jetty-fishing.js?v=0.90.18';
+import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {FISH_POOL,FISH_ENTRY_FEE,FISH_RIVALS,fishingResident,fishingSpecies} from './fishing-habitats.js?v=0.90.18';
 export {FISH_POOL,FISH_ENTRY_FEE} from './fishing-habitats.js?v=0.90.18';
 import {startingMoveIds} from './moveset-identity.js?v=0.87.0';

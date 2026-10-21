@@ -1,6 +1,6 @@
 import {COSSENNE_TRAINERS} from './cossenne-data.js?v=0.87.0';
 import {cossenneReady} from './cossenne-rules.js?v=0.87.0';
-import {warehouseReady} from './cybressa-rules.js?v=0.87.0';
+import {warehouseReady} from './cybressa-rules.js?v=0.90.20';
 import {DATA} from './data.js?v=0.87.0';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {hospiceReady} from './hospice-quest.js?v=0.87.0';

@@ -1,5 +1,5 @@
 import {activeDraughts} from './training-draughts.js?v=0.87.0';
-import {shinySummaryHTML} from './shinies.js?v=0.87.0';
+import {shinySummaryHTML} from './shinies.js?v=0.90.20';
 import {inheritanceSummaryHTML} from './breeding-inheritance.js?v=0.90.18';
 import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,inheritedGrowthRate,GROWTH_BONUS_FACTOR} from './progression.js?v=0.90.18';
 export function growthDescription(percent,key){

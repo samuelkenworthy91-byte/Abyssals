@@ -1,5 +1,5 @@
 import {signatureArtReady} from './signature-effects.js?v=0.87.0';
-import {combatArtReady,combatArtSrc} from './combat-art.js?v=0.87.0';
+import {combatArtReady,combatArtSrc} from './combat-art.js?v=0.90.20';
 import {DATA} from './data.js?v=0.87.0';import {effectSpec,effectHTML,PALETTES} from './effects.js?v=0.87.0';import {learnTreeHTML} from './learn-tree.js?v=0.90.18';
 const $=id=>document.getElementById(id);let timer;
 for(const type of Object.keys(PALETTES))$('type').add(new Option(type,type));

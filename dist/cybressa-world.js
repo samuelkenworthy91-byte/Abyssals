@@ -1,4 +1,4 @@
-import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.87.0';
+import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.90.20';
 const npc=(id,label,x,y,sprite=2)=>({id,label,x,y,sprite});
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 function trail(name,terrain,spots=[],props=[]){return {name,terrain,bloom:true,road:[[1,17],[10,17],[10,10],[23,10],[23,23],[38,23],[38,17],[46,17]],grass:[[5,20,18,27],[14,5,20,12],[27,6,42,15],[27,25,42,28]],props,spots:[{id:'area-sign',label:name+' noticeboard',x:7,y:16},...spots],gates:[]};}

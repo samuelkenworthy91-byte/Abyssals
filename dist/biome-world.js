@@ -1,5 +1,5 @@
-import {MARASEN_ASSETS} from './marasen-art.js?v=0.87.0';
-import {ORCHARD_PIXEL_ASSETS} from './cossenne-art.js?v=0.87.0';
+import {MARASEN_ASSETS} from './marasen-art.js?v=0.90.20';
+import {ORCHARD_PIXEL_ASSETS} from './cossenne-art.js?v=0.90.20';
 import {MOUNTAIN_PIXEL_ASSETS} from './mountain-art.js?v=0.87.0';
 // Visual profiles change materials, not movement or gate geometry.
 const ROOMS={relicGrove:'forest',relicGrove2:'forest',relicGrove3:'ruins',cybressa:'coast',rivercause:'wetland',rivercause2:'coast',philomereBackwaters:'wetland',smugglersWeir:'coast',saltFlats:'desert',cybressaWarehouse:'sewer',town:'snow',march:'snow',march2:'snow',marchMeadow:'snow',anglersReach:'snow',scrub:'desert',scrub2:'desert',dorelem:'desert',northRoad:'desert',northRoad2:'desert',northRoad3:'desert',burrowHollow:'cave',orchardCanopy:'forest',hospiceRoad:'forest',hospiceRoad2:'forest',philomere:'forest',rescueGlade:'forest',tunnels:'sewer',tunnels2:'sewer',glassSluice:'grotto',emberQuarry:'quarry',stormBluffs:'grotto',reedSanctuary:'wetland',medicinePath:'wetland',medicinePath2:'wetland',coralGrotto:'coast',moonlitDepths:'coast',relicCrags:'ruins'};

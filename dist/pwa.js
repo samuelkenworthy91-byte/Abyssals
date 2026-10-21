@@ -1,5 +1,5 @@
 const nativeAndroid=!!globalThis.AbyssalsNative;
-const BUILD_VERSION='0.90.19';
+const BUILD_VERSION='0.90.20';
 const install=document.querySelector('#install-game'),status=document.querySelector('#pwa-status');
 let prompt=null;
 const installed=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone;

@@ -32,6 +32,8 @@ jobs:
           node-version: '22'
       - name: Test game behavior and source
         run: |
+          python3 -m pip install --quiet Pillow==11.1.0
+          node scripts/audit-shiny-art.mjs
           for test in tests/*.test.mjs; do node "$test"; done
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
@@ -42,6 +44,7 @@ jobs:
           npx playwright install --with-deps chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
           node tests/character-art-browser.cjs
+          node tests/shiny-browser.cjs
           node tests/quickbite-angling-browser.cjs
           node tests/browser-smoke.cjs
           node tests/botrune-browser.cjs

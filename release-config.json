@@ -1,7 +1,7 @@
 {
-  "version": "0.90.19",
-  "version_code": 114,
-  "filename": "Abyssals-v0.90.19-Real-World-Finale.apk",
-  "title": "Abyssals v0.90.19 \u2014 The Real-World Finale",
-  "notes": "Willowmere memorial and two inherited partners with +15 percentage points in all growths; Guanrong and Feirong quests; artistic Cayfen and partner commissions; Sporefall and a genuine allied 2v2 Darius showdown; unique Cruxwyrm encounter; alabaster Ramelle, Lv100\u2013105 Hasan and the mirror threshold. Bespoke raster pixel environments, full-body leader art, story scenes, paintings and puzzle props. All 478 catalogue entries audited: 462 eligible species have pre-eighth-leader acquisition/evolution paths; starter and fossil choices remain exceptions. Wild split evolutions replaced by their bases, earlier Votress/Regulet habitats, and late Gehennuar/Suncub encounters. Original signing key, saves, unique outcomes, permadeath and prior fixes preserved. Automated source/browser checks; no physical-phone testing. Memorial companions now join with four appropriate level-80 moves. Existing untouched memorial movesets upgrade once; custom moves, HP, growth and deaths remain intact."
+  "version": "0.90.20",
+  "version_code": 115,
+  "filename": "Abyssals-v0.90.20-Clean-Shiny-Palettes.apk",
+  "title": "Abyssals v0.90.20 — Clean Shiny Palettes",
+  "notes": "All 478 Abyssals now use deliberate family shiny palettes rather than colour inversion. Original outlines, highlights, shading and every alpha byte are preserved. Smooth colour boundaries remove false black speckles on pale artwork. Combat, followers, atlas forms and menus share the correct palette; asynchronous summary portraits retain shiny and alternate-form identity. All 957 art surfaces audited across over 60 million visible pixels. Existing shiny ownership, rarity, saves, permanent deaths and quest outcomes preserved. Original Android signing key; automated source and browser checks, with no physical-phone testing."
 }

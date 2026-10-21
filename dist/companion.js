@@ -1,4 +1,4 @@
-import {shinyCanvas} from './shinies.js?v=0.87.0';
+import {shinyCanvas} from './shinies.js?v=0.90.20';
 import {relicArtPath,drawRelicPanel} from './relic-art.js?v=0.87.0';
 import {beginStep,advanceStep} from './movement.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
@@ -71,7 +71,7 @@ export function companionArt(id){
  if(!artCache.has(id)){const im=new Image();im.src=`${REVISED_FOLLOWERS.has(id)?'assets/followers/'+id+'.webp':relicArtPath(id)||'assets/followers/'+id+'.webp'}?v=0.87.0`;artCache.set(id,im);}return artCache.get(id);
 }
 export function drawCompanion(ctx,f,time,reduced=false){
- const base=companionArt(f.unit.species.id),im=f.unit.shiny===true?(shinyCanvas(base)||base):base;if(!im.complete||!im.naturalWidth)return;
+ const base=companionArt(f.unit.species.id),im=f.unit.shiny===true?(shinyCanvas(base,f.unit)||base):base;if(!im.complete||!im.naturalWidth)return;
  if(relicArtPath(f.unit.species.id)&&!REVISED_FOLLOWERS.has(f.unit.species.id)){const size=f.unit.species.stage==='Base'?34:42,bob=!reduced&&f.step?Math.sin(time/70)*1.5:0;ctx.save();ctx.fillStyle='#07142555';ctx.beginPath();ctx.ellipse(f.px,f.py+1,size*.22,2.5,0,0,Math.PI*2);ctx.fill();ctx.translate(f.px,f.py+4-size-bob);if(f.facing==='left')ctx.scale(-1,1);if(!reduced&&f.step)ctx.rotate(Math.sin(time/100)*.045);drawRelicPanel(ctx,im,f.unit.species.id,-size/2,0,size);ctx.restore();return;}
  const p=companionProfile(f.unit.species),rows={down:0,left:1,up:2,right:3},threeFrame=f.unit.species.approvedMiasma;
  const progress=f.step?f.step.elapsed/f.step.duration:0;

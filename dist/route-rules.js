@@ -1,5 +1,5 @@
 import {encounterWeights} from './expedition-abilities.js?v=0.87.0';
-import {expandEncounterRoute} from './roster-encounters.js?v=0.90.18';
+import {expandEncounterRoute} from './roster-encounters.js?v=0.90.20';
 import {stageLevel} from './route-progression.js?v=0.87.0';
 import {legalForm} from './route-roster.js?v=0.87.0';
 import {openingEncounterLevel} from './opening-balance.js?v=0.87.0';

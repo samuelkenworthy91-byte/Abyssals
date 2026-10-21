@@ -1,4 +1,4 @@
-import {rollShiny} from './shinies.js?v=0.87.0';
+import {rollShiny} from './shinies.js?v=0.90.20';
 import {rollInheritance,validateInheritance} from './breeding-inheritance.js?v=0.90.18';
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';

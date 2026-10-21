@@ -1,7 +1,7 @@
 import {installSiteTablets} from './site-tablets.js?v=0.89.4';
 import {installAquaticMarasen} from './marasen-aquatic.js?v=0.89.2';
 import {VERDANT_ROAD,MARASEN_BRANCHES} from './marasen-data.js?v=0.87.0';
-import {registerBiome} from './biome-world.js?v=0.90.13';
+import {registerBiome} from './biome-world.js?v=0.90.20';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 const actor=(id,label,x,y,portrait)=>({id,label,x,y,sprite:0,...(portrait?{revoltCharacter:portrait}:{})});
 const winding=[[[1,17],[8,17],[8,8],[19,8],[19,24],[32,24],[32,11],[41,11],[41,17],[46,17]],[[1,17],[11,17],[11,25],[24,25],[24,7],[36,7],[36,17],[46,17]],[[1,17],[7,17],[7,9],[20,9],[20,22],[37,22],[37,17],[46,17]]];
