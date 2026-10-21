@@ -1,7 +1,7 @@
 {
-  "version": "0.90.20",
-  "version_code": 115,
-  "filename": "Abyssals-v0.90.20-Clean-Shiny-Palettes.apk",
-  "title": "Abyssals v0.90.20 — Clean Shiny Palettes",
-  "notes": "All 478 Abyssals now use deliberate family shiny palettes rather than colour inversion. Original outlines, highlights, shading and every alpha byte are preserved. Smooth colour boundaries remove false black speckles on pale artwork. Combat, followers, atlas forms and menus share the correct palette; asynchronous summary portraits retain shiny and alternate-form identity. All 957 art surfaces audited across over 60 million visible pixels. Existing shiny ownership, rarity, saves, permanent deaths and quest outcomes preserved. Original Android signing key; automated source and browser checks, with no physical-phone testing."
+  "version": "0.90.21",
+  "version_code": 116,
+  "filename": "Abyssals-v0.90.21-Uncapped-Catch-Up-XP.apk",
+  "title": "Abyssals v0.90.21 — Uncapped Catch-Up XP",
+  "notes": "Removes the level-gap XP ceiling and adds the approved quadratic catch-up formula: round((25 + 5d + d²/48) × progression bonus × Warbond × species yield). A level-1 partner defeating a level-150 ordinary opponent with Warbond receives 4,930 XP, reaching level 50 with 30 XP remaining. Binoculars award full individual XP to each eligible living party member. Weaker-opponent penalties, level-200 maximum, saves, shiny artwork, permanent death and quest progress preserved. Built and verified through GitHub Actions using the original Android signing key. Automated tests; no physical-phone testing."
 }
