@@ -1,0 +1,40 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict'),fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ const page=await browser.newPage({viewport:{width:430,height:932},serviceWorkers:'block'}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.route(/\/app\.js(?:\?.*)?$/,async route=>{const response=await route.fetch();await route.fulfill({response,body:await response.text()+`\nwindow.__anglingQA={boot(){closeDialogue();closeModal();setMotionPreference('reduced');selectSlot(1);const fixture=structuredClone(initialExpeditionState);Object.assign(fixture,{begun:true,openingDone:true,tamingTaught:true,pate:true,trade:true,kurg:true,blessing:true,test:true,departed:true,nextUnitId:2,money:100000,party:[newUnit(byId('004'),65)],sideAdventures:{fishing:{rod:true,lastEnteredDay:-1,contest:null}}});resumeSnapshot({state:fixture,room:'anglersReach',player:{x:24,y:17,facing:'up'},phaseElapsed:10000,worldRandom:123});fishingWarden();},keeper(){const e=nextFishingEncounter(state,lead(),phaseElapsed),u=newUnit(byId(e.speciesId),e.level);recordFishingCatch(state,u,e,phaseElapsed);persist();fishingWarden();},open:fishingWarden,clock(t){phaseElapsed=t;lastClock=performance.now();},close:closeModal,ready:()=>fishingReadyAt(state),snapshot:()=>wildCheckpoint(),restore:resumeSnapshot,day:GAME_DAY_MS};`});});
+ await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'networkidle'});
+ await page.waitForFunction(()=>window.__anglingQA);
+ await page.evaluate(()=>window.__anglingQA.boot());
+ await page.locator('#fish-enter').click();
+ await page.evaluate(()=>window.__anglingQA.keeper());
+ assert(await page.locator('#fish-weigh-in').isEnabled());
+ await page.waitForTimeout(250); // the live clock must not disable early submission
+ assert(await page.locator('#fish-weigh-in').isEnabled());
+ fs.mkdirSync('build/qa',{recursive:true});
+ await page.screenshot({path:'build/qa/fishing-submit-daylight.png'});
+ await page.locator('#fish-weigh-in').click();
+ for(let i=0;i<3;i++)await page.locator('#fish-reveal').click();
+ await page.locator('[data-fish-prize]').first().click();
+ const ready=await page.evaluate(()=>window.__anglingQA.ready());
+ await page.evaluate(()=>{window.__anglingQA.close();window.__anglingQA.open();});
+ assert((await page.locator('#modal-root').innerText()).includes('Next entry cooldown'));
+ assert.equal(await page.locator('#fish-enter').count(),0);
+ // Persist, load the real save in another area, then return after the full day.
+ const snapshot=await page.evaluate(()=>{const s=window.__anglingQA.snapshot();s.room='marasen';return s;});
+ await page.reload({waitUntil:'networkidle'});
+ await page.evaluate(s=>{window.__anglingQA.restore(s);window.__anglingQA.open();},snapshot);
+ assert.equal(await page.evaluate(()=>window.__anglingQA.ready()),ready);
+ assert.equal(await page.locator('#fish-enter').count(),0);
+ await page.evaluate(t=>{window.__anglingQA.close();window.__anglingQA.clock(t);window.__anglingQA.open();},ready+100);
+ assert(await page.locator('#fish-enter').isEnabled());
+ await page.locator('#fish-enter').click();
+ await page.evaluate(()=>window.__anglingQA.open());
+ assert((await page.locator('#modal-root').innerText()).includes('Search for one Water-type keeper'));
+ await page.screenshot({path:'build/qa/fishing-next-day-entry.png'});
+ assert.deepEqual(errors,[]);
+ console.log('PASS: daylight submit button, prize collection, persistent cooldown across reload/travel and next-day paid entry');
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

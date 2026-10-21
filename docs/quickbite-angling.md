@@ -1,0 +1,7 @@
+# Quickbite and Angling — 0.90.15
+
+Quickbite strength is 40× / 12× / 3× / 1× on rounds 1 / 2 / 3 / 4 onward. The shared capture preview and four-check resolution remain unchanged. At catch rate 45, level 65, 1/300 HP, the opening chance is about 61%; levels 60–70 span about 53–70%. Species catch rates and legendary tiers still apply. Other foods are unchanged.
+
+Angler’s Reach allows submitting a keeper immediately. Nightfall still closes casting; an unfinished result can be resolved later after travel. Scores, rivals, the one-keeper rule and prize choices remain fixed. Save absolute `caughtAt` and `submittedAt` timestamps on the existing `phaseElapsed` clock. Eligibility requires a claimed prize, daylight and a full `GAME_DAY_MS` after the later timestamp. The clock represents visible game time, not time with the app closed. Old unsubmitted entries work immediately; old completed results without a submission timestamp use that contest's nightfall as the conservative cooldown anchor. No prior progress or prizes are reset.
+
+`tests/quickbite-angling.test.mjs` exercises displayed/rolled odds, rapid falloff, unchanged Slow Stew, immediate submission, duplicate completion/prize protection, no-keeper deadline, daylight eligibility, delayed return, saved cooldown and legacy contests. The release workflow also runs the new fishing browser interactions plus the existing game regressions. Android updates retain the original package and signing certificate.

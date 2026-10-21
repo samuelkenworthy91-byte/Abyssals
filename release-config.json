@@ -1,7 +1,7 @@
 {
-  "version": "0.90.14",
-  "version_code": 109,
-  "filename": "Abyssals-v0.90.14-Glass-Scars.apk",
-  "title": "Abyssals v0.90.14 \u2014 Glass Scars and Stormcatch",
-  "notes": "Detailed worn stone mountain steps and a broken supply-cart illustration replace the temporary drawings. Glass Scars now has vitrified lightning craters with safe route clearance and matching basin collision. Storm lightning has irregular branching leaders and thinner forks. The driver describes Pate and Trade racing into the storm and a disturbance up the mountain without naming Darius. Stormcatch has a no-stakes demonstration, clear WAIT/TAP NOW cues and repeatable five-charge shifts with rotating supplies; existing first-cache rewards remain claimed. Saves, deaths, story progress, unique encounters, Android package and original signing certificate are preserved. No physical-phone testing performed."
+  "version": "0.90.15",
+  "version_code": 110,
+  "filename": "Abyssals-v0.90.15-Quickbite-Angling.apk",
+  "title": "Abyssals v0.90.15 \u2014 Quickbite and Angling",
+  "notes": "Quickbite starts at 40\u00d7 capture strength, falls to 12\u00d7 on round 2 and 3\u00d7 on round 3, then returns to 1\u00d7 from round 4. A level-65 catch-rate-45 Abyssal at 1 HP has about a 61% opening chance. Fishing keepers can be submitted immediately, with casting open until nightfall. A full saved game-day cooldown runs from the later catch/submission before another daylight entry; travel and save/reload preserve it. Existing contests, prizes, saves, package and original signing certificate are preserved. Tested through GitHub Actions; no physical-phone testing performed."
 }
