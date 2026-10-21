@@ -34,3 +34,5 @@ Object.assign(INTERIORS.marasenArchive,{floor:'#bdba9e',wall:'#597080',rug:[21,1
 Object.assign(INTERIORS.marasenMill,{floor:'#b4ab81',wall:'#6b795e',rug:[21,21,6,3]});
 
 INTERIORS.marasenArena=structuredClone(INTERIORS.cossenneFirewatch);
+
+for(const [room,base]of [['botruneShop','cossenneShop'],['botruneClinic','hospice'],['botruneInn','cossenneHome'],['botruneRecords','cossenneFirewatch']]){INTERIORS[room]=structuredClone(INTERIORS[base]);INTERIORS[room].floor='#727584';INTERIORS[room].wall='#393c50';}

@@ -45,3 +45,7 @@ Runtime portrait sizes: Pate 55,678 bytes; Trade 57,936; Fatima 80,676. Combined
 - STATE-042/052/079/083/104: independent human life/progress, persistent memorial history, restoration after its authored unlock, and five elective total uses remain in force. The historical-death location changes from Emmara to Botrune under this user overlay.
 
 Release checkout now selects runtime, scripts, tests, wrapper and docs; reference image archives are neither downloaded for the release job nor packaged into the APK.
+
+## 21 October 2026 — Thunder Crown overlay
+
+See `thunderplain-crown.md` for the mandatory mountain detour, Darius/Tianzhar encounter, full-screen storm flashes, functioning Gothic lower streets and execution comic panels. The original nine trial indexes and historical deaths above remain unchanged; the two companion beats now carry illustrated panels and expanded dialogue. This supersedes the earlier generic sentence animation description for those two deaths.

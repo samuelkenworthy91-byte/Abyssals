@@ -6,6 +6,8 @@ The 0.90.1 update opens the seven-screen Thunderplain from Marasen to Botrune. A
 
 The 0.90.12 update replaces Marasen’s freestanding district portals with open-air streets and gives each Exchange floor stocked individual display cabinets and marble stairs. See [layout, artwork provenance and verification](docs/marasen-store.md).
 
+The 0.90.13 update adds the mandatory Thunder Crown mountain confrontation, a separate Tianzhar wild battle, the Stormcatch lightning relay, dramatic weather and Gothic Botrune town services with illustrated Pate/Trade sentence panels. See [story, assets and checks](docs/thunderplain-crown.md).
+
 ## Standard update protocol
 
 1. Commit source, artwork, tests and build changes here. Bump the version and Android version_code in `release-config.json`, plus the game/offline version.

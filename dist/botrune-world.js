@@ -1,9 +1,10 @@
-import {STORM_ROAD} from './botrune-data.js?v=0.90.0';
-import {registerBiome} from './biome-world.js?v=0.87.0';
+import {installThunderplainWorld,botruneBuildingBlocked} from './thunderplain-world.js?v=0.90.13';
+import {STORM_ROAD} from './botrune-data.js?v=0.90.13';
+import {registerBiome} from './biome-world.js?v=0.90.13';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 const person=(id,label,x,y,portrait)=>({id,label,x,y,sprite:0,revoltCharacter:portrait});
-export function botruneWalkable(m,x,y){if(m.botruneKind==='square')return y>=21&&y<=28||x>=20&&x<=28&&y>=9&&y<=21||x>=12&&x<=40&&y>=3&&y<=9;return null;}
-export function installBotruneWorld(maps){
+export function botruneWalkable(m,x,y){if(m.botruneKind==='square')return y>=21&&y<=29||x>=20&&x<=28&&y>=9&&y<=21||x>=12&&x<=40&&y>=3&&y<=9;if(m.botruneKind==='lower')return !botruneBuildingBlocked(m,x,y);return null;}
+export function installBotruneWorld(maps,doors){
  Object.assign(maps.marasen.gates.find(g=>g.id==='marasen-next'),{label:'Scribes’ Road · Thunderplain',to:'stormVerge',arrival:[3,17,'right'],action:'botrune-entry'});
  const roads=[[[1,17],[9,17],[9,9],[23,9],[23,23],[37,23],[37,17],[46,17]],[[1,17],[12,17],[12,24],[25,24],[25,8],[39,8],[39,17],[46,17]],[[1,17],[10,17],[10,8],[20,8],[20,23],[34,23],[34,17],[46,17]]];
  for(const [n,[room,name]]of STORM_ROAD.entries()){
@@ -22,4 +23,5 @@ export function installBotruneWorld(maps){
   ...[20,15,10].map((y,n)=>({...person('TRN-BT-GUARD-'+(n+1),'Guard captain '+(n+1),24,y,'TRN-SC-stormBluffs-'+n),botruneGuard:true})),
   person('bt-leader','Canon Fatima bint Musa',37,6,'LDR-06'),{id:'bt-recovery',label:'Pate and Trade · remember them',x:32,y:8,questProp:true},{id:'bt-archive',label:'Abbey archive · civilian records',x:41,y:24,questProp:true}
  ],gates:[gate('botrune-back','Road of Unanswered Bells',1,24,'stormApproach',[44,17,'left']),gate('botrune-next','War Road · chapter boundary',46,24,null,null,'botrune-boundary')]};registerBiome('botrune','quarry');
+ installThunderplainWorld(maps,doors);
 }

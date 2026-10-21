@@ -1,13 +1,14 @@
+import {BOTRUNE_ASSETS} from './botrune-art.js?v=0.90.13';
 import {onCourtArtChange} from './paladin-art.js?v=0.87.0';
 import {COSSENNE_ACTIVITY_ROOMS} from './cossenne-services.js?v=0.87.0';
 import {REVOLT_EVENTS,REVOLT_CAST} from './revolt-data.js?v=0.87.0';
 import {LIFE_EMBER_PICKUPS} from './extra-lives.js?v=0.87.0';
 import {TRAVEL_HUBS} from './fast-travel.js?v=0.87.0';
-import {BIOME_ASSETS,biomeAsset,drawBiomeDetails} from './biome-world.js?v=0.87.0';
-import {SHOPKEEPERS} from './shopkeepers.js?v=0.87.0';
+import {BIOME_ASSETS,biomeAsset,drawBiomeDetails} from './biome-world.js?v=0.90.13';
+import {SHOPKEEPERS} from './shopkeepers.js?v=0.90.13';
 import {EXTRA_TRAINERS} from './route-progression.js?v=0.87.0';
-import {INTERIORS,interiorBlocked,drawInterior} from './interiors.js?v=0.87.0';
-import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.87.0';
+import {INTERIORS,interiorBlocked,drawInterior} from './interiors.js?v=0.90.13';
+import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.13';
 // Authored prototype geometry. All movement/collision is defined here, independently of art.
 export const TILE=16, WIDTH=48, HEIGHT=32;
 export const AREA_GATES={town:[{id:'exit',x:46,y:17,to:'march',arrival:[3,17,'right'],action:'departure'}],march:[{id:'town-return',x:1,y:17,to:'town',arrival:[44,17,'left']},{id:'march-stage-forward',x:46,y:17,to:'march2',arrival:[3,17,'right'],action:undefined}],scrub:[{id:'march-return',x:1,y:17,to:'march',arrival:[44,17,'left']},{id:'scrub-boundary',x:46,y:17}]};
@@ -72,7 +73,7 @@ export function isBlocked(room,x,y){
  return false;
 }
 const assetFiles={fortBanner:'fort-banner-v037.webp',fortCarpet:'fort-carpet-v037.webp',fortGate:'fort-gate-v037.webp',fortStone:'fort-stone-v037.webp',fortBastion:'fort-bastion-v037.webp',fortFloor:'fort-floor-v037.webp',fortWall:'fort-wall-v037.webp',fortArch:'fort-arch-v037.webp',fortPier:'fort-pier-v037.webp',dockPlanks:'dock-planks-v0303.webp',dockEnd:'dock-end-v0303.webp',dockPost:'dock-post-v0303.webp',fishingCrate:'fishing-crate-v0303.webp',sewerFloor:'sewer-floor.webp',sewerWall:'sewer-wall.webp',sewage:'sewage.webp',sluice:'sluice.webp',chest:'chest.webp',sack:'sack.webp',valve:'valve.webp',pipe:'pipe.webp',bloomHouse:'bloom-house.webp',bloomShop:'bloom-shop.webp',bloomKeep:'bloom-keep.webp',bloomHospice:'bloom-hospice.webp',bloomGround:'bloom-ground.webp',bloomPath:'bloom-path.webp',palm:'palm.webp',rug:'rug.webp',keep:'tile-keep-v13.webp',hospice:'tile-hospice-v13.webp',ridge:'tile-ridge-v13.webp',tallgrass:'tile-tallgrass.png',sign:'tile-sign.png',bramble:'tile-bramble.png',fence:'tile-fence.png',grass:'tile-grass.png',path:'tile-path.png',water:'tile-water.png',floor:'tile-floor.png',tree:'tile-tree.png',house:'tile-house.png',shop:'tile-shop.png',shrine:'tile-shrine.png',tent:'tile-tent.png',memorial:'tile-memorial.png',table:'tile-table.png',desk:'tile-desk.png',bed:'tile-bed.png',shelf:'tile-shelf.png',wall:'tile-wall.png',mat:'tile-mat.png'};
-Object.assign(assetFiles,BIOME_ASSETS);
+Object.assign(assetFiles,BIOME_ASSETS,BOTRUNE_ASSETS);
 const art={};for(const [name,file]of Object.entries(assetFiles)){const im=new Image();im.onload=()=>mapCache.clear();im.src='assets/pixel/'+file;art[name]=im;}
 const mapCache=new Map();
 onCourtArtChange(()=>mapCache.clear());

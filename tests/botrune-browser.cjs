@@ -11,6 +11,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
   const step=await page.evaluate(()=>window.__btQA.step());if(step.phase==='gauntlet'&&!step.busy)break;
   if(!reloaded&&step.cursor===7&&await page.locator('#dialogue').isVisible()){await page.evaluate(()=>window.__btQA.reload());reloaded=true;await page.waitForSelector('#dialogue:not([hidden])');continue;}
   if(await page.locator('#dialogue').isVisible()){
+   if([6,7].includes(step.cursor)){assert(await page.locator('#botrune-comic').isVisible());assert.equal(await page.locator('.dialogue-bust').count(),0);await page.screenshot({path:'build/qa/botrune-comic-'+step.cursor+'.png'});}
    const text=await page.locator('.dialogue-text').innerText();transcript+=text+'\n';
    if(text.includes('Aimon. No—')&&!pateShot){await page.screenshot({path:'build/qa/pate-last-warning.png'});pateShot=true;}
    await page.locator('#next-line').click();

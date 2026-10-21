@@ -1,0 +1,50 @@
+{
+  "generator": "built-in ImageGen",
+  "release": "0.90.13",
+  "references": [
+    "dist/assets/REV-DARIUS.webp",
+    "dist/assets/CHR-PATE.webp",
+    "dist/assets/CHR-TRADE.webp",
+    "dist/assets/LDR-06.webp",
+    "dist/assets/173.webp"
+  ],
+  "source_files": [
+    {
+      "source": "abbey.png",
+      "sha256": "1d57c7eee966452ad40af458bbaceb153ee42eceef2d539255431f7225e29342",
+      "bytes": 2872650
+    },
+    {
+      "source": "conductor.png",
+      "sha256": "1131a9ddf0698d7cf9999181dbae3e0de5abf56f2e5e25fe57d4d5429444ae0e",
+      "bytes": 1791122
+    },
+    {
+      "source": "darius-storm.png",
+      "sha256": "c91e641029cc0e5db2d9408dc7e882a31d0efa8a15e97006e0f0e2edd4e94539",
+      "bytes": 1990996
+    },
+    {
+      "source": "garrison-house.png",
+      "sha256": "3c7d8d3013e6b2dab7b69d3a9798dcee320bbd47c692ffe4f1581ae3d38db7ac",
+      "bytes": 2663793
+    },
+    {
+      "source": "pate-panel.png",
+      "sha256": "9eba7b971483ceca5ce420f8f71d7bb13bfbcb89363c924a8b8e2242db861df1",
+      "bytes": 3207695
+    },
+    {
+      "source": "scriptorium.png",
+      "sha256": "b0a745c57503a8518130ff6db41c0ce98ba6e1ea2308795120bb5e40f078f152",
+      "bytes": 2584893
+    },
+    {
+      "source": "trade-panel.png",
+      "sha256": "116d3647bb58e6efd53e18e71266fa5f6351def16bdba85092ebef2b8648a7c3",
+      "bytes": 2770335
+    }
+  ],
+  "runtime_optimizer": "scripts/prepare-thunderplain-art.py",
+  "prompt_set": "docs/thunderplain-crown.md#artwork-provenance-and-packaging"
+}

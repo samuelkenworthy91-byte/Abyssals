@@ -37,8 +37,8 @@ export const TRIAL_BEATS=[
  {lines:[['Third prisoner','There was no hearing. You did not even ask our names.'],['Canon Fatima bint Musa','Names do not alter a sentence.','LDR-06']],death:'prisoner-3'},
  {lines:[['Botrune','The guard pulls the last two prisoners into the light. A familiar face turns towards the crowd. Then another.'],['Aimon','Pate? Trade?','CHR-AIMON']]},
  {lines:[['Pate','Aimon. No—don’t come up here. Run! Get away from this place!','CHR-PATE'],['Trade','Listen to him. You don’t have to prove anything to us. Go. Live.','CHR-TRADE'],['Aimon','Let them go. They haven’t done what you said. Let them go!','CHR-AIMON']]},
- {lines:[['Canon Fatima bint Musa','Continue.','LDR-06']],death:'CHR-PATE'},
- {lines:[['Trade','Aimon. Please.','CHR-TRADE']],death:'CHR-TRADE'},
+ {comic:'pate',lines:[['Pate','Please—he is only a boy. Let Aimon go. Look at me. Please, look at me!','CHR-PATE'],['A guard','Canon, wait! These two carried our wounded. I saw them!'],['Canon Fatima bint Musa','Continue.','LDR-06']],death:'CHR-PATE'},
+ {comic:'trade',lines:[['Trade','Pate? Pate, answer me. Please. Aimon, don’t look. Go!','CHR-TRADE'],['A soldier below the stage','Stop! For the love of—stop! They have done nothing!'],['Trade','Aimon. Please.','CHR-TRADE']],death:'CHR-TRADE'},
  {lines:[['Botrune','There is no applause. Fatima lowers the blade. Five people lie on the platform. The clerk closes a ledger whose last two lines were never filled in.'],['Aimon','I thought if I could just catch up…','CHR-AIMON'],['Aimon','They were here. I was here.','CHR-AIMON'],['Canon Fatima bint Musa','Clear the square.','LDR-06']]}
 ];
 export const WITNESSES={

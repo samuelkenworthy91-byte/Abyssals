@@ -31,5 +31,5 @@ s.fates['LDR-06']='EXECUTED';assert(settleLeaderRewards(s,leader,()=>({uid:'gift
 console.log('PASS: 7 storm maps, shelter, gate returns, 14 legal day/night tables; persistent independent deaths; all 3 unbypassable guard cordons; 6 physical leader slots; once-only judgement rewards');
 const {drawStormWeather}=await import('../dist/botrune-art.js');
 function weatherStrokes(time,reduced){let strokes=0;const c={save(){},restore(){},fillRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){strokes++;}};drawStormWeather(c,'stormGlass',time,reduced);return strokes;}
-assert.equal(weatherStrokes(200,false),33);assert.equal(weatherStrokes(1000,false),32);assert.equal(weatherStrokes(200,true),0);
-console.log('PASS: distant lightning is intermittent; reduced motion disables lightning and rain');
+assert.equal(weatherStrokes(200,false),32);assert.equal(weatherStrokes(1000,false),32);assert.equal(weatherStrokes(200,true),0);
+console.log('PASS: rain remains active; reduced motion disables rain (screen lightning tested separately)');
