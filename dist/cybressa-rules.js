@@ -1,3 +1,4 @@
+import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.23';
 import {DATA} from './data.js?v=0.87.0';
 import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.87.0';
 import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.87.0';
@@ -36,9 +37,9 @@ export function createCybressaTrial(state,random=Math.random,continuation=false)
  if(!cybressaUnlocked(state)||q.activeTrial||continuation&&!previous)return false;
  const round=previous?previous.round+1:1;
  const baseLevel=previous?.baseLevel??42+Math.min(3,Math.floor(random()*4)),level=Math.min(200,baseLevel+4*(round-1)),serial=q.trialSerial+1;
- const team=drawTrialTeam(round,level,random,previous?.teamIds||[]);
- const t={id:'TRN-CY-TRIAL-'+serial,name:'Proven Grounds · Simulation '+serial+' · Round '+round,portraitId:'TRN-C01-001',ai_tier:'Advanced',role:'Trial Contract',runtimeAuthored:true,simulation:true,team};
- q.trialSerial=serial;q.activeTrial={trainer:t,text:'This chamber stands outside time and place. Its simulations can echo any known Abyssal, even a legendary or mythic. These are projections, not the unique creatures roaming the world. The simulation is real combat for your partners.',marks:round+2,round,baseLevel,earned:previous?.earned||0};q.trialContinuation=null;return true;
+ const boss=buildArenaBoss(round,level),team=boss?.team||drawTrialTeam(round,level,random,previous?.teamIds||[]);
+ const t={id:'TRN-CY-TRIAL-'+serial,name:'Proven Grounds · Simulation '+serial+' · Round '+round,portraitId:'TRN-C01-001',ai_tier:'Advanced',role:'Trial Contract',runtimeAuthored:true,simulation:true,team,...(boss?{...boss,name:'Proven Grounds · Boss Round '+round+' · '+boss.name}: {})};
+ q.trialSerial=serial;q.activeTrial={trainer:t,text:'This chamber stands outside time and place. Its simulations can echo any known Abyssal, even a legendary or mythic. These are projections, not the unique creatures roaming the world. The simulation is real combat for your partners.',marks:arenaRoundMarks(round),bossKey:boss?.key||null,round,baseLevel,earned:previous?.earned||0};if(boss)q.activeTrial.text+=' Boss strategy: '+boss.plan+' Six curated partners, tactical switching, and two half-HP healing items for the entire battle.';q.trialContinuation=null;return true;
 }
 export function continueCybressaTrial(state,random=Math.random){
  if(!(state.party||[]).some(u=>u.hp>0&&!u.dead)||!createCybressaTrial(state,random,true))return false;
@@ -46,5 +47,9 @@ export function continueCybressaTrial(state,random=Math.random){
  return true;
 }
 export function finishCybressaTrialRun(state){const q=cybressaState(state);if(!q.trialContinuation||q.activeTrial)return false;q.trialContinuation=null;return true;}
-export function registerCybressaTrial(state,expansion,voices){const a=state.cybressa?.activeTrial;if(!a)return null;const t=a.trainer;if(!expansion.trainers.some(v=>v.id===t.id))expansion.trainers.push(t);voices[t.id]={before:a.text+' Defeat all three opponents to earn '+a.marks+' Trial Marks. Partners can die; retreat keeps this same contract.',after:'Round '+(a.round||1)+' complete. '+a.marks+' Trial Marks have been entered in your account. Continue for a stronger team and a larger reward, or finish here.',repeat:'This contract has been paid.'};return t;}
-export function completeCybressaTrial(state,id){const q=cybressaState(state),a=q.activeTrial;if(a?.trainer.id!==id||!state.defeatedTrainers?.includes(id))return false;q.trialMarks+=a.marks;q.trialContinuation={round:a.round||1,baseLevel:a.baseLevel??a.trainer.team[0].level,teamIds:a.trainer.team.map(u=>u.species_id),earned:(a.earned||0)+a.marks};q.activeTrial=null;return true;}
+export function registerCybressaTrial(state,expansion,voices,battleInProgress=false){const a=state.cybressa?.activeTrial;if(!a)return null;
+ // Upgrade a saved, unstarted milestone contract; never replace a live opponent.
+ const boss=!a.trainer.arenaBoss?buildArenaBoss(a.round,Math.min(...a.trainer.team.map(u=>u.level))):null;
+ if(boss){a.marks=arenaRoundMarks(a.round);if(!battleInProgress){a.trainer={...a.trainer,...boss,name:'Proven Grounds · Boss Round '+a.round+' · '+boss.name};a.bossKey=boss.key;a.text+=' Boss strategy: '+boss.plan+' Six curated partners, tactical switching, and two half-HP healing items for the entire battle.';}}
+ const t=a.trainer;const index=expansion.trainers.findIndex(v=>v.id===t.id);if(index<0)expansion.trainers.push(t);else expansion.trainers[index]=t;voices[t.id]={before:a.text+' Defeat all '+t.team.length+' opponents to earn '+a.marks+' Trial Marks. Partners can die; retreat keeps this same contract.',after:'Round '+(a.round||1)+' complete. '+a.marks+' Trial Marks have been entered in your account. Continue for a stronger team and a larger reward, or finish here.',repeat:'This contract has been paid.'};return t;}
+export function completeCybressaTrial(state,id){const q=cybressaState(state),a=q.activeTrial;if(a?.trainer.id!==id||!state.defeatedTrainers?.includes(id))return false;q.trialMarks+=a.marks;q.trialContinuation={round:a.round||1,baseLevel:a.baseLevel??a.trainer.team[0].level,teamIds:a.trainer.team.map(u=>u.species_id),earned:(a.earned||0)+a.marks,lastMarks:a.marks,bossKey:a.bossKey||null};q.activeTrial=null;return true;}
