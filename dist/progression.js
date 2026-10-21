@@ -17,7 +17,7 @@ export function inheritedGrowthRate(unit,key){
  return Math.max(0,...[record?.growth,...(record?.lineageGrowth||[])].filter(g=>g?.stat===key&&Number.isFinite(g.rate)).map(g=>g.rate));
 }
 export function unitGrowthRates(unit){
- const nurseryBonus=unit.nurseryLegacy?.version===1?15:0;
+ const nurseryBonus=(unit.nurseryLegacy?.version===1?15:0)+(unit.memorialLegacy?.version===1?15:0);
  const stewardship=key=>Math.max(0,unit.stewardship?.[key]||0);
  const tenths=STAT_KEYS.map(key=>Math.round(Math.max(growthPercent(unit.species,key),inheritedGrowthRate(unit,key))*(unit.growthMultiplier===1.1?1.1:1)*10));
  const total=tenths.reduce((n,v)=>n+v,0),cap=unit.giftOrigin==='Roadside rescue'?Math.max(0,3000-STAT_KEYS.reduce((sum,k)=>sum+stewardship(k)*10,0)):null;

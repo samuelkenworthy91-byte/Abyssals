@@ -1,4 +1,5 @@
-import {accessEncounterRoute} from './encounter-access.js?v=0.88.2';
+import {collectionEncounterRoute} from './collection-access.js?v=0.90.18';
+import {accessEncounterRoute} from './encounter-access.js?v=0.90.18';
 import {birdEncounterRoute} from './bird-encounters.js?v=0.87.0';
 import {biodiversityEncounterRoute} from './biome-biodiversity.js?v=0.87.0';
 import {orchardRoute} from './cossenne-data.js?v=0.87.0';
@@ -31,4 +32,6 @@ function existingEncounterRoute(route){if(route.relicExpanded||route.aquaticExpa
 
 function expandExistingEncounterRoute(route){const orchard=orchardRoute(route?.room);if(orchard)return orchard;const special=route&&paladinEncounterRoute(jungleRoute(route.room)||courtRoute(route.room));if(special)return special;if(route.menagerieExpanded)return route;return menagerieEncounterRoute(existingEncounterRoute(route));}
 
-export function expandEncounterRoute(route){if(route?.birdsExpanded)return accessEncounterRoute(route);if(route?.biodiversityExpanded)return accessEncounterRoute(birdEncounterRoute(route));return accessEncounterRoute(birdEncounterRoute(biodiversityEncounterRoute(expandExistingEncounterRoute(route))));}
+function authoredEncounterRoute(route){if(route?.birdsExpanded)return accessEncounterRoute(route);if(route?.biodiversityExpanded)return accessEncounterRoute(birdEncounterRoute(route));return accessEncounterRoute(birdEncounterRoute(biodiversityEncounterRoute(expandExistingEncounterRoute(route))));}
+
+export function expandEncounterRoute(route){return collectionEncounterRoute(authoredEncounterRoute(route));}

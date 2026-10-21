@@ -1,11 +1,12 @@
+import {FINALE_TRAINERS} from '../dist/finale-data.js';
 import assert from 'node:assert/strict';
 import {DATA} from '../dist/data.js';
 import {EXPANSION} from '../dist/expansion-data.js';
 import {BOTRUNE_TRAINERS} from '../dist/botrune-data.js';
 import {settleLeaderRewards,EXECUTION_BOUNTIES,NURSERY_SHINY_CHANCE} from '../dist/leader-outcomes.js';
 import {unitGrowthRates,STAT_KEYS} from '../dist/progression.js';
-const leaders=[...EXPANSION.trainers,...BOTRUNE_TRAINERS].filter(t=>EXECUTION_BOUNTIES[t.id]);
-const unique=[...new Map(leaders.map(t=>[t.id,t])).values()];assert.equal(unique.length,6);
+const leaders=[...EXPANSION.trainers,...BOTRUNE_TRAINERS,...FINALE_TRAINERS].filter(t=>EXECUTION_BOUNTIES[t.id]);
+const unique=[...new Map(leaders.map(t=>[t.id,t])).values()];assert.equal(unique.length,8);
 const create=(id,level)=>({uid:'gift-'+id,level,species:DATA.species.find(s=>s.id===id),hp:10,maxHp:10,stats:{},growthSeed:123,shiny:true});
 for(const leader of unique){
  let s={money:0,fates:{[leader.id]:'EXECUTED'},party:[],reserve:[],dead:[]};
@@ -25,4 +26,4 @@ for(const leader of unique){
 let shinies=0;const leader=unique[0];for(let i=0;i<10000;i++){
  const s={fates:{[leader.id]:'EXECUTED'},party:[],reserve:[]};settleLeaderRewards(s,leader,(id,level)=>({...create(id,level),uid:'leader-legacy:'+leader.id,shiny:false}),{random:()=>i/10000});if(s.party[0].shiny)shinies++;
 }
-assert.equal(shinies,2500);console.log('PASS: six execution gifts, +15 every growth across evolution, fixed 25% shiny rolls, reload idempotence, old/dead/released gift migration');
+assert.equal(shinies,2500);console.log('PASS: eight execution gifts, +15 every growth across evolution, fixed 25% shiny rolls, reload idempotence, old/dead/released gift migration');

@@ -1,4 +1,4 @@
-import {relearnPool} from './evolution.js?v=0.87.0';
+import {relearnPool} from './evolution.js?v=0.90.18';
 // Revalidate at confirmation; never charge money or refresh unrelated moves.
 export function applyRelearn(unit,moveId,slot){
  if(!unit||unit.dead||unit.hp<=0)return false;

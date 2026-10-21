@@ -1,4 +1,4 @@
-import {inheritanceSummaryHTML} from './breeding-inheritance.js?v=0.87.0';
+import {inheritanceSummaryHTML} from './breeding-inheritance.js?v=0.90.18';
 import {DATA} from './data.js?v=0.87.0';
 import {EVOLUTIONS} from './evolution-data.js?v=0.87.0';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

@@ -1,10 +1,11 @@
+import {wildCollectionForm} from './collection-access.js?v=0.90.18';
 import {isReducedMotion} from './motion.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.87.0';
 import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.87.0';
 import {legalForm,rootForm} from './route-roster.js?v=0.87.0';
 import {encounterWeights} from './expedition-abilities.js?v=0.87.0';
-import {hashSeed} from './progression.js?v=0.90.17';
+import {hashSeed} from './progression.js?v=0.90.18';
 export const JETTIES=[
  ['medicinePath','Floodplain jetty',['051','079','139'],10,14],
  ['glassSluice','Mineral-water jetty',['051','139'],10,16],
@@ -29,7 +30,7 @@ export function nextJettyEncounter(state,room,phase,random,leader=null){
  const bounds=SIDE_POOLS[room]||ROAD_POOLS[room]||CYBRESSA_ROUTES[room]||j,min=bounds.min??j.min,max=bounds.max??j.max;
  const weights=encounterWeights(slots,leader);let roll=random()*weights.reduce((n,v)=>n+v,0),index=0;for(;index<weights.length-1;index++){roll-=weights[index];if(roll<0)break;}
  const level=min+Math.min(max-min,Math.floor(random()*(max-min+1)));state.jettyCasts??={};const cast=state.jettyCasts[room]=(state.jettyCasts[room]||0)+1;
- return {speciesId:legalForm(slots[index].species_id,level),level,phase,tableId:j.id+'-'+phase,jettyId:j.id,seed:'jetty:'+room+':'+cast+':'+hashSeed(String(random()))};
+ return {speciesId:wildCollectionForm(legalForm(slots[index].species_id,level)),level,phase,tableId:j.id+'-'+phase,jettyId:j.id,seed:'jetty:'+room+':'+cast+':'+hashSeed(String(random()))};
 }
 // Transfer exactly once, including legacy finished contests with leftover bait.
 export function keepContestBait(state){const c=state.sideAdventures?.fishing?.contest;state.riverBait=Number.isSafeInteger(state.riverBait)&&state.riverBait>=0?state.riverBait:0;if(!c||c.baitInBag)return false;state.riverBait+=Math.max(0,Math.floor(c.bait||0));c.baitInBag=true;return true;}

@@ -1,0 +1,119 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "originalSize": [
+    1536,
+    1024
+  ],
+  "runtimeSize": [
+    768,
+    512
+  ],
+  "prompts": {
+    "memorial-road": "Use case: stylized-concept. Asset: finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image is map with no border. Exactly 48 columns by 32 rows logical tiles, each 32x32 pixels in output; use carefully clustered crisp pixel art with gorgeous detailed late-era 32-bit JRPG quality, NOT illustration, NOT isometric, NOT perspective, no smooth brushwork or vector/SVG aesthetic. Camera looking straight down, building facades can show a short south face. Rich carefully limited palette, subtle dither, beautiful authored texture and materials. No people, no creatures, no text, no labels, no UI, no watermarks, no grid lines. All main paths need visually clear flat walkable terrain, keep tall objects off those paths. Scene: extraordinarily beautiful sunlit riverside woodland route in late spring. Broad winding pale-earth walking path runs LEFT TO RIGHT THROUGH ROW 24, open from west edge to east edge. A secondary path goes north at column24. Flower-rich lawns, pink blossom trees along upper margin, winding clear turquoise river across upper half and arched pale stone footbridge at column24. Sunbeams and little beds of blue white and golden wildflowers. Large shapes readable from phone size, rare polished decorative pixels. Walkable road rows22\u201326 entire width; grassy clearings rows17\u201327; river and large trees only above row16 or below row28.",
+    "burial-grove": "Use case: stylized-concept. Asset: finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image is map with no border. Exactly 48 columns by 32 rows logical tiles, each 32x32 pixels in output; use carefully clustered crisp pixel art with gorgeous detailed late-era 32-bit JRPG quality, NOT illustration, NOT isometric, NOT perspective, no smooth brushwork or vector/SVG aesthetic. Camera looking straight down, building facades can show a short south face. Rich carefully limited palette, subtle dither, beautiful authored texture and materials. No people, no creatures, no text, no labels, no UI, no watermarks, no grid lines. All main paths need visually clear flat walkable terrain, keep tall objects off those paths. Scene: quiet sunlit memorial grove, immense beautiful ancient oak centered column24,row8, spreading emerald canopy and hanging white blossoms, tree trunk foot at column24,row14. TWO small freshly filled graves with discreet blank pale stone markers side by side centered columns21 and27, row17. A broad warm-earth footpath runs west to east rows23\u201326, open both edges. A branching path at column24 connects row24 to graves at row18. Low flowers edge the graves, two small unlit candles, poignant but restful beauty. Upper and outer margins have water and distant blossom, lower margin flower-rich lawns. No bodies, no mourners, no writing on gravestones. Empty clear space in front of graves for game actors.",
+    "cayfen": "Use case: stylized-concept. Asset: finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image is map with no border. Exactly 48 columns by 32 rows logical tiles, each 32x32 pixels in output; use carefully clustered crisp pixel art with gorgeous detailed late-era 32-bit JRPG quality, NOT illustration, NOT isometric, NOT perspective, no smooth brushwork or vector/SVG aesthetic. Camera looking straight down, building facades can show a short south face. Rich carefully limited palette, subtle dither, beautiful authored texture and materials. No people, no creatures, no text, no labels, no UI, no watermarks, no grid lines. All main paths need visually clear flat walkable terrain, keep tall objects off those paths. Scene: Cayfen, gorgeous living medieval sun city of artists, warm ivory and ochre plaster, gold mosaic pavements, lapis tile trim, bright awnings and flowering rose courtyards. Design strict gameplay layout: broad open HORIZONTAL PLAZA rows21 to26 extending full west-east width. Four enterable building entrances centered at logical tiles (9,18),(37,18),(9,27),(37,27). Two north buildings occupy columns3\u201315/31\u201343 and rows5\u201317, south-facing doors at row18. Two south buildings occupy columns3\u201315/31\u201343 and rows28\u201331 partly cropped by bottom edge, north-facing entry doors at row27. Their side paths at columns9 and37 remain open from rows18\u201327. No architecture crosses horizontal rows21\u201326. Gallery is northwestern building with artistic mosaics over its blank doorway; north-east is care/shop, southwest is inn, southeast another studio. Add small fountains only at columns22\u201326 rows7\u201313 away from paths. Explicit no actors/text.",
+    "gallery": "Use case: stylized-concept. Asset: finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image is map with no border. Exactly 48 columns by 32 rows logical tiles, each 32x32 pixels in output; use carefully clustered crisp pixel art with gorgeous detailed late-era 32-bit JRPG quality, NOT illustration, NOT isometric, NOT perspective, no smooth brushwork or vector/SVG aesthetic. Camera looking straight down, building facades can show a short south face. Rich carefully limited palette, subtle dither, beautiful authored texture and materials. No people, no creatures, no text, no labels, no UI, no watermarks, no grid lines. All main paths need visually clear flat walkable terrain, keep tall objects off those paths. Scene: lavish but welcoming medieval art gallery interior in Cayfen, warm golden light, ivory walls, lapis and ochre mosaic accents, polished parquet or pale-tile floor. A gallery of six distinct framed PIXEL paintings along north wall, paintings show landscapes, abstract rainbow paw marks, leaf impressions and expressive flame swirls, no letters. Small sculpture plinths occupy left and right borders. Four painting easels line a rear alcove, a low worktable with pigments at northeast wall. Large central floor rows12\u201328 columns6\u201342 is empty and walkable. South exit opening at center column24,row30. Top-down room with clearly readable wall boundaries, human scale compatible with 32px sprites, exceptionally elegant authored detail. Nothing blocks center aisle.",
+    "sporefall": "Use case: stylized-concept. Finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image map no border. 48x32 logical tiles. Carefully clustered crisp pixel art, gorgeous detailed late-era 32-bit JRPG quality, NOT smooth illustration/isometric/perspective/vector/SVG. Camera straight down, buildings can show short south face. Rich controlled palette, subtle dither, authored texture. No people, creatures, text, labels, UI, watermarks, grid. Main paths clearly flat and usable. A vast dangerous ravine forest of colossal bracket fungi: indigo-purple canopies, luminous turquoise spores, pale hanging roots, blue-black pools below. MAIN SAFE CROSSING: continuous broad 4-tile-wide mossy ancient stone-and-root bridge across ENTIRE WIDTH at rows15\u201319, straight east-west, no gaps/plants on it. Larger stable platform at center cols20\u201328 rows12\u201322, readable side rails. Huge mushrooms in bottom corners, abyss openings at north/south center. Tiny lanterns show passable land route. Premium magical pixel art.",
+    "ramelle": "Use case: stylized-concept. Finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image map no border. 48x32 logical tiles. Carefully clustered crisp pixel art, gorgeous detailed late-era 32-bit JRPG quality, NOT smooth illustration/isometric/perspective/vector/SVG. Camera straight down, buildings can show short south face. Rich controlled palette, subtle dither, authored texture. No people, creatures, text, labels, UI, watermarks, grid. Main paths clearly flat and usable. Ramelle: serene alabaster Fairy city, white stone/pearl roofs, iridescent lavender, golden trim, crystalline water gardens, pale flowering trees. Broad clear horizontal promenade rows15\u201319 edge to edge, central north-south boulevard cols22\u201326. FOUR buildings: NW sanctuary, NE white fortress gatehouse, SW carehouse, SE inn. Doors centered (10,11),(37,11),(10,28),(38,28). North buildings rows2\u201310; lower buildings rows21\u201327 doors facing bottom. WALKABLE PATH along left/right/bottom edges connects central boulevard to both lower doorsteps. Nothing across main street rows15\u201319. Water gardens only outer sidecourtyards away from doors. Beautiful regal yet lived-in, no character statues.",
+    "ramelle-fortress": "Use case: stylized-concept. Finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image map no border. 48x32 logical tiles. Carefully clustered crisp pixel art, gorgeous detailed late-era 32-bit JRPG quality, NOT smooth illustration/isometric/perspective/vector/SVG. Camera straight down, buildings can show short south face. Rich controlled palette, subtle dither, authored texture. No people, creatures, text, labels, UI, watermarks, grid. Main paths clearly flat and usable. Magnificent alabaster fortress interior battle hall: pearl limestone, gold inlay, pale amethyst stained glass, opalescent sidewall water channels, sunlight shafts and floral Fairy motifs. Grand central arena open oval mosaic floor cols10\u201338 rows11\u201325. Raised north dais cols18\u201330 rows3\u20138, broad stairs to arena, slim gold lectern at(24,6). CLEAR WALKABLE vertical aisle cols22\u201326 from south exit row30 to dais row8. Planters/columns only x3\u20136 and42\u201345. Symmetrical luxurious pixel architecture, empty room.",
+    "mirror-chamber": "Use case: stylized-concept. Finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image map no border. 48x32 logical tiles. Carefully clustered crisp pixel art, gorgeous detailed late-era 32-bit JRPG quality, NOT smooth illustration/isometric/perspective/vector/SVG. Camera straight down, buildings can show short south face. Rich controlled palette, subtle dither, authored texture. No people, creatures, text, labels, UI, watermarks, grid. Main paths clearly flat and usable. Ancient subterranean mirror chamber predating religious architecture. Worn pale stone/amber veins. Enormous tall oval silver-black MIRROR in carved stone arch centered column24, rows2\u201311. Reflective face subtle starfield/ghostly depth, NO figures/faces. Three broad shallow stone steps rows11\u201314. Spacious clear mosaic FLOOR rows15\u201329, central aisle cols20\u201328. Blank tablets and small blue lamps at sidewalls, shallow water border only extreme edges. Sole south exit(24,30). Mysterious/tender/ancient, not horror gore or heavenly throne. High-end crisp pixel atmosphere.",
+    "waterfall-road": "Use case: stylized-concept. Finished top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. Wide 1536x1024 canvas, entire image map no border. 48x32 logical tiles. Carefully clustered crisp pixel art, gorgeous detailed late-era 32-bit JRPG quality, NOT smooth illustration/isometric/perspective/vector/SVG. Camera straight down, buildings can show short south face. Rich controlled palette, subtle dither, authored texture. No people, creatures, text, labels, UI, watermarks, grid. Main paths clearly flat and usable. Breathtaking green river gorge with flowering trees and waterfalls. Strong pale stone bridge runs HORIZONTALLY across entire scene at row17 from west edge to east edge, deck usable rows15\u201319, railings rows14/20. Clear turquoise river runs vertically through central cols19\u201329 BELOW bridge then descends into foaming waterfall lower third. Emerald banks and pink/white blossom, sunlit cliffs, tiny blank shrines far north. Walking connections both edges at row17. No plants/gates blocking bridge. Authored pixel textures, not photoreal.",
+    "terraces": "Use case: stylized-concept. Finished bespoke top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. 1536x1024 wide canvas, no border, 48x32 logical tiles. High-end detailed late-32-bit JRPG pixel art with crisp clustered pixels and authored textures, no smooth painting/vector/perspective/isometric. No people, creatures, UI, writing, labels, grid or watermarks. Scene: a unique incredibly beautiful sunlit flowering orchard of terraced hillside gardens. Pale pink/white/peach blossom trees in lush upper rows, long stone retaining walls with little side stairs, distant turquoise irrigation pools. A broad ochre-earth path runs horizontally all the way from left to right at rows16\u201319. Lower half has terraces of blue irises, golden poppies and young orchard trees. Uppermost center features an ornate but empty vine-covered gateway. Keep rows16\u201319 completely clear and walkable, no plants across it. Pixel rendering of abundant floral beauty, natural gentle outdoor sunlight.",
+    "guan": "Use case: stylized-concept. Finished bespoke top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. 1536x1024 wide canvas, no border, 48x32 logical tiles. High-end detailed late-32-bit JRPG pixel art with crisp clustered pixels and authored textures, no smooth painting/vector/perspective/isometric. No people, creatures, UI, writing, labels, grid or watermarks. Scene: quiet ancient guardian shrine in a peach grove for Guanrong. Central pale stone altar/shrine at (24,8), north half bordered by huge peach blossom trees, old blank green banners and weathered jade-green stone lanterns. A broad empty shrine forecourt around cols17\u201331 rows11\u201321, mossy paths connect horizontally across scene row17 to both edges. A clear central approach rises from row17 to altar row10. Small carved leaf and oath-knot motifs, but NO writing or creature statues. South contains still pond with lily pads only belowrow24, grassy flanks with blue flowers. Respectful, protected, beautiful, high-end detailed pixel art.",
+    "fei": "Use case: stylized-concept. Finished bespoke top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. 1536x1024 wide canvas, no border, 48x32 logical tiles. High-end detailed late-32-bit JRPG pixel art with crisp clustered pixels and authored textures, no smooth painting/vector/perspective/isometric. No people, creatures, UI, writing, labels, grid or watermarks. Scene: ancient crossing defended by Feirong, in a lush peach forest valley. A broad sturdy rustic timber-and-pale-stone bridge spans west to east across map at rows15\u201319, completely clear usable deck, low railings outside. Blue river runs vertically near center cols21\u201328, vigorous but beautiful water, pink blossom trees and emerald banks. North bank has a SMALL old watch pavilion with blank red/green streamers at(35,7), clear sidepath from bridge to it. Wide stable grassy platform at westbridge approach columns10\u201318 row17; eastapproach columns31\u201339. No creatures on bridge. Courageous warm green/amber palette, sunlit detailed pixel foliage and dramatic river.",
+    "darius": "Use case: stylized-concept. Finished bespoke top-down orthographic PIXEL ART RPG GAME MAP for Abyssals. 1536x1024 wide canvas, no border, 48x32 logical tiles. High-end detailed late-32-bit JRPG pixel art with crisp clustered pixels and authored textures, no smooth painting/vector/perspective/isometric. No people, creatures, UI, writing, labels, grid or watermarks. Scene: final confrontation arena in Sporefall Chasm, a BROAD ancient broken stone/root bridge with huge stable central battle platform across a vast bioluminescent fungal ravine. Main crossing must be open left-to-right rows15\u201319 from both edges with no gaps. Large central octagonal stable cracked-stone arena columns17\u201332 rows9\u201324, empty of actors and obstruction, old railing on outer edge. Broken unused bridge fragments hang only far below, never across actual path. Colossal indigo fungal shelves and turquoise luminous spores, pale hanging roots, high cavern opening light upperleft. Battle-ready clear centralground, dramatic threatening beauty, premium authoredpixelart.",
+    "service-sheet": "Use case: stylized-concept. Bespoke premium PIXEL ART RPG INTERIOR CONTACT SHEET. Output3072x2048 or1536x1024, EXACT TWO BY TWO equal rectangular roomimages fillingfourquadrants, no gutters/borders/text. EACH quadrant a complete TOP-DOWN orthographic interior with south exit at horizontalcenter loweredge, clear centralfloor columns8\u201340 rows12\u201327, small objects along north/sidewallonly. Crisp high-end32-bitJRPG pixelclusters, rich controlledcolors, no smoothillustration, no actors/creatures/UI. TOPLEFT: warm ivory/lapis art-city provisioner shop, shelves/jars/baskets and northcounter, sunny goldenlight. TOPRIGHT: warm ochre/blue inn lounge, northfireplace, sidebeds/sofas, tiny diningtables outside centralfloor. BOTTOMLEFT: WHITE ALABASTER sanctuary/clinic, palegold/lavender fixtures, side couches and water basin, northern healing dais, sereneopalpalette. BOTTOMRIGHT: warm art-city leaderhall, saffron/gold mosaics, wide clear central battlefloor, elegant northdais with lectern, rose-red banners and ivoryarches. Unique detailedpixelinteriors, each composition isolated to its exact quarter."
+  },
+  "corrections": {
+    "cayfen": "Use case: precise-object-edit. EDIT TARGET: supplied top-down pixel-art city map. Preserve pixel art style, palette, quality, upper half city, north buildings, fountain, and broad horizontal street EXACTLY. Change ONLY LOWER HALF: shorten the two southern buildings vertically so their south-facing front doors end around 78% down the canvas (logical row25 in a32-row map), leaving a continuous broad flat WALKABLE golden-paved promenade beneath them at rows27\u201330. Keep doors at logical x10 and x38. The new lower promenade must connect both doorstep approaches to the central vertical boulevard and left/right margins, entirely clear of pots, trees, walls, stalls or tall props. Remove roof/facade bulk as needed to give this path real room, not crop the doors. Keep four buildings total and exquisite authored pixel masonry, small roofs and artist-shop detail; do not turn into flat icons. No people, text, grid, UI. 1536x1024 landscape, same exact top-down orthographic view. This is a functional game-map repair, clear lower connecting lane essential."
+  },
+  "processing": "nearest-neighbour normalization to 768x512, RGB WebP quality92; service sheet split at exact half-width/half-height into four independent rooms",
+  "runtime_artifacts": [
+    {
+      "path": "dist/assets/finale/env-burial.webp",
+      "bytes": 288384,
+      "sha256": "d835b4dcf108e79821d47066c08c8e0e1b2ed0ef2ec7f79bb4a8d42ab988e66a"
+    },
+    {
+      "path": "dist/assets/finale/env-cayfen-hall.webp",
+      "bytes": 158998,
+      "sha256": "d4dc48667200e11c8a51474476d37741f7150aef4e5d843f3f1e307ee432c3d7"
+    },
+    {
+      "path": "dist/assets/finale/env-cayfen.webp",
+      "bytes": 263184,
+      "sha256": "27d378e01a8a2e6c85d54369933c75ac0e6a847b26abfdbc46d72a22ab1badbc"
+    },
+    {
+      "path": "dist/assets/finale/env-darius.webp",
+      "bytes": 244126,
+      "sha256": "3d52c51fb4d7909a79af7b1472280b515b0887f3d7971fb7931ba8a37ec1d8ca"
+    },
+    {
+      "path": "dist/assets/finale/env-falls.webp",
+      "bytes": 279166,
+      "sha256": "5dc1270f393684723160d932d7e2255e04e4bc656e8427fa18b25c5ecf22c6ba"
+    },
+    {
+      "path": "dist/assets/finale/env-fei.webp",
+      "bytes": 282034,
+      "sha256": "0490255bb814e673d02bcb18bae97b29c8474c28f8f10225479c110666e43d3f"
+    },
+    {
+      "path": "dist/assets/finale/env-fortress.webp",
+      "bytes": 230344,
+      "sha256": "c404ac7e371063070b82a991fd6831e711c56b96cc2f47c7aab11b2f15233863"
+    },
+    {
+      "path": "dist/assets/finale/env-gallery.webp",
+      "bytes": 186324,
+      "sha256": "a37b34af013c02592384a72b1dff9150497c961222df7ff8e80b42ac34234ffb"
+    },
+    {
+      "path": "dist/assets/finale/env-guan.webp",
+      "bytes": 262260,
+      "sha256": "7ec1dbb052747b9ad6589d33c3b989c49faac8c65d32ea4b9dcd7ae7adc0e412"
+    },
+    {
+      "path": "dist/assets/finale/env-inn.webp",
+      "bytes": 162012,
+      "sha256": "56a737dca32e56639a66d6381721bd059f085e4c1f96ad9b3220a5c770b8a14a"
+    },
+    {
+      "path": "dist/assets/finale/env-mirror.webp",
+      "bytes": 233402,
+      "sha256": "a793a764009a8c125fc76ed567864b1985e3538176f66874196563812631f3ff"
+    },
+    {
+      "path": "dist/assets/finale/env-ramelle.webp",
+      "bytes": 268206,
+      "sha256": "275124038fbd3f9951a878a535372b26357b0a14248bacaad167ea960ab5a276"
+    },
+    {
+      "path": "dist/assets/finale/env-road.webp",
+      "bytes": 285392,
+      "sha256": "5dd3eb1456ffed6099718bfbda8b2e8477ccafde511a903e03ecbc99d67bc607"
+    },
+    {
+      "path": "dist/assets/finale/env-sanctuary.webp",
+      "bytes": 166410,
+      "sha256": "f019ae6dfea4bdd7ce0cffdd447fe5d7c91846b74e65a19c34e5f9322c0fbb6e"
+    },
+    {
+      "path": "dist/assets/finale/env-shop.webp",
+      "bytes": 171152,
+      "sha256": "049e48f0d4782b3d78537d4c97f796cffa4f3f5cff7eb039a4e9ba18e4d0280c"
+    },
+    {
+      "path": "dist/assets/finale/env-spore.webp",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "dist/assets/finale/env-terraces.webp",
+      "bytes": 288452,
+      "sha256": "fe5da453687dba71852a06a8193359bb8c3120c0382b0bd12fb67d3d8809f6b0"
+    }
+  ],
+  "total_bytes": 3769846
+}

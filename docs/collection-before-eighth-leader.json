@@ -1,0 +1,6672 @@
+{
+  "catalogue": 478,
+  "eligible": 462,
+  "missing": 0,
+  "splitFormsRemoved": [
+    "108",
+    "109",
+    "111",
+    "112",
+    "116",
+    "117",
+    "118",
+    "142",
+    "143",
+    "153",
+    "154",
+    "366",
+    "367",
+    "368",
+    "369",
+    "370",
+    "371",
+    "372",
+    "373",
+    "374",
+    "375",
+    "385",
+    "386",
+    "058",
+    "059",
+    "063",
+    "064",
+    "065",
+    "071",
+    "072",
+    "074",
+    "075",
+    "093",
+    "094"
+  ],
+  "species": [
+    {
+      "id": "001",
+      "name": "Scarimp",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "002",
+      "name": "Grimscar",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "003",
+      "name": "Noctafey",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "004",
+      "name": "Calibrit",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "005",
+      "name": "Severyn",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "006",
+      "name": "Axiomaro",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "007",
+      "name": "Ruffurn",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "008",
+      "name": "Revhound",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "009",
+      "name": "Revault",
+      "sources": [],
+      "exception": "Chosen starter family; other two excluded"
+    },
+    {
+      "id": "010",
+      "name": "Pennkit",
+      "sources": [
+        "march:DAY",
+        "march:NIGHT",
+        "scrub:DAY",
+        "dorelem:DAY",
+        "dorelem:NIGHT",
+        "philomere:DAY",
+        "philomere:NIGHT",
+        "scrub2:DAY",
+        "march2:DAY",
+        "march2:NIGHT",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "marchMeadow:NIGHT",
+        "dorelemFort:DAY",
+        "dorelemFort:NIGHT",
+        "philomereFort:DAY",
+        "philomereFort:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:DAY",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:DAY",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:DAY",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "011",
+      "name": "Hareald",
+      "sources": [
+        "evolve 010 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "scrub:DAY",
+        "dorelem:DAY",
+        "dorelem:NIGHT",
+        "philomere:DAY",
+        "philomere:NIGHT",
+        "scrub2:DAY",
+        "march2:DAY",
+        "march2:NIGHT",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "marchMeadow:NIGHT",
+        "dorelemFort:DAY",
+        "dorelemFort:NIGHT",
+        "philomereFort:DAY",
+        "philomereFort:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:DAY",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:DAY",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:DAY",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "012",
+      "name": "Tatterook",
+      "sources": [
+        "dorelem:DAY",
+        "dorelem:NIGHT",
+        "philomere:DAY",
+        "philomere:NIGHT",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "dorelemFort:DAY",
+        "dorelemFort:NIGHT",
+        "philomereFort:DAY",
+        "philomereFort:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:DAY",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:DAY",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:DAY",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "013",
+      "name": "Corvassal",
+      "sources": [
+        "evolve 012 / LEVEL",
+        "dorelem:DAY",
+        "dorelem:NIGHT",
+        "philomere:DAY",
+        "philomere:NIGHT",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "dorelemFort:DAY",
+        "dorelemFort:NIGHT",
+        "philomereFort:DAY",
+        "philomereFort:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:DAY",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:DAY",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:DAY",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "014",
+      "name": "Mottlet",
+      "sources": [
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "dorelem:DAY",
+        "dorelem:NIGHT",
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "philomere:DAY",
+        "philomere:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "dorelemFort:DAY",
+        "dorelemFort:NIGHT",
+        "philomereFort:DAY",
+        "philomereFort:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:DAY",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:DAY",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:DAY",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "015",
+      "name": "Bastimole",
+      "sources": [
+        "passFoothills:DAY",
+        "stormVerge:DAY",
+        "stormVerge:NIGHT",
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormHollow:DAY",
+        "stormHollow:NIGHT",
+        "stormWatch:DAY",
+        "stormWatch:NIGHT",
+        "stormApproach:DAY",
+        "stormApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "016",
+      "name": "Tokenail",
+      "sources": [
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "017",
+      "name": "Ampullusk",
+      "sources": [
+        "evolve 016 / LEVEL",
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "018",
+      "name": "Rouncolt",
+      "sources": [
+        "dorelem:DAY",
+        "philomere:DAY",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "greenCut:DAY",
+        "greenCut:NIGHT",
+        "dorelemFort:DAY",
+        "philomereFort:DAY",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormDariusCamp:DAY",
+        "stormDariusRidge:DAY",
+        "stormDariusCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "019",
+      "name": "Coursire",
+      "sources": [
+        "evolve 018 / LEVEL",
+        "dorelem:DAY",
+        "philomere:DAY",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "greenCut:DAY",
+        "greenCut:NIGHT",
+        "dorelemFort:DAY",
+        "philomereFort:DAY",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormDariusCamp:DAY",
+        "stormDariusRidge:DAY",
+        "stormDariusCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "020",
+      "name": "Destridon",
+      "sources": [
+        "evolve 019 / LEVEL",
+        "evolve 018 / LEVEL",
+        "dorelem:DAY",
+        "philomere:DAY",
+        "rescueGlade:DAY",
+        "rescueGlade:NIGHT",
+        "anglersReach:DAY",
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "greenCut:DAY",
+        "greenCut:NIGHT",
+        "dorelemFort:DAY",
+        "philomereFort:DAY",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormDariusCamp:DAY",
+        "stormDariusRidge:DAY",
+        "stormDariusCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "021",
+      "name": "Keelcrab",
+      "sources": [
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "fishing contest",
+        "jetty:philomereBackwaters:NIGHT",
+        "jetty:smugglersWeir:DAY",
+        "jetty:smugglersWeir:NIGHT",
+        "jetty:rivercause:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "022",
+      "name": "Galleonid",
+      "sources": [
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave3:DAY",
+        "waranCave3:NIGHT",
+        "waranCave4:DAY",
+        "waranCave4:NIGHT",
+        "rivercause:NIGHT",
+        "rivercause2:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "023",
+      "name": "Wickmidge",
+      "sources": [
+        "dorelem:NIGHT",
+        "philomere:NIGHT",
+        "rescueGlade:NIGHT",
+        "anglersReach:NIGHT",
+        "orchardFirebreak:DAY",
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:DAY",
+        "orchardEmberwood:NIGHT",
+        "dorelemFort:NIGHT",
+        "philomereFort:NIGHT",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "024",
+      "name": "Vesperyre",
+      "sources": [
+        "rivercause:NIGHT",
+        "rivercause2:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:NIGHT",
+        "orchardVerge:NIGHT",
+        "orchardBend:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "025",
+      "name": "Caprune",
+      "sources": [
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT",
+        "burrowHollow:NIGHT",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "026",
+      "name": "Ibracle",
+      "sources": [
+        "passFoothills:DAY",
+        "passRidge:DAY",
+        "sunkenShrine3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "027",
+      "name": "Snickal",
+      "sources": [
+        "scrub:NIGHT",
+        "dorelem:NIGHT",
+        "northRoad:NIGHT",
+        "philomere:NIGHT",
+        "scrub2:NIGHT",
+        "northRoad2:NIGHT",
+        "northRoad3:NIGHT",
+        "rescueGlade:NIGHT",
+        "anglersReach:NIGHT",
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "dorelemFort:NIGHT",
+        "philomereFort:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "028",
+      "name": "Cackena",
+      "sources": [
+        "evolve 027 / LEVEL",
+        "scrub:NIGHT",
+        "dorelem:NIGHT",
+        "northRoad:NIGHT",
+        "philomere:NIGHT",
+        "scrub2:NIGHT",
+        "northRoad2:NIGHT",
+        "northRoad3:NIGHT",
+        "rescueGlade:NIGHT",
+        "anglersReach:NIGHT",
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "dorelemFort:NIGHT",
+        "philomereFort:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "029",
+      "name": "Carriena",
+      "sources": [
+        "smugglersWeir:NIGHT",
+        "saltFlats:NIGHT",
+        "orchardFirebreak:NIGHT",
+        "orchardAshSlope:NIGHT",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:NIGHT",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "030",
+      "name": "Bantisk",
+      "sources": [
+        "orchardBend:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "031",
+      "name": "Cockatrix",
+      "sources": [
+        "evolve 030 / LEVEL",
+        "orchardBend:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "032",
+      "name": "Regalisk",
+      "sources": [
+        "evolve 031 / LEVEL",
+        "evolve 030 / LEVEL",
+        "orchardBend:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "033",
+      "name": "Eyret",
+      "sources": [
+        "dorelem:DAY",
+        "philomere:DAY",
+        "rescueGlade:DAY",
+        "anglersReach:DAY",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "rivercause2:DAY",
+        "rivercause2:NIGHT",
+        "dorelemFort:DAY",
+        "philomereFort:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormDariusCamp:DAY",
+        "stormDariusRidge:DAY",
+        "stormDariusCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "034",
+      "name": "Falchawk",
+      "sources": [
+        "evolve 033 / LEVEL",
+        "dorelem:DAY",
+        "philomere:DAY",
+        "rescueGlade:DAY",
+        "anglersReach:DAY",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "rivercause2:DAY",
+        "rivercause2:NIGHT",
+        "dorelemFort:DAY",
+        "philomereFort:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT",
+        "stormRelay:DAY",
+        "stormDariusCamp:DAY",
+        "stormDariusRidge:DAY",
+        "stormDariusCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "035",
+      "name": "Dromble",
+      "sources": [
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "036",
+      "name": "Caskamel",
+      "sources": [
+        "northRoad:DAY",
+        "northRoad2:DAY",
+        "northRoad3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "037",
+      "name": "Cisternel",
+      "sources": [
+        "saltFlats:DAY",
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:DAY",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "038",
+      "name": "Stinglet",
+      "sources": [
+        "saltFlats:DAY",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "039",
+      "name": "Trebuchor",
+      "sources": [
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "040",
+      "name": "Niblust",
+      "sources": [
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT",
+        "greenFern:DAY",
+        "greenFern:NIGHT",
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "courtPlinths:DAY",
+        "courtPlinths:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "041",
+      "name": "Locruin",
+      "sources": [
+        "orchardBend:NIGHT",
+        "orchardAshSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "042",
+      "name": "Sprigfawn",
+      "sources": [
+        "dorelem:DAY",
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "philomere:DAY",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT",
+        "rescueGlade:DAY",
+        "anglersReach:DAY",
+        "dorelemFort:DAY",
+        "philomereFort:DAY",
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "courtPlinths:DAY",
+        "courtPlinths:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "emptyThrone:DAY",
+        "emptyThrone:NIGHT",
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT",
+        "stormRelay:DAY",
+        "stormDariusCamp:DAY",
+        "stormDariusRidge:DAY",
+        "stormDariusCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "043",
+      "name": "Olehart",
+      "sources": [
+        "orchardVerge:DAY",
+        "orchardBend:DAY",
+        "orchardRenewal:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove2:DAY",
+        "greenFern:DAY",
+        "greenTerrace:DAY",
+        "greenApproach:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "044",
+      "name": "Cubanner",
+      "sources": [
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "045",
+      "name": "Prideguard",
+      "sources": [
+        "evolve 044 / LEVEL",
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "046",
+      "name": "Leonarch",
+      "sources": [
+        "evolve 045 / LEVEL",
+        "evolve 044 / LEVEL",
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "047",
+      "name": "Rutlet",
+      "sources": [
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT",
+        "passEastSlope:DAY",
+        "passEastSlope:NIGHT",
+        "orchardAshSlope:DAY",
+        "orchardAshSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "048",
+      "name": "Ramporque",
+      "sources": [
+        "evolve 047 / LEVEL",
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT",
+        "passEastSlope:DAY",
+        "passEastSlope:NIGHT",
+        "orchardAshSlope:DAY",
+        "orchardAshSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "049",
+      "name": "Mirascal",
+      "sources": [
+        "orchardFirebreak:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "050",
+      "name": "Sunscint",
+      "sources": [
+        "evolve 049 / LEVEL",
+        "orchardFirebreak:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "051",
+      "name": "Rillip",
+      "sources": [
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT",
+        "fishing contest",
+        "jetty:medicinePath:DAY",
+        "jetty:medicinePath:NIGHT",
+        "jetty:glassSluice:DAY",
+        "jetty:glassSluice:NIGHT",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT",
+        "jetty:philomereBackwaters:DAY",
+        "jetty:philomereBackwaters:NIGHT",
+        "jetty:smugglersWeir:DAY",
+        "jetty:smugglersWeir:NIGHT",
+        "jetty:rivercause:DAY",
+        "jetty:rivercause:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "052",
+      "name": "Galvaneel",
+      "sources": [
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:DAY",
+        "smugglersWeir:DAY",
+        "sunkenShrine:DAY",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "053",
+      "name": "Scripquid",
+      "sources": [
+        "medicinePath:NIGHT",
+        "medicinePath2:NIGHT",
+        "reedSanctuary:NIGHT",
+        "coralGrotto:NIGHT",
+        "moonlitDepths:NIGHT",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:NIGHT",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:NIGHT",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:NIGHT",
+        "fishing contest",
+        "jetty:medicinePath:NIGHT",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:NIGHT",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT",
+        "jetty:smugglersWeir:DAY",
+        "jetty:smugglersWeir:NIGHT",
+        "jetty:rivercause:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "054",
+      "name": "Palimopus",
+      "sources": [
+        "rivercause:DAY",
+        "rivercause2:DAY",
+        "rivercause2:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "055",
+      "name": "Chalkit",
+      "sources": [
+        "passFoothills:DAY",
+        "passFoothills:NIGHT",
+        "greenVault:DAY",
+        "greenVault:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "056",
+      "name": "Albannor",
+      "sources": [
+        "rivercause2:DAY",
+        "passEastSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "057",
+      "name": "Censmoke",
+      "sources": [
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "058",
+      "name": "Thurafume",
+      "sources": [
+        "evolve 057 / STORY_CHOICE",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "059",
+      "name": "Malifume",
+      "sources": [
+        "evolve 057 / STORY_CHOICE",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "060",
+      "name": "Pomling",
+      "sources": [
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT",
+        "orchardCanopy:DAY",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail3:DAY",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "061",
+      "name": "Granadove",
+      "sources": [
+        "rivercause:DAY",
+        "philomereBackwaters:DAY",
+        "orchardVerge:DAY",
+        "orchardVerge:NIGHT",
+        "greenCanopy:DAY",
+        "greenBraid:DAY",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "062",
+      "name": "Votress",
+      "sources": [
+        "glassSluice:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "063",
+      "name": "Sigilume",
+      "sources": [
+        "evolve 062 / LEVEL",
+        "glassSluice:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "064",
+      "name": "Sepulshade",
+      "sources": [
+        "evolve 062 / LEVEL",
+        "glassSluice:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "065",
+      "name": "Idolure",
+      "sources": [
+        "evolve 062 / LEVEL",
+        "glassSluice:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "066",
+      "name": "Brackhound",
+      "sources": [
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "067",
+      "name": "Mastigrim",
+      "sources": [
+        "evolve 066 / LEVEL",
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "068",
+      "name": "Cerberrood",
+      "sources": [
+        "evolve 067 / LEVEL",
+        "evolve 066 / LEVEL",
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "069",
+      "name": "Murmite",
+      "sources": [
+        "tunnels:NIGHT",
+        "tunnels2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "070",
+      "name": "Cairant",
+      "sources": [
+        "passCrystalPocket:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "071",
+      "name": "Serapine",
+      "sources": [
+        "evolve 070 / STORY_CHOICE",
+        "passCrystalPocket:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "072",
+      "name": "Pandemne",
+      "sources": [
+        "evolve 070 / STORY_CHOICE",
+        "passCrystalPocket:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "073",
+      "name": "Flaggrim",
+      "sources": [
+        "greenCut:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "074",
+      "name": "Oriflamme",
+      "sources": [
+        "evolve 073 / STORY_CHOICE",
+        "greenCut:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "075",
+      "name": "Tattereign",
+      "sources": [
+        "evolve 073 / STORY_CHOICE",
+        "greenCut:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "076",
+      "name": "Grailhare",
+      "sources": [
+        "courtPlinths:DAY",
+        "courtPlinths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "077",
+      "name": "Saltinel",
+      "sources": [
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "078",
+      "name": "Bethlisk",
+      "sources": [
+        "rivercause:DAY",
+        "rivercause2:DAY",
+        "philomereBackwaters:DAY",
+        "smugglersWeir:DAY",
+        "saltFlats:DAY",
+        "sunkenShrine:DAY",
+        "sunkenShrine2:DAY",
+        "sunkenShrine3:DAY",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail3:DAY",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "079",
+      "name": "Foamwhelp",
+      "sources": [
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT",
+        "coralGrotto:DAY",
+        "coralGrotto:NIGHT",
+        "moonlitDepths:DAY",
+        "moonlitDepths:NIGHT",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:DAY",
+        "coralGrottoTrail3:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:DAY",
+        "moonlitDepthsTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT",
+        "fishing contest",
+        "jetty:medicinePath:DAY",
+        "jetty:medicinePath:NIGHT",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT",
+        "jetty:philomereBackwaters:DAY",
+        "jetty:philomereBackwaters:NIGHT",
+        "jetty:rivercause:DAY",
+        "jetty:rivercause:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "080",
+      "name": "Liontide",
+      "sources": [
+        "rivercause2:DAY",
+        "greenFalls:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "081",
+      "name": "Dunetuft",
+      "sources": [
+        "saltFlats:DAY",
+        "saltFlats:NIGHT",
+        "passEastSlope:DAY",
+        "passEastSlope:NIGHT",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:DAY",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "082",
+      "name": "Accordacal",
+      "sources": [
+        "saltFlats:DAY",
+        "passLowerTunnel:NIGHT",
+        "passUpperTunnel:NIGHT",
+        "passEastSlope:NIGHT",
+        "passCrystalPocket:NIGHT",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "083",
+      "name": "Rufram",
+      "sources": [
+        "orchardFirebreak:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "084",
+      "name": "Fordossa",
+      "sources": [
+        "orchardEmberwood:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "085",
+      "name": "Tyrquill",
+      "sources": [
+        "rivercause2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "086",
+      "name": "Wraithrone",
+      "sources": [
+        "smugglersWeir:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "087",
+      "name": "Regulet",
+      "sources": [
+        "orchardCanopy:DAY",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "088",
+      "name": "Thronelorn",
+      "sources": [
+        "evolve 087 / LEVEL",
+        "orchardCanopy:DAY",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "089",
+      "name": "Cyprigon",
+      "sources": [
+        "saltFlats:DAY",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "090",
+      "name": "Oathlet",
+      "sources": [
+        "hospiceRoad:DAY",
+        "hospiceRoad2:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "091",
+      "name": "Parlethorn",
+      "sources": [
+        "sunkenShrine3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "092",
+      "name": "Jerbune",
+      "sources": [
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "093",
+      "name": "Concordune",
+      "sources": [
+        "evolve 092 / STORY_CHOICE",
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "094",
+      "name": "Sundune",
+      "sources": [
+        "evolve 092 / STORY_CHOICE",
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "095",
+      "name": "Pennmot",
+      "sources": [
+        "relicCrags:DAY",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "096",
+      "name": "Grudgemont",
+      "sources": [
+        "evolve 095 / LEVEL",
+        "relicCrags:DAY",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "097",
+      "name": "Courstoat",
+      "sources": [
+        "march2:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "098",
+      "name": "Reversire",
+      "sources": [
+        "evolve 097 / LEVEL",
+        "march2:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "099",
+      "name": "Whisbat",
+      "sources": [
+        "scrub:NIGHT",
+        "tunnels:NIGHT",
+        "dorelem:NIGHT",
+        "northRoad:NIGHT",
+        "hospiceRoad:NIGHT",
+        "philomere:NIGHT",
+        "scrub2:NIGHT",
+        "tunnels2:NIGHT",
+        "northRoad2:NIGHT",
+        "northRoad3:NIGHT",
+        "hospiceRoad2:NIGHT",
+        "rescueGlade:NIGHT",
+        "anglersReach:NIGHT",
+        "burrowHollow:DAY",
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "orchardCanopy:NIGHT",
+        "dorelemFort:NIGHT",
+        "philomereFort:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail3:DAY",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:NIGHT",
+        "stormRelay:NIGHT",
+        "stormDariusCamp:NIGHT",
+        "stormDariusRidge:NIGHT",
+        "stormDariusCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "100",
+      "name": "Pactecho",
+      "sources": [
+        "rivercause2:NIGHT",
+        "passFoothills:NIGHT",
+        "orchardVerge:NIGHT",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "101",
+      "name": "Limbud",
+      "sources": [
+        "rescueGlade:DAY",
+        "orchardVerge:DAY",
+        "orchardVerge:NIGHT",
+        "orchardRenewal:DAY",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:DAY",
+        "pilgrimGrove3:NIGHT",
+        "greenFern:DAY",
+        "greenFern:NIGHT",
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT",
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "102",
+      "name": "Laureveil",
+      "sources": [
+        "evolve 101 / LEVEL",
+        "rescueGlade:DAY",
+        "orchardVerge:DAY",
+        "orchardVerge:NIGHT",
+        "orchardRenewal:DAY",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:DAY",
+        "pilgrimGrove3:NIGHT",
+        "greenFern:DAY",
+        "greenFern:NIGHT",
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT",
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "103",
+      "name": "Amplet",
+      "sources": [
+        "glassSluice:DAY",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "104",
+      "name": "Vortamor",
+      "sources": [
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "105",
+      "name": "Nibblub",
+      "sources": [
+        "rivercause:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "106",
+      "name": "Gourbog",
+      "sources": [
+        "rivercause:NIGHT",
+        "philomereBackwaters:DAY",
+        "philomereBackwaters:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:DAY",
+        "philomereBackwatersTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "107",
+      "name": "Pebbettle",
+      "sources": [
+        "scrub:DAY",
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "scrub2:DAY",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "rivercause2:DAY",
+        "passLowerTunnel:DAY",
+        "passEastSlope:DAY",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormGlass:DAY",
+        "stormGlass:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "108",
+      "name": "Avaroll",
+      "sources": [
+        "evolve 107 / LEVEL",
+        "scrub:DAY",
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "scrub2:DAY",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "rivercause2:DAY",
+        "passLowerTunnel:DAY",
+        "passEastSlope:DAY",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormGlass:DAY",
+        "stormGlass:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "109",
+      "name": "Prodiglow",
+      "sources": [
+        "evolve 107 / LEVEL",
+        "scrub:DAY",
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "scrub2:DAY",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "rivercause2:DAY",
+        "passLowerTunnel:DAY",
+        "passEastSlope:DAY",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormGlass:DAY",
+        "stormGlass:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "110",
+      "name": "Styxlet",
+      "sources": [
+        "tunnels:DAY",
+        "medicinePath:DAY",
+        "tunnels2:DAY",
+        "medicinePath2:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "sunkenShrine:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "111",
+      "name": "Ragegill",
+      "sources": [
+        "evolve 110 / LEVEL",
+        "tunnels:DAY",
+        "medicinePath:DAY",
+        "tunnels2:DAY",
+        "medicinePath2:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "sunkenShrine:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "112",
+      "name": "Sulkoad",
+      "sources": [
+        "evolve 110 / LEVEL",
+        "tunnels:DAY",
+        "medicinePath:DAY",
+        "tunnels2:DAY",
+        "medicinePath2:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "sunkenShrine:NIGHT",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "113",
+      "name": "Embertle",
+      "sources": [
+        "orchardFirebreak:DAY",
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:DAY",
+        "orchardEmberwood:NIGHT",
+        "orchardAshSlope:DAY",
+        "orchardAshSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "114",
+      "name": "Sepulchel",
+      "sources": [
+        "orchardFirebreak:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "115",
+      "name": "Triskit",
+      "sources": [
+        "philomereBackwaters:DAY",
+        "saltFlats:NIGHT",
+        "orchardVerge:NIGHT",
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:NIGHT",
+        "orchardAshSlope:NIGHT",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "116",
+      "name": "Phlegacorn",
+      "sources": [
+        "evolve 115 / LEVEL",
+        "philomereBackwaters:DAY",
+        "saltFlats:NIGHT",
+        "orchardVerge:NIGHT",
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:NIGHT",
+        "orchardAshSlope:NIGHT",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "117",
+      "name": "Harpbriar",
+      "sources": [
+        "evolve 115 / LEVEL",
+        "philomereBackwaters:DAY",
+        "saltFlats:NIGHT",
+        "orchardVerge:NIGHT",
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:NIGHT",
+        "orchardAshSlope:NIGHT",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "118",
+      "name": "Searwaste",
+      "sources": [
+        "evolve 115 / LEVEL",
+        "philomereBackwaters:DAY",
+        "saltFlats:NIGHT",
+        "orchardVerge:NIGHT",
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:NIGHT",
+        "orchardAshSlope:NIGHT",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail3:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "119",
+      "name": "Feignid",
+      "sources": [
+        "orchardBend:DAY",
+        "orchardBend:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "120",
+      "name": "Malebolace",
+      "sources": [
+        "evolve 119 / LEVEL",
+        "orchardBend:DAY",
+        "orchardBend:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "121",
+      "name": "Kincoil",
+      "sources": [
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "122",
+      "name": "Pactolin",
+      "sources": [
+        "evolve 121 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "123",
+      "name": "Cocytalon",
+      "sources": [
+        "evolve 122 / LEVEL",
+        "evolve 121 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "124",
+      "name": "Hexamuse",
+      "sources": [
+        "pilgrimGrove:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "125",
+      "name": "Scarabel",
+      "sources": [
+        "orchardCanopy:DAY",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "126",
+      "name": "Bulwarkab",
+      "sources": [
+        "evolve 125 / LEVEL",
+        "orchardCanopy:DAY",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "127",
+      "name": "Mortargek",
+      "sources": [
+        "passLowerTunnel:DAY",
+        "passLowerTunnel:NIGHT",
+        "passUpperTunnel:DAY",
+        "passUpperTunnel:NIGHT",
+        "sunkenShrine3:DAY",
+        "sunkenShrine3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "128",
+      "name": "Sallyskink",
+      "sources": [
+        "evolve 127 / LEVEL",
+        "passLowerTunnel:DAY",
+        "passLowerTunnel:NIGHT",
+        "passUpperTunnel:DAY",
+        "passUpperTunnel:NIGHT",
+        "sunkenShrine3:DAY",
+        "sunkenShrine3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "129",
+      "name": "Paxibis",
+      "sources": [
+        "greenMeadow:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "130",
+      "name": "Veiltern",
+      "sources": [
+        "moonlitDepths:NIGHT",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "131",
+      "name": "Galebrass",
+      "sources": [
+        "evolve 130 / LEVEL",
+        "moonlitDepths:NIGHT",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "132",
+      "name": "Trucepoe",
+      "sources": [
+        "greenLantern:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "133",
+      "name": "Wadopot",
+      "sources": [
+        "medicinePath:DAY",
+        "medicinePath2:DAY",
+        "reedSanctuary:DAY",
+        "coralGrotto:DAY",
+        "moonlitDepths:DAY",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail3:DAY",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail3:DAY",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail3:DAY",
+        "fishing contest",
+        "jetty:medicinePath:DAY",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:DAY",
+        "jetty:moonlitDepths:DAY",
+        "jetty:smugglersWeir:DAY",
+        "jetty:smugglersWeir:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "134",
+      "name": "Fetterpot",
+      "sources": [
+        "sunkenShrine:DAY",
+        "sunkenShrine2:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "135",
+      "name": "Pearlfrond",
+      "sources": [
+        "moonlitDepths:DAY",
+        "waranCave4:DAY",
+        "waranCave4:NIGHT",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove2:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenApproach:DAY",
+        "greenApproach:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail3:DAY",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "136",
+      "name": "Regnacra",
+      "sources": [
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove3:DAY",
+        "sunkenShrine2:DAY",
+        "sunkenShrine3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "137",
+      "name": "Skatelk",
+      "sources": [
+        "passRidge:DAY",
+        "passRidge:NIGHT",
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "138",
+      "name": "Rimehart",
+      "sources": [
+        "evolve 137 / LEVEL",
+        "passRidge:DAY",
+        "passRidge:NIGHT",
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "139",
+      "name": "Reedile",
+      "sources": [
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "coralGrotto:DAY",
+        "coralGrotto:NIGHT",
+        "moonlitDepths:DAY",
+        "moonlitDepths:NIGHT",
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:DAY",
+        "coralGrottoTrail3:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:DAY",
+        "moonlitDepthsTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "courtPlinths:DAY",
+        "courtPlinths:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "emptyThrone:DAY",
+        "emptyThrone:NIGHT",
+        "fishing contest",
+        "jetty:medicinePath:DAY",
+        "jetty:medicinePath:NIGHT",
+        "jetty:glassSluice:DAY",
+        "jetty:glassSluice:NIGHT",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT",
+        "jetty:philomereBackwaters:DAY",
+        "jetty:philomereBackwaters:NIGHT",
+        "jetty:smugglersWeir:DAY",
+        "jetty:smugglersWeir:NIGHT",
+        "jetty:rivercause:DAY",
+        "jetty:rivercause:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "140",
+      "name": "Deltacroc",
+      "sources": [
+        "orchardRenewal:DAY",
+        "pilgrimGrove2:DAY",
+        "sunkenShrine:DAY",
+        "sunkenShrine2:DAY",
+        "sunkenShrine3:DAY",
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenBraid:DAY",
+        "greenApproach:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "141",
+      "name": "Pilgrimp",
+      "sources": [
+        "northRoad:DAY",
+        "hospiceRoad:DAY",
+        "northRoad2:DAY",
+        "northRoad3:DAY",
+        "hospiceRoad2:DAY",
+        "orchardVerge:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove3:DAY",
+        "pilgrimGrove3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "142",
+      "name": "Ganderiel",
+      "sources": [
+        "evolve 141 / LEVEL",
+        "northRoad:DAY",
+        "hospiceRoad:DAY",
+        "northRoad2:DAY",
+        "northRoad3:DAY",
+        "hospiceRoad2:DAY",
+        "orchardVerge:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove3:DAY",
+        "pilgrimGrove3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "143",
+      "name": "Caproclaim",
+      "sources": [
+        "evolve 141 / LEVEL",
+        "northRoad:DAY",
+        "hospiceRoad:DAY",
+        "northRoad2:DAY",
+        "northRoad3:DAY",
+        "hospiceRoad2:DAY",
+        "orchardVerge:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove2:DAY",
+        "pilgrimGrove3:DAY",
+        "pilgrimGrove3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "144",
+      "name": "Dartfin",
+      "sources": [
+        "stormBluffs:DAY",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "145",
+      "name": "Lusivolt",
+      "sources": [
+        "evolve 144 / LEVEL",
+        "stormBluffs:DAY",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "146",
+      "name": "Fieflet",
+      "sources": [
+        "burrowHollow:DAY",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "147",
+      "name": "Pledrake",
+      "sources": [
+        "evolve 146 / LEVEL",
+        "burrowHollow:DAY",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "148",
+      "name": "Decimite",
+      "sources": [
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "149",
+      "name": "Tithelect",
+      "sources": [
+        "evolve 148 / LEVEL",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "150",
+      "name": "Lyrlet",
+      "sources": [
+        "greenApproach:DAY",
+        "greenApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "151",
+      "name": "Aquilore",
+      "sources": [
+        "sunBank:NIGHT",
+        "burialGrove:NIGHT",
+        "sunFalls:NIGHT",
+        "sunTerraces:NIGHT",
+        "guanApproach:NIGHT",
+        "guanShrine:NIGHT",
+        "feiApproach:NIGHT",
+        "feiCrossing:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "152",
+      "name": "Acremink",
+      "sources": [
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT",
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "153",
+      "name": "Longspurr",
+      "sources": [
+        "evolve 152 / LEVEL",
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT",
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "154",
+      "name": "Elixirine",
+      "sources": [
+        "evolve 152 / LEVEL",
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT",
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT",
+        "rescueGladeTrail2:DAY",
+        "rescueGladeTrail2:NIGHT",
+        "rescueGladeTrail3:DAY",
+        "rescueGladeTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "155",
+      "name": "Lanspup",
+      "sources": [
+        "greenVault:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "156",
+      "name": "Dirgehound",
+      "sources": [
+        "evolve 155 / LEVEL",
+        "greenVault:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "157",
+      "name": "Choughlet",
+      "sources": [
+        "passRidge:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "158",
+      "name": "Ascalough",
+      "sources": [
+        "passSummit:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "159",
+      "name": "Tempestrel",
+      "sources": [
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:NIGHT",
+        "stormVerge:DAY",
+        "stormVerge:NIGHT",
+        "stormHollow:DAY",
+        "stormHollow:NIGHT",
+        "stormWatch:DAY",
+        "stormWatch:NIGHT",
+        "stormApproach:DAY",
+        "stormApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "160",
+      "name": "Vowcolt",
+      "sources": [
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "161",
+      "name": "Oathcourser",
+      "sources": [
+        "sunBank:DAY",
+        "burialGrove:DAY",
+        "sunFalls:DAY",
+        "sunTerraces:DAY",
+        "guanApproach:DAY",
+        "guanShrine:DAY",
+        "feiApproach:DAY",
+        "feiCrossing:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "162",
+      "name": "Chantlet",
+      "sources": [
+        "orchardBend:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "163",
+      "name": "Sarumoss",
+      "sources": [
+        "orchardRenewal:DAY",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove3:DAY",
+        "greenMeadow:DAY",
+        "greenTerrace:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "164",
+      "name": "Caelynx",
+      "sources": [
+        "unique quest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "165",
+      "name": "Tellurion",
+      "sources": [
+        "unique quest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "166",
+      "name": "Gehennuar",
+      "sources": [
+        "finale unique:gehennuar (before leader eight)"
+      ],
+      "exception": null
+    },
+    {
+      "id": "167",
+      "name": "Dustisk",
+      "sources": [
+        "greenCut:DAY",
+        "greenCut:NIGHT",
+        "greenFern:DAY",
+        "greenFern:NIGHT",
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT",
+        "greenLantern:DAY",
+        "greenLantern:NIGHT",
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "168",
+      "name": "Cairisk",
+      "sources": [
+        "evolve 167 / LEVEL",
+        "greenCut:DAY",
+        "greenCut:NIGHT",
+        "greenFern:DAY",
+        "greenFern:NIGHT",
+        "greenMeadow:DAY",
+        "greenMeadow:NIGHT",
+        "greenLantern:DAY",
+        "greenLantern:NIGHT",
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "169",
+      "name": "Mausolisk",
+      "sources": [
+        "sunBank:DAY",
+        "burialGrove:DAY",
+        "sunFalls:DAY",
+        "sunTerraces:DAY",
+        "sporeRim:NIGHT",
+        "sporeDepths:NIGHT",
+        "sporeBridge:NIGHT",
+        "sporeCrown:NIGHT",
+        "guanApproach:DAY",
+        "guanShrine:DAY",
+        "feiApproach:DAY",
+        "feiCrossing:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "170",
+      "name": "Chipkid",
+      "sources": [
+        "greenCanopy:DAY",
+        "greenCanopy:NIGHT",
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "greenVault:DAY",
+        "greenVault:NIGHT",
+        "greenApproach:DAY",
+        "greenApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "171",
+      "name": "Rimebex",
+      "sources": [
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "172",
+      "name": "Aegishorn",
+      "sources": [
+        "sunBank:DAY",
+        "burialGrove:DAY",
+        "sunFalls:DAY",
+        "sunTerraces:DAY",
+        "sporeRim:DAY",
+        "sporeDepths:DAY",
+        "sporeBridge:DAY",
+        "sporeCrown:DAY",
+        "guanApproach:DAY",
+        "guanShrine:DAY",
+        "feiApproach:DAY",
+        "feiCrossing:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "173",
+      "name": "Tianzhar",
+      "sources": [
+        "unique quest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "174",
+      "name": "Cruxwyrm",
+      "sources": [
+        "unique quest",
+        "finale unique:crux (before leader eight)"
+      ],
+      "exception": null
+    },
+    {
+      "id": "175",
+      "name": "Feirong",
+      "sources": [
+        "unique quest",
+        "finale unique:fei (before leader eight)"
+      ],
+      "exception": null
+    },
+    {
+      "id": "176",
+      "name": "Paleursa",
+      "sources": [],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "177",
+      "name": "Raptyrale",
+      "sources": [],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "178",
+      "name": "Sidermite",
+      "sources": [],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "179",
+      "name": "Xenolithid",
+      "sources": [
+        "stormGlass:DAY",
+        "stormGlass:NIGHT"
+      ],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "180",
+      "name": "Gravodo",
+      "sources": [],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "181",
+      "name": "Cairnodo",
+      "sources": [],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "182",
+      "name": "Kronodo",
+      "sources": [],
+      "exception": "Chosen fossil family; other three excluded"
+    },
+    {
+      "id": "183",
+      "name": "Guanrong",
+      "sources": [
+        "unique quest",
+        "finale unique:guan (before leader eight)"
+      ],
+      "exception": null
+    },
+    {
+      "id": "184",
+      "name": "Liubeirow",
+      "sources": [
+        "unique quest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "185",
+      "name": "Waranwei",
+      "sources": [
+        "unique quest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "186",
+      "name": "Suncub",
+      "sources": [
+        "finale unique:suncub (before leader eight)"
+      ],
+      "exception": null
+    },
+    {
+      "id": "187",
+      "name": "Cehong",
+      "sources": [
+        "evolve 186 / LEVEL",
+        "finale unique:suncub (before leader eight)"
+      ],
+      "exception": null
+    },
+    {
+      "id": "188",
+      "name": "Wispindle",
+      "sources": [
+        "march:NIGHT",
+        "march2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "189",
+      "name": "Pallantern",
+      "sources": [
+        "orchardFirebreak:NIGHT",
+        "orchardEmberwood:NIGHT",
+        "sunkenShrine3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "190",
+      "name": "Zipplet",
+      "sources": [
+        "march:DAY",
+        "march2:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "191",
+      "name": "Voltrake",
+      "sources": [
+        "stormVerge:DAY",
+        "stormVerge:NIGHT",
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormGlass:DAY",
+        "stormGlass:NIGHT",
+        "stormHollow:DAY",
+        "stormHollow:NIGHT",
+        "stormWatch:DAY",
+        "stormWatch:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT",
+        "stormApproach:DAY",
+        "stormApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "192",
+      "name": "Thimblit",
+      "sources": [
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT",
+        "orchardVerge:DAY",
+        "orchardVerge:NIGHT",
+        "orchardRenewal:DAY",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:NIGHT",
+        "pilgrimGrove3:DAY",
+        "pilgrimGrove3:NIGHT",
+        "greenCanopy:DAY",
+        "greenCanopy:NIGHT",
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "courtPlinths:DAY",
+        "courtPlinths:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "193",
+      "name": "Velourmoth",
+      "sources": [
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "greenFern:DAY",
+        "greenFalls:NIGHT",
+        "greenMeadow:DAY",
+        "greenLantern:DAY",
+        "greenApproach:DAY",
+        "sunBank:DAY",
+        "sunBank:NIGHT",
+        "burialGrove:DAY",
+        "burialGrove:NIGHT",
+        "sunFalls:DAY",
+        "sunFalls:NIGHT",
+        "sunTerraces:DAY",
+        "sunTerraces:NIGHT",
+        "sporeRim:DAY",
+        "sporeDepths:DAY",
+        "sporeBridge:DAY",
+        "sporeCrown:DAY",
+        "guanApproach:DAY",
+        "guanApproach:NIGHT",
+        "guanShrine:DAY",
+        "guanShrine:NIGHT",
+        "feiApproach:DAY",
+        "feiApproach:NIGHT",
+        "feiCrossing:DAY",
+        "feiCrossing:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "194",
+      "name": "Glacigel",
+      "sources": [
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "passCrystalPocket:DAY",
+        "passCrystalPocket:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "195",
+      "name": "Cryotoxin",
+      "sources": [
+        "evolve 194 / LEVEL",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "passCrystalPocket:DAY",
+        "passCrystalPocket:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "196",
+      "name": "Nymphang",
+      "sources": [
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "197",
+      "name": "Vyrmantic",
+      "sources": [
+        "evolve 196 / LEVEL",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "198",
+      "name": "Bellwark",
+      "sources": [
+        "waranCave3:DAY",
+        "waranCave3:NIGHT",
+        "waranCave4:DAY",
+        "waranCave4:NIGHT",
+        "passUpperTunnel:DAY",
+        "passUpperTunnel:NIGHT",
+        "greenCut:DAY",
+        "greenCut:NIGHT",
+        "greenVault:DAY",
+        "greenVault:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "199",
+      "name": "Knuckluff",
+      "sources": [
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "200",
+      "name": "Cindergraft",
+      "sources": [
+        "orchardVerge:DAY",
+        "orchardBend:DAY",
+        "orchardFirebreak:DAY",
+        "orchardEmberwood:DAY",
+        "orchardAshSlope:DAY",
+        "orchardRenewal:DAY",
+        "pilgrimGrove3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "201",
+      "name": "Toastuft",
+      "sources": [
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "202",
+      "name": "Brindlit",
+      "sources": [
+        "evolve 201 / LEVEL",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "203",
+      "name": "Hearthyl",
+      "sources": [
+        "evolve 202 / LEVEL",
+        "evolve 201 / LEVEL",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "204",
+      "name": "Puddlep",
+      "sources": [
+        "fishing contest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "205",
+      "name": "Tricklet",
+      "sources": [
+        "evolve 204 / LEVEL",
+        "fishing contest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "206",
+      "name": "Pluvivet",
+      "sources": [
+        "evolve 205 / LEVEL",
+        "evolve 204 / LEVEL",
+        "fishing contest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "207",
+      "name": "Tickit",
+      "sources": [
+        "passCrystalPocket:DAY",
+        "passCrystalPocket:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "208",
+      "name": "Oscillet",
+      "sources": [
+        "evolve 207 / LEVEL",
+        "passCrystalPocket:DAY",
+        "passCrystalPocket:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "209",
+      "name": "Chronovox",
+      "sources": [
+        "stormWatch:DAY",
+        "stormWatch:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "210",
+      "name": "Snuzzlet",
+      "sources": [
+        "march:DAY",
+        "march:NIGHT",
+        "march2:NIGHT",
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "211",
+      "name": "Fleecicle",
+      "sources": [
+        "evolve 210 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "march2:NIGHT",
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "212",
+      "name": "Nivomant",
+      "sources": [
+        "evolve 211 / LEVEL",
+        "evolve 210 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "march2:NIGHT",
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "213",
+      "name": "Tusskip",
+      "sources": [
+        "reedSanctuary:DAY",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "214",
+      "name": "Ruffellow",
+      "sources": [
+        "evolve 213 / LEVEL",
+        "reedSanctuary:DAY",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "216",
+      "name": "Solenip",
+      "sources": [
+        "greenCut:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "217",
+      "name": "Toxenodon",
+      "sources": [
+        "evolve 216 / LEVEL",
+        "greenCut:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "218",
+      "name": "Venodon",
+      "sources": [
+        "greenVault:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "219",
+      "name": "Loamlet",
+      "sources": [
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "220",
+      "name": "Terruff",
+      "sources": [
+        "evolve 219 / LEVEL",
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "221",
+      "name": "Barrowburr",
+      "sources": [
+        "passFoothills:NIGHT",
+        "orchardAshSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "222",
+      "name": "Buttonip",
+      "sources": [
+        "march:DAY",
+        "march2:DAY",
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "223",
+      "name": "Stitchkin",
+      "sources": [
+        "evolve 222 / LEVEL",
+        "march:DAY",
+        "march2:DAY",
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "224",
+      "name": "Thimbleon",
+      "sources": [
+        "evolve 223 / LEVEL",
+        "evolve 222 / LEVEL",
+        "march:DAY",
+        "march2:DAY",
+        "marchMeadow:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "225",
+      "name": "Pebblip",
+      "sources": [
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "226",
+      "name": "Cairnook",
+      "sources": [
+        "evolve 225 / LEVEL",
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "227",
+      "name": "Bouldernap",
+      "sources": [
+        "evolve 226 / LEVEL",
+        "evolve 225 / LEVEL",
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "228",
+      "name": "Tuatlet",
+      "sources": [
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "229",
+      "name": "Runcel",
+      "sources": [
+        "evolve 228 / LEVEL",
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "230",
+      "name": "Sphenwyr",
+      "sources": [
+        "evolve 229 / LEVEL",
+        "evolve 228 / LEVEL",
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "231",
+      "name": "Hushint",
+      "sources": [
+        "march:NIGHT",
+        "march2:NIGHT",
+        "marchMeadow:NIGHT",
+        "burrowHollow:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "232",
+      "name": "Shadwell",
+      "sources": [
+        "evolve 231 / LEVEL",
+        "march:NIGHT",
+        "march2:NIGHT",
+        "marchMeadow:NIGHT",
+        "burrowHollow:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "233",
+      "name": "Nightavail",
+      "sources": [
+        "evolve 232 / LEVEL",
+        "evolve 231 / LEVEL",
+        "march:NIGHT",
+        "march2:NIGHT",
+        "marchMeadow:NIGHT",
+        "burrowHollow:NIGHT",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "234",
+      "name": "Rivnip",
+      "sources": [
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "235",
+      "name": "Rivetong",
+      "sources": [
+        "evolve 234 / LEVEL",
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "236",
+      "name": "Ferrumbat",
+      "sources": [
+        "evolve 235 / LEVEL",
+        "evolve 234 / LEVEL",
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "237",
+      "name": "Sleetwick",
+      "sources": [
+        "glassSluice:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "238",
+      "name": "Thawling",
+      "sources": [
+        "evolve 237 / LEVEL",
+        "glassSluice:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "239",
+      "name": "Thermora",
+      "sources": [
+        "evolve 238 / LEVEL",
+        "evolve 237 / LEVEL",
+        "glassSluice:NIGHT",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "240",
+      "name": "Cindertap",
+      "sources": [
+        "orchardEmberwood:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "241",
+      "name": "Furnuckle",
+      "sources": [
+        "evolve 240 / LEVEL",
+        "orchardEmberwood:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "242",
+      "name": "Pyroclastor",
+      "sources": [
+        "evolve 241 / LEVEL",
+        "evolve 240 / LEVEL",
+        "orchardEmberwood:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "243",
+      "name": "Smoglet",
+      "sources": [
+        "orchardFirebreak:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "244",
+      "name": "Censerbug",
+      "sources": [
+        "evolve 243 / LEVEL",
+        "orchardFirebreak:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "245",
+      "name": "Brimbarrel",
+      "sources": [
+        "orchardFirebreak:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "246",
+      "name": "Flarekite",
+      "sources": [
+        "orchardEmberwood:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "247",
+      "name": "Cindervane",
+      "sources": [
+        "evolve 246 / LEVEL",
+        "orchardEmberwood:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "248",
+      "name": "Solmistral",
+      "sources": [
+        "evolve 247 / LEVEL",
+        "evolve 246 / LEVEL",
+        "orchardEmberwood:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "249",
+      "name": "Kilnib",
+      "sources": [
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "250",
+      "name": "Clinkerel",
+      "sources": [
+        "evolve 249 / LEVEL",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "251",
+      "name": "Obsidorn",
+      "sources": [
+        "orchardEmberwood:DAY",
+        "orchardAshSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "252",
+      "name": "Sparkscale",
+      "sources": [
+        "orchardEmberwood:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "253",
+      "name": "Pyrelisk",
+      "sources": [
+        "evolve 252 / LEVEL",
+        "orchardEmberwood:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "254",
+      "name": "Regnignis",
+      "sources": [
+        "evolve 253 / LEVEL",
+        "evolve 252 / LEVEL",
+        "orchardEmberwood:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "255",
+      "name": "Brinip",
+      "sources": [
+        "moonlitDepths:DAY",
+        "moonlitDepths:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:DAY",
+        "moonlitDepthsTrail3:NIGHT",
+        "fishing contest",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "256",
+      "name": "Bracklet",
+      "sources": [
+        "evolve 255 / LEVEL",
+        "moonlitDepths:DAY",
+        "moonlitDepths:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:DAY",
+        "moonlitDepthsTrail3:NIGHT",
+        "fishing contest",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "257",
+      "name": "Toxoring",
+      "sources": [
+        "waranCave4:DAY",
+        "waranCave4:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "258",
+      "name": "Skimlet",
+      "sources": [
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:DAY",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:DAY",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "259",
+      "name": "Surfwisp",
+      "sources": [
+        "evolve 258 / LEVEL",
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:DAY",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:DAY",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "260",
+      "name": "Spindrill",
+      "sources": [
+        "evolve 259 / LEVEL",
+        "evolve 258 / LEVEL",
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT",
+        "anglersReach:DAY",
+        "anglersReach:NIGHT",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "rivercause:DAY",
+        "rivercause:NIGHT",
+        "philomereBackwaters:DAY",
+        "philomereBackwaters:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:DAY",
+        "philomereBackwatersTrail3:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "261",
+      "name": "Bubblouse",
+      "sources": [
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "fishing contest",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "262",
+      "name": "Scullip",
+      "sources": [
+        "evolve 261 / LEVEL",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "fishing contest",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "263",
+      "name": "Hydroveil",
+      "sources": [
+        "evolve 262 / LEVEL",
+        "evolve 261 / LEVEL",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "fishing contest",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "264",
+      "name": "Reefling",
+      "sources": [
+        "fishing contest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "265",
+      "name": "Tidelorn",
+      "sources": [
+        "evolve 264 / LEVEL",
+        "fishing contest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "266",
+      "name": "Coralwyr",
+      "sources": [
+        "evolve 265 / LEVEL",
+        "evolve 264 / LEVEL",
+        "fishing contest"
+      ],
+      "exception": null
+    },
+    {
+      "id": "267",
+      "name": "Gloamweb",
+      "sources": [
+        "medicinePath:NIGHT",
+        "medicinePath2:NIGHT",
+        "fishing contest",
+        "jetty:medicinePath:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "268",
+      "name": "Undertide",
+      "sources": [
+        "waranCave3:DAY",
+        "waranCave3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "269",
+      "name": "Abysselve",
+      "sources": [
+        "waranCave5:DAY",
+        "waranCave5:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "270",
+      "name": "Pearlup",
+      "sources": [
+        "coralGrotto:DAY",
+        "coralGrotto:NIGHT",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:DAY",
+        "coralGrottoTrail3:NIGHT",
+        "fishing contest",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "271",
+      "name": "Nacreel",
+      "sources": [
+        "evolve 270 / LEVEL",
+        "coralGrotto:DAY",
+        "coralGrotto:NIGHT",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:DAY",
+        "coralGrottoTrail3:NIGHT",
+        "fishing contest",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "272",
+      "name": "Opaloria",
+      "sources": [
+        "waranCave5:DAY",
+        "waranCave5:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "273",
+      "name": "Bulbcoil",
+      "sources": [
+        "greenCut:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "274",
+      "name": "Coiltulip",
+      "sources": [
+        "greenFalls:DAY",
+        "greenBraid:DAY",
+        "greenVault:DAY",
+        "greenApproach:DAY",
+        "stormVerge:DAY",
+        "stormVerge:NIGHT",
+        "sunBank:DAY",
+        "burialGrove:DAY",
+        "sunFalls:DAY",
+        "sunTerraces:DAY",
+        "guanApproach:DAY",
+        "guanShrine:DAY",
+        "feiApproach:DAY",
+        "feiCrossing:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "275",
+      "name": "Frostrill",
+      "sources": [
+        "coralGrotto:DAY",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "276",
+      "name": "Polarhythm",
+      "sources": [
+        "evolve 275 / LEVEL",
+        "coralGrotto:DAY",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "277",
+      "name": "Gleamgrub",
+      "sources": [
+        "greenFern:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "278",
+      "name": "Lucivenom",
+      "sources": [
+        "evolve 277 / LEVEL",
+        "greenFern:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "279",
+      "name": "Dunecell",
+      "sources": [
+        "passEastSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "280",
+      "name": "Seismavolt",
+      "sources": [
+        "evolve 279 / LEVEL",
+        "passEastSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "281",
+      "name": "Kitelet",
+      "sources": [
+        "greenCanopy:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "282",
+      "name": "Voltavane",
+      "sources": [
+        "evolve 281 / LEVEL",
+        "greenCanopy:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "283",
+      "name": "Synapip",
+      "sources": [
+        "greenCanopy:DAY",
+        "greenCanopy:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "284",
+      "name": "Cerebrill",
+      "sources": [
+        "evolve 283 / LEVEL",
+        "greenCanopy:DAY",
+        "greenCanopy:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "285",
+      "name": "Tapvolt",
+      "sources": [
+        "greenCanopy:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "286",
+      "name": "Blackoutaye",
+      "sources": [
+        "stormVerge:DAY",
+        "stormVerge:NIGHT",
+        "stormPylons:DAY",
+        "stormPylons:NIGHT",
+        "stormGlass:DAY",
+        "stormGlass:NIGHT",
+        "stormHollow:DAY",
+        "stormHollow:NIGHT",
+        "stormWatch:DAY",
+        "stormWatch:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT",
+        "stormApproach:DAY",
+        "stormApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "287",
+      "name": "Budseer",
+      "sources": [
+        "greenCut:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "288",
+      "name": "Saigoracle",
+      "sources": [
+        "greenCanopy:NIGHT",
+        "greenMeadow:NIGHT",
+        "greenVault:DAY",
+        "greenTerrace:NIGHT",
+        "greenApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "289",
+      "name": "Poddle",
+      "sources": [
+        "orchardVerge:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "290",
+      "name": "Huskweaver",
+      "sources": [
+        "orchardBend:DAY",
+        "orchardRenewal:DAY",
+        "greenFern:DAY",
+        "greenLantern:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "291",
+      "name": "Lichenub",
+      "sources": [
+        "orchardFirebreak:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "292",
+      "name": "Monolichen",
+      "sources": [
+        "passFoothills:DAY",
+        "passEastSlope:DAY",
+        "orchardAshSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "293",
+      "name": "Bramblisk",
+      "sources": [
+        "greenFern:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "294",
+      "name": "Arborwyr",
+      "sources": [
+        "greenCanopy:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "295",
+      "name": "Ikaplet",
+      "sources": [
+        "relicGrove:DAY",
+        "relicGrove:NIGHT",
+        "relicGrove2:DAY",
+        "relicGrove2:NIGHT",
+        "relicGrove3:DAY",
+        "relicGrove3:NIGHT",
+        "courtTurn:DAY",
+        "courtTurn:NIGHT",
+        "bannerwood:DAY",
+        "bannerwood:NIGHT",
+        "courtProcession:DAY",
+        "courtProcession:NIGHT",
+        "courtPlinths:DAY",
+        "courtPlinths:NIGHT",
+        "crownfall:DAY",
+        "crownfall:NIGHT",
+        "courtApproach:DAY",
+        "courtApproach:NIGHT",
+        "emptyThrone:DAY",
+        "emptyThrone:NIGHT",
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "296",
+      "name": "Okabriar",
+      "sources": [
+        "orchardVerge:NIGHT",
+        "orchardBend:NIGHT",
+        "orchardRenewal:NIGHT",
+        "greenCut:NIGHT",
+        "greenCanopy:NIGHT",
+        "greenMeadow:NIGHT",
+        "greenBraid:NIGHT",
+        "greenLantern:NIGHT",
+        "greenVault:NIGHT",
+        "greenTerrace:NIGHT",
+        "greenApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "297",
+      "name": "Siltillo",
+      "sources": [
+        "passLowerTunnel:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "298",
+      "name": "Permafoss",
+      "sources": [
+        "evolve 297 / LEVEL",
+        "passLowerTunnel:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "299",
+      "name": "Flurrit",
+      "sources": [
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT",
+        "trade:stormBluffs"
+      ],
+      "exception": null
+    },
+    {
+      "id": "300",
+      "name": "Auroray",
+      "sources": [
+        "passRidge:DAY",
+        "passRidge:NIGHT",
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "301",
+      "name": "Prismip",
+      "sources": [
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "trade:glassSluice"
+      ],
+      "exception": null
+    },
+    {
+      "id": "302",
+      "name": "Mirrime",
+      "sources": [
+        "evolve 301 / LEVEL",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "trade:glassSluice"
+      ],
+      "exception": null
+    },
+    {
+      "id": "303",
+      "name": "Rimegrub",
+      "sources": [
+        "passUpperTunnel:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "304",
+      "name": "Glacisilk",
+      "sources": [
+        "evolve 303 / LEVEL",
+        "passUpperTunnel:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "305",
+      "name": "Shiveroot",
+      "sources": [
+        "moonlitDepths:DAY",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "306",
+      "name": "Hoarfetter",
+      "sources": [
+        "evolve 305 / LEVEL",
+        "moonlitDepths:DAY",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "307",
+      "name": "Palmote",
+      "sources": [
+        "trade:coralGrotto"
+      ],
+      "exception": null
+    },
+    {
+      "id": "308",
+      "name": "Mantrimp",
+      "sources": [
+        "evolve 307 / LEVEL",
+        "trade:coralGrotto"
+      ],
+      "exception": null
+    },
+    {
+      "id": "309",
+      "name": "Pincerip",
+      "sources": [
+        "burrowHollow:DAY",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "310",
+      "name": "Clinchitin",
+      "sources": [
+        "sporeRim:DAY",
+        "sporeDepths:DAY",
+        "sporeBridge:DAY",
+        "sporeCrown:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "311",
+      "name": "Knollop",
+      "sources": [
+        "greenCut:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "312",
+      "name": "Cragrapple",
+      "sources": [
+        "greenVault:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "313",
+      "name": "Billock",
+      "sources": [
+        "trade:reedSanctuary"
+      ],
+      "exception": null
+    },
+    {
+      "id": "314",
+      "name": "Shoebrex",
+      "sources": [
+        "evolve 313 / LEVEL",
+        "trade:reedSanctuary"
+      ],
+      "exception": null
+    },
+    {
+      "id": "315",
+      "name": "Anvilip",
+      "sources": [
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "trade:emberQuarry"
+      ],
+      "exception": null
+    },
+    {
+      "id": "316",
+      "name": "Forgecasque",
+      "sources": [
+        "passUpperTunnel:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "317",
+      "name": "Marlip",
+      "sources": [
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave3:DAY",
+        "waranCave3:NIGHT",
+        "philomereBackwaters:DAY",
+        "philomereBackwaters:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:DAY",
+        "philomereBackwatersTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "318",
+      "name": "Seepmire",
+      "sources": [
+        "evolve 317 / LEVEL",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave3:DAY",
+        "waranCave3:NIGHT",
+        "philomereBackwaters:DAY",
+        "philomereBackwaters:NIGHT",
+        "sunkenShrine:DAY",
+        "sunkenShrine:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "philomereBackwatersTrail2:DAY",
+        "philomereBackwatersTrail2:NIGHT",
+        "philomereBackwatersTrail3:DAY",
+        "philomereBackwatersTrail3:NIGHT",
+        "anglersReachTrail2:DAY",
+        "anglersReachTrail2:NIGHT",
+        "anglersReachTrail3:DAY",
+        "anglersReachTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "319",
+      "name": "Mesmerit",
+      "sources": [
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave5:DAY",
+        "waranCave5:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:DAY",
+        "sunkenShrine3:NIGHT",
+        "greenLantern:DAY",
+        "greenLantern:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "320",
+      "name": "Hypnox",
+      "sources": [
+        "evolve 319 / LEVEL",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave5:DAY",
+        "waranCave5:NIGHT",
+        "smugglersWeir:DAY",
+        "smugglersWeir:NIGHT",
+        "sunkenShrine2:DAY",
+        "sunkenShrine2:NIGHT",
+        "sunkenShrine3:DAY",
+        "sunkenShrine3:NIGHT",
+        "greenLantern:DAY",
+        "greenLantern:NIGHT",
+        "smugglersWeirTrail2:DAY",
+        "smugglersWeirTrail2:NIGHT",
+        "smugglersWeirTrail3:DAY",
+        "smugglersWeirTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "321",
+      "name": "Fumip",
+      "sources": [
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave3:DAY",
+        "waranCave3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "322",
+      "name": "Revenox",
+      "sources": [
+        "orchardBend:NIGHT",
+        "orchardAshSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "323",
+      "name": "Bitterpip",
+      "sources": [
+        "verdantJungle:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "324",
+      "name": "Maliverv",
+      "sources": [
+        "evolve 323 / LEVEL",
+        "verdantJungle:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "325",
+      "name": "Ferripod",
+      "sources": [
+        "tunnels:DAY",
+        "tunnels2:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "326",
+      "name": "Scalysilver",
+      "sources": [
+        "waranCave5:DAY",
+        "waranCave5:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "327",
+      "name": "Dustfoil",
+      "sources": [
+        "passFoothills:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "328",
+      "name": "Sandsoar",
+      "sources": [
+        "passRidge:DAY",
+        "passSummit:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "329",
+      "name": "Tunnip",
+      "sources": [
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT",
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passLowerTunnel:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "330",
+      "name": "Burrowloc",
+      "sources": [
+        "passLowerTunnel:DAY",
+        "passUpperTunnel:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "331",
+      "name": "Siltknot",
+      "sources": [
+        "passLowerTunnel:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "332",
+      "name": "Terramourn",
+      "sources": [
+        "passEastSlope:NIGHT",
+        "orchardAshSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "333",
+      "name": "Duskdig",
+      "sources": [
+        "tunnels:DAY",
+        "tunnels:NIGHT",
+        "tunnels2:DAY",
+        "tunnels2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "334",
+      "name": "Undermaw",
+      "sources": [
+        "passFoothills:NIGHT",
+        "passLowerTunnel:NIGHT",
+        "passRidge:NIGHT",
+        "stormGlass:DAY",
+        "stormGlass:NIGHT",
+        "stormHollow:DAY",
+        "stormHollow:NIGHT",
+        "stormCauseway:DAY",
+        "stormCauseway:NIGHT",
+        "stormApproach:DAY",
+        "stormApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "335",
+      "name": "Bilbit",
+      "sources": [
+        "burrowHollow:DAY",
+        "burrowHollow:NIGHT",
+        "burrowHollowTrail2:DAY",
+        "burrowHollowTrail2:NIGHT",
+        "burrowHollowTrail3:DAY",
+        "burrowHollowTrail3:NIGHT",
+        "trade:burrowHollow"
+      ],
+      "exception": null
+    },
+    {
+      "id": "336",
+      "name": "Dunebelle",
+      "sources": [
+        "passLowerTunnel:DAY",
+        "passUpperTunnel:NIGHT",
+        "passCrystalPocket:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "337",
+      "name": "Lanterpip",
+      "sources": [
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT",
+        "trade:orchardCanopy"
+      ],
+      "exception": null
+    },
+    {
+      "id": "338",
+      "name": "Lanternyx",
+      "sources": [
+        "greenFern:NIGHT",
+        "greenCanopy:DAY",
+        "greenMeadow:NIGHT",
+        "greenLantern:DAY",
+        "greenLantern:NIGHT",
+        "greenTerrace:NIGHT",
+        "greenApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "339",
+      "name": "Veilwing",
+      "sources": [
+        "passEastSlope:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "340",
+      "name": "Shroudvane",
+      "sources": [
+        "greenCut:NIGHT",
+        "greenFern:NIGHT",
+        "greenCanopy:NIGHT",
+        "greenBraid:NIGHT",
+        "greenLantern:NIGHT",
+        "greenVault:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "341",
+      "name": "Gustwyr",
+      "sources": [
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "342",
+      "name": "Aerofold",
+      "sources": [
+        "evolve 341 / LEVEL",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "343",
+      "name": "Notionip",
+      "sources": [
+        "trade:moonlitDepths"
+      ],
+      "exception": null
+    },
+    {
+      "id": "344",
+      "name": "Memorhop",
+      "sources": [
+        "evolve 343 / LEVEL",
+        "trade:moonlitDepths"
+      ],
+      "exception": null
+    },
+    {
+      "id": "345",
+      "name": "Somnibranch",
+      "sources": [
+        "coralGrotto:NIGHT",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "346",
+      "name": "Oneiroveil",
+      "sources": [
+        "sunBank:DAY",
+        "burialGrove:DAY",
+        "sunFalls:DAY",
+        "sunTerraces:DAY",
+        "sporeRim:DAY",
+        "sporeDepths:DAY",
+        "sporeBridge:DAY",
+        "sporeCrown:DAY",
+        "guanApproach:DAY",
+        "guanShrine:DAY",
+        "feiApproach:DAY",
+        "feiCrossing:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "347",
+      "name": "Flintick",
+      "sources": [
+        "passLowerTunnel:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "348",
+      "name": "Shardshield",
+      "sources": [
+        "passUpperTunnel:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "349",
+      "name": "Glossip",
+      "sources": [
+        "relicCrags:DAY",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "350",
+      "name": "Vitreolith",
+      "sources": [
+        "waranCave5:DAY",
+        "waranCave5:NIGHT",
+        "passRidge:NIGHT",
+        "passCrystalPocket:DAY",
+        "passCrystalPocket:NIGHT",
+        "passSummit:NIGHT",
+        "sunBank:NIGHT",
+        "burialGrove:NIGHT",
+        "sunFalls:NIGHT",
+        "sunTerraces:NIGHT",
+        "sporeRim:DAY",
+        "sporeRim:NIGHT",
+        "sporeDepths:DAY",
+        "sporeDepths:NIGHT",
+        "sporeBridge:DAY",
+        "sporeBridge:NIGHT",
+        "sporeCrown:DAY",
+        "sporeCrown:NIGHT",
+        "guanApproach:NIGHT",
+        "guanShrine:NIGHT",
+        "feiApproach:NIGHT",
+        "feiCrossing:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "351",
+      "name": "Onyxip",
+      "sources": [
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "waranCave3:DAY",
+        "waranCave3:NIGHT",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:NIGHT",
+        "trade:relicCrags"
+      ],
+      "exception": null
+    },
+    {
+      "id": "352",
+      "name": "Obsidianox",
+      "sources": [
+        "passFoothills:NIGHT",
+        "passLowerTunnel:NIGHT",
+        "passUpperTunnel:NIGHT",
+        "passEastSlope:NIGHT",
+        "passCrystalPocket:NIGHT",
+        "sporeRim:DAY",
+        "sporeRim:NIGHT",
+        "sporeDepths:DAY",
+        "sporeDepths:NIGHT",
+        "sporeBridge:DAY",
+        "sporeBridge:NIGHT",
+        "sporeCrown:DAY",
+        "sporeCrown:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "353",
+      "name": "Geodot",
+      "sources": [
+        "passFoothills:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "354",
+      "name": "Opalith",
+      "sources": [
+        "passUpperTunnel:DAY",
+        "passEastSlope:NIGHT",
+        "passCrystalPocket:DAY",
+        "passCrystalPocket:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "355",
+      "name": "Wyrmote",
+      "sources": [
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "356",
+      "name": "Requiwyr",
+      "sources": [
+        "sunBank:NIGHT",
+        "burialGrove:NIGHT",
+        "sunFalls:NIGHT",
+        "sunTerraces:NIGHT",
+        "sporeRim:NIGHT",
+        "sporeDepths:NIGHT",
+        "sporeBridge:NIGHT",
+        "sporeCrown:NIGHT",
+        "guanApproach:NIGHT",
+        "guanShrine:NIGHT",
+        "feiApproach:NIGHT",
+        "feiCrossing:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "357",
+      "name": "Mournip",
+      "sources": [
+        "greenLantern:DAY",
+        "greenLantern:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "358",
+      "name": "Reverielle",
+      "sources": [
+        "sunBank:NIGHT",
+        "burialGrove:NIGHT",
+        "sunFalls:NIGHT",
+        "sunTerraces:NIGHT",
+        "sporeRim:NIGHT",
+        "sporeDepths:NIGHT",
+        "sporeBridge:NIGHT",
+        "sporeCrown:NIGHT",
+        "guanApproach:NIGHT",
+        "guanShrine:NIGHT",
+        "feiApproach:NIGHT",
+        "feiCrossing:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "359",
+      "name": "Claspip",
+      "sources": [
+        "passUpperTunnel:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "360",
+      "name": "Amblysteel",
+      "sources": [
+        "passCrystalPocket:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "361",
+      "name": "Pricklet",
+      "sources": [
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "emberQuarry:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail3:DAY",
+        "trade:marchMeadow"
+      ],
+      "exception": null
+    },
+    {
+      "id": "362",
+      "name": "Cinderlance",
+      "sources": [
+        "evolve 361 / LEVEL",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "emberQuarry:DAY",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail3:DAY",
+        "trade:marchMeadow"
+      ],
+      "exception": null
+    },
+    {
+      "id": "363",
+      "name": "Ferriferno",
+      "sources": [
+        "orchardEmberwood:DAY",
+        "orchardAshSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "364",
+      "name": "Rimebun",
+      "sources": [
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "waranCave2:DAY",
+        "waranCave2:NIGHT",
+        "waranCave3:DAY",
+        "waranCave3:NIGHT",
+        "waranCave4:DAY",
+        "waranCave4:NIGHT",
+        "waranCave5:DAY",
+        "waranCave5:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "365",
+      "name": "Rivet",
+      "sources": [
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "366",
+      "name": "Vigilisk",
+      "sources": [
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "367",
+      "name": "Vesperedge",
+      "sources": [
+        "evolve 366 / LEVEL",
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "368",
+      "name": "Kilnguard",
+      "sources": [
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "369",
+      "name": "Cinderbastion",
+      "sources": [
+        "evolve 368 / LEVEL",
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "370",
+      "name": "Voltknuckle",
+      "sources": [
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "371",
+      "name": "Ragevolt",
+      "sources": [
+        "evolve 370 / LEVEL",
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "372",
+      "name": "Frostsquire",
+      "sources": [
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "373",
+      "name": "Rimewarden",
+      "sources": [
+        "evolve 372 / LEVEL",
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "374",
+      "name": "Gloamguard",
+      "sources": [
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "375",
+      "name": "Dreadcleaver",
+      "sources": [
+        "evolve 374 / LEVEL",
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "385",
+      "name": "Carapex",
+      "sources": [
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "386",
+      "name": "Elytrarch",
+      "sources": [
+        "evolve 385 / LEVEL",
+        "evolve 365 / ITEM",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "waranCave1:DAY",
+        "waranCave1:NIGHT",
+        "passLowerTunnel:DAY",
+        "passCrystalPocket:DAY",
+        "orchardEmberwood:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "376",
+      "name": "Snubling",
+      "sources": [
+        "coralGrotto:DAY",
+        "coralGrotto:NIGHT",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:DAY",
+        "coralGrottoTrail3:NIGHT",
+        "fishing contest",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "377",
+      "name": "Cragjaw",
+      "sources": [
+        "waranCave4:DAY",
+        "waranCave4:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "378",
+      "name": "Narlit",
+      "sources": [
+        "moonlitDepths:DAY",
+        "moonlitDepths:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:DAY",
+        "moonlitDepthsTrail3:NIGHT",
+        "fishing contest",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "379",
+      "name": "Auracorn",
+      "sources": [
+        "evolve 378 / LEVEL",
+        "moonlitDepths:DAY",
+        "moonlitDepths:NIGHT",
+        "moonlitDepthsTrail2:DAY",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:DAY",
+        "moonlitDepthsTrail3:NIGHT",
+        "fishing contest",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "380",
+      "name": "Oraclespear",
+      "sources": [
+        "waranCave4:DAY",
+        "waranCave4:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "381",
+      "name": "Solmola",
+      "sources": [
+        "coralGrotto:DAY",
+        "coralGrotto:NIGHT",
+        "coralGrottoTrail2:DAY",
+        "coralGrottoTrail2:NIGHT",
+        "coralGrottoTrail3:DAY",
+        "coralGrottoTrail3:NIGHT",
+        "fishing contest",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "382",
+      "name": "Finlet",
+      "sources": [
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "fishing contest",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "383",
+      "name": "Reeftalon",
+      "sources": [
+        "evolve 382 / LEVEL",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT",
+        "fishing contest",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "384",
+      "name": "Tideryu",
+      "sources": [
+        "waranCave5:DAY",
+        "waranCave5:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "387",
+      "name": "Brinelet",
+      "sources": [
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:philomereBackwaters:DAY",
+        "jetty:philomereBackwaters:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "388",
+      "name": "Gorgobrine",
+      "sources": [
+        "jetty:smugglersWeir:DAY",
+        "jetty:smugglersWeir:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "389",
+      "name": "Scuteling",
+      "sources": [
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "390",
+      "name": "Maneshell",
+      "sources": [
+        "evolve 389 / LEVEL",
+        "glassSluice:DAY",
+        "glassSluice:NIGHT",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "glassSluiceTrail2:DAY",
+        "glassSluiceTrail2:NIGHT",
+        "glassSluiceTrail3:DAY",
+        "glassSluiceTrail3:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "391",
+      "name": "Bastilion",
+      "sources": [
+        "passFoothills:DAY",
+        "passUpperTunnel:DAY",
+        "passEastSlope:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "392",
+      "name": "Ashpup",
+      "sources": [
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "393",
+      "name": "Greymaw",
+      "sources": [
+        "passRidge:NIGHT",
+        "passSummit:NIGHT",
+        "sunBank:NIGHT",
+        "burialGrove:NIGHT",
+        "sunFalls:NIGHT",
+        "sunTerraces:NIGHT",
+        "sporeRim:NIGHT",
+        "sporeDepths:NIGHT",
+        "sporeBridge:NIGHT",
+        "sporeCrown:NIGHT",
+        "guanApproach:NIGHT",
+        "guanShrine:NIGHT",
+        "feiApproach:NIGHT",
+        "feiCrossing:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "394",
+      "name": "Drowsip",
+      "sources": [
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "395",
+      "name": "Noxloris",
+      "sources": [
+        "orchardBend:NIGHT",
+        "orchardRenewal:NIGHT",
+        "pilgrimGrove2:NIGHT",
+        "pilgrimGrove3:NIGHT",
+        "greenCut:NIGHT",
+        "greenFern:NIGHT",
+        "greenFalls:NIGHT",
+        "greenMeadow:NIGHT",
+        "greenBraid:NIGHT",
+        "greenVault:NIGHT",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "396",
+      "name": "Foamlet",
+      "sources": [
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "397",
+      "name": "Pearlune",
+      "sources": [
+        "evolve 396 / LEVEL",
+        "jetty:reedSanctuary:DAY",
+        "jetty:reedSanctuary:NIGHT",
+        "jetty:coralGrotto:DAY",
+        "jetty:coralGrotto:NIGHT",
+        "jetty:moonlitDepths:DAY",
+        "jetty:moonlitDepths:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "398",
+      "name": "Selkiora",
+      "sources": [
+        "greenFalls:DAY",
+        "greenFalls:NIGHT",
+        "greenBraid:DAY",
+        "greenBraid:NIGHT",
+        "greenApproach:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "399",
+      "name": "Plumip",
+      "sources": [
+        "orchardCanopy:DAY",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail3:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "400",
+      "name": "Crownveil",
+      "sources": [
+        "greenLantern:DAY",
+        "greenTerrace:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "401",
+      "name": "Fennip",
+      "sources": [
+        "saltFlats:DAY",
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:DAY",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "402",
+      "name": "Vulpwyrm",
+      "sources": [
+        "evolve 401 / LEVEL",
+        "saltFlats:DAY",
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:DAY",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "403",
+      "name": "Sirocwyr",
+      "sources": [
+        "evolve 402 / LEVEL",
+        "evolve 401 / LEVEL",
+        "saltFlats:DAY",
+        "saltFlats:NIGHT",
+        "saltFlatsTrail2:DAY",
+        "saltFlatsTrail2:NIGHT",
+        "saltFlatsTrail3:DAY",
+        "saltFlatsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "404",
+      "name": "Flurrip",
+      "sources": [
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "405",
+      "name": "Veilvulp",
+      "sources": [
+        "passRidge:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "406",
+      "name": "Asterling",
+      "sources": [
+        "moonlitDepths:NIGHT",
+        "moonlitDepthsTrail2:NIGHT",
+        "moonlitDepthsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "407",
+      "name": "Frostcub",
+      "sources": [
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "408",
+      "name": "Rimebruin",
+      "sources": [
+        "evolve 407 / LEVEL",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "409",
+      "name": "Boreabrawn",
+      "sources": [
+        "passRidge:DAY",
+        "passSummit:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "410",
+      "name": "Bambub",
+      "sources": [
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "411",
+      "name": "Pandarbor",
+      "sources": [
+        "greenMeadow:DAY",
+        "greenTerrace:DAY"
+      ],
+      "exception": null
+    },
+    {
+      "id": "412",
+      "name": "Karolion",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "413",
+      "name": "Rholant",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "414",
+      "name": "Olivynx",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "415",
+      "name": "Turpurr",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "416",
+      "name": "Ogyon",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "417",
+      "name": "Renaclaw",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "418",
+      "name": "Astalcar",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "419",
+      "name": "Fieraguar",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "420",
+      "name": "Maugrise",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "421",
+      "name": "Huonquet",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "422",
+      "name": "Florimara",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "423",
+      "name": "Naimspark",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "424",
+      "name": "Ganelurk",
+      "sources": [
+        "court roamer"
+      ],
+      "exception": null
+    },
+    {
+      "id": "425",
+      "name": "Verdantyr",
+      "sources": [
+        "verdantJungle:DAY",
+        "verdantJungle:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "426",
+      "name": "Sprigpip",
+      "sources": [
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "427",
+      "name": "Thornwing",
+      "sources": [
+        "evolve 426 / LEVEL",
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "428",
+      "name": "Briarion",
+      "sources": [
+        "evolve 427 / LEVEL",
+        "evolve 426 / LEVEL",
+        "hospiceRoad:DAY",
+        "hospiceRoad:NIGHT",
+        "hospiceRoad2:DAY",
+        "hospiceRoad2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "429",
+      "name": "Ziplet",
+      "sources": [
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "430",
+      "name": "Voltrill",
+      "sources": [
+        "evolve 429 / LEVEL",
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "431",
+      "name": "Tempestral",
+      "sources": [
+        "evolve 430 / LEVEL",
+        "evolve 429 / LEVEL",
+        "stormBluffs:DAY",
+        "stormBluffs:NIGHT",
+        "stormBluffsTrail2:DAY",
+        "stormBluffsTrail2:NIGHT",
+        "stormBluffsTrail3:DAY",
+        "stormBluffsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "432",
+      "name": "Pennip",
+      "sources": [
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "433",
+      "name": "Pennantail",
+      "sources": [
+        "evolve 432 / LEVEL",
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "434",
+      "name": "Valiantrel",
+      "sources": [
+        "evolve 433 / LEVEL",
+        "evolve 432 / LEVEL",
+        "northRoad:DAY",
+        "northRoad:NIGHT",
+        "northRoad2:DAY",
+        "northRoad2:NIGHT",
+        "northRoad3:DAY",
+        "northRoad3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "435",
+      "name": "Cindlet",
+      "sources": [
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "436",
+      "name": "Kindrel",
+      "sources": [
+        "evolve 435 / LEVEL",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "437",
+      "name": "Pyrestrel",
+      "sources": [
+        "evolve 436 / LEVEL",
+        "evolve 435 / LEVEL",
+        "emberQuarry:DAY",
+        "emberQuarry:NIGHT",
+        "emberQuarryTrail2:DAY",
+        "emberQuarryTrail2:NIGHT",
+        "emberQuarryTrail3:DAY",
+        "emberQuarryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "438",
+      "name": "Brookip",
+      "sources": [
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "439",
+      "name": "Torrentail",
+      "sources": [
+        "evolve 438 / LEVEL",
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "440",
+      "name": "Kingcascade",
+      "sources": [
+        "evolve 439 / LEVEL",
+        "evolve 438 / LEVEL",
+        "medicinePath:DAY",
+        "medicinePath:NIGHT",
+        "medicinePath2:DAY",
+        "medicinePath2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "441",
+      "name": "Rivetweet",
+      "sources": [
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "442",
+      "name": "Ferrike",
+      "sources": [
+        "evolve 441 / LEVEL",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "443",
+      "name": "Irontalon",
+      "sources": [
+        "evolve 442 / LEVEL",
+        "evolve 441 / LEVEL",
+        "relicCrags:DAY",
+        "relicCrags:NIGHT",
+        "relicCragsTrail2:DAY",
+        "relicCragsTrail2:NIGHT",
+        "relicCragsTrail3:DAY",
+        "relicCragsTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "444",
+      "name": "Pilchip",
+      "sources": [
+        "orchardBend:DAY",
+        "orchardBend:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "445",
+      "name": "Gloamjay",
+      "sources": [
+        "evolve 444 / LEVEL",
+        "orchardBend:DAY",
+        "orchardBend:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "446",
+      "name": "Umbraive",
+      "sources": [
+        "evolve 445 / LEVEL",
+        "evolve 444 / LEVEL",
+        "orchardBend:DAY",
+        "orchardBend:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "447",
+      "name": "Wickowl",
+      "sources": [
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "448",
+      "name": "Hushowl",
+      "sources": [
+        "evolve 447 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "449",
+      "name": "Vespermourn",
+      "sources": [
+        "evolve 448 / LEVEL",
+        "evolve 447 / LEVEL",
+        "march:DAY",
+        "march:NIGHT",
+        "march2:DAY",
+        "march2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "450",
+      "name": "Coolet",
+      "sources": [
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "451",
+      "name": "Auradove",
+      "sources": [
+        "evolve 450 / LEVEL",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "452",
+      "name": "Seraphlume",
+      "sources": [
+        "evolve 451 / LEVEL",
+        "evolve 450 / LEVEL",
+        "pilgrimGrove:DAY",
+        "pilgrimGrove:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "453",
+      "name": "Dustpip",
+      "sources": [
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "454",
+      "name": "Crestilt",
+      "sources": [
+        "evolve 453 / LEVEL",
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "455",
+      "name": "Dunelancer",
+      "sources": [
+        "evolve 454 / LEVEL",
+        "evolve 453 / LEVEL",
+        "scrub:DAY",
+        "scrub:NIGHT",
+        "scrub2:DAY",
+        "scrub2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "456",
+      "name": "Chiprook",
+      "sources": [
+        "passFoothills:DAY",
+        "passFoothills:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "457",
+      "name": "Cragcrow",
+      "sources": [
+        "evolve 456 / LEVEL",
+        "passFoothills:DAY",
+        "passFoothills:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "458",
+      "name": "Cairnaven",
+      "sources": [
+        "evolve 457 / LEVEL",
+        "evolve 456 / LEVEL",
+        "passFoothills:DAY",
+        "passFoothills:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "459",
+      "name": "Threadlet",
+      "sources": [
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "460",
+      "name": "Weavren",
+      "sources": [
+        "evolve 459 / LEVEL",
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "461",
+      "name": "Tapestrix",
+      "sources": [
+        "evolve 460 / LEVEL",
+        "evolve 459 / LEVEL",
+        "orchardCanopy:DAY",
+        "orchardCanopy:NIGHT",
+        "orchardCanopyTrail2:DAY",
+        "orchardCanopyTrail2:NIGHT",
+        "orchardCanopyTrail3:DAY",
+        "orchardCanopyTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "462",
+      "name": "Reedip",
+      "sources": [
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "463",
+      "name": "Miasbis",
+      "sources": [
+        "evolve 462 / LEVEL",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "464",
+      "name": "Venibis",
+      "sources": [
+        "evolve 463 / LEVEL",
+        "evolve 462 / LEVEL",
+        "reedSanctuary:DAY",
+        "reedSanctuary:NIGHT",
+        "reedSanctuaryTrail2:DAY",
+        "reedSanctuaryTrail2:NIGHT",
+        "reedSanctuaryTrail3:DAY",
+        "reedSanctuaryTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "465",
+      "name": "Reverip",
+      "sources": [
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "466",
+      "name": "Trancewing",
+      "sources": [
+        "evolve 465 / LEVEL",
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "467",
+      "name": "Oraculane",
+      "sources": [
+        "evolve 466 / LEVEL",
+        "evolve 465 / LEVEL",
+        "greenTerrace:DAY",
+        "greenTerrace:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "468",
+      "name": "Chillbill",
+      "sources": [
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "469",
+      "name": "Rimebeak",
+      "sources": [
+        "evolve 468 / LEVEL",
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "470",
+      "name": "Boreapuff",
+      "sources": [
+        "evolve 469 / LEVEL",
+        "evolve 468 / LEVEL",
+        "passSummit:DAY",
+        "passSummit:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "471",
+      "name": "Scalip",
+      "sources": [
+        "passRidge:DAY",
+        "passRidge:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "472",
+      "name": "Wyrmkite",
+      "sources": [
+        "evolve 471 / LEVEL",
+        "passRidge:DAY",
+        "passRidge:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "473",
+      "name": "Dracorizon",
+      "sources": [
+        "evolve 472 / LEVEL",
+        "evolve 471 / LEVEL",
+        "passRidge:DAY",
+        "passRidge:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "474",
+      "name": "Piplet",
+      "sources": [
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "475",
+      "name": "Larkeen",
+      "sources": [
+        "evolve 474 / LEVEL",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "476",
+      "name": "Aurorark",
+      "sources": [
+        "evolve 475 / LEVEL",
+        "evolve 474 / LEVEL",
+        "marchMeadow:DAY",
+        "marchMeadow:NIGHT",
+        "marchMeadowTrail2:DAY",
+        "marchMeadowTrail2:NIGHT",
+        "marchMeadowTrail3:DAY",
+        "marchMeadowTrail3:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "477",
+      "name": "Whiflet",
+      "sources": [
+        "rivercause2:DAY",
+        "rivercause2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "478",
+      "name": "Sailswift",
+      "sources": [
+        "evolve 477 / LEVEL",
+        "rivercause2:DAY",
+        "rivercause2:NIGHT"
+      ],
+      "exception": null
+    },
+    {
+      "id": "479",
+      "name": "Zephyreon",
+      "sources": [
+        "evolve 478 / LEVEL",
+        "evolve 477 / LEVEL",
+        "rivercause2:DAY",
+        "rivercause2:NIGHT"
+      ],
+      "exception": null
+    }
+  ]
+}

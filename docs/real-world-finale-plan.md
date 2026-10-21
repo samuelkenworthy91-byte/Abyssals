@@ -1,6 +1,6 @@
 # Real-world finale — user revision, 21 October 2026
 
-Status: implementation brief. The route between leaders seven and eight requires the user's biome choice before construction. This document changes no shipped game behavior; v0.90.17 remains the live release.
+Status: approved and implemented on feature/real-world-finale. Sporefall Chasm was approved. Release verification is in progress for v0.90.18; v0.90.17 remains live until publication.
 
 ## Current source and canonical identities
 
@@ -73,3 +73,7 @@ End this real-world implementation at the accessible threshold. Do not implement
 Validate main-road and side-quest navigation, visible entrances, safe gate arrivals, gallery commissions, both leader fates, the true double battle, saved funeral and gift receipts, every unique encounter, retreat/reload behavior, and old saves. Add source and browser coverage for these stateful flows. Select optimized catalogue artwork before creating any missing illustrations; keep reference archives outside the runtime.
 
 Commit final game work to GitHub, advance the release version and Android versionCode, and use the original signed Android Actions workflow. Publish the exact matching runtime to the existing PWA, preserving audience and saves. No gameplay release is created by this planning-only document.
+
+## Collection deadline, 21 October 2026
+
+Every eligible species must have a real acquisition or evolution path by victory over leader eight. Other starters and unchosen fossil families remain exceptions. All descendants of a branching evolution are excluded from ordinary wild tables and fishing; their bases remain available. Votress and Regulet receive earlier direct habitats. Gehennuar and Suncub receive optional unique encounters after Cayfen, before Ramelle. See collection-before-eighth-leader.json and tests/collection-access.test.mjs for the catalogue ledger.

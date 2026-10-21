@@ -1,4 +1,4 @@
-import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.88.0';
+import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.90.18';
 import {MARASEN_RECORDS,MARASEN_BRANCHES,MARASEN_TRAINERS,VERDANT_ROAD,marasenRoute} from './marasen-data.js?v=0.87.0';
 import * as r from './marasen-rules.js?v=0.87.0';
 export function marasenInteract(id,a){

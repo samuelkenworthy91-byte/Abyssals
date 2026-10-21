@@ -1,6 +1,6 @@
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm,legalForm,legalMoves} from './route-roster.js?v=0.87.0';
-export const EXECUTION_BOUNTIES={'LDR-01':10000,'LDR-02':18000,'LDR-03':26000,'LDR-04':34000,'LDR-05':42000,'LDR-06':50000};
+export const EXECUTION_BOUNTIES={'LDR-01':10000,'LDR-02':18000,'LDR-03':26000,'LDR-04':34000,'LDR-05':42000,'LDR-06':50000,'LDR-07':60000,'LDR-08':70000};
 export function leaderOutcomeState(state){state.leaderOutcomes??={version:1,bounties:{},gifts:{},rematches:{}};return state.leaderOutcomes;}
 export function leaderAceBaby(leader){const ace=[...leader.team].sort((a,b)=>b.level-a.level||b.slot-a.slot)[0];return rootForm(ace.species_id);}
 export const NURSERY_GROWTH_BONUS=15;

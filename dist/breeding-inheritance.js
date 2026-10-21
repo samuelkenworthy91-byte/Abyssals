@@ -1,5 +1,5 @@
 import {DATA} from './data.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,inheritedGrowthRate} from './progression.js?v=0.90.17';
+import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,inheritedGrowthRate} from './progression.js?v=0.90.18';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

@@ -9,7 +9,7 @@ import {CYBRESSA_ROUTES,CYBRESSA_QUESTS} from './cybressa-data.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {pacedEncounterRoute} from './encounter-pacing.js?v=0.87.0';
-import {expandEncounterRoute} from './roster-encounters.js?v=0.87.0';
+import {expandEncounterRoute} from './roster-encounters.js?v=0.90.18';
 import {registerCampaignBiome} from './biome-world.js?v=0.90.13';
 export {SIDE_CAMPAIGNS};
 const campaignFactions=new Map();

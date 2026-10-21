@@ -45,6 +45,7 @@ jobs:
           node tests/quickbite-angling-browser.cjs
           node tests/browser-smoke.cjs
           node tests/botrune-browser.cjs
+          node tests/finale-browser.cjs
           node tests/thunderplain-browser.cjs
           node tests/storm-polish-browser.cjs
           node tests/marasen-browser.cjs

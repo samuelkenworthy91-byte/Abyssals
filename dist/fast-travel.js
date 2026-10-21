@@ -1,5 +1,7 @@
 // Paid caravans open after the first leader; each destination requires a recorded visit.
 export const TRAVEL_HUBS=[
+ {id:'caravan-cayfen',room:'cayfen',name:'Cayfen',x:24,y:25,arrival:[24,26,'up'],fare:150},
+ {id:'caravan-ramelle',room:'ramelle',name:'Ramelle',x:24,y:25,arrival:[24,26,'up'],fare:175},
  {id:"caravan-botrune",room:"botrune",name:"Botrune",x:36,y:24,arrival:[36,25,"up"],fare:125},
  {id:"caravan-marasen",room:"marasen",name:"Marasen",x:32,y:18,arrival:[32,19,"up"],fare:100},
  {id:'caravan-town',room:'town',name:'Civeton',x:26,y:20,arrival:[26,21,'up'],fare:100},
@@ -10,7 +12,7 @@ export const TRAVEL_HUBS=[
  {id:'caravan-fort',room:'waranCave1',name:'Sunken Fort',x:6,y:16,arrival:[6,17,'up'],fare:150}
 ];
 export const fastTravelUnlocked=state=>(state.defeatedTrainers||[]).includes('LDR-01')||['SPARED','EXECUTED'].includes(state.fates?.['LDR-01']);
-const townForRoom=room=>room==='botrune'?'botrune':room?.startsWith('marasen')?'marasen':room==='town'||['pate','trade','shop'].includes(room)?'town':room?.startsWith('cossenne')?'cossenne':room?.startsWith('cybressa')?'cybressa':room?.startsWith('dorelem')?'dorelem':room?.startsWith('philomere')||room==='hospice'?'philomere':/^waranCave[1-5]$/.test(room||'')?'waranCave1':null;
+const townForRoom=room=>room?.startsWith('cayfen')?'cayfen':room?.startsWith('ramelle')?'ramelle':room==='botrune'?'botrune':room?.startsWith('marasen')?'marasen':room==='town'||['pate','trade','shop'].includes(room)?'town':room?.startsWith('cossenne')?'cossenne':room?.startsWith('cybressa')?'cybressa':room?.startsWith('dorelem')?'dorelem':room?.startsWith('philomere')||room==='hospice'?'philomere':/^waranCave[1-5]$/.test(room||'')?'waranCave1':null;
 export function visitedTravelRooms(state){
  if(Array.isArray(state.travelVisitedRooms))return state.travelVisitedRooms;
  // Older expeditions had no visit ledger. Recover only visits evidenced by progress.
@@ -21,6 +23,7 @@ export function visitedTravelRooms(state){
  if(leader(4)||state.cossenne?.walk?.length)rooms.add('cossenne');
  if(leader(3)||state.cybressa?.investigation||state.cybressa?.grain||defeated.some(id=>id.startsWith('TRN-CY-WH-')))rooms.add('cybressa');
  if(defeated.some(id=>/^TRN-CAVE-[1-5]$/.test(id))||state.exploration?.huntSeen||state.exploration?.mythic||(state.exploration?.claims||[]).some(id=>id.startsWith('waranCave'))||(state.exploration?.finds||[]).some(id=>id.startsWith('explore-find-cave-')))rooms.add('waranCave1');
+ if(leader(7))rooms.add('cayfen');if(leader(8))rooms.add('ramelle');
  const rested=townForRoom(state.lastPriestRest?.room);if(rested)rooms.add(rested);
  if(rooms.has('cybressa'))rooms.add('philomere');if(rooms.has('philomere'))rooms.add('dorelem');
  state.travelVisitedRooms=[...rooms];return state.travelVisitedRooms;

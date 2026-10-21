@@ -2,7 +2,7 @@ import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats,migrateStats} from './stat-balance.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {EVOLUTIONS} from './evolution-data.js?v=0.87.0';
-import {STAT_KEYS} from './progression.js?v=0.90.17';
+import {STAT_KEYS} from './progression.js?v=0.90.18';
 
 export function eligibleEvolutions(unit,state={},itemId=null){
  if(!unit||unit.dead||unit.hp<=0||(unit.evolutionHistory||[]).some(e=>e.level===unit.level))return [];
