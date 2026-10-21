@@ -1,0 +1,23 @@
+{
+  "generator": "built-in ImageGen",
+  "transparent_background": true,
+  "sources": [
+    {
+      "name": "broken-cart.png",
+      "sha256": "7989fd7d8820bafd4404e8237078a7cfe1fa05b0d71c5a7d295cfd3bd10ca3e9",
+      "bytes": 1917504
+    },
+    {
+      "name": "glass-crater.png",
+      "sha256": "dc9ec3ba1728be1fbc3d64cbf6645af364b9e19780ecedcf1cee19ab3c79f7a5",
+      "bytes": 3497948
+    },
+    {
+      "name": "mountain-steps.png",
+      "sha256": "b3f73751bea1f9599244ae18cb82fda1b2846a62040a144688d2203c5d1a069d",
+      "bytes": 2873905
+    }
+  ],
+  "optimization": "scripts/prepare-storm-polish-art.py",
+  "prompts": "docs/storm-polish.md"
+}

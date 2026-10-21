@@ -14,6 +14,7 @@ export function installThunderplainWorld(maps,doors){
  addBranch('stormWatch','bt-darius-entry','North ascent · Broken Banner Camp',24,2,'stormDariusCamp',[3,17,'right']);
  Object.assign(maps.stormWatch.gates.find(g=>g.id==='stormWatch-forward'),{action:'storm-cart',x:42,label:'Cart road · Botrune causeway'});
  maps.stormWatch.spots.push(actor('bt-cart-driver','Driver · broken cart wheel',40,19,'SHOP-DOR'));
+ maps.stormGlass.stormBoulders=[];
  const side=(id,name)=>{maps[id]={name,area:id,bloom:true,hub:true,terrain:'ridge',botruneKind:'storm',stormSide:true,stormMountain:id!=='stormRelay',stormBoulders:[[5,23,3,3],[36,4,4,3]],stormRods:[[7,7],[20,7],[36,10]],road:[[1,17],[46,17]],grass:[[5,5,16,12],[31,20,42,27]],sidePaths:[{points:[[24,7],[24,26]]}],props:[],spots:[],gates:[]};registerBiome(id,'quarry');return maps[id];};
  const relay=side('stormRelay','Thunderplain · Stormcatch Relay');relay.gates=[gate('stormRelay-back','Glass Scars',1,17,'stormGlass',[24,4,'down'])];relay.spots=[actor('bt-relay-engineer','Relay keeper Samira',18,20,'REV-MARYAM'),{id:'bt-relay-control',label:'Stormcatch · route lightning into the receivers',x:25,y:12,questProp:true}];
  relay.props=[{asset:'btConductor',x:22,y:5,w:5,h:7,decorative:true}];relay.stormRods.push([25,11]);

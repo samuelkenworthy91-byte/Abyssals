@@ -29,3 +29,5 @@ Keep secret values private. Do not paste them into issues, commits, workflow inp
 The expected certificate SHA-256 is `6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac`; signing verifies this before publishing. The compatible compiled native wrapper is preserved in `release/v0.89.1/`. No fresh native Java compilation or physical phone installation test is claimed.
 
 The older receipt-based workflows reproduce historical signed releases. New updates use the standard workflow above. Do not run historical `scripts/restore-release.py` over current source.
+
+The 0.90.14 update polishes the storm route with glass impact craters, detailed mountain steps and a broken cart, natural lightning forks and repeatable Stormcatch shifts with a timing demonstration. See [implementation and verification](docs/storm-polish.md).

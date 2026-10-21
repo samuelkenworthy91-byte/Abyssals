@@ -27,3 +27,7 @@ Prompts: transparent Gothic copper conductor tower, basalt/iron/copper/porcelain
 ## Verification
 
 `tests/thunderplain.test.mjs` covers every new route, gate return, NPC approach, town door/building collision, legal team moves, finite medicine, unique outcomes across saves, relay rewards and full-screen flash bounds. `tests/thunderplain-browser.cjs` exercises the blocked cart, mountain trail, relay controls, Darius-to-wild battle handoff and reload, enabled capture supplies, unique resolution and inn interaction in Chromium. Existing Botrune, Marasen and browser smoke suites remain required. Browser fixtures simulate battle victory/outcome at authored boundaries; they do not claim a full balance playthrough or physical-phone testing. GitHub Actions tests, signs with the original certificate, verifies alignment and publishes the APK.
+
+## v0.90.14 feedback
+
+`storm-polish.md` supersedes the cart's explicit Darius directions and one-time relay description: the driver now suggests investigating a disturbance, and the relay has a demonstration and repeatable varied supply shifts. The temporary mountain/cart graphics and straight lightning shape are replaced; Glass Scars gains physical vitrified craters. Core story and unique encounters are unchanged.

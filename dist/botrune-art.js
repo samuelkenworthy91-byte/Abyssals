@@ -1,10 +1,11 @@
-import {isStormRoom} from './storm-weather.js?v=0.90.13';
+import {GLASS_CRATERS,MOUNTAIN_FLIGHTS,MOUNTAIN_ENTRY} from './storm-props.js?v=0.90.14';
+import {isStormRoom} from './storm-weather.js?v=0.90.14';
 import {drawCompanion} from './companion.js?v=0.87.0';
-import {canMeetStormDragon,stormState} from './thunderplain-rules.js?v=0.90.13';
+import {canMeetStormDragon,stormState} from './thunderplain-rules.js?v=0.90.14';
 import {DATA} from './data.js?v=0.87.0';
 import {STORM_ROAD,BOTRUNE_GUARDS} from './botrune-data.js?v=0.90.13';
-import {botruneState,btDefeated,trialVictims} from './botrune-rules.js?v=0.90.13';
-export const BOTRUNE_ASSETS={btConductor:'bt-conductor-v09013.webp',btAbbey:'bt-abbey-v09013.webp',btHouse:'bt-garrison-house-v09013.webp',btScriptorium:'bt-scriptorium-v09013.webp'};
+import {botruneState,btDefeated,trialVictims} from './botrune-rules.js?v=0.90.14';
+export const BOTRUNE_ASSETS={btMountainSteps:'bt-mountain-steps-v09014.webp',btBrokenCart:'bt-broken-cart-v09014.webp',btGlassCrater:'bt-glass-crater-v09014.webp',btConductor:'bt-conductor-v09013.webp',btAbbey:'bt-abbey-v09013.webp',btHouse:'bt-garrison-house-v09013.webp',btScriptorium:'bt-scriptorium-v09013.webp'};
 export const victims=[['prisoner-1',17,'TRN-C02-001'],['prisoner-2',21,'TRN-C02-002'],['prisoner-3',25,'TRN-C01-002'],['CHR-PATE',29,'CHR-PATE'],['CHR-TRADE',33,'CHR-TRADE']];
 export function drawBotruneMap(c,m,room,asset,road,grass,walkable){
  if(!m.botruneKind)return false;
@@ -34,21 +35,22 @@ export function drawBotruneMap(c,m,room,asset,road,grass,walkable){
   c.strokeStyle='#756858';c.lineWidth=1;for(const x of [22,26]){c.beginPath();c.moveTo(x*16,2*16);c.lineTo(x*16,30*16);c.stroke();}
   c.fillStyle='#d1b87a';c.font='bold 10px serif';c.textAlign='center';c.fillText('LOWER GARRISON STREETS',24*16,22);
  }else{
+  if(room==='stormGlass')for(const p of GLASS_CRATERS)asset(c,'btGlassCrater',p.x,p.y,p.w,p.h);
   // Existing quarry ground/cliffs and fort architecture are reused; the conductor
   // structures are native pixel drawings, with collision restricted to terrain.
   for(const [x,y,w,h]of m.stormBoulders||[])asset(c,'biomequarryrock',x,y-1,w,h+1);
   for(const [x,y]of m.stormRods||[])asset(c,'btConductor',x-1,y-5,3,6);
-  for(let n=0;n<9;n++){const x=3+(n*13)%42,y=3+(n*7)%25;if(!road(room,x,y)){c.strokeStyle='#a0b6b577';c.lineWidth=1;c.beginPath();c.moveTo(x*16,y*16);c.lineTo(x*16+12,y*16+5);c.lineTo(x*16+5,y*16+14);c.stroke();}}
+  for(let n=0;n<(room==='stormGlass'?0:9);n++){const x=3+(n*13)%42,y=3+(n*7)%25;if(!road(room,x,y)){c.strokeStyle='#a0b6b577';c.lineWidth=1;c.beginPath();c.moveTo(x*16,y*16);c.lineTo(x*16+12,y*16+5);c.lineTo(x*16+5,y*16+14);c.stroke();}}
   if(m.stormMountain){
    c.save();c.filter='grayscale(.9) brightness(.7)';for(let y=0;y<32;y++)for(let x=0;x<48;x++)if(!walkable(room,x,y))asset(c,'biomepassRidgewall',x,y,1,1);c.restore();
-   for(const x of [11,24,37])for(let y=11;y<25;y++)if(road(room,x,y)){c.fillStyle='#b7afb25c';c.fillRect(x*16-10,y*16,36,3);c.fillStyle='#151e2a77';c.fillRect(x*16-10,y*16+13,36,3);}
+   for(const p of MOUNTAIN_FLIGHTS)asset(c,'btMountainSteps',p.x,p.y,p.w,p.h);
    if(m.stormCave){for(let x=13;x<23;x++)asset(c,'fortWall',x,5,1,5);c.fillStyle='#130f15';c.fillRect(16*16,8*16,5*16,3*16);}
    if(m.stormTower){drawSlate(c,25*16,2*16,18*16,13*16);asset(c,'btConductor',28,0,10,13);for(const x of [25,42])for(let y=3;y<14;y++)asset(c,'fortWall',x,y,1,1);}
   }
   for(const p of m.props)asset(c,p.asset,p.x,p.y,p.w,p.h);
   for(const s of m.spots)if(s.routeSign)asset(c,'sign',s.x-1,s.y-3,4,3);
  }
- for(const g of m.gates){if(g.action==='storm-side'){if(g.to==='stormDariusCamp'){asset(c,'biomequarryrock',g.x-4,g.y-2,3,5);asset(c,'biomequarryrock',g.x+2,g.y-2,3,5);for(let n=0;n<4;n++){c.fillStyle=n%2?'#c6b5a0':'#625b62';c.fillRect(g.x*16-10,g.y*16+n*6,36,3);}}else asset(c,'btConductor',g.x-3,g.y-5,3,6);}c.fillStyle='#bcc6bd';c.fillRect(g.x*16+4,g.y*16+6,8,4);}
+ for(const g of m.gates){if(g.action==='storm-side'){if(g.to==='stormDariusCamp'){const p=MOUNTAIN_ENTRY;asset(c,'btMountainSteps',p.x,p.y,p.w,p.h);}else asset(c,'btConductor',g.x-3,g.y-5,3,6);}c.fillStyle='#bcc6bd';c.fillRect(g.x*16+4,g.y*16+6,8,4);}
  return true;
 }
 export function drawBotrunePeople(c,s,room,time,reduced,drawHuman,presentation){

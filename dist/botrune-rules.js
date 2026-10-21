@@ -1,4 +1,4 @@
-import {stormSideObjective} from './thunderplain-rules.js?v=0.90.13';
+import {stormSideObjective} from './thunderplain-rules.js?v=0.90.14';
 import {BOTRUNE_GUARDS,TRIAL_BEATS,STORM_ROAD} from './botrune-data.js?v=0.90.13';
 export function botruneState(s){return s.botrune??={version:1,cursor:0,phase:'trial',witnesses:[],keepsakes:false};}
 export const botruneUnlocked=s=>['SPARED','EXECUTED'].includes(s.fates?.['LDR-05']);
@@ -23,7 +23,7 @@ export function botruneBlocked(s,room,x,y){if(room!=='botrune')return false;cons
 export function botruneSpots(s,room,spots){if(room!=='botrune')return spots;return spots.filter(p=>!p.botruneGuard||!btDefeated(s,p.id)).filter(p=>p.id!=='bt-leader'||s.fates?.['LDR-06']!=='EXECUTED').filter(p=>p.id!=='bt-recovery'||botruneState(s).phase!=='trial');}
 export function botruneObjective(s,room){
  const side=stormSideObjective(s,room);if(side)return side;
- if(room==='stormWatch'&&!btDefeated(s,'TRN-BT-DARIUS'))return {spot:'bt-darius-entry',text:'The broken cart blocks the east road. Climb north through Broken Banner Camp, defeat Darius at the lightning tower, then return to the driver.'};
+ if(room==='stormWatch'&&!btDefeated(s,'TRN-BT-DARIUS'))return {spot:'bt-darius-entry',text:'The cart blocks the east road. Pate and Trade went ahead for supplies. Investigate the disturbance up the old stone steps north of Abandoned Watch.'};
  if(room==='botruneLower')return {spot:'bt-upper-street',text:'Botrune services: provisioner northwest, infirmary southwest, inn southeast, records northeast. North street returns to the abbey square.'};
  const n=STORM_ROAD.findIndex(r=>r[0]===room);if(n>=0)return {spot:room+'-forward',text:'Cross the Thunderplain · '+(n+1)+'/'+STORM_ROAD.length+' · follow the pale road towards Botrune'};
  if(room==='botruneShelter')return {spot:'bt-shelter-exit',text:'Prepare at the roadside shelter; the Botrune road stays open behind you'};
