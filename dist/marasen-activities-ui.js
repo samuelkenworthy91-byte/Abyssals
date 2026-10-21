@@ -1,5 +1,6 @@
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.
+import {marasenObjective} from './marasen-rules.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {HELD_ITEMS} from './held-data.js?v=0.87.0';
 import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.87.0';
@@ -150,7 +151,7 @@ export function marasenExtraInteract(id,a){const {room,AREA_GATES,state,warp,sho
   showDialogue([line('Survey warning','The old path is occupied. Darius’s followers have captured Tellurion and taken control of the spillway. Maryam is evacuating the families below.'),line('Farid’s margin note','A landslide is still a disaster if it happens on someone else’s doorstep. Find the refugee kitchens; the crest is not safe until the lower bell rings.')],()=>void warp(gate.to,...gate.arrival));return true;
  }
  if(gate?.action==='marasen-main-out'){
-  if(!(state.defeatedTrainers||[]).includes('TRN-MR-DARIUS')){showDialogue([line('The broken bridle','Darius still holds the reservoir. You cannot reach the city without confronting him.')]);return true;}
+  if(!(state.defeatedTrainers||[]).includes('TRN-MR-DARIUS')){showDialogue([line('The broken bridle','Darius still holds the reservoir. ' +marasenObjective(state,room).text+'')]);return true;}
   void warp(gate.to,...gate.arrival);return true;
  }
  if(id==='mr-main-warning'||id==='mr-main-watch'||id==='mr-main-camp'||id==='mr-main-bell'){

@@ -35,6 +35,7 @@ jobs:
           for test in tests/*.test.mjs; do node "$test"; done
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
+          python3 tests/android-manifest.test.py
       - name: Test real game interactions in Chromium
         run: |
           npm install --no-save --package-lock=false playwright@1.51.1
@@ -42,6 +43,7 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
           node tests/browser-smoke.cjs
           node tests/botrune-browser.cjs
+          node tests/marasen-browser.cjs
       - name: Retain game screenshots
         if: always()
         uses: actions/upload-artifact@v4
@@ -55,7 +57,7 @@ jobs:
           python3 - <<'PY'
           import json,os,re
           c=json.load(open('release-config.json'))
-          assert re.fullmatch(r'0\.\d\d\.\d',c['version'])
+          assert re.fullmatch(r'0\.\d{2}\.\d+',c['version'])
           assert isinstance(c['version_code'],int) and c['version_code']>102
           assert re.fullmatch(r'Abyssals-v[\w.\-]+\.apk',c['filename'])
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:

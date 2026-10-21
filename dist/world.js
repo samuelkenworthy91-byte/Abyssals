@@ -110,7 +110,7 @@ function buildMap(room){const surface=document.createElement('canvas');surface.w
  }
  for(const gate of AREA_GATES[room]||[]){
   // Main exits retain doorway mats; directions live on the single route board.
-  if(NEW_MAPS[room]?.sidePaths?.some(p=>p.gateId===gate.id))continue;
+  if(gate.entrance||NEW_MAPS[room]?.sidePaths?.some(p=>p.gateId===gate.id))continue;
   asset(c,'mat',gate.x,gate.y);
  }
  if(!NEW_MAPS[room])drawBiomeDetails(c,room,drawWorldAsset,(x,y)=>!isBlocked(room,x,y));

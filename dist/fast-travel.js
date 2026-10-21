@@ -1,7 +1,7 @@
 // Paid caravans open after the first leader; each destination requires a recorded visit.
 export const TRAVEL_HUBS=[
  {id:"caravan-botrune",room:"botrune",name:"Botrune",x:36,y:24,arrival:[36,25,"up"],fare:125},
- {id:"caravan-marasen",room:"marasen",name:"Marasen",x:30,y:19,arrival:[30,20,"up"],fare:100},
+ {id:"caravan-marasen",room:"marasen",name:"Marasen",x:32,y:18,arrival:[32,19,"up"],fare:100},
  {id:'caravan-town',room:'town',name:'Civeton',x:26,y:20,arrival:[26,21,'up'],fare:100},
  {id:'caravan-dorelem',room:'dorelem',name:'Dorelem',x:30,y:20,arrival:[30,21,'up'],fare:100},
  {id:'caravan-philomere',room:'philomere',name:'Philomere',x:24,y:20,arrival:[24,21,'up'],fare:100},

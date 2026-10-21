@@ -15,7 +15,7 @@ export function installMarasenWorld(maps,doors){
  for(const [n,room]of ['greenCut','greenCanopy','greenMeadow','greenBraid','greenVault','greenTerrace'].entries())maps[room].spots.push(actor('TRN-MR-ROAD-'+n,'Dawn Bloom road watch',24,19,'LDR-05'));
  const branches=[['greenFern','mill',['millRace','millRoots','millWheel']],['greenFalls','peach',['peachTrace','peachPools','peachOath','peachSanctuary']],['greenLantern','darius',['commonCamp','commonSpill','commonDam','commonCrown','commonBinding']]];
  for(const [base,key,rooms] of branches){
-  maps[base].gates.push(gate('mr-'+key+'-entry','Expedition · '+MARASEN_BRANCHES[rooms[0]].name,24,4,rooms[0],[3,17,'right'],'marasen-side-entry'));maps[base].sidePaths.push({points:[[24,7],[24,4]]});maps[base].gates.push({...gate('mr-'+key+'-shortcut','Restored return path',40,4,rooms.at(-1),[44,17,'left'],'marasen-shortcut'),marasenQuest:key});maps[base].sidePaths.push({points:[[36,7],[40,7],[40,4]]});
+  if(key!=='darius')maps[base].gates.push(gate('mr-'+key+'-entry','Expedition · '+MARASEN_BRANCHES[rooms[0]].name,24,4,rooms[0],[3,17,'right'],'marasen-side-entry'));if(key!=='darius')maps[base].sidePaths.push({points:[[24,7],[24,4]]});
   for(const [n,room] of rooms.entries()){
    const r=MARASEN_BRANCHES[room];maps[room]=map(r.name,r.kind,n+1);maps[room].grass=[];registerBiome(room,'forest');maps[room].gates=[gate(room+'-back',n?MARASEN_BRANCHES[rooms[n-1]].name:'Return to green road',1,17,n?rooms[n-1]:base,n?[44,17,'left']:[24,6,'down']),gate(room+'-forward',n<rooms.length-1?'Continue expedition':'Return to green road',46,17,n<rooms.length-1?rooms[n+1]:base,n<rooms.length-1?[3,17,'right']:[24,6,'down'],n<rooms.length-1?'marasen-expedition':undefined)];
    maps[room].spots.push({id:'mr-'+key+'-record-'+n,label:'Read the site account',x:24,y:16,questProp:true});
@@ -30,8 +30,8 @@ export function installMarasenWorld(maps,doors){
  add('commonDam',actor('TRN-MR-ALICE','Alice atte Ford',33,23,'REV-ALICE'));add('commonDam',{id:'mr-evacuate',label:'Send the evacuation signal',x:38,y:22,questProp:true});
  add('commonCrown',actor('TRN-MR-DARIUS','Darius',37,22,'REV-DARIUS'));add('commonBinding',{id:'mr-tellurion-encounter',label:'Tellurion beyond the broken bridle',x:38,y:22,questProp:true});
 
- // The Common Cause expedition is now mandatory on the main road. The previous
- // side entrance survives for existing saves; neither path duplicates Tellurion.
+ // The Common Cause expedition is mandatory on the main road.
+ // Existing expedition saves retain their rooms and progress.
  const terraceGate=maps.greenTerrace.gates.find(g=>g.id==='greenTerrace-forward');
  Object.assign(terraceGate,{label:'Occupied Spillway · Darius’s trail',to:'commonCamp',arrival:[3,17,'right'],action:'marasen-main-darius'});
  Object.assign(maps.commonCamp.gates[0],{label:'The Hundred Terraces',to:'greenTerrace',arrival:[44,17,'left']});
@@ -111,4 +111,12 @@ export function installMarasenWorld(maps,doors){
 
  installAquaticMarasen(maps,doors);
  installSiteTablets(maps);
+ // Structural entrances share their exact interaction tile; no floating destinations.
+ for(const m of Object.values(maps).filter(m=>m.verdantKind&&!Number.isInteger(m.exchangeFloor))){
+  for(const g of m.gates){
+   const building=m.aquaticBuildings?.find(b=>b.door?.[0]===g.x&&b.door?.[1]===g.y);
+   g.entrance={asset:building?null:g.to==='commonSpill'||g.to==='millRoots'?'biomecavemouth':'fortArch',x:g.x-1,y:g.y-3,w:3,h:4};
+  }
+ }
+
 }

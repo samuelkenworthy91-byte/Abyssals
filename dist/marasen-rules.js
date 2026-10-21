@@ -21,13 +21,67 @@ export function settleMarasenEncounter(s,key,outcome){if(!['captured','defeated'
 export function encounterSpec(s,key){if(!canMeetMarasen(s,key))return null;const q=marasenState(s);q.seeds[key]??=(s.playerName||'Aimon')+':marasen-unique:'+key;return {speciesId:speciesFor[key],level:key==='peach'?64:70,seed:q.seeds[key],marasenId:key,phase:'DAY',tableId:'MARASEN-UNIQUE-'+key};}
 export function marasenLeaderReady(s){return marasenState(s).walk.length===3&&defeated(s,'TRN-MR-GATE')&&defeated(s,'TRN-MR-INNER')&&questState(s,'fort').solved;}
 export function recordMarasenWalk(s,id){if(!['water','levy','letters'].includes(id)||!marasenUnlocked(s))return false;const q=marasenState(s);if(q.walk.includes(id))return false;q.walk.push(id);return true;}
-export function marasenObjective(s,room){const branch=MARASEN_BRANCHES[room];if(branch?.quest){const key=branch.quest,q=questState(s,key);return {spot:!q.accepted?'mr-'+key+'-keeper':!q.records.includes(branch.stage)?'mr-'+key+'-record-'+branch.stage:key==='peach'&&branch.stage===2&&!q.solved?'mr-peach-bells':key==='darius'&&branch.stage===3&&!defeated(s,'TRN-MR-DARIUS')?'TRN-MR-DARIUS':room+'-forward',text:!q.accepted?'Speak to the expedition keeper':!q.records.includes(branch.stage)?'Read the site account before continuing':key==='peach'&&q.solved?'Approach Liubeirow at the quiet spring':key==='darius'&&!q.evacuated?'Make the spillway safe and evacuate the households':key==='darius'&&!defeated(s,'TRN-MR-DARIUS')?'Climb to Darius after the evacuation':key==='mill'&&!q.solved?'Solve the coupled mill controls using both records':'Explore the next clearing; return paths stay open'};}
- if(VERDANT_ROAD.some(r=>r[0]===room))return {spot:room+'-forward',text:'Follow the irrigated green road towards Marasen; side expeditions are optional'};
- if(room.startsWith('marasenExchange'))return {spot:'mr-exchange-counter',text:'Browse the six-floor Grand Mercantile Exchange · Codices, held relics, evolution supplies and permanent growth.'};
- if(room==='marasenRapids')return {spot:'mr-race-board',text:'Race Water Abyssals through the rapids, or watch and wager doubloons on an exact finishing position.'};
- if(room==='marasenBridges'||room==='marasenCitadel')return {spot:room==='marasenBridges'?'mr-city-archive':'mr-citadel-fort',text:'Explore Marasen’s bridge district, soaring waterfalls and Highwater Citadel.'};
- if(room.startsWith('marasen'))return {spot:room==='marasen'?(marasenState(s).walk.length===3?'mr-fort-entry':!marasenState(s).walk.includes('water')?'mr-water':!marasenState(s).walk.includes('levy')?'mr-levy':'mr-letters'):room==='marasenGate'?'mr-fort-control':'mr-leader',text:s.fates?.['LDR-05']?'Marasen is open; Botrune lies beyond the current chapter':marasenState(s).walk.length<3?'Hear the households, read the levy account and collect Trade’s letter':'Explore the civic fort, solve its lock and challenge Khalid'};return null;}
-
-export function marasenJournal(s,room){if(!VERDANT_ROAD.some(r=>r[0]===room)&&!MARASEN_BRANCHES[room]&&!room.startsWith('marasen'))return null;const q=marasenState(s);return 'The Green Road leads through the cliffs and occupied spillway to Marasen. '+['mill','peach','darius'].map(key=>{const p=q.quests[key];return key+': '+(!p?.accepted?(key==='peach'&&!peachUnlocked(s)?'locked until Wei’s fort encounter is resolved':'keeper not yet spoken to'):p.claimed?'allocation complete':p.solved?'mechanism restored · '+p.records.length+' accounts':p.records.length+' accounts; read the site clues');}).join(' · ')+'. '+(q.quests.darius?.evacuated?'The reservoir households are evacuated. ':'')+(defeated(s,'TRN-MR-DARIUS')?'Darius has withdrawn; Tellurion’s encounter is beyond the bridle. ':'')+'Unique outcomes: Liubeirow '+(q.encounters.peach||'unresolved')+'; Tellurion '+(q.encounters.tellurion||'unresolved')+'.';}
+// One progress checklist powers the field objective, journal and blocked passages.
+const questRooms=key=>Object.keys(MARASEN_BRANCHES).filter(room=>MARASEN_BRANCHES[room].quest===key);
+const at=(room,spot,text)=>({room,spot,text});
+export function marasenQuestStep(s,key){
+ const q=questState(s,key),rooms=questRooms(key),name=room=>MARASEN_BRANCHES[room].name;
+ if(!q.accepted)return at(rooms[0],'mr-'+key+'-keeper','Speak to '+(key==='darius'?'Maryam bint Salim':key==='mill'?'Hugh atte Mill':'the orchard marker')+' at '+name(rooms[0])+' and accept the expedition');
+ for(let n=0;n<rooms.length;n++){
+  if(!q.records.includes(n))return at(rooms[n],'mr-'+key+'-record-'+n,'Read the stone tablet “'+MARASEN_RECORDS[key][n][0]+'” at '+name(rooms[n]));
+  if(n===1&&key!=='peach'){
+   if(!q.solved)return at(rooms[n],'mr-'+key+'-control','Restore the '+(key==='darius'?'spillway':'mill')+' with the coupled controls at '+name(rooms[n])+'. Use the two recorded tablet clues in Journal → Recorded site tablets');
+   if(key==='darius'&&!defeated(s,'TRN-MR-FARID'))return at(rooms[n],'TRN-MR-FARID','Win Farid ibn Yunus’s crossing challenge at '+name(rooms[n]));
+  }
+  if(n===2){
+   if(key==='darius'){
+    if(!defeated(s,'TRN-MR-ALICE'))return at(rooms[n],'TRN-MR-ALICE','Win Alice atte Ford’s crossing challenge at '+name(rooms[n]));
+    if(!q.evacuated)return at(rooms[n],'mr-evacuate','Speak to Alice at the evacuation signal beside the east road in '+name(rooms[n])+' to send the last carts');
+   }
+   if(key==='mill'){
+    if(!defeated(s,'TRN-MR-HUGH'))return at(rooms[n],'TRN-MR-HUGH','Win Hugh atte Mill’s milling challenge at '+name(rooms[n]));
+    if(!q.claimed)return at(rooms[n],'mr-mill-choice','Sign the flour allocation beside Hugh at '+name(rooms[n]));
+   }
+   if(key==='peach'&&!q.solved)return at(rooms[n],'mr-peach-bells','Reconstruct the six-stroke oath at the three bells in '+name(rooms[n])+'. The three recorded tablets explain the outward journey and return');
+  }
+  if(n===3&&key==='darius'&&!defeated(s,'TRN-MR-DARIUS'))return at(rooms[n],'TRN-MR-DARIUS','Challenge Darius beside the bound Tellurion at '+name(rooms[n]));
+ }
+ if(key==='peach'&&!marasenState(s).encounters.peach)return at(rooms.at(-1),'mr-peach-encounter','Approach Liubeirow at the Quiet Spring for the optional unique encounter');
+ if(key==='darius'&&!marasenState(s).encounters.tellurion)return at(rooms.at(-1),'mr-tellurion-encounter','Tellurion is free. Its unique encounter at the Broken Bridle is optional; the east arch leads to Marasen Water Gardens');
+ return at(rooms.at(-1),rooms.at(-1)+'-forward',key==='darius'?'Take the east arch to Marasen Water Gardens':'Return through the road arch to the Green Road; this optional expedition is complete');
+}
+function guideQuest(s,room){
+ const key=MARASEN_BRANCHES[room].quest,step=marasenQuestStep(s,key),rooms=questRooms(key),here=rooms.indexOf(room),there=rooms.indexOf(step.room);
+ if(here===there)return step;
+ const back=there<here,next=rooms[here+(back?-1:1)];
+ return {...step,spot:room+(back?'-back':'-forward'),text:(back?'Return west':'Continue east')+' through the arch to '+MARASEN_BRANCHES[next].name+'. Next: '+step.text};
+}
+export function marasenCivicStep(s){
+ const walk=marasenState(s).walk;
+ if(!walk.includes('water'))return at('marasen','mr-water','Speak to the Canal households on the north bank, west of the central canal bridge');
+ if(!walk.includes('levy'))return at('marasen','mr-levy','Read the Levy clerk’s account on the north bank, east of the central canal bridge');
+ if(!walk.includes('letters'))return at('marasen','mr-letters','Collect Trade’s letter from the forwarding box beside the Archive, in northeast Lower Cascades');
+ if(!defeated(s,'TRN-MR-GATE'))return at('marasenGate','TRN-MR-GATE','Challenge the canal guard in the Civic Fort · Gate Court');
+ if(!questState(s,'fort').solved)return at('marasenGate','mr-fort-control','Solve the household allocation lock at the controls in the Gate Court, using the city’s six-measure account');
+ if(!defeated(s,'TRN-MR-INNER'))return at('marasenHall','TRN-MR-INNER','Challenge the reservoir guard in the Assembly Hall, east of the Gate Court');
+ return at('marasenHall','mr-leader','Challenge Castellan Khalid ibn Hasan in the east of the Assembly Hall, then decide his fate');
+}
+export function marasenObjective(s,room){
+ if(MARASEN_BRANCHES[room]?.quest)return guideQuest(s,room);
+ if(VERDANT_ROAD.some(r=>r[0]===room))return {spot:room+'-forward',text:room==='greenApproach'?'Follow the east road arch to Marasen · Lower Cascades':room==='greenTerrace'?'Take the east arch to Refugee Kitchens. Speak to Maryam to begin the mandatory spillway evacuation; Darius blocks the road to Marasen':'Follow the east road arches towards the Hundred Terraces, then Refugee Kitchens and Marasen. Silent Mill and Peach Orchard are optional north trails'};
+ if(!room.startsWith('marasen'))return null;
+ if(s.fates?.['LDR-05'])return {spot:room==='marasen'?'marasen-next':null,text:'The city challenge is complete. From Lower Cascades, take the east road arch to the Thunderplain and Botrune'};
+ const step=marasenCivicStep(s);
+ if(room===step.room)return step;
+ const returnCity=step.room==='marasen';
+ const links={marasen:returnCity?null:'mr-fort-entry',marasenCitadel:returnCity?'mr-citadel-back':'mr-citadel-fort',marasenBridges:returnCity?'mr-bridges-home':'mr-bridges-citadel',marasenRapids:'mr-rapids-back',marasenGate:returnCity?'marasenGate-back':'marasenGate-forward',marasenHall:'marasenHall-back'};
+ const directions={marasen:'Take the northeast stone arch to Highwater Citadel, then enter the large citadel doorway',marasenCitadel:returnCity?'Take the west road arch to Lower Cascades':'Enter the large citadel doorway to the Gate Court',marasenBridges:returnCity?'Take the west arch to Lower Cascades':'Take the east arch to Highwater Citadel',marasenRapids:'Take the west arch to Lower Cascades',marasenGate:returnCity?'Return west to Highwater Citadel, then west to Lower Cascades':'Take the east arch to the Assembly Hall',marasenHall:'Return west through the Gate Court'};
+ if(room.startsWith('marasenExchange'))return {spot:Number(room.slice(-1))?'mr-exchange-down':'mr-exchange-leave',text:'Use the west stairs down to 1F, then the south exit to Lower Cascades. Next: '+step.text};
+ return {spot:links[room]||'room-exit',text:(directions[room]||'Leave this building for Lower Cascades')+'. Next: '+step.text};
+}
+export function marasenJournal(s,room){
+ const objective=marasenObjective(s,room);if(!objective)return null;
+ return 'Next: '+objective.text+'. Main road: Cossenne → Green Road → Hundred Terraces → Refugee Kitchens → Spillway Tunnels → Lower Warning → Crown Reservoir → Broken Bridle → Water Gardens → Marasen. '+['darius','mill','peach'].map(key=>(key==='darius'?'Required road expedition':key==='mill'?'Optional Silent Mill':'Optional Peach Orchard')+': '+(key==='peach'&&!peachUnlocked(s)?'Resolve Wei’s encounter on the bottom floor of the Sunken Fort first. Return to Pearlwater Falls and take the north trail':marasenQuestStep(s,key).text)).join('. ')+'.';
+}
 
 export function marasenBlocked(s,room,x,y){if(y<16||y>18)return false;if(room==='marasenGate')return x===18&&!defeated(s,'TRN-MR-GATE')||x===34&&!questState(s,'fort').solved;if(room==='marasenHall')return x===30&&!defeated(s,'TRN-MR-INNER');return false;}

@@ -47,7 +47,7 @@ export function installAquaticMarasen(maps,doors){
  bridges.gates=[gate('mr-bridges-home','Lower Cascades',1,17,'marasen',[24,26,'up']),gate('mr-bridges-citadel','Highwater Citadel',46,17,'marasenCitadel',[3,17,'right'])];move(bridges,'area-sign',5,14);
  const rapids=maps.marasenRapids;
  setup(rapids,'aquaticArena',[building('aquaticArena',8,1,32,16,null,'RAPIDS ARENA')],[[0,22,47,24]],[bridge(3,22,3,3,'v'),bridge(23,22,3,3,'v'),bridge(43,22,3,3,'v')],[[1,17],[46,17]],[[[4,17],[4,28],[44,28],[44,17]],[[24,19],[24,28]]]);
- move(rapids,'mr-race-marshal',24,20);move(rapids,'mr-race-board',34,27);move(rapids,'area-sign',7,19);rapids.gates[0].arrival=[44,28,'left'];
+ move(rapids,'mr-race-marshal',24,20);move(rapids,'mr-race-board',34,27);move(rapids,'area-sign',7,19);rapids.gates[0].arrival=[44,28,'left'];rapids.gates=rapids.gates.filter(g=>g.id!=='mr-rapids-bridges');
  const citadel=maps.marasenCitadel;
  setup(citadel,'aquaticCitadel',[building('aquaticCitadel',15,1,25,17,[27,17],'HIGHWATER CITADEL')],[[0,22,47,24]],[bridge(7,22,3,3,'v'),bridge(36,22,3,3,'v')],[[1,17],[10,17],[10,20],[44,20],[44,17],[46,17]],[[[8,20],[8,28],[38,28],[38,20]],[[27,17],[27,20]]]);
  move(citadel,'mr-water-warden',20,20);move(citadel,'area-sign',5,19);move(citadel,'mr-city-headwaters',31,27);
@@ -70,7 +70,7 @@ export function drawAquaticDetails(c,m,asset){c.save();
  // Stone coping follows actual water, while bridges are drawn last so railings remain continuous.
  c.strokeStyle='#99bdba';c.lineWidth=2;for(const [a,b,d,e]of m.marasenWater||[])c.strokeRect(a*16,b*16,(d-a+1)*16,(e-b+1)*16);
  for(const b of m.aquaticBridges)drawBridge(c,b,asset);
- for(const b of m.aquaticBuildings){asset(c,b.asset,b.x,b.y,b.w,b.h);if(b.door){const [x,y]=b.door;asset(c,'mat',x-1,y,3,1);plaque(c,x*16+8,(y+1)*16+1,b.label,110);}else plaque(c,(b.x+b.w/2)*16,(b.y+b.h)*16,b.label,120);}
- if(m.verdantKind==='aquaticCity'){asset(c,'fortArch',43,9,3,4);plaque(c,44*16+8,14*16,'HIGHWATER →',100);plaque(c,24*16+8,29*16,'SEVEN BRIDGES ↓',115);plaque(c,43*16,29*16,'RAPIDS →',76);}
+ for(const b of m.aquaticBuildings){asset(c,b.asset,b.x,b.y,b.w,b.h);if(b.door){const [x,y]=b.door;asset(c,'mat',x-1,y,3,1);}}
+
  c.restore();}
 export function drawAquaticNotice(c,m,s){c.save();plaque(c,s.x*16+8,(s.y-1)*16,m.verdantKind==='aquaticArena'?'RAPIDS':m.verdantKind==='aquaticCitadel'?'HIGHWATER':'CITY GUIDE',85);c.restore();}

@@ -66,7 +66,7 @@ export function drawNewMap(c,room,drawAsset){const bloom=territoryBloom(room);co
  drawExplorationScenery(c,m,{biome:!!biomeFor(room)});
  if(!m.verdantKind&&!m.farm)drawBiomeDetails(c,room,drawAsset,(x,y)=>newWalkable(room,x,y));
  drawPassDetails(c,m,asset,(x,y)=>newWalkable(room,x,y));drawEnvironmentArtwork(c,m,asset,(x,y)=>newWalkable(room,x,y));
- drawMarasenDetails(c,m,drawAsset,(x,y)=>newWalkable(room,x,y));drawOrchardDecor(c,m,drawAsset,(x,y)=>newWalkable(room,x,y));drawBiomeEntrances(c,m,asset);drawJetty(c,room,globalThis.performance?.now?.()||0);
+ drawMarasenDetails(c,m,drawAsset,(x,y)=>newWalkable(room,x,y));for(const g of m.gates||[]){const e=g.entrance;if(e?.asset)drawAsset(c,e.asset,e.x,e.y,e.w,e.h);}drawOrchardDecor(c,m,drawAsset,(x,y)=>newWalkable(room,x,y));drawBiomeEntrances(c,m,asset);drawJetty(c,room,globalThis.performance?.now?.()||0);
  if(m.terrain==='fort'&&!m.leaderFort){c.save();for(const g of m.gates){const back=g.id.endsWith('-back'),x=back?3:44,y=17;c.fillStyle='#182b3bcc';c.fillRect((x-1)*16,y*16-21,48,16);c.fillStyle='#ffe3a5';c.font='bold 10px sans-serif';c.textAlign='center';c.fillText(back?(m.caveFloor===0?'EXIT ←':'UP ←'):'DOWN →',x*16+8,y*16-9);c.fillRect(x*16,y*16+6,16,3);c.beginPath();c.moveTo((x+(back?0:1))*16,y*16+1);c.lineTo((x+(back?-0.4:1.4))*16,y*16+7);c.lineTo((x+(back?0:1))*16,y*16+13);c.fill();}c.restore();}
 
 }
