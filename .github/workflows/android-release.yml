@@ -41,6 +41,7 @@ jobs:
           npm install --no-save --package-lock=false playwright@1.51.1
           npx playwright install --with-deps chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+          node tests/character-art-browser.cjs
           node tests/quickbite-angling-browser.cjs
           node tests/browser-smoke.cjs
           node tests/botrune-browser.cjs

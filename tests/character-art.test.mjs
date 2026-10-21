@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {DATA} from '../dist/data.js';
+import {relicArtPath} from '../dist/relic-art.js';
+import {RESTORED_TRAINER_ART,trainerPortraitId,trainerBattleArtId,dialoguePortraitId} from '../dist/side-trainer-art.js';
+import {MARASEN_TRAINERS} from '../dist/marasen-data.js';
+import {BOTRUNE_TRAINERS} from '../dist/botrune-data.js';
+import {STORM_TRAINERS} from '../dist/thunderplain-data.js';
+import {worldPortrait} from '../dist/world-characters.js';
+const root=new URL('../dist/',import.meta.url),exists=path=>fs.existsSync(new URL(path,root));
+for(const s of DATA.species)assert(exists(relicArtPath(s.id)||'assets/'+s.id+'.webp'),s.id+' has real battle/dialogue artwork');
+assert.equal(RESTORED_TRAINER_ART.length,13);
+const trainers=[...MARASEN_TRAINERS,...BOTRUNE_TRAINERS,...STORM_TRAINERS];
+for(const id of RESTORED_TRAINER_ART){
+ const t=trainers.find(t=>t.id===id);assert(t,id);
+ assert.equal(trainerPortraitId(t),id);
+ assert.equal(trainerBattleArtId(t),id);
+ assert.equal(dialoguePortraitId(id,trainers),id);
+ assert.equal(worldPortrait({id}),id);
+ assert(exists('assets/'+id+'.webp'));
+}
+assert.equal(trainerBattleArtId({id:'LDR-05'}),'LDR-05-battle');
+assert.equal(trainerPortraitId({id:'LDR-05'}),'LDR-05');
+assert.equal(dialoguePortraitId('TRN-MR-DARIUS',trainers),'REV-DARIUS');
+assert.equal(dialoguePortraitId('REMATCH-LDR-05-1',[{id:'REMATCH-LDR-05-1',portraitId:'LDR-05'}]),'LDR-05');
+assert(exists('assets/LDR-05-battle.webp'));
+const app=fs.readFileSync(new URL('app.js',root),'utf8');
+assert(!app.includes('imageCache[t.id]?t.id:null'));
+assert(app.includes('abyssalUnit:u'));
+assert(app.includes('combatArtSrc(subject)'));
+assert(app.includes('dialogue!==current||current.lines[current.index]!==line'));
+console.log('PASS: every creature has real artwork; thirteen distinct archived full figures; consistent dialogue/battle/world identity; Khalid full body; rematch and post-fight aliases; stale async dialogue guard');

@@ -485,4 +485,8 @@ export const SIDE_TRAINER_ART={
   }
 };
 export const SIDE_TRAINER_IDS=Object.keys(SIDE_TRAINER_ART);
-export function trainerPortraitId(trainer){return SIDE_TRAINER_ART[trainer?.id]?trainer.id:trainer?.portraitId||trainer?.id;}
+export const RESTORED_TRAINER_ART=["TRN-MR-ROAD-0", "TRN-MR-ROAD-1", "TRN-MR-ROAD-2", "TRN-MR-ROAD-3", "TRN-MR-ROAD-4", "TRN-MR-ROAD-5", "TRN-MR-GATE", "TRN-MR-INNER", "TRN-BT-GUARD-1", "TRN-BT-GUARD-2", "TRN-BT-GUARD-3", "TRN-BT-ASCENT", "TRN-BT-CAVE"];
+export function trainerPortraitId(trainer){return RESTORED_TRAINER_ART.includes(trainer?.id)||SIDE_TRAINER_ART[trainer?.id]?trainer.id:trainer?.portraitId||trainer?.id;}
+export function trainerBattleArtId(trainer){const id=trainerPortraitId(trainer);return id==='LDR-05'?'LDR-05-battle':id;}
+export function dialoguePortraitId(id,trainers=[]){const trainer=trainers.find(t=>t.id===id);return trainer?trainerPortraitId(trainer):id;}
+

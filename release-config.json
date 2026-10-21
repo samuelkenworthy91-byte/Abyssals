@@ -1,7 +1,7 @@
 {
-  "version": "0.90.15",
-  "version_code": 110,
-  "filename": "Abyssals-v0.90.15-Quickbite-Angling.apk",
-  "title": "Abyssals v0.90.15 \u2014 Quickbite and Angling",
-  "notes": "Quickbite starts at 40\u00d7 capture strength, falls to 12\u00d7 on round 2 and 3\u00d7 on round 3, then returns to 1\u00d7 from round 4. A level-65 catch-rate-45 Abyssal at 1 HP has about a 61% opening chance. Fishing keepers can be submitted immediately, with casting open until nightfall. A full saved game-day cooldown runs from the later catch/submission before another daylight entry; travel and save/reload preserve it. Existing contests, prizes, saves, package and original signing certificate are preserved. Tested through GitHub Actions; no physical-phone testing performed."
+  "version": "0.90.16",
+  "version_code": 111,
+  "filename": "Abyssals-v0.90.16-Character-Portraits.apk",
+  "title": "Abyssals v0.90.16 \u2014 Faces of the Expedition",
+  "notes": "Companion conversations now use the actual battle-art resolver, including atlas species and shiny colours. Post-fight trainer conversations resolve their mapped portrait instead of requesting nonexistent encounter-ID files. Thirteen archived complete figures provide distinct role-appropriate route/fort trainer appearances in dialogue, battle and the overworld. Khalid gains a full-body battle illustration matching his existing portrait. Canon Fatima has a heavier, harsher execution-leader design. Existing saves, story outcomes, unique encounters, Quickbite/fishing changes, Android package and original signing certificate are preserved. Automated source and browser checks; no physical-phone testing."
 }

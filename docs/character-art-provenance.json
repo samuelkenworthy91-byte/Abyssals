@@ -1,0 +1,105 @@
+[
+  {
+    "id": "TRN-MR-ROAD-0",
+    "source": "art-library/characters/reference/TRN-C06-007_Enforcer_Kelm.png",
+    "source_sha256": "1e1db894c397c64aeb03f58a89539353d1d614c285815163b249d0dd5a040e69",
+    "runtime": "assets/TRN-MR-ROAD-0.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-ROAD-1",
+    "source": "art-library/characters/reference/TRN-C06-008_Defector_Mara.png",
+    "source_sha256": "18e1067df88037ed402a595a7cdbb8c5b2b27cf571deb62bba8d9a8c1bbc0aa5",
+    "runtime": "assets/TRN-MR-ROAD-1.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-ROAD-2",
+    "source": "art-library/characters/reference/TRN-C08-009_Duelist_Caia.png",
+    "source_sha256": "fdbdff3e3a401b4f68745ecd93977b75bcb973b192222ed433f16b49fa240ec8",
+    "runtime": "assets/TRN-MR-ROAD-2.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-ROAD-3",
+    "source": "art-library/characters/reference/TRN-C07-006_Guard_Captain_Vessa.png",
+    "source_sha256": "478d4f54d459666374cf642fcd56a44f67aeefc9b53aa85ef32803795053f213",
+    "runtime": "assets/TRN-MR-ROAD-3.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-ROAD-4",
+    "source": "art-library/characters/reference/TRN-C06-009_Prospector_Venn.png",
+    "source_sha256": "4d9aab1019a068faee275b6a8772e1af0be33e6ac1c35842be83114b9d01eb58",
+    "runtime": "assets/TRN-MR-ROAD-4.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-ROAD-5",
+    "source": "art-library/characters/reference/TRN-C06-005_Mason_Edda.png",
+    "source_sha256": "ce53cbdb5e0ee31eaa9c53ae9bcf02b7c46fba0d6d23a8d4d556b0e63f723af9",
+    "runtime": "assets/TRN-MR-ROAD-5.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-GATE",
+    "source": "art-library/characters/reference/TRN-C06-006_Officer_Sorn.png",
+    "source_sha256": "8974557291ffb0fff9ce47294fa1547d9175b4bbae4cc4d499976d5543d3230a",
+    "runtime": "assets/TRN-MR-GATE.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-MR-INNER",
+    "source": "art-library/characters/reference/TRN-C09-001_Temple_Guard_Aurel.png",
+    "source_sha256": "2432cf8a18650446be12ca58b25a48921ac7db2ff23d214150d38b8b31866f83",
+    "runtime": "assets/TRN-MR-INNER.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-BT-GUARD-1",
+    "source": "art-library/characters/reference/TRN-C02-006_Ysarn_Guard.png",
+    "source_sha256": "9f18d846c3be885283213a1e513683a26a80a3e9b99211d369f4397ce12a50ac",
+    "runtime": "assets/TRN-BT-GUARD-1.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-BT-GUARD-2",
+    "source": "art-library/characters/reference/TRN-C02-004_Halven_Officer.png",
+    "source_sha256": "ad618b8a072e3cd4a65061598ef725e71fbb5cf225290edde01cf83a5f34dcb7",
+    "runtime": "assets/TRN-BT-GUARD-2.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-BT-GUARD-3",
+    "source": "art-library/characters/reference/TRN-C07-007_Heretic_Scribe_Omel.png",
+    "source_sha256": "ef232d5ffc53a8d89768ee23ab099e27545591f25d2ebb4c9006d34fd6abefe4",
+    "runtime": "assets/TRN-BT-GUARD-3.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-BT-ASCENT",
+    "source": "art-library/characters/reference/TRN-C02-003_Neris_Hunter.png",
+    "source_sha256": "9f5001b3ec4e1ca54b0b06cb1b0bf3a7f06ec85dbcd34689f922d2ad85779adf",
+    "runtime": "assets/TRN-BT-ASCENT.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "TRN-BT-CAVE",
+    "source": "art-library/characters/reference/TRN-C02-005_Corren_Siege_Engineer.png",
+    "source_sha256": "ad2e3646966dd1c5159722480a6dcb9dd144118888d309e1b0f337817ab689bf",
+    "runtime": "assets/TRN-BT-CAVE.webp",
+    "normalization": "Remove magenta key; isolate full-figure bounds; resize to at most 520\u00d7780. No character redraw."
+  },
+  {
+    "id": "LDR-05-battle",
+    "source": "Built-in ImageGen edit of existing LDR-05 reference",
+    "runtime": "assets/LDR-05-battle.webp",
+    "purpose": "Full-body Khalid continuation"
+  },
+  {
+    "id": "LDR-06",
+    "source": "Built-in ImageGen edit of existing LDR-06 reference",
+    "runtime": "assets/LDR-06.webp",
+    "purpose": "User-requested heavy-built cruel execution leader redesign, retaining Canon Fatima"
+  }
+]
