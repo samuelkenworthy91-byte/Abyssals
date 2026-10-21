@@ -3,6 +3,8 @@ import {AQUATIC_ASSETS,drawAquaticSurface,drawAquaticDetails} from './marasen-aq
 import {drawCompanion} from './companion.js?v=0.87.0';
 export const MARASEN_ASSETS=Object.fromEntries(['Tree','Gate','Keep','Market','Apothecary','Archive','Mill','Binding'].map(n=>['marasen'+n,'marasen-'+n.toLowerCase()+'-v082.webp']));
 Object.assign(MARASEN_ASSETS,AQUATIC_ASSETS);
+for(const name of ['Potions','Books','Armour','Stairs','Counter'])MARASEN_ASSETS['exchange'+name]='exchange-'+name.toLowerCase()+'-v09012.webp';
+for(let i=0;i<6;i++)MARASEN_ASSETS['exchangeBackdrop'+i]='exchange-frieze-'+i+'-v09012.webp';
 const TERRAIN_NAMES=['LawnA','LawnB','PathA','PathB','MeadowA','MeadowB','MeadowC','MeadowD','WaterA','WaterB','WaterC','WaterD','Bank','Floor','TimberV','TimberH'];
 for(const name of TERRAIN_NAMES)MARASEN_ASSETS['verdant'+name]='verdant-'+name.replace(/([a-z])([A-Z])/g,'$1-$2').toLowerCase()+'-v085.webp';
 for(const name of ['Oak','Willow','Fern','Reeds','Bridge','Log','Garden','Stones'])MARASEN_ASSETS['verdant'+name]='verdant-'+name.toLowerCase()+'-v085.webp';

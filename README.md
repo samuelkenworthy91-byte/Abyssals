@@ -4,6 +4,8 @@ Current game source and artwork: **dist/**. Releases contain installable signed 
 
 The 0.90.1 update opens the seven-screen Thunderplain from Marasen to Botrune. A public execution scene, persistent guard gauntlet and physical-power leader battle continue Pate and Trade’s story. See [the current story revision and asset provenance](docs/botrune-story.md). Existing farm conversations and puzzle tablets remain available.
 
+The 0.90.12 update replaces Marasen’s freestanding district portals with open-air streets and gives each Exchange floor stocked individual display cabinets and marble stairs. See [layout, artwork provenance and verification](docs/marasen-store.md).
+
 ## Standard update protocol
 
 1. Commit source, artwork, tests and build changes here. Bump the version and Android version_code in `release-config.json`, plus the game/offline version.

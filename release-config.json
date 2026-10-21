@@ -1,7 +1,7 @@
 {
-  "version": "0.90.11",
-  "version_code": 106,
-  "filename": "Abyssals-v0.90.11-Marasen-Navigation.apk",
-  "title": "Abyssals v0.90.11 \u2014 Clear roads to Marasen",
-  "notes": "Fixes the Marasen caravan arrival inside the canal and moves its hub to a connected road. Corrects Walter\u2019s emergency return point and safely places travel arrivals; existing blocked saves recover on resume. Progress-aware route messages and Journal name the exact next person, tablet, mechanism or challenge and its location, including Darius\u2019s mandatory evacuation route and Khalid\u2019s civic prerequisites. Removes duplicate Darius access, locked optional return shortcuts and the unneeded Rapids-to-Bridges exit. Remaining road and district transitions have visible stone arches or tunnel mouths using existing artwork, and city building labels are decluttered. Preserves saves, quest progress, unique encounters, permanent deaths, package and original signing key. Navigation, quest regression and live Chromium checks run before the signed GitHub Actions release. No physical-phone installation test claimed."
+  "version": "0.90.12",
+  "version_code": 107,
+  "filename": "Abyssals-v0.90.12-Marasen-Exchange.apk",
+  "title": "Abyssals v0.90.12 \u2014 Marasen streets and stocked Exchange",
+  "notes": "Marasen\u2019s districts now connect through visible open-air streets rather than freestanding doorway portals. Every exterior building has an entrance: the Seed Exchange is restored in Seven Bridges and the Rapids Arena has a race hall. Six Exchange floors receive individual transparent 3D-style potion cases, armour cabinets, colourful codex bookshelves, carved counters and marble staircases, with shared furniture/stair collision and broad clear aisles. Original architectural detail is reused only outside walkable floor space. Existing saves, quests, permanent deaths, unique encounters and the original Android package/certificate are preserved. Automated geometry, save recovery and live Chromium interaction checks run before the signed GitHub Actions release. No physical-phone installation test claimed."
 }

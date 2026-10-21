@@ -32,3 +32,5 @@ Object.assign(INTERIORS.marasenMarket,{floor:'#b6b78a',wall:'#5b7b64',rug:[21,21
 Object.assign(INTERIORS.marasenApothecary,{floor:'#bac6a1',wall:'#467367',rug:[23,20,4,3]});
 Object.assign(INTERIORS.marasenArchive,{floor:'#bdba9e',wall:'#597080',rug:[21,19,7,3]});
 Object.assign(INTERIORS.marasenMill,{floor:'#b4ab81',wall:'#6b795e',rug:[21,21,6,3]});
+
+INTERIORS.marasenArena=structuredClone(INTERIORS.cossenneFirewatch);

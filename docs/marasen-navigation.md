@@ -25,3 +25,7 @@ Remove the duplicate Lanternwood entrance to Darius, locked optional return shor
 - Android versionName supports multi-digit patch numbers by rebuilding the pinned wrapper's binary XML string pool, lengths and later offsets. `tests/android-manifest.test.py` checks pool alignment, preceding/following strings, package and versionCode for multiple lengths.
 
 Release `0.90.11`, Android code `106`, same package and original signing certificate. GitHub Actions runs tests, reconstructs the compatible wrapper, builds, signs, verifies and publishes the APK. No physical-phone installation test is claimed.
+
+## v0.90.12 layout overlay
+
+See [Marasen streets and Exchange](marasen-store.md) for the current city street endpoints, restored Seed Exchange, Arena race hall and stocked six-floor interiors. This supersedes v0.90.11’s city district arches; required expedition road guidance and safe caravan/priest arrivals remain unchanged.

@@ -115,7 +115,7 @@ export function installMarasenWorld(maps,doors){
  for(const m of Object.values(maps).filter(m=>m.verdantKind&&!Number.isInteger(m.exchangeFloor))){
   for(const g of m.gates){
    const building=m.aquaticBuildings?.find(b=>b.door?.[0]===g.x&&b.door?.[1]===g.y);
-   g.entrance={asset:building?null:g.to==='commonSpill'||g.to==='millRoots'?'biomecavemouth':'fortArch',x:g.x-1,y:g.y-3,w:3,h:4};
+   g.entrance={asset:building||g.street?null:g.to==='commonSpill'||g.to==='millRoots'?'biomecavemouth':'fortArch',x:g.x-1,y:g.y-3,w:3,h:4};
   }
  }
 

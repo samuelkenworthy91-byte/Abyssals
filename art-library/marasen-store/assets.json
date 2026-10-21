@@ -1,0 +1,37 @@
+[
+  {
+    "name": "potions",
+    "source": "art-library/marasen-store/source/potions.png",
+    "source_sha256": "e2d89e65c2afcb673f1e3350f37c5dfb5e3e1497d9bff1a7efff314389d305f0",
+    "runtime": "dist/assets/pixel/exchange-potions-v09012.webp",
+    "runtime_bytes": 35494
+  },
+  {
+    "name": "books",
+    "source": "art-library/marasen-store/source/books.png",
+    "source_sha256": "25bf6f97cf9f2a379670d3294743f4a37a090f2b7b0e6d62572e6bc596553039",
+    "runtime": "dist/assets/pixel/exchange-books-v09012.webp",
+    "runtime_bytes": 34732
+  },
+  {
+    "name": "armour",
+    "source": "art-library/marasen-store/source/armour.png",
+    "source_sha256": "be63325809020a3f06f31e235223bb9b5cd4eb494412e3a45234f4997591a899",
+    "runtime": "dist/assets/pixel/exchange-armour-v09012.webp",
+    "runtime_bytes": 36584
+  },
+  {
+    "name": "stairs",
+    "source": "art-library/marasen-store/source/stairs.png",
+    "source_sha256": "16693549c674634ba73b3b9151d6cb66e49ba23768d4a85cf7dbb1210ab2402c",
+    "runtime": "dist/assets/pixel/exchange-stairs-v09012.webp",
+    "runtime_bytes": 22074
+  },
+  {
+    "name": "counter",
+    "source": "art-library/marasen-store/source/counter.png",
+    "source_sha256": "f55e89bc79b4a046c2a739528f72136b0dc9a6c1753a33233d82a43a55d2b9ce",
+    "runtime": "dist/assets/pixel/exchange-counter-v09012.webp",
+    "runtime_bytes": 28186
+  }
+]
