@@ -2,7 +2,7 @@ import {rollShiny} from './shinies.js?v=0.87.0';
 import {rollInheritance,validateInheritance} from './breeding-inheritance.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
-import {hashSeed} from './progression.js?v=0.87.0';
+import {hashSeed} from './progression.js?v=0.90.17';
 export const EGG_ICON='assets/items/abyssal-egg.webp';
 export const BREEDING_FEE=1000,EGG_STEPS=512,EGG_CAPACITY=3;
 const protectedFamilies=new Set(DATA.species.filter(s=>s.legendaryRoamer||/legendary|mythic/i.test(s.power_class||'')||/^(mythic|mythical|legendary)$/i.test(s.role||'')).map(s=>rootForm(s.id)));

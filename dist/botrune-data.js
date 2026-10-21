@@ -30,16 +30,276 @@ export const BOTRUNE_TRAINERS=[
 ];
 export const BOTRUNE_GUARDS=BOTRUNE_TRAINERS.filter(t=>t.id.startsWith('TRN-BT-GUARD'));
 export function installBotruneTrainers(expansion,voices={}){for(const t of BOTRUNE_TRAINERS){if(!expansion.trainers.some(x=>x.id===t.id))expansion.trainers.push(t);voices[t.id]={before:t.before,after:t.after,repeat:'This challenge is finished.'};}}
+// Keep all nine checkpoint indices stable for existing saves.
 export const TRIAL_BEATS=[
- {lines:[['Canon Fatima bint Musa','People of Botrune. These First Light soldiers poisoned the wells, burned our grain and murdered those who would not kneel. Their commanders call it deliverance. We call it by its proper name.','LDR-06'],['Botrune','Nobody cheers. A woman folds her hands over an empty bread basket. Beside her, a clerk looks down at the stones.']]},
- {lines:[['First prisoner','We arrived yesterday. We never went near your wells.'],['Canon Fatima bint Musa','The record is complete.','LDR-06']],death:'prisoner-1'},
- {lines:[['Second prisoner','Ask the miller. We carried his daughter out of the storm.'],['Botrune','The miller in the front row opens his mouth. A guard turns towards him. He lowers his head.']],death:'prisoner-2'},
- {lines:[['Third prisoner','There was no hearing. You did not even ask our names.'],['Canon Fatima bint Musa','Names do not alter a sentence.','LDR-06']],death:'prisoner-3'},
- {lines:[['Botrune','The guard pulls the last two prisoners into the light. A familiar face turns towards the crowd. Then another.'],['Aimon','Pate? Trade?','CHR-AIMON']]},
- {lines:[['Pate','Aimon. No—don’t come up here. Run! Get away from this place!','CHR-PATE'],['Trade','Listen to him. You don’t have to prove anything to us. Go. Live.','CHR-TRADE'],['Aimon','Let them go. They haven’t done what you said. Let them go!','CHR-AIMON']]},
- {comic:'pate',lines:[['Pate','Please—he is only a boy. Let Aimon go. Look at me. Please, look at me!','CHR-PATE'],['A guard','Canon, wait! These two carried our wounded. I saw them!'],['Canon Fatima bint Musa','Continue.','LDR-06']],death:'CHR-PATE'},
- {comic:'trade',lines:[['Trade','Pate? Pate, answer me. Please. Aimon, don’t look. Go!','CHR-TRADE'],['A soldier below the stage','Stop! For the love of—stop! They have done nothing!'],['Trade','Aimon. Please.','CHR-TRADE']],death:'CHR-TRADE'},
- {lines:[['Botrune','There is no applause. Fatima lowers the blade. Five people lie on the platform. The clerk closes a ledger whose last two lines were never filled in.'],['Aimon','I thought if I could just catch up…','CHR-AIMON'],['Aimon','They were here. I was here.','CHR-AIMON'],['Canon Fatima bint Musa','Clear the square.','LDR-06']]}
+ {
+  "lines": [
+   [
+    "Botrune",
+    "The narrow street opens onto the abbey square. Soldiers hold a crowd below a raised platform. Five prisoners kneel beside a block. Fatima stands at a lectern, a heavy sword beside her."
+   ],
+   [
+    "Canon Fatima bint Musa",
+    "By authority of the garrison, the following sentences will be carried out now.",
+    "LDR-06"
+   ],
+   [
+    "A woman in the crowd",
+    "Where was the hearing? Let their families speak!"
+   ],
+   [
+    "Cordon captain",
+    "Behind the line. All of you."
+   ]
+  ]
+ },
+ {
+  "lines": [
+   [
+    "Canon Fatima bint Musa",
+    "First prisoner. Poisoning the south well and conspiring to murder the households who draw from it. Guilty. Sentence: death.",
+    "LDR-06"
+   ],
+   [
+    "First prisoner",
+    "We arrived yesterday! I never went near that well. Ask anyone on the gate!"
+   ],
+   [
+    "The miller",
+    "The well is clean! I drank from it this morning!"
+   ],
+   [
+    "Cordon captain",
+    "Another word and you will be removed. Hold the line."
+   ],
+   [
+    "Botrune",
+    "Fatima leaves the lectern. The prisoner is forced forward. The sword falls; his protest stops. His body is dragged clear of the block."
+   ]
+  ],
+  "death": "prisoner-1"
+ },
+ {
+  "lines": [
+   [
+    "Canon Fatima bint Musa",
+    "Second prisoner. Burning the grain store and withholding food from the people of Botrune. Guilty. Sentence: death.",
+    "LDR-06"
+   ],
+   [
+    "The baker",
+    "That fire was months ago! She wasn’t even here!"
+   ],
+   [
+    "Second prisoner",
+    "Please. Ask the miller. I carried his daughter out of the storm. He knows me."
+   ],
+   [
+    "Cordon captain",
+    "Face the platform. Keep the crowd back."
+   ],
+   [
+    "Botrune",
+    "A guard forces her to her knees. Fatima strikes again. The miller shouts until his voice breaks; the soldiers do not move."
+   ]
+  ],
+  "death": "prisoner-2"
+ },
+ {
+  "lines": [
+   [
+    "Canon Fatima bint Musa",
+    "Third prisoner. Murder of a civilian messenger and armed conspiracy against this city. Guilty. Sentence: death.",
+    "LDR-06"
+   ],
+   [
+    "Third prisoner",
+    "You took me off a wagon. I asked for a hearing. You wouldn’t even take my name."
+   ],
+   [
+    "A voice in the crowd",
+    "Then name the messenger! Who was killed?"
+   ],
+   [
+    "Canon Fatima bint Musa",
+    "The sentence stands.",
+    "LDR-06"
+   ],
+   [
+    "Cordon captain",
+    "Eyes front. Nobody crosses."
+   ],
+   [
+    "Botrune",
+    "The third prisoner struggles as the guards pin his arms. Fatima brings the sword down. His heels scrape once against the boards, then stop."
+   ]
+  ],
+  "death": "prisoner-3"
+ },
+ {
+  "lines": [
+   [
+    "Botrune",
+    "The last two prisoners are pulled forward. One has a green cloak darkened by the rain. The other turns at the sound of your voice."
+   ],
+   [
+    "Aimon",
+    "Pate? Trade?",
+    "CHR-AIMON"
+   ],
+   [
+    "Canon Fatima bint Musa",
+    "Peter FitzRobert. Known as Pate. Aiding an enemy company, theft of garrison supplies and organising armed infiltration. Guilty. Sentence: death.",
+    "LDR-06"
+   ],
+   [
+    "Pate",
+    "We came for a wagon ride! We were buying supplies for a cart. Ask the driver!",
+    "CHR-PATE"
+   ],
+   [
+    "Aimon",
+    "That’s a lie! They haven’t done any of that!",
+    "CHR-AIMON"
+   ]
+  ]
+ },
+ {
+  "lines": [
+   [
+    "Pate",
+    "Aimon. No—don’t come up here. Run! Get away from this place!",
+    "CHR-PATE"
+   ],
+   [
+    "Trade",
+    "Listen to him. You don’t have to prove anything to us. Go. Live.",
+    "CHR-TRADE"
+   ],
+   [
+    "Aimon",
+    "Let them go. They haven’t done what you said. Let them go!",
+    "CHR-AIMON"
+   ],
+   [
+    "A garrison soldier",
+    "Captain. That’s the man who carried Huw off the road. Those two helped our wounded."
+   ],
+   [
+    "Another soldier",
+    "I saw them at the wagon stand. They were asking about a ride. Canon, there’s been a mistake."
+   ],
+   [
+    "Canon Fatima bint Musa",
+    "Return to your posts.",
+    "LDR-06"
+   ]
+  ]
+ },
+ {
+  "comic": "pate",
+  "lines": [
+   [
+    "Pate",
+    "Please—he is only a boy. Aimon, stay back. Look at me. Stay back!",
+    "CHR-PATE"
+   ],
+   [
+    "A guard",
+    "Canon, wait! These two carried our wounded. I saw them!"
+   ],
+   [
+    "Canon Fatima bint Musa",
+    "You have your orders.",
+    "LDR-06"
+   ],
+   [
+    "Botrune",
+    "A guard grips Pate’s shoulders. Fatima drives the heavy blade down. Blood strikes the boards. His knees give way and he falls, still facing the crowd."
+   ],
+   [
+    "Trade",
+    "Pate! No—let me go! Let me get to him!",
+    "CHR-TRADE"
+   ],
+   [
+    "Botrune",
+    "Pate does not move. A soldier releases his arm and stares at the blood on his glove."
+   ]
+  ],
+  "death": "CHR-PATE"
+ },
+ {
+  "comic": "trade",
+  "lines": [
+   [
+    "Canon Fatima bint Musa",
+    "Thomas de Clare. Known as Trade. Carrying enemy dispatches and recruiting aid for the same conspiracy. Guilty. Sentence: death.",
+    "LDR-06"
+   ],
+   [
+    "Trade",
+    "It’s a field notebook. Look in it! There are names of people we helped—please, just look!",
+    "CHR-TRADE"
+   ],
+   [
+    "A soldier below the stage",
+    "Stop! For the love of—stop! They have done nothing!"
+   ],
+   [
+    "Trade",
+    "Aimon. Don’t come any closer. Please.",
+    "CHR-TRADE"
+   ],
+   [
+    "Botrune",
+    "Trade tries to turn towards Pate. Fatima strikes before he can reach him. He hits the boards hard; his open hand falls beside the notebook."
+   ],
+   [
+    "Aimon",
+    "Trade!",
+    "CHR-AIMON"
+   ],
+   [
+    "Botrune",
+    "Neither of them answers. Rain runs red between the planks."
+   ]
+  ],
+  "death": "CHR-TRADE"
+ },
+ {
+  "lines": [
+   [
+    "Botrune",
+    "There is no applause. Five people lie dead on the platform. A soldier steps away from the block and is sick behind the stair. The clerk’s pen hangs above two names he never wrote."
+   ],
+   [
+    "Aimon",
+    "You heard them. You heard all of them.",
+    "CHR-AIMON"
+   ],
+   [
+    "Aimon",
+    "You knew they hadn’t done it.",
+    "CHR-AIMON"
+   ],
+   [
+    "Canon Fatima bint Musa",
+    "Clear the square.",
+    "LDR-06"
+   ],
+   [
+    "Aimon",
+    "Don’t you walk away from me!",
+    "CHR-AIMON"
+   ],
+   [
+    "Chaplain Walter",
+    "Aimon. I’m here. Stay with me.",
+    "CHR-AERIC"
+   ]
+  ]
+ }
 ];
 export const WITNESSES={
  'bt-miller':['The miller','My well is clean. It has been clean all week. The soldier she killed helped my daughter walk when the thunder frightened her. I should have said it. I stood here and let her say those things.'],

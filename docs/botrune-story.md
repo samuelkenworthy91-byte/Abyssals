@@ -49,3 +49,13 @@ Release checkout now selects runtime, scripts, tests, wrapper and docs; referenc
 ## 21 October 2026 — Thunder Crown overlay
 
 See `thunderplain-crown.md` for the mandatory mountain detour, Darius/Tianzhar encounter, full-screen storm flashes, functioning Gothic lower streets and execution comic panels. The original nine trial indexes and historical deaths above remain unchanged; the two companion beats now carry illustrated panels and expanded dialogue. This supersedes the earlier generic sentence animation description for those two deaths.
+
+## 21 October 2026 — v0.90.17 verdict and aftermath revision
+
+The eastern Thunderplain road now enters the Gothic lower main street. The public execution begins only on crossing into the next screen, the abbey square. All five prisoners receive distinct fabricated charges and death verdicts; civilians object during the first three deaths while the soldiers enforce orders. Guard recognition and hesitation begin only with Pate and Trade, who came to arrange a wagon ride and helped garrison wounded. The same nine saved beat indices, death event and independent life histories remain intact.
+
+The two replacement execution comics use the built-in image tool with the existing panels as edit targets and canonical CHR-PATE, CHR-TRADE and the v0.90.16 LDR-06 full figure as identity references. Prompt: retain three horizontal rainy Gothic panels, adult companions, green Pate/navy Trade costumes and broad heavy-built Fatima; show a decisive fatal sword strike and immediate motionless aftermath with restrained blood, no dismemberment/exposed anatomy, no lettering. Selected 720×900 WebPs: `dist/assets/pixel/bt-pate-panel-v09017.webp` and `bt-trade-panel-v09017.webp`; earlier panels remain in git history.
+
+Aimon understands that his older friends wanted to keep him safe, rather than merely send him home. He voices anger at Fatima and the soldiers. Walter does not demand forgiveness; he steadies Aimon, helps collect the cord/notebook and stays with him. The new `walterCalmed` completion flag is independent of historical deaths and works for existing keepsake saves without replaying the trial. The next-chapter boundary points back to this scene until completed.
+
+All six executed leaders’ unique first-form nursery gifts now carry permanent +15 percentage points to each of six growth rates and a fixed 25% shiny roll. The bonus survives evolution and save hydration, stacks once, and does not retroactively recalculate existing stats. Receipt-based migration upgrades existing living or memorial gifts once, preserves existing shiny status and death, never recreates released gifts, and never duplicates money. Spare remains the repeatable rematch choice.

@@ -1,5 +1,5 @@
 import {breedable} from './breeding.js?v=0.87.0';
-import {STAT_KEYS,unitGrowthRates} from './progression.js?v=0.87.0';
+import {STAT_KEYS,unitGrowthRates} from './progression.js?v=0.90.17';
 export const permanentRates=u=>unitGrowthRates({...u,trainingEffects:[]});
 export const rehomeable=u=>breedable(u)&&!u.originalStarter&&!u.unique&&!u.questUnique&&!u.species.unique&&!u.species.oneOfAKind;
 export function stewardshipCost(u,stat){return 2**(u.stewardship?.[stat]||0);}

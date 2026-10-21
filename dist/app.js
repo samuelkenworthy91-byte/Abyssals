@@ -1,9 +1,9 @@
 import {installStormTrainers,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.14';
 import {stormState,recordStormVictory,settleStormDragon,stormBound,stormMedicineAllowed,chooseStormMove,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.14';
 import {drawStormScreen} from './storm-weather.js?v=0.90.14';
-import {BOTRUNE_TRAINERS,BOTRUNE_GUARDS,TRIAL_BEATS,installBotruneTrainers,botruneRoute} from './botrune-data.js?v=0.90.14';
-import {botruneState,finishTrialBeat,botruneCanFight,botruneBlocked,botruneSpots,botruneObjective,botruneJournal} from './botrune-rules.js?v=0.90.14';
-import {handleBotrune,botruneFateMenu} from './botrune-ui.js?v=0.90.14';
+import {BOTRUNE_TRAINERS,BOTRUNE_GUARDS,TRIAL_BEATS,installBotruneTrainers,botruneRoute} from './botrune-data.js?v=0.90.17';
+import {botruneState,finishTrialBeat,botruneCanFight,botruneBlocked,botruneSpots,botruneObjective,botruneJournal} from './botrune-rules.js?v=0.90.17';
+import {handleBotrune,botruneFateMenu} from './botrune-ui.js?v=0.90.17';
 import {drawBotrunePeople,drawStormWeather,drawStormDragon} from './botrune-art.js?v=0.90.14';
 import {siteTabletHit,siteTabletJournalHTML} from './site-tablets.js?v=0.89.4';
 import {advanceFarm,farmActors,farmAnimalBlocked,farmAnimalHit} from './cossenne-farm.js?v=0.89.4';
@@ -23,7 +23,7 @@ import {breedingPlanHTML,inheritanceSummaryHTML} from './breeding-inheritance.js
 import {drawRevoltDocuments} from './revolt-world.js?v=0.90.14';
 import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,revoltState,canReadRevolt,recordRevolt,revoltLines,revoltAid,installRevoltTrainers,revoltJournal} from './revolt.js?v=0.87.0';
 import {CHOICE_REWARDS,outcomeState,choiceRewardText,rewardText} from './choice-rewards.js?v=0.87.0';
-import {EXECUTION_BOUNTIES,leaderAceBaby,leaderOutcomeState,settleLeaderRewards,makeLeaderRematch,completeLeaderRematch} from './leader-outcomes.js?v=0.87.0';
+import {EXECUTION_BOUNTIES,leaderAceBaby,leaderOutcomeState,settleLeaderRewards,makeLeaderRematch,completeLeaderRematch} from './leader-outcomes.js?v=0.90.17';
 import {EGG_ICON,BREEDING_FEE,EGG_STEPS,EGG_CAPACITY,nurseryState,breedingUnlocked,breedable,breedingPair,createBreedingEgg,advanceEggSteps,hatchBreedingEgg} from './breeding.js?v=0.87.0';
 import {FRESH_MEAT,FRESH_MEAT_MODIFIER} from './fresh-meat.js?v=0.87.0';
 import {patientStrength} from './patient-ration.js?v=0.87.0';
@@ -121,7 +121,7 @@ import {EXPANSION} from './expansion-data.js?v=0.87.0';
 import {revealLevel} from './level-reveal.js?v=0.87.0';
 import {nextCommand} from './menu-navigation.js?v=0.87.0';
 import {PLAYER_SPRITE} from './player-sprite.js?v=0.87.0';
-import {normalizeProgress,initializeProgress,growLevel,rewardsFor,STAT_KEYS,STAT_LABELS} from './progression.js?v=0.87.0';
+import {normalizeProgress,initializeProgress,growLevel,rewardsFor,STAT_KEYS,STAT_LABELS} from './progression.js?v=0.90.17';
 import {createResidents,residentBlocks,updateResidents} from './residents.js?v=0.87.0';
 import {cleanName,escapeHTML,unitName} from './names.js?v=0.87.0';
 import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.87.0';
@@ -1006,7 +1006,7 @@ function cossenneFateMenu(){
 }
 
 // Decision rewards and town services.
-function leaderDecisionHTML(t){const baby=byId(leaderAceBaby(t));return `<b>Spare:</b> unlock repeatable supervised rematches for EXP and doubloons; the six-partner team starts 3 levels stronger and trains up to +10. <br><b>Execute:</b> receive ${EXECUTION_BOUNTIES[t.id].toLocaleString('en-GB')} doubloons immediately and a Lv. 1 ${escapeHTML(baby.name)} from the surrendered nursery. No rematches. This decision is permanent.`;}
+function leaderDecisionHTML(t){const baby=byId(leaderAceBaby(t));return `<b>Spare:</b> unlock repeatable supervised rematches for EXP and doubloons; the six-partner team starts 3 levels stronger and trains up to +10. <br><b>Execute:</b> receive ${EXECUTION_BOUNTIES[t.id].toLocaleString('en-GB')} doubloons immediately and a Lv. 1 ${escapeHTML(baby.name)} from the surrendered nursery: +15 percentage points to growth in every stat and a 1 in 4 (25%) shiny chance. No rematches. This decision is permanent.`;}
 function syncLeaderRewards(){for(const t of EXPANSION.trainers.filter(t=>EXECUTION_BOUNTIES[t.id]))settleLeaderRewards(state,t,(id,level,seed)=>newUnit(byId(id),level,seed));}
 function registerLeaderRematches(){const originals=EXPANSION.trainers.filter(t=>EXECUTION_BOUNTIES[t.id]);EXPANSION.trainers=EXPANSION.trainers.filter(t=>!t.rematchOf);for(const t of originals){const match=makeLeaderRematch(state,openingTrainer(t,state));if(match){EXPANSION.trainers.push(match);TRAINER_VOICES[match.id]={before:'We have been training under supervision. Six partners, no lethal blows. Let us see what both our teams have learned.',after:'A fair match. Your challenge purse is paid; come back when your partners are ready again.',repeat:'We can arrange another supervised match.'};}}}
 function leaderRematchMenu(){if(battle||presentationLocked||state.wiped)return;registerLeaderRematches();const matches=EXPANSION.trainers.filter(t=>t.rematchOf);openModal('Spared leaders · rematches',`<p>Spared leaders keep training. Each victory pays a new purse and normal level-based EXP. Supervised matches stop at 1 HP. There is no daily limit.</p>${matches.map(t=>{const f=fortForLeader(t.rematchOf)||(t.rematchOf==='LDR-06'?{town:'botrune',room:'botrune'}:{town:'marasen',room:'marasenHall'}),here=room===f?.town||room===f?.room;return `<article class="choice-reward-row"><h3>${escapeHTML(t.name)}</h3><p>Wins: ${leaderOutcomeState(state).rematches[t.rematchOf]?.wins||0} · 6 partners · Lv. ${Math.min(...t.team.map(s=>s.level))}–${Math.max(...t.team.map(s=>s.level))} · ${trainerPayout(t).toLocaleString('en-GB')} doubloons</p><p>${t.team.map(s=>escapeHTML(byId(s.species_id).name)+' Lv. '+s.level).join(' · ')}</p><button data-rematch="${t.id}" ${!here||!lead()?'disabled':''}>${here?'Challenge under supervision':'Return to '+roomName(f.town)}</button></article>`;}).join('')||'<p>No spared leader is available yet. Executed leaders cannot return for rematches.</p>'}`);document.querySelectorAll('[data-rematch]').forEach(button=>button.onclick=()=>{const t=EXPANSION.trainers.find(t=>t.id===button.dataset.rematch);if(!t||state.fates?.[t.rematchOf]!=='SPARED')return;const f=fortForLeader(t.rematchOf)||(t.rematchOf==='LDR-06'?{town:'botrune',room:'botrune'}:{town:'marasen',room:'marasenHall'});if(room!==f.town&&room!==f.room)return;closeModal();challengeTrainer(t);});menuBack();}
@@ -1027,7 +1027,7 @@ function marasenInteract(id){return handleMarasen(id,{state,room,AREA_GATES,line
    if(!rewardTransaction(()=>{if(state.fates?.['LDR-05'])return;state.fates['LDR-05']=fate;state.pendingFate=null;settleLeaderRewards(state,t,(id,level,seed)=>newUnit(byId(id),level,seed));}))return;
    buildMarkers();showDialogue([line('Marasen',fate==='SPARED'?'The clerks bring Khalid the first household petition under supervision. His authority is gone; the work remains.':'The water-clock keeps time through the silence. Farid takes a copy of the household ledger before the new officer seals the hall.')]);
   };
-  showDialogue([{...line('Confirm the judgement',fate==='SPARED'?'Khalid survives under supervision. Repeatable supervised rematches remain available.':'This is permanent. Khalid dies. Received once: 42,000 doubloons and his ace’s first-form nursery partner.'),choices:[{text:'Confirm.',action:confirm},{text:'Reconsider.',action:marasenFateMenu}]}]);
+  showDialogue([{...line('Confirm the judgement',fate==='SPARED'?'Khalid survives under supervision. Repeatable supervised rematches remain available.':'This is permanent. Khalid dies. Received once: 42,000 doubloons and his ace’s first-form nursery partner (+15 growth points in every stat; 25% shiny chance).'),choices:[{text:'Confirm.',action:confirm},{text:'Reconsider.',action:marasenFateMenu}]}]);
  };
  showDialogue([{...line(t.name,'My partners are beaten. I surrender. Spare me and I will work under supervision, with repeatable supervised rematches. Execute me and the command grants a one-time 42,000-doubloon cache and my ace’s first-form nursery partner. The canal workers must live with your decision.','LDR-05'),choices:[{text:'Spare Khalid.',action:()=>choose('SPARED')},{text:'Execute Khalid.',action:()=>choose('EXECUTED')}]}]);
 }
@@ -1110,7 +1110,7 @@ async function playBotruneBeat(){
    botruneSceneBusy=false;buildMarkers();refresh();persist();
   };void finish();
  });
- if(beat.comic){const panel=document.createElement('div');panel.id='botrune-comic';panel.style.backgroundImage=`url(assets/pixel/bt-${beat.comic}-panel-v09013.webp)`;panel.setAttribute('role','img');panel.setAttribute('aria-label',beat.comic==='pate'?'Pate’s execution on the abbey stage':'Trade’s execution on the abbey stage');$('#viewport').append(panel);$('#dialogue').classList.add('comic-dialogue');}
+ if(beat.comic){const panel=document.createElement('div');panel.id='botrune-comic';panel.style.backgroundImage=`url(assets/pixel/bt-${beat.comic}-panel-v09017.webp)`;panel.setAttribute('role','img');panel.setAttribute('aria-label',beat.comic==='pate'?'Pate’s execution on the abbey stage':'Trade’s execution on the abbey stage');$('#viewport').append(panel);$('#dialogue').classList.add('comic-dialogue');}
 }
 
 $('#objective-short').onclick=()=>{if(state.begun&&!battle&&!presentationLocked)journalMenu();};

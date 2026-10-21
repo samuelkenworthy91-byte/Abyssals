@@ -17,12 +17,13 @@ export function inheritedGrowthRate(unit,key){
  return Math.max(0,...[record?.growth,...(record?.lineageGrowth||[])].filter(g=>g?.stat===key&&Number.isFinite(g.rate)).map(g=>g.rate));
 }
 export function unitGrowthRates(unit){
+ const nurseryBonus=unit.nurseryLegacy?.version===1?15:0;
  const stewardship=key=>Math.max(0,unit.stewardship?.[key]||0);
  const tenths=STAT_KEYS.map(key=>Math.round(Math.max(growthPercent(unit.species,key),inheritedGrowthRate(unit,key))*(unit.growthMultiplier===1.1?1.1:1)*10));
  const total=tenths.reduce((n,v)=>n+v,0),cap=unit.giftOrigin==='Roadside rescue'?Math.max(0,3000-STAT_KEYS.reduce((sum,k)=>sum+stewardship(k)*10,0)):null;
  if(cap!==null&&total>cap){const exact=tenths.map(v=>v*cap/total),scaled=exact.map(Math.floor);let remaining=cap-scaled.reduce((n,v)=>n+v,0);
-  const order=exact.map((v,i)=>({i,remainder:v-scaled[i]})).sort((a,b)=>b.remainder-a.remainder||a.i-b.i);for(const {i} of order){if(remaining--<=0)break;scaled[i]++;}return Object.fromEntries(STAT_KEYS.map((key,i)=>[key,scaled[i]/10+stewardship(key)+trainingGrowthBonus(unit,key)+(unit.marasenGrowth?.[key]||0)]));
- }return Object.fromEntries(STAT_KEYS.map((key,i)=>[key,tenths[i]/10+stewardship(key)+trainingGrowthBonus(unit,key)+(unit.marasenGrowth?.[key]||0)]));
+  const order=exact.map((v,i)=>({i,remainder:v-scaled[i]})).sort((a,b)=>b.remainder-a.remainder||a.i-b.i);for(const {i} of order){if(remaining--<=0)break;scaled[i]++;}return Object.fromEntries(STAT_KEYS.map((key,i)=>[key,scaled[i]/10+stewardship(key)+trainingGrowthBonus(unit,key)+(unit.marasenGrowth?.[key]||0)+nurseryBonus]));
+ }return Object.fromEntries(STAT_KEYS.map((key,i)=>[key,tenths[i]/10+stewardship(key)+trainingGrowthBonus(unit,key)+(unit.marasenGrowth?.[key]||0)+nurseryBonus]));
 }
 export function unitGrowthPercent(unit,key){return unitGrowthRates(unit)[key];}
 export function statGain(percent,roll,key,bonusRoll=1){

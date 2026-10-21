@@ -4,7 +4,7 @@ import {marasenObjective} from './marasen-rules.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {HELD_ITEMS} from './held-data.js?v=0.87.0';
 import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,unitGrowthPercent} from './progression.js?v=0.87.0';
+import {STAT_KEYS,STAT_LABELS,unitGrowthPercent} from './progression.js?v=0.90.17';
 const FLOOR_NAMES=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
 const money=n=>Math.floor(n||0).toLocaleString('en-GB');
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

@@ -1,5 +1,5 @@
 import {stormSideObjective} from './thunderplain-rules.js?v=0.90.14';
-import {BOTRUNE_GUARDS,TRIAL_BEATS,STORM_ROAD} from './botrune-data.js?v=0.90.13';
+import {BOTRUNE_GUARDS,TRIAL_BEATS,STORM_ROAD} from './botrune-data.js?v=0.90.17';
 export function botruneState(s){return s.botrune??={version:1,cursor:0,phase:'trial',witnesses:[],keepsakes:false};}
 export const botruneUnlocked=s=>['SPARED','EXECUTED'].includes(s.fates?.['LDR-05']);
 export const btDefeated=(s,id)=>(s.defeatedTrainers||[]).includes(id);
@@ -24,12 +24,12 @@ export function botruneSpots(s,room,spots){if(room!=='botrune')return spots;retu
 export function botruneObjective(s,room){
  const side=stormSideObjective(s,room);if(side)return side;
  if(room==='stormWatch'&&!btDefeated(s,'TRN-BT-DARIUS'))return {spot:'bt-darius-entry',text:'The cart blocks the east road. Pate and Trade went ahead for supplies. Investigate the disturbance up the old stone steps north of Abandoned Watch.'};
- if(room==='botruneLower')return {spot:'bt-upper-street',text:'Botrune services: provisioner northwest, infirmary southwest, inn southeast, records northeast. North street returns to the abbey square.'};
+ if(room==='botruneLower')return {spot:'bt-upper-street',text:botruneState(s).phase==='trial'?'Enter Botrune’s Gothic main street. A proclamation carries from the abbey square to the north. Shops, the infirmary and the inn are open.':'Botrune services: provisioner northwest, infirmary southwest, inn southeast, records northeast. North street returns to the abbey square.'};
  const n=STORM_ROAD.findIndex(r=>r[0]===room);if(n>=0)return {spot:room+'-forward',text:'Cross the Thunderplain · '+(n+1)+'/'+STORM_ROAD.length+' · follow the pale road towards Botrune'};
  if(room==='botruneShelter')return {spot:'bt-shelter-exit',text:'Prepare at the roadside shelter; the Botrune road stays open behind you'};
  if(!room.startsWith('botrune'))return null;
  const q=botruneState(s);if(q.phase==='trial')return {spot:null,text:'A public sentence is being read in Botrune'};
  const guard=BOTRUNE_GUARDS.find(t=>!btDefeated(s,t.id));if(guard)return {spot:guard.id,text:'Reach Fatima on the stage · break the guard cordon '+(BOTRUNE_GUARDS.indexOf(guard)+1)+'/3. You may retreat to prepare.'};
- return !s.fates?.['LDR-06']?{spot:'bt-leader',text:'Confront Canon Fatima on the public stage'}:{spot:!q.keepsakes?'bt-recovery':'bt-archive',text:!q.keepsakes?'Return to Pate and Trade on the platform':'Speak to the abbey scholar; Botrune’s archive is protected'};
+ return !s.fates?.['LDR-06']?{spot:'bt-leader',text:'Confront Canon Fatima on the public stage'}:{spot:!q.keepsakes||!q.walterCalmed?'bt-recovery':'bt-archive',text:!q.keepsakes||!q.walterCalmed?'Return to Pate and Trade on the platform':'Speak to the abbey scholar; Botrune’s archive is protected'};
 }
 export function botruneJournal(s,room){if(room.startsWith('storm'))return (botruneObjective(s,room)?.text||'Follow the pale road to Botrune.')+' The mountain steps leave Abandoned Watch to the north. The Stormcatch Relay is a separate north trail from Glass Scars.';if(!botruneObjective(s,room))return '';const q=botruneState(s);return q.phase==='trial'?'Pate and Trade’s trail leads across the Thunderplain to Botrune.':q.phase==='gauntlet'?'Fatima executed five prisoners, including Pate and Trade. The crowd did not cheer. Witnesses say the charges were invented. The three guard captains block the stage; completed victories stay saved if you retreat.':'Fatima’s rule has ended. Pate and Trade’s deaths remain recorded separately; neither a victory nor a judgement brings them back. The abbey archive remains under civilian protection.';}

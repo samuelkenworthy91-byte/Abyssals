@@ -1,7 +1,7 @@
 {
-  "version": "0.90.16",
-  "version_code": 111,
-  "filename": "Abyssals-v0.90.16-Character-Portraits.apk",
-  "title": "Abyssals v0.90.16 \u2014 Faces of the Expedition",
-  "notes": "Companion conversations now use the actual battle-art resolver, including atlas species and shiny colours. Post-fight trainer conversations resolve their mapped portrait instead of requesting nonexistent encounter-ID files. Thirteen archived complete figures provide distinct role-appropriate route/fort trainer appearances in dialogue, battle and the overworld. Khalid gains a full-body battle illustration matching his existing portrait. Canon Fatima has a heavier, harsher execution-leader design. Existing saves, story outcomes, unique encounters, Quickbite/fishing changes, Android package and original signing certificate are preserved. Automated source and browser checks; no physical-phone testing."
+  "version": "0.90.17",
+  "version_code": 112,
+  "filename": "Abyssals-v0.90.17-Botrune-Verdicts.apk",
+  "title": "Abyssals v0.90.17 \u2014 The Botrune Verdicts",
+  "notes": "Botrune now opens on the Gothic main street before the execution square. Each prisoner receives a verdict; witnesses contest the false charges, and guards hesitate only when they recognise Pate and Trade. Revised execution comics and explicit deaths, more natural dialogue, and an angry aftermath with Chaplain Walter. All six execution nursery gifts receive +15 percentage points of growth in every stat and a fixed 25% shiny chance. Existing gifts upgrade once without duplicate payouts or reviving lost partners. Existing saves, death history, Quickbite/fishing, Android package and original signing certificate preserved. Automated source/browser checks; no physical-phone testing."
 }

@@ -33,3 +33,11 @@ const {drawStormWeather}=await import('../dist/botrune-art.js');
 function weatherStrokes(time,reduced){let strokes=0;const c={save(){},restore(){},fillRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){strokes++;}};drawStormWeather(c,'stormGlass',time,reduced);return strokes;}
 assert.equal(weatherStrokes(200,false),32);assert.equal(weatherStrokes(1000,false),32);assert.equal(weatherStrokes(200,true),0);
 console.log('PASS: rain remains active; reduced motion disables rain (screen lightning tested separately)');
+
+// The road enters the Gothic service street, then its north gate reveals the square.
+assert.equal(NEW_MAPS.stormApproach.gates.find(g=>g.id==='stormApproach-forward').to,'botruneLower');
+assert.equal(NEW_MAPS.botruneLower.gates.find(g=>g.id==='bt-upper-street').to,'botrune');
+assert.equal(NEW_MAPS.botruneLower.gates.find(g=>g.id==='bt-road-return').to,'stormApproach');
+const street=flood('botruneLower',[3,17]);assert(street.has('24,2'));assert(street.has('1,17'));
+assert.equal(TRIAL_BEATS.length,9);assert.deepEqual(TRIAL_BEATS.map(b=>b.death).filter(Boolean),['prisoner-1','prisoner-2','prisoner-3','CHR-PATE','CHR-TRADE']);
+assert.equal(TRIAL_BEATS.flatMap(b=>b.lines).filter(([who,text])=>who==='Canon Fatima bint Musa'&&text.includes('Sentence: death.')).length,5);

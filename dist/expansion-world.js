@@ -1,5 +1,5 @@
 import {glassCraterBlocked} from './storm-props.js?v=0.90.14';
-import {installBotruneWorld,botruneWalkable} from './botrune-world.js?v=0.90.13';
+import {installBotruneWorld,botruneWalkable} from './botrune-world.js?v=0.90.17';
 import {drawBotruneMap} from './botrune-art.js?v=0.90.14';
 import {farmBlocked} from './cossenne-farm.js?v=0.89.4';
 import {exchangeWalkable,aquaticWalkable,drawExchangeInterior,drawAquaticNotice} from './marasen-aquatic.js?v=0.89.2';
