@@ -4,23 +4,27 @@ import {marasenObjective} from './marasen-rules.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {HELD_ITEMS} from './held-data.js?v=0.87.0';
 import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,unitGrowthPercent} from './progression.js?v=0.90.18';
+import {STAT_KEYS,STAT_LABELS,unitGrowthPercent} from './progression.js?v=0.90.21';
 const FLOOR_NAMES=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
 const money=n=>Math.floor(n||0).toLocaleString('en-GB');
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function data(s){s.marasen??={version:2,walk:[],quests:{},encounters:{},seeds:{},serviceDays:[]};s.marasen.exchange??={receipts:[]};s.marasen.rapids??={runs:0,wins:0,race:null,results:[],daily:[]};return s.marasen;}
 const owned=s=>[...(s.party||[]),...(s.reserve||[])].filter(u=>u&&u.hp>0&&!u.dead);
 const activeWater=s=>owned(s).filter(u=>u.species?.types?.includes('WATER'));
-const scrolls=()=>{
- const moves=DATA.moves.filter(m=>m&&m.id&&m.power>=40&&m.power<=90&&m.category!=='STATUS'&&!m.signature_owner_family&&!m.questTutor&&!m.signature_owner_name&&!m.signature_owner&&DATA.learnsets.some(l=>l.move_id===m.id));
- const selected=[],types=new Set();for(const m of moves){if(!types.has(m.type_id)&&selected.length<16){selected.push(m);types.add(m.type_id);}}
- return selected.map(m=>({id:String(m.id),name:m.name,description:`${m.type_id} / ${m.category} · power ${m.power} · single-use Codex`,price:m.power>=75?5500:3500}));
+export const exchangeScrolls=()=>{
+ const ordinary=DATA.moves.filter(m=>m&&m.id&&!m.signature_owner_family&&!m.questTutor&&!m.signature_owner_name&&!m.signature_owner&&(m.tutorTypes?.length||DATA.learnsets.some(l=>l.move_id===m.id)));
+ const status=ordinary.filter(m=>m.category==='STATUS').sort((a,b)=>Number(!!b.exchangeLesson)-Number(!!a.exchangeLesson)||a.type_id.localeCompare(b.type_id)||a.name.localeCompare(b.name));
+ const attacks=[],counts=new Map();
+ for(const m of ordinary.filter(m=>m.category!=='STATUS'&&m.power>=40&&m.power<=100).sort((a,b)=>a.type_id.localeCompare(b.type_id)||a.power-b.power)){
+  const key=m.type_id+':'+m.category,n=counts.get(key)||0;if(n<2){attacks.push(m);counts.set(key,n+1);}
+ }
+ return [...status,...attacks].map(m=>({id:String(m.id),name:m.name,description:`${m.type_id} / ${m.category}${m.power?' · power '+m.power:''} · ${m.effect_text||'No additional effect.'}${m.tutorTypes?.length?' · Compatible types: '+m.tutorTypes.join(' / '):''} · single-use Codex`,price:m.category==='STATUS'?(m.effects.some(e=>e.status==='FREEZE'||e.status==='BAD_POISON')?6500:4500):m.power>=75?5500:3500}));
 };
 function storeItems(floor){
- if(floor===1)return scrolls().map(m=>({...m,kind:'codex'}));
+ if(floor===1)return exchangeScrolls().map(m=>({...m,kind:'codex'}));
  if(floor===2)return HELD_ITEMS.filter(i=>Number(i.buy_price)>0&&!i.id.startsWith('HELD_QUEST_')).slice(0,26).map(i=>({kind:'held',id:i.id,name:i.name,description:i.effect_text,price:Math.max(1800,i.buy_price)}));
  if(floor===3)return EVOLUTION_ITEMS.filter(i=>Number(i.buy_price)>0).map(i=>({kind:'evolution',id:i.id,name:i.name,description:i.effect_text,price:Number(i.buy_price)}));
- if(floor===4)return [{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 percentage points of future growth. Maximum five growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 percentage point to future growth in all six stats. Maximum five growth doses per Abyssal.',price:30000}];
+ if(floor===4)return [{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 percentage points of future growth. Maximum ten growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 percentage point to future growth in all six stats. Maximum ten growth doses per Abyssal.',price:30000}];
  if(floor===5)return [{kind:'supply',id:'riverBait',name:'River Bait',description:'Specialist capture food suited to aquatic encounters.',price:950},{kind:'supply',id:'emergencyEvacs',name:'Emergency Evac',description:'Return a living expedition safely to its recovery location.',price:2500},{kind:'supply',id:'lifeEmbers',name:'Life Ember',description:'A rare second chance for a living Abyssal. One per expedition.',price:40000}];
  return [];
 }
@@ -35,7 +39,7 @@ function purchase(s,item){if(!item||!Number.isFinite(item.price)||item.price<1||
  else s[item.id]=(s[item.id]||0)+1;
  if(item.id==='lifeEmbers')m.exchange.receipts.push('lifeEmbers');return true;
 }
-export function growthTonic(s,uid,kind,stat){const u=owned(s).find(u=>u.uid===uid);if(!u||!['focused','balanced'].includes(kind)||(u.marasenTonicDoses||0)>=5||kind==='focused'&&!STAT_KEYS.includes(stat))return false;
+export function growthTonic(s,uid,kind,stat){const u=owned(s).find(u=>u.uid===uid);if(!u||!['focused','balanced'].includes(kind)||(u.marasenTonicDoses||0)>=10||kind==='focused'&&!STAT_KEYS.includes(stat))return false;
  const cost=kind==='focused'?25000:30000;if((s.money||0)<cost)return false;
  s.money-=cost;u.marasenTonicDoses=(u.marasenTonicDoses||0)+1;u.marasenGrowth??={};
  for(const key of kind==='focused'?[stat]:STAT_KEYS)u.marasenGrowth[key]=(u.marasenGrowth[key]||0)+(kind==='focused'?5:1);
@@ -43,7 +47,7 @@ export function growthTonic(s,uid,kind,stat){const u=owned(s).find(u=>u.uid===ui
 }
 function showFloor(a,floor){const {state,openModal,$,document,rewardTransaction,shop}=a,items=storeItems(floor);
  if(floor===0){shop('marasenMarket');return;}
- openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div><b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a five-dose lifetime cap.</p>`);
+ openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div><b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap.</p>`);
  for(const btn of document.querySelectorAll('[data-mr-buy]'))btn.onclick=()=>{const it=items[Number(btn.dataset.mrBuy)];if(!it)return;
  if(it.kind==='growth'){showTonic(a,it);return;}
  if(state.money<it.price)return;
@@ -52,11 +56,11 @@ function showFloor(a,floor){const {state,openModal,$,document,rewardTransaction,
 }
 function showTonic(a,item){const {state,openModal,document,$,rewardTransaction}=a;
  const pool=owned(state);
- openModal(item.name,`<p>${safe(item.description)}</p><p>Cost: <b>${money(item.price)} doubloons</b>. The improvement affects <b>future levels only</b>, not current stats, and cannot be inherited by offspring.</p><div class="summary-list">${pool.map(u=>`<button data-mr-tonic-uid="${safe(u.uid)}" ${(u.marasenTonicDoses||0)>=5||state.money<item.price?'disabled':''}><b>${safe(u.nickname||u.species.name)} · Lv. ${u.level}</b><small>Lifetime doses ${(u.marasenTonicDoses||0)} / 5 · ${safe(u.species.types.join(' / '))}</small></button>`).join('')}</div>`);
+ openModal(item.name,`<p>${safe(item.description)}</p><p>Cost: <b>${money(item.price)} doubloons</b>. The improvement affects <b>future levels only</b>, not current stats, and cannot be inherited by offspring.</p><div class="summary-list">${pool.map(u=>`<button data-mr-tonic-uid="${safe(u.uid)}" ${(u.marasenTonicDoses||0)>=10||state.money<item.price?'disabled':''}><b>${safe(u.nickname||u.species.name)} · Lv. ${u.level}</b><small>Lifetime doses ${(u.marasenTonicDoses||0)} / 10 · ${safe(u.species.types.join(' / '))}</small></button>`).join('')}</div>`);
  for(const el of document.querySelectorAll('[data-mr-tonic-uid]'))el.onclick=()=>{
   const uid=el.dataset.mrTonicUid,u=pool.find(x=>x.uid===uid);if(!u)return;
   const selector=item.id==='focused'?`<label>Stat to improve<select id="mr-tonic-stat">${STAT_KEYS.map(k=>`<option value="${k}">${STAT_LABELS[k]} · ${unitGrowthPercent(u,k).toFixed(1)}% → ${(unitGrowthPercent(u,k)+5).toFixed(1)}%</option>`).join('')}</select></label>`:'<p>All six growth rates increase by 1 percentage point.</p>';
-  openModal('Confirm permanent growth',`<p>Give <b>${safe(u.nickname||u.species.name)}</b> a ${safe(item.name)}?</p>${selector}<p>Doses after purchase: <b>${(u.marasenTonicDoses||0)+1}/5</b>. This cannot be reversed.</p><button id="mr-tonic-approve" class="primary">Apply tonic · ${money(item.price)} doubloons</button><button id="mr-tonic-abort">Cancel</button>`);
+  openModal('Confirm permanent growth',`<p>Give <b>${safe(u.nickname||u.species.name)}</b> a ${safe(item.name)}?</p>${selector}<p>Doses after purchase: <b>${(u.marasenTonicDoses||0)+1}/10</b>. This cannot be reversed.</p><button id="mr-tonic-approve" class="primary">Apply tonic · ${money(item.price)} doubloons</button><button id="mr-tonic-abort">Cancel</button>`);
   $('#mr-tonic-abort').onclick=()=>showTonic(a,item);
   $('#mr-tonic-approve').onclick=()=>{let applied=false;const key=$('#mr-tonic-stat')?.value||null;if(rewardTransaction(()=>{applied=growthTonic(state,uid,item.id,key);})&&applied){a.refresh?.();showFloor(a,4);}else showTonic(a,item);};
  };
@@ -81,15 +85,21 @@ function raceEntrants(s,uid){const live=activeWater(s),unit=live.find(u=>u.uid==
  if(unit)return [{id:unit.uid,name:unit.nickname||unit.species.name,species:unit.species.id,speed:unit.stats?.speed||40,isPlayer:true},...ai.slice(0,3)];
  return ai;
 }
-export function beginRapids(s,{unitId=null,betLane=0,betPlace=1,stake=0,event='open'}={}){
- const r=data(s).rapids;if(r.race)return false;const competition=RACE_EVENTS[event];if(!competition||r.runs<competition.unlock)return false;const fee=unitId?competition.fee:0;
+export function beginRapids(s,{unitId=null,betLane=0,betPlace=1,stake=0,event='open',mode='rhythm',random=Math.random}={}){
+ const r=data(s).rapids;if(r.race||!['rhythm','speed'].includes(mode))return false;const competition=RACE_EVENTS[event];if(!competition||r.runs<competition.unlock)return false;const fee=unitId?competition.fee:0;
  if(!Number.isSafeInteger(stake)||stake<0||stake+fee>(s.money||0)||!Number.isInteger(betLane)||betLane<0||betLane>3||![1,2,3].includes(betPlace))return false;
  if(unitId&&!activeWater(s).some(u=>u.uid===unitId))return false;
- const entrants=raceEntrants(s,unitId),seed=r.runs+1;
+ const entrants=raceEntrants(s,unitId).map(u=>({...u,luck:Math.max(0,Math.min(1,random()))})),seed=r.runs+1;
  s.money-=stake+fee;r.runs++;
- r.race={seed,unitId,entrants,betLane,betPlace,stake,event,fee,startedAt:Date.now(),status:'ready'};return true;
+ r.race={seed,unitId,entrants,betLane,betPlace,stake,event,mode,fee,startedAt:Date.now(),status:'ready'};return true;
 }
-function rankRunners(r,perfect,good,miss){const n=Math.max(1,Math.ceil(RACE_EVENTS[r.event||'open'].duration/840));
+export function speedRaceScore(speed,maximum,luck){return .9*Math.max(0,speed)/Math.max(1,maximum)+.1*Math.max(0,Math.min(1,luck||0));}
+function rankRunners(r,perfect,good,miss){
+ if(r.mode==='speed'){
+  const maximum=Math.max(1,...r.entrants.map(u=>u.speed));
+  return r.entrants.map((u,index)=>({...u,index,score:speedRaceScore(u.speed,maximum,u.luck)})).sort((a,b)=>b.score-a.score||a.index-b.index).map((u,index)=>({...u,place:index+1}));
+ }
+ const n=Math.max(1,Math.ceil(RACE_EVENTS[r.event||'open'].duration/840));
  const records=r.entrants.map((u,i)=>{
   const skill=u.isPlayer?Math.max(0,Math.min(1,(perfect+.58*good)/n)):.50+((r.seed*19+i*37)%39)/100;
   const speed=Math.max(0,Math.min(1,u.speed/(u.speed+125)));
@@ -104,19 +114,24 @@ export function finishRapids(s,{perfect=0,good=0,miss=0}={}){const r=data(s).rap
  const own=results.find(x=>x.isPlayer),day=new Date().toISOString().slice(0,10);
  let racePrize=0;const event=bet.event||'open',dailyKey=day+':'+event;if(own&&own.place<=3&&!r.daily.includes(dailyKey)){racePrize=RACE_EVENTS[event].prizes[own.place-1];r.daily.push(dailyKey);if(own.place===1)r.wins++;}
  s.money+=paid+racePrize;
- const record={seed:bet.seed,event,entryFee:bet.fee||0,entrant:bet.entrants[bet.betLane].name,betPlace:bet.betPlace,actualPlace:chosen.place,stake:bet.stake,payout:paid,racePrize,results:results.map(x=>({name:x.name,place:x.place,species:x.species,isPlayer:x.isPlayer}))};
+ const record={seed:bet.seed,event,mode:bet.mode||'rhythm',entryFee:bet.fee||0,entrant:bet.entrants[bet.betLane].name,betPlace:bet.betPlace,actualPlace:chosen.place,stake:bet.stake,payout:paid,racePrize,results:results.map(x=>({name:x.name,place:x.place,species:x.species,isPlayer:x.isPlayer}))};
  r.results.push(record);r.results=r.results.slice(-12);r.race=null;return record;
 }
 function raceMenu(a){const {state,openModal,$,document,rewardTransaction}=a,r=data(state).rapids;
  if(r.race){racePlaying(a);return;}
  const avail=activeWater(state),choices=avail.map(u=>`<option value="${safe(u.uid)}">${safe(u.nickname||u.species.name)} · Speed ${u.stats?.speed||0}</option>`).join('');
- openModal('Marasen Rapids · Race & wager',`<div class="mr-race-intro"><b>THE LIVING WATER CUP</b><p>Race your Water Abyssal, or watch four independent competitors. Tap bubbles near the gold target as they approach; perfect timing gives your racer a boost. Raw Speed also matters.</p></div><label>Choose event<select id="mr-event">${Object.entries(RACE_EVENTS).map(([id,c])=>`<option value="${id}" ${r.runs<c.unlock?'disabled':''}>${c.name} · ${money(c.fee)} entry · ${Math.round(c.duration/1000)}s${r.runs<c.unlock?' · Unlock after '+c.unlock+' races':''}</option>`).join('')}</select></label><label>Your racer<select id="mr-racer"><option value="">Spectate only (no entry fee)</option>${choices}</select></label><div id="mr-runners-preview"></div><label>Back an entrant<select id="mr-bet-lane"></select></label><label>Predicted finish<select id="mr-bet-place"><option value="1">1st place</option><option value="2">2nd place</option><option value="3">3rd place</option></select></label><label>Wager doubloons<input id="mr-wager" type="number" inputmode="numeric" step="1" min="0" max="${Math.max(0,state.money)}" value="0"></label><p class="mr-note">Only in-game doubloons. Correct entrant AND exact predicted place (1st–3rd) pays <b>2× your stake in total</b>; all other predictions lose the stake. Last place cannot be backed. Spectating is free, and wagering is optional.</p><button id="mr-bet-go" class="primary">Enter Rapids race</button><small>Available: ${money(state.money)} doubloons · ${r.runs} races completed</small>`);
+ openModal('Marasen Rapids · Race & wager',`<div class="mr-race-intro"><b>THE LIVING WATER CUP</b><p>Race your Water Abyssal, or watch four independent competitors. Choose an automatic race based on Speed with 10% luck, or play the bubble-timing mini game.</p></div><label>Choose event<select id="mr-event">${Object.entries(RACE_EVENTS).map(([id,c])=>`<option value="${id}" ${r.runs<c.unlock?'disabled':''}>${c.name} · ${money(c.fee)} entry · ${Math.round(c.duration/1000)}s${r.runs<c.unlock?' · Unlock after '+c.unlock+' races':''}</option>`).join('')}</select></label><label>Race mode<select id="mr-race-mode"><option value="speed">Automatic · Speed + 10% luck</option><option value="rhythm">Play bubble-timing mini game</option></select></label><label>Your racer<select id="mr-racer"><option value="">Spectate only (no entry fee)</option>${choices}</select></label><div id="mr-runners-preview"></div><label>Back an entrant<select id="mr-bet-lane"></select></label><label>Predicted finish<select id="mr-bet-place"><option value="1">1st place</option><option value="2">2nd place</option><option value="3">3rd place</option></select></label><label>Wager doubloons<input id="mr-wager" type="number" inputmode="numeric" step="1" min="0" max="${Math.max(0,state.money)}" value="0"></label><p class="mr-note">Only in-game doubloons. Correct entrant AND exact predicted place (1st–3rd) pays <b>2× your stake in total</b>; all other predictions lose the stake. Last place cannot be backed. Spectating is free, and wagering is optional.</p><button id="mr-bet-go" class="primary">Enter Rapids race</button><small>Available: ${money(state.money)} doubloons · ${r.runs} races completed</small>`);
  const preview=()=>{const unitId=$('#mr-racer').value,entrants=raceEntrants(state,unitId);$('#mr-bet-lane').innerHTML=entrants.map((x,i)=>`<option value="${i}">${safe(x.name)} · Speed ${Math.round(x.speed)}</option>`).join('');$('#mr-runners-preview').innerHTML=entrants.map((x,i)=>`<div class="mr-preview-runner"><img src="assets/rapids/${safe(x.species)}.webp" alt=""><span>Lane ${i+1}: ${safe(x.name)}</span></div>`).join('');};
  $('#mr-racer').onchange=preview;preview();
- $('#mr-bet-go').onclick=()=>{let started=false;const stake=Number($('#mr-wager').value);if(!Number.isSafeInteger(stake)||stake<0||stake+($('#mr-racer').value?RACE_EVENTS[$('#mr-event').value].fee:0)>state.money){$('#mr-wager').setCustomValidity('Choose a whole-number wager you can afford.');$('#mr-wager').reportValidity();return;}const args={unitId:$('#mr-racer').value||null,betLane:Number($('#mr-bet-lane').value),betPlace:Number($('#mr-bet-place').value),stake,event:$('#mr-event').value};if(rewardTransaction(()=>{started=beginRapids(state,args);})&&started){a.refresh?.();racePlaying(a);}};
+ $('#mr-bet-go').onclick=()=>{let started=false;const stake=Number($('#mr-wager').value);if(!Number.isSafeInteger(stake)||stake<0||stake+($('#mr-racer').value?RACE_EVENTS[$('#mr-event').value].fee:0)>state.money){$('#mr-wager').setCustomValidity('Choose a whole-number wager you can afford.');$('#mr-wager').reportValidity();return;}const args={unitId:$('#mr-racer').value||null,betLane:Number($('#mr-bet-lane').value),betPlace:Number($('#mr-bet-place').value),stake,event:$('#mr-event').value,mode:$('#mr-race-mode').value};if(rewardTransaction(()=>{started=beginRapids(state,args);})&&started){a.refresh?.();racePlaying(a);}};
 }
 function racePlaying(a){const {state,openModal,$,document,rewardTransaction}=a,rap=data(state).rapids,bet=rap.race;if(!bet)return raceMenu(a);
  const racers=bet.entrants;
+ if(bet.mode==='speed'){
+  openModal('Rapids · Automatic race',`<p>Speed determines 90% of the result; each entrant has a saved luck roll worth the remaining 10%. No tapping is needed.</p><div class="mr-race-results">${racers.map(u=>`<div class="mr-podium"><img src="assets/rapids/${safe(u.species)}.webp" alt=""><span>${safe(u.name)}${u.isPlayer?' · YOUR ABYSSAL':''} · Speed ${Math.round(u.speed)}</span></div>`).join('')}</div><p>Wager: ${money(bet.stake)} doubloons. The entry fee and stake have already been paid.</p><button id="mr-race-auto" class="primary">Race automatically</button>`);
+  $('#mr-race-auto').onclick=()=>{let record=null;if(rewardTransaction(()=>{record=finishRapids(state);})&&record){a.refresh?.();raceResults(a,record);}};
+  return;
+ }
  openModal('Rapids · '+(bet.unitId?'Your race':'Spectator race'),`<div class="mr-race-viewport" id="mr-race-viewport">${racers.map((u,i)=>`<div class="mr-swimlane" data-lane="${i}"><div class="mr-swimtrack"><img class="mr-race-sprite" id="mr-racer-${i}" src="assets/rapids/${safe(u.species)}.webp" alt="${safe(u.name)}"></div><small>${safe(u.name)}${u.isPlayer?' · YOUR ABYSSAL':''}</small></div>`).join('')}</div><div class="mr-rhythm" id="mr-rhythm"><div id="mr-bubble-track"><span class="mr-bubble-target">◎</span><button id="mr-bubble" aria-label="Tap bubble when it reaches the golden target">●</button></div><b id="mr-race-rating">Ready · timing matters!</b></div><p id="mr-race-clock" role="status">${Math.round(RACE_EVENTS[bet.event||'open'].duration/1000)} seconds to the finish</p><p>Wager: ${money(bet.stake)} ⛁ on ${safe(racers[bet.betLane].name)}, ${bet.betPlace}${bet.betPlace===1?'st':bet.betPlace===2?'nd':'rd'} place. Correct pick pays ${money(bet.stake*2)}.</p><button id="mr-race-begin" class="primary">${bet.unitId?'Start race':'Watch race'}</button><p class="mr-note">You can close and resume this race later. Your stake is charged once when you register and will never be charged again.</p>`);
  let timer=null,started=false,perfect=0,good=0,miss=0,bubbleNote=-1,currentNote=-1,cleared=false,startAt=0;
  const duration=RACE_EVENTS[bet.event||'open'].duration,notes=Math.ceil(duration/840),step=duration/notes;
@@ -182,9 +197,10 @@ export function marasenExtraInteract(id,a){const {room,AREA_GATES,state,warp,sho
   showDialogue(talks[id].map(t=>line('Marasen citizen',t)));return true;
  }
  if(id==='area-sign'&&room.startsWith('marasen')){
-  const map={marasen:'Lower Cascades: exchange, market, archive, east to Rapids, south to bridges, north to the Citadel.',marasenBridges:'Seven Bridges: aqueducts, mills, canals, households, crossing to the Citadel.',marasenRapids:'The Rapids: Water Abyssal races, precise bubble tapping, and optional doubloon wagering.',marasenCitadel:'Highwater Citadel: waterfalls, civic fort, and the city leader.'};
+  const map={marasen:'Lower Cascades: exchange, market, archive, east to Rapids, south to bridges, north to the Citadel.',marasenBridges:'Seven Bridges: aqueducts, mills, canals, households, crossing to the Citadel.',marasenRapids:'The Rapids: Water Abyssal races: automatic Speed races with 10% luck, or bubble tapping, and optional doubloon wagering.',marasenCitadel:'Highwater Citadel: waterfalls, civic fort, and the city leader.'};
   const floor=Number(room.slice('marasenExchange'.length));const text=room.startsWith('marasenExchange')?'Grand Exchange · '+FLOOR_NAMES[floor]+'. Use the left/down and right/up stairs.':map[room];
   if(text){openModal('Marasen city guide','<p>'+safe(text)+'</p>');return true;}
  }
  return false;
 }
+

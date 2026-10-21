@@ -1,7 +1,7 @@
 {
-  "version": "0.90.21",
-  "version_code": 116,
-  "filename": "Abyssals-v0.90.21-Uncapped-Catch-Up-XP.apk",
-  "title": "Abyssals v0.90.21 — Uncapped Catch-Up XP",
-  "notes": "Removes the level-gap XP ceiling and adds the approved quadratic catch-up formula: round((25 + 5d + d²/48) × progression bonus × Warbond × species yield). A level-1 partner defeating a level-150 ordinary opponent with Warbond receives 4,930 XP, reaching level 50 with 30 XP remaining. Binoculars award full individual XP to each eligible living party member. Weaker-opponent penalties, level-200 maximum, saves, shiny artwork, permanent death and quest progress preserved. Built and verified through GitHub Actions using the original Android signing key. Automated tests; no physical-phone testing."
+  "version": "0.90.22",
+  "version_code": 117,
+  "filename": "Abyssals-v0.90.22-Training-and-Rapids.apk",
+  "title": "Abyssals v0.90.22 — Training and Rapids",
+  "notes": "Ten concurrent Trial Mark training effects per Abyssal and ten lifetime department-store growth-tonic doses. Expanded Exchange library: 153 techniques including sleep, freeze, paralysis, poison, bad poison and burn lessons with type compatibility. Optional automatic Rapids races use 90% Speed and 10% saved luck; original rhythm races and wager payouts remain. Choose a batch quantity of level tonics; growth, move choices and evolution process in order with saved progress and existing EXP preserved. Menus retain scroll position across purchases, selections and return trips. Includes uncapped catch-up XP and clean shiny palettes. Existing saves, deaths and quest outcomes preserved. GitHub Actions source/browser checks and original-key Android signing; no physical-phone testing."
 }
