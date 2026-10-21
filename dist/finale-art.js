@@ -1,4 +1,4 @@
-import {finaleState,canMeetFinalUnique} from './finale-rules.js?v=0.90.18';
+import {finaleState,canMeetFinalUnique} from './finale-rules.js?v=0.90.19';
 const keys=['road','burial','falls','terraces','guan','fei','cayfen','gallery','spore','darius','ramelle','fortress','mirror','shop','inn','sanctuary','cayfen-hall'];
 const props=['rune-shelter','rune-faith','rune-crossing','windlass','inscription'];
 export const FINALE_ASSETS=Object.fromEntries([...keys.map(k=>['finale-'+k,'../finale/env-'+k+'.webp']),...props.map(k=>['finale-prop-'+k,'../finale/prop-'+k+'.webp'])]);

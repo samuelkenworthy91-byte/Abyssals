@@ -6,7 +6,7 @@ import {PALADIN_IDS} from './paladin-data.js?v=0.87.0';
 export const SAVE_FILE_FORMAT='abyssals-expedition';
 export const SAVE_FILE_VERSION=1;
 export const SAVE_FILE_LIMIT=5*1024*1024;
-export const SAVE_GAME_VERSION='0.90.18';
+export const SAVE_GAME_VERSION='0.90.19';
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const fail=message=>{throw new Error(message);};
 function inspect(value,depth=0,budget={left:200000}){if(--budget.left<0||depth>80)fail('This save file is too complex.');if(typeof value==='number'&&!Number.isFinite(value))fail('The save contains an invalid number.');if(value&&typeof value==='object')for(const [key,v]of Object.entries(value)){if(['__proto__','constructor','prototype'].includes(key))fail('The save contains an unsupported field.');inspect(v,depth+1,budget);}}

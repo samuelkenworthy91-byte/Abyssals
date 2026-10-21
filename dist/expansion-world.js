@@ -1,6 +1,6 @@
 import {glassCraterBlocked} from './storm-props.js?v=0.90.14';
 import {installFinaleWorld,finaleWalkable} from './finale-world.js?v=0.90.18';
-import {drawFinaleMap} from './finale-art.js?v=0.90.18';
+import {drawFinaleMap} from './finale-art.js?v=0.90.19';
 import {installBotruneWorld,botruneWalkable} from './botrune-world.js?v=0.90.17';
 import {drawBotruneMap} from './botrune-art.js?v=0.90.14';
 import {farmBlocked} from './cossenne-farm.js?v=0.89.4';

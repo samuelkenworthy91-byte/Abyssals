@@ -1,3 +1,4 @@
+import {migrateMemorialMoves} from './finale-rules.js?v=0.90.19';
 import {cossenneServices} from './cossenne-services.js?v=0.87.0';
 import {SPECIALIST_SUPPLIES} from './specialist-supplies.js?v=0.87.0';
 import {migrateChoiceRewards} from './choice-rewards.js?v=0.87.0';
@@ -20,5 +21,5 @@ export function migrateProgress(state){
  state.rewardQueue=(state.rewardQueue||[]).map(card=>card.kind==='evolution-check'?{...card,kind:'evolve-check'}:card);
  for(const id of ['scrub-shrine-cache','lost-pilgrim','medicine-chain-reward'])if(state.collectedRelics?.includes(id)&&!state.supplyClaims.includes(id))state.supplyClaims.push(id);
  delete state.prizeClaims;delete state.evolutionInventory;delete state.evolutionClaims;
- adventureState(state);keepContestBait(state);state.trainingTonics??=0;if(!state.levelEvolutionMigration){state.trainingTonics+=Object.entries(state.evolutionItems||{}).filter(([id])=>!id.startsWith('ITEM_RELIC_')).reduce((n,[id,v])=>n+(Number.isSafeInteger(v)&&v>0?v:0),0);state.evolutionItems=Object.fromEntries(Object.entries(state.evolutionItems||{}).filter(([id])=>id.startsWith('ITEM_RELIC_')));state.levelEvolutionMigration=true;}state.moveScrolls??={};migrateHospiceQuest(state);migrateChoiceRewards(state);return state;
+ adventureState(state);keepContestBait(state);state.trainingTonics??=0;if(!state.levelEvolutionMigration){state.trainingTonics+=Object.entries(state.evolutionItems||{}).filter(([id])=>!id.startsWith('ITEM_RELIC_')).reduce((n,[id,v])=>n+(Number.isSafeInteger(v)&&v>0?v:0),0);state.evolutionItems=Object.fromEntries(Object.entries(state.evolutionItems||{}).filter(([id])=>id.startsWith('ITEM_RELIC_')));state.levelEvolutionMigration=true;}state.moveScrolls??={};migrateHospiceQuest(state);migrateChoiceRewards(state);migrateMemorialMoves(state);return state;
 }

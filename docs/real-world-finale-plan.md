@@ -1,6 +1,6 @@
 # Real-world finale — user revision, 21 October 2026
 
-Status: approved and implemented on feature/real-world-finale. Sporefall Chasm was approved. Release verification is in progress for v0.90.18; v0.90.17 remains live until publication.
+Status: approved and implemented on feature/real-world-finale. Sporefall Chasm was approved. Release v0.90.18 passed all source/browser checks and original-key signing. Final delivery is v0.90.19, adding level-80 memorial movesets and a safe migration before the matching PWA deployment.
 
 ## Current source and canonical identities
 

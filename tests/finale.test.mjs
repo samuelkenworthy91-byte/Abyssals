@@ -1,3 +1,5 @@
+import {startingMoveIds} from '../dist/moveset-identity.js';
+import {migrateMemorialMoves} from '../dist/finale-rules.js';
 import assert from 'node:assert/strict';
 import {DATA} from '../dist/data.js';
 import {instance} from '../dist/engine.js';
@@ -35,3 +37,6 @@ for(const [id,d]of Object.entries(NEW_DOORS).filter(([,d])=>['cayfen','ramelle']
 console.log('PASS: full finale navigation, saved burial and personal legacies, two distinct guardian puzzles/unique deaths, eight-leader outcomes and gate access, gallery commissions and Lv105 Fairy/Dragon ace');
 
 for(const key of ['gehennuar','suncub']){const z={party:[],reserve:[],dead:[],fates:{}};assert(!canMeetFinalUnique(z,key));z.fates['LDR-07']='SPARED';z.finale.rareRecords=[key];assert(canMeetFinalUnique(z,key));assert(settleFinalUnique(z,key,'captured'));assert(!canMeetFinalUnique(z,key));}
+
+for(const u of s.party.filter(u=>u.memorialLegacy)){assert.equal(u.moves.length,4);assert(u.moves.some(m=>m.power>=80));const old=structuredClone(u);delete old.memorialLegacy.movesVersion;old.moves=startingMoveIds(DATA,old.species,1).map(id=>({...DATA.moves.find(m=>m.id===id),left:1}));const state={party:[old],reserve:[]};assert(migrateMemorialMoves(state));assert.deepEqual(old.moves.map(m=>m.id),startingMoveIds(DATA,old.species,80));assert(!migrateMemorialMoves(state));const trained=structuredClone(u);delete trained.memorialLegacy.movesVersion;trained.moves=[{id:999,left:1}];assert(migrateMemorialMoves({party:[trained]}));assert.deepEqual(trained.moves,[{id:999,left:1}]);}
+console.log('PASS: memorial partners join with four level-80 moves; legacy migration preserves customized moves and is idempotent.');

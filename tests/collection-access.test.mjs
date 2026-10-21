@@ -10,7 +10,7 @@ import {DATA} from '../dist/data.js';
 import {EVOLUTIONS} from '../dist/evolution-data.js';
 import {EXPANSION} from '../dist/expansion-data.js';
 import {ROUTE} from '../dist/route-data.js';
-import {NEW_MAPS} from '../dist/expansion-world.js';
+import {NEW_MAPS,newGrass,newBlocked} from '../dist/expansion-world.js';
 import {expandEncounterRoute} from '../dist/roster-encounters.js';
 import {finaleRoute} from '../dist/finale-data.js';
 import {botruneRoute} from '../dist/botrune-data.js';
@@ -25,7 +25,7 @@ import {FOSSILS} from '../dist/mountain-quests.js';
 function baseAreaRoute(room){const fn=finaleRoute(room);if(fn)return fn;if(NEW_MAPS[room]?.finale)return {room,area:{rate:'LOW'},tables:[]};const bt=botruneRoute(room);if(bt)return bt;const green=marasenRoute(room);if(green)return green;const orchard=orchardRoute(room);if(orchard)return orchard;if(room.startsWith('cossenne'))return {room,area:{rate:'LOW'},tables:[]};const campaign=campaignRoute(room);if(campaign)return campaign;const city=cybressaRoute(room);if(city)return city;if(['cybressa','cybressaWarehouse','cybressaTrial','cybressaFort'].includes(room))return {room,area:{rate:'LOW'},tables:[]};const cave=caveRoute(room);if(cave)return expandEncounterRoute(cave);const area=EXPANSION.areas.find(a=>a.id===NEW_MAPS[room]?.area);return expandEncounterRoute(area?{room,area,tables:EXPANSION.tables.filter(t=>t.area_id===area.id)}:{...ROUTE,room});}
 const routes=[...new Set(['march',...Object.keys(NEW_MAPS)])].map(room=>expandEncounterRoute(paladinEncounterRoute(jungleRoute(room)||courtRoute(room)||baseAreaRoute(room))));
 const sources=new Map();const add=(id,source)=>{if(!sources.has(id))sources.set(id,[]);sources.get(id).push(source);};
-for(const r of routes)for(const t of r.tables||[])for(const s of t.slots)add(s.species_id,r.room+':'+t.phase);
+const habitatRooms=new Set(['march']);for(const room of Object.keys(NEW_MAPS)){let found=false;for(let y=0;y<32&&!found;y++)for(let x=0;x<48;x++)if(newGrass(room,x,y)&&!newBlocked(room,x,y)){found=true;break;}if(found)habitatRooms.add(room);}for(const r of routes)if(habitatRooms.has(r.room))for(const t of r.tables||[])for(const s of t.slots)add(s.species_id,r.room+':'+t.phase);
 for(const t of SIDE_CONTENT)add(t.offered,'trade:'+t.room);
 for(const id of FISH_POOL)add(id,'fishing contest');for(const id of PALADIN_IDS)add(id,'court roamer');for(const id of ['164','165','173','174','175','183','184','185'])add(id,'unique quest');
 
