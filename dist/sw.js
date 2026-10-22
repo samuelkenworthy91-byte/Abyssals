@@ -10,7 +10,7 @@ const URLS=self.ABYSSALS_OFFLINE_ASSETS.map(path=>new URL(path,ROOT).href);
 const ALLOWED=new Set(URLS.map(url=>new URL(url).pathname));
 self.addEventListener('install',event=>event.waitUntil((async()=>{
  const cache=await caches.open(CACHE);let cursor=0;
- try{await Promise.all(Array.from({length:6},async()=>{while(cursor<URLS.length){const url=URLS[cursor++],response=await fetch(new Request(url,{cache:'reload'}));if(!response.ok||response.redirected||!['basic','default'].includes(response.type))throw Error('Offline download incomplete');await cache.put(url,response);}}));}
+ try{await Promise.all(Array.from({length:6},async()=>{while(cursor<URLS.length){const url=URLS[cursor++],response=await fetch(new Request(url,{cache:'reload'}));if(!response.ok||new URL(response.url).origin!==ROOT.origin||!['basic','default'].includes(response.type))throw Error('Offline download incomplete');await cache.put(url,response);}}));}
  catch(error){await caches.delete(CACHE);throw error;}
 })()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
