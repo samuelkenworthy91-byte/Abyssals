@@ -21,7 +21,7 @@ Rivet + core at level 12 → middle form; the middle form evolves at the listed 
 
 Carillodon is a special sound attacker: Plain Call, Resonant Chime (Steel, 75 power, 100 accuracy, 15 PP), Carillon Cannon (Normal, 90 power, 100 accuracy, 10 PP), Iron Curtain and Second Wind. Both new sound moves are explicitly tagged for Soundproof and sound abilities. Aesirion’s Mindsteel Cleave is Psychic/physical and uses Attack. Every final signature is available on evolution and through relearning.
 
-New final base-stat totals are 510–535, with clear offensive and defensive tradeoffs and authored growth budgets comparable to existing Rivet branches. Warbond remains shared and non-stacking. No new acquisition gates, map mutations or save resets.
+New final base-stat totals are 490–520, with clear offensive and defensive tradeoffs and authored growth budgets comparable to existing Rivet branches. Warbond remains shared and non-stacking. No new acquisition gates, map mutations or save resets.
 
 Art source: approved standalone review gallery revision 5, source commit 4d5973dfb236b0af3da9f1f7fa8ce819fe4953f3. Normal final revision 4, Grass pair revision 4, Fighting final revision 5, Ground/Poison/Flying revision 3; other new art retains its approved versions.
 
