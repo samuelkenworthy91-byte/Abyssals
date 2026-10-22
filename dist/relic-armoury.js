@@ -104,8 +104,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 525,
     "coverageMove": 117,
-    "description": "Tempered silver plate, brass rivets, amber eyes, round shield and straight sword. Middle compact young knight with large gauntlets; final broad regal masterwork armour with anvil-shaped shoulders, tower shield and heavy straight sword. No elemental glow beyond amber soul.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "It gathers fallen steel around a small, unwavering soul. Its shield is always the first thing it repairs.",
+      "Each plate has been tempered by years of protecting its companions. It answers a heavy blow with one precise sword stroke."
+    ]
   },
   {
     "key": "normal",
@@ -223,8 +226,11 @@ export const ARMOURY_BRANCHES=[
     "category": "SPECIAL",
     "signatureId": 526,
     "coverageMove": 10,
-    "description": "Bellusk retains its approved artwork. Carillodon keeps its six-legged, four-tusked juggernaut body but directs sound through a flared, ring-lined trunk cannon. Visible expanding pressure rings, resonating ear plates and vibrating bells make its attack method readable.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "Its small bells chime in time with its footsteps. A breath through its trunk can carry a clear note across the woodland.",
+      "Its bells and broad ear plates resonate together. The flared trunk focuses their sound into powerful waves of pressure."
+    ]
   },
   {
     "key": "water",
@@ -342,8 +348,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 527,
     "coverageMove": 117,
-    "description": "Reefrook is an energetic upright shark fighter with finned forearms. Riptidebrute gains a much wider hammerhead-like head, a massive torso and broad steel gauntlets and jaw armour.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "It practises hooks and jabs against breaking surf. Steel fins brace its forearms against the waves.",
+      "It plants its feet against the strongest current. A punch from its armoured fist carries a curling surge of water."
+    ]
   },
   {
     "key": "grass",
@@ -461,8 +470,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 528,
     "coverageMove": 117,
-    "description": "Briarcalf carries small leaf-shaped steel ankle blades. Canopylance develops long, sword-shaped silver blades along its lower limbs, green blade veins, petal-like shoulder guards and restrained blossom accents. Its long neck, patterned coat and flowing leaf mane keep an elegant floral giraffe silhouette.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "Leaf-shaped steel grows from its ankle guards. It steps carefully around young flowers, even when startled.",
+      "Its long neck sways above a canopy of floral armour. Elegant ankle swords sweep through the air when it bounds into battle."
+    ]
   },
   {
     "key": "fighting",
@@ -584,8 +596,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 529,
     "coverageMove": 117,
-    "description": "Scrapbrute retains its current artwork. Ironogre keeps its broad green orc silhouette and red-and-black armour, with longer hooked power-claw talons, sharpened inner cutting edges and heavier mechanical joints. Its cleaver gains a pronounced cutting tip, broad silver bevel and jagged back edge.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "It tests every piece of scrap before adding it to its armour. The strongest plates go around its enormous gauntlet.",
+      "Hydraulic joints drive its hooked power claw shut. Its heavy cleaver carries a wicked cutting tip and a jagged steel spine."
+    ]
   },
   {
     "key": "poison",
@@ -703,8 +718,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 530,
     "coverageMove": 117,
-    "description": "Rustwight is now a squat, hunched tomb imp with a small segmented shell, clawed forearms and a green core. Gravehulk becomes a broad nonhuman tomb beast with a larger carapace, rib-like steel armour, curved forearm blades and an articulated toxin tail.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "A green light stirs behind its smooth metal mask. Venom gathers in the gaps between its rib-like plates.",
+      "Its ancient carapace encloses a glowing toxic core. Forearm blades and a segmented tail strike together in a silent sweep."
+    ]
   },
   {
     "key": "ground",
@@ -826,8 +844,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 531,
     "coverageMove": 117,
-    "description": "Terrabite now has a steel skull helmet, layered chest armour, a mechanical claw and basalt shoulder growths. Tyrantread develops much heavier body plating, an enormous asymmetric claw arm, reinforced legs and a basalt-and-steel tail hammer.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "Steel plates reinforce its skull and powerful legs. Basalt growths brace the joints of its enormous mechanical claw.",
+      "Layers of steel armour surround a thunderous tyrannosaur frame. Its mechanical claw shatters earth while its basalt tail anchors every blow."
+    ]
   },
   {
     "key": "flying",
@@ -953,8 +974,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 532,
     "coverageMove": 117,
-    "description": "Glidecadet is a compact glider with folded wing panels, separate forearms and sturdy feet. Nightvector develops a broad delta-shaped chest, four articulated wing panels, independent clawed arms, stronger talons and paired tail fins.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "It folds its triangular wings close while resting. Independent armoured forearms steady it during sudden turns.",
+      "Four swept wing panels shift independently to silence its flight. It dives behind a delta-shaped breastplate with its clawed forearms ready."
+    ]
   },
   {
     "key": "psychic",
@@ -1068,8 +1092,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 533,
     "coverageMove": 117,
-    "description": "Runecaval is a compact armoured centaur with a red mane and psychic-edged sabre. Aesirion becomes a sweeping dark cavalry creature with extra equine legs, a long horned helmet and an extended curved blade.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "A red mane streams behind its dark armour. It practises quiet sword cuts while sensing the next movement of its foe.",
+      "Psychic force gathers along its curved blade. It commits that force to one decisive physical cut from a powerful cavalry stance."
+    ]
   },
   {
     "key": "rock",
@@ -1191,8 +1218,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 534,
     "coverageMove": 117,
-    "description": "Shardarter is a small mineral dragonfly with pebble plates and mica wings. Lithodarter develops a long basalt abdomen, amber geode eyes, four broad mineral wings and a pointed crystal tail.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "Its mica wings shimmer like thin sheets of stone. A sharp mineral tail keeps it balanced during fast changes of direction.",
+      "Four broad mineral wings carry its long basalt body. It darts through narrow gaps and strikes with a pointed geode tail."
+    ]
   },
   {
     "key": "dragon",
@@ -1314,8 +1344,11 @@ export const ARMOURY_BRANCHES=[
     "category": "PHYSICAL",
     "signatureId": 535,
     "coverageMove": 117,
-    "description": "Nebulisk is a sleek silver-and-indigo dragon with small cyan wing fans. Astralcyon grows tall angular energy wings, a silver chest and head, and restrained red accents around its cosmic core.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "Cyan light flickers between silver and indigo plates. Small wing fans gather the energy of distant stars.",
+      "Angular wings unfold around an astral core. Silver claws draw bright arcs through the darkness when it attacks."
+    ]
   },
   {
     "key": "fairy",
@@ -1437,8 +1470,11 @@ export const ARMOURY_BRANCHES=[
     "category": "SPECIAL",
     "signatureId": 536,
     "coverageMove": 10,
-    "description": "A mischievous fun jester automaton, stylish and characterful rather than fearsome. Middle: small animated silver and rose-gold marionette jester with one raised eyebrow-shaped visor, cheeky asymmetrical smiling metal mouth, short two-pronged jester hat made from curved articulated steel with tiny bells, slender spring-coil legs, purple teal diamond-patterned enamel, and a comically oversized handheld bell mallet. Final: splendid agile harlequin automaton with expressive crescent grinning visor and one wink-like narrow eye, elegantly exaggerated long springy limbs, three swooping articulated metal jester-cap points tipped with bells, layered pearl-steel and rose-gold armour with teal and magenta harlequin diamonds, a big playful bell hammer, floating tiny metallic stars close to body and a jaunty one-legged balancing battle pose. Fun theatrical personality, clever lovable trickster, no evil horror clown makeup. Cool refined fantasy game battle sprite, not toy plastic, not a Rivet recolour and not a human skin face. Its armour, movement and expression make this the fun branch.",
-    "approvedArmoury": true
+    "approvedArmoury": true,
+    "entries": [
+      "Its little bells ring just before a mischievous trick. Spring-like legs carry it out of reach of an irritated opponent.",
+      "It balances on one springy leg to perform elaborate feints. A flourish of spectral bells ends in an oversized illusory hammer blow."
+    ]
   }
 ];
 export const ARMOURY_MOVES=[
@@ -1484,7 +1520,7 @@ export const ARMOURY_MOVES=[
     "approvedArmoury": true,
     "signature_owner_family": "FAMILY-365",
     "signature_owner_name": "Carillodon",
-    "authored_visual_action": "proposed new signature. Back bells resonate, ear plates focus the tone, and the trunk fires a concentrated cone of pressure rings. The damage comes from sound rather than a stomp or contact hit.",
+    "authored_visual_action": "Back bells resonate, ear plates focus the tone, and the trunk fires a concentrated cone of pressure rings. The damage comes from sound rather than a stomp or contact hit.",
     "sceneAction": "ripple",
     "provenance": {
       "authoring": "Approved complete Rivet armoury, 2026-10-22"
@@ -1658,7 +1694,7 @@ export const ARMOURY_MOVES=[
     "approvedArmoury": true,
     "signature_owner_family": "FAMILY-365",
     "signature_owner_name": "Aesirion",
-    "authored_visual_action": "proposed new signature. A decisive sword cut carries concentrated psychic force along the blade; it uses Attack rather than Special Attack.",
+    "authored_visual_action": "A decisive sword cut carries concentrated psychic force along the blade; it uses Attack rather than Special Attack.",
     "sceneAction": "pierce",
     "provenance": {
       "authoring": "Approved complete Rivet armoury, 2026-10-22"
