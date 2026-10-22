@@ -13,10 +13,11 @@ permissions:
   contents: write
 concurrency:
   group: android-release-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   release:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,24 +39,30 @@ jobs:
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
           python3 tests/android-manifest.test.py
-      - name: Test real game interactions in Chromium
+      - name: Install Chromium for interaction checks
+        timeout-minutes: 8
         run: |
           npm install --no-save --package-lock=false playwright@1.51.1
           npx playwright install --with-deps chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
-          node tests/field-quality-browser.cjs
-          node tests/rivet-armoury-browser.cjs
-          node tests/arena-bosses-browser.cjs
-          node tests/training-rapids-browser.cjs
-          node tests/character-art-browser.cjs
-          node tests/shiny-browser.cjs
-          node tests/quickbite-angling-browser.cjs
-          node tests/browser-smoke.cjs
-          node tests/botrune-browser.cjs
-          node tests/finale-browser.cjs
-          node tests/thunderplain-browser.cjs
-          node tests/storm-polish-browser.cjs
-          node tests/marasen-browser.cjs
+      - name: Test Rivet cores and sprites in Chromium
+        timeout-minutes: 3
+        run: node tests/rivet-armoury-browser.cjs
+      - name: Test remaining real game interactions in Chromium
+        timeout-minutes: 15
+        run: |
+          timeout 180s node tests/field-quality-browser.cjs
+          timeout 180s node tests/arena-bosses-browser.cjs
+          timeout 180s node tests/training-rapids-browser.cjs
+          timeout 180s node tests/character-art-browser.cjs
+          timeout 180s node tests/shiny-browser.cjs
+          timeout 180s node tests/quickbite-angling-browser.cjs
+          timeout 180s node tests/browser-smoke.cjs
+          timeout 180s node tests/botrune-browser.cjs
+          timeout 180s node tests/finale-browser.cjs
+          timeout 180s node tests/thunderplain-browser.cjs
+          timeout 180s node tests/storm-polish-browser.cjs
+          timeout 180s node tests/marasen-browser.cjs
       - name: Retain game screenshots
         if: always()
         uses: actions/upload-artifact@v4
