@@ -1,10 +1,13 @@
+import {statusCaptureMultiplier} from './status-rules.js?v=0.90.24';
 export function statusDetails(u){const loss=n=>Math.max(1,Math.floor(u.maxHp*n)),s=u.moveState||{},out=[];
  if(u.status==='BURN')out.push(`Burn: Attack ×0.5 on physical moves; loses ${loss(1/8)} HP at turn end.`);
+ if(u.status==='FROSTBITE')out.push(`Frostbite: Special Attack ×0.5 on special moves; loses ${loss(1/8)} HP at turn end.`);
  if(u.status==='POISON')out.push(`Poison: loses ${loss(1/8)} HP at turn end.`);
  if(u.status==='BAD_POISON')out.push(`Bad poison: next turn loses ${loss(Math.min(15,(u.toxicCounter||0)+1)/16)} HP; increases each turn; switching resets escalation.`);
  if(u.status==='PARALYSIS')out.push('Paralysis: Speed ×0.5; 25% chance to lose an action.');
- if(u.status==='SLEEP')out.push(`Sleep: ${u.statusTurns||0} blocked actions remain; then wakes.`);
+ if(u.status==='SLEEP')out.push(`Sleep: ${u.statusTurns||0} blocked actions remain (randomly 1–6 when inflicted); then wakes.`);
  if(u.status==='FREEZE')out.push('Freeze: 20% thaw chance before each action.');
+ if(u.status&&out.length)out[out.length-1]+=` Capture strength ×${statusCaptureMultiplier(u)}.`;
  if(u.confusion>0)out.push(`Confusion: ${u.confusion} actions remain; 33% chance to hurt itself for ${loss(.1)} HP.`);
  if(u.trapped>0)out.push(`Trapped: cannot switch or escape for ${u.trapped} turns.`);
  if(s.disabled?.turns>0)out.push(`Move sealed: ${u.moves.find(m=>m.id===s.disabled.moveId)?.name||'previous move'} (${s.disabled.turns} turns).`);

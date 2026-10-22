@@ -1,4 +1,4 @@
-import {restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.87.0';
+import {restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.24';
 import {unitName} from './names.js?v=0.87.0';
 export const SUPPORTED_EFFECTS = new Set(['party_heal','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
 export function moveUsable(u,m){return !!m&&m.left>0&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
@@ -39,9 +39,9 @@ export function extraMoveEffect(actor,target,move,e,messages,{floor=0}={}){
 }
 export function contactReaction(actor,target,move,damage,random,{floor=0}={}){const out=[],s=target.moveState||{};if(damage<=0||!isContact(move)||actor.hp<=0)return out;
  if(s.thorns?.turns>0){const [n,d]=s.thorns.fraction,loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp*n/d)));actor.hp-=loss;out.push(`${unitName(actor)} loses ${loss} HP to Thorn Guard.`);}
- if(actor.hp>0&&s.coat?.turns>0&&random()*100<(s.coat.chance_percent??30))inflictStatus(actor,s.coat.status,out);return out;}
+ if(actor.hp>0&&s.coat?.turns>0&&random()*100<(s.coat.chance_percent??30))inflictStatus(actor,s.coat.status,out,random);return out;}
 export function endMoveEffects(units,random= Math.random){const out=[],field=units[0]?.field||{};
- for(const u of units){if(u.hp>0){const area=field.moveFields?.[u.side||'enemy'];if(area?.turns>0&&random()*100<area.chance_percent)inflictStatus(u,area.status,out);}const s=u.moveState;if(!s)continue;
+ for(const u of units){if(u.hp>0){const area=field.moveFields?.[u.side||'enemy'];if(area?.turns>0&&random()*100<area.chance_percent)inflictStatus(u,area.status,out,random);}const s=u.moveState;if(!s)continue;
  s.previousCategory=s.currentCategory||null;delete s.currentCategory;
  for(const key of ['criticalWard','mark','thorns','coat','disabled'])if(s[key]?.turns>0&&--s[key].turns===0){delete s[key];out.push(`${unitName(u)}: ${key==='disabled'?'move seal':'temporary '+key} expired.`);}
  }

@@ -6,7 +6,7 @@ import {startingMoveIds} from './moveset-identity.js?v=0.87.0';
 import {TYPES} from './type-rules.js?v=0.87.0';
 import {EVOLUTIONS} from './evolution-data.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
-import {instance,rng} from './engine.js?v=0.87.0';
+import {instance,rng} from './engine.js?v=0.90.24';
 import {hashSeed,initializeProgress,STAT_KEYS,unitGrowthRates} from './progression.js?v=0.90.18';
 // Ordinary starting forms only; exclude special rarity classes across the whole family.
 const specialFamily=s=>DATA.species.some(other=>other.family_id===s.family_id&&/legend|myth|pseudo|fossil/i.test(other.power_class));

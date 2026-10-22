@@ -1,3 +1,4 @@
+import {statusCaptureMultiplier} from './status-rules.js?v=0.90.24';
 import {encounterWeights} from './expedition-abilities.js?v=0.87.0';
 import {expandEncounterRoute} from './roster-encounters.js?v=0.90.20';
 import {stageLevel} from './route-progression.js?v=0.87.0';
@@ -30,7 +31,7 @@ export function capturePreview(target,foodModifier=1){
  const tier=captureSpeciesTier(target.species);
  const hp=Math.min(target.hp,target.maxHp);
  const levelFactor=tier.ignoreLevel?1:captureLevelFactor(target.level);
- const a=Math.floor((3*target.maxHp-2*hp)*tier.rate*foodModifier*levelFactor/(3*target.maxHp));
+ const a=Math.floor((3*target.maxHp-2*hp)*tier.rate*foodModifier*levelFactor*statusCaptureMultiplier(target)/(3*target.maxHp));
  const threshold=a>=255?65536:a<=0?0:Math.min(65536,Math.floor(1048560/Math.sqrt(Math.sqrt(16711680/a))));
  return {a,threshold,chance:Math.pow(threshold/65536,4)};
 }

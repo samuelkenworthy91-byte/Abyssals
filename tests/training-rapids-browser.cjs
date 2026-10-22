@@ -18,7 +18,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=req
  assert.deepEqual(await page.evaluate(()=>{const s=window.__trainQA.read();return [s.level,s.exp,s.tonics];}),[198,37,9]);
  await page.evaluate(()=>window.__trainQA.draughts());assert((await page.locator('.modal').innerText()).includes('/10 effects'));
  await page.evaluate(()=>window.__trainQA.stock(1));
- assert(await page.getByText('Slumber Mist',{exact:true}).count());assert(await page.getByText('Rime Seal',{exact:true}).count());assert(await page.getByText('Venom Mark',{exact:true}).count());
+ assert(await page.getByText('Slumber Mist',{exact:true}).count());assert(await page.getByText('Rime Seal',{exact:true}).count());assert(await page.getByText('Venom Mark',{exact:true}).count());assert(await page.getByText('Hoarfrost Hex',{exact:true}).count());
  // Real purchase at the bottom of the long shop must retain its position.
  const buy=page.locator('[data-mr-buy]').last();await buy.scrollIntoViewIfNeeded();
  const top=await page.locator('.modal').evaluate(el=>el.scrollTop);assert(top>500);

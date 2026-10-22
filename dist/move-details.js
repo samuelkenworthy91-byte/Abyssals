@@ -1,28 +1,29 @@
+import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {resolveSalvationMove} from './salvation.js?v=0.87.0';
-import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.87.0';
-import {statusDetails} from './battle-status.js?v=0.87.0';
-import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.87.0';
+import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.24';
+import {statusDetails} from './battle-status.js?v=0.90.24';
+import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.90.24';
 import {typeEffectiveness,effectivenessLabel,categorySymbol} from './type-rules.js?v=0.87.0';
-import {stageMultiplier,damageScale} from './engine.js?v=0.87.0';
+import {stageMultiplier,damageScale} from './engine.js?v=0.90.24';
 const names={attack:'Attack',defence:'Defense',sp_attack:'Special Attack',sp_defence:'Special Defense',speed:'Speed',accuracy:'Accuracy',evasion:'Evasion'};
 export function damageRange(actor,target,move){move=resolveSalvationMove(actor,move);
  if(!move.power)return null;
  if(move.category==='SPECIAL'&&has(actor,'Sage Mind'))move={...move,power:move.power*2,effects:[]};
  const guaranteed=critChance(actor,move,target)===1,special=move.category==='SPECIAL',a=special?'sp_attack':'attack',d=special?'sp_defence':'defence';
- const atk=actor.stats[a]*(guaranteed?1:stageMultiplier(actor.stages[a]))*heldStat(actor,a)*(actor.status==='BURN'&&!special?.5:1),def=target.stats[d]*(guaranteed?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[d]||0):target.stages[d]))*heldStat(target,d);
+ const atk=actor.stats[a]*(guaranteed?1:stageMultiplier(actor.stages[a]))*heldStat(actor,a)*statusAttackFactor(actor,special),def=target.stats[d]*(guaranteed?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[d]||0):target.stages[d]))*heldStat(target,d);
  const base=Math.floor((2*actor.level/5+2)*move.power*atk/Math.max(1,def)/50)+2;
  const bonus=actor.species.types.includes(move.type_id)?1.5:1;
  const effectiveness=abilityImmunity(target,move)?0:typeEffectiveness(move.type_id,target.species.types),movedFirst=actor.stats.speed*stageMultiplier(actor.stages.speed)*speedFactor(actor,target)>=target.stats.speed*stageMultiplier(target.stages.speed)*speedFactor(target,actor),scale=(guaranteed?2:1)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,movedFirst,critical:guaranteed});
  const cap=move.nonlethal?Math.max(0,target.hp-1):Infinity;return {effectiveness,min:Math.min(cap,effectiveness===0?0:Math.max(1,Math.floor(base*bonus*.85*scale))),max:Math.min(cap,effectiveness===0?0:Math.max(1,Math.floor(base*bonus*scale))),sameType:bonus===1.5,attack:names[a],defense:names[d]};
 }
 export function mechanicsFor(move,actor,target){move=resolveSalvationMove(actor,move);
- const details=[];if(move.description)details.push(move.description);if(move.nonlethal)details.push(move.effect_text);if(move.power&&move.category==='SPECIAL'&&has(actor,'Sage Mind')){move={...move,effects:[]};details.push('Sage Mind doubles special move power and removes secondary effects.');}if(move.power)details.push(`Critical chance: ${(critChance(actor,move,target)*100).toFixed(1)}%, including Speed advantage. Critical hits deal 2× damage and ignore all Attack and Defence stages, including special stats. Held items, burn and damage-reducing abilities still apply.`);
+ const details=[];if(move.description)details.push(move.description);if(move.nonlethal)details.push(move.effect_text);if(move.power&&move.category==='SPECIAL'&&has(actor,'Sage Mind')){move={...move,effects:[]};details.push('Sage Mind doubles special move power and removes secondary effects.');}if(move.power)details.push(`Critical chance: ${(critChance(actor,move,target)*100).toFixed(1)}%, including Speed advantage. Critical hits deal 2× damage and ignore all Attack and Defence stages, including special stats. Held items, burn, frostbite and damage-reducing abilities still apply.`);
  for(const e of move.effects){
   if(e.effect_id==='stat_stage'){
    for(const stat of e.stats||[e.stat])if(stat){const who=e.target==='SELF'?actor:target;const current=who.stages?.[stat]||0,next=Math.max(-6,Math.min(6,current+e.stages));details.push(`${e.chance_percent??100}% chance: ${e.target==='SELF'?'your':'foe’s'} ${names[stat]||stat} ${e.stages>0?'rises':'falls'} ${Math.abs(e.stages)} stage. Current ${stageMultiplier(current).toFixed(2)}× → ${stageMultiplier(next).toFixed(2)}×${next===current?' (stage limit reached)':''}.`);}
   }
   if(e.effect_id==='flinch')details.push(`${e.chance_percent??100}% flinch chance. Stops the foe’s action only if it has not acted this round; blocked by flinch protection.`);
-  if(e.effect_id==='inflict_status'&&e.status==='CONFUSION')details.push(`${e.chance_percent}% confusion chance. Practice: lasts 2 actions; 33% chance per action to lose 10% maximum HP instead of using the move.`);
+  if(e.effect_id==='inflict_status'&&e.status==='CONFUSION')details.push(`${e.chance_percent}% confusion chance. Practice: lasts a uniformly random 1–6 eligible actions; 33% chance per action to lose 10% maximum HP instead of using the move.`);
 
   if(e.effect_id==='prevent_flinch')details.push(`Blocks flinching for ${e.turns||5} turns, including this turn.`);
   if(e.effect_id==='prevent_forced_switch')details.push('Authored protection against forced switching. This slice has no forced-switch actions, so that part has no effect here.');
@@ -32,7 +33,7 @@ export function mechanicsFor(move,actor,target){move=resolveSalvationMove(actor,
  }
  if(move.id===310)details.push('Below half HP: priority +1, ahead of normal-priority moves.');
  for(const e of move.effects){
- if(e.effect_id==='inflict_status'&&e.status!=='CONFUSION')details.push(`${e.chance_percent??100}% chance of ${e.status.toLowerCase().replaceAll('_',' ')}. ${statusDetails({...target,status:e.status,toxicCounter:0}).filter(t=>t.toLowerCase().startsWith(e.status.toLowerCase().replace('_',' '))).join(' ')}`);
+ if(e.effect_id==='inflict_status'&&e.status!=='CONFUSION')details.push(`${e.chance_percent??100}% chance of ${e.status.toLowerCase().replaceAll('_',' ')}. ${statusDetails({...target,status:e.status,statusTurns:e.status==='SLEEP'?'1–6':0,toxicCounter:0}).filter(t=>t.toLowerCase().startsWith(e.status.toLowerCase().replace('_',' '))).join(' ')}`);
  if(e.effect_id==='hp_cost')details.push(`Costs ${Math.round(e.fraction[0]/e.fraction[1]*100)}% of your maximum HP.`);
  if(e.effect_id==='next_move_cannot_miss')details.push('The next attempted move ignores accuracy and evasion. Immunity still applies.');
  if(e.effect_id==='ignore_positive_evasion')details.push('Ignores positive foe evasion stages. Accuracy penalties still apply.');

@@ -1,4 +1,4 @@
-import {installExchangeTechniques} from './exchange-techniques.js?v=0.90.22';
+import {installExchangeTechniques} from './exchange-techniques.js?v=0.90.24';
 import {installBirds} from './bird-family.js?v=0.87.0';
 import {installPaladins} from './paladin-data.js?v=0.87.0';
 import {installMenagerie} from './menagerie-family.js?v=0.87.0';

@@ -1,3 +1,4 @@
+import {randomStatusDuration} from './status-rules.js?v=0.90.24';
 import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.87.0';
 import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.87.0';
 import {bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.87.0';
@@ -63,9 +64,9 @@ export function changeWeather(weather,units,turns=5){const messages=[];const old
 }
 export function isContact(m){return m.contact??(m.category==='PHYSICAL'&&!/shot|arrow|projectile|launch|beam|wave|pulse/i.test(m.name));}
 export function isSound(m){return m.sound??(/roar|cry|call|chorus|song|chant|howl|chime|echo|shriek|resonance|sound|sonic/i.test(m.name));}
-export function inflictStatus(u,status,messages=[]){if(u.hp<=0)return false;if(status==='CONFUSION'){u.confusion=2;messages.push(`${unitName(u)} is confused.`);return true;}
- if(u.status||u.statusImmunity?.[status]||has(u,'Toxinproof')&&['POISON','BAD_POISON'].includes(status)||has(u,'Coldproof')&&status==='FREEZE'||['POISON','BAD_POISON'].includes(status)&&u.species.types.some(t=>['POISON','STEEL'].includes(t))||status==='BURN'&&u.species.types.includes('FIRE')||status==='FREEZE'&&u.species.types.includes('ICE')||status==='PARALYSIS'&&u.species.types.includes('ELECTRIC'))return false;
- u.status=status;u.statusTurns=status==='SLEEP'?2:0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);return true;
+export function inflictStatus(u,status,messages=[],random=Math.random){if(u.hp<=0)return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);return true;}
+ if(u.status||u.statusImmunity?.[status]||has(u,'Toxinproof')&&['POISON','BAD_POISON'].includes(status)||has(u,'Coldproof')&&status==='FREEZE'||['POISON','BAD_POISON'].includes(status)&&u.species.types.some(t=>['POISON','STEEL'].includes(t))||status==='BURN'&&u.species.types.includes('FIRE')||['FREEZE','FROSTBITE'].includes(status)&&u.species.types.includes('ICE')||status==='PARALYSIS'&&u.species.types.includes('ELECTRIC'))return false;
+ u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);return true;
 }
 export function blockedByAbility(actor,target,move,messages=[]){
  let why=null;if(has(target,'Hovercore')&&move.type_id==='GROUND')why='Ground immunity';if(has(target,'Soundproof')&&isSound(move))why='sound immunity';
@@ -134,7 +135,7 @@ export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=f
  messages.push(...paladinAfterDamage(actor,target,move,damage,{effectiveness,critical}),...birdAfterDamage(actor,target,move,damage,{effectiveness,floor,changeStage,isContact}));
  recordMenagerieDamage(actor,target);tb.directDamageTurn=tb.turn;
  if(has(target,'Fortress Curl')&&move.category==='PHYSICAL')t.flags.fortress=true;
- if(has(actor,'Venom Grip')&&isContact(move)&&target.hp>0&&random()<.3)inflictStatus(target,'POISON',messages);
+ if(has(actor,'Venom Grip')&&isContact(move)&&target.hp>0&&random()<.3)inflictStatus(target,'POISON',messages,random);
  if(has(target,'Sensitive Ears')&&move.category==='SPECIAL'&&target.hp>0&&tb.earsTurn!==tb.turn){tb.earsTurn=tb.turn;stage(target,'speed',1);say(target,'special hit raised Speed.');}
  if(has(actor,'Afterglow')&&move.category==='SPECIAL'&&actor.hp>0&&ab.afterglowTurn!==ab.turn){ab.afterglowTurn=ab.turn;say(actor,`restored ${restoreHP(actor,Math.max(1,Math.floor(actor.maxHp/16)))} HP.`);}
  if(has(target,'Arctic Endurance')&&target.hp>0&&target.hp<target.maxHp/2&&!tb.flags.arctic){tb.flags.arctic=true;stage(target,'defence',1);stage(target,'sp_defence',1);say(target,'below half HP: Defence and Special Defence rose.');}
@@ -154,9 +155,9 @@ export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=f
  if(has(actor,'Oath Roar')&&isSound(move)&&!a.flags.oath&&actor.hp>0){stage(actor,'attack',1);a.flags.oath=true;say(actor,'Attack rose.');}
  if(has(actor,'Siege Breaker')){target.screens={};if(target.field?.screens)delete target.field.screens[target.side];say(actor,'opposing screens removed.');}
  if(isContact(move)&&actor.hp>0){if(has(target,'Ugly Rebuke')){const loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp/8)));actor.hp-=loss;say(target,`Ugly Rebuke costs the attacker ${loss} HP.`);}if(has(target,'Thornhide')){const loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp/16)));actor.hp-=loss;say(target,`contact thorns cost the attacker ${loss} HP.`);}
-  if(has(target,'Cinderhide')&&random()<.15)inflictStatus(actor,'BURN',messages);
-  if(has(target,'Poison Barbs')&&random()<.2)inflictStatus(actor,'POISON',messages);
-  if(has(target,'Static Hide')&&random()<.2)inflictStatus(actor,'PARALYSIS',messages);
+  if(has(target,'Cinderhide')&&random()<.15)inflictStatus(actor,'BURN',messages,random);
+  if(has(target,'Poison Barbs')&&random()<.2)inflictStatus(actor,'POISON',messages,random);
+  if(has(target,'Static Hide')&&random()<.2)inflictStatus(actor,'PARALYSIS',messages,random);
  }
  if(target.hp<=0){if(has(actor,'Battle Rush')&&!a.flags.rush){stage(actor,'speed',1);a.flags.rush=true;say(actor,'knockout raised Speed.');}
   if(has(actor,'Conqueror\'s Spark')&&!ab.flags.conqueror){stage(actor,'speed',1);ab.flags.conqueror=true;a.flags.spark=true;say(actor,'knockout raised Speed and charged the next Fire/Electric move.');}
@@ -180,7 +181,7 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
   if(has(u,'Berry Hoard')&&b.regrow<=b.turn&&!u.heldItem&&b.berry){u.heldItem=b.berry;u.heldDefinition=b.berryDefinition;delete b.regrow;messages.push(note(u,'Berry regrew.'));}
   if(has(u,'Warm Current')&&field.weather==='SUN'&&!suppressed){const n=restoreHP(u,Math.max(1,Math.floor(u.maxHp/16)));if(n)messages.push(note(u,`sunlight restored ${n} HP.`));}
   if(has(u,'Earthroot','World Anchor')&&['GRASSY','GROUND'].includes(field.terrain)){const n=restoreHP(u,Math.max(1,Math.floor(u.maxHp/16)));if(n)messages.push(note(u,`terrain restored ${n} HP.`));}
-  let residual=0;if(u.status==='BURN'||u.status==='POISON')residual=Math.max(1,Math.floor(u.maxHp/8));if(u.status==='BAD_POISON')residual=Math.max(1,Math.floor(u.maxHp*(u.toxicCounter=Math.min(15,(u.toxicCounter||0)+1))/16));
+  let residual=0;if(['BURN','FROSTBITE','POISON'].includes(u.status))residual=Math.max(1,Math.floor(u.maxHp/8));if(u.status==='BAD_POISON')residual=Math.max(1,Math.floor(u.maxHp*(u.toxicCounter=Math.min(15,(u.toxicCounter||0)+1))/16));
   if(!suppressed&&field.weather==='SAND'&&!has(u,'Sandcoat')&&!u.species.types.some(t=>['ROCK','GROUND','STEEL'].includes(t)))residual+=Math.max(1,Math.floor(u.maxHp/16));
   if(!suppressed&&field.weather==='HAIL'&&!u.species.types.includes('ICE'))residual+=Math.max(1,Math.floor(u.maxHp/16));
   const loss=Math.min(Math.max(0,u.hp-(u.combatFloor??floor)),residual);u.hp-=loss;if(loss)messages.push(`${unitName(u)} loses ${loss} HP to ${u.status?.toLowerCase()||'weather'}.`);
@@ -190,7 +191,7 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
  for(const source of units){if(source.hp<=0||source.captured||!has(source,'Miasma'))continue;
   for(const foe of units){if(foe===source||foe.hp<=0||foe.captured||foe.status||foe.statusImmunity?.POISON||foe.statusImmunity?.BAD_POISON||has(foe,'Toxinproof')||foe.species.types.some(t=>['POISON','STEEL'].includes(t)))continue;
    if(source.side&&foe.side&&source.side===foe.side)continue;
-   if(random()<.33&&inflictStatus(foe,'BAD_POISON',messages))messages.push(note(source,'venomous mist badly poisoned '+unitName(foe)+'.'));
+   if(random()<.33&&inflictStatus(foe,'BAD_POISON',messages,random))messages.push(note(source,'venomous mist badly poisoned '+unitName(foe)+'.'));
   }
  }
  if(field.weatherTurns>0&&--field.weatherTurns===0){messages.push(...changeWeather(null,units,0));}

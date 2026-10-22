@@ -1,9 +1,10 @@
+import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {DATA} from './data.js?v=0.87.0';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
-import {stageMultiplier} from './engine.js?v=0.87.0';
-import {moveUsable} from './move-rules.js?v=0.87.0';
-import {canSwitch,leaveAbility,enterAbility,abilityName} from './abilities.js?v=0.87.0';
+import {stageMultiplier} from './engine.js?v=0.90.24';
+import {moveUsable} from './move-rules.js?v=0.90.24';
+import {canSwitch,leaveAbility,enterAbility,abilityName} from './abilities.js?v=0.90.24';
 export const isArenaBossRound=round=>Number.isSafeInteger(round)&&round>0&&round%5===0;
 export const arenaRoundMarks=round=>isArenaBossRound(round)?round*10:round+2;
 // Species, four preferred legal techniques, ability slot and held-item role.
@@ -37,7 +38,7 @@ function expectedDamage(actor,target,move){
  const attack=(actor.stats[a]||1)*stageMultiplier(actor.stages?.[a]),defence=(target.stats[d]||1)*stageMultiplier(target.stages?.[d]);
  const weather=actor.field?.weather,climate=weather==='RAIN'?(move.type_id==='WATER'?1.5:move.type_id==='FIRE'?.5:1):weather==='SUN'?(move.type_id==='FIRE'?1.5:move.type_id==='WATER'?.5:1):1;
  const screen=(target.field?.screens?.[target.side]?.[move.category]||0)>0?.5:1;
- return ((2*actor.level/5+2)*move.power*attack/Math.max(1,defence)/50+2)*effectiveness*(actor.species.types.includes(move.type_id)?1.5:1)*climate*screen*(actor.status==='BURN'&&!special?.5:1)*(move.accuracy==='ALWAYS'?1:(move.accuracy??100)/100)*.925;
+ return ((2*actor.level/5+2)*move.power*attack/Math.max(1,defence)/50+2)*effectiveness*(actor.species.types.includes(move.type_id)?1.5:1)*climate*screen*statusAttackFactor(actor,special)*(move.accuracy==='ALWAYS'?1:(move.accuracy??100)/100)*.925;
 }
 const pressure=(a,b)=>Math.max(0,...usable(a).map(m=>expectedDamage(a,b,m)))/Math.max(1,b.hp);
 export function chooseArenaBossMove(b,actor,target,pool=usable(actor)){
@@ -53,7 +54,7 @@ export function chooseArenaBossMove(b,actor,target,pool=usable(actor)){
    if(e.effect_id==='terrain'&&actor.field?.terrain!==e.terrain)value=Math.max(value,.8);
    if(e.effect_id==='screen'&&(actor.field?.screens?.[actor.side]?.[e.category]||0)<2){const preferred=usable(target).filter(m=>m.power).sort((a,c)=>expectedDamage(target,actor,c)-expectedDamage(target,actor,a))[0];value=Math.max(value,(preferred?.category===e.category ? .95 : .3));}
    if(e.effect_id==='inflict_status'&&!target.status&&e.target!=='SELF'){
-    const immune=(e.status==='POISON'||e.status==='BAD_POISON')&&target.species.types.some(t=>['POISON','STEEL'].includes(t))||e.status==='PARALYSIS'&&target.species.types.includes('ELECTRIC')||e.status==='FREEZE'&&target.species.types.includes('ICE')||e.status==='BURN'&&target.species.types.includes('FIRE');
+    const immune=(e.status==='POISON'||e.status==='BAD_POISON')&&target.species.types.some(t=>['POISON','STEEL'].includes(t))||e.status==='PARALYSIS'&&target.species.types.includes('ELECTRIC')||['FREEZE','FROSTBITE'].includes(e.status)&&target.species.types.includes('ICE')||e.status==='BURN'&&target.species.types.includes('FIRE');
     if(!immune&&!target.statusImmunity?.[e.status]&&!(abilityName(target)==='Toxinproof'&&['POISON','BAD_POISON'].includes(e.status))&&!(abilityName(target)==='Coldproof'&&e.status==='FREEZE'))value=Math.max(value,['SLEEP','FREEZE'].includes(e.status)?.75:e.status==='BAD_POISON'?.7:.55);
    }
    if(e.effect_id==='stat_stage'&&e.target==='SELF'&&e.stages>0&&health>.6&&threat<.55){const keys=e.stats||[e.stat];if(keys.some(k=>(actor.stages?.[k]||0)<2))value=Math.max(value,.55+Math.min(.25,(keys.length-1)*.1));}
