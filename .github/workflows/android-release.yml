@@ -44,6 +44,7 @@ jobs:
           npx playwright install --with-deps chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
           node tests/field-quality-browser.cjs
+          node tests/rivet-armoury-browser.cjs
           node tests/arena-bosses-browser.cjs
           node tests/training-rapids-browser.cjs
           node tests/character-art-browser.cjs

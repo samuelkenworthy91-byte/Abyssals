@@ -48,3 +48,18 @@ for(const m of PALADIN_MOVES){MOVE_SCENES[m.id].sequence=m.animation;MOVE_SCENES
 MOVE_SCENES[499].courtArt='assets/court/fx-15.webp';
 
 installExpansionScenes(MOVE_SCENES,BIRD_MOVES);
+
+// Armoury signatures use their approved weapon/creature action descriptions.
+for(const move of RELIC_MOVES.filter(m=>m.approvedArmoury)){
+ const score=MOVE_SCENES[move.id];score.sequence=move.authored_visual_action;
+ if(!move.sound)continue;
+ score.action='ripple';score.style='wave';score.cell=10;score.duration=1750;score.impact=.62;
+ // Three travelling pressure fronts, driven by the actual caster coordinates.
+ score.layers=Array.from({length:3},(_,i)=>({role:'sonic-pressure-ring',size:130+i*20,frames:[
+  {at:0,x:1,y:0,sx:.05,sy:.05,turn:0,opacity:0},
+  {at:12+i*7,x:1,y:0,sx:.2,sy:.35,turn:0,opacity:1},
+  {at:44+i*6,x:.4,y:0,sx:.55,sy:.9,turn:0,opacity:1},
+  {at:62+i*6,x:0,y:0,sx:.85,sy:1.2,turn:0,opacity:1},
+  {at:100,x:0,y:0,sx:1.1,sy:1.5,turn:0,opacity:0}
+ ]}));
+}

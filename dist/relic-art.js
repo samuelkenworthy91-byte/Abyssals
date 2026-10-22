@@ -22,5 +22,30 @@ export const RELIC_ART={
  '374':{file:'dark.png',rect:[0,0,800,887]},'375':{file:'dark.png',rect:[800,0,974,887]}
 };
 Object.assign(RELIC_ART,BIRD_ART);
+// Individually cropped approved armoury sprites.
+RELIC_ART['480']={file:'steel-mid.webp',rect:null};
+RELIC_ART['481']={file:'steel-final.webp',rect:null};
+RELIC_ART['482']={file:'normal-mid.webp',rect:null};
+RELIC_ART['483']={file:'normal-final.webp',rect:null};
+RELIC_ART['484']={file:'water-mid.webp',rect:null};
+RELIC_ART['485']={file:'water-final.webp',rect:null};
+RELIC_ART['486']={file:'grass-mid.webp',rect:null};
+RELIC_ART['487']={file:'grass-final.webp',rect:null};
+RELIC_ART['488']={file:'fighting-mid.webp',rect:null};
+RELIC_ART['489']={file:'fighting-final.webp',rect:null};
+RELIC_ART['490']={file:'poison-mid.webp',rect:null};
+RELIC_ART['491']={file:'poison-final.webp',rect:null};
+RELIC_ART['492']={file:'ground-mid.webp',rect:null};
+RELIC_ART['493']={file:'ground-final.webp',rect:null};
+RELIC_ART['494']={file:'flying-mid.webp',rect:null};
+RELIC_ART['495']={file:'flying-final.webp',rect:null};
+RELIC_ART['496']={file:'psychic-mid.webp',rect:null};
+RELIC_ART['497']={file:'psychic-final.webp',rect:null};
+RELIC_ART['498']={file:'rock-mid.webp',rect:null};
+RELIC_ART['499']={file:'rock-final.webp',rect:null};
+RELIC_ART['500']={file:'dragon-mid.webp',rect:null};
+RELIC_ART['501']={file:'dragon-final.webp',rect:null};
+RELIC_ART['502']={file:'fairy-mid.webp',rect:null};
+RELIC_ART['503']={file:'fairy-final.webp',rect:null};
 export function relicArtPath(id){const s=RELIC_ART[id];return s?'assets/'+(s.folder||'relic-family')+'/'+s.file:null;}
 export function drawRelicPanel(ctx,im,id,x,y,size){if(RELIC_ART[id]?.clipRows){const panel=clippedAtlasPanel(im,RELIC_ART[id]);const scale=size/Math.max(panel.width,panel.height),w=panel.width*scale,h=panel.height*scale;ctx.drawImage(panel,x+(size-w)/2,y+(size-h)/2,w,h);return;}const r=RELIC_ART[id]?.rect||[0,0,im.naturalWidth,im.naturalHeight],scale=size/Math.max(r[2],r[3]),w=r[2]*scale,h=r[3]*scale;ctx.drawImage(im,...r,x+(size-w)/2,y+(size-h)/2,w,h);}
