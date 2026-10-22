@@ -6,7 +6,7 @@ import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {migrateCharacterNames} from './character-names.js?v=0.87.0';
 import {memorialState} from './memorial.js?v=0.87.0';
 import {normalizeBinoculars} from './binoculars.js?v=0.87.0';
-import {adventureState} from './side-adventures.js?v=0.90.20';
+import {adventureState} from './side-adventures.js?v=0.90.25';
 import {migrateHospiceQuest} from './hospice-quest.js?v=0.87.0';
 const sources={ITEM_EVOLUTION_SUNSCAR_GLASS:'scrub-shrine-cache',ITEM_EVOLUTION_IRON_SIGIL:'armory-reliquary',ITEM_EVOLUTION_GILDED_IDOL:'keep-treasury-reward',ITEM_EVOLUTION_SAINT_S_TONIC:'medicine-chain-reward',ITEM_EVOLUTION_WAYFARER_FEATHER:'lost-pilgrim'};
 export function migrateProgress(state){

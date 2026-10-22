@@ -2,7 +2,7 @@ import {rng} from './engine.js?v=0.90.24';
 import {DATA} from './data.js?v=0.87.0';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {EXTRA_TRAINERS,routeStage} from './route-progression.js?v=0.87.0';
-import {ROAD_POOLS} from './encounter-pools.js?v=0.87.0';
+import {ROAD_POOLS} from './encounter-pools.js?v=0.90.25';
 const EARLY_ROOMS={'TRN-C01-003':'march2','TRN-C02-001':'scrub','TRN-C02-002':'scrub2'};
 export const variableEarlyTrainer=t=>!!t&&!t.expeditionTeam&&(!!EARLY_ROOMS[t.id]||EXTRA_TRAINERS.some(r=>r.id===t.id));
 function hash(text){let n=2166136261;for(const c of text)n=Math.imul(n^c.charCodeAt(0),16777619);return n>>>0||1;}

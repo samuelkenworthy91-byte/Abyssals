@@ -1,7 +1,7 @@
 {
-  "version": "0.90.24",
-  "version_code": 119,
-  "filename": "Abyssals-v0.90.24-Status-and-Capture.apk",
-  "title": "Abyssals v0.90.24 \u2014 Status and Capture",
-  "notes": "Sleep and confusion now independently roll a uniform 1\u20136 action duration on infliction, using saved battle RNG. Adds Frostbite: half Special Attack and 1/8 maximum HP damage each round, with Ice immunity, available through the new Hoarfrost Hex department-store codex. Capture strength bonuses: sleep/freeze 3\u00d7, paralysis 2\u00d7, burn/frostbite/poison/bad poison 1.25\u00d7, applied before all four capture checks and capped at 100% success. Combat, damage previews, arena AI and condition descriptions agree. Existing saves, major-status exclusivity, permanent death and encounter uniqueness preserved. Tested and signed through GitHub Actions with the original Android release key."
+  "version": "0.90.25",
+  "version_code": 120,
+  "filename": "Abyssals-v0.90.25-Field-and-Capture-Fixes.apk",
+  "title": "Abyssals v0.90.25 — Field and Capture Fixes",
+  "notes": "Walter’s menu wraps into two columns, fits the available PWA or APK window, and scrolls with a reachable close header. Fishing contests can start by day or night; each paid contest retains a ten-minute casting window, with a full day–night cycle after the last catch or submission before re-entry. Existing paid contests, keepers, prizes and cooldowns survive reload and travel. Capturing now grants normal EXP to all eligible battle participants, with switched partners, Binoculars sharing, Warbond, catch-up XP and Rimebun yield preserved; newly caught opponents cannot earn their own capture EXP or grant retroactive Warbond. Each Sunken Fort floor has a distinct wild pool; Rimebun stays at 3% on floors 1–3 and 5% on floors 4–5, and all prior acquisition paths remain available. Source and real-browser regression checks; original-key Android signing."
 }

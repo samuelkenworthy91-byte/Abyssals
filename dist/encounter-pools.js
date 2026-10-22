@@ -20,5 +20,6 @@ export const SIDE_POOLS={
  moonlitDepths:{biome:'tide-pools',min:36,max:38,DAY:['051','079','139','133','255'],NIGHT:['051','079','139','053','255']},
  relicCrags:{biome:'ruins',min:31,max:33,DAY:['025','107','014','077','349'],NIGHT:['025','107','014','077','351']}
 };
-export const FORT_POOLS=[['021','255','349','351'],['255','022','301','321'],['022','268','321','351'],['022','257','377','380'],['269','326','350','384','272']];
+// Each floor has its own residents; Rimebun is inserted separately at its fixed rarity.
+export const FORT_POOLS=[['021','255','349','351'],['303','022','301','321'],['032','268','352','330'],['304','257','377','380'],['269','326','350','384','272']];
 export const POOL_WEIGHTS=[35,25,20,15,5];

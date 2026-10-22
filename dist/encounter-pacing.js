@@ -1,4 +1,4 @@
-import {ROAD_POOLS,SIDE_POOLS,POOL_WEIGHTS} from './encounter-pools.js?v=0.87.0';
+import {ROAD_POOLS,SIDE_POOLS,POOL_WEIGHTS} from './encounter-pools.js?v=0.90.25';
 import {legalForm} from './route-roster.js?v=0.87.0';
 import {routeStage} from './route-progression.js?v=0.87.0';
 const AREA_ROADS={'CIV-01':'march','DOR-01':'scrub','DOR-02':'tunnels','PHI-01':'northRoad','PHI-02':'hospiceRoad','PHI-03':'medicinePath'};

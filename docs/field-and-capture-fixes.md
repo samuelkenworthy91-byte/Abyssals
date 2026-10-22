@@ -1,0 +1,11 @@
+# Field and capture fixes — v0.90.25
+
+Walter’s main menu uses two wrapped action columns in every viewport. Its dialog stays within the available window, scrolls vertically and keeps the close header reachable. The existing portrait layout and each menu’s saved scroll position remain in place.
+
+Fishing entry is available by day or night. A new paid contest saves its entry timestamp and keeps the existing ten-minute casting budget, independent of daylight. Midnight and travel cannot close or restart that paid window. The next entry requires prize collection and one complete 20-minute day–night cycle after the later of the last keeper catch or submission. Existing saved contests without an entry timestamp retain their original deadline, keeper, rivals, draws and rewards.
+
+Successful captures settle normal battle EXP through the existing transactional reward queue. All eligible living participants, including switched partners, qualify; Binoculars still include the existing living party. Normal level-gap rewards, Warbond, Rimebun’s sixfold yield, growth, move learning and evolution apply. A newly caught opponent cannot earn EXP from its own capture or supply retroactive Warbond. The Rivet rescue rewards defeated and captured opponents; the remaining foe’s retreat grants no EXP. Existing reward receipts prevent repeated awards after reload.
+
+All five Sunken Fort wild pools are distinct after every encounter-expansion and collection rule is applied, by day and night. Related evolutionary forms can appear at different depths, but no ordinary species ID repeats across floors. Rimebun is the sole shared wild species: 3% on floors 1–3 and 5% on floors 4–5. Rivet remains a 5% find on floor 1, and the existing deep-floor rarities retain their weights. The acquisition-coverage regression confirms that previous eligible species remain reachable before leader eight. Trainer teams, quest specimens and unique encounters are unchanged.
+
+Validation covers actual desktop, portrait and landscape menu interactions; night entry and saved cooldowns; real single/double captures, switched-partner and Binoculars rewards, and reload idempotence; and the actual sighting boards on all five floors. Android releases use the original package and signing key through GitHub Actions.

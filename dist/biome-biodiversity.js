@@ -22,8 +22,8 @@ export const BIOME_ADDITIONS={
  relicGrove:['040','101','192'],courtTurn:['040','101','192'],bannerwood:['040','101','192'],
  courtProcession:['040','101','192'],courtPlinths:['040','076','192'],crownfall:['040','101','192'],
  courtApproach:['040','101','192'],verdantJungle:['040','101','192'],
- waranCave1:['329','127'],waranCave2:['317','319'],waranCave3:['317','198'],
- waranCave4:['135','198'],waranCave5:['319','198'],
+ waranCave1:['329','127'],waranCave2:['317','152'],waranCave3:['127','198'],
+ waranCave4:['135','325'],waranCave5:['319','198'],
  rescueGlade:['018','101','040'],anglersReach:['258','135','317']
 };
 export function biodiversityEncounterRoute(route){

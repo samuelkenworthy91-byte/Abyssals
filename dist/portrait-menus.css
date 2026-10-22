@@ -117,3 +117,36 @@
 .modal [data-steward-donor][aria-pressed="true"]{outline:3px solid #d5ad46;background:#423820}
 .modal [data-steward-recipient],.modal [data-steward-donor],.modal [data-rehome-unit]{display:flex;flex-wrap:wrap;align-items:center;gap:8px;text-align:left;min-width:0}
 .modal .reserve-browser~* img{object-fit:contain}
+
+/* Walter uses the same wrapped actions in a PWA window and the native app. */
+.modal-backdrop:has(.walter-actions) {
+  grid-template-rows:minmax(0,1fr);
+  overflow:hidden;
+}
+#modal-root .modal:has(.walter-actions) {
+  min-width:0;
+  min-height:0;
+  max-height:100%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.modal:has(.walter-actions) .modal-header {
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:#152435;
+}
+.modal .walter-actions {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  justify-content:stretch;
+  gap:10px;
+}
+.walter-actions button {
+  min-width:0;
+  max-width:100%;
+  min-height:44px;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}

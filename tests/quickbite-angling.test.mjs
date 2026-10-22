@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {specialistStrength, SPECIALIST_FOODS} from '../dist/specialist-supplies.js';
 import {capturePreview,resolveCapture} from '../dist/route-rules.js';
-import {GAME_DAY_MS as DAY,FISH_DAYLIGHT_MS as LIGHT,enterCompetition,nextFishingEncounter,recordFishingCatch,finishCompetition,claimFishingPrize,availableFishingPrizes,fishingReadyAt,fishingCanSubmit,canEnterCompetition,sideObjective} from '../dist/side-adventures.js';
+import {GAME_DAY_MS as DAY,FISH_DAYLIGHT_MS as LIGHT,enterCompetition,nextFishingEncounter,recordFishingCatch,finishCompetition,claimFishingPrize,availableFishingPrizes,fishingReadyAt,fishingDeadline,fishingCanSubmit,canEnterCompetition,sideObjective} from '../dist/side-adventures.js';
 import {DATA} from '../dist/data.js';
 
 const target={species:{capture_rate:45},level:65,hp:1,maxHp:300};
@@ -56,19 +56,19 @@ assert(canEnterCompetition(late,4*DAY+100));
 const empty=fresh();assert(enterCompetition(empty,1));
 assert(!fishingCanSubmit(empty.sideAdventures.fishing.contest,LIGHT-1));
 assert(!finishCompetition(empty,LIGHT-1));
-assert.equal(nextFishingEncounter(empty,null,LIGHT),null);
-assert(finishCompetition(empty,LIGHT)); // no keeper resolves after deadline
+assert.equal(fishingDeadline(empty.sideAdventures.fishing.contest),LIGHT+1);
+assert.equal(nextFishingEncounter(empty,null,LIGHT+1),null);
+assert(finishCompetition(empty,LIGHT+1)); // no keeper resolves after deadline
 claim(empty);
-assert(!enterCompetition(empty,LIGHT+DAY)); // cooldown ends at night; wait for day
-assert(enterCompetition(empty,2*DAY));
+assert(!enterCompetition(empty,LIGHT+DAY)); // still one millisecond short
+assert(enterCompetition(empty,LIGHT+DAY+1)); // exact cooldown boundary, at night
 
 const legacy=fresh();assert(enterCompetition(legacy,1));
 const c=legacy.sideAdventures.fishing.contest;
 c.entry={uid:'old',score:100};
 assert(finishCompetition(legacy,100)); // old unsubmitted keeper works immediately
 claim(legacy);
-delete c.submittedAt;
+delete c.submittedAt;delete c.enteredAt;
 assert.equal(fishingReadyAt(legacy),LIGHT+DAY); // safe fallback for older results
-assert(!enterCompetition(legacy,LIGHT+DAY));
-assert(enterCompetition(legacy,2*DAY));
+assert(enterCompetition(legacy,LIGHT+DAY)); // legacy cooldown can also end at night
 console.log('Quickbite odds and fishing submission/cooldown regressions passed',chances.map(p=>(100*p).toFixed(1)+'%'));
