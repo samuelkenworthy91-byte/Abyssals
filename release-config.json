@@ -1,7 +1,7 @@
 {
-  "version": "0.90.26",
-  "version_code": 121,
-  "filename": "Abyssals-v0.90.26-Rivet-Complete-Armoury.apk",
-  "title": "Abyssals v0.90.26 \u2014 Rivet\u2019s Complete Armoury",
-  "notes": "Adds twelve approved Rivet evolution branches and 24 battle sprites, completing pure Steel and all 17 Steel pairings. Twelve matching cores join the free bell-restoration choices and Thomas\u2019s repeatable 10,000-doubloon shop; Rivet uses cores at level 12, followed by branch-specific level evolutions. Adds balanced stats/growth, learnsets, twelve final signatures, Carillodon\u2019s sound-based Resonant Chime, physical Psychic Aesirion, dex and follower art, family-consistent shinies and complete offline assets. Existing species IDs, six original branches, Warbond, saves and quest progress remain intact."
+  "version": "0.90.27",
+  "version_code": 122,
+  "filename": "Abyssals-v0.90.27-Bird-Wing-Corrections.apk",
+  "title": "Abyssals v0.90.27 — Bird Wing Corrections",
+  "notes": "Corrects sixteen avian illustrations with duplicated folded wings or inconsistent wing joins. Each corrected bird has a single pair of wings while preserving its design, colours, crest and tail. Shared runtime artwork updates battles, summaries, the field guide, overworld companions and shinies. All corrected images are included offline. Retains the complete Rivet armoury, original Android signing identity, existing saves, progress and creature statistics."
 }

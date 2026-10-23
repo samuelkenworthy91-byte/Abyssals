@@ -1,3 +1,4 @@
+import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.27';
 // Eighteen approved three-stage avian families. Each stage has its own identity.
 export const BIRD_FAMILIES=[
   {
@@ -263,7 +264,8 @@ export function installBirds(data){
   for(const [i,id]of brief.support.entries())add(s,data.moves.find(m=>m.id===id),[4,20,26][i]);
   for(const [i,type]of brief.coverage.entries())add(s,pick(type,cat,50),12+i*8);
   if(s.stage==='Final')add(s,BIRD_MOVES[f.index],0);
-  data.assets.push({id:s.id,source:'Approved corrected avian illustration atlas',runtime:'assets/bird-family/'+f.slug+'.png'});
+  const corrected=CORRECTED_BIRD_ART[s.id];
+  data.assets.push({id:s.id,source:corrected?'Individually edited two-wing avian illustration':'Approved corrected avian illustration atlas',runtime:corrected?'assets/'+corrected.folder+'/'+corrected.file:'assets/bird-family/'+f.slug+'.png'});
  }
 }
 

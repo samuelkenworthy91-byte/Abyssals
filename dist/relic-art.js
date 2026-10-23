@@ -1,4 +1,5 @@
 import {BIRD_ART} from './bird-art.js?v=0.87.0';
+import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.27';
 import {clippedAtlasPanel} from './atlas-clip.js?v=0.87.0';
 // Approved creature panels are drawn from untouched transparent imagegen atlases.
 export const RELIC_ART={
@@ -22,6 +23,7 @@ export const RELIC_ART={
  '374':{file:'dark.png',rect:[0,0,800,887]},'375':{file:'dark.png',rect:[800,0,974,887]}
 };
 Object.assign(RELIC_ART,BIRD_ART);
+Object.assign(RELIC_ART,CORRECTED_BIRD_ART);
 // Individually cropped approved armoury sprites.
 RELIC_ART['480']={file:'steel-mid.webp',rect:null};
 RELIC_ART['481']={file:'steel-final.webp',rect:null};
