@@ -1,7 +1,7 @@
 {
-  "version": "0.90.30",
-  "version_code": 125,
-  "filename": "Abyssals-v0.90.30-Teamcraft.apk",
-  "title": "Abyssals v0.90.30 \u2014 Teamcraft",
-  "notes": "Implements the approved specialised 551-move pool: 32 save-safe consolidations, expressive names, three starter-type release attacks, Protect/effigy/relay codices, permanent PP investment, conditional weather tools, distinct ability roles and individual move choreography. Updates PWA and APK from the same source. Preserves original signing, saves, quests, unique encounters and permanent death."
+  "version": "0.90.31",
+  "version_code": 126,
+  "filename": "Abyssals-v0.90.31-Prodigy-Evolution.apk",
+  "title": "Abyssals v0.90.31 — Prodigy Evolution",
+  "notes": "Prodigies add one copy of their original growth advantage at birth and one more per completed evolution. Selected later trainers field genuinely trained Prodigies, named in a warning before accepting their battle; stronger Hell trainer policies are ready for the future arc. Breeding passes the original bonus without evolution multiplier inflation. Preserves earned stats, saves, quests, unique encounters, permanent death and original APK signing. PWA and APK share the updated source."
 }
