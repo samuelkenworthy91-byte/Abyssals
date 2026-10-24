@@ -1,7 +1,7 @@
 {
-  "version": "0.90.27",
-  "version_code": 122,
-  "filename": "Abyssals-v0.90.27-Bird-Wing-Corrections.apk",
-  "title": "Abyssals v0.90.27 — Bird Wing Corrections",
-  "notes": "Corrects sixteen avian illustrations with duplicated folded wings or inconsistent wing joins. Each corrected bird has a single pair of wings while preserving its design, colours, crest and tail. Shared runtime artwork updates battles, summaries, the field guide, overworld companions and shinies. All corrected images are included offline. Retains the complete Rivet armoury, original Android signing identity, existing saves, progress and creature statistics."
+  "version": "0.90.28",
+  "version_code": 123,
+  "filename": "Abyssals-v0.90.28-Tactical-Moves.apk",
+  "title": "Abyssals v0.90.28 — Shared Tactical Move Pool",
+  "notes": "Adds 32 shared, type-compatible tactical moves including genuine 2–5 hit attacks, ally buffs and healing, dual- and triple-stat boosts with drawbacks, and three selective techniques per Rivet evolution path. All techniques enter the general move catalogue and Grand Exchange tutor pool. Preserves saves, existing signatures, evolution rules, original APK signing, and prior bird artwork corrections."
 }

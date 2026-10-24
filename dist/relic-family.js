@@ -1,4 +1,5 @@
 import {ARMOURY_BRANCHES,ARMOURY_MOVES} from './relic-armoury.js?v=0.90.26';
+import {TACTICAL_MOVES,TACTICAL_BRANCH_LEARNSETS} from './tactical-moves.js?v=0.90.28';
 import {RELIC_ART} from './relic-art.js?v=0.87.0';
 // Six original branches plus twelve approved armoury branches. Existing IDs and rules remain stable.
 export const RIVET_ID='365';
@@ -40,10 +41,10 @@ export const RELIC_EVOLUTIONS=RELIC_BRANCHES.flatMap((b,i)=>{
  return [{id:'EVOLUTION-RELIC-'+b.key,from_species_id:RIVET_ID,to_species_id:b.ids[0],condition:{method:'ITEM',minimum_level:12,item_id:RELIC_ITEMS[i].id,consumed:true},promotion_delta:delta(base,mid),approvedExpansion:true,approvedRelic:true,provenance},{id:'EVOLUTION-RELIC-'+b.key+'-FINAL',from_species_id:b.ids[0],to_species_id:b.ids[1],condition:{method:'LEVEL',minimum_level:b.level},promotion_delta:delta(mid,final),approvedExpansion:true,approvedRelic:true,provenance}];
 });
 export const RELIC_GROWTH_PROFILES=RELIC_SPECIES.map(s=>({id:s.id,name:s.name,archetype:s.role,priorities:keys.toSorted((a,b)=>s.growth_percent[b]-s.growth_percent[a]).slice(0,3),reason:'User-approved branch identity assigns growth to its distinct combat role and leaves clear weaknesses; Warbond is its shared expedition benefit.',authored:{...s.growth_percent},rates:{...s.growth_percent},total:Object.values(s.growth_percent).reduce((a,b)=>a+b,0),bonusPoints:0,bonusFraction:0,qualification:'Authored relic branch; no additional rarity bonus'}));
-export function installRelicFamily(data){if(data.species.some(s=>s.id===RIVET_ID))return;data.species.push(...RELIC_SPECIES);data.moves.push(...RELIC_MOVES);
+export function installRelicFamily(data){if(data.species.some(s=>s.id===RIVET_ID))return;data.species.push(...RELIC_SPECIES);data.moves.push(...RELIC_MOVES,...TACTICAL_MOVES);
  const add=(id,rows)=>{for(const [level,move_id]of rows){const m=data.moves.find(m=>m.id===move_id);if(!m)throw Error('Missing relic move '+move_id);const row={species_id:id,move_id,name:m.name,level,method:'LEVEL_UP',expansion:true,identity:true,identity_core:true,approvedRelic:true,provenance};data.learnsets.push(row);data.authoredLearnsets?.push(structuredClone(row));}};
  add(RIVET_ID,[[1,315],[1,12],[5,8],[8,313],[12,320],[16,126],[20,369],[26,318],[34,124],[44,319]]);
- for(const [i,b]of RELIC_BRANCHES.entries()){const rows=[...b.moves,[14,b.coverageMove??[129,128,130,133,126,133][i]]].sort((a,b)=>a[0]-b[0]);add(b.ids[0],rows);add(b.ids[1],[[0,b.signatureId],...(b.approvedArmoury?rows.map(([level,id])=>[level===0?1:level,id]).filter(([,id])=>id!==b.signatureId):rows.filter(([level,id])=>level!==0&&id!==b.signatureId))]);}
+ for(const [i,b]of RELIC_BRANCHES.entries()){const rows=[...b.moves,...(TACTICAL_BRANCH_LEARNSETS[b.key]||[]),[14,b.coverageMove??[129,128,130,133,126,133][i]]].sort((a,b)=>a[0]-b[0]);add(b.ids[0],rows);add(b.ids[1],[[0,b.signatureId],...(b.approvedArmoury?rows.map(([level,id])=>[level===0?1:level,id]).filter(([,id])=>id!==b.signatureId):rows.filter(([level,id])=>level!==0&&id!==b.signatureId))]);}
  for(const s of RELIC_SPECIES)data.assets.push({id:s.id,source:'dist/assets/'+(RELIC_ART[s.id].folder||'relic-family')+'/'+RELIC_ART[s.id].file,runtime:'assets/'+(RELIC_ART[s.id].folder||'relic-family')+'/'+RELIC_ART[s.id].file,atlas_rect:RELIC_ART[s.id].rect});
 }
 // Rewards use a battle-long participant union; dead bearers can still have taught allies.

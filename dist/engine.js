@@ -23,6 +23,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false}={}){
  if(!continuation&&actor.status==='SLEEP'){if(actor.statusTurns>0){actor.statusTurns--;return {damage:0,skipped:true,messages:[`${unitName(actor)} is asleep.`]};}actor.status=null;}
  if(!continuation&&actor.status==='FREEZE'){if(random()<.2)actor.status=null;else return {damage:0,skipped:true,messages:[`${unitName(actor)} is frozen.`]};}
  if(!continuation&&actor.status==='PARALYSIS'&&random()<.25)return {damage:0,skipped:true,messages:[`${unitName(actor)} cannot move: paralysis.`]};
+ if(!continuation&&move.sharedTacticalMove){const costs=(move.effects||[]).filter(e=>e.effect_id==='hp_cost').reduce((sum,e)=>sum+Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])),0);if(costs&&actor.hp<=costs)return {damage:0,skipped:true,messages:[`${unitName(actor)} needs more HP to use ${move.name}.`]};}
  if(!continuation)move.left--;move=birdPrepareMove(actor,resolveSalvationMove(actor,move),{isContact});if(move.nonlethal)floor=Math.max(1,floor);trackMove(actor,move);if(move.menagerieRule==='WHITEOUT_WALTZ'&&actor.field?.weather==='HAIL'&&!weatherSuppressed(actor,target))move={...move,power:90};if(move.power&&move.category==='SPECIAL'&&has(actor,'Sage Mind'))move={...move,power:move.power*2,effects:[]};
  if(!continuation&&actor.confusion>0){actor.confusion--;if(random()<.33){const damage=Math.min(actor.hp-selfFloor,Math.max(1,Math.floor(actor.maxHp*.1)));actor.hp-=damage;return {damage:0,selfDamage:damage,skipped:true,messages:[`${unitName(actor)} is confused and loses ${damage} HP.`]};}}
  const sure=actor.moveState?.sureHit>0;if(sure)actor.moveState.sureHit--;const cragSight=birdAccuracy(actor,target,move),ignoreEvasion=cragSight||move.effects.some(e=>e.effect_id==='ignore_positive_evasion');
@@ -31,11 +32,33 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false}={}){
  if(!['SELF','ACTIVE_SIDE'].includes(move.target)&&blockedByAbility(actor,target,move,messages)){failedMove(actor,move);return {damage:0,immune:true,effectiveness:0,messages};}
  let damage=0,critical=false,effectiveness=move.power?typeEffectiveness(move.type_id,target.species.types):1;
  if(move.power&&effectiveness===0){failedMove(actor,move);return {damage:0,critical:false,effectiveness,immune:true,messages:[`${unitName(actor)} used ${move.name}. No effect! ${unitName(target)} is immune to ${move.type_id} (0×).`,...birdGroundImmunity(target,move,{changeStage})]};}
- if(move.power){const special=move.category==='SPECIAL';const atk=special?'sp_attack':'attack',def=special?'sp_defence':'defence';critical=random()<critChance(actor,move,target);const a=actor.stats[atk]*(critical?1:stageMultiplier(actor.stages[atk]))*heldStat(actor,atk)*statusAttackFactor(actor,special),d=target.stats[def]*(critical?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def]))*heldStat(target,def);const sameType=actor.species.types.includes(move.type_id)?1.5:1;damage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(critical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical,movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,critical,movedFirst,switching:!!target.switching})));if(has(target,'Ghost Hull')&&target.hp===target.maxHp&&damage>=target.hp&&!abilityBattle(target).flags.hull){damage=target.hp-1;abilityBattle(target).flags.hull=true;messages.push(`${unitName(target)} · Ghost Hull: held on at 1 HP.`);}damage=Math.max(0,Math.min(target.hp-floor,damage));target.hp-=damage;consumeWard(target,move,damage);if(damage){actor.field??={};actor.field.currentMoveDamage??=[];actor.field.currentMoveDamage.push({actor:actor.uid||actor.species.id,victim:target.uid||target.species.id,side:target.side});}}
+  let hitCount=0;
+  if(move.power){
+   const special=move.category==='SPECIAL',atk=special?'sp_attack':'attack',def=special?'sp_defence':'defence';
+   const strikes=move.hits?Math.max(1,Math.min(5,Math.floor(move.hits.min+random()*(move.hits.max-move.hits.min+1)))):1;
+   for(let i=0;i<strikes&&target.hp>floor&&actor.hp>0;i++){
+    const strikeCritical=random()<critChance(actor,move,target);
+    const a=actor.stats[atk]*(strikeCritical?1:stageMultiplier(actor.stages[atk]))*heldStat(actor,atk)*statusAttackFactor(actor,special);
+    const d=target.stats[def]*(strikeCritical?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def]))*heldStat(target,def);
+    const sameType=actor.species.types.includes(move.type_id)?1.5:1;
+    let strikeDamage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(strikeCritical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical:strikeCritical,movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,critical:strikeCritical,movedFirst,switching:!!target.switching})));
+    if(has(target,'Ghost Hull')&&target.hp===target.maxHp&&strikeDamage>=target.hp&&!abilityBattle(target).flags.hull){strikeDamage=target.hp-1;abilityBattle(target).flags.hull=true;messages.push(`${unitName(target)} · Ghost Hull: held on at 1 HP.`);}
+    strikeDamage=Math.max(0,Math.min(target.hp-floor,strikeDamage));
+    target.hp-=strikeDamage;damage+=strikeDamage;critical=critical||strikeCritical;hitCount++;
+    consumeWard(target,move,strikeDamage);
+    if(strikeDamage){actor.field??={};actor.field.currentMoveDamage??=[];actor.field.currentMoveDamage.push({actor:actor.uid||actor.species.id,victim:target.uid||target.species.id,side:target.side});}
+    if(move.hits){
+     messages.push(...afterDamage(actor,target,move,strikeDamage,{effectiveness,critical:strikeCritical,floor:selfFloor,random}));
+     messages.push(...contactReaction(actor,target,move,strikeDamage,random,{floor:selfFloor}));
+    }
+   }
+  }
  messages.push(`${unitName(actor)} used ${move.name}.${damage?' '+damage+' damage.':''}${critical?' Critical hit!':''}`);
+  if(move.hits)messages.push(`Hit ${hitCount} ${hitCount===1?'time':'times'}.`);
  if(move.power&&effectiveness!==1)messages.push(effectiveness>1?`Super effective! ${move.type_id} exploits ${unitName(target)}’s weakness (${effectiveness}×).`:`Not very effective. ${unitName(target)} resists ${move.type_id} (${effectiveness}×).`);
  for(const e of move.effects){if(!['recurring_status','contact_status_retaliation'].includes(e.effect_id)&&random()*100>=(e.chance_percent??100))continue;const who=e.target==='SELF'?actor:target;
-  if(e.effect_id==='stat_stage'){let copied=false;for(const stat of e.stats||[e.stat])if(stat){if(who===actor&&stat==='evasion'&&e.stages>0&&blocksEvasion(target)){messages.push(`${unitName(target)} blocks evasion boosts.`);continue;}const gain=changeStage(who,stat,e.stages,actor,messages);if(gain>0&&who===actor&&has(target,'Covetous Mirror')&&!abilityMemory(target).flags.mirror&&!copied){const n=gain;changeStage(target,stat,n,target,messages);abilityMemory(target).flags.mirror=true;copied=true;messages.push(`${unitName(target)} · Covetous Mirror: copied ${stat.replaceAll('_',' ')}.`);}}}
+  if(e.effect_id==='party_stage'){const allies=[...new Set([actor,...menagerieParty(actor)])].filter(u=>u.hp>0&&!u.dead&&u.side===actor.side&&(u===actor||u.abilityState));for(const member of allies)for(const stat of e.stats||[e.stat])if(stat)changeStage(member,stat,e.stages,actor,messages);}
+   if(e.effect_id==='stat_stage'){let copied=false;for(const stat of e.stats||[e.stat])if(stat){if(who===actor&&stat==='evasion'&&e.stages>0&&blocksEvasion(target)){messages.push(`${unitName(target)} blocks evasion boosts.`);continue;}const gain=changeStage(who,stat,e.stages,actor,messages);if(gain>0&&who===actor&&has(target,'Covetous Mirror')&&!abilityMemory(target).flags.mirror&&!copied){const n=gain;changeStage(target,stat,n,target,messages);abilityMemory(target).flags.mirror=true;copied=true;messages.push(`${unitName(target)} · Covetous Mirror: copied ${stat.replaceAll('_',' ')}.`);}}}
   if(e.effect_id==='flinch'&&!who.immuneFlinch&&!has(who,'Unfazed'))who.flinched=true;
   if(e.effect_id==='inflict_status')inflictStatus(who,e.status,messages,random);
   if(e.effect_id==='status_immunity'){who.statusImmunity??={};who.statusImmunity[e.status]=e.turns||5;}
@@ -50,8 +73,8 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false}={}){
   if(e.effect_id==='recoil'&&damage&&!has(actor,'Hard Head')){const [n,d]=e.fraction;const recoil=Math.min(Math.max(0,actor.hp-selfFloor),Math.max(1,Math.floor((e.basis==='MAX_HP'?actor.maxHp:damage)*n/d)));actor.hp-=recoil;messages.push(`${unitName(actor)} took ${recoil} recoil damage.`);}
   extraMoveEffect(actor,target,move,e,messages,{floor:selfFloor});
  }
- if(move.power)messages.push(...afterDamage(actor,target,move,damage,{effectiveness,critical,floor:selfFloor,random}));else messages.push(...afterStatusMove(actor,target));
- messages.push(...contactReaction(actor,target,move,damage,random,{floor:selfFloor}));recordMove(actor,move);if(move.nonlethal){target.hp=Math.max(1,target.hp);messages.push('First Light Salvation holds back · the target remains alive.');}return {damage,critical,effectiveness,messages,category:move.category,remainingHp:target.hp};
+ if(move.power&&!move.hits)messages.push(...afterDamage(actor,target,move,damage,{effectiveness,critical,floor:selfFloor,random}));else if(!move.power)messages.push(...afterStatusMove(actor,target));
+ if(!move.hits)messages.push(...contactReaction(actor,target,move,damage,random,{floor:selfFloor}));recordMove(actor,move);if(move.nonlethal){target.hp=Math.max(1,target.hp);messages.push('First Light Salvation holds back · the target remains alive.');}return {damage,critical,effectiveness,messages,hitCount,category:move.category,remainingHp:target.hp};
 }
 export function cleanupRound(...args){const random=typeof args.at(-1)==='function'?args.pop():Math.random,units=args;for(const u of units)triggerSunWrath(u);const residual=endAbilities(units,{floor:units[0]?.combatFloor??0,random});const extra=endMoveEffects(units,random);for(const u of units){residual.push(...birdThreshold(u,{changeStage}));triggerSunWrath(u);if(triggerArcticEndurance(u))residual.push(`${unitName(u)} · Arctic Endurance: Defence and Special Defence rose.`);u.flinched=false;u.actedThisRound=false;if(u.immuneFlinch>0)u.immuneFlinch--;}return [...residual,...extra];}
 export function heal(unit,amount=Math.min(50,Math.floor(unit.maxHp/2))){if(unit.hp<1||unit.hp>=unit.maxHp)return 0;return restoreHP(unit,amount);}
