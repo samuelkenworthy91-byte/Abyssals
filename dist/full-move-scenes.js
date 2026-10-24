@@ -1,7 +1,8 @@
 import {EXPANSION_MOVES} from './full-expansion.js?v=0.87.0';
+import {TACTICAL_MOVES} from './tactical-moves.js?v=0.90.28';
 const f=(at,x,y,sx,sy=sx,turn=0,opacity=1,px=0)=>({at,x,y,sx,sy,turn,opacity,px});
 export function installExpansionScenes(scenes,moves=EXPANSION_MOVES){
- for(const m of moves){
+ for(const m of (moves===EXPANSION_MOVES?[...moves,...TACTICAL_MOVES]:moves)){
   const name=m.name.toLowerCase(),seed=m.id-386,heal=m.effects.some(e=>['heal','party_heal','cure_major_status'].includes(e.effect_id));
   const action=m.sceneAction||(heal?'restore':/quill|spine|needle|shard|stitch|barb/.test(name)?'pierce':/coil|ring|halo|spiral|weave/.test(name)?'coil':/tide|wave|surf|wash|chorus|echo|song/.test(name)?'ripple':m.category==='PHYSICAL'?'rake':'pulse');
   const style=heal?'bloom':({pierce:'beam',coil:'vortex',ripple:'wave',rake:'slash',pulse:'nova'})[action];
