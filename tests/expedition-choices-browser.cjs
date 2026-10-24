@@ -4,7 +4,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=req
  page.on('pageerror',e=>errors.push(e.message));
  await page.route(/\/app\.js(?:\?.*)?$/,async route=>{const response=await route.fetch();await route.fulfill({response,body:await response.text()+`\nwindow.__choicesQA={
  boot(){if(battle)hideBattleSurface();closeDialogue();presentationLocked=false;selectSlot(1);setMotionPreference('reduced');const fixture=structuredClone(initialExpeditionState),party=[newUnit(byId('003'),60)],reserve=['002','003','364','021'].map(id=>newUnit(byId(id),60));Object.assign(fixture,{begun:true,openingDone:true,tamingTaught:true,party,reserve,nextUnitId:10000,money:1000000,slowStews:5});resumeSnapshot({state:fixture,room:'town',player:{x:24,y:20,facing:'up'}});},
- list:()=>partyMenu(true),shop:r=>shop(r),start(){room='march';startWild({speciesId:'364',level:60,phase:'DAY'});},ready:()=>!!battle&&!battle.busy&&!battle.sendOut,
+ list:()=>partyMenu(true),shop:r=>shop(r),start(){closeModal();room='march';startWild({speciesId:'364',level:60,phase:'DAY'});},ready:()=>!!battle&&!battle.busy&&!battle.sendOut,
  capture(){const e=battle.enemies[0];e.hp=1;e.status='SLEEP';e.statusTurns=6;battle.round=100;return wildTurn({food:'slowStews'});},
  state:()=>({party:state.party.map(u=>u.uid),reserve:state.reserve.map(u=>({uid:u.uid,pending:!!u.capturePlacementPending}))}),
  load(){if(battle)hideBattleSurface();closeDialogue();selectSlot(1);resumeSnapshot(JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')));},close:closeModal
