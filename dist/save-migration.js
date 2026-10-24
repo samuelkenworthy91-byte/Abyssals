@@ -1,3 +1,5 @@
+import {migrateTeamcraftState} from './teamcraft-progress.js?v=0.90.30';
+import {DATA} from './data.js?v=0.90.30';
 import {migrateGeneralStores} from './shopkeepers.js?v=0.90.29';
 import {visitedTravelRooms} from './fast-travel.js?v=0.87.0';
 import {migrateMemorialMoves} from './finale-rules.js?v=0.90.19';
@@ -12,7 +14,7 @@ import {adventureState} from './side-adventures.js?v=0.90.25';
 import {migrateHospiceQuest} from './hospice-quest.js?v=0.87.0';
 const sources={ITEM_EVOLUTION_SUNSCAR_GLASS:'scrub-shrine-cache',ITEM_EVOLUTION_IRON_SIGIL:'armory-reliquary',ITEM_EVOLUTION_GILDED_IDOL:'keep-treasury-reward',ITEM_EVOLUTION_SAINT_S_TONIC:'medicine-chain-reward',ITEM_EVOLUTION_WAYFARER_FEATHER:'lost-pilgrim'};
 export function migrateProgress(state){
- cossenneServices(state);migrateGeneralStores(state,visitedTravelRooms(state));
+ migrateTeamcraftState(state,DATA.moves);cossenneServices(state);migrateGeneralStores(state,visitedTravelRooms(state));
  for(const u of [...(state.party||[]),...(state.reserve||[])])if(u.abilitySlot==='hidden')u.hiddenAbilityUnlocked=true;migrateCharacterNames(state);normalizeBinoculars(state);if(!Number.isSafeInteger(state.lifeEmbers)||state.lifeEmbers<0)state.lifeEmbers=0;memorialState(state);
  for(const key of ['emergencyEvacs','armedEscorts','escortSteps','heartyFood','patientRations','freshMeat',...SPECIALIST_SUPPLIES.map(i=>i.key)])if(!Number.isSafeInteger(state[key])||state[key]<0)state[key]=0;
  state.lastPriestRest??=null;

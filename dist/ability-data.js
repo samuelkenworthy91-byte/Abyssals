@@ -1,3 +1,4 @@
+import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.30';
 import {BIRD_ABILITIES} from './bird-abilities.js?v=0.87.0';
 import {PALADIN_ABILITIES} from './paladin-data.js?v=0.87.0';
 import {MENAGERIE_ABILITIES} from './menagerie-family.js?v=0.87.0';
@@ -458,3 +459,7 @@ ABILITIES.push(...MENAGERIE_ABILITIES);
 ABILITIES.push(...PALADIN_ABILITIES);
 
 ABILITIES.push(...BIRD_ABILITIES);
+
+for(const a of ABILITIES)if(ABILITY_PATCHES[a.name])Object.assign(a,ABILITY_PATCHES[a.name]);
+
+Object.assign(ABILITIES.find(a=>a.name==='Whiteout Sovereign'),{text:'Sets five turns of hail on entry. First entry each battle raises Speed one stage; no Evasion boost.'});

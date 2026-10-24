@@ -1,3 +1,4 @@
+import {prepareSpecialistMove,stabMultiplier,secondaryChance} from './teamcraft-battle.js?v=0.90.30';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {resolveSalvationMove} from './salvation.js?v=0.87.0';
 import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.24';
@@ -8,16 +9,16 @@ import {stageMultiplier,damageScale} from './engine.js?v=0.90.24';
 const names={attack:'Attack',defence:'Defense',sp_attack:'Special Attack',sp_defence:'Special Defense',speed:'Speed',accuracy:'Accuracy',evasion:'Evasion'};
 export function damageRange(actor,target,move){move=resolveSalvationMove(actor,move);
  if(!move.power)return null;
- if(move.category==='SPECIAL'&&has(actor,'Sage Mind'))move={...move,power:move.power*2,effects:[]};
+ move=prepareSpecialistMove(actor,move);
  const guaranteed=critChance(actor,move,target)===1,special=move.category==='SPECIAL',a=special?'sp_attack':'attack',d=special?'sp_defence':'defence';
  const atk=actor.stats[a]*(guaranteed?1:stageMultiplier(actor.stages[a]))*heldStat(actor,a)*statusAttackFactor(actor,special),def=target.stats[d]*(guaranteed?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[d]||0):target.stages[d]))*heldStat(target,d);
  const base=Math.floor((2*actor.level/5+2)*move.power*atk/Math.max(1,def)/50)+2;
- const bonus=actor.species.types.includes(move.type_id)?1.5:1;
+ const bonus=stabMultiplier(actor,move);
  const effectiveness=abilityImmunity(target,move)?0:typeEffectiveness(move.type_id,target.species.types),movedFirst=actor.stats.speed*stageMultiplier(actor.stages.speed)*speedFactor(actor,target)>=target.stats.speed*stageMultiplier(target.stages.speed)*speedFactor(target,actor),scale=(guaranteed?2:1)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,movedFirst,critical:guaranteed});
- const cap=move.nonlethal?Math.max(0,target.hp-1):Infinity;const lo=move.hits?.min||1,hi=move.hits?.max||1;return {effectiveness,min:Math.min(cap,effectiveness===0?0:Math.max(1,Math.floor(base*bonus*.85*scale))*lo),max:Math.min(cap,effectiveness===0?0:Math.max(1,Math.floor(base*bonus*scale))*hi),sameType:bonus===1.5,attack:names[a],defense:names[d],hits:move.hits||null};
+ const cap=move.nonlethal?Math.max(0,target.hp-1):Infinity;const lo=move.hits?.min||1,hi=move.hits?.max||1;return {effectiveness,min:Math.min(cap,effectiveness===0?0:Math.max(1,Math.floor(base*bonus*.85*scale))*lo),max:Math.min(cap,effectiveness===0?0:Math.max(1,Math.floor(base*bonus*scale))*hi),sameType:bonus>1,attack:names[a],defense:names[d],hits:move.hits||null};
 }
 export function mechanicsFor(move,actor,target){move=resolveSalvationMove(actor,move);
- const details=[];if(move.hits)details.push(`Strikes ${move.hits.min}–${move.hits.max} times; damage and critical hits are rolled separately for each strike; one PP is spent per move.`);if(move.description)details.push(move.description);if(move.nonlethal)details.push(move.effect_text);if(move.power&&move.category==='SPECIAL'&&has(actor,'Sage Mind')){move={...move,effects:[]};details.push('Sage Mind doubles special move power and removes secondary effects.');}if(move.power)details.push(`Critical chance: ${(critChance(actor,move,target)*100).toFixed(1)}%, including Speed advantage. Critical hits deal 2× damage and ignore all Attack and Defence stages, including special stats. Held items, burn, frostbite and damage-reducing abilities still apply.`);
+ const details=[];if(move.id>=700||move.releaseMove)details.push(move.effect_text);if(has(actor,'Native Force'))details.push('Native Force: matching-type attacks receive 1.8× STAB, replacing the normal 1.5×.');if(has(actor,'Fortune Thread'))details.push('Fortune Thread doubles eligible secondary-effect chances, capped at 60% without lowering an existing higher chance. Accuracy and dedicated status moves are unchanged.');if(move.hits)details.push(`Strikes ${move.hits.min}–${move.hits.max} times; damage and critical hits are rolled separately for each strike; one PP is spent per move.`);if(move.description)details.push(move.description);if(move.nonlethal)details.push(move.effect_text);if(move.power&&move.category==='SPECIAL'&&has(actor,'Sage Mind')){move=prepareSpecialistMove(actor,move);details.push('Sage Mind boosts eligible Special attacks by 30%, removing tagged optional benefits but preserving all costs.');}if(move.power)details.push(`Critical chance: ${(critChance(actor,move,target)*100).toFixed(1)}%, including Speed advantage. Critical hits deal 2× damage and ignore all Attack and Defence stages, including special stats. Held items, burn, frostbite and damage-reducing abilities still apply.`);
  for(const e of move.effects){
   if(e.effect_id==='party_stage')details.push(`Raises ${e.stats.map(k=>names[k]||k).join(' and ')} by ${e.stages} stage(s) for the user and active allies.`);
   if(e.effect_id==='stat_stage'){

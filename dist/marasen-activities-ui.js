@@ -1,3 +1,4 @@
+import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.
 import {marasenObjective} from './marasen-rules.js?v=0.87.0';
@@ -12,7 +13,7 @@ function data(s){s.marasen??={version:2,walk:[],quests:{},encounters:{},seeds:{}
 const owned=s=>[...(s.party||[]),...(s.reserve||[])].filter(u=>u&&u.hp>0&&!u.dead);
 const activeWater=s=>owned(s).filter(u=>u.species?.types?.includes('WATER'));
 export const exchangeScrolls=()=>{
- const ordinary=DATA.moves.filter(m=>m&&m.id&&!m.signature_owner_family&&!m.questTutor&&!m.signature_owner_name&&!m.signature_owner&&(m.tutorTypes?.length||DATA.learnsets.some(l=>l.move_id===m.id)));
+ const ordinary=DATA.moves.filter(m=>m&&m.id&&!m.signature_owner_family&&!m.questTutor&&!m.signature_owner_name&&!m.signature_owner&&(m.codexOnly||m.tutorTypes?.length||DATA.learnsets.some(l=>l.move_id===m.id)));
  const status=ordinary.filter(m=>m.category==='STATUS').sort((a,b)=>Number(!!b.exchangeLesson)-Number(!!a.exchangeLesson)||a.type_id.localeCompare(b.type_id)||a.name.localeCompare(b.name));
  const attacks=[],counts=new Map();
  for(const m of ordinary.filter(m=>m.category!=='STATUS'&&m.power>=40&&m.power<=100).sort((a,b)=>a.type_id.localeCompare(b.type_id)||a.power-b.power)){
@@ -25,7 +26,7 @@ function storeItems(floor){
  if(floor===1)return exchangeScrolls().map(m=>({...m,kind:'codex'}));
  if(floor===2)return HELD_ITEMS.filter(i=>Number(i.buy_price)>0&&!i.id.startsWith('HELD_QUEST_')).slice(0,26).map(i=>({kind:'held',id:i.id,name:i.name,description:i.effect_text,price:Math.max(1800,i.buy_price)}));
  if(floor===3)return EVOLUTION_ITEMS.filter(i=>Number(i.buy_price)>0).map(i=>({kind:'evolution',id:i.id,name:i.name,description:i.effect_text,price:Number(i.buy_price)}));
- if(floor===4)return [{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 percentage points of future growth. Maximum ten growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 percentage point to future growth in all six stats. Maximum ten growth doses per Abyssal.',price:30000}];
+ if(floor===4)return [{kind:'pp',id:'endurance',name:'Endurance Tonic',description:'Permanent +1 maximum PP per dose to an individual move. Repeatable; price scales with investment. Current PP is not refilled.',price:1000},{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 percentage points of future growth. Maximum ten growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 percentage point to future growth in all six stats. Maximum ten growth doses per Abyssal.',price:30000}];
  if(floor===5)return [{kind:'supply',id:'riverBait',name:'River Bait',description:'Specialist capture food suited to aquatic encounters.',price:950},{kind:'supply',id:'emergencyEvacs',name:'Emergency Evac',description:'Return a living expedition safely to its recovery location.',price:2500},{kind:'supply',id:'lifeEmbers',name:'Life Ember',description:'A rare second chance for a living Abyssal. One per expedition.',price:40000}];
  return [];
 }
@@ -50,6 +51,7 @@ function showFloor(a,floor){const {state,openModal,$,document,rewardTransaction,
  if(floor===0){shop('marasenMarket');return;}
  openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div><b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap.</p>`);
  for(const btn of document.querySelectorAll('[data-mr-buy]'))btn.onclick=()=>{const it=items[Number(btn.dataset.mrBuy)];if(!it)return;
+ if(it.kind==='pp'){enduranceTonicMenu(a,()=>showFloor(a,floor));return;}
  if(it.kind==='growth'){showTonic(a,it);return;}
  if(state.money<it.price)return;
  if(rewardTransaction(()=>purchase(state,it))){a.refresh?.();showFloor(a,floor);}

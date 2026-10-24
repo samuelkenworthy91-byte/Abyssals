@@ -52,6 +52,7 @@ jobs:
       - name: Test remaining real game interactions in Chromium
         timeout-minutes: 15
         run: |
+          timeout 180s node tests/teamcraft-browser.cjs
           timeout 180s node tests/expedition-choices-browser.cjs
           timeout 180s node tests/field-quality-browser.cjs
           timeout 180s node tests/arena-bosses-browser.cjs

@@ -1,7 +1,7 @@
 {
-  "version": "0.90.29",
-  "version_code": 124,
-  "filename": "Abyssals-v0.90.29-Expedition-Choices.apk",
-  "title": "Abyssals v0.90.29 \u2014 Expedition Choices",
-  "notes": "Adds combined party/reserve, two-type, evolution-stage and search filters across partner menus; a saved party/reserve choice after every capture; five Sunken Fort floors with separate evolution families, stronger deep encounters and unchanged Rimebun rarity; and permanent general-store supply unlocks. Grand Exchange and specialist counters remain separate. Preserves saves, quests, unique encounters, package and original signing."
+  "version": "0.90.30",
+  "version_code": 125,
+  "filename": "Abyssals-v0.90.30-Teamcraft.apk",
+  "title": "Abyssals v0.90.30 \u2014 Teamcraft",
+  "notes": "Implements the approved specialised 551-move pool: 32 save-safe consolidations, expressive names, three starter-type release attacks, Protect/effigy/relay codices, permanent PP investment, conditional weather tools, distinct ability roles and individual move choreography. Updates PWA and APK from the same source. Preserves original signing, saves, quests, unique encounters and permanent death."
 }

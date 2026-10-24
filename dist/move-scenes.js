@@ -1,3 +1,5 @@
+import {DATA} from './data.js?v=0.90.30';
+import {installTeamcraftScenes} from './teamcraft-scenes.js?v=0.90.30';
 import {BIRD_MOVES} from './bird-family.js?v=0.87.0';
 import {PALADIN_MOVES} from './paladin-data.js?v=0.87.0';
 import {MENAGERIE_MOVES} from './menagerie-family.js?v=0.87.0';
@@ -63,3 +65,5 @@ for(const move of RELIC_MOVES.filter(m=>m.approvedArmoury)){
   {at:100,x:0,y:0,sx:1.1,sy:1.5,turn:0,opacity:0}
  ]}));
 }
+
+installTeamcraftScenes(MOVE_SCENES,DATA.moves);

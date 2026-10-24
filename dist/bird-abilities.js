@@ -115,7 +115,7 @@ const entry=u=>{u.abilityState??={flags:{}};u.abilityState.flags??={};return u.a
 const message=(u,text)=>u.species.name+' · '+name(u)+': '+text;
 export function birdPrepareMove(actor,move,{isContact}){
  let result=move;if(!move.power)return result;
- if(name(actor)==='Mindwing'&&move.type_id==='FLYING')result={...result,category:'SPECIAL',contact:isContact(move)};
+ if(name(actor)==='Mindwing'&&move.type_id==='FLYING'&&move.category==='SPECIAL')result={...result,ignorePositiveDefence:true};
  if(name(actor)==='Hush Current'&&!battle(actor).flags.birdHush||name(actor)==='High Horizon'&&entry(actor).birdHorizon&&move.type_id==='FLYING')result={...result,ignorePositiveDefence:true};
  return result;
 }

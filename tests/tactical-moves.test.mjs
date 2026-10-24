@@ -1,3 +1,4 @@
+import {canonicalMoveId} from '../dist/teamcraft-data.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {DATA} from '../dist/data.js';
@@ -9,15 +10,15 @@ import {bindMenagerieParty} from '../dist/menagerie-rules.js';
 import {canLearnScroll} from '../dist/side-adventures.js';
 import {exchangeScrolls} from '../dist/marasen-activities-ui.js';
 import {MOVE_SCENES} from '../dist/move-scenes.js';
-const get=id=>DATA.moves.find(m=>m.id===id);
+const get=id=>DATA.moves.find(m=>m.id===canonicalMoveId(id));
 const unit=id=>instance(DATA.species.find(s=>s.id===id),70,[]);
 assert.equal(TACTICAL_MOVES.length,32);
 assert.equal(new Set(TACTICAL_MOVES.map(m=>m.id)).size,32);
 assert.equal(TACTICAL_MOVES.filter(m=>m.hits).length,9);
-for(const m of TACTICAL_MOVES){assert.equal(get(m.id)?.name,m.name);assert(!m.signature_owner_family);assert(m.tutorTypes.length);assert(MOVE_SCENES[m.id]?.layers?.length, 'scene for '+m.name);}
+for(const m of TACTICAL_MOVES){assert(get(m.id));if(canonicalMoveId(m.id)===m.id)assert.equal(get(m.id)?.name,m.name);assert(!m.signature_owner_family);assert(m.tutorTypes.length);assert(MOVE_SCENES[m.id]?.layers?.length, 'scene for '+m.name);}
 assert.equal(RELIC_BRANCHES.length,18);
-for(const b of RELIC_BRANCHES){const ids=TACTICAL_BRANCH_LEARNSETS[b.key];assert.equal(ids.length,3,'three role techniques for '+b.key);for(const [level,id] of ids){for(const speciesId of b.ids)assert(DATA.learnsets.some(l=>l.species_id===speciesId&&l.move_id===id&&l.level===level),b.key+' learns '+id);}}
-const shop=exchangeScrolls();for(const m of TACTICAL_MOVES)assert(shop.some(s=>s.id===String(m.id)),m.name+' appears in general Codex shop');
+for(const b of RELIC_BRANCHES){const ids=TACTICAL_BRANCH_LEARNSETS[b.key];assert.equal(ids.length,3,'three role techniques for '+b.key);for(const [level,id] of ids){for(const speciesId of b.ids)assert(DATA.learnsets.some(l=>l.species_id===speciesId&&l.move_id===canonicalMoveId(id)&&(canonicalMoveId(id)!==id||l.level===level))||canLearnScroll(unit(speciesId),canonicalMoveId(id)),b.key+' retains learning or merged-codex access to '+id);}}
+const shop=exchangeScrolls();for(const m of TACTICAL_MOVES)assert(shop.some(s=>s.id===String(canonicalMoveId(m.id))),m.name+' appears in general Codex shop');
 const steelSpecies=DATA.species.find(s=>s.id!=='365'&&!RELIC_BRANCHES.some(b=>b.ids.includes(s.id))&&s.types.includes('STEEL'));
 assert(steelSpecies);
 assert(canLearnScroll(instance(steelSpecies,20,[]),538),'non-Rivet Steel species may learn shared multi-hit move');
@@ -41,7 +42,7 @@ assert(canLearnScroll(instance(steelSpecies,20,[]),538),'non-Rivet Steel species
  a.hp=Math.floor(a.maxHp/2);ally.hp=Math.floor(ally.maxHp/2);
  const before=[a.hp,ally.hp];
  applyMove(a,foe,move,()=>.5);
- assert(a.hp>before[0]);assert(ally.hp>before[1],'heals benched living companions');
+ assert(a.hp>before[0]);assert.equal(ally.hp,before[1],'ordinary chorus does not heal benches');ally.abilityState={flags:{}};ally.side=a.side;applyMove(a,foe,{...get(549),left:3},()=>.5);assert(ally.hp>before[1],'heals a living active ally');
  ally.hp=0;applyMove(a,foe,{...get(549),left:8},()=>.5);assert.equal(ally.hp,0,'no revival');
 }
 {

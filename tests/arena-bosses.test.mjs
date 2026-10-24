@@ -1,3 +1,4 @@
+import {canonicalMoveId} from '../dist/teamcraft-data.js';
 import assert from 'node:assert/strict';
 import {DATA} from '../dist/data.js';
 import {instance,applyMove,rng} from '../dist/engine.js';
@@ -5,7 +6,7 @@ import {initializeProgress} from '../dist/progression.js';
 import {beginAbilities} from '../dist/abilities.js';
 import {isArenaBossRound,arenaRoundMarks,arenaBossSpec,buildArenaBoss,chooseArenaBossAction,chooseArenaBossMove,switchArenaBoss,orderArenaBossReplacement} from '../dist/arena-bosses.js';
 import {createCybressaTrial,continueCybressaTrial,registerCybressaTrial,completeCybressaTrial} from '../dist/cybressa-rules.js';
-const move=id=>DATA.moves.find(m=>m.id===id);
+const move=id=>DATA.moves.find(m=>m.id===canonicalMoveId(id));
 function unit(id,ids,level=60){const u=instance(DATA.species.find(s=>s.id===id),level,ids.map(move));u.uid=id;initializeProgress(u);return u;}
 for(let round=1;round<=100;round++){
  assert.equal(isArenaBossRound(round),round%5===0);

@@ -1,3 +1,5 @@
+import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
+import {specialistAIPool} from './teamcraft-battle.js?v=0.90.30';
 import {applyMove,cleanupRound,priority,stageMultiplier} from './engine.js?v=0.90.24';
 import {effectiveStage,speedFactor} from './abilities.js?v=0.90.24';
 import {moveUsable} from './move-rules.js?v=0.90.24';
@@ -8,7 +10,7 @@ export function refillDoubleFoes(b){if(!b.activeEnemyIndices)return;const active
 export function doubleRound(b,playerMove=null,targetIndex=0){
  const foes=doubleLivingTargets(b),events=[];if(!foes.length)return events;
  const target=foes.find(f=>f.i===targetIndex)?.u||foes[0].u,field=b.player.field||{};
- const pool=u=>u.moves.filter(m=>moveUsable(u,m)&&m.power>0);
+ const pool=u=>specialistAIPool(u,b.player,u.moves.filter(m=>moveUsable(u,m)));
  const plans=[];if(playerMove&&b.player.hp>0)plans.push({actor:b.player,target,move:playerMove,side:'player'});
  if(b.alliedRivet.hp>1){const ms=pool(b.alliedRivet);if(ms.length)plans.push({actor:b.alliedRivet,target,move:ms[Math.floor(b.random()*ms.length)],side:'ally'});}
  for(const {u}of foes){const ms=pool(u),allies=[b.player,b.alliedRivet].filter(a=>a.hp>0&&(a!==b.alliedRivet||a.hp>1));if(ms.length&&allies.length)plans.push({actor:u,target:allies[Math.floor(b.random()*allies.length)],move:ms[Math.floor(b.random()*ms.length)],side:'enemy'});}
@@ -17,12 +19,12 @@ export function doubleRound(b,playerMove=null,targetIndex=0){
  for(const p of plans){if(p.actor.withdrawn||p.actor.hp<=0||p.actor===b.alliedRivet&&p.actor.hp<=1||p.actor.captured)continue;
   if(p.target.withdrawn||p.target.hp<=0||p.target===b.alliedRivet&&p.target.hp<=1){const alternatives=p.side==='enemy'?[b.player,b.alliedRivet].filter(u=>u.hp>0&&(u!==b.alliedRivet||u.hp>1)):doubleLivingTargets(b).map(t=>t.u);p.target=alternatives[0];if(!p.target)continue;}
   const targets=p.move.target==='ALL_FOES'?(p.side==='enemy'?[b.player,b.alliedRivet].filter(u=>u.hp>0&&(u!==b.alliedRivet||u.hp>1)):doubleLivingTargets(b).map(t=>t.u)):[p.target];
-  let remaining=null;
+  let remaining=null;const procContext={};
   for(const victim of targets){
    // One action and one PP expenditure, with independent hit checks per opponent.
-   const result=applyMove(p.actor,victim,p.move,b.random,{floor:victim===b.alliedRivet||victim.boundSovereign?1:0,continuation:remaining!==null});
+   const result=applyMove(p.actor,victim,p.move,b.random,{floor:victim===b.alliedRivet||victim.boundSovereign?1:0,continuation:remaining!==null,procContext});
    if(remaining===null)remaining=p.move.left;else p.move.left=remaining;
-   events.push({...p,target:victim,result});
+   if(result.replacementUid){const next=menagerieParty(p.actor).find(u=>u.uid===result.replacementUid);if(next){if(p.actor===b.player)b.player=next;else if(p.actor===b.alliedRivet)b.alliedRivet=next;else{const i=b.enemies.indexOf(p.actor),j=b.enemies.indexOf(next);if(i>=0&&j>=0)[b.enemies[i],b.enemies[j]]=[next,p.actor];}for(const plan of plans)if(plan.target===p.actor)plan.target=next;}}events.push({...p,target:victim,result});
    if(victim===b.alliedRivet&&victim.hp===1)result.messages.push(b.finaleDouble?'Hasan withdraws his wounded partner behind the line.':'Rivet retreats behind your partner, its armour barely holding.');if(victim.boundSovereign&&victim.hp<=1){victim.withdrawn=true;result.messages.push('Cruxwyrm breaks Darius’s command and withdraws from the company.');}
    if(result.skipped||p.actor.hp<=0)break;
   }
