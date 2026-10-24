@@ -1,10 +1,11 @@
+import {validateTransferSnapshot} from '../dist/save-transfer.js';
 import assert from 'node:assert/strict';
 import {DATA} from '../dist/data.js';
 import {ABILITIES} from '../dist/ability-data.js';
 import {instance,applyMove,cleanupRound} from '../dist/engine.js';
 import {beginAbilities,leaveAbility,enterAbility} from '../dist/abilities.js';
 import {MOVE_SCENES} from '../dist/move-scenes.js';
-import {normalizeTeamcraftUnit,buyPPTonic,tonicQuote} from '../dist/teamcraft-progress.js';
+import {normalizeTeamcraftUnit,buyPPTonic,tonicQuote,migrateTeamcraftState} from '../dist/teamcraft-progress.js';
 import {canonicalMoveId,codexCompatible} from '../dist/teamcraft-data.js';
 import {secondaryChance,prepareSpecialistMove,stabMultiplier} from '../dist/teamcraft-battle.js';
 const move=id=>DATA.moves.find(m=>m.id===id);
@@ -38,4 +39,6 @@ assert.deepEqual([711,712,713].map(id=>[move(id).name,move(id).type_id]),[['Full
  const a=unit();a.moves=[{...move(11),left:2},{...move(11),id:41,left:4}];a.ppBonusByMoveId={11:3,41:7};normalizeTeamcraftUnit(a,DATA.moves);assert.equal(a.moves.length,1);assert.equal(a.moves[0].pp,12);assert.equal(a.moves[0].left,2);assert.equal(a.ppBonusByMoveId[11],7);const state={money:1000000};const q=tonicQuote(state,a,11,2);assert.equal(q.cost,145000);assert(buyPPTonic(state,a,11,2));assert.equal(a.moves[0].pp,14);assert.equal(a.moves[0].left,2);normalizeTeamcraftUnit(a,DATA.moves);assert.equal(a.moves[0].pp,14);assert.equal(a.moves[0].left,2);assert.equal(canonicalMoveId(41),11);assert(codexCompatible(a.species,700,DATA));
 }
 {const a=unit(),b=unit('159','Weather Calm');beginAbilities(a,[b],[a],{weather:'RAIN'});const {r,m}=use(a,b,387);assert(r.skipped);assert.equal(m.left,move(387).pp,'suppressed weather cannot spend Rain Mantle PP');}
+{const u=unit();u.breedingInheritance={moveId:41};u.moves=[];const state={party:[u],nursery:{eggs:[{inheritance:{moveId:41}}]}};migrateTeamcraftState(state,DATA.moves);assert.equal(u.breedingInheritance.moveId,11);assert.equal(state.nursery.eggs[0].inheritance.moveId,11);assert(state.nursery.eggs[0].inheritance.teamcraftAliasMigration);}
+{const u=unit();u.moves=[{id:41,left:1}];const snapshot={version:1,state:{begun:true,playerName:'Aimon',money:0,party:[u],reserve:[],dead:[]},room:'town',player:{x:20,y:20,facing:'up'}};const options={speciesIds:new Set(DATA.species.map(s=>s.id)),moveIds:new Set(DATA.moves.map(m=>m.id)),rooms:new Set(['town'])};assert(validateTransferSnapshot(snapshot,options));u.moves=[{id:999999,left:1}];assert.throws(()=>validateTransferSnapshot(snapshot,options));}
 console.log('PASS Teamcraft: 551 distinct moves/scenes, type releases, protection, effigies, relay/fatigue, False Front, proc modifiers, STAB and investment-safe aliases.');
