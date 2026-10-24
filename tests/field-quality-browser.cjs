@@ -25,7 +25,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=req
   await page.setViewportSize(viewport);await page.evaluate(()=>{window.__fieldQA.boot();window.__fieldQA.injure();window.__fieldQA.walter();});
   const box=await page.locator('.modal').evaluate(el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,client:el.clientWidth,scroll:el.scrollWidth};});
   assert(box.x>=0&&box.y>=0&&box.right<=viewport.width+1&&box.bottom<=viewport.height+1,'Walter fits the window');assert(box.scroll<=box.client+1,'no horizontal overflow');
-  assert.equal(await page.locator('.walter-actions button').count(),9);
+  assert.equal(await page.locator('.walter-actions button').count(),10);
   for(const button of await page.locator('.walter-actions button').all()){await button.scrollIntoViewIfNeeded();const r=await button.boundingBox();assert(r.x>=0&&r.x+r.width<=viewport.width+1&&r.y>=0&&r.y+r.height<=viewport.height+1,'every Walter action is reachable');}
   await page.locator('#aeric-rest').click();assert(await page.evaluate(()=>window.__fieldQA.rested()));
   await page.evaluate(()=>window.__fieldQA.walter());await page.locator('#relearn').click();assert(await page.locator('[data-relearn-unit]').count()>20);
