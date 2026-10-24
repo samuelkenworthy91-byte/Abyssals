@@ -50,7 +50,7 @@ assert(canLearnScroll(instance(steelSpecies,20,[]),538),'non-Rivet Steel species
  const invalid=applyMove(a,foe,m,()=>.5);assert(invalid.skipped);assert.equal(m.left,before,'invalid HP cost does not spend PP');
  a.hp=a.maxHp;applyMove(a,foe,m,()=>.5);
  assert.equal(a.stages.attack,3);assert.equal(a.stages.sp_attack,3);assert.equal(a.stages.speed,3);
- assert.equal(a.stages.defence,-2);assert.equal(a.stages.sp_defence,-2);assert(a.hp<=a.maxHp/2);
+ assert.equal(a.stages.defence,-2);assert.equal(a.stages.sp_defence,-2);assert.equal(a.hp,a.maxHp-Math.max(1,Math.floor(a.maxHp/2)),'50% max-HP cost respects integer HP rounding');
 }
 const offline=fs.readFileSync('dist/offline-assets.js','utf8');
 assert(offline.includes('"tactical-moves.js"'));
