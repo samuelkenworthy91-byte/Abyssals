@@ -25,7 +25,10 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=req
  await buy.click();await page.waitForTimeout(100);
  assert(Math.abs(await page.locator('.modal').evaluate(el=>el.scrollTop)-top)<30,'purchase retains list position');
  await page.screenshot({path:'build/qa/exchange-list-position.png'});
- await page.evaluate(()=>window.__trainQA.stock(4));await page.locator('[data-mr-buy="1"]').click();
+ await page.evaluate(()=>window.__trainQA.stock(4));
+ const growthTonic=page.locator('.mr-stock').filter({hasText:'Focused Growth Tonic'}).locator('[data-mr-buy]');
+ assert.equal(await growthTonic.count(),1,'Growth Apothecary stocks the focused tonic');
+ await growthTonic.click();
  // Selecting and returning to a scrolled partner list also retains its position.
  const target=page.locator('[data-mr-tonic-uid]').last();await target.scrollIntoViewIfNeeded();const listTop=await page.locator('.modal').evaluate(el=>el.scrollTop);
  await target.click();await page.locator('#mr-tonic-abort').click();await page.waitForTimeout(100);
