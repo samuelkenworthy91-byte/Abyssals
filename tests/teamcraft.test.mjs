@@ -37,4 +37,5 @@ assert.deepEqual([711,712,713].map(id=>[move(id).name,move(id).type_id]),[['Full
 {
  const a=unit();a.moves=[{...move(11),left:2},{...move(11),id:41,left:4}];a.ppBonusByMoveId={11:3,41:7};normalizeTeamcraftUnit(a,DATA.moves);assert.equal(a.moves.length,1);assert.equal(a.moves[0].pp,12);assert.equal(a.moves[0].left,2);assert.equal(a.ppBonusByMoveId[11],7);const state={money:1000000};const q=tonicQuote(state,a,11,2);assert.equal(q.cost,145000);assert(buyPPTonic(state,a,11,2));assert.equal(a.moves[0].pp,14);assert.equal(a.moves[0].left,2);normalizeTeamcraftUnit(a,DATA.moves);assert.equal(a.moves[0].pp,14);assert.equal(a.moves[0].left,2);assert.equal(canonicalMoveId(41),11);assert(codexCompatible(a.species,700,DATA));
 }
+{const a=unit(),b=unit('159','Weather Calm');beginAbilities(a,[b],[a],{weather:'RAIN'});const {r,m}=use(a,b,387);assert(r.skipped);assert.equal(m.left,move(387).pp,'suppressed weather cannot spend Rain Mantle PP');}
 console.log('PASS Teamcraft: 551 distinct moves/scenes, type releases, protection, effigies, relay/fatigue, False Front, proc modifiers, STAB and investment-safe aliases.');

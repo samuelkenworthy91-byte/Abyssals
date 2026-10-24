@@ -11,12 +11,12 @@ export function secondaryChance(u,e){const p=e.chance_percent??100;return e.seco
 export function prepareSpecialistMove(u,m){if(!m.power)return m;let effects=m.effects||[];if(has(u,'Sage Mind')&&m.category==='SPECIAL'&&effects.some(e=>e.secondary))return {...m,power:m.power*1.3,effects:effects.filter(e=>!e.secondary)};return m;}
 export const stabMultiplier=(u,m)=>u.species.types.includes(m.type_id)?has(u,'Native Force')?1.8:1.5:1;
 export const soundMove=m=>m.sound??/roar|cry|call|chorus|song|echo|sound|sonic/i.test(m.name);
-export function actionInvalid(u,m){
+export function actionInvalid(u,m,foe=null){
  if(m.effects.some(e=>e.effect_id==='effigy')){const cost=Math.max(1,Math.floor(u.maxHp/4));if(u.hp<=cost||ms(u).decoy)return 'Not enough HP, or an effigy already exists.';}
  if(m.effects.some(e=>e.effect_id==='relay')){if((u.trapped&&!has(u,'Wayfarer')&&!has(u,'Bindproof'))||(ms(u).relayFatigue||0)>0||!selectedAlly(u)||selectedAlly(u)===u)return 'Choose a living benched partner; trapped or fatigued partners cannot relay.';}
  if(m.effects.some(e=>e.effect_id==='clear_weather')&&!u.field?.weather)return 'There is no weather to clear.';
- if(m.effects.some(e=>e.effect_id==='rain_mantle')&&(u.field?.weather!=='RAIN'||has(u,'Weather Calm')))return 'Rain Mantle requires active rain.';
- if(m.effects.some(e=>e.effect_id==='aurora_screen')&&(u.field?.weather!=='HAIL'||has(u,'Weather Calm')))return 'Aurora Reprieve requires active hail.';
+ if(m.effects.some(e=>e.effect_id==='rain_mantle')&&(u.field?.weather!=='RAIN'||(has(u,'Weather Calm')||has(foe,'Weather Calm'))))return 'Rain Mantle requires active rain.';
+ if(m.effects.some(e=>e.effect_id==='aurora_screen')&&(u.field?.weather!=='HAIL'||(has(u,'Weather Calm')||has(foe,'Weather Calm'))))return 'Aurora Reprieve requires active hail.';
  if(m.allyTarget&&!selectedAlly(u))return 'Choose a living ally.';
  return null;
 }
@@ -53,10 +53,10 @@ export function departTeamcraft(u,next,switching,messages=[]){if(!living(u)||!li
  return pass;
 }
 export function damagedTeamcraft(actor,target,move,damage,hooks){if(!damage)return;const {changeStage,messages}=hooks,s=ms(target),f=flags(target);
- if(has(target,'Rain Sluice')&&target.field?.weather==='RAIN'&&!f.rainUsed&&living(target)){f.rainUsed=true;f.rainCure=true;}
+ if(has(target,'Rain Sluice')&&target.field?.weather==='RAIN'&&!has(actor,'Weather Calm')&&!has(target,'Weather Calm')&&!f.rainUsed&&living(target)){f.rainUsed=true;f.rainCure=true;}
  if(has(target,'Countermelody')&&soundMove(move)&&!s.melodyUsed)s.melodyReady=true;
  if(has(actor,'Countermelody')&&ms(actor).melodyReady&&soundMove(move)){changeStage(target,'sp_attack',-1,actor,messages);ms(actor).melodyReady=false;ms(actor).melodyUsed=true;}
  if(has(target,'Margin Note')){s.moveVisits??={};s.moveVisits[move.id]=(s.moveVisits[move.id]||0)+1;if(s.moveVisits[move.id]>=2)s.recordedMove=move.id;}
 }
-export function endTeamcraft(units){for(const u of units){const s=ms(u);delete s.protection;if(s.relayFatigue>0)s.relayFatigue--;if(s.critGuard>0)s.critGuard--;if(s.wardTurns>0&&--s.wardTurns===0)delete s.oneWard;if(has(u,'Sand Reservoir')&&u.field?.weather==='SAND'&&living(u)){s.sandTurns=(s.sandTurns||0)+1;if(s.sandTurns>=2)flags(u).silt=true;}else s.sandTurns=0;}}
-export function specialistAIPool(u,foe,moves){const roster=menagerieParty(u).filter(v=>v!==u&&living(v));u.teamcraftTargetUid=roster.sort((a,b)=>(b.hp/b.maxHp)-(a.hp/a.maxHp))[0]?.uid;return moves.filter(m=>!actionInvalid(u,m)&&(!m.effects.some(e=>e.effect_id==='protect')||(ms(u).protectChain||0)<2)&&(!m.effects.some(e=>e.effect_id==='heal')||u.hp<u.maxHp*.65));}
+export function endTeamcraft(units){const suppressed=units.some(u=>u.hp>0&&has(u,'Weather Calm'));for(const u of units){const s=ms(u);delete s.protection;if(s.relayFatigue>0)s.relayFatigue--;if(s.critGuard>0)s.critGuard--;if(s.wardTurns>0&&--s.wardTurns===0)delete s.oneWard;if(has(u,'Sand Reservoir')&&!suppressed&&u.field?.weather==='SAND'&&living(u)){s.sandTurns=(s.sandTurns||0)+1;if(s.sandTurns>=2)flags(u).silt=true;}else s.sandTurns=0;}}
+export function specialistAIPool(u,foe,moves){const roster=menagerieParty(u).filter(v=>v!==u&&living(v));u.teamcraftTargetUid=roster.sort((a,b)=>(b.hp/b.maxHp)-(a.hp/a.maxHp))[0]?.uid;return moves.filter(m=>!actionInvalid(u,m,foe)&&(!m.effects.some(e=>e.effect_id==='protect')||(ms(u).protectChain||0)<2)&&(!m.effects.some(e=>e.effect_id==='heal')||u.hp<u.maxHp*.65));}
