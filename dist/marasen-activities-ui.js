@@ -19,7 +19,7 @@ export const exchangeScrolls=()=>{
   const key=m.type_id+':'+m.category,n=counts.get(key)||0;if(n<2){attacks.push(m);counts.set(key,n+1);}
  }
  const tactical=ordinary.filter(m=>m.sharedTacticalMove&&m.category!=='STATUS'&&!attacks.some(a=>a.id===m.id));
- return [...status,...attacks,...tactical].map(m=>({id:String(m.id),name:m.name,description:`${m.type_id} / ${m.category}${m.power?' · power '+m.power+(m.hits?' × '+m.hits.min+'–'+m.hits.max+' hits':''):''} · ${m.effect_text||'No additional effect.'}${m.tutorTypes?.length?' · Compatible types: '+m.tutorTypes.join(' / '):''} · single-use Codex`,price:m.category==='STATUS'?(m.effects.some(e=>e.status==='FREEZE'||e.status==='BAD_POISON')?6500:4500):m.power>=75?5500:3500}));
+ return [...status,...attacks,...tactical].map(m=>({id:String(m.id),name:m.name,description:`${m.type_id} / ${m.category}${m.power?' · power '+m.power+(m.hits?' × '+m.hits.min+'–'+m.hits.max+' hits':''):''} · ${m.effect_text||'No additional effect.'}${m.tutorTypes?.length?' · Compatible types: '+m.tutorTypes.join(' / '):''} · single-use Codex`,price:m.category==='STATUS'?(m.sharedTacticalMove?(m.effects.some(e=>e.effect_id==='stat_stage'&&Math.abs(e.stages)>=3)?8500:6000):(m.effects.some(e=>e.status==='FREEZE'||e.status==='BAD_POISON')?6500:4500)):m.hits?6500:m.power>=75?5500:3500}));
 };
 function storeItems(floor){
  if(floor===1)return exchangeScrolls().map(m=>({...m,kind:'codex'}));
