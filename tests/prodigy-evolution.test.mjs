@@ -33,9 +33,9 @@ assert.equal(unitGrowthRates(u).attack,270,'same-stat records use the strongest 
 const child=species('001'),baseline=growthPercent(child,'attack'),options=inheritanceOptions(child,u),offer=options.growth.find(g=>g.stat==='attack');
 assert.equal(offer.donorRate,baseline+50,'donor passes original +50, not the stacked +150 or evolved species growth');assert(offer.prodigy);
 const plan={stat:'attack',moveId:null},passed=rollInheritance(child,u,1,plan,()=>.1),missed=rollInheritance(child,u,1,plan,()=>.99);
-validateInheritance(passed,child,0);assert.equal(passed.growth.rate-baseline,51);assert.equal(missed.growth,null);
+validateInheritance(passed,child,0);assert.equal(passed.growth.rate-baseline,50);assert.equal(missed.growth,null);
 // Independent family carryover likewise retains the original, unstacked rate.
-const lineage=rollInheritance(child,u,1,{stat:'',moveId:null},()=>.1,u);assert.equal(lineage.lineageGrowth.find(g=>g.stat==='attack').rate,90);
+const lineage=rollInheritance(child,u,1,{stat:'',moveId:null},()=>.1,u);assert.equal(lineage.lineageGrowth.find(g=>g.stat==='attack').rate,baseline+50);
 const trainers=[...COSSENNE_TRAINERS,...MARASEN_TRAINERS,...BOTRUNE_TRAINERS,...FINALE_TRAINERS];
 for(const [id,policy] of Object.entries(TRAINER_PRODIGIES)){
  const raw=trainers.find(t=>t.id===id);assert(raw,id+' must be a playable trainer');const before=JSON.stringify(raw),t=withTrainerProdigies(raw);
@@ -55,3 +55,4 @@ const hell=withTrainerProdigies({id:'HELL-TEST',name:'Hell challenger',arc:'hell
 assert.equal(hell.team.filter(s=>s.prodigy).length,2);assert(hell.team.filter(s=>s.prodigy).every(s=>s.prodigy.bonus===50));assert(trainerProdigyWarning(hell).includes('Prodigies'));
 const rematch=makeLeaderRematch({fates:{'LDR-08':'SPARED'}},trainers.find(t=>t.id==='LDR-08'));assert.equal(withTrainerProdigies(rematch).team.filter(s=>s.prodigy).length,3);
 console.log('PASS: 90/190/270 three-stage growth, immutable birth bonus, overflow rolls, legacy saves, independent stats, additive draughts, breeding without evolution inflation, all eight trainer policies, named warnings, deterministic battle stats and Hell/rematch policies');
+

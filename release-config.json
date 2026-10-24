@@ -1,7 +1,7 @@
 {
-  "version": "0.90.31",
-  "version_code": 126,
-  "filename": "Abyssals-v0.90.31-Prodigy-Evolution.apk",
-  "title": "Abyssals v0.90.31 — Prodigy Evolution",
-  "notes": "Prodigies add one copy of their original growth advantage at birth and one more per completed evolution. Selected later trainers field genuinely trained Prodigies, named in a warning before accepting their battle; stronger Hell trainer policies are ready for the future arc. Breeding passes the original bonus without evolution multiplier inflation. Preserves earned stats, saves, quests, unique encounters, permanent death and original APK signing. PWA and APK share the updated source."
+  "version": "0.90.32",
+  "version_code": 127,
+  "filename": "Abyssals-v0.90.32-Prodigy-Breeding.apk",
+  "title": "Abyssals v0.90.32 — Prodigy Breeding",
+  "notes": "Same-family breeding automatically rolls every distinct Prodigy stat available across both parents. Independent 33.176% rolls target all six at 1 in 750 eggs. Shared stats retain the stronger original bonus without evolution or donor-roll inflation. Clear pairing odds; existing eggs, offspring, earned stats, saves, quests and permanent death preserved. APK uses the original release signing key. PWA source and offline version updated."
 }

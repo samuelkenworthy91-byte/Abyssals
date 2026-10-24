@@ -5,7 +5,13 @@ import {rootForm} from './route-roster.js?v=0.87.0';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const nativeMoves=species=>new Set(DATA.learnsets.filter(l=>l.species_id===species.id).map(l=>l.move_id));
 const ordinary=m=>m&&['PHYSICAL','SPECIAL','STATUS'].includes(m.category)&&Number.isFinite(m.pp)&&m.pp>0&&!m.signature&&!m.signature_owner_family;
-export const PRODIGY_INHERITANCE_CHANCE=.33;
+// Six independent successes have probability exactly 1/750.
+export const PRODIGY_INHERITANCE_CHANCE=Math.pow(1/750,1/STAT_KEYS.length);
+export function rollFamilyProdigies(rows,random=Math.random){return rows.filter(()=>random()<PRODIGY_INHERITANCE_CHANCE).map(row=>({...row}));}
+export function familyProdigyOptions(species,donor,parent){
+ if(!parent||rootForm(parent.species.id)!==species.id||rootForm(donor.species.id)!==species.id)return [];
+ return STAT_KEYS.map(stat=>{const baseline=growthPercent(species,stat),bonus=Math.max(inheritedGrowthBonus(parent,stat),inheritedGrowthBonus(donor,stat));return {stat,baseline,rate:Math.round((baseline+bonus)*10)/10};}).filter(g=>g.rate>g.baseline);
+}
 // Temporary draughts cannot become permanent through breeding. Rescue and
 // previously inherited permanent rates remain legitimate donor strengths.
 export function inheritanceOptions(species,donor){
@@ -23,16 +29,19 @@ export function rollInheritance(species,donor,donorIndex,plan={},random=Math.ran
  if(stat&&!g||moveId&&!m)return null;
  // Roll once at egg creation. A missed Prodigy transfer leaves normal species
  // growth; it never silently substitutes another stat or rerolls at hatching.
- const inherited=g&&(!g.prodigy||random()<PRODIGY_INHERITANCE_CHANCE);
- const growth=inherited?{...g,rate:Math.round((g.donorRate+Math.floor(Math.max(0,Math.min(.999999999,random()))*11))*10)/10}:null;
- // Only the parent supplying the offspring family can pass its existing
- // Prodigy rates automatically. Roll each stat once, independent of the donor.
- // Preserve the recorded rate exactly: carryover never adds another bonus.
+ const family=familyProdigyOptions(species,donor,parent),pooled=new Set(family.map(row=>row.stat));
+ const inherited=g&&!pooled.has(g.stat)&&(!g.prodigy||random()<PRODIGY_INHERITANCE_CHANCE);
+ const growth=inherited?{...g,rate:g.prodigy?g.donorRate:Math.round((g.donorRate+Math.floor(Math.max(0,Math.min(.999999999,random()))*11))*10)/10}:null;
+ // Same-family parents pool their original bonuses. One roll per distinct
+ // stat, regardless of donor selection or overlap; never inherit evolution copies.
  const lineageGrowth=[];
- if(parent&&rootForm(parent.species.id)===species.id){
+ if(parent&&rootForm(parent.species.id)===species.id&&rootForm(donor.species.id)===species.id){
+  lineageGrowth.push(...rollFamilyProdigies(family,random));
+ }else if(parent&&rootForm(parent.species.id)===species.id){
+  // Cross-family pairings retain the family parent's existing carryover path.
   for(const stat of STAT_KEYS){
-   const rate=inheritedGrowthRate(parent,stat),baseline=growthPercent(species,stat);
-   if(rate>baseline&&random()<PRODIGY_INHERITANCE_CHANCE)lineageGrowth.push({stat,baseline,rate});
+   const baseline=growthPercent(species,stat),bonus=inheritedGrowthBonus(parent,stat);
+   if(bonus>0&&random()<PRODIGY_INHERITANCE_CHANCE)lineageGrowth.push({stat,baseline,rate:Math.round((baseline+bonus)*10)/10});
   }
  }
  return {version:2,speciesId:species.id,donorIndex,growth,lineageGrowth,moveId:m?.move.id??null};
@@ -56,4 +65,9 @@ export function inheritanceSummaryHTML(unit){
  return `${rows.length?`<p class="prodigy-badge"><b>★ Prodigy · ${rows.map(g=>STAT_LABELS[g.stat]).join(' / ')}</b><br>${rows.map(g=>`${STAT_LABELS[g.stat]}: original bonus +${inheritedGrowthBonus(unit,g.stat)} × ${prodigyMultiplier(unit)} = +${prodigyGrowthBonus(unit,g.stat)} growth points`).join('<br>')}<br>Each completed evolution adds another copy of the original bonus.</p>`:''}${m?`<p><b>Inherited move: ${esc(m.name)}</b> · ${esc(m.type_id)} · ${esc(m.category)}<br>Outside its birth species’ normal move pool. Available through free relearning.</p>`:''}`;
 }
 
-export function breedingPlanHTML(species,donor,index,parent=null){const options=inheritanceOptions(species,donor),lineage=parent&&rootForm(parent.species.id)===species.id?STAT_KEYS.map(stat=>({stat,rate:inheritedGrowthRate(parent,stat)})).filter(g=>g.rate>growthPercent(species,g.stat)):[];return `<fieldset class="breeding-plan"><legend>50% ${esc(species.name)} · donor ${esc(donor.species.name)}</legend><p>${lineage.length?`Family Prodigy growth: ${lineage.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each has a separate 33% chance to carry over, alongside your donor choice.`:'No existing family Prodigy growth to carry over.'}</p><label for="breed-stat-${index}">One chosen donor growth</label><select id="breed-stat-${index}">${options.growth.map(g=>`<option value="${g.stat}">${STAT_LABELS[g.stat]}: ${g.donorRate}–${Math.round((g.donorRate+10)*10)/10}% (normal ${g.baseline}%)${g.prodigy?' · 33% inheritance chance; otherwise normal growth':''}</option>`).join('')}<option value="">${options.growth.length?'No inherited growth':'No donor growth beats this species’ normal rates'}</option></select><label for="breed-move-${index}">One move outside its normal pool</label><select id="breed-move-${index}">${options.moves.map(({move:m,coverage,answers})=>`<option value="${m.id}">${esc(m.name)} · ${esc(m.type_id)} · ${esc(m.category)}${answers.length?' · covers weakness: '+answers.join(', '):coverage?' · new type coverage':''}</option>`).join('')}<option value="">${options.moves.length?'No inherited move':'No eligible donor move outside this species’ pool'}</option></select></fieldset>`;}
+export function breedingPlanHTML(species,donor,index,parent=null){
+ const options=inheritanceOptions(species,donor),family=familyProdigyOptions(species,donor,parent),pooled=new Set(family.map(g=>g.stat)),growth=options.growth.filter(g=>!pooled.has(g.stat));
+ const sameFamily=parent&&rootForm(parent.species.id)===species.id&&rootForm(donor.species.id)===species.id;
+ const lineage=parent&&!sameFamily?STAT_KEYS.map(stat=>({stat,rate:growthPercent(species,stat)+inheritedGrowthBonus(parent,stat)})).filter(g=>g.rate>growthPercent(species,g.stat)):[];
+ return `<fieldset class="breeding-plan"><legend>50% ${esc(species.name)} · donor ${esc(donor.species.name)}</legend><p>${sameFamily?(family.length?`Automatic Prodigy inheritance from both parents: ${family.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each distinct stat has one independent 33.176% chance. Shared stats use the stronger original bonus. All six together: 1 in 750 eggs.`:'Neither parent has an existing Prodigy bonus to pass down.'):(lineage.length?`Family Prodigy growth: ${lineage.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each has a separate 33.176% chance alongside your donor choice.`:'No existing family Prodigy growth to carry over.')}</p><label for="breed-stat-${index}">One additional donor growth</label><select id="breed-stat-${index}">${growth.map(g=>`<option value="${g.stat}">${STAT_LABELS[g.stat]}: ${g.donorRate}${g.prodigy?'':'–'+Math.round((g.donorRate+10)*10)/10}% (normal ${g.baseline}%)${g.prodigy?' · 33.176% inheritance chance; otherwise normal growth':''}</option>`).join('')}<option value="">${growth.length?'No additional donor growth':'No additional donor growth available'}</option></select><label for="breed-move-${index}">One move outside its normal pool</label><select id="breed-move-${index}">${options.moves.map(({move:m,coverage,answers})=>`<option value="${m.id}">${esc(m.name)} · ${esc(m.type_id)} · ${esc(m.category)}${answers.length?' · covers weakness: '+answers.join(', '):coverage?' · new type coverage':''}</option>`).join('')}<option value="">${options.moves.length?'No inherited move':'No eligible donor move outside this species’ pool'}</option></select></fieldset>`;
+}
