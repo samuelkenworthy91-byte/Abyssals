@@ -1,7 +1,8 @@
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=require('node:assert/strict'),fs=require('node:fs');
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--no-sandbox']}),page=await browser.newPage({viewport:{width:430,height:932},serviceWorkers:'block'}),errors=[];
- page.on('pageerror',e=>errors.push(e.message));
+ page.on('pageerror',e=>{errors.push(e.message);console.error('Game page error:',e.stack);});
+ page.on('requestfailed',r=>console.error('Request failed:',r.url(),r.failure()?.errorText));
  await page.route(/\/app\.js(?:\?.*)?$/,async route=>{const response=await route.fetch();await route.fulfill({response,body:await response.text()+`
  window.__prodigyQA={
  boot(){closeDialogue();closeModal();setMotionPreference('reduced');selectSlot(1);const fixture=structuredClone(initialExpeditionState);Object.assign(fixture,{begun:true,openingDone:true,tamingTaught:true,pate:true,trade:true,kurg:true,blessing:true,test:true,departed:true,party:[newUnit(byId('003'),90)],money:100000,nextUnitId:900});resumeSnapshot({state:fixture,room:'sunTerraces',player:{x:3,y:17,facing:'right'},phaseElapsed:0,worldRandom:43});},
