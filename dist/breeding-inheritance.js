@@ -1,5 +1,5 @@
 import {DATA} from './data.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,inheritedGrowthRate} from './progression.js?v=0.90.18';
+import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './progression.js?v=0.90.31';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -9,7 +9,10 @@ export const PRODIGY_INHERITANCE_CHANCE=.33;
 // Temporary draughts cannot become permanent through breeding. Rescue and
 // previously inherited permanent rates remain legitimate donor strengths.
 export function inheritanceOptions(species,donor){
- const rates=unitGrowthRates({...donor,trainingEffects:[],stewardship:undefined}),naturalRates=unitGrowthRates({...donor,trainingEffects:[],stewardship:undefined,breedingInheritance:undefined}),growth=STAT_KEYS.map(stat=>({stat,baseline:growthPercent(species,stat),donorRate:rates[stat],prodigy:rates[stat]>naturalRates[stat]})).filter(g=>g.donorRate>g.baseline).sort((a,b)=>(b.donorRate-b.baseline)-(a.donorRate-a.baseline));
+ const rates=unitGrowthRates({...donor,trainingEffects:[],stewardship:undefined,breedingInheritance:undefined});
+ // An existing Prodigy donates its original advantage, never its evolution
+ // multiplier. Ordinary donors still offer their permanent species/gift rates.
+ const growth=STAT_KEYS.map(stat=>{const baseline=growthPercent(species,stat),bonus=inheritedGrowthBonus(donor,stat);return {stat,baseline,donorRate:bonus>0?Math.round((baseline+bonus)*10)/10:rates[stat],prodigy:bonus>0};}).filter(g=>g.donorRate>g.baseline).sort((a,b)=>(b.donorRate-b.baseline)-(a.donorRate-a.baseline));
  const natural=nativeMoves(species),naturalAttacks=DATA.moves.filter(m=>natural.has(m.id)&&m.power>0),weaknesses=[...new Set(DATA.species.flatMap(s=>s.types))].filter(t=>typeEffectiveness(t,species.types)>1);
  const moves=[...new Set((donor.moves||[]).map(m=>m.id))].map(id=>DATA.moves.find(m=>m.id===id)).filter(m=>ordinary(m)&&!natural.has(m.id)).map(move=>{const coverage=move.power>0&&!species.types.includes(move.type_id),answers=move.power>0?weaknesses.filter(t=>typeEffectiveness(move.type_id,[t])>1&&!naturalAttacks.some(m=>typeEffectiveness(m.type_id,[t])>1)):[];return {move,coverage,answers};}).sort((a,b)=>b.answers.length-a.answers.length||Number(b.coverage)-Number(a.coverage)||(b.move.power||0)-(a.move.power||0)||a.move.id-b.move.id);
  return {growth,moves};
@@ -50,7 +53,7 @@ export function validateInheritance(record,species,selectedParent){
 export function inheritanceSummaryHTML(unit){
  const i=unit.breedingInheritance;if(!i)return '';
  const m=DATA.moves.find(m=>m.id===i.moveId),rows=STAT_KEYS.map(stat=>({stat,rate:inheritedGrowthRate(unit,stat)})).filter(g=>g.rate>0);
- return `${rows.length?`<p class="prodigy-badge"><b>★ Prodigy · ${rows.map(g=>STAT_LABELS[g.stat]).join(' / ')}</b><br>${rows.map(g=>`${STAT_LABELS[g.stat]}: inherited growth ${g.rate}%`).join('<br>')}</p>`:''}${m?`<p><b>Inherited move: ${esc(m.name)}</b> · ${esc(m.type_id)} · ${esc(m.category)}<br>Outside its birth species’ normal move pool. Available through free relearning.</p>`:''}`;
+ return `${rows.length?`<p class="prodigy-badge"><b>★ Prodigy · ${rows.map(g=>STAT_LABELS[g.stat]).join(' / ')}</b><br>${rows.map(g=>`${STAT_LABELS[g.stat]}: original bonus +${inheritedGrowthBonus(unit,g.stat)} × ${prodigyMultiplier(unit)} = +${prodigyGrowthBonus(unit,g.stat)} growth points`).join('<br>')}<br>Each completed evolution adds another copy of the original bonus.</p>`:''}${m?`<p><b>Inherited move: ${esc(m.name)}</b> · ${esc(m.type_id)} · ${esc(m.category)}<br>Outside its birth species’ normal move pool. Available through free relearning.</p>`:''}`;
 }
 
 export function breedingPlanHTML(species,donor,index,parent=null){const options=inheritanceOptions(species,donor),lineage=parent&&rootForm(parent.species.id)===species.id?STAT_KEYS.map(stat=>({stat,rate:inheritedGrowthRate(parent,stat)})).filter(g=>g.rate>growthPercent(species,g.stat)):[];return `<fieldset class="breeding-plan"><legend>50% ${esc(species.name)} · donor ${esc(donor.species.name)}</legend><p>${lineage.length?`Family Prodigy growth: ${lineage.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each has a separate 33% chance to carry over, alongside your donor choice.`:'No existing family Prodigy growth to carry over.'}</p><label for="breed-stat-${index}">One chosen donor growth</label><select id="breed-stat-${index}">${options.growth.map(g=>`<option value="${g.stat}">${STAT_LABELS[g.stat]}: ${g.donorRate}–${Math.round((g.donorRate+10)*10)/10}% (normal ${g.baseline}%)${g.prodigy?' · 33% inheritance chance; otherwise normal growth':''}</option>`).join('')}<option value="">${options.growth.length?'No inherited growth':'No donor growth beats this species’ normal rates'}</option></select><label for="breed-move-${index}">One move outside its normal pool</label><select id="breed-move-${index}">${options.moves.map(({move:m,coverage,answers})=>`<option value="${m.id}">${esc(m.name)} · ${esc(m.type_id)} · ${esc(m.category)}${answers.length?' · covers weakness: '+answers.join(', '):coverage?' · new type coverage':''}</option>`).join('')}<option value="">${options.moves.length?'No inherited move':'No eligible donor move outside this species’ pool'}</option></select></fieldset>`;}
