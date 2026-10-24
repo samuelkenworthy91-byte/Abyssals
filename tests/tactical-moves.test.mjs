@@ -54,5 +54,5 @@ assert(canLearnScroll(instance(steelSpecies,20,[]),538),'non-Rivet Steel species
 }
 const offline=fs.readFileSync('dist/offline-assets.js','utf8');
 assert(offline.includes('"tactical-moves.js"'));
-assert(offline.includes("'0.90.28'"));
+assert(offline.includes("'"+JSON.parse(fs.readFileSync("release-config.json","utf8")).version+"'"));
 console.log('PASS: shared tactical pool, 18 selective learnsets, type tutors, scenes, multihit, ally buffs, healing and high-cost safeguards.');

@@ -11,4 +11,21 @@ function baseShopStock(room){if(room.startsWith('marasen')||room.startsWith('bot
 export function purchaseQuote(state,item,amount){const quantity=Number(amount),max=Math.floor(state.money/item.price),valid=Number.isSafeInteger(quantity)&&quantity>=1&&quantity<=max;return {quantity,max,valid,total:valid?quantity*item.price:0};}
 export function buySupplies(state,item,amount){const q=purchaseQuote(state,item,amount);if(!q.valid)return false;state.money-=q.total;state[item.key]=(state[item.key]||0)+q.quantity;return true;}
 
-export function shopStock(room,state=null){let stock=baseShopStock(room);if(state?.questUnlocks?.winterRecipe)stock=[...stock,WINTER_PRESERVE];if(room.startsWith('cossenne')&&state?.cossenneServices?.relief?.claimed){const keys=new Set([...SPECIALIST_FOODS,...SPECIALIST_MEDICINES].map(i=>i.key));stock=stock.map(i=>keys.has(i.key)?{...i,price:Math.floor(i.price*.9),text:i.text+' Firewatch relief discount: 10%.'}:i);}return stock;}
+export function shopStock(room,state=null){let stock=[...baseShopStock(room)];if(GENERAL_STORES.has(room)&&state?.generalStoreSupplies){const keys=new Set(stock.map(i=>i.key));for(const key of state.generalStoreSupplies){const item=generalCatalogue.get(key);if(item&&!keys.has(key)){stock.push(item);keys.add(key);}}}if(state?.questUnlocks?.winterRecipe)stock=[...stock,WINTER_PRESERVE];if(room.startsWith('cossenne')&&state?.cossenneServices?.relief?.claimed){const keys=new Set([...SPECIALIST_FOODS,...SPECIALIST_MEDICINES].map(i=>i.key));stock=stock.map(i=>keys.has(i.key)?{...i,price:Math.floor(i.price*.9),text:i.text+' Firewatch relief discount: 10%.'}:i);}return stock;}
+
+// Named specialist counters and the Grand Exchange never join the general supply chain.
+export const GENERAL_STORES=new Set(['shop','dorelemShop','philomereShop','cybressaShop','cossenneShop','botruneShop','marasen','cayfen','ramelle']);
+const generalCatalogue=new Map([...GENERAL_STORES].flatMap(room=>baseShopStock(room)).map(item=>[item.key,item]));
+export function unlockGeneralStore(state,room){
+ if(!GENERAL_STORES.has(room))return false;
+ const keys=new Set(state.generalStoreSupplies||[]);
+ for(const item of baseShopStock(room))keys.add(item.key);
+ state.generalStoreSupplies=[...keys];return true;
+}
+
+export function migrateGeneralStores(state,visited=[]){
+ if(Array.isArray(state.generalStoreSupplies))return;
+ state.generalStoreSupplies=[];
+ const legacyStores={town:'shop',dorelem:'dorelemShop',philomere:'philomereShop',cybressa:'cybressaShop',cossenne:'cossenneShop',marasen:'marasen',botrune:'botruneShop',cayfen:'cayfen',ramelle:'ramelle'};
+ for(const town of visited)if(legacyStores[town])unlockGeneralStore(state,legacyStores[town]);
+}

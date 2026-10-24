@@ -12,7 +12,7 @@ export function defeatExpMultiplier(enemy){return enemy?.species?.id===RIMEBUN_I
 export function rimebunWildMove(enemy,pool,random,healUsed=false){const healing=m=>m.effects.some(e=>['heal','heal_by_format'].includes(e.effect_id));if(!healUsed&&enemy.hp<enemy.maxHp*.4){const heal=pool.find(healing);if(heal)return heal;}const choices=pool.filter(m=>!healing(m)),attacks=choices.filter(m=>m.power>0);const usable=attacks.length?attacks:choices;return usable.length?usable[Math.floor(random()*usable.length)]:null;}
 export function rimebunCaveSlots(floor){
  const deep=floor.index>=3,rate=deep?5:3;
- const weights=floor.index===3?[50,35,5,5]:floor.index===4?[61,24,3,4,3]:[39,29,19,10];
- const base=FORT_POOLS[floor.index].map((id,i)=>({species_id:id,min_level:floor.min,max_level:floor.max,weight:weights[i],rarity:deep?(i<2?'Common':'Rare'):['Common','Common','Uncommon','Rare'][i],authoredSlot:true}));
+ const weights=deep?[30,24,15,12,8,6]:[30,24,17,12,8,6];
+ const base=FORT_POOLS[floor.index].map((id,i)=>({species_id:id,min_level:floor.min,max_level:floor.max,weight:weights[i],rarity:i<2?'Common':i<4?'Uncommon':'Rare',authoredSlot:true}));
  base.push({species_id:RIMEBUN_ID,min_level:floor.min,max_level:floor.max,weight:rate,rarity:'Rare',authoredSlot:true,rimebunRare:true});return base;
 }

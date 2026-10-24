@@ -1,3 +1,4 @@
+import {caveRoute} from './exploration-rules.js?v=0.90.29';
 import {collectionEncounterRoute} from './collection-access.js?v=0.90.18';
 import {accessEncounterRoute} from './encounter-access.js?v=0.90.18';
 import {birdEncounterRoute} from './bird-encounters.js?v=0.87.0';
@@ -34,4 +35,4 @@ function expandExistingEncounterRoute(route){const orchard=orchardRoute(route?.r
 
 function authoredEncounterRoute(route){if(route?.birdsExpanded)return accessEncounterRoute(route);if(route?.biodiversityExpanded)return accessEncounterRoute(birdEncounterRoute(route));return accessEncounterRoute(birdEncounterRoute(biodiversityEncounterRoute(expandExistingEncounterRoute(route))));}
 
-export function expandEncounterRoute(route){return collectionEncounterRoute(authoredEncounterRoute(route));}
+export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return collectionEncounterRoute(fort);return collectionEncounterRoute(authoredEncounterRoute(route));}

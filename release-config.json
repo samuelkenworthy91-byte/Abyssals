@@ -1,7 +1,7 @@
 {
-  "version": "0.90.28",
-  "version_code": 123,
-  "filename": "Abyssals-v0.90.28-Tactical-Moves.apk",
-  "title": "Abyssals v0.90.28 — Shared Tactical Move Pool",
-  "notes": "Adds 32 shared, type-compatible tactical moves including genuine 2–5 hit attacks, ally buffs and healing, dual- and triple-stat boosts with drawbacks, and three selective techniques per Rivet evolution path. All techniques enter the general move catalogue and Grand Exchange tutor pool. Preserves saves, existing signatures, evolution rules, original APK signing, and prior bird artwork corrections."
+  "version": "0.90.29",
+  "version_code": 124,
+  "filename": "Abyssals-v0.90.29-Expedition-Choices.apk",
+  "title": "Abyssals v0.90.29 \u2014 Expedition Choices",
+  "notes": "Adds combined party/reserve, two-type, evolution-stage and search filters across partner menus; a saved party/reserve choice after every capture; five Sunken Fort floors with separate evolution families, stronger deep encounters and unchanged Rimebun rarity; and permanent general-store supply unlocks. Grand Exchange and specialist counters remain separate. Preserves saves, quests, unique encounters, package and original signing."
 }
