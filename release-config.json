@@ -1,7 +1,7 @@
 {
-  "version": "0.90.32",
-  "version_code": 127,
-  "filename": "Abyssals-v0.90.32-Prodigy-Breeding.apk",
-  "title": "Abyssals v0.90.32 — Prodigy Breeding",
-  "notes": "Same-family breeding automatically rolls every distinct Prodigy stat available across both parents. Independent 33.176% rolls target all six at 1 in 750 eggs. Shared stats retain the stronger original bonus without evolution or donor-roll inflation. Clear pairing odds; existing eggs, offspring, earned stats, saves, quests and permanent death preserved. APK uses the original release signing key. PWA source and offline version updated."
+  "version": "0.90.33",
+  "version_code": 128,
+  "filename": "Abyssals-v0.90.33-Nursery-Stewardship.apk",
+  "title": "Abyssals v0.90.33 — Nursery & Stewardship",
+  "notes": "Batch stewardship completes multiple escalating-cost lessons with exact donor thresholds and leaves surplus partners untouched. Bulk ordinary rehoming, visible selection controls, confirmation and held-item returns. Marasen Grand Exchange 5F sells Family Seals (20,000), Heirloom Charm (500,000), Prodigy Feed (35,000), Inheritance Thread (15,000) and Brooding Warmer (200,000). Charm stacks additively with Feed or Thread; pairing previews actual odds, species and consumed supplies. Warmer reduces new eggs to 384 steps. Preserves existing eggs, offspring, saves, earned stats, quests, permanent deaths and original APK signing. PWA source/offline version updated."
 }

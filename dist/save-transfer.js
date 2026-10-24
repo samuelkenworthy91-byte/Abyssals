@@ -1,14 +1,14 @@
 import {canonicalMoveId} from './teamcraft-data.js?v=0.90.30';
 import {redirectInheritance} from './teamcraft-progress.js?v=0.90.30';
-import {validateInheritance} from './breeding-inheritance.js?v=0.90.18';
+import {validateInheritance} from './breeding-inheritance.js?v=0.90.33';
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
-import {validateNurserySnapshot} from './breeding.js?v=0.90.20';
+import {validateNurserySnapshot} from './breeding.js?v=0.90.33';
 import {PALADIN_IDS} from './paladin-data.js?v=0.87.0';
 export const SAVE_FILE_FORMAT='abyssals-expedition';
 export const SAVE_FILE_VERSION=1;
 export const SAVE_FILE_LIMIT=5*1024*1024;
-export const SAVE_GAME_VERSION='0.90.30';
+export const SAVE_GAME_VERSION='0.90.33';
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const fail=message=>{throw new Error(message);};
 function inspect(value,depth=0,budget={left:200000}){if(--budget.left<0||depth>80)fail('This save file is too complex.');if(typeof value==='number'&&!Number.isFinite(value))fail('The save contains an invalid number.');if(value&&typeof value==='object')for(const [key,v]of Object.entries(value)){if(['__proto__','constructor','prototype'].includes(key))fail('The save contains an unsupported field.');inspect(v,depth+1,budget);}}
@@ -30,3 +30,4 @@ export function validateTransferSnapshot(snapshot,{speciesIds,moveIds,rooms,stat
 export function makeSaveFile(snapshot,options={}){validateTransferSnapshot(snapshot,options);return JSON.stringify({format:SAVE_FILE_FORMAT,formatVersion:SAVE_FILE_VERSION,gameVersion:SAVE_GAME_VERSION,exportedAt:new Date().toISOString(),snapshot},null,2);}
 export function parseSaveFile(text,options={}){if(typeof text!=='string'||new TextEncoder().encode(text).length>SAVE_FILE_LIMIT)fail('Choose an Abyssals JSON save smaller than 5 MB.');let data;try{data=JSON.parse(text);}catch{fail('This file is not valid JSON. Choose a downloaded Abyssals save.');}inspect(data);let snapshot;if(data?.format===SAVE_FILE_FORMAT){if(data.formatVersion!==SAVE_FILE_VERSION)fail('This save-file version is unsupported. Update the game first.');snapshot=data.snapshot;}else if(data?.version===1&&data.state)snapshot=data;else fail('This is not an Abyssals save file.');validateTransferSnapshot(snapshot,options);return {snapshot,gameVersion:data.gameVersion||'Earlier build'};}
 export function saveFileName(snapshot){const name=(snapshot.state.playerName||'Aimon').replace(/[^a-zA-Z0-9_-]/g,'-').slice(0,40)||'Aimon';return `abyssals-${name}-${new Date().toISOString().slice(0,10)}.json`;}
+

@@ -1,4 +1,4 @@
-import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.90.22';
+import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.90.33';
 import {MARASEN_RECORDS,MARASEN_BRANCHES,MARASEN_TRAINERS,VERDANT_ROAD,marasenRoute} from './marasen-data.js?v=0.87.0';
 import * as r from './marasen-rules.js?v=0.87.0';
 export function marasenInteract(id,a){
@@ -68,4 +68,5 @@ export function marasenInteract(id,a){
  if(id==='mr-apothecary-service'){say('Waterside apothecary','The next fight can wait. Walter restores living partners outside. Specialist medicines and stronger capture foods are stocked at this counter.');return true;}
  return false;
 }
+
 
