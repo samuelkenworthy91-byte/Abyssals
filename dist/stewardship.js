@@ -1,4 +1,4 @@
-import {breedable} from './breeding.js?v=0.90.33';
+import {breedable} from './breeding.js?v=0.90.35';
 import {STAT_KEYS,unitGrowthRates,permanentGrowthMultiplier} from './progression.js?v=0.90.34';
 export const permanentRates=u=>unitGrowthRates({...u,trainingEffects:[]});
 export const rehomeable=u=>breedable(u)&&!u.originalStarter&&!u.unique&&!u.questUnique&&!u.species.unique&&!u.species.oneOfAKind;

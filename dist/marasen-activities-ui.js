@@ -1,4 +1,4 @@
-import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.33';
+import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.35';
 import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.

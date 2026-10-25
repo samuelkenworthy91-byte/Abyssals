@@ -2,9 +2,9 @@ import {STAT_KEYS} from './progression.js?v=0.90.31';
 export const BASE_PRODIGY_CHANCE=Math.pow(1/750,1/6);
 export const NURSERY_ITEMS=[
  {id:'familySeal',name:'Family Seal',price:20000,reusable:false,description:'Single use. Choose either parent’s base species for the egg. Cannot be used when both parents have the same base species.'},
- {id:'heirloomCharm',name:'Heirloom Charm',price:500000,reusable:true,description:'Reusable. Raises normal Prodigy inheritance to 40%. Adds the same 6.824 percentage-point bonus alongside Feed or Thread.'},
- {id:'prodigyFeed',name:'Prodigy Feed',price:35000,reusable:false,description:'Single use. 45% per eligible Prodigy stat, or 51.824% with the Charm. Use Feed or Thread per egg.'},
- {id:'inheritanceThread',name:'Inheritance Thread',price:15000,reusable:false,description:'Single use. One chosen available Prodigy stat has a 65% chance, or 71.824% with the Charm. Other stats keep their normal or Charm odds.'},
+ {id:'heirloomCharm',name:'Heirloom Charm',price:500000,reusable:true,description:'Reusable. Raises each parent’s Prodigy roll to 40%. Adds the same 6.824 percentage-point bonus alongside Feed or Thread.'},
+ {id:'prodigyFeed',name:'Prodigy Feed',price:35000,reusable:false,description:'Single use. 45% per parent carrying an eligible Prodigy stat, or 51.824% with the Charm. Use Feed or Thread per egg.'},
+ {id:'inheritanceThread',name:'Inheritance Thread',price:15000,reusable:false,description:'Single use. Each parent carrying the chosen Prodigy stat gets a 65% roll, or 71.824% with the Charm. Other stats keep their normal or Charm odds.'},
  {id:'broodingWarmer',name:'Brooding Warmer',price:200000,reusable:true,description:'Reusable. New eggs need 384 steps instead of 512. Existing eggs keep their original requirements.'}
 ];
 export const nurseryItemCount=(state,id)=>state.nurseryItems?.[id]||0;

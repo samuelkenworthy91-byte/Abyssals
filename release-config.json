@@ -1,7 +1,7 @@
 {
-  "version": "0.90.34",
-  "version_code": 129,
-  "filename": "Abyssals-v0.90.34-Permanent-Growth.apk",
-  "title": "Abyssals v0.90.34 — Permanent Growth",
-  "notes": "Every original permanent growth-point bonus uses 1 + completed evolutions: Prodigy, stewardship, department-store growth tonics, nursery/memorial gifts and the rescue gift’s original birth-form advantage. Partner summaries display per-stat source maths. Tonic and batch-stewardship previews, donor eligibility and actual gains use the same multiplier. Original investments and dose/lesson counts stay unchanged; existing bonuses update future growth without rerolling earned stats. The rescue gift’s 300% limit applies only to initial gift generation; evolution, stewardship and tonics have no growth-percentage ceiling once it joins you. Temporary draughts stay flat. Breeding excludes nonheritable stewardship/store training and evolution multiplier inflation. Preserves existing saves, eggs, lives, permanent deaths, quests and original APK signing. Existing shop prices and breeding fee unchanged."
+  "version": "0.90.35",
+  "version_code": 130,
+  "filename": "Abyssals-v0.90.35-Two-Parent-Inheritance.apk",
+  "title": "Abyssals v0.90.35 — Two-Parent Inheritance",
+  "notes": "Same-family parents each independently roll for every original Prodigy bonus they carry. One carrier keeps its 33.176% base chance; two carriers give 55.345%. Nursery items boost each carrier’s roll and pairing previews show the combined per-stat and all-trait odds. If both succeed, keep the stronger original bonus once; if only one succeeds, inherit that parent’s original bonus. No bonus addition or evolution inflation. Existing eggs, offspring, saves, permanent growth, quests, lives, prices and original APK signing are preserved."
 }

@@ -1,9 +1,9 @@
 import {canonicalMoveId} from './teamcraft-data.js?v=0.90.30';
 import {redirectInheritance} from './teamcraft-progress.js?v=0.90.30';
-import {validateInheritance} from './breeding-inheritance.js?v=0.90.33';
+import {validateInheritance} from './breeding-inheritance.js?v=0.90.35';
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
-import {validateNurserySnapshot} from './breeding.js?v=0.90.33';
+import {validateNurserySnapshot} from './breeding.js?v=0.90.35';
 import {PALADIN_IDS} from './paladin-data.js?v=0.87.0';
 export const SAVE_FILE_FORMAT='abyssals-expedition';
 export const SAVE_FILE_VERSION=1;
