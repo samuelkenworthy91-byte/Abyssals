@@ -1,6 +1,7 @@
 // Marasen geometry is shared by collision, bridge art, furniture and entrances.
 export const AQUATIC_ASSETS=Object.fromEntries(['exchange','arena','citadel','pavilion','pearl','water','bridge','teal'].map(n=>['aquatic'+n[0].toUpperCase()+n.slice(1),'aquatic-'+n+'-v089.webp']));
 export const EXCHANGE_FLOORS=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
+AQUATIC_ASSETS.exchangeLift='exchange-lift.webp';
 const palettes=[['#d6d2ad','#4e827a'],['#b8c7d2','#335f85'],['#d0cdc1','#657c85'],['#c4d3bd','#527b68'],['#bdcfb7','#466e57'],['#dfd7b5','#977b48']];
 export const EXCHANGE_STAIRS=[{x:5,y:7,w:5,h:5,gate:[7,9]},{x:38,y:7,w:5,h:5,gate:[40,9]}];
 const furniture=[
@@ -24,7 +25,8 @@ export function installAquaticMarasen(maps,doors){
   const m=maps['marasenExchange'+i];Object.assign(m,{exchangeBackdrop:'exchangeBackdrop'+i,exchangeFloor:i,name:'Grand Exchange · '+(i+1)+'F · '+EXCHANGE_FLOORS[i],terrain:'interior',verdantKind:'exchangeInterior',props:[],road:[],sidePaths:[],grass:[],marasenWater:[]});
   m.spots=[{id:'mr-exchange-counter',label:'Browse '+EXCHANGE_FLOORS[i],x:24,y:13,questProp:true},{id:'mr-exchange-clerk',label:'Exchange '+(i+1)+'F attendant',x:25,y:9,sprite:0}];
   if(i===5)m.spots.push({id:'mr-merchant-guild',label:'Five-Bank Accord · merchant guild registrar',x:33,y:25,questProp:true});
-  m.gates=[i?gate('mr-exchange-directory','Floor directory',24,28,null,null,'marasen-directory'):gate('mr-exchange-leave','Leave exchange',24,28,'marasen',[10,16,'down']),i?gate('mr-exchange-down','Down to '+i+'F',7,9,'marasenExchange'+(i-1),[40,12,'down']):gate('mr-exchange-ground','Ground floor landing',7,9,null,null,'marasen-ground-landing'),i<5?gate('mr-exchange-up','Up to '+(i+2)+'F',40,9,'marasenExchange'+(i+1),[7,12,'down']):gate('mr-exchange-roof','Top floor landing',40,9,null,null,'marasen-top-landing')];
+  m.gates=[i?gate('mr-exchange-lift','Lift · choose a floor',24,28,null,null,'marasen-lift'):gate('mr-exchange-leave','Leave exchange',24,28,'marasen',[10,16,'down']),i?gate('mr-exchange-down','Down to '+i+'F',7,9,'marasenExchange'+(i-1),[40,12,'down']):gate('mr-exchange-ground','Ground floor landing',7,9,null,null,'marasen-ground-landing'),i<5?gate('mr-exchange-up','Up to '+(i+2)+'F',40,9,'marasenExchange'+(i+1),[7,12,'down']):gate('mr-exchange-roof','Top floor landing',40,9,null,null,'marasen-top-landing')];
+  if(i===0)m.gates.push(gate('mr-exchange-lift','Lift · choose a floor',31,28,null,null,'marasen-lift'));
  }
  const building=(asset,x,y,w,h,door,label)=>({asset,x,y,w,h,door,label});
  const bridge=(x,y,w,h,axis)=>({x,y,w,h,axis});
@@ -76,7 +78,7 @@ export function drawExchangeInterior(c,m,asset){const i=m.exchangeFloor,[floor,a
  for(let x=2;x<=45;x++){asset(c,'fortWall',x,5,1,2);asset(c,'fortWall',x,29,1,1);}for(let y=7;y<29;y++){asset(c,'fortWall',2,y,1,1);asset(c,'fortWall',45,y,1,1);}
  stairs(c,5,7,i?'DOWN '+i+'F':'GROUND',asset);stairs(c,38,7,i<5?'UP '+(i+2)+'F':'TOP FLOOR',asset);
  for(const p of exchangeProps(i))asset(c,...p);
- plaque(c,24*16,6*16,`${i+1}F · ${EXCHANGE_FLOORS[i].toUpperCase()}`,230);asset(c,'mat',23,27,3,2);plaque(c,24*16,30*16,i?'DIRECTORY':'EXIT TO MARASEN',130);c.restore();}
+ plaque(c,24*16,6*16,`${i+1}F · ${EXCHANGE_FLOORS[i].toUpperCase()}`,230);asset(c,'mat',23,27,3,2);plaque(c,24*16,30*16,i?'LIFT':'EXIT TO MARASEN',130);const lx=i?23:30;asset(c,'exchangeLift',lx,27,3,3);if(!i)plaque(c,31*16,30*16,'LIFT',60);c.restore();}
 export function drawAquaticSurface(c,m,x,y,flags,asset){const wet=inRects(m.marasenWater,x,y);c.fillStyle=wet?'#319aa9':'#c3c8af';c.fillRect(x*16,y*16,16,16);asset?.(c,wet?'verdantWaterA':'aquaticPearl',x,y,1,1,{x:x%8*16,y:y%8*16,w:16,h:16});if(flags.road&&!wet){c.save();c.globalAlpha=.2;c.fillStyle='#4b9296';c.fillRect(x*16,y*16,16,16);c.restore();}}
 function drawBridge(c,b,asset){c.save();for(let y=b.y;y<b.y+b.h;y++)for(let x=b.x;x<b.x+b.w;x++){c.fillStyle=(x+y)%2?'#c0c6b8':'#d5d6c1';c.fillRect(x*16,y*16,16,16);c.fillStyle='#789c9c';c.fillRect(x*16,y*16+15,16,1);c.fillRect(x*16+15,y*16,1,16);c.fillStyle='#f2ead0';c.fillRect(x*16+1,y*16+1,14,2);}const v=b.axis==='v';c.fillStyle='#345d70';c.strokeStyle='#e5dfbd';c.lineWidth=2;
  if(v){for(const x of [b.x*16,(b.x+b.w)*16-3]){c.fillRect(x,b.y*16,3,b.h*16);for(let y=b.y*16;y<=(b.y+b.h)*16;y+=16){c.fillRect(x-2,y-3,7,6);c.strokeRect(x-2,y-3,7,6);}}}else{for(const y of [b.y*16,(b.y+b.h)*16-3]){c.fillRect(b.x*16,y,b.w*16,3);for(let x=b.x*16;x<=(b.x+b.w)*16;x+=16){c.fillRect(x-3,y-2,6,7);c.strokeRect(x-3,y-2,6,7);}}}c.restore();}

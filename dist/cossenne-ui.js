@@ -1,6 +1,6 @@
 import {farmAnimalLine} from './cossenne-farm.js?v=0.90.20';
 import {ORCHARD_BRIEFS,orchardNextStep} from './orchard-guidance.js?v=0.87.0';
-import {choiceRewardText} from './choice-rewards.js?v=0.87.0';
+import {choiceRewardText} from './choice-rewards.js?v=0.90.40';
 import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.87.0';
 import {ORCHARD_RECORDS,ORCHARD_HISTORY,COSSENNE_WALK} from './cossenne-dialogue.js?v=0.87.0';
 import * as rules from './cossenne-rules.js?v=0.87.0';

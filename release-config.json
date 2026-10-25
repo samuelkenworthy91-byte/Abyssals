@@ -1,8 +1,8 @@
 {
-  "version": "0.90.39",
-  "version_code": 134,
-  "filename": "Abyssals-v0.90.39-Fort-Care.apk",
-  "title": "Abyssals v0.90.39 \u2014 Fort Care",
-  "notes": "All HP-payment moves require the full cost while leaving at least 1 HP; unaffordable moves fail without boosts or PP loss and are excluded from AI choices. Audits every legendary and mythical capture tier, including Waranwei, with shared preview/roll regression coverage. Adds healers and town care on all five Sunken Fort floors: healing, reserve swaps, eggs, breeding and the full care menu are available upon reaching each floor. Preserves quests, permanent deaths, saves, package and original signing. Includes the rebuilt offline PWA.",
-  "pwa_filename": "Abyssals-v0.90.39-PWA.zip"
+  "version": "0.90.40",
+  "version_code": 135,
+  "filename": "Abyssals-v0.90.40-Bag-and-Lift.apk",
+  "title": "Abyssals v0.90.40 \u2014 Bag Artwork and Exchange Lift",
+  "notes": "Matching inventory artwork for all bag supplies, held items, evolution items and nursery supplies. Type-coloured move codexes. Patient Rations retired from shops, rewards and combat; existing stock converts one-for-one to Slow Stew. Adds a walk-in Grand Exchange lift with floor and shop descriptions. Development patch staged without triggering an APK build; further requested changes will be included before release.",
+  "pwa_filename": "Abyssals-v0.90.40-PWA.zip"
 }

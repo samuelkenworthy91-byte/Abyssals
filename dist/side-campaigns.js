@@ -1,4 +1,4 @@
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.87.0';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
 import {menagerieEncounterRoute} from './menagerie-encounters.js?v=0.87.0';
 import {isReducedMotion} from './motion.js?v=0.87.0';
 import {MECHANISM_ART,drawQuestMechanism,drawExpeditionGate,drawEvidence} from './quest-scenery.js?v=0.87.0';

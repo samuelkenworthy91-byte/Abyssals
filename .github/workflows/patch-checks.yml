@@ -1,0 +1,42 @@
+name: Check pending patch without packaging
+on:
+  push:
+    branches: ['patch/**']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            dist
+            scripts
+            tests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate inventory, save migration dependencies and map navigation
+        run: |
+          for file in dist/*.js; do node --check "$file"; done
+          node tests/bag-lift.test.mjs
+          node tests/marasen-navigation.test.mjs
+          node tests/marasen-store.test.mjs
+          node tests/expedition-choices.test.mjs
+          node tests/status-capture.test.mjs
+          python3 scripts/validate-game.py
+      - name: Install browser for portrait interaction checks
+        run: |
+          npm install --no-save --package-lock=false playwright@1.51.1
+          npx playwright install chromium
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Check every bag pocket and all six lift journeys
+        run: node tests/bag-lift-browser.cjs
+      - name: Preserve phone screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pending-patch-phone-checks
+          path: build/qa

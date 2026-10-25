@@ -1,6 +1,6 @@
 import {reliefJournal} from './cossenne-services.js?v=0.87.0';
 import {orchardNextStep} from './orchard-guidance.js?v=0.87.0';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.87.0';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
 import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.87.0';
 export const cossenneUnlocked=s=>['SPARED','EXECUTED'].includes(s.fates?.['LDR-03']);
 export function cossenneState(s){s.cossenne??={};const q=s.cossenne;q.version=1;q.walk??=[];q.valves??=[];q.events??=[];q.expeditions??={};return q;}

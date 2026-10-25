@@ -1,7 +1,7 @@
 import {trialState,trialsReady} from './court-trials.js?v=0.87.0';
 import {COURT_RAIDERS,pendingCourtRaider,courtRaidCleared,installCourtRaiders,installCourtRaidTrainers} from './court-raiders.js?v=0.87.0';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.87.0';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
 import {courtState} from './paladin-roaming.js?v=0.87.0';
 export const COURT_ROOMS=['courtTurn','bannerwood','courtProcession','courtPlinths','crownfall','courtApproach','emptyThrone'];
 export const COURT_TITLES=['The Forgotten Turn','Bannerwood','The Broken Procession','The Thirteen Plinths','Crownfall Ravine','The Sceptre Road','The Empty Throne'];

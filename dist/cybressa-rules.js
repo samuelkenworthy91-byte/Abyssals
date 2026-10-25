@@ -1,6 +1,6 @@
 import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.24';
 import {DATA} from './data.js?v=0.87.0';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.87.0';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
 import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.87.0';
 import {passObjective,PASS_ROUTES} from './mountain-pass.js?v=0.90.20';
 import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS} from './cybressa-data.js?v=0.90.20';

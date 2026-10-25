@@ -1,12 +1,12 @@
 import {migrateRenewalEconomy,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.38';
 import {migrateTeamcraftState} from './teamcraft-progress.js?v=0.90.30';
 import {DATA} from './data.js?v=0.90.30';
-import {migrateGeneralStores} from './shopkeepers.js?v=0.90.29';
+import {migrateGeneralStores} from './shopkeepers.js?v=0.90.40';
 import {visitedTravelRooms} from './fast-travel.js?v=0.87.0';
 import {migrateMemorialMoves} from './finale-rules.js?v=0.90.19';
 import {cossenneServices} from './cossenne-services.js?v=0.87.0';
 import {SPECIALIST_SUPPLIES} from './specialist-supplies.js?v=0.87.0';
-import {migrateChoiceRewards} from './choice-rewards.js?v=0.87.0';
+import {migrateChoiceRewards} from './choice-rewards.js?v=0.90.40';
 import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {migrateCharacterNames} from './character-names.js?v=0.87.0';
 import {memorialState} from './memorial.js?v=0.87.0';
@@ -18,6 +18,9 @@ export function migrateProgress(state){
  migrateTeamcraftState(state,DATA.moves);cossenneServices(state);migrateGeneralStores(state,visitedTravelRooms(state));
  for(const u of [...(state.party||[]),...(state.reserve||[])])if(u.abilitySlot==='hidden')u.hiddenAbilityUnlocked=true;migrateCharacterNames(state);normalizeBinoculars(state);if(!Number.isSafeInteger(state.lifeEmbers)||state.lifeEmbers<0)state.lifeEmbers=0;memorialState(state);
  for(const key of ['emergencyEvacs','armedEscorts','escortSteps','heartyFood','patientRations','freshMeat',...SPECIALIST_SUPPLIES.map(i=>i.key)])if(!Number.isSafeInteger(state[key])||state[key]<0)state[key]=0;
+ // Retired food converts once, including imported pre-patch saves.
+ if(state.patientRations>0){state.slowStews+=state.patientRations;state.patientRations=0;}
+ state.generalStoreSupplies=state.generalStoreSupplies?.filter(k=>k!=='patientRations');
  state.lastPriestRest??=null;
  state.heldItems??={};state.supplyClaims??=[];state.tunnelPuzzle??={sequence:[],solved:false};
  state.trainerPayouts=[...new Set([...(state.trainerPayouts||[]),...(state.prizeClaims||[])])];

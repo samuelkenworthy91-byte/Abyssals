@@ -1,3 +1,4 @@
+import {itemIcon,codexIcon} from './item-art.js?v=0.90.40';
 import {EVOLUTIONS} from './evolution-data.js?v=0.90.38';
 import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.35';
 import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
@@ -57,7 +58,7 @@ export function growthTonicQuote(s,uid,kind,stat){
 export function growthTonic(s,uid,kind,stat){const q=growthTonicQuote(s,uid,kind,stat);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+1;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
 function showFloor(a,floor){const {state,openModal,$,document,rewardTransaction,shop}=a,items=storeItems(floor);
  if(floor===0){shop('marasenMarket');return;}
- openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div><b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='nursery'?`<small>${it.reusable?(nurseryItemCount(state,it.id)?'Owned · reusable':'Reusable purchase'):'In nursery supplies: '+nurseryItemCount(state,it.id)}</small>`:''}${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.kind==='nursery'&&it.reusable&&nurseryItemCount(state,it.id)>0||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap. Nursery items are chosen at Walter when creating an egg; the Charm stacks with Feed or Thread.</p>`);
+ openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div>${it.kind==='codex'?codexIcon(DATA.moves.find(m=>m.id===Number(it.id))):itemIcon(it.id)}<b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='nursery'?`<small>${it.reusable?(nurseryItemCount(state,it.id)?'Owned · reusable':'Reusable purchase'):'In nursery supplies: '+nurseryItemCount(state,it.id)}</small>`:''}${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.kind==='nursery'&&it.reusable&&nurseryItemCount(state,it.id)>0||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap. Nursery items are chosen at Walter when creating an egg; the Charm stacks with Feed or Thread.</p>`);
  for(const btn of document.querySelectorAll('[data-mr-buy]'))btn.onclick=()=>{const it=items[Number(btn.dataset.mrBuy)];if(!it)return;
  if(it.kind==='pp'){enduranceTonicMenu(a,()=>showFloor(a,floor));return;}
  if(it.kind==='growth'){showTonic(a,it);return;}
@@ -172,7 +173,13 @@ function raceResults(a,record){const {openModal,$,state}=a;
 }
 export function marasenExtraInteract(id,a){const {room,AREA_GATES,state,warp,showDialogue,line,openModal,$}=a;
  const gate=AREA_GATES[room]?.find(g=>g.id===id);
- if(gate?.action==='marasen-directory'){showDialogue([line('Grand Exchange directory','1F Provisions · 2F Technique Library · 3F Relic Gallery · 4F Evolution Atelier · 5F Growth Apothecary · 6F Merchant’s Terrace. Corner staircases connect every floor. Descend to 1F to leave.')]);return true;}
+ if(gate?.action==='marasen-lift'){
+  const current=Number(room.replace('marasenExchange',''));
+  const shops=['Food, medicine and field supplies','Move codexes and techniques','Held items and battle relics','Triskit evolution stones and Rivet cores','Level, growth and endurance tonics; nursery supplies','River Bait, Emergency Evacs and Life Ember'];
+  openModal('Grand Exchange · Lift',`<p>Choose a floor. You are on <b>${current+1}F · ${FLOOR_NAMES[current]}</b>.</p><div class="exchange-lift-menu">${FLOOR_NAMES.map((name,i)=>`<button data-lift-floor="${i}" ${i===current?'disabled aria-current="true"':''}><b>${i+1}F · ${name}${i===current?' · current floor':''}</b><small>${shops[i]}${i===0?' · Exit to Marasen':''}</small></button>`).join('')}</div>`);
+  for(const button of a.document.querySelectorAll('[data-lift-floor]'))button.onclick=()=>{const floor=Number(button.dataset.liftFloor);if(!Number.isInteger(floor)||floor<0||floor>5||floor===current)return;a.closeModal();void warp('marasenExchange'+floor,floor?24:31,26,'up');};
+  return true;
+ }
  if(['marasen-ground-landing','marasen-top-landing'].includes(gate?.action)){showDialogue([line('Exchange landing',gate.action==='marasen-ground-landing'?'This is the ground floor. The exit is at the bottom centre of the room.':'This is the top floor. Use the west corner staircase to descend.')]);return true;}
  if(gate?.action==='marasen-city'){void warp(gate.to,...gate.arrival);return true;}
  if(gate?.action==='marasen-main-darius'){
