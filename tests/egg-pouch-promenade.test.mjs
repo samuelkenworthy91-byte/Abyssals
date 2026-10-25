@@ -11,7 +11,7 @@ const state={begun:true,playerName:'QA',money:1000000,party:[parent('a'),parent(
 const lay=()=>createBreedingEgg(state,'a','b',{random:()=>0,inheritancePlans:[{stat:'',moveId:null},{stat:'',moveId:null}]});
 assert.equal(eggCapacity(state),3);for(let i=0;i<3;i++)assert(lay());let before=JSON.stringify(state);assert.equal(lay(),null);assert.equal(JSON.stringify(state),before);
 assert.deepEqual(POUCH_UPGRADES.map(i=>i.price),[10000,20000,40000,80000,160000]);assert.deepEqual(POUCH_UPGRADES.map(i=>i.capacity),[4,5,6,8,10]);
-assert(sellsPouchUpgrades('philomereShop'));assert(!sellsPouchUpgrades('shop'));assert(!sellsPouchUpgrades('dorelemShop'));assert(sellsPouchUpgrades('marasen'));
+assert(sellsPouchUpgrades('philomereShop'));assert(!sellsPouchUpgrades('shop'));assert(!sellsPouchUpgrades('dorelemShop'));assert(sellsPouchUpgrades('marasen'));assert(sellsPouchUpgrades('cayfenShop'));assert(sellsPouchUpgrades('ramelleShop'));
 const originalEggs=JSON.stringify(state.nursery.eggs);
 for(let tier=0;tier<5;tier++){assert.equal(nextPouchUpgrade(state),POUCH_UPGRADES[tier]);const funds=state.money;assert(buyPouchUpgrade(state,tier));assert.equal(state.money,funds-POUCH_UPGRADES[tier].price);before=JSON.stringify(state);assert(!buyPouchUpgrade(state,tier),'stale confirmation never buys another tier');assert.equal(JSON.stringify(state),before);assert.equal(eggCapacity(state),POUCH_UPGRADES[tier].capacity);}
 assert.equal(JSON.stringify(state.nursery.eggs),originalEggs);assert.equal(nextPouchUpgrade(state),null);assert(!buyPouchUpgrade(state));
