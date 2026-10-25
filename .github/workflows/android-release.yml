@@ -54,6 +54,7 @@ jobs:
         run: |
           timeout 180s node tests/prodigy-evolution-browser.cjs
           timeout 300s node tests/nursery-care-browser.cjs
+          timeout 240s node tests/egg-pouch-promenade-browser.cjs
           timeout 180s node tests/teamcraft-browser.cjs
           timeout 180s node tests/expedition-choices-browser.cjs
           timeout 180s node tests/field-quality-browser.cjs

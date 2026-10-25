@@ -1,7 +1,7 @@
 {
-  "version": "0.90.35",
-  "version_code": 130,
-  "filename": "Abyssals-v0.90.35-Two-Parent-Inheritance.apk",
-  "title": "Abyssals v0.90.35 — Two-Parent Inheritance",
-  "notes": "Same-family parents each independently roll for every original Prodigy bonus they carry. One carrier keeps its 33.176% base chance; two carriers give 55.345%. Nursery items boost each carrier’s roll and pairing previews show the combined per-stat and all-trait odds. If both succeed, keep the stronger original bonus once; if only one succeeds, inherit that parent’s original bonus. No bonus addition or evolution inflation. Existing eggs, offspring, saves, permanent growth, quests, lives, prices and original APK signing are preserved."
+  "version": "0.90.36",
+  "version_code": 131,
+  "filename": "Abyssals-v0.90.36-Willowglass-Keepers.apk",
+  "title": "Abyssals v0.90.36 — Willowglass & Keepers",
+  "notes": "Five permanent Egg Pouch upgrades from Philomere’s apothecary and later general stores: 10,000 / 20,000 / 40,000 / 80,000 / 160,000 doubloons for capacities 4 / 5 / 6 / 8 / 10. Existing saves start at their original three slots; upgrades preserve eggs and progress. Discover the scenic old wooden Willowglass Viaduct through Philomere’s southern garden arch. Dedicated high-end pixel art shows ivy-covered timber supports over a vast misty evergreen marsh. A fixed aerial view keeps both ends on screen; tap either end to walk the full 360 ordinary steps across. Every carried egg progresses normally, including all ten; a return trip readies a fresh 512-step egg. No bonus steps for entering, idling, tapping or loading. Bridge coordinates and pouch purchases survive save export/import. Retains two-parent Prodigy inheritance, permanent growth, prices, lives, quests and original APK signing."
 }

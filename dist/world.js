@@ -1,3 +1,4 @@
+import {roomGrid,isPromenade,promenadeWalkable,drawPromenade} from './promenade.js?v=0.90.36';
 import {FINALE_ASSETS} from './finale-art.js?v=0.90.19';
 import {BOTRUNE_ASSETS} from './botrune-art.js?v=0.90.20';
 import {onCourtArtChange} from './paladin-art.js?v=0.90.20';
@@ -9,7 +10,7 @@ import {BIOME_ASSETS,biomeAsset,drawBiomeDetails} from './biome-world.js?v=0.90.
 import {SHOPKEEPERS} from './shopkeepers.js?v=0.90.13';
 import {EXTRA_TRAINERS} from './route-progression.js?v=0.87.0';
 import {INTERIORS,interiorBlocked,drawInterior} from './interiors.js?v=0.90.13';
-import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.20';
+import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.36';
 // Authored prototype geometry. All movement/collision is defined here, independently of art.
 export const TILE=16, WIDTH=48, HEIGHT=32;
 export const AREA_GATES={town:[{id:'exit',x:46,y:17,to:'march',arrival:[3,17,'right'],action:'departure'}],march:[{id:'town-return',x:1,y:17,to:'town',arrival:[44,17,'left']},{id:'march-stage-forward',x:46,y:17,to:'march2',arrival:[3,17,'right'],action:undefined}],scrub:[{id:'march-return',x:1,y:17,to:'march',arrival:[44,17,'left']},{id:'scrub-boundary',x:46,y:17}]};
@@ -55,6 +56,7 @@ const props=[
  {asset:'memorial',x:35,y:22,w:5,h:4,solid:[35,22,39,24]}
 ];
 export function isBlocked(room,x,y){
+ if(isPromenade(room))return !promenadeWalkable(x,y);
  if(x<0||y<0||x>=WIDTH||y>=HEIGHT)return true;
  if(NEW_MAPS[room])return newBlocked(room,x,y);
  if(room==='hospice'&&newSpots(room).some(s=>s.sprite!==undefined&&s.x===x&&s.y===y))return true;
@@ -118,6 +120,7 @@ function buildMap(room){const surface=document.createElement('canvas');surface.w
  if(!NEW_MAPS[room])drawBiomeDetails(c,room,drawWorldAsset,(x,y)=>!isBlocked(room,x,y));
  return surface;
 }
-export function drawMap(ctx,room){if(!art.grass.complete||!art.floor.complete)return;if(!mapCache.has(room))mapCache.set(room,buildMap(room));const map=mapCache.get(room);if(map)ctx.drawImage(map,0,0);}
+export function drawMap(ctx,room){if(isPromenade(room)){drawPromenade(ctx);return;}if(!art.grass.complete||!art.floor.complete)return;if(!mapCache.has(room))mapCache.set(room,buildMap(room));const map=mapCache.get(room);if(map)ctx.drawImage(map,0,0);}
 
-export function nearestWalkable(room,x,y){if(!isBlocked(room,x,y))return [x,y];let best=[24,23],distance=Infinity;for(let ty=0;ty<HEIGHT;ty++)for(let tx=0;tx<WIDTH;tx++){const d=Math.abs(tx-x)+Math.abs(ty-y);if(d<distance&&!isBlocked(room,tx,ty)){distance=d;best=[tx,ty];}}return best;}
+export function nearestWalkable(room,x,y){if(!isBlocked(room,x,y))return [x,y];let best=[24,23],distance=Infinity;for(let ty=0;ty<roomGrid(room)[1];ty++)for(let tx=0;tx<roomGrid(room)[0];tx++){const d=Math.abs(tx-x)+Math.abs(ty-y);if(d<distance&&!isBlocked(room,tx,ty)){distance=d;best=[tx,ty];}}return best;}
+

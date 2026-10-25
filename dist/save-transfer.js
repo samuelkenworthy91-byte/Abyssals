@@ -1,14 +1,15 @@
+import {roomGrid} from './promenade.js?v=0.90.36';
 import {canonicalMoveId} from './teamcraft-data.js?v=0.90.30';
 import {redirectInheritance} from './teamcraft-progress.js?v=0.90.30';
 import {validateInheritance} from './breeding-inheritance.js?v=0.90.35';
 import {DATA} from './data.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
-import {validateNurserySnapshot} from './breeding.js?v=0.90.35';
+import {validateNurserySnapshot} from './breeding.js?v=0.90.36';
 import {PALADIN_IDS} from './paladin-data.js?v=0.87.0';
 export const SAVE_FILE_FORMAT='abyssals-expedition';
 export const SAVE_FILE_VERSION=1;
 export const SAVE_FILE_LIMIT=5*1024*1024;
-export const SAVE_GAME_VERSION='0.90.34';
+export const SAVE_GAME_VERSION='0.90.36';
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const fail=message=>{throw new Error(message);};
 function inspect(value,depth=0,budget={left:200000}){if(--budget.left<0||depth>80)fail('This save file is too complex.');if(typeof value==='number'&&!Number.isFinite(value))fail('The save contains an invalid number.');if(value&&typeof value==='object')for(const [key,v]of Object.entries(value)){if(['__proto__','constructor','prototype'].includes(key))fail('The save contains an unsupported field.');inspect(v,depth+1,budget);}}
@@ -21,9 +22,9 @@ export function validateTransferSnapshot(snapshot,{speciesIds,moveIds,rooms,stat
  if(s.paladinCourt!==undefined){const q=s.paladinCourt;if(!object(q)||!object(q.roamers)||q.released!==undefined&&typeof q.released!=='boolean')fail('The roaming court record is invalid.');for(const [id,r]of Object.entries(q.roamers)){if(!PALADIN_IDS.includes(id)||!object(r)||!['roaming','captured','killed'].includes(r.status))fail('A roaming guardian record is invalid.');if(r.unit){unit(r.unit);if(r.unit.species.id!==id||r.unit.uid!=='court:'+id||r.status!=='roaming')fail('A roaming guardian identity is invalid.');}}}
  if(Array.isArray(s.nursery?.eggs))for(const egg of s.nursery.eggs)redirectInheritance(egg.inheritance);validateNurserySnapshot(s);
  const partners=[...s.party,...s.reserve,...s.dead];partners.forEach(unit);if(new Set(partners.map(u=>u.uid)).size!==partners.length)fail('The save contains duplicate partner identities.');
- if(typeof snapshot.room!=='string'||rooms&&!rooms.has(snapshot.room))fail('This save’s location is unavailable in this build. Update the game first.');const p=snapshot.player;if(!object(p)||!Number.isInteger(p.x)||!Number.isInteger(p.y)||p.x<0||p.x>=48||p.y<0||p.y>=32||!['up','down','left','right'].includes(p.facing))fail('The saved position is invalid.');
+ if(typeof snapshot.room!=='string'||rooms&&!rooms.has(snapshot.room))fail('This save’s location is unavailable in this build. Update the game first.');const p=snapshot.player;if(!object(p)||!Number.isInteger(p.x)||!Number.isInteger(p.y)||p.x<0||p.x>=roomGrid(snapshot.room)[0]||p.y<0||p.y>=roomGrid(snapshot.room)[1]||!['up','down','left','right'].includes(p.facing))fail('The saved position is invalid.');
  for(const key of ['phaseElapsed','worldRandom'])if(snapshot[key]!==undefined&&(!Number.isFinite(snapshot[key])||snapshot[key]<0))fail('The expedition clock or random state is invalid.');
- if(snapshot.returnDoor){const d=snapshot.returnDoor;if(!object(d)||!Number.isInteger(d.x)||!Number.isInteger(d.y)||d.x<0||d.x>=48||d.y<0||d.y>=32||(rooms&&!rooms.has(d.room||'town')))fail('The saved return doorway is invalid.');}
+ if(snapshot.returnDoor){const d=snapshot.returnDoor;if(!object(d)||!Number.isInteger(d.x)||!Number.isInteger(d.y)||d.x<0||d.x>=roomGrid(d.room)[0]||d.y<0||d.y>=roomGrid(d.room)[1]||(rooms&&!rooms.has(d.room||'town')))fail('The saved return doorway is invalid.');}
  if(snapshot.battle){const b=snapshot.battle;if(!object(b)||b.kind!=='wild'||!Array.isArray(b.enemies)||!b.enemies.length||b.enemies.length>6||!partners.some(u=>u.uid===b.playerUid)||!Number.isInteger(b.randomState)||b.randomState<0||b.randomState>4294967295)fail('The saved battle is incomplete.');if(b.relicDouble!==undefined&&typeof b.relicDouble!=='boolean')fail('The saved double battle flag is invalid.');if(b.relicDouble===true&&!object(b.alliedRivet))fail('The saved double battle is missing its ally.');if(b.finaleDouble){if(b.relicDouble!==true||!Array.isArray(b.activeEnemyIndices)||b.activeEnemyIndices.length!==2||new Set(b.activeEnemyIndices.filter(i=>i>=0)).size!==b.activeEnemyIndices.filter(i=>i>=0).length||b.activeEnemyIndices.some(i=>!Number.isInteger(i)||i< -1||i>=b.enemies.length)||!Number.isInteger(b.reserveCursor)||b.reserveCursor<2||b.reserveCursor>b.enemies.length)fail('The saved finale battle positions are invalid.');}if(b.finaleUnique&&!['guan','fei','crux','gehennuar','suncub'].includes(b.finaleUnique))fail('The saved guardian is invalid.');b.enemies.forEach(unit);if(b.alliedRivet)unit(b.alliedRivet);}
  return snapshot;
 }
