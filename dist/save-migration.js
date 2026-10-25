@@ -1,3 +1,4 @@
+import {migrateRenewalEconomy,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.38';
 import {migrateTeamcraftState} from './teamcraft-progress.js?v=0.90.30';
 import {DATA} from './data.js?v=0.90.30';
 import {migrateGeneralStores} from './shopkeepers.js?v=0.90.29';
@@ -21,9 +22,11 @@ export function migrateProgress(state){
  state.heldItems??={};state.supplyClaims??=[];state.tunnelPuzzle??={sequence:[],solved:false};
  state.trainerPayouts=[...new Set([...(state.trainerPayouts||[]),...(state.prizeClaims||[])])];
  state.evolutionItems={...(state.evolutionInventory||{}),...(state.evolutionItems||{})};
+ migrateRenewalEconomy(state);for(const u of [...(state.party||[]),...(state.reserve||[]),...(state.dead||[])])rememberLegacyRenewalMoves(u);
  state.collectedRelics=[...new Set([...(state.collectedRelics||[]),...(state.evolutionClaims||[]).map(id=>sources[id]).filter(Boolean)])];
  state.rewardQueue=(state.rewardQueue||[]).map(card=>card.kind==='evolution-check'?{...card,kind:'evolve-check'}:card);
  for(const id of ['scrub-shrine-cache','lost-pilgrim','medicine-chain-reward'])if(state.collectedRelics?.includes(id)&&!state.supplyClaims.includes(id))state.supplyClaims.push(id);
  delete state.prizeClaims;delete state.evolutionInventory;delete state.evolutionClaims;
  adventureState(state);keepContestBait(state);state.trainingTonics??=0;if(!state.levelEvolutionMigration){state.trainingTonics+=Object.entries(state.evolutionItems||{}).filter(([id])=>!id.startsWith('ITEM_RELIC_')).reduce((n,[id,v])=>n+(Number.isSafeInteger(v)&&v>0?v:0),0);state.evolutionItems=Object.fromEntries(Object.entries(state.evolutionItems||{}).filter(([id])=>id.startsWith('ITEM_RELIC_')));state.levelEvolutionMigration=true;}state.moveScrolls??={};migrateHospiceQuest(state);migrateChoiceRewards(state);migrateMemorialMoves(state);return state;
 }
+

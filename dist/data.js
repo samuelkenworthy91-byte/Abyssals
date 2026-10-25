@@ -1,3 +1,4 @@
+import {installEvolutionRenewal} from './evolution-renewal-data.js?v=0.90.38';
 import {installTeamcraft} from './teamcraft-data.js?v=0.90.30';
 import {installExchangeTechniques} from './exchange-techniques.js?v=0.90.24';
 import {installBirds} from './bird-family.js?v=0.87.0';
@@ -61,3 +62,6 @@ installBirds(DATA);
 installExchangeTechniques(DATA);
 
 installTeamcraft(DATA);
+
+
+installEvolutionRenewal(DATA);

@@ -1,3 +1,4 @@
+import {RENEWAL_GROWTH} from './evolution-renewal-data.js?v=0.90.38';
 import {BIRD_GROWTH_PROFILES} from './bird-family.js?v=0.87.0';
 import {PALADIN_GROWTH_PROFILES} from './paladin-data.js?v=0.87.0';
 import {MENAGERIE_GROWTH_PROFILES} from './menagerie-family.js?v=0.87.0';
@@ -30,3 +31,6 @@ for(const [id,rates,reason] of [
 ]){const profile=GROWTH_PROFILES.find(p=>p.id===id);profile.rates=rates;profile.total=Object.values(rates).reduce((a,b)=>a+b,0);profile.reason=reason;profile.qualification='Pebbettle branch specialisation';profile.bonusPoints=0;profile.adjustmentPoints=profile.total-Object.values(profile.authored).reduce((a,b)=>a+b,0);}
 
 GROWTH_PROFILES.push(...BIRD_GROWTH_PROFILES);
+
+
+for(const row of RENEWAL_GROWTH){const p=GROWTH_PROFILES.find(p=>p.id===row.id);if(p)Object.assign(p,row,{reason:'Approved evolution renewal',qualification:'User-approved role specialisation'});else GROWTH_PROFILES.push({...row,authored:{...row.rates},priorities:[],reason:'Cultivated Censmoke physical branch',qualification:'Approved evolution renewal',bonusPoints:0,bonusFraction:0});}

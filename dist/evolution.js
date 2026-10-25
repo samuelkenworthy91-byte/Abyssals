@@ -1,3 +1,4 @@
+import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.38';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats,migrateStats} from './stat-balance.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
@@ -7,6 +8,7 @@ import {STAT_KEYS} from './progression.js?v=0.90.18';
 export function eligibleEvolutions(unit,state={},itemId=null){
  if(!unit||unit.dead||unit.hp<=0||(unit.evolutionHistory||[]).some(e=>e.level===unit.level))return [];
  return EVOLUTIONS.map(e=>tunedEvolution(e,DATA.species.find(s=>s.id===e.from_species_id))).filter(e=>{const c=e.condition;if(e.from_species_id!==unit.species.id||unit.level<c.minimum_level)return false;
+  if(c.method==='STAT')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0)&&statEvolutionAllowed(unit,e);
   if(c.method==='LEVEL')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0);
   if(c.method==='ITEM')return c.item_id===itemId&&(state.evolutionItems?.[itemId]||0)>0;
   // A committed enum is authoritative; history is a compatibility fallback only.
@@ -15,7 +17,7 @@ export function eligibleEvolutions(unit,state={},itemId=null){
  });
 }
 export function promote(unit,path){
- if(unit.dead||unit.hp<=0||unit.species.id!==path.from_species_id||unit.level<path.condition.minimum_level||(unit.evolutionHistory||[]).some(e=>e.level===unit.level)||(path.condition.method!=='ITEM'&&unit.level<=(unit.evolutionBlockedLevel??0)))return null;
+ if(!statEvolutionAllowed(unit,path)||unit.dead||unit.hp<=0||unit.species.id!==path.from_species_id||unit.level<path.condition.minimum_level||(unit.evolutionHistory||[]).some(e=>e.level===unit.level)||(path.condition.method!=='ITEM'&&unit.level<=(unit.evolutionBlockedLevel??0)))return null;
  const target=DATA.species.find(s=>s.id===path.to_species_id);if(!target)return null;
  migrateStats(unit);
  const from=unit.species.id,oldHp=unit.hp,oldMax=unit.maxHp;
@@ -28,5 +30,6 @@ export function levelMoves(unit){return DATA.learnsets.filter(l=>l.species_id===
 export function promoteUsingItem(unit,path,state){if(path.condition.method!=='ITEM'||!eligibleEvolutions(unit,state,path.condition.item_id).some(p=>p.id===path.id))return null;const card=promote(unit,path);if(card)state.evolutionItems[path.condition.item_id]--;return card;}
 export function entryMoves(unit){return DATA.learnsets.filter(l=>l.species_id===unit.species.id&&l.level===0);}
 export function relearnPool(unit){const ids=new Set([unit.species.id,...(unit.evolutionHistory||[]).flatMap(h=>[h.from,h.to])]);const equipped=new Set(unit.moves.map(m=>m.id));
- return [...new Set([...DATA.learnsets.filter(l=>ids.has(l.species_id)&&l.level<=unit.level).map(l=>l.move_id),...(unit.breedingInheritance?.moveId?[unit.breedingInheritance.moveId]:[])])].map(id=>DATA.moves.find(m=>m.id===id)).filter(m=>m?.category&&!equipped.has(m.id));
+ return [...new Set([...DATA.learnsets.filter(l=>ids.has(l.species_id)&&l.level<=unit.level).map(l=>l.move_id),...(unit.legacyRelearnMoveIds||[]),...(unit.breedingInheritance?.moveId?[unit.breedingInheritance.moveId]:[])])].map(id=>DATA.moves.find(m=>m.id===id)).filter(m=>m?.category&&!equipped.has(m.id));
 }
+

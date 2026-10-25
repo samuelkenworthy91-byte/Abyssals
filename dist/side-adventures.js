@@ -39,7 +39,7 @@ export const WATER_BAIT_MODIFIER=1.7;
 
 export const FISH_PRIZES=[
  {id:'tide-pearl',name:'Tide Pearl',rank:1,kind:'evolution',item:'ITEM_EVOLUTION_TIDE_PEARL',quantity:1,text:'Evolve Triskit into Phlegacorn from level 30.'},
- {id:'stormglass',name:'Stormglass',rank:1,kind:'evolution',item:'ITEM_EVOLUTION_STORMGLASS',quantity:1,text:'Evolve Pebbettle into Prodiglow from level 28.'},
+ {id:'training-tonic',name:'Training Tonic',rank:1,kind:'tonic',quantity:1,text:'Raises a living Abyssal one level. Pebbettle evolves by level without an item.'},
  {id:'champion-tonics',name:'Training Tonic × 3',rank:1,kind:'tonic',quantity:3,text:'Each tonic raises one living Abyssal by exactly one level, with growth and move learning.'},
  {id:'veil-charm',name:'Veil Charm',rank:1,kind:'held',item:'HELD_VEIL_CHARM',quantity:1,text:'A held item that improves Special Defence.'},
  {id:'foam-scroll',name:'Foam Lance scroll',rank:1,kind:'scroll',moveId:45,quantity:1,text:'Teach Foam Lance to an Abyssal whose species or previous form has it in its learnset.'},

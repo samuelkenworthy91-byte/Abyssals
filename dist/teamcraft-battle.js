@@ -1,3 +1,4 @@
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.24';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];
@@ -13,7 +14,7 @@ export const stabMultiplier=(u,m)=>u.species.types.includes(m.type_id)?has(u,'Na
 export const soundMove=m=>m.sound??/roar|cry|call|chorus|song|echo|sound|sonic/i.test(m.name);
 export function actionInvalid(u,m,foe=null){
  if(m.effects.some(e=>e.effect_id==='effigy')){const cost=Math.max(1,Math.floor(u.maxHp/4));if(u.hp<=cost||ms(u).decoy)return 'Not enough HP, or an effigy already exists.';}
- if(m.effects.some(e=>e.effect_id==='relay')){if((u.trapped&&!has(u,'Wayfarer')&&!has(u,'Bindproof'))||(ms(u).relayFatigue||0)>0||!selectedAlly(u)||selectedAlly(u)===u)return 'Choose a living benched partner; trapped or fatigued partners cannot relay.';}
+ if(m.effects.some(e=>['relay','healing_relay'].includes(e.effect_id))){if((u.trapped&&!has(u,'Wayfarer')&&!has(u,'Bindproof'))||(ms(u).relayFatigue||0)>0||!selectedAlly(u)||selectedAlly(u)===u)return 'Choose a living benched partner; trapped or fatigued partners cannot relay.';}
  if(m.effects.some(e=>e.effect_id==='clear_weather')&&!u.field?.weather)return 'There is no weather to clear.';
  if(m.effects.some(e=>e.effect_id==='rain_mantle')&&(u.field?.weather!=='RAIN'||(has(u,'Weather Calm')||has(foe,'Weather Calm'))))return 'Rain Mantle requires active rain.';
  if(m.effects.some(e=>e.effect_id==='aurora_screen')&&(u.field?.weather!=='HAIL'||(has(u,'Weather Calm')||has(foe,'Weather Calm'))))return 'Aurora Reprieve requires active hail.';
@@ -33,6 +34,8 @@ export function strikeBarrier(actor,target,move,damage,{floor=0}={},messages=[])
 export function teamcraftEffect(actor,target,move,e,messages,hooks){const {random,changeStage,restoreHP}=hooks,s=ms(actor),f=flags(actor),ally=selectedAlly(actor);const weather=actor.field?.weather,calm=has(actor,'Weather Calm')||has(target,'Weather Calm');
  if(e.effect_id==='protect'){const chain=s.protectChain||0;s.protectChain=chain+1;if(random()<3**(-chain)){s.protection=true;messages.push(`${unitName(actor)} holds fast.`);}else messages.push('Holdfast fails after repeated protection.');return true;}
  if(e.effect_id==='effigy'){const hp=Math.max(1,Math.floor(actor.maxHp/4));actor.hp-=hp;s.decoy={hp,maxHp:hp};s.effigyHandoff=true;messages.push(`An effigy takes the front · ${hp} HP.`);return true;}
+ if(e.effect_id==='active_cleanse'){for(const member of menagerieParty(actor).filter(u=>living(u)&&(u===actor||u.abilityState)&&u.side===actor.side)){member.status=null;member.statusTurns=0;member.confusion=0;member.toxicCounter=0;messages.push(`${unitName(member)} is cleansed by Mourning Dew.`);}return true;}
+ if(e.effect_id==='healing_relay'){if(!living(ally)||ally===actor)return true;s.healingRelay=true;s.relayRequested=ally.uid;delete s.effigyHandoff;delete s.decoy;messages.push(`${unitName(actor)} prepares a restorative passage for ${unitName(ally)}.`);return true;}
  if(e.effect_id==='relay'){s.relayRequested=ally.uid;messages.push(`${unitName(actor)} passes the standard to ${unitName(ally)}.`);return true;}
  if(e.effect_id==='clear_weather'){actor.field.weather=null;actor.field.weatherTurns=0;messages.push('The sky clears.');return true;}
  if(e.effect_id==='clear_offence'){for(const stat of ['attack','sp_attack'])if(target.stages[stat]>0)target.stages[stat]=0;messages.push('The target’s offensive boosts fade.');return true;}
@@ -45,6 +48,7 @@ export function teamcraftEffect(actor,target,move,e,messages,hooks){const {rando
  return false;
 }
 export function departTeamcraft(u,next,switching,messages=[]){if(!living(u)||!living(next)||!switching)return false;const s=ms(u),f=flags(u);let pass=false;
+ if(s.healingRelay){next.stages={};delete ms(next).decoy;delete ms(next).effigyHandoff;const restored=Math.floor(next.maxHp/4*(has(u,'Medicinal Sap')?1.15:1));const before=next.hp;healRelayHP(next,Math.max(1,restored));next.status=null;next.statusTurns=0;next.confusion=0;next.toxicCounter=0;ms(next).relayFatigue=3;messages.push(`${unitName(next)} receives ${next.hp-before} HP and is cleansed.`);return false;}
  if(!(s.relayFatigue>0)&&(s.relayRequested||s.effigyHandoff||has(u,'Relay Plumage'))){next.stages=Object.fromEntries(PASS_STATS.map(k=>[k,Math.max(-6,Math.min(6,u.stages?.[k]||0))]));ms(next).relayFatigue=3;if(s.effigyHandoff&&!s.relayRequested&&s.decoy)ms(next).decoy={...s.decoy};messages.push(`${unitName(next)} inherits five combat stat stages.`);pass=true;}
  if(s.entryCleanse){for(const k in next.stages)if(next.stages[k]<0)next.stages[k]=0;}
  if(has(u,'Sand Reservoir')&&f.silt){ms(next).oneWard={category:'PHYSICAL',multiplier:.8};delete f.silt;}
@@ -60,3 +64,4 @@ export function damagedTeamcraft(actor,target,move,damage,hooks){if(!damage)retu
 }
 export function endTeamcraft(units){const suppressed=units.some(u=>u.hp>0&&has(u,'Weather Calm'));for(const u of units){const s=ms(u);delete s.protection;if(s.relayFatigue>0)s.relayFatigue--;if(s.critGuard>0)s.critGuard--;if(s.wardTurns>0&&--s.wardTurns===0)delete s.oneWard;if(has(u,'Sand Reservoir')&&!suppressed&&u.field?.weather==='SAND'&&living(u)){s.sandTurns=(s.sandTurns||0)+1;if(s.sandTurns>=2)flags(u).silt=true;}else s.sandTurns=0;}}
 export function specialistAIPool(u,foe,moves){const roster=menagerieParty(u).filter(v=>v!==u&&living(v));u.teamcraftTargetUid=roster.sort((a,b)=>(b.hp/b.maxHp)-(a.hp/a.maxHp))[0]?.uid;return moves.filter(m=>!actionInvalid(u,m,foe)&&(!m.effects.some(e=>e.effect_id==='protect')||(ms(u).protectChain||0)<2)&&(!m.effects.some(e=>e.effect_id==='heal')||u.hp<u.maxHp*.65));}
+

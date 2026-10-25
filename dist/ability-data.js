@@ -1,3 +1,4 @@
+import {RENEWAL_ABILITIES} from './evolution-renewal-data.js?v=0.90.38';
 import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.30';
 import {BIRD_ABILITIES} from './bird-abilities.js?v=0.87.0';
 import {PALADIN_ABILITIES} from './paladin-data.js?v=0.87.0';
@@ -463,3 +464,7 @@ ABILITIES.push(...BIRD_ABILITIES);
 for(const a of ABILITIES)if(ABILITY_PATCHES[a.name])Object.assign(a,ABILITY_PATCHES[a.name]);
 
 Object.assign(ABILITIES.find(a=>a.name==='Whiteout Sovereign'),{text:'Sets five turns of hail on entry. First entry each battle raises Speed one stage; no Evasion boost.'});
+
+
+ABILITIES.push(...RENEWAL_ABILITIES.map(a=>({...a,text:a.effect_text})));
+Object.assign(ABILITIES.find(a=>a.name==='Countercharge'),{text:'The first damaging contact hit received after entry grants +2 Attack. Each damaging super-effective move also grants +1 Attack, once per move. Both bonuses stack; +6 battle-stage limit.'});

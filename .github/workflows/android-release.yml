@@ -46,6 +46,9 @@ jobs:
           # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Test evolution renewal on phone
+        timeout-minutes: 3
+        run: node tests/evolution-renewal-browser.cjs
       - name: Test Rivet cores and sprites in Chromium
         timeout-minutes: 3
         run: node tests/rivet-armoury-browser.cjs
@@ -86,12 +89,14 @@ jobs:
           assert isinstance(c['version_code'],int) and c['version_code']>102
           assert re.fullmatch(r'Abyssals-v[\w.\-]+\.apk',c['filename'])
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-            f.write('version='+c['version']+'\ncode='+str(c['version_code'])+'\nfilename='+c['filename']+'\n')
+            f.write('version='+c['version']+'\ncode='+str(c['version_code'])+'\nfilename='+c['filename']+'\npwa='+c['pwa_filename']+'\n')
           PY
       - name: Recover compatible native wrapper
         run: python3 scripts/reconstruct-base.py
       - name: Build APK from committed game source
         run: python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version '${{ steps.config.outputs.version }}' --version-code '${{ steps.config.outputs.code }}' --output 'build/unsigned-${{ steps.config.outputs.version }}.apk'
+      - name: Build verified offline PWA bundle
+        run: python3 scripts/build-pwa.py
       - name: Retain unsigned build for signing recovery
         uses: actions/upload-artifact@v4
         with:
@@ -113,6 +118,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_VERSION: ${{ steps.config.outputs.version }}
           APK_FILENAME: ${{ steps.config.outputs.filename }}
+          PWA_FILENAME: ${{ steps.config.outputs.pwa }}
         run: |
           python3 - <<'PY'
           import json
@@ -122,7 +128,33 @@ jobs:
           PY
           gh release view "v$RELEASE_VERSION" >/dev/null 2>&1 || gh release create "v$RELEASE_VERSION" --target "$GITHUB_SHA" --title "$(cat build/release-title.txt)" --notes-file build/release-notes.md
           gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v$RELEASE_VERSION" -f sha="$GITHUB_SHA" -F force=true >/dev/null
-          gh release upload "v$RELEASE_VERSION" "build/$APK_FILENAME" "build/$APK_FILENAME.sha256" "build/signature-verification-$RELEASE_VERSION.txt" --clobber
+          gh release upload "v$RELEASE_VERSION" "build/$APK_FILENAME" "build/$APK_FILENAME.sha256" "build/signature-verification-$RELEASE_VERSION.txt" "build/$PWA_FILENAME" "build/$PWA_FILENAME.sha256" --clobber
 
 
 
+
+  pwa:
+    needs: release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: dist
+          sparse-checkout-cone-mode: true
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload tested PWA
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Deploy tested PWA
+        id: deployment
+        uses: actions/deploy-pages@v4

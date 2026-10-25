@@ -2,7 +2,7 @@ import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.30'
 import {randomStatusDuration} from './status-rules.js?v=0.90.24';
 import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.87.0';
 import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.87.0';
-import {bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.87.0';
+import {menagerieParty,bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.87.0';
 import {ABILITIES} from './ability-data.js?v=0.87.0';
 import {HELD_ITEMS} from './held-data.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
@@ -25,6 +25,8 @@ export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattl
  if(!newBattle&&!afterFaint){if(heldInfo(u)?.effect?.condition==='switch')abilityBattle(u).flags.defenderReady=true;if(has(u,'Tidal Footwork')&&!abilityBattle(u).flags.tidalFootwork){abilityBattle(u).flags.tidalFootwork=true;raise(['speed'],'voluntary switch raised Speed.');}}
  if(has(u,'Clear Judgment')){for(const k in u.stages)if(u.stages[k]<0)u.stages[k]=0;messages.push(note(u,'negative stages cleared; opposing evasion boosts blocked.'));}
  messages.push(...paladinEnter(u));
+ if(u.hp>0&&!u.dead&&has(u,'Battle Readiness')){const key=Number(u.stats.attack)>=Number(u.stats.sp_attack)?'attack':'sp_attack';changeStage(u,key,1,u,messages);messages.push(note(u,(key==='attack'?'Attack':'Special Attack')+' rose on entry.'));}
+ if(u.hp>0&&!u.dead&&has(u,'Dread Presence')&&foe){for(const opponent of menagerieParty(foe).filter(x=>x.hp>0&&!x.dead&&(x===foe||x.abilityState||(foe.side==='enemy'?field.activeEnemyUids:field.activePlayerUids)?.includes(x.uid))))changeStage(opponent,'attack',-1,u,messages);}
  if(has(u,'Royal Glare')&&foe){changeStage(foe,'speed',-1,u,messages);}
  if(has(u,'Gatekeeper')&&!u.abilityState.allies)raise(['defence','sp_defence'],'last partner: Defence and Special Defence rose.');
  if(has(u,'Last Stand')&&!u.abilityState.allies)raise(['attack','speed'],'last partner: Attack and Speed rose.');
@@ -122,7 +124,7 @@ export function abilityMultiplier(actor,target,move,{effectiveness=1,critical=fa
 }
 export const healingMultiplier=u=>heldInfo(u)?.effect?.operation==='healing_received'?heldInfo(u).effect.multiplier:1;
 export function restoreHP(u,n){if(u.hp<=0)return 0;const restored=Math.max(0,Math.min(Math.floor(n*healingMultiplier(u)),u.maxHp-u.hp));u.hp+=restored;return restored;}
-export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=false,floor=0,random=Math.random}={}){
+export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=false,floor=0,random=Math.random,counterContext={}}={}){
  const messages=[],a=abilityMemory(actor),t=abilityMemory(target),ab=abilityBattle(actor),tb=abilityBattle(target),say=(u,text)=>messages.push(note(u,text));
  a.flags.attack=true;a.flags.patient=false;a.dealt+=damage;a.hits++;if(has(actor,'Proof by Cut')&&a.hits>=3)a.hits=0;
  if(damage&&has(actor,'Marked Quarry','Sinmark')&&!a.flags.marked){a.mark=target.uid||target.species.id;a.flags.marked=true;}
@@ -151,7 +153,11 @@ export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=f
  if(triggerSunWrath(target))say(target,'transformed into Sun God’s Wrath; all six stats boosted by 25%.');
  if(has(target,'Mimic Ear')&&isSound(move)){t.flags.echo=true;say(target,'next sound move is empowered.');}
  if(has(target,'Steamheart')&&move.type_id==='WATER'&&!t.flags.steam&&target.hp>0){stage(target,'sp_attack',1);t.flags.steam=true;say(target,'Special Attack rose.');}
- if(has(target,'Countercharge')&&isContact(move)&&!t.flags.counter&&target.hp>0){stage(target,'attack',1);t.flags.counter=true;say(target,'Attack rose.');}
+ if(damage>0&&target.hp>0&&!target.dead&&has(target,'Countercharge','Countercurrent')){
+  const stat=has(target,'Countercurrent')?'sp_attack':'attack';
+  if(isContact(move)&&!t.flags.counter){t.flags.counter=true;const n=stage(target,stat,2);if(n)say(target,(stat==='attack'?'Attack':'Special Attack')+' rose two stages after its first contact hit.');}
+  if(effectiveness>1){counterContext.effectiveTargets??=new Set();if(!counterContext.effectiveTargets.has(target)){counterContext.effectiveTargets.add(target);const n=stage(target,stat,1);if(n)say(target,(stat==='attack'?'Attack':'Special Attack')+' rose after a super-effective move.');}}
+ }
  if(has(target,'Stored Charge')&&isContact(move)&&target.hp>0){t.charges=Math.min(2,t.charges+1);say(target,`${t.charges} Charge${t.charges===1?'':'s'} stored.`);}
  if(has(target,'Heartwood Core')&&target.hp>0&&target.hp<=target.maxHp/3&&!tb.flags.heart){tb.flags.heart=true;say(target,`restored ${restoreHP(target,target.maxHp/4)} HP.`);}
  if(has(actor,'Oath Roar')&&isSound(move)&&!a.flags.oath&&actor.hp>0){stage(actor,'attack',1);a.flags.oath=true;say(actor,'Attack rose.');}
@@ -201,3 +207,4 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
 }
 
 export function abilityImmunity(target,move){return has(target,'Hovercore')&&move.type_id==='GROUND'||has(target,'Soundproof')&&isSound(move)||has(target,'Capacitor')&&move.type_id==='ELECTRIC'||has(target,'Reservoir')&&move.type_id==='WATER';}
+

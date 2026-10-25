@@ -11,9 +11,9 @@ import {secondaryChance,prepareSpecialistMove,stabMultiplier} from '../dist/team
 const move=id=>DATA.moves.find(m=>m.id===id);
 const unit=(id='001',ability='Unfazed')=>{const species=structuredClone(DATA.species.find(s=>s.id===id));species.ability_names={primary:ability};const u=instance(species,20,[]);u.uid=Math.random().toString();u.hp=u.maxHp=1000;u.stats={hp:1000,attack:70,defence:70,sp_attack:70,sp_defence:70,speed:70};return u;};
 const use=(a,t,id,random=()=>.5)=>{const m={...move(id),left:move(id).pp};const r=applyMove(a,t,m,random,{floor:0});return {r,m};};
-assert.equal(DATA.moves.length,551);assert.equal(ABILITIES.length,143);assert.equal(new Set(DATA.moves.map(m=>m.name)).size,551);assert(!DATA.moves.some(m=>/^Plain /.test(m.name)));assert.equal(DATA.learnsets.filter(l=>[700,701,702].includes(l.move_id)).length,0);
+assert.equal(DATA.moves.length,555);assert.equal(ABILITIES.length,146);assert.equal(new Set(DATA.moves.map(m=>m.name)).size,555);assert(!DATA.moves.some(m=>/^Plain /.test(m.name)));assert.equal(DATA.learnsets.filter(l=>[700,701,702].includes(l.move_id)).length,2);
 for(const m of DATA.moves){assert(MOVE_SCENES[m.id]?.layers?.length,m.name);assert(Number.isInteger(MOVE_SCENES[m.id].teamcraftScore),m.name);}
-assert.equal(new Set(DATA.moves.map(m=>MOVE_SCENES[m.id].teamcraftScore)).size,551);
+assert.equal(new Set(DATA.moves.map(m=>MOVE_SCENES[m.id].teamcraftScore)).size,555);
 assert.deepEqual([711,712,713].map(id=>[move(id).name,move(id).type_id]),[['Full Release','FIGHTING'],['Latent Power','DARK'],['Mind Unbound','PSYCHIC']]);
 {
  const a=unit(),b=unit();beginAbilities(a,[b],[a],{});use(a,b,700);const hp=a.hp;const hit=use(b,a,8).r;assert(hit.blocked);assert.equal(a.hp,hp);cleanupRound(a,b,()=>.5);assert(!a.moveState.protection);use(a,b,700);assert(!a.moveState.protection,'second protection fails with 0.5 roll');
@@ -41,4 +41,5 @@ assert.deepEqual([711,712,713].map(id=>[move(id).name,move(id).type_id]),[['Full
 {const a=unit(),b=unit('159','Weather Calm');beginAbilities(a,[b],[a],{weather:'RAIN'});const {r,m}=use(a,b,387);assert(r.skipped);assert.equal(m.left,move(387).pp,'suppressed weather cannot spend Rain Mantle PP');}
 {const u=unit();u.breedingInheritance={moveId:41};u.moves=[];const state={party:[u],nursery:{eggs:[{inheritance:{moveId:41}}]}};migrateTeamcraftState(state,DATA.moves);assert.equal(u.breedingInheritance.moveId,11);assert.equal(state.nursery.eggs[0].inheritance.moveId,11);assert(state.nursery.eggs[0].inheritance.teamcraftAliasMigration);}
 {const u=unit();u.moves=[{id:41,left:1}];const snapshot={version:1,state:{begun:true,playerName:'Aimon',money:0,party:[u],reserve:[],dead:[]},room:'town',player:{x:20,y:20,facing:'up'}};const options={speciesIds:new Set(DATA.species.map(s=>s.id)),moveIds:new Set(DATA.moves.map(m=>m.id)),rooms:new Set(['town'])};assert(validateTransferSnapshot(snapshot,options));u.moves=[{id:999999,left:1}];assert.throws(()=>validateTransferSnapshot(snapshot,options));}
-console.log('PASS Teamcraft: 551 distinct moves/scenes, type releases, protection, effigies, relay/fatigue, False Front, proc modifiers, STAB and investment-safe aliases.');
+console.log('PASS Teamcraft: 555 distinct moves/scenes, type releases, protection, effigies, relay/fatigue, False Front, proc modifiers, STAB and investment-safe aliases.');
+

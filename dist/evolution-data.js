@@ -10,7 +10,7 @@ export const EVOLUTIONS=[{"id":"EVOLUTION-001","path_number":1,"from_species_id"
 
 EVOLUTIONS.push(...NEW_EVOLUTIONS);
 
-for(const path of EVOLUTIONS){if(path.condition.method==='ITEM'){path.authoredCondition={...path.condition};path.condition={method:'LEVEL',minimum_level:path.condition.minimum_level};path.levelBranchChoice=true;}}
+for(const path of EVOLUTIONS){if(path.condition.method==='ITEM'&&path.from_species_id!=='115'){path.authoredCondition={...path.condition};path.condition={method:'LEVEL',minimum_level:path.condition.minimum_level};path.levelBranchChoice=true;}}
 EVOLUTIONS.push(...EXPANSION_EVOLUTIONS,...RELIC_EVOLUTIONS);
 
 EVOLUTIONS.push(...AQUATIC_EVOLUTIONS);
@@ -20,3 +20,7 @@ EVOLUTIONS.push(...MIASMA_EVOLUTIONS);
 EVOLUTIONS.push(...MENAGERIE_EVOLUTIONS);
 
 EVOLUTIONS.push(...BIRD_EVOLUTIONS);
+
+
+for(const p of EVOLUTIONS.filter(p=>p.from_species_id==='057'))p.condition={method:'STAT',minimum_level:30,stats:p.to_species_id==='058'?['defence','sp_defence']:['sp_attack']};
+EVOLUTIONS.push({id:'EVOLUTION-CENSMOKE-VIGORFUME',from_species_id:'057',to_species_id:'504',condition:{method:'STAT',minimum_level:30,stats:['attack','speed']},approvedExpansion:true,promotion_delta:{hp:30,attack:75,defence:35,sp_attack:0,sp_defence:20,speed:35}});

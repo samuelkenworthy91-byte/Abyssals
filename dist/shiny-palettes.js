@@ -1725,3 +1725,6 @@ export const SHINY_PALETTES=Object.fromEntries(Object.entries({"100":"FAMILY-099
 
 // Rivet armoury evolutions retain the same family shiny direction.
 for(let id=480;id<=503;id++)SHINY_PALETTES[String(id)]=families['FAMILY-365'];
+
+
+SHINY_PALETTES['504']=SHINY_PALETTES['057'];

@@ -1,3 +1,4 @@
+import {installRenewalScenes} from './evolution-renewal-scenes.js?v=0.90.38';
 import {DATA} from './data.js?v=0.90.30';
 import {installTeamcraftScenes} from './teamcraft-scenes.js?v=0.90.30';
 import {BIRD_MOVES} from './bird-family.js?v=0.87.0';
@@ -67,3 +68,6 @@ for(const move of RELIC_MOVES.filter(m=>m.approvedArmoury)){
 }
 
 installTeamcraftScenes(MOVE_SCENES,DATA.moves);
+
+
+installRenewalScenes(MOVE_SCENES);
