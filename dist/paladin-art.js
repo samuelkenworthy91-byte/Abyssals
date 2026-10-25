@@ -1,7 +1,7 @@
 import {trialState,channelFlow} from './court-trials.js?v=0.87.0';
 import {PALADIN_SPECIES} from './paladin-data.js?v=0.87.0';
 import {COURT_ROOMS,COURT_TITLES,COURT_SEALS} from './paladin-quest.js?v=0.87.0';
-import {drawCompanion,companionArt} from './companion.js?v=0.90.20';
+import {drawCompanion,companionArt} from './companion.js?v=0.90.37';
 const images=new Map(),artListeners=new Set();
 // Map textures load lazily. Every completed load must invalidate cached maps,
 // including maps first visited while the network/offline artwork is still cold.
@@ -54,3 +54,4 @@ if((room==='courtPlinths'&&!q?.puzzle)||(room==='courtApproach'&&!q?.commander))
  if(frame?.binding>0)sprite(c,'fx-14',20*16,7*16,128,110);
 }
 export async function prepareCourtArt(){const list=[...PALADIN_SPECIES.filter(s=>s.legendaryRoamer).map(s=>companionArt(s.id)),...['orb','sceptre','throne','plinth'].map(art)];await Promise.all(list.map(i=>i.complete&&i.naturalWidth?Promise.resolve():new Promise((resolve,reject)=>{i.addEventListener('load',resolve,{once:true});i.addEventListener('error',()=>reject(Error('Court artwork could not load')),{once:true});if(i.complete&&!i.naturalWidth)reject(Error('Court artwork could not load'));})));}
+

@@ -1,4 +1,4 @@
-import {drawCompanion,companionArt} from './companion.js?v=0.90.20';
+import {drawCompanion,companionArt} from './companion.js?v=0.90.37';
 export const FARM_SPECIES={plough:'048',piglet:'047',goat:'025',goose:'142',cooler:'211'};
 export const FARM_PEN={left:4,top:6,right:18,bottom:19,gateX:18,gateTop:14,gateBottom:16};
 export const FARM_FIELD={left:28,top:5,right:44,bottom:25};
@@ -56,3 +56,4 @@ export const FARM_ANIMAL_TEXT={
 };
 const FARM_BUSTS={'025':[155,30,215,290],'047':[60,100,300,310],'048':[200,140,300,290],'142':[100,85,210,285],'211':[35,50,300,310]};
 export function farmAnimalLine(id){const a=FARM_ANIMAL_TEXT[id.replace(/^cs-animal-/,'')];return a?{speaker:a.name,text:a.text,abyssalId:a.species,farmBust:FARM_BUSTS[a.species]}:null;}
+

@@ -1,12 +1,24 @@
-# Egg Pouch upgrades and Willowglass Viaduct — v0.90.36
+# Egg Pouch upgrades and Willowglass through-road — v0.90.37
 
-The hospice landmark identifies Philomere (Civeton → Dorelem → Philomere). Its apothecary and later general stores sell five sequential permanent upgrades: 10k → 4 eggs, 20k → 5, 40k → 6, 80k → 8, 160k → 10. Total investment is 310k. Older saves retain the initial three slots. The optional nursery.pouchTier is validated as an integer 0–5. Purchase confirmations retain the expected tier to reject stale/double purchases; normal reward transactions retain rollback on save failure. All capacity checks, UI and save validation use eggCapacity(state).
+Philomere’s apothecary and later general stores sell five sequential permanent upgrades: 10k → 4 eggs, 20k → 5, 40k → 6, 80k → 8, 160k → 10. Total investment is 310k. Older saves retain their initial three slots. The optional nursery.pouchTier is validated as an integer 0–5. Purchases reject stale confirmations and retain the normal save-failure rollback.
 
-Philomere’s southern garden arch at (22,28) leads to Willowglass Viaduct, an optional scenic out-and-back. Its ordinary movement grid is 432×288, projected into the normal 768×512 map canvas at one ninth scale. Existing maps retain 48×32 grids. The two belvederes at (36,144) and (396,144) are exactly 360 Manhattan steps apart. Every step uses the existing collision, movement, egg/companion/escort advancement and persistence code. A normal egg needs 512 steps (384 with the Warmer), so a 720-step return trip readies every fresh carried egg. Reaching ready status follows the existing manual hatching flow.
+## Route and controls
 
-The fixed overhead camera and generous snapped endpoint hit areas support phone taps without scrolling. The city gate is separate from the western walking endpoint, so returning to that endpoint does not force a room change. No encounter terrain or trainers interrupt the optional promenade. The final scene uses a dedicated 1536×1024 pixel-art environment: an aged wooden bridge, timber braces and ivy-covered uprights, warm lanterns, and a vast ethereal marsh with evergreen islands, mist and reflected light. The background is optimized WebP, bundled offline and in the APK; the character projection aligns with the visible deck. The generated source image is retained separately from the packaged asset. Location text contains no nursery counters, step multipliers or egg-farming signage.
+The main route is now Philomere → Willowglass Viaduct → Rivercause Road, in both directions. Philomere’s original eastern gate and story-lock action are retained; its target is the bridge. Rivercause’s western gate returns to the eastern bridge landing. The former southern garden entrance and its decorative arch have been removed. Optional ferries retain their existing routes.
 
-Save export/import accepts extended positions only for this named map. Source tests cover upgrade sequencing and affordability, stale confirmations, ten real eggs, validation, 360-step paths in both directions, actual egg advancement, save transfer and hatching. Phone Chromium tests buy every upgrade through the shop, create ten eggs through the nursery, enter via the town arch, tap both ends, pause/resume, export/reload at the far end, verify hatch readiness and return to town.
+The normal 432×288 tile grid projects onto a fixed 768×512 aerial scene. Landings (36,144) and (396,144) remain exactly 360 real movement steps apart. Both full-height edge strips are walkable exit zones, with broad tap targets that work anywhere vertically along either side, including the camera’s letterboxing. A tap walks Aimon to the landing and transitions to the adjoining screen. Tapping the current landing exits immediately without awarding steps. The central marsh remains blocked; the painted deck is the walking route.
+
+Direction plaques and large edge chevrons name Philomere and Rivercause Road. Aimon’s scene scale rises from 0.4 to 0.75 and the follower from 0.22 to 0.36. Bridge steps take one third of their previous time: a fresh crossing is approximately 12 seconds running or 24 walking. Other maps retain their normal speed. Companion placement now respects each room’s grid dimensions.
+
+## Progress and compatibility
+
+Movement, egg progress, companion/escort steps and persistence all use the existing completed-step path. Ten carried eggs advance together; normal eggs still need 512 steps and Warmer eggs 384. No steps are awarded for entry, taps, loading, idling or transition itself. Existing eggs, upgrades, player positions and quest outcomes remain intact.
+
+The original abbess fate gate is checked at both Philomere’s eastern exit and the bridge’s onward exit, so a legacy save from the former optional bridge cannot bypass the story. Bridge objectives direct locked legacy players back to Philomere. Save transfer retains room-specific coordinate validation.
+
+## Validation
+
+Source checks cover all pouch tiers, ten eggs, save validation, both 360-step routes, both full-height edges, endpoint taps, through-route targets, story-lock action, expected travel times and follower placement. Phone Chromium checks buy every upgrade, create ten eggs, enter through Philomere’s original eastern gate, tap high and low edge locations, pause/export/reload mid-crossing, reach Rivercause, return through the bridge into town, hatch an egg and verify the original story gate remains locked without the abbess’s fate.
 
 ## Art production
 

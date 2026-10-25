@@ -1,4 +1,4 @@
-import {companionArt,drawCompanion} from './companion.js?v=0.90.20';
+import {companionArt,drawCompanion} from './companion.js?v=0.90.37';
 export const PEACH_ORCHARD_MYTHICS=Object.freeze({Feirong:'175',Guanrong:'183',Liubeirow:'184'});
 export const HUNT_DURATION=9600;
 const lerp=(a,b,p)=>a+(b-a)*p;
@@ -22,3 +22,4 @@ export async function playHunt({onFrame,player,reduced=false,wait,visible=()=>tr
  const step=reduced?800:80;for(let t=0;t<=HUNT_DURATION;t+=step){while(!visible())await wait(80);onFrame(huntFrame(t,player,reduced));await wait(reduced?350:step);}
 }
 export function shouldStartHunt(state,room,player){const q=state.exploration||{};return room==='waranCave5'&&!q.mythic&&!q.huntSeen&&!q.huntBattlePending&&player.x>=24;}
+

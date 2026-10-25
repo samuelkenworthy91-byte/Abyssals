@@ -1,6 +1,6 @@
 import {GLASS_CRATERS,MOUNTAIN_FLIGHTS,MOUNTAIN_ENTRY} from './storm-props.js?v=0.90.14';
 import {isStormRoom} from './storm-weather.js?v=0.90.14';
-import {drawCompanion} from './companion.js?v=0.90.20';
+import {drawCompanion} from './companion.js?v=0.90.37';
 import {canMeetStormDragon,stormState} from './thunderplain-rules.js?v=0.90.14';
 import {DATA} from './data.js?v=0.87.0';
 import {STORM_ROAD,BOTRUNE_GUARDS} from './botrune-data.js?v=0.90.17';
@@ -81,3 +81,4 @@ export function drawStormDragon(c,state,room,time,reduced){
 }
 
 function drawSlate(c,left,top,width,height){c.save();c.beginPath();c.rect(left,top,width,height);c.clip();c.fillStyle='#242c38';c.fillRect(left,top,width,height);const colours=['#353d49','#303844','#39404b','#323946'];for(let y=top;y<top+height;y+=16)for(let x=left-32;x<left+width;x+=32){const xx=x+((y/16)%2?16:0);c.fillStyle=colours[(Math.abs(Math.floor(x/32)*17+Math.floor(y/16)*7))%4];c.fillRect(xx+1,y+1,30,14);c.fillStyle='#51566366';c.fillRect(xx+2,y+1,28,1);}c.restore();}
+

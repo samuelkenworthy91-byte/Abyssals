@@ -1,3 +1,4 @@
+import {roomGrid} from './promenade.js?v=0.90.37';
 import {shinyCanvas} from './shinies.js?v=0.90.20';
 import {relicArtPath,drawRelicPanel} from './relic-art.js?v=0.87.0';
 import {beginStep,advanceStep} from './movement.js?v=0.87.0';
@@ -26,7 +27,7 @@ export function resetCompanion(f,unit,player,room,blocked){
  if(!unit||unit.hp<=0||unit.dead)return;
  const [dx,dy]=vectors[player.facing]||vectors.down;
  const candidates=[[player.x-dx,player.y-dy],[player.x-1,player.y],[player.x+1,player.y],[player.x,player.y-1],[player.x,player.y+1]];
- const tile=candidates.find(([x,y])=>x>=0&&x<48&&y>=0&&y<32&&!blocked(x,y));
+ const tile=candidates.find(([x,y])=>x>=0&&x<roomGrid(room)[0]&&y>=0&&y<roomGrid(room)[1]&&!blocked(x,y));
  if(!tile)return;
  [f.x,f.y]=tile;f.px=f.x*16+8;f.py=f.y*16+8;f.facing=player.facing;f.visible=true;
 }
@@ -83,3 +84,4 @@ export function drawCompanion(ctx,f,time,reduced=false){
  const row=rows[f.facing]??0,mirrored=MIRRORED_FOLLOWER_FRAMES[f.unit.species.id]?.includes(row*2+frame);if(mirrored){ctx.translate(f.px,0);ctx.scale(-1,1);}
  ctx.drawImage(im,frame*cell,row*cell,cell,cell,mirrored?-size/2:f.px-size/2,f.py+4-size-lift,size,size);ctx.restore();
 }
+

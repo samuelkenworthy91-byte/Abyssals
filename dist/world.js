@@ -1,4 +1,4 @@
-import {roomGrid,isPromenade,promenadeWalkable,drawPromenade} from './promenade.js?v=0.90.36';
+import {roomGrid,isPromenade,promenadeWalkable,drawPromenade,promenadeGate} from './promenade.js?v=0.90.37';
 import {FINALE_ASSETS} from './finale-art.js?v=0.90.19';
 import {BOTRUNE_ASSETS} from './botrune-art.js?v=0.90.20';
 import {onCourtArtChange} from './paladin-art.js?v=0.90.20';
@@ -10,12 +10,12 @@ import {BIOME_ASSETS,biomeAsset,drawBiomeDetails} from './biome-world.js?v=0.90.
 import {SHOPKEEPERS} from './shopkeepers.js?v=0.90.13';
 import {EXTRA_TRAINERS} from './route-progression.js?v=0.87.0';
 import {INTERIORS,interiorBlocked,drawInterior} from './interiors.js?v=0.90.13';
-import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.36';
+import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.37';
 // Authored prototype geometry. All movement/collision is defined here, independently of art.
 export const TILE=16, WIDTH=48, HEIGHT=32;
 export const AREA_GATES={town:[{id:'exit',x:46,y:17,to:'march',arrival:[3,17,'right'],action:'departure'}],march:[{id:'town-return',x:1,y:17,to:'town',arrival:[44,17,'left']},{id:'march-stage-forward',x:46,y:17,to:'march2',arrival:[3,17,'right'],action:undefined}],scrub:[{id:'march-return',x:1,y:17,to:'march',arrival:[44,17,'left']},{id:'scrub-boundary',x:46,y:17}]};
 for(const [room,m] of Object.entries(NEW_MAPS))AREA_GATES[room]=m.gates;
-export function gateAt(room,x,y){return AREA_GATES[room]?.find(g=>g.x===x&&g.y===y||NEW_MAPS[room]?.sidePaths?.some(p=>p.gateId===g.id)&&Math.abs(g.x-x)<=1&&g.y===y);}
+export function gateAt(room,x,y){if(isPromenade(room))return promenadeGate(AREA_GATES[room],x,y);return AREA_GATES[room]?.find(g=>g.x===x&&g.y===y||NEW_MAPS[room]?.sidePaths?.some(p=>p.gateId===g.id)&&Math.abs(g.x-x)<=1&&g.y===y);}
 export const DOORS={pate:{x:9,y:10},trade:{x:21,y:10},shop:{x:9,y:26}};
 Object.assign(DOORS,NEW_DOORS);
 const outdoor=[

@@ -1,7 +1,7 @@
 {
-  "version": "0.90.36",
-  "version_code": 131,
-  "filename": "Abyssals-v0.90.36-Willowglass-Keepers.apk",
-  "title": "Abyssals v0.90.36 — Willowglass & Keepers",
-  "notes": "Five permanent Egg Pouch upgrades from Philomere’s apothecary and later general stores: 10,000 / 20,000 / 40,000 / 80,000 / 160,000 doubloons for capacities 4 / 5 / 6 / 8 / 10. Existing saves start at their original three slots; upgrades preserve eggs and progress. Discover the scenic old wooden Willowglass Viaduct through Philomere’s southern garden arch. Dedicated high-end pixel art shows ivy-covered timber supports over a vast misty evergreen marsh. A fixed aerial view keeps both ends on screen; tap either end to walk the full 360 ordinary steps across. Every carried egg progresses normally, including all ten; a return trip readies a fresh 512-step egg. No bonus steps for entering, idling, tapping or loading. Bridge coordinates and pouch purchases survive save export/import. Retains two-parent Prodigy inheritance, permanent growth, prices, lives, quests and original APK signing."
+  "version": "0.90.37",
+  "version_code": 132,
+  "filename": "Abyssals-v0.90.37-Willowglass-Through-Road.apk",
+  "title": "Abyssals v0.90.37 — Willowglass Through-Road",
+  "notes": "Willowglass Viaduct is now the first screen through Philomere’s eastern exit and leads onward to Rivercause Road. Rivercause returns through the bridge too; the old southern dead-end entrance is removed. Both full-height edges are generous tap and walk exit zones, with clear direction plaques and edge arrows. Aimon is nearly twice as large in the aerial view and bridge travel is three times faster: about 12 seconds running or 24 walking for the same 360 real steps. Follower placement supports the bridge grid. The original abbess story gate remains enforced, including for older bridge saves. Existing artwork, pouch upgrades, eggs, hatch progress, saves, lives, quests, prices and original signing are preserved."
 }

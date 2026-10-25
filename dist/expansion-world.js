@@ -1,4 +1,4 @@
-import {installPromenade,isPromenade,promenadeWalkable,drawPromenade,drawPromenadeEntrance} from './promenade.js?v=0.90.36';
+import {installPromenade,isPromenade,promenadeWalkable,drawPromenade} from './promenade.js?v=0.90.37';
 import {glassCraterBlocked} from './storm-props.js?v=0.90.14';
 import {installFinaleWorld,finaleWalkable} from './finale-world.js?v=0.90.18';
 import {drawFinaleMap} from './finale-art.js?v=0.90.19';
@@ -66,7 +66,6 @@ export function drawNewMap(c,room,drawAsset){if(isPromenade(room)){drawPromenade
  for(const s of m.spots){if(s.routeSign){if(m.aquaticCity)drawAquaticNotice(c,m,s);else asset(c,'sign',s.x-1,s.y-3,4,3);}else if(s.wallSign)asset(c,'sign',s.x,s.y,1,1);else if(s.id.includes('sign'))asset(c,'sign',s.x,s.y-2,2,2);}
  if(room==='tunnels')for(const v of VALVES)asset(c,'valve',v.x,v.y,1,1);
  for(const d of Object.values(NEW_DOORS).filter(d=>d.room===room&&!d.hiddenEntrance)){if(!m.aquaticCity)asset(c,'mat',d.x,d.y+1);}
- if(room==='philomere')drawPromenadeEntrance(c);
  drawLeaderFortEntrances(c,m,asset);
  drawExplorationScenery(c,m,{biome:!!biomeFor(room)});
  if(!m.verdantKind&&!m.farm)drawBiomeDetails(c,room,drawAsset,(x,y)=>newWalkable(room,x,y));

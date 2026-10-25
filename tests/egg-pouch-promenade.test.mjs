@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
 import {POUCH_UPGRADES,eggCapacity,buyPouchUpgrade,nextPouchUpgrade,sellsPouchUpgrades} from '../dist/egg-pouch.js';
-import {PROMENADE_ROOM,PROMENADE_ENDS,PROMENADE_SCALE,roomGrid,promenadeTap} from '../dist/promenade.js';
+import {PROMENADE_ROOM,PROMENADE_ENDS,PROMENADE_SCALE,roomGrid,promenadeTap,promenadeGate,promenadeTravelDuration} from '../dist/promenade.js';
 import {NEW_MAPS,newBlocked} from '../dist/expansion-world.js';
 import {DATA} from '../dist/data.js';
 import {pathfind} from '../dist/engine.js';
 import {createBreedingEgg,advanceEggSteps,validateNurserySnapshot,hatchBreedingEgg} from '../dist/breeding.js';
+import {createCompanion,resetCompanion} from '../dist/companion.js';
 import {makeSaveFile,parseSaveFile} from '../dist/save-transfer.js';
 const species=DATA.species.find(s=>s.id==='001'),parent=uid=>({uid,species,hp:10,maxHp:10,stats:Object.fromEntries(['hp','attack','defence','sp_attack','sp_defence','speed'].map(s=>[s,10])),level:1,moves:[]});
 const state={begun:true,playerName:'QA',money:1000000,party:[parent('a'),parent('b')],reserve:[],dead:[],fates:{'LDR-02':'SPARED'}};
@@ -26,6 +27,19 @@ assert(state.nursery.eggs.every(e=>e.remaining===152));
 const snapshot={version:1,state,room:PROMENADE_ROOM,player:{x:396,y:144,facing:'left'}};const restored=parseSaveFile(makeSaveFile(snapshot)).snapshot;assert.equal(restored.player.x,396);assert.equal(eggCapacity(restored.state),10);assert.equal(restored.state.nursery.eggs.length,10);
 for(let i=0;i<360;i++)advanceEggSteps(restored.state);assert(restored.state.nursery.eggs.every(e=>e.remaining===0));validateNurserySnapshot(restored.state);
 const egg=restored.state.nursery.eggs[0];assert(hatchBreedingEgg(restored.state,egg.id,id=>({...parent('child'),species:DATA.species.find(s=>s.id===id)})));assert.equal(restored.state.nursery.eggs.length,9);assert.equal(eggCapacity(restored.state),10);
-assert.deepEqual(promenadeTap(396,130),PROMENADE_ENDS[1]);assert.deepEqual(promenadeTap(36,160),PROMENADE_ENDS[0]);assert.deepEqual(promenadeTap(18,144),[18,144]);assert.equal(promenadeTap(396,20),null);assert.equal(PROMENADE_SCALE,9);
+assert.deepEqual(promenadeTap(396,130),PROMENADE_ENDS[1]);assert.deepEqual(promenadeTap(36,160),PROMENADE_ENDS[0]);assert.deepEqual(promenadeTap(18,144),[36,144]);assert.deepEqual(promenadeTap(396,20),[396,144]);assert.equal(promenadeTap(216,20),null);assert.equal(PROMENADE_SCALE,9);
 assert.throws(()=>makeSaveFile({...snapshot,room:'philomere'}),'extended coordinates only valid on bridge');
 console.log('PASS: sequential 10/20/40/80/160k upgrades, ten-egg limit, stale/poor purchases, save validation and legacy defaults, 360 real steps each way, ten eggs progressed together, bridge save/import/hatch, safe town connection and phone tap targets');
+
+assert.equal(entry.id,'philomere-boundary');assert.equal(entry.action,'cybressa-road');assert.equal(NEW_MAPS.philomere.gates.some(g=>g.id==='willowglass-entry'),false);
+assert.equal(NEW_MAPS.rivercause.gates.find(g=>g.id==='rivercause-back').to,PROMENADE_ROOM);
+assert.equal(NEW_MAPS[PROMENADE_ROOM].gates.find(g=>g.edgeSide==='east').to,'rivercause');
+for(let y=0;y<288;y++){
+ assert(!blocked(0,y));assert(!blocked(431,y));
+ assert.equal(promenadeGate(NEW_MAPS[PROMENADE_ROOM].gates,0,y).to,'philomere');assert.equal(promenadeGate(NEW_MAPS[PROMENADE_ROOM].gates,431,y).to,'rivercause');
+ assert.deepEqual(promenadeTap(5,y),[36,144]);assert.deepEqual(promenadeTap(420,y),[396,144]);
+}
+assert(blocked(-1,144));assert(blocked(432,144));assert(blocked(216,0));
+assert(Math.abs(promenadeTravelDuration(true)*360-12)<1e-10);assert(Math.abs(promenadeTravelDuration(false)*360-24)<1e-10);
+const follower=createCompanion();resetCompanion(follower,state.party[0],{x:36,y:144,facing:'right'},PROMENADE_ROOM,blocked);assert(follower.visible);assert.equal(follower.y,144);
+console.log('PASS: mandatory Philomere/bridge/Rivercause route in both directions, original story-gate action, no southern detour, both full-height walkable edges and tap targets, 12s run / 24s walk, extended-grid follower visibility');
