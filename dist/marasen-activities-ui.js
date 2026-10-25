@@ -6,7 +6,7 @@ import {marasenObjective} from './marasen-rules.js?v=0.87.0';
 import {DATA} from './data.js?v=0.87.0';
 import {HELD_ITEMS} from './held-data.js?v=0.87.0';
 import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,unitGrowthPercent} from './progression.js?v=0.90.21';
+import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.34';
 const FLOOR_NAMES=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
 const money=n=>Math.floor(n||0).toLocaleString('en-GB');
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -27,7 +27,7 @@ function storeItems(floor){
  if(floor===1)return exchangeScrolls().map(m=>({...m,kind:'codex'}));
  if(floor===2)return HELD_ITEMS.filter(i=>Number(i.buy_price)>0&&!i.id.startsWith('HELD_QUEST_')).slice(0,26).map(i=>({kind:'held',id:i.id,name:i.name,description:i.effect_text,price:Math.max(1800,i.buy_price)}));
  if(floor===3)return EVOLUTION_ITEMS.filter(i=>Number(i.buy_price)>0).map(i=>({kind:'evolution',id:i.id,name:i.name,description:i.effect_text,price:Number(i.buy_price)}));
- if(floor===4)return [{kind:'pp',id:'endurance',name:'Endurance Tonic',description:'Permanent +1 maximum PP per dose to an individual move. Repeatable; price scales with investment. Current PP is not refilled.',price:1000},{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 percentage points of future growth. Maximum ten growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 percentage point to future growth in all six stats. Maximum ten growth doses per Abyssal.',price:30000},...NURSERY_ITEMS.map(i=>({...i,kind:'nursery'}))];
+ if(floor===4)return [{kind:'pp',id:'endurance',name:'Endurance Tonic',description:'Permanent +1 maximum PP per dose to an individual move. Repeatable; price scales with investment. Current PP is not refilled.',price:1000},{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 original growth points, multiplied by 1 + completed evolutions. Maximum ten growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 original growth point in all six stats, multiplied by 1 + completed evolutions. Maximum ten growth doses per Abyssal.',price:30000},...NURSERY_ITEMS.map(i=>({...i,kind:'nursery'}))];
  if(floor===5)return [{kind:'supply',id:'riverBait',name:'River Bait',description:'Specialist capture food suited to aquatic encounters.',price:950},{kind:'supply',id:'emergencyEvacs',name:'Emergency Evac',description:'Return a living expedition safely to its recovery location.',price:2500},{kind:'supply',id:'lifeEmbers',name:'Life Ember',description:'A rare second chance for a living Abyssal. One per expedition.',price:40000}];
  return [];
 }
@@ -43,12 +43,18 @@ function purchase(s,item){if(!item||!Number.isFinite(item.price)||item.price<1||
  else s[item.id]=(s[item.id]||0)+1;
  if(item.id==='lifeEmbers')m.exchange.receipts.push('lifeEmbers');return true;
 }
-export function growthTonic(s,uid,kind,stat){const u=owned(s).find(u=>u.uid===uid);if(!u||!['focused','balanced'].includes(kind)||(u.marasenTonicDoses||0)>=10||kind==='focused'&&!STAT_KEYS.includes(stat))return false;
- const cost=kind==='focused'?25000:30000;if((s.money||0)<cost)return false;
- s.money-=cost;u.marasenTonicDoses=(u.marasenTonicDoses||0)+1;u.marasenGrowth??={};
- for(const key of kind==='focused'?[stat]:STAT_KEYS)u.marasenGrowth[key]=(u.marasenGrowth[key]||0)+(kind==='focused'?5:1);
- return true;
+export function growthTonicQuote(s,uid,kind,stat){
+ const u=owned(s).find(u=>u.uid===uid),cost=kind==='focused'?25000:30000;
+ if(!u||!['focused','balanced'].includes(kind)||kind==='focused'&&!STAT_KEYS.includes(stat))return {ok:false,reason:'Choose a living partner and a valid growth stat.'};
+ if((u.marasenTonicDoses||0)>=10)return {ok:false,reason:'This partner has used all ten permanent growth doses.'};
+ if((s.money||0)<cost)return {ok:false,reason:'Not enough doubloons.'};
+ const keys=kind==='focused'?[stat]:STAT_KEYS,original=kind==='focused'?5:1,next={...u,marasenGrowth:{...u.marasenGrowth}};
+ for(const key of keys)next.marasenGrowth[key]=(next.marasenGrowth[key]||0)+original;
+ const details=permanentGrowthDetails(next);
+ if(u.giftOrigin==='Roadside rescue'&&details.totalUncapped>300.00001)return {ok:false,reason:'This rescue partner cannot fit the full boost within its 300% permanent growth limit.'};
+ return {ok:true,u,cost,keys,original,multiplier:permanentGrowthMultiplier(u),next,before:permanentGrowthDetails(u),after:details};
 }
+export function growthTonic(s,uid,kind,stat){const q=growthTonicQuote(s,uid,kind,stat);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+1;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
 function showFloor(a,floor){const {state,openModal,$,document,rewardTransaction,shop}=a,items=storeItems(floor);
  if(floor===0){shop('marasenMarket');return;}
  openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div><b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='nursery'?`<small>${it.reusable?(nurseryItemCount(state,it.id)?'Owned · reusable':'Reusable purchase'):'In nursery supplies: '+nurseryItemCount(state,it.id)}</small>`:''}${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.kind==='nursery'&&it.reusable&&nurseryItemCount(state,it.id)>0||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap. Nursery items are chosen at Walter when creating an egg; the Charm stacks with Feed or Thread.</p>`);
@@ -64,8 +70,10 @@ function showTonic(a,item){const {state,openModal,document,$,rewardTransaction}=
  openModal(item.name,`<p>${safe(item.description)}</p><p>Cost: <b>${money(item.price)} doubloons</b>. The improvement affects <b>future levels only</b>, not current stats, and cannot be inherited by offspring.</p><div class="summary-list">${pool.map(u=>`<button data-mr-tonic-uid="${safe(u.uid)}" ${(u.marasenTonicDoses||0)>=10||state.money<item.price?'disabled':''}><b>${safe(u.nickname||u.species.name)} · Lv. ${u.level}</b><small>Lifetime doses ${(u.marasenTonicDoses||0)} / 10 · ${safe(u.species.types.join(' / '))}</small></button>`).join('')}</div>`);
  for(const el of document.querySelectorAll('[data-mr-tonic-uid]'))el.onclick=()=>{
   const uid=el.dataset.mrTonicUid,u=pool.find(x=>x.uid===uid);if(!u)return;
-  const selector=item.id==='focused'?`<label>Stat to improve<select id="mr-tonic-stat">${STAT_KEYS.map(k=>`<option value="${k}">${STAT_LABELS[k]} · ${unitGrowthPercent(u,k).toFixed(1)}% → ${(unitGrowthPercent(u,k)+5).toFixed(1)}%</option>`).join('')}</select></label>`:'<p>All six growth rates increase by 1 percentage point.</p>';
-  openModal('Confirm permanent growth',`<p>Give <b>${safe(u.nickname||u.species.name)}</b> a ${safe(item.name)}?</p>${selector}<p>Doses after purchase: <b>${(u.marasenTonicDoses||0)+1}/10</b>. This cannot be reversed.</p><button id="mr-tonic-approve" class="primary">Apply tonic · ${money(item.price)} doubloons</button><button id="mr-tonic-abort">Cancel</button>`);
+  const selector=item.id==='focused'?`<label>Stat to improve<select id="mr-tonic-stat">${STAT_KEYS.map(k=>`<option value="${k}">${STAT_LABELS[k]} · ${unitGrowthPercent(u,k).toFixed(1)}% → ${(unitGrowthPercent(u,k)+5*permanentGrowthMultiplier(u)).toFixed(1)}%</option>`).join('')}</select></label>`:`<p>All six growth rates increase by ${permanentGrowthMultiplier(u)} percentage points: +1 original point × ${permanentGrowthMultiplier(u)}.</p>`;
+  openModal('Confirm permanent growth',`<p>Give <b>${safe(u.nickname||u.species.name)}</b> a ${safe(item.name)}?</p>${selector}<div id="mr-tonic-math" role="status"></div><p>Doses after purchase: <b>${(u.marasenTonicDoses||0)+1}/10</b>. This cannot be reversed.</p><button id="mr-tonic-approve" class="primary">Apply tonic · ${money(item.price)} doubloons</button><button id="mr-tonic-abort">Cancel</button>`);
+  const updateMath=()=>{const stat=$('#mr-tonic-stat')?.value||null,q=growthTonicQuote(state,uid,item.id,stat);$('#mr-tonic-math').innerHTML=q.ok?`<p>Original bonus +${q.original} × ${q.multiplier} = +${q.original*q.multiplier} growth points per affected stat. This bonus also gains another copy after each future evolution.</p><p>${q.keys.map(key=>`${STAT_LABELS[key]}: ${q.before.rows.find(r=>r.key===key).permanent}% → ${q.after.rows.find(r=>r.key===key).permanent}% permanent growth`).join('<br>')}</p>`:`<p>${safe(q.reason)}</p>`;$('#mr-tonic-approve').disabled=!q.ok;};
+  if($('#mr-tonic-stat'))$('#mr-tonic-stat').onchange=updateMath;updateMath();
   $('#mr-tonic-abort').onclick=()=>showTonic(a,item);
   $('#mr-tonic-approve').onclick=()=>{let applied=false;const key=$('#mr-tonic-stat')?.value||null;if(rewardTransaction(()=>{applied=growthTonic(state,uid,item.id,key);})&&applied){a.refresh?.();showFloor(a,4);}else showTonic(a,item);};
  };

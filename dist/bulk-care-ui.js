@@ -1,4 +1,4 @@
-import {rehomeable,permanentRates,stewardshipQuote} from './stewardship.js?v=0.90.33';
+import {rehomeable,permanentRates,stewardshipQuote} from './stewardship.js?v=0.90.34';
 import {STAT_LABELS} from './progression.js?v=0.90.31';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function bulkCareMenu(a,uid=null,stat=null,selection=[]){
@@ -11,7 +11,7 @@ export function bulkCareMenu(a,uid=null,stat=null,selection=[]){
  const update=()=>{
   for(const button of nodes){const yes=selected.has(button.getAttribute('data-'+attr));button.setAttribute('aria-pressed',String(yes));button.style.outline=yes?'3px solid #d5ad46':'';}
   const ids=[...selected],q=uid?stewardshipQuote(state,uid,stat,ids):null,keepLiving=state.party.some(u=>u.hp>0&&!u.dead&&!selected.has(u.uid));
-  $('#care-preview').textContent=uid?`Selected ${ids.length}. Use ${q.cost||0}; keep ${q.kept?.length??ids.length}. ${STAT_LABELS[stat]} ${q.before}% → ${q.after}% · +${q.lessons||0} percentage points. ${q.ok?'Next lesson: '+q.nextCost+' partners.':q.reason}`:`Selected ${ids.length} partners. ${keepLiving?'Held items will return to your bag.':'Keep at least one living party member.'}`;
+  $('#care-preview').textContent=uid?`Selected ${ids.length}. Use ${q.cost||0}; keep ${q.kept?.length??ids.length}. ${STAT_LABELS[stat]} ${q.before}% → ${q.after}% · +${q.gain||0} percentage points across ${q.lessons||0} lessons. ${q.ok?'Next lesson: '+q.nextCost+' partners.':q.reason}`:`Selected ${ids.length} partners. ${keepLiving?'Held items will return to your bag.':'Keep at least one living party member.'}`;
   $('#care-review').disabled=uid?!q.ok:!ids.length||!keepLiving;
  };
  for(const button of nodes)button.onclick=()=>{const id=button.getAttribute('data-'+attr);if(selected.has(id))selected.delete(id);else selected.add(id);update();};

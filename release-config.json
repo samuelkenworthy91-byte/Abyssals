@@ -1,7 +1,7 @@
 {
-  "version": "0.90.33",
-  "version_code": 128,
-  "filename": "Abyssals-v0.90.33-Nursery-Stewardship.apk",
-  "title": "Abyssals v0.90.33 — Nursery & Stewardship",
-  "notes": "Batch stewardship completes multiple escalating-cost lessons with exact donor thresholds and leaves surplus partners untouched. Bulk ordinary rehoming, visible selection controls, confirmation and held-item returns. Marasen Grand Exchange 5F sells Family Seals (20,000), Heirloom Charm (500,000), Prodigy Feed (35,000), Inheritance Thread (15,000) and Brooding Warmer (200,000). Charm stacks additively with Feed or Thread; pairing previews actual odds, species and consumed supplies. Warmer reduces new eggs to 384 steps. Preserves existing eggs, offspring, saves, earned stats, quests, permanent deaths and original APK signing. PWA source/offline version updated."
+  "version": "0.90.34",
+  "version_code": 129,
+  "filename": "Abyssals-v0.90.34-Permanent-Growth.apk",
+  "title": "Abyssals v0.90.34 — Permanent Growth",
+  "notes": "Every original permanent growth-point bonus uses 1 + completed evolutions: Prodigy, stewardship, department-store growth tonics, nursery/memorial gifts and the rescue gift’s original birth-form advantage. Partner summaries display per-stat source maths. Tonic and batch-stewardship previews, donor eligibility and actual gains use the same multiplier. Original investments and dose/lesson counts stay unchanged; existing bonuses update future growth without rerolling earned stats. Temporary draughts stay flat and outside the full permanent rescue cap. Breeding excludes nonheritable stewardship/store training and evolution multiplier inflation. Preserves existing saves, eggs, lives, permanent deaths, quests and original APK signing. Existing shop prices and breeding fee unchanged."
 }

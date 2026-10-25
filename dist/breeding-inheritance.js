@@ -1,6 +1,6 @@
 import {BASE_PRODIGY_CHANCE,inheritanceChance,chanceLabel} from './breeding-items.js?v=0.90.33';
 import {DATA} from './data.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './progression.js?v=0.90.31';
+import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,permanentGrowthSources,inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './progression.js?v=0.90.34';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -16,7 +16,7 @@ export function familyProdigyOptions(species,donor,parent){
 // Temporary draughts cannot become permanent through breeding. Rescue and
 // previously inherited permanent rates remain legitimate donor strengths.
 export function inheritanceOptions(species,donor){
- const rates=unitGrowthRates({...donor,trainingEffects:[],stewardship:undefined,breedingInheritance:undefined});
+ const rates=unitGrowthRates({...donor,trainingEffects:[],rescueGrowthBonus:donor.growthMultiplier===1.1?Object.fromEntries(STAT_KEYS.map(stat=>[stat,permanentGrowthSources(donor,stat).rescue])):undefined,stewardship:undefined,marasenGrowth:undefined,breedingInheritance:undefined,evolutionHistory:[]});
  // An existing Prodigy donates its original advantage, never its evolution
  // multiplier. Ordinary donors still offer their permanent species/gift rates.
  const growth=STAT_KEYS.map(stat=>{const baseline=growthPercent(species,stat),bonus=inheritedGrowthBonus(donor,stat);return {stat,baseline,donorRate:bonus>0?Math.round((baseline+bonus)*10)/10:rates[stat],prodigy:bonus>0};}).filter(g=>g.donorRate>g.baseline).sort((a,b)=>(b.donorRate-b.baseline)-(a.donorRate-a.baseline));

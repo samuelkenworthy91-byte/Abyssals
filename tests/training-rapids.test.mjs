@@ -6,7 +6,7 @@ import {levelTonicQuote,queueLevelTonics} from '../dist/training-tonics.js';
 import {EXCHANGE_STATUS_MOVES,installExchangeTechniques} from '../dist/exchange-techniques.js';
 import {canLearnScroll} from '../dist/side-adventures.js';
 import {instance,applyMove} from '../dist/engine.js';
-const unit=(uid='learner',level=20)=>({uid,level,hp:100,exp:37,moves:[],species:{id:'test',name:'Test',types:['WATER'],ability_names:{primary:'None'}},stats:{speed:250}});
+const unit=(uid='learner',level=20)=>({uid,level,hp:100,exp:37,moves:[],species:{id:'test',name:'Test',types:['WATER'],growth_percent:{hp:50,attack:50,defence:50,sp_attack:50,sp_defence:50,speed:50},ability_names:{primary:'None'}},stats:{speed:250}});
 let u=unit(),s={cybressa:{trialMarks:100000},money:1000000,party:[u],reserve:[]};
 for(let n=0;n<10;n++)assert(buyTrainingDraught(s,u,'speed',5));
 assert.equal(activeDraughts(u).length,10);assert.equal(trainingGrowthBonus(u,'speed'),200);
@@ -50,3 +50,4 @@ assert.equal(a.mode,'speed');assert.equal(a.results[0].name,'Test');assert.equal
 const settled=s.money;assert.equal(finishRapids(s),null);assert.equal(s.money,settled);
 assert(beginRapids(s,{unitId:'swimmer',mode:'rhythm',event:'sprint',random:()=>.5}));assert(finishRapids(s,{perfect:100}));
 console.log('PASS: ten boosts/doses, bulk-tonic validation and persistence, expanded compatible status lessons and real status effects, 90/10 Speed races, saved luck and single settlement');
+
