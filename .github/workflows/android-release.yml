@@ -46,6 +46,9 @@ jobs:
           # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Test Sunken Fort care on every floor
+        timeout-minutes: 3
+        run: node tests/fort-care-browser.cjs
       - name: Test evolution renewal on phone
         timeout-minutes: 3
         run: node tests/evolution-renewal-browser.cjs
@@ -158,3 +161,4 @@ jobs:
       - name: Deploy tested PWA
         id: deployment
         uses: actions/deploy-pages@v4
+

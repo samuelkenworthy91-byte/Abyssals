@@ -2,8 +2,8 @@ import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {DATA} from './data.js?v=0.87.0';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
-import {stageMultiplier} from './engine.js?v=0.90.24';
-import {moveUsable} from './move-rules.js?v=0.90.24';
+import {stageMultiplier} from './engine.js?v=0.90.39';
+import {moveUsable} from './move-rules.js?v=0.90.39';
 import {canSwitch,leaveAbility,enterAbility,abilityName} from './abilities.js?v=0.90.24';
 export const isArenaBossRound=round=>Number.isSafeInteger(round)&&round>0&&round%5===0;
 export const arenaRoundMarks=round=>isArenaBossRound(round)?round*10:round+2;
@@ -90,3 +90,4 @@ export function switchArenaBoss(b,index){
  return messages;
 }
 export function orderArenaBossReplacement(b){if(!b.trainer?.arenaBoss||b.enemies.length<2)return;const ranked=b.enemies.map((u,index)=>({index,score:pressure(u,b.player)-pressure(b.player,u)})).sort((a,c)=>c.score-a.score||a.index-c.index);const index=ranked[0].index;if(index>0)[b.enemies[0],b.enemies[index]]=[b.enemies[index],b.enemies[0]];}
+

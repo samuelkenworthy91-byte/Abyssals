@@ -1,7 +1,9 @@
 import {restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.24';
 import {unitName} from './names.js?v=0.87.0';
 export const SUPPORTED_EFFECTS = new Set(['healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
-export function moveUsable(u,m){return !!m&&m.left>0&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
+export function moveHPCost(actor,move){return (move?.effects||[]).filter(e=>e.effect_id==='hp_cost').reduce((sum,e)=>sum+Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])),0);}
+export function canPayMoveHP(actor,move){return actor.hp>moveHPCost(actor,move);}
+export function moveUsable(u,m){return !!m&&m.left>0&&canPayMoveHP(u,m)&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
 export function movePriority(m,u){return (m.priority||0)+(m.id===310&&u?.hp<u?.maxHp/2?1:0);}
 export function moveDamageMultiplier(actor,target,move,{critical=false,movedFirst=true}={}){
  let n=1;for(const e of move.effects||[])if(e.effect_id==='power_multiplier'){
@@ -23,7 +25,7 @@ export function consumeWard(target,move,damage){if(damage>0&&target.moveState?.w
 export function extraMoveEffect(actor,target,move,e,messages,{floor=0}={}){
  const who=e.target==='SELF'||!e.target?actor:target;who.moveState??={};const s=who.moveState;
  const note=t=>messages.push(`${unitName(who)}: ${t}`);
- if(e.effect_id==='hp_cost'){const cost=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])));actor.hp-=cost;messages.push(`${unitName(actor)} pays ${cost} HP.`);}
+ if(e.effect_id==='hp_cost'){const cost=Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1]));if(actor.hp<=cost)return;actor.hp-=cost;messages.push(`${unitName(actor)} pays ${cost} HP.`);}
  if(e.effect_id==='heal_by_format'){const [n,d]=e.singles.max_hp_fraction,amount=restoreHP(actor,Math.floor(actor.maxHp*n/d*(has(actor,'Medicinal Sap')?1.15:1)));messages.push(`${unitName(actor)} restores ${amount} HP.`);}
  if(e.effect_id==='next_move_cannot_miss'){s.sureHit=e.uses||1;note('next move cannot miss.');}
  if(e.effect_id==='next_hit_damage_multiplier'){s.ward={...e};note(`next ${e.category==='PHYSICAL'?'physical ':''}hit deals ${e.multiplier*100}% damage.`);}
@@ -50,4 +52,5 @@ export function endMoveEffects(units,random= Math.random){const out=[],field=uni
  if(field.terrainTurns>0&&--field.terrainTurns===0){field.terrain=null;out.push('Terrain faded.');}
  field.lastMoveDamage=field.currentMoveDamage||[];field.currentMoveDamage=[];return out;
 }
+
 

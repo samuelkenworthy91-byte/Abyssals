@@ -1,8 +1,8 @@
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {specialistAIPool} from './teamcraft-battle.js?v=0.90.30';
-import {applyMove,cleanupRound,priority,stageMultiplier} from './engine.js?v=0.90.24';
+import {applyMove,cleanupRound,priority,stageMultiplier} from './engine.js?v=0.90.39';
 import {effectiveStage,speedFactor} from './abilities.js?v=0.90.24';
-import {moveUsable} from './move-rules.js?v=0.90.24';
+import {moveUsable} from './move-rules.js?v=0.90.39';
 import {captureHealth,healthChanges} from './health-presentation.js?v=0.87.0';
 // Four simultaneous combatants, one selected player target, one independent AI action per other actor.
 export function doubleLivingTargets(b){return b.enemies.map((u,i)=>({u,i})).filter(({u,i})=>(!b.activeEnemyIndices||b.activeEnemyIndices.includes(i))&&u.hp>0&&!u.captured&&!u.withdrawn&&!(u.boundSovereign&&u.hp<=1));}
@@ -34,3 +34,4 @@ export function doubleRound(b,playerMove=null,targetIndex=0){
  if(b.alliedRivet.hp<=0)b.alliedRivet.hp=1;for(const u of b.enemies)if(u.boundSovereign&&u.hp<=1){u.hp=1;u.withdrawn=true;}
  return events;
 }
+

@@ -1,8 +1,8 @@
 {
-  "version": "0.90.38",
-  "version_code": 133,
-  "filename": "Abyssals-v0.90.38-Evolution-Renewal.apk",
-  "title": "Abyssals v0.90.38 \u2014 Evolution Renewal",
-  "notes": "Adds Vigorfume and cultivated three-way Censmoke evolution at level 30; restores item-only Triskit branches from the department store; specialises the three Triskit finals and adds restorative relay tools. Rebalances all 212 damaging stat-changing moves with guaranteed low-power utility, varied proc rates and selected two-stage effects. Countercharge and Countercurrent grant +2 on the first damaging contact hit after entry, plus +1 per damaging super-effective move. Adds Dread Presence and Battle Readiness. Seven refreshed battle designs and matching four-direction follower atlases, with the darker purple Malifume. Removes redundant evolution sale items with one-time save compensation. Preserves earned stats, original Prodigies, existing forms, equipped moves, legal legacy relearning, quests, permanent deaths, package and original signing. Includes the rebuilt offline PWA.",
-  "pwa_filename": "Abyssals-v0.90.38-PWA.zip"
+  "version": "0.90.39",
+  "version_code": 134,
+  "filename": "Abyssals-v0.90.39-Fort-Care.apk",
+  "title": "Abyssals v0.90.39 \u2014 Fort Care",
+  "notes": "All HP-payment moves require the full cost while leaving at least 1 HP; unaffordable moves fail without boosts or PP loss and are excluded from AI choices. Audits every legendary and mythical capture tier, including Waranwei, with shared preview/roll regression coverage. Adds healers and town care on all five Sunken Fort floors: healing, reserve swaps, eggs, breeding and the full care menu are available upon reaching each floor. Preserves quests, permanent deaths, saves, package and original signing. Includes the rebuilt offline PWA.",
+  "pwa_filename": "Abyssals-v0.90.39-PWA.zip"
 }

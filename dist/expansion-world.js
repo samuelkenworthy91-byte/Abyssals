@@ -25,7 +25,7 @@ import {biomeAsset,biomeFor,installBiomeWorld,drawBiomeDetails,drawBiomeEntrance
 import {installLeaderForts,leaderFortWalkable,drawLeaderFortDecor,drawLeaderFortEntrances} from './leader-fort-world.js?v=0.90.20';
 import {fortCoastTile,drawFortTile,drawFortCoast,drawFortExterior,drawFortArchitecture} from './fort-render.js?v=0.87.0';
 import {installExpansionHabitats} from './full-expansion-world.js?v=0.90.14';
-import {installExplorationWorld,drawExplorationScenery} from './exploration-world.js?v=0.90.13';
+import {installExplorationWorld,drawExplorationScenery} from './exploration-world.js?v=0.90.39';
 import {installSidePaths} from './side-world.js?v=0.90.13';
 import {extendRoutes} from './route-progression.js?v=0.87.0';
 import {BOARD,onBoard,boardWall} from './tunnel-puzzle.js?v=0.87.0';
@@ -116,3 +116,4 @@ installFinaleWorld(NEW_MAPS,NEW_DOORS);
 installPromenade(NEW_MAPS);
 
 if(NEW_MAPS.emberQuarry&&!NEW_MAPS.emberQuarry.spots.some(s=>s.id==='censmoke-care-board'))NEW_MAPS.emberQuarry.spots.push({id:'censmoke-care-board',label:'Read incense guardian cultivation notes',x:22,y:16,routeSign:true});
+

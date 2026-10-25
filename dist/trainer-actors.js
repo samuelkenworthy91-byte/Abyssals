@@ -1,5 +1,5 @@
 import {beginStep,advanceStep} from './movement.js?v=0.87.0';
-import {pathfind} from './engine.js?v=0.90.24';
+import {pathfind} from './engine.js?v=0.90.39';
 const patrols={
  'TRN-C01-002':[[42,20],[42,23],[40,23],[40,20]],
  'TRN-C01-003':[[32,24],[35,24],[35,22],[32,22]],
@@ -24,3 +24,4 @@ export function updateTrainers(list,dt,solid,player,defeated,onSeen,targetId=nul
  if(solid(x,y)||player.x===x&&player.y===y||player.step?.x===x&&player.step?.y===y||list.some(o=>o!==n&&(o.x===x&&o.y===y||o.step?.x===x&&o.step?.y===y))){n.wait=.5;continue;}
  beginStep(n,x,y,.4);n.wait=.35;
 }}
+

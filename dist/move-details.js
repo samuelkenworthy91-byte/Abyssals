@@ -1,11 +1,11 @@
 import {prepareSpecialistMove,stabMultiplier,secondaryChance} from './teamcraft-battle.js?v=0.90.30';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {resolveSalvationMove} from './salvation.js?v=0.87.0';
-import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.24';
+import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.39';
 import {statusDetails} from './battle-status.js?v=0.90.24';
 import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.90.24';
 import {typeEffectiveness,effectivenessLabel,categorySymbol} from './type-rules.js?v=0.87.0';
-import {stageMultiplier,damageScale} from './engine.js?v=0.90.24';
+import {stageMultiplier,damageScale} from './engine.js?v=0.90.39';
 const names={attack:'Attack',defence:'Defense',sp_attack:'Special Attack',sp_defence:'Special Defense',speed:'Speed',accuracy:'Accuracy',evasion:'Evasion'};
 export function damageRange(actor,target,move){move=resolveSalvationMove(actor,move);
  if(!move.power)return null;
@@ -57,3 +57,4 @@ export function mechanicsFor(move,actor,target){move=resolveSalvationMove(actor,
  return {details,range,accuracy:actor.moveState?.sureHit>0||move.accuracy==='ALWAYS'?100:Math.min(100,(move.accuracy??100)*stageMultiplier(actor.stages.accuracy)/stageMultiplier(move.effects.some(e=>e.effect_id==='ignore_positive_evasion')?Math.min(0,target.stages.evasion||0):target.stages.evasion)),order:movePriority(move,actor)>0?'Before normal-priority moves':'Normal priority; faster partner acts first',category:move.category==='PHYSICAL'?'Physical':move.category==='SPECIAL'?'Special':'Status',target:move.target==='SELF'?'Your partner':'One foe'};
 }
 export function detailsHTML(move,actor,target,{supervised=true}={}){move=resolveSalvationMove(actor,move);const d=mechanicsFor(move,actor,target);return `<div class="move-detail-heading"><b>${move.name}</b><span>${categorySymbol(move.category)} ${move.type_id} · ${d.category}</span></div><p>${move.effect_text}</p><dl class="move-stats"><div><dt>Power</dt><dd>${move.power??'—'}</dd></div><div><dt>Accuracy</dt><dd>${move.accuracy==='ALWAYS'?'Always':(move.accuracy??100)+'%'}</dd></div><div><dt>PP</dt><dd>${move.left??move.pp} / ${move.pp}</dd></div><div><dt>Target</dt><dd>${d.target}</dd></div></dl><p class="mechanic-order">${d.order}. ${move.accuracy==='ALWAYS'?'Always hits; ignores accuracy and evasion stages.':'Current hit chance: '+Math.round(d.accuracy)+'%.'}</p>${d.range?`<p>Uses <b>${d.range.attack}</b> against <b>${d.range.defense}</b>. ${effectivenessLabel(d.range.effectiveness)}. Normal-hit estimate: <b>${d.range.min}–${d.range.max} HP</b>${d.range.sameType?' · includes 1.5× same-type bonus':''}. ${supervised?'The referee stops damage at 1 HP.':'There is no referee: zero HP is lethal.'}</p>`:''}<ul>${d.details.map(t=>`<li>${t}</li>`).join('')}</ul><small class="practice-note">Type matchups apply to damaging moves; abilities and held items apply. Estimates exclude critical hits and assume the current Speed order.</small>`;}
+

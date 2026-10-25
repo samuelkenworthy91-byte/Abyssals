@@ -17,13 +17,13 @@ export function captureSpeciesTier(species){
  const name=String(species?.name??'');
  const id=String(species?.id??'');
  const power=String(species?.power_class??'');
- const role=String(species?.role??'');
+ const role=[species?.role,species?.rarity].filter(Boolean).join(' ');
  if(id==='425'||name==='Verdantyr')return {name:'Verdantyr',rate:15,ignoreLevel:true};
  if(species?.approvedPaladin&&species?.legendaryRoamer)return {name:'Paladin',rate:10,ignoreLevel:true};
+ if(/pseudo/i.test(power)||/pseudo/i.test(role))return {name:'Pseudo-legendary',rate:45,ignoreLevel:false};
  if(/mythic/i.test(power)||/mythic/i.test(role))return {name:'Mythical',rate:3,ignoreLevel:true};
  if(/box legendary/i.test(power)||/box legendary/i.test(role))return {name:'Major legendary',rate:3,ignoreLevel:true};
  if(/legendary/i.test(power)||/legendary/i.test(role)||species?.legendaryRoamer)return {name:'Legendary Watcher',rate:5,ignoreLevel:true};
- if(/pseudo/i.test(power)||/pseudo/i.test(role))return {name:'Pseudo-legendary',rate:45,ignoreLevel:false};
  return {name:'Ordinary',rate:species?.capture_rate??ROUTE.prototype_catch_rate,ignoreLevel:false};
 }
 export function capturePreview(target,foodModifier=1){
@@ -43,3 +43,4 @@ export function completeStarterReturn(unit){if(!unit.pendingReturn)return false;
 
 // Presentation only: reveal the already committed four capture checks without new RNG.
 export function captureMilestones(result){if(result.success)return [25,50,75,100];const passed=Math.max(0,Math.min(3,result.passed||0)),steps=Array.from({length:passed},(_,i)=>(i+1)*25),last=Math.min(99,Math.max(passed*25,Math.floor(result.closeness||0)));if(!steps.length||last>steps.at(-1))steps.push(last);return steps;}
+

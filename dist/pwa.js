@@ -1,5 +1,5 @@
 const nativeAndroid=!!globalThis.AbyssalsNative;
-const BUILD_VERSION='0.90.38';
+const BUILD_VERSION='0.90.39';
 const install=document.querySelector('#install-game'),status=document.querySelector('#pwa-status');
 let prompt=null;
 const installed=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone;
@@ -21,5 +21,6 @@ if(!nativeAndroid&&'serviceWorker' in navigator&&window.isSecureContext){
   window.addEventListener('online',()=>registration.update().catch(()=>{}));
  }).catch(()=>{status.textContent='Play online · saves stay on this device';});
 }else status.textContent='Saves stay on this device';
+
 
 
