@@ -8,7 +8,7 @@ The main route is now Philomere → Willowglass Viaduct → Rivercause Road, in 
 
 The normal 432×288 tile grid projects onto a fixed 768×512 aerial scene. Landings (36,144) and (396,144) remain exactly 360 real movement steps apart. Both full-height edge strips are walkable exit zones, with broad tap targets that work anywhere vertically along either side, including the camera’s letterboxing. A tap walks Aimon to the landing and transitions to the adjoining screen. Tapping the current landing exits immediately without awarding steps. The central marsh remains blocked; the painted deck is the walking route.
 
-Direction plaques and large edge chevrons name Philomere and Rivercause Road. Aimon’s scene scale rises from 0.4 to 0.75 and the follower from 0.22 to 0.36. Bridge steps take one third of their previous time: a fresh crossing is approximately 12 seconds running or 24 walking. Other maps retain their normal speed. Companion placement now respects each room’s grid dimensions.
+Exact gate-tile taps take priority over nearby follower conversations, preventing the follower behind Aimon from swallowing the return-gate click. Direction plaques and large edge chevrons name Philomere and Rivercause Road. Aimon’s scene scale rises from 0.4 to 0.75 and the follower from 0.22 to 0.36. Bridge steps take one third of their previous time: a fresh crossing is approximately 12 seconds running or 24 walking. Other maps retain their normal speed. Companion placement now respects each room’s grid dimensions.
 
 ## Progress and compatibility
 
