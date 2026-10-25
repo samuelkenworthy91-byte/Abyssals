@@ -24,10 +24,11 @@ reloading/cancelling a promotion. There is no retrospective reroll of earned sta
 New rescue gifts record their original 10% birth-form advantage in
 `rescueGrowthBonus`. Older records derive it from their first saved evolution's
 `from` species, or the current species when unevolved. This bonus also stacks
-from its original value. Every permanent source is inside the rescue-only 300%
-six-stat cap; proportional scaling uses integer tenths. Temporary effects add
-after the cap. Ordinary creatures and Prodigies do not have this total cap.
-Stewardship and tonic purchases must fit their full gain within the rescue cap.
+from its original value. The 300% six-stat limit applies only when generating
+initial rescue gift offers. After the gift enters player care, evolution,
+stewardship and tonics have no permanent growth-percentage ceiling. No player-owned
+rates are scaled down. Temporary boosts remain flat additions. Existing tonic
+dose limits and level rules are unchanged.
 
 The partner growth summary includes a per-stat formula and original source
 breakdown. Tonic confirmations show +5 × multiplier (focused) or +1 × multiplier
@@ -42,7 +43,7 @@ Eggs already created keep their committed records.
 
 Validation: `tests/permanent-growth.test.mjs` covers all sources at ×1/×2/×3,
 real promotions and level-up gains, reloads, purchase order, immutable receipts,
-advanced stewardship quotes, rescue rounding/caps/legacy fallback and donor
+advanced stewardship quotes, initial rescue eligibility, uncapped growth/legacy fallback and donor
 inflation. Phone QA in `tests/prodigy-evolution-browser.cjs` checks the visible
 maths, evolved tonic cancellation/purchase/reload, unchanged earned stats and
 a real amplified stewardship transaction. Existing nursery, trainer, gift and

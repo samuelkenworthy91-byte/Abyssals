@@ -34,10 +34,9 @@ export function permanentGrowthDetails(unit){
   const natural=growthPercent(unit.species,key),sources=permanentGrowthSources(unit,key),originalBonus=Object.values(sources).reduce((sum,v)=>sum+v,0),stackedBonus=originalBonus*multiplier;
   return {key,natural,sources,originalBonus,stackedBonus,tenths:Math.round((natural+stackedBonus)*10)};
  });
- const total=rows.reduce((n,row)=>n+row.tenths,0),capped=unit.giftOrigin==='Roadside rescue'&&total>3000;
- let values=rows.map(row=>row.tenths);
- if(capped){const exact=values.map(v=>v*3000/total);values=exact.map(Math.floor);let remaining=3000-values.reduce((a,b)=>a+b,0);const order=exact.map((v,i)=>({i,remainder:v-values[i]})).sort((a,b)=>b.remainder-a.remainder||a.i-b.i);for(const {i}of order){if(remaining--<=0)break;values[i]++;}}
- return {multiplier,capped,totalUncapped:total/10,totalPermanent:values.reduce((a,b)=>a+b,0)/10,rows:rows.map((row,i)=>({...row,uncapped:row.tenths/10,permanent:values[i]/10}))};
+ // The rescue's 300% rule belongs to gift generation, never player-owned growth.
+ const total=rows.reduce((n,row)=>n+row.tenths,0);
+ return {multiplier,capped:false,totalUncapped:total/10,totalPermanent:total/10,rows:rows.map(row=>({...row,uncapped:row.tenths/10,permanent:row.tenths/10}))};
 }
 export function unitGrowthRates(unit){return Object.fromEntries(permanentGrowthDetails(unit).rows.map(row=>[row.key,Math.round((row.permanent+trainingGrowthBonus(unit,row.key))*10)/10]));}
 export function unitGrowthPercent(unit,key){return unitGrowthRates(unit)[key];}

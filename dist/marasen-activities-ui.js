@@ -51,7 +51,6 @@ export function growthTonicQuote(s,uid,kind,stat){
  const keys=kind==='focused'?[stat]:STAT_KEYS,original=kind==='focused'?5:1,next={...u,marasenGrowth:{...u.marasenGrowth}};
  for(const key of keys)next.marasenGrowth[key]=(next.marasenGrowth[key]||0)+original;
  const details=permanentGrowthDetails(next);
- if(u.giftOrigin==='Roadside rescue'&&details.totalUncapped>300.00001)return {ok:false,reason:'This rescue partner cannot fit the full boost within its 300% permanent growth limit.'};
  return {ok:true,u,cost,keys,original,multiplier:permanentGrowthMultiplier(u),next,before:permanentGrowthDetails(u),after:details};
 }
 export function growthTonic(s,uid,kind,stat){const q=growthTonicQuote(s,uid,kind,stat);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+1;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
