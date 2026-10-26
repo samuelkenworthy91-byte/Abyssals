@@ -1,6 +1,6 @@
 import {migrateRenewalEconomy,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.38';
 import {migrateTeamcraftState} from './teamcraft-progress.js?v=0.90.30';
-import {DATA} from './data.js?v=0.90.30';
+import {DATA} from './data.js?v=0.90.40';
 import {migrateGeneralStores} from './shopkeepers.js?v=0.90.40';
 import {visitedTravelRooms} from './fast-travel.js?v=0.87.0';
 import {migrateMemorialMoves} from './finale-rules.js?v=0.90.19';
@@ -11,7 +11,7 @@ import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {migrateCharacterNames} from './character-names.js?v=0.87.0';
 import {memorialState} from './memorial.js?v=0.87.0';
 import {normalizeBinoculars} from './binoculars.js?v=0.87.0';
-import {adventureState} from './side-adventures.js?v=0.90.25';
+import {adventureState} from './side-adventures.js?v=0.90.40';
 import {migrateHospiceQuest} from './hospice-quest.js?v=0.87.0';
 const sources={ITEM_EVOLUTION_SUNSCAR_GLASS:'scrub-shrine-cache',ITEM_EVOLUTION_IRON_SIGIL:'armory-reliquary',ITEM_EVOLUTION_GILDED_IDOL:'keep-treasury-reward',ITEM_EVOLUTION_SAINT_S_TONIC:'medicine-chain-reward',ITEM_EVOLUTION_WAYFARER_FEATHER:'lost-pilgrim'};
 export function migrateProgress(state){

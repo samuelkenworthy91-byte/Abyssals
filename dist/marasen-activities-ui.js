@@ -1,14 +1,14 @@
 import {itemIcon,codexIcon} from './item-art.js?v=0.90.40';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.38';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.40';
 import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.35';
 import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.
 import {marasenObjective} from './marasen-rules.js?v=0.87.0';
-import {DATA} from './data.js?v=0.87.0';
-import {HELD_ITEMS} from './held-data.js?v=0.87.0';
-import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.87.0';
-import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.34';
+import {DATA} from './data.js?v=0.90.40';
+import {HELD_ITEMS} from './held-data.js?v=0.90.40';
+import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.40';
+import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.40';
 const FLOOR_NAMES=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
 const money=n=>Math.floor(n||0).toLocaleString('en-GB');
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -27,7 +27,7 @@ export const exchangeScrolls=()=>{
 };
 function storeItems(floor){
  if(floor===1)return exchangeScrolls().map(m=>({...m,kind:'codex'}));
- if(floor===2)return HELD_ITEMS.filter(i=>Number(i.buy_price)>0&&!i.id.startsWith('HELD_QUEST_')).slice(0,26).map(i=>({kind:'held',id:i.id,name:i.name,description:i.effect_text,price:Math.max(1800,i.buy_price)}));
+ if(floor===2)return HELD_ITEMS.filter(i=>Number(i.buy_price)>0&&!i.id.startsWith('HELD_QUEST_')).filter(i=>!i.effect?.berry).map(i=>({kind:'held',id:i.id,name:i.name,description:i.effect_text,price:Math.max(1800,i.buy_price)}));
  if(floor===3)return EVOLUTION_ITEMS.filter(i=>Number(i.buy_price)>0&&EVOLUTIONS.some(p=>p.condition.method==='ITEM'&&p.condition.item_id===i.id&&p.from_species_id===i.effect.from_species_id&&p.to_species_id===i.effect.to_species_id)).map(i=>({kind:'evolution',id:i.id,name:i.name,description:i.effect_text,price:Number(i.buy_price)}));
  if(floor===4)return [{kind:'pp',id:'endurance',name:'Endurance Tonic',description:'Permanent +1 maximum PP per dose to an individual move. Repeatable; price scales with investment. Current PP is not refilled.',price:1000},{kind:'training',id:'trainingTonics',name:'Level Training Tonic',description:'Raises a living Abyssal one level; separate from permanent growth tonics.',price:7500},{kind:'growth',id:'focused',name:'Focused Growth Tonic',description:'Choose one stat. +5 original growth points, multiplied by 1 + completed evolutions. Maximum ten growth doses per Abyssal.',price:25000},{kind:'growth',id:'balanced',name:'Balanced Growth Tonic',description:'+1 original growth point in all six stats, multiplied by 1 + completed evolutions. Maximum ten growth doses per Abyssal.',price:30000},...NURSERY_ITEMS.map(i=>({...i,kind:'nursery'}))];
  if(floor===5)return [{kind:'supply',id:'riverBait',name:'River Bait',description:'Specialist capture food suited to aquatic encounters.',price:950},{kind:'supply',id:'emergencyEvacs',name:'Emergency Evac',description:'Return a living expedition safely to its recovery location.',price:2500},{kind:'supply',id:'lifeEmbers',name:'Life Ember',description:'A rare second chance for a living Abyssal. One per expedition.',price:40000}];

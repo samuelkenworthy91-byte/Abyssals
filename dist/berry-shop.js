@@ -1,0 +1,5 @@
+// Mabel's pantry uses illustrated furniture with matching walkable aisles.
+export const BERRY_SHOP_ASSETS=Object.fromEntries(['counter','pantry','cabinet','crate','table','plant','window','mixed'].map(n=>['berryShop'+n,'berry-shop-'+n+'.webp']));
+export const BERRY_SHOP_PROPS=[['berryShoppantry',16,8,4,6],['berryShopcabinet',29,8,5,3],['berryShopcounter',21,11,7,3],['berryShopcrate',16,18,3,3],['berryShoptable',29,20,4,3],['berryShopplant',17,24,2,2],['berryShopmixed',30,24,3,2]];
+export function berryShopBlocked(x,y){return x<14||x>34||y<7||y>27||y===27&&x!==24||BERRY_SHOP_PROPS.some(([,a,b,w,h])=>x>=a&&x<a+w&&y>=b&&y<b+h);}
+export function drawBerryShop(c,asset){c.save();c.fillStyle='#1c1a19';c.fillRect(0,0,768,512);for(let y=5;y<=28;y++)for(let x=13;x<=35;x++)asset(c,y<7||x===13||x===35||y===28?'wall':'floor',x,y);c.fillStyle='#b9824622';c.fillRect(14*16,7*16,21*16,21*16);asset(c,'berryShopwindow',22,5,5,4);c.fillStyle='#bea27c';c.fillRect(22*16,16*16,5*16,10*16);c.fillStyle='#557554';for(let y=16;y<26;y+=2)c.fillRect(22*16+3,y*16+3,5*16-6,3);for(const p of BERRY_SHOP_PROPS)asset(c,...p);asset(c,'mat',24,27);c.restore();}

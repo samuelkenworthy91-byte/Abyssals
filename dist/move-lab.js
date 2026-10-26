@@ -1,6 +1,6 @@
 import {signatureArtReady} from './signature-effects.js?v=0.87.0';
 import {combatArtReady,combatArtSrc} from './combat-art.js?v=0.90.20';
-import {DATA} from './data.js?v=0.87.0';import {effectSpec,effectHTML,PALETTES} from './effects.js?v=0.87.0';import {learnTreeHTML} from './learn-tree.js?v=0.90.18';
+import {DATA} from './data.js?v=0.90.40';import {effectSpec,effectHTML,PALETTES} from './effects.js?v=0.87.0';import {learnTreeHTML} from './learn-tree.js?v=0.90.18';
 const $=id=>document.getElementById(id);let timer;
 for(const type of Object.keys(PALETTES))$('type').add(new Option(type,type));
 function filter(){const needle=$('search').value.toLowerCase(),type=$('type').value,old=$('move').value,moves=DATA.moves.filter(m=>(!type||m.type_id===type)&&(m.name+' '+m.type_id+' '+m.effect_text).toLowerCase().includes(needle));$('move').replaceChildren(...moves.map(m=>new Option(m.name+' · '+m.type_id,m.id)));if(moves.some(m=>String(m.id)===old))$('move').value=old;$('play').disabled=!moves.length;preview();}

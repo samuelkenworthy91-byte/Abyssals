@@ -1,6 +1,6 @@
-import {DATA} from './data.js?v=0.87.0';
-import {ABILITIES} from './ability-data.js?v=0.87.0';
-import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.40';
+import {ABILITIES} from './ability-data.js?v=0.90.40';
+import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.40';
 import {RELIC_ITEMS} from './relic-family.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';
 export {QUEST_REWARDS,SECRET_MOVES};

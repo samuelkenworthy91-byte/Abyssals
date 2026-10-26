@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.40';
 import {participantExpMultiplier} from './relic-family.js?v=0.87.0';
 import {trainingGrowthBonus} from './training-draughts.js?v=0.87.0';
 import {experienceMultiplier} from './opening-balance.js?v=0.87.0';
@@ -21,7 +21,7 @@ export function expAward(enemyLevel,ownLevel,multiplier=1,participantMultiplier=
  if(gap<0)return Math.max(1,Math.round(25*experienceMultiplier(ownLevel)*Math.pow((10+gap)/10,3)))*yieldMultiplier*participantMultiplier;
  return Math.round((25+5*gap+gap*gap/48)*experienceMultiplier(ownLevel)*participantMultiplier*yieldMultiplier);
 }
-export function growthPercent(species,key){const authored=species.growth_percent?.[key];if(Number.isFinite(authored))return Math.max(10,authored);const base=species.base_stats,bst=STAT_KEYS.reduce((n,k)=>n+base[k],0);return Math.max(10,Math.floor((32+.06*(bst-300))*Math.pow(base[key]/(bst/6),2.25)+.5));}
+export function growthPercent(species,key){const authored=species.growth_percent?.[key];if(Number.isFinite(authored))return Math.max(species.branchBase?0:10,authored);const base=species.base_stats,bst=STAT_KEYS.reduce((n,k)=>n+base[k],0);return Math.max(10,Math.floor((32+.06*(bst-300))*Math.pow(base[key]/(bst/6),2.25)+.5));}
 // Immutable original growth-point investments share the completed-evolution multiplier.
 export const permanentGrowthMultiplier=unit=>prodigyMultiplier(unit);
 export function permanentGrowthSources(unit,key){
@@ -52,7 +52,7 @@ export function statGain(percent,roll,key,bonusRoll=1){
 // Each call consumes exactly 100 EXP. The reward queue repeats this through all
 // earned levels, preserving the remainder even at the existing level-200 ceiling.
 export function growLevel(unit){normalizeProgress(unit);if(unit.dead||unit.hp<=0||unit.exp<100||unit.level>=200)return null;unit.exp-=100;unit.level++;unit.growthRulesVersion=GROWTH_RULES_VERSION;const rows=STAT_KEYS.map(key=>{const before=key==='hp'?unit.maxHp:unit.stats[key];const roll=hashSeed(`${unit.growthSeed}:${unit.level}:${key}`)/4294967296;const bonusRoll=hashSeed(`${unit.growthSeed}:${unit.level}:${key}:bounded-bonus`)/4294967296;const gain=statGain(unitGrowthPercent(unit,key),roll,key,bonusRoll);unit.stats[key]=before+gain;if(key==='hp'){unit.maxHp=before+gain;unit.hp=Math.min(unit.maxHp,unit.hp+gain);}return {key,before,after:before+gain,gain};});if(rows.every(row=>row.gain===0)){const weights=STAT_KEYS.map(key=>unitGrowthPercent(unit,key)),total=weights.reduce((n,w)=>n+w,0);let pick=hashSeed(`${unit.growthSeed}:${unit.level}:guaranteed`)/4294967296*total;const index=weights.findIndex(w=>(pick-=w)<0),row=rows[Math.max(0,index)],gain=row.key==='hp'?10:1;row.gain=gain;row.after+=gain;row.guaranteed=true;unit.stats[row.key]=row.after;if(row.key==='hp'){unit.maxHp=row.after;unit.hp=Math.min(unit.maxHp,unit.hp+gain);}}return {kind:'level',uid:unit.uid,level:unit.level,rows};}
-export function rewardsFor(defeats,party,{shareAll=false,warbond=null}={}){const multiplier=participantExpMultiplier(defeats,party,{shareAll,warbond}),amounts=new Map();for(const defeat of defeats){for(const uid of new Set(shareAll?party.map(u=>u.uid):defeat.participants)){const unit=party.find(u=>u.uid===uid&&u.hp>0&&!u.dead&&u.level<200);if(unit){const award=expAward(defeat.level,unit.level,defeat.expMultiplier,multiplier);if(award>0)amounts.set(uid,(amounts.get(uid)||0)+award);}}}return [...amounts].map(([uid,amount])=>({uid,amount,...(multiplier===2?{ability:'Warbond',multiplier}: {})}));}
+export function rewardsFor(defeats,party,{shareAll=false,warbond=null}={}){const multiplier=participantExpMultiplier(defeats,party,{shareAll,warbond}),amounts=new Map();for(const defeat of defeats){for(const uid of new Set(shareAll?party.map(u=>u.uid):defeat.participants)){const unit=party.find(u=>u.uid===uid&&u.hp>0&&!u.dead&&u.level<200);if(unit){const raw=expAward(defeat.level,unit.level,defeat.expMultiplier,multiplier),award=unit.species.id==='505'?Math.floor(raw/2):raw;if(award>0)amounts.set(uid,(amounts.get(uid)||0)+award);}}}return [...amounts].map(([uid,amount])=>({uid,amount,...(multiplier===2?{ability:'Warbond',multiplier}: {})}));}
 
 export function initializeProgress(unit){normalizeProgress(unit);const target=unit.level;unit.level=1;for(let level=2;level<=target;level++){unit.exp=100;growLevel(unit);}unit.exp=0;unit.hp=unit.maxHp;unit.evolutionBlockedLevel=unit.level;return unit;}
 

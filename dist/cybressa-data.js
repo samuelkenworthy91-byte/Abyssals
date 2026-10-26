@@ -1,5 +1,5 @@
 import {mountainRoute,PASS_CACHES} from './mountain-pass.js?v=0.90.20';
-import {DATA} from './data.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.40';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 export const CYBRESSA_ROUTES={
  rivercause:{name:'Rivercause Road · Western Causeway',min:38,max:40,biome:'wetland',DAY:['052','106','061','078','054'],NIGHT:['052','106','024','022','112']},

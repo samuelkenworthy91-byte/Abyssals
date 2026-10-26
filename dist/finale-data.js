@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.40';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 export const SUN_ROAD=[['sunBank','Willowmere · The Quiet Bank',78,81,'road'],['burialGrove','Willowmere · The Remembering Tree',79,82,'burial'],['sunFalls','Willowmere · Silverwater Crossing',81,85,'falls'],['sunTerraces','Cayfen · The Flowering Terraces',83,87,'terraces']];
 export const SPORE_ROAD=[['sporeRim','Sporefall · Hanging Roots',89,93,'spore'],['sporeDepths','Sporefall · The Lantern Shelves',91,95,'spore'],['sporeBridge','Sporefall · Broken Companies',93,97,'spore'],['sporeCrown','Sporefall · The Last Crossing',95,99,'darius']];

@@ -1,4 +1,4 @@
-import {canonicalMoveId} from './teamcraft-data.js?v=0.90.30';
+import {canonicalMoveId} from './teamcraft-data.js?v=0.90.40';
 export function maximumPP(unit,move){const n=Number(unit.ppBonusByMoveId?.[move.id]||0);return move.pp+(Number.isSafeInteger(n)&&n>0?n:0);}
 export function redirectInheritance(record){if(record&&Number.isInteger(record.moveId)){const id=canonicalMoveId(record.moveId);if(id!==record.moveId){record.moveId=id;record.teamcraftAliasMigration=true;}}}
 export function normalizeTeamcraftUnit(u,moves){redirectInheritance(u.breedingInheritance);const by=new Map(moves.map(m=>[m.id,m])),bonus={};for(const [key,value]of Object.entries(u.ppBonusByMoveId||{})){if(Number.isSafeInteger(value)&&value>0){const id=canonicalMoveId(key);bonus[id]=Math.max(bonus[id]||0,value);}}u.ppBonusByMoveId=bonus;const unique=new Map();

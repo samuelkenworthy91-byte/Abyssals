@@ -1,8 +1,8 @@
 {
   "version": "0.90.40",
   "version_code": 135,
-  "filename": "Abyssals-v0.90.40-Bag-and-Lift.apk",
-  "title": "Abyssals v0.90.40 \u2014 Bag Artwork and Exchange Lift",
-  "notes": "Matching inventory artwork for all bag supplies, held items, evolution items and nursery supplies. Type-coloured move codexes. Patient Rations retired from shops, rewards and combat; existing stock converts one-for-one to Slow Stew. Adds a walk-in Grand Exchange lift with floor and shop descriptions. Development patch staged without triggering an APK build; further requested changes will be included before release. Corrects the mirrored right-facing walking frame for Waranwei. New branch families remain review proposals outside the game until approved.",
+  "filename": "Abyssals-v0.90.40-Berries-and-Branches.apk",
+  "title": "Abyssals v0.90.40 \u2014 Berries and Branches",
+  "notes": "Adds two new item-branch families with ten original battle portraits and matching directional followers. Flaskling is rare at levels 5\u20138 in Dorelem Scrub and gains half EXP; use a sin item at level 40+ in Hell. Scruffox is rare at levels 8\u201312 on North Scrub Road; four relics evolve it at level 30. Reggifox is Fighting/Psychic with buffing and special attacks. All eight evolution items are in Marasen\u2019s Evolution Atelier. Adds twelve consumable held Berries linked to existing Berry abilities, eight broad-role held items, and Mabel Rowan\u2019s illustrated farm-shop pantry in Dorelem\u2019s upper-left stablehouse. Tightens item crops, adds pictures throughout the bag, retires Patient Rations with a one-for-one Slow Stew conversion, adds the Grand Exchange lift and corrects Waranwei\u2019s walking direction. Preserves saves, quests, permanent deaths, package identity and original signing. Includes the rebuilt offline PWA.",
   "pwa_filename": "Abyssals-v0.90.40-PWA.zip"
 }

@@ -1,10 +1,10 @@
 import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.30';
 import {randomStatusDuration} from './status-rules.js?v=0.90.24';
-import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.87.0';
-import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.87.0';
+import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.90.40';
+import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.90.40';
 import {menagerieParty,bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.87.0';
-import {ABILITIES} from './ability-data.js?v=0.87.0';
-import {HELD_ITEMS} from './held-data.js?v=0.87.0';
+import {ABILITIES} from './ability-data.js?v=0.90.40';
+import {HELD_ITEMS} from './held-data.js?v=0.90.40';
 import {unitName} from './names.js?v=0.87.0';
 export function abilityName(u){return u.species.ability_names?.[u.abilitySlot||'primary']||null;}
 export function abilityInfo(u){return ABILITIES.find(a=>a.name===abilityName(u));}
@@ -14,14 +14,14 @@ const note=(u,text)=>`${unitName(u)} · ${abilityName(u)}: ${text}`;
 export function abilityMemory(u){return u.abilityState??={types:[],moves:[],flags:{},charges:0,dealt:0,hits:0};}
 export function abilityBattle(u){return u.abilityBattle??={flags:{},turn:0};}
 export function heldInfo(u){return HELD_ITEMS.find(i=>i.id===u.heldItem)||u.heldDefinition||null;}
-export function heldStat(u,key){const e=heldInfo(u)?.effect;return (e?.operation==='quest_stats'?e.stats[key]||1:1)*(e?.operation==='effective_stat'&&e.stat===key?e.multiplier:1)*(key!=='hp'&&u.sunWrath?.active?1.25:1);}
+export function heldStat(u,key){const e=heldInfo(u)?.effect;return (e?.operation==='assault_vest'&&key==='sp_defence'?e.multiplier:1)*(e?.operation==='quest_stats'?e.stats[key]||1:1)*(e?.operation==='effective_stat'&&e.stat===key?e.multiplier:1)*(key!=='hp'&&u.sunWrath?.active?1.25:1);}
 export function weatherSuppressed(...units){return units.some(u=>u.hp>0&&has(u,'Weather Calm'));}
 export function effectiveStage(u,key,foe=null){return Math.max(-6,Math.min(6,u.stages?.[key]||0));}
 export function speedFactor(u,opponent){const w=u.field?.weather,suppressed=weatherSuppressed(u,opponent||u);return (u.status==='PARALYSIS'?.5:1)*heldStat(u,'speed')*(!suppressed&&(has(u,'Rainrunner')&&w==='RAIN'||has(u,'Sunstride')&&w==='SUN'||has(u,'Snowfoot')&&['SNOW','HAIL'].includes(w))?1.5:1);}
 export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattle=false}={}){
  bindMenagerieParty(party);u.abilitySlot??='primary';u.abilityState={types:[],moves:[],flags:{},charges:0,dealt:0,hits:0};if(newBattle)u.abilityBattle={flags:{},turn:0};abilityBattle(u);u.field=field;
  u.abilityState.allies=Math.max(0,party.filter(p=>p.hp>0&&!p.dead).length-1);u.abilityState.primaryTypes=new Set(party.filter(p=>p.hp>0&&!p.dead).map(p=>p.species.types[0])).size;
- const messages=[];if(triggerSunWrath(u))messages.push(note(u,"Sun God’s Wrath: transformed; all six stats boosted by 25%."));const raise=(keys,text)=>{for(const k of keys)stage(u,k,1);messages.push(note(u,text));};
+ const messages=[];if(u.fixerBoost){stage(u,'speed',1);delete u.fixerBoost;messages.push('The Fixer prepared a Speed boost.');}if(triggerSunWrath(u))messages.push(note(u,"Sun God’s Wrath: transformed; all six stats boosted by 25%."));const raise=(keys,text)=>{for(const k of keys)stage(u,k,1);messages.push(note(u,text));};
  if(!newBattle&&!afterFaint){if(heldInfo(u)?.effect?.condition==='switch')abilityBattle(u).flags.defenderReady=true;if(has(u,'Tidal Footwork')&&!abilityBattle(u).flags.tidalFootwork){abilityBattle(u).flags.tidalFootwork=true;raise(['speed'],'voluntary switch raised Speed.');}}
  if(has(u,'Clear Judgment')){for(const k in u.stages)if(u.stages[k]<0)u.stages[k]=0;messages.push(note(u,'negative stages cleared; opposing evasion boosts blocked.'));}
  messages.push(...paladinEnter(u));
@@ -38,18 +38,19 @@ export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattl
  if(has(u,'Sovereign Decree')){field.decree={side:u.side||'player',turns:5};messages.push(note(u,'Decree protects its side for five turns.'));}
  if(has(u,'Floodplain')&&field.weather==='RAIN'){stage(u,'defence',1);u.abilityState.flags.flood=true;messages.push(note(u,'rain raised Defence.'));}
  if(has(u,'Waystone Master')&&u.hazards?.length){u.hazards.shift();messages.push(note(u,'one entry-hazard layer removed.'));}
- return messages;
+ messages.push(...activateHeldRecovery(u,party));return messages;
 }
 export function triggerArcticEndurance(u){const b=abilityBattle(u);if(!has(u,'Arctic Endurance')||u.hp<=0||u.hp>=u.maxHp/2||b.flags.arctic)return false;b.flags.arctic=true;stage(u,'defence',1);stage(u,'sp_defence',1);return true;}
 export function triggerSunWrath(u){if(!has(u,"Sun God's Wrath")||u.hp<=0||u.hp>=u.maxHp/2||u.sunWrath?.active)return false;const baseMax=u.maxHp;u.sunWrath={active:true,baseMax};u.maxHp=u.stats.hp=Math.round(baseMax*1.25);u.hp=Math.max(1,Math.round(u.hp*u.maxHp/baseMax));return true;}
-export function leaveAbility(u,{switching=false,nextUnit=null}={}){paladinLeave(u);const messages=birdLeave(u,{switching,nextUnit,changeStage,restoreHP}),alive=u.hp>0&&!u.dead;if(switching&&alive&&has(u,'Renewing Tide'))messages.push(note(u,`restored ${restoreHP(u,Math.max(1,Math.floor(u.maxHp/3)))} HP on switching out.`));departTeamcraft(u,nextUnit,switching,messages);if(u.sunWrath?.active){const max=u.maxHp;u.maxHp=u.stats.hp=u.sunWrath.baseMax;u.hp=u.hp<=0?0:Math.max(1,Math.round(u.hp*u.maxHp/max));delete u.sunWrath;}if(has(u,'Renewal'))u.status=null;u.trapped=0;u.moveState={};u.toxicCounter=0;u.preventForcedSwitch=0;u.immuneFlinch=0;u.statusImmunity={};u.abilityState=null;u.stages={};u.confusion=0;u.flinched=false;u.field={};return messages;}
+export function leaveAbility(u,{switching=false,nextUnit=null}={}){paladinLeave(u);const messages=birdLeave(u,{switching,nextUnit,changeStage,restoreHP}),alive=u.hp>0&&!u.dead;if(switching&&alive&&has(u,'Renewing Tide'))messages.push(note(u,`restored ${restoreHP(u,Math.max(1,Math.floor(u.maxHp/3)))} HP on switching out.`));if(switching&&nextUnit&&abilityBattle(u).fixerReady){nextUnit.fixerBoost=true;delete abilityBattle(u).fixerReady;}departTeamcraft(u,nextUnit,switching,messages);if(u.sunWrath?.active){const max=u.maxHp;u.maxHp=u.stats.hp=u.sunWrath.baseMax;u.hp=u.hp<=0?0:Math.max(1,Math.round(u.hp*u.maxHp/max));delete u.sunWrath;}if(has(u,'Renewal'))u.status=null;u.trapped=0;u.moveState={};u.toxicCounter=0;u.preventForcedSwitch=0;u.immuneFlinch=0;u.statusImmunity={};u.abilityState=null;u.stages={};u.confusion=0;u.flinched=false;u.field={};return messages;}
 export function beginAbilities(player,foes,party=[player],field={}){bindMenagerieParty(party);bindMenagerieParty(foes);for(const u of [...party,...foes]){u.abilityBattle={flags:{},turn:0};u.abilityState=null;u.moveState={};u.toxicCounter=0;u.field=field;u.stages={};}for(const u of party)u.side='player';player.side='player';for(const e of foes)e.side='enemy';field.titheUnits=[...party,...foes].filter(u=>has(u,'Tithe Charge')).map(u=>({uid:u.uid,side:u.side}));return [...enterAbility(player,foes[0],{party,field,newBattle:true}),...enterAbility(foes[0],player,{party:foes,field,newBattle:true})];}
 export function resumeAbilities(player,foes,party=[player]){bindMenagerieParty(party);bindMenagerieParty(foes);const field=player.field||foes[0]?.field||{};for(const u of [...party,...foes])u.field=field;player.side='player';for(const e of foes)e.side='enemy';}
 export function changeStage(u,key,amount,source,messages=[]){const enemy=source&&source!==u;
  const decree=u.field?.decree;const protectedStat=paladinStatProtected(u,key)||has(u,'Stable Core')||has(u,'Battle Nerve','Rallying Cry')&&key==='attack'||has(u,'Calm Guard')&&key==='sp_defence'||has(u,'Keen Sense')&&key==='accuracy'||has(u,'Surefoot')&&key==='speed'||decree?.turns>0&&decree.side===u.side;
  if(enemy&&amount<0&&protectedStat){messages.push(note(u,'stat reduction blocked.'));return 0;}
+ if(amount>0&&key==='evasion'&&has(u,'Heavy Hands'))return 0;
  if(amount>0&&key==='evasion'&&source===u&&u.opponentBlocksEvasion){messages.push('Opposing ability blocks evasion boosts.');return 0;}
- const gain=stage(u,key,amount);if(gain)messages.push(`${unitName(u)}: ${key.replaceAll('_',' ')} ${gain>0?'rose':'fell'}.`);
+ let gain=stage(u,key,amount);if(gain<0&&has(u,'Quick Study')&&!abilityBattle(u).flags.quickStudy){stage(u,key,-gain);abilityBattle(u).flags.quickStudy=true;messages.push(note(u,'restored its first lowered stat.'));gain=0;}if(gain)messages.push(`${unitName(u)}: ${key.replaceAll('_',' ')} ${gain>0?'rose':'fell'}.`);
  return gain;
 }
 export function blocksEvasion(u){return has(u,'Clear Judgment')||u.field?.decree?.turns>0&&u.field.decree.side===u.side;}
@@ -67,9 +68,9 @@ export function changeWeather(weather,units,turns=5){const messages=[];const old
 }
 export function isContact(m){return m.contact??(m.category==='PHYSICAL'&&!/shot|arrow|projectile|launch|beam|wave|pulse/i.test(m.name));}
 export function isSound(m){return m.sound??(/roar|cry|call|chorus|song|chant|howl|chime|echo|shriek|resonance|sound|sonic/i.test(m.name));}
-export function inflictStatus(u,status,messages=[],random=Math.random){if(u.hp<=0)return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);return true;}
+export function inflictStatus(u,status,messages=[],random=Math.random){if(u.hp<=0)return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
  if(u.status||u.statusImmunity?.[status]||has(u,'Toxinproof')&&['POISON','BAD_POISON'].includes(status)||has(u,'Coldproof')&&status==='FREEZE'||['POISON','BAD_POISON'].includes(status)&&u.species.types.some(t=>['POISON','STEEL'].includes(t))||status==='BURN'&&u.species.types.includes('FIRE')||['FREEZE','FROSTBITE'].includes(status)&&u.species.types.includes('ICE')||status==='PARALYSIS'&&u.species.types.includes('ELECTRIC'))return false;
- u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);return true;
+ u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);messages.push(...activateHeldRecovery(u));return true;
 }
 export function blockedByAbility(actor,target,move,messages=[]){
  let why=null;if(has(target,'Hovercore')&&move.type_id==='GROUND')why='Ground immunity';if(has(target,'Soundproof')&&isSound(move))why='sound immunity';
@@ -120,6 +121,14 @@ export function abilityMultiplier(actor,target,move,{effectiveness=1,critical=fa
  const ward=heldInfo(target)?.effect,battle=target.abilityBattle||{flags:{}};if(ward?.operation==='quest_ward'&&!battle.flags.questWard&&((ward.condition==='super'&&effectiveness>1)||(ward.condition==='physical'&&move.category==='PHYSICAL')||(ward.condition==='switch'&&battle.flags.defenderReady)))multiplier*=ward.multiplier;
  const held=heldInfo(actor)?.effect;if(held?.operation==='quest_damage'&&held.types.includes(move.type_id)&&held.category===move.category)multiplier*=held.multiplier;
  if(held?.operation==='damage_multiplier'&&(!held.type_id||held.type_id===move.type_id)&&(!held.requires||actor.field?.weather||actor.field?.terrain))multiplier*=held.multiplier;
+ if(has(actor,'Peerless Ego')&&move.category==='SPECIAL'&&!Object.values(actor.stages||{}).some(n=>n<0))multiplier*=1.2;
+ if(move.prideSignature&&!Object.values(actor.stages||{}).some(n=>n<0))multiplier*=1.2;
+ if(has(actor,'Sovereign Charge')&&!a.flags.sovereignSpent)multiplier*=1.25;
+ if(has(actor,'Heavy Hands')&&isContact(move))multiplier*=1.15;
+ if(has(target,'Unhurried')&&movedFirst)multiplier*=.8;
+ if(has(target,'Burhwall')&&effectiveness>1)multiplier*=.75;
+ if(held?.operation==='category_damage'&&held.category===move.category)multiplier*=held.multiplier;
+ if(held?.operation==='life_orb')multiplier*=held.multiplier;
  return multiplier;
 }
 export const healingMultiplier=u=>heldInfo(u)?.effect?.operation==='healing_received'?heldInfo(u).effect.multiplier:1;
@@ -135,6 +144,9 @@ export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=f
  if(has(actor,'Revenge Mark'))a.attacker=null;
  if(move.category==='PHYSICAL'&&has(actor,'Bamboo Discipline'))a.flags.bamboo=false;
  if(!damage)return messages;
+ if(has(actor,'Sovereign Charge'))a.flags.sovereignSpent=true;
+ if(has(target,'Grievance')&&target.hp>0&&effectiveness>1){counterContext.grievance??=new Set();if(!counterContext.grievance.has(target)){counterContext.grievance.add(target);changeStage(target,'attack',1,target,messages);}}
+ const helmet=heldInfo(target)?.effect;if(helmet?.operation==='contact_helmet'&&isContact(move)&&actor.hp>0){const loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp/6)));actor.hp-=loss;messages.push(`${unitName(actor)} loses ${loss} HP to Reprisal Helm.`);}
  damagedTeamcraft(actor,target,move,damage,{changeStage,messages});
  messages.push(...paladinAfterDamage(actor,target,move,damage,{effectiveness,critical}),...birdAfterDamage(actor,target,move,damage,{effectiveness,floor,changeStage,isContact}));
  recordMenagerieDamage(actor,target);tb.directDamageTurn=tb.turn;
@@ -177,15 +189,30 @@ export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=f
 }
 export function recordMove(actor,move){birdRecordMove(actor,move);const a=abilityMemory(actor);a.repeated=a.previousMove===move.id;a.previousMove=move.id;if(move.power)a.previousType=move.type_id;}
 export function failedMove(actor,move){const a=abilityMemory(actor);if(has(actor,'Bamboo Discipline')&&move.category==='PHYSICAL')a.flags.bamboo=false;a.hits=0;if(move.power)a.flags.attack=true;recordMove(actor,move);}
-export function afterStatusMove(actor,target=null){paladinAfterStatus(actor);const a=abilityMemory(actor),messages=birdAfterStatus(actor,target,{changeStage});if(has(actor,'Bamboo Discipline')){a.flags.bamboo=true;messages.push(note(actor,'next physical attack gains 30% power.'));}if(has(actor,'Feintstep')&&!a.flags.feint){a.flags.feint=true;stage(actor,'speed',1);messages.push(note(actor,'successful status move raised Speed.'));}return messages;}
+export function afterStatusMove(actor,target=null){paladinAfterStatus(actor);const a=abilityMemory(actor),messages=birdAfterStatus(actor,target,{changeStage});if(has(actor,'Bamboo Discipline')){a.flags.bamboo=true;messages.push(note(actor,'next physical attack gains 30% power.'));}if(has(actor,'Feintstep')&&!a.flags.feint){a.flags.feint=true;stage(actor,'speed',1);messages.push(note(actor,'successful status move raised Speed.'));}if(has(actor,'The Fixer')){const ally=menagerieParty(actor).find(u=>u!==actor&&u.hp>0&&!u.dead&&u.abilityState&&u.side===actor.side);if(ally)changeStage(ally,'speed',1,actor,messages);else abilityBattle(actor).fixerReady=true;}return messages;}
 export function consumedBerry(u,party=[u],amount=0){const b=abilityBattle(u),messages=[];b.berry=u.heldItem;b.berryDefinition=u.heldDefinition;u.heldItem=null;u.heldDefinition=null;const healing=Math.floor(amount*(has(u,'Feast')?1.5:1))+(has(u,'Forager')?Math.max(1,Math.floor(u.maxHp/16)):0);const n=restoreHP(u,healing);if(has(u,'Shared Pantry')&&!b.flags.pantry){const ally=menagerieParty(u).find(v=>v!==u&&v.hp>0&&!v.dead&&v.hp<v.maxHp);if(ally){b.flags.pantry=true;const shared=restoreHP(ally,Math.max(1,Math.floor(ally.maxHp/8)));messages.push(`${unitName(ally)} shares ${shared} HP from the pantry.`);}}if(n)messages.push(`${unitName(u)}'s Berry restored ${n} HP.`);if(has(u,'Berry Hoard')&&!b.flags.hoard){b.flags.hoard=true;b.regrow=b.turn+2;}
  u.field??={};u.field.tithe??={};const ids=new Set([...party.filter(ally=>ally.side===u.side&&has(ally,'Tithe Charge')).map(ally=>ally.uid),...(u.field.titheUnits||[]).filter(ally=>ally.side===u.side).map(ally=>ally.uid)]);for(const uid of ids)u.field.tithe[uid]=Math.min(3,(u.field.tithe[uid]||0)+1);return messages;}
+export function activateHeldRecovery(u,party=menagerieParty(u)){
+ if(!u||u.hp<=0||u.dead)return [];const item=heldInfo(u),e=item?.effect;if(!e)return [];const messages=[];
+ if(e.operation==='white_herb'&&Object.values(u.stages||{}).some(n=>n<0)){for(const k in u.stages)if(u.stages[k]<0)u.stages[k]=0;u.heldItem=null;u.heldDefinition=null;messages.push(`${unitName(u)} consumed Clear Herb; lowered stages restored.`);return messages;}
+ if(!e.berry)return messages;
+ const cure=e.cure==='ALL'?(!!u.status||u.confusion>0):Array.isArray(e.cure)&&e.cure.includes(u.status);
+ const empty=e.pp&&u.moves?.find(m=>m.left===0),low=e.threshold!==undefined&&u.hp<=u.maxHp*e.threshold;
+ const useful=low&&(e.stat?(u.stages?.[e.stat]||0)<6:u.hp<u.maxHp);
+ if(!cure&&!empty&&!useful)return messages;
+ if(cure){u.status=null;u.statusTurns=0;u.toxicCounter=0;if(e.cure==='ALL')u.confusion=0;messages.push(`${unitName(u)} consumed ${item.name}; status cured.`);}
+ if(empty){const n=Math.min(e.pp,empty.pp);empty.left=n;messages.push(`${unitName(u)} consumed ${item.name}; ${empty.name} recovered ${n} PP.`);}
+ const amount=low&&!e.stat?(e.amount??Math.max(1,Math.floor(u.maxHp*(e.healFraction||.25)))):0;
+ messages.push(...consumedBerry(u,party,amount));if(e.stat){stage(u,e.stat,e.stages||1);messages.push(`${unitName(u)} consumed ${item.name}; ${e.stat.replace('_',' ')} rose.`);}return messages;
+}
+export function heldSurvival(target,damage,messages){if(heldInfo(target)?.effect?.operation==='focus_sash'&&target.hp===target.maxHp&&damage>=target.hp&&target.hp>1){target.heldItem=null;target.heldDefinition=null;messages.push(`${unitName(target)} consumed Last Thread and held on at 1 HP.`);return target.hp-1;}return damage;}
+export function finishHeldMove(actor,target,move,damage,{floor=0}={}){const messages=[];if(damage>0&&heldInfo(actor)?.effect?.operation==='life_orb'&&actor.hp>0){const loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp/10)));actor.hp-=loss;messages.push(`${unitName(actor)} loses ${loss} HP to Pressure Orb.`);}messages.push(...activateHeldRecovery(actor),...activateHeldRecovery(target));return messages;}
 export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){const messages=[];const field=units[0]?.field||{},suppressed=weatherSuppressed(...units);
  for(const u of units){if(u.hp<=0)continue;const a=abilityMemory(u),b=abilityBattle(u);b.turn++;
   if(has(u,'Patience'))a.flags.patient=a.dealt===0&&!(u.moveState?.protectChain>1);
   if(has(u,'Truce')&&a.dealt===0&&!a.flags.truce){stage(u,'sp_defence',1);a.flags.truce=true;messages.push(note(u,'a turn without damage raised Special Defence.'));}
   const held=heldInfo(u)?.effect;if(held?.operation==='end_turn_heal'&&(!held.holderType||u.species.types.includes(held.holderType))){const [n,d]=held.max_hp_fraction;const restored=restoreHP(u,Math.max(1,Math.floor(u.maxHp*n/d)));if(restored)messages.push(`${unitName(u)} · ${heldInfo(u).name}: restored ${restored} HP.`);}
-  if(held?.berry&&u.hp<=u.maxHp*(held.threshold??.5))messages.push(...consumedBerry(u,party,held.amount??u.maxHp/4));
+  messages.push(...activateHeldRecovery(u,party));
   if(has(u,'Berry Hoard')&&b.regrow<=b.turn&&!u.heldItem&&b.berry){u.heldItem=b.berry;u.heldDefinition=b.berryDefinition;delete b.regrow;messages.push(note(u,'Berry regrew.'));}
   if(has(u,'Warm Current')&&field.weather==='SUN'&&!suppressed){const n=restoreHP(u,Math.max(1,Math.floor(u.maxHp/16)));if(n)messages.push(note(u,`sunlight restored ${n} HP.`));}
   if(has(u,'Earthroot','World Anchor')&&['GRASSY','GROUND'].includes(field.terrain)){const n=restoreHP(u,Math.max(1,Math.floor(u.maxHp/16)));if(n)messages.push(note(u,`terrain restored ${n} HP.`));}
@@ -193,7 +220,7 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
   if(!suppressed&&field.weather==='SAND'&&!has(u,'Sandcoat','Sand Reservoir')&&!u.species.types.some(t=>['ROCK','GROUND','STEEL'].includes(t)))residual+=Math.max(1,Math.floor(u.maxHp/16));
   if(!suppressed&&field.weather==='HAIL'&&!u.species.types.includes('ICE'))residual+=Math.max(1,Math.floor(u.maxHp/16));
   const loss=Math.min(Math.max(0,u.hp-(u.combatFloor??floor)),residual);u.hp-=loss;if(loss)messages.push(`${unitName(u)} loses ${loss} HP to ${u.status?.toLowerCase()||'weather'}.`);
-  a.dealt=0;if(u.trapped>0)u.trapped--;if(u.preventForcedSwitch>0)u.preventForcedSwitch--;for(const key in u.statusImmunity||{})if(--u.statusImmunity[key]<=0)delete u.statusImmunity[key];
+  messages.push(...activateHeldRecovery(u,party));a.dealt=0;if(u.trapped>0)u.trapped--;if(u.preventForcedSwitch>0)u.preventForcedSwitch--;for(const key in u.statusImmunity||{})if(--u.statusImmunity[key]<=0)delete u.statusImmunity[key];
  }
  // Miasma resolves after this turn's residual damage, so new poison starts next turn.
  for(const source of units){if(source.hp<=0||source.captured||!has(source,'Miasma'))continue;

@@ -1,7 +1,7 @@
-import {DATA} from './data.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.40';
 import {startingMoveIds} from './moveset-identity.js?v=0.87.0';
-import {initializeProgress} from './progression.js?v=0.90.18';
-import {FINALE_TRAINERS,PEACH_FINAL,LEGACY_POOLS,COMMISSIONS} from './finale-data.js?v=0.90.18';
+import {initializeProgress} from './progression.js?v=0.90.40';
+import {FINALE_TRAINERS,PEACH_FINAL,LEGACY_POOLS,COMMISSIONS} from './finale-data.js?v=0.90.40';
 export function finaleState(s){const q=s.finale??={version:1,burialCursor:0,buried:false,legacies:null,quests:{},unique:{},commissions:[],gallerySeen:[]};q.quests??={};q.unique??={};q.commissions??=[];q.gallerySeen??=[];return q;}
 export const finaleUnlocked=s=>Boolean(s.fates?.['LDR-06']&&s.botrune?.walterCalmed);
 export function finishBurialLine(s,index){const q=finaleState(s);if(q.buried||q.burialCursor!==index||index<0||index>=14)return false;q.burialCursor++;if(q.burialCursor===14){q.buried=true;q.mirrorRumour=true;s.storyHistory??=[];if(!s.storyHistory.some(e=>e.id==='FN-TREE-BURIAL-20261021'))s.storyHistory.push({id:'FN-TREE-BURIAL-20261021',place:'Willowmere',people:['CHR-PATE','CHR-TRADE']});}return true;}

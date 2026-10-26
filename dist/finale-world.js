@@ -1,4 +1,4 @@
-import {SUN_ROAD,SPORE_ROAD} from './finale-data.js?v=0.90.18';
+import {SUN_ROAD,SPORE_ROAD} from './finale-data.js?v=0.90.40';
 const gate=(id,label,x,y,to,arrival,action='finale-gate')=>({id,label,x,y,to,arrival,action,door:true});
 const npc=(id,label,x,y,revoltCharacter)=>({id,label,x,y,sprite:0,revoltCharacter});
 const prop=(id,label,x,y)=>({id,label,x,y,questProp:true});

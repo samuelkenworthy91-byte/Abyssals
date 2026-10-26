@@ -1,4 +1,4 @@
-import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,REVOLT_REVELATION,REVOLT_TRAINERS} from './revolt-data.js?v=0.87.0';
+import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,REVOLT_REVELATION,REVOLT_TRAINERS} from './revolt-data.js?v=0.90.40';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
 export {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS};

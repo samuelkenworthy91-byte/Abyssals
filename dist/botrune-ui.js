@@ -1,5 +1,5 @@
 import {handleStormSide} from './thunderplain-ui.js?v=0.90.17';
-import {BOTRUNE_NAME,BOTRUNE_TRAINERS,BOTRUNE_GUARDS,WITNESSES,STORM_RECORD,STORM_ROAD,botruneRoute} from './botrune-data.js?v=0.90.17';
+import {BOTRUNE_NAME,BOTRUNE_TRAINERS,BOTRUNE_GUARDS,WITNESSES,STORM_RECORD,STORM_ROAD,botruneRoute} from './botrune-data.js?v=0.90.40';
 import {botruneState,botruneUnlocked,botruneCanFight,btDefeated,botruneObjective} from './botrune-rules.js?v=0.90.17';
 export function handleBotrune(id,a){
  if(handleStormSide(id,a))return true;

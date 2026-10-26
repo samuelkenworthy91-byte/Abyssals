@@ -1,20 +1,21 @@
+import {branchEncounterRoute} from './branch-families.js?v=0.90.40';
 import {caveRoute} from './exploration-rules.js?v=0.90.29';
 import {collectionEncounterRoute} from './collection-access.js?v=0.90.18';
 import {accessEncounterRoute} from './encounter-access.js?v=0.90.18';
 import {birdEncounterRoute} from './bird-encounters.js?v=0.87.0';
 import {biodiversityEncounterRoute} from './biome-biodiversity.js?v=0.90.25';
-import {orchardRoute} from './cossenne-data.js?v=0.87.0';
+import {orchardRoute} from './cossenne-data.js?v=0.90.40';
 import {courtRoute} from './paladin-quest.js?v=0.87.0';
 import {jungleRoute,paladinEncounterRoute} from './paladin-encounters.js?v=0.87.0';
 import {menagerieEncounterRoute} from './menagerie-encounters.js?v=0.87.0';
 import {aquaticEncounterRoute} from './approved-aquatic.js?v=0.87.0';
 import {relicGroveRoute} from './relic-quest.js?v=0.87.0';
 import {relicEncounterRoute} from './relic-family.js?v=0.87.0';
-import {cybressaRoute} from './cybressa-data.js?v=0.90.20';
+import {cybressaRoute} from './cybressa-data.js?v=0.90.40';
 import {pacedEncounterRoute} from './encounter-pacing.js?v=0.87.0';
 import {expandFullRoute} from './full-encounter-rules.js?v=0.87.0';
 import {normalizeEncounterRoute} from './encounter-audit.js?v=0.87.0';
-import {routeStage} from './route-progression.js?v=0.87.0';
+import {routeStage} from './route-progression.js?v=0.90.40';
 // Habitats placed along the currently playable road. Later forms never appear below evolution level.
 export const ROSTER_ENCOUNTERS=[
  ['188','march','NIGHT',5,8,8],['190','march','BOTH',5,9,10],
@@ -35,4 +36,4 @@ function expandExistingEncounterRoute(route){const orchard=orchardRoute(route?.r
 
 function authoredEncounterRoute(route){if(route?.birdsExpanded)return accessEncounterRoute(route);if(route?.biodiversityExpanded)return accessEncounterRoute(birdEncounterRoute(route));return accessEncounterRoute(birdEncounterRoute(biodiversityEncounterRoute(expandExistingEncounterRoute(route))));}
 
-export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return collectionEncounterRoute(fort);return collectionEncounterRoute(authoredEncounterRoute(route));}
+export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return collectionEncounterRoute(fort);return branchEncounterRoute(collectionEncounterRoute(authoredEncounterRoute(route)));}

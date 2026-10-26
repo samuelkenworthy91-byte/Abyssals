@@ -1,4 +1,4 @@
-import {MARASEN_RECORDS,MARASEN_BRANCHES,VERDANT_ROAD} from './marasen-data.js?v=0.87.0';
+import {MARASEN_RECORDS,MARASEN_BRANCHES,VERDANT_ROAD} from './marasen-data.js?v=0.90.40';
 export function marasenState(s){s.marasen??={version:1,walk:[],quests:{},encounters:{},seeds:{},serviceDays:[]};return s.marasen;}
 export function questState(s,key){const q=marasenState(s);return q.quests[key]??={accepted:false,records:[],rings:[0,0,0],solved:false,order:[],choice:null,claimed:false};}
 export const defeated=(s,id)=>(s.defeatedTrainers||[]).includes(id);

@@ -1,5 +1,5 @@
 import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.90.40';
-import {MARASEN_RECORDS,MARASEN_BRANCHES,MARASEN_TRAINERS,VERDANT_ROAD,marasenRoute} from './marasen-data.js?v=0.87.0';
+import {MARASEN_RECORDS,MARASEN_BRANCHES,MARASEN_TRAINERS,VERDANT_ROAD,marasenRoute} from './marasen-data.js?v=0.90.40';
 import * as r from './marasen-rules.js?v=0.87.0';
 export function marasenInteract(id,a){
  if(marasenExtraInteract(id,a))return true;

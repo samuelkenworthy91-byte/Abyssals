@@ -1,9 +1,9 @@
-import {restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.24';
+import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.40';
 import {unitName} from './names.js?v=0.87.0';
 export const SUPPORTED_EFFECTS = new Set(['healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
 export function moveHPCost(actor,move){return (move?.effects||[]).filter(e=>e.effect_id==='hp_cost').reduce((sum,e)=>sum+Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])),0);}
 export function canPayMoveHP(actor,move){return actor.hp>moveHPCost(actor,move);}
-export function moveUsable(u,m){return !!m&&m.left>0&&canPayMoveHP(u,m)&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
+export function moveUsable(u,m){return !!m&&!(heldInfo(u)?.effect?.operation==='assault_vest'&&m.category==='STATUS')&&m.left>0&&canPayMoveHP(u,m)&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
 export function movePriority(m,u){return (m.priority||0)+(m.id===310&&u?.hp<u?.maxHp/2?1:0);}
 export function moveDamageMultiplier(actor,target,move,{critical=false,movedFirst=true}={}){
  let n=1;for(const e of move.effects||[])if(e.effect_id==='power_multiplier'){

@@ -1,4 +1,4 @@
-import {abilityName} from './abilities.js?v=0.90.24';
+import {abilityName} from './abilities.js?v=0.90.40';
 
 export function installExpeditionAbilities(data){
  for(const [family,name] of [['FAMILY-121','Quarry Scent'],['FAMILY-107','Fortune Finder']])for(const s of data.species.filter(s=>s.family_id===family)){

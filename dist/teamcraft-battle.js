@@ -1,4 +1,4 @@
-import {restoreHP as healRelayHP} from './abilities.js?v=0.90.24';
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.40';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];

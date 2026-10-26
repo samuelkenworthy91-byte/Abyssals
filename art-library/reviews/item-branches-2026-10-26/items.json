@@ -5608,6 +5608,258 @@
       "price": 7500,
       "src": "assets/items/training-tonic.webp",
       "icon": "<span class=\"item-art\"><img src=\"assets/items/training-tonic.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_POWER_WRAP",
+      "name": "Power Wrap",
+      "category": "Held items",
+      "text": "Physical damaging moves deal 15% more damage.",
+      "price": 6000,
+      "src": "assets/items/power-wrap.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/power-wrap.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_MIND_LENS",
+      "name": "Mind Lens",
+      "category": "Held items",
+      "text": "Special damaging moves deal 15% more damage.",
+      "price": 6000,
+      "src": "assets/items/mind-lens.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/mind-lens.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_KEEN_LENS",
+      "name": "Keen Lens",
+      "category": "Held items",
+      "text": "Multiplies move accuracy by 1.1, capped at 100%.",
+      "price": 6500,
+      "src": "assets/items/keen-lens.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/keen-lens.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_VANGUARD_VEST",
+      "name": "Vanguard Vest",
+      "category": "Held items",
+      "text": "Special Defence ×1.5, but the holder cannot select status moves.",
+      "price": 10000,
+      "src": "assets/items/vanguard-vest.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/vanguard-vest.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_REPRISAL_HELM",
+      "name": "Reprisal Helm",
+      "category": "Held items",
+      "text": "A successful contact hit costs the attacker 1/6 of its maximum HP.",
+      "price": 10000,
+      "src": "assets/items/reprisal-helm.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/reprisal-helm.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_LAST_THREAD",
+      "name": "Last Thread",
+      "category": "Held items",
+      "text": "Consumed to survive a direct lethal hit at 1 HP when starting that hit at full HP. Multi-hit moves can still defeat the holder.",
+      "price": 7000,
+      "src": "assets/items/last-thread.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/last-thread.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_CLEAR_HERB",
+      "name": "Clear Herb",
+      "category": "Held items",
+      "text": "Consumed to clear the holder’s lowered combat stat stages.",
+      "price": 3500,
+      "src": "assets/items/clear-herb.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/clear-herb.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_PRESSURE_ORB",
+      "name": "Pressure Orb",
+      "category": "Held items",
+      "text": "Damaging moves deal 30% more damage. Each successful damaging move costs 1/10 maximum HP; this can defeat the holder.",
+      "price": 12000,
+      "src": "assets/items/pressure-orb.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/pressure-orb.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_DEW",
+      "name": "Dewberry",
+      "category": "Berries",
+      "text": "At half HP or below, restores 10 HP. Consumed on activation; works with Berry abilities.",
+      "price": 150,
+      "src": "assets/items/dewberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/dewberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_HEARTH",
+      "name": "Hearthberry",
+      "category": "Berries",
+      "text": "At half HP or below, restores 25% maximum HP. Consumed on activation; works with Berry abilities.",
+      "price": 450,
+      "src": "assets/items/hearthberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/hearthberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_RENEWAL",
+      "name": "Renewal Berry",
+      "category": "Berries",
+      "text": "At one quarter HP or below, restores one third maximum HP. Consumed on activation; works with Berry abilities.",
+      "price": 650,
+      "src": "assets/items/renewal-berry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/renewal-berry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_CLEAR",
+      "name": "Clearberry",
+      "category": "Berries",
+      "text": "Cures any major status and confusion. Consumed on activation; works with Berry abilities.",
+      "price": 650,
+      "src": "assets/items/clearberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/clearberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_EMBER",
+      "name": "Emberberry",
+      "category": "Berries",
+      "text": "Cures Burn. Consumed on activation; works with Berry abilities.",
+      "price": 200,
+      "src": "assets/items/emberberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/emberberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_FROST",
+      "name": "Frostberry",
+      "category": "Berries",
+      "text": "Cures Freeze or Frostbite. Consumed on activation; works with Berry abilities.",
+      "price": 200,
+      "src": "assets/items/frostberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/frostberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_WAKE",
+      "name": "Wakeberry",
+      "category": "Berries",
+      "text": "Cures Sleep. Consumed on activation; works with Berry abilities.",
+      "price": 200,
+      "src": "assets/items/wakeberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/wakeberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_SPARK",
+      "name": "Sparkberry",
+      "category": "Berries",
+      "text": "Cures Paralysis. Consumed on activation; works with Berry abilities.",
+      "price": 200,
+      "src": "assets/items/sparkberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/sparkberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_ANTIDOTE",
+      "name": "Antidote Berry",
+      "category": "Berries",
+      "text": "Cures Poison or Bad Poison. Consumed on activation; works with Berry abilities.",
+      "price": 200,
+      "src": "assets/items/antidote-berry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/antidote-berry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_FOCUS",
+      "name": "Focusberry",
+      "category": "Berries",
+      "text": "Restores up to 10 PP to the first move that reaches zero PP. Consumed on activation; works with Berry abilities.",
+      "price": 400,
+      "src": "assets/items/focusberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/focusberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_MIGHT",
+      "name": "Mightberry",
+      "category": "Berries",
+      "text": "At one quarter HP or below, raises Attack one stage. Consumed on activation; works with Berry abilities.",
+      "price": 750,
+      "src": "assets/items/mightberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/mightberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BERRY_MIND",
+      "name": "Mindberry",
+      "category": "Berries",
+      "text": "At one quarter HP or below, raises Special Attack one stage. Consumed on activation; works with Berry abilities.",
+      "price": 750,
+      "src": "assets/items/mindberry.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/mindberry.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_VAINGLORY_MIRROR",
+      "name": "Vainglory Mirror",
+      "category": "Evolution",
+      "text": "Flaskling → Vainglulus · Lv. 40+ · use in Hell",
+      "price": 18000,
+      "src": "assets/items/vainglory-mirror.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/vainglory-mirror.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_WRATH_BRAND",
+      "name": "Wrath Brand",
+      "category": "Evolution",
+      "text": "Flaskling → Wrathulus · Lv. 40+ · use in Hell",
+      "price": 18000,
+      "src": "assets/items/wrath-brand.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/wrath-brand.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_LEADEN_HOURGLASS",
+      "name": "Leaden Hourglass",
+      "category": "Evolution",
+      "text": "Flaskling → Slothulus · Lv. 40+ · use in Hell",
+      "price": 18000,
+      "src": "assets/items/leaden-hourglass.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/leaden-hourglass.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_BOTTOMLESS_CUP",
+      "name": "Bottomless Cup",
+      "category": "Evolution",
+      "text": "Flaskling → Gulomunc · Lv. 40+ · use in Hell",
+      "price": 18000,
+      "src": "assets/items/bottomless-cup.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/bottomless-cup.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_AVALON_BLADE",
+      "name": "Avalon Blade",
+      "category": "Evolution",
+      "text": "Scruffox → Arthox · Lv. 30+",
+      "price": 10000,
+      "src": "assets/items/avalon-blade.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/avalon-blade.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_BURH_SHIELD",
+      "name": "Burh Shield",
+      "category": "Evolution",
+      "text": "Scruffox → Alfredox · Lv. 30+",
+      "price": 10000,
+      "src": "assets/items/burh-shield.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/burh-shield.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_ENFORCER_KNUCKLES",
+      "name": "Enforcer Knuckles",
+      "category": "Evolution",
+      "text": "Scruffox → Ronnifox · Lv. 30+",
+      "price": 10000,
+      "src": "assets/items/enforcer-knuckles.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/enforcer-knuckles.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "ITEM_BRANCH_FIXERS_WATCH",
+      "name": "Fixer’s Watch",
+      "category": "Evolution",
+      "text": "Scruffox → Reggifox · Lv. 30+",
+      "price": 10000,
+      "src": "assets/items/fixers-watch.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/fixers-watch.webp\" alt=\"\"></span>"
     }
   ],
   "colors": {

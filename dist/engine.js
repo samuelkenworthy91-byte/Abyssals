@@ -1,13 +1,14 @@
+import {heldSurvival,finishHeldMove,activateHeldRecovery} from './abilities.js?v=0.90.40';
 import {secondaryChance,prepareSpecialistMove,stabMultiplier,actionInvalid,beginAction,blocksTarget,strikeBarrier,teamcraftEffect,endTeamcraft,selectedAlly} from './teamcraft-battle.js?v=0.90.30';
-import {enterAbility,leaveAbility} from './abilities.js?v=0.90.24';
+import {enterAbility,leaveAbility} from './abilities.js?v=0.90.40';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
-import {birdPrepareMove,birdAccuracy,birdGroundImmunity,birdThreshold} from './bird-abilities.js?v=0.87.0';
+import {birdPrepareMove,birdAccuracy,birdGroundImmunity,birdThreshold} from './bird-abilities.js?v=0.90.40';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {resolveSalvationMove} from './salvation.js?v=0.87.0';
 import {captureHealth,healthChanges} from './health-presentation.js?v=0.87.0';
-import {canPayMoveHP,moveUsable,movePriority,moveDamageMultiplier,trackMove,consumeWard,extraMoveEffect,contactReaction,endMoveEffects} from './move-rules.js?v=0.90.39';
-export {moveUsable} from './move-rules.js?v=0.90.39';
-import {isContact,effectiveStage,weatherSuppressed,triggerArcticEndurance,has,abilityMemory,abilityBattle,speedFactor,heldStat,heldInfo,restoreHP,blockedByAbility,critChance,ignoresDefence,abilityMultiplier,afterDamage,afterStatusMove,recordMove,failedMove,changeStage,blocksEvasion,inflictStatus,endAbilities,triggerSunWrath} from './abilities.js?v=0.90.24';
+import {canPayMoveHP,moveUsable,movePriority,moveDamageMultiplier,trackMove,consumeWard,extraMoveEffect,contactReaction,endMoveEffects} from './move-rules.js?v=0.90.40';
+export {moveUsable} from './move-rules.js?v=0.90.40';
+import {isContact,effectiveStage,weatherSuppressed,triggerArcticEndurance,has,abilityMemory,abilityBattle,speedFactor,heldStat,heldInfo,restoreHP,blockedByAbility,critChance,ignoresDefence,abilityMultiplier,afterDamage,afterStatusMove,recordMove,failedMove,changeStage,blocksEvasion,inflictStatus,endAbilities,triggerSunWrath} from './abilities.js?v=0.90.40';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 import {startingStats,STAT_BALANCE_VERSION,EVOLUTION_STAT_VERSION} from './stat-balance.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
@@ -28,7 +29,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
  if(!continuation){const invalid=actionInvalid(actor,move,target);if(invalid)return {damage:0,skipped:true,messages:[invalid]};}beginAction(actor,move,continuation);if(!continuation)move.left--;move=birdPrepareMove(actor,resolveSalvationMove(actor,move),{isContact});if(move.nonlethal)floor=Math.max(1,floor);trackMove(actor,move);if(move.menagerieRule==='WHITEOUT_WALTZ'&&actor.field?.weather==='HAIL'&&!weatherSuppressed(actor,target))move={...move,power:90};move=prepareSpecialistMove(actor,move);if(move.sunPierce&&actor.field?.weather==='SUN'&&!weatherSuppressed(actor,target))move={...move,ignorePositiveDefence:true};
  if(!continuation&&actor.confusion>0){actor.confusion--;if(random()<.33){const damage=Math.min(actor.hp-selfFloor,Math.max(1,Math.floor(actor.maxHp*.1)));actor.hp-=damage;return {damage:0,selfDamage:damage,skipped:true,messages:[`${unitName(actor)} is confused and loses ${damage} HP.`]};}}
  const sure=actor.moveState?.sureHit>0;if(sure)actor.moveState.sureHit--;const cragSight=birdAccuracy(actor,target,move),ignoreEvasion=cragSight||move.effects.some(e=>e.effect_id==='ignore_positive_evasion');
- const accuracy=sure||move.accuracy==='ALWAYS'?Infinity:Math.min(100,(move.accuracy??100)+(move.category==='STATUS'&&heldInfo(actor)?.effect?.operation==='status_accuracy'?heldInfo(actor).effect.add_points:0))*stageMultiplier(cragSight?Math.max(0,actor.stages.accuracy||0):actor.stages.accuracy)/stageMultiplier(ignoreEvasion?Math.min(0,effectiveStage(target,'evasion',actor)):effectiveStage(target,'evasion',actor));
+ const accuracy=sure||move.accuracy==='ALWAYS'?Infinity:Math.min(100,(move.accuracy??100)*(heldInfo(actor)?.effect?.operation==='accuracy_multiplier'?heldInfo(actor).effect.multiplier:1)+(move.category==='STATUS'&&heldInfo(actor)?.effect?.operation==='status_accuracy'?heldInfo(actor).effect.add_points:0))*stageMultiplier(cragSight?Math.max(0,actor.stages.accuracy||0):actor.stages.accuracy)/stageMultiplier(ignoreEvasion?Math.min(0,effectiveStage(target,'evasion',actor)):effectiveStage(target,'evasion',actor));
  if(random()*100>=accuracy){failedMove(actor,move);return {damage:0,missed:true,messages:[`${unitName(actor)} used ${move.name}, but missed.`]};}
  if(!['SELF','ACTIVE_SIDE'].includes(move.target)&&blockedByAbility(actor,target,move,messages)){failedMove(actor,move);return {damage:0,immune:true,effectiveness:0,messages};}
  if(blocksTarget(actor,target,move,messages))return {damage:0,blocked:true,messages};
@@ -46,7 +47,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
     let strikeDamage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(strikeCritical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical:strikeCritical,movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,critical:strikeCritical,movedFirst,switching:!!target.switching})));
     if(has(target,'Ghost Hull')&&target.hp===target.maxHp&&strikeDamage>=target.hp&&!abilityBattle(target).flags.hull){strikeDamage=target.hp-1;abilityBattle(target).flags.hull=true;messages.push(`${unitName(target)} · Ghost Hull: held on at 1 HP.`);}
     strikeDamage=Math.max(0,Math.min(target.hp-floor,strikeDamage));
-    const barrier=strikeBarrier(actor,target,move,strikeDamage,{floor},messages);barrierBlocked=barrierBlocked||barrier.blocked;strikeDamage=barrier.damage;target.hp-=strikeDamage;damage+=strikeDamage;critical=critical||strikeCritical;hitCount++;
+    const barrier=strikeBarrier(actor,target,move,strikeDamage,{floor},messages);barrierBlocked=barrierBlocked||barrier.blocked;strikeDamage=heldSurvival(target,barrier.damage,messages);target.hp-=strikeDamage;damage+=strikeDamage;critical=critical||strikeCritical;hitCount++;
     consumeWard(target,move,strikeDamage);
     if(strikeDamage){actor.field??={};actor.field.currentMoveDamage??=[];actor.field.currentMoveDamage.push({actor:actor.uid||actor.species.id,victim:target.uid||target.species.id,side:target.side});}
     if(move.hits){
@@ -72,12 +73,13 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
   if(e.effect_id==='prevent_flinch')actor.immuneFlinch=e.turns||5;
   if(e.effect_id==='party_heal'){for(const member of menagerieParty(actor)){if(member.hp<=0||member.dead||move.activeOnly&&member!==actor&&!member.abilityState)continue;const [n,d]=e.max_hp_fraction;const restored=restoreHP(member,Math.max(1,Math.floor(member.maxHp*n/d)));messages.push(`${unitName(member)} restored ${restored} HP from ${move.name}.`);}}
   if(e.effect_id==='heal'){const [n,d]=e.max_hp_fraction;const restored=heal(who,Math.max(1,Math.floor(who.maxHp*n/d*(has(actor,'Medicinal Sap')?1.15:1))));messages.push(`${unitName(who)} restored ${restored} HP.`);}
-  if(e.effect_id==='drain'&&damage){const [n,d]=e.actual_hp_damage_fraction;const restored=heal(actor,Math.max(1,Math.floor(damage*n/d)));messages.push(`${unitName(actor)} drained ${restored} HP.`);}
+  if(e.effect_id==='drain'&&damage){const [n,d]=e.actual_hp_damage_fraction;const restored=heal(actor,Math.max(1,Math.floor(damage*n/d*(has(actor,'Bottomless')?1.25:1))));messages.push(`${unitName(actor)} drained ${restored} HP.`);}
   if(e.effect_id==='recoil'&&damage&&!has(actor,'Hard Head')){const [n,d]=e.fraction;const recoil=Math.min(Math.max(0,actor.hp-selfFloor),Math.max(1,Math.floor((e.basis==='MAX_HP'?actor.maxHp:damage)*n/d)));actor.hp-=recoil;messages.push(`${unitName(actor)} took ${recoil} recoil damage.`);}
   extraMoveEffect(actor,target,move,e,messages,{floor:selfFloor});
  }
+ if(move.id===737&&(actor.stages.speed||0)<0){actor.stages.speed=0;messages.push('Hold the Burh restored lowered Speed.');}
  if(move.power&&!move.hits)messages.push(...afterDamage(actor,target,move,damage,{effectiveness,critical,floor:selfFloor,random,counterContext:procContext}));else if(!move.power)messages.push(...afterStatusMove(actor,target));
- if(!move.hits)messages.push(...contactReaction(actor,target,move,damage,random,{floor:selfFloor}));recordMove(actor,move);if(move.nonlethal){target.hp=Math.max(1,target.hp);messages.push('First Light Salvation holds back · the target remains alive.');}return {damage,critical,effectiveness,messages,hitCount,category:move.category,remainingHp:target.hp};
+ if(!move.hits)messages.push(...contactReaction(actor,target,move,damage,random,{floor:selfFloor}));messages.push(...finishHeldMove(actor,target,move,damage,{floor:selfFloor}));recordMove(actor,move);if(move.nonlethal){target.hp=Math.max(1,target.hp);messages.push('First Light Salvation holds back · the target remains alive.');}return {damage,critical,effectiveness,messages,hitCount,category:move.category,remainingHp:target.hp};
 }
 export function cleanupRound(...args){const random=typeof args.at(-1)==='function'?args.pop():Math.random,units=args;for(const u of units)triggerSunWrath(u);endTeamcraft(units);const residual=endAbilities(units,{floor:units[0]?.combatFloor??0,random});const extra=endMoveEffects(units,random);for(const u of units){residual.push(...birdThreshold(u,{changeStage}));triggerSunWrath(u);if(triggerArcticEndurance(u))residual.push(`${unitName(u)} · Arctic Endurance: Defence and Special Defence rose.`);u.flinched=false;u.actedThisRound=false;if(u.immuneFlinch>0)u.immuneFlinch--;}return [...residual,...extra];}
 export function heal(unit,amount=Math.min(50,Math.floor(unit.maxHp/2))){if(unit.hp<1||unit.hp>=unit.maxHp)return 0;return restoreHP(unit,amount);}

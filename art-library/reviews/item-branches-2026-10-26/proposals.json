@@ -1,5 +1,5 @@
 {
-  "status": "Review proposals only — not added to gameplay or shop stock",
+  "status": "Implemented in v0.90.40",
   "statOrder": [
     "HP",
     "Attack",
@@ -435,25 +435,25 @@
       "name": "Reggifox",
       "types": [
         "FIGHTING",
-        "DARK"
+        "PSYCHIC"
       ],
-      "role": "Dishonourable / tactical support",
-      "concept": "A neat, calculating fox organiser with silver watch, signal cane and three directing tokens. Its value comes from control and ally support, not raw damage.",
+      "role": "Dishonourable / psychic support and special attacker",
+      "concept": "A composed psychic fox organiser with silver watch, signal cane and directing thought-tokens. Buffing, disruption and Psychic special attacks share its toolkit.",
       "stats": [
         90,
-        65,
-        85,
-        60,
+        40,
+        80,
         110,
-        110
+        100,
+        100
       ],
       "growth": [
         65,
-        35,
-        65,
-        30,
-        110,
-        105
+        15,
+        55,
+        120,
+        90,
+        95
       ],
       "ability": {
         "name": "The Fixer",
@@ -461,13 +461,15 @@
       },
       "signature": {
         "name": "Quiet Arrangement",
-        "text": "Proposed Dark status move · 10 PP. Lower one opponent’s Attack and Special Attack by one stage. Existing immunities and protective effects apply."
+        "text": "Psychic status move · 10 PP. Lower one opponent’s Attack and Special Attack by one stage."
       },
       "moves": [
+        "Mind Lance",
+        "Aura Pulse",
+        "Calm Thought",
         "Standard Relay",
-        "Night Veil",
-        "Future Read",
-        "Firm Footing"
+        "Firm Footing",
+        "Future Read"
       ],
       "item": {
         "id": "fixers-watch",

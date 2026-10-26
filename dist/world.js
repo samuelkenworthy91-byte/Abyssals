@@ -1,16 +1,17 @@
+import {BERRY_SHOP_ASSETS,drawBerryShop,berryShopBlocked} from './berry-shop.js?v=0.90.40';
 import {roomGrid,isPromenade,promenadeWalkable,drawPromenade,promenadeGate} from './promenade.js?v=0.90.37';
 import {FINALE_ASSETS} from './finale-art.js?v=0.90.19';
 import {BOTRUNE_ASSETS} from './botrune-art.js?v=0.90.20';
 import {onCourtArtChange} from './paladin-art.js?v=0.90.20';
 import {COSSENNE_ACTIVITY_ROOMS} from './cossenne-services.js?v=0.87.0';
-import {REVOLT_EVENTS,REVOLT_CAST} from './revolt-data.js?v=0.87.0';
+import {REVOLT_EVENTS,REVOLT_CAST} from './revolt-data.js?v=0.90.40';
 import {LIFE_EMBER_PICKUPS} from './extra-lives.js?v=0.87.0';
 import {TRAVEL_HUBS} from './fast-travel.js?v=0.90.18';
-import {BIOME_ASSETS,biomeAsset,drawBiomeDetails} from './biome-world.js?v=0.90.20';
+import {BIOME_ASSETS,biomeAsset,drawBiomeDetails} from './biome-world.js?v=0.90.40';
 import {SHOPKEEPERS} from './shopkeepers.js?v=0.90.40';
-import {EXTRA_TRAINERS} from './route-progression.js?v=0.87.0';
+import {EXTRA_TRAINERS} from './route-progression.js?v=0.90.40';
 import {INTERIORS,interiorBlocked,drawInterior} from './interiors.js?v=0.90.13';
-import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.37';
+import {NEW_MAPS,NEW_DOORS,newRoad,newGrass,newBlocked,newSpots,drawNewMap} from './expansion-world.js?v=0.90.40';
 // Authored prototype geometry. All movement/collision is defined here, independently of art.
 export const TILE=16, WIDTH=48, HEIGHT=32;
 export const AREA_GATES={town:[{id:'exit',x:46,y:17,to:'march',arrival:[3,17,'right'],action:'departure'}],march:[{id:'town-return',x:1,y:17,to:'town',arrival:[44,17,'left']},{id:'march-stage-forward',x:46,y:17,to:'march2',arrival:[3,17,'right'],action:undefined}],scrub:[{id:'march-return',x:1,y:17,to:'march',arrival:[44,17,'left']},{id:'scrub-boundary',x:46,y:17}]};
@@ -55,7 +56,7 @@ const props=[
  {asset:'tent',x:41,y:7,w:5,h:5,solid:[41,7,45,11]},
  {asset:'memorial',x:35,y:22,w:5,h:4,solid:[35,22,39,24]}
 ];
-export function isBlocked(room,x,y){
+export function isBlocked(room,x,y){if(room==='dorelemHome')return berryShopBlocked(x,y)||newSpots(room).some(s=>s.sprite!==undefined&&s.x===x&&s.y===y);
  if(isPromenade(room))return !promenadeWalkable(x,y);
  if(x<0||y<0||x>=WIDTH||y>=HEIGHT)return true;
  if(NEW_MAPS[room])return newBlocked(room,x,y);
@@ -76,7 +77,7 @@ export function isBlocked(room,x,y){
  return false;
 }
 const assetFiles={fortBanner:'fort-banner-v037.webp',fortCarpet:'fort-carpet-v037.webp',fortGate:'fort-gate-v037.webp',fortStone:'fort-stone-v037.webp',fortBastion:'fort-bastion-v037.webp',fortFloor:'fort-floor-v037.webp',fortWall:'fort-wall-v037.webp',fortArch:'fort-arch-v037.webp',fortPier:'fort-pier-v037.webp',dockPlanks:'dock-planks-v0303.webp',dockEnd:'dock-end-v0303.webp',dockPost:'dock-post-v0303.webp',fishingCrate:'fishing-crate-v0303.webp',sewerFloor:'sewer-floor.webp',sewerWall:'sewer-wall.webp',sewage:'sewage.webp',sluice:'sluice.webp',chest:'chest.webp',sack:'sack.webp',valve:'valve.webp',pipe:'pipe.webp',bloomHouse:'bloom-house.webp',bloomShop:'bloom-shop.webp',bloomKeep:'bloom-keep.webp',bloomHospice:'bloom-hospice.webp',bloomGround:'bloom-ground.webp',bloomPath:'bloom-path.webp',palm:'palm.webp',rug:'rug.webp',keep:'tile-keep-v13.webp',hospice:'tile-hospice-v13.webp',ridge:'tile-ridge-v13.webp',tallgrass:'tile-tallgrass.png',sign:'tile-sign.png',bramble:'tile-bramble.png',fence:'tile-fence.png',grass:'tile-grass.png',path:'tile-path.png',water:'tile-water.png',floor:'tile-floor.png',tree:'tile-tree.png',house:'tile-house.png',shop:'tile-shop.png',shrine:'tile-shrine.png',tent:'tile-tent.png',memorial:'tile-memorial.png',table:'tile-table.png',desk:'tile-desk.png',bed:'tile-bed.png',shelf:'tile-shelf.png',wall:'tile-wall.png',mat:'tile-mat.png'};
-Object.assign(assetFiles,BIOME_ASSETS,BOTRUNE_ASSETS,FINALE_ASSETS);
+Object.assign(assetFiles,BERRY_SHOP_ASSETS,BIOME_ASSETS,BOTRUNE_ASSETS,FINALE_ASSETS);
 const art={};for(const [name,file]of Object.entries(assetFiles)){const im=new Image();im.onload=()=>mapCache.clear();im.src='assets/pixel/'+file;art[name]=im;}
 const mapCache=new Map();
 onCourtArtChange(()=>mapCache.clear());
@@ -84,7 +85,7 @@ export function drawWorldAsset(ctx,name,x,y,w=1,h=1,crop=null){if(name==='water'
 const asset=(ctx,name,...args)=>drawWorldAsset(ctx,name,...args);
 function buildMap(room){const surface=document.createElement('canvas');surface.width=WIDTH*TILE;surface.height=HEIGHT*TILE;const c=surface.getContext('2d');c.imageSmoothingEnabled=false;
  const asset=(ctx,name,...args)=>drawWorldAsset(ctx,biomeAsset(room,name)??name,...args);
- if(NEW_MAPS[room]){drawNewMap(c,room,drawWorldAsset);
+ if(room==='dorelemHome'){drawBerryShop(c,drawWorldAsset);}else if(NEW_MAPS[room]){drawNewMap(c,room,drawWorldAsset);
  }else if(room==='scrub'){
   for(let y=0;y<HEIGHT;y++)for(let x=0;x<WIDTH;x++)asset(c,y>=16&&y<=18?'path':'grass',x,y);
   for(let x=0;x<WIDTH;x+=2){asset(c,'bramble',x,12,2,4);asset(c,'bramble',x,19,2,4);asset(c,'tree',x,5,2,3);asset(c,'tree',x,25,2,3);}

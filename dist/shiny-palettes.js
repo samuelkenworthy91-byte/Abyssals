@@ -1728,3 +1728,8 @@ for(let id=480;id<=503;id++)SHINY_PALETTES[String(id)]=families['FAMILY-365'];
 
 
 SHINY_PALETTES['504']=SHINY_PALETTES['057'];
+
+const flaskShiny={family:'FAMILY-505',name:'Flaskling',sourceHue:295,targetHue:145,chroma:.96,neutralTint:.025};
+const foxShiny={family:'FAMILY-510',name:'Scruffox',sourceHue:45,targetHue:225,chroma:.96,neutralTint:0};
+for(let id=505;id<=509;id++)SHINY_PALETTES[String(id)]=flaskShiny;
+for(let id=510;id<=514;id++)SHINY_PALETTES[String(id)]=foxShiny;

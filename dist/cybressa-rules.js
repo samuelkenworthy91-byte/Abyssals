@@ -1,9 +1,9 @@
 import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.24';
-import {DATA} from './data.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.40';
 import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
 import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.87.0';
 import {passObjective,PASS_ROUTES} from './mountain-pass.js?v=0.90.20';
-import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS} from './cybressa-data.js?v=0.90.20';
+import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS} from './cybressa-data.js?v=0.90.40';
 import {legalMoves} from './route-roster.js?v=0.87.0';
 export const cybressaUnlocked=state=>['SPARED','EXECUTED'].includes(state.fates?.['LDR-02']);
 export function cybressaState(state){state.cybressa??={};const q=state.cybressa;q.version=1;q.evidence??=[];q.quests??={};q.trialMarks??=0;q.trialSerial??=0;return q;}

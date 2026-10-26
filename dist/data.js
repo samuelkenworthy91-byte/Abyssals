@@ -1,18 +1,19 @@
-import {installEvolutionRenewal} from './evolution-renewal-data.js?v=0.90.38';
-import {installTeamcraft} from './teamcraft-data.js?v=0.90.30';
+import {installBranchFamilies} from './branch-families.js?v=0.90.40';
+import {installEvolutionRenewal} from './evolution-renewal-data.js?v=0.90.40';
+import {installTeamcraft} from './teamcraft-data.js?v=0.90.40';
 import {installExchangeTechniques} from './exchange-techniques.js?v=0.90.24';
 import {installBirds} from './bird-family.js?v=0.87.0';
-import {installPaladins} from './paladin-data.js?v=0.87.0';
+import {installPaladins} from './paladin-data.js?v=0.90.40';
 import {installMenagerie} from './menagerie-family.js?v=0.87.0';
 import {installMiasma} from './miasma-family.js?v=0.87.0';
-import {SECRET_MOVES,installQuestAbilityAlternatives} from './quest-rewards-data.js?v=0.87.0';
+import {SECRET_MOVES,installQuestAbilityAlternatives} from './quest-rewards-data.js?v=0.90.40';
 import {installSalvation} from './salvation.js?v=0.87.0';
 import {installAquatic} from './approved-aquatic.js?v=0.87.0';
 import {installSpecialFighting} from './special-fighting.js?v=0.87.0';
 import {installRelicFamily} from './relic-family.js?v=0.87.0';
 import {canonicalCharacterName,canonicalDialogueTree} from './canonical-character-names.js?v=0.87.0';
 import {applyModernLearnsets} from './modern-learnsets.js?v=0.87.0';
-import {installExpeditionAbilities} from './expedition-abilities.js?v=0.87.0';
+import {installExpeditionAbilities} from './expedition-abilities.js?v=0.90.40';
 import {installRimebun} from './rimebun.js?v=0.87.0';
 import {applyMovesetIdentity} from './moveset-identity.js?v=0.87.0';
 import {installFullExpansion} from './full-expansion.js?v=0.87.0';
@@ -65,3 +66,5 @@ installTeamcraft(DATA);
 
 
 installEvolutionRenewal(DATA);
+
+installBranchFamilies(DATA);

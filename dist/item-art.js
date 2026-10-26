@@ -1,3 +1,4 @@
+import {BROAD_HELD_ITEMS} from './broad-held-data.js?v=0.90.40';
 import {TYPE_COLORS} from './type-rules.js?v=0.90.40';
 const ROOT='assets/items/';
 const basic={bread:'bread',heartyFood:'hearty-ration',winterPreserves:'winter-preserve',riverBait:'river-bait',poultices:'poultice',lifeEmbers:'life-ember',emergencyEvacs:'emergency-evac',armedEscorts:'armed-escort',binoculars:'binoculars',smoke:'smoke-bomb',rod:'fishing-rod',note:'trade-note',trainingTonics:'training-tonic',awakeningSigils:'awakening-sigil',bell:'pilgrim-bell',prayers:'two-prayers',familySeal:'family-seal',heirloomCharm:'heirloom-charm',prodigyFeed:'prodigy-feed',inheritanceThread:'inheritance-thread',broodingWarmer:'brooding-warmer',focused:'focused-growth',balanced:'balanced-growth',endurance:'endurance-tonic'};
@@ -6,6 +7,8 @@ const coreTypes={VIGIL:'GHOST',FURNACE:'FIRE',STORM:'ELECTRIC',RIME:'ICE',DUSK:'
 const hues={NORMAL:35,FIRE:0,WATER:205,ELECTRIC:50,GRASS:110,ICE:175,FIGHTING:20,POISON:280,GROUND:30,FLYING:230,PSYCHIC:325,BUG:75,ROCK:40,GHOST:265,DRAGON:250,DARK:290,STEEL:195,FAIRY:335};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function itemArt(key){
+ const broad=BROAD_HELD_ITEMS.find(i=>i.id===key);if(broad)return {src:broad.icon};
+ if(key.startsWith('ITEM_BRANCH_'))return {src:ROOT+key.slice(12).toLowerCase().replaceAll('_','-')+'.webp'};
  if(basic[key])return {src:ROOT+basic[key]+'.webp'};
  if(held[key])return {src:ROOT+held[key]+'.webp'};
  if(key.startsWith('HELD_TYPE_SIGIL_'))return {src:ROOT+'type-sigil.webp',type:key.slice(16)};

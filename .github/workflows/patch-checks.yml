@@ -23,6 +23,7 @@ jobs:
         run: |
           for file in dist/*.js; do node --check "$file"; done
           node tests/bag-lift.test.mjs
+          node tests/branches-berries.test.mjs
           node tests/waranwei-direction.test.mjs
           node tests/item-review.test.mjs
           node tests/marasen-navigation.test.mjs

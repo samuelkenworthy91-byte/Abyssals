@@ -1,13 +1,14 @@
-import {RENEWAL_ABILITIES} from './evolution-renewal-data.js?v=0.90.38';
-import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.30';
-import {BIRD_ABILITIES} from './bird-abilities.js?v=0.87.0';
-import {PALADIN_ABILITIES} from './paladin-data.js?v=0.87.0';
+import {BRANCH_ABILITIES} from './branch-families.js?v=0.90.40';
+import {RENEWAL_ABILITIES} from './evolution-renewal-data.js?v=0.90.40';
+import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.40';
+import {BIRD_ABILITIES} from './bird-abilities.js?v=0.90.40';
+import {PALADIN_ABILITIES} from './paladin-data.js?v=0.90.40';
 import {MENAGERIE_ABILITIES} from './menagerie-family.js?v=0.87.0';
 import {MIASMA_ABILITY} from './miasma-family.js?v=0.87.0';
-import {QUEST_HIDDEN_ABILITIES} from './quest-rewards-data.js?v=0.87.0';
+import {QUEST_HIDDEN_ABILITIES} from './quest-rewards-data.js?v=0.90.40';
 import {AQUATIC_ABILITIES} from './approved-aquatic.js?v=0.87.0';
 import {WARBOND_ABILITY} from './relic-family.js?v=0.87.0';
-import {EXPEDITION_ABILITIES} from './expedition-ability-data.js?v=0.87.0';
+import {EXPEDITION_ABILITIES} from './expedition-ability-data.js?v=0.90.40';
 // Authored Ability Glossary, Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx.
 export const ABILITIES=[
   {
@@ -468,3 +469,5 @@ Object.assign(ABILITIES.find(a=>a.name==='Whiteout Sovereign'),{text:'Sets five 
 
 ABILITIES.push(...RENEWAL_ABILITIES.map(a=>({...a,text:a.effect_text})));
 Object.assign(ABILITIES.find(a=>a.name==='Countercharge'),{text:'The first damaging contact hit received after entry grants +2 Attack. Each damaging super-effective move also grants +1 Attack, once per move. Both bonuses stack; +6 battle-stage limit.'});
+
+ABILITIES.push(...BRANCH_ABILITIES);

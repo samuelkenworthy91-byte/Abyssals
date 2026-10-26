@@ -1,5 +1,5 @@
 import {rehomeable,permanentRates,stewardshipQuote} from './stewardship.js?v=0.90.34';
-import {STAT_LABELS} from './progression.js?v=0.90.31';
+import {STAT_LABELS} from './progression.js?v=0.90.40';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function bulkCareMenu(a,uid=null,stat=null,selection=[]){
  const {state,openModal,$,document,partnerIdentity,menuBack,confirm,back}=a,all=[...state.party,...state.reserve],target=all.find(u=>u.uid===uid);

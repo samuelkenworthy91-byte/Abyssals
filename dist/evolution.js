@@ -1,16 +1,17 @@
+import {branchEvolutionAllowed} from './branch-families.js?v=0.90.40';
 import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.38';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats,migrateStats} from './stat-balance.js?v=0.87.0';
-import {DATA} from './data.js?v=0.87.0';
-import {EVOLUTIONS} from './evolution-data.js?v=0.87.0';
-import {STAT_KEYS} from './progression.js?v=0.90.18';
+import {DATA} from './data.js?v=0.90.40';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.40';
+import {STAT_KEYS} from './progression.js?v=0.90.40';
 
 export function eligibleEvolutions(unit,state={},itemId=null){
  if(!unit||unit.dead||unit.hp<=0||(unit.evolutionHistory||[]).some(e=>e.level===unit.level))return [];
  return EVOLUTIONS.map(e=>tunedEvolution(e,DATA.species.find(s=>s.id===e.from_species_id))).filter(e=>{const c=e.condition;if(e.from_species_id!==unit.species.id||unit.level<c.minimum_level)return false;
   if(c.method==='STAT')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0)&&statEvolutionAllowed(unit,e);
   if(c.method==='LEVEL')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0);
-  if(c.method==='ITEM')return c.item_id===itemId&&(state.evolutionItems?.[itemId]||0)>0;
+  if(c.method==='ITEM')return branchEvolutionAllowed(e,state)&&c.item_id===itemId&&(state.evolutionItems?.[itemId]||0)>0;
   // A committed enum is authoritative; history is a compatibility fallback only.
   const choice=state[c.state_field]??state.storyChoices?.[c.state_field];
   return !itemId&&unit.level>(unit.evolutionBlockedLevel??0)&&(choice!==undefined?choice===c.equals:(state.storyHistory||[]).includes(c.history_trigger));

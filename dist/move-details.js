@@ -1,11 +1,11 @@
 import {prepareSpecialistMove,stabMultiplier,secondaryChance} from './teamcraft-battle.js?v=0.90.30';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {resolveSalvationMove} from './salvation.js?v=0.87.0';
-import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.39';
+import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.40';
 import {statusDetails} from './battle-status.js?v=0.90.24';
-import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.90.24';
+import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.90.40';
 import {typeEffectiveness,effectivenessLabel,categorySymbol} from './type-rules.js?v=0.87.0';
-import {stageMultiplier,damageScale} from './engine.js?v=0.90.39';
+import {stageMultiplier,damageScale} from './engine.js?v=0.90.40';
 const names={attack:'Attack',defence:'Defense',sp_attack:'Special Attack',sp_defence:'Special Defense',speed:'Speed',accuracy:'Accuracy',evasion:'Evasion'};
 export function damageRange(actor,target,move){move=resolveSalvationMove(actor,move);
  if(!move.power)return null;

@@ -1,3 +1,5 @@
+Approved and implemented on 26 October 2026. See docs/berries-and-branch-families.md for final mechanics, the Fighting/Psychic Reggifox revision, early base-form habitats, twelve Berries and eight broad held items. The current gallery contains 308 entries.
+
 # Item and branch-evolution review · 26 October 2026
 
 This is an approval artifact, outside `dist/` and excluded from the APK and PWA. It shows 280 existing inventory / shop entries (including 191 move codexes), ten original creature-art proposals, eight new evolution-item pictures, proposed stats/growth/abilities/moves, and a Waranwei walking comparison. `build_review.py` embeds every picture into one offline HTML file; its output belongs in `build/review/` or an explicit output path.
