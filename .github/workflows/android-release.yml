@@ -56,6 +56,9 @@ jobs:
       - name: Test Sunken Fort care on every floor
         timeout-minutes: 3
         run: node tests/fort-care-browser.cjs
+      - name: Test fort lift, held bonuses, and Prodigy card indicators
+        timeout-minutes: 3
+        run: node tests/fort-lift-prodigy-browser.cjs
       - name: Test evolution renewal on phone
         timeout-minutes: 3
         run: node tests/evolution-renewal-browser.cjs

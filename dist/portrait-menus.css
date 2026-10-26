@@ -150,3 +150,38 @@
   white-space:normal;
   overflow-wrap:anywhere;
 }
+
+
+/* Equipment, inherited Prodigy diamonds and the visited-floor lift. */
+.partner-card-meta { display:flex; flex-direction:column; flex:1 0 100%; gap:5px; min-width:0; text-align:left; margin-top:5px; }
+.partner-card-meta>small { color:#c9d6dc; font-size:11px; }
+.prodigy-pips { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; width:min(100%,360px); padding:7px 4px 4px; }
+.prodigy-pip { position:relative; isolation:isolate; min-height:28px; display:grid; place-items:center; text-align:center; color:#9ca9af; font:700 9px/1.2 Inter,system-ui,sans-serif; letter-spacing:.1px; white-space:nowrap; }
+.prodigy-pip::before { content:''; position:absolute; z-index:-1; left:50%; top:50%; width:22px; height:22px; border:1px solid #677887; background:#1a2938; transform:translate(-50%,-50%) rotate(45deg); border-radius:3px; }
+.prodigy-pip.is-prodigy { color:#171e28; text-shadow:0 1px #ffe7aa7a; }
+.prodigy-pip.is-prodigy::before { background:linear-gradient(145deg,#fff2bc,#d4a04c); border:1px solid #ffedc1; box-shadow:0 0 10px #dfb65b7d; }
+.held-summary { border:1px solid #8b7c5f; background:linear-gradient(115deg,#233442,#152231); border-radius:8px; padding:11px; margin:10px 0; }
+.held-title { display:flex; align-items:center; gap:8px; font-size:14px; }
+.held-title img { max-width:42px; max-height:42px; object-fit:contain; }
+.held-summary p { margin:5px 0; color:#d7dfdf; font-size:12px; }
+.held-summary small { font-size:11px; color:#a9b9c1; }
+.held-stat-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(125px,1fr)); gap:5px; margin-top:8px; }
+.held-stat-list span { background:#10202f; border-radius:4px; padding:5px 7px; font-size:12px; }
+.held-stat-list b { color:#f4d498; white-space:nowrap; }
+.fort-lift-sidebar { border-top:1px solid #7c6d50; padding-top:13px; }
+.fort-lift-sidebar[hidden] { display:none !important; }
+.fort-lift-sidebar h3 { color:#ebcc8c; font:600 21px Georgia,serif; }
+.fort-lift-sidebar p { font-size:12px; margin:3px 0 8px; }
+.fort-lift-list { display:grid; gap:5px; }
+.fort-lift-list button { display:block; width:100%; text-align:left; min-height:38px; padding:7px 9px; border-color:#857352; background:#203340; font-size:12px; }
+.fort-lift-list button:disabled { color:#8b98a1; background:#101d28; opacity:.6; }
+.fort-lift-list button[aria-current="location"] { border-color:#e5c186; box-shadow:inset 3px 0 #e5c186; }
+.fort-lift-list button small { display:block; font-size:10px; margin-top:2px; color:#b5c7ce; }
+.fort-lift-list button b { color:#f3d18d; }
+@media (max-width:600px) {
+ .prodigy-pips { gap:3px; }
+ .prodigy-pip { font-size:8px; min-height:28px; }
+ .prodigy-pip::before { width:19px; height:19px; }
+ .fort-lift-list button { min-height:44px; }
+ .partner-card-meta { width:100%; }
+}
