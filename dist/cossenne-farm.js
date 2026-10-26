@@ -1,4 +1,4 @@
-import {drawCompanion,companionArt} from './companion.js?v=0.90.37';
+import {drawCompanion,companionArt} from './companion.js?v=0.90.40';
 export const FARM_SPECIES={plough:'048',piglet:'047',goat:'025',goose:'142',cooler:'211'};
 export const FARM_PEN={left:4,top:6,right:18,bottom:19,gateX:18,gateTop:14,gateBottom:16};
 export const FARM_FIELD={left:28,top:5,right:44,bottom:25};

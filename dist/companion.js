@@ -65,7 +65,8 @@ export function talkToCompanion(unit,context={}){
  m.seen[mood]=count+1;m.talks=(Number(m.talks)||0)+1;m.lastMood=mood;
  return {mood,label:mood[0].toUpperCase()+mood.slice(1),text:behaviourFor(index,mood,unitName(unit),companionProfile(unit.species).gesture,unit.species),index};
 }
-export const MIRRORED_FOLLOWER_FRAMES={'181':[3],'185':[7],'230':[7],'342':[5]};
+// Waranwei: only the first right-facing source frame points left. Mirror frame 6, not frame 7.
+export const MIRRORED_FOLLOWER_FRAMES={'181':[3],'185':[6],'230':[7],'342':[5]};
 export const REVISED_FOLLOWERS=new Set(['361','362','363','376','377','380','381','381-wrath','384','387','388']);
 const artCache=new Map();
 export function companionArt(id){

@@ -1,0 +1,17 @@
+{
+  "method": "Built-in image-generation tool; transparent original creature battle-art proposals.",
+  "sources": {
+    "flaskling": "/workspace/scratch/0d0e27454b03/generated_images/exec-c5460d1f-091d-4d60-8e3a-c784e628efb0.png",
+    "vainglulus": "/workspace/scratch/0d0e27454b03/generated_images/exec-1a447023-f2b3-486f-aef3-0d49a33c2e43.png",
+    "wrathulus": "/workspace/scratch/0d0e27454b03/generated_images/exec-026e0e23-ca0d-4013-b715-6dbe7f71747b.png",
+    "slothulus": "/workspace/scratch/0d0e27454b03/generated_images/exec-ef6524a5-b53b-4fae-9830-38b6e725c941.png",
+    "gulomunc": "/workspace/scratch/0d0e27454b03/generated_images/exec-a0f25074-130f-455c-ac38-e7bd1d52b34b.png",
+    "scruffox": "/workspace/scratch/0d0e27454b03/generated_images/exec-5456ad78-f8b0-42e5-b069-100c600480e2.png",
+    "arthox": "/workspace/scratch/0d0e27454b03/generated_images/exec-997ec847-9047-47ba-9fb1-01ce6f518228.png",
+    "alfredox": "/workspace/scratch/0d0e27454b03/generated_images/exec-83a5c93d-050b-497c-a949-97649c569a11.png",
+    "ronnifox": "/workspace/scratch/0d0e27454b03/generated_images/exec-7c4e8f62-5f8a-462f-b52b-a7e90148568c.png",
+    "reggifox": "/workspace/scratch/0d0e27454b03/generated_images/exec-d133bda5-cbcb-4802-b091-1b897b1294c5.png",
+    "evolution-items": "/workspace/scratch/0d0e27454b03/generated_images/exec-db5c8901-7812-4270-be16-e2d8676574f9.png"
+  },
+  "preparation": "Creature cutouts trimmed to alpha, resized within 640 pixels, padded into 704-pixel squares and encoded as quality-94 WebP. Item atlas cropped into eight cells and encoded losslessly. Original generated images remain preserved by the generating tool."
+}

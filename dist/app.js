@@ -105,7 +105,7 @@ import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} 
 import {RESCUE_GIFTS,rescueGiftPool,chooseRescueTypes,validRescueTypes,rescueGiftChoices,RESCUE_SOLDIERS,GAME_DAY_MS,FISH_DAYLIGHT_MS,fishingDeadline,fishingClosed,fishingCanSubmit,fishingReadyAt,canEnterCompetition,FISH_ENTRY_FEE,FISH_PRIZES,adventureState,gameDay,rescueReady,completeRescue,claimRescueGift,receiveRod,enterCompetition,nextFishingEncounter,waterBaitModifier,canUseWaterBait,recordFishingCatch,fishScore,finishCompetition,fishingResults,availableFishingPrizes,claimFishingPrize,canLearnScroll,sideObjective,sideJournal} from './side-adventures.js?v=0.90.35';
 import {sideFieldSpots} from './side-world.js?v=0.90.14';
 import {MEDICINE_GUARD,migrateHospiceQuest,hospiceQuest,requestHospiceMedicine,canFightMedicineGuard,defeatMedicineGuard,carryingHospiceMedicine,deliverHospiceMedicine,hospiceReady,hospiceFieldSpots,hospiceObjective,journalSummary} from './hospice-quest.js?v=0.87.0';
-import {createCompanion,resetCompanion,syncCompanion,followPlayerStep,advanceCompanion,recordCompanionStep,talkToCompanion,drawCompanion} from './companion.js?v=0.90.37';
+import {createCompanion,resetCompanion,syncCompanion,followPlayerStep,advanceCompanion,recordCompanionStep,talkToCompanion,drawCompanion} from './companion.js?v=0.90.40';
 import {signatureArtReady} from './signature-effects.js?v=0.87.0';
 import {healthKey,captureHealth,healthChanges,presentedHP} from './health-presentation.js?v=0.87.0';
 import {statusHTML} from './battle-status.js?v=0.90.24';

@@ -3,6 +3,6 @@
   "version_code": 135,
   "filename": "Abyssals-v0.90.40-Bag-and-Lift.apk",
   "title": "Abyssals v0.90.40 \u2014 Bag Artwork and Exchange Lift",
-  "notes": "Matching inventory artwork for all bag supplies, held items, evolution items and nursery supplies. Type-coloured move codexes. Patient Rations retired from shops, rewards and combat; existing stock converts one-for-one to Slow Stew. Adds a walk-in Grand Exchange lift with floor and shop descriptions. Development patch staged without triggering an APK build; further requested changes will be included before release.",
+  "notes": "Matching inventory artwork for all bag supplies, held items, evolution items and nursery supplies. Type-coloured move codexes. Patient Rations retired from shops, rewards and combat; existing stock converts one-for-one to Slow Stew. Adds a walk-in Grand Exchange lift with floor and shop descriptions. Development patch staged without triggering an APK build; further requested changes will be included before release. Corrects the mirrored right-facing walking frame for Waranwei. New branch families remain review proposals outside the game until approved.",
   "pwa_filename": "Abyssals-v0.90.40-PWA.zip"
 }

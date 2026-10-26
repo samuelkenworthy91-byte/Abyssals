@@ -15,6 +15,7 @@ jobs:
             dist
             scripts
             tests
+            art-library/reviews/item-branches-2026-10-26
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -22,6 +23,8 @@ jobs:
         run: |
           for file in dist/*.js; do node --check "$file"; done
           node tests/bag-lift.test.mjs
+          node tests/waranwei-direction.test.mjs
+          node tests/item-review.test.mjs
           node tests/marasen-navigation.test.mjs
           node tests/marasen-store.test.mjs
           node tests/expedition-choices.test.mjs
@@ -34,6 +37,10 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
       - name: Check every bag pocket and all six lift journeys
         run: node tests/bag-lift-browser.cjs
+      - name: Build and inspect the standalone item review
+        run: |
+          python3 art-library/reviews/item-branches-2026-10-26/build_review.py
+          node tests/item-review-browser.cjs
       - name: Preserve phone screenshots
         if: always()
         uses: actions/upload-artifact@v4

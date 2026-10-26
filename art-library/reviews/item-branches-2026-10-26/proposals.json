@@ -1,0 +1,500 @@
+{
+  "status": "Review proposals only — not added to gameplay or shop stock",
+  "statOrder": [
+    "HP",
+    "Attack",
+    "Defence",
+    "Sp. Attack",
+    "Sp. Defence",
+    "Speed"
+  ],
+  "creatures": [
+    {
+      "id": "flaskling",
+      "name": "Flaskling",
+      "types": [
+        "DARK"
+      ],
+      "role": "Frail investment / unevolved",
+      "concept": "A tiny unfinished shadow homunculus inside a travelling alchemist’s flask. The violet nucleus and bronze neck-ring survive in every evolution.",
+      "stats": [
+        22,
+        8,
+        12,
+        16,
+        14,
+        18
+      ],
+      "growth": [
+        15,
+        5,
+        10,
+        15,
+        10,
+        10
+      ],
+      "ability": {
+        "name": "Incomplete Soul",
+        "text": "Species trait: receives 50% of the final EXP it would normally receive, including participation, capture EXP and binocular sharing. A single 2× Warbond multiplier brings this to normal EXP. The penalty ends upon evolution; changing abilities cannot bypass it."
+      },
+      "signature": {
+        "name": "Feeble Pulse",
+        "text": "Proposed Dark special attack · 25 power · 100% accuracy · 35 PP. Its only natural damaging move."
+      },
+      "moves": [
+        "Lv. 1: Feeble Pulse",
+        "Lv. 10: Cower — raise own Defence one stage.",
+        "No further natural moves before evolution; codex teaching is blocked while the soul is unfinished."
+      ],
+      "item": null,
+      "family": "flask",
+      "meaning": "Flask + hatchling",
+      "level": 40
+    },
+    {
+      "id": "vainglulus",
+      "name": "Vainglulus",
+      "types": [
+        "DARK",
+        "PSYCHIC"
+      ],
+      "role": "Pride / fast special attacker",
+      "concept": "The flask breaks into a mirror crown and regal shadow mantle. It floats above others, constantly admiring its own reflection.",
+      "stats": [
+        80,
+        45,
+        70,
+        145,
+        100,
+        120
+      ],
+      "growth": [
+        50,
+        15,
+        40,
+        135,
+        85,
+        110
+      ],
+      "ability": {
+        "name": "Peerless Ego",
+        "text": "Proposed: special damage rises by 20% while no combat stat is lowered. A stat drop removes the bonus until all lowered stages are cleared."
+      },
+      "signature": {
+        "name": "Look Upon Me",
+        "text": "Proposed Psychic special attack · 85 power · 100% accuracy · 10 PP. Deals 20% extra damage if the user has no lowered combat stats."
+      },
+      "moves": [
+        "Mind Lance",
+        "Night Veil",
+        "Calm Thought",
+        "Eclipse Resonance"
+      ],
+      "item": {
+        "id": "vainglory-mirror",
+        "name": "Vainglory Mirror",
+        "price": 18000
+      },
+      "family": "flask",
+      "meaning": "Vainglory + homunculus",
+      "level": null
+    },
+    {
+      "id": "wrathulus",
+      "name": "Wrathulus",
+      "types": [
+        "DARK",
+        "FIRE"
+      ],
+      "role": "Wrath / relentless physical attacker",
+      "concept": "Obsidian claws and ember-filled glass seams turn the once helpless soul into a compact, furious hunter.",
+      "stats": [
+        95,
+        150,
+        80,
+        40,
+        65,
+        130
+      ],
+      "growth": [
+        75,
+        140,
+        55,
+        15,
+        35,
+        115
+      ],
+      "ability": {
+        "name": "Grievance",
+        "text": "Proposed: after surviving a super-effective damaging hit, gain one Attack stage. At most once per attack, including multi-hit moves."
+      },
+      "signature": {
+        "name": "Fury Unsealed",
+        "text": "Proposed Fire physical attack · 100 power · 95% accuracy · 10 PP. Lowers the user’s Defence by one stage after dealing damage."
+      },
+      "moves": [
+        "Night Slash",
+        "Close Quarters",
+        "Cinder Rend",
+        "Stoke the Heart"
+      ],
+      "item": {
+        "id": "wrath-brand",
+        "name": "Wrath Brand",
+        "price": 18000
+      },
+      "family": "flask",
+      "meaning": "Wrath + homunculus",
+      "level": null
+    },
+    {
+      "id": "slothulus",
+      "name": "Slothulus",
+      "types": [
+        "DARK",
+        "GROUND"
+      ],
+      "role": "Sloth / immense slow wall",
+      "concept": "A stone-heavy body with dragging pillar arms and an almost motionless hourglass grows around the little violet soul.",
+      "stats": [
+        140,
+        100,
+        135,
+        40,
+        125,
+        20
+      ],
+      "growth": [
+        130,
+        75,
+        125,
+        10,
+        110,
+        5
+      ],
+      "ability": {
+        "name": "Unhurried",
+        "text": "Proposed: reduce direct damage taken by 20% while moving after the attacker. Residual damage is unchanged; no forced loafing turns."
+      },
+      "signature": {
+        "name": "Burden of Ages",
+        "text": "Proposed Ground physical attack · 75 power · 100% accuracy · 10 PP. Lowers the target’s Speed one stage on a successful hit."
+      },
+      "moves": [
+        "Earth Break",
+        "Firm Footing",
+        "Guarded Breath",
+        "Night Veil"
+      ],
+      "item": {
+        "id": "leaden-hourglass",
+        "name": "Leaden Hourglass",
+        "price": 18000
+      },
+      "family": "flask",
+      "meaning": "Sloth + homunculus",
+      "level": null
+    },
+    {
+      "id": "gulomunc",
+      "name": "Gulomunc",
+      "types": [
+        "DARK",
+        "POISON"
+      ],
+      "role": "Gluttony / HP and recovery specialist",
+      "concept": "The flask becomes an enormous translucent belly; its small nucleus survives above a constantly churning digestive void.",
+      "stats": [
+        160,
+        95,
+        85,
+        90,
+        95,
+        35
+      ],
+      "growth": [
+        150,
+        70,
+        70,
+        65,
+        80,
+        10
+      ],
+      "ability": {
+        "name": "Bottomless",
+        "text": "Proposed: healing from draining attacks is 25% stronger. The existing healing multiplier and maximum HP still apply; it cannot revive or grant lives."
+      },
+      "signature": {
+        "name": "Empty the Table",
+        "text": "Proposed Dark physical draining attack · 75 power · 100% accuracy · 10 PP. Restores HP equal to 50% of damage actually dealt before healing modifiers."
+      },
+      "moves": [
+        "Venom Lash",
+        "Toxin Spray",
+        "Night Strike",
+        "Guarded Breath"
+      ],
+      "item": {
+        "id": "bottomless-cup",
+        "name": "Bottomless Cup",
+        "price": 18000
+      },
+      "family": "flask",
+      "meaning": "Gula (gluttony) + homunculus",
+      "level": null
+    },
+    {
+      "id": "scruffox",
+      "name": "Scruffox",
+      "types": [
+        "FIGHTING"
+      ],
+      "role": "Uncommitted young fighter",
+      "concept": "A wiry street-sparring fox whose plain wraps and four-point clasp give no clue whether it will become a protector or an extortionist.",
+      "stats": [
+        50,
+        55,
+        40,
+        25,
+        40,
+        65
+      ],
+      "growth": [
+        35,
+        45,
+        25,
+        15,
+        25,
+        55
+      ],
+      "ability": {
+        "name": "Quick Study",
+        "text": "Proposed: the first lowered combat stat in each battle is restored immediately to its previous stage. Once per battle."
+      },
+      "signature": {
+        "name": "Practice Bout",
+        "text": "Proposed Fighting physical attack · 40 power · 100% accuracy · 30 PP. No secondary effect."
+      },
+      "moves": [
+        "Brave Palm",
+        "Firm Footing",
+        "Guarded Breath",
+        "Night Feint"
+      ],
+      "item": null,
+      "family": "fox",
+      "meaning": "Scruffy + fox",
+      "level": 30
+    },
+    {
+      "id": "arthox",
+      "name": "Arthox",
+      "types": [
+        "FIGHTING",
+        "FAIRY"
+      ],
+      "role": "Honourable / outright attack",
+      "concept": "A mythic Romano-British fox war leader: bronze lamellar armour, purple cloak and a radiant leaf-shaped blade. Athletic rather than heavily shielded.",
+      "stats": [
+        80,
+        145,
+        75,
+        35,
+        75,
+        110
+      ],
+      "growth": [
+        50,
+        135,
+        40,
+        15,
+        45,
+        110
+      ],
+      "ability": {
+        "name": "Sovereign Charge",
+        "text": "Proposed: the first successful damaging move after each entry deals 25% extra damage. Switching resets it; missed or blocked attacks do not spend it."
+      },
+      "signature": {
+        "name": "Avalon Cleave",
+        "text": "Proposed Fairy physical attack · 90 power · 100% accuracy · 10 PP. No secondary effect; a dependable blade for the attack specialist."
+      },
+      "moves": [
+        "Close Quarters",
+        "Brave Kick",
+        "Iron Cut",
+        "Firm Footing"
+      ],
+      "item": {
+        "id": "avalon-blade",
+        "name": "Avalon Blade",
+        "price": 10000
+      },
+      "family": "fox",
+      "meaning": "Arthur + fox",
+      "level": 30
+    },
+    {
+      "id": "alfredox",
+      "name": "Alfredox",
+      "types": [
+        "FIGHTING",
+        "STEEL"
+      ],
+      "role": "Honourable / outright defence",
+      "concept": "A fortress-builder fox whose interlocking gate shield and layered armour evoke Alfred’s defensive burhs. Low damage and speed keep it distinct from Arthox.",
+      "stats": [
+        100,
+        70,
+        150,
+        30,
+        135,
+        35
+      ],
+      "growth": [
+        90,
+        35,
+        145,
+        10,
+        125,
+        10
+      ],
+      "ability": {
+        "name": "Burhwall",
+        "text": "Proposed: reduce super-effective damage received by 25%. Does not affect status or indirect damage."
+      },
+      "signature": {
+        "name": "Hold the Burh",
+        "text": "Proposed Steel status move · 10 PP. Raise the user’s Defence and Special Defence by one stage and remove its lowered Speed stages; no healing."
+      },
+      "moves": [
+        "Iron Ward",
+        "Plate Guard",
+        "Guarded Breath",
+        "Brave Throw"
+      ],
+      "item": {
+        "id": "burh-shield",
+        "name": "Burh Shield",
+        "price": 10000
+      },
+      "family": "fox",
+      "meaning": "Alfred + fox",
+      "level": 30
+    },
+    {
+      "id": "ronnifox",
+      "name": "Ronnifox",
+      "types": [
+        "FIGHTING",
+        "DARK"
+      ],
+      "role": "Dishonourable / bruiser",
+      "concept": "A broad, rough-edged fox enforcer: heavy knuckles, boxer’s stance and torn pinstripe waistcoat. Deliberately stockier and less precise than Reggifox.",
+      "stats": [
+        115,
+        125,
+        100,
+        30,
+        85,
+        65
+      ],
+      "growth": [
+        110,
+        115,
+        90,
+        10,
+        65,
+        40
+      ],
+      "ability": {
+        "name": "Heavy Hands",
+        "text": "Proposed: contact attacks deal 15% more damage but the user cannot gain evasion stages. Does not boost non-contact moves."
+      },
+      "signature": {
+        "name": "Back-Alley Barrage",
+        "text": "Proposed Fighting physical attack · 40 power × 2 hits · 95% accuracy · 15 PP. Two contact hits, checked using the game’s existing multi-hit rules."
+      },
+      "moves": [
+        "Close Quarters",
+        "Night Lash",
+        "Iron Elbow",
+        "Guarded Breath"
+      ],
+      "item": {
+        "id": "enforcer-knuckles",
+        "name": "Enforcer Knuckles",
+        "price": 10000
+      },
+      "family": "fox",
+      "meaning": "Ronnie + fox",
+      "level": 30
+    },
+    {
+      "id": "reggifox",
+      "name": "Reggifox",
+      "types": [
+        "FIGHTING",
+        "DARK"
+      ],
+      "role": "Dishonourable / tactical support",
+      "concept": "A neat, calculating fox organiser with silver watch, signal cane and three directing tokens. Its value comes from control and ally support, not raw damage.",
+      "stats": [
+        90,
+        65,
+        85,
+        60,
+        110,
+        110
+      ],
+      "growth": [
+        65,
+        35,
+        65,
+        30,
+        110,
+        105
+      ],
+      "ability": {
+        "name": "The Fixer",
+        "text": "Proposed: after using a non-damaging move, its living active ally gains one Speed stage once per turn. In singles, prepare that bonus for the next voluntary incoming partner; it cannot stack before the switch."
+      },
+      "signature": {
+        "name": "Quiet Arrangement",
+        "text": "Proposed Dark status move · 10 PP. Lower one opponent’s Attack and Special Attack by one stage. Existing immunities and protective effects apply."
+      },
+      "moves": [
+        "Standard Relay",
+        "Night Veil",
+        "Future Read",
+        "Firm Footing"
+      ],
+      "item": {
+        "id": "fixers-watch",
+        "name": "Fixer’s Watch",
+        "price": 10000
+      },
+      "family": "fox",
+      "meaning": "Reggie + fox",
+      "level": 30
+    }
+  ],
+  "evolutionRules": {
+    "flask": {
+      "minimumLevel": 40,
+      "region": "Hell",
+      "experienceMultiplier": 0.5,
+      "itemRequired": true,
+      "itemConsumedOnlyOnSuccess": true,
+      "penaltyEndsOnEvolution": true
+    },
+    "fox": {
+      "suggestedMinimumLevel": 30,
+      "itemRequired": true,
+      "honourBranches": 2,
+      "dishonourBranches": 2,
+      "reputationLock": false
+    },
+    "shop": "Marasen · Grand Exchange · 4F Evolution Atelier"
+  }
+}

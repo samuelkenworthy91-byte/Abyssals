@@ -1,6 +1,6 @@
 import {GLASS_CRATERS,MOUNTAIN_FLIGHTS,MOUNTAIN_ENTRY} from './storm-props.js?v=0.90.14';
 import {isStormRoom} from './storm-weather.js?v=0.90.14';
-import {drawCompanion} from './companion.js?v=0.90.37';
+import {drawCompanion} from './companion.js?v=0.90.40';
 import {canMeetStormDragon,stormState} from './thunderplain-rules.js?v=0.90.14';
 import {DATA} from './data.js?v=0.87.0';
 import {STORM_ROAD,BOTRUNE_GUARDS} from './botrune-data.js?v=0.90.17';
