@@ -33,7 +33,7 @@ const fs=require('node:fs');
  assert.equal(await page.locator('#fort-lift [data-fort-destination="waranCave4"]').isDisabled(),true);
  await page.evaluate(()=>window.__patchQA.lift());
  await page.locator('.modal [data-fort-destination="waranCave2"]').click();
- await page.waitForFunction(()=>window.__patchQA.room()==='waranCave2');
+ await page.waitForFunction(()=>window.__patchQA.room()==='waranCave2'&&document.querySelector('#world-warp').hidden);
  assert.equal(await page.locator('#fort-lift [data-fort-destination="waranCave2"]').isDisabled(),true);
 
  // Equipment's real effective stat multiplier appears alongside the held item.
