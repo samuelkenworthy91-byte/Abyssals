@@ -117,7 +117,7 @@ const shownHP=u=>presentationHealth?.[healthKey(u)]??u.hp;
 import {growthSummaryHTML} from './growth-summary.js?v=0.90.35';
 import {ESCORT_STEPS,PRIEST_RETURNS,rememberPriestRest,evacDestination,activateEscort,advanceEscortStep,consumeEvac} from './field-items.js?v=0.90.39';
 import {evacHorses,drawEvacHorse} from './evac-horses.js?v=0.87.0';
-import {territoryBloom} from './expansion-world.js?v=0.90.41';
+import {territoryBloom} from './expansion-world.js?v=0.90.42';
 import {worldPortrait,portraitBounds,drawWorldCharacter,WORLD_WALK_IDS} from './world-characters.js?v=0.90.41';
 import {enterTrainerArea,trainerStandingDown,standDownTrainer} from './trainer-stand-down.js?v=0.87.0';
 import {wildEscape} from './escape-rules.js?v=0.87.0';
