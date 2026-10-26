@@ -25,7 +25,7 @@ import {biomeAsset,biomeFor,installBiomeWorld,drawBiomeDetails,drawBiomeEntrance
 import {installLeaderForts,leaderFortWalkable,drawLeaderFortDecor,drawLeaderFortEntrances} from './leader-fort-world.js?v=0.90.41';
 import {fortCoastTile,drawFortTile,drawFortCoast,drawFortExterior,drawFortArchitecture} from './fort-render.js?v=0.87.0';
 import {installExpansionHabitats} from './full-expansion-world.js?v=0.90.41';
-import {installExplorationWorld,drawExplorationScenery} from './exploration-world.js?v=0.90.41';
+import {installExplorationWorld,drawExplorationScenery} from './exploration-world.js?v=0.90.42';
 import {installSidePaths} from './side-world.js?v=0.90.41';
 import {extendRoutes} from './route-progression.js?v=0.90.41';
 import {BOARD,onBoard,boardWall} from './tunnel-puzzle.js?v=0.87.0';
