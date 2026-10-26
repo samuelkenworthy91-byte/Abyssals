@@ -1,8 +1,8 @@
 {
-  "version": "0.90.41",
-  "version_code": 136,
-  "filename": "Abyssals-v0.90.41-Pride-Wrath-and-Type-Eggs.apk",
-  "title": "Abyssals v0.90.41 \u2014 Pride, Wrath and Type Eggs",
-  "notes": "Major original Pride and weapon-based Wrath redesigns, with the original Flaskling visibly present in all four sin forms and matching walking sprites. Cleans sixteen item icons and adds six broad held items to the Exchange. Reggifox\u2019s unique The Fixer ability now prepares stronger special attacks after status moves, entirely in singles. Arthox gains Parting Blow, a Fighting damaging switch move in the catalogue. Adds all eighteen type egg designs: each shell half shows one hatchling type, including existing eggs. Preserves hatch outcomes, saves, permanent deaths, quests, package identity and original signing certificate. Includes updated offline PWA.",
-  "pwa_filename": "Abyssals-v0.90.41-PWA.zip"
+  "version": "0.90.42",
+  "version_code": 137,
+  "filename": "Abyssals-v0.90.42-Fort-Lift-and-Prodigy-Cards.apk",
+  "title": "Abyssals v0.90.42 — Fort Lift and Prodigy Cards",
+  "notes": "Adds a right-side Sunken Fort/Veilroot lift with direct travel to explored floors only, including an accessible lift station on each floor. Shows held equipment and exact battle-stat multipliers in partner summaries. Adds a one-tap move-to-first-party-slot action in stats, reorganising the expedition and lead together. Six labelled gold-diamond Prodigy markers now appear beneath Abyssal cards in breeding, party, reserve and other partner lists, with details available before selection. Preserves existing saves, breeds, battles, APK package, Android signing identity and offline PWA.",
+  "pwa_filename": "Abyssals-v0.90.42-PWA.zip"
 }
