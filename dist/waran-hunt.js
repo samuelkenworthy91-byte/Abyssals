@@ -1,4 +1,4 @@
-import {companionArt,drawCompanion} from './companion.js?v=0.90.40';
+import {companionArt,drawCompanion} from './companion.js?v=0.90.41';
 export const PEACH_ORCHARD_MYTHICS=Object.freeze({Feirong:'175',Guanrong:'183',Liubeirow:'184'});
 export const HUNT_DURATION=9600;
 const lerp=(a,b,p)=>a+(b-a)*p;

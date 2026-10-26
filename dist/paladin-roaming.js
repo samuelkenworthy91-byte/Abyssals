@@ -1,4 +1,4 @@
-import {PALADIN_IDS,PALADIN_SPECIES} from './paladin-data.js?v=0.90.40';
+import {PALADIN_IDS,PALADIN_SPECIES} from './paladin-data.js?v=0.90.41';
 export const COURT_ENCOUNTER_CHANCE=.01,COURT_FLEE_CHANCE=.10;
 export function courtState(state){const q=state.paladinCourt??={version:1,accepted:false,inscriptions:[],sequence:[],puzzle:false,commander:false,releasePending:false,released:false,choice:null,roamers:{}};if(state.defeatedTrainers?.includes('TRN-COURT-HUGH')||q.released)q.commander=true;if((q.version??1)<2){q.legacyProgress=!!(q.puzzle||q.commander||q.released);if(!q.legacyProgress)q.sequence=[];q.version=2;}q.inscriptions??=[];q.sequence??=[];q.roamers??={};for(const id of PALADIN_IDS){q.roamers[id]??={status:'roaming',unit:null,meetings:0};const row=q.roamers[id];if([...state.party||[],...state.reserve||[]].some(u=>u.species.id===id))row.status='captured';else if((state.dead||[]).some(u=>u.species.id===id)&&row.status==='roaming')row.status='killed';}return q;}
 export function availablePaladins(state){const q=courtState(state);return q.released?PALADIN_IDS.filter(id=>q.roamers[id].status==='roaming'):[];}

@@ -1,11 +1,11 @@
 import {roomGrid} from './promenade.js?v=0.90.37';
-import {canonicalMoveId} from './teamcraft-data.js?v=0.90.40';
+import {canonicalMoveId} from './teamcraft-data.js?v=0.90.41';
 import {redirectInheritance} from './teamcraft-progress.js?v=0.90.30';
 import {validateInheritance} from './breeding-inheritance.js?v=0.90.35';
-import {DATA} from './data.js?v=0.90.40';
+import {DATA} from './data.js?v=0.90.41';
 import {rootForm} from './route-roster.js?v=0.87.0';
 import {validateNurserySnapshot} from './breeding.js?v=0.90.36';
-import {PALADIN_IDS} from './paladin-data.js?v=0.90.40';
+import {PALADIN_IDS} from './paladin-data.js?v=0.90.41';
 export const SAVE_FILE_FORMAT='abyssals-expedition';
 export const SAVE_FILE_VERSION=1;
 export const SAVE_FILE_LIMIT=5*1024*1024;

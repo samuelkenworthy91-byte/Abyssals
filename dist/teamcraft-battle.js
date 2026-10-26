@@ -1,4 +1,4 @@
-import {restoreHP as healRelayHP} from './abilities.js?v=0.90.40';
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.41';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];
@@ -47,9 +47,9 @@ export function teamcraftEffect(actor,target,move,e,messages,hooks){const {rando
  if(e.effect_id==='aurora_screen'){actor.field.screens??={};actor.field.screens[actor.side]??={};actor.field.screens[actor.side].SPECIAL=Math.max(3,actor.field.screens[actor.side].SPECIAL||0);return true;}
  return false;
 }
-export function departTeamcraft(u,next,switching,messages=[]){if(!living(u)||!living(next)||!switching)return false;const s=ms(u),f=flags(u);let pass=false;
+export function departTeamcraft(u,next,switching,messages=[],{passStages=true}={}){if(!living(u)||!living(next)||!switching)return false;const s=ms(u),f=flags(u);let pass=false;
  if(s.healingRelay){next.stages={};delete ms(next).decoy;delete ms(next).effigyHandoff;const restored=Math.floor(next.maxHp/4*(has(u,'Medicinal Sap')?1.15:1));const before=next.hp;healRelayHP(next,Math.max(1,restored));next.status=null;next.statusTurns=0;next.confusion=0;next.toxicCounter=0;ms(next).relayFatigue=3;messages.push(`${unitName(next)} receives ${next.hp-before} HP and is cleansed.`);return false;}
- if(!(s.relayFatigue>0)&&(s.relayRequested||s.effigyHandoff||has(u,'Relay Plumage'))){next.stages=Object.fromEntries(PASS_STATS.map(k=>[k,Math.max(-6,Math.min(6,u.stages?.[k]||0))]));ms(next).relayFatigue=3;if(s.effigyHandoff&&!s.relayRequested&&s.decoy)ms(next).decoy={...s.decoy};messages.push(`${unitName(next)} inherits five combat stat stages.`);pass=true;}
+ if(passStages&&!(s.relayFatigue>0)&&(s.relayRequested||s.effigyHandoff||has(u,'Relay Plumage'))){next.stages=Object.fromEntries(PASS_STATS.map(k=>[k,Math.max(-6,Math.min(6,u.stages?.[k]||0))]));ms(next).relayFatigue=3;if(s.effigyHandoff&&!s.relayRequested&&s.decoy)ms(next).decoy={...s.decoy};messages.push(`${unitName(next)} inherits five combat stat stages.`);pass=true;}
  if(s.entryCleanse){for(const k in next.stages)if(next.stages[k]<0)next.stages[k]=0;}
  if(has(u,'Sand Reservoir')&&f.silt){ms(next).oneWard={category:'PHYSICAL',multiplier:.8};delete f.silt;}
  if(has(u,'Rain Sluice')&&f.rainCure&&u.field?.weather==='RAIN'){next.status=null;next.statusTurns=0;next.toxicCounter=0;f.rainCure=false;}

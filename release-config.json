@@ -1,8 +1,8 @@
 {
-  "version": "0.90.40",
-  "version_code": 135,
-  "filename": "Abyssals-v0.90.40-Berries-and-Branches.apk",
-  "title": "Abyssals v0.90.40 \u2014 Berries and Branches",
-  "notes": "Adds two new item-branch families with ten original battle portraits and matching directional followers. Flaskling is rare at levels 5\u20138 in Dorelem Scrub and gains half EXP; use a sin item at level 40+ in Hell. Scruffox is rare at levels 8\u201312 on North Scrub Road; four relics evolve it at level 30. Reggifox is Fighting/Psychic with buffing and special attacks. All eight evolution items are in Marasen\u2019s Evolution Atelier. Adds twelve consumable held Berries linked to existing Berry abilities, eight broad-role held items, and Mabel Rowan\u2019s illustrated farm-shop pantry in Dorelem\u2019s upper-left stablehouse. Tightens item crops, adds pictures throughout the bag, retires Patient Rations with a one-for-one Slow Stew conversion, adds the Grand Exchange lift and corrects Waranwei\u2019s walking direction. Preserves saves, quests, permanent deaths, package identity and original signing. Includes the rebuilt offline PWA.",
-  "pwa_filename": "Abyssals-v0.90.40-PWA.zip"
+  "version": "0.90.41",
+  "version_code": 136,
+  "filename": "Abyssals-v0.90.41-Pride-Wrath-and-Type-Eggs.apk",
+  "title": "Abyssals v0.90.41 \u2014 Pride, Wrath and Type Eggs",
+  "notes": "Major original Pride and weapon-based Wrath redesigns, with the original Flaskling visibly present in all four sin forms and matching walking sprites. Cleans sixteen item icons and adds six broad held items to the Exchange. Reggifox\u2019s unique The Fixer ability now prepares stronger special attacks after status moves, entirely in singles. Arthox gains Parting Blow, a Fighting damaging switch move in the catalogue. Adds all eighteen type egg designs: each shell half shows one hatchling type, including existing eggs. Preserves hatch outcomes, saves, permanent deaths, quests, package identity and original signing certificate. Includes updated offline PWA.",
+  "pwa_filename": "Abyssals-v0.90.41-PWA.zip"
 }

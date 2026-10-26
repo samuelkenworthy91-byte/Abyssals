@@ -1,5 +1,5 @@
 import {BIRD_FAMILIES} from './bird-family.js?v=0.87.0';
-import {routeStage} from './route-progression.js?v=0.90.40';
+import {routeStage} from './route-progression.js?v=0.90.41';
 // Family indices match the approved artwork. New birds occupy duplicate common
 // habitat slots; original local rarities and unique species remain available.
 export const BIRD_HABITATS=[

@@ -47,6 +47,9 @@ jobs:
           # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Test redesigned sins, Fighting pivot and type eggs on phone
+        timeout-minutes: 3
+        run: node tests/pride-wrath-eggs-browser.cjs
       - name: Test berry pantry and new branch families on phone
         timeout-minutes: 3
         run: node tests/branches-berries-browser.cjs

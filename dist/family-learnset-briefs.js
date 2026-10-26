@@ -1,5 +1,5 @@
 import {BIRD_BRIEFS} from './bird-family.js?v=0.87.0';
-import {PALADIN_SPECIES,PALADIN_MOVES} from './paladin-data.js?v=0.90.40';
+import {PALADIN_SPECIES,PALADIN_MOVES} from './paladin-data.js?v=0.90.41';
 import {MENAGERIE_FAMILIES,MENAGERIE_SPECIES} from './menagerie-family.js?v=0.87.0';
 import {AQUATIC_BRIEFS} from './approved-aquatic.js?v=0.87.0';
 // Reviewed family themes, using Scarlet/Violet + DLC learnsets as pacing references.

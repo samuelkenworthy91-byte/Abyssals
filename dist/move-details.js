@@ -1,11 +1,11 @@
 import {prepareSpecialistMove,stabMultiplier,secondaryChance} from './teamcraft-battle.js?v=0.90.30';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {resolveSalvationMove} from './salvation.js?v=0.87.0';
-import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.40';
+import {moveDamageMultiplier,movePriority} from './move-rules.js?v=0.90.41';
 import {statusDetails} from './battle-status.js?v=0.90.24';
-import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.90.40';
+import {has,abilityMultiplier,abilityImmunity,heldStat,ignoresDefence,speedFactor,critChance,healingMultiplier} from './abilities.js?v=0.90.41';
 import {typeEffectiveness,effectivenessLabel,categorySymbol} from './type-rules.js?v=0.87.0';
-import {stageMultiplier,damageScale} from './engine.js?v=0.90.40';
+import {stageMultiplier,damageScale} from './engine.js?v=0.90.41';
 const names={attack:'Attack',defence:'Defense',sp_attack:'Special Attack',sp_defence:'Special Defense',speed:'Speed',accuracy:'Accuracy',evasion:'Evasion'};
 export function damageRange(actor,target,move){move=resolveSalvationMove(actor,move);
  if(!move.power)return null;
@@ -47,6 +47,7 @@ export function mechanicsFor(move,actor,target){move=resolveSalvationMove(actor,
  if(e.effect_id==='contact_retaliation')details.push(`Contact attackers lose 12.5% of their maximum HP for ${e.turns} turns. This is the slice binding of the source’s unspecified HP basis.`);
  if(e.effect_id==='contact_status_retaliation')details.push(`Contact attackers risk ${e.chance_percent}% ${e.status.toLowerCase()} for ${e.turns} turns.`);
  if(e.effect_id==='heal_by_format')details.push('Singles: restores '+50*healingMultiplier(actor)+'% maximum HP, capped at full. Cannot revive.');
+ if(e.effect_id==='pivot')details.push('After dealing damage, switch to a chosen living benched partner if able; no stat stages are passed. Misses, protection and immunity do not switch.');
  if(e.effect_id==='prevent_switch')details.push(`Blocks voluntary switching and escape for ${e.turns||3} turns unless Bindproof or Wayfarer applies.`);
  if(e.effect_id==='status_immunity')details.push(`${e.status.toLowerCase()} immunity for ${e.turns} turns.`);
  if(e.effect_id==='cure_major_status')details.push('Cures the current major status; confusion is separate.');

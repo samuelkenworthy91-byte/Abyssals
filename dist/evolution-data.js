@@ -1,4 +1,4 @@
-import {BRANCH_EVOLUTIONS} from './branch-families.js?v=0.90.40';
+import {BRANCH_EVOLUTIONS} from './branch-families.js?v=0.90.41';
 import {BIRD_EVOLUTIONS} from './bird-family.js?v=0.87.0';
 import {MENAGERIE_EVOLUTIONS} from './menagerie-family.js?v=0.87.0';
 import {MIASMA_EVOLUTIONS} from './miasma-family.js?v=0.87.0';

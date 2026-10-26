@@ -1,10 +1,10 @@
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
-import {DATA} from './data.js?v=0.90.40';
+import {DATA} from './data.js?v=0.90.41';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
-import {stageMultiplier} from './engine.js?v=0.90.40';
-import {moveUsable} from './move-rules.js?v=0.90.40';
-import {canSwitch,leaveAbility,enterAbility,abilityName} from './abilities.js?v=0.90.40';
+import {stageMultiplier} from './engine.js?v=0.90.41';
+import {moveUsable} from './move-rules.js?v=0.90.41';
+import {canSwitch,leaveAbility,enterAbility,abilityName} from './abilities.js?v=0.90.41';
 export const isArenaBossRound=round=>Number.isSafeInteger(round)&&round>0&&round%5===0;
 export const arenaRoundMarks=round=>isArenaBossRound(round)?round*10:round+2;
 // Species, four preferred legal techniques, ability slot and held-item role.

@@ -1,5 +1,5 @@
 import {questPropSprite} from './quest-prop-art.js?v=0.87.0';
-import {REVOLT_EVENTS,REVOLT_CAST} from './revolt-data.js?v=0.90.40';
+import {REVOLT_EVENTS,REVOLT_CAST} from './revolt-data.js?v=0.90.41';
 export function installRevoltWorld(maps){for(const e of REVOLT_EVENTS){const m=maps[e.room];if(e.room==='town')continue;if(!m)throw Error('Missing revolt story room '+e.room);let [x,y]=e.at;const occupied=(x,y)=>m.spots.some(s=>s.x===x&&s.y===y)||m.gates.some(s=>s.x===x&&s.y===y)||m.props.some(p=>x>=p.x&&x<p.x+p.w&&y>=p.y&&y<p.y+p.h);if(occupied(x,y)){const options=[[x,y+2],[x-2,y],[x+2,y],[x,y-2],[20,20],[18,18]];[x,y]=options.find(([x,y])=>!occupied(x,y))||e.at;}m.spots.push({id:'revolt-'+e.id,label:e.character?REVOLT_CAST[e.character].name:e.title,x,y,revoltEvent:e.id,...(e.character?{sprite:0,revoltCharacter:e.character,facing:'down'}:{questProp:true})});}}
 
 export function drawRevoltDocuments(c,spots){for(const s of spots.filter(s=>s.revoltEvent&&!s.revoltCharacter)){const art=questPropSprite('ledger');if(!art?.ready)continue;const x=s.x*16+8,y=s.y*16+8;c.save();c.fillStyle='#17251b77';c.beginPath();c.ellipse(x,y+3,13,4,0,0,Math.PI*2);c.fill();c.drawImage(art.image,x-17,y-24,34,28);c.strokeStyle='#f4e7c9';c.lineWidth=2;c.beginPath();c.moveTo(x+6,y-9);c.lineTo(x+13,y-4);c.moveTo(x+6,y-4);c.lineTo(x+13,y-9);c.stroke();c.restore();}}

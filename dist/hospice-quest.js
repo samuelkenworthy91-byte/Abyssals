@@ -1,4 +1,4 @@
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.40';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.41';
 // A staged supply quest: discover the need in Philomere, win the cache battle,
 // then make one recorded allocation. No quest state changes on field inspection.
 export const MEDICINE_GUARD=Object.freeze({id:'hospice-medicine',speciesId:'140',level:40,moveIds:[43,87,358,40],hpMultiplier:1.25});

@@ -1,10 +1,10 @@
-import {branchEvolutionAllowed} from './branch-families.js?v=0.90.40';
+import {branchEvolutionAllowed} from './branch-families.js?v=0.90.41';
 import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.38';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats,migrateStats} from './stat-balance.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.40';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.40';
-import {STAT_KEYS} from './progression.js?v=0.90.40';
+import {DATA} from './data.js?v=0.90.41';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {STAT_KEYS} from './progression.js?v=0.90.41';
 
 export function eligibleEvolutions(unit,state={},itemId=null){
  if(!unit||unit.dead||unit.hp<=0||(unit.evolutionHistory||[]).some(e=>e.level===unit.level))return [];

@@ -1,0 +1,63 @@
+{
+  "method": "Built-in image generation; atlas crops normalized with Pillow. All generated alpha preserved.",
+  "battleArt": {
+    "506": "exec-4eb8b8b5-d65b-41d8-bade-0d6b72325215.png",
+    "507": "exec-e3cf4982-df4b-4283-9e96-2ea1813a00ee.png",
+    "508": "exec-94162b95-070e-412e-a726-33e7e087060e.png",
+    "509": "exec-666a2d89-01ad-41da-aabc-b8a16519f421.png"
+  },
+  "cleanedItems": [
+    "antidote-berry",
+    "boatwright-brace",
+    "clear-herb",
+    "dewberry",
+    "fishing-rod",
+    "focusberry",
+    "heirloom-charm",
+    "inheritance-thread",
+    "mind-lens",
+    "mourning-veil",
+    "pilgrim-bell",
+    "poultice",
+    "trade-note",
+    "training-tonic",
+    "wakeberry",
+    "tideglass-charm"
+  ],
+  "newHeldItems": 6,
+  "typeEggs": [
+    "normal",
+    "fire",
+    "water",
+    "electric",
+    "grass",
+    "ice",
+    "fighting",
+    "poison",
+    "ground",
+    "flying",
+    "psychic",
+    "bug",
+    "rock",
+    "ghost",
+    "dragon",
+    "dark",
+    "steel",
+    "fairy"
+  ],
+  "followers": {
+    "rows": [
+      "506",
+      "507",
+      "508",
+      "509"
+    ],
+    "correctedLeftFrame5": [
+      "506",
+      "507",
+      "509"
+    ],
+    "sourceFrames": "down/down/up/up/left/left/right/right",
+    "runtimeFrames": "down/down/left/left/up/up/right/right"
+  }
+}

@@ -1,4 +1,4 @@
-import {SHINY_PALETTES} from './shiny-palettes.js?v=0.90.40';
+import {SHINY_PALETTES} from './shiny-palettes.js?v=0.90.41';
 export const SHINY_DENOMINATOR=4096,EGG_SHINY_DENOMINATOR=2048;
 export function rollShiny(random=Math.random,{bred=false}={}){const roll=random();return Number.isFinite(roll)&&roll>=0&&roll<1/(bred?EGG_SHINY_DENOMINATOR:SHINY_DENOMINATOR);}
 export function assignShiny(unit,{random=Math.random}={}){if(typeof unit.shiny!=='boolean')unit.shiny=rollShiny(random);return unit;}

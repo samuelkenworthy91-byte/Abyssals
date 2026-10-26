@@ -1,5 +1,5 @@
 import {EXPANSION_HABITATS} from './full-encounters.js?v=0.87.0';
-import {CAVE_FLOORS} from './exploration-data.js?v=0.90.40';
+import {CAVE_FLOORS} from './exploration-data.js?v=0.90.41';
 // Play-test route pacing overlay, deliberately separate from imported canon tables.
 export const ROUTE_STAGES={
  march:{base:'march',stage:1,count:2,min:5,max:7},march2:{base:'march',stage:2,count:2,min:8,max:10},

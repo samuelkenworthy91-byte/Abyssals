@@ -1,6 +1,6 @@
 import {stormRelayMenu} from './storm-relay.js?v=0.90.14';
 export {stormRelayMenu} from './storm-relay.js?v=0.90.14';
-import {STORM_NOTES,STORM_TRAINERS,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.40';
+import {STORM_NOTES,STORM_TRAINERS,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.41';
 import {stormState,acceptStormDarius,readStormNote,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.14';
 export function handleStormSide(id,a){
  const {state:s,room,line,showDialogue,warp,rewardTransaction:commit,buildMarkers,openModal,escapeHTML:e,challengeTrainer,startWild,shop,$}=a,q=stormState(s);

@@ -1,9 +1,9 @@
 import {GLASS_CRATERS,MOUNTAIN_FLIGHTS,MOUNTAIN_ENTRY} from './storm-props.js?v=0.90.14';
 import {isStormRoom} from './storm-weather.js?v=0.90.14';
-import {drawCompanion} from './companion.js?v=0.90.40';
+import {drawCompanion} from './companion.js?v=0.90.41';
 import {canMeetStormDragon,stormState} from './thunderplain-rules.js?v=0.90.14';
-import {DATA} from './data.js?v=0.90.40';
-import {STORM_ROAD,BOTRUNE_GUARDS} from './botrune-data.js?v=0.90.40';
+import {DATA} from './data.js?v=0.90.41';
+import {STORM_ROAD,BOTRUNE_GUARDS} from './botrune-data.js?v=0.90.41';
 import {botruneState,btDefeated,trialVictims} from './botrune-rules.js?v=0.90.17';
 export const BOTRUNE_ASSETS={btMountainSteps:'bt-mountain-steps-v09014.webp',btBrokenCart:'bt-broken-cart-v09014.webp',btGlassCrater:'bt-glass-crater-v09014.webp',btConductor:'bt-conductor-v09013.webp',btAbbey:'bt-abbey-v09013.webp',btHouse:'bt-garrison-house-v09013.webp',btScriptorium:'bt-scriptorium-v09013.webp'};
 export const victims=[['prisoner-1',17,'TRN-C02-001'],['prisoner-2',21,'TRN-C02-002'],['prisoner-3',25,'TRN-C01-002'],['CHR-PATE',29,'CHR-PATE'],['CHR-TRADE',33,'CHR-TRADE']];

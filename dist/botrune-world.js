@@ -1,6 +1,6 @@
-import {installThunderplainWorld,botruneBuildingBlocked} from './thunderplain-world.js?v=0.90.40';
-import {STORM_ROAD} from './botrune-data.js?v=0.90.40';
-import {registerBiome} from './biome-world.js?v=0.90.40';
+import {installThunderplainWorld,botruneBuildingBlocked} from './thunderplain-world.js?v=0.90.41';
+import {STORM_ROAD} from './botrune-data.js?v=0.90.41';
+import {registerBiome} from './biome-world.js?v=0.90.41';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 const person=(id,label,x,y,portrait)=>({id,label,x,y,sprite:0,revoltCharacter:portrait});
 export function botruneWalkable(m,x,y){if(m.botruneKind==='square')return y>=21&&y<=29||x>=20&&x<=28&&y>=9&&y<=21||x>=12&&x<=40&&y>=3&&y<=9;if(m.botruneKind==='lower')return !botruneBuildingBlocked(m,x,y);return null;}

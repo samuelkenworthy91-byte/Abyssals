@@ -1,14 +1,14 @@
-import {codexCompatible,canonicalMoveId} from './teamcraft-data.js?v=0.90.40';
+import {codexCompatible,canonicalMoveId} from './teamcraft-data.js?v=0.90.41';
 import {BREEDING_ONLY_FIRST_FORMS,TRADE_ONLY_FAMILIES,RESERVED_STARTERS} from './encounter-access.js?v=0.90.18';
 import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {FISH_POOL,FISH_ENTRY_FEE,FISH_RIVALS,fishingResident,fishingSpecies} from './fishing-habitats.js?v=0.90.18';
 export {FISH_POOL,FISH_ENTRY_FEE} from './fishing-habitats.js?v=0.90.18';
 import {startingMoveIds} from './moveset-identity.js?v=0.87.0';
 import {TYPES} from './type-rules.js?v=0.87.0';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.40';
-import {DATA} from './data.js?v=0.90.40';
-import {instance,rng} from './engine.js?v=0.90.40';
-import {hashSeed,initializeProgress,STAT_KEYS,unitGrowthRates} from './progression.js?v=0.90.40';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.41';
+import {instance,rng} from './engine.js?v=0.90.41';
+import {hashSeed,initializeProgress,STAT_KEYS,unitGrowthRates} from './progression.js?v=0.90.41';
 // Ordinary starting forms only; exclude special rarity classes across the whole family.
 const specialFamily=s=>DATA.species.some(other=>other.family_id===s.family_id&&/legend|myth|pseudo|fossil/i.test(other.power_class));
 export const RESCUE_GIFTS=DATA.species.filter(s=>![...BREEDING_ONLY_FIRST_FORMS,...TRADE_ONLY_FAMILIES,...RESERVED_STARTERS].includes(s.id)&&!specialFamily(s)&&!EVOLUTIONS.some(e=>e.to_species_id===s.id)&&Object.values(unitGrowthRates({species:s,growthMultiplier:1.1})).reduce((n,v)=>n+Math.round(v*10),0)<=3000).map(s=>s.id);

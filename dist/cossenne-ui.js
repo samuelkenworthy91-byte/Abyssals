@@ -1,7 +1,7 @@
 import {farmAnimalLine} from './cossenne-farm.js?v=0.90.20';
 import {ORCHARD_BRIEFS,orchardNextStep} from './orchard-guidance.js?v=0.87.0';
-import {choiceRewardText} from './choice-rewards.js?v=0.90.40';
-import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.90.40';
+import {choiceRewardText} from './choice-rewards.js?v=0.90.41';
+import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.90.41';
 import {ORCHARD_RECORDS,ORCHARD_HISTORY,COSSENNE_WALK} from './cossenne-dialogue.js?v=0.87.0';
 import * as rules from './cossenne-rules.js?v=0.87.0';
 export function orchardHistoryHTML(room,escape){const r=ORCHARD_ROUTES[room];if(!r)return '';const pages=ORCHARD_HISTORY[r.kind]||ORCHARD_HISTORY.living;return '<h3>'+escape(pages[0])+'</h3>'+pages.slice(1).map(p=>'<p>'+escape(p)+'</p>').join('');}

@@ -1,4 +1,4 @@
-import {BURIAL_LINES,FINALE_TRAINERS,PEACH_FINAL,GALLERY_WORKS,COMMISSIONS} from './finale-data.js?v=0.90.40';
+import {BURIAL_LINES,FINALE_TRAINERS,PEACH_FINAL,GALLERY_WORKS,COMMISSIONS} from './finale-data.js?v=0.90.41';
 import {finaleState,finaleUnlocked,peachQuest,acceptPeachQuest,readPeachClue,turnOathRune,turnBridgeWeight,finalUniqueEncounter,canFightFinale,createCommission,settleFinalLeader} from './finale-rules.js?v=0.90.19';
 const clues={guan:'Shelter the traveller first. Keep faith when the road is empty. Hold the crossing last. Touch the three named seals in the order of the promise. Defeat the requisitioner before approaching the guardian.',fei:'Three windlasses hold the old bridge. The west needs one turn, the middle three, and the east two. Each dial has four positions: 0, 1, 2, 3, then 0 again. The toll captain must release the crossing first.'};
 export function handleFinale(id,a){const {state:s,room,line,showDialogue,warp,rewardTransaction:commit,buildMarkers,openModal,closeModal,escapeHTML:e,challengeTrainer,startWild,species,$}=a,q=finaleState(s),say=(n,t,p)=>showDialogue([line(n,t,p)]),gate=a.AREA_GATES[room]?.find(g=>g.id===id);

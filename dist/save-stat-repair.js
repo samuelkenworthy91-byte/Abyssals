@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.40';
+import {DATA} from './data.js?v=0.90.41';
 import {migrateStats} from './stat-balance.js?v=0.87.0';
 // Repair stored slots as they are read, including reserve, memorial and suspended battles.
 // Only baseline differences change; earned growth, EXP, moves and life records are retained.

@@ -9,7 +9,7 @@ import {beginAbilities,activateHeldRecovery,heldInfo,heldStat,changeStage,enterA
 import {moveUsable} from '../dist/move-rules.js';
 import {canLearnScroll} from '../dist/side-adventures.js';
 const s=id=>DATA.species.find(s=>s.id===id),u=(id='510',ability=null)=>{const a=instance(structuredClone(s(id)),40,[]);a.uid=id+Math.random();if(ability)a.species.ability_names={primary:ability};a.hp=a.maxHp=200;a.stats={hp:200,attack:70,defence:70,sp_attack:70,sp_defence:70,speed:70};return a;};
-assert.equal(BRANCH_ITEMS.length,8);assert.equal(BERRIES.length,12);assert.equal(BROAD_HELD_ITEMS.length,20);assert.deepEqual(s('514').types,['FIGHTING','PSYCHIC']);assert(s('514').base_stats.sp_attack>s('514').base_stats.attack);
+assert.equal(BRANCH_ITEMS.length,8);assert.equal(BERRIES.length,12);assert.equal(BROAD_HELD_ITEMS.length,26);assert.deepEqual(s('514').types,['FIGHTING','PSYCHIC']);assert(s('514').base_stats.sp_attack>s('514').base_stats.attack);
 assert.equal(DATA.learnsets.filter(l=>l.species_id==='505').length,2);assert(!canLearnScroll(u('505'),700));
 for(const p of BRANCH_EVOLUTIONS){const a=u(p.from_species_id),state={evolutionItems:{[p.condition.item_id]:2},evolutionRoom:'marasenExchange3'};a.evolutionBlockedLevel=39;
  if(a.species.id==='505'){assert.equal(eligibleEvolutions(a,state,p.condition.item_id).length,0);assert.equal(promoteUsingItem(a,p,state),null);assert.equal(state.evolutionItems[p.condition.item_id],2);state.evolutionRoom='hellGate';a.level=39;assert.equal(eligibleEvolutions(a,state,p.condition.item_id).length,0);a.level=40;}

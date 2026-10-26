@@ -1,6 +1,6 @@
 import {drawSiteTablet} from './site-tablets.js?v=0.89.4';
-import {AQUATIC_ASSETS,drawAquaticSurface,drawAquaticDetails} from './marasen-aquatic.js?v=0.90.40';
-import {drawCompanion} from './companion.js?v=0.90.40';
+import {AQUATIC_ASSETS,drawAquaticSurface,drawAquaticDetails} from './marasen-aquatic.js?v=0.90.41';
+import {drawCompanion} from './companion.js?v=0.90.41';
 export const MARASEN_ASSETS=Object.fromEntries(['Tree','Gate','Keep','Market','Apothecary','Archive','Mill','Binding'].map(n=>['marasen'+n,'marasen-'+n.toLowerCase()+'-v082.webp']));
 Object.assign(MARASEN_ASSETS,AQUATIC_ASSETS);
 for(const name of ['Potions','Books','Armour','Stairs','Counter'])MARASEN_ASSETS['exchange'+name]='exchange-'+name.toLowerCase()+'-v09012.webp';

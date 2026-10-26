@@ -1,4 +1,4 @@
-import {LEGACY_RENEWAL_LEARNSETS} from './evolution-renewal-data.js?v=0.90.40';
+import {LEGACY_RENEWAL_LEARNSETS} from './evolution-renewal-data.js?v=0.90.41';
 export const CENSMOKE_BRANCH_STATS={'058':['defence','sp_defence'],'059':['sp_attack'],'504':['attack','speed']};
 export function cultivatedStats(unit){const keys=['attack','defence','sp_attack','sp_defence','speed'];const high=Math.max(...keys.map(k=>Number(unit.stats?.[k])||0));return keys.filter(k=>Number(unit.stats?.[k])===high);}
 export function statEvolutionAllowed(unit,path){return path.condition.method!=='STAT'||(path.condition.stats||[]).some(k=>cultivatedStats(unit).includes(k));}

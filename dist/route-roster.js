@@ -1,7 +1,7 @@
-import {DATA} from './data.js?v=0.90.40';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.40';
+import {DATA} from './data.js?v=0.90.41';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
-import {EXTRA_TRAINERS} from './route-progression.js?v=0.90.40';
+import {EXTRA_TRAINERS} from './route-progression.js?v=0.90.41';
 export function rootForm(id){let prev;const seen=new Set();while((prev=EVOLUTIONS.find(e=>e.to_species_id===id))&&!seen.has(id)){seen.add(id);id=prev.from_species_id;}return id;}
 export function legalForm(id,level){const prev=EVOLUTIONS.find(e=>e.to_species_id===id);if(!prev)return id;const tuned=tunedEvolution(prev,DATA.species.find(s=>s.id===prev.from_species_id));return level<tuned.condition.minimum_level?legalForm(prev.from_species_id,level):id;}
 export function legalMoves(id,level){return [...new Set(DATA.learnsets.filter(l=>l.species_id===id&&l.level<=level).map(l=>l.move_id))].filter(id=>DATA.moves.find(m=>m.id===id)?.category);}
