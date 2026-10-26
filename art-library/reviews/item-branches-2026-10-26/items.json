@@ -5860,6 +5860,87 @@
       "price": 10000,
       "src": "assets/items/fixers-watch.webp",
       "icon": "<span class=\"item-art\"><img src=\"assets/items/fixers-watch.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_DUELIST_GRIP",
+      "name": "Duelist Grip",
+      "category": "Held items",
+      "text": "Attack ×1.2. No move lock.",
+      "price": 8000,
+      "src": "assets/items/duelist-grip.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/duelist-grip.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_SCHOLAR_BEAD",
+      "name": "Scholar Bead",
+      "category": "Held items",
+      "text": "Special Attack ×1.2. No move lock.",
+      "price": 8000,
+      "src": "assets/items/scholar-bead.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/scholar-bead.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_FLEET_ANKLET",
+      "name": "Fleet Anklet",
+      "category": "Held items",
+      "text": "Speed ×1.15. No move lock.",
+      "price": 8000,
+      "src": "assets/items/fleet-anklet.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/fleet-anklet.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_BASTION_PLATE",
+      "name": "Bastion Plate",
+      "category": "Held items",
+      "text": "Defence ×1.2. Status moves remain available.",
+      "price": 8000,
+      "src": "assets/items/bastion-plate.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/bastion-plate.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_SHELTER_CLASP",
+      "name": "Shelter Clasp",
+      "category": "Held items",
+      "text": "While at full HP, reduce direct damage received by 20%. Each hit checks separately.",
+      "price": 9000,
+      "src": "assets/items/shelter-clasp.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/shelter-clasp.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "HELD_SIPHON_CHARM",
+      "name": "Siphon Charm",
+      "category": "Held items",
+      "text": "After a damaging move, restore 1/8 of actual HP damage dealt. Cannot revive the holder.",
+      "price": 10000,
+      "src": "assets/items/siphon-charm.webp",
+      "icon": "<span class=\"item-art\"><img src=\"assets/items/siphon-charm.webp\" alt=\"\"></span>"
+    },
+    {
+      "id": "codex-741",
+      "name": "Parting Blow Codex",
+      "category": "Codexes",
+      "text": "Fighting physical attack · 70 power · 100% accuracy · 20 PP. After dealing damage, switch to a chosen living benched partner if able. Does not pass stat stages. Still attacks if trapped or no partner is available. · single-use Codex",
+      "price": 3500,
+      "src": "assets/items/codex.webp",
+      "icon": "<span class=\"item-art typed-item-art\" style=\"--item-type:#ec8077\" title=\"FIGHTING move codex\"><img src=\"assets/items/codex.webp\" alt=\"\" style=\"filter:hue-rotate(-185deg)\"></span>",
+      "type": "FIGHTING",
+      "categoryMove": "PHYSICAL",
+      "eligibility": "Fighting-type species, or a species whose current or previous form learns this move.",
+      "species": [
+        "Ruffurn",
+        "Revhound",
+        "Revault",
+        "Falchawk",
+        "Prideguard",
+        "Leonarch",
+        "Ramporque",
+        "Mastigrim",
+        "Cerberrood",
+        "Flaggrim",
+        "Oriflamme",
+        "Liontide"
+      ],
+      "speciesCount": 55
     }
   ],
   "colors": {

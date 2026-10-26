@@ -39,7 +39,7 @@
       },
       "signature": {
         "name": "Feeble Pulse",
-        "text": "Proposed Dark special attack · 25 power · 100% accuracy · 35 PP. Its only natural damaging move."
+        "text": "Dark special attack · 25 power · 100% accuracy · 35 PP. Its only natural damaging move."
       },
       "moves": [
         "Lv. 1: Feeble Pulse",
@@ -59,7 +59,7 @@
         "PSYCHIC"
       ],
       "role": "Pride / fast special attacker",
-      "concept": "The flask breaks into a mirror crown and regal shadow mantle. It floats above others, constantly admiring its own reflection.",
+      "concept": "The original one-eyed Flaskling pilots a towering ink courtier from its visible chest flask. A sweeping formal tailcoat, white cravat and watching shadow ribbons embody Pride.",
       "stats": [
         80,
         45,
@@ -78,11 +78,11 @@
       ],
       "ability": {
         "name": "Peerless Ego",
-        "text": "Proposed: special damage rises by 20% while no combat stat is lowered. A stat drop removes the bonus until all lowered stages are cleared."
+        "text": "special damage rises by 20% while no combat stat is lowered. A stat drop removes the bonus until all lowered stages are cleared."
       },
       "signature": {
         "name": "Look Upon Me",
-        "text": "Proposed Psychic special attack · 85 power · 100% accuracy · 10 PP. Deals 20% extra damage if the user has no lowered combat stats."
+        "text": "Psychic special attack · 85 power · 100% accuracy · 10 PP. Deals 20% extra damage if the user has no lowered combat stats."
       },
       "moves": [
         "Mind Lance",
@@ -107,7 +107,7 @@
         "FIRE"
       ],
       "role": "Wrath / relentless physical attacker",
-      "concept": "Obsidian claws and ember-filled glass seams turn the once helpless soul into a compact, furious hunter.",
+      "concept": "The original one-eyed Flaskling pilots a six-armed ink swordsman from its visible chest flask. Oversized ember-edged blades, spare swords and crimson ink ribbons embody Wrath.",
       "stats": [
         95,
         150,
@@ -126,11 +126,11 @@
       ],
       "ability": {
         "name": "Grievance",
-        "text": "Proposed: after surviving a super-effective damaging hit, gain one Attack stage. At most once per attack, including multi-hit moves."
+        "text": "after surviving a super-effective damaging hit, gain one Attack stage. At most once per attack, including multi-hit moves."
       },
       "signature": {
         "name": "Fury Unsealed",
-        "text": "Proposed Fire physical attack · 100 power · 95% accuracy · 10 PP. Lowers the user’s Defence by one stage after dealing damage."
+        "text": "Fire physical attack · 100 power · 100% accuracy · 10 PP. Lowers the user’s Defence by one stage after dealing damage."
       },
       "moves": [
         "Night Slash",
@@ -155,7 +155,7 @@
         "GROUND"
       ],
       "role": "Sloth / immense slow wall",
-      "concept": "A stone-heavy body with dragging pillar arms and an almost motionless hourglass grows around the little violet soul.",
+      "concept": "The original sleepy one-eyed Flaskling is visible inside the chest flask of its massive mossy stone body, beneath an almost motionless hourglass.",
       "stats": [
         140,
         100,
@@ -174,11 +174,11 @@
       ],
       "ability": {
         "name": "Unhurried",
-        "text": "Proposed: reduce direct damage taken by 20% while moving after the attacker. Residual damage is unchanged; no forced loafing turns."
+        "text": "reduce direct damage taken by 20% while moving after the attacker. Residual damage is unchanged; no forced loafing turns."
       },
       "signature": {
         "name": "Burden of Ages",
-        "text": "Proposed Ground physical attack · 75 power · 100% accuracy · 10 PP. Lowers the target’s Speed one stage on a successful hit."
+        "text": "Ground physical attack · 75 power · 100% accuracy · 10 PP. Lowers the target’s Speed one stage on a successful hit."
       },
       "moves": [
         "Earth Break",
@@ -203,7 +203,7 @@
         "POISON"
       ],
       "role": "Gluttony / HP and recovery specialist",
-      "concept": "The flask becomes an enormous translucent belly; its small nucleus survives above a constantly churning digestive void.",
+      "concept": "The original one-eyed Flaskling remains visible in a suspended flask above the green digestive void within its immense glass belly.",
       "stats": [
         160,
         95,
@@ -222,11 +222,11 @@
       ],
       "ability": {
         "name": "Bottomless",
-        "text": "Proposed: healing from draining attacks is 25% stronger. The existing healing multiplier and maximum HP still apply; it cannot revive or grant lives."
+        "text": "healing from draining attacks is 25% stronger. The existing healing multiplier and maximum HP still apply; it cannot revive or grant lives."
       },
       "signature": {
         "name": "Empty the Table",
-        "text": "Proposed Dark physical draining attack · 75 power · 100% accuracy · 10 PP. Restores HP equal to 50% of damage actually dealt before healing modifiers."
+        "text": "Dark physical draining attack · 75 power · 100% accuracy · 10 PP. Restores HP equal to 50% of damage actually dealt before healing modifiers."
       },
       "moves": [
         "Venom Lash",
@@ -269,11 +269,11 @@
       ],
       "ability": {
         "name": "Quick Study",
-        "text": "Proposed: the first lowered combat stat in each battle is restored immediately to its previous stage. Once per battle."
+        "text": "the first lowered combat stat in each battle is restored immediately to its previous stage. Once per battle."
       },
       "signature": {
         "name": "Practice Bout",
-        "text": "Proposed Fighting physical attack · 40 power · 100% accuracy · 30 PP. No secondary effect."
+        "text": "Fighting physical attack · 40 power · 100% accuracy · 30 PP. No secondary effect."
       },
       "moves": [
         "Brave Palm",
@@ -313,17 +313,19 @@
       ],
       "ability": {
         "name": "Sovereign Charge",
-        "text": "Proposed: the first successful damaging move after each entry deals 25% extra damage. Switching resets it; missed or blocked attacks do not spend it."
+        "text": "the first successful damaging move after each entry deals 25% extra damage. Switching resets it; missed or blocked attacks do not spend it."
       },
       "signature": {
         "name": "Avalon Cleave",
-        "text": "Proposed Fairy physical attack · 90 power · 100% accuracy · 10 PP. No secondary effect; a dependable blade for the attack specialist."
+        "text": "Fairy physical attack · 90 power · 100% accuracy · 10 PP. No secondary effect; a dependable blade for the attack specialist."
       },
       "moves": [
+        "Parting Blow",
         "Close Quarters",
-        "Brave Kick",
-        "Iron Cut",
-        "Firm Footing"
+        "Avalon Cleave",
+        "Firm Footing",
+        "Night Slash",
+        "Brave Throw"
       ],
       "item": {
         "id": "avalon-blade",
@@ -361,11 +363,11 @@
       ],
       "ability": {
         "name": "Burhwall",
-        "text": "Proposed: reduce super-effective damage received by 25%. Does not affect status or indirect damage."
+        "text": "reduce super-effective damage received by 25%. Does not affect status or indirect damage."
       },
       "signature": {
         "name": "Hold the Burh",
-        "text": "Proposed Steel status move · 10 PP. Raise the user’s Defence and Special Defence by one stage and remove its lowered Speed stages; no healing."
+        "text": "Steel status move · 10 PP. Raise the user’s Defence and Special Defence by one stage and remove its lowered Speed stages; no healing."
       },
       "moves": [
         "Iron Ward",
@@ -409,11 +411,11 @@
       ],
       "ability": {
         "name": "Heavy Hands",
-        "text": "Proposed: contact attacks deal 15% more damage but the user cannot gain evasion stages. Does not boost non-contact moves."
+        "text": "contact attacks deal 15% more damage but the user cannot gain evasion stages. Does not boost non-contact moves."
       },
       "signature": {
         "name": "Back-Alley Barrage",
-        "text": "Proposed Fighting physical attack · 40 power × 2 hits · 95% accuracy · 15 PP. Two contact hits, checked using the game’s existing multi-hit rules."
+        "text": "Fighting physical attack · 40 power × 2 hits · 100% accuracy · 10 PP. Two contact hits, checked using the game’s existing multi-hit rules."
       },
       "moves": [
         "Close Quarters",
@@ -457,7 +459,7 @@
       ],
       "ability": {
         "name": "The Fixer",
-        "text": "Proposed: after using a non-damaging move, its living active ally gains one Speed stage once per turn. In singles, prepare that bonus for the next voluntary incoming partner; it cannot stack before the switch."
+        "text": "After a successful status move, prepare the next special attack to deal 30% more damage. The bonus cannot stack, is spent only when special damage is dealt, and is lost on switching. Works entirely in singles."
       },
       "signature": {
         "name": "Quiet Arrangement",

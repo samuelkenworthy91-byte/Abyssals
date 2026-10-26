@@ -7,3 +7,6 @@ assert.equal(p.creatures.length,10);assert.equal(p.creatures.filter(c=>c.item).l
 for(const c of p.creatures){assert.equal(c.stats.length,6);assert.equal(c.growth.length,6);assert(fs.existsSync(new URL('art/'+c.id+'.webp',root)));if(c.item){assert(fs.existsSync(new URL('art/'+c.item.id+'.webp',root)));assert.equal(c.stats.reduce((a,b)=>a+b,0),c.family==='fox'?520:560);}}
 assert.equal(p.evolutionRules.flask.minimumLevel,40);assert.equal(p.evolutionRules.flask.region,'Hell');assert.equal(p.evolutionRules.flask.experienceMultiplier*2,1);assert(!p.evolutionRules.fox.reputationLock);
 console.log('PASS: 315 unique pictured entries, 192 codexes, 10 complete creature proposals and eight item branches; final level 40 / Hell / half-EXP rules and equal within-family base-stat totals.');
+
+assert(p.creatures.find(c=>c.name==='Arthox').moves.includes('Parting Blow'));
+assert(p.creatures.find(c=>c.name==='Reggifox').ability.text.includes('next special attack'));
