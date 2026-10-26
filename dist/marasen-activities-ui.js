@@ -56,14 +56,24 @@ export function growthTonicQuote(s,uid,kind,stat){
  return {ok:true,u,cost,keys,original,multiplier:permanentGrowthMultiplier(u),next,before:permanentGrowthDetails(u),after:details};
 }
 export function growthTonic(s,uid,kind,stat){const q=growthTonicQuote(s,uid,kind,stat);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+1;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
-function showFloor(a,floor){const {state,openModal,$,document,rewardTransaction,shop}=a,items=storeItems(floor);
+function showFloor(a,floor,filters={category:'ALL',type:'ALL'}){const {state,openModal,$,document,rewardTransaction,shop}=a,items=storeItems(floor);
  if(floor===0){shop('marasenMarket');return;}
  openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div>${it.kind==='codex'?codexIcon(DATA.moves.find(m=>m.id===Number(it.id))):itemIcon(it.id)}<b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='nursery'?`<small>${it.reusable?(nurseryItemCount(state,it.id)?'Owned · reusable':'Reusable purchase'):'In nursery supplies: '+nurseryItemCount(state,it.id)}</small>`:''}${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.kind==='nursery'&&it.reusable&&nurseryItemCount(state,it.id)>0||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap. Nursery items are chosen at Walter when creating an egg; the Charm stacks with Feed or Thread.</p>`);
+ if(floor===1){
+  const typeIds=[...new Set(items.map(it=>DATA.moves.find(m=>m.id===Number(it.id))?.type_id).filter(Boolean))].sort();
+  const bar=document.createElement('div');bar.className='mr-codex-filters';
+  bar.innerHTML='<label>Move category<select id="mr-codex-category"><option value="ALL">All categories</option><option value="STATUS">Status</option><option value="PHYSICAL">Physical</option><option value="SPECIAL">Special</option></select></label><label>Move type<select id="mr-codex-type"><option value="ALL">All types</option>'+typeIds.map(type=>'<option value="'+safe(type)+'">'+safe(type)+'</option>').join('')+'</select></label><small id="mr-codex-count" role="status"></small>';
+  document.querySelector('.mr-merch-floor')?.after(bar);
+  const cat=$('#mr-codex-category'),type=$('#mr-codex-type'),rows=[...document.querySelectorAll('.mr-stock')];
+  cat.value=filters.category||'ALL';type.value=filters.type||'ALL';
+  const apply=()=>{let shown=0;items.forEach((it,i)=>{const m=DATA.moves.find(m=>m.id===Number(it.id)),visible=(cat.value==='ALL'||m?.category===cat.value)&&(type.value==='ALL'||m?.type_id===type.value);rows[i].hidden=!visible;if(visible)shown++;});$('#mr-codex-count').textContent=shown+' of '+items.length+' codices';};
+  cat.onchange=apply;type.onchange=apply;apply();
+ }
  for(const btn of document.querySelectorAll('[data-mr-buy]'))btn.onclick=()=>{const it=items[Number(btn.dataset.mrBuy)];if(!it)return;
  if(it.kind==='pp'){enduranceTonicMenu(a,()=>showFloor(a,floor));return;}
  if(it.kind==='growth'){showTonic(a,it);return;}
  if(state.money<it.price)return;
- if(rewardTransaction(()=>purchase(state,it))){a.refresh?.();showFloor(a,floor);}
+ if(rewardTransaction(()=>purchase(state,it))){const chosen={category:$('#mr-codex-category')?.value||'ALL',type:$('#mr-codex-type')?.value||'ALL'};a.refresh?.();showFloor(a,floor,chosen);}
  };
 }
 function showTonic(a,item){const {state,openModal,document,$,rewardTransaction}=a;

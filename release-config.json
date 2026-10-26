@@ -1,8 +1,8 @@
 {
-  "version": "0.90.42",
-  "version_code": 137,
-  "filename": "Abyssals-v0.90.42-Fort-Lift-and-Prodigy-Cards.apk",
-  "title": "Abyssals v0.90.42 — Fort Lift and Prodigy Cards",
-  "notes": "Adds a right-side Sunken Fort/Veilroot lift with direct travel to explored floors only, including an accessible lift station on each floor. Shows held equipment and exact battle-stat multipliers in partner summaries. Adds a one-tap move-to-first-party-slot action in stats, reorganising the expedition and lead together. Six labelled gold-diamond Prodigy markers now appear beneath Abyssal cards in breeding, party, reserve and other partner lists, with details available before selection. Preserves existing saves, breeds, battles, APK package, Android signing identity and offline PWA.",
-  "pwa_filename": "Abyssals-v0.90.42-PWA.zip"
+  "version": "0.90.43",
+  "version_code": 138,
+  "filename": "Abyssals-v0.90.43-Fort-Lift-Breeding-and-Codexes.apk",
+  "title": "Abyssals v0.90.43 — Fort Lift, Auto-Hatching and Codex Filters",
+  "notes": "Reuses the original Grand Exchange pixel-art lift east of the Sunken Fort salvage chests on all five floors, with accessible stations, known-floor-only travel and safe arrivals. Eggs hatch automatically once ready, together when simultaneous, with individual reveals and safe party/reserve placement. Nursery pairing supports up to ten eggs in one transaction, bounded by pouch capacity, available funds and consumable supplies, with independent shiny and inheritance rolls. Grand Exchange codices filter by Status/Physical/Special and move type, including combinations and maintained selections after purchase. Preserves old save data, permanent death, package identity, signing and offline PWA.",
+  "pwa_filename": "Abyssals-v0.90.43-PWA.zip"
 }

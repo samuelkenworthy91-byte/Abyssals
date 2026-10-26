@@ -24,6 +24,18 @@ export function createBreedingEgg(state,aUid,bUid,{random=null,inheritancePlans=
  const shiny=rollShiny(()=>hashSeed(seed+':shiny')/4294967296,{bred:true});
  const egg={shiny,inheritance,id:'egg-'+serial,serial,seed,speciesId:species.id,parents:[aUid,bUid],parentSpecies:[a.species.id,b.species.id],selectedParent:index,abilitySlot,remaining:setup.total,total:setup.total,breedingEffects:setup.effects};state.money-=BREEDING_FEE;for(const id of setup.used)state.nurseryItems[id]--;n.serial=serial;n.eggs.push(egg);return egg;
 }
+export function breedingBatchLimit(state,aUid,bUid,breedingOptions={}){
+ const pair=breedingPair(partners(state).find(u=>u.uid===aUid),partners(state).find(u=>u.uid===bUid));
+ if(!breedingUnlocked(state)||!pair.ok)return 0;
+ const setup=prepareBreedingEffects(state,breedingOptions,pair.forms);if(!setup.ok)return 0;
+ return Math.max(0,Math.min(eggCapacity(state)-nurseryState(state).eggs.length,Math.floor((state.money||0)/BREEDING_FEE),...setup.used.map(id=>state.nurseryItems?.[id]||0)));
+}
+export function createBreedingBatch(state,aUid,bUid,{count=1,inheritancePlans=[],breedingOptions={}}={}){
+ if(!Number.isSafeInteger(count)||count<1||count>breedingBatchLimit(state,aUid,bUid,breedingOptions))return null;
+ const backup={money:state.money,nursery:structuredClone(nurseryState(state)),nurseryItems:structuredClone(state.nurseryItems||{})},eggs=[];
+ for(let i=0;i<count;i++){const egg=createBreedingEgg(state,aUid,bUid,{inheritancePlans,breedingOptions});if(!egg){state.money=backup.money;state.nursery=backup.nursery;state.nurseryItems=backup.nurseryItems;return null;}eggs.push(egg);}
+ return eggs;
+}
 export function advanceEggSteps(state){const ready=[];for(const egg of state.nursery?.eggs||[])if(egg.remaining>0){egg.remaining--;if(egg.remaining===0)ready.push(egg.id);}return ready;}
 export function hatchBreedingEgg(state,id,create){const n=nurseryState(state),egg=n.eggs.find(e=>e.id===id);if(!egg||egg.remaining!==0||typeof create!=='function'||n.hatched.some(e=>e.id===id))return null;const species=DATA.species.find(s=>s.id===egg.speciesId);if(!species||protectedFamilies.has(rootForm(species.id))||(/legendary|mythic/i.test(species.power_class||'')||/^(mythic|mythical|legendary)$/i.test(species.role||''))||species.legendaryRoamer||rootForm(species.id)!==species.id)return null;
  const u=create(species.id,1,'hatched:'+egg.id+':'+egg.seed);if(!u||u.level!==1||u.species.id!==egg.speciesId)return null;u.shiny=egg.shiny===true;u.originalStarter=false;u.lives=1;u.growthMultiplier=1;u.giftOrigin='Nursery egg';u.abilitySlot=egg.abilitySlot;if(egg.abilitySlot==='hidden')u.hiddenAbilityUnlocked=true;if(egg.inheritance){validateInheritance(egg.inheritance,species,egg.selectedParent);u.breedingInheritance=structuredClone(egg.inheritance);if(egg.inheritance.moveId!==null){const m=DATA.moves.find(m=>m.id===egg.inheritance.moveId);u.moves=[...u.moves.filter(v=>v.id!==m.id).slice(0,3),{...m,left:m.pp}];}}u.birth={kind:'egg',parents:[...egg.parents],parentSpecies:[...egg.parentSpecies],seed:egg.seed};(state.party.length<6?state.party:state.reserve).push(u);n.eggs=n.eggs.filter(e=>e.id!==id);n.hatched.push({id,uid:u.uid,speciesId:species.id});return u;
