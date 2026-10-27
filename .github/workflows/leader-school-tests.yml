@@ -15,6 +15,7 @@ jobs:
         with:
           sparse-checkout: |
             /dist/*.js
+            /dist/index.html
             /tests/*.test.mjs
           sparse-checkout-cone-mode: false
           filter: blob:none
