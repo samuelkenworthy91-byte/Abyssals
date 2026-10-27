@@ -4,6 +4,7 @@ import {ROAD_POOLS,SIDE_POOLS,FORT_POOLS} from './encounter-pools.js?v=0.90.25';
 import {FULL_ENCOUNTERS,EXPANSION_HABITATS} from './full-encounters.js?v=0.87.0';
 import {CAVE_FLOORS} from './exploration-data.js?v=0.90.41';
 import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {visitedTravelRooms} from './fast-travel.js?v=0.90.18';
 import {growthPercent,STAT_KEYS,STAT_LABELS,unitGrowthRates} from './progression.js?v=0.90.41';
 
 // Small, append-only observations. A captured species stays registered after
@@ -40,7 +41,7 @@ export function recordFieldBattle(state,battle,room){
  // A trainer's unrevealed reserves must not be marked seen. Double battles
  // reveal their two active foes, not the entire six-part roster.
  const indices=battle.activeEnemyIndices?.length?battle.activeEnemyIndices:
-  battle.relicDouble?[0,1]:[0];
+  battle.relicDouble?[0,1]:battle.kind==='practice'?[battle.index??0]:[0];
  for(const i of indices)recordFieldSighting(state,battle.enemies[i]?.species?.id,room);
 }
 export function fieldJournalStatus(state,id){
@@ -118,9 +119,13 @@ const townForHabitat=area=>{
  if(/cossenne|orchard|peach|grove/.test(name))return 'Cossenne';
  return null;
 };
-export function fieldJournalRumours(id){
+export function fieldJournalRumours(id,state=null){
  const towns=[...new Set((speciesHabitatIndex.get(id)||[]).map(r=>townForHabitat(r.area)).filter(Boolean))];
- if(towns.length)return 'Rumour has it this Abyssal can be found near '+towns.slice(0,2).join(' or ')+'. Search the surrounding routes and hidden paths.';
+ const roomKey={Civeton:'town',Dorelem:'dorelem',Philomere:'philomere',Cybressa:'cybressa',Cossenne:'cossenne',Marasen:'marasen',Botrune:'botrune',Cayfen:'cayfen',Ramelle:'ramelle',Kaivton:'kaivton'};
+ const visits=state?new Set(visitedTravelRooms(state)):null;
+ const known=visits?towns.filter(t=>visits.has(roomKey[t]||t.toLowerCase())):towns;
+ if(known.length)return 'Rumour has it this Abyssal can be found near '+known.slice(0,2).join(' or ')+'. Search the surrounding routes and hidden paths.';
+ if(towns.length)return 'Rumour has it this Abyssal can be found somewhere far off ahead. Explore new settlements to narrow down the search.';
  if(EVOLUTIONS.some(e=>e.to_species_id===id))return 'Rumour has it this form is reached by evolving another Abyssal, rather than hunting for it here.';
  return 'No ordinary wild sighting is recorded. Seek special encounters, gifts, rewards or trades.';
 }
