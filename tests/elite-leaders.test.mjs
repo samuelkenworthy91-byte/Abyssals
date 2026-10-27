@@ -36,7 +36,7 @@ for(const raw of originals){
   for(const stat of slot.prodigy.stats){assert.equal(prodigyGrowthBonus(u,stat),slot.prodigy.bonus*(1+u.evolutionHistory.length));assert(unitGrowthRates(u)[stat]>growthPercent(s,stat));}
   assert.deepEqual(unitGrowthRates(JSON.parse(JSON.stringify(u))),unitGrowthRates(u));
  }
- assert.match(trainerProdigyWarning(t),/Warning:/);
+ assert.match(trainerProdigyWarning(t),/Warning:/);for(const slot of t.team)assert(!trainerProdigyWarning(t).includes(find(slot.species_id).name),'warning must not reveal reserve identities');
  state.fates[t.id]='SPARED';const rematch=makeLeaderRematch(state,t);assert(rematch.eliteLeader);assert.deepEqual(rematch.team.map(s=>find(s.species_id).family_id),t.team.map(s=>find(s.species_id).family_id));assert(rematch.team.every(s=>find(s.species_id).types.includes(spec.type)));assert.deepEqual(state.leaderTeams[t.id].team,t.team,'rematches leave locked roster unchanged');assert(rematch.nonlethal);
  state.defeatedTrainers.push(rematch.id);state.trainerPayouts=[rematch.id];assert(completeLeaderRematch(state,rematch.id));assert(!completeLeaderRematch(state,rematch.id));
  state.fates[t.id]='EXECUTED';state.money=0;settleLeaderRewards(state,raw,(id,l,uid)=>({uid,species:find(id),level:l,hp:10}));

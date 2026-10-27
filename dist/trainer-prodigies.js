@@ -47,6 +47,7 @@ export function withTrainerProdigies(t){
 export function trainerProdigyWarning(t){
  const prodigies=t.team.filter(s=>s.prodigy);
  if(!prodigies.length)return '';
+ if(t.eliteLeader)return `Warning: ${t.name} commands ${prodigies.length} exceptionally trained Prodigies. Every partner has unusually strong growth; later aces may have several Prodigy stats. Their identities stay concealed until they enter battle. Prepare your team before accepting.`;
  return `Warning: ${t.name} has ${prodigies.length===1?'a Prodigy':'Prodigies'} — ${prodigies.map(s=>species(s.species_id)?.name||'an Abyssal').join(', ')}. Their unusually strong growth builds further with each evolution. Prepare your team before accepting.`;
 }
 export function initializeTrainerGrowth(unit,slot){
