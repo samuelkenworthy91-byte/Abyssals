@@ -8,7 +8,7 @@ import {rng} from './engine.js?v=0.90.41';
 // The shared type, six level slots and tactical school are permanent.
 // Species and ace are chosen independently for each save, then never rerolled.
 export const LEADER_SCHOOLS=Object.freeze({
- 'LDR-01':{type:'STEEL',town:'dorelem',plan:'Iron discipline: screens and defensive pivots'},
+ 'LDR-01':{type:'ROCK',town:'dorelem',plan:'Stone bastion: ironclad defence, screens and counterattacking pivots'},
  'LDR-02':{type:'FAIRY',town:'philomere',plan:'Hospice covenant: restoration and resilient special attackers'},
  'LDR-03':{type:'GROUND',town:'cybressa',plan:'Civic balance: hazard control and physical breakers'},
  'LDR-04':{type:'GRASS',town:'cossenne',plan:'Living orchard: recovery and field control'},

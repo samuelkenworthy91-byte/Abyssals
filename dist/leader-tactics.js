@@ -75,7 +75,7 @@ export function chooseLeaderAction(b){
    const defence=hazard(c.u,target),health=c.u.hp/c.u.maxHp;
    return {...c,take,give,score:give-take*.85+health*.25-(defence>=4?.4:defence>=2?.15:0)};
   }).sort((a,c)=>c.score-a.score);
-  const best=candidates[0],currentScore=outgoing-incoming*.85+hp*.25,urgent=incoming>=.65||outgoing<.22||hp<.38,better=best&&best.score>currentScore+.26;
+  const best=candidates[0],currentScore=outgoing-incoming*.85+hp*.25,urgent=incoming>=.65||outgoing<.22||hp<.38||hazard(actor,target)>=2&&incoming>.25,better=best&&best.score>currentScore+.26;
   // A switch spends the entire action and will still be hit if the player attacks.
   // Never surrender an imminent KO unless the substitute survives better.
   if(best&&urgent&&better&&best.take<incoming*.85&&best.take<1.2&&best.u.hp>0)return {kind:'switch',index:best.index};

@@ -472,3 +472,4 @@ button.console-selected{outline:2px solid #ead39c;outline-offset:1px;border-colo
 #battle.leader-battle .trainer-intro-art img{max-height:none;height:100%;width:100%;filter:drop-shadow(0 0 18px var(--leader-accent))}
 #battle.leader-battle .trainer-intro-caption h2{color:var(--leader-accent);text-shadow:0 4px 12px #0009}
 @media(max-width:600px){#battle.leader-battle .battle-meta{max-width:130px;min-height:112px;font-size:10px}#battle.leader-battle .battle-trainer-portrait{width:76px;height:105px}#battle.leader-battle .trainer-intro-art{height:67%;width:86%}#battle.leader-battle .trainer-intro-art img{max-height:none}}
+#battle.leader-battle[data-leader-school="ROCK"]{--leader-accent:#d6b98d}
