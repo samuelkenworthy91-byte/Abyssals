@@ -44,3 +44,6 @@ export function travelQuote(state,from,to){
  return {ok:!reason,reason,destination,cost:destination?.fare||0};
 }
 export function payTravelFare(state,from,to){const quote=travelQuote(state,from,to);if(!quote.ok)return false;state.money-=quote.cost;return true;}
+
+// Journal and travel consult the same ledger, including its legacy migration.
+export function hasVisitedTown(state,name){const hub=TRAVEL_HUBS.find(h=>h.name.toLowerCase()===String(name).toLowerCase());return !!hub&&visitedTravelRooms(state).includes(hub.room);}

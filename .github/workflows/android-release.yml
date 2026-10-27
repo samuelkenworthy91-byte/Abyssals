@@ -35,6 +35,8 @@ jobs:
       - name: Test game behavior and source
         run: |
           python3 -m pip install --quiet Pillow==11.1.0
+          node scripts/build-journal-habitats.mjs
+          git diff --exit-code -- dist/journal-habitats.js
           node scripts/audit-shiny-art.mjs
           for test in tests/*.test.mjs; do node "$test"; done
           for file in dist/*.js; do node --check "$file"; done
@@ -47,6 +49,11 @@ jobs:
           # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Test elite leaders, visible sightings and switching
+        timeout-minutes: 5
+        run: |
+          node tests/elite-leaders-browser.cjs
+          node tests/elite-offline-browser.cjs
       - name: Test redesigned sins, Fighting pivot and type eggs on phone
         timeout-minutes: 3
         run: node tests/pride-wrath-eggs-browser.cjs

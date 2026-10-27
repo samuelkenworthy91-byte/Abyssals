@@ -1,0 +1,17 @@
+/* Elite framing keeps both creatures, health panels and commands in their own rows. */
+.elite-leader-battle{--leader-type:#d9bd7d;border:2px solid var(--leader-type);box-shadow:inset 0 0 38px color-mix(in srgb,var(--leader-type) 22%,transparent)}
+.elite-leader-battle .battle-meta{position:relative;padding-left:82px;min-height:102px;border-bottom:2px solid var(--leader-type);color:#fff3d3}
+.elite-leader-battle .battle-trainer-portrait{position:absolute;left:0;top:0;width:78px;height:102px;max-width:none;max-height:none;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 0 5px var(--leader-type))}
+.elite-leader-intro{background:radial-gradient(ellipse at 45% 45%,#354256f5,#07121dfc 75%);border:3px solid var(--leader-type);overflow:hidden}
+.elite-leader-intro:before{content:'';position:absolute;inset:8%;border:1px solid var(--leader-type);transform:rotate(-8deg);opacity:.35;pointer-events:none}
+.elite-leader-intro .trainer-intro-art{width:58%;height:95%;z-index:1}
+.elite-leader-intro .trainer-intro-art img{width:100%;height:100%;object-fit:contain;max-height:none;filter:drop-shadow(0 8px 10px #0008);animation:elite-enter .6s ease-out both}
+.elite-leader-intro .trainer-intro-caption{z-index:2;max-width:40%;border-left:3px solid var(--leader-type);padding-left:12px;text-shadow:0 2px 4px #000}
+.elite-leader-intro .eyebrow{color:var(--leader-type)}
+.elite-leader-intro h2{font-size:clamp(20px,3vw,34px);line-height:1.15}
+@keyframes elite-enter{from{opacity:0;transform:translateX(-25px)}to{opacity:1;transform:none}}
+@media(max-width:560px){.elite-leader-intro{display:flex;flex-direction:column;justify-content:flex-end}.elite-leader-intro .trainer-intro-art{height:72%;width:90%;position:absolute;top:0;left:5%}.elite-leader-intro .trainer-intro-caption{position:relative;max-width:95%;width:95%;padding:14px;background:#091321e8;margin:0 0 12px}.elite-leader-battle .battle-meta{padding-left:65px;min-height:88px;font-size:10px}.elite-leader-battle .battle-trainer-portrait{width:62px;height:86px}}
+@media(prefers-reduced-motion:reduce){.elite-leader-intro *{animation:none!important;transition:none!important}}
+html[data-motion="reduced"] .elite-leader-intro *{animation:none!important;transition:none!important}
+
+.elite-player-hud{position:relative}.elite-player-hud .hp-hud{padding-right:76px}.elite-player-hud>img{position:absolute;right:6px;top:2px;width:68px;height:68px;object-fit:contain;z-index:1;pointer-events:none}

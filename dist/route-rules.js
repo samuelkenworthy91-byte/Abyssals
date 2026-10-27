@@ -3,7 +3,7 @@ import {encounterWeights} from './expedition-abilities.js?v=0.90.41';
 import {expandEncounterRoute} from './roster-encounters.js?v=0.90.41';
 import {stageLevel} from './route-progression.js?v=0.90.41';
 import {legalForm} from './route-roster.js?v=0.87.0';
-import {openingEncounterLevel} from './opening-balance.js?v=0.87.0';
+import {openingEncounterLevel} from './opening-balance.js?v=0.90.46';
 import {ROUTE} from './route-data.js?v=0.90.41';
 export function phaseAt(elapsed){return Math.floor(Math.max(0,elapsed)/600000)%2?'NIGHT':'DAY';}
 export function pickEncounter(phase,random,route=ROUTE,leader=null){route=expandEncounterRoute(route);const table=route.tables.find(t=>t.phase===phase);if(!table?.slots.length)throw Error('Missing encounter table: '+phase);const weights=encounterWeights(table.slots,leader);let value=random()*weights.reduce((a,b)=>a+b,0);const slot=table.slots.find((s,i)=>(value-=weights[i])<0)||table.slots.at(-1);const level=route.room?stageLevel(route.room,random):null;const fallback=openingEncounterLevel(slot.min_level+Math.min(slot.max_level-slot.min_level,Math.floor(random()*(slot.max_level-slot.min_level+1))),route.area);const chosen=slot.approvedExpansion362||slot.authoredSlot?slot.min_level+Math.min(slot.max_level-slot.min_level,Math.floor(random()*(slot.max_level-slot.min_level+1))):slot.approvedExpansion?Math.max(slot.min_level,Math.min(slot.max_level,level??fallback)):(level??fallback);return {speciesId:legalForm(slot.species_id,chosen),level:chosen,phase,tableId:table.id};}

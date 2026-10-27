@@ -37,7 +37,7 @@ assert(Array.isArray(fieldJournalMoves('002')));
 assert(fieldJournalEvolutions('001').some(e=>e.from.id==='001'));
 assert(fieldJournalHabitats('010').length>0,'first road species should have a real habitat');
 assert(fieldJournalHabitats('364').some(h=>h.area.includes('Sunken Fort')));
-assert.match(fieldJournalRumours('364'),/near Dorelem/);
+assert.match(fieldJournalRumours('364',{travelVisitedRooms:['town','dorelem']}),/near Dorelem/);
 assert.equal(fieldJournalAvailability('364').kind,'wild');
 assert.match(fieldJournalRumours('010'),/near Civeton/);
 assert(!fieldJournalRumours('010').includes('Civeton March'));
@@ -60,5 +60,5 @@ const app=fs.readFileSync('dist/app.js','utf8'),html=fs.readFileSync('dist/index
 assert(app.includes('menu-field-journal')&&app.includes('recordFieldBattle(state,battle,room)'));
 assert(!app.includes('growth-report.html')&&!app.includes('move-lab.html')&&!app.includes('follower-catalogue.html'));
 for(const file of ['field-journal.js','field-journal-ui.js','field-journal.css'])assert(offline.includes('"'+file+'"'));
-assert(html.includes('field-journal.css')&&html.includes('app.js?v=0.90.45'));
+assert(html.includes('field-journal.css')&&html.includes('app.js?v=0.90.46'));
 console.log('PASS: persistent sightings and ownership, trainer reserve secrecy, active double battles, evolution, death, habitats, growth and offline menu wiring');

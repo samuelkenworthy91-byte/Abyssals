@@ -1,8 +1,9 @@
+import {hasVisitedTown} from './fast-travel.js?v=0.90.46';
 import {DATA} from './data.js?v=0.90.41';
-import {ROUTE} from './route-data.js?v=0.90.41';
-import {ROAD_POOLS,SIDE_POOLS,FORT_POOLS} from './encounter-pools.js?v=0.90.25';
-import {FULL_ENCOUNTERS,EXPANSION_HABITATS} from './full-encounters.js?v=0.87.0';
-import {CAVE_FLOORS} from './exploration-data.js?v=0.90.41';
+import {JOURNAL_HABITATS} from './journal-habitats.js?v=0.90.46';
+import {SIDE_CONTENT} from './exploration-data.js?v=0.90.41';
+import {FOSSILS} from './mountain-quests.js?v=0.90.16';
+import {BREEDING_ONLY_FIRST_FORMS} from './encounter-access.js?v=0.90.18';
 import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
 import {growthPercent,STAT_KEYS,STAT_LABELS,unitGrowthRates} from './progression.js?v=0.90.41';
 
@@ -32,16 +33,17 @@ export function ensureFieldJournal(state){
 export function recordFieldSighting(state,speciesId,room=null){
  if(!validId(speciesId))return false;
  const journal=ensureFieldJournal(state);
- if(!journal.seen[speciesId])journal.seen[speciesId]={room:typeof room==='string'?room:null};
+ if(journal.seen[speciesId])return false;
+ journal.seen[speciesId]={room:typeof room==='string'?room:null};
  return true;
 }
 export function recordFieldBattle(state,battle,room){
- if(!battle?.enemies?.length)return;
- // A trainer's unrevealed reserves must not be marked seen. Double battles
- // reveal their two active foes, not the entire six-part roster.
+ if(!battle?.enemies?.length||['trainer','calling'].includes(battle.phase))return false;
  const indices=battle.activeEnemyIndices?.length?battle.activeEnemyIndices:
-  battle.relicDouble?[0,1]:[0];
- for(const i of indices)recordFieldSighting(state,battle.enemies[i]?.species?.id,room);
+  battle.relicDouble?[0,1]:[battle.kind==='wild'||battle.kind==='lesson'?0:(battle.index||0)];
+ let changed=false;
+ for(const i of indices)if(i>=0&&battle.enemies[i]&&!battle.enemies[i].withdrawn)changed=recordFieldSighting(state,battle.enemies[i].species?.id,room)||changed;
+ return changed;
 }
 export function fieldJournalStatus(state,id){
  const journal=ensureFieldJournal(state);
@@ -86,50 +88,28 @@ export function fieldJournalMoves(id){
  })).filter(r=>r.move).sort((a,b)=>a.level-b.level||a.move.name.localeCompare(b.move.name));
 }
 
-// Only use actual authored encounter tables, not guessed locations.
-const speciesHabitatIndex=new Map();
-const add=(id,area,phase='',levels='')=>{
- if(!validId(id)||!area)return;
- const rows=speciesHabitatIndex.get(id)||[];
- const key=area+'|'+phase+'|'+levels;
- if(!rows.some(r=>r.key===key))rows.push({key,area,phase,levels});
- speciesHabitatIndex.set(id,rows);
-};
-const habitatNames=Object.fromEntries(EXPANSION_HABITATS.map(h=>[h.room,h.name]));
-for(const t of ROUTE.tables||[])for(const s of t.slots||[])add(s.species_id,ROUTE.area?.location||'Civeton March',t.phase||'',s.min_level+'–'+s.max_level);
-for(const [room,pool] of Object.entries(ROAD_POOLS))for(const phase of ['DAY','NIGHT'])for(const id of pool[phase]||[])add(id,pool.name||room,phase);
-for(const [room,pool] of Object.entries(SIDE_POOLS))for(const phase of ['DAY','NIGHT'])for(const id of pool[phase]||[])add(id,habitatNames[room]||room,phase,pool.min+'–'+pool.max);
-for(const [index,pool] of FORT_POOLS.entries())for(const id of pool)add(id,CAVE_FLOORS[index]?.name||'Sunken Fort · floor '+(index+1),'BOTH');
-for(const row of FULL_ENCOUNTERS)add(row.species_id,habitatNames[row.room]||row.room,row.phase,row.min_level+'–'+row.max_level);
-add('364','Sunken Fort · all explored floors','RARE');
-// Rumour locations derive from actual encounter areas, never speculative routes.
-const townForHabitat=area=>{
- const name=String(area||'').toLowerCase();
- if(/sunken fort|veilroot|bastion/.test(name))return 'Dorelem';
- if(/civeton|march|meadow|hedgerow/.test(name))return 'Civeton';
- if(/dorelem|scrub|tenrec|burrow|service tunnel|glasswater|quarry|stormglass|relic crags/.test(name))return 'Dorelem';
- if(/philomere|hospice|medicine|reed|coral|moonlit|orchard canopy|north road/.test(name))return 'Philomere';
- if(/cybressa|rivercause|backwater|smuggler|salt flat/.test(name))return 'Cybressa';
- if(/marasen|living water|rapids|aquatic/.test(name))return 'Marasen';
- if(/botrune|gothic/.test(name))return 'Botrune';
- if(/kaivton|snow/.test(name))return 'Kaivton';
- if(/ramelle/.test(name))return 'Ramelle';
- if(/cayfen/.test(name))return 'Cayfen';
- if(/cossenne|orchard|peach|grove/.test(name))return 'Cossenne';
- return null;
-};
-export function fieldJournalRumours(id){
- const towns=[...new Set((speciesHabitatIndex.get(id)||[]).map(r=>townForHabitat(r.area)).filter(Boolean))];
- if(towns.length)return 'Rumour has it this Abyssal can be found near '+towns.slice(0,2).join(' or ')+'. Search the surrounding routes and hidden paths.';
+// Generated from the same final encounter pipelines as wild battles, including
+// expansions, split-form replacement, floor-specific pools and fishing.
+const speciesHabitatIndex=new Map(Object.entries(JOURNAL_HABITATS).map(([id,rows])=>[id,rows.map(r=>({...r,key:r.room+'|'+r.phase+'|'+r.levels,area:r.room.startsWith('waranCave')?'Sunken Fort · '+r.area:r.area}))]));
+function specialAcquisition(id){
+ if(BREEDING_ONLY_FIRST_FORMS.includes(id))return {kind:'breeding',message:'This Abyssal is obtained through breeding.'};
+ if(SIDE_CONTENT.some(s=>s.offered===id))return {kind:'trade',message:'This Abyssal can be obtained through a traveller’s trade.'};
+ if(['001','004','007'].includes(id))return {kind:'gift',message:'This family begins with a chosen starter gift; breeding can provide another of your chosen family.'};
+ if(FOSSILS.some(f=>f.id===id))return {kind:'gift',message:'A special revival gift is needed for this ancient Abyssal.'};
+ return {kind:'special',message:'No ordinary wild sighting is recorded. Seek a special encounter, gift or reward as your expedition progresses.'};
+}
+export function fieldJournalRumours(id,state={}){
+ const towns=[...new Set((speciesHabitatIndex.get(id)||[]).map(r=>r.town).filter(Boolean))];
+ if(towns.length){const known=towns.filter(t=>hasVisitedTown(state,t));return known.length?'Rumour has it this Abyssal can be found somewhere near '+known.slice(0,2).join(' or ')+'.':'Rumour has it this Abyssal can be found somewhere far off ahead.';}
  if(EVOLUTIONS.some(e=>e.to_species_id===id))return 'Rumour has it this form is reached by evolving another Abyssal, rather than hunting for it here.';
- return 'No ordinary wild sighting is recorded. Seek special encounters, gifts, rewards or trades.';
+ return specialAcquisition(id).message;
 }
 export function fieldJournalAvailability(id){
  const locations=speciesHabitatIndex.get(id)||[];
  if(locations.length)return {kind:'wild',message:'Recorded wild habitats'};
  const parents=EVOLUTIONS.filter(e=>e.to_species_id===id).map(e=>DATA.species.find(s=>s.id===e.from_species_id)?.name).filter(Boolean);
  if(parents.length)return {kind:'evolution',message:'Only available through evolution of '+[...new Set(parents)].join(' or ')+'.'};
- return {kind:'special',message:'No regular wild encounter recorded. Look for special encounters, gifts, rewards or trades.'};
+ return specialAcquisition(id);
 }
 export function fieldJournalHabitats(id){
  const matches=speciesHabitatIndex.get(id)||[];

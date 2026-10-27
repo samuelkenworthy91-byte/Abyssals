@@ -51,13 +51,14 @@ export function trainerProdigyWarning(t){
 }
 export function initializeTrainerGrowth(unit,slot){
  if(!slot.prodigy)return initializeProgress(unit);
- const {stat,bonus}=slot.prodigy;
- if(!['hp','attack','defence','sp_attack','sp_defence','speed'].includes(stat)||!Number.isFinite(bonus)||bonus<=0)throw Error('Invalid trainer Prodigy');
+ const {stat,bonus}=slot.prodigy;const stats=slot.prodigy.stats||[stat];
+ if(!stats.every(k=>['hp','attack','defence','sp_attack','sp_defence','speed'].includes(k))||!Number.isFinite(bonus)||bonus<=0)throw Error('Invalid trainer Prodigy');
  // Train from the birth form and actually promote at the legal levels. Merely
  // changing a finished unit's label/rates would leave its battle stats ordinary.
  normalizeProgress(unit);
  const level=unit.level,target=unit.species,path=evolutionPath(target.id),birth=species(path[0]?.from_species_id)||target,baseline=growthPercent(birth,stat);
- unit.breedingInheritance={version:2,speciesId:birth.id,donorIndex:1,growth:{stat,baseline,donorRate:baseline+bonus,rate:baseline+bonus},lineageGrowth:[],moveId:null};
+ const growthRows=stats.map(stat=>{const baseline=growthPercent(birth,stat);return {stat,baseline,donorRate:baseline+bonus,rate:baseline+bonus};});
+ unit.breedingInheritance={version:2,speciesId:birth.id,donorIndex:1,growth:growthRows[0],lineageGrowth:growthRows.slice(1),moveId:null};
  unit.species=birth;unit.stats=startingStats(birth);unit.hp=unit.maxHp=unit.stats.hp;unit.level=1;unit.exp=0;unit.evolutionHistory=[];unit.evolutionBlockedLevel=0;
  let step=0;
  for(let n=2;n<=level;n++){

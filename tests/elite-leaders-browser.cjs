@@ -1,0 +1,36 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict'),fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({headless:true,args:['--no-sandbox'],...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{})});
+ const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce',serviceWorkers:'block'}),errors=[],missing=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
+ await page.route(/\/app\.js(?:\?.*)?$/,async route=>{const response=await route.fetch();await route.fulfill({response,body:await response.text()+`\nwindow.__eliteQA={boot(){closeDialogue();closeModal();setMotionPreference('reduced');selectSlot(1);const fixture=structuredClone(initialExpeditionState);Object.assign(fixture,{begun:true,openingDone:true,tamingTaught:true,pate:true,trade:true,kurg:true,blessing:true,test:true,departed:true,nextUnitId:100,playerName:'Fox',leaderTeamSeed:8484,money:100000,party:[newUnit(byId('004'),110)],travelVisitedRooms:['town']});resumeSnapshot({state:fixture,room:'town',player:{x:24,y:23,facing:'up'},phaseElapsed:0,worldRandom:123});},async intro(id){hideBattleSurface();closeDialogue();closeModal();const t=openingTrainer(EXPANSION.trainers.find(t=>t.id===id),state),p=lead(),enemies=t.team.map(slot=>{const u=instance(byId(slot.species_id),slot.level,slot.battle_move_ids.map(moveId));u.uid=t.id+'-'+slot.slot;u.heldItem=slot.held_item_id;return initializeTrainerGrowth(u,slot);});battle={kind:'wild',trainer:t,total:6,index:0,random:rng(882),player:p,enemies,round:1,history:[],participants:[p.uid],defeats:[],busy:true,finished:false,phase:'trainer',artReady:true,log:'Elite leader challenge.'};initializeBattleAbilities(battle);await battleArtReady(p,...enemies);showBattleSurface();renderBattle();return {first:enemies[0].species.id,reserve:enemies[5].species.id};},ready(){battle.phase='ready';battle.busy=false;renderBattle();return state.fieldJournal.seen[battle.enemies[0].species.id]!=null;},next(){battle.enemies.shift();renderBattle();return state.fieldJournal.seen[battle.enemies[0].species.id]!=null;},journal(){hideBattleSurface();fieldJournalMenu();},sightings(){return structuredClone(state.fieldJournal);},singleSeen(){return recordFieldBattle(state,battle,room);},async switchTurn(){battle.phase='ready';battle.busy=false;battle.round=1;const e=battle.enemies[0],next=battle.enemies[1];e.species={...e.species,types:['FIRE'],ability_names:{primary:'Plain'}};next.species={...next.species,types:['GRASS'],ability_names:{primary:'Plain'}};battle.player.species={...battle.player.species,types:['WATER'],ability_names:{primary:'Plain'}};for(const u of [e,next,battle.player]){u.hp=u.maxHp=200;u.stats={hp:200,attack:100,sp_attack:100,defence:100,sp_defence:100,speed:100};const m=DATA.moves.find(m=>m.power>=90&&m.type_id===u.species.types[0]&&m.category==='SPECIAL');u.moves=[{...m,left:m.pp}];}const before=battle.player.hp,oldRound=battle.round;await wildTurn({wait:true});return {before,after:battle.player.hp,rounds:battle.round-oldRound,switches:battle.leaderSwitchCount,seen:!!state.fieldJournal.seen[battle.enemies[0].species.id]};},rumourEntry(){hideBattleSurface();recordFieldBattle(state,{kind:'wild',phase:'ready',enemies:[newUnit(byId('364'),20)]},room);createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHTML,combatArtSrc,normalizeSummaryArt,roomName,document}).entry('364');},rumourVisit(){state.travelVisitedRooms.push('dorelem');},rosters(){return structuredClone(state.leaderTeams);},close(){hideBattleSurface();closeDialogue();closeModal();}};`});});
+ await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'networkidle'});await page.waitForFunction(()=>window.__eliteQA);await page.evaluate(()=>window.__eliteQA.boot());fs.mkdirSync('build/qa',{recursive:true});
+ for(const width of [390,1280]){
+  await page.setViewportSize({width,height:width===390?844:900});
+  for(let n=1;n<=8;n++){
+   const id='LDR-0'+n;await page.evaluate(id=>window.__eliteQA.intro(id),id);
+   await page.waitForFunction(()=>{const i=document.querySelector('.trainer-intro-art img');return i?.complete&&i.naturalWidth>0;});
+   assert((await page.locator('.elite-leader-intro .eyebrow').innerText()).includes('ELITE TOWN LEADER'));
+   const box=await page.locator('.trainer-intro-art').boundingBox();assert(box.height>250,'dramatic full body intro');
+   const img=page.locator('.trainer-intro-art img');assert.equal(await img.evaluate(el=>getComputedStyle(el).animationName),'none');
+   await page.screenshot({path:'build/qa/elite-'+id+'-'+width+'.png'});
+   assert(await page.evaluate(()=>window.__eliteQA.ready()),'visible first opponent immediately seen');
+   assert(await page.evaluate(()=>window.__eliteQA.next()),'replacement immediately seen');
+   assert(await page.locator('[data-health-key]').count()>=2);await page.screenshot({path:'build/qa/elite-ready-'+id+'-'+width+'.png'});
+   const command=await page.locator('.battle-panel').boundingBox();assert(command&&command.width>0);
+   await page.evaluate(()=>window.__eliteQA.close());
+  }
+ }
+ await page.setViewportSize({width:390,height:844});await page.evaluate(()=>window.__eliteQA.intro('LDR-01'));
+ const turn=await page.evaluate(()=>window.__eliteQA.switchTurn());assert.equal(turn.switches,1);assert.equal(turn.before,turn.after,'switching gives no free attack');assert.equal(turn.rounds,1);assert(turn.seen);
+ await page.evaluate(()=>window.__eliteQA.close());
+ // Open real personal journal and inspect a new trainer sighting.
+ await page.evaluate(()=>{window.__eliteQA.boot();});
+ await page.evaluate(()=>window.__eliteQA.intro('LDR-01'));await page.evaluate(()=>window.__eliteQA.ready());
+ await page.evaluate(()=>window.__eliteQA.rumourEntry());assert((await page.locator('.modal').innerText()).includes('Fox’s Field Journal'));assert((await page.locator('.field-journal-rumour').innerText()).includes('far off ahead'));await page.evaluate(()=>window.__eliteQA.rumourVisit());await page.evaluate(()=>window.__eliteQA.rumourEntry());assert((await page.locator('.field-journal-rumour').innerText()).includes('somewhere near Dorelem'));await page.evaluate(()=>window.__eliteQA.close());
+ // Persist and reload the save without altering roster identity.
+ const saved=await page.evaluate(()=>localStorage.getItem('abyssals-save-1')||Object.keys(localStorage).map(k=>localStorage.getItem(k)).find(x=>x?.includes('leaderTeams')));assert(saved?.includes('leaderTeams'));const locked=JSON.parse(saved).state.leaderTeams;await page.reload({waitUntil:'networkidle'});await page.waitForFunction(()=>window.__eliteQA);await page.locator('#title-continue').click();await page.locator('#load-game').click();await page.locator('[data-load-slot="1"]').click();assert.deepEqual(await page.evaluate(()=>window.__eliteQA.rosters()),locked);
+ assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
+ await browser.close();console.log('PASS: eight phone and desktop leader portraits, reduced-motion entrance, visible sighting hooks, real full-action leader switch, journal persistence, no browser errors or missing assets');
+})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,7 +1,7 @@
 import {DATA} from './data.js?v=0.90.41';
 import {participantExpMultiplier} from './relic-family.js?v=0.87.0';
 import {trainingGrowthBonus} from './training-draughts.js?v=0.87.0';
-import {experienceMultiplier} from './opening-balance.js?v=0.87.0';
+import {experienceMultiplier} from './opening-balance.js?v=0.90.46';
 import {inheritedGrowthBonus,prodigyMultiplier} from './prodigy-growth.js?v=0.90.31';
 export {inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './prodigy-growth.js?v=0.90.31';
 // Authored BST-derived percentages; standard overflow plus one bounded bonus.

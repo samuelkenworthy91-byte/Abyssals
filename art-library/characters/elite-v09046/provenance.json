@@ -1,0 +1,90 @@
+[
+  {
+    "id": "LDR-01",
+    "prompt": "Ser Yusuf ibn Salim, Dorelem keep commander, GROUND specialist. Adult Middle Eastern man with olive skin, dark braid and stern honourable face. REDESIGN: broad angular sandstone lamellar armour, ochre split cavalry cloak, weathered cream scarf, fortress-key insignia, heavy boots, grounded wide stance and hand resting on a long sabre planted point-down. Strong castle-bastion shoulder silhouette, minimal violet lining only. Disciplined, direct, protector of his city.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-01.webp",
+    "sha256": "e8ff84b29a1623b216776a3eaac02af3a7a6f27a1974e06d1e570f38983b98f5",
+    "size": [
+      475,
+      960
+    ]
+  },
+  {
+    "id": "LDR-02",
+    "prompt": "Abbess Aisha bint Ibrahim, Philomere hospice administrator, FAIRY specialist. Middle Eastern woman with warm brown skin, silver braids under a short linen veil, mature compassionate but resolute face. REDESIGN: layered sage and ivory healer vestments, rose-gold crescent brooch, belt of labelled glass medicine bottles, one rolled sleeve and bandaged wrist, asymmetric petal-shaped shoulder stole, open palm offering a little glowing healing light, medical satchel. Authority through care and endurance, not a generic soldier.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-02.webp",
+    "sha256": "f4cebd9365c4edc3c7799ec94916d3bd9bb5786d417b7d7aa7186196abba064e",
+    "size": [
+      640,
+      960
+    ]
+  },
+  {
+    "id": "LDR-03",
+    "prompt": "Provost Ahmad ibn Yusuf, Cybressa river city administrator, DARK specialist. Middle Eastern man with olive skin, neatly trimmed dark beard, intelligent assessing eyes. REDESIGN: sharply tailored midnight-blue high-collar merchant-magistrate coat, bronze river-lock chains across chest, burgundy half-cape, intricately folded black turban, signet rings, sealed accounting folio under one arm, other hand holding a balance-weight on a chain. Upright and calculating, clever civic bureaucrat, distinctive thin angular silhouette.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-03.webp",
+    "sha256": "228f7e1569f3e9c5832d6a4c9ccdf94e5b9d42a3b16562328bd8136122435a26",
+    "size": [
+      640,
+      960
+    ]
+  },
+  {
+    "id": "LDR-04",
+    "prompt": "Warden Ismail ibn Umar, Cossenne orchard steward, GRASS specialist. Middle Eastern man with tan skin, long black ponytail with grey forelock, short beard and thoughtful compassionate expression. REDESIGN: forest-green sleeveless long warden coat over ivory linen, copper leaf clasps, woven orchard cords, asymmetric living-vine embroidered mantle, pruning knife in sheath, hand-crafted wooden staff with a carved peach branch tip, sturdy orchard boots, free hand extended protectively. Wind-swept branching silhouette, responsible guardian of households and water channels.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-04.webp",
+    "sha256": "067092c08bd8af14a851174bb197cb7b6ca20f4ed83fc1b988239cd2a1f87f34",
+    "size": [
+      640,
+      960
+    ]
+  },
+  {
+    "id": "LDR-05",
+    "prompt": "Castellan Khalid ibn Hasan, Marasen city of living water, WATER specialist. Middle Eastern middle-aged man with tan skin, salt-and-pepper beard, stern dignified gaze. REDESIGN: dark teal scale armour, aquamarine long cloak shaped like breaking waves, pearl and brass fastenings, compact cream wrapped turban, tide-gauge baton in one hand and long curved naval sabre sheathed at his hip. Broad harbour-defender silhouette and imposing stance, sea-glass details, city authority without looking like a generic faction member.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-05.webp",
+    "sha256": "a9da12d91d1dbb8a2f5c0ea82a9886ca4fbe8eca71eb51d608e07dd78b10fd74",
+    "size": [
+      640,
+      960
+    ]
+  },
+  {
+    "id": "LDR-06",
+    "prompt": "Canon Fatima bint Musa, Botrune abbey ruler, FIGHTING specialist. Preserve identity: an imposing, heavily built Middle Eastern WOMAN, strong broad jaw, dark wavy arranged hair, severe disdainful face, heavy shoulders and thick powerful arms. REDESIGN elaborates her established armoured scholar-executioner identity: massive blackened bronze gauntlets and articulated armour beneath ivory and aubergine canonical robes, architectural angular gold-edged collar, heavy chained closed ledger at belt, enormous ceremonial execution sword held upright with tip resting beside boot. Broad triangular domineering silhouette, crimson lining, stern ruthless authority, no smile, no gore. Must remain visibly a mature heavyset woman, not a slender young cleric or man.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-06.webp",
+    "sha256": "3d6a06a782b0eb5a3b52865cc203748f8feeb5ab79a2cb12510552586e6d5b84",
+    "size": [
+      640,
+      960
+    ]
+  },
+  {
+    "id": "LDR-07",
+    "prompt": "Marshal Ibrahim ibn Ahmad, Cayfen guardian of artists and studios, STEEL specialist. Middle Eastern middle-aged man with warm brown skin and short black-grey beard. REDESIGN: brushed steel breastplate etched with geometric artisan patterns, deep turquoise undercoat, saffron short asymmetric marshal cape fastened with a sculpted sunflower brooch, sculptural silver shoulder guard, wrapped ochre headcloth, white trousers, engraved metal command baton. One open hand in a restrained calming command, thoughtful weary authoritative gaze. Military discipline tempered by protecting the arts; distinctive crisp asymmetric silhouette.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-07.webp",
+    "sha256": "f1b1fc1e8b52ed89c1bd3071125333bef2464fc89be5b6419c9d38ce1e6be7c9",
+    "size": [
+      639,
+      960
+    ]
+  },
+  {
+    "id": "LDR-08",
+    "prompt": "Hierophant Hasan ibn Ibrahim, alabaster Ramelle ruler and experienced battler, PSYCHIC specialist. Elderly Middle Eastern man, rich brown skin, white beard, contemplative strong face. REDESIGN: flowing alabaster robes with indigo star-map panels, large open circular astrolabe collar framing shoulders, fine gold chain circlet over close white headwrap, translucent blue crystal at breast, long ornate astrolabe staff in one hand, closed illuminated book in other. Tall luminous architectural silhouette, gaze calm and formidable, spiritual authority and battle experience. No modern items.",
+    "tool": "built-in image_gen; transparent background extraction where required",
+    "runtime": "dist/assets/LDR-08.webp",
+    "sha256": "0cc1cd0d0ccd6366601529497d8ef5f06ff17166c8df4a227e3af989e2d13c44",
+    "size": [
+      640,
+      960
+    ]
+  }
+]

@@ -1,8 +1,8 @@
 {
-  "version": "0.90.45",
-  "version_code": 140,
-  "filename": "Abyssals-v0.90.45-Accessible-Lifts-Bulk-Shops-and-Journal.apk",
-  "title": "Abyssals v0.90.45 — Accessible Fort Lifts, Bulk Shops and Personal Field Journal",
-  "notes": "Access to south-facing lifts on five fort floors, broad collision-safe forecourt. Bulk purchases for Grand Exchange codexes, relics, evolution items, repeatable nursery supplies and provisions, with maximum, pricing and purchase restrictions. Hatched eggs visibly show 0 to 6 Prodigy markers. The Field Journal follows the save character's name and uses silhouette art before capture, vague town-level rumour hints before capture, and true encounter/evolution records once caught. Preserves existing saves, offline PWA and original Android signing identity.",
-  "pwa_filename": "Abyssals-v0.90.45-PWA.zip"
+  "version": "0.90.46",
+  "version_code": 141,
+  "filename": "Abyssals-v0.90.46-Elite-Leaders.apk",
+  "title": "Abyssals v0.90.46 \u2014 Elite Town Leaders and Field Journal",
+  "notes": "Eight redesigned canonical town leaders with larger elemental battle presentation. Fixed specialties and save-locked six-member legal teams, curated moves, held items and genuine compounded Prodigy growth. Leaders use matchup-aware attacks and action-cost switching with trapping and loop protection. Journal sightings persist when visible battle opponents enter, including simulations and doubles; rumours reveal town names only after recorded visits. Existing story outcomes, saves, nursery rewards, nonlethal rematches and original Android signing identity preserved.",
+  "pwa_filename": "Abyssals-v0.90.46-PWA.zip"
 }

@@ -1,4 +1,4 @@
-import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.24';
+import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.46';
 import {DATA} from './data.js?v=0.90.41';
 import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.41';
 import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.87.0';

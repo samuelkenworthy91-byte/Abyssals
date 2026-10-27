@@ -2,7 +2,7 @@ import {migrateRenewalEconomy,rememberLegacyRenewalMoves} from './evolution-rene
 import {migrateTeamcraftState} from './teamcraft-progress.js?v=0.90.30';
 import {DATA} from './data.js?v=0.90.41';
 import {migrateGeneralStores} from './shopkeepers.js?v=0.90.41';
-import {visitedTravelRooms} from './fast-travel.js?v=0.87.0';
+import {visitedTravelRooms} from './fast-travel.js?v=0.90.46';
 import {migrateMemorialMoves} from './finale-rules.js?v=0.90.19';
 import {cossenneServices} from './cossenne-services.js?v=0.87.0';
 import {SPECIALIST_SUPPLIES} from './specialist-supplies.js?v=0.87.0';

@@ -1,4 +1,4 @@
-import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.44';
+import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.46';
 import {TYPE_COLORS,TYPES} from './type-rules.js?v=0.87.0';
 const LIMIT=30;
 const statuses={all:'Every entry',unknown:'Undiscovered',seen:'Seen · never caught',owned:'Caught · no living specimen',living:'Caught · alive'};
@@ -34,7 +34,7 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
     return '<button class="field-journal-row" data-field-id="'+esc(s.id)+'">'+
      '<span class="field-journal-art '+(caught?'':'field-journal-silhouette')+'">'+art(s,!caught)+'</span>'+
      '<span class="field-journal-row-text"><strong>No. '+esc(s.id)+' · '+(hasSeen?esc(s.name):'Unknown Abyssal')+'</strong>'+
-     '<small>'+(caught?s.types.map(t=>esc(t)).join(' / '):'Rumoured near a settlement · silhouette')+'</small></span>'+badge(status)+'</button>';
+     '<small>'+(caught?s.types.map(t=>esc(t)).join(' / '):(hasSeen?'Location rumour available · silhouette':'Undiscovered · silhouette'))+'</small></span>'+badge(status)+'</button>';
    }).join('')||'<p>No records match these filters.</p>')+'</div>'+
    '<div class="field-journal-pages"><button id="field-journal-prev" '+(filters.page===0?'disabled':'')+'>Previous</button><span>'+(filters.page+1)+' / '+pages+'</span><button id="field-journal-next" '+(filters.page>=pages-1?'disabled':'')+'>Next</button></div>';
   const root=document.querySelector('.modal');
@@ -67,7 +67,7 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
   const habitat=fieldJournalHabitats(id);
   const noted=state.fieldJournal?.seen?.[id]?.room;
   const availability=fieldJournalAvailability(id);
-   const placeText=caught?'<p><b>'+esc(availability.message)+'</b></p>'+(habitat.length&&availability.kind==='wild'?'<ul>'+habitat.slice(0,12).map(r=>'<li>'+esc(r.area)+(r.phase&&r.phase!=='BOTH'?' · '+esc(r.phase.toLowerCase()):'')+(r.levels?' · Lv. '+esc(r.levels):'')+'</li>').join('')+'</ul>'+(habitat.length>12?'<p>+'+(habitat.length-12)+' further recorded locations</p>':''):''):'<p class="field-journal-rumour">'+esc(fieldJournalRumours(id))+'</p>';
+   const placeText=caught?'<p><b>'+esc(availability.message)+'</b></p>'+(habitat.length&&availability.kind==='wild'?'<ul>'+habitat.slice(0,12).map(r=>'<li>'+esc(r.area)+(r.phase&&r.phase!=='BOTH'?' · '+esc(r.phase.toLowerCase()):'')+(r.levels?' · Lv. '+esc(r.levels):'')+'</li>').join('')+'</ul>'+(habitat.length>12?'<p>+'+(habitat.length-12)+' further recorded locations</p>':''):''):'<p class="field-journal-rumour">'+esc(seen?fieldJournalRumours(id,state):'Encounter this Abyssal to begin recording location rumours.')+'</p>';
   const growth=fieldJournalGrowth(species,living[0]||null);
   const growthHtml=caught?'<section class="field-journal-section"><h3>Growth rates</h3><p>Natural species growth'+(living.length?' compared with your first living specimen. Prodigy and permanent bonuses are included in that specimen’s figures.':' (individual bonuses unavailable without a living specimen).')+'</p><div class="field-journal-growth">'+
    STAT_KEYS.map(k=>'<div><span>'+esc(STAT_LABELS[k])+'</span><b>'+esc(growth.original[k])+'%</b>'+(growth.individual?'<strong>'+esc(growth.individual[k])+'%</strong>':'')+'</div>').join('')+

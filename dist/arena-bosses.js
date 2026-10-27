@@ -1,10 +1,11 @@
+import {prepareSpecialistMove,stabMultiplier} from './teamcraft-battle.js?v=0.90.30';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {DATA} from './data.js?v=0.90.41';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
-import {stageMultiplier} from './engine.js?v=0.90.41';
-import {moveUsable} from './move-rules.js?v=0.90.41';
-import {canSwitch,leaveAbility,enterAbility,abilityName} from './abilities.js?v=0.90.41';
+import {stageMultiplier,damageScale} from './engine.js?v=0.90.41';
+import {moveUsable,moveDamageMultiplier} from './move-rules.js?v=0.90.41';
+import {canSwitch,leaveAbility,enterAbility,abilityName,abilityImmunity,heldStat,abilityMultiplier} from './abilities.js?v=0.90.41';
 export const isArenaBossRound=round=>Number.isSafeInteger(round)&&round>0&&round%5===0;
 export const arenaRoundMarks=round=>isArenaBossRound(round)?round*10:round+2;
 // Species, four preferred legal techniques, ability slot and held-item role.
@@ -30,23 +31,22 @@ export function buildArenaBoss(round,level){
  return {key:spec.key,name:spec.name,plan:spec.plan,team,sourceHeldRoles:spec.members.map((p,i)=>({slot:i+1,role:p.role})),bagUses:2,arenaHealingFraction:.5,arenaBoss:true,ai_tier:'Expert'};
 }
 const usable=u=>(u.moves||[]).filter(m=>moveUsable(u,m));
-function expectedDamage(actor,target,move){
- if(!move?.power||actor.hp<=0)return 0;
+export function expectedDamage(actor,target,move){
+ if(!move?.power||actor.hp<=0||abilityImmunity(target,move))return 0;move=prepareSpecialistMove(actor,move);
  let effectiveness=typeEffectiveness(move.type_id,target.species.types);
  if(move.type_id==='GROUND'&&['Hovercore','Levitate'].includes(abilityName(target)))effectiveness=0;
  const special=move.category==='SPECIAL',a=special?'sp_attack':'attack',d=special?'sp_defence':'defence';
- const attack=(actor.stats[a]||1)*stageMultiplier(actor.stages?.[a]),defence=(target.stats[d]||1)*stageMultiplier(target.stages?.[d]);
- const weather=actor.field?.weather,climate=weather==='RAIN'?(move.type_id==='WATER'?1.5:move.type_id==='FIRE'?.5:1):weather==='SUN'?(move.type_id==='FIRE'?1.5:move.type_id==='WATER'?.5:1):1;
- const screen=(target.field?.screens?.[target.side]?.[move.category]||0)>0?.5:1;
- return ((2*actor.level/5+2)*move.power*attack/Math.max(1,defence)/50+2)*effectiveness*(actor.species.types.includes(move.type_id)?1.5:1)*climate*screen*statusAttackFactor(actor,special)*(move.accuracy==='ALWAYS'?1:(move.accuracy??100)/100)*.925;
+ const attack=(actor.stats[a]||1)*stageMultiplier(actor.stages?.[a])*heldStat(actor,a),defence=(target.stats[d]||1)*stageMultiplier(target.stages?.[d])*heldStat(target,d);
+ return ((2*actor.level/5+2)*move.power*attack/Math.max(1,defence)/50+2)*effectiveness*stabMultiplier(actor,move)*damageScale(actor.level)*moveDamageMultiplier(actor,target,move)*abilityMultiplier(actor,target,move,{effectiveness})*statusAttackFactor(actor,special)*(move.accuracy==='ALWAYS'?1:(move.accuracy??100)/100)*.925;
 }
 const pressure=(a,b)=>Math.max(0,...usable(a).map(m=>expectedDamage(a,b,m)))/Math.max(1,b.hp);
 export function chooseArenaBossMove(b,actor,target,pool=usable(actor)){
- if(!b.trainer?.arenaBoss||!pool.length)return null;
+ if(!(b.trainer?.arenaBoss||b.trainer?.eliteLeader)||!pool.length)return null;
  const threat=pressure(target,actor),health=actor.hp/actor.maxHp;
  const score=m=>{
   if(m.power){const damage=expectedDamage(actor,target,m);return damage/Math.max(1,target.maxHp)*2+(damage>=target.hp?2:0)+(m.priority>0&&damage>=target.hp?1:0);}
   let value=-1;
+  if(target.moveState?.protection&&!['SELF','ACTIVE_SIDE'].includes(m.target))return -2;
   for(const e of m.effects||[]){
    if(['heal','heal_by_format'].includes(e.effect_id)&&health<.65)value=Math.max(value,(1-health)*1.5+(threat<.9?.25:0));
    if(e.effect_id==='cure_major_status'&&actor.status)value=Math.max(value,.65);
@@ -59,16 +59,17 @@ export function chooseArenaBossMove(b,actor,target,pool=usable(actor)){
    }
    if(e.effect_id==='stat_stage'&&e.target==='SELF'&&e.stages>0&&health>.6&&threat<.55){const keys=e.stats||[e.stat];if(keys.some(k=>(actor.stages?.[k]||0)<2))value=Math.max(value,.55+Math.min(.25,(keys.length-1)*.1));}
   }
+  if(m.effects?.some(e=>e.effect_id==='protect')&&(target.status||actor.heldItem==='HELD_PILGRIM_CUP')&&(actor.moveState?.protectChain||0)===0)value=Math.max(value,.6);
   return value*(m.accuracy==='ALWAYS'?1:(m.accuracy??100)/100);
  };
  return [...pool].sort((a,c)=>score(c)-score(a))[0];
 }
 export function chooseArenaBossAction(b){
- if(!b.trainer?.arenaBoss)return null;
+ if(!(b.trainer?.arenaBoss||b.trainer?.eliteLeader))return null;
  const actor=b.enemies[0],target=b.player;if(!actor||actor.hp<=0||!target||target.hp<=0)return null;
  const threat=pressure(target,actor),attack=pressure(actor,target),hp=actor.hp/actor.maxHp;
  // Switching spends the whole enemy action. A two-turn cooldown prevents loops.
- if(canSwitch(actor)&&(b.lastBossSwitchRound??-10)<=b.round-2){
+ if(canSwitch(actor)&&(b.lastBossSwitchRound??-10)<=b.round-2&&(!b.trainer.eliteLeader||(b.leaderSwitchCount||0)<8)){
   const relay=abilityName(actor)==='Relay Plumage'&&Object.values(actor.stages||{}).filter(v=>v>0).reduce((n,v)=>n+v,0)>=2;
   const candidates=b.enemies.map((u,index)=>({u,index})).filter(({u,index})=>index>0&&u.hp>0&&!u.dead).map(({u,index})=>({u,index,threat:pressure(target,u),attack:pressure(relay?{...u,stages:{...u.stages,...actor.stages}}:u,target)}));
   candidates.sort((a,c)=>(c.attack-c.threat)-(a.attack-a.threat));
@@ -81,13 +82,13 @@ export function chooseArenaBossAction(b){
 }
 export function switchArenaBoss(b,index){
  const old=b.enemies[0],next=b.enemies[index];
- if(!b.trainer?.arenaBoss||!Number.isInteger(index)||index<1||!next||next.hp<=0||next.dead||!canSwitch(old))return null;
+ if(!(b.trainer?.arenaBoss||b.trainer?.eliteLeader)||!Number.isInteger(index)||index<1||!next||next.hp<=0||next.dead||!canSwitch(old))return null;
  const field=b.player.field||old.field||{};next.stages={};
  const messages=leaveAbility(old,{switching:true,nextUnit:next});
- b.enemies[index]=old;b.enemies[0]=next;b.lastBossSwitchRound=b.round;next.actedThisRound=true;
+ b.enemies[index]=old;b.enemies[0]=next;b.lastBossSwitchRound=b.round;b.leaderSwitchCount=(b.leaderSwitchCount||0)+1;next.actedThisRound=true;
  messages.unshift(b.trainer.name+' withdraws '+old.species.name+' and sends out '+next.species.name+'.');
  messages.push(...enterAbility(next,b.player,{party:b.enemies,field}));
  return messages;
 }
-export function orderArenaBossReplacement(b){if(!b.trainer?.arenaBoss||b.enemies.length<2)return;const ranked=b.enemies.map((u,index)=>({index,score:pressure(u,b.player)-pressure(b.player,u)})).sort((a,c)=>c.score-a.score||a.index-c.index);const index=ranked[0].index;if(index>0)[b.enemies[0],b.enemies[index]]=[b.enemies[index],b.enemies[0]];}
+export function orderArenaBossReplacement(b){if(!(b.trainer?.arenaBoss||b.trainer?.eliteLeader)||b.enemies.length<2)return;const ranked=b.enemies.map((u,index)=>({index,score:pressure(u,b.player)-pressure(b.player,u)})).sort((a,c)=>c.score-a.score||a.index-c.index);if(b.trainer.eliteLeader&&b.enemies.length>2)for(const row of ranked)if(b.enemies[row.index].leaderAce)row.score-=.5;ranked.sort((a,c)=>c.score-a.score||a.index-c.index);const index=ranked[0].index;if(index>0)[b.enemies[0],b.enemies[index]]=[b.enemies[index],b.enemies[0]];}
 
