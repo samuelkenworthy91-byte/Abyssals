@@ -45,6 +45,8 @@ assert(fs.readFileSync('dist/field-journal-ui.js','utf8').includes('art(species,
 assert(fs.readFileSync('dist/exploration-world.js','utf8').includes('[[38,24],[40,24],[40,22]]'));
 assert(fs.readFileSync('dist/marasen-activities-ui.js','utf8').includes('mr-shop-quantity'));
 assert(app.includes('id="berry-qty"')&&app.includes('id="core-qty"'));
+assert(fs.readFileSync('dist/marasen-activities-ui.js','utf8').includes('id="mr-tonic-count"'));
+
 const app=fs.readFileSync('dist/app.js','utf8'),html=fs.readFileSync('dist/index.html','utf8'),offline=fs.readFileSync('dist/offline-assets.js','utf8');
 assert(app.includes('menu-field-journal')&&app.includes('recordFieldBattle(state,battle,room)'));
 assert(!app.includes('growth-report.html')&&!app.includes('move-lab.html')&&!app.includes('follower-catalogue.html'));

@@ -55,17 +55,16 @@ export function purchase(s,item,amount=1){
  if(item.id==='lifeEmbers')data(s).exchange.receipts.push('lifeEmbers');
  return true;
 }
-export function growthTonicQuote(s,uid,kind,stat){
- const u=owned(s).find(u=>u.uid===uid),cost=kind==='focused'?25000:30000;
+export function growthTonicQuote(s,uid,kind,stat,amount=1){
+ const u=owned(s).find(u=>u.uid===uid),perDose=kind==='focused'?25000:30000,quantity=Number(amount);
  if(!u||!['focused','balanced'].includes(kind)||kind==='focused'&&!STAT_KEYS.includes(stat))return {ok:false,reason:'Choose a living partner and a valid growth stat.'};
- if((u.marasenTonicDoses||0)>=10)return {ok:false,reason:'This partner has used all ten permanent growth doses.'};
- if((s.money||0)<cost)return {ok:false,reason:'Not enough doubloons.'};
+ const max=Math.max(0,Math.min(10-(u.marasenTonicDoses||0),Math.floor((s.money||0)/perDose)));
+ if(!Number.isSafeInteger(quantity)||quantity<1||quantity>max)return {ok:false,max,reason:max<1?'No remaining affordable growth doses for this partner.':'Choose a whole number between 1 and '+max+' doses.'};
  const keys=kind==='focused'?[stat]:STAT_KEYS,original=kind==='focused'?5:1,next={...u,marasenGrowth:{...u.marasenGrowth}};
- for(const key of keys)next.marasenGrowth[key]=(next.marasenGrowth[key]||0)+original;
- const details=permanentGrowthDetails(next);
- return {ok:true,u,cost,keys,original,multiplier:permanentGrowthMultiplier(u),next,before:permanentGrowthDetails(u),after:details};
+ for(const key of keys)next.marasenGrowth[key]=(next.marasenGrowth[key]||0)+original*quantity;
+ return {ok:true,u,cost:perDose*quantity,quantity,max,keys,original,multiplier:permanentGrowthMultiplier(u),next,before:permanentGrowthDetails(u),after:permanentGrowthDetails(next)};
 }
-export function growthTonic(s,uid,kind,stat){const q=growthTonicQuote(s,uid,kind,stat);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+1;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
+export function growthTonic(s,uid,kind,stat,amount=1){const q=growthTonicQuote(s,uid,kind,stat,amount);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+q.quantity;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
 function exchangeQuantityMenu(a,floor,item,filters){
  const {state,openModal,$,rewardTransaction}=a;
  const initial=exchangePurchaseQuote(state,item,1);
@@ -107,11 +106,11 @@ function showTonic(a,item){const {state,openModal,document,$,rewardTransaction}=
  for(const el of document.querySelectorAll('[data-mr-tonic-uid]'))el.onclick=()=>{
   const uid=el.dataset.mrTonicUid,u=pool.find(x=>x.uid===uid);if(!u)return;
   const selector=item.id==='focused'?`<label>Stat to improve<select id="mr-tonic-stat">${STAT_KEYS.map(k=>`<option value="${k}">${STAT_LABELS[k]} · ${unitGrowthPercent(u,k).toFixed(1)}% → ${(unitGrowthPercent(u,k)+5*permanentGrowthMultiplier(u)).toFixed(1)}%</option>`).join('')}</select></label>`:`<p>All six growth rates increase by ${permanentGrowthMultiplier(u)} percentage points: +1 original point × ${permanentGrowthMultiplier(u)}.</p>`;
-  openModal('Confirm permanent growth',`<p>Give <b>${safe(u.nickname||u.species.name)}</b> a ${safe(item.name)}?</p>${selector}<div id="mr-tonic-math" role="status"></div><p>Doses after purchase: <b>${(u.marasenTonicDoses||0)+1}/10</b>. This cannot be reversed.</p><button id="mr-tonic-approve" class="primary">Apply tonic · ${money(item.price)} doubloons</button><button id="mr-tonic-abort">Cancel</button>`);
-  const updateMath=()=>{const stat=$('#mr-tonic-stat')?.value||null,q=growthTonicQuote(state,uid,item.id,stat);$('#mr-tonic-math').innerHTML=q.ok?`<p>Original bonus +${q.original} × ${q.multiplier} = +${q.original*q.multiplier} growth points per affected stat. This bonus also gains another copy after each future evolution.</p><p>${q.keys.map(key=>`${STAT_LABELS[key]}: ${q.before.rows.find(r=>r.key===key).permanent}% → ${q.after.rows.find(r=>r.key===key).permanent}% permanent growth`).join('<br>')}</p>`:`<p>${safe(q.reason)}</p>`;$('#mr-tonic-approve').disabled=!q.ok;};
-  if($('#mr-tonic-stat'))$('#mr-tonic-stat').onchange=updateMath;updateMath();
+  openModal('Confirm permanent growth',`<p>Give <b>${safe(u.nickname||u.species.name)}</b> ${safe(item.name)} doses?</p>${selector}<label>Number of doses <input id="mr-tonic-count" type="number" inputmode="numeric" min="1" max="${Math.min(10-(u.marasenTonicDoses||0),Math.floor(state.money/item.price))}" step="1" value="1"></label><div id="mr-tonic-math" role="status"></div><p>Permanent bonus applies to <b>future levels only</b> and cannot be reversed.</p><button id="mr-tonic-approve" class="primary">Apply growth tonics</button><button id="mr-tonic-abort">Cancel</button>`);
+  const updateMath=()=>{const stat=$('#mr-tonic-stat')?.value||null,n=Number($('#mr-tonic-count')?.value),q=growthTonicQuote(state,uid,item.id,stat,n);$('#mr-tonic-math').innerHTML=q.ok?`<p>${q.quantity} dose(s) · ${money(q.cost)} doubloons · lifetime doses ${(u.marasenTonicDoses||0)+q.quantity}/10</p><p>Original bonus +${q.original*q.quantity} × ${q.multiplier} = +${q.original*q.quantity*q.multiplier} growth points per affected stat. This bonus also gains another copy after each future evolution.</p><p>${q.keys.map(key=>`${STAT_LABELS[key]}: ${q.before.rows.find(r=>r.key===key).permanent}% → ${q.after.rows.find(r=>r.key===key).permanent}% permanent growth`).join('<br>')}</p>`:`<p>${safe(q.reason)}</p>`;$('#mr-tonic-approve').disabled=!q.ok;};
+  if($('#mr-tonic-stat'))$('#mr-tonic-stat').onchange=updateMath;$('#mr-tonic-count').oninput=updateMath;updateMath();
   $('#mr-tonic-abort').onclick=()=>showTonic(a,item);
-  $('#mr-tonic-approve').onclick=()=>{let applied=false;const key=$('#mr-tonic-stat')?.value||null;if(rewardTransaction(()=>{applied=growthTonic(state,uid,item.id,key);})&&applied){a.refresh?.();showFloor(a,4);}else showTonic(a,item);};
+  $('#mr-tonic-approve').onclick=()=>{let applied=false;const key=$('#mr-tonic-stat')?.value||null;if(rewardTransaction(()=>{applied=growthTonic(state,uid,item.id,key,Number($('#mr-tonic-count').value));})&&applied){a.refresh?.();showFloor(a,4);}else showTonic(a,item);};
  };
 }
 const RACE_EVENTS={
