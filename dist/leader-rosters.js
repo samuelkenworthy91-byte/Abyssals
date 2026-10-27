@@ -116,8 +116,8 @@ export function lockedLeaderRoster(state,t){
   team:structuredClone(team),prodigyPolicy:{count,bonus:id==='LDR-08'?35:id==='LDR-07'?30:Math.max(20,16+Number(id.slice(-2))*2)},
   sourceHeldRoles:t.sourceHeldRoles?.length?t.sourceHeldRoles:[{slot:1,role:'STATUS'},{slot:3,role:'GUARD'},{slot:team.length,role:'OFFENSE'}]};
 }
-export function lockLeadersForRegion(state,room,trainers){
+export function lockLeadersForRegion(state,room,trainers,prepare=t=>t){
  const target=Object.entries(LEADER_SCHOOLS).find(([,s])=>room===s.town||room?.startsWith(s.town+'Fort')||room?.startsWith(s.town+'Hall'));
  if(!target)return;
- const trainer=trainers.find(t=>t.id===target[0]);if(trainer)lockedLeaderRoster(state,trainer);
+ const trainer=trainers.find(t=>t.id===target[0]);if(trainer)lockedLeaderRoster(state,prepare(trainer));
 }

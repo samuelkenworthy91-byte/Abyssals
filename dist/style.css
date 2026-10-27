@@ -454,3 +454,21 @@ button.console-selected{outline:2px solid #ead39c;outline-offset:1px;border-colo
 
 /* Prodigy score sits above each hatchling's six marked traits. */
 .hatch-reveal .hatch-prodigy-score{display:flex;align-items:center;justify-content:center;gap:8px;margin:5px 0 9px;padding:7px;background:#243a44;border:1px solid #bf9850;border-radius:8px;color:#e6c98d;font:700 13px var(--sans)}.hatch-prodigy-score strong{font-size:20px;color:#fff0b5}.hatch-reveal .prodigy-pips{justify-content:center;margin:6px 0 9px}
+
+/* Each leader carries an unmistakable battle silhouette and distinctive school colour. */
+#battle.leader-battle{--leader-accent:#d6b982}
+#battle.leader-battle[data-leader-school="STEEL"]{--leader-accent:#c9d7e8}
+#battle.leader-battle[data-leader-school="FAIRY"]{--leader-accent:#efb9de}
+#battle.leader-battle[data-leader-school="GROUND"]{--leader-accent:#e0bd83}
+#battle.leader-battle[data-leader-school="GRASS"]{--leader-accent:#a6d88d}
+#battle.leader-battle[data-leader-school="WATER"]{--leader-accent:#88c9e8}
+#battle.leader-battle[data-leader-school="DARK"]{--leader-accent:#cf9fdf}
+#battle.leader-battle[data-leader-school="PSYCHIC"]{--leader-accent:#e99bcb}
+#battle.leader-battle[data-leader-school="DRAGON"]{--leader-accent:#bea8fa}
+#battle.leader-battle .battle-meta{max-width:185px;min-height:130px;border-left:2px solid var(--leader-accent);padding:7px 6px;background:linear-gradient(95deg,#151c2eb8,#293044ae)}
+#battle.leader-battle .battle-trainer-portrait{width:94px;height:128px;max-width:58%;object-fit:contain;object-position:center bottom;margin-left:4px;filter:drop-shadow(0 0 8px var(--leader-accent)) drop-shadow(0 10px 11px #070811)}
+#battle.leader-battle .trainer-intro{background:radial-gradient(ellipse at 33% 45%,color-mix(in srgb,var(--leader-accent) 23%,#111d2b),#090f21 75%);border:3px ridge var(--leader-accent)}
+#battle.leader-battle .trainer-intro-art{height:91%;width:44%}
+#battle.leader-battle .trainer-intro-art img{max-height:none;height:100%;width:100%;filter:drop-shadow(0 0 18px var(--leader-accent))}
+#battle.leader-battle .trainer-intro-caption h2{color:var(--leader-accent);text-shadow:0 4px 12px #0009}
+@media(max-width:600px){#battle.leader-battle .battle-meta{max-width:130px;min-height:112px;font-size:10px}#battle.leader-battle .battle-trainer-portrait{width:76px;height:105px}#battle.leader-battle .trainer-intro-art{height:67%;width:86%}#battle.leader-battle .trainer-intro-art img{max-height:none}}

@@ -34,7 +34,8 @@ export function trainerProdigyPolicy(t){
 }
 export function withTrainerProdigies(t){
  const policy=trainerProdigyPolicy(t);if(!policy)return t;
- const team=t.team.map(s=>({...s})),candidates=team.filter(s=>breedable(species(s.species_id))).sort((a,b)=>b.level-a.level||b.slot-a.slot);
+ const safeGrowthChain=id=>{try{return evolutionPath(id).every(p=>p.condition.method==='LEVEL'&&Number.isFinite(p.condition.minimum_level));}catch{return false;}};
+ const team=t.team.map(s=>({...s})),candidates=team.filter(s=>breedable(species(s.species_id))&&safeGrowthChain(s.species_id)).sort((a,b)=>b.level-a.level||b.slot-a.slot);
  for(const slot of candidates.slice(0,policy.count)){
   if(slot.prodigy)continue;
   const s=species(slot.species_id),moves=(slot.battle_move_ids||slot.current_form_legal_move_ids||[]).map(id=>DATA.moves.find(m=>m.id===id));
