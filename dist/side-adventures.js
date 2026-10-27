@@ -3,11 +3,11 @@ import {BREEDING_ONLY_FIRST_FORMS,TRADE_ONLY_FAMILIES,RESERVED_STARTERS} from '.
 import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {FISH_POOL,FISH_ENTRY_FEE,FISH_RIVALS,fishingResident,fishingSpecies} from './fishing-habitats.js?v=0.90.18';
 export {FISH_POOL,FISH_ENTRY_FEE} from './fishing-habitats.js?v=0.90.18';
-import {startingMoveIds} from './moveset-identity.js?v=0.87.0';
+import {startingMoveIds} from './moveset-identity.js?v=0.90.47';
 import {TYPES} from './type-rules.js?v=0.87.0';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
-import {DATA} from './data.js?v=0.90.41';
-import {instance,rng} from './engine.js?v=0.90.41';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.47';
+import {instance,rng} from './engine.js?v=0.90.47';
 import {hashSeed,initializeProgress,STAT_KEYS,unitGrowthRates} from './progression.js?v=0.90.41';
 // Ordinary starting forms only; exclude special rarity classes across the whole family.
 const specialFamily=s=>DATA.species.some(other=>other.family_id===s.family_id&&/legend|myth|pseudo|fossil/i.test(other.power_class));

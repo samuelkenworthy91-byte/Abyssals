@@ -1,3 +1,4 @@
+import {ORCHARD_ABILITIES} from './tide-orchard-data.js?v=0.90.47';
 import {BRANCH_ABILITIES} from './branch-families.js?v=0.90.41';
 import {RENEWAL_ABILITIES} from './evolution-renewal-data.js?v=0.90.41';
 import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.41';
@@ -471,3 +472,5 @@ ABILITIES.push(...RENEWAL_ABILITIES.map(a=>({...a,text:a.effect_text})));
 Object.assign(ABILITIES.find(a=>a.name==='Countercharge'),{text:'The first damaging contact hit received after entry grants +2 Attack. Each damaging super-effective move also grants +1 Attack, once per move. Both bonuses stack; +6 battle-stage limit.'});
 
 ABILITIES.push(...BRANCH_ABILITIES);
+
+ABILITIES.push(...ORCHARD_ABILITIES);

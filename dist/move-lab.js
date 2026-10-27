@@ -1,6 +1,6 @@
 import {signatureArtReady} from './signature-effects.js?v=0.87.0';
 import {combatArtReady,combatArtSrc} from './combat-art.js?v=0.90.20';
-import {DATA} from './data.js?v=0.90.41';import {effectSpec,effectHTML,PALETTES} from './effects.js?v=0.87.0';import {learnTreeHTML} from './learn-tree.js?v=0.90.18';
+import {DATA} from './data.js?v=0.90.47';import {effectSpec,effectHTML,PALETTES} from './effects.js?v=0.90.47';import {learnTreeHTML} from './learn-tree.js?v=0.90.18';
 const $=id=>document.getElementById(id);let timer;
 for(const type of Object.keys(PALETTES))$('type').add(new Option(type,type));
 function filter(){const needle=$('search').value.toLowerCase(),type=$('type').value,old=$('move').value,moves=DATA.moves.filter(m=>(!type||m.type_id===type)&&(m.name+' '+m.type_id+' '+m.effect_text).toLowerCase().includes(needle));$('move').replaceChildren(...moves.map(m=>new Option(m.name+' · '+m.type_id,m.id)));if(moves.some(m=>String(m.id)===old))$('move').value=old;$('play').disabled=!moves.length;preview();}
@@ -8,4 +8,4 @@ let previewRequest=0;async function preview(){const request=++previewRequest;cle
 function tree(){const species=DATA.species.find(s=>s.id===$('species').value);$('tree').innerHTML=learnTreeHTML({species,level:1,moves:[],evolutionHistory:[]});}
 for(const s of DATA.species)$('species').add(new Option(String(s.dex_number).padStart(3,'0')+' · '+s.name+' · '+s.growth_archetype,s.id));$('species').onchange=tree;$('search').oninput=filter;$('type').onchange=filter;$('move').onchange=preview;$('play').onclick=preview;filter();const initial=new URLSearchParams(location.search).get('move')||'38';if(DATA.moves.some(m=>String(m.id)===initial)){$('move').value=initial;preview();}tree();
 
-for(const [cls,id] of [['caster','001'],['target','007']])combatArtReady(id).then(ready=>{if(ready)document.querySelector('.'+cls).src=combatArtSrc(id);});
+for(const [cls,id] of [['caster',new URLSearchParams(location.search).get('caster')||'001'],['target',new URLSearchParams(location.search).get('target')||'007']])combatArtReady(id).then(ready=>{if(ready)document.querySelector('.'+cls).src=combatArtSrc(id);});

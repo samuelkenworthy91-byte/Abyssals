@@ -1,9 +1,10 @@
-import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.30';
+import {endOrchard} from './tide-orchard-battle.js?v=0.90.47';
+import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.47';
 import {randomStatusDuration} from './status-rules.js?v=0.90.24';
 import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.90.41';
 import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.90.41';
 import {menagerieParty,bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.87.0';
-import {ABILITIES} from './ability-data.js?v=0.90.41';
+import {ABILITIES} from './ability-data.js?v=0.90.47';
 import {HELD_ITEMS} from './held-data.js?v=0.90.41';
 import {unitName} from './names.js?v=0.87.0';
 export function abilityName(u){return u.species.ability_names?.[u.abilitySlot||'primary']||null;}
@@ -17,7 +18,7 @@ export function heldInfo(u){return HELD_ITEMS.find(i=>i.id===u.heldItem)||u.held
 export function heldStat(u,key){const e=heldInfo(u)?.effect;return (e?.operation==='assault_vest'&&key==='sp_defence'?e.multiplier:1)*(e?.operation==='quest_stats'?e.stats[key]||1:1)*(e?.operation==='effective_stat'&&e.stat===key?e.multiplier:1)*(key!=='hp'&&u.sunWrath?.active?1.25:1);}
 export function weatherSuppressed(...units){return units.some(u=>u.hp>0&&has(u,'Weather Calm'));}
 export function effectiveStage(u,key,foe=null){return Math.max(-6,Math.min(6,u.stages?.[key]||0));}
-export function speedFactor(u,opponent){const w=u.field?.weather,suppressed=weatherSuppressed(u,opponent||u);return (u.status==='PARALYSIS'?.5:1)*heldStat(u,'speed')*(!suppressed&&(has(u,'Rainrunner')&&w==='RAIN'||has(u,'Sunstride')&&w==='SUN'||has(u,'Snowfoot')&&['SNOW','HAIL'].includes(w))?1.5:1);}
+export function speedFactor(u,opponent){const w=u.field?.weather,suppressed=weatherSuppressed(u,opponent||u);return (u.field?.orchardTailwind?.[u.side||'player']>0?2:1)*(u.status==='PARALYSIS'?.5:1)*heldStat(u,'speed')*(!suppressed&&(has(u,'Rainrunner')&&w==='RAIN'||has(u,'Sunstride')&&w==='SUN'||has(u,'Snowfoot')&&['SNOW','HAIL'].includes(w))?1.5:1);}
 export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattle=false}={}){
  bindMenagerieParty(party);u.abilitySlot??='primary';u.abilityState={types:[],moves:[],flags:{},charges:0,dealt:0,hits:0};if(newBattle)u.abilityBattle={flags:{},turn:0};abilityBattle(u);u.field=field;
  u.abilityState.allies=Math.max(0,party.filter(p=>p.hp>0&&!p.dead).length-1);u.abilityState.primaryTypes=new Set(party.filter(p=>p.hp>0&&!p.dead).map(p=>p.species.types[0])).size;
@@ -46,7 +47,7 @@ export function leaveAbility(u,{switching=false,nextUnit=null,passStages=true}={
 export function beginAbilities(player,foes,party=[player],field={}){bindMenagerieParty(party);bindMenagerieParty(foes);for(const u of [...party,...foes]){u.abilityBattle={flags:{},turn:0};u.abilityState=null;u.moveState={};u.toxicCounter=0;u.field=field;u.stages={};}for(const u of party)u.side='player';player.side='player';for(const e of foes)e.side='enemy';field.titheUnits=[...party,...foes].filter(u=>has(u,'Tithe Charge')).map(u=>({uid:u.uid,side:u.side}));return [...enterAbility(player,foes[0],{party,field,newBattle:true}),...enterAbility(foes[0],player,{party:foes,field,newBattle:true})];}
 export function resumeAbilities(player,foes,party=[player]){bindMenagerieParty(party);bindMenagerieParty(foes);const field=player.field||foes[0]?.field||{};for(const u of [...party,...foes])u.field=field;player.side='player';for(const e of foes)e.side='enemy';}
 export function changeStage(u,key,amount,source,messages=[]){const enemy=source&&source!==u;
- const decree=u.field?.decree;const protectedStat=paladinStatProtected(u,key)||has(u,'Stable Core')||has(u,'Battle Nerve','Rallying Cry')&&key==='attack'||has(u,'Calm Guard')&&key==='sp_defence'||has(u,'Keen Sense')&&key==='accuracy'||has(u,'Surefoot')&&key==='speed'||decree?.turns>0&&decree.side===u.side;
+ const decree=u.field?.decree;const protectedStat=(u.field?.orchardMist?.[u.side||'player']>0)||paladinStatProtected(u,key)||has(u,'Stable Core')||has(u,'Battle Nerve','Rallying Cry')&&key==='attack'||has(u,'Calm Guard')&&key==='sp_defence'||has(u,'Keen Sense')&&key==='accuracy'||has(u,'Surefoot')&&key==='speed'||decree?.turns>0&&decree.side===u.side;
  if(enemy&&amount<0&&protectedStat){messages.push(note(u,'stat reduction blocked.'));return 0;}
  if(amount>0&&key==='evasion'&&has(u,'Heavy Hands'))return 0;
  if(amount>0&&key==='evasion'&&source===u&&u.opponentBlocksEvasion){messages.push('Opposing ability blocks evasion boosts.');return 0;}
@@ -68,7 +69,7 @@ export function changeWeather(weather,units,turns=5){const messages=[];const old
 }
 export function isContact(m){return m.contact??(m.category==='PHYSICAL'&&!/shot|arrow|projectile|launch|beam|wave|pulse/i.test(m.name));}
 export function isSound(m){return m.sound??(/roar|cry|call|chorus|song|chant|howl|chime|echo|shriek|resonance|sound|sonic/i.test(m.name));}
-export function inflictStatus(u,status,messages=[],random=Math.random){if(u.hp<=0)return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
+export function inflictStatus(u,status,messages=[],random=Math.random){if(u.hp<=0)return false;if(u.field?.orchardSafeguard?.[u.side||'player']>0||status==='SLEEP'&&u.moveState?.wakeful>0)return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
  if(u.status||u.statusImmunity?.[status]||has(u,'Toxinproof')&&['POISON','BAD_POISON'].includes(status)||has(u,'Coldproof')&&status==='FREEZE'||['POISON','BAD_POISON'].includes(status)&&u.species.types.some(t=>['POISON','STEEL'].includes(t))||status==='BURN'&&u.species.types.includes('FIRE')||['FREEZE','FROSTBITE'].includes(status)&&u.species.types.includes('ICE')||status==='PARALYSIS'&&u.species.types.includes('ELECTRIC'))return false;
  u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);messages.push(...activateHeldRecovery(u));return true;
 }
@@ -231,6 +232,7 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
    if(random()<.33&&inflictStatus(foe,'BAD_POISON',messages,random))messages.push(note(source,'venomous mist badly poisoned '+unitName(foe)+'.'));
   }
  }
+ messages.push(...endOrchard(units,{floor,random}));
  if(field.weatherTurns>0&&--field.weatherTurns===0){messages.push(...changeWeather(null,units,0));}
  if(field.decree?.turns>0)field.decree.turns--;return messages;
 }

@@ -7,7 +7,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  await page.addInitScript(()=>localStorage.setItem('abyssals-motion','reduced'));
  await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'load'});
  await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:150000});
- const cached=await page.evaluate(async()=>{const key=(await caches.keys()).find(k=>k.startsWith('abyssals-0.90.46'));return key?(await(await caches.open(key)).keys()).length:0;});assert(cached>=1978);
+ const cached=await page.evaluate(async version=>{const key=(await caches.keys()).find(k=>k.startsWith('abyssals-'+version));return key?(await(await caches.open(key)).keys()).length:0;},JSON.parse(fs.readFileSync('release-config.json','utf8')).version);assert(cached>=1978);
  await context.setOffline(true);await page.reload({waitUntil:'networkidle'});await page.locator('#title-continue').click();await page.locator('#new-game').click();
  assert(await page.locator('.modal').isVisible(),'offline new expedition opens name dialog');
  const files=['elite-leaders.js','journal-habitats.js','elite-leaders.css',...Array.from({length:8},(_,i)=>'assets/LDR-0'+(i+1)+'.webp')];

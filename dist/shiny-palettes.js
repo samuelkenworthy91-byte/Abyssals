@@ -1733,3 +1733,8 @@ const flaskShiny={family:'FAMILY-505',name:'Flaskling',sourceHue:295,targetHue:1
 const foxShiny={family:'FAMILY-510',name:'Scruffox',sourceHue:45,targetHue:225,chroma:.96,neutralTint:0};
 for(let id=505;id<=509;id++)SHINY_PALETTES[String(id)]=flaskShiny;
 for(let id=510;id<=514;id++)SHINY_PALETTES[String(id)]=foxShiny;
+
+const tideShiny={family:'FAMILY-515',name:'Rillkit',sourceHue:240,targetHue:60,chroma:.96,neutralTint:0};
+const orchardShiny={family:'FAMILY-518',name:'Mewisp',sourceHue:140,targetHue:320,chroma:.96,neutralTint:0};
+for(const id of ['515','516','517'])SHINY_PALETTES[id]=tideShiny;
+for(const id of ['518','519'])SHINY_PALETTES[id]=orchardShiny;

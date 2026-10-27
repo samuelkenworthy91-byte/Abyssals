@@ -1,4 +1,4 @@
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
 // All descendants of a branching evolution belong to that branch, including its later stages.
 const children=new Map();for(const e of EVOLUTIONS){if(!children.has(e.from_species_id))children.set(e.from_species_id,[]);children.get(e.from_species_id).push(e.to_species_id);}
 export const SPLIT_WILD_REPLACEMENTS={};

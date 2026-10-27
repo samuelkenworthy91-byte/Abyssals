@@ -18,7 +18,7 @@ const species=id=>DATA.species.find(s=>s.id===id);
 const unit=(id='365',level=12)=>({...instance(species(id),level,[]),uid:'qa-'+id,evolutionHistory:[]});
 assert.equal(RELIC_BRANCHES.length,18);assert.equal(RELIC_SPECIES.length,37);assert.equal(ARMOURY_BRANCHES.length,12);
 assert.equal(new Set(RELIC_BRANCHES.map(b=>b.types.filter(t=>t!=='STEEL').join()||'STEEL')).size,18);
-assert.equal(DATA.species.length,513);assert.equal(new Set(DATA.species.map(s=>s.id)).size,513);
+assert.equal(DATA.species.filter(s=>!s.tideOrchard).length,513);assert.equal(new Set(DATA.species.map(s=>s.id)).size,DATA.species.length);
 assert.equal(new Set(DATA.moves.map(m=>m.id)).size,DATA.moves.length);
 const offline=fs.readFileSync('dist/offline-assets.js','utf8');
 for(const b of RELIC_BRANCHES){

@@ -1,4 +1,5 @@
-import {restoreHP as healRelayHP} from './abilities.js?v=0.90.41';
+import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.47';
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.47';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];
@@ -13,6 +14,7 @@ export function prepareSpecialistMove(u,m){if(!m.power)return m;let effects=m.ef
 export const stabMultiplier=(u,m)=>u.species.types.includes(m.type_id)?has(u,'Native Force')?1.8:1.5:1;
 export const soundMove=m=>m.sound??/roar|cry|call|chorus|song|echo|sound|sonic/i.test(m.name);
 export function actionInvalid(u,m,foe=null){
+ const invalid=orchardInvalid(u,m,foe);if(invalid)return invalid;
  if(m.effects.some(e=>e.effect_id==='effigy')){const cost=Math.max(1,Math.floor(u.maxHp/4));if(u.hp<=cost||ms(u).decoy)return 'Not enough HP, or an effigy already exists.';}
  if(m.effects.some(e=>['relay','healing_relay'].includes(e.effect_id))){if((u.trapped&&!has(u,'Wayfarer')&&!has(u,'Bindproof'))||(ms(u).relayFatigue||0)>0||!selectedAlly(u)||selectedAlly(u)===u)return 'Choose a living benched partner; trapped or fatigued partners cannot relay.';}
  if(m.effects.some(e=>e.effect_id==='clear_weather')&&!u.field?.weather)return 'There is no weather to clear.';
@@ -21,7 +23,7 @@ export function actionInvalid(u,m,foe=null){
  if(m.allyTarget&&!selectedAlly(u))return 'Choose a living ally.';
  return null;
 }
-export function beginAction(u,m,continuation=false){if(continuation)return;const s=ms(u);if(!m.effects.some(e=>e.effect_id==='protect'))s.protectChain=0;delete s.protection;}
+export function beginAction(u,m,continuation=false){if(continuation)return;const s=ms(u);if(!m.effects.some(e=>e.effect_id==='brine_veil'))s.brineChain=0;delete s.brineVeil;delete s.brineSpent;if(!m.effects.some(e=>e.effect_id==='protect'))s.protectChain=0;delete s.protection;}
 export function blocksTarget(u,t,m,messages){if(u===t||['SELF','ACTIVE_SIDE','PARTNER'].includes(m.target))return false;if(ms(t).protection){messages.push(`${unitName(t)} holds fast; the move is blocked.`);return true;}if(!m.power&&ms(t).decoy&&!soundMove(m)){messages.push(`${unitName(t)}’s effigy blocks the status move.`);return true;}return false;}
 export function strikeBarrier(actor,target,move,damage,{floor=0}={},messages=[]){
  const s=ms(target),f=flags(target);
@@ -48,6 +50,7 @@ export function teamcraftEffect(actor,target,move,e,messages,hooks){const {rando
  return false;
 }
 export function departTeamcraft(u,next,switching,messages=[],{passStages=true}={}){if(!living(u)||!living(next)||!switching)return false;const s=ms(u),f=flags(u);let pass=false;
+ if(s.breezeOnly){next.stages={};delete ms(next).decoy;delete ms(next).effigyHandoff;if(s.decoy)ms(next).decoy={hp:Math.min(s.decoy.hp,Math.max(1,Math.floor(next.maxHp/4))),maxHp:Math.max(1,Math.floor(next.maxHp/4))};ms(next).relayFatigue=3;messages.push(`${unitName(next)} receives only the remaining effigy.`);return false;}
  if(s.healingRelay){next.stages={};delete ms(next).decoy;delete ms(next).effigyHandoff;const restored=Math.floor(next.maxHp/4*(has(u,'Medicinal Sap')?1.15:1));const before=next.hp;healRelayHP(next,Math.max(1,restored));next.status=null;next.statusTurns=0;next.confusion=0;next.toxicCounter=0;ms(next).relayFatigue=3;messages.push(`${unitName(next)} receives ${next.hp-before} HP and is cleansed.`);return false;}
  if(passStages&&!(s.relayFatigue>0)&&(s.relayRequested||s.effigyHandoff||has(u,'Relay Plumage'))){next.stages=Object.fromEntries(PASS_STATS.map(k=>[k,Math.max(-6,Math.min(6,u.stages?.[k]||0))]));ms(next).relayFatigue=3;if(s.effigyHandoff&&!s.relayRequested&&s.decoy)ms(next).decoy={...s.decoy};messages.push(`${unitName(next)} inherits five combat stat stages.`);pass=true;}
  if(s.entryCleanse){for(const k in next.stages)if(next.stages[k]<0)next.stages[k]=0;}

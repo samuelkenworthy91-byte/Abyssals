@@ -60,5 +60,5 @@ const app=fs.readFileSync('dist/app.js','utf8'),html=fs.readFileSync('dist/index
 assert(app.includes('menu-field-journal')&&app.includes('recordFieldBattle(state,battle,room)'));
 assert(!app.includes('growth-report.html')&&!app.includes('move-lab.html')&&!app.includes('follower-catalogue.html'));
 for(const file of ['field-journal.js','field-journal-ui.js','field-journal.css'])assert(offline.includes('"'+file+'"'));
-assert(html.includes('field-journal.css')&&html.includes('app.js?v=0.90.46'));
+assert(html.includes('field-journal.css')&&html.includes('app.js?v='+JSON.parse(fs.readFileSync('release-config.json','utf8')).version));
 console.log('PASS: persistent sightings and ownership, trainer reserve secrecy, active double battles, evolution, death, habitats, growth and offline menu wiring');

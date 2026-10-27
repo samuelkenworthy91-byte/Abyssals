@@ -1,9 +1,10 @@
-import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.41';
+import {orchardUsable,orchardGrounded} from './tide-orchard-battle.js?v=0.90.47';
+import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.47';
 import {unitName} from './names.js?v=0.87.0';
-export const SUPPORTED_EFFECTS = new Set(['pivot','healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
+export const SUPPORTED_EFFECTS = new Set(['orchard_mist','undertow_mark','brine_veil','blank_horizon','moonlit_reprisal','berry_supper','orchard_tailwind','draining_roots','orchard_carpet','pantry_refill','breeze_relay','orchard_taunt','orchard_rest','dream_murmur','binding_eddy','orchard_safeguard','wakeful_seed','clearcut_breeze','refrain_lock','pivot','healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
 export function moveHPCost(actor,move){return (move?.effects||[]).filter(e=>e.effect_id==='hp_cost').reduce((sum,e)=>sum+Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])),0);}
 export function canPayMoveHP(actor,move){return actor.hp>moveHPCost(actor,move);}
-export function moveUsable(u,m){return !!m&&!(heldInfo(u)?.effect?.operation==='assault_vest'&&m.category==='STATUS')&&m.left>0&&canPayMoveHP(u,m)&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
+export function moveUsable(u,m){return !!m&&orchardUsable(u,m)&&!(heldInfo(u)?.effect?.operation==='assault_vest'&&m.category==='STATUS')&&m.left>0&&canPayMoveHP(u,m)&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
 export function movePriority(m,u){return (m.priority||0)+(m.id===310&&u?.hp<u?.maxHp/2?1:0);}
 export function moveDamageMultiplier(actor,target,move,{critical=false,movedFirst=true}={}){
  let n=1;for(const e of move.effects||[])if(e.effect_id==='power_multiplier'){
@@ -16,7 +17,8 @@ export function moveDamageMultiplier(actor,target,move,{critical=false,movedFirs
  const field=actor.field||{},weather=field.weather,calm=has(actor,'Weather Calm')||has(target,'Weather Calm');
  if(!calm&&weather==='RAIN')n*=move.type_id==='WATER'?1.5:move.type_id==='FIRE'?.5:1;
  if(!calm&&weather==='SUN')n*=move.type_id==='FIRE'?1.5:move.type_id==='WATER'?.5:1;
- if(field.terrain==='GRASSY'&&move.type_id==='GRASS')n*=1.2;
+ if(field.terrain==='GRASSY'&&move.type_id==='GRASS')n*=field.orchardCarpet?(orchardGrounded(actor)?1.3:1):1.2;
+ if(target.moveState?.brineVeil&&move.category==='SPECIAL')n*=.5;
  const screen=field.screens?.[target.side]?.[move.category];if(screen>0)n*=.5;
  return n;
 }
@@ -36,7 +38,7 @@ export function extraMoveEffect(actor,target,move,e,messages,{floor=0}={}){
  if(e.effect_id==='disable_last_move'){const id=s.lastMove;if(id){s.disabled={moveId:id,turns:e.turns};note(`${who.moves.find(m=>m.id===id)?.name||'last move'} sealed for ${e.turns} turns.`);}else note('has no previous move to seal.');}
  if(e.effect_id==='recurring_status'){actor.field??={};actor.field.moveFields??={};actor.field.moveFields[target.side||'enemy']={...e};messages.push(`${move.name} will test for ${e.status.toLowerCase()} each turn for ${e.turns} turns.`);}
  if(e.effect_id==='weather')messages.push(...changeWeather(e.weather,[actor,target],e.turns));
- if(e.effect_id==='terrain'){if(setTerrain(e.terrain,[actor,target])){actor.field.terrainTurns=e.turns;messages.push(`${e.terrain} terrain lasts ${e.turns} turns.`);}else messages.push('World Anchor prevents terrain changes.');}
+ if(e.effect_id==='terrain'){if(setTerrain(e.terrain,[actor,target])){actor.field.terrainTurns=e.turns;delete actor.field.orchardCarpet;messages.push(`${e.terrain} terrain lasts ${e.turns} turns.`);}else messages.push('World Anchor prevents terrain changes.');}
  if(e.effect_id==='screen'){actor.field??={};actor.field.screens??={};actor.field.screens[actor.side||'player']??={};actor.field.screens[actor.side||'player'][e.category]=screenTurns(actor,e.turns);messages.push(`${e.category==='PHYSICAL'?'Physical':'Special'} damage to this side is halved for ${screenTurns(actor,e.turns)} turns.`);}
 }
 export function contactReaction(actor,target,move,damage,random,{floor=0}={}){const out=[],s=target.moveState||{};if(damage<=0||!isContact(move)||actor.hp<=0)return out;
@@ -49,7 +51,7 @@ export function endMoveEffects(units,random= Math.random){const out=[],field=uni
  }
  for(const side in field.moveFields||{})if(--field.moveFields[side].turns<=0)delete field.moveFields[side];
  for(const side in field.screens||{})for(const cat in field.screens[side])if(--field.screens[side][cat]<=0)delete field.screens[side][cat];
- if(field.terrainTurns>0&&--field.terrainTurns===0){field.terrain=null;out.push('Terrain faded.');}
+ if(field.terrainTurns>0&&--field.terrainTurns===0){field.terrain=null;delete field.orchardCarpet;out.push('Terrain faded.');}
  field.lastMoveDamage=field.currentMoveDamage||[];field.currentMoveDamage=[];return out;
 }
 

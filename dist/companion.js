@@ -1,6 +1,6 @@
 import {roomGrid} from './promenade.js?v=0.90.37';
 import {shinyCanvas} from './shinies.js?v=0.90.20';
-import {relicArtPath,drawRelicPanel} from './relic-art.js?v=0.87.0';
+import {RELIC_ART,relicArtPath,drawRelicPanel} from './relic-art.js?v=0.90.47';
 import {beginStep,advanceStep} from './movement.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 import {behaviourFor} from './companion-lines.js?v=0.87.0';
@@ -74,7 +74,7 @@ export function companionArt(id){
 }
 export function drawCompanion(ctx,f,time,reduced=false){
  const base=companionArt(f.unit.species.id),im=f.unit.shiny===true?(shinyCanvas(base,f.unit)||base):base;if(!im.complete||!im.naturalWidth)return;
- if(relicArtPath(f.unit.species.id)&&!REVISED_FOLLOWERS.has(f.unit.species.id)){const size=f.unit.species.stage==='Base'?34:42,bob=!reduced&&f.step?Math.sin(time/70)*1.5:0;ctx.save();ctx.fillStyle='#07142555';ctx.beginPath();ctx.ellipse(f.px,f.py+1,size*.22,2.5,0,0,Math.PI*2);ctx.fill();ctx.translate(f.px,f.py+4-size-bob);if(f.facing==='left')ctx.scale(-1,1);if(!reduced&&f.step)ctx.rotate(Math.sin(time/100)*.045);drawRelicPanel(ctx,im,f.unit.species.id,-size/2,0,size);ctx.restore();return;}
+ if(relicArtPath(f.unit.species.id)&&!REVISED_FOLLOWERS.has(f.unit.species.id)){const size=f.unit.species.stage==='Base'?34:42,airborne=f.unit.species.tideOrchard&&f.unit.species.companion_motion==='hover',bob=!reduced&&(f.step||airborne)?Math.sin(time/(airborne?220:70))*1.5:0;ctx.save();ctx.fillStyle='#07142555';ctx.beginPath();ctx.ellipse(f.px,f.py+1,size*.22,2.5,0,0,Math.PI*2);ctx.fill();ctx.translate(f.px,f.py+4-size-bob);if(f.facing===(RELIC_ART[f.unit.species.id]?.facesLeft?'right':'left'))ctx.scale(-1,1);if(!reduced&&f.step)ctx.rotate(Math.sin(time/100)*.045);drawRelicPanel(ctx,im,f.unit.species.id,-size/2,0,size);ctx.restore();return;}
  const p=companionProfile(f.unit.species),rows={down:0,left:1,up:2,right:3},threeFrame=f.unit.species.approvedMiasma;
  const progress=f.step?f.step.elapsed/f.step.duration:0;
  const frame=threeFrame?(reduced||!f.step?1:[1,0,1,2][Math.floor((f.stride+progress)*4)%4]):reduced?0:f.step?Math.floor((f.stride+progress)*2)%2:0;

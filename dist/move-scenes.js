@@ -1,5 +1,5 @@
 import {installRenewalScenes} from './evolution-renewal-scenes.js?v=0.90.38';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {installTeamcraftScenes} from './teamcraft-scenes.js?v=0.90.30';
 import {BIRD_MOVES} from './bird-family.js?v=0.87.0';
 import {PALADIN_MOVES} from './paladin-data.js?v=0.90.41';

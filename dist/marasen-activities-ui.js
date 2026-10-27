@@ -1,11 +1,11 @@
 import {itemIcon,codexIcon} from './item-art.js?v=0.90.41';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
 import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.35';
 import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.
 import {marasenObjective} from './marasen-rules.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {HELD_ITEMS} from './held-data.js?v=0.90.41';
 import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.41';
 import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.41';

@@ -1,5 +1,5 @@
-import {rng} from './engine.js?v=0.90.41';
-import {DATA} from './data.js?v=0.90.41';
+import {rng} from './engine.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.47';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {EXTRA_TRAINERS,routeStage} from './route-progression.js?v=0.90.41';
 import {ROAD_POOLS} from './encounter-pools.js?v=0.90.25';

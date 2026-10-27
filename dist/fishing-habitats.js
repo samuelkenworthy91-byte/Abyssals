@@ -1,5 +1,5 @@
 import {wildCollectionForm} from './collection-access.js?v=0.90.18';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {FULL_ENCOUNTERS} from './full-encounters.js?v=0.87.0';
 import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.25';
 import {rootForm,legalForm} from './route-roster.js?v=0.87.0';

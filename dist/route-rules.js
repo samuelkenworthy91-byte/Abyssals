@@ -1,6 +1,6 @@
 import {statusCaptureMultiplier} from './status-rules.js?v=0.90.24';
 import {encounterWeights} from './expedition-abilities.js?v=0.90.41';
-import {expandEncounterRoute} from './roster-encounters.js?v=0.90.41';
+import {expandEncounterRoute} from './roster-encounters.js?v=0.90.47';
 import {stageLevel} from './route-progression.js?v=0.90.41';
 import {legalForm} from './route-roster.js?v=0.87.0';
 import {openingEncounterLevel} from './opening-balance.js?v=0.90.46';

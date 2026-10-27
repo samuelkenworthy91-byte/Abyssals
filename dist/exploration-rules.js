@@ -1,5 +1,5 @@
 import {rimebunCaveSlots} from './rimebun.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {legalForm} from './route-roster.js?v=0.87.0';
 import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.41';
 export function explorationState(state){return state.exploration??={claims:[],trades:[],finds:[],quests:[],mythic:null};}

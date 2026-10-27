@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.41';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {EXTRA_TRAINERS} from './route-progression.js?v=0.90.41';
 export function rootForm(id){let prev;const seen=new Set();while((prev=EVOLUTIONS.find(e=>e.to_species_id===id))&&!seen.has(id)){seen.add(id);id=prev.from_species_id;}return id;}

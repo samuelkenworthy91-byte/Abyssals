@@ -1,3 +1,4 @@
+import {TIDE_ORCHARD_EVOLUTIONS} from './tide-orchard-data.js?v=0.90.47';
 import {BRANCH_EVOLUTIONS} from './branch-families.js?v=0.90.41';
 import {BIRD_EVOLUTIONS} from './bird-family.js?v=0.87.0';
 import {MENAGERIE_EVOLUTIONS} from './menagerie-family.js?v=0.87.0';
@@ -27,3 +28,5 @@ for(const p of EVOLUTIONS.filter(p=>p.from_species_id==='057'))p.condition={meth
 EVOLUTIONS.push({id:'EVOLUTION-CENSMOKE-VIGORFUME',from_species_id:'057',to_species_id:'504',condition:{method:'STAT',minimum_level:30,stats:['attack','speed']},approvedExpansion:true,promotion_delta:{hp:30,attack:75,defence:35,sp_attack:0,sp_defence:20,speed:35}});
 
 EVOLUTIONS.push(...BRANCH_EVOLUTIONS);
+
+EVOLUTIONS.push(...TIDE_ORCHARD_EVOLUTIONS);

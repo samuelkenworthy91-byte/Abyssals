@@ -18,6 +18,7 @@ export function statusDetails(u){const loss=n=>Math.max(1,Math.floor(u.maxHp*n))
  if(s.coat?.turns>0)out.push(`Venom Coat: contact attackers risk ${s.coat.chance_percent}% poison (${s.coat.turns} turns).`);
  if(s.criticalWard?.turns>0)out.push(`Critical ward: critical damage ×${s.criticalWard.multiplier} (${s.criticalWard.turns} turns).`);
  for(const [status,turns] of Object.entries(u.statusImmunity||{}))out.push(`${status.toLowerCase()} immunity: ${turns} turns.`);
+ if(s.drowned)out.push(`Drowned Mark: 1/16 max HP for ${s.drowned.turns} more turn ends.`);if(s.roots)out.push('Draining Roots: lose 1/8 max HP and feed the opposing active slot each turn.');if(s.orchardTaunt>0)out.push(`Goading Glance: status moves blocked (${s.orchardTaunt} turns).`);if(s.orchardEncore)out.push(`Refrain Lock: last selected move only (${s.orchardEncore.turns} turns).`);if(u.species.ability_names?.[u.abilitySlot||'primary']==='Stillwater')out.push(`Stillwater: ${s.stillwaterHits||0}/3 special hits received.`);
  const f=u.field||{};if(f.weather)out.push(`${f.weather}: ${f.weatherTurns||0} turns${f.weather==='RAIN'?' · Water ×1.5, Fire ×0.5':f.weather==='SUN'?' · Fire ×1.5, Water ×0.5':''}.`);
  if(f.terrain)out.push(`${f.terrain} terrain${f.terrainTurns?' · '+f.terrainTurns+' turns':''}.`);
  for(const [cat,turns] of Object.entries(f.screens?.[u.side]||{}))if(turns>0)out.push(`${cat==='PHYSICAL'?'Physical':'Special'} screen: damage ×0.5 (${turns} turns).`);

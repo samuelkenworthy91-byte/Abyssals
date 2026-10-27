@@ -1,6 +1,6 @@
 import {wildCollectionForm} from './collection-access.js?v=0.90.18';
 import {isReducedMotion} from './motion.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.25';
 import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.90.41';
 import {legalForm,rootForm} from './route-roster.js?v=0.87.0';

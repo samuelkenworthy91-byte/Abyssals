@@ -2,8 +2,8 @@ import {branchEvolutionAllowed} from './branch-families.js?v=0.90.41';
 import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.38';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats,migrateStats} from './stat-balance.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.41';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
 import {STAT_KEYS} from './progression.js?v=0.90.41';
 
 export function eligibleEvolutions(unit,state={},itemId=null){

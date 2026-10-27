@@ -1,5 +1,5 @@
 import {mountainTileName} from './mountain-art.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {legalForm} from './route-roster.js?v=0.87.0';
 import {installMountainQuests} from './mountain-quests.js?v=0.87.0';
 import {registerBiome} from './biome-world.js?v=0.90.41';

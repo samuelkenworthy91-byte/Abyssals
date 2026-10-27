@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 // User-authored continuation, 20 October 2026. BT IDs deliberately do not
 // impersonate the unavailable locked CH07 scene list (see docs/botrune-story.md).

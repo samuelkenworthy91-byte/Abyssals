@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.41';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats} from './stat-balance.js?v=0.87.0';
 import {growLevel,normalizeProgress,initializeProgress,growthPercent} from './progression.js?v=0.90.41';

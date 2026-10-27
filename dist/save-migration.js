@@ -1,6 +1,6 @@
 import {migrateRenewalEconomy,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.38';
 import {migrateTeamcraftState} from './teamcraft-progress.js?v=0.90.30';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {migrateGeneralStores} from './shopkeepers.js?v=0.90.41';
 import {visitedTravelRooms} from './fast-travel.js?v=0.90.46';
 import {migrateMemorialMoves} from './finale-rules.js?v=0.90.19';

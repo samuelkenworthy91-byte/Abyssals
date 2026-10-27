@@ -1,5 +1,5 @@
 import {BASE_PRODIGY_CHANCE,inheritanceChance,chanceLabel} from './breeding-items.js?v=0.90.35';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,permanentGrowthSources,inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './progression.js?v=0.90.41';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 import {rootForm} from './route-roster.js?v=0.87.0';

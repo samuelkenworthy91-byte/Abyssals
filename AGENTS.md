@@ -13,3 +13,5 @@
 - Before creating new character or story artwork, check `art-library/characters/reference/CHARACTER-CATALOG.json`, its `recovered-indexes/`, and `archive/library-2026-10-20/README.md`. Reuse matching existing character IDs and prepared assets; historical source names do not override current canon. Pate and Trade have transparent, Poké Ball-free PNG and smaller lossless WebP portraits under `art-library/characters/ready/`.
 
 - For Botrune and later companion story work, read `docs/botrune-story.md`. The 20 October 2026 user revision moves Pate/Trade deaths to Botrune; do not reintroduce their superseded Emmara Mill deaths. Preserve `BT-PUBLIC-SENTENCE-20261020`, independent `humanLives` history/current state, known locked CH07/WLD anchors and the protected abbey archive.
+
+- Every newly added move must have its own explicitly authored, keyed artwork and battle choreography, plus browser verification. Do not reuse a type-atlas effect with only a colour change. Preserve save-stable move IDs and add animation-coverage tests.

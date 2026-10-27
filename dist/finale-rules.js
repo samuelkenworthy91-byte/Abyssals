@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.41';
-import {startingMoveIds} from './moveset-identity.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.47';
+import {startingMoveIds} from './moveset-identity.js?v=0.90.47';
 import {initializeProgress} from './progression.js?v=0.90.41';
 import {FINALE_TRAINERS,PEACH_FINAL,LEGACY_POOLS,COMMISSIONS} from './finale-data.js?v=0.90.41';
 export function finaleState(s){const q=s.finale??={version:1,burialCursor:0,buried:false,legacies:null,quests:{},unique:{},commissions:[],gallerySeen:[]};q.quests??={};q.unique??={};q.commissions??=[];q.gallerySeen??=[];return q;}

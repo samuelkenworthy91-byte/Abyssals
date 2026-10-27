@@ -49,6 +49,9 @@ jobs:
           # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Test Tide and Orchard moves, terrain and live battle graphics
+        timeout-minutes: 4
+        run: node tests/tide-orchard-browser.cjs
       - name: Test elite leaders, visible sightings and switching
         timeout-minutes: 5
         run: |

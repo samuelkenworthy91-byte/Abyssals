@@ -11,9 +11,9 @@ import {secondaryChance,prepareSpecialistMove,stabMultiplier} from '../dist/team
 const move=id=>DATA.moves.find(m=>m.id===id);
 const unit=(id='001',ability='Unfazed')=>{const species=structuredClone(DATA.species.find(s=>s.id===id));species.ability_names={primary:ability};const u=instance(species,20,[]);u.uid=Math.random().toString();u.hp=u.maxHp=1000;u.stats={hp:1000,attack:70,defence:70,sp_attack:70,sp_defence:70,speed:70};return u;};
 const use=(a,t,id,random=()=>.5)=>{const m={...move(id),left:move(id).pp};const r=applyMove(a,t,m,random,{floor:0});return {r,m};};
-assert.equal(DATA.moves.length,567);assert.equal(ABILITIES.length,156);assert.equal(new Set(DATA.moves.map(m=>m.name)).size,567);assert(!DATA.moves.some(m=>/^Plain /.test(m.name)));assert.equal(DATA.learnsets.filter(l=>[700,701,702].includes(l.move_id)).length,3);
+assert.equal(DATA.moves.filter(m=>!m.tideOrchardMove).length,567);assert.equal(ABILITIES.length,158);assert.equal(new Set(DATA.moves.map(m=>m.name)).size,DATA.moves.length);assert(!DATA.moves.some(m=>/^Plain /.test(m.name)));assert.equal(DATA.learnsets.filter(l=>!l.tideOrchard&&[700,701,702].includes(l.move_id)).length,3);
 for(const m of DATA.moves){assert(MOVE_SCENES[m.id]?.layers?.length,m.name);assert(Number.isInteger(MOVE_SCENES[m.id].teamcraftScore),m.name);}
-assert.equal(new Set(DATA.moves.map(m=>MOVE_SCENES[m.id].teamcraftScore)).size,567);
+assert.equal(new Set(DATA.moves.map(m=>MOVE_SCENES[m.id].teamcraftScore)).size,DATA.moves.length);
 assert.deepEqual([711,712,713].map(id=>[move(id).name,move(id).type_id]),[['Full Release','FIGHTING'],['Latent Power','DARK'],['Mind Unbound','PSYCHIC']]);
 {
  const a=unit(),b=unit();beginAbilities(a,[b],[a],{});use(a,b,700);const hp=a.hp;const hit=use(b,a,8).r;assert(hit.blocked);assert.equal(a.hp,hp);cleanupRound(a,b,()=>.5);assert(!a.moveState.protection);use(a,b,700);assert(!a.moveState.protection,'second protection fails with 0.5 roll');

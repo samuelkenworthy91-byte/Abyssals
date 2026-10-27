@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 export const STORM_SIDE_ROOMS=['stormRelay','stormDariusCamp','stormDariusRidge','stormDariusCrown'];
 export const DARIUS_STORM_ID='TRN-BT-DARIUS';

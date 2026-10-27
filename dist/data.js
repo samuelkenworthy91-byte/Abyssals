@@ -1,3 +1,4 @@
+import {installTideOrchard} from './tide-orchard-data.js?v=0.90.47';
 import {installBranchFamilies} from './branch-families.js?v=0.90.41';
 import {installEvolutionRenewal} from './evolution-renewal-data.js?v=0.90.41';
 import {installTeamcraft} from './teamcraft-data.js?v=0.90.41';
@@ -15,7 +16,7 @@ import {canonicalCharacterName,canonicalDialogueTree} from './canonical-characte
 import {applyModernLearnsets} from './modern-learnsets.js?v=0.87.0';
 import {installExpeditionAbilities} from './expedition-abilities.js?v=0.90.41';
 import {installRimebun} from './rimebun.js?v=0.87.0';
-import {applyMovesetIdentity} from './moveset-identity.js?v=0.87.0';
+import {applyMovesetIdentity} from './moveset-identity.js?v=0.90.47';
 import {installFullExpansion} from './full-expansion.js?v=0.87.0';
 import {applyCoverageBalance} from './coverage-balance.js?v=0.87.0';
 import {applyRosterExpansion} from './roster-expansion.js?v=0.87.0';
@@ -68,3 +69,5 @@ installTeamcraft(DATA);
 installEvolutionRenewal(DATA);
 
 installBranchFamilies(DATA);
+
+installTideOrchard(DATA);

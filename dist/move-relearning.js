@@ -1,5 +1,5 @@
 import {normalizeTeamcraftUnit} from './teamcraft-progress.js?v=0.90.30';
-import {DATA} from './data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.47';
 import {relearnPool} from './evolution.js?v=0.90.41';
 // Revalidate at confirmation; never charge money or refresh unrelated moves.
 export function applyRelearn(unit,moveId,slot){

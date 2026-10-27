@@ -1,3 +1,4 @@
+import {tideOrchardRoute} from './tide-orchard-habitats.js?v=0.90.47';
 import {branchEncounterRoute} from './branch-families.js?v=0.90.41';
 import {caveRoute} from './exploration-rules.js?v=0.90.29';
 import {collectionEncounterRoute} from './collection-access.js?v=0.90.18';
@@ -36,4 +37,4 @@ function expandExistingEncounterRoute(route){const orchard=orchardRoute(route?.r
 
 function authoredEncounterRoute(route){if(route?.birdsExpanded)return accessEncounterRoute(route);if(route?.biodiversityExpanded)return accessEncounterRoute(birdEncounterRoute(route));return accessEncounterRoute(birdEncounterRoute(biodiversityEncounterRoute(expandExistingEncounterRoute(route))));}
 
-export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return collectionEncounterRoute(fort);return branchEncounterRoute(collectionEncounterRoute(authoredEncounterRoute(route)));}
+export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return collectionEncounterRoute(fort);return tideOrchardRoute(branchEncounterRoute(collectionEncounterRoute(authoredEncounterRoute(route))));}

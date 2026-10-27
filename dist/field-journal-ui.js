@@ -1,4 +1,4 @@
-import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.46';
+import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.47';
 import {TYPE_COLORS,TYPES} from './type-rules.js?v=0.87.0';
 const LIMIT=30;
 const statuses={all:'Every entry',unknown:'Undiscovered',seen:'Seen · never caught',owned:'Caught · no living specimen',living:'Caught · alive'};

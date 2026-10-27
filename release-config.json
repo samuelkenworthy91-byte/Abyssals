@@ -1,8 +1,8 @@
 {
-  "version": "0.90.46",
-  "version_code": 141,
-  "filename": "Abyssals-v0.90.46-Elite-Leaders.apk",
-  "title": "Abyssals v0.90.46 \u2014 Elite Town Leaders and Field Journal",
-  "notes": "Eight redesigned canonical town leaders with larger elemental battle presentation. Fixed specialties and save-locked six-member legal teams, curated moves, held items and genuine compounded Prodigy growth. Leaders use matchup-aware attacks and action-cost switching with trapping and loop protection. Journal sightings persist when visible battle opponents enter, including simulations and doubles; rumours reveal town names only after recorded visits. Existing story outcomes, saves, nursery rewards, nonlethal rematches and original Android signing identity preserved.",
-  "pwa_filename": "Abyssals-v0.90.46-PWA.zip"
+  "version": "0.90.47",
+  "version_code": 142,
+  "filename": "Abyssals-v0.90.47-Tide-and-Orchard.apk",
+  "title": "Abyssals v0.90.47 \u2014 Tide and Orchard",
+  "notes": "Two approved families: Rillkit \u2192 Undertide \u2192 Mournami and Mewisp \u2192 Purrchard, with smooth transparent artwork, evolution, breeding, shinies and Field Journal habitats. Every third special HP hit triggers Stillwater\u2019s three 50-power Water slashes. Berry Pantry regrows eaten berries every turn at 25%, or 75% in Grassy Terrain. 43 branded techniques have independent vector battle effects; existing branded protection, screens and weather are reused. Draining Roots, effigy-only Breeze Relay, berry handling, terrain, special retaliation and disruption are implemented and tested. Species inhabit clear sluicewater, reed banks, a flooded cloister, subtropical canopy and intact fruit groves. Save format, story progress and original Android signing identity are preserved.",
+  "pwa_filename": "Abyssals-v0.90.47-PWA.zip"
 }

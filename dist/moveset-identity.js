@@ -89,6 +89,8 @@ export function applyMovesetIdentity(data){
 }
 // A new wild partner carries damage, coverage and its role tool, not four late support moves.
 export function startingMoveIds(data,species,level){
+ if(species.tideOrchard){const legal=new Set(data.learnsets.filter(l=>l.species_id===species.id&&l.method==='LEVEL_UP'&&l.level<=level).map(l=>l.move_id)),preferred=species.family_id==='FAMILY-515'?[751,749,747,742,745,743,748,746]:[765,759,755,760,761,757,701,762],chosen=[];for(const id of preferred){if(!legal.has(id))continue;const m=data.moves.find(m=>m.id===id),attacks=chosen.filter(k=>data.moves.find(m=>m.id===k)?.power);if(m.power&&attacks.length>=1)continue;chosen.push(id);if(chosen.length===4)break;}return chosen;}
+
  const legal=data.learnsets.filter(l=>l.species_id===species.id&&l.level<=level),moves=new Map(data.moves.map(m=>[m.id,m]));
  const p=species.moveset_identity||{category:species.growth_percent.attack>=species.growth_percent.sp_attack?'PHYSICAL':'SPECIAL'};
  const sorted=legal.slice().sort((a,b)=>b.level-a.level||b.move_id-a.move_id),chosen=[];
