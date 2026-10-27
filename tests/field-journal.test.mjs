@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {exchangePurchaseQuote,purchase} from '../dist/marasen-activities-ui.js';
 import fs from 'node:fs';
 import {DATA} from '../dist/data.js';
 import {ensureFieldJournal,recordFieldSighting,recordFieldBattle,fieldJournalStatus,fieldJournalCounts,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,fieldJournalMoves,fieldJournalEvolutions,fieldJournalAllSpecies} from '../dist/field-journal.js';
@@ -47,6 +48,14 @@ assert(fs.readFileSync('dist/marasen-activities-ui.js','utf8').includes('mr-shop
 assert(fs.readFileSync('dist/app.js','utf8').includes('id="berry-qty"')&&fs.readFileSync('dist/app.js','utf8').includes('id="core-qty"'));
 assert(fs.readFileSync('dist/marasen-activities-ui.js','utf8').includes('id="mr-tonic-count"'));
 
+const shopState={money:15000,moveScrolls:{},heldItems:{},evolutionItems:{}};
+const codex={kind:'codex',id:'777',price:250},quote=exchangePurchaseQuote(shopState,codex,50);
+assert.equal(quote.valid,true);assert.equal(quote.total,12500);
+assert(purchase(shopState,codex,50));assert.equal(shopState.money,2500);assert.equal(shopState.moveScrolls['777'],50);
+assert(!exchangePurchaseQuote(shopState,codex,11).valid,'cannot buy beyond available money');
+shopState.money=40000;const once={kind:'supply',id:'lifeEmbers',price:40000};
+assert(exchangePurchaseQuote(shopState,once,1).valid);assert(!exchangePurchaseQuote(shopState,once,2).valid);
+assert(purchase(shopState,once,1));assert(!exchangePurchaseQuote(shopState,once,1).valid,'no duplicate life ember');
 const app=fs.readFileSync('dist/app.js','utf8'),html=fs.readFileSync('dist/index.html','utf8'),offline=fs.readFileSync('dist/offline-assets.js','utf8');
 assert(app.includes('menu-field-journal')&&app.includes('recordFieldBattle(state,battle,room)'));
 assert(!app.includes('growth-report.html')&&!app.includes('move-lab.html')&&!app.includes('follower-catalogue.html'));

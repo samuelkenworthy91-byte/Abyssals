@@ -33,5 +33,8 @@ for(const f of CAVE_FLOORS){
  const state={};assert(rememberPriestRest(state,f.room));assert.deepEqual(evacDestination(state),point);
  const visited=new Set(),queue=[[3,17]];while(queue.length){const [x,y]=queue.shift(),key=x+','+y;if(visited.has(key)||isBlocked(f.room,x,y))continue;visited.add(key);for(const [dx,dy]of [[1,0],[-1,0],[0,1],[0,-1]])queue.push([x+dx,y+dy]);}
  assert(visited.has(healer.x+','+(healer.y+1)),f.room+' connected healer');assert(visited.has('44,17'),f.room+' connected stairs');
+ const lift=map.spots.find(s=>s.id===f.room+'-lift');assert.deepEqual([lift?.x,lift?.y],[40,22],f.room+' front door of lift');
+ for(const tile of ['40,22','40,23','40,24','39,24','38,24'])assert(visited.has(tile),f.room+' accessible lift front walkway at '+tile);
+ assert(!isBlocked(f.room,40,22)&&!isBlocked(f.room,40,23),f.room+' lift entrance must not be blocked');
 }
 console.log(`PASS: ${costs.length} HP-cost moves on both sides at cost−1/cost/cost+1; ${rare.length} legendary/mythic tiers; five reachable healers and care/evac points.`);
