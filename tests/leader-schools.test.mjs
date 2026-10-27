@@ -33,7 +33,7 @@ for(const [id,school] of Object.entries(LEADER_SCHOOLS)){
  assert(leader.team.every(s=>legalForm(s.species_id,s.level)===s.species_id),id+' must not pre-evolve');
  assert.deepEqual(lockedLeaderRoster(state,base).team,leader.team,id+' must not reroll on another challenge');
  assert.deepEqual(lockedLeaderRoster(JSON.parse(JSON.stringify(state)),base).team,leader.team,id+' must persist after reload');
- const prodigies=withTrainerProdigies(leader);assert(prodigies.team.some(s=>s.prodigy),id+' must warn about actual Prodigies');
+ const prodigies=withTrainerProdigies(leader);assert(prodigies.team.every(s=>s.prodigy),id+' must give each partner one real Prodigy stat');
  assert.match(trainerProdigyWarning(prodigies),/Prodig/);
  const arrivals={leaderRosters:{version:1,seed:90121,teams:{}}};
  lockLeadersForRegion(arrivals,school.town,all,t=>openingTrainer(t));

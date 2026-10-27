@@ -24,8 +24,9 @@ const hash=value=>{let n=2166136261;for(const c of String(value))n=Math.imul(n^c
 const legendary=s=>!!(s.legendaryRoamer||s.mythic||s.legendary||s.unique||/legendary|mythic|unique|sovereign/i.test([s.power_class,s.role].join(' ')));
 const minimum=p=>Number.isFinite(p.condition?.minimum_level)?p.condition.minimum_level:30;
 const roleBySlot=['opener','breaker','wall','support','sweeper','ace'];
+function naturalGrowthPath(id){const seen=new Set();while(!seen.has(id)){seen.add(id);const p=EVOLUTIONS.find(p=>p.to_species_id===id);if(!p)return true;if(p.condition?.method!=='LEVEL'||!Number.isFinite(p.condition.minimum_level))return false;id=p.from_species_id;}return false;}
 function legalStage(s,level,type){
- if(legalForm(s.id,level)!==s.id)return false;
+ if(!naturalGrowthPath(s.id)||legalForm(s.id,level)!==s.id)return false;
  return !EVOLUTIONS.some(p=>p.from_species_id===s.id&&minimum(tunedEvolution(p,s))<=level&&species(p.to_species_id)?.types.includes(type));
 }
 function fullMoves(id,level){
@@ -111,7 +112,7 @@ export function lockedLeaderRoster(state,t){
  state.leaderRosters.teams??={};
  let team=state.leaderRosters.teams[id];
  if(!Array.isArray(team)||team.length!==t.team.length){team=rollTeam({...t,id},theme.type,state.leaderRosters.seed);state.leaderRosters.teams[id]=structuredClone(team);}
- const count=id==='LDR-08'?3:['LDR-06','LDR-07'].includes(id)?2:1;
+ const count=team.length; // Each leader partner carries one real inherited Prodigy growth stat.
  return {...t,ai_tier:'Leader',leaderTactician:true,leaderSchool:theme.type,leaderPlan:theme.plan,
   team:structuredClone(team),prodigyPolicy:{count,bonus:id==='LDR-08'?35:id==='LDR-07'?30:Math.max(20,16+Number(id.slice(-2))*2)},
   sourceHeldRoles:t.sourceHeldRoles?.length?t.sourceHeldRoles:[{slot:1,role:'STATUS'},{slot:3,role:'GUARD'},{slot:team.length,role:'OFFENSE'}]};
