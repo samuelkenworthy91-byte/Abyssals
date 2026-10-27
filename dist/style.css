@@ -451,3 +451,6 @@ button.console-selected{outline:2px solid #ead39c;outline-offset:1px;border-colo
 /* Codex filters and automatic multi-egg hatch reveals, sized for portrait displays. */
 .mr-codex-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin:12px 0;align-items:end}.mr-codex-filters label{display:grid;gap:4px;font-weight:700}.mr-codex-filters select{min-width:0;width:100%;max-width:100%;padding:9px;border-radius:7px}.mr-codex-filters small{grid-column:1/-1}.mr-stock[hidden]{display:none!important}
 .egg-hatch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;max-height:58vh;overflow:auto}.egg-hatch-grid .egg-hatching{margin:0;padding:10px;border:1px solid var(--line);border-radius:10px}.egg-hatch-grid .egg-hatching img{max-width:120px;max-height:115px;object-fit:contain}
+
+/* Prodigy score sits above each hatchling's six marked traits. */
+.hatch-reveal .hatch-prodigy-score{display:flex;align-items:center;justify-content:center;gap:8px;margin:5px 0 9px;padding:7px;background:#243a44;border:1px solid #bf9850;border-radius:8px;color:#e6c98d;font:700 13px var(--sans)}.hatch-prodigy-score strong{font-size:20px;color:#fff0b5}.hatch-reveal .prodigy-pips{justify-content:center;margin:6px 0 9px}

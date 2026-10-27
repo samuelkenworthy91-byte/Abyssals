@@ -1,4 +1,4 @@
-import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.44';
+import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.44';
 import {TYPE_COLORS,TYPES} from './type-rules.js?v=0.87.0';
 const LIMIT=30;
 const statuses={all:'Every entry',unknown:'Undiscovered',seen:'Seen · never caught',owned:'Caught · no living specimen',living:'Caught · alive'};
@@ -9,7 +9,8 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
  const all=fieldJournalAllSpecies();
  const badge=status=>'<span class="field-journal-badge field-journal-'+status+'">'+
   ({unknown:'Undiscovered',seen:'Seen · not caught',owned:'Caught · not alive',living:'Caught · alive'}[status]||status)+'</span>';
- const art=species=>'<img data-summary-art="'+esc(species.id)+'" data-summary-uid="" data-summary-shiny="false" src="'+esc(combatArtSrc({species,shiny:false}))+'" alt="'+esc(species.name)+'">';
+ const art=(species,hidden=false)=>'<img data-summary-art="'+esc(species.id)+'" data-summary-uid="" data-summary-shiny="false" src="'+esc(combatArtSrc({species,shiny:false}))+'" alt="'+(hidden?'Unidentified Abyssal silhouette':esc(species.name))+'">';
+ const journalTitle=()=>{const name=String(state.playerName||'Aimon').trim()||'Aimon';return name+(name.toLowerCase().endsWith('s')?'’':'’s')+' Field Journal';};
  function renderList(request=filters,keepFocus=false){
   ensureFieldJournal(state);
   filters={...filters,...request};
@@ -29,16 +30,16 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
    '<p class="field-journal-results">'+list.length+' entries · page '+(filters.page+1)+' of '+pages+'</p>'+
    '<div class="field-journal-list">'+(entries.map(s=>{
     const status=fieldJournalStatus(state,s.id);
-    const hasSeen=status!=='unknown';
+    const hasSeen=status!=='unknown',caught=status==='owned'||status==='living';
     return '<button class="field-journal-row" data-field-id="'+esc(s.id)+'">'+
-     '<span class="field-journal-art '+(hasSeen?'':'field-journal-silhouette')+'">'+(hasSeen?art(s):'<span aria-hidden="true">?</span>')+'</span>'+
+     '<span class="field-journal-art '+(caught?'':'field-journal-silhouette')+'">'+art(s,!caught)+'</span>'+
      '<span class="field-journal-row-text"><strong>No. '+esc(s.id)+' · '+(hasSeen?esc(s.name):'Unknown Abyssal')+'</strong>'+
-     '<small>'+(hasSeen?s.types.map(t=>esc(t)).join(' / '):'Habitat hint available')+'</small></span>'+badge(status)+'</button>';
+     '<small>'+(caught?s.types.map(t=>esc(t)).join(' / '):'Rumoured near a settlement · silhouette')+'</small></span>'+badge(status)+'</button>';
    }).join('')||'<p>No records match these filters.</p>')+'</div>'+
    '<div class="field-journal-pages"><button id="field-journal-prev" '+(filters.page===0?'disabled':'')+'>Previous</button><span>'+(filters.page+1)+' / '+pages+'</span><button id="field-journal-next" '+(filters.page>=pages-1?'disabled':'')+'>Next</button></div>';
   const root=document.querySelector('.modal');
   const previousScroll=root?.scrollTop||0;
-  openModal('Eamon’s Field Journal',html);
+  openModal(journalTitle(),html);
   document.querySelector('.modal')?.classList.add('field-journal-modal');
   normalizeSummaryArt();
   document.querySelectorAll('[data-field-id]').forEach(button=>button.addEventListener('click',()=>renderEntry(button.dataset.fieldId)));
@@ -65,7 +66,8 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
   const losses=fieldJournalLosses(state,id);
   const habitat=fieldJournalHabitats(id);
   const noted=state.fieldJournal?.seen?.[id]?.room;
-  const placeText=habitat.length?'<ul>'+habitat.slice(0,9).map(r=>'<li>'+esc(r.area)+(r.phase&&r.phase!=='BOTH'?' · '+esc(r.phase.toLowerCase()):'')+(r.levels?' · Lv. '+esc(r.levels):'')+'</li>').join('')+'</ul>'+(habitat.length>9?'<p>+'+(habitat.length-9)+' further recorded locations</p>':''):'<p>'+fallback+'</p>';
+  const availability=fieldJournalAvailability(id);
+   const placeText=caught?'<p><b>'+esc(availability.message)+'</b></p>'+(habitat.length&&availability.kind==='wild'?'<ul>'+habitat.slice(0,12).map(r=>'<li>'+esc(r.area)+(r.phase&&r.phase!=='BOTH'?' · '+esc(r.phase.toLowerCase()):'')+(r.levels?' · Lv. '+esc(r.levels):'')+'</li>').join('')+'</ul>'+(habitat.length>12?'<p>+'+(habitat.length-12)+' further recorded locations</p>':''):''):'<p class="field-journal-rumour">'+esc(fieldJournalRumours(id))+'</p>';
   const growth=fieldJournalGrowth(species,living[0]||null);
   const growthHtml=caught?'<section class="field-journal-section"><h3>Growth rates</h3><p>Natural species growth'+(living.length?' compared with your first living specimen. Prodigy and permanent bonuses are included in that specimen’s figures.':' (individual bonuses unavailable without a living specimen).')+'</p><div class="field-journal-growth">'+
    STAT_KEYS.map(k=>'<div><span>'+esc(STAT_LABELS[k])+'</span><b>'+esc(growth.original[k])+'%</b>'+(growth.individual?'<strong>'+esc(growth.individual[k])+'%</strong>':'')+'</div>').join('')+
@@ -79,14 +81,14 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
    '<p>Special codex and inherited move compatibility may provide additional techniques.</p></details>':'';
   const abilities=species.ability_names&&typeof species.ability_names==='object'?Object.entries(species.ability_names).filter(([,v])=>v).map(([k,v])=>'<span>'+esc(k)+': '+esc(v)+'</span>').join(' · '):'';
   const html='<div class="field-journal-detail"><div class="field-journal-hero">'+
-   '<div class="field-journal-large-art '+(seen?'':'field-journal-silhouette')+'">'+(seen?art(species):'<span aria-hidden="true">?</span>')+'</div>'+
+   '<div class="field-journal-large-art '+(caught?'':'field-journal-silhouette')+'">'+art(species,!caught)+'</div>'+
    '<div><span class="eyebrow">FIELD JOURNAL · NO. '+esc(species.id)+'</span><h3>'+(seen?esc(species.name):'Unknown Abyssal')+'</h3>'+badge(status)+
    '<p>'+(seen?species.types.map(t=>'<span class="field-journal-type" style="--journal-type:'+esc(TYPE_COLORS[t]||'#728598')+'">'+esc(t)+'</span>').join(' '):'Typing revealed on sight')+'</p></div></div>'+
-   '<section class="field-journal-section"><h3>Where to encounter</h3>'+placeText+(noted?'<p><b>First sighting:</b> '+esc(roomName(noted))+'</p>':'')+'</section>'+
+   '<section class="field-journal-section"><h3>Where to encounter</h3>'+placeText+(caught&&noted?'<p><b>First sighting:</b> '+esc(roomName(noted))+'</p>':'')+'</section>'+
    (caught?'<section class="field-journal-section"><h3>Ownership record</h3><p>'+living.length+' living in party or reserves · '+losses+' recorded at the memorial.</p>'+(abilities?'<p><b>Possible abilities:</b> '+abilities+'</p>':'')+'</section>':'')+
    growthHtml+evolutionHtml+movesHtml+
    '<div class="field-journal-footer"><button id="field-journal-back" class="primary">Back to entries</button></div></div>';
-  openModal('Eamon’s Field Journal',html);
+  openModal(journalTitle(),html);
   document.querySelector('.modal')?.classList.add('field-journal-modal');
   normalizeSummaryArt();
   document.querySelector('#field-journal-back').onclick=()=>renderList();

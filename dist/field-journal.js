@@ -102,6 +102,35 @@ for(const [room,pool] of Object.entries(SIDE_POOLS))for(const phase of ['DAY','N
 for(const [index,pool] of FORT_POOLS.entries())for(const id of pool)add(id,CAVE_FLOORS[index]?.name||'Sunken Fort · floor '+(index+1),'BOTH');
 for(const row of FULL_ENCOUNTERS)add(row.species_id,habitatNames[row.room]||row.room,row.phase,row.min_level+'–'+row.max_level);
 add('364','Sunken Fort · all explored floors','RARE');
+// Rumour locations derive from actual encounter areas, never speculative routes.
+const townForHabitat=area=>{
+ const name=String(area||'').toLowerCase();
+ if(/sunken fort|veilroot|bastion/.test(name))return 'Dorelem';
+ if(/civeton|march|meadow|hedgerow/.test(name))return 'Civeton';
+ if(/dorelem|scrub|tenrec|burrow|service tunnel|glasswater|quarry|stormglass|relic crags/.test(name))return 'Dorelem';
+ if(/philomere|hospice|medicine|reed|coral|moonlit|orchard canopy|north road/.test(name))return 'Philomere';
+ if(/cybressa|rivercause|backwater|smuggler|salt flat/.test(name))return 'Cybressa';
+ if(/marasen|living water|rapids|aquatic/.test(name))return 'Marasen';
+ if(/botrune|gothic/.test(name))return 'Botrune';
+ if(/kaivton|snow/.test(name))return 'Kaivton';
+ if(/ramelle/.test(name))return 'Ramelle';
+ if(/cayfen/.test(name))return 'Cayfen';
+ if(/cossenne|orchard|peach|grove/.test(name))return 'Cossenne';
+ return null;
+};
+export function fieldJournalRumours(id){
+ const towns=[...new Set((speciesHabitatIndex.get(id)||[]).map(r=>townForHabitat(r.area)).filter(Boolean))];
+ if(towns.length)return 'Rumour has it this Abyssal can be found near '+towns.slice(0,2).join(' or ')+'. Search the surrounding routes and hidden paths.';
+ if(EVOLUTIONS.some(e=>e.to_species_id===id))return 'Rumour has it this form is reached by evolving another Abyssal, rather than hunting for it here.';
+ return 'No ordinary wild sighting is recorded. Seek special encounters, gifts, rewards or trades.';
+}
+export function fieldJournalAvailability(id){
+ const locations=speciesHabitatIndex.get(id)||[];
+ if(locations.length)return {kind:'wild',message:'Recorded wild habitats'};
+ const parents=EVOLUTIONS.filter(e=>e.to_species_id===id).map(e=>DATA.species.find(s=>s.id===e.from_species_id)?.name).filter(Boolean);
+ if(parents.length)return {kind:'evolution',message:'Only available through evolution of '+[...new Set(parents)].join(' or ')+'.'};
+ return {kind:'special',message:'No regular wild encounter recorded. Look for special encounters, gifts, rewards or trades.'};
+}
 export function fieldJournalHabitats(id){
  const matches=speciesHabitatIndex.get(id)||[];
  if(matches.length)return matches;

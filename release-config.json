@@ -1,8 +1,8 @@
 {
-  "version": "0.90.44",
-  "version_code": 139,
-  "filename": "Abyssals-v0.90.44-Eamons-Field-Journal.apk",
-  "title": "Abyssals v0.90.44 — Eamon's Field Journal",
-  "notes": "Adds Eamon's Field Journal to the in-game Start menu. Tracks seen species from revealed wild and trainer encounters, remembers species ever owned across evolution, rehoming and permadeath, distinguishes living catches, and shows habitat clues, typings, natural and individual growth, evolutions, abilities and learnsets as discovered. Removes old external field guide, growth report and move studio links from the Abyssals screen. Backfills older saves from party, reserves, memorial and evolution history without inventing earlier unseen encounters. Keeps the offline PWA and Android package identity/signing.",
-  "pwa_filename": "Abyssals-v0.90.44-PWA.zip"
+  "version": "0.90.45",
+  "version_code": 140,
+  "filename": "Abyssals-v0.90.45-Accessible-Lifts-Bulk-Shops-and-Journal.apk",
+  "title": "Abyssals v0.90.45 — Accessible Fort Lifts, Bulk Shops and Personal Field Journal",
+  "notes": "Access to south-facing lifts on five fort floors, broad collision-safe forecourt. Bulk purchases for Grand Exchange codexes, relics, evolution items, repeatable nursery supplies and provisions, with maximum, pricing and purchase restrictions. Hatched eggs visibly show 0 to 6 Prodigy markers. The Field Journal follows the save character's name and uses silhouette art before capture, vague town-level rumour hints before capture, and true encounter/evolution records once caught. Preserves existing saves, offline PWA and original Android signing identity.",
+  "pwa_filename": "Abyssals-v0.90.45-PWA.zip"
 }

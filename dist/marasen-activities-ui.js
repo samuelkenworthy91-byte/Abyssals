@@ -33,17 +33,27 @@ function storeItems(floor){
  if(floor===5)return [{kind:'supply',id:'riverBait',name:'River Bait',description:'Specialist capture food suited to aquatic encounters.',price:950},{kind:'supply',id:'emergencyEvacs',name:'Emergency Evac',description:'Return a living expedition safely to its recovery location.',price:2500},{kind:'supply',id:'lifeEmbers',name:'Life Ember',description:'A rare second chance for a living Abyssal. One per expedition.',price:40000}];
  return [];
 }
-const price=entry=>entry.price;
-function purchase(s,item){if(!item||!Number.isFinite(item.price)||item.price<1||s.money<item.price)return false;
- if(item.kind==='nursery')return buyNurseryItem(s,item.id);
- const m=data(s);if(item.id==='lifeEmbers'&&m.exchange.receipts.includes('lifeEmbers'))return false;
- if(item.kind==='growth')return false;
- s.money-=item.price;
- if(item.kind==='codex'){s.moveScrolls??={};s.moveScrolls[item.id]=(s.moveScrolls[item.id]||0)+1;}
- else if(item.kind==='held'){s.heldItems??={};s.heldItems[item.id]=(s.heldItems[item.id]||0)+1;}
- else if(item.kind==='evolution'){s.evolutionItems??={};s.evolutionItems[item.id]=(s.evolutionItems[item.id]||0)+1;}
- else s[item.id]=(s[item.id]||0)+1;
- if(item.id==='lifeEmbers')m.exchange.receipts.push('lifeEmbers');return true;
+export function exchangePurchaseQuote(s,item,amount=1){
+ if(!item||!Number.isSafeInteger(item.price)||item.price<1)return {valid:false,max:0,total:0};
+ const restricted=item.id==='lifeEmbers'&&data(s).exchange.receipts.includes('lifeEmbers')||item.kind==='nursery'&&item.reusable&&nurseryItemCount(s,item.id)>0;
+ const cap=item.id==='lifeEmbers'||item.kind==='nursery'&&item.reusable?1:99999;
+ const max=restricted||['growth','pp'].includes(item.kind)?0:Math.max(0,Math.min(cap,Math.floor((s.money||0)/item.price)));
+ const quantity=Number(amount),valid=Number.isSafeInteger(quantity)&&quantity>=1&&quantity<=max;
+ return {valid,max,quantity,total:valid?quantity*item.price:0};
+}
+export function purchase(s,item,amount=1){
+ const q=exchangePurchaseQuote(s,item,amount);if(!q.valid)return false;
+ if(item.kind==='nursery'){
+  for(let i=0;i<q.quantity;i++)if(!buyNurseryItem(s,item.id))return false;
+  return true;
+ }
+ s.money-=q.total;
+ if(item.kind==='codex'){s.moveScrolls??={};s.moveScrolls[item.id]=(s.moveScrolls[item.id]||0)+q.quantity;}
+ else if(item.kind==='held'){s.heldItems??={};s.heldItems[item.id]=(s.heldItems[item.id]||0)+q.quantity;}
+ else if(item.kind==='evolution'){s.evolutionItems??={};s.evolutionItems[item.id]=(s.evolutionItems[item.id]||0)+q.quantity;}
+ else s[item.id]=(s[item.id]||0)+q.quantity;
+ if(item.id==='lifeEmbers')data(s).exchange.receipts.push('lifeEmbers');
+ return true;
 }
 export function growthTonicQuote(s,uid,kind,stat){
  const u=owned(s).find(u=>u.uid===uid),cost=kind==='focused'?25000:30000;
@@ -56,6 +66,21 @@ export function growthTonicQuote(s,uid,kind,stat){
  return {ok:true,u,cost,keys,original,multiplier:permanentGrowthMultiplier(u),next,before:permanentGrowthDetails(u),after:details};
 }
 export function growthTonic(s,uid,kind,stat){const q=growthTonicQuote(s,uid,kind,stat);if(!q.ok)return false;s.money-=q.cost;q.u.marasenTonicDoses=(q.u.marasenTonicDoses||0)+1;q.u.marasenGrowth=q.next.marasenGrowth;return true;}
+function exchangeQuantityMenu(a,floor,item,filters){
+ const {state,openModal,$,rewardTransaction}=a;
+ const initial=exchangePurchaseQuote(state,item,1);
+ if(!initial.valid)return;
+ openModal('Purchase · '+item.name,`<p>${safe(item.description)}</p><p><b>${money(item.price)} doubloons each</b> · ${money(state.money)} available.</p><label for="mr-shop-quantity">Quantity</label><div class="quantity-picker"><button id="mr-qty-minus" aria-label="One fewer">−</button><input id="mr-shop-quantity" type="number" inputmode="numeric" min="1" max="${initial.max}" step="1" value="1"><button id="mr-qty-plus" aria-label="One more">+</button><button id="mr-qty-max">Max</button></div><p id="mr-qty-total" role="status"></p><div class="modal-actions"><button id="mr-qty-cancel">Back to shop</button><button id="mr-qty-confirm" class="primary">Buy</button></div>`);
+ const input=$('#mr-shop-quantity');
+ const update=()=>{const q=exchangePurchaseQuote(state,item,input.value);$('#mr-qty-total').textContent=q.valid?'Total: '+money(q.total)+' doubloons · '+money(state.money-q.total)+' remaining':'Enter a whole number from 1 to '+q.max;$('#mr-qty-confirm').disabled=!q.valid;$('#mr-qty-minus').disabled=!(Number(input.value)>1);$('#mr-qty-plus').disabled=!(Number(input.value)<q.max);};
+ input.oninput=update;
+ $('#mr-qty-minus').onclick=()=>{input.value=Math.max(1,(Number(input.value)||1)-1);update();};
+ $('#mr-qty-plus').onclick=()=>{input.value=Math.min(initial.max,(Number(input.value)||0)+1);update();};
+ $('#mr-qty-max').onclick=()=>{input.value=initial.max;update();};
+ $('#mr-qty-cancel').onclick=()=>showFloor(a,floor,filters);
+ $('#mr-qty-confirm').onclick=()=>{const q=exchangePurchaseQuote(state,item,input.value);if(!q.valid)return;let done=false;if(rewardTransaction(()=>{done=purchase(state,item,q.quantity);})&&done){a.refresh?.();showFloor(a,floor,filters);}};
+ update();
+}
 function showFloor(a,floor,filters={category:'ALL',type:'ALL'}){const {state,openModal,$,document,rewardTransaction,shop}=a,items=storeItems(floor);
  if(floor===0){shop('marasenMarket');return;}
  openModal('Grand Exchange · '+FLOOR_NAMES[floor],`<p>Marasen is the commercial centre of the Living Water basin. <b>${money(state.money)} doubloons</b> available.</p><div class="mr-merch-floor"><span>FLOOR ${floor+1} / 6</span><b>${FLOOR_NAMES[floor]}</b></div>${items.map((it,i)=>`<article class="mr-stock"><div>${it.kind==='codex'?codexIcon(DATA.moves.find(m=>m.id===Number(it.id))):itemIcon(it.id)}<b>${safe(it.name)}</b><p>${safe(it.description)}</p>${it.kind==='nursery'?`<small>${it.reusable?(nurseryItemCount(state,it.id)?'Owned · reusable':'Reusable purchase'):'In nursery supplies: '+nurseryItemCount(state,it.id)}</small>`:''}${it.kind==='codex'?`<small>In backpack: ${state.moveScrolls?.[it.id]||0}</small>`:''}</div><button data-mr-buy="${i}" ${state.money<it.price||it.kind==='nursery'&&it.reusable&&nurseryItemCount(state,it.id)>0||it.id==='lifeEmbers'&&data(state).exchange.receipts.includes('lifeEmbers')?'disabled':''}>${money(it.price)} ⛁</button></article>`).join('')}<p class="mr-note">Moves are stored in your Bag → Training → Move Scrolls. Permanent growth tonics are applied directly to an individual, with a ten-dose lifetime cap. Nursery items are chosen at Walter when creating an egg; the Charm stacks with Feed or Thread.</p>`);
@@ -73,7 +98,7 @@ function showFloor(a,floor,filters={category:'ALL',type:'ALL'}){const {state,ope
  if(it.kind==='pp'){enduranceTonicMenu(a,()=>showFloor(a,floor));return;}
  if(it.kind==='growth'){showTonic(a,it);return;}
  if(state.money<it.price)return;
- if(rewardTransaction(()=>purchase(state,it))){const chosen={category:$('#mr-codex-category')?.value||'ALL',type:$('#mr-codex-type')?.value||'ALL'};a.refresh?.();showFloor(a,floor,chosen);}
+ const chosen={category:$('#mr-codex-category')?.value||'ALL',type:$('#mr-codex-type')?.value||'ALL'};exchangeQuantityMenu(a,floor,it,chosen);
  };
 }
 function showTonic(a,item){const {state,openModal,document,$,rewardTransaction}=a;

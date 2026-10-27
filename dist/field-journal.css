@@ -64,3 +64,6 @@
  .field-journal-large-art{flex-basis:110px;height:125px}
  .field-journal-growth>div{grid-template-columns:minmax(0,1fr) 64px 64px}
 }
+
+/* Authentic unrecruited species silhouette, including a never-caught sighting. */
+.field-journal-silhouette img{filter:brightness(0) contrast(3)!important;opacity:.98}.field-journal-rumour{font-style:italic;color:#e5d0a8!important}
