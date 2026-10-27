@@ -37,7 +37,7 @@ for(const raw of originals){
   assert.deepEqual(unitGrowthRates(JSON.parse(JSON.stringify(u))),unitGrowthRates(u));
  }
  assert.match(trainerProdigyWarning(t),/Warning:/);
- state.fates[t.id]='SPARED';const rematch=makeLeaderRematch(state,t);assert(rematch.eliteLeader);assert.deepEqual(rematch.team.map(s=>s.species_id),t.team.map(s=>s.species_id));assert(rematch.nonlethal);
+ state.fates[t.id]='SPARED';const rematch=makeLeaderRematch(state,t);assert(rematch.eliteLeader);assert.deepEqual(rematch.team.map(s=>find(s.species_id).family_id),t.team.map(s=>find(s.species_id).family_id));assert(rematch.team.every(s=>find(s.species_id).types.includes(spec.type)));assert.deepEqual(state.leaderTeams[t.id].team,t.team,'rematches leave locked roster unchanged');assert(rematch.nonlethal);
  state.defeatedTrainers.push(rematch.id);state.trainerPayouts=[rematch.id];assert(completeLeaderRematch(state,rematch.id));assert(!completeLeaderRematch(state,rematch.id));
  state.fates[t.id]='EXECUTED';state.money=0;settleLeaderRewards(state,raw,(id,l,uid)=>({uid,species:find(id),level:l,hp:10}));
  assert.equal(state.leaderOutcomes.gifts[t.id].speciesId,leaderAceBaby(t));const money=state.money,count=state.party.length+state.reserve.length;settleLeaderRewards(state,raw,()=>assert.fail('duplicate nursery'));assert.equal(state.money,money);assert.equal(state.party.length+state.reserve.length,count);

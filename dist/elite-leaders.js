@@ -32,6 +32,16 @@ export function legalLeaderForm(s,level){
  return !EVOLUTIONS.some(e=>e.from_species_id===s.id&&(tunedEvolution(e,s).condition.minimum_level||1)<=level);
 }
 const moveCache=new Map(),setCache=new Map(),rosterCache=new Map();
+// Rematches train the same saved family forward; they never roll a new member.
+export function advanceLeaderForm(id,level,type){
+ const seen=new Set();
+ while(!seen.has(id)){
+  seen.add(id);
+  const next=EVOLUTIONS.filter(e=>e.from_species_id===id&&e.condition.method==='LEVEL'&&tunedEvolution(e,species(id)).condition.minimum_level<=level&&species(e.to_species_id)?.types.includes(type)).sort((a,b)=>a.to_species_id.localeCompare(b.to_species_id))[0];
+  if(!next)break;id=next.to_species_id;
+ }
+ return id;
+}
 export function leaderLegalMoves(s,level){
  const key=s.id+':'+level;if(moveCache.has(key))return moveCache.get(key);
  const legal=new Set(legalMoves(s.id,level));
