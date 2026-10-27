@@ -22,7 +22,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=req
  // Real purchase at the bottom of the long shop must retain its position.
  const buy=page.locator('[data-mr-buy]').last();await buy.scrollIntoViewIfNeeded();
  const top=await page.locator('.modal').evaluate(el=>el.scrollTop);assert(top>500);
- await buy.click();await page.waitForTimeout(100);
+ await buy.click();assert.equal(await page.locator('#mr-shop-quantity').inputValue(),'1');await page.locator('#mr-qty-confirm').click();await page.waitForTimeout(100);
  assert(Math.abs(await page.locator('.modal').evaluate(el=>el.scrollTop)-top)<30,'purchase retains list position');
  await page.screenshot({path:'build/qa/exchange-list-position.png'});
  await page.evaluate(()=>window.__trainQA.stock(4));

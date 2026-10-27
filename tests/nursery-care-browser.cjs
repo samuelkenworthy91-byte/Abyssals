@@ -15,7 +15,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),assert=req
  };`});});
  await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'networkidle'});await page.waitForFunction(()=>window.__careQA);await page.evaluate(()=>window.__careQA.boot());
  const stock=await page.locator('#modal-root').innerText();for(const price of ['20,000','500,000','35,000','15,000','200,000'])assert(stock.includes(price));
- for(let index=4;index<=8;index++)await page.locator('[data-mr-buy="'+index+'"]').click();
+ for(let index=4;index<=8;index++){await page.locator('[data-mr-buy="'+index+'"]').click();assert.equal(await page.locator('#mr-shop-quantity').inputValue(),'1');await page.locator('#mr-qty-confirm').click();}
  let data=await page.evaluate(()=>window.__careQA.read());assert.equal(data.money,1230000);assert.deepEqual(data.items,{familySeal:1,heirloomCharm:1,prodigyFeed:1,inheritanceThread:1,broodingWarmer:1});assert(await page.locator('[data-mr-buy="5"]').isDisabled());
  console.log('Nursery phone QA: shop purchased; checking pairing options');await page.evaluate(()=>window.__careQA.pair());assert(await page.locator('#breed-charm').isChecked());assert(await page.locator('#breed-warmer').isChecked());assert(await page.locator('#breed-seal option[value="0"]').evaluate(option=>option.disabled),'same-family Seal option is natively disabled');
  await page.locator('#breed-enhancer').selectOption('feed');assert((await page.locator('#modal-root').innerText()).includes('51.824%'));await page.locator('#breed-stat-0').selectOption('');await page.locator('#breed-stat-1').selectOption('');
