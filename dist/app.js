@@ -1351,7 +1351,52 @@ const finaleCreatureImages=new Map();
 function getFinaleCreatureImage(u){const key=u.species.id+':'+Boolean(u.shiny);if(!finaleCreatureImages.has(key)){const im=new Image();finaleCreatureImages.set(key,im);void combatArtReady(u).then(()=>{im.src=combatArtSrc(u);});}return finaleCreatureImages.get(key);}
 function clearFinaleScene(){document.querySelector('#finale-story')?.remove();$('#dialogue').classList.remove('finale-story-dialogue');}
 function showFinaleScene(name){clearFinaleScene();const panel=document.createElement('div');panel.id='finale-story';panel.style.backgroundImage=`url(assets/finale/story-${name==='burial'?'burial':'darius-cruxwyrm'}.webp)`;panel.setAttribute('role','img');panel.setAttribute('aria-label',name==='burial'?'Aimon and Walter bury Pate and Trade beneath the flowering tree':'Darius and Cruxwyrm hold the last crossing');$('#viewport').append(panel);$('#dialogue').classList.add('finale-story-dialogue');}
-function finaleAPI(){return {state,room,AREA_GATES,line,showDialogue,warp,rewardTransaction,buildMarkers,openModal,closeModal,escapeHTML,challengeTrainer,startWild,species:byId,$,rest:restAtPriest,art:combatArtSrc,create:(id,level,seed)=>newUnit(byId(id),level,seed),settleLeaderRewards,decisionHTML:leaderDecisionHTML,burial:playFinaleBurial,doubleBattle:startFinaleDouble,scene:showFinaleScene,clearScene:clearFinaleScene,rematch:t=>{registerLeaderRematches();const r=EXPANSION.trainers.find(r=>r.rematchOf===t.id);if(r)challengeTrainer(r);}};}
+async function startMirrorDescent(fate){
+ if(!state.fates?.['LDR-08']||battle||dialogue||presentationLocked)return;
+ if(finaleState(state).mirrorArrivalSeen){await warp('afterlifeThreshold',24,23,'up');return;}
+ stopMovement();
+ if(room!=='ramelleFortress')await warp('ramelleFortress',24,12,'down');
+ presentationLocked=true;
+ const escortId=fate==='SPARED'?'LDR-08':'fn-fortress-custodian';
+ const escort=NEW_MAPS.ramelleFortress?.spots?.find(p=>p.id===escortId);
+ const original=escort?{x:escort.x,y:escort.y}:null;
+ const route=[[24,8],[24,10],[24,12],[25,14],[27,16],[29,18],[31,19],[33,19],[35,19]];
+ try{
+  for(const [x,y] of route){
+   if(room!=='ramelleFortress')break;
+   const [px,py]=nearestWalkable(room,x,y);
+   setPlayer(px,py,'right');
+   if(escort){escort.x=Math.max(1,px-2);escort.y=py;buildMarkers();}
+   await delay(reducedMotion()?8:120);
+  }
+ }finally{
+  if(escort&&original)Object.assign(escort,original);
+  presentationLocked=false;
+ }
+ await warp('afterlifeThreshold',24,23,'up');
+ if(room!=='afterlifeThreshold')return;
+ let portal=document.getElementById('hell-portal');if(portal)portal.remove();
+ portal=document.createElement('div');portal.id='hell-portal';portal.setAttribute('role','img');portal.setAttribute('aria-label','The Hell Mirror opens into a dark portal; Severin Vale steps through.');
+ portal.innerHTML='<img src="assets/finale/severin-guide.svg" alt="">';
+ $('#viewport').appendChild(portal);
+ await delay(reducedMotion()?40:1000);
+ const guideLines=[
+  line('Beneath Ramelle','The old mirror ripples. Its reflection empties until there is only a dark opening. A narrow figure steps through, his fingers stained with ink.'),
+  line('Severin Vale','Aimon. I wondered whether you would find the door without me. My name is Severin Vale. Do you want comfort, or directions?'),
+  line('Aimon','I want Pate and Trade. Are they really beyond that?','CHR-AIMON'),
+  line(fate==='SPARED'?'Hierophant Hasan':'The fortress custodian',fate==='SPARED'?'No. Severin Vale? That name appears in our oldest forbidden records. You cannot be standing here.':'Severin Vale? The Hierophant kept your name sealed in the oldest records. Nobody believed you were real.',fate==='SPARED'?'LDR-08':undefined),
+  line('Severin Vale','The dead do not vanish at once. For a time, a person remains themselves. Your friends may still be reached.'),
+  line('Severin Vale','But it is no simple resurrection. You must cross the underworld, find them before their identities fade, and return. Its ruler does not let people leave freely.'),
+  line('Walter','I cannot promise what that means for them. Nor can I call it sacrilege simply because I do not understand it.','CHR-AERIC'),
+  line('Aimon','Then I need to know how to get in.','CHR-AIMON'),
+  line('Severin Vale','The passage is open. First, prepare your partners. If you die below, no one is coming after you.')
+ ];
+ showDialogue(guideLines,()=>{
+  rewardTransaction(()=>{const q=finaleState(state);q.mirrorArrivalSeen=true;q.severinRevealed=true;q.rescueWindowExplained=true;q.gateRevealed=true;state.storyHistory??=[];if(!state.storyHistory.some(h=>h.id==='FN-MIRROR-SEVERIN-20261028'))state.storyHistory.push({id:'FN-MIRROR-SEVERIN-20261028',place:'Beneath Ramelle',people:['CHR-AIMON','SEVERIN-VALE','CHR-AERIC']});});
+  portal?.remove();buildMarkers();refresh();
+ });
+}
+function finaleAPI(){return {state,room,AREA_GATES,line,showDialogue,warp,rewardTransaction,buildMarkers,openModal,closeModal,escapeHTML,challengeTrainer,startWild,species:byId,$,rest:restAtPriest,art:combatArtSrc,create:(id,level,seed)=>newUnit(byId(id),level,seed),settleLeaderRewards,decisionHTML:leaderDecisionHTML,burial:playFinaleBurial,doubleBattle:startFinaleDouble,descent:startMirrorDescent,scene:showFinaleScene,clearScene:clearFinaleScene,rematch:t=>{registerLeaderRematches();const r=EXPANSION.trainers.find(r=>r.rematchOf===t.id);if(r)challengeTrainer(r);}};}
 function finaleInteract(id){return handleFinale(id,finaleAPI());}
 function playFinaleBurial(){const q=finaleState(state);if(finaleSceneBusy||q.buried||!BURIAL_LINES[q.burialCursor])return;finaleSceneBusy=true;showFinaleScene('burial');const index=q.burialCursor,args=BURIAL_LINES[index];showDialogue([line(args[0],args[1])],()=>{if(!rewardTransaction(()=>{finishBurialLine(state,index);if(finaleState(state).buried)grantMemorialPartners(state,(id,level,seed)=>newUnit(byId(id),level,seed));})){finaleSceneBusy=false;clearFinaleScene();return;}finaleSceneBusy=false;if(q.buried){clearFinaleScene();buildMarkers();const units=Object.values(q.legacies).map(r=>[...state.party,...state.reserve].find(u=>u.uid===r.uid)).filter(Boolean);openModal('Their travelling companions',`<p>Two friends join the road with you. Both have a permanent +15 percentage points in every growth rate. Their lives are now in your care.</p><div class="finale-legacy-pair">${units.map(u=>`<article><img src="${combatArtSrc(u)}" alt="${escapeHTML(u.species.name)}"><h3>${escapeHTML(u.species.name)}</h3><p>Lv. ${u.level} · ${escapeHTML(u.giftOrigin)}</p><small>${state.party.includes(u)?'Joined your expedition':'Waiting safely in reserve'}</small></article>`).join('')}</div><button id="fn-legacy-continue" class="primary">Continue together</button>`);$('#fn-legacy-continue').onclick=closeModal;}});}
 function startFinaleDouble(){clearFinaleScene();if(battle||presentationLocked||!lead()||!canFightFinale(state,'TRN-FN-DARIUS'))return;const before=wildCheckpoint(),q=finaleState(state),p=lead();presentationHealth=null;q.specimens??={};const ally=newUnit(byId('071'),103,'finale-hasan-serapine');ally.combatFloor=1;const enemies=FINAL_DARIUS.team.map((slot,i)=>{let u=i===0&&q.specimens.crux?hydrate(structuredClone(q.specimens.crux)):newUnit(byId(slot.species_id),slot.level,i===0?'finale-unique-crux':'darius-final-'+i);u.moves=slot.current_form_legal_move_ids.filter(id=>moveId(id)?.category).slice(-4).map(id=>({...moveId(id),left:moveId(id).pp}));u.hp=u.maxHp;u.status=null;u.stages={};u.dead=false;u.side='enemy';u.combatFloor=0;delete u.withdrawn;if(i===0){q.specimens.crux??=structuredClone(u);u.boundSovereign=true;u.combatFloor=1;}return u;});battle={kind:'wild',relicDouble:true,finaleDouble:true,alliedRivet:ally,participants:[p.uid],defeats:[],player:p,enemies,activeEnemyIndices:[0,1],reserveCursor:2,index:0,targetIndex:0,total:6,round:1,random:rng(Math.floor(worldRandom()*0xffffffff)||1),busy:true,finished:false,artReady:false,phase:'ready',history:[],log:'Hasan stands beside you. Choose one of the two active opponents; enemy reserves enter between rounds.'};const field={activeEnemyUids:enemies.slice(0,2).map(u=>u.uid),activePlayerUids:[p.uid,ally.uid]};p.combatFloor=0;beginAbilities(p,enemies.slice(0,2),[...state.party,ally],field);enterAbility(ally,enemies[0],{party:[...state.party,ally],field});bindMenagerieParty([...state.party,ally]);if(!persist()){rollbackWild(before);return;}showBattleSurface();renderBattle();const b=battle;void battleArtReady(p,ally,...enemies).then(()=>{if(battle!==b)return;b.artReady=true;b.busy=false;renderBattle();persist();});}
