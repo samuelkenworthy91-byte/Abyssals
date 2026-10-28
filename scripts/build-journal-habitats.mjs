@@ -39,6 +39,8 @@ assign([...Object.keys(ORCHARD_ROUTES),...COURT_ROOMS,'verdantJungle'],'Cossenne
 assign([...VERDANT_ROAD.map(r=>r[0]),...Object.keys(MARASEN_BRANCHES),'marasenBridges','marasenRapids','marasenCitadel'],'Marasen');
 assign([...STORM_ROAD.map(r=>r[0]),'stormRelay','stormCrags','stormWatch','stormShelter'],'Botrune');assign(SUN_ROAD.map(r=>r[0]),'Cayfen');assign(SPORE_ROAD.map(r=>r[0]),'Ramelle');
 assign(['guanApproach','guanShrine','feiApproach','feiCrossing'],'Cayfen');
+// Sporefall's optional branches use Ramelle's encounter ecology and rumours.
+assign(['sporeGrotto','sporeCanopy'],'Ramelle');
 for(const h of EXPANSION_HABITATS){towns.set(h.room,towns.get(h.parent));for(const suffix of ['Trail2','Trail3'])towns.set(h.room+suffix,towns.get(h.parent));}
 for(const root of ['philomereBackwaters','smugglersWeir','saltFlats','rescueGlade','anglersReach'])for(const suffix of ['Trail2','Trail3'])towns.set(root+suffix,towns.get(root));
 const rows={},add=(id,row)=>{if(!rows[id])rows[id]=[];if(!rows[id].some(r=>JSON.stringify(r)===JSON.stringify(row)))rows[id].push(row);};

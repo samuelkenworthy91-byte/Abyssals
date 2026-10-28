@@ -26,6 +26,8 @@ jobs:
           for file in dist/*.js; do node --check "$file"; done
           python3 -m pip install --quiet Pillow==11.1.0
           python3 scripts/audit-action-art.py
+          node scripts/build-journal-habitats.mjs
+          git diff --exit-code -- dist/journal-habitats.js
           for test in tests/*.test.mjs; do node "$test"; done
           node tests/bag-lift.test.mjs
           node tests/branches-berries.test.mjs
