@@ -26,7 +26,11 @@ for(const id of ['LDR-07','LDR-08'])for(const fate of ['SPARED','EXECUTED']){con
 let n=s.finale.commissions.length;const work=createCommission(s,s.party[0].uid,{palette:'river',shape:'open',tool:'wash'});assert.equal(work.score,3);assert.equal(s.finale.commissions.length,n+1);assert.equal(s.money,800+(work.partnerAffinity?100:0));assert(!createCommission(s,'absent',{palette:'river',shape:'open',tool:'wash'}));
 for(const t of FINALE_TRAINERS)for(const slot of t.team){assert.equal(t.team.length,t.id.startsWith('LDR-')||t.finaleDouble?6:slot&&t.team.length);const legal=legalMoves(slot.species_id,slot.level);for(const m of slot.current_form_legal_move_ids)assert(legal.includes(m));}
 assert.equal(FINALE_TRAINERS.find(t=>t.id==='LDR-08').team.at(-1).species_id,'071');assert.equal(FINALE_TRAINERS.find(t=>t.id==='LDR-08').team.at(-1).level,105);
-for(const r of [...SUN_ROAD,...SPORE_ROAD])for(const table of finaleRoute(r[0]).tables){assert.equal(table.slots.length,6);assert.equal(table.slots.reduce((n,v)=>n+v.weight,0),100);}
+for(const r of [...SUN_ROAD,...SPORE_ROAD,['sporeGrotto'],['sporeCanopy']])for(const table of finaleRoute(r[0]).tables){assert.equal(table.slots.length,6);assert.equal(table.slots.reduce((n,v)=>n+v.weight,0),100);}
+assert(['sporeRim','sporeDepths','sporeBridge','sporeGrotto','sporeCanopy'].every(room=>NEW_MAPS[room]?.finaleArt?.startsWith('spore-')));
+assert(NEW_MAPS.sporeDepths.gates.some(g=>g.to==='sporeGrotto'));
+assert(NEW_MAPS.sporeBridge.gates.some(g=>g.to==='sporeCanopy'));
+assert(['cayfen','ramelle'].every(room=>NEW_MAPS[room].spots.filter(p=>p.id.startsWith('fn-')).length>=4));
 const flood=(room,start)=>{const q=[start],seen=new Set();for(let i=0;i<q.length;i++){const [x,y]=q[i],k=x+','+y;if(seen.has(k)||newBlocked(room,x,y))continue;seen.add(k);q.push([x-1,y],[x+1,y],[x,y-1],[x,y+1]);}return seen;};
 for(const [room,m]of Object.entries(NEW_MAPS).filter(([,m])=>m.finale)){
  const seen=flood(room,m.finaleInterior||room==='afterlifeThreshold'?[24,24]:[3,m.road[0][1]]);assert(seen.size>30,room);

@@ -7,7 +7,7 @@ export function finaleWalkable(m,x,y){if(!m.finale)return null;if(m.finaleSolids
 export function installFinaleWorld(maps,doors){
  const base=(id,name,art,y=17,walk=null)=>maps[id]={name,area:id,bloom:true,hub:false,terrain:'finale',finale:true,finaleArt:art,finaleWalk:walk||[rect(1,y-2,46,y+2),rect(5,13,43,24)],finaleSolids:[],road:[[1,y],[46,y]],sidePaths:[],grass:[],props:[],spots:[],gates:[]};
  for(const [entries,previous,next]of [[SUN_ROAD,'botrune','cayfen'],[SPORE_ROAD,'cayfen','ramelle']])for(const [i,r]of entries.entries()){
-  const [id,name,,,art]=r,y=id==='burialGrove'?24:17,m=base(id,name,art,y);m.grass=id==='burialGrove'?[]:[[6,14,13,15],[33,20,41,23]];
+  const [id,name,,,art]=r,y=id==='burialGrove'?24:17,m=base(id,name,({'sporeRim':'spore-rim','sporeDepths':'spore-depths','sporeBridge':'spore-bridge'}[id]||art),y);m.grass=id==='burialGrove'?[]:[[6,14,13,15],[33,20,41,23]];
   if(id==='burialGrove')m.finaleWalk=[rect(1,21,46,27),rect(17,15,31,25)];
   if(id.startsWith('spore')){m.finaleWalk=[rect(1,15,46,19),rect(7,13,14,22),rect(20,13,29,22),rect(34,13,42,22)];m.grass=[[8,13,13,14],[35,20,41,22]];}
   const prev=i?entries[i-1][0]:previous,py=prev==='burialGrove'?24:prev==='botrune'?24:17,to=i<entries.length-1?entries[i+1][0]:next,ty=to==='burialGrove'?24:17;
@@ -34,6 +34,19 @@ export function installFinaleWorld(maps,doors){
  interior('ramelleFortress','ramelle','Ramelle · Hasan’s Alabaster Fortress','fortress',[37,11],[npc('LDR-08','Hierophant Hasan ibn Ibrahim',24,13,'LDR-08'),prop('fn-fortress-below','The stair beneath the fortress',35,19)]);
  const threshold=base('afterlifeThreshold','Beneath Ramelle · The Answering Mirror','mirror',24,[rect(8,10,40,28)]);threshold.area=null;threshold.gates=[gate('fn-threshold-back','Return to Hasan’s fortress',24,27,'ramelleFortress',[34,19,'left'])];threshold.spots=[prop('fn-afterlife','The answering mirror · afterlife threshold',24,11),npc('fn-threshold-walter','Walter at the threshold',18,20,'CHR-AERIC')];
  maps.sporeRim.spots=[npc('TRN-FN-SPORE','Lantern warden Safiya',25,19,'TRN-SC-stormBluffs-2'),prop('fn-spore-sign','Read the crossing markers',12,20)];maps.sporeDepths.spots=[npc('fn-spore-refugee','A frightened First Light medic',13,20,'SHOP-PHI')];maps.sporeBridge.spots=[npc('TRN-FN-LAST','A fleeing company captain',25,19,'TRN-SC-stormBluffs-1'),npc('fn-wounded-bloom','A wounded Dawnbloom soldier',13,20,'TRN-C01-002')];maps.sporeCrown.spots=[npc('fn-darius','Darius · The Last Peace',28,17,'REV-DARIUS-FINAL'),npc('fn-hasan-ally','Hasan · a shared defence',21,20,'LDR-08'),npc('fn-wounded-first','A wounded First Light soldier',12,20,'TRN-C02-001'),prop('fn-crux-encounter','Cruxwyrm · the freed sovereign',37,20)];
+ // The visible northward paths lead to optional habitats, not invisible dead ends.
+ for(const [id,parent,art,title] of [
+  ['sporeGrotto','sporeDepths','spore-grotto','Sporefall · The Moonpool Grotto'],
+  ['sporeCanopy','sporeBridge','spore-canopy','Sporefall · Crown of Roots']
+ ]){
+  const m=base(id,title,art,14,[rect(1,14,46,15),rect(15,10,37,23)]);m.gates=[gate(id+'-back','Return to Sporefall',1,14,parent,[24,12,'down'])];
+  m.spots=id==='sporeGrotto'?[npc('fn-spore-lichen','A lichen surveyor',31,14,'REV-MARYAM'),prop('fn-spore-moonpool','Read the moonpool inscription',19,15)]:[npc('fn-spore-herbalist','A canopy herbalist',30,14,'REV-MARYAM'),prop('fn-spore-bridge-notes','Read the crossing diary',18,15)];
+  maps[parent].gates.push(gate('fn-'+id+'-entry',title,24,6,id,[3,14,'right']));
+  maps[parent].sidePaths.push({points:[[24,14],[24,6]]});
+ }
+ maps.ramelleFortress.spots.push(npc('fn-fortress-custodian','Keeper of the old stair',29,14,'REV-MARYAM'));
+ maps.cayfen.spots.push(npc('fn-cayfen-courier','A canvas courier',31,17,'REV-MARYAM'),npc('fn-cayfen-chimes','A bell-maker',17,17,'SHOP-PHI'));
+ maps.ramelle.spots.push(npc('fn-ramelle-medic','A sanctuary aide',32,15,'REV-MARYAM'),npc('fn-ramelle-archivist','A vault archivist',11,15,'SHOP-PHI'));
  // Geometry follows the finished raster maps, not the initial image prompts.
  const profiles={
  road:{y:21,walk:[[1,21,46,22],[24,2,24,21],[9,16,15,19],[27,18,39,20]]},
@@ -43,6 +56,11 @@ export function installFinaleWorld(maps,doors){
  guan:{y:14,walk:[[1,14,46,15],[17,10,31,17],[23,6,25,10],[23,18,25,23]]},
  fei:{y:14,walk:[[1,14,46,15]]},
  spore:{y:14,walk:[[1,14,46,15],[21,12,27,16]]},
+ 'spore-rim':{y:14,walk:[[1,14,46,15],[21,12,27,16]]},
+ 'spore-depths':{y:14,walk:[[1,14,46,15],[21,12,27,16],[23,6,25,14]]},
+ 'spore-bridge':{y:14,walk:[[1,14,46,15],[21,12,27,16],[23,6,25,14]]},
+ 'spore-grotto':{y:14,walk:[[1,14,46,15],[16,10,37,23],[23,7,25,18]]},
+ 'spore-canopy':{y:14,walk:[[1,14,46,15],[10,11,40,22],[23,7,25,18]]},
  darius:{y:13,walk:[[1,12,46,14],[18,9,29,17]]},
  cayfen:{y:17,walk:[[1,16,46,18],[9,11,10,16],[37,11,38,16],[23,19,25,29],[1,29,46,29],[10,27,10,29],[38,27,38,29]]},
  ramelle:{y:15,walk:[[1,15,46,16],[23,2,25,29],[12,10,13,15],[36,10,37,15],[12,27,13,29],[35,27,36,29],[2,29,45,29]]},
@@ -77,7 +95,7 @@ export function installFinaleWorld(maps,doors){
  maps.sunFalls.gates.find(g=>g.id==='fn-guan-entry').arrival=[3,15,'right'];maps.sunTerraces.gates.find(g=>g.id==='fn-fei-entry').arrival=[3,21,'right'];maps.botrune.gates.find(g=>g.id==='botrune-next').arrival=[3,21,'right'];
  // Proper habitat strips on safe ground; the cliff and water never host encounters.
  maps.sunBank.grass=[[27,18,39,20]];maps.guanApproach.grass=[];maps.feiApproach.grass=[[27,18,39,20]];
- maps.sunTerraces.grass=[[31,14,39,14]];maps.sporeRim.grass=[[21,12,27,13]];maps.sporeDepths.grass=[[21,12,27,13]];maps.sporeBridge.grass=[[21,12,27,13]];
+ maps.sunTerraces.grass=[[31,14,39,14]];maps.sporeRim.grass=[[21,12,27,13]];maps.sporeDepths.grass=[[21,12,27,13]];maps.sporeBridge.grass=[[21,12,27,13]];maps.sporeGrotto.grass=[[18,12,22,13],[28,19,34,20]];maps.sporeCanopy.grass=[[18,12,22,13],[30,18,35,19]];
  maps.sunTerraces.spots.push(prop('fn-rare-record-suncub','Read the sun-keeper’s field record',24,4),prop('fn-rare-encounter-suncub','Suncub · the warm terrace',24,7));maps.sporeDepths.spots.push(prop('fn-rare-record-gehennuar','Read the deep warden’s field record',26,12),prop('fn-rare-encounter-gehennuar','Gehennuar · the luminous depths',26,15));
  // All town caravan arrivals lie on the broad central boulevard.
 
