@@ -5,5 +5,19 @@ await page.evaluate(()=>window.__fnQA.boot('burialGrove',false));await page.wait
 for(const room of ['sunBank','sunFalls','guanShrine','feiCrossing','cayfen','cayfenGallery','sporeDepths','sporeCrown','ramelle','ramelleFortress','afterlifeThreshold']){await page.evaluate(room=>window.__fnQA.boot(room),room);await page.waitForTimeout(400);await page.locator('#viewport').screenshot({path:'build/qa/finale-'+room+'.png'});}
 await page.evaluate(()=>{window.__fnQA.boot('cayfenGallery');window.__fnQA.act('fn-art-commission');});await page.locator('#fn-create').click();await page.locator('[data-fn-artist]').first().click();for(const v of ['river','open','wash'])await page.locator('[data-fn-choice="'+v+'"]').click();assert.equal((await page.evaluate(()=>window.__fnQA.snapshot())).works.length,1);await page.screenshot({path:'build/qa/finale-commission.png'});
 await page.evaluate(()=>{window.__fnQA.boot('sporeCrown');window.__fnQA.startDouble();});await page.waitForSelector('[data-double-menu="fight"]:not([disabled])');assert.equal(await page.locator('.double-foe').count(),2);assert.equal(await page.locator('#double-capture').count(),0);await page.locator('[data-double-menu="fight"]').click();await page.locator('[data-double-move]:not([disabled])').first().click();assert.equal(await page.locator('[data-double-target]').count(),4);assert.equal(await page.locator('.double-target-menu').count(),1);await page.locator('[data-double-back]').click();await page.locator('[data-double-back]').click();await page.locator('#double-wait').click();await page.waitForFunction(()=>window.__fnQA.snapshot().battle.round===2);await page.waitForTimeout(1200);if(await page.locator('#farewell-continue').isVisible())await page.locator('#farewell-continue').click();await page.waitForFunction(()=>window.__fnQA.snapshot().battle.round===2&&!document.querySelector('#double-switch')?.disabled);assert.equal((await page.evaluate(()=>window.__fnQA.snapshot())).battle.reserve,2);await page.screenshot({path:'build/qa/finale-double.png'});await page.evaluate(()=>window.__fnQA.reload());await page.waitForSelector('#double-wait');assert((await page.evaluate(()=>window.__fnQA.snapshot())).battle.finale);await page.evaluate(()=>window.__fnQA.finishDouble());
-for(const id of ['LDR-07','LDR-08']){await page.evaluate(id=>window.__fnQA.fate(id),id);await page.locator('#fn-spare').click();const s=await page.evaluate(()=>window.__fnQA.copy());assert.equal(s.state.fates[id],'SPARED');assert(s.state.finale[id==='LDR-07'?'mirrorLead':'gateRevealed']);await page.evaluate(()=>window.__fnQA.close());}
+for(const id of ['LDR-07','LDR-08']){
+ await page.evaluate(id=>{window.__fnQA.boot('ramelleFortress');window.__fnQA.fate(id);},id);
+ await page.locator('#fn-spare').click();
+ const receipt=await page.evaluate(()=>window.__fnQA.copy());
+ assert.equal(receipt.state.fates[id],'SPARED');
+ assert(receipt.state.finale[id==='LDR-07'?'mirrorLead':'gateRevealed']);
+ if(id==='LDR-08'){
+  for(let i=0;i<6&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
+  await page.waitForSelector('#hell-portal',{timeout:15000});
+  assert.equal(await page.locator('#hell-portal img').getAttribute('src'),'assets/finale/severin-guide.svg');
+  await page.screenshot({path:'build/qa/finale-severin-portal.png'});
+  for(let i=0;i<18&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
+  await page.waitForFunction(()=>window.__fnQA.copy().state.finale.mirrorArrivalSeen,{timeout:10000});
+ }else await page.evaluate(()=>window.__fnQA.close());
+}
 assert.deepEqual(errors,[]);console.log('PASS: live finale environments, interrupted burial and atomic gifts, partner art commission, real 2v2 turn and save resume, both leader outcomes.');await browser.close();})().catch(e=>{console.error(e);process.exit(1)});
