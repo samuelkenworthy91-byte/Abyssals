@@ -1,8 +1,8 @@
 {
-  "version": "0.90.48",
-  "version_code": 143,
-  "filename": "Abyssals-v0.90.48-Action-and-Glass.apk",
-  "title": "Abyssals v0.90.48 — Action and Glass",
-  "notes": "63 authored sixteen-frame pixel-art battle effects: all 43 Tide & Orchard moves, four passive effects and 16 older moves. Mercy Edge retains its original First Light graphics. Stillwater uses three clear sword cuts followed by glass shattering, with actual strike timing and HP presentation. Older ordinary effects now use action-first choreography and pixel-grid atlases rather than type-first recolouring. 820 later learning choices across 256 species repair branch and late-level progression; Flaskling remains deliberately minimal. All intended Codex techniques are stocked, free relearning respects learning methods, and already learned moves are retained. Existing saves, permanent deaths, quests, package and original signing identity are preserved.",
-  "pwa_filename": "Abyssals-v0.90.48-PWA.zip"
+  "version": "0.90.49",
+  "version_code": 144,
+  "filename": "Abyssals-v0.90.49-Clearer-Moves.apk",
+  "title": "Abyssals v0.90.49 — Clearer Moves",
+  "notes": "Animation frames rebuilt from original detailed sources at 192x192 instead of 64x64, at the same screen size, plus 35% longer animation timing make anticipation, contact and aftermath easier to follow. Fixes the town leader freeze after attacks such as Avalon Cleave: animation anchors now find the player health panel inside the leader portrait layout. Both attack directions, all eight leaders and Full/Reduced motion are covered by live browser regression tests. Original Mercy artwork and timing, existing saves, quests, permanent deaths, package and original signing certificate are preserved.",
+  "pwa_filename": "Abyssals-v0.90.49-PWA.zip"
 }

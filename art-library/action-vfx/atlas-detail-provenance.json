@@ -1,0 +1,156 @@
+[
+  {
+    "file": "moves-bug.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "1b08244ee1fc19da19d99959e62b84f1151ec96cd9cb260340891afdfd40ee79",
+    "runtimeSha256": "c0777f8fb49a25369aaf8dc47ba80ce660475fb2502040b5ff22cb4be44ed0bc",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-grass.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "facf64ab733774e2718433966bdb7b9b837ed9926655291c5998f8293bcf3fb2",
+    "runtimeSha256": "522e5776f95064774ab01ced97fb847aa02655dd53247554825b191de440552f",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-normal.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "4cdc3498363454769d63739727bf33c426cd24a03c5116ae886dd33d134ed47c",
+    "runtimeSha256": "f91b3b838909a64c05ff92a78631658b219d995842b918a2840e4cadfc115060",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-poison.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "e422fa875ea14954b3b43ab91d6fae31ea0a04cc1d33c6c2f52f00e5dbfa3a52",
+    "runtimeSha256": "9d5cfe341b9fda53f53fadcd1aeea8f33cb823b715eba666e377743fd86c1a6a",
+    "logicalCell": 192
+  },
+  {
+    "file": "signature-d.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "7b130614f814c58f7bbdd0a6c8b7fcfb2ec5be34f582de7aaa77fb594aa916ce",
+    "runtimeSha256": "4491575f42b558fe1ba165bbb9242430552df2b4f1dae06468d63c2f1c800ba1",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-psychic.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "aa3c1b702164520130847f83e99f1391ed1727f1b17835a8df91a996356816bb",
+    "runtimeSha256": "7be107308036fdf5c43f3189ea183cbe6530c17442cd2ad48d7280f4e8caca7b",
+    "logicalCell": 192
+  },
+  {
+    "file": "signature-c.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "1c5af8c97815367eca602ae9e787ebf6b7c8eb9a3eef622f6c62214d6bbd74c5",
+    "runtimeSha256": "514ef85f3d42607571963f65ff6a093f3ec2a739a7e52981df5b991dee77b113",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-dragon.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "95a87b7a2eb356d32f593f5edfa2e626c3069e9197fa84867676c6b607cd59fc",
+    "runtimeSha256": "d6aefbcd7f12ba06ac2a8cecf76ddc109e4b81c4b390de29287790a3c92f2543",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-ice.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "38765e5c759d5d0ff96f06a8f66c6cdafa74eb851b3ab427d681a59a190d1019",
+    "runtimeSha256": "e107572626d9eb6211d503b03c9f894738e9ba61df6a5d583ee9c76adfeaf8c2",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-flying.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "020482f90b5df01a0f0f65311cb2053b5a025fa11d40c82dce57f3c5c2e073ac",
+    "runtimeSha256": "41ca687c5b700caf1178e40f4c17597840022e83443e55745c740dc4c935b590",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-fire.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "7b69a286e9fb0464a5f12f0683a07c9ea58e6017400b68716b3a406740ab32bd",
+    "runtimeSha256": "63fd010442c5ada220a05073cc9cc4e10966e0f3b5f6899e2db1b8de94e0d317",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-steel.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "f5f8c1533234c8f54170d4bc5b1a7b9a0018b412d2e23070cf3419578c207182",
+    "runtimeSha256": "201f37ec6359eaf4a31eafd2ff3df1aee2c82bf7959fe377b67b8733c246350d",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-ground.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "dffb727dd13ce360c890d219114b607bf61dbb69b3f7a746286ad30b28528db2",
+    "runtimeSha256": "50882bdaae8e78fb07bab0c7d7170781a4bc291739d32d6efe206d5f46f76356",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-electric.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "366d1a6ba2601e43cb347b68f351d4bda5b3844f71ff2994ea91e59d4e4b08f4",
+    "runtimeSha256": "5a12898e5cbab9c624f5fc9e744b598ed41106b952db3dc1925135a9943a99bf",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-rock.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "76fff36eb30d75af719cdd07ec5a8a442159454ca764f1876f963c21018299dc",
+    "runtimeSha256": "3b58370703e72ea2a3ddcf7eb9164503cd64f2314f910d7e506035b853d28b40",
+    "logicalCell": 192
+  },
+  {
+    "file": "signature-b.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "28beb809169a99d410553e9e6f262a1ec32d0808caf4458bf179f31fce783316",
+    "runtimeSha256": "80f6980db1950f04664b6c73e5cdb55e48740cfa18b70397e9ffd8c87387d017",
+    "logicalCell": 192
+  },
+  {
+    "file": "signature-a.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "0a558676beef7ca699d313dbc4470d14cda29388ea77668c44d25a0fb1d5ec2f",
+    "runtimeSha256": "0b75740a7dc63533a5ffb48cf1494ed5a605dede81f7991cb2da7e3c2a05014e",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-fighting.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "504827a1fd02f4b723f3143f4d0d1dbac83e16455695fad3fa6348a7b3593b85",
+    "runtimeSha256": "2581b9ebd59a8149de8157e5d5f19eabca39f84da3dfbb53021311394df53173",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-fairy.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "1aac25b71532c50e2fb4ea16202c610e56064753bc13d305d07429691aa90f63",
+    "runtimeSha256": "53e761505f42b779c69556a569451451b4e95a200b9a64fdffa97c7904ebb06b",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-ghost.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "b1152a5e7aa36fc055ee54ed19851aaabe05e0bbea9d503ecab9f4eeeec88d01",
+    "runtimeSha256": "76d68e91d6ac48077f5d3350e7cd4655fc4c2c74baede5533ba2f2c1d65bd13e",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-dark.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "729bbe7ed60cd533098bae64fd1efd5b9e443cc85e97876391d6901d1d279fad",
+    "runtimeSha256": "95dd3a258d80fbf5b85b0a737a9120f250941c0b1afec693ff96d6b739bd94b0",
+    "logicalCell": 192
+  },
+  {
+    "file": "moves-water.webp",
+    "sourceCommit": "487b69dfb66491bf70b883b0737aa22f4800f038",
+    "sourceSha256": "ca5616fe3872dbfbfc46396052e9738c3bb6cb648564ece5daa8625b00b62911",
+    "runtimeSha256": "951f84986edf831473e309e74d7fd15a198e4e96bb503602fe8552740fde21ba",
+    "logicalCell": 192
+  }
+]

@@ -45,6 +45,7 @@ jobs:
         run: |
           node tests/action-vfx-browser.cjs
           node tests/tide-orchard-browser.cjs
+          node tests/elite-leaders-browser.cjs
       - name: Check every bag pocket and all six lift journeys
         run: node tests/bag-lift-browser.cjs
       - name: Check lift, Prodigy indicators and equipment on portrait phone
@@ -61,3 +62,4 @@ jobs:
           path: |
             build/qa
             build/review/*.html
+

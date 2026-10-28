@@ -18,15 +18,16 @@ assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,63);
 for(const art of Object.values(ACTION_ART)){
  assert(fs.existsSync('dist/'+art.src),art.name);
  const m=move(art.id)||{id:art.id,type_id:'WATER',category:'SPECIAL',power:50};
- assert(effectSpec(m).pixel,art.name);
+ assert(effectSpec(m).pixel,art.name);assert.equal(effectSpec(m).duration,Math.round(art.duration*1.35));
  const html=effectHTML(m);assert(html.includes('data-action-art='),art.name);assert(!html.includes('<svg'),art.name);
- assert.equal(art.frames,16);assert.equal(art.logicalCell,64);
+ assert.equal(art.frames,16);assert.equal(art.logicalCell,192);
 }
 assert.deepEqual(actionFrames({id:790},{hitCount:0}),[]);
 assert(!actionFrames({id:790},{hitCount:1}).includes(4));
 assert(!actionFrames({id:790},{hitCount:2}).includes(7));
 assert.equal(actionFrames({id:790},{hitCount:3}).length,16);
 assert(ACTION_ART[790].sequence.includes('no water'));
+assert.equal(effectSpec({id:999,salvation:true,power:40}).duration,1600,'original Mercy timing retained');
 const u=unit('517',60);
 assert(!relearnPool(u).some(m=>m.id===784),'untaught Codex move cannot leak through free relearning');
 assert(!applyRelearn(u,784,-1),'confirmation rejects it too');
@@ -51,3 +52,4 @@ const result=applyMove(b,a,{...move(742),left:10},()=>.5,{floor:0}),reply=result
 assert.equal(reply.strikes.length,3);assert.equal(reply.strikes.reduce((n,s)=>n+s.damage,0),reply.damage);
 assert(reply.hpChanges.length);assert(result.presentationMainChanges);
 console.log('PASS: 63 raster animations, actual counter strikes, Codex acquisition, method-aware relearning, save retention and post-evolution progression.');
+

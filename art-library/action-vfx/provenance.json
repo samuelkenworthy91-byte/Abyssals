@@ -5,10 +5,15 @@
     "brief": "A compact rippling water pulse with droplets and a splash impact.",
     "generator": "built-in image_gen",
     "sourceSha256": "af86fdc7295587544d7cda7bf991cf647f4e5cd06003b130d7a4b27553cc6d97",
-    "runtimeSha256": "8081252b4871129003b411fef74c946adc7aaa66c7528b1dce72dd97519f3f41",
-    "logicalCell": 64,
+    "runtimeSha256": "f14e58934396807757c0733db3b277e52fa44dcce099ab979aa40fe9b058a0b0",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 743,
@@ -16,10 +21,15 @@
     "brief": "Measured breath wisps drawing inward, then a calm focus highlight.",
     "generator": "built-in image_gen",
     "sourceSha256": "ea05cc94af1e1a3da89e48bef792f66e30729df0cc71a69b68f1861cea25795c",
-    "runtimeSha256": "d3a1b8759d7e44f888bd794787b695a305c36230c0d0b47eea50b31820f02486",
-    "logicalCell": 64,
+    "runtimeSha256": "00562d91e46d2445ca436fa0990325341462fb78938e16ba80c92953e634fe94",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 744,
@@ -27,10 +37,15 @@
     "brief": "Layered drifting pixel mist, with soft shapes built from clusters rather than blur.",
     "generator": "built-in image_gen",
     "sourceSha256": "965416cadbd1f994b0d79512a2ab1b1370324e9bcdb0add4c341fb4c3da81de8",
-    "runtimeSha256": "45301cebe293a072293f686e9504339051c913f1941498da1fa6af549c1b74b7",
-    "logicalCell": 64,
+    "runtimeSha256": "3aa22fc557637bdc3bdca178f04b021d335b209a468b7f4e13bddb181deaeb5e",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 745,
@@ -38,10 +53,15 @@
     "brief": "A dark current closes around the target and leaves a readable brief mark.",
     "generator": "built-in image_gen",
     "sourceSha256": "84d6f324aad83216c899ee79c0b775e77e288f5038d744fd3554d04c527e67a1",
-    "runtimeSha256": "bbe4ab20ca354cb95b2fd7806f7c2fab04911742c804206ada95cb0628d00aef",
-    "logicalCell": 64,
+    "runtimeSha256": "b00e5b6ef2614d151fb7f0666e75f297de3017c84c0e24a87af8b429f1d6a5f2",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 746,
@@ -49,10 +69,15 @@
     "brief": "A curved sheet of shaded water with a riposte-ready glint.",
     "generator": "built-in image_gen",
     "sourceSha256": "055b2cd86375ed98de5fdabba38a1a911a4fc98c97a6b495a9789dd772fa2d01",
-    "runtimeSha256": "06350de08f42a5c03a1a9073261383eb6556f9b5d425f31d8bbf3bc59a46e06f",
-    "logicalCell": 64,
+    "runtimeSha256": "490cb3a4ca18947e4e219e686cad1ee9b7719d73ebb0e8b6173c4a7f0ba7c364",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 747,
@@ -60,10 +85,15 @@
     "brief": "Sharp briny water bursts and salt-like sparkles at the wound; remove the triangle emblem.",
     "generator": "built-in image_gen",
     "sourceSha256": "1e806ef16c03e2518712c23da48a46cda6624ddcefdd71624d5fdbce2246f6a8",
-    "runtimeSha256": "8948fd8e4ab4dc97d100c7567374ca67e20c5aeb6e03b5e22948bf412c21491a",
-    "logicalCell": 64,
+    "runtimeSha256": "48354c0418a70c9480cdccce2af332a88ee721ba66ca71fe452c17b3b2c7db0e",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 748,
@@ -71,10 +101,15 @@
     "brief": "A dense dark-water surge with a different cadence from Rill Pulse.",
     "generator": "built-in image_gen",
     "sourceSha256": "ce164daf7646deacff4890664afe54c33a703ce950e4fcfe3c11400b25ee9104",
-    "runtimeSha256": "107ae6abc919bc05959eaf63685325618a902dceeffbe85f056da34358e62c6c",
-    "logicalCell": 64,
+    "runtimeSha256": "33807f8d842b8e523ba20b512628d62694ef13eb1b4df7af73bbd8d795d9a530",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 749,
@@ -82,10 +117,15 @@
     "brief": "An incoming current turns and lashes back; direction change is the identity.",
     "generator": "built-in image_gen",
     "sourceSha256": "bb4ef7366e5f51cb84291e6a39f764367dbcc7e13501281a008cfb0a0d3bd91b",
-    "runtimeSha256": "6d671bc02be2a61b6a1c36cc8c04159c1386e20b4d417667419182523e189aa0",
-    "logicalCell": 64,
+    "runtimeSha256": "3c9d4028bed8491d62a51613775fc34bdd5c692dd3ce4b5cc1b4a53a5be5428b",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 750,
@@ -93,10 +133,15 @@
     "brief": "Water settles around the user before a restrained rising focus cue.",
     "generator": "built-in image_gen",
     "sourceSha256": "8e4865d7bb15b7f7a06f12f1a4299f734d6d6c0cbd42850fd5749aefc587aa38",
-    "runtimeSha256": "4db54aed9692470cab1b13e5ee36bf2a9ccb891a815e3c28c28e471ca2c5ab8f",
-    "logicalCell": 64,
+    "runtimeSha256": "dfb280c0fd938c5baa7b7a8520cdb92dc5ab3325b26347388ffef44123ede6d4",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 751,
@@ -104,10 +149,15 @@
     "brief": "Distinct large dark-water choreography with a deliberate closing impact.",
     "generator": "built-in image_gen",
     "sourceSha256": "72fd7bcf1f140400948e393d3163151bcdab9cb0db7676f19a8473dc66fa965a",
-    "runtimeSha256": "aef79fda36724b69a7321ba2838f8f08d50c2505bd8371d64fc885d22a00a361",
-    "logicalCell": 64,
+    "runtimeSha256": "99923b455702102f541d80cc65139565f6a1a5ce1ed99bb88dbceaee87f20e6f",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 752,
@@ -115,10 +165,15 @@
     "brief": "A low fog sweep erases visible boost motifs.",
     "generator": "built-in image_gen",
     "sourceSha256": "14b200e06dd5f036226604b0627c949dcada2f86b8f46ced81ea580b0a846310",
-    "runtimeSha256": "4dab8e87ae69a9e864f4ca84bb8465e094a8255ccc6b6e4a3568b0bac28a7216",
-    "logicalCell": 64,
+    "runtimeSha256": "7cc0300b0d25d2b3b63890e0ce587b2db0bea2e81174de4299005af82165faff",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 753,
@@ -126,10 +181,15 @@
     "brief": "A concentrated water lance with a forceful splash and trailing spray.",
     "generator": "built-in image_gen",
     "sourceSha256": "d32cbdb18d014837005a6e36b4aa99b53133226cf3ad2cb6c7c1c0f117108455",
-    "runtimeSha256": "89c829f9df83a1363fc8c6fc5d94d55ec6fbf5f5edd6f23e29cd713ac5274fa8",
-    "logicalCell": 64,
+    "runtimeSha256": "b9a2ee9304915eec4da2ba6a174c312601923d615622b00834decd5d3dab86cd",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 754,
@@ -137,10 +197,15 @@
     "brief": "A reflective moonlit surface catches an impact and returns it.",
     "generator": "built-in image_gen",
     "sourceSha256": "b0c18c59ef420cba9d896597e4c68b33fc7c4d5a7083404376c0fac378ac70a0",
-    "runtimeSha256": "692b3c1415aeca08b95eaff77253e865f90c5de9a8e0c16b3949f49a145ca83e",
-    "logicalCell": 64,
+    "runtimeSha256": "0eeef638b71632fb05b6fbd7d1d2f3218b02e74d0bd8820f28884bef245b9dcb",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 755,
@@ -148,10 +213,15 @@
     "brief": "Small playful wind curls and leaf scraps.",
     "generator": "built-in image_gen",
     "sourceSha256": "0b29e4f7dd8f5b2c8abb3b2a55723430ed620bf275b9ba41ba743659ea7953b5",
-    "runtimeSha256": "be98138cfde9ec8f8f13aeae21d486a5f40090560cc30c9fc703b07c13ca7223",
-    "logicalCell": 64,
+    "runtimeSha256": "c29649535d9f38395dee07380252895ec62dcc46614afc61e9d62190b543e7ef",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 756,
@@ -159,10 +229,15 @@
     "brief": "Shaded feathers drift and sweep across the target.",
     "generator": "built-in image_gen",
     "sourceSha256": "185621d29c9e8f9f78fd63417a074bc169d3eb55ce1c8843412709df1ba8a593",
-    "runtimeSha256": "c0b515a2dc9c684e3587a89aa06525671960d175c4bbfa5d3f613c20ee0558ea",
-    "logicalCell": 64,
+    "runtimeSha256": "ee202d591a9c3d66880791cdcdd2cd38b7c67bee2e714875da93cadb98c0b2a0",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 757,
@@ -170,10 +245,15 @@
     "brief": "A recognisable berry consumption beat followed by recovery motes.",
     "generator": "built-in image_gen",
     "sourceSha256": "d3c6b4192b0a191da11ec91533b3573bf908727f11f62e1fbd109ced5ea83cfc",
-    "runtimeSha256": "3e14e1cb5cf716e9fd8f0ec7db8802c14ca170cd4734da3677e823ddd1c29956",
-    "logicalCell": 64,
+    "runtimeSha256": "cc0c6855c4f9ba1fd935d85ddfff2c418234ae4e43b6ffd5a52cc6cd81e21f48",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 758,
@@ -181,10 +261,15 @@
     "brief": "Rising air lifts leaves in a broad upward flow.",
     "generator": "built-in image_gen",
     "sourceSha256": "2bc6a3679653e6e52f09e0df22d7fe3e211015f8acd10551a4149f9efd39dcef",
-    "runtimeSha256": "106c7e9aeeacbb8da848881b715785675df096970ce19bcda93c4d08261a29cf",
-    "logicalCell": 64,
+    "runtimeSha256": "ff3a9e5ce78a429e445c29a6f3a24fb65a8ced4aab82845df9c473ee5b40cfc9",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 759,
@@ -192,10 +277,15 @@
     "brief": "Several narrow wind blades with crisp cutting contacts.",
     "generator": "built-in image_gen",
     "sourceSha256": "e9b918a8f11d1e97348f3147abefc6119289e45783248b61d7e0a9739aa3f149",
-    "runtimeSha256": "7cc5bc968487707d2b4c4f77c3d0cdd5e16ed8b73221a8517ed1bbe215225729",
-    "logicalCell": 64,
+    "runtimeSha256": "add59a06543ed2f8027ae70f1ab84eed6bf615a343dfacd03d018691f00f7f30",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 760,
@@ -203,10 +293,15 @@
     "brief": "Roots visibly grow towards and bind the target.",
     "generator": "built-in image_gen",
     "sourceSha256": "eb0d38527e2832416d0c56d42235d6d5109129499fa9cb36b9796a94ff86436f",
-    "runtimeSha256": "ddeca65506d803ac62f1c6fdfcc7c333da1f9cf7197e3f710a2192e53314d4ed",
-    "logicalCell": 64,
+    "runtimeSha256": "cefad75a09cb462fe8df1b9c963cfdbc6a6d5e9b348ab14225fabda50ad92167",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 761,
@@ -214,10 +309,15 @@
     "brief": "The user settles beneath foliage; recovery gathers gently.",
     "generator": "built-in image_gen",
     "sourceSha256": "f59f7ebaaa421864c98ab81c9d2fb206089d07c1f028f802221c76e1ce8cdb7e",
-    "runtimeSha256": "cc9896d440fb86cf97ebd0251e16e904613acbef3e9c9e84c483d333c3b6ae7c",
-    "logicalCell": 64,
+    "runtimeSha256": "49a876f9debeec0e20300d7e39822cef8f6464b02733b46befb748aff6701809",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 762,
@@ -225,10 +325,15 @@
     "brief": "Low foliage spreads across the field with readable terrain boundaries.",
     "generator": "built-in image_gen",
     "sourceSha256": "45f7ced0e5c744b51907e850e31a5f408ddfa526dfd56e5066b28a06ea19c57d",
-    "runtimeSha256": "c245c723b0d8785a1301a86730cb33f4036c3d445b4f77d99979484b3b33304b",
-    "logicalCell": 64,
+    "runtimeSha256": "a9b52efba59ebddaa524bed1734614c49123add41539c61822988f5052fe6a60",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 763,
@@ -236,10 +341,15 @@
     "brief": "A sleepy drifting spore cloud with a distinct settling beat.",
     "generator": "built-in image_gen",
     "sourceSha256": "12df0269c160fadfa4ae7626d562af1567219a6e8bfb9426066fff667549914d",
-    "runtimeSha256": "1fa09075dfe75950c33ba23d37d79d0443eee9366407c36875aa8e0b071038cf",
-    "logicalCell": 64,
+    "runtimeSha256": "103cc73a8e1f65d64d119786739c6407582c29e6f497c6b0926dedca99de6612",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 764,
@@ -247,10 +357,15 @@
     "brief": "Thick shaded sap spatters and leaves a brief toxic residue.",
     "generator": "built-in image_gen",
     "sourceSha256": "c74d20cf8235cb67e2fbf91e79346f41d67a321ba0085a59eb82b9ea99dd198a",
-    "runtimeSha256": "f31d8c7b3902f4f4963efcf5fb660d51192ef78b2da8d5150cc9067b3e518f02",
-    "logicalCell": 64,
+    "runtimeSha256": "718c5dd0737aa31ff3cc289144a3f78a9c13d312364668f667654266a5448271",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 765,
@@ -258,10 +373,15 @@
     "brief": "Energy travels from the target back through a root-like stream.",
     "generator": "built-in image_gen",
     "sourceSha256": "fe0ffe526d18c0066c61d59617c43140219196bfae47324939dba6247c18f57f",
-    "runtimeSha256": "51a71bd6217b49798d3a52692e878918ca047bd2471289195ee191805a395ba6",
-    "logicalCell": 64,
+    "runtimeSha256": "c4467ac3a3a1933834a7f447f9aaf06f59d59b7e755a0b829906ed74300a0ce9",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 766,
@@ -269,10 +389,15 @@
     "brief": "A berry reforms or returns to the holder, followed by a small confirmation sparkle.",
     "generator": "built-in image_gen",
     "sourceSha256": "279555e89474b29a9da0d62603341a04f3ba63ebbadbae59314e57bc09c97226",
-    "runtimeSha256": "b02a50ae89f5a3ccaaf19e37c9aeeb136f945a2a27333e82ae44ba40184a8e52",
-    "logicalCell": 64,
+    "runtimeSha256": "36fec2953478dad90c07bb2883eaaeef30e5feeac275d5b64883ca5cfe85bca5",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 767,
@@ -280,10 +405,15 @@
     "brief": "Layered cotton tufts gather into a padded protective coat.",
     "generator": "built-in image_gen",
     "sourceSha256": "05a49df28e0fa49d9e6222f13b536bc660c1c9986247d2bf677ae9e177845a0f",
-    "runtimeSha256": "2d861d23c6f84e96a51dfb8f9a632e063637f39b57991c62bf449e0c45b5444e",
-    "logicalCell": 64,
+    "runtimeSha256": "7214adcba593b0ecf5a89ad5bcf661c46079b756d128fd390589d325cd52ec0c",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 768,
@@ -291,10 +421,15 @@
     "brief": "A directional leaf-and-air handoff towards the selected replacement.",
     "generator": "built-in image_gen",
     "sourceSha256": "48f36a10fee4a2d66538f3414c44de760a024f902ebf52e8a09c6a50f988aab4",
-    "runtimeSha256": "1a862f23fe15bd8302a10fd125e191a1444061fb6dd584db0ca07a9cf63dc80d",
-    "logicalCell": 64,
+    "runtimeSha256": "71e5eadbfd9847bc7485dbcf752d9650207eb0ff0711709906e7887c04a443f0",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 769,
@@ -302,10 +437,15 @@
     "brief": "A broad cutting wind arc breaks through a sweep of leaves.",
     "generator": "built-in image_gen",
     "sourceSha256": "3741759afdb2f72e3f0ad4a607fd37df55bc7c02d8430937f131de77d3a3c8b6",
-    "runtimeSha256": "8989f24e992d361d8f7edac1411a41492b37be435407d18eb7921cf366daab8b",
-    "logicalCell": 64,
+    "runtimeSha256": "571ea5214844d186a7814ae585182259d759082c08001cdc723cb5fa6fc7d9b0",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 770,
@@ -313,10 +453,15 @@
     "brief": "A sharp eye/glance cue and brief provocation reaction.",
     "generator": "built-in image_gen",
     "sourceSha256": "94bd3bafceace755fa1c5bba38384b9a3e0d7f5c0447165d9d7de4c7c0f87eb6",
-    "runtimeSha256": "23a2cef3821b68341a14b1e6be612fa2c1f8efaae3659e23394d99cc5fa78d50",
-    "logicalCell": 64,
+    "runtimeSha256": "382885378f29ed25ae027716b8c7d9a9640d1c52a1d6534f2568d0346cc13c32",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 771,
@@ -324,10 +469,15 @@
     "brief": "A settling rest sequence with a clear sleep finish.",
     "generator": "built-in image_gen",
     "sourceSha256": "d193084a61474e2a3c6c7ed7b2b2f715cf4d2d2c8b43ef8581bce6021ac862cc",
-    "runtimeSha256": "131b7960ecfd59a0e573c25485804883ff0fa0e667c38039c1cfc461ef9780b0",
-    "logicalCell": 64,
+    "runtimeSha256": "5ec4956378a9346c72bf15ab0b877ce98a8891fc79821301e590b5457e4c1776",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 772,
@@ -335,10 +485,15 @@
     "brief": "A dream pulse resolves into the called move; preserve the follow-on animation.",
     "generator": "built-in image_gen",
     "sourceSha256": "9cd8b1f40962f52cbb7ae1f4591c5034fbf6a4780b4b10f07d4c7da21f182a0e",
-    "runtimeSha256": "77a39f38002ee15ec9964029f078392b5677c57d808c06476dd3add01d75073f",
-    "logicalCell": 64,
+    "runtimeSha256": "eabf459e7b86fc6e1939168f0d4dbf26c1dba7ab8d6fb39bf097f852d3cd1ec1",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 773,
@@ -346,10 +501,15 @@
     "brief": "A broad travelling water sheet with foam and a heavy landing.",
     "generator": "built-in image_gen",
     "sourceSha256": "7551c5d463f05c7b6b630438cde4d84a83da0421b1ecda4a0f11f5424e72db58",
-    "runtimeSha256": "334e5af7e9434dcfc3864849298e3e68a3f154a6c02c344cc4dad34e88b3a80c",
-    "logicalCell": 64,
+    "runtimeSha256": "65fbd47af2687fdcf19e75e4a16428f406da22e07a49b6495a444259f1ba365b",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 774,
@@ -357,10 +517,15 @@
     "brief": "A jagged dark sound wave with distinct pulsed contacts.",
     "generator": "built-in image_gen",
     "sourceSha256": "3c30cf5111d95f7fae14ca8906e1d07ee707b80fd3f27505e8c3df3493380271",
-    "runtimeSha256": "4e13bfc3f8544160449268f7e78c5c233eb485bfe0d0272728a859a8ec2274eb",
-    "logicalCell": 64,
+    "runtimeSha256": "fe4e7bea05292369364e71f5ce04441be79ebfa6f7c6a1e82e958a18180a8a0c",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 775,
@@ -368,10 +533,15 @@
     "brief": "A fine cool stream with restrained frosty highlights, not an ice beam.",
     "generator": "built-in image_gen",
     "sourceSha256": "ca9c41f91b9e542a8128d7f5f320835da53b5e9f0f507282e724e380fb1d5173",
-    "runtimeSha256": "63825f1acfec008643e5d8b4c9e8e26c5a693be605e2c81cc1d4002e8a554353",
-    "logicalCell": 64,
+    "runtimeSha256": "2eb663ddd906729bd89383416af4d5725032d14b8ec5e2be59aa4b7b85babf6b",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 776,
@@ -379,10 +549,15 @@
     "brief": "A persistent circular water pull with an obvious centre.",
     "generator": "built-in image_gen",
     "sourceSha256": "57a195ea9ac28f7b340d3071279edeb03acd33ba8a4b839c08f167ea68bde36a",
-    "runtimeSha256": "7c2eede6cd11a33fdde97a663754b26d6a33eac4bb73ae68ea039cbfde691be4",
-    "logicalCell": 64,
+    "runtimeSha256": "0ca88a94540a3eda628866e36421ebfc3e1d6e40430b1cd192120d985f9056d9",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 777,
@@ -390,10 +565,15 @@
     "brief": "A field-side sheltering air curtain.",
     "generator": "built-in image_gen",
     "sourceSha256": "69baf39a00b5ac6df7896821bf4add9f48254a2cd13b608bbb0ca252972e5f97",
-    "runtimeSha256": "71bf68b6a7bab01f4fbd5981f3d77ca166a61fd26a912fc19cb71aa9a40c45a1",
-    "logicalCell": 64,
+    "runtimeSha256": "ad4a30790115888b176d2cd8689da314956cb47501d7802e9a214b478fc64bd4",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 778,
@@ -401,10 +581,15 @@
     "brief": "Pollen catches around the target and resolves into a paralysis cue.",
     "generator": "built-in image_gen",
     "sourceSha256": "27606a5f2aadf55c99911373a418c061c855d5d94cdaa9ac8dd68a3aca02f24f",
-    "runtimeSha256": "a48dc3a5220f641cc92fed21143677ad439aa2a16c02cced09cdc6e761358a82",
-    "logicalCell": 64,
+    "runtimeSha256": "0bceff5ada33ac32197b68d1f87b7ff5c13577a967b267bc6d39b9af855c42d1",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 779,
@@ -412,10 +597,15 @@
     "brief": "A distinct toxic pollen cloud with falling granular residue.",
     "generator": "built-in image_gen",
     "sourceSha256": "50f5121b874c29096b1b3337708ff72c9bf9a7fc00dd250b59902f8157804c09",
-    "runtimeSha256": "93f69e777aff80d463983047450509420303c95b425621dbd0b22dcdc3215020",
-    "logicalCell": 64,
+    "runtimeSha256": "ddc4477016186afa9ad95eaf1ebe505ac2303a54071ac7be07b72e9f7e105a9b",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 780,
@@ -423,10 +613,15 @@
     "brief": "A seed opens in a short bright alertness pulse.",
     "generator": "built-in image_gen",
     "sourceSha256": "6948990feb6a83593ecc8e95258266e2ec2b014ff680f230a8d8166fb88f6d68",
-    "runtimeSha256": "c0af130e7a0973d30675424d139c3a3982901d073861eddf2767020e28016f7a",
-    "logicalCell": 64,
+    "runtimeSha256": "4f37eda8b72094962be3a78c8ec20237f6256681855d814d94c6dd26b9286227",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 781,
@@ -434,10 +629,15 @@
     "brief": "A forceful sweep disperses screen/hazard motifs.",
     "generator": "built-in image_gen",
     "sourceSha256": "11135f4b4c63ab91e9d64552da0c466859a1232671fd8ff3d9a371622ce02b04",
-    "runtimeSha256": "fd6cc8a87974a1210cc75714624a0de0535664fd41aa7b29094ab2e9599da2d6",
-    "logicalCell": 64,
+    "runtimeSha256": "eccb7c372d1045fe0cca902a4c6165e56a3cf868309575a46a3b3fd5123ae7f3",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 782,
@@ -445,10 +645,15 @@
     "brief": "A repeating closed rhythm around the target communicates the move lock.",
     "generator": "built-in image_gen",
     "sourceSha256": "e70f31abdf94414ff358f190812d2892f5d20a6b0ac0e2611f5b2c6354d48848",
-    "runtimeSha256": "704ff5b2684881d6316a0db91a46cea15e50b6c5a3e92f5fb5a04fb04441be10",
-    "logicalCell": 64,
+    "runtimeSha256": "0f60b3ccfee43fc6fce8dc27790daca14726711f4b40b8f2cf09009f58835caf",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 783,
@@ -456,10 +661,15 @@
     "brief": "A contact strike, leaf wake, and directional retreat into the replacement.",
     "generator": "built-in image_gen",
     "sourceSha256": "b022c6081e1faed360b38e41c4e3b36371e40eba574afbb942f4323c81565db5",
-    "runtimeSha256": "cff737237f0a2228138cc11ab9f896e86288723542f4acf4a63b8402faedd9ec",
-    "logicalCell": 64,
+    "runtimeSha256": "53ac864550ea9bc011d42af21ee2f3dae1124a239dd1947cbcb9af55e98e6cd7",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 15
+    "visibleFrames": 15,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 784,
@@ -467,10 +677,15 @@
     "brief": "A crisp shaded ice lance, crystalline impact and falling ice chips.",
     "generator": "built-in image_gen",
     "sourceSha256": "b75a63182b3a57c48bebb5a25af40fcf838e38761987ea76317123195b123f7b",
-    "runtimeSha256": "774cff4290644165d081e4de4fe3dadf0bb53d21162f920b997fecfa0d3c3e01",
-    "logicalCell": 64,
+    "runtimeSha256": "053595fbbe57bf6fbb565e69d2500cc4a0270ec5417e10000a1031dff2143c5f",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 791,
@@ -478,10 +693,15 @@
     "brief": "A real ripe berry re-forms from a tiny pip beside the holder, solid shaded fruit flesh and a leaf appear, then a subtle confirmation glint; no elemental emblem.",
     "generator": "built-in image_gen",
     "sourceSha256": "c0f5c6867bd1290cc50b9619cef9e5766b7871e27bfbbc04baacd742cebac6c9",
-    "runtimeSha256": "b16cf255a3302825364ba35de49e6ac8f690260b24b5e862d0a35bf9c523b56c",
-    "logicalCell": 64,
+    "runtimeSha256": "912b3769f5d7c2310f4e597a96cf654624f9ae5937dd8a7efcd773969384e654",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 792,
@@ -489,10 +709,15 @@
     "brief": "Fine roots grip the victim; small warm life-energy beads travel inward along them towards the beneficiary; roots settle after the transfer. No violent collision.",
     "generator": "built-in image_gen",
     "sourceSha256": "10782a4e668f687e93cc16fbddf166a19f8b9b8eea6f53a63733743ed436a803",
-    "runtimeSha256": "92587cd5c84d697d580b45b1ec560c42d7e426d31b03218ada41dc658d593c9f",
-    "logicalCell": 64,
+    "runtimeSha256": "02a621402608a777c3fa703548bfb19b4f1120747f033f509169785627f42ad1",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 793,
@@ -500,10 +725,15 @@
     "brief": "A single compact decisive ivory sword cut through a translucent glass-like guard, with a few sharp splinters; do not add water spray.",
     "generator": "built-in image_gen",
     "sourceSha256": "1ec3d8f547107522193617e0e3568f9fe31e6ea54ff96537c8c00710b6a096ef",
-    "runtimeSha256": "b87dc13e291a8055f7d8b61193ab38e66f4818b77d3289d96ee151436fac6378",
-    "logicalCell": 64,
+    "runtimeSha256": "331bdacd1fe28714ece777e31bdee93700b66cb9b026ca578fa72fa670785833",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 316,
@@ -511,10 +741,15 @@
     "brief": "A long solid steel lance point thrusts forward rapidly and punctures at one tiny bright contact, then withdraws. Straight piercing motion, not a slash.",
     "generator": "built-in image_gen",
     "sourceSha256": "cea054edc3c751fd097a7c7b60c6748a610f5788a575ab29f03ecafa42343f94",
-    "runtimeSha256": "7b58465b0e55cd4ba2f18e98474bcd3cc3c3dc96d989828fc307f59536fde401",
-    "logicalCell": 64,
+    "runtimeSha256": "b7e793d4bfb45765a2a5361a79a3f1ee09bb6689f7bcaa2c90f2a6666c9731ab",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 390,
@@ -522,10 +757,15 @@
     "brief": "A broad padded fist-like contact silhouette rises from low to high, ending in a strong upward compression impact and a small dust fall. Not flames or an elemental orb.",
     "generator": "built-in image_gen",
     "sourceSha256": "517ec0d02c5983bc7934df8da4ca48a29cb225a9dba0d7df5f9c2a99d98982ae",
-    "runtimeSha256": "0e9d1bfff05b9ade4accca27ff758ef61319b3b1c10f18802b87ef0e0ad3237e",
-    "logicalCell": 64,
+    "runtimeSha256": "d120e07c86ac6ed479d9051e8e0d53350329c4221cffe0cc209c680fea7f8d38",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 431,
@@ -533,10 +773,15 @@
     "brief": "A heavy armoured shoulder plate rushes horizontally and compresses a squat anvil-shaped impact; short heavy recoil and falling metal chips.",
     "generator": "built-in image_gen",
     "sourceSha256": "6ca420e39f9bebad73f58d7f361aef5c260ef0d98edb5567f6a8eec703f4ba9b",
-    "runtimeSha256": "b7d89d795a78c964ff3ff542ad008ab00429b46033d6c03527e10ea255b60bc7",
-    "logicalCell": 64,
+    "runtimeSha256": "1f015b507eee0cc76c47414678bad7036f09b169848751a5c21ac80c8d62877b",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 62,
@@ -544,10 +789,15 @@
     "brief": "A loose physical electrical wire whips forward, bends around the target, contacts with a few local sparks, then springs away. A wire, not a generic lightning orb.",
     "generator": "built-in image_gen",
     "sourceSha256": "0aba6a9819f648d98225e1a888a49396bbda3b880a592f9e950ebc3c8de845b3",
-    "runtimeSha256": "f64cc5f6957c6aef6232d902749d1f7a9559a6c6c370b5446e8a23c313df7441",
-    "logicalCell": 64,
+    "runtimeSha256": "621457fc2294280855bd1a7ffc47950a7270433128b4bab4781e095ee442a5c1",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 388,
@@ -555,10 +805,15 @@
     "brief": "A small mechanical gear train engages tooth by tooth, a current jumps along the meshed teeth, then releases in a compact directed discharge. Real clockwork silhouette.",
     "generator": "built-in image_gen",
     "sourceSha256": "4c6e3ded63752b881e49ad27b5e7699b1355f7fd9039d3ae4a762f662bb6a795",
-    "runtimeSha256": "06dba9da60aef192e18c4ae8a896a62c2b2eee453229b89ad3ba1d060bc978e7",
-    "logicalCell": 64,
+    "runtimeSha256": "5e6389294f03e746096770ded58a9ed08c2b44ba7be029bf98dbcd8b9723f425",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 410,
@@ -566,10 +821,15 @@
     "brief": "A fern frond unfolds branch by branch, a tiny electrical signal traces the leaflet tips, and the leafy circuit discharges. Fern identity, not a generic type symbol.",
     "generator": "built-in image_gen",
     "sourceSha256": "f8bb001abea1f8d41be531d42d7a0a5138ff7242198f60f073bf9ad42c68d70f",
-    "runtimeSha256": "4b13275f035f6d8f717ac835b35c17ca786b703e11c2c8d27949066099757d83",
-    "logicalCell": 64,
+    "runtimeSha256": "708fcea777db250f329f9be52e5a8ab1c270754f77cbc38b8dfae7850c687bd0",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 412,
@@ -577,10 +837,15 @@
     "brief": "Several shaded mushroom spores float in a staggered relay; a tiny signal jumps from spore to spore, then disperses in a small granular impact.",
     "generator": "built-in image_gen",
     "sourceSha256": "af7dff00c0274133f2b67a13adcb3b4838851d2b97c82947436df57789857539",
-    "runtimeSha256": "5a6dc12251a6abbec656a1ba4e728b33775034222547b3e993a4576c2c08d7f0",
-    "logicalCell": 64,
+    "runtimeSha256": "5483647486c4cd5b7faac1c7fdff549c88b7b866e41d0cb7311c4f62978eaee9",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 3,
@@ -588,10 +853,15 @@
     "brief": "A jagged vibrating sound pressure front breaks into uneven staccato bands; successive short pulses, then an abrupt silence. A cry, not a projectile orb.",
     "generator": "built-in image_gen",
     "sourceSha256": "ba87e60e870bd6e0d7b40997a65546d7f239c9f9247f56f86f9e344abd1d1d89",
-    "runtimeSha256": "7eea409dfe49cd01ff3214c1e74ea6bf9b34715d3aff74ddee11366a67030eda",
-    "logicalCell": 64,
+    "runtimeSha256": "5dccf8e37d4c7ee28084a0eaa66ce9d676e094c30c48014da037dcaf110f92ce",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 4,
@@ -599,10 +869,15 @@
     "brief": "Two short opposing pressure fronts meet like hands clapping; a single flat white impact and concentric compressed sound bands ring out. Different from a cry.",
     "generator": "built-in image_gen",
     "sourceSha256": "de48f988476c6f7205fb5913adcf7df39a318526b1e89a8449d74f4a9344968b",
-    "runtimeSha256": "e0774cc67b2696ba5f7678be76e9205ea852b5fecb3dcccacf31f3d7f82f47fe",
-    "logicalCell": 64,
+    "runtimeSha256": "e9ebdfd1f592da75cfdffec215e382a306b4c39ce663ceabf90d0b7b6714a0ae",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 294,
@@ -610,10 +885,15 @@
     "brief": "An off-centre dark false strike appears briefly; it vanishes, then the real compact cut contacts from the opposite side. Misdirection before impact.",
     "generator": "built-in image_gen",
     "sourceSha256": "fd3ac36cdafd8e8c4973aca4882446b451f03e46e2fce08b809a8f13a5b627e9",
-    "runtimeSha256": "26377c091c6482692eb3a20d3b01f538dca50bfc39d805da254518d7ad8c257a",
-    "logicalCell": 64,
+    "runtimeSha256": "6f0e088198622e04ae2714910be465f34b1e11f3a7451543b1d55a9306eb2401",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1274,
+      1235
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 449,
@@ -621,10 +901,15 @@
     "brief": "Solid black volcanic glass slabs rise and interlock around the user into a low shelter, facets catching sparse warm highlights; settle protectively without attack flash.",
     "generator": "built-in image_gen",
     "sourceSha256": "0a6689b7005558f931cfa2bd868de7bc92aa39fcdeb3ed75401301762bc3a022",
-    "runtimeSha256": "0245b4c313f5f4139b9af37e4defb904d56e56ea91a4bea8e3429b34b36ea2fd",
-    "logicalCell": 64,
+    "runtimeSha256": "5023b3b9aea205b07f2b733c64ade8e04a670476b170886fe5635567ce88225f",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 460,
@@ -632,10 +917,15 @@
     "brief": "A heavy broad dark execution blade drops vertically in one committed cut, pauses at its contact, then dust and tiny metal chips settle. Not a swooping claw swipe.",
     "generator": "built-in image_gen",
     "sourceSha256": "15b72ce37b2ef9e25a19277635810ad8784cb4e076c9837cdc83b5ea6669ef30",
-    "runtimeSha256": "8f9faf29be94473192a492c44a49c9fb5562f39ae6ce0118ca053d5b4b50a217",
-    "logicalCell": 64,
+    "runtimeSha256": "c5d5d6d5a238947e49a45328447d4673906c20b93a34e4ef2b4fe069f55f51d7",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 446,
@@ -643,10 +933,15 @@
     "brief": "A little dreamlike reflection appears, slow irregular ripples bend it, then the reflection softly folds inward; muted moonlit colours and calm timing.",
     "generator": "built-in image_gen",
     "sourceSha256": "cdbbf5a3176c2430d3e2ba3badd2c4deb2b92fc442f0ffee7bda59541e727eb8",
-    "runtimeSha256": "dc790aeba766afe293e00acfebf16a51bbd048cd0a4cc17126a7254fa2f8ca04",
-    "logicalCell": 64,
+    "runtimeSha256": "2ec2b4700ed121a5493c62af0d0bccbd8292c82c20a81e1301e91bfa3f4cce5b",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 494,
@@ -654,10 +949,15 @@
     "brief": "An ornate small arcane mirror materialises, catches a bright image, splits the reflection into several offset panes, and snaps a precise reflected pulse back.",
     "generator": "built-in image_gen",
     "sourceSha256": "8eca69346c45d3642096a75f27ca341c806e1466d35b9a191fc2f74485b26cf3",
-    "runtimeSha256": "5dade3f682b2c07fb447e6426c7d72c301c99e121caa1c608303ac43cc37227b",
-    "logicalCell": 64,
+    "runtimeSha256": "8021ca557596581f7ad036d3d8487616fa89dfa5789f4a86f724ac43d64fcb83",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 38,
@@ -665,10 +965,15 @@
     "brief": "A tiny crimson battle standard plants at one side, three escalating marching impact steps advance left to right, then a commanding crest-shaped solid impact lands and the banner settles. Bespoke miniature conquest choreography, no generic fireball.",
     "generator": "built-in image_gen",
     "sourceSha256": "172abf74e14f7697d7f25f94326f1a214db7d36e1d154f33cb90a2db9f31f03c",
-    "runtimeSha256": "de3a60dbe846ae14ad756573ae84a1919a07c306987739c8a15bdaff357da757",
-    "logicalCell": 64,
+    "runtimeSha256": "bc33db97eede064759fcd7bec848bb76a2d0775fce193c99b7471dd70ebf03d7",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 705,
@@ -676,10 +981,15 @@
     "brief": "A solid heated glass blade grows a bright molten rim, makes one broad horizontal cutting pass, then irregular amber glass splinters cool into dark fragments. The blade action comes first.",
     "generator": "built-in image_gen",
     "sourceSha256": "b9d571d8c130eff63d947b44ec7b2fa15ee6912a83bb810c95de1a35afc067c1",
-    "runtimeSha256": "43b43f95b1fcfdb8a3532d2b9fc0b10167c09105a8f794983a56bc43c2fdc2a4",
-    "logicalCell": 64,
+    "runtimeSha256": "dba726d0eae23d1c808905922b77d4348decb09078f8d61c7b24c158e154a6b3",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 16
+    "visibleFrames": 16,
+    "sourceResolution": [
+      1402,
+      1122
+    ],
+    "detailRestoredFrom": "original-generation"
   },
   {
     "id": 790,
@@ -687,9 +997,14 @@
     "brief": "Three clean sword cuts, followed by glass fracturing and shattering; no water effects.",
     "generator": "built-in image_gen",
     "sourceSha256": "bc99d6a4fb6fbc1221c4d657b8f081aac05c15c6e45c2b69783b3eeed84507c1",
-    "runtimeSha256": "4a606defc6bd1b56b40a159a84b69eb2b3ff4d89bfa4be2eac713f69a6ce476d",
-    "logicalCell": 64,
+    "runtimeSha256": "79e412440bf8259fca49c864f27c4f824f4676bfeda3f86be03b3f4098e0e4c0",
+    "logicalCell": 192,
     "frameCount": 16,
-    "visibleFrames": 15
+    "visibleFrames": 15,
+    "sourceResolution": [
+      1254,
+      1254
+    ],
+    "detailRestoredFrom": "original-generation"
   }
 ]

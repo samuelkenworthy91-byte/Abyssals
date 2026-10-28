@@ -1,5 +1,8 @@
-import {ACTION_ART} from './action-vfx-data.js?v=0.90.48';
+import {ACTION_ART} from './action-vfx-data.js?v=0.90.49';
 export {ACTION_ART};
+// Keep the render clock and battle impact clock identical. Mercy's original
+// First Light scene deliberately retains its authored timing.
+export const readableDuration=(move,duration)=>move?.salvation?duration:Math.round(duration*1.35);
 const loading=new Map();
 export function pixelArtReady(move){
  const s=ACTION_ART[move?.id];if(!s||typeof Image==='undefined')return Promise.resolve(true);
@@ -22,5 +25,6 @@ export function pixelSceneHTML(move,result={}){
  const key='pixel-'+s.id+'-'+frames.length;
  const position=i=>((i%4)*100/3)+'% '+(Math.floor(i/4)*100/3)+'%';
  const css=frames.map((frame,i)=>(i*100/frames.length).toFixed(3)+'%{background-position:'+position(frame)+'}').join('')+'100%{background-position:'+position(frames.at(-1))+'}';
- return '<div class="pixel-action of-'+s.key+'" data-fx-move="'+s.id+'" data-action-art="'+s.key+'" '+(s.orchard?'data-orchard-art="'+s.key+'" ':'')+'data-hit-count="'+(result.hitCount??'')+'" style="--pixel-duration:'+s.duration+'ms"><style>@keyframes '+key+'{'+css+'}</style><i class="pixel-move-art '+(s.orchard?'orchard-ink':'')+'" aria-hidden="true" style="background-image:url('+s.src+');animation-name:'+key+'"></i></div>';
+ return '<div class="pixel-action of-'+s.key+'" data-fx-move="'+s.id+'" data-action-art="'+s.key+'" '+(s.orchard?'data-orchard-art="'+s.key+'" ':'')+'data-hit-count="'+(result.hitCount??'')+'" style="--pixel-duration:'+readableDuration(move,s.duration)+'ms"><style>@keyframes '+key+'{'+css+'}</style><i class="pixel-move-art '+(s.orchard?'orchard-ink':'')+'" aria-hidden="true" style="background-image:url('+s.src+');animation-name:'+key+'"></i></div>';
 }
+
