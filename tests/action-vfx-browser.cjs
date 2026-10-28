@@ -2,7 +2,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),fs=require
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--no-sandbox'],...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{})});
  const page=await browser.newPage({viewport:{width:390,height:844},serviceWorkers:'block'}),errors=[];
- page.on('pageerror',e=>errors.push(e.message));const root=process.env.TEST_URL||'http://127.0.0.1:8763';
+ page.on('pageerror',e=>errors.push(e.message));const root=process.env.TEST_URL||'http://127.0.0.1:8765';
  fs.mkdirSync('build/qa',{recursive:true});await page.goto(root+'/move-lab.html?move=747&caster=517&target=001',{waitUntil:'networkidle'});
  const report=await page.evaluate(async()=>{
   const {ACTION_ART}=await import('./action-vfx.js?v=0.90.48');
@@ -14,7 +14,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),fs=require
  for(const id of [747,790,316,390,388,494,705]){
   await page.evaluate(async id=>{
    const {pixelSceneHTML}=await import('./action-vfx.js?v=0.90.48');const {DATA}=await import('./data.js?v=0.90.48');
-   const m=DATA.moves.find(m=>m.id===id)||{id,power:50,type_id:'WATER'};document.getElementById('preview-fx').innerHTML='<div class="fx-anchor" style="left:63%;top:45%">'+pixelSceneHTML(m,{hitCount:3})+'</div>';
+   const m=DATA.moves.find(m=>m.id===id)||{id,power:50,type_id:'WATER'};document.getElementById('preview-fx').innerHTML='<div class="fx-anchor" style="left:65%;top:45%">'+pixelSceneHTML(m,{hitCount:3})+'</div>';
   },id);
   const art=page.locator('.pixel-move-art');assert(await art.isVisible());assert(['pixelated','crisp-edges'].includes(await art.evaluate(e=>getComputedStyle(e).imageRendering)));
   await page.waitForTimeout(id===790?1250:630);await page.screenshot({path:'build/qa/action-phone-'+id+'.png'});
