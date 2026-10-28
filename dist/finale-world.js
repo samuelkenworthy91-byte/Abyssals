@@ -44,6 +44,7 @@ export function installFinaleWorld(maps,doors){
   maps[parent].gates.push(gate('fn-'+id+'-entry',title,24,6,id,[3,14,'right']));
   maps[parent].sidePaths.push({points:[[24,14],[24,6]]});
  }
+ maps.ramelleFortress.spots.push(npc('fn-fortress-custodian','Keeper of the old stair',29,14,'REV-MARYAM'));
  maps.cayfen.spots.push(npc('fn-cayfen-courier','A canvas courier',31,17,'REV-MARYAM'),npc('fn-cayfen-chimes','A bell-maker',17,17,'SHOP-PHI'));
  maps.ramelle.spots.push(npc('fn-ramelle-medic','A sanctuary aide',32,15,'REV-MARYAM'),npc('fn-ramelle-archivist','A vault archivist',17,15,'SHOP-PHI'));
  // Geometry follows the finished raster maps, not the initial image prompts.
