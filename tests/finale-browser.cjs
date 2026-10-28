@@ -16,8 +16,20 @@ for(const id of ['LDR-07','LDR-08']){
   await page.waitForSelector('#hell-portal',{timeout:15000});
   assert.equal(await page.locator('#hell-portal img').getAttribute('src'),'assets/finale/severin-guide.svg');
   await page.screenshot({path:'build/qa/finale-severin-portal.png'});
+  await page.waitForSelector('#dialogue:not([hidden])',{timeout:12000});
   for(let i=0;i<18&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
   await page.waitForFunction(()=>window.__fnQA.copy().state.finale.mirrorArrivalSeen,{timeout:10000});
  }else await page.evaluate(()=>window.__fnQA.close());
 }
+// Executed Hierophant: the custodian escorts Aimon, preserving the same gateway.
+await page.evaluate(()=>{window.__fnQA.boot('ramelleFortress');window.__fnQA.fate('LDR-08');});
+await page.locator('#fn-execute').click();await page.locator('#fn-confirm').click();
+assert.equal((await page.evaluate(()=>window.__fnQA.copy())).state.fates['LDR-08'],'EXECUTED');
+for(let i=0;i<6&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
+await page.waitForSelector('#hell-portal',{timeout:15000});
+await page.waitForSelector('#dialogue:not([hidden])',{timeout:12000});
+assert((await page.locator('#dialogue').innerText()).includes('Severin')||await page.locator('#hell-portal img').count()===1);
+for(let i=0;i<18&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
+await page.waitForFunction(()=>window.__fnQA.copy().state.finale.mirrorArrivalSeen);
+assert.equal((await page.evaluate(()=>window.__fnQA.copy())).state.fates['LDR-08'],'EXECUTED');
 assert.deepEqual(errors,[]);console.log('PASS: live finale environments, interrupted burial and atomic gifts, partner art commission, real 2v2 turn and save resume, both leader outcomes.');await browser.close();})().catch(e=>{console.error(e);process.exit(1)});
