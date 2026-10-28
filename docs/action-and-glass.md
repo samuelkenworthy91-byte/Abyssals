@@ -31,3 +31,5 @@ A full-checkout patch workflow runs before promotion. The Android workflow then 
 Artwork uses built-in Imagegen. The provenance JSON records briefs and source/runtime hashes. To rebuild approved sources, use scripts/prepare-action-art.py --sources INPUT.json. Normal builds consume the committed optimized PNGs.
 
 Mercy Edge and its ray variant explicitly retain their original First Light graphics, as requested. They are excluded from the new artwork batch.
+
+The pre-existing zero-byte berry-shop cabinet is restored from the original pantry-props atlas (top-row third prop). This repairs the shop prop and standalone review image decoding; no new character artwork is introduced.

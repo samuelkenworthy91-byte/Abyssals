@@ -15,3 +15,8 @@ for p in (root/'dist/assets/vfx').glob('*.webp'):
  if p.name.startswith('moves-'):assert Image.open(p).size==(256,384),p.name
  if p.name.startswith('signature-'):assert Image.open(p).size==(192,256),p.name
 print('PASS: 63 committed pixel animations and all 22 normalized atlases.')
+
+# This pre-existing empty prop also blocked review-image verification.
+with Image.open(root/'dist/assets/pixel/berry-shop-cabinet.webp') as im:
+ assert im.width>0 and im.height>0
+ im.verify()
