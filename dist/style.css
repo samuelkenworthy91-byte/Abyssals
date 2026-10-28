@@ -454,3 +454,43 @@ button.console-selected{outline:2px solid #ead39c;outline-offset:1px;border-colo
 
 /* Prodigy score sits above each hatchling's six marked traits. */
 .hatch-reveal .hatch-prodigy-score{display:flex;align-items:center;justify-content:center;gap:8px;margin:5px 0 9px;padding:7px;background:#243a44;border:1px solid #bf9850;border-radius:8px;color:#e6c98d;font:700 13px var(--sans)}.hatch-prodigy-score strong{font-size:20px;color:#fff0b5}.hatch-reveal .prodigy-pips{justify-content:center;margin:6px 0 9px}
+
+/* v0.90.50: Doubles use the ordinary single-battle command vocabulary. */
+#battle .relic-double-arena.double-standard{position:relative;display:flex;flex-direction:column;box-sizing:border-box;width:100%;height:100%;min-height:0;padding:12px;isolation:isolate}
+#battle .double-standard .battle-top{position:relative;z-index:2;min-height:70px;justify-content:flex-end}
+#battle .double-standard .double-meta{display:flex;align-items:center;gap:9px;background:#142334e8;border:1px solid #617180;border-radius:5px;padding:7px 10px;text-align:left;color:#eddfc1;flex-wrap:wrap;max-width:85%}
+#battle .double-standard .double-meta span{font-size:12px}
+#battle .double-standard .double-partner-portrait{width:45px;height:55px;object-fit:contain}
+#battle .double-standard .double-enemy-zone{position:absolute;inset:12% 2% 40%;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:4%;pointer-events:none}
+#battle .double-standard .double-foe{pointer-events:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;width:min(43%,250px);height:100%;max-height:280px;background:transparent;border:1px solid transparent;border-radius:7px;color:inherit;cursor:pointer;transition:background .15s,border .15s}
+#battle .double-standard .double-foe:focus-visible,#battle .double-standard .double-foe.selected{outline:2px solid #e5d8a6;outline-offset:2px;background:#182c3b85}
+#battle .double-standard .double-foe img{height:57%;width:94%;min-height:0;object-fit:contain;filter:drop-shadow(0 8px 7px #0009);animation:breathe 3.5s ease-in-out infinite}
+#battle .double-standard .double-foe-hud{width:100%;max-width:220px}
+#battle .double-standard .double-foe .combat-hud{min-width:0;padding:6px 9px}
+#battle .double-standard .double-foe .combat-hud b{font-size:clamp(13px,2vw,18px)}
+#battle .double-standard .double-foe .combat-hud .condition-details,#battle .double-standard .double-foe .combat-hud .stage-note{display:none}
+#battle .double-standard .double-bottom{position:relative;z-index:2;display:grid;grid-template-columns:minmax(200px,32%) minmax(0,1fr);gap:12px;margin-top:auto}
+#battle .double-standard .double-friendly{display:flex;flex-direction:column;gap:5px;justify-content:flex-end}
+#battle .double-standard .double-friendly-unit{position:relative;min-width:0}
+#battle .double-standard .double-friendly-unit .combat-hud{min-width:0;padding:7px 10px}
+#battle .double-standard .double-friendly-unit .combat-hud b{font-size:clamp(14px,2vw,19px)}
+#battle .double-standard .double-friendly-unit .condition-details,#battle .double-standard .double-friendly-unit .stage-note{display:none}
+#battle .double-standard .double-partner{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center}
+#battle .double-standard .double-partner>small{grid-column:1/-1;color:#e3d4ac;font-size:10px;letter-spacing:.07em}
+#battle .double-standard .double-partner>img{width:44px;height:54px;object-fit:contain}
+#battle .double-standard .battle-panel{min-width:0;padding:10px}
+#battle .double-standard .battle-log{min-height:25px;margin-bottom:6px}
+#battle .double-standard .double-prompt{font-size:14px;color:#f1deb4;margin:7px 0}
+#battle .double-standard .double-target-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#battle .double-standard .double-target-menu button{padding:12px;background:#23394b;border:1px solid #8a9c9d;border-radius:5px;text-align:left;color:#f5f1e9}
+#battle .double-standard .double-target-menu small{display:block;color:#becad0}
+#battle .double-standard .double-target-menu button:focus-visible{outline:2px solid #f3d58d}
+#battle .double-standard .move-slot{min-width:0}
+#battle .double-standard .battle-back{margin-bottom:6px}
+#hell-portal{pointer-events:none;position:absolute;left:50%;top:20%;width:24%;height:36%;transform:translateX(-50%);z-index:8;opacity:0;animation:mirror-awaken 1.4s ease-out forwards}
+#hell-portal::before{content:"";position:absolute;inset:0;border-radius:50% 50% 43% 43%;background:radial-gradient(ellipse at 50% 52%,#0b0b19 15%,#221e4b 43%,#9bd9c8 54%,#f3d79e 57%,transparent 62%);box-shadow:0 0 35px #7f8ae0aa;animation:portal-pulse 2.5s ease-in-out infinite}
+#hell-portal img{position:absolute;bottom:-11%;left:15%;width:70%;height:85%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 7px 8px #000)}
+@keyframes mirror-awaken{from{opacity:0;transform:translateX(-50%) scale(.3)}to{opacity:1;transform:translateX(-50%) scale(1)}}
+@keyframes portal-pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
+@media(max-width:690px){#battle .relic-double-arena.double-standard{padding:5px}#battle .double-standard .double-meta{max-width:100%;padding:3px 5px}#battle .double-standard .double-partner-portrait{width:28px;height:33px}#battle .double-standard .double-enemy-zone{inset:12% 0 47%;gap:1%}#battle .double-standard .double-foe{width:49%}#battle .double-standard .double-foe .combat-hud{padding:3px 5px}#battle .double-standard .double-foe .combat-hud b{font-size:12px}#battle .double-standard .double-foe .combat-hud small,#battle .double-standard .double-foe .combat-hud .hp-numbers{font-size:10px}#battle .double-standard .double-bottom{grid-template-columns:31% 69%;gap:3px}#battle .double-standard .double-friendly-unit .combat-hud{padding:4px 5px}#battle .double-standard .double-friendly-unit .combat-hud b{font-size:12px}#battle .double-standard .double-friendly-unit .combat-hud .battle-ability,#battle .double-standard .double-friendly-unit .combat-hud .life-label,#battle .double-standard .double-friendly-unit .combat-hud .hud-types{display:none}#battle .double-standard .double-partner{grid-template-columns:25px 1fr}#battle .double-standard .double-partner>img{width:25px;height:32px}#battle .double-standard .battle-panel{padding:5px}#battle .double-standard .battle-actions{gap:3px}#battle .double-standard .double-target-menu{gap:3px}#battle .double-standard .double-target-menu button{padding:4px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){#hell-portal,#hell-portal::before{animation:none;opacity:1}}
