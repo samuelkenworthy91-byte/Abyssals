@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 export const COSSENNE_PEOPLE=Array.from({length:8},(_,i)=>'TRN-C05-00'+(i+1)).concat('LDR-04');
 export const ORCHARD_MAIN=['orchardVerge','orchardBend','orchardFirebreak','orchardEmberwood','orchardAshSlope','orchardRenewal'];

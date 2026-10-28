@@ -1,4 +1,4 @@
-import {DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.41';
+import {DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.48';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 export function stormState(s){const q=s.thunderplain??={version:1,relay:{caught:0,attempt:0,claimed:false},darius:{accepted:false,notes:[],released:false,outcome:null}};q.relay??={caught:0,attempt:0,claimed:false};q.darius??={accepted:false,notes:[],released:false,outcome:null};q.relay.clears??=q.relay.claimed?1:0;return q;}
 export function acceptStormDarius(s){const q=stormState(s).darius;if(q.accepted)return false;q.accepted=true;return true;}

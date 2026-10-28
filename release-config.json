@@ -1,8 +1,8 @@
 {
-  "version": "0.90.47",
-  "version_code": 142,
-  "filename": "Abyssals-v0.90.47-Tide-and-Orchard.apk",
-  "title": "Abyssals v0.90.47 \u2014 Tide and Orchard",
-  "notes": "Two approved families: Rillkit \u2192 Undertide \u2192 Mournami and Mewisp \u2192 Purrchard, with smooth transparent artwork, evolution, breeding, shinies and Field Journal habitats. Every third special HP hit triggers Stillwater\u2019s three 50-power Water slashes. Berry Pantry regrows eaten berries every turn at 25%, or 75% in Grassy Terrain. 43 branded techniques have independent vector battle effects; existing branded protection, screens and weather are reused. Draining Roots, effigy-only Breeze Relay, berry handling, terrain, special retaliation and disruption are implemented and tested. Species inhabit clear sluicewater, reed banks, a flooded cloister, subtropical canopy and intact fruit groves. Save format, story progress and original Android signing identity are preserved.",
-  "pwa_filename": "Abyssals-v0.90.47-PWA.zip"
+  "version": "0.90.48",
+  "version_code": 143,
+  "filename": "Abyssals-v0.90.48-Action-and-Glass.apk",
+  "title": "Abyssals v0.90.48 — Action and Glass",
+  "notes": "63 authored sixteen-frame pixel-art battle effects: all 43 Tide & Orchard moves, four passive effects and 16 older moves. Mercy Edge retains its original First Light graphics. Stillwater uses three clear sword cuts followed by glass shattering, with actual strike timing and HP presentation. Older ordinary effects now use action-first choreography and pixel-grid atlases rather than type-first recolouring. 820 later learning choices across 256 species repair branch and late-level progression; Flaskling remains deliberately minimal. All intended Codex techniques are stocked, free relearning respects learning methods, and already learned moves are retained. Existing saves, permanent deaths, quests, package and original signing identity are preserved.",
+  "pwa_filename": "Abyssals-v0.90.48-PWA.zip"
 }

@@ -1,4 +1,4 @@
-import {SIDE_CONTENT,CAVE_FLOORS} from './exploration-data.js?v=0.90.41';
+import {SIDE_CONTENT,CAVE_FLOORS} from './exploration-data.js?v=0.90.48';
 export function installExplorationWorld(maps){
  for(const c of SIDE_CONTENT){const m=maps[c.room],i=c.index;
   // Alternating detours, loops and clearings give each habitat its own silhouette.

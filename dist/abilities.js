@@ -1,11 +1,11 @@
-import {endOrchard} from './tide-orchard-battle.js?v=0.90.47';
-import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.47';
+import {endOrchard} from './tide-orchard-battle.js?v=0.90.48';
+import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.48';
 import {randomStatusDuration} from './status-rules.js?v=0.90.24';
 import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.90.41';
 import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.90.41';
 import {menagerieParty,bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.87.0';
-import {ABILITIES} from './ability-data.js?v=0.90.47';
-import {HELD_ITEMS} from './held-data.js?v=0.90.41';
+import {ABILITIES} from './ability-data.js?v=0.90.48';
+import {HELD_ITEMS} from './held-data.js?v=0.90.48';
 import {unitName} from './names.js?v=0.87.0';
 export function abilityName(u){return u.species.ability_names?.[u.abilitySlot||'primary']||null;}
 export function abilityInfo(u){return ABILITIES.find(a=>a.name===abilityName(u));}
@@ -238,4 +238,5 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
 }
 
 export function abilityImmunity(target,move){return has(target,'Hovercore')&&move.type_id==='GROUND'||has(target,'Soundproof')&&isSound(move)||has(target,'Capacitor')&&move.type_id==='ELECTRIC'||has(target,'Reservoir')&&move.type_id==='WATER';}
+
 

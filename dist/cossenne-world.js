@@ -1,6 +1,6 @@
 import {installCossenneFarm} from './cossenne-farm.js?v=0.90.20';
 import {RELIEF_POSTS} from './cossenne-services.js?v=0.87.0';
-import {ORCHARD_MAIN,ORCHARD_ROUTES} from './cossenne-data.js?v=0.90.41';
+import {ORCHARD_MAIN,ORCHARD_ROUTES} from './cossenne-data.js?v=0.90.48';
 import {registerBiome} from './biome-world.js?v=0.90.41';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 const person=(id,label,x,y)=>({id,label,x,y,sprite:'bystander'});

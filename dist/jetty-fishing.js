@@ -1,8 +1,8 @@
 import {wildCollectionForm} from './collection-access.js?v=0.90.18';
 import {isReducedMotion} from './motion.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.25';
-import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.90.41';
+import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.90.48';
 import {legalForm,rootForm} from './route-roster.js?v=0.87.0';
 import {encounterWeights} from './expedition-abilities.js?v=0.90.41';
 import {hashSeed} from './progression.js?v=0.90.41';
@@ -46,3 +46,4 @@ export function drawJetty(ctx,room,time=0){const j=jettyFor(room);if(!j)return;t
  for(const px of [32,35])for(const py of [25,28]){const sx=px*16-3,sy=py*16;ctx.fillStyle='#342b24';ctx.fillRect(sx,sy-9,6,22);ctx.fillStyle='#b99361';ctx.fillRect(sx+1,sy-10,4,20);ctx.fillStyle='#e0c79b';ctx.fillRect(sx,sy-11,6,3);ctx.strokeStyle='#ac9670';ctx.beginPath();ctx.moveTo(sx+3,sy-5);ctx.lineTo(sx+3,(py===25?28:25)*16-5);ctx.stroke();}
  ctx.fillStyle='#745132';ctx.fillRect(32*16+4,27*16-4,10,10);ctx.strokeStyle='#d5bd85';ctx.strokeRect(32*16+5,27*16-3,8,8);ctx.beginPath();ctx.moveTo(34*16+4,28*16);ctx.lineTo(34*16+13,28*16-19);ctx.stroke();ctx.restore();
 }
+

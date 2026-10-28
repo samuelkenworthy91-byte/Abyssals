@@ -1,5 +1,5 @@
 import {beginStep,advanceStep} from './movement.js?v=0.87.0';
-import {pathfind} from './engine.js?v=0.90.47';
+import {pathfind} from './engine.js?v=0.90.48';
 const patrols={
  'TRN-C01-002':[[42,20],[42,23],[40,23],[40,20]],
  'TRN-C01-003':[[32,24],[35,24],[35,22],[32,22]],

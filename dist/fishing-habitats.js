@@ -1,5 +1,5 @@
 import {wildCollectionForm} from './collection-access.js?v=0.90.18';
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {FULL_ENCOUNTERS} from './full-encounters.js?v=0.87.0';
 import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.25';
 import {rootForm,legalForm} from './route-roster.js?v=0.87.0';
@@ -16,3 +16,4 @@ export const FISH_POOL=FISH_SLOTS.map(s=>s.species_id);
 export const fishingResident=unit=>!!unit?.species?.types?.includes('WATER');
 export function fishingSpecies(roll,level,leader=null){const weights=encounterWeights(FISH_SLOTS,leader),total=weights.reduce((a,b)=>a+b,0);let n=Math.max(0,Math.min(.999999999,roll))*total;let slot=FISH_SLOTS.at(-1);for(let i=0;i<weights.length;i++){n-=weights[i];if(n<0){slot=FISH_SLOTS[i];break;}}return wildCollectionForm(legalForm(slot.species_id,level));}
 export const FISH_RIVALS=['Alice Giffard','Old Walter FitzHugh','Agnes FitzRobert','Robert de Vesci','Matilda de Montfort'];
+

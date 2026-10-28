@@ -1,4 +1,4 @@
-import {MARASEN_RECORDS} from './marasen-data.js?v=0.90.41';
+import {MARASEN_RECORDS} from './marasen-data.js?v=0.90.48';
 const QUEST_NAMES={mill:'The Silent Mill',peach:'Liubeirow · the Peach Orchard oath',darius:'The Common Cause · spillway survey'};
 export function installSiteTablets(maps){for(const m of Object.values(maps))for(const s of m.spots||[]){const match=s.id?.match(/^mr-(mill|peach|darius)-record-(\d)$/);if(match){s.siteTablet=true;s.questProp=true;s.hintQuest=match[1];s.hintStage=Number(match[2]);s.label='Read the '+(match[1]==='peach'?'oath':match[1]==='mill'?'millwright’s':'spillway')+' tablet';}}}
 // A low stone lectern with a weathered bronze face: smaller and lower than the

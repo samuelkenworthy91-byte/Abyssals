@@ -1,15 +1,15 @@
 import {roomGrid} from './promenade.js?v=0.90.37';
-import {canonicalMoveId} from './teamcraft-data.js?v=0.90.41';
-import {redirectInheritance} from './teamcraft-progress.js?v=0.90.30';
+import {canonicalMoveId} from './teamcraft-data.js?v=0.90.48';
+import {redirectInheritance} from './teamcraft-progress.js?v=0.90.48';
 import {validateInheritance} from './breeding-inheritance.js?v=0.90.35';
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {rootForm} from './route-roster.js?v=0.87.0';
 import {validateNurserySnapshot} from './breeding.js?v=0.90.36';
-import {PALADIN_IDS} from './paladin-data.js?v=0.90.41';
+import {PALADIN_IDS} from './paladin-data.js?v=0.90.48';
 export const SAVE_FILE_FORMAT='abyssals-expedition';
 export const SAVE_FILE_VERSION=1;
 export const SAVE_FILE_LIMIT=5*1024*1024;
-export const SAVE_GAME_VERSION='0.90.47';
+export const SAVE_GAME_VERSION='0.90.48';
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const fail=message=>{throw new Error(message);};
 function inspect(value,depth=0,budget={left:200000}){if(--budget.left<0||depth>80)fail('This save file is too complex.');if(typeof value==='number'&&!Number.isFinite(value))fail('The save contains an invalid number.');if(value&&typeof value==='object')for(const [key,v]of Object.entries(value)){if(['__proto__','constructor','prototype'].includes(key))fail('The save contains an unsupported field.');inspect(v,depth+1,budget);}}

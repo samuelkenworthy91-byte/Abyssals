@@ -1,12 +1,12 @@
 import {itemIcon,codexIcon} from './item-art.js?v=0.90.41';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.48';
 import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.35';
 import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.
 import {marasenObjective} from './marasen-rules.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.47';
-import {HELD_ITEMS} from './held-data.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.48';
+import {HELD_ITEMS} from './held-data.js?v=0.90.48';
 import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.41';
 import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.41';
 const FLOOR_NAMES=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
@@ -22,7 +22,7 @@ export const exchangeScrolls=()=>{
  for(const m of ordinary.filter(m=>m.category!=='STATUS'&&m.power>=40&&m.power<=100).sort((a,b)=>a.type_id.localeCompare(b.type_id)||a.power-b.power)){
   const key=m.type_id+':'+m.category,n=counts.get(key)||0;if(n<2){attacks.push(m);counts.set(key,n+1);}
  }
- const tactical=ordinary.filter(m=>m.sharedTacticalMove&&m.category!=='STATUS'&&!attacks.some(a=>a.id===m.id));
+ const tactical=ordinary.filter(m=>(m.sharedTacticalMove||m.codexOnly||m.accessRestored)&&m.category!=='STATUS'&&!attacks.some(a=>a.id===m.id));
  return [...status,...attacks,...tactical].map(m=>({id:String(m.id),name:m.name,description:`${m.type_id} / ${m.category}${m.power?' · power '+m.power+(m.hits?' × '+m.hits.min+'–'+m.hits.max+' hits':''):''} · ${m.effect_text||'No additional effect.'}${m.tutorTypes?.length?' · Compatible types: '+m.tutorTypes.join(' / '):''} · single-use Codex`,price:m.category==='STATUS'?(m.sharedTacticalMove?(m.effects.some(e=>e.effect_id==='stat_stage'&&Math.abs(e.stages)>=3)?8500:6000):(m.effects.some(e=>e.status==='FREEZE'||e.status==='BAD_POISON')?6500:4500)):m.hits?6500:m.power>=75?5500:3500}));
 };
 function storeItems(floor){
@@ -257,5 +257,6 @@ export function marasenExtraInteract(id,a){const {room,AREA_GATES,state,warp,sho
  }
  return false;
 }
+
 
 

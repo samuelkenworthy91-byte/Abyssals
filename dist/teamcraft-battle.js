@@ -1,5 +1,5 @@
-import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.47';
-import {restoreHP as healRelayHP} from './abilities.js?v=0.90.47';
+import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.48';
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.48';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];
@@ -67,4 +67,5 @@ export function damagedTeamcraft(actor,target,move,damage,hooks){if(!damage)retu
 }
 export function endTeamcraft(units){const suppressed=units.some(u=>u.hp>0&&has(u,'Weather Calm'));for(const u of units){const s=ms(u);delete s.protection;if(s.relayFatigue>0)s.relayFatigue--;if(s.critGuard>0)s.critGuard--;if(s.wardTurns>0&&--s.wardTurns===0)delete s.oneWard;if(has(u,'Sand Reservoir')&&!suppressed&&u.field?.weather==='SAND'&&living(u)){s.sandTurns=(s.sandTurns||0)+1;if(s.sandTurns>=2)flags(u).silt=true;}else s.sandTurns=0;}}
 export function specialistAIPool(u,foe,moves){const roster=menagerieParty(u).filter(v=>v!==u&&living(v));u.teamcraftTargetUid=roster.sort((a,b)=>(b.hp/b.maxHp)-(a.hp/a.maxHp))[0]?.uid;return moves.filter(m=>!actionInvalid(u,m,foe)&&(!m.effects.some(e=>e.effect_id==='protect')||(ms(u).protectChain||0)<2)&&(!m.effects.some(e=>e.effect_id==='heal')||u.hp<u.maxHp*.65));}
+
 

@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {participantExpMultiplier} from './relic-family.js?v=0.87.0';
 import {trainingGrowthBonus} from './training-draughts.js?v=0.87.0';
 import {experienceMultiplier} from './opening-balance.js?v=0.90.46';
@@ -55,4 +55,5 @@ export function growLevel(unit){normalizeProgress(unit);if(unit.dead||unit.hp<=0
 export function rewardsFor(defeats,party,{shareAll=false,warbond=null}={}){const multiplier=participantExpMultiplier(defeats,party,{shareAll,warbond}),amounts=new Map();for(const defeat of defeats){for(const uid of new Set(shareAll?party.map(u=>u.uid):defeat.participants)){const unit=party.find(u=>u.uid===uid&&u.hp>0&&!u.dead&&u.level<200);if(unit){const raw=expAward(defeat.level,unit.level,defeat.expMultiplier,multiplier),award=unit.species.id==='505'?Math.floor(raw/2):raw;if(award>0)amounts.set(uid,(amounts.get(uid)||0)+award);}}}return [...amounts].map(([uid,amount])=>({uid,amount,...(multiplier===2?{ability:'Warbond',multiplier}: {})}));}
 
 export function initializeProgress(unit){normalizeProgress(unit);const target=unit.level;unit.level=1;for(let level=2;level<=target;level++){unit.exp=100;growLevel(unit);}unit.exp=0;unit.hp=unit.maxHp;unit.evolutionBlockedLevel=unit.level;return unit;}
+
 

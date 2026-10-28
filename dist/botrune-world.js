@@ -1,5 +1,5 @@
 import {installThunderplainWorld,botruneBuildingBlocked} from './thunderplain-world.js?v=0.90.41';
-import {STORM_ROAD} from './botrune-data.js?v=0.90.41';
+import {STORM_ROAD} from './botrune-data.js?v=0.90.48';
 import {registerBiome} from './biome-world.js?v=0.90.41';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 const person=(id,label,x,y,portrait)=>({id,label,x,y,sprite:0,revoltCharacter:portrait});

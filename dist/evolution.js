@@ -1,9 +1,10 @@
 import {branchEvolutionAllowed} from './branch-families.js?v=0.90.41';
+import {relearnMoveIds} from './learning-access.js?v=0.90.48';
 import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.38';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {startingStats,migrateStats} from './stat-balance.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.47';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.48';
 import {STAT_KEYS} from './progression.js?v=0.90.41';
 
 export function eligibleEvolutions(unit,state={},itemId=null){
@@ -30,7 +31,8 @@ export function promote(unit,path){
 export function levelMoves(unit){return DATA.learnsets.filter(l=>l.species_id===unit.species.id&&l.level===unit.level&&l.method==='LEVEL_UP');}
 export function promoteUsingItem(unit,path,state){if(path.condition.method!=='ITEM'||!eligibleEvolutions(unit,state,path.condition.item_id).some(p=>p.id===path.id))return null;const card=promote(unit,path);if(card)state.evolutionItems[path.condition.item_id]--;return card;}
 export function entryMoves(unit){return DATA.learnsets.filter(l=>l.species_id===unit.species.id&&l.level===0);}
-export function relearnPool(unit){const ids=new Set([unit.species.id,...(unit.evolutionHistory||[]).flatMap(h=>[h.from,h.to])]);const equipped=new Set(unit.moves.map(m=>m.id));
- return [...new Set([...DATA.learnsets.filter(l=>ids.has(l.species_id)&&l.level<=unit.level).map(l=>l.move_id),...(unit.legacyRelearnMoveIds||[]),...(unit.breedingInheritance?.moveId?[unit.breedingInheritance.moveId]:[])])].map(id=>DATA.moves.find(m=>m.id===id)).filter(m=>m?.category&&!equipped.has(m.id));
+export function relearnPool(unit){const equipped=new Set(unit.moves.map(m=>m.id));
+ return relearnMoveIds(unit,DATA.learnsets).map(id=>DATA.moves.find(m=>m.id===id)).filter(m=>m?.category&&!equipped.has(m.id));
 }
+
 

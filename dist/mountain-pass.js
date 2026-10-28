@@ -1,5 +1,5 @@
 import {mountainTileName} from './mountain-art.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {legalForm} from './route-roster.js?v=0.87.0';
 import {installMountainQuests} from './mountain-quests.js?v=0.87.0';
 import {registerBiome} from './biome-world.js?v=0.90.41';
@@ -67,3 +67,4 @@ export function drawPassDetails(c,m,asset,walkable){if(!m.passKind)return;c.save
 
  for(const g of m.gates){if(g.x!==1&&g.x!==46)continue;const x=g.x===1?3:42,y=17;c.fillStyle='#172533e8';c.fillRect(x*16-10,y*16-23,78,15);c.fillStyle='#f4e1af';c.font='bold 9px sans-serif';c.fillText(g.x===1?(m.passKind==='upper'?'↓ LOWER':m.passKind==='ridge'?'↓ TUNNEL':'← RETURN'):m.passKind==='foothill'?'↓ ADIT':m.passKind==='lower'?'CLIMB →':m.passKind==='upper'?'DAYLIGHT →':m.passKind==='scree'?'MARKET →':'EAST →',x*16-5,y*16-12);}
  c.restore();}
+

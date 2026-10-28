@@ -1,0 +1,53 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {DATA} from '../dist/data.js';
+import {EVOLUTIONS} from '../dist/evolution-data.js';
+import {ACTION_ART,actionFrames} from '../dist/action-vfx.js';
+import {effectSpec,effectHTML} from '../dist/effects.js';
+import {relearnPool,levelMoves} from '../dist/evolution.js';
+import {applyRelearn} from '../dist/move-relearning.js';
+import {learnTreeHTML} from '../dist/learn-tree.js';
+import {normalizeTeamcraftUnit} from '../dist/teamcraft-progress.js';
+import {exchangeScrolls} from '../dist/marasen-activities-ui.js';
+import {instance,applyMove} from '../dist/engine.js';
+import {beginAbilities} from '../dist/abilities.js';
+const species=id=>DATA.species.find(s=>s.id===id),move=id=>DATA.moves.find(m=>m.id===id);
+const unit=(id='517',level=60)=>{const u=instance(species(id),level,[]);u.uid=id;u.hp=u.maxHp=5000;u.stats={hp:5000,attack:80,defence:100,sp_attack:100,sp_defence:100,speed:80};return u;};
+assert.equal(Object.keys(ACTION_ART).length,63);
+assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,63);
+for(const art of Object.values(ACTION_ART)){
+ assert(fs.existsSync('dist/'+art.src),art.name);
+ const m=move(art.id)||{id:art.id,type_id:'WATER',category:'SPECIAL',power:50};
+ assert(effectSpec(m).pixel,art.name);
+ const html=effectHTML(m);assert(html.includes('data-action-art='),art.name);assert(!html.includes('<svg'),art.name);
+ assert.equal(art.frames,16);assert.equal(art.logicalCell,64);
+}
+assert.deepEqual(actionFrames({id:790},{hitCount:0}),[]);
+assert(!actionFrames({id:790},{hitCount:1}).includes(4));
+assert(!actionFrames({id:790},{hitCount:2}).includes(7));
+assert.equal(actionFrames({id:790},{hitCount:3}).length,16);
+assert(ACTION_ART[790].sequence.includes('no water'));
+const u=unit('517',60);
+assert(!relearnPool(u).some(m=>m.id===784),'untaught Codex move cannot leak through free relearning');
+assert(!applyRelearn(u,784,-1),'confirmation rejects it too');
+assert(learnTreeHTML(u).includes('Codex teaching · Grand Exchange'));
+u.moves=[{...move(784),left:3}];normalizeTeamcraftUnit(u,DATA.moves);u.moves=[];
+assert(relearnPool(u).some(m=>m.id===784),'an existing save retains its learned Codex move');
+assert(applyRelearn(u,784,-1));
+const stock=new Set(exchangeScrolls().map(m=>Number(m.id)));
+for(const m of DATA.moves.filter(m=>m.codexOnly||m.accessRestored))assert(stock.has(m.id),m.name+' has a real purchase route');
+for(const id of ['506','507','508','509','511','512','513','514']){
+ const earliest=EVOLUTIONS.find(e=>e.to_species_id===id).condition.minimum_level;
+ const rows=DATA.learnsets.filter(l=>l.species_id===id&&l.progressionRenewal);
+ assert(rows.length>=5,id);assert(rows.every(l=>l.level>earliest),id+' choices happen after evolution');
+ const sample=unit(id,rows[0].level);assert(levelMoves(sample).some(l=>l.move_id===rows[0].move_id));
+}
+assert.equal(DATA.learnsets.filter(l=>l.species_id==='505').length,2);
+const fox=DATA.learnsets.filter(l=>l.species_id==='511');
+assert.equal(new Set(fox.map(l=>[l.move_id,l.level,l.method].join(':'))).size,fox.length);
+for(const row of DATA.learnsets)assert(DATA.moves.some(m=>m.id===row.move_id));
+const a=unit('517'),b=unit('001');b.uid='enemy';beginAbilities(a,[b],[a],{});a.moveState.stillwaterHits=2;
+const result=applyMove(b,a,{...move(742),left:10},()=>.5,{floor:0}),reply=result.reactions[0].result;
+assert.equal(reply.strikes.length,3);assert.equal(reply.strikes.reduce((n,s)=>n+s.damage,0),reply.damage);
+assert(reply.hpChanges.length);assert(result.presentationMainChanges);
+console.log('PASS: 63 raster animations, actual counter strikes, Codex acquisition, method-aware relearning, save retention and post-evolution progression.');

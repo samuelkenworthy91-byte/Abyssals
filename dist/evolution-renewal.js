@@ -1,4 +1,4 @@
-import {LEGACY_RENEWAL_LEARNSETS} from './evolution-renewal-data.js?v=0.90.41';
+import {LEGACY_RENEWAL_LEARNSETS} from './evolution-renewal-data.js?v=0.90.48';
 export const CENSMOKE_BRANCH_STATS={'058':['defence','sp_defence'],'059':['sp_attack'],'504':['attack','speed']};
 export function cultivatedStats(unit){const keys=['attack','defence','sp_attack','sp_defence','speed'];const high=Math.max(...keys.map(k=>Number(unit.stats?.[k])||0));return keys.filter(k=>Number(unit.stats?.[k])===high);}
 export function statEvolutionAllowed(unit,path){return path.condition.method!=='STAT'||(path.condition.stats||[]).some(k=>cultivatedStats(unit).includes(k));}
@@ -6,3 +6,4 @@ export function evolutionOutlook(unit){if(unit.species?.id==='115')return 'Trisk
 export function rememberLegacyRenewalMoves(unit){if(unit.evolutionRenewalVersion===1)return unit;const ids=new Set([unit.species?.id,...(unit.evolutionHistory||[]).flatMap(e=>[e.from,e.to])]);unit.legacyRelearnMoveIds=[...new Set([...(unit.legacyRelearnMoveIds||[]),...[...ids].flatMap(id=>(LEGACY_RENEWAL_LEARNSETS[id]||[]).filter(l=>l.level<=unit.level).map(l=>l.move_id))])];unit.evolutionRenewalVersion=1;return unit;}
 export const REMOVED_EVOLUTION_ITEMS={ITEM_EVOLUTION_IRON_SIGIL:4000,ITEM_EVOLUTION_GRAVE_SALT:4000,ITEM_EVOLUTION_GILDED_IDOL:4000,ITEM_EVOLUTION_GILDED_NODULE:3500,ITEM_EVOLUTION_STORMGLASS:3500,ITEM_EVOLUTION_BLOODSTONE:3500,ITEM_EVOLUTION_GRIEF_PEARL:3500,ITEM_EVOLUTION_WAYFARER_FEATHER:4000,ITEM_EVOLUTION_PILGRIM_BELL:4000,ITEM_EVOLUTION_TRIAL_TOXIN:4000,ITEM_EVOLUTION_SAINT_S_TONIC:4000,ITEM_EVOLUTION_SUN_RELIC:0};
 export function migrateRenewalEconomy(state){if(state.evolutionRenewalEconomy===1)return;let refund=0;const removed=[];state.evolutionItems??={};for(const [id,price]of Object.entries(REMOVED_EVOLUTION_ITEMS)){const n=state.evolutionItems[id];if(Number.isSafeInteger(n)&&n>0){refund+=n*price;removed.push({id,count:n});}delete state.evolutionItems[id];}state.money=(Number.isSafeInteger(state.money)?state.money:0)+refund;state.evolutionRenewalRefund={amount:refund,items:removed};state.evolutionRenewalEconomy=1;state.levelEvolutionMigration=true;}
+

@@ -1,5 +1,8 @@
-import {TIDE_ORCHARD_MOVES,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.47';
-import {ORCHARD_VFX_ART} from './tide-orchard-vfx-art.js?v=0.90.47';
-const all=[...TIDE_ORCHARD_MOVES,...Object.entries(ORCHARD_REACTIONS).map(([key,m])=>({...m,key}))];
-export const ORCHARD_SCORES=Object.fromEntries(all.map(m=>{const art=ORCHARD_VFX_ART[m.key];if(!art)throw Error('New move has no dedicated artwork: '+m.name);return [m.id,{...art,id:m.id,key:m.key,individual:true,orchard:true,style:m.key,color:m.type_id==='GRASS'?'#a3e48e':'#9adfff',status:m.category==='STATUS'}];}));
-export function orchardSceneHTML(move,result={}){const s=ORCHARD_SCORES[move.id];if(!s)return '';const key='orchard-'+s.id,travel=s.travel?'translate(var(--source-x,0px),var(--source-y,0px)) scale(.12)':'translate(0,35px) scale(.2)';return `<div class="orchard-fx of-${s.key}" data-fx-move="${s.id}" data-orchard-art="${s.key}" style="--of-time:${s.duration}ms"><style>@keyframes ${key}{0%{opacity:0;transform:${travel}}18%{opacity:.8} ${s.impact*100}%{opacity:1;transform:translate(0,0) scale(1)}78%{opacity:1;transform:scale(1.12) rotate(${s.id%2?6:-6}deg)}100%{opacity:0;transform:translate(0,-18px) scale(1.25)}}.of-${s.key} .orchard-ink{animation-name:${key}}</style>${s.svg}${result.damage?`<b class="of-damage">−${result.damage}</b>`:''}</div>`;}
+import {TIDE_ORCHARD_MOVES,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.48';
+import {ACTION_ART,pixelSceneHTML} from './action-vfx.js?v=0.90.48';
+const all=[...TIDE_ORCHARD_MOVES,...Object.values(ORCHARD_REACTIONS)];
+export const ORCHARD_SCORES=Object.fromEntries(all.map(m=>{
+ const art=ACTION_ART[m.id];if(!art)throw Error('Missing authored pixel animation: '+m.name);
+ return [m.id,{...art,individual:true,orchard:true,status:m.category==='STATUS',style:art.key}];
+}));
+export function orchardSceneHTML(move,result={}){return pixelSceneHTML(move,result);}

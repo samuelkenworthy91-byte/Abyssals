@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 // These two unique sanctuary encounters use legendary capture rarity.
 for(const id of ['165','184']){const species=DATA.species.find(s=>s.id===id);if(species.capture_rate==null)species.capture_rate=3;}

@@ -1,6 +1,6 @@
 import {roomGrid} from './promenade.js?v=0.90.37';
 import {shinyCanvas} from './shinies.js?v=0.90.20';
-import {RELIC_ART,relicArtPath,drawRelicPanel} from './relic-art.js?v=0.90.47';
+import {RELIC_ART,relicArtPath,drawRelicPanel} from './relic-art.js?v=0.90.48';
 import {beginStep,advanceStep} from './movement.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
 import {behaviourFor} from './companion-lines.js?v=0.87.0';

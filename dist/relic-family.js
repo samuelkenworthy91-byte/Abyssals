@@ -1,6 +1,6 @@
 import {ARMOURY_BRANCHES,ARMOURY_MOVES} from './relic-armoury.js?v=0.90.26';
 import {TACTICAL_MOVES,TACTICAL_BRANCH_LEARNSETS} from './tactical-moves.js?v=0.90.28';
-import {RELIC_ART} from './relic-art.js?v=0.90.47';
+import {RELIC_ART} from './relic-art.js?v=0.90.48';
 // Six original branches plus twelve approved armoury branches. Existing IDs and rules remain stable.
 export const RIVET_ID='365';
 const keys=['hp','attack','defence','sp_attack','sp_defence','speed'];
@@ -53,3 +53,4 @@ export function markWarbond(b,units=[],shareAll=false){const ids=new Set(b.parti
 export function participantExpMultiplier(defeats,party,{shareAll=false,warbond=null}={}){if(warbond!==null)return warbond?2:1;const ids=new Set(defeats.flatMap(d=>d.participants||[]));return party.some(u=>bearer(u)&&(ids.has(u.uid)||shareAll&&u.hp>0&&!u.dead))?2:1;}
 
 export function relicEncounterRoute(route){if(route.relicExpanded||!['emberQuarry','relicCrags','waranCave1'].includes(route.room))return route;return {...route,relicExpanded:true,tables:route.tables.map(t=>{const slots=t.slots.map(s=>({...s})),largest=route.room==='waranCave1'?slots[2]:slots.reduce((a,b)=>a.weight>b.weight?a:b);largest.weight-=5;const bounds=slots[0];slots.push({species_id:RIVET_ID,min_level:bounds.min_level,max_level:bounds.max_level,weight:5,rarity:'Rare',authoredSlot:true,approvedRelic:true});return {...t,slots};})};}
+

@@ -1,6 +1,6 @@
-import {MARASEN_TRAINERS} from './marasen-data.js?v=0.90.41';
-import {COSSENNE_TRAINERS} from './cossenne-data.js?v=0.90.41';
-import {CYBRESSA_TRAINERS} from './cybressa-data.js?v=0.90.41';
+import {MARASEN_TRAINERS} from './marasen-data.js?v=0.90.48';
+import {COSSENNE_TRAINERS} from './cossenne-data.js?v=0.90.48';
+import {CYBRESSA_TRAINERS} from './cybressa-data.js?v=0.90.48';
 export const PAYOUT_COEFFICIENTS={Basic:[10,50],Advanced:[16,50],'Leader-lite':[24,75],Leader:[50,50],Rival:[50,50],Warden:[0,0],Final:[0,0],Severin:[0,0]};
 export function trainerPayout(trainer){const [level,size]=PAYOUT_COEFFICIENTS[trainer.ai_tier]||[0,0];return Math.floor((level*Math.max(0,...trainer.team.map(t=>t.level))+size*trainer.team.length)/10+.5)*10;}
 export function claimTrainerPayout(state,trainer){state.trainerPayouts??=[];if(state.trainerPayouts.includes(trainer.id)||state.defeatedTrainers?.includes(trainer.id))return 0;const amount=trainerPayout(trainer);state.money+=amount;state.trainerPayouts.push(trainer.id);return amount;}

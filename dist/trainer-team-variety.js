@@ -1,5 +1,5 @@
-import {rng} from './engine.js?v=0.90.47';
-import {DATA} from './data.js?v=0.90.47';
+import {rng} from './engine.js?v=0.90.48';
+import {DATA} from './data.js?v=0.90.48';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 import {EXTRA_TRAINERS,routeStage} from './route-progression.js?v=0.90.41';
 import {ROAD_POOLS} from './encounter-pools.js?v=0.90.25';
@@ -21,4 +21,5 @@ export function expeditionTrainerTeam(state,t){
  for(const slot of team){slot.species_id=legalForm(slot.species_id,slot.level);slot.current_form_legal_move_ids=legalMoves(slot.species_id,slot.level);}
  state.trainerTeams??={};state.trainerTeams[t.id]=structuredClone(team);return {...t,team,expeditionTeam:true};
 }
+
 

@@ -1,5 +1,5 @@
 import {mountainRoute,PASS_CACHES} from './mountain-pass.js?v=0.90.20';
-import {DATA} from './data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
 import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
 export const CYBRESSA_ROUTES={
  rivercause:{name:'Rivercause Road · Western Causeway',min:38,max:40,biome:'wetland',DAY:['052','106','061','078','054'],NIGHT:['052','106','024','022','112']},
@@ -34,3 +34,4 @@ export const CYBRESSA_TRAINERS=[
 ];
 export function installCybressaTrainers(expansion,voices){for(const source of CYBRESSA_TRAINERS){if(!expansion.trainers.some(t=>t.id===source.id)){const {before,after,...t}=source;expansion.trainers.push({...t,role:t.id==='LDR-03'?'city leader':'Cybressa chapter',runtimeAuthored:true});}if(voices)voices[source.id]={before:source.before,after:source.after,repeat:source.after};}}
 export function cybressaRoute(room){const pass=mountainRoute(room);if(pass)return pass;const r=CYBRESSA_ROUTES[room];if(!r)return null;const weights=[35,30,24,8,3];return {room,explorationTable:true,encounterPacing:true,area:{id:room,name:r.name,rate:'NORMAL'},tables:['DAY','NIGHT'].map(phase=>({id:room+'-'+phase,area_id:room,phase,slots:r[phase].map((id,i)=>{let min=r.min;while(min<=r.max&&legalForm(id,min)!==id)min++;if(min>r.max)throw Error('Cybressa encounter below evolution level: '+id);if(!DATA.species.some(s=>s.id===id))throw Error('Missing Cybressa species '+id);return {species_id:id,min_level:min,max_level:r.max,weight:weights[i],authoredSlot:true,rarity:i<3?'Common':i===3?'Uncommon':'Rare'};})}))};}
+

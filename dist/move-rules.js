@@ -1,5 +1,5 @@
-import {orchardUsable,orchardGrounded} from './tide-orchard-battle.js?v=0.90.47';
-import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.47';
+import {orchardUsable,orchardGrounded} from './tide-orchard-battle.js?v=0.90.48';
+import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.48';
 import {unitName} from './names.js?v=0.87.0';
 export const SUPPORTED_EFFECTS = new Set(['orchard_mist','undertow_mark','brine_veil','blank_horizon','moonlit_reprisal','berry_supper','orchard_tailwind','draining_roots','orchard_carpet','pantry_refill','breeze_relay','orchard_taunt','orchard_rest','dream_murmur','binding_eddy','orchard_safeguard','wakeful_seed','clearcut_breeze','refrain_lock','pivot','healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
 export function moveHPCost(actor,move){return (move?.effects||[]).filter(e=>e.effect_id==='hp_cost').reduce((sum,e)=>sum+Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])),0);}
@@ -54,5 +54,6 @@ export function endMoveEffects(units,random= Math.random){const out=[],field=uni
  if(field.terrainTurns>0&&--field.terrainTurns===0){field.terrain=null;delete field.orchardCarpet;out.push('Terrain faded.');}
  field.lastMoveDamage=field.currentMoveDamage||[];field.currentMoveDamage=[];return out;
 }
+
 
 

@@ -28,6 +28,7 @@ jobs:
             release
             docs
             art-library/reviews/item-branches-2026-10-26
+            art-library/action-vfx
           sparse-checkout-cone-mode: true
       - uses: actions/setup-node@v4
         with:
@@ -35,6 +36,7 @@ jobs:
       - name: Test game behavior and source
         run: |
           python3 -m pip install --quiet Pillow==11.1.0
+          python3 scripts/audit-action-art.py
           node scripts/build-journal-habitats.mjs
           git diff --exit-code -- dist/journal-habitats.js
           node scripts/audit-shiny-art.mjs
@@ -49,6 +51,9 @@ jobs:
           # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Verify pixel action artwork on phone
+        timeout-minutes: 3
+        run: node tests/action-vfx-browser.cjs
       - name: Test Tide and Orchard moves, terrain and live battle graphics
         timeout-minutes: 4
         run: node tests/tide-orchard-browser.cjs

@@ -16,8 +16,8 @@ const move=key=>({...DATA.moves.find(m=>m.id===(I[key]||key)),left:30});
 const use=(a,b,k,random=()=>.5)=>applyMove(a,b,move(k),random,{floor:0});
 const fixture=(id='517',other='001')=>{const a=make(id),b=make(other);beginAbilities(a,[b],[a],{});return [a,b];};
 assert.equal(TIDE_ORCHARD_SPECIES.length,5);assert.equal(new Set(DATA.species.map(s=>s.id)).size,DATA.species.length);assert.equal(new Set(DATA.moves.map(m=>m.name)).size,DATA.moves.length);
-for(const m of TIDE_ORCHARD_MOVES){assert(ORCHARD_SCORES[m.id]?.svg,m.name);assert(effectHTML(m).includes('data-orchard-art'),m.name);}
-assert.equal(new Set(TIDE_ORCHARD_MOVES.map(m=>ORCHARD_SCORES[m.id].svg)).size,TIDE_ORCHARD_MOVES.length,'distinct artwork for every new move');
+for(const m of TIDE_ORCHARD_MOVES){assert(ORCHARD_SCORES[m.id]?.src,m.name);assert(effectHTML(m).includes('data-orchard-art'),m.name);}
+assert.equal(new Set(TIDE_ORCHARD_MOVES.map(m=>ORCHARD_SCORES[m.id].src)).size,TIDE_ORCHARD_MOVES.length,'distinct artwork for every new move');
 // Third special hit: three real Water attacks, no extra PP or chosen-action consumption.
 {
  const[a,b]=fixture();const hp=b.hp;const m=move('waterPulse');b.moves=[m];const third=[];

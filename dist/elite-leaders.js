@@ -1,8 +1,8 @@
-import {DATA} from './data.js?v=0.90.47';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.48';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {legalMoves} from './route-roster.js?v=0.87.0';
-import {rng} from './engine.js?v=0.90.47';
+import {rng} from './engine.js?v=0.90.48';
 import {typeEffectiveness,TYPES} from './type-rules.js?v=0.87.0';
 
 // Identity, specialty and level curve are authored; only the saved roster varies.
@@ -119,3 +119,4 @@ export function eliteLeaderTeam(state,t){
  return {...t,team:structuredClone(saved.team),eliteLeader:true,specialty:spec.type,leaderTitle:spec.title,expeditionTeam:true,sourceHeldRoles:[],bagUses:t.bagUses??t.bag_count??1};
 }
 export function lockVisitedLeaderTeams(state,trainers,visited){for(const t of trainers)if(!t.rematchOf&&eliteIdentity(t)&&visited.includes(eliteIdentity(t).town))eliteLeaderTeam(state,t);}
+

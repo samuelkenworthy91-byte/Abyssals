@@ -1,5 +1,5 @@
 import {BIRD_BRIEFS} from './bird-family.js?v=0.87.0';
-import {PALADIN_SPECIES,PALADIN_MOVES} from './paladin-data.js?v=0.90.41';
+import {PALADIN_SPECIES,PALADIN_MOVES} from './paladin-data.js?v=0.90.48';
 import {MENAGERIE_FAMILIES,MENAGERIE_SPECIES} from './menagerie-family.js?v=0.87.0';
 import {AQUATIC_BRIEFS} from './approved-aquatic.js?v=0.87.0';
 // Reviewed family themes, using Scarlet/Violet + DLC learnsets as pacing references.
@@ -16,3 +16,4 @@ for(const f of MENAGERIE_FAMILIES){const s=MENAGERIE_SPECIES.find(s=>s.id===f.id
 for(const [i,s]of PALADIN_SPECIES.entries())FAMILY_BRIEFS[s.family_id]={family_id:s.family_id,theme:s.name,role:s.role,types:s.types,reference_levels:s.legendaryRoamer?[1,6,12,16,26,32]:[1,6,12,16,22,24,26,30,38],plan:s.ability_names.primary+" supports "+PALADIN_MOVES[i].name+" with category-matched STAB and restrained coverage."};
 
 Object.assign(FAMILY_BRIEFS,BIRD_BRIEFS);
+

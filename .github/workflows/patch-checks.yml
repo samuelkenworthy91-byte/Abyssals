@@ -15,13 +15,18 @@ jobs:
             dist
             scripts
             tests
+            docs
             art-library/reviews/item-branches-2026-10-26
+            art-library/action-vfx
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Validate inventory, save migration dependencies and map navigation
         run: |
           for file in dist/*.js; do node --check "$file"; done
+          python3 -m pip install --quiet Pillow==11.1.0
+          python3 scripts/audit-action-art.py
+          for test in tests/*.test.mjs; do node "$test"; done
           node tests/bag-lift.test.mjs
           node tests/branches-berries.test.mjs
           node tests/waranwei-direction.test.mjs
@@ -36,6 +41,10 @@ jobs:
           npm install --no-save --package-lock=false playwright@1.51.1
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+      - name: Verify action artwork and live counter presentation
+        run: |
+          node tests/action-vfx-browser.cjs
+          node tests/tide-orchard-browser.cjs
       - name: Check every bag pocket and all six lift journeys
         run: node tests/bag-lift-browser.cjs
       - name: Check lift, Prodigy indicators and equipment on portrait phone

@@ -1,13 +1,13 @@
-import {codexCompatible,canonicalMoveId} from './teamcraft-data.js?v=0.90.41';
+import {codexCompatible,canonicalMoveId} from './teamcraft-data.js?v=0.90.48';
 import {BREEDING_ONLY_FIRST_FORMS,TRADE_ONLY_FAMILIES,RESERVED_STARTERS} from './encounter-access.js?v=0.90.18';
 import {keepContestBait} from './jetty-fishing.js?v=0.90.20';
 import {FISH_POOL,FISH_ENTRY_FEE,FISH_RIVALS,fishingResident,fishingSpecies} from './fishing-habitats.js?v=0.90.18';
 export {FISH_POOL,FISH_ENTRY_FEE} from './fishing-habitats.js?v=0.90.18';
-import {startingMoveIds} from './moveset-identity.js?v=0.90.47';
+import {startingMoveIds} from './moveset-identity.js?v=0.90.48';
 import {TYPES} from './type-rules.js?v=0.87.0';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
-import {DATA} from './data.js?v=0.90.47';
-import {instance,rng} from './engine.js?v=0.90.47';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.48';
+import {DATA} from './data.js?v=0.90.48';
+import {instance,rng} from './engine.js?v=0.90.48';
 import {hashSeed,initializeProgress,STAT_KEYS,unitGrowthRates} from './progression.js?v=0.90.41';
 // Ordinary starting forms only; exclude special rarity classes across the whole family.
 const specialFamily=s=>DATA.species.some(other=>other.family_id===s.family_id&&/legend|myth|pseudo|fossil/i.test(other.power_class));
@@ -76,5 +76,6 @@ export function claimFishingPrize(state,id){const c=state.sideAdventures?.fishin
 export function canLearnScroll(unit,moveId){moveId=canonicalMoveId(moveId);if(unit?.species?.id==='505')return false;const ids=new Set([unit?.species?.id,...(unit?.evolutionHistory||[]).flatMap(h=>[h.from,h.to])]);return !!unit&&unit.hp>0&&!unit.dead&&!unit.moves.some(m=>m.id===moveId)&&(codexCompatible(unit.species,moveId,DATA)||DATA.learnsets.some(l=>ids.has(l.species_id)&&l.move_id===moveId)||(DATA.moves.find(m=>m.id===moveId)?.tutorTypes||[]).some(t=>unit.species.types.includes(t)));}
 export function sideObjective(state,room,elapsed=0){if(room==='rescueGlade'){const q=state.sideAdventures?.rescue;return {spot:q?.rescued?q.giftUid?'rescue-back':'rescued-soldier':'rescue-leader',text:q?.rescued?q.giftUid?'Return to the main road':'Choose a rescue gift Abyssal':q?.seen?'Defeat all four soldiers without leaving the battle':'Investigate the soldiers in the glade'};}if(room==='anglersReach'){const f=state.sideAdventures?.fishing,c=f?.contest;return {spot:!f?.rod?'fishing-warden':c&&!c.finished&&!c.entry&&!fishingClosed(c,elapsed)?'fishing-cast':'fishing-warden',text:!f?.rod?'Speak to the angling warden':c&&!c.finished?fishingClosed(c,elapsed)?'Submit your competition result':c.entry?'Submit your keeper to the warden now':'Find one Water-type keeper before time runs out':c&&!c.prizeClaimed?'Collect your competition prize':'Speak to the warden or return to the road'};}return null;}
 export function sideJournal(state,room,elapsed=0){if(room==='rescueGlade')return rescueReady(state)?'The young soldier is safe. He wants to thank you.':'A lone True Light soldier is cornered by a Dawn Bloom patrol.';if(room==='anglersReach'){const c=state.sideAdventures?.fishing?.contest;return c&&!c.finished?`Competition day ${c.day+1}: ${c.casts} casts used · ${fishingClosed(c,elapsed)?'Casting time has ended':'Casting window is open'}. ${c.entry?'Your keeper is registered at '+c.entry.score+' total stats; submit it to the warden now.':'You can keep one catch.'}`:'Submit a keeper at any time. Enter again at any time after a full day–night cycle from your last catch or submission, whichever was later. Travel does not reset the wait.';}return null;}
+
 
 

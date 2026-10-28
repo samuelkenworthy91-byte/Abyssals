@@ -1,5 +1,5 @@
 import {EXPANSION_HABITATS} from './full-encounters.js?v=0.87.0';
-import {CAVE_FLOORS} from './exploration-data.js?v=0.90.41';
+import {CAVE_FLOORS} from './exploration-data.js?v=0.90.48';
 // Play-test route pacing overlay, deliberately separate from imported canon tables.
 export const ROUTE_STAGES={
  march:{base:'march',stage:1,count:2,min:5,max:7},march2:{base:'march',stage:2,count:2,min:8,max:10},
@@ -41,3 +41,4 @@ export function extendRoutes(maps){
  maps.scrub.spots=maps.scrub.spots.filter(s=>s.id!=='TRN-C02-002');maps.scrub2.spots.push({id:'TRN-C02-002',label:'Soldier Ralph de Bohun',x:31,y:20,sprite:2});
  for(const t of EXTRA_TRAINERS)if(maps[t.room])maps[t.room].spots.push({id:t.id,label:t.name,x:t.x,y:t.y,sprite:2,patrol:[[t.x,t.y],[t.x+2,t.y],[t.x+2,t.y+1],[t.x,t.y+1]]});
 }
+

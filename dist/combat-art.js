@@ -1,6 +1,6 @@
 import {frameCombatArt} from './combat-frame.js?v=0.87.0';
 import {shinyCanvas} from './shinies.js?v=0.90.20';
-import {relicArtPath,RELIC_ART} from './relic-art.js?v=0.90.47';
+import {relicArtPath,RELIC_ART} from './relic-art.js?v=0.90.48';
 // Retain decoded fronts and retry transient failures. DOM redraws reuse ready PNGs.
 const fronts=new Map();
 export function preloadCombatArt(ids){for(const id of new Set(ids))void combatArtReady(id);}

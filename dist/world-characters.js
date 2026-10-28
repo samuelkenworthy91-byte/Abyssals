@@ -1,5 +1,5 @@
-import {REVOLT_ART_IDS} from './revolt-data.js?v=0.90.41';
-import {COSSENNE_PEOPLE} from './cossenne-data.js?v=0.90.41';
+import {REVOLT_ART_IDS} from './revolt-data.js?v=0.90.48';
+import {COSSENNE_PEOPLE} from './cossenne-data.js?v=0.90.48';
 import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.87.0';
 import {SIDE_TRAINER_ART,SIDE_TRAINER_IDS,RESTORED_TRAINER_ART} from './side-trainer-art.js?v=0.90.16';
 // Four facing rows, with a passing pose between opposite planted-foot poses.

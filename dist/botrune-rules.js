@@ -1,5 +1,5 @@
 import {stormSideObjective} from './thunderplain-rules.js?v=0.90.14';
-import {BOTRUNE_GUARDS,TRIAL_BEATS,STORM_ROAD} from './botrune-data.js?v=0.90.41';
+import {BOTRUNE_GUARDS,TRIAL_BEATS,STORM_ROAD} from './botrune-data.js?v=0.90.48';
 export function botruneState(s){return s.botrune??={version:1,cursor:0,phase:'trial',witnesses:[],keepsakes:false};}
 export const botruneUnlocked=s=>['SPARED','EXECUTED'].includes(s.fates?.['LDR-05']);
 export const btDefeated=(s,id)=>(s.defeatedTrainers||[]).includes(id);

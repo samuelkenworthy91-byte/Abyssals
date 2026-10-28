@@ -1,16 +1,16 @@
-import {ORCHARD_IDS,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.47';
-import {orchardPrepare,orchardEffect,brineVeil,orchardHit} from './tide-orchard-battle.js?v=0.90.47';
-import {heldSurvival,finishHeldMove,activateHeldRecovery} from './abilities.js?v=0.90.47';
-import {secondaryChance,prepareSpecialistMove,stabMultiplier,actionInvalid,beginAction,blocksTarget,strikeBarrier,teamcraftEffect,endTeamcraft,selectedAlly} from './teamcraft-battle.js?v=0.90.47';
-import {enterAbility,leaveAbility} from './abilities.js?v=0.90.47';
+import {ORCHARD_IDS,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.48';
+import {orchardPrepare,orchardEffect,brineVeil,orchardHit} from './tide-orchard-battle.js?v=0.90.48';
+import {heldSurvival,finishHeldMove,activateHeldRecovery} from './abilities.js?v=0.90.48';
+import {secondaryChance,prepareSpecialistMove,stabMultiplier,actionInvalid,beginAction,blocksTarget,strikeBarrier,teamcraftEffect,endTeamcraft,selectedAlly} from './teamcraft-battle.js?v=0.90.48';
+import {enterAbility,leaveAbility} from './abilities.js?v=0.90.48';
 import {statusAttackFactor} from './status-rules.js?v=0.90.24';
 import {birdPrepareMove,birdAccuracy,birdGroundImmunity,birdThreshold} from './bird-abilities.js?v=0.90.41';
 import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
-import {resolveSalvationMove} from './salvation.js?v=0.87.0';
+import {resolveSalvationMove} from './salvation.js?v=0.90.48';
 import {captureHealth,healthChanges} from './health-presentation.js?v=0.87.0';
-import {canPayMoveHP,moveUsable,movePriority,moveDamageMultiplier,trackMove,consumeWard,extraMoveEffect,contactReaction,endMoveEffects} from './move-rules.js?v=0.90.47';
-export {moveUsable} from './move-rules.js?v=0.90.47';
-import {canSwitch,isContact,effectiveStage,weatherSuppressed,triggerArcticEndurance,has,abilityMemory,abilityBattle,speedFactor,heldStat,heldInfo,restoreHP,blockedByAbility,critChance,ignoresDefence,abilityMultiplier,afterDamage,afterStatusMove,recordMove,failedMove,changeStage,blocksEvasion,inflictStatus,endAbilities,triggerSunWrath} from './abilities.js?v=0.90.47';
+import {canPayMoveHP,moveUsable,movePriority,moveDamageMultiplier,trackMove,consumeWard,extraMoveEffect,contactReaction,endMoveEffects} from './move-rules.js?v=0.90.48';
+export {moveUsable} from './move-rules.js?v=0.90.48';
+import {canSwitch,isContact,effectiveStage,weatherSuppressed,triggerArcticEndurance,has,abilityMemory,abilityBattle,speedFactor,heldStat,heldInfo,restoreHP,blockedByAbility,critChance,ignoresDefence,abilityMultiplier,afterDamage,afterStatusMove,recordMove,failedMove,changeStage,blocksEvasion,inflictStatus,endAbilities,triggerSunWrath} from './abilities.js?v=0.90.48';
 import {typeEffectiveness} from './type-rules.js?v=0.87.0';
 import {startingStats,STAT_BALANCE_VERSION,EVOLUTION_STAT_VERSION} from './stat-balance.js?v=0.87.0';
 import {unitName} from './names.js?v=0.87.0';
@@ -94,19 +94,20 @@ export function cleanupRound(...args){const random=typeof args.at(-1)==='functio
 export function heal(unit,amount=Math.min(50,Math.floor(unit.maxHp/2))){if(unit.hp<1||unit.hp>=unit.maxHp)return 0;return restoreHP(unit,amount);}
 export function pathfind(start,end,blocked,width=48,height=32){const key=([x,y])=>`${x},${y}`;const queue=[start],seen=new Set([key(start)]),parents=new Map();let reached=false;for(let i=0;i<queue.length;i++){const p=queue[i];if(key(p)===key(end)){reached=true;break;}for(const [dx,dy]of [[0,-1],[1,0],[0,1],[-1,0]]){const n=[p[0]+dx,p[1]+dy],k=key(n);if(n[0]<0||n[1]<0||n[0]>=width||n[1]>=height||blocked(n[0],n[1])||seen.has(k))continue;seen.add(k);parents.set(k,p);queue.push(n);}}if(!reached)return [];const path=[];let p=end;while(key(p)!==key(start)){path.push(p);p=parents.get(key(p));}return path.reverse();}
 
-export function applyMove(actor,target,move,random,options){const formBefore=new Map([actor,target].map(u=>[u.uid||u.species.id,!!u.sunWrath?.active]));const affected=[...new Set([actor,target,...(move.allyTarget||move.effects?.some(e=>['party_heal','active_cleanse','healing_relay'].includes(e.effect_id))?menagerieParty(actor):[])])];const before=captureHealth(...affected);const result=resolveMove(actor,target,move,random,options);result.messages.push(...birdThreshold(actor,{changeStage}),...birdThreshold(target,{changeStage}));triggerSunWrath(actor);triggerSunWrath(target);for(const u of [actor,target])if(triggerArcticEndurance(u))result.messages.push(`${unitName(u)} · Arctic Endurance: Defence and Special Defence rose.`);const pivot=move.effects?.some(e=>e.effect_id==='pivot')&&result.damage>0&&actor.hp>0&&canSwitch(actor);if(!result.skipped&&(actor.moveState?.relayRequested||pivot)){const next=selectedAlly(actor);if(next&&(!pivot||next!==actor&&!next.abilityState)){const field=actor.field;if(pivot){delete actor.moveState.effigyHandoff;delete actor.moveState.relayRequested;delete actor.moveState.decoy;result.messages.push(`${unitName(actor)} withdraws after Parting Blow.`);}result.messages.push(...leaveAbility(actor,{switching:true,nextUnit:next,passStages:!pivot}),...enterAbility(next,target,{party:menagerieParty(actor),field}));next.actedThisRound=true;result.replacementUid=next.uid;}}result.hpChanges=healthChanges(before,...affected);result.transforms=[actor,target].filter(u=>u.sunWrath?.active&&!formBefore.get(u.uid||u.species.id)).map(u=>({uid:u.uid||u.species.id,side:u.side,speciesId:u.species.id}));return result;}
+export function applyMove(actor,target,move,random,options){const formBefore=new Map([actor,target].map(u=>[u.uid||u.species.id,!!u.sunWrath?.active]));const affected=[...new Set([actor,target,...(move.allyTarget||move.effects?.some(e=>['party_heal','active_cleanse','healing_relay'].includes(e.effect_id))?menagerieParty(actor):[])])];const before=captureHealth(...affected);const result=resolveMove(actor,target,move,random,options);result.messages.push(...birdThreshold(actor,{changeStage}),...birdThreshold(target,{changeStage}));triggerSunWrath(actor);triggerSunWrath(target);for(const u of [actor,target])if(triggerArcticEndurance(u))result.messages.push(`${unitName(u)} · Arctic Endurance: Defence and Special Defence rose.`);const pivot=move.effects?.some(e=>e.effect_id==='pivot')&&result.damage>0&&actor.hp>0&&canSwitch(actor);if(!result.skipped&&(actor.moveState?.relayRequested||pivot)){const next=selectedAlly(actor);if(next&&(!pivot||next!==actor&&!next.abilityState)){const field=actor.field;if(pivot){delete actor.moveState.effigyHandoff;delete actor.moveState.relayRequested;delete actor.moveState.decoy;result.messages.push(`${unitName(actor)} withdraws after Parting Blow.`);}result.messages.push(...leaveAbility(actor,{switching:true,nextUnit:next,passStages:!pivot}),...enterAbility(next,target,{party:menagerieParty(actor),field}));next.actedThisRound=true;result.replacementUid=next.uid;}}result.hpChanges=healthChanges(before,...affected);if(result.reactions?.length){const delta=new Map();for(const reaction of result.reactions)for(const h of reaction.result.hpChanges||[])delta.set(h.key,(delta.get(h.key)||0)+h.after-h.before);result.presentationMainChanges=result.hpChanges.map(h=>({...h,after:Math.max(0,Math.min(h.maxHp,h.after-(delta.get(h.key)||0)))}));}result.transforms=[actor,target].filter(u=>u.sunWrath?.active&&!formBefore.get(u.uid||u.species.id)).map(u=>({uid:u.uid||u.species.id,side:u.side,speciesId:u.species.id}));return result;}
 
 
 
-function tideReply(actor,target,reply,random,fallbackFloor=0){const messages=[],floor=target.combatFloor??fallbackFloor,m=reply.move;let total=0,hits=0;
+function tideReply(actor,target,reply,random,fallbackFloor=0){const messages=[],floor=target.combatFloor??fallbackFloor,m=reply.move,beforeReply=captureHealth(actor,target),strikes=[];let total=0,hits=0;
  for(let i=0;i<reply.hits&&actor.hp>0&&target.hp>floor;i++){
   if(blocksTarget(actor,target,m,messages)||blockedByAbility(actor,target,m,messages))break;
   const effectiveness=typeEffectiveness('WATER',target.species.types);if(!effectiveness)break;
   const a=actor.stats.sp_attack*stageMultiplier(actor.stages.sp_attack)*heldStat(actor,'sp_attack')*statusAttackFactor(actor,true),d=target.stats.sp_defence*stageMultiplier(target.stages.sp_defence)*heldStat(target,'sp_defence');
   const base=Math.floor((2*actor.level/5+2)*m.power*a/Math.max(1,d)/50)+2;
   const amount=Math.max(1,Math.floor(base*stabMultiplier(actor,m)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,m,{movedFirst:false})*abilityMultiplier(actor,target,m,{effectiveness,movedFirst:false})));
-  const barrier=strikeBarrier(actor,target,m,Math.min(Math.max(0,target.hp-floor),amount),{floor},messages),n=heldSurvival(target,barrier.damage,messages);target.hp-=n;total+=n;hits++;consumeWard(target,m,n);messages.push(...afterDamage(actor,target,m,n,{effectiveness,floor:actor.combatFloor??0,random}),...activateHeldRecovery(target));
+  const beforeStrike=captureHealth(actor,target);const barrier=strikeBarrier(actor,target,m,Math.min(Math.max(0,target.hp-floor),amount),{floor},messages),n=heldSurvival(target,barrier.damage,messages);target.hp-=n;total+=n;hits++;consumeWard(target,m,n);messages.push(...afterDamage(actor,target,m,n,{effectiveness,floor:actor.combatFloor??0,random}),...activateHeldRecovery(target));strikes.push({damage:n,effectiveness,hpChanges:healthChanges(beforeStrike,actor,target)});
  }
  messages.push(`${unitName(actor)} · ${m.name}: ${hits} slash${hits===1?'':'es'}, ${total} damage.`);
- return {who:actor.side||'player',move:m,result:{damage:total,effectiveness:1,messages,hitCount:hits,reactionOnly:true}};
+ return {who:actor.side||'player',move:m,result:{damage:total,effectiveness:strikes[0]?.effectiveness??0,messages,hitCount:hits,reactionOnly:true,strikes,hpChanges:healthChanges(beforeReply,actor,target)}};
 }
+

@@ -1,4 +1,4 @@
-import {abilityName} from './abilities.js?v=0.90.47';
+import {abilityName} from './abilities.js?v=0.90.48';
 
 export function installExpeditionAbilities(data){
  for(const [family,name] of [['FAMILY-121','Quarry Scent'],['FAMILY-107','Fortune Finder']])for(const s of data.species.filter(s=>s.family_id===family)){
@@ -21,3 +21,4 @@ export function battleDoubloonQuote(b,units=[],base=0){
  const bonus=eligible&&base>0?base*(multiplier-1):eligible&&!b.trainer&&b.kind==='wild'&&b.outcome==='defeated'?5*Math.max(1,b.enemies[0]?.rewardLevel??b.enemies[0]?.level??1)*(multiplier/2):0;
  return {base,bonus,total:base+bonus,ability:bonus?(multiplier===4?'Grand Fortune':'Fortune Finder'):null};
 }
+

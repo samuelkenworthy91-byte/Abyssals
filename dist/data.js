@@ -1,14 +1,16 @@
-import {installTideOrchard} from './tide-orchard-data.js?v=0.90.47';
+import {installProgressionRenewal} from './progression-renewal.js?v=0.90.48';
+import {EVOLUTIONS as PROGRESSION_EVOLUTIONS} from './evolution-data.js?v=0.90.48';
+import {installTideOrchard} from './tide-orchard-data.js?v=0.90.48';
 import {installBranchFamilies} from './branch-families.js?v=0.90.41';
-import {installEvolutionRenewal} from './evolution-renewal-data.js?v=0.90.41';
-import {installTeamcraft} from './teamcraft-data.js?v=0.90.41';
+import {installEvolutionRenewal} from './evolution-renewal-data.js?v=0.90.48';
+import {installTeamcraft} from './teamcraft-data.js?v=0.90.48';
 import {installExchangeTechniques} from './exchange-techniques.js?v=0.90.24';
 import {installBirds} from './bird-family.js?v=0.87.0';
-import {installPaladins} from './paladin-data.js?v=0.90.41';
+import {installPaladins} from './paladin-data.js?v=0.90.48';
 import {installMenagerie} from './menagerie-family.js?v=0.87.0';
 import {installMiasma} from './miasma-family.js?v=0.87.0';
-import {SECRET_MOVES,installQuestAbilityAlternatives} from './quest-rewards-data.js?v=0.90.41';
-import {installSalvation} from './salvation.js?v=0.87.0';
+import {SECRET_MOVES,installQuestAbilityAlternatives} from './quest-rewards-data.js?v=0.90.48';
+import {installSalvation} from './salvation.js?v=0.90.48';
 import {installAquatic} from './approved-aquatic.js?v=0.87.0';
 import {installSpecialFighting} from './special-fighting.js?v=0.87.0';
 import {installRelicFamily} from './relic-family.js?v=0.87.0';
@@ -16,7 +18,7 @@ import {canonicalCharacterName,canonicalDialogueTree} from './canonical-characte
 import {applyModernLearnsets} from './modern-learnsets.js?v=0.87.0';
 import {installExpeditionAbilities} from './expedition-abilities.js?v=0.90.41';
 import {installRimebun} from './rimebun.js?v=0.87.0';
-import {applyMovesetIdentity} from './moveset-identity.js?v=0.90.47';
+import {applyMovesetIdentity} from './moveset-identity.js?v=0.90.48';
 import {installFullExpansion} from './full-expansion.js?v=0.87.0';
 import {applyCoverageBalance} from './coverage-balance.js?v=0.87.0';
 import {applyRosterExpansion} from './roster-expansion.js?v=0.87.0';
@@ -71,3 +73,8 @@ installEvolutionRenewal(DATA);
 installBranchFamilies(DATA);
 
 installTideOrchard(DATA);
+
+
+DATA.progressionEvolutionParents=new Set(PROGRESSION_EVOLUTIONS.map(e=>e.from_species_id));
+installProgressionRenewal(DATA);
+delete DATA.progressionEvolutionParents;

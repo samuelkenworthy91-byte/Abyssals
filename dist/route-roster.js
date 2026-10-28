@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.47';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.47';
+import {DATA} from './data.js?v=0.90.48';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.48';
 import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
 import {EXTRA_TRAINERS} from './route-progression.js?v=0.90.41';
 export function rootForm(id){let prev;const seen=new Set();while((prev=EVOLUTIONS.find(e=>e.to_species_id===id))&&!seen.has(id)){seen.add(id);id=prev.from_species_id;}return id;}
@@ -7,3 +7,4 @@ export function legalForm(id,level){const prev=EVOLUTIONS.find(e=>e.to_species_i
 export function legalMoves(id,level){return [...new Set(DATA.learnsets.filter(l=>l.species_id===id&&l.level<=level).map(l=>l.move_id))].filter(id=>DATA.moves.find(m=>m.id===id)?.category);}
 export function fullLeaderTeam(t){if(!['LDR-01','LDR-02'].includes(t.id))return t;const levels=t.id==='LDR-01'?[18,18,19,19,20,20]:[36,37,37,38,39,40];return {...t,team:t.team.map((s,i)=>{const id=rootForm(s.species_id);return {...s,species_id:id,level:levels[i],current_form_legal_move_ids:legalMoves(id,levels[i])};})};}
 export function installRouteTrainers(expansion,voices){for(const r of EXTRA_TRAINERS){if(expansion.trainers.some(t=>t.id===r.id))continue;expansion.trainers.push({id:r.id,name:r.name,ai_tier:'Basic',team:r.species.map((id,i)=>{id=legalForm(id,r.levels[i]);return {slot:i+1,species_id:id,level:r.levels[i],current_form_legal_move_ids:legalMoves(id,r.levels[i])};}),role:'route',runtimeAuthored:true});voices[r.id]={before:'The road ahead is harder. Show me how you protect your partners.',after:'Take a breath before the next stretch. There is no shame in heading back for supplies.',repeat:'You have already earned your passage. Keep an eye on the signposts.'};}}
+
