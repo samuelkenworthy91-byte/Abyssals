@@ -46,7 +46,7 @@ export function installFinaleWorld(maps,doors){
  }
  maps.ramelleFortress.spots.push(npc('fn-fortress-custodian','Keeper of the old stair',29,14,'REV-MARYAM'));
  maps.cayfen.spots.push(npc('fn-cayfen-courier','A canvas courier',31,17,'REV-MARYAM'),npc('fn-cayfen-chimes','A bell-maker',17,17,'SHOP-PHI'));
- maps.ramelle.spots.push(npc('fn-ramelle-medic','A sanctuary aide',32,15,'REV-MARYAM'),npc('fn-ramelle-archivist','A vault archivist',17,15,'SHOP-PHI'));
+ maps.ramelle.spots.push(npc('fn-ramelle-medic','A sanctuary aide',32,15,'REV-MARYAM'),npc('fn-ramelle-archivist','A vault archivist',11,15,'SHOP-PHI'));
  // Geometry follows the finished raster maps, not the initial image prompts.
  const profiles={
  road:{y:21,walk:[[1,21,46,22],[24,2,24,21],[9,16,15,19],[27,18,39,20]]},
