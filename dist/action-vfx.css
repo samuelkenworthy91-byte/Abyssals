@@ -2,8 +2,8 @@
 .pixel-action{position:absolute;width:256px;height:256px;left:-128px;top:-128px;pointer-events:none;isolation:isolate}
 .pixel-move-art.pixel-move-art{display:block;width:100%;height:100%;background-size:400% 400%;background-repeat:no-repeat;image-rendering:pixelated;image-rendering:crisp-edges;filter:none;transform:none;animation-duration:var(--pixel-duration);animation-timing-function:steps(1,end);animation-fill-mode:both;overflow:visible}
 @media(max-width:400px){.pixel-action{width:192px;height:192px;left:-96px;top:-96px}}
-@media(prefers-reduced-motion:reduce){.pixel-move-art.pixel-move-art{animation:none!important;background-position:66.6667% 66.6667%!important}}
-.motion-reduced .pixel-move-art.pixel-move-art{animation:none!important;background-position:66.6667% 66.6667%!important}
+@media(prefers-reduced-motion:reduce){:root:not([data-motion="full"]) .pixel-move-art.pixel-move-art{animation:none!important;background-position:66.6667% 66.6667%!important}}
+:root[data-motion="reduced"] .pixel-move-art.pixel-move-art{animation:none!important;background-position:66.6667% 66.6667%!important}
 
 .move-art,.move-detail,.signature-art,.sig-art,.court-move-art{image-rendering:pixelated;image-rendering:crisp-edges}
 

@@ -20,6 +20,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),fs=require
   await page.waitForTimeout(id===790?1250:630);await page.screenshot({path:'build/qa/action-phone-'+id+'.png'});
  }
  await page.emulateMedia({reducedMotion:'reduce'});assert.equal(await page.locator('.pixel-move-art').evaluate(e=>getComputedStyle(e).animationName),'none');
+ await page.evaluate(async()=>{const m=await import('./motion.js?v=0.87.0');m.setMotionPreference('full');});assert.notEqual(await page.locator('.pixel-move-art').evaluate(e=>getComputedStyle(e).animationName),'none','Full setting overrides device reduction');
+ await page.emulateMedia({reducedMotion:'no-preference'});await page.evaluate(async()=>{const m=await import('./motion.js?v=0.87.0');m.setMotionPreference('reduced');});assert.equal(await page.locator('.pixel-move-art').evaluate(e=>getComputedStyle(e).animationName),'none','Game reduced setting works without device reduction');
  await page.setViewportSize({width:1280,height:900});await page.screenshot({path:'build/qa/action-desktop-reduced.png'});
  assert.deepEqual(errors,[]);await browser.close();console.log('PASS: 63 real sprite sheets decode, phone layout, distinct action screenshots and reduced motion.');
 })().catch(e=>{console.error(e);process.exit(1)});
