@@ -1,7 +1,7 @@
 name: Development workspace snapshot
 on:
   push:
-    branches: ['feature/**', 'patch/**']
+    branches: ['feature/**', 'patch/**', 'artwork/**']
     paths:
       - '.github/workflows/development-snapshot.yml'
       - 'scripts/development-snapshot.py'
