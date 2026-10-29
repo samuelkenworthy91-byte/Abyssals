@@ -46,8 +46,11 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
    const strikes=move.hits?Math.max(1,Math.min(5,Math.floor(move.hits.min+random()*(move.hits.max-move.hits.min+1)))):1;
    for(let i=0;i<strikes&&target.hp>floor&&actor.hp>0;i++){
     const strikeCritical=!(target.moveState?.critGuard>0)&&random()<critChance(actor,move,target);
-    const a=actor.stats[atk]*(strikeCritical?1:stageMultiplier(actor.stages[atk]))*heldStat(actor,atk)*statusAttackFactor(actor,special);
-    const d=target.stats[def]*(strikeCritical?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def]))*heldStat(target,def);
+    // Critical hits bypass only positive defensive stages on the target.
+    // Keep the attacker's boosts/debuffs, target's defensive debuffs, equipment and status penalties.
+    const a=actor.stats[atk]*stageMultiplier(actor.stages[atk])*heldStat(actor,atk)*statusAttackFactor(actor,special);
+    const defenceStage=strikeCritical||ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def];
+    const d=target.stats[def]*stageMultiplier(defenceStage)*heldStat(target,def);
     const sameType=stabMultiplier(actor,move);
     let strikeDamage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(strikeCritical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical:strikeCritical,movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,critical:strikeCritical,movedFirst,switching:!!target.switching})));
     if(has(target,'Ghost Hull')&&target.hp===target.maxHp&&strikeDamage>=target.hp&&!abilityBattle(target).flags.hull){strikeDamage=target.hp-1;abilityBattle(target).flags.hull=true;messages.push(`${unitName(target)} · Ghost Hull: held on at 1 HP.`);}
