@@ -1,0 +1,32 @@
+{
+  "id": 65,
+  "name": "Coil Hook",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "inflict_status",
+      "status": "PARALYSIS",
+      "chance_percent": 30,
+      "secondary": true
+    },
+    {
+      "effect_id": "recoil",
+      "fraction": [
+        1,
+        10
+      ],
+      "basis": null
+    }
+  ],
+  "batch": "08",
+  "sequence": "A thick spring-wound copper hook compresses, drives one upward hooking punch, flexes from recoil and loosens into separated spring turns. Mechanical hook shape, not a fist.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Coil Hook, stable ID65. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A thick spring-wound copper hook compresses, drives one upward hooking punch, flexes from recoil and loosens into separated spring turns. Mechanical hook shape, not a fist. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/65-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/65-prepared.png",
+  "sourceSha256": "fa18e3c39175364a857c82844b864f1fc56cb55e7af5167f559667e2e5fe98de",
+  "preparedSha256": "35873dbd63197fff152e0c16ae1d75ef48977023dbecbe1e0ebd812dc0dab68b",
+  "generator": "built-in image_gen"
+}

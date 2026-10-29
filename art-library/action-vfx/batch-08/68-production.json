@@ -1,0 +1,24 @@
+{
+  "id": 68,
+  "name": "Spark Jolt",
+  "category": "SPECIAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "inflict_status",
+      "status": "PARALYSIS",
+      "chance_percent": 20,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Spark Jolt, stable ID68. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/68-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/68-prepared.png",
+  "sourceSha256": "0030267d904ee5eeeacdbe9fb5a3e7e5879c51d48eb1192b6e4559546b9f60af",
+  "preparedSha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+  "generator": "built-in image_gen"
+}

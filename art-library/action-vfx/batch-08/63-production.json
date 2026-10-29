@@ -1,0 +1,28 @@
+{
+  "id": 63,
+  "name": "Static Detonation",
+  "category": "SPECIAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "sp_defence"
+      ],
+      "stages": -2,
+      "chance_percent": 25,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "A small tangled static knot winds tighter; one asymmetrical electrical detonation ruptures its shell into barbed filaments, then the filaments gutter away. No thundercloud or generic fire explosion.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Static Detonation, stable ID63. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A small tangled static knot winds tighter; one asymmetrical electrical detonation ruptures its shell into barbed filaments, then the filaments gutter away. No thundercloud or generic fire explosion. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/63-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/63-prepared.png",
+  "sourceSha256": "2009203feb60d652efb7b3b30e206a95efa6f2c550759333b1933a3cbf96a6d3",
+  "preparedSha256": "714f809bda929dda757ddd46a8d2f55c95e359dad85a3a7da78d93c387de8d8a",
+  "generator": "built-in image_gen"
+}

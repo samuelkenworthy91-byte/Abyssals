@@ -1,0 +1,17 @@
+{
+  "id": 64,
+  "name": "Livewire Rend",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [],
+  "batch": "08",
+  "sequence": "Three exposed copper-wire claws flex, rake together once diagonally through one contact, shed little blue sparks from their frayed insulation, then withdraw. No whole creature.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Livewire Rend, stable ID64. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Three exposed copper-wire claws flex, rake together once diagonally through one contact, shed little blue sparks from their frayed insulation, then withdraw. No whole creature. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/64-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/64-prepared.png",
+  "sourceSha256": "1d7252d82b9038462874e894bc2bf2a5ffc8dd464c0016c8cce8276186fb159b",
+  "preparedSha256": "dda85cae92a424a8fea308709148ea8c778afbad3964150368cb46e8e08be68b",
+  "generator": "built-in image_gen"
+}

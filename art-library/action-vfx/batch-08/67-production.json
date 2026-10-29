@@ -1,0 +1,32 @@
+{
+  "id": 67,
+  "name": "Arcwire Scissor",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "inflict_status",
+      "status": "PARALYSIS",
+      "chance_percent": 30,
+      "secondary": true
+    },
+    {
+      "effect_id": "recoil",
+      "fraction": [
+        1,
+        10
+      ],
+      "basis": null
+    }
+  ],
+  "batch": "08",
+  "sequence": "Two jointed wire-cutter jaws with crackling copper cutting edges open, close once around a small central corona, then spring open and shed one backward recoil spark. No whole character.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Arcwire Scissor, stable ID67. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Two jointed wire-cutter jaws with crackling copper cutting edges open, close once around a small central corona, then spring open and shed one backward recoil spark. No whole character. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/67-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/67-prepared.png",
+  "sourceSha256": "2c406fd81bb6a7fc12c647c52fc538d202dd2642e85e6c770f6e4e5d7a0fde5c",
+  "preparedSha256": "885c0f84df8555c8fb44c7532f2ba7f2b56fb21898228df9a2275a8ad18d7dd3",
+  "generator": "built-in image_gen"
+}
