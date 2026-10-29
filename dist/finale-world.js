@@ -56,12 +56,12 @@ export function installFinaleWorld(maps,doors){
  guan:{y:14,walk:[[1,14,46,15],[17,10,31,17],[23,6,25,10],[23,18,25,23]]},
  fei:{y:14,walk:[[1,14,46,15]]},
  spore:{y:14,walk:[[1,14,46,15],[21,12,27,16]]},
- 'spore-rim':{y:14,walk:[[1,14,46,15],[21,12,27,16]]},
- 'spore-depths':{y:14,walk:[[1,14,46,15],[21,12,27,16],[23,6,25,14]]},
- 'spore-bridge':{y:14,walk:[[1,14,46,15],[21,12,27,16],[23,6,25,14]]},
- 'spore-grotto':{y:14,walk:[[1,14,46,15],[16,10,37,23],[23,7,25,18]]},
- 'spore-canopy':{y:14,walk:[[1,14,46,15],[10,11,40,22],[23,7,25,18]]},
- darius:{y:13,walk:[[1,12,46,14],[18,9,29,17]]},
+ 'spore-rim':{y:16,walk:[[1,15,46,16],[21,14,27,17],[10,10,12,14]]},
+ 'spore-depths':{y:17,walk:[[1,17,46,18],[21,15,27,19],[24,6,24,17]]},
+ 'spore-bridge':{y:16,walk:[[1,15,46,16],[21,14,27,18],[24,6,24,16]]},
+ 'spore-grotto':{y:15,walk:[[1,15,46,16],[18,13,33,20],[20,21,31,22],[23,10,25,13]]},
+ 'spore-canopy':{y:15,walk:[[1,14,46,15],[12,16,36,17],[16,18,33,18],[20,10,20,14],[20,10,25,11],[23,9,25,11]]},
+ darius:{y:15,walk:[[1,14,46,15],[20,13,28,18],[23,9,25,13],[22,19,26,19]]},
  cayfen:{y:17,walk:[[1,16,46,18],[9,11,10,16],[37,11,38,16],[23,19,25,29],[1,29,46,29],[10,27,10,29],[38,27,38,29]]},
  ramelle:{y:15,walk:[[1,15,46,16],[23,2,25,29],[12,10,13,15],[36,10,37,15],[12,27,13,29],[35,27,36,29],[2,29,45,29]]},
  gallery:{walk:[[9,10,39,23],[8,24,40,25],[23,26,25,29],[11,9,36,10]]},
@@ -72,7 +72,7 @@ export function installFinaleWorld(maps,doors){
  sanctuary:{walk:[[15,12,32,25],[23,26,25,28]]},
  'cayfen-hall':{walk:[[10,13,38,25],[22,9,26,13],[20,6,29,8],[23,26,25,28]]}
  };
- for(const m of Object.values(maps).filter(m=>m.finale)){const p=profiles[m.finaleArt];m.finaleWalk=p.walk;m.finaleSolids=[];if(p.y!==undefined){m.road=[[1,p.y],[46,p.y]];for(const g of m.gates)if(g.x===1||g.x===46)g.y=p.y;}m.grass=[];}
+ for(const m of Object.values(maps).filter(m=>m.finale)){const p=profiles[m.finaleArt];m.finaleWalk=p.walk;m.finaleSolids=m.finaleArt==='spore-canopy'?[[21,12,27,15]]:m.finaleArt==='spore-rim'?[[23,13,24,14]]:[];if(p.y!==undefined){m.road=[[1,p.y],[46,p.y]];for(const g of m.gates)if(g.x===1||g.x===46)g.y=p.y;}m.grass=[];}
  const position=(room,id,x,y)=>{const p=maps[room].spots.find(p=>p.id===id);if(p)Object.assign(p,{x,y});};
  for(const [room,id,x,y]of [
  ['sunBank','TRN-FN-ROAD',32,22],['sunBank','fn-road-sign',10,22],['burialGrove','fn-burial',24,19],['burialGrove','fn-pate-grave',20,17],['burialGrove','fn-trade-grave',29,17],
@@ -81,8 +81,8 @@ export function installFinaleWorld(maps,doors){
  ['feiApproach','fn-fei-clue',24,17],['feiApproach','TRN-FN-FEI',36,22],['feiCrossing','fn-fei-clue',10,14],['feiCrossing','fn-fei-weight-0',14,14],['feiCrossing','fn-fei-weight-1',23,14],['feiCrossing','fn-fei-weight-2',34,14],['feiCrossing','fn-fei-encounter',28,14],
  ['cayfen','local-aeric',24,20],['cayfen','fn-cayfen-resident',25,23],['cayfen','fn-cayfen-painter',16,18],['ramelle','local-aeric',24,20],['ramelle','fn-ramelle-resident',25,23],['ramelle','fn-ramelle-child',16,16],
  ['cayfenGallery','fn-gallery-water',13,8],['cayfenGallery','fn-gallery-fire',24,8],['cayfenGallery','fn-gallery-steel',34,8],['cayfenHall','LDR-07',24,7],['ramelleFortress','LDR-08',24,5],
- ['sporeRim','TRN-FN-SPORE',25,16],['sporeRim','fn-spore-sign',21,13],['sporeDepths','fn-spore-refugee',23,13],['sporeBridge','TRN-FN-LAST',25,16],['sporeBridge','fn-wounded-bloom',23,13],
- ['sporeCrown','fn-darius',25,11],['sporeCrown','fn-hasan-ally',21,16],['sporeCrown','fn-wounded-first',19,16],['sporeCrown','fn-crux-encounter',28,16],['afterlifeThreshold','fn-threshold-walter',18,20]
+ ['sporeRim','TRN-FN-SPORE',25,16],['sporeRim','fn-spore-sign',21,13],['sporeDepths','fn-spore-refugee',23,14],['sporeBridge','TRN-FN-LAST',25,16],['sporeBridge','fn-wounded-bloom',23,15],
+ ['sporeCrown','fn-darius',25,11],['sporeCrown','fn-hasan-ally',21,16],['sporeCrown','fn-wounded-first',20,16],['sporeCrown','fn-crux-encounter',28,16],['afterlifeThreshold','fn-threshold-walter',18,20]
  ])position(room,id,x,y);
  for(const [id,x,y]of [['cayfenShop',10,27],['cayfenInn',38,27],['ramelleSanctuary',12,9],['ramelleFortress',36,9],['ramelleShop',13,26],['ramelleInn',36,26]]){Object.assign(doors[id],{x,y});const g=maps[id].gates[0];g.arrival=[x,y+1,'down'];}
  // Door tiles are reserved openings; their approach is always on the visible floor.
@@ -95,8 +95,11 @@ export function installFinaleWorld(maps,doors){
  maps.sunFalls.gates.find(g=>g.id==='fn-guan-entry').arrival=[3,15,'right'];maps.sunTerraces.gates.find(g=>g.id==='fn-fei-entry').arrival=[3,21,'right'];maps.botrune.gates.find(g=>g.id==='botrune-next').arrival=[3,21,'right'];
  // Proper habitat strips on safe ground; the cliff and water never host encounters.
  maps.sunBank.grass=[[27,18,39,20]];maps.guanApproach.grass=[];maps.feiApproach.grass=[[27,18,39,20]];
- maps.sunTerraces.grass=[[31,14,39,14]];maps.sporeRim.grass=[[21,12,27,13]];maps.sporeDepths.grass=[[21,12,27,13]];maps.sporeBridge.grass=[[21,12,27,13]];maps.sporeGrotto.grass=[[18,12,22,13],[28,19,34,20]];maps.sporeCanopy.grass=[[18,12,22,13],[30,18,35,19]];
- maps.sunTerraces.spots.push(prop('fn-rare-record-suncub','Read the sun-keeper’s field record',24,4),prop('fn-rare-encounter-suncub','Suncub · the warm terrace',24,7));maps.sporeDepths.spots.push(prop('fn-rare-record-gehennuar','Read the deep warden’s field record',26,12),prop('fn-rare-encounter-gehennuar','Gehennuar · the luminous depths',26,15));
+ maps.sunTerraces.grass=[[31,14,39,14]];maps.sporeRim.grass=[[21,14,22,14],[25,14,27,14]];maps.sporeDepths.grass=[[21,15,22,16],[26,15,27,16]];maps.sporeBridge.grass=[[21,14,22,14],[26,14,27,14]];maps.sporeGrotto.grass=[[18,13,21,14],[29,19,32,20]];maps.sporeCanopy.grass=[[17,16,20,17],[30,16,33,17]];
+ maps.sunTerraces.spots.push(prop('fn-rare-record-suncub','Read the sun-keeper’s field record',24,4),prop('fn-rare-encounter-suncub','Suncub · the warm terrace',24,7));maps.sporeDepths.spots.push(prop('fn-rare-record-gehennuar','Read the deep warden’s field record',27,15),prop('fn-rare-encounter-gehennuar','Gehennuar · the luminous depths',26,15));
+ maps.sporeDepths.gates.find(g=>g.to==='sporeGrotto').arrival=[3,15,'right'];
+ maps.sporeDepths.sidePaths=[{points:[[24,17],[24,6]]}];maps.sporeBridge.sidePaths=[{points:[[24,16],[24,6]]}];
+ maps.sporeGrotto.gates[0].arrival=[24,14,'down'];maps.sporeCanopy.gates[0].arrival=[24,13,'down'];
  // All town caravan arrivals lie on the broad central boulevard.
 
 }

@@ -1,31 +1,35 @@
 {
   "batch": "01",
-  "format": "PNG indexed transparent 768×768, 16 frames of 192×192",
+  "format": "PNG indexed transparent 768\u00d7768, 16 frames of 192\u00d7192",
   "rasterTechnique": "authored distinct kinetic silhouettes, palette-clustered at per-move colours; no runtime random elements",
   "moves": [
     {
       "id": 2,
       "name": "plain-burst",
       "filename": "2-plain-burst.png",
-      "action": "pressure wave"
+      "action": "pressure wave",
+      "revision": "03"
     },
     {
       "id": 36,
       "name": "drowned-ember",
       "filename": "36-drowned-ember.png",
-      "action": "submerged ember"
+      "action": "submerged ember",
+      "revision": "03"
     },
     {
       "id": 37,
       "name": "infernal-prowl",
       "filename": "37-infernal-prowl.png",
-      "action": "stalking pawprints"
+      "action": "stalking pawprints",
+      "revision": "03"
     },
     {
       "id": 39,
       "name": "red-banner-rush",
       "filename": "39-red-banner-rush.png",
-      "action": "rushing battle flag"
+      "action": "rushing battle flag",
+      "revision": "03"
     },
     {
       "id": 59,
@@ -37,43 +41,50 @@
       "id": 76,
       "name": "alien-circuit",
       "filename": "76-alien-circuit.png",
-      "action": "electrical circuit"
+      "action": "electrical circuit",
+      "revision": "03"
     },
     {
       "id": 97,
       "name": "kindness-gathers",
       "filename": "97-kindness-gathers.png",
-      "action": "sprouting seed"
+      "action": "sprouting seed",
+      "revision": "03"
     },
     {
       "id": 98,
       "name": "oathkeepers-edge",
       "filename": "98-oathkeepers-edge.png",
-      "action": "rootbound sword"
+      "action": "rootbound sword",
+      "revision": "03"
     },
     {
       "id": 116,
       "name": "celestial-rime",
       "filename": "116-celestial-rime.png",
-      "action": "falling ice lances"
+      "action": "falling ice lances",
+      "revision": "03"
     },
     {
       "id": 246,
       "name": "ancient-nodule",
       "filename": "246-ancient-nodule.png",
-      "action": "fossil shard burst"
+      "action": "fossil shard burst",
+      "revision": "03"
     },
     {
       "id": 352,
       "name": "benevolent-bloom",
       "filename": "352-benevolent-bloom.png",
-      "action": "restorative flower"
+      "action": "restorative flower",
+      "revision": "03"
     },
     {
       "id": 353,
       "name": "concord-pact",
       "filename": "353-concord-pact.png",
-      "action": "interlocked sigils"
+      "action": "interlocked sigils",
+      "revision": "03"
     }
   ]
 }

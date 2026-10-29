@@ -1,0 +1,91 @@
+{
+  "batch": "02",
+  "format": "PNG indexed transparent 768\u00d7768, 16 frames of 192\u00d7192",
+  "rasterTechnique": "Individually authored action choreography; art review pending.",
+  "moves": [
+    {
+      "id": 1,
+      "name": "brace-yourself",
+      "filename": "1-brace-yourself.png",
+      "action": "Brace Yourself",
+      "revision": "01"
+    },
+    {
+      "id": 5,
+      "name": "first-footfall",
+      "filename": "5-first-footfall.png",
+      "action": "First Footfall",
+      "revision": "01"
+    },
+    {
+      "id": 6,
+      "name": "parting-feint",
+      "filename": "6-parting-feint.png",
+      "action": "Parting Feint",
+      "revision": "01"
+    },
+    {
+      "id": 7,
+      "name": "gathering-pace",
+      "filename": "7-gathering-pace.png",
+      "action": "Gathering Pace",
+      "revision": "01"
+    },
+    {
+      "id": 8,
+      "name": "steady-blow",
+      "filename": "8-steady-blow.png",
+      "action": "Steady Blow",
+      "revision": "01"
+    },
+    {
+      "id": 9,
+      "name": "measured-cut",
+      "filename": "9-measured-cut.png",
+      "action": "Measured Cut",
+      "revision": "01"
+    },
+    {
+      "id": 10,
+      "name": "quick-wit",
+      "filename": "10-quick-wit.png",
+      "action": "Quick Wit",
+      "revision": "01"
+    },
+    {
+      "id": 11,
+      "name": "second-wind",
+      "filename": "11-second-wind.png",
+      "action": "Second Wind",
+      "revision": "01"
+    },
+    {
+      "id": 12,
+      "name": "sure-stride",
+      "filename": "12-sure-stride.png",
+      "action": "Sure Stride",
+      "revision": "01"
+    },
+    {
+      "id": 15,
+      "name": "full-commitment",
+      "filename": "15-full-commitment.png",
+      "action": "Full Commitment",
+      "revision": "01"
+    },
+    {
+      "id": 16,
+      "name": "rolling-momentum",
+      "filename": "16-rolling-momentum.png",
+      "action": "Rolling Momentum",
+      "revision": "01"
+    },
+    {
+      "id": 17,
+      "name": "reckless-follow-through",
+      "filename": "17-reckless-follow-through.png",
+      "action": "Reckless Follow-through",
+      "revision": "01"
+    }
+  ]
+}

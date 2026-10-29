@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "policy": "Approval requires source/frame inspection and actual gameplay evidence at phone scale, current SHA-256, a reviewer and a specific rationale. Dimensions and file existence never grant approval. Protected original art hashes remain independently enforced.",
+  "moves": {}
+}

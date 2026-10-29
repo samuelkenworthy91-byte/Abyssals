@@ -13,12 +13,14 @@ import {instance,applyMove} from '../dist/engine.js';
 import {beginAbilities} from '../dist/abilities.js';
 const species=id=>DATA.species.find(s=>s.id===id),move=id=>DATA.moves.find(m=>m.id===id);
 const unit=(id='517',level=60)=>{const u=instance(species(id),level,[]);u.uid=id;u.hp=u.maxHp=5000;u.stats={hp:5000,attack:80,defence:100,sp_attack:100,sp_defence:100,speed:80};return u;};
-const protectedOriginals=Object.values(ACTION_ART).filter(a=>a.batch!=='01');
+const protectedOriginals=Object.values(ACTION_ART).filter(a=>!a.batch);
 const firstNewBatch=Object.values(ACTION_ART).filter(a=>a.batch==='01');
 assert.equal(protectedOriginals.length,63,'the original separately approved effects must not change');
 assert.equal(firstNewBatch.length,12,'all batch-one canonical move effects are registered');
-assert.equal(Object.keys(ACTION_ART).length,75);
-assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,75);
+const batches=fs.readdirSync('art-library/action-vfx').filter(f=>/^batch-\d+\.json$/.test(f)).flatMap(f=>JSON.parse(fs.readFileSync('art-library/action-vfx/'+f)).moves);
+for(const m of batches)assert.equal(ACTION_ART[m.id].src,'assets/vfx/action/'+m.filename);
+const expectedCount=63+batches.length;assert.equal(Object.keys(ACTION_ART).length,expectedCount);
+assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,expectedCount);
 for(const art of Object.values(ACTION_ART)){
  assert(fs.existsSync('dist/'+art.src),art.name);
  const m=move(art.id)||{id:art.id,type_id:'WATER',category:'SPECIAL',power:50};
