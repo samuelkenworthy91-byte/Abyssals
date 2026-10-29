@@ -1,4 +1,4 @@
-import {beginStep,advanceStep} from './movement.js?v=0.87.0';
+import {beginStep,advanceStep} from './movement.js?v=0.90.52';
 // Newly authored optional flavour. These are villagers' beliefs, not a neutral account of the war.
 const definitions={
  dorelem:[{id:'keep-civilian',label:'Dorelem resident',civilian:2,route:[[14,20],[16,20],[16,22],[14,22]],talk:['A wall keeps people out. It does not tell you whether they should have been kept out.','The passage below the keep was built for supplies. These days it carries families as often as barrels.']}],

@@ -1,6 +1,6 @@
-import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.87.0';
-import {animateDuel} from './duel.js?v=0.87.0';
-import {escapeHTML} from './names.js?v=0.87.0';
+import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.90.52';
+import {animateDuel} from './duel.js?v=0.90.52';
+import {escapeHTML} from './names.js?v=0.90.52';
 export function createTitle({slots,onNew,onLoad,onDownload,onUpload,onError}){
  const root=document.querySelector('#title-screen'),app=document.querySelector('#app');let timer;const duel=animateDuel(root,{onReveal:reveal,onComplete:()=>{duel.stop(false);root.classList.remove('opening');}});
  const reduced=()=>isReducedMotion();const motion=root.querySelector('#title-motion'),motionCopy=root.querySelector('#title-motion-copy');const sync=()=>{motion.value=motionPreference();motionCopy.textContent=motionDescription();};sync();motion.onchange=()=>{setMotionPreference(motion.value);sync();};

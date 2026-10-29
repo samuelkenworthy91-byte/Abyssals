@@ -15,7 +15,8 @@
       "name": "branding-iron",
       "filename": "19-branding-iron.png",
       "action": "Branding Iron",
-      "revision": "01"
+      "revision": "02",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-03/19-source.png"
     },
     {
       "id": 20,
@@ -36,14 +37,23 @@
       "name": "scorchwhip",
       "filename": "22-scorchwhip.png",
       "action": "Scorchwhip",
-      "revision": "02"
+      "revision": "03-contact08",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-03/22-source.png",
+      "frameReplacements": [
+        {
+          "oneBasedFrame": 8,
+          "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-03/22-contact-frame-08.png",
+          "reason": "Complete separately authored contact pose; removes neighbour-cell fragment"
+        }
+      ]
     },
     {
       "id": 23,
       "name": "hotfoot",
       "filename": "23-hotfoot.png",
       "action": "Hotfoot",
-      "revision": "01"
+      "revision": "02",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-03/23-source.png"
     },
     {
       "id": 24,

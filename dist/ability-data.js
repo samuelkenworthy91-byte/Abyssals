@@ -1,15 +1,15 @@
-import {ORCHARD_ABILITIES} from './tide-orchard-data.js?v=0.90.48';
-import {BRANCH_ABILITIES} from './branch-families.js?v=0.90.41';
-import {RENEWAL_ABILITIES} from './evolution-renewal-data.js?v=0.90.48';
-import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.48';
-import {BIRD_ABILITIES} from './bird-abilities.js?v=0.90.41';
-import {PALADIN_ABILITIES} from './paladin-data.js?v=0.90.48';
-import {MENAGERIE_ABILITIES} from './menagerie-family.js?v=0.87.0';
-import {MIASMA_ABILITY} from './miasma-family.js?v=0.87.0';
-import {QUEST_HIDDEN_ABILITIES} from './quest-rewards-data.js?v=0.90.48';
-import {AQUATIC_ABILITIES} from './approved-aquatic.js?v=0.87.0';
-import {WARBOND_ABILITY} from './relic-family.js?v=0.87.0';
-import {EXPEDITION_ABILITIES} from './expedition-ability-data.js?v=0.90.48';
+import {ORCHARD_ABILITIES} from './tide-orchard-data.js?v=0.90.52';
+import {BRANCH_ABILITIES} from './branch-families.js?v=0.90.52';
+import {RENEWAL_ABILITIES} from './evolution-renewal-data.js?v=0.90.52';
+import {ABILITY_PATCHES} from './teamcraft-data.js?v=0.90.52';
+import {BIRD_ABILITIES} from './bird-abilities.js?v=0.90.52';
+import {PALADIN_ABILITIES} from './paladin-data.js?v=0.90.52';
+import {MENAGERIE_ABILITIES} from './menagerie-family.js?v=0.90.52';
+import {MIASMA_ABILITY} from './miasma-family.js?v=0.90.52';
+import {QUEST_HIDDEN_ABILITIES} from './quest-rewards-data.js?v=0.90.52';
+import {AQUATIC_ABILITIES} from './approved-aquatic.js?v=0.90.52';
+import {WARBOND_ABILITY} from './relic-family.js?v=0.90.52';
+import {EXPEDITION_ABILITIES} from './expedition-ability-data.js?v=0.90.52';
 // Authored Ability Glossary, Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx.
 export const ABILITIES=[
   {

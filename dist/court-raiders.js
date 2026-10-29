@@ -1,5 +1,5 @@
-import {courtState} from './paladin-roaming.js?v=0.87.0';
-import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
+import {courtState} from './paladin-roaming.js?v=0.90.52';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.52';
 export const COURT_DARIUS='TRN-COURT-CAUSE-DARIUS';
 export const COURT_RAIDERS=[
  {id:'TRN-COURT-CAUSE-FARID',character:'REV-FARID',name:'Farid ibn Yunus · Common Cause scouts',room:'courtTurn',at:[35,24],gate:'court-next-0',level:32,ids:['082','091','108','140'],before:'The knight went east with six partners and three pages of holy promises. Your officers make promises too. We are keeping this road until our people know what is in there.',after:'You have the road. Remember that the people in these woods are not another army’s stores.',repeat:'Our injured are leaving by the western trail. Let them pass.'},

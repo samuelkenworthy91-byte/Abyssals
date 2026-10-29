@@ -1,5 +1,5 @@
-import {ACTION_ART,pixelArtReady} from './action-vfx.js?v=0.90.49';
-import {moveArtReady} from './move-scene-renderer.js?v=0.90.49';
+import {ACTION_ART,pixelArtReady} from './action-vfx.js?v=0.90.52';
+import {moveArtReady} from './move-scene-renderer.js?v=0.90.52';
 // Every signature has an explicit authored sequence, artwork cell and impact cue.
 const rows=[
  [378,'spirit-bastion',1850,0.64,'d',0,'#8ee8da','#f2eacb','Spirit orb gathers → spectral bastion closes → ghost pulse strikes'],
@@ -91,8 +91,8 @@ const factories={
  353:()=>layer('pact-ribbon-left',art('left-half'))+layer('pact-ribbon-right',art('right-half'))+layer('pact-knot',art())+rays('pact-stars',8),
  354:()=>[0,1,2,3,4].map(i=>layer('oath-panel',art(),`--i:${i};--tx:${(i-2)*43}px`)).join('')+rays('oath-thread',4)+layer('settled-oathwall',art())
 };
-export function signatureHTML(move,result={},duration=SIGNATURE_EFFECTS[move.id]?.duration){const s=SIGNATURE_EFFECTS[move.id];if(!s)return '';return `<div class="signature-fx sig-${s.key} ${result.critical?'sig-critical':''}" data-fx-move="${s.id}" data-signature="${s.key}" style="--fx-duration:${duration}ms;--fx-color:${s.color};--sig-accent:${s.accent};--atlas-url:url('assets/vfx/signature-${s.atlas}.webp?v=0.87.0');--atlas-x:${s.cell%3*50}%;--atlas-y:${Math.floor(s.cell/3)*100/3}%;--impact-delay:${duration*s.impact}ms">${factories[s.id](result)}</div>`;}
+export function signatureHTML(move,result={},duration=SIGNATURE_EFFECTS[move.id]?.duration){const s=SIGNATURE_EFFECTS[move.id];if(!s)return '';return `<div class="signature-fx sig-${s.key} ${result.critical?'sig-critical':''}" data-fx-move="${s.id}" data-signature="${s.key}" style="--fx-duration:${duration}ms;--fx-color:${s.color};--sig-accent:${s.accent};--atlas-url:url('assets/vfx/signature-${s.atlas}.webp?v=0.90.52');--atlas-x:${s.cell%3*50}%;--atlas-y:${Math.floor(s.cell/3)*100/3}%;--impact-delay:${duration*s.impact}ms">${factories[s.id](result)}</div>`;}
 const loaded=new Map();
-export function signatureArtReady(move){if(ACTION_ART[move?.id])return pixelArtReady(move);const s=SIGNATURE_EFFECTS[move?.id];if(!s)return moveArtReady(move);if(typeof Image==='undefined')return Promise.resolve(true);const url=`assets/vfx/signature-${s.atlas}.webp?v=0.87.0`;if(!loaded.has(url))loaded.set(url,new Promise(resolve=>{const img=new Image();let done=false;const finish=ok=>{if(done)return;done=true;clearTimeout(timer);if(!ok)loaded.delete(url);resolve(ok);};const timer=setTimeout(()=>finish(false),5000);img.onload=()=>finish(true);img.onerror=()=>finish(false);img.src=url;}));return loaded.get(url);}
+export function signatureArtReady(move){if(ACTION_ART[move?.id])return pixelArtReady(move);const s=SIGNATURE_EFFECTS[move?.id];if(!s)return moveArtReady(move);if(typeof Image==='undefined')return Promise.resolve(true);const url=`assets/vfx/signature-${s.atlas}.webp?v=0.90.52`;if(!loaded.has(url))loaded.set(url,new Promise(resolve=>{const img=new Image();let done=false;const finish=ok=>{if(done)return;done=true;clearTimeout(timer);if(!ok)loaded.delete(url);resolve(ok);};const timer=setTimeout(()=>finish(false),5000);img.onload=()=>finish(true);img.onerror=()=>finish(false);img.src=url;}));return loaded.get(url);}
 
 

@@ -12,6 +12,7 @@ file=root/'dist/action-vfx-data.js';prefix='export const ACTION_ART=';art=json.l
 for batch in args.batches:
  prepared=root/f'art-library/action-vfx/batch-{batch}/prepared-manifest.json'
  items=json.loads(prepared.read_text())['moves'] if prepared.exists() else [m for m in pending['items'] if m['batch']==batch]
+ if not items:items=[json.loads(p.read_text()) for p in sorted((root/f'art-library/action-vfx/batch-{batch}').glob('*-production.json'))]
  if not items:raise ValueError('No authored sources for batch '+batch)
  manifest={'batch':batch,'format':'PNG indexed transparent768x768;16frames of192x192','rasterTechnique':'Authored raster scenes; visual and gameplay approval tracked separately.','moves':[]}
  for m in items:

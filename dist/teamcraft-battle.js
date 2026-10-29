@@ -1,7 +1,7 @@
-import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.48';
-import {restoreHP as healRelayHP} from './abilities.js?v=0.90.48';
-import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
-import {unitName} from './names.js?v=0.87.0';
+import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.52';
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.52';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.52';
+import {unitName} from './names.js?v=0.90.52';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];
 const has=(u,n)=>u?.species?.ability_names?.[u.abilitySlot||'primary']===n;
 const battle=u=>(u.abilityBattle??={flags:{},turn:0});

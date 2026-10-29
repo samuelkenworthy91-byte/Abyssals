@@ -1,4 +1,4 @@
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.48';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.52';
 export const SALVATION_ID=470;
 export const SALVATION_MOVE={id:SALVATION_ID,name:'Mercy Edge',type_id:'FAIRY',category:'PHYSICAL',power:60,accuracy:100,pp:20,priority:0,target:'SINGLE_FOE',effects:[],adaptiveCategory:false,nonlethal:true,contact:false,salvation:true,tutor:'Walter',effect_text:'Uses Attack or Special Attack, whichever is higher. Direct damage cannot reduce a living target below 1 HP. Critical hits and damage boosts retain that limit. Poison, burn and other turn-end effects still apply.',authored_visual_action:'An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains.',provenance:{authoring:'Universal Walter restraint tutor, user request 2026-10-14'}};
 export function resolveSalvationMove(unit,move){return move?.adaptiveCategory?{...move,category:(unit.stats.sp_attack>unit.stats.attack?'SPECIAL':'PHYSICAL')}:move;}

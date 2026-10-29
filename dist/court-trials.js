@@ -1,4 +1,4 @@
-import {courtState} from './paladin-roaming.js?v=0.87.0';
+import {courtState} from './paladin-roaming.js?v=0.90.52';
 // N,E,S,W. Channels must connect reciprocally; no water may leak into a nest.
 export const CHANNEL_BASE=[6,10,10,13,6,10,3,11,10];
 export const CHANNEL_LINKS=[1,2,5,0,3,8,7,4,6];

@@ -42,6 +42,8 @@ jobs:
           node scripts/build-art-coverage.mjs --check
           node scripts/build-environment-qa.mjs --check
           python3 scripts/audit-finale-art.py
+          python3 scripts/verify-art-release-scope.py
+          python3 tests/interim-art-scope.test.py
           node scripts/build-journal-habitats.mjs
           git diff --exit-code -- dist/journal-habitats.js
           for test in tests/*.test.mjs; do node "$test"; done

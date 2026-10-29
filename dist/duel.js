@@ -1,4 +1,4 @@
-import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.87.0';
+import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.90.52';
 // One choreographed opening, with held drawings at eight frames per second.
 export const OPENING_FRAMES=104;
 export function duelFrame(frame){const f=Math.max(0,Math.min(OPENING_FRAMES-1,frame)),leftStrike=f===6||f===7,rightStrike=f===18||f===19;const iceCharge=f>=24&&f<30,iceBeam=f>=30&&f<44,ghostCharge=f>=50&&f<62,ghostBurst=f>=62&&f<78,ghostWash=f>=78;return {leftPose:leftStrike||ghostBurst?2:f>=4&&f<6||ghostCharge?1:rightStrike||iceBeam?3:0,rightPose:rightStrike?2:f>=16&&f<18||iceCharge?1:leftStrike||ghostBurst?3:0,leftX:leftStrike?48:f===8?20:rightStrike?-8:iceBeam?-10:ghostBurst?12:0,rightX:rightStrike?-48:f===20?-20:leftStrike?8:ghostBurst?12:0,leftStrike,rightStrike,iceCharge,iceBeam,ghostCharge,ghostBurst,ghostWash,titleReveal:f>=88,stage:f<24?'slashes':f<30?'ice-charge':f<44?'ice-beam':f<50?'ice-recoil':f<62?'ghost-charge':f<78?'ghost-burst':f<88?'ghost-wash':'title-reveal'};}

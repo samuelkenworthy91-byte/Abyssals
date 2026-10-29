@@ -57,11 +57,11 @@
     "registered": 610,
     "battleReactions": 4,
     "total": 614,
-    "dedicated": 130,
-    "missing": 484,
-    "approved": 33,
+    "dedicated": 133,
+    "missing": 481,
+    "approved": 39,
     "originalCatalogueStillRegistered": 325,
-    "originalCatalogueDedicated": 73
+    "originalCatalogueDedicated": 76
   },
   "aliases": [
     {
@@ -2134,7 +2134,7 @@
       "art": {
         "src": "assets/vfx/action/19-branding-iron.png",
         "exists": true,
-        "sha256": "bfc86476c615d5a8ae6875bb649fa6a9482f0d0c867a50e44527ff1d6fd95216",
+        "sha256": "8e1524e7d4428d34f2c32b9734aca631d06672494d8db0458e094843ef38ca08",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -2145,16 +2145,20 @@
         "sequence": "A blackened iron branding stamp with a unique branching rune heats from black to dull red to white-hot edges, moves forward in foreshortening, presses flat with ONE forceful smoky sizzle, leaves a seared rune suspended briefly, stamp recoils backwards and smoky mark fades. Recognisable forged iron tool, glowing thermal texture.",
         "registeredName": "Branding Iron"
       },
-      "status": "requires-revision",
+      "status": "approved",
       "review": {
-        "status": "requires-revision",
-        "sha256": "bfc86476c615d5a8ae6875bb649fa6a9482f0d0c867a50e44527ff1d6fd95216",
-        "reviewer": "Codex source-frame inspection, 2026-10-29",
-        "rationale": "A material edge or fragment crosses the authored source-cell boundary; placement-guided redraw is in progress. Passing battle tests does not approve this defect.",
+        "status": "approved",
+        "sha256": "8e1524e7d4428d34f2c32b9734aca631d06672494d8db0458e094843ef38ca08",
+        "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+        "rationale": "The full textured branding stamp heats, presses once and recoils through smoke. Handle continuity and thermal surface detail are complete in the prepared sixteen frames. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
         "sourceEvidence": [
           "dist/assets/vfx/action/19-branding-iron.png"
         ],
-        "gameplayEvidence": [],
+        "gameplayEvidence": [
+          "art-library/action-vfx/reviews-v0.90.52/single-19.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-0-19.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-1-19.png"
+        ],
         "current": true
       }
     },
@@ -2399,7 +2403,7 @@
       "art": {
         "src": "assets/vfx/action/22-scorchwhip.png",
         "exists": true,
-        "sha256": "70dd6083e451f0b6f06b54e94b7dbd079a06db6064ff6573de343cb4ffc73dd4",
+        "sha256": "a5ae732bb53ea79913026e2893b0378dd10678d41d72764ad91f6ff1d2cdc0ad",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -2410,16 +2414,21 @@
         "sequence": "A long tapered glowing ember lash slowly coils with a heavy charcoal handle knot at lower left, uncoils and snaps rapidly through a narrow S-curve, its tip cracks exactly once at upper right producing a thin white hot scorch seam, lash overshoots and recoils with falling ember scales, fades. No flag, no sword, clearly flexible whip.",
         "registeredName": "Scorchwhip"
       },
-      "status": "requires-revision",
+      "status": "approved",
       "review": {
-        "status": "requires-revision",
-        "sha256": "70dd6083e451f0b6f06b54e94b7dbd079a06db6064ff6573de343cb4ffc73dd4",
-        "reviewer": "Codex source-frame inspection, 2026-10-29",
-        "rationale": "A material edge or fragment crosses the authored source-cell boundary; placement-guided redraw is in progress. Passing battle tests does not approve this defect.",
+        "status": "approved",
+        "sha256": "a5ae732bb53ea79913026e2893b0378dd10678d41d72764ad91f6ff1d2cdc0ad",
+        "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+        "rationale": "The separately authored complete contact pose replaces frame8 of the crowded atlas, removing the stray neighbour-cell fragment while preserving the coiling lash, one contact and recovery. All sixteen frames and390x844 live single/double captures were inspected; this is not physical Android-device certification.",
         "sourceEvidence": [
-          "dist/assets/vfx/action/22-scorchwhip.png"
+          "dist/assets/vfx/action/22-scorchwhip.png",
+          "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-03/22-contact-frame-08.png"
         ],
-        "gameplayEvidence": [],
+        "gameplayEvidence": [
+          "art-library/action-vfx/reviews-v0.90.52/single-22.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-0-22.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-1-22.png"
+        ],
         "current": true
       }
     },
@@ -2485,7 +2494,7 @@
       "art": {
         "src": "assets/vfx/action/23-hotfoot.png",
         "exists": true,
-        "sha256": "e8168bfcc3e8661ac3c6c3d1309b16d81366e4a7f0615aebce3d8cbb90ccf591",
+        "sha256": "7850b52d99988b4be75c0401bc8c91859e374ba6ad904b8951100fb0737dd066",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -2496,16 +2505,20 @@
         "sequence": "A small light clawed foot heats at its toe tips, crouches briefly, leaps in a low short skimming streak, lands toe-first in a compact fiery scuff, slides a short distance with three claw grooves and skips away. This is a quick light burning toe skid, distinct from a big pounce or a heavy planted footfall.",
         "registeredName": "Hotfoot"
       },
-      "status": "requires-revision",
+      "status": "approved",
       "review": {
-        "status": "requires-revision",
-        "sha256": "e8168bfcc3e8661ac3c6c3d1309b16d81366e4a7f0615aebce3d8cbb90ccf591",
-        "reviewer": "Codex source-frame inspection, 2026-10-29",
-        "rationale": "A material edge or fragment crosses the authored source-cell boundary; placement-guided redraw is in progress. Passing battle tests does not approve this defect.",
+        "status": "approved",
+        "sha256": "7850b52d99988b4be75c0401bc8c91859e374ba6ad904b8951100fb0737dd066",
+        "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+        "rationale": "The light heated foot crouches, skims, makes a toe-first burning scuff and withdraws. Toe tips and the trailing grooves remain readable at game scale. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
         "sourceEvidence": [
           "dist/assets/vfx/action/23-hotfoot.png"
         ],
-        "gameplayEvidence": [],
+        "gameplayEvidence": [
+          "art-library/action-vfx/reviews-v0.90.52/single-23.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-0-23.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-1-23.png"
+        ],
         "current": true
       }
     },
@@ -11821,9 +11834,36 @@
         }
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
-      "art": null,
-      "status": "incomplete",
-      "review": null
+      "art": {
+        "src": "assets/vfx/action/155-clay-hook.png",
+        "exists": true,
+        "sha256": "20d616a4eaab170673fe13092da0f43ad15de3680523c2c275d3e9e00914072b",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A compact earthen forearm curls low, drives one upward clay hook, spatters wet clay at contact, hardens those spatters into layered defensive cuffs, then lowers. Detailed sculpted clay hand; no whole character.",
+        "registeredName": "Clay Hook"
+      },
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "20d616a4eaab170673fe13092da0f43ad15de3680523c2c275d3e9e00914072b",
+        "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+        "rationale": "The clay forearm rises into one uppercut, spatters at contact and forms layered defensive cuffs before lowering. The physical hook and defensive aftermath are both readable. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+        "sourceEvidence": [
+          "dist/assets/vfx/action/155-clay-hook.png"
+        ],
+        "gameplayEvidence": [
+          "art-library/action-vfx/reviews-v0.90.52/single-155.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-0-155.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-1-155.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": 156,
@@ -13316,9 +13356,36 @@
         }
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
-      "art": null,
-      "status": "incomplete",
-      "review": null
+      "art": {
+        "src": "assets/vfx/action/176-featherweight.png",
+        "exists": true,
+        "sha256": "32c4cf1e529a1eef164b7c4494eaa9827e3f8642df87ddfec516ab5d592e40f8",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Three delicate feather-tipped talon quills flex and sweep together in one weightless claw rake; three curved trails converge at ONE contact, white barbs drift away and tips uncurl. No full bird.",
+        "registeredName": "Featherweight"
+      },
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "32c4cf1e529a1eef164b7c4494eaa9827e3f8642df87ddfec516ab5d592e40f8",
+        "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+        "rationale": "The feathered talon quills rake once through three curved motion trails; one contact flare is followed by loose barbs and uncurling recovery. The trails do not imply extra hits. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+        "sourceEvidence": [
+          "dist/assets/vfx/action/176-featherweight.png"
+        ],
+        "gameplayEvidence": [
+          "art-library/action-vfx/reviews-v0.90.52/single-176.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-0-176.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-1-176.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": 177,
@@ -22000,9 +22067,36 @@
         }
       ],
       "authoredAction": "one decisive impact arc with a strong contact flash.",
-      "art": null,
-      "status": "incomplete",
-      "review": null
+      "art": {
+        "src": "assets/vfx/action/319-iron-strike.png",
+        "exists": true,
+        "sha256": "013905b8388fffa24b0749630cb1eed8d5d4afc66e9a43b61520626d2063b019",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A broad blunt riveted steel striker on a short articulated shank draws back, strikes one downward diagonal with flat weighted contact, chips scatter, then rebounds and retracts. No sharpened sword or fist.",
+        "registeredName": "Iron Strike"
+      },
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "013905b8388fffa24b0749630cb1eed8d5d4afc66e9a43b61520626d2063b019",
+        "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+        "rationale": "A detailed articulated iron striker swings down into one heavy contact, scatters chips and rebounds. Material volume, joints and follow-through distinguish it from a sword or bare fist. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+        "sourceEvidence": [
+          "dist/assets/vfx/action/319-iron-strike.png"
+        ],
+        "gameplayEvidence": [
+          "art-library/action-vfx/reviews-v0.90.52/single-319.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-0-319.png",
+          "art-library/action-vfx/reviews-v0.90.52/double-1-319.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": 320,

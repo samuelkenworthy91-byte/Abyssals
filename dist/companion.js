@@ -1,9 +1,9 @@
-import {roomGrid} from './promenade.js?v=0.90.37';
-import {shinyCanvas} from './shinies.js?v=0.90.20';
-import {RELIC_ART,relicArtPath,drawRelicPanel} from './relic-art.js?v=0.90.48';
-import {beginStep,advanceStep} from './movement.js?v=0.87.0';
-import {unitName} from './names.js?v=0.87.0';
-import {behaviourFor} from './companion-lines.js?v=0.87.0';
+import {roomGrid} from './promenade.js?v=0.90.52';
+import {shinyCanvas} from './shinies.js?v=0.90.52';
+import {RELIC_ART,relicArtPath,drawRelicPanel} from './relic-art.js?v=0.90.52';
+import {beginStep,advanceStep} from './movement.js?v=0.90.52';
+import {unitName} from './names.js?v=0.90.52';
+import {behaviourFor} from './companion-lines.js?v=0.90.52';
 
 // Family assignments are explicit: airborne and aquatic bodies never receive paw/tail gestures.
 const families={
@@ -70,7 +70,7 @@ export const MIRRORED_FOLLOWER_FRAMES={'181':[3],'185':[6],'230':[7],'342':[5]};
 export const REVISED_FOLLOWERS=new Set(['361','362','363','376','377','380','381','381-wrath','384','387','388']);
 const artCache=new Map();
 export function companionArt(id){
- if(!artCache.has(id)){const im=new Image();im.src=`${REVISED_FOLLOWERS.has(id)?'assets/followers/'+id+'.webp':relicArtPath(id)||'assets/followers/'+id+'.webp'}?v=0.87.0`;artCache.set(id,im);}return artCache.get(id);
+ if(!artCache.has(id)){const im=new Image();im.src=`${REVISED_FOLLOWERS.has(id)?'assets/followers/'+id+'.webp':relicArtPath(id)||'assets/followers/'+id+'.webp'}?v=0.90.52`;artCache.set(id,im);}return artCache.get(id);
 }
 export function drawCompanion(ctx,f,time,reduced=false){
  const base=companionArt(f.unit.species.id),im=f.unit.shiny===true?(shinyCanvas(base,f.unit)||base):base;if(!im.complete||!im.naturalWidth)return;

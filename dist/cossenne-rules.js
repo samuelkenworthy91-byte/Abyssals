@@ -1,7 +1,7 @@
-import {reliefJournal} from './cossenne-services.js?v=0.87.0';
-import {orchardNextStep} from './orchard-guidance.js?v=0.87.0';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.41';
-import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.90.48';
+import {reliefJournal} from './cossenne-services.js?v=0.90.52';
+import {orchardNextStep} from './orchard-guidance.js?v=0.90.52';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.52';
+import {ORCHARD_ROUTES,COSSENNE_CACHES} from './cossenne-data.js?v=0.90.52';
 export const cossenneUnlocked=s=>['SPARED','EXECUTED'].includes(s.fates?.['LDR-03']);
 export function cossenneState(s){s.cossenne??={};const q=s.cossenne;q.version=1;q.walk??=[];q.valves??=[];q.events??=[];q.expeditions??={};return q;}
 export function cossenneEvent(s,id){const q=cossenneState(s);if(q.events.includes(id))return false;q.events.push(id);s.storyFlags??={};if(id==='CH05-E01')s.storyFlags.rhoswen_arc_state=Math.max(1,s.storyFlags.rhoswen_arc_state||0);if(id==='CH05-E03')s.storyFlags.religious_parallels_found=(s.storyFlags.religious_parallels_found||0)+2;if(id==='CH05-O01')s.storyFlags.two_prayers_unlocked=true;if(id==='CH05-E06')s.storyFlags.kurg_doubt_state=1;return true;}

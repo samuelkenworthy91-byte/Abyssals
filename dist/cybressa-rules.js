@@ -1,10 +1,10 @@
-import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.46';
-import {DATA} from './data.js?v=0.90.48';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.41';
-import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.87.0';
-import {passObjective,PASS_ROUTES} from './mountain-pass.js?v=0.90.20';
-import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS} from './cybressa-data.js?v=0.90.48';
-import {legalMoves} from './route-roster.js?v=0.87.0';
+import {buildArenaBoss,arenaRoundMarks} from './arena-bosses.js?v=0.90.52';
+import {DATA} from './data.js?v=0.90.52';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.52';
+import {mountainQuestHint,mountainQuestObjective} from './mountain-quests.js?v=0.90.52';
+import {passObjective,PASS_ROUTES} from './mountain-pass.js?v=0.90.52';
+import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS} from './cybressa-data.js?v=0.90.52';
+import {legalMoves} from './route-roster.js?v=0.90.52';
 export const cybressaUnlocked=state=>['SPARED','EXECUTED'].includes(state.fates?.['LDR-02']);
 export function cybressaState(state){state.cybressa??={};const q=state.cybressa;q.version=1;q.evidence??=[];q.quests??={};q.trialMarks??=0;q.trialSerial??=0;return q;}
 export function acceptWarehouseQuest(state){if(!cybressaUnlocked(state))return false;const q=cybressaState(state);if(q.investigation)return false;q.investigation=true;return true;}

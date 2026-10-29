@@ -1,0 +1,34 @@
+{
+  "batch": "07",
+  "format": "PNG indexed transparent768x768;16frames of192x192",
+  "rasterTechnique": "Authored raster scenes; visual and gameplay approval tracked separately.",
+  "moves": [
+    {
+      "id": 155,
+      "name": "clay-hook",
+      "filename": "155-clay-hook.png",
+      "action": "Clay Hook",
+      "revision": "01",
+      "sequence": "A compact earthen forearm curls low, drives one upward clay hook, spatters wet clay at contact, hardens those spatters into layered defensive cuffs, then lowers. Detailed sculpted clay hand; no whole character.",
+      "source": "art-library/action-vfx/batch-07/155-source.png"
+    },
+    {
+      "id": 176,
+      "name": "featherweight",
+      "filename": "176-featherweight.png",
+      "action": "Featherweight",
+      "revision": "01",
+      "sequence": "Three delicate feather-tipped talon quills flex and sweep together in one weightless claw rake; three curved trails converge at ONE contact, white barbs drift away and tips uncurl. No full bird.",
+      "source": "art-library/action-vfx/batch-07/176-source.png"
+    },
+    {
+      "id": 319,
+      "name": "iron-strike",
+      "filename": "319-iron-strike.png",
+      "action": "Iron Strike",
+      "revision": "01",
+      "sequence": "A broad blunt riveted steel striker on a short articulated shank draws back, strikes one downward diagonal with flat weighted contact, chips scatter, then rebounds and retracts. No sharpened sword or fist.",
+      "source": "art-library/action-vfx/batch-07/319-source.png"
+    }
+  ]
+}

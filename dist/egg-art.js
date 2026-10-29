@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.48';
-import {TYPES} from './type-rules.js?v=0.90.41';
+import {DATA} from './data.js?v=0.90.52';
+import {TYPES} from './type-rules.js?v=0.90.52';
 // Derive appearance from the already fixed hatchling, never reroll or mutate an egg.
 export function eggTypes(egg){
  const species=DATA.species.find(s=>s.id===egg?.speciesId);

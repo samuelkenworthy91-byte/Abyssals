@@ -1,6 +1,6 @@
-import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,REVOLT_REVELATION,REVOLT_TRAINERS} from './revolt-data.js?v=0.90.48';
-import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.41';
+import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,REVOLT_REVELATION,REVOLT_TRAINERS} from './revolt-data.js?v=0.90.52';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.52';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.52';
 export {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS};
 export function revoltState(state){state.revolt??={version:1,seen:[],clues:[],goalKnown:false,aid:null};return state.revolt;}
 export function revoltStage(state){return state.fates?.['LDR-03']?4:state.fates?.['LDR-02']?3:state.fates?.['LDR-01']?2:1;}

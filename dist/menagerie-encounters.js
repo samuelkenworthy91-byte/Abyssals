@@ -1,4 +1,4 @@
-import {DATA} from './data.js?v=0.90.48';
+import {DATA} from './data.js?v=0.90.52';
 // Reachable habitats; inherited side-campaign tables offer higher levels.
 export const MENAGERIE_HABITATS=[
  ['glassSluice','389','BOTH',18,20,8],['relicCrags','389','BOTH',31,33,8],

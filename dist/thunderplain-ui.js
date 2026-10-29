@@ -1,7 +1,7 @@
-import {stormRelayMenu} from './storm-relay.js?v=0.90.14';
-export {stormRelayMenu} from './storm-relay.js?v=0.90.14';
-import {STORM_NOTES,STORM_TRAINERS,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.48';
-import {stormState,acceptStormDarius,readStormNote,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.14';
+import {stormRelayMenu} from './storm-relay.js?v=0.90.52';
+export {stormRelayMenu} from './storm-relay.js?v=0.90.52';
+import {STORM_NOTES,STORM_TRAINERS,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.52';
+import {stormState,acceptStormDarius,readStormNote,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.52';
 export function handleStormSide(id,a){
  const {state:s,room,line,showDialogue,warp,rewardTransaction:commit,buildMarkers,openModal,escapeHTML:e,challengeTrainer,startWild,shop,$}=a,q=stormState(s);
  const say=(n,text,portrait)=>{const pages=[];for(const sentence of text.match(/[^.!?]+[.!?]*/g)||[text]){const last=pages.length-1;if(last>=0&&pages[last].length+sentence.length<290)pages[last]+=' '+sentence.trim();else pages.push(sentence.trim());}showDialogue(pages.map(t=>line(n,t,portrait)));},gate=a.AREA_GATES[room]?.find(g=>g.id===id);

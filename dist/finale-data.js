@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.48';
-import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.52';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.52';
 export const SUN_ROAD=[['sunBank','Willowmere · The Quiet Bank',78,81,'road'],['burialGrove','Willowmere · The Remembering Tree',79,82,'burial'],['sunFalls','Willowmere · Silverwater Crossing',81,85,'falls'],['sunTerraces','Cayfen · The Flowering Terraces',83,87,'terraces']];
 export const SPORE_ROAD=[['sporeRim','Sporefall · Hanging Roots',89,93,'spore'],['sporeDepths','Sporefall · The Lantern Shelves',91,95,'spore'],['sporeBridge','Sporefall · Broken Companies',93,97,'spore'],['sporeCrown','Sporefall · The Last Crossing',95,99,'darius']];
 export const PEACH_FINAL={guan:{id:'183',name:'Guanrong',title:'The Oath at the Crossing',guard:'TRN-FN-GUAN',level:87},fei:{id:'175',name:'Feirong',title:'The Strength to Hold',guard:'TRN-FN-FEI',level:88},crux:{id:'174',name:'Cruxwyrm',level:102},gehennuar:{id:'166',name:'Gehennuar',level:96},suncub:{id:'186',name:'Suncub',level:90}};
