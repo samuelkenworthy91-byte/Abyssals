@@ -1,0 +1,217 @@
+[
+  {
+    "test": "tests/action-and-learning.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 63 raster animations, actual counter strikes, Codex acquisition, method-aware relearning, save retention and post-evolution progression.\n"
+  },
+  {
+    "test": "tests/arena-bosses.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: every fifth-round schedule and reward through round 100; five legal six-partner strategies; saved runs and single payouts; matchup switches, cooldown, relay/weather continuity, finite healing and purposeful moves\n"
+  },
+  {
+    "test": "tests/bag-lift.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: every held/evolution/nursery item and shop supply has artwork; Patient Rations absent from every shop; all six lift entrances and arrivals are safe.\n"
+  },
+  {
+    "test": "tests/botrune.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 7 storm maps, shelter, gate returns, 14 legal day/night tables; persistent independent deaths; all 3 unbypassable guard cordons; 6 physical leader slots; once-only judgement rewards\nPASS: rain remains active; reduced motion disables rain (screen lightning tested separately)\n"
+  },
+  {
+    "test": "tests/branches-berries.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: eight branch paths, Hell/level/item gate and non-consumption on failure, half EXP and Warbond, weak early base encounters, Psychic Reggifox, twelve real Berries, regrowth, Feast, broad equipment and survival.\n"
+  },
+  {
+    "test": "tests/catch-up-xp.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: approved uncapped curve, rounding, weaker opponents, Warbond, Binoculars, eligibility, yields, multiple enemies, level overflow and level-200 limit\n"
+  },
+  {
+    "test": "tests/character-art.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: every creature has real artwork; thirteen distinct archived full figures; consistent dialogue/battle/world identity; Khalid full body; rematch and post-fight aliases; stale async dialogue guard\n"
+  },
+  {
+    "test": "tests/collection-access.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 518 catalogue entries; 502 eligible entries reachable through actual wild tables, fishing, trades, unique quests or evolution; no missing eligible species; no wild split branches.\n"
+  },
+  {
+    "test": "tests/cossenne-farm.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: farm/town navigation, old doors, every NPC, roaming boundaries, all sprites, headland turns, pasture gate and original farmer progression\nPASS: all five working animals can be approached, targeted and spoken to with battle busts; movement waits safely and farm labels are removed\n"
+  },
+  {
+    "test": "tests/egg-pouch-promenade.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: sequential 10/20/40/80/160k upgrades, ten-egg limit, stale/poor purchases, save validation and legacy defaults, 360 real steps each way, ten eggs progressed together, bridge save/import/hatch, safe town connection and phone tap targets\nPASS: mandatory Philomere/bridge/Rivercause route in both directions, original story-gate action, no southern detour, both full-height walkable edges and tap targets, 12s run / 24s walk, extended-grid follower visibility\n"
+  },
+  {
+    "test": "tests/elite-leaders.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: eight persistent legal elite rosters, levels, type and role coverage, four legal moves, real compounded Prodigies, deterministic migrations, nursery and rematches, action-limited switching, sightings and visited-town rumours\n"
+  },
+  {
+    "test": "tests/evolution-renewal.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: user counter sequence; multi-hit, protection, death and entry rules; three cultivated branches; item-only Triskit; one-time refund and legacy moves; proc budgets and abilities; restorative relay; legal starting STAB and distinct scenes.\n"
+  },
+  {
+    "test": "tests/execution-nursery.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: eight execution gifts, +15 every growth across evolution, fixed 25% shiny rolls, reload idempotence, old/dead/released gift migration\n"
+  },
+  {
+    "test": "tests/expedition-choices.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: combined filters, evolution branch depth, solo/full-party capture choices and reload, permanent general-store unlocks without specialist leakage, 30 disjoint fort families with ascending levels and species power.\n"
+  },
+  {
+    "test": "tests/field-journal.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: persistent sightings and ownership, trainer reserve secrecy, active double battles, evolution, death, habitats, growth and offline menu wiring\n"
+  },
+  {
+    "test": "tests/field-quality.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: capture XP for participants/observers, no self XP or retroactive Warbond, double-battle capture records; five distinct fort pools with unchanged Rimebun rarity; anytime fishing, full-cycle cooldown and reload.\n"
+  },
+  {
+    "test": "tests/finale-double.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: genuine four-actor rounds, reserve isolation and replacement, spread moves/one PP, living sovereign withdrawal, lethal player damage\n"
+  },
+  {
+    "test": "tests/finale.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: full finale navigation, saved burial and personal legacies, two distinct guardian puzzles/unique deaths, eight-leader outcomes and gate access, gallery commissions and Lv105 Fairy/Dragon ace\nPASS: memorial partners join with four level-80 moves; legacy migration preserves customized moves and is idempotent.\n"
+  },
+  {
+    "test": "tests/fort-care.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 6 HP-cost moves on both sides at cost\u22121/cost/cost+1; 24 legendary/mythic tiers; five reachable healers and care/evac points.\n"
+  },
+  {
+    "test": "tests/item-review.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 315 unique pictured entries, 192 codexes, 10 complete creature proposals and eight item branches; final level 40 / Hell / half-EXP rules and equal within-family base-stat totals.\n"
+  },
+  {
+    "test": "tests/marasen-guidance.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: progress-specific required road, civic and old-save directions; all road/district entrance footprints, gate arrivals, services and Marasen travel/rest landings\n"
+  },
+  {
+    "test": "tests/marasen-navigation.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 10 maps; 23 safe gate destinations; furniture, broad aisles, unique entrances and all visible bridge footprints\n"
+  },
+  {
+    "test": "tests/marasen-store.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: every city facade has a unique real entrance, all district exits are open-air edge streets, six floors share furniture/rail collision and clear stair approaches\n"
+  },
+  {
+    "test": "tests/move-art-batch01.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 12 independent canonical move sprite sheets, stable IDs, all 16 frames and player-sized pixel art rendering\n"
+  },
+  {
+    "test": "tests/nursery-care.test.mjs",
+    "exitCode": 0,
+    "output": "SIM {} 1321 / 1000000 expected 1 in 750.0\nSIM {\"charm\":true} 4114 / 1000000 expected 1 in 244.1\nSIM {\"enhancer\":\"feed\"} 8227 / 1000000 expected 1 in 120.4\nSIM {\"charm\":true,\"enhancer\":\"feed\"} 19279 / 1000000 expected 1 in 51.6\nSIM {\"enhancer\":\"thread\",\"threadStat\":\"speed\"} 2549 / 1000000 expected 1 in 382.8\nSIM {\"charm\":true,\"enhancer\":\"thread\",\"threadStat\":\"speed\"} 7360 / 1000000 expected 1 in 136.0\nPASS: 10x prices, ownership, additive stacks, fixed eggs and hatching, Seal species, Thread validity, legacy eggs, batch lesson costs and thresholds, surplus, held items, uncapped rescue care and protected donors\n"
+  },
+  {
+    "test": "tests/offline-redirects.test.mjs",
+    "exitCode": 0,
+    "output": "PWA accepts same-origin canonical HTML redirects and rejects cross-origin offline responses.\n"
+  },
+  {
+    "test": "tests/permanent-growth.test.mjs",
+    "exitCode": 0,
+    "output": "prodigy 90 \u2192 190 \u2192 270\nstewardship 42 \u2192 94 \u2192 126\nfocused tonic 45 \u2192 100 \u2192 135\nbalanced tonic 41 \u2192 92 \u2192 123\nnursery gift 55 \u2192 120 \u2192 165\nmemorial gift 55 \u2192 120 \u2192 165\nboth gifts 70 \u2192 150 \u2192 210\ncombined 97 \u2192 204 \u2192 291\nrescue original bonus 44 \u2192 98 \u2192 132\nPASS: all permanent sources \u00d71/\u00d72/\u00d73, real evolution and level-up, immutable receipts, post-evolution purchases, scaled stewardship quotes, initial-only rescue limit, uncapped care and legacy fallback, flat temporaries and no breeding inflation\n"
+  },
+  {
+    "test": "tests/playtest-polish.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 21\u00d7 fixed ration, quarter-HP Cruxwyrm probability, town unlocks, and five distinct Sporefall environments\n"
+  },
+  {
+    "test": "tests/pride-wrath-eggs.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: Fighting pivot and re-entry, no stage passing; miss, immunity, protect, trap, solo and contact KO; singles Fixer preparation; six held items; all 513 species egg halves match fixed hatchling types without mutation.\n"
+  },
+  {
+    "test": "tests/prodigy-breeding.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: pooled stats, both parent outcomes, 1+5/3+3/5+1, one roll per carrier, strongest successful overlap, immutable bonuses, legacy records, actual egg save/hatch, six-stat simulation 4524/2000000 (1 in 442.1)\nFIVE-TRAIT SIM {} 9368/500000 observed 1 in 53.37 exact 1 in 53.59\nFIVE-TRAIT SIM {\"charm\":true} 20863/500000 observed 1 in 23.97 exact 1 in 23.84\nFIVE-TRAIT SIM {\"enhancer\":\"feed\"} 34411/500000 observed 1 in 14.53 exact 1 in 14.55\nFIVE-TRAIT SIM {\"charm\":true,\"enhancer\":\"feed\"} 60498/500000 observed 1 in 8.26 exact 1 in 8.22\nFIVE-TRAIT SIM {\"enhancer\":\"thread\",\"threadStat\":\"sp_defence\"} 18139/500000 observed 1 in 27.56 exact 1 in 27.35\nFIVE-TRAIT SIM {\"charm\":true,\"enhancer\":\"thread\",\"threadStat\":\"sp_defence\"} 37729/500000 observed 1 in 13.25 exact 1 in 13.28\n"
+  },
+  {
+    "test": "tests/prodigy-evolution.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 90/190/270 three-stage growth, immutable birth bonus, overflow rolls, legacy saves, independent stats, additive draughts, breeding without evolution inflation, all eight trainer policies, named warnings, deterministic battle stats and Hell/rematch policies\n"
+  },
+  {
+    "test": "tests/quickbite-angling.test.mjs",
+    "exitCode": 0,
+    "output": "Quickbite odds and fishing submission/cooldown regressions passed [ '60.8%', '18.0%', '4.3%', '1.2%' ]\n"
+  },
+  {
+    "test": "tests/rivet-armoury.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: all 18 core choices/purchases, level gates, item consumption, final signatures/relearning, 24 new art/offline/shiny bindings, sound combat and existing-save shop access.\n"
+  },
+  {
+    "test": "tests/shiny-palettes.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: complete family palette coverage, stable evolution/form identity, unchanged alpha and black/white structure, smooth highlight/outline boundaries, perceptual shading, per-family atlas caches and unchanged shiny ownership/odds.\n"
+  },
+  {
+    "test": "tests/site-tablets.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: 12 visible solid site tablets; accessible A-button positions, repeat reading, exact journal copies and old-save discovery flags without spoilers\n"
+  },
+  {
+    "test": "tests/status-capture.test.mjs",
+    "exitCode": 0,
+    "output": "Status combat, duration, immunity, preview, codex and capture checks passed.\n"
+  },
+  {
+    "test": "tests/storm-polish.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: old claimed-cache migration, nine repeat shifts with four rewards/no duplicates, story and unique outcomes preserved, timing phases, deterministic attached lightning forks and all glass craters clear of the main road\n"
+  },
+  {
+    "test": "tests/tactical-moves.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: shared tactical pool, 18 selective learnsets, type tutors, scenes, multihit, ally buffs, healing and high-cost safeguards.\n"
+  },
+  {
+    "test": "tests/teamcraft.test.mjs",
+    "exitCode": 0,
+    "output": "PASS Teamcraft: 567 distinct moves/scenes, type releases, protection, effigies, relay/fatigue, False Front, proc modifiers, STAB and investment-safe aliases.\n"
+  },
+  {
+    "test": "tests/thunderplain.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: mountain/relay/town navigation and entrance collision, legal Darius team, finite medicine, separate unique wild outcome through saves, no resurrection, once-only minigame supplies and full-screen 2\u201325s lightning/reduced motion\n"
+  },
+  {
+    "test": "tests/tide-orchard.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: Tide & Orchard species, branded moves, unique artwork, three-slash counters, floor safety, berry probabilities, final terrain tick, roots, relay and disruption.\n"
+  },
+  {
+    "test": "tests/training-rapids.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: ten boosts/doses, bulk-tonic validation and persistence, expanded compatible status lessons and real status effects, 90/10 Speed races, saved luck and single settlement\n"
+  },
+  {
+    "test": "tests/waranwei-direction.test.mjs",
+    "exitCode": 0,
+    "output": "PASS: Waranwei mirrors only its reversed first right-facing frame; all other frames and species corrections are unchanged.\n"
+  }
+]

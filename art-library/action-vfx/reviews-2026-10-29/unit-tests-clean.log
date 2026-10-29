@@ -1,0 +1,153 @@
+tests/action-and-learning.test.mjs
+PASS: 63 raster animations, actual counter strikes, Codex acquisition, method-aware relearning, save retention and post-evolution progression.
+
+tests/arena-bosses.test.mjs
+PASS: every fifth-round schedule and reward through round 100; five legal six-partner strategies; saved runs and single payouts; matchup switches, cooldown, relay/weather continuity, finite healing and purposeful moves
+
+tests/bag-lift.test.mjs
+PASS: every held/evolution/nursery item and shop supply has artwork; Patient Rations absent from every shop; all six lift entrances and arrivals are safe.
+
+tests/botrune.test.mjs
+PASS: 7 storm maps, shelter, gate returns, 14 legal day/night tables; persistent independent deaths; all 3 unbypassable guard cordons; 6 physical leader slots; once-only judgement rewards
+PASS: rain remains active; reduced motion disables rain (screen lightning tested separately)
+
+tests/branches-berries.test.mjs
+PASS: eight branch paths, Hell/level/item gate and non-consumption on failure, half EXP and Warbond, weak early base encounters, Psychic Reggifox, twelve real Berries, regrowth, Feast, broad equipment and survival.
+
+tests/catch-up-xp.test.mjs
+PASS: approved uncapped curve, rounding, weaker opponents, Warbond, Binoculars, eligibility, yields, multiple enemies, level overflow and level-200 limit
+
+tests/character-art.test.mjs
+PASS: every creature has real artwork; thirteen distinct archived full figures; consistent dialogue/battle/world identity; Khalid full body; rematch and post-fight aliases; stale async dialogue guard
+
+tests/collection-access.test.mjs
+PASS: 518 catalogue entries; 502 eligible entries reachable through actual wild tables, fishing, trades, unique quests or evolution; no missing eligible species; no wild split branches.
+
+tests/cossenne-farm.test.mjs
+PASS: farm/town navigation, old doors, every NPC, roaming boundaries, all sprites, headland turns, pasture gate and original farmer progression
+PASS: all five working animals can be approached, targeted and spoken to with battle busts; movement waits safely and farm labels are removed
+
+tests/egg-pouch-promenade.test.mjs
+PASS: sequential 10/20/40/80/160k upgrades, ten-egg limit, stale/poor purchases, save validation and legacy defaults, 360 real steps each way, ten eggs progressed together, bridge save/import/hatch, safe town connection and phone tap targets
+PASS: mandatory Philomere/bridge/Rivercause route in both directions, original story-gate action, no southern detour, both full-height walkable edges and tap targets, 12s run / 24s walk, extended-grid follower visibility
+
+tests/elite-leaders.test.mjs
+PASS: eight persistent legal elite rosters, levels, type and role coverage, four legal moves, real compounded Prodigies, deterministic migrations, nursery and rematches, action-limited switching, sightings and visited-town rumours
+
+tests/evolution-renewal.test.mjs
+PASS: user counter sequence; multi-hit, protection, death and entry rules; three cultivated branches; item-only Triskit; one-time refund and legacy moves; proc budgets and abilities; restorative relay; legal starting STAB and distinct scenes.
+
+tests/execution-nursery.test.mjs
+PASS: eight execution gifts, +15 every growth across evolution, fixed 25% shiny rolls, reload idempotence, old/dead/released gift migration
+
+tests/expedition-choices.test.mjs
+PASS: combined filters, evolution branch depth, solo/full-party capture choices and reload, permanent general-store unlocks without specialist leakage, 30 disjoint fort families with ascending levels and species power.
+
+tests/field-journal.test.mjs
+PASS: persistent sightings and ownership, trainer reserve secrecy, active double battles, evolution, death, habitats, growth and offline menu wiring
+
+tests/field-quality.test.mjs
+PASS: capture XP for participants/observers, no self XP or retroactive Warbond, double-battle capture records; five distinct fort pools with unchanged Rimebun rarity; anytime fishing, full-cycle cooldown and reload.
+
+tests/finale-double.test.mjs
+PASS: genuine four-actor rounds, reserve isolation and replacement, spread moves/one PP, living sovereign withdrawal, lethal player damage
+
+tests/finale.test.mjs
+PASS: full finale navigation, saved burial and personal legacies, two distinct guardian puzzles/unique deaths, eight-leader outcomes and gate access, gallery commissions and Lv105 Fairy/Dragon ace
+PASS: memorial partners join with four level-80 moves; legacy migration preserves customized moves and is idempotent.
+
+tests/fort-care.test.mjs
+PASS: 6 HP-cost moves on both sides at cost−1/cost/cost+1; 24 legendary/mythic tiers; five reachable healers and care/evac points.
+
+tests/item-review.test.mjs
+PASS: 315 unique pictured entries, 192 codexes, 10 complete creature proposals and eight item branches; final level 40 / Hell / half-EXP rules and equal within-family base-stat totals.
+
+tests/marasen-guidance.test.mjs
+PASS: progress-specific required road, civic and old-save directions; all road/district entrance footprints, gate arrivals, services and Marasen travel/rest landings
+
+tests/marasen-navigation.test.mjs
+PASS: 10 maps; 23 safe gate destinations; furniture, broad aisles, unique entrances and all visible bridge footprints
+
+tests/marasen-store.test.mjs
+PASS: every city facade has a unique real entrance, all district exits are open-air edge streets, six floors share furniture/rail collision and clear stair approaches
+
+tests/move-art-batch01.test.mjs
+PASS: 12 independent canonical move sprite sheets, stable IDs, all 16 frames and player-sized pixel art rendering
+
+tests/nursery-care.test.mjs
+SIM {} 1321 / 1000000 expected 1 in 750.0
+SIM {"charm":true} 4114 / 1000000 expected 1 in 244.1
+SIM {"enhancer":"feed"} 8227 / 1000000 expected 1 in 120.4
+SIM {"charm":true,"enhancer":"feed"} 19279 / 1000000 expected 1 in 51.6
+SIM {"enhancer":"thread","threadStat":"speed"} 2549 / 1000000 expected 1 in 382.8
+SIM {"charm":true,"enhancer":"thread","threadStat":"speed"} 7360 / 1000000 expected 1 in 136.0
+PASS: 10x prices, ownership, additive stacks, fixed eggs and hatching, Seal species, Thread validity, legacy eggs, batch lesson costs and thresholds, surplus, held items, uncapped rescue care and protected donors
+
+tests/offline-redirects.test.mjs
+PWA accepts same-origin canonical HTML redirects and rejects cross-origin offline responses.
+
+tests/permanent-growth.test.mjs
+prodigy 90 → 190 → 270
+stewardship 42 → 94 → 126
+focused tonic 45 → 100 → 135
+balanced tonic 41 → 92 → 123
+nursery gift 55 → 120 → 165
+memorial gift 55 → 120 → 165
+both gifts 70 → 150 → 210
+combined 97 → 204 → 291
+rescue original bonus 44 → 98 → 132
+PASS: all permanent sources ×1/×2/×3, real evolution and level-up, immutable receipts, post-evolution purchases, scaled stewardship quotes, initial-only rescue limit, uncapped care and legacy fallback, flat temporaries and no breeding inflation
+
+tests/playtest-polish.test.mjs
+PASS: 21× fixed ration, quarter-HP Cruxwyrm probability, town unlocks, and five distinct Sporefall environments
+
+tests/pride-wrath-eggs.test.mjs
+PASS: Fighting pivot and re-entry, no stage passing; miss, immunity, protect, trap, solo and contact KO; singles Fixer preparation; six held items; all 513 species egg halves match fixed hatchling types without mutation.
+
+tests/prodigy-breeding.test.mjs
+PASS: pooled stats, both parent outcomes, 1+5/3+3/5+1, one roll per carrier, strongest successful overlap, immutable bonuses, legacy records, actual egg save/hatch, six-stat simulation 4524/2000000 (1 in 442.1)
+FIVE-TRAIT SIM {} 9368/500000 observed 1 in 53.37 exact 1 in 53.59
+FIVE-TRAIT SIM {"charm":true} 20863/500000 observed 1 in 23.97 exact 1 in 23.84
+FIVE-TRAIT SIM {"enhancer":"feed"} 34411/500000 observed 1 in 14.53 exact 1 in 14.55
+FIVE-TRAIT SIM {"charm":true,"enhancer":"feed"} 60498/500000 observed 1 in 8.26 exact 1 in 8.22
+FIVE-TRAIT SIM {"enhancer":"thread","threadStat":"sp_defence"} 18139/500000 observed 1 in 27.56 exact 1 in 27.35
+FIVE-TRAIT SIM {"charm":true,"enhancer":"thread","threadStat":"sp_defence"} 37729/500000 observed 1 in 13.25 exact 1 in 13.28
+
+tests/prodigy-evolution.test.mjs
+PASS: 90/190/270 three-stage growth, immutable birth bonus, overflow rolls, legacy saves, independent stats, additive draughts, breeding without evolution inflation, all eight trainer policies, named warnings, deterministic battle stats and Hell/rematch policies
+
+tests/quickbite-angling.test.mjs
+Quickbite odds and fishing submission/cooldown regressions passed [ '60.8%', '18.0%', '4.3%', '1.2%' ]
+
+tests/rivet-armoury.test.mjs
+PASS: all 18 core choices/purchases, level gates, item consumption, final signatures/relearning, 24 new art/offline/shiny bindings, sound combat and existing-save shop access.
+
+tests/shiny-palettes.test.mjs
+PASS: complete family palette coverage, stable evolution/form identity, unchanged alpha and black/white structure, smooth highlight/outline boundaries, perceptual shading, per-family atlas caches and unchanged shiny ownership/odds.
+
+tests/site-tablets.test.mjs
+PASS: 12 visible solid site tablets; accessible A-button positions, repeat reading, exact journal copies and old-save discovery flags without spoilers
+
+tests/status-capture.test.mjs
+Status combat, duration, immunity, preview, codex and capture checks passed.
+
+tests/storm-polish.test.mjs
+PASS: old claimed-cache migration, nine repeat shifts with four rewards/no duplicates, story and unique outcomes preserved, timing phases, deterministic attached lightning forks and all glass craters clear of the main road
+
+tests/tactical-moves.test.mjs
+PASS: shared tactical pool, 18 selective learnsets, type tutors, scenes, multihit, ally buffs, healing and high-cost safeguards.
+
+tests/teamcraft.test.mjs
+PASS Teamcraft: 567 distinct moves/scenes, type releases, protection, effigies, relay/fatigue, False Front, proc modifiers, STAB and investment-safe aliases.
+
+tests/thunderplain.test.mjs
+PASS: mountain/relay/town navigation and entrance collision, legal Darius team, finite medicine, separate unique wild outcome through saves, no resurrection, once-only minigame supplies and full-screen 2–25s lightning/reduced motion
+
+tests/tide-orchard.test.mjs
+PASS: Tide & Orchard species, branded moves, unique artwork, three-slash counters, floor safety, berry probabilities, final terrain tick, roots, relay and disruption.
+
+tests/training-rapids.test.mjs
+PASS: ten boosts/doses, bulk-tonic validation and persistence, expanded compatible status lessons and real status effects, 90/10 Speed races, saved luck and single settlement
+
+tests/waranwei-direction.test.mjs
+PASS: Waranwei mirrors only its reversed first right-facing frame; all other frames and species corrections are unchanged.

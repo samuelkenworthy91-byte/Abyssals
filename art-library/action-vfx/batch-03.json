@@ -1,0 +1,91 @@
+{
+  "batch": "03",
+  "format": "PNG indexed transparent 768\u00d7768, 16 frames of 192\u00d7192",
+  "rasterTechnique": "Individually authored action choreography; art review pending.",
+  "moves": [
+    {
+      "id": 18,
+      "name": "firefly-volley",
+      "filename": "18-firefly-volley.png",
+      "action": "Firefly Volley",
+      "revision": "01"
+    },
+    {
+      "id": 19,
+      "name": "branding-iron",
+      "filename": "19-branding-iron.png",
+      "action": "Branding Iron",
+      "revision": "01"
+    },
+    {
+      "id": 20,
+      "name": "pyre-detonation",
+      "filename": "20-pyre-detonation.png",
+      "action": "Pyre Detonation",
+      "revision": "01"
+    },
+    {
+      "id": 21,
+      "name": "cinder-rend",
+      "filename": "21-cinder-rend.png",
+      "action": "Cinder Rend",
+      "revision": "01"
+    },
+    {
+      "id": 22,
+      "name": "scorchwhip",
+      "filename": "22-scorchwhip.png",
+      "action": "Scorchwhip",
+      "revision": "02"
+    },
+    {
+      "id": 23,
+      "name": "hotfoot",
+      "filename": "23-hotfoot.png",
+      "action": "Hotfoot",
+      "revision": "01"
+    },
+    {
+      "id": 24,
+      "name": "charcoal-hook",
+      "filename": "24-charcoal-hook.png",
+      "action": "Charcoal Hook",
+      "revision": "01"
+    },
+    {
+      "id": 25,
+      "name": "ash-wheel",
+      "filename": "25-ash-wheel.png",
+      "action": "Ash Wheel",
+      "revision": "01"
+    },
+    {
+      "id": 26,
+      "name": "stoke-the-heart",
+      "filename": "26-stoke-the-heart.png",
+      "action": "Stoke the Heart",
+      "revision": "01"
+    },
+    {
+      "id": 27,
+      "name": "kiln-kiss",
+      "filename": "27-kiln-kiss.png",
+      "action": "Kiln Kiss",
+      "revision": "02"
+    },
+    {
+      "id": 28,
+      "name": "kiln-scissor",
+      "filename": "28-kiln-scissor.png",
+      "action": "Kiln Scissor",
+      "revision": "01"
+    },
+    {
+      "id": 30,
+      "name": "cinder-pounce",
+      "filename": "30-cinder-pounce.png",
+      "action": "Cinder Pounce",
+      "revision": "01"
+    }
+  ]
+}

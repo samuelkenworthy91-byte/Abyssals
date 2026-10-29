@@ -17,7 +17,7 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,6 +29,7 @@ jobs:
             docs
             art-library/reviews/item-branches-2026-10-26
             art-library/action-vfx
+            art-library/finale
           sparse-checkout-cone-mode: true
       - uses: actions/setup-node@v4
         with:
@@ -37,6 +38,9 @@ jobs:
         run: |
           python3 -m pip install --quiet Pillow==11.1.0
           python3 scripts/audit-action-art.py
+          node scripts/build-art-coverage.mjs --check
+          node scripts/build-environment-qa.mjs --check
+          python3 scripts/audit-finale-art.py
           node scripts/build-journal-habitats.mjs
           git diff --exit-code -- dist/journal-habitats.js
           node scripts/audit-shiny-art.mjs
@@ -44,6 +48,10 @@ jobs:
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
           python3 tests/android-manifest.test.py
+      - name: Require complete reviewed artwork before release
+        run: |
+          node scripts/build-art-coverage.mjs --check --release
+          node scripts/build-environment-qa.mjs --check --release
       - name: Install Chromium for interaction checks
         timeout-minutes: 8
         run: |
@@ -81,7 +89,7 @@ jobs:
         timeout-minutes: 3
         run: node tests/rivet-armoury-browser.cjs
       - name: Test remaining real game interactions in Chromium
-        timeout-minutes: 15
+        timeout-minutes: 40
         run: |
           timeout 180s node tests/prodigy-evolution-browser.cjs
           timeout 300s node tests/nursery-care-browser.cjs

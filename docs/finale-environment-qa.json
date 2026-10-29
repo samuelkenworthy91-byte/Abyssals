@@ -3,7 +3,7 @@
   "policy": "Connectivity checks do not grant visual approval. Review must inspect authored floor alignment, depth, lighting, actors and exits in day/night at phone scale.",
   "totals": {
     "maps": 25,
-    "approved": 0,
+    "approved": 6,
     "technicalIssues": 0
   },
   "maps": [
@@ -684,8 +684,23 @@
         "sidePaths": []
       },
       "technicalIssues": [],
-      "status": "requires-review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "ea527051757334a33afaa5aa7c97f21c5727a6764e5244750f71a1b9e4b23356",
+        "geometrySha256": "05060780cd68fb685ee0198ff71dd032da0e4ef0a6eae2306004a3bcb3950446",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Warm Cayfen masonry and daylight transition into a root-filled abyss; open causeway and central sign landing are legible. The small western stair is grounded and the central stele blocks passage. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeRim-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeRim-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeRim-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeRim-1280-night.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": "sporeDepths",
@@ -856,8 +871,23 @@
         ]
       },
       "technicalIssues": [],
-      "status": "requires-review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "253bfde9c58f4a362cfd8052f3aa7365cff9aaa9152500333ebe1021f4ae6b03",
+        "geometrySha256": "7fee4164e253e6c573583a3c8e9dfad0e60787b2afe6d97f212124692802abfd",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Cold vertical root chasm, distant crossings and subdued fungus frame a warm navigable causeway and narrow north shrine stair; encounter and field-record positions are reachable. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeDepths-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeDepths-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeDepths-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeDepths-1280-night.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": "sporeBridge",
@@ -1022,8 +1052,23 @@
         ]
       },
       "technicalIssues": [],
-      "status": "requires-review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "bde6867bd39056c4adcc45b3ef58ca1e51207b62f6de7e2974628d48bd3a4043",
+        "geometrySha256": "267687cf13c4a7e968f252e164c3fdc92acf4afa927fcb72a0a16884047c5c1d",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Opposing abandoned army camps sit on separated background ledges; the central ruined crossing and north stair remain bright enough to navigate without washing out the chasm. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeBridge-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeBridge-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeBridge-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeBridge-1280-night.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": "sporeCrown",
@@ -1155,8 +1200,23 @@
         "sidePaths": []
       },
       "technicalIssues": [],
-      "status": "requires-review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "0edda66bfdda4319231e83e5aa72286e1b1b83e7faaa109089ee4c2b75671e5b",
+        "geometrySha256": "29d0729ae2b26aa854dbb8b1fd99a30f7c985bf985c6087627f0580332cbdfea",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Dragon mosaic and warm shrine dais create a distinct Darius arena; two armies frame the crossing, with room for Hasan, wounded soldiers and Cruxwyrm on authored stone. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCrown-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeCrown-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCrown-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeCrown-1280-night.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": "guanApproach",
@@ -2826,8 +2886,23 @@
         "sidePaths": []
       },
       "technicalIssues": [],
-      "status": "requires-review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "53dc26bd94696a4faab42b13045267b0d28fa32151544a10ac4868818c3be9b3",
+        "geometrySha256": "92f24369250e52cab469b901acc044a9095e16c93bdc508824f86761323c5f08",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Moonlit mineral pool is recessed above the playable crescent terrace; shrine steps and surveyor stand on stone, with distinct blue depth lighting and a readable return crossing. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-1280-night.png"
+        ],
+        "current": true
+      }
     },
     {
       "id": "sporeCanopy",
@@ -2947,8 +3022,23 @@
         "sidePaths": []
       },
       "technicalIssues": [],
-      "status": "requires-review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "3a24df01e7e9f81a3729306a7714fe8521abd73fbdcf7334f52b47dca171ea3c",
+        "geometrySha256": "b09e4518eb5836d0146498d90bc390c563722457d0d03dc2904fbfb20e0df364",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "An enormous living root platform with draped vegetation and old shrines forms the Crown of Roots; collision routes around the central shrine instead of through it. Gold-green canopy light gives a distinct identity. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-1280-night.png"
+        ],
+        "current": true
+      }
     }
   ]
 }
