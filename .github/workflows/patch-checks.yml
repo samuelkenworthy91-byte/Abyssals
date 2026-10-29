@@ -2,6 +2,18 @@ name: Check pending patch without packaging
 on:
   push:
     branches: ['patch/**', 'feature/**']
+    paths:
+      - 'dist/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/patch-checks.yml'
+      - 'art-library/action-vfx/batch-*.json'
+      - 'art-library/action-vfx/quality-reviews.json'
+      - 'art-library/action-vfx/provenance.json'
+      - 'art-library/action-vfx/atlas-detail-provenance.json'
+      - 'art-library/finale/quality-reviews.json'
+      - 'docs/move-coverage*'
+      - 'docs/finale-environment-qa*'
 permissions:
   contents: read
 jobs:
