@@ -6,6 +6,10 @@ on:
       - '.github/workflows/development-snapshot.yml'
       - 'scripts/development-snapshot.py'
       - 'docs/development-resume.md'
+      - 'scripts/audit-halfway-artwork.py'
+      - 'art-library/action-vfx/batch-*/production-plan.json'
+      - 'art-library/action-vfx/batch-*/prepared-manifest.json'
+      - 'art-library/action-vfx/batch-*/*.png'
 permissions:
   contents: read
 concurrency:
@@ -27,6 +31,8 @@ jobs:
             art-library/action-vfx
             art-library/finale
             art-library/reviews/item-branches-2026-10-26
+      - name: Count only real authored animation sheets
+        run: python3 scripts/audit-halfway-artwork.py
       - name: Package sources, prepared artwork and resume state
         run: python3 scripts/development-snapshot.py create --commit "$GITHUB_SHA" --output build/development-snapshot
       - uses: actions/upload-artifact@v4
