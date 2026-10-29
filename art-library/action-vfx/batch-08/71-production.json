@@ -15,11 +15,14 @@
   "batch": "08",
   "sequence": "Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact.",
   "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Static Field, stable ID71. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
-  "source": "art-library/action-vfx/batch-08/71-source.png",
+  "source": "art-library/action-vfx/batch-08/71-source-v2.png",
   "impact": 0.4375,
-  "status": "source and prepared sheet checkpointed; gameplay review pending",
-  "prepared": "art-library/action-vfx/batch-08/71-prepared.png",
-  "sourceSha256": "4e7a7790d167f4825082469a521646df1a635b56958312fbcf3312ad91afe0c7",
-  "preparedSha256": "8166188c507dd15ff4dc6cb4f4a193caddbf47bd6ff510c8a6d6677aba8ef205",
-  "generator": "built-in image_gen"
+  "status": "revised source and prepared candidate; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/71-prepared-v2.png",
+  "sourceSha256": "6d21135626796b5e9fb8036229a5268fc9402843bd773075bd941ac941614637",
+  "preparedSha256": "6c6a69f3f920914d32a2ea16fe661f0ac56fb6bfeba0dfa5f43a55eae10e1c04",
+  "generator": "built-in image_gen",
+  "revision": "02",
+  "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
+  "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments."
 }

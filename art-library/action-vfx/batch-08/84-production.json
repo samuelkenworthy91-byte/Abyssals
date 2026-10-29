@@ -1,0 +1,25 @@
+{
+  "id": 84,
+  "name": "Canopy Resonance",
+  "category": "SPECIAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "drain",
+      "actual_hp_damage_fraction": [
+        25,
+        100
+      ]
+    }
+  ],
+  "batch": "08",
+  "sequence": "An arched canopy of four broad veined leaves sways in sequence; one twisting stream of leaf-vein resonance curls around a central gap and opens once, then small sap motes return left and the canopy relaxes. No generic hurricane or repeated hit.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Canopy Resonance, stable ID84. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: An arched canopy of four broad veined leaves sways in sequence; one twisting stream of leaf-vein resonance curls around a central gap and opens once, then small sap motes return left and the canopy relaxes. No generic hurricane or repeated hit. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/84-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/84-prepared.png",
+  "sourceSha256": "c5068217b87ab11bd0390ae630eb5ddbea002e6c65ce728f1d3cce3db7c9ad1c",
+  "preparedSha256": "5cc611423c3742428260f248f9b360dc9ae317fad83422a5573585321ce3370c",
+  "generator": "built-in image_gen"
+}

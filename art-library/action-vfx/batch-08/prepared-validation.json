@@ -1,0 +1,199 @@
+{
+  "moves": [
+    {
+      "id": 63,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "714f809bda929dda757ddd46a8d2f55c95e359dad85a3a7da78d93c387de8d8a",
+      "source": "art-library/action-vfx/batch-08/63-source.png",
+      "prepared": "art-library/action-vfx/batch-08/63-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 64,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "dda85cae92a424a8fea308709148ea8c778afbad3964150368cb46e8e08be68b",
+      "source": "art-library/action-vfx/batch-08/64-source.png",
+      "prepared": "art-library/action-vfx/batch-08/64-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 65,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "35873dbd63197fff152e0c16ae1d75ef48977023dbecbe1e0ebd812dc0dab68b",
+      "source": "art-library/action-vfx/batch-08/65-source.png",
+      "prepared": "art-library/action-vfx/batch-08/65-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 66,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
+      "source": "art-library/action-vfx/batch-08/66-source.png",
+      "prepared": "art-library/action-vfx/batch-08/66-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 67,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "885c0f84df8555c8fb44c7532f2ba7f2b56fb21898228df9a2275a8ad18d7dd3",
+      "source": "art-library/action-vfx/batch-08/67-source.png",
+      "prepared": "art-library/action-vfx/batch-08/67-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 68,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+      "source": "art-library/action-vfx/batch-08/68-source.png",
+      "prepared": "art-library/action-vfx/batch-08/68-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 69,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "b807f04af2aa8acd1739b158e3c1fda69ef5d8b20acdcab0dafb72fc4007ad99",
+      "source": "art-library/action-vfx/batch-08/69-source.png",
+      "prepared": "art-library/action-vfx/batch-08/69-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 70,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "38f35715e3ff43b952eba247c4cdba4ab85cfe6dfb9b0d9d9b8148a93e47ff0f",
+      "source": "art-library/action-vfx/batch-08/70-source-v2.png",
+      "prepared": "art-library/action-vfx/batch-08/70-prepared-v2.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 71,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "6c6a69f3f920914d32a2ea16fe661f0ac56fb6bfeba0dfa5f43a55eae10e1c04",
+      "source": "art-library/action-vfx/batch-08/71-source-v2.png",
+      "prepared": "art-library/action-vfx/batch-08/71-prepared-v2.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 72,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "f6df58830cd6864490180853429096a1a59ed84ca23dc56ed02627e8151cec51",
+      "source": "art-library/action-vfx/batch-08/72-source.png",
+      "prepared": "art-library/action-vfx/batch-08/72-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 73,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "b6a106b7df49959fda9e00105b7f0291163c44aedaa24da00f20887eb05e9a76",
+      "source": "art-library/action-vfx/batch-08/73-source.png",
+      "prepared": "art-library/action-vfx/batch-08/73-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 74,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+      "source": "art-library/action-vfx/batch-08/74-source.png",
+      "prepared": "art-library/action-vfx/batch-08/74-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 75,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "473b42ec0bf25e4cef8c409c507da80e60f0eef35ca2581079f36038737d190d",
+      "source": "art-library/action-vfx/batch-08/75-source-v2.png",
+      "prepared": "art-library/action-vfx/batch-08/75-prepared-v2.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 77,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "56edb127bc2030b29ef79df0520310663a13e6944c2f66b60df9b1d581a583b0",
+      "source": "art-library/action-vfx/batch-08/77-source.png",
+      "prepared": "art-library/action-vfx/batch-08/77-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 78,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "24bc7cf825b9b0f878487c7abc38d78263fcb6b3eaeb7d92f82d3f5c0c638e56",
+      "source": "art-library/action-vfx/batch-08/78-source.png",
+      "prepared": "art-library/action-vfx/batch-08/78-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 79,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+      "source": "art-library/action-vfx/batch-08/79-source.png",
+      "prepared": "art-library/action-vfx/batch-08/79-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 80,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "bd12f6956f21c294791442e75512e771192735400af295777847fe764f5f72e4",
+      "source": "art-library/action-vfx/batch-08/80-source.png",
+      "prepared": "art-library/action-vfx/batch-08/80-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 81,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "69da6c0bb5b416a7314529a10c4a6cc4c874d395e363c13c4ae6410886835385",
+      "source": "art-library/action-vfx/batch-08/81-source.png",
+      "prepared": "art-library/action-vfx/batch-08/81-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 82,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
+      "source": "art-library/action-vfx/batch-08/82-source.png",
+      "prepared": "art-library/action-vfx/batch-08/82-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 83,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "b50f239cea8aff703bafe9eceb4b70a1a80f2fcc1cc6b2c019bf91f3ad99ee83",
+      "source": "art-library/action-vfx/batch-08/83-source.png",
+      "prepared": "art-library/action-vfx/batch-08/83-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    },
+    {
+      "id": 84,
+      "frames": 16,
+      "uniqueFrames": 16,
+      "sha256": "5cc611423c3742428260f248f9b360dc9ae317fad83422a5573585321ce3370c",
+      "source": "art-library/action-vfx/batch-08/84-source.png",
+      "prepared": "art-library/action-vfx/batch-08/84-prepared.png",
+      "status": "source prepared; not registered or gameplay approved"
+    }
+  ],
+  "generatedSheets": 21,
+  "installedBaseline": 133,
+  "preparedTotal": 154,
+  "preparedPercent": 25.1,
+  "installedPercent": 21.7,
+  "gameplayReview": "pending"
+}
