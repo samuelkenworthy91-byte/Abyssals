@@ -43,3 +43,8 @@ Download a repository snapshot instead of re-creating art or making hundreds of 
 - Browser runtime artifact: run40880432139, artifact12898784508, Playwright1.62.1 headless shell. This avoids blocked direct CDN download.
 - A previous interruption lost uncommitted new generations for the next six moves; do not count them in installed coverage. No matching Library files were found.
 - Next target remains154 dedicated sheets out of614, then pause for review.
+
+## Interim release requested
+The user explicitly requested installing all already-made artwork and redesigned environments and publishing an interim signed APK before the rest of the overhaul.
+Current main v0.90.51 includes trainer awareness/patrols and corrected critical-hit stages; these changes are merged and must be preserved. Target next release v0.90.52 / Android code147 or higher if main advances.
+Three remaining source-only sheets (155,319,176) must be prepared and tested. The six redesigned Sporefall areas and130 installed move sheets are already on this branch. No more new artwork production is required for this interim release.

@@ -1,19 +1,19 @@
-import {ORCHARD_IDS,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.48';
-import {orchardPrepare,orchardEffect,brineVeil,orchardHit} from './tide-orchard-battle.js?v=0.90.48';
-import {heldSurvival,finishHeldMove,activateHeldRecovery} from './abilities.js?v=0.90.48';
-import {secondaryChance,prepareSpecialistMove,stabMultiplier,actionInvalid,beginAction,blocksTarget,strikeBarrier,teamcraftEffect,endTeamcraft,selectedAlly} from './teamcraft-battle.js?v=0.90.48';
-import {enterAbility,leaveAbility} from './abilities.js?v=0.90.48';
-import {statusAttackFactor} from './status-rules.js?v=0.90.24';
-import {birdPrepareMove,birdAccuracy,birdGroundImmunity,birdThreshold} from './bird-abilities.js?v=0.90.41';
-import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
-import {resolveSalvationMove} from './salvation.js?v=0.90.48';
-import {captureHealth,healthChanges} from './health-presentation.js?v=0.87.0';
-import {canPayMoveHP,moveUsable,movePriority,moveDamageMultiplier,trackMove,consumeWard,extraMoveEffect,contactReaction,endMoveEffects} from './move-rules.js?v=0.90.48';
-export {moveUsable} from './move-rules.js?v=0.90.48';
-import {canSwitch,isContact,effectiveStage,weatherSuppressed,triggerArcticEndurance,has,abilityMemory,abilityBattle,speedFactor,heldStat,heldInfo,restoreHP,blockedByAbility,critChance,ignoresDefence,abilityMultiplier,afterDamage,afterStatusMove,recordMove,failedMove,changeStage,blocksEvasion,inflictStatus,endAbilities,triggerSunWrath} from './abilities.js?v=0.90.48';
-import {typeEffectiveness} from './type-rules.js?v=0.87.0';
-import {startingStats,STAT_BALANCE_VERSION,EVOLUTION_STAT_VERSION} from './stat-balance.js?v=0.87.0';
-import {unitName} from './names.js?v=0.87.0';
+import {ORCHARD_IDS,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.52';
+import {orchardPrepare,orchardEffect,brineVeil,orchardHit} from './tide-orchard-battle.js?v=0.90.52';
+import {heldSurvival,finishHeldMove,activateHeldRecovery} from './abilities.js?v=0.90.52';
+import {secondaryChance,prepareSpecialistMove,stabMultiplier,actionInvalid,beginAction,blocksTarget,strikeBarrier,teamcraftEffect,endTeamcraft,selectedAlly} from './teamcraft-battle.js?v=0.90.52';
+import {enterAbility,leaveAbility} from './abilities.js?v=0.90.52';
+import {statusAttackFactor} from './status-rules.js?v=0.90.52';
+import {birdPrepareMove,birdAccuracy,birdGroundImmunity,birdThreshold} from './bird-abilities.js?v=0.90.52';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.52';
+import {resolveSalvationMove} from './salvation.js?v=0.90.52';
+import {captureHealth,healthChanges} from './health-presentation.js?v=0.90.52';
+import {canPayMoveHP,moveUsable,movePriority,moveDamageMultiplier,trackMove,consumeWard,extraMoveEffect,contactReaction,endMoveEffects} from './move-rules.js?v=0.90.52';
+export {moveUsable} from './move-rules.js?v=0.90.52';
+import {canSwitch,isContact,effectiveStage,weatherSuppressed,triggerArcticEndurance,has,abilityMemory,abilityBattle,speedFactor,heldStat,heldInfo,restoreHP,blockedByAbility,critChance,ignoresDefence,abilityMultiplier,afterDamage,afterStatusMove,recordMove,failedMove,changeStage,blocksEvasion,inflictStatus,endAbilities,triggerSunWrath} from './abilities.js?v=0.90.52';
+import {typeEffectiveness} from './type-rules.js?v=0.90.52';
+import {startingStats,STAT_BALANCE_VERSION,EVOLUTION_STAT_VERSION} from './stat-balance.js?v=0.90.52';
+import {unitName} from './names.js?v=0.90.52';
 // Isolated demonstration rules. These numeric bindings are NOT locked Abyssals canon.
 export const PROTOTYPE_RULES = Object.freeze({level:8,statInitialization:'half HP and one-fifth other species base stats',damage:'Gen-III-shaped integer demonstration; type effectiveness and authored abilities',abilities:true,criticalMultiplier:2,confusionTurns:[1,6],supervisedFloor:1});
 export function damageScale(level){return Math.min(1,.55+level*.015);}
@@ -46,8 +46,11 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
    const strikes=move.hits?Math.max(1,Math.min(5,Math.floor(move.hits.min+random()*(move.hits.max-move.hits.min+1)))):1;
    for(let i=0;i<strikes&&target.hp>floor&&actor.hp>0;i++){
     const strikeCritical=!(target.moveState?.critGuard>0)&&random()<critChance(actor,move,target);
-    const a=actor.stats[atk]*(strikeCritical?1:stageMultiplier(actor.stages[atk]))*heldStat(actor,atk)*statusAttackFactor(actor,special);
-    const d=target.stats[def]*(strikeCritical?1:stageMultiplier(ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def]))*heldStat(target,def);
+    // Critical hits bypass only positive defensive stages on the target.
+    // Keep the attacker's boosts/debuffs, target's defensive debuffs, equipment and status penalties.
+    const a=actor.stats[atk]*stageMultiplier(actor.stages[atk])*heldStat(actor,atk)*statusAttackFactor(actor,special);
+    const defenceStage=strikeCritical||ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def];
+    const d=target.stats[def]*stageMultiplier(defenceStage)*heldStat(target,def);
     const sameType=stabMultiplier(actor,move);
     let strikeDamage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(strikeCritical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical:strikeCritical,movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,critical:strikeCritical,movedFirst,switching:!!target.switching})));
     if(has(target,'Ghost Hull')&&target.hp===target.maxHp&&strikeDamage>=target.hp&&!abilityBattle(target).flags.hull){strikeDamage=target.hp-1;abilityBattle(target).flags.hull=true;messages.push(`${unitName(target)} · Ghost Hull: held on at 1 HP.`);}
@@ -110,4 +113,5 @@ function tideReply(actor,target,reply,random,fallbackFloor=0){const messages=[],
  messages.push(`${unitName(actor)} · ${m.name}: ${hits} slash${hits===1?'':'es'}, ${total} damage.`);
  return {who:actor.side||'player',actorUid:actor.uid,targetUid:target.uid,move:m,result:{damage:total,effectiveness:strikes[0]?.effectiveness??0,messages,hitCount:hits,reactionOnly:true,strikes,hpChanges:healthChanges(beforeReply,actor,target)}};
 }
+
 

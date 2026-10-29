@@ -79,9 +79,11 @@ export function blockedByAbility(actor,target,move,messages=[]){
  if(has(target,'Reservoir')&&move.type_id==='WATER'){restoreHP(target,Math.floor(target.maxHp/4));why='absorbed Water; HP restored';}
  if(why){messages.push(note(target,why+'.'));return true;}return false;
 }
-// Raw permanent Speed gives +6.25 percentage points per extra multiple of foe Speed.
-// Temporary Speed stages do not alter this bonus; slower attackers retain their base chance.
-export function critChance(actor,move,target){if(target&&preventsCritical(target))return 0;if(move.guaranteedCritical)return 1;let stage=move.effects?.some(e=>e.effect_id==='high_critical_ratio')?1:0;if(stage&&has(actor,'Focus Edge'))stage++;if(has(actor,'Proof by Cut')&&abilityMemory(actor).hits>=2)stage++;stage+=paladinCritStage(actor,target);const ratio=target?Math.max(1,actor.stats.speed/Math.max(1,target.stats.speed)):1;return Math.min(.5,[1/16,1/8,1/4,1/3][Math.min(3,stage)]+(ratio-1)/16);}
+// Use the same in-battle Speed as turn order: stat stages, held bonuses,
+// paralysis, weather abilities and Tailwind all affect the crit differential.
+// Slower attackers receive no differential bonus; ordinary crits cap at 50%.
+function criticalSpeed(unit,opponent){const s=effectiveStage(unit,'speed',opponent);const stageFactor=s>=0?(2+s)/2:2/(2-s);return unit.stats.speed*stageFactor*speedFactor(unit,opponent);}
+export function critChance(actor,move,target){if(target&&preventsCritical(target))return 0;if(move.guaranteedCritical)return 1;let stage=move.effects?.some(e=>e.effect_id==='high_critical_ratio')?1:0;if(stage&&has(actor,'Focus Edge'))stage++;if(has(actor,'Proof by Cut')&&abilityMemory(actor).hits>=2)stage++;stage+=paladinCritStage(actor,target);const ratio=target?Math.max(1,criticalSpeed(actor,target)/Math.max(1,criticalSpeed(target,actor))):1;return Math.min(.5,[1/16,1/8,1/4,1/3][Math.min(3,stage)]+(ratio-1)/16);}
 export function ignoresDefence(actor,target){const a=actor.abilityState||{};return has(actor,'Sinmark')&&a.mark===(target.uid||target.species.id);}
 export function abilityMultiplier(actor,target,move,{effectiveness=1,critical=false,movedFirst=false,switching=false}={}){
  const a=actor.abilityState||{flags:{},charges:0},t=target.abilityState||{flags:{},types:[],moves:[]};let multiplier=paladinMultiplier(actor,target,move,{effectiveness,critical})*birdMultiplier(actor,target,move,{effectiveness});const previous=a.previousType,key=target.uid||target.species.id;
