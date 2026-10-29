@@ -1,0 +1,68 @@
+{
+  "id": 89,
+  "name": "Root Grip",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/full-expansion.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 90
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "043",
+      "061",
+      "102",
+      "106",
+      "117",
+      "136",
+      "184",
+      "288",
+      "292"
+    ],
+    "tutor": true,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "SPECIAL",
+  "type": "GRASS",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 80,
+  "pp": 10,
+  "accuracy": 95,
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "speed"
+      ],
+      "stages": -2,
+      "chance_percent": 25,
+      "secondary": true
+    }
+  ],
+  "authoredAction": "a forceful multi-layered attack effect with a pronounced travel phase and heavy impact.",
+  "art": null,
+  "status": "generated; prepared validation and visual review pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "A thick bundle of pale segmented roots reaches outward like grasping fingers, coils ONCE around a hollow central space, contracts with creaking purple pressure lines, then releases its loosening knots. Heavy restraining root magic, no whip.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Root Grip, stable ID89. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, read row-major. GENUINE transparent alpha background. Action: A thick bundle of pale segmented roots reaches outward like grasping fingers, coils ONCE around a hollow central space, contracts with creaking purple pressure lines, then releases its loosening knots. Heavy restraining root magic, no whip. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 poses are complete and individually isolated in the MIDDLE40% of each cell, leaving very large completely empty transparent gutters. Every tip, splinter, mote and any small hard-edged glint must stay inside that middle40%. No big glows or soft haze spanning gutters. Highly readable material shading with crisp clustered pixels, designed for192px logical cells. No whole creature, humans, scenery, text, labels, grid or borders. No duplicated poses, no additional hits, no generic recoloured effect.",
+  "source": "art-library/action-vfx/batch-09/89-source.png",
+  "prepared": "art-library/action-vfx/batch-09/89-prepared.png",
+  "generator": "built-in image_gen",
+  "sourceSha256": "b49a22415182400d0f0972ad56853b9ac51808e66249305a4ffb491c5e77edc0",
+  "preparedSha256": "cf0012f86f4a8a86534954df88341e14729362c2b827cef954f116a86cf55b25"
+}

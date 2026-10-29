@@ -1,0 +1,72 @@
+{
+  "id": 93,
+  "name": "Root Ward",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/full-expansion.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 94
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "042",
+      "043",
+      "090",
+      "091",
+      "105",
+      "106",
+      "135",
+      "136",
+      "165",
+      "175",
+      "291",
+      "292",
+      "293",
+      "294"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "STATUS",
+  "type": "GRASS",
+  "target": "SELF",
+  "allyTarget": false,
+  "power": null,
+  "pp": 20,
+  "accuracy": "ALWAYS",
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "defence"
+      ],
+      "stages": 1,
+      "chance_percent": 100
+    }
+  ],
+  "authoredAction": "construct a stable magical or elemental sigil that settles into a protective aura. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+  "art": null,
+  "status": "generated; prepared validation and visual review pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "Five thick root stakes grow upward around a central hollow gap, interlock into a low woven living barricade, settle with a quiet amber sap glint, and remain protective before fading. Self defence buff: NO damaging flash, blow or hit star.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Root Ward, stable ID93. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, read row-major. GENUINE transparent alpha background. Action: Five thick root stakes grow upward around a central hollow gap, interlock into a low woven living barricade, settle with a quiet amber sap glint, and remain protective before fading. Self defence buff: NO damaging flash, blow or hit star. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 poses are complete and individually isolated in the MIDDLE40% of each cell, leaving very large completely empty transparent gutters. Every tip, splinter, mote and any small hard-edged glint must stay inside that middle40%. No big glows or soft haze spanning gutters. Highly readable material shading with crisp clustered pixels, designed for192px logical cells. No whole creature, humans, scenery, text, labels, grid or borders. No duplicated poses, no additional hits, no generic recoloured effect.",
+  "source": "art-library/action-vfx/batch-09/93-source.png",
+  "prepared": "art-library/action-vfx/batch-09/93-prepared.png",
+  "generator": "built-in image_gen",
+  "sourceSha256": "c22b2e3ad5e1a20ca5cd2ac85b10010996a4e9181e15a5c5196f353005a3e608",
+  "preparedSha256": "9882c654103ef06e62111932034e08e2db3626429e3ee6a62e7ca9655ae573ca"
+}

@@ -1,0 +1,69 @@
+{
+  "id": 94,
+  "name": "Spring Growth",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/progression-renewal.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 95
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "060",
+      "061",
+      "136",
+      "184",
+      "200",
+      "273",
+      "274",
+      "295",
+      "296",
+      "414"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "STATUS",
+  "type": "GRASS",
+  "target": "SELF",
+  "allyTarget": false,
+  "power": null,
+  "pp": 20,
+  "accuracy": "ALWAYS",
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "attack",
+        "sp_attack"
+      ],
+      "stages": 1,
+      "chance_percent": 100
+    }
+  ],
+  "authoredAction": "sprout quick curling shoots or light-vines around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+  "art": null,
+  "status": "generated; prepared validation and visual review pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "Two curled fresh shoots unfold in alternating directions, grow into four bright young leaf fronds and one pink bud, gently arch around an empty central space and settle as a balanced growth aura. Self offensive buff, no target damage flash.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Spring Growth, stable ID94. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, read row-major. GENUINE transparent alpha background. Action: Two curled fresh shoots unfold in alternating directions, grow into four bright young leaf fronds and one pink bud, gently arch around an empty central space and settle as a balanced growth aura. Self offensive buff, no target damage flash. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 poses are complete and individually isolated in the MIDDLE40% of each cell, leaving very large completely empty transparent gutters. Every tip, splinter, mote and any small hard-edged glint must stay inside that middle40%. No big glows or soft haze spanning gutters. Highly readable material shading with crisp clustered pixels, designed for192px logical cells. No whole creature, humans, scenery, text, labels, grid or borders. No duplicated poses, no additional hits, no generic recoloured effect.",
+  "source": "art-library/action-vfx/batch-09/94-source.png",
+  "prepared": "art-library/action-vfx/batch-09/94-prepared.png",
+  "generator": "built-in image_gen",
+  "sourceSha256": "b2c3a962a6417a4c0706b1a125de715e90b0144951b8aaa85d30226250886790",
+  "preparedSha256": "e923142bc6e9a6330fe736fb8a881dd68cfe31388f49aa51d11ba1c2210dee7f"
+}
