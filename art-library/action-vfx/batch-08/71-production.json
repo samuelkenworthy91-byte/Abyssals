@@ -1,0 +1,25 @@
+{
+  "id": 71,
+  "name": "Static Field",
+  "category": "STATUS",
+  "target": "FOE_SIDE",
+  "effects": [
+    {
+      "effect_id": "recurring_status",
+      "status": "PARALYSIS",
+      "chance_percent": 25,
+      "turns": 3,
+      "target": "FOE_SIDE"
+    }
+  ],
+  "batch": "08",
+  "sequence": "Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Static Field, stable ID71. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/71-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/71-prepared.png",
+  "sourceSha256": "4e7a7790d167f4825082469a521646df1a635b56958312fbcf3312ad91afe0c7",
+  "preparedSha256": "8166188c507dd15ff4dc6cb4f4a193caddbf47bd6ff510c8a6d6677aba8ef205",
+  "generator": "built-in image_gen"
+}
