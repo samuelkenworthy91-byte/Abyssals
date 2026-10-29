@@ -1,0 +1,48 @@
+import assert from 'node:assert/strict';
+import {createTrainers,seesPlayer,updateTrainers,localPatrol} from '../dist/trainer-actors.js';
+const trainer=(id,x=12,y=12,extra={})=>({id,label:id,x,y,sprite:2,...extra});
+const person=(x,y)=>({x,y,step:null});
+const terrain=(walls=[])=>{const tiles=new Set(walls.map(([x,y])=>x+','+y));return (x,y)=>x<2||x>45||y<2||y>29||tiles.has(x+','+y);};
+const clear=terrain();
+const eligibleIds=new Set(['TRN-STATIC','TRN-LOOK','TRN-FIXED','TRN-MOBILE','TRN-BLOCK','TRN-RT-001']);
+const spots=[trainer('TRN-STATIC'),trainer('TRN-LOOK',20,16),trainer('TRN-FIXED',30,18,{facing:'right'}),trainer('TRN-MOBILE',35,18,{patrol:[[35,18],[37,18],[37,20],[35,20]]}),{id:'shopkeeper',x:15,y:14,sprite:0},{id:'TRN-UNKNOWN',x:25,y:16,sprite:2}];
+const actors=createTrainers(spots,{eligibleIds,solid:clear});
+assert.equal(actors.length,4,'all roster trainers including stationary lookouts are actors; civilians and unknown IDs are not');
+assert.equal(actors.find(a=>a.id==='TRN-STATIC').route,null);
+const staticTrainer=actors.find(a=>a.id==='TRN-STATIC');
+assert(seesPlayer(staticTrainer,person(12,17),clear),'stationary trainer notices player in unobstructed lane');
+assert.equal(staticTrainer.facing,'down');
+assert(seesPlayer(staticTrainer,person(9,12),clear),'stationary lookout can turn to scan side corridor');
+assert.equal(staticTrainer.facing,'left');
+assert(!seesPlayer(staticTrainer,person(13,13),clear),'diagonal is not an axial sight line');
+assert(!seesPlayer(staticTrainer,person(12,19),terrain([[12,15]])),'walls interrupt trainer vision');
+assert(!seesPlayer(staticTrainer,{x:12,y:17,step:{x:12,y:18}},clear),'wait for player to finish step before alerting');
+const fixed=actors.find(a=>a.id==='TRN-FIXED');
+assert(!seesPlayer(fixed,person(29,18),clear),'fixed-facing lookout cannot see behind itself');
+assert(seesPlayer(fixed,person(33,18),clear),'fixed-facing lookout sees forward');
+assert(!seesPlayer(fixed,person(38,18),clear),'vision has bounded range');
+const mobile=actors.find(a=>a.id==='TRN-MOBILE');
+assert(!seesPlayer(mobile,person(33,18),clear),'patroller cannot detect behind itself');
+const calls=[];updateTrainers([staticTrainer],.1,clear,person(12,15),[],n=>calls.push(n.id));
+assert.deepEqual(calls,['TRN-STATIC'],'entering sight line starts encounter');
+calls.length=0;updateTrainers([staticTrainer],.1,clear,person(12,15),['TRN-STATIC'],n=>calls.push(n.id));
+assert.equal(calls.length,0,'defeated trainer never re-challenges');
+updateTrainers([staticTrainer],.1,clear,person(12,15),[],n=>calls.push(n.id),null,()=>false);
+assert.equal(calls.length,0,'quest and tutorial gates suppress sight encounters');
+let moving=false;let visited=new Set();
+const patrol=createTrainers([trainer('TRN-MOBILE',35,18,{patrol:[[35,18],[37,18],[37,20],[35,20]]})],{eligibleIds,solid:clear})[0];
+for(let i=0;i<140;i++){
+ updateTrainers([patrol],.2,clear,person(2,2),[],()=>assert.fail('off-lane sight trigger'));
+ visited.add(patrol.x+','+patrol.y);if(patrol.step)moving=true;
+ assert(!clear(patrol.x,patrol.y),'patroller never occupies a wall');
+}
+assert(moving&&visited.size>3,'authored patrol advances through multiple corners');
+const seeded=Array.from({length:30},(_,i)=>trainer('TRN-PATROL-'+i,10,10));
+const generated=createTrainers(seeded,{eligibleIds:new Set(seeded.map(s=>s.id)),solid:clear,roaming:true});
+assert(generated.some(a=>a.route?.length>=2),'some ordinary route trainers receive deterministic walking loops');
+assert(generated.some(a=>!a.route),'not every trainer roams; maintain stationary variety');
+for(const n of generated)if(n.route){assert.deepEqual(n.route[0],[n.x,n.y]);for(const [x,y] of n.route)assert(!clear(x,y),'generated patrol point must be walkable');}
+const obstructed=terrain([[12,12],[12,13],[13,12]]);
+assert.equal(localPatrol(trainer('TRN-BLOCK',12,12),obstructed),null,'cannot generate route from blocked spawn');
+assert.equal(createTrainers([trainer('TRN-FIXED',30,18,{facing:'right'})],{eligibleIds})[0].scanAllDirections,false);
+console.log('PASS: stationary trainer sight lines, turnable lookout, walls, vision range, combat gates, defeat suppression, authored and generated patrols.');
