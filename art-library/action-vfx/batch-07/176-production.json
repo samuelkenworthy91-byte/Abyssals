@@ -1,0 +1,21 @@
+{
+  "id": 176,
+  "name": "Featherweight",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "flinch",
+      "status": "FLINCH",
+      "chance_percent": 20,
+      "secondary": true
+    }
+  ],
+  "authoredAction": "three curved claw trails that converge on the target.",
+  "batch": "07",
+  "sequence": "Three delicate feather-tipped talon quills flex and sweep together in one weightless claw rake; three curved trails converge at ONE contact, white barbs drift away and tips uncurl. No full bird.",
+  "prompt": "Use case: stylized-concept. Original detailed pixel-art JRPG combat animation for Featherweight, stable ID176. Exactly16 distinct temporal drawings in a strict4x4 equal-cell square sprite atlas, row-major. True transparent alpha background. Authored action: Three delicate feather-tipped talon quills flex and sweep together in one weightless claw rake; three curved trails converge at ONE contact, white barbs drift away and tips uncurl. No full bird. Preparation frames1–4, purposeful motion5–8, one contact or gentle support settling9–10, consequences11–13, recovery14–16. Only isolated action forms and body parts: no entire creature, no full bird, no character portrait, no scenery, text, labels or grid. Crisp clustered shaded pixels, rich material volumes, readable at192x192 logical pixels. Every complete pose including every tip/glow/trail/particle must fit entirely INSIDE middle50% of its own cell with enormous transparent gutters. Do not crop any silhouette or cross cell boundaries. No duplicate drawings, generic symbol or recoloured shared effect. ONE successful hit only; multiple motion trails are not extra contacts.",
+  "source": "art-library/action-vfx/batch-07/176-source.png",
+  "sourceBlob": "5b2858e05346634445abb1f70a476e0db133a916",
+  "status": "source-only; not installed or approved"
+}
