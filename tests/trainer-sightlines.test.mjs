@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {createTrainers,seesPlayer,updateTrainers,localPatrol} from '../dist/trainer-actors.js';
+import {NEW_MAPS,newSpots,newBlocked} from '../dist/expansion-world.js';
 const trainer=(id,x=12,y=12,extra={})=>({id,label:id,x,y,sprite:2,...extra});
 const person=(x,y)=>({x,y,step:null});
 const terrain=(walls=[])=>{const tiles=new Set(walls.map(([x,y])=>x+','+y));return (x,y)=>x<2||x>45||y<2||y>29||tiles.has(x+','+y);};
@@ -15,7 +16,7 @@ assert.equal(staticTrainer.facing,'down');
 assert(seesPlayer(staticTrainer,person(9,12),clear),'stationary lookout can turn to scan side corridor');
 assert.equal(staticTrainer.facing,'left');
 assert(!seesPlayer(staticTrainer,person(13,13),clear),'diagonal is not an axial sight line');
-assert(!seesPlayer(staticTrainer,person(12,19),terrain([[12,15]])),'walls interrupt trainer vision');
+assert(!seesPlayer(staticTrainer,person(12,17),terrain([[12,15]])),'walls interrupt trainer vision');
 assert(!seesPlayer(staticTrainer,{x:12,y:17,step:{x:12,y:18}},clear),'wait for player to finish step before alerting');
 const fixed=actors.find(a=>a.id==='TRN-FIXED');
 assert(!seesPlayer(fixed,person(29,18),clear),'fixed-facing lookout cannot see behind itself');
@@ -45,4 +46,16 @@ for(const n of generated)if(n.route){assert.deepEqual(n.route[0],[n.x,n.y]);for(
 const obstructed=terrain([[12,12],[12,13],[13,12]]);
 assert.equal(localPatrol(trainer('TRN-BLOCK',12,12),obstructed),null,'cannot generate route from blocked spawn');
 assert.equal(createTrainers([trainer('TRN-FIXED',30,18,{facing:'right'})],{eligibleIds})[0].scanAllDirections,false);
-console.log('PASS: stationary trainer sight lines, turnable lookout, walls, vision range, combat gates, defeat suppression, authored and generated patrols.');
+
+let mappedTrainers=0,mappedRooms=0;
+for(const [room,m] of Object.entries(NEW_MAPS)){
+ const visible=newSpots(room).filter(s=>s.sprite!==undefined&&s.id?.startsWith('TRN-'));
+ if(!visible.length)continue;
+ const roster=new Set(visible.map(s=>s.id));
+ const actors=createTrainers(newSpots(room),{eligibleIds:roster,solid:(x,y)=>newBlocked(room,x,y),roaming:!!m.area&&!m.hub&&!m.leaderFort});
+ assert.deepEqual(new Set(actors.map(a=>a.id)),roster,room+' every map trainer must have an actor');
+ assert(actors.every(a=>a.trainerActor&&Number.isFinite(a.px)&&Number.isFinite(a.py)),room+' actors must be renderable');
+ mappedTrainers+=actors.length;mappedRooms++;
+}
+assert(mappedTrainers>20&&mappedRooms>10,'audit must cover actual route and fort trainer placements');
+console.log('PASS: '+mappedTrainers+' mapped trainers across '+mappedRooms+' rooms; stationary trainer sight lines, turnable lookout, walls, vision range, combat gates, defeat suppression, authored and generated patrols.');
