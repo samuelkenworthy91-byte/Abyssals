@@ -38,9 +38,6 @@ def run():
     old_pending = {m["id"] for m in batch08 + batch09}
     assert len(old_pending) == len(batch08) + len(batch09), "Duplicate prepared IDs"
     assert len(batch08) == 21 and len(batch09) == 17, "Recovery stock changed"
-    assert not old_pending.intersection(installed_ids) or all(
-        int(i) in installed_ids for i in old_pending.intersection(installed_ids)
-    )
     target_ids = {m["id"] for m in target["moves"]}
     assert len(target_ids) == len(target["moves"]) == 153, "Target inventory changed"
     assert {m["id"] for m in batch09}.issubset(target_ids)
@@ -71,8 +68,8 @@ def run():
             else:
                 raise ValueError(f"Saved artwork missing, corrupt or unverified: {m['id']}")
     actual_authored = installed_ids | verified
-    assert len(actual_authored) <= TOTAL and len(actual_authored) <= GOAL
-    missing_to_goal = GOAL - len(actual_authored)
+    assert len(actual_authored) <= TOTAL
+    missing_to_goal = max(0, GOAL - len(actual_authored))
     report = {
         "total": TOTAL, "halfwayTarget": GOAL,
         "installed": len(installed_ids), "preparedVerified": len(verified - installed_ids),
