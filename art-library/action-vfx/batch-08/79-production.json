@@ -1,0 +1,25 @@
+{
+  "id": 79,
+  "name": "Leaf Cut",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "drain",
+      "actual_hp_damage_fraction": [
+        25,
+        100
+      ]
+    }
+  ],
+  "batch": "08",
+  "sequence": "One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Leaf Cut, stable ID79. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/79-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/79-prepared.png",
+  "sourceSha256": "258ba4b6a41f4afba8b3066a04e9735977a4d944a60752b8db8b1b132aefaef7",
+  "preparedSha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+  "generator": "built-in image_gen"
+}

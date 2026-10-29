@@ -1,0 +1,17 @@
+{
+  "id": 83,
+  "name": "Thistle Hook",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [],
+  "batch": "08",
+  "sequence": "A single purple thistle burr on a thick curved stem draws back, swings one upward hooking strike, sheds a few pointed burr bristles at contact and uncurls downward. Distinct thistle head and hooked stem.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Thistle Hook, stable ID83. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A single purple thistle burr on a thick curved stem draws back, swings one upward hooking strike, sheds a few pointed burr bristles at contact and uncurls downward. Distinct thistle head and hooked stem. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/83-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/83-prepared.png",
+  "sourceSha256": "bd51a7e5fdc096083a7e017210ab4df41bed923d65aadc103de9b5629df6eed8",
+  "preparedSha256": "b50f239cea8aff703bafe9eceb4b70a1a80f2fcc1cc6b2c019bf91f3ad99ee83",
+  "generator": "built-in image_gen"
+}

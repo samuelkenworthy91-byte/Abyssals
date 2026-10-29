@@ -1,0 +1,28 @@
+{
+  "id": 82,
+  "name": "Leaf Lash",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "speed"
+      ],
+      "stages": -1,
+      "chance_percent": 100,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "One long flexible leaf rib bends into a whip, draws a wide S-shaped preparation, snaps its leafy tip once across the center, and curls slack with fluttering torn leaflets. Whole whip remains in each cell.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Leaf Lash, stable ID82. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: One long flexible leaf rib bends into a whip, draws a wide S-shaped preparation, snaps its leafy tip once across the center, and curls slack with fluttering torn leaflets. Whole whip remains in each cell. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/82-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/82-prepared.png",
+  "sourceSha256": "8d3859c0966874bf86903d4343763f4e5657fc92e104f9713860f14c3d27e091",
+  "preparedSha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
+  "generator": "built-in image_gen"
+}
