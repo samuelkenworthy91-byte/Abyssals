@@ -1,8 +1,8 @@
 {
-  "version": "0.90.50",
-  "version_code": 145,
-  "filename": "Abyssals-v0.90.50-Playtest-Polish.apk",
-  "title": "Abyssals v0.90.50 — Playtest Polish",
-  "notes": "Redesigned double battles with the single-battle HUD, partner portrait, move-first foe targeting; five distinct Sporefall chasm environment backgrounds and two new side paths; Fortified Ration with fixed 21x generic capture strength, first sold in Botrune; new Cayfen and Ramelle NPC errands; automatic post-Hierophant descent and Hell Mirror portal introducing canonical Severin Vale, for either spared/executed fates. Existing saves, legendary capture tiers and original APK signing are preserved. Full bespoke move artwork expansion remains a separate substantial production phase.",
-  "pwa_filename": "Abyssals-v0.90.50-PWA.zip"
+  "version": "0.90.51",
+  "version_code": 146,
+  "filename": "Abyssals-v0.90.51-Trainer-Awareness-Criticals.apk",
+  "title": "Abyssals v0.90.51 — Trainer Awareness & Critical Hits",
+  "notes": "Trainer field AI: stationary trainers now notice Aimon on unobstructed sight lines, selected route trainers patrol short safe loops, solid obstacles block vision, defeated trainers stay inactive, and story/tutorial/sparring gates are preserved. Critical hits: effective in-battle Speed including stages contributes to critical chance (existing 50% cap); criticals only bypass positive defensive stat stages while preserving negative Defence, both positive and negative Attack stages, weather, status and held-item effects. Retains earlier v0.90.50 game content, save format and original Android signing identity.",
+  "pwa_filename": "Abyssals-v0.90.51-PWA.zip"
 }
