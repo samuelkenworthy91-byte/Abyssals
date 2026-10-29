@@ -1,4 +1,4 @@
-import {STAT_KEYS} from './progression.js?v=0.90.41';
+import {STAT_KEYS} from './progression.js?v=0.90.52';
 export const BASE_PRODIGY_CHANCE=Math.pow(1/750,1/6);
 export const NURSERY_ITEMS=[
  {id:'familySeal',name:'Family Seal',price:20000,reusable:false,description:'Single use. Choose either parent’s base species for the egg. Cannot be used when both parents have the same base species.'},

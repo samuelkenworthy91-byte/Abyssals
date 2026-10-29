@@ -1,0 +1,3044 @@
+{
+  "schemaVersion": 1,
+  "policy": "Connectivity checks do not grant visual approval. Review must inspect authored floor alignment, depth, lighting, actors and exits in day/night at phone scale.",
+  "totals": {
+    "maps": 25,
+    "approved": 6,
+    "technicalIssues": 0
+  },
+  "maps": [
+    {
+      "id": "sunBank",
+      "name": "Willowmere · The Quiet Bank",
+      "source": "dist/assets/finale/env-road.webp",
+      "sha256": "5dd3eb1456ffed6099718bfbda8b2e8477ccafde511a903e03ecbc99d67bc607",
+      "geometrySha256": "7716fc350808a195c4888d4bbb7cc9a7556081b4ef7c6c322da9dc7ad7827c13",
+      "reachableTiles": 147,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            21,
+            46,
+            22
+          ],
+          [
+            24,
+            2,
+            24,
+            21
+          ],
+          [
+            9,
+            16,
+            15,
+            19
+          ],
+          [
+            27,
+            18,
+            39,
+            20
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sunBank-back",
+            "label": "Return · botrune",
+            "x": 1,
+            "y": 21,
+            "to": "botrune",
+            "arrival": [
+              44,
+              24,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sunBank-forward",
+            "label": "Continue · burialGrove",
+            "x": 46,
+            "y": 21,
+            "to": "burialGrove",
+            "arrival": [
+              3,
+              21,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "TRN-FN-ROAD",
+            "label": "Willowmere ranger Alice",
+            "x": 32,
+            "y": 22,
+            "sprite": 0,
+            "revoltCharacter": "TRN-SC-orchardCanopy-0"
+          },
+          {
+            "id": "fn-road-sign",
+            "label": "Willowmere waystone",
+            "x": 10,
+            "y": 22,
+            "questProp": true
+          },
+          {
+            "id": "sunBank-back",
+            "label": "Return · botrune",
+            "x": 1,
+            "y": 21,
+            "to": "botrune",
+            "arrival": [
+              44,
+              24,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sunBank-forward",
+            "label": "Continue · burialGrove",
+            "x": 46,
+            "y": 21,
+            "to": "burialGrove",
+            "arrival": [
+              3,
+              21,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            27,
+            18,
+            39,
+            20
+          ]
+        ],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "burialGrove",
+      "name": "Willowmere · The Remembering Tree",
+      "source": "dist/assets/finale/env-burial.webp",
+      "sha256": "d835b4dcf108e79821d47066c08c8e0e1b2ed0ef2ec7f79bb4a8d42ab988e66a",
+      "geometrySha256": "4cffa8a4ba1d88a2309e9880fa182d3a147244ae60150fac87fd8efe3eb51beb",
+      "reachableTiles": 115,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            21,
+            46,
+            22
+          ],
+          [
+            23,
+            16,
+            25,
+            22
+          ],
+          [
+            18,
+            18,
+            31,
+            18
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "burialGrove-back",
+            "label": "Return · sunBank",
+            "x": 1,
+            "y": 21,
+            "to": "sunBank",
+            "arrival": [
+              44,
+              21,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "burialGrove-forward",
+            "label": "Continue · sunFalls",
+            "x": 46,
+            "y": 21,
+            "to": "sunFalls",
+            "arrival": [
+              3,
+              13,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-burial",
+            "label": "Walter · the Remembering Tree",
+            "x": 24,
+            "y": 19,
+            "sprite": 0,
+            "revoltCharacter": "CHR-AERIC"
+          },
+          {
+            "id": "fn-pate-grave",
+            "label": "Pate · remember him",
+            "x": 20,
+            "y": 17,
+            "questProp": true
+          },
+          {
+            "id": "fn-trade-grave",
+            "label": "Trade · remember him",
+            "x": 29,
+            "y": 17,
+            "questProp": true
+          },
+          {
+            "id": "burialGrove-back",
+            "label": "Return · sunBank",
+            "x": 1,
+            "y": 21,
+            "to": "sunBank",
+            "arrival": [
+              44,
+              21,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "burialGrove-forward",
+            "label": "Continue · sunFalls",
+            "x": 46,
+            "y": 21,
+            "to": "sunFalls",
+            "arrival": [
+              3,
+              13,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "sunFalls",
+      "name": "Willowmere · Silverwater Crossing",
+      "source": "dist/assets/finale/env-falls.webp",
+      "sha256": "5dc1270f393684723160d932d7e2255e04e4bc656e8427fa18b25c5ecf22c6ba",
+      "geometrySha256": "65eeecb8990adfacabe6e6696302d39154da32bd45d38609fa8f40bcaf642873",
+      "reachableTiles": 101,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            13,
+            46,
+            14
+          ],
+          [
+            6,
+            9,
+            8,
+            14
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sunFalls-back",
+            "label": "Return · burialGrove",
+            "x": 1,
+            "y": 13,
+            "to": "burialGrove",
+            "arrival": [
+              44,
+              21,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sunFalls-forward",
+            "label": "Continue · sunTerraces",
+            "x": 46,
+            "y": 13,
+            "to": "sunTerraces",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-guan-entry",
+            "label": "Peach Grove · The Oath Road",
+            "x": 7,
+            "y": 9,
+            "to": "guanApproach",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-guan-keeper",
+            "label": "Crossing keeper · The Oath at the Crossing",
+            "x": 16,
+            "y": 14,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "sunFalls-back",
+            "label": "Return · burialGrove",
+            "x": 1,
+            "y": 13,
+            "to": "burialGrove",
+            "arrival": [
+              44,
+              21,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sunFalls-forward",
+            "label": "Continue · sunTerraces",
+            "x": 46,
+            "y": 13,
+            "to": "sunTerraces",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-guan-entry",
+            "label": "Peach Grove · The Oath Road",
+            "x": 7,
+            "y": 9,
+            "to": "guanApproach",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": [
+          {
+            "points": [
+              [
+                7,
+                13
+              ],
+              [
+                7,
+                9
+              ]
+            ]
+          }
+        ]
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "sunTerraces",
+      "name": "Cayfen · The Flowering Terraces",
+      "source": "dist/assets/finale/env-terraces.webp",
+      "sha256": "fe5da453687dba71852a06a8193359bb8c3120c0382b0bd12fb67d3d8809f6b0",
+      "geometrySha256": "fb2ff586be1a54ed4134d34e6c4d6390d9bfd95557b129254769dc325caa3c7c",
+      "reachableTiles": 167,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            14,
+            46,
+            16
+          ],
+          [
+            23,
+            2,
+            25,
+            14
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sunTerraces-back",
+            "label": "Return · sunFalls",
+            "x": 1,
+            "y": 15,
+            "to": "sunFalls",
+            "arrival": [
+              44,
+              13,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sunTerraces-forward",
+            "label": "Continue · cayfen",
+            "x": 46,
+            "y": 15,
+            "to": "cayfen",
+            "arrival": [
+              3,
+              17,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-fei-entry",
+            "label": "Peach Grove · The Burdened Crossing",
+            "x": 24,
+            "y": 2,
+            "to": "feiApproach",
+            "arrival": [
+              3,
+              21,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-fei-keeper",
+            "label": "Bridge keeper · The Strength to Hold",
+            "x": 16,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "REV-HUGH"
+          },
+          {
+            "id": "TRN-FN-TERRACE",
+            "label": "Terrace keeper Zaynab",
+            "x": 35,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "TRN-SC-orchardCanopy-1"
+          },
+          {
+            "id": "fn-rare-record-suncub",
+            "label": "Read the sun-keeper’s field record",
+            "x": 24,
+            "y": 4,
+            "questProp": true
+          },
+          {
+            "id": "fn-rare-encounter-suncub",
+            "label": "Suncub · the warm terrace",
+            "x": 24,
+            "y": 7,
+            "questProp": true
+          },
+          {
+            "id": "sunTerraces-back",
+            "label": "Return · sunFalls",
+            "x": 1,
+            "y": 15,
+            "to": "sunFalls",
+            "arrival": [
+              44,
+              13,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sunTerraces-forward",
+            "label": "Continue · cayfen",
+            "x": 46,
+            "y": 15,
+            "to": "cayfen",
+            "arrival": [
+              3,
+              17,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-fei-entry",
+            "label": "Peach Grove · The Burdened Crossing",
+            "x": 24,
+            "y": 2,
+            "to": "feiApproach",
+            "arrival": [
+              3,
+              21,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            31,
+            14,
+            39,
+            14
+          ]
+        ],
+        "sidePaths": [
+          {
+            "points": [
+              [
+                24,
+                15
+              ],
+              [
+                24,
+                2
+              ]
+            ]
+          }
+        ]
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "sporeRim",
+      "name": "Sporefall · Hanging Roots",
+      "source": "dist/assets/finale/env-spore-rim.webp",
+      "sha256": "ea527051757334a33afaa5aa7c97f21c5727a6764e5244750f71a1b9e4b23356",
+      "geometrySha256": "05060780cd68fb685ee0198ff71dd032da0e4ef0a6eae2306004a3bcb3950446",
+      "reachableTiles": 117,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            15,
+            46,
+            16
+          ],
+          [
+            21,
+            14,
+            27,
+            17
+          ],
+          [
+            10,
+            10,
+            12,
+            14
+          ]
+        ],
+        "solids": [
+          [
+            23,
+            13,
+            24,
+            14
+          ]
+        ],
+        "gates": [
+          {
+            "id": "sporeRim-back",
+            "label": "Return · cayfen",
+            "x": 1,
+            "y": 16,
+            "to": "cayfen",
+            "arrival": [
+              44,
+              17,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeRim-forward",
+            "label": "Continue · sporeDepths",
+            "x": 46,
+            "y": 16,
+            "to": "sporeDepths",
+            "arrival": [
+              3,
+              17,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "TRN-FN-SPORE",
+            "label": "Lantern warden Safiya",
+            "x": 25,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "TRN-SC-stormBluffs-2"
+          },
+          {
+            "id": "fn-spore-sign",
+            "label": "Read the crossing markers",
+            "x": 21,
+            "y": 13,
+            "questProp": true
+          },
+          {
+            "id": "sporeRim-back",
+            "label": "Return · cayfen",
+            "x": 1,
+            "y": 16,
+            "to": "cayfen",
+            "arrival": [
+              44,
+              17,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeRim-forward",
+            "label": "Continue · sporeDepths",
+            "x": 46,
+            "y": 16,
+            "to": "sporeDepths",
+            "arrival": [
+              3,
+              17,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            21,
+            14,
+            22,
+            14
+          ],
+          [
+            25,
+            14,
+            27,
+            14
+          ]
+        ],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "ea527051757334a33afaa5aa7c97f21c5727a6764e5244750f71a1b9e4b23356",
+        "geometrySha256": "05060780cd68fb685ee0198ff71dd032da0e4ef0a6eae2306004a3bcb3950446",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Warm Cayfen masonry and daylight transition into a root-filled abyss; open causeway and central sign landing are legible. The small western stair is grounded and the central stele blocks passage. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeRim-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeRim-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeRim-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeRim-1280-night.png"
+        ],
+        "current": true
+      }
+    },
+    {
+      "id": "sporeDepths",
+      "name": "Sporefall · The Lantern Shelves",
+      "source": "dist/assets/finale/env-spore-depths.webp",
+      "sha256": "253bfde9c58f4a362cfd8052f3aa7365cff9aaa9152500333ebe1021f4ae6b03",
+      "geometrySha256": "7fee4164e253e6c573583a3c8e9dfad0e60787b2afe6d97f212124692802abfd",
+      "reachableTiles": 118,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            17,
+            46,
+            18
+          ],
+          [
+            21,
+            15,
+            27,
+            19
+          ],
+          [
+            24,
+            6,
+            24,
+            17
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sporeDepths-back",
+            "label": "Return · sporeRim",
+            "x": 1,
+            "y": 17,
+            "to": "sporeRim",
+            "arrival": [
+              44,
+              16,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeDepths-forward",
+            "label": "Continue · sporeBridge",
+            "x": 46,
+            "y": 17,
+            "to": "sporeBridge",
+            "arrival": [
+              3,
+              16,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-sporeGrotto-entry",
+            "label": "Sporefall · The Moonpool Grotto",
+            "x": 24,
+            "y": 6,
+            "to": "sporeGrotto",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-spore-refugee",
+            "label": "A frightened First Light medic",
+            "x": 23,
+            "y": 14,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-rare-record-gehennuar",
+            "label": "Read the deep warden’s field record",
+            "x": 27,
+            "y": 15,
+            "questProp": true
+          },
+          {
+            "id": "fn-rare-encounter-gehennuar",
+            "label": "Gehennuar · the luminous depths",
+            "x": 26,
+            "y": 15,
+            "questProp": true
+          },
+          {
+            "id": "sporeDepths-back",
+            "label": "Return · sporeRim",
+            "x": 1,
+            "y": 17,
+            "to": "sporeRim",
+            "arrival": [
+              44,
+              16,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeDepths-forward",
+            "label": "Continue · sporeBridge",
+            "x": 46,
+            "y": 17,
+            "to": "sporeBridge",
+            "arrival": [
+              3,
+              16,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-sporeGrotto-entry",
+            "label": "Sporefall · The Moonpool Grotto",
+            "x": 24,
+            "y": 6,
+            "to": "sporeGrotto",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            21,
+            15,
+            22,
+            16
+          ],
+          [
+            26,
+            15,
+            27,
+            16
+          ]
+        ],
+        "sidePaths": [
+          {
+            "points": [
+              [
+                24,
+                17
+              ],
+              [
+                24,
+                6
+              ]
+            ]
+          }
+        ]
+      },
+      "technicalIssues": [],
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "253bfde9c58f4a362cfd8052f3aa7365cff9aaa9152500333ebe1021f4ae6b03",
+        "geometrySha256": "7fee4164e253e6c573583a3c8e9dfad0e60787b2afe6d97f212124692802abfd",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Cold vertical root chasm, distant crossings and subdued fungus frame a warm navigable causeway and narrow north shrine stair; encounter and field-record positions are reachable. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeDepths-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeDepths-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeDepths-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeDepths-1280-night.png"
+        ],
+        "current": true
+      }
+    },
+    {
+      "id": "sporeBridge",
+      "name": "Sporefall · Broken Companies",
+      "source": "dist/assets/finale/env-spore-bridge.webp",
+      "sha256": "bde6867bd39056c4adcc45b3ef58ca1e51207b62f6de7e2974628d48bd3a4043",
+      "geometrySha256": "267687cf13c4a7e968f252e164c3fdc92acf4afa927fcb72a0a16884047c5c1d",
+      "reachableTiles": 118,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            15,
+            46,
+            16
+          ],
+          [
+            21,
+            14,
+            27,
+            18
+          ],
+          [
+            24,
+            6,
+            24,
+            16
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sporeBridge-back",
+            "label": "Return · sporeDepths",
+            "x": 1,
+            "y": 16,
+            "to": "sporeDepths",
+            "arrival": [
+              44,
+              17,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeBridge-forward",
+            "label": "Continue · sporeCrown",
+            "x": 46,
+            "y": 16,
+            "to": "sporeCrown",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-sporeCanopy-entry",
+            "label": "Sporefall · Crown of Roots",
+            "x": 24,
+            "y": 6,
+            "to": "sporeCanopy",
+            "arrival": [
+              3,
+              14,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "TRN-FN-LAST",
+            "label": "A fleeing company captain",
+            "x": 25,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "TRN-SC-stormBluffs-1"
+          },
+          {
+            "id": "fn-wounded-bloom",
+            "label": "A wounded Dawnbloom soldier",
+            "x": 23,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "TRN-C01-002"
+          },
+          {
+            "id": "sporeBridge-back",
+            "label": "Return · sporeDepths",
+            "x": 1,
+            "y": 16,
+            "to": "sporeDepths",
+            "arrival": [
+              44,
+              17,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeBridge-forward",
+            "label": "Continue · sporeCrown",
+            "x": 46,
+            "y": 16,
+            "to": "sporeCrown",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "fn-sporeCanopy-entry",
+            "label": "Sporefall · Crown of Roots",
+            "x": 24,
+            "y": 6,
+            "to": "sporeCanopy",
+            "arrival": [
+              3,
+              14,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            21,
+            14,
+            22,
+            14
+          ],
+          [
+            26,
+            14,
+            27,
+            14
+          ]
+        ],
+        "sidePaths": [
+          {
+            "points": [
+              [
+                24,
+                16
+              ],
+              [
+                24,
+                6
+              ]
+            ]
+          }
+        ]
+      },
+      "technicalIssues": [],
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "bde6867bd39056c4adcc45b3ef58ca1e51207b62f6de7e2974628d48bd3a4043",
+        "geometrySha256": "267687cf13c4a7e968f252e164c3fdc92acf4afa927fcb72a0a16884047c5c1d",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Opposing abandoned army camps sit on separated background ledges; the central ruined crossing and north stair remain bright enough to navigate without washing out the chasm. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeBridge-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeBridge-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeBridge-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeBridge-1280-night.png"
+        ],
+        "current": true
+      }
+    },
+    {
+      "id": "sporeCrown",
+      "name": "Sporefall · The Last Crossing",
+      "source": "dist/assets/finale/env-darius.webp",
+      "sha256": "0edda66bfdda4319231e83e5aa72286e1b1b83e7faaa109089ee4c2b75671e5b",
+      "geometrySha256": "29d0729ae2b26aa854dbb8b1fd99a30f7c985bf985c6087627f0580332cbdfea",
+      "reachableTiles": 139,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            14,
+            46,
+            15
+          ],
+          [
+            20,
+            13,
+            28,
+            18
+          ],
+          [
+            23,
+            9,
+            25,
+            13
+          ],
+          [
+            22,
+            19,
+            26,
+            19
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sporeCrown-back",
+            "label": "Return · sporeBridge",
+            "x": 1,
+            "y": 15,
+            "to": "sporeBridge",
+            "arrival": [
+              44,
+              16,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeCrown-forward",
+            "label": "Continue · ramelle",
+            "x": 46,
+            "y": 15,
+            "to": "ramelle",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-darius",
+            "label": "Darius · The Last Peace",
+            "x": 25,
+            "y": 11,
+            "sprite": 0,
+            "revoltCharacter": "REV-DARIUS-FINAL"
+          },
+          {
+            "id": "fn-hasan-ally",
+            "label": "Hasan · a shared defence",
+            "x": 21,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "LDR-08"
+          },
+          {
+            "id": "fn-wounded-first",
+            "label": "A wounded First Light soldier",
+            "x": 20,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "TRN-C02-001"
+          },
+          {
+            "id": "fn-crux-encounter",
+            "label": "Cruxwyrm · the freed sovereign",
+            "x": 28,
+            "y": 16,
+            "questProp": true
+          },
+          {
+            "id": "sporeCrown-back",
+            "label": "Return · sporeBridge",
+            "x": 1,
+            "y": 15,
+            "to": "sporeBridge",
+            "arrival": [
+              44,
+              16,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "sporeCrown-forward",
+            "label": "Continue · ramelle",
+            "x": 46,
+            "y": 15,
+            "to": "ramelle",
+            "arrival": [
+              3,
+              15,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "0edda66bfdda4319231e83e5aa72286e1b1b83e7faaa109089ee4c2b75671e5b",
+        "geometrySha256": "29d0729ae2b26aa854dbb8b1fd99a30f7c985bf985c6087627f0580332cbdfea",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Dragon mosaic and warm shrine dais create a distinct Darius arena; two armies frame the crossing, with room for Hasan, wounded soldiers and Cruxwyrm on authored stone. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCrown-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeCrown-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCrown-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeCrown-1280-night.png"
+        ],
+        "current": true
+      }
+    },
+    {
+      "id": "guanApproach",
+      "name": "Peach Grove · The Oath Road",
+      "source": "dist/assets/finale/env-terraces.webp",
+      "sha256": "fe5da453687dba71852a06a8193359bb8c3120c0382b0bd12fb67d3d8809f6b0",
+      "geometrySha256": "24ad0e39067706836c97ca06750f07058c7c1caeb6b77ffe192aecbb028ac347",
+      "reachableTiles": 169,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            14,
+            46,
+            16
+          ],
+          [
+            23,
+            2,
+            25,
+            14
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "guanApproach-back",
+            "label": "Return to Willowmere",
+            "x": 1,
+            "y": 15,
+            "to": "sunFalls",
+            "arrival": [
+              7,
+              11,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "guanApproach-forward",
+            "label": "Enter the guardian sanctuary",
+            "x": 46,
+            "y": 15,
+            "to": "guanShrine",
+            "arrival": [
+              3,
+              14,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-guan-clue",
+            "label": "Read the guardian’s inscription",
+            "x": 24,
+            "y": 12,
+            "questProp": true
+          },
+          {
+            "id": "TRN-FN-GUAN",
+            "label": "Shrine requisitioner",
+            "x": 36,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "TRN-SC-stormBluffs-0"
+          },
+          {
+            "id": "guanApproach-back",
+            "label": "Return to Willowmere",
+            "x": 1,
+            "y": 15,
+            "to": "sunFalls",
+            "arrival": [
+              7,
+              11,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "guanApproach-forward",
+            "label": "Enter the guardian sanctuary",
+            "x": 46,
+            "y": 15,
+            "to": "guanShrine",
+            "arrival": [
+              3,
+              14,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "guanShrine",
+      "name": "Peach Grove · Guanrong’s Oath Shrine",
+      "source": "dist/assets/finale/env-guan.webp",
+      "sha256": "7ec1dbb052747b9ad6589d33c3b989c49faac8c65d32ea4b9dcd7ae7adc0e412",
+      "geometrySha256": "2c161dfc46537b9f2f384f0e4575c9373711017818198fc8f922ff1ada4bca41",
+      "reachableTiles": 204,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            14,
+            46,
+            15
+          ],
+          [
+            17,
+            10,
+            31,
+            17
+          ],
+          [
+            23,
+            6,
+            25,
+            10
+          ],
+          [
+            23,
+            18,
+            25,
+            23
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "guanShrine-back",
+            "label": "Return to The Oath Road",
+            "x": 1,
+            "y": 14,
+            "to": "guanApproach",
+            "arrival": [
+              44,
+              15,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-guan-clue",
+            "label": "Read the guardian’s inscription",
+            "x": 24,
+            "y": 7,
+            "questProp": true
+          },
+          {
+            "id": "fn-guan-rune-shelter",
+            "label": "Rune · Shelter",
+            "x": 18,
+            "y": 12,
+            "questProp": true
+          },
+          {
+            "id": "fn-guan-rune-faith",
+            "label": "Rune · Faith",
+            "x": 30,
+            "y": 12,
+            "questProp": true
+          },
+          {
+            "id": "fn-guan-rune-crossing",
+            "label": "Rune · Crossing",
+            "x": 24,
+            "y": 20,
+            "questProp": true
+          },
+          {
+            "id": "fn-guan-encounter",
+            "label": "Guanrong · the oath guardian",
+            "x": 24,
+            "y": 10,
+            "questProp": true
+          },
+          {
+            "id": "guanShrine-back",
+            "label": "Return to The Oath Road",
+            "x": 1,
+            "y": 14,
+            "to": "guanApproach",
+            "arrival": [
+              44,
+              15,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "feiApproach",
+      "name": "Peach Grove · The Burdened Crossing",
+      "source": "dist/assets/finale/env-road.webp",
+      "sha256": "5dd3eb1456ffed6099718bfbda8b2e8477ccafde511a903e03ecbc99d67bc607",
+      "geometrySha256": "4acf89f9e6615915dce87971589a90be327ca20da8ba9a694929ede22b8f4362",
+      "reachableTiles": 132,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            21,
+            46,
+            22
+          ],
+          [
+            24,
+            2,
+            24,
+            21
+          ],
+          [
+            9,
+            16,
+            15,
+            19
+          ],
+          [
+            27,
+            18,
+            39,
+            20
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "feiApproach-back",
+            "label": "Return to Willowmere",
+            "x": 1,
+            "y": 21,
+            "to": "sunTerraces",
+            "arrival": [
+              24,
+              5,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "feiApproach-forward",
+            "label": "Enter the guardian sanctuary",
+            "x": 46,
+            "y": 21,
+            "to": "feiCrossing",
+            "arrival": [
+              3,
+              14,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-fei-clue",
+            "label": "Read the bridgekeeper’s tally",
+            "x": 24,
+            "y": 17,
+            "questProp": true
+          },
+          {
+            "id": "TRN-FN-FEI",
+            "label": "Bridge toll captain",
+            "x": 36,
+            "y": 22,
+            "sprite": 0,
+            "revoltCharacter": "TRN-SC-stormBluffs-1"
+          },
+          {
+            "id": "feiApproach-back",
+            "label": "Return to Willowmere",
+            "x": 1,
+            "y": 21,
+            "to": "sunTerraces",
+            "arrival": [
+              24,
+              5,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "feiApproach-forward",
+            "label": "Enter the guardian sanctuary",
+            "x": 46,
+            "y": 21,
+            "to": "feiCrossing",
+            "arrival": [
+              3,
+              14,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            27,
+            18,
+            39,
+            20
+          ]
+        ],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "feiCrossing",
+      "name": "Peach Grove · Feirong’s Held Bridge",
+      "source": "dist/assets/finale/env-fei.webp",
+      "sha256": "0490255bb814e673d02bcb18bae97b29c8474c28f8f10225479c110666e43d3f",
+      "geometrySha256": "d60e8dbb5d7477277b0db97d14614522d0d63e3bee92f8786a387a30683b57c9",
+      "reachableTiles": 84,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            14,
+            46,
+            15
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "feiCrossing-back",
+            "label": "Return to The Burdened Crossing",
+            "x": 1,
+            "y": 14,
+            "to": "feiApproach",
+            "arrival": [
+              44,
+              21,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-fei-clue",
+            "label": "Read the bridgekeeper’s tally",
+            "x": 10,
+            "y": 14,
+            "questProp": true
+          },
+          {
+            "id": "fn-fei-weight-0",
+            "label": "Bridge windlass 1",
+            "x": 14,
+            "y": 14,
+            "questProp": true
+          },
+          {
+            "id": "fn-fei-weight-1",
+            "label": "Bridge windlass 2",
+            "x": 23,
+            "y": 14,
+            "questProp": true
+          },
+          {
+            "id": "fn-fei-weight-2",
+            "label": "Bridge windlass 3",
+            "x": 34,
+            "y": 14,
+            "questProp": true
+          },
+          {
+            "id": "fn-fei-encounter",
+            "label": "Feirong · the crossing guardian",
+            "x": 28,
+            "y": 14,
+            "questProp": true
+          },
+          {
+            "id": "feiCrossing-back",
+            "label": "Return to The Burdened Crossing",
+            "x": 1,
+            "y": 14,
+            "to": "feiApproach",
+            "arrival": [
+              44,
+              21,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "cayfen",
+      "name": "Cayfen · City of the Open Studios",
+      "source": "dist/assets/finale/env-cayfen.webp",
+      "sha256": "27d378e01a8a2e6c85d54369933c75ac0e6a847b26abfdbc46d72a22ab1badbc",
+      "geometrySha256": "fd80f9f83d28343fc923ceddff03ac916a3f4ad9dd70f97aaf420ea0901e2a43",
+      "reachableTiles": 227,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            16,
+            46,
+            18
+          ],
+          [
+            9,
+            11,
+            10,
+            16
+          ],
+          [
+            37,
+            11,
+            38,
+            16
+          ],
+          [
+            23,
+            19,
+            25,
+            29
+          ],
+          [
+            1,
+            29,
+            46,
+            29
+          ],
+          [
+            10,
+            27,
+            10,
+            29
+          ],
+          [
+            38,
+            27,
+            38,
+            29
+          ],
+          [
+            10,
+            11,
+            10,
+            12
+          ],
+          [
+            37,
+            11,
+            37,
+            12
+          ],
+          [
+            10,
+            27,
+            10,
+            28
+          ],
+          [
+            38,
+            27,
+            38,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "cayfen-back",
+            "label": "Willowmere flowering terraces",
+            "x": 1,
+            "y": 17,
+            "to": "sunTerraces",
+            "arrival": [
+              44,
+              15,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "cayfen-forward",
+            "label": "Sporefall Chasm · Hanging Roots",
+            "x": 46,
+            "y": 17,
+            "to": "sporeRim",
+            "arrival": [
+              3,
+              16,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "local-aeric",
+            "label": "Walter · rest and expedition care",
+            "x": 24,
+            "y": 20,
+            "sprite": 0,
+            "revoltCharacter": "CHR-AERIC"
+          },
+          {
+            "id": "fn-cayfen-resident",
+            "label": "A mosaic apprentice",
+            "x": 25,
+            "y": 23,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-cayfen-painter",
+            "label": "A street painter and her partner",
+            "x": 16,
+            "y": 18,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-cayfen-courier",
+            "label": "A canvas courier",
+            "x": 31,
+            "y": 17,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-cayfen-chimes",
+            "label": "A bell-maker",
+            "x": 17,
+            "y": 17,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "cayfen-back",
+            "label": "Willowmere flowering terraces",
+            "x": 1,
+            "y": 17,
+            "to": "sunTerraces",
+            "arrival": [
+              44,
+              15,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "cayfen-forward",
+            "label": "Sporefall Chasm · Hanging Roots",
+            "x": 46,
+            "y": 17,
+            "to": "sporeRim",
+            "arrival": [
+              3,
+              16,
+              "right"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "cayfenGallery",
+            "label": "Cayfen · The Shared Hand Gallery",
+            "x": 10,
+            "y": 11,
+            "door": true
+          },
+          {
+            "id": "cayfenHall",
+            "label": "Cayfen · Sun Hall",
+            "x": 37,
+            "y": 11,
+            "door": true
+          },
+          {
+            "id": "cayfenShop",
+            "label": "Cayfen provisioner",
+            "x": 10,
+            "y": 27,
+            "door": true
+          },
+          {
+            "id": "cayfenInn",
+            "label": "Cayfen · The Painted Lantern",
+            "x": 38,
+            "y": 27,
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "ramelle",
+      "name": "Ramelle · The Alabaster City",
+      "source": "dist/assets/finale/env-ramelle.webp",
+      "sha256": "275124038fbd3f9951a878a535372b26357b0a14248bacaad167ea960ab5a276",
+      "geometrySha256": "0ce7b5dfa5da2f76259e8c4f07bedf1895569175f30516cd0c47343bae5c30ab",
+      "reachableTiles": 235,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            15,
+            46,
+            16
+          ],
+          [
+            23,
+            2,
+            25,
+            29
+          ],
+          [
+            12,
+            10,
+            13,
+            15
+          ],
+          [
+            36,
+            10,
+            37,
+            15
+          ],
+          [
+            12,
+            27,
+            13,
+            29
+          ],
+          [
+            35,
+            27,
+            36,
+            29
+          ],
+          [
+            2,
+            29,
+            45,
+            29
+          ],
+          [
+            13,
+            26,
+            13,
+            27
+          ],
+          [
+            36,
+            26,
+            36,
+            27
+          ],
+          [
+            12,
+            9,
+            12,
+            10
+          ],
+          [
+            36,
+            9,
+            36,
+            10
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "ramelle-back",
+            "label": "Sporefall · The Last Crossing",
+            "x": 1,
+            "y": 15,
+            "to": "sporeCrown",
+            "arrival": [
+              44,
+              15,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "local-aeric",
+            "label": "Walter · rest and expedition care",
+            "x": 24,
+            "y": 20,
+            "sprite": 0,
+            "revoltCharacter": "CHR-AERIC"
+          },
+          {
+            "id": "fn-ramelle-resident",
+            "label": "A keeper of the water gardens",
+            "x": 25,
+            "y": 23,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-ramelle-child",
+            "label": "A child drawing in chalk",
+            "x": 16,
+            "y": 16,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-ramelle-medic",
+            "label": "A sanctuary aide",
+            "x": 32,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-ramelle-archivist",
+            "label": "A vault archivist",
+            "x": 11,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "ramelle-back",
+            "label": "Sporefall · The Last Crossing",
+            "x": 1,
+            "y": 15,
+            "to": "sporeCrown",
+            "arrival": [
+              44,
+              15,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          },
+          {
+            "id": "ramelleShop",
+            "label": "Ramelle provisioner",
+            "x": 13,
+            "y": 26,
+            "door": true
+          },
+          {
+            "id": "ramelleInn",
+            "label": "Ramelle · The Quiet Cloister",
+            "x": 36,
+            "y": 26,
+            "door": true
+          },
+          {
+            "id": "ramelleSanctuary",
+            "label": "Ramelle · Water Garden Sanctuary",
+            "x": 12,
+            "y": 9,
+            "door": true
+          },
+          {
+            "id": "ramelleFortress",
+            "label": "Ramelle · Hasan’s Alabaster Fortress",
+            "x": 36,
+            "y": 9,
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "cayfenGallery",
+      "name": "Cayfen · The Shared Hand Gallery",
+      "source": "dist/assets/finale/env-gallery.webp",
+      "sha256": "a37b34af013c02592384a72b1dff9150497c961222df7ff8e80b42ac34234ffb",
+      "geometrySha256": "e456ca16bc7371b90dd1bfd0224b2a5b7d057b8cbed5bd7baf0f004d7aa613b1",
+      "reachableTiles": 535,
+      "geometry": {
+        "walk": [
+          [
+            9,
+            10,
+            39,
+            23
+          ],
+          [
+            8,
+            24,
+            40,
+            25
+          ],
+          [
+            23,
+            26,
+            25,
+            29
+          ],
+          [
+            11,
+            9,
+            36,
+            10
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-cayfenGallery",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              10,
+              12,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-gallery-curator",
+            "label": "Curator Salma",
+            "x": 24,
+            "y": 14,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-gallery-water",
+            "label": "Where the River Waits",
+            "x": 13,
+            "y": 8,
+            "questProp": true
+          },
+          {
+            "id": "fn-gallery-fire",
+            "label": "Windows Still Lit",
+            "x": 24,
+            "y": 8,
+            "questProp": true
+          },
+          {
+            "id": "fn-gallery-steel",
+            "label": "Hands at Work",
+            "x": 34,
+            "y": 8,
+            "questProp": true
+          },
+          {
+            "id": "fn-art-commission",
+            "label": "Partner art commissions",
+            "x": 30,
+            "y": 19,
+            "questProp": true
+          },
+          {
+            "id": "fn-gallery-collection",
+            "label": "Your expedition’s collection",
+            "x": 17,
+            "y": 19,
+            "questProp": true
+          },
+          {
+            "id": "fn-exit-cayfenGallery",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              10,
+              12,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "cayfenHall",
+      "name": "Cayfen · Sun Hall",
+      "source": "dist/assets/finale/env-cayfen-hall.webp",
+      "sha256": "d4dc48667200e11c8a51474476d37741f7150aef4e5d843f3f1e307ee432c3d7",
+      "geometrySha256": "decc40c8a8c93320f3864c70dd6964166aeefbe0a0e3d5b8831698fdaa7fce27",
+      "reachableTiles": 434,
+      "geometry": {
+        "walk": [
+          [
+            10,
+            13,
+            38,
+            25
+          ],
+          [
+            22,
+            9,
+            26,
+            13
+          ],
+          [
+            20,
+            6,
+            29,
+            8
+          ],
+          [
+            23,
+            26,
+            25,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-cayfenHall",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              37,
+              12,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "LDR-07",
+            "label": "Marshal Ibrahim ibn Ahmad",
+            "x": 24,
+            "y": 7,
+            "sprite": 0,
+            "revoltCharacter": "LDR-07"
+          },
+          {
+            "id": "fn-cayfen-records",
+            "label": "The marshal’s mirror records",
+            "x": 33,
+            "y": 19,
+            "questProp": true
+          },
+          {
+            "id": "fn-exit-cayfenHall",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              37,
+              12,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "cayfenShop",
+      "name": "Cayfen provisioner",
+      "source": "dist/assets/finale/env-shop.webp",
+      "sha256": "049e48f0d4782b3d78537d4c97f796cffa4f3f5cff7eb039a4e9ba18e4d0280c",
+      "geometrySha256": "7c716bcc11a00e77b80e81292de64306735e68bb92a1008965d936888515a14c",
+      "reachableTiles": 280,
+      "geometry": {
+        "walk": [
+          [
+            12,
+            12,
+            37,
+            21
+          ],
+          [
+            23,
+            22,
+            25,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-cayfenShop",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              10,
+              28,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "local-supplies",
+            "label": "Browse supplies",
+            "x": 24,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-exit-cayfenShop",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              10,
+              28,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "cayfenInn",
+      "name": "Cayfen · The Painted Lantern",
+      "source": "dist/assets/finale/env-inn.webp",
+      "sha256": "56a737dca32e56639a66d6381721bd059f085e4c1f96ad9b3220a5c770b8a14a",
+      "geometrySha256": "b8f323c777e5678ed054e93d43c1eec644588d445fa8df9fb37fdaee8e347b0d",
+      "reachableTiles": 277,
+      "geometry": {
+        "walk": [
+          [
+            15,
+            11,
+            33,
+            24
+          ],
+          [
+            23,
+            25,
+            25,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-cayfenInn",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              38,
+              28,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-inn-rest",
+            "label": "Rest at the inn",
+            "x": 24,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-exit-cayfenInn",
+            "label": "Return to cayfen",
+            "x": 24,
+            "y": 27,
+            "to": "cayfen",
+            "arrival": [
+              38,
+              28,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "ramelleShop",
+      "name": "Ramelle provisioner",
+      "source": "dist/assets/finale/env-shop.webp",
+      "sha256": "049e48f0d4782b3d78537d4c97f796cffa4f3f5cff7eb039a4e9ba18e4d0280c",
+      "geometrySha256": "5ed0413f330f3d3478c993b18cc1bc6dfa550cb6fae526f54fc5e52905d54f08",
+      "reachableTiles": 280,
+      "geometry": {
+        "walk": [
+          [
+            12,
+            12,
+            37,
+            21
+          ],
+          [
+            23,
+            22,
+            25,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-ramelleShop",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              13,
+              27,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "local-supplies",
+            "label": "Browse supplies",
+            "x": 24,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-exit-ramelleShop",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              13,
+              27,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "ramelleInn",
+      "name": "Ramelle · The Quiet Cloister",
+      "source": "dist/assets/finale/env-sanctuary.webp",
+      "sha256": "f019ae6dfea4bdd7ce0cffdd447fe5d7c91846b74e65a19c34e5f9322c0fbb6e",
+      "geometrySha256": "b4139adf41ebb652de74df5499d5fc1d1f866b45a1ebbaeee05071c0d0d75436",
+      "reachableTiles": 260,
+      "geometry": {
+        "walk": [
+          [
+            15,
+            12,
+            32,
+            25
+          ],
+          [
+            23,
+            26,
+            25,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-ramelleInn",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              36,
+              27,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-inn-rest",
+            "label": "Rest at the inn",
+            "x": 24,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "SHOP-PHI"
+          },
+          {
+            "id": "fn-exit-ramelleInn",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              36,
+              27,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "ramelleSanctuary",
+      "name": "Ramelle · Water Garden Sanctuary",
+      "source": "dist/assets/finale/env-sanctuary.webp",
+      "sha256": "f019ae6dfea4bdd7ce0cffdd447fe5d7c91846b74e65a19c34e5f9322c0fbb6e",
+      "geometrySha256": "9fac990ed40f0206bf3a628455b0ba45a7d2c55a347792076a9b7e6b81db1888",
+      "reachableTiles": 259,
+      "geometry": {
+        "walk": [
+          [
+            15,
+            12,
+            32,
+            25
+          ],
+          [
+            23,
+            26,
+            25,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-ramelleSanctuary",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              12,
+              10,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "local-aeric",
+            "label": "Walter · treatment and reserves",
+            "x": 24,
+            "y": 15,
+            "sprite": 0,
+            "revoltCharacter": "CHR-AERIC"
+          },
+          {
+            "id": "fn-sanctuary-keeper",
+            "label": "The sanctuary keeper",
+            "x": 31,
+            "y": 19,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-exit-ramelleSanctuary",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              12,
+              10,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "ramelleFortress",
+      "name": "Ramelle · Hasan’s Alabaster Fortress",
+      "source": "dist/assets/finale/env-fortress.webp",
+      "sha256": "c404ac7e371063070b82a991fd6831e711c56b96cc2f47c7aab11b2f15233863",
+      "geometrySha256": "01ee47dc4d38089df68013a8a9d2f4c4e4e954aed8d86d9a8f5a03a019675c94",
+      "reachableTiles": 454,
+      "geometry": {
+        "walk": [
+          [
+            10,
+            10,
+            38,
+            22
+          ],
+          [
+            23,
+            8,
+            25,
+            29
+          ],
+          [
+            19,
+            3,
+            29,
+            6
+          ],
+          [
+            22,
+            7,
+            26,
+            9
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-exit-ramelleFortress",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              36,
+              10,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "LDR-08",
+            "label": "Hierophant Hasan ibn Ibrahim",
+            "x": 24,
+            "y": 5,
+            "sprite": 0,
+            "revoltCharacter": "LDR-08"
+          },
+          {
+            "id": "fn-fortress-below",
+            "label": "The stair beneath the fortress",
+            "x": 35,
+            "y": 19,
+            "questProp": true
+          },
+          {
+            "id": "fn-fortress-custodian",
+            "label": "Keeper of the old stair",
+            "x": 29,
+            "y": 14,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-exit-ramelleFortress",
+            "label": "Return to ramelle",
+            "x": 24,
+            "y": 27,
+            "to": "ramelle",
+            "arrival": [
+              36,
+              10,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "afterlifeThreshold",
+      "name": "Beneath Ramelle · The Answering Mirror",
+      "source": "dist/assets/finale/env-mirror.webp",
+      "sha256": "a793a764009a8c125fc76ed567864b1985e3538176f66874196563812631f3ff",
+      "geometrySha256": "68ace46cdc9fcf058a0fee93145fdd986a8458b4ac7f2425338beab4cebc18b2",
+      "reachableTiles": 331,
+      "geometry": {
+        "walk": [
+          [
+            10,
+            15,
+            38,
+            24
+          ],
+          [
+            23,
+            25,
+            25,
+            29
+          ],
+          [
+            20,
+            12,
+            28,
+            14
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "fn-threshold-back",
+            "label": "Return to Hasan’s fortress",
+            "x": 24,
+            "y": 27,
+            "to": "ramelleFortress",
+            "arrival": [
+              34,
+              19,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-afterlife",
+            "label": "The answering mirror · afterlife threshold",
+            "x": 24,
+            "y": 11,
+            "questProp": true
+          },
+          {
+            "id": "fn-threshold-walter",
+            "label": "Walter at the threshold",
+            "x": 18,
+            "y": 20,
+            "sprite": 0,
+            "revoltCharacter": "CHR-AERIC"
+          },
+          {
+            "id": "fn-threshold-back",
+            "label": "Return to Hasan’s fortress",
+            "x": 24,
+            "y": 27,
+            "to": "ramelleFortress",
+            "arrival": [
+              34,
+              19,
+              "left"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "sporeGrotto",
+      "name": "Sporefall · The Moonpool Grotto",
+      "source": "dist/assets/finale/env-spore-grotto.webp",
+      "sha256": "53dc26bd94696a4faab42b13045267b0d28fa32151544a10ac4868818c3be9b3",
+      "geometrySha256": "92f24369250e52cab469b901acc044a9095e16c93bdc508824f86761323c5f08",
+      "reachableTiles": 216,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            15,
+            46,
+            16
+          ],
+          [
+            18,
+            13,
+            33,
+            20
+          ],
+          [
+            20,
+            21,
+            31,
+            22
+          ],
+          [
+            23,
+            10,
+            25,
+            13
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "sporeGrotto-back",
+            "label": "Return to Sporefall",
+            "x": 1,
+            "y": 15,
+            "to": "sporeDepths",
+            "arrival": [
+              24,
+              14,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-spore-lichen",
+            "label": "A lichen surveyor",
+            "x": 31,
+            "y": 14,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-spore-moonpool",
+            "label": "Read the moonpool inscription",
+            "x": 19,
+            "y": 15,
+            "questProp": true
+          },
+          {
+            "id": "sporeGrotto-back",
+            "label": "Return to Sporefall",
+            "x": 1,
+            "y": 15,
+            "to": "sporeDepths",
+            "arrival": [
+              24,
+              14,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            18,
+            13,
+            21,
+            14
+          ],
+          [
+            29,
+            19,
+            32,
+            20
+          ]
+        ],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "53dc26bd94696a4faab42b13045267b0d28fa32151544a10ac4868818c3be9b3",
+        "geometrySha256": "92f24369250e52cab469b901acc044a9095e16c93bdc508824f86761323c5f08",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "Moonlit mineral pool is recessed above the playable crescent terrace; shrine steps and surveyor stand on stone, with distinct blue depth lighting and a readable return crossing. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeGrotto-1280-night.png"
+        ],
+        "current": true
+      }
+    },
+    {
+      "id": "sporeCanopy",
+      "name": "Sporefall · Crown of Roots",
+      "source": "dist/assets/finale/env-spore-canopy.webp",
+      "sha256": "3a24df01e7e9f81a3729306a7714fe8521abd73fbdcf7334f52b47dca171ea3c",
+      "geometrySha256": "b09e4518eb5836d0146498d90bc390c563722457d0d03dc2904fbfb20e0df364",
+      "reachableTiles": 158,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            14,
+            46,
+            15
+          ],
+          [
+            12,
+            16,
+            36,
+            17
+          ],
+          [
+            16,
+            18,
+            33,
+            18
+          ],
+          [
+            20,
+            10,
+            20,
+            14
+          ],
+          [
+            20,
+            10,
+            25,
+            11
+          ],
+          [
+            23,
+            9,
+            25,
+            11
+          ]
+        ],
+        "solids": [
+          [
+            21,
+            12,
+            27,
+            15
+          ]
+        ],
+        "gates": [
+          {
+            "id": "sporeCanopy-back",
+            "label": "Return to Sporefall",
+            "x": 1,
+            "y": 15,
+            "to": "sporeBridge",
+            "arrival": [
+              24,
+              13,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "spots": [
+          {
+            "id": "fn-spore-herbalist",
+            "label": "A canopy herbalist",
+            "x": 30,
+            "y": 14,
+            "sprite": 0,
+            "revoltCharacter": "REV-MARYAM"
+          },
+          {
+            "id": "fn-spore-bridge-notes",
+            "label": "Read the crossing diary",
+            "x": 18,
+            "y": 15,
+            "questProp": true
+          },
+          {
+            "id": "sporeCanopy-back",
+            "label": "Return to Sporefall",
+            "x": 1,
+            "y": 15,
+            "to": "sporeBridge",
+            "arrival": [
+              24,
+              13,
+              "down"
+            ],
+            "action": "finale-gate",
+            "door": true
+          }
+        ],
+        "grass": [
+          [
+            17,
+            16,
+            20,
+            17
+          ],
+          [
+            30,
+            16,
+            33,
+            17
+          ]
+        ],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "sha256": "3a24df01e7e9f81a3729306a7714fe8521abd73fbdcf7334f52b47dca171ea3c",
+        "geometrySha256": "b09e4518eb5836d0146498d90bc390c563722457d0d03dc2904fbfb20e0df364",
+        "reviewer": "Codex visual inspection, 2026-10-29",
+        "rationale": "An enormous living root platform with draped vegetation and old shrines forms the Crown of Roots; collision routes around the central shrine instead of through it. Gold-green canopy light gives a distinct identity. Source grid overlays, phone day/night and desktop comparisons inspected; connectivity audited separately.",
+        "dayEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-390-day.png",
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-1280-day.png"
+        ],
+        "nightEvidence": [
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-390-night.png",
+          "art-library/finale/reviews-2026-10-29/sporeCanopy-1280-night.png"
+        ],
+        "current": true
+      }
+    }
+  ]
+}

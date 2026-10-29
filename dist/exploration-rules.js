@@ -1,7 +1,7 @@
-import {rimebunCaveSlots} from './rimebun.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.48';
-import {legalForm} from './route-roster.js?v=0.87.0';
-import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.48';
+import {rimebunCaveSlots} from './rimebun.js?v=0.90.52';
+import {DATA} from './data.js?v=0.90.52';
+import {legalForm} from './route-roster.js?v=0.90.52';
+import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.52';
 export function explorationState(state){return state.exploration??={claims:[],trades:[],finds:[],quests:[],mythic:null};}
 export function grantExplorationReward(state,reward){for(const [key,value]of Object.entries(reward)){if(key==='held'){state.heldItems??={};state.heldItems[value]=(state.heldItems[value]||0)+1;}else state[key]=(state[key]||0)+value;}}
 export function claimExplorationCache(state,id){const content=SIDE_CONTENT.find(c=>c.id+'-cache'===id),floor=CAVE_FLOORS.find(f=>f.room+'-cache'===id),q=explorationState(state);if(q.claims.includes(id)||(!content&&!floor))return false;q.claims.push(id);grantExplorationReward(state,content?.reward||floor.reward);return true;}

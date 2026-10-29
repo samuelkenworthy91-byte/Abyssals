@@ -1,4 +1,4 @@
-import {cossenneServices,startConservatoryBoard,flipConservatoryCard,coverConservatoryCards,APOTHECARY_RECIPES,craftApothecary,RELIEF_POSTS,acceptRelief,prepareReliefPost,claimRelief,reliefJournal} from './cossenne-services.js?v=0.87.0';
+import {cossenneServices,startConservatoryBoard,flipConservatoryCard,coverConservatoryCards,APOTHECARY_RECIPES,craftApothecary,RELIEF_POSTS,acceptRelief,prepareReliefPost,claimRelief,reliefJournal} from './cossenne-services.js?v=0.90.52';
 export function handleCossenneService(id,a){const {state,room,openModal,document,$,shop,rewardTransaction,refresh,toast,showDialogue,line}=a;
  const commit=fn=>{let changed=false;const saved=rewardTransaction(()=>changed=fn());if(saved&&changed)refresh();return saved&&changed;};
  const repaint=fn=>{const top=$('.modal')?.scrollTop||0;fn();const pane=$('.modal');if(pane)pane.scrollTop=top;};

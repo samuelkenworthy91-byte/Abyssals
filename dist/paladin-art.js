@@ -1,7 +1,7 @@
-import {trialState,channelFlow} from './court-trials.js?v=0.87.0';
-import {PALADIN_SPECIES} from './paladin-data.js?v=0.90.48';
-import {COURT_ROOMS,COURT_TITLES,COURT_SEALS} from './paladin-quest.js?v=0.87.0';
-import {drawCompanion,companionArt} from './companion.js?v=0.90.48';
+import {trialState,channelFlow} from './court-trials.js?v=0.90.52';
+import {PALADIN_SPECIES} from './paladin-data.js?v=0.90.52';
+import {COURT_ROOMS,COURT_TITLES,COURT_SEALS} from './paladin-quest.js?v=0.90.52';
+import {drawCompanion,companionArt} from './companion.js?v=0.90.52';
 const images=new Map(),artListeners=new Set();
 // Map textures load lazily. Every completed load must invalidate cached maps,
 // including maps first visited while the network/offline artwork is still cold.

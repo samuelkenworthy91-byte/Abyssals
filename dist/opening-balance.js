@@ -1,6 +1,6 @@
-import {eliteLeaderTeam,eliteIdentity} from './elite-leaders.js?v=0.90.46';
-import {expeditionTrainerTeam} from './trainer-team-variety.js?v=0.87.0';
-import {fullLeaderTeam} from './route-roster.js?v=0.87.0';
+import {eliteLeaderTeam,eliteIdentity} from './elite-leaders.js?v=0.90.52';
+import {expeditionTrainerTeam} from './trainer-team-variety.js?v=0.90.52';
+import {fullLeaderTeam} from './route-roster.js?v=0.90.52';
 // Opening play-test settings; authored species growth and later regions stay intact.
 export function experienceMultiplier(level){return level<50?2:level<100?1.25:1;}
 export function openingEncounterLevel(level,area){const bounds=area.id==='CIV-01'?[5,10]:['DOR-01','DOR-02'].includes(area.id)?[11,16]:null;if(!bounds)return level;return bounds[0]+Math.min(bounds[1]-bounds[0],Math.floor((level-area.min_level)/(area.max_level-area.min_level+1)*(bounds[1]-bounds[0]+1)));}

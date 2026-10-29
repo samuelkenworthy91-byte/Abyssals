@@ -1,4 +1,4 @@
-import {clipAtlasPixels} from './atlas-clip.js?v=0.87.0';
+import {clipAtlasPixels} from './atlas-clip.js?v=0.90.52';
 // Display framing only: original art files and every nontransparent detail stay intact.
 export function visibleArtBounds(data,width,height){if(!data||!Number.isInteger(width)||!Number.isInteger(height)||width<1||height<1||data.length<width*height*4)return null;let left=width,top=height,right=-1,bottom=-1;for(let y=0;y<height;y++)for(let x=0;x<width;x++)if(data[(y*width+x)*4+3]>0){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}return right<left?null:{x:left,y:top,width:right-left+1,height:bottom-top+1};}
 export function combatFrameLayout(bounds,maximum=512){const pad=Math.max(2,Math.ceil(Math.max(bounds.width,bounds.height)*.04)),scale=Math.min(1,maximum/(bounds.width+pad*2),maximum/(bounds.height+pad*2));return {width:Math.ceil((bounds.width+pad*2)*scale),height:Math.ceil((bounds.height+pad*2)*scale),x:pad*scale,y:pad*scale,artWidth:bounds.width*scale,artHeight:bounds.height*scale};}

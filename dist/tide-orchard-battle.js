@@ -1,8 +1,8 @@
-import {ORCHARD_IDS as I,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.48';
-import {has,heldInfo,consumedBerry,activateHeldRecovery,abilityBattle,restoreHP,changeStage,canSwitch} from './abilities.js?v=0.90.48';
-import {menagerieParty} from './menagerie-rules.js?v=0.87.0';
-import {selectedAlly} from './teamcraft-battle.js?v=0.90.48';
-import {unitName} from './names.js?v=0.87.0';
+import {ORCHARD_IDS as I,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.52';
+import {has,heldInfo,consumedBerry,activateHeldRecovery,abilityBattle,restoreHP,changeStage,canSwitch} from './abilities.js?v=0.90.52';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.52';
+import {selectedAlly} from './teamcraft-battle.js?v=0.90.52';
+import {unitName} from './names.js?v=0.90.52';
 const ms=u=>u.moveState??={};
 const alive=u=>u&&u.hp>0&&!u.dead&&!u.captured;
 const sameSide=(a,b)=>a===b||a.side&&a.side===b.side;
@@ -50,7 +50,7 @@ export function orchardHit(a,t,m,damage){if(damage<=0||m.tidePassive||sameSide(a
  if(has(t,'Stillwater')&&alive(t)){const s=ms(t);s.stillwaterHits=(s.stillwaterHits||0)+1;if(s.stillwaterHits>=3){s.stillwaterHits=0;replies.push({move:ORCHARD_REACTIONS.counter,hits:3});}}
  if(alive(t)&&ms(t).brineVeil&&!ms(t).brineSpent){ms(t).brineSpent=true;replies.push({move:ORCHARD_REACTIONS.veilReply,hits:1});}return replies;
 }
-export function endOrchard(units,{floor=0,random=Math.random}={}){const out=[],f=units[0]?.field||{},queue=(u,move,target=u,damage=0)=>{(f.orchardFX??=[]).push({who:u.side||'player',move,result:{damage,effectiveness:1,messages:[],hitCount:1},targetSide:target.side});};
+export function endOrchard(units,{floor=0,random=Math.random}={}){const out=[],f=units[0]?.field||{},queue=(u,move,target=u,damage=0)=>{(f.orchardFX??=[]).push({who:u.side||'player',actorUid:u.uid,targetUid:target.uid,move,result:{damage,effectiveness:1,messages:[],hitCount:1},targetSide:target.side});};
  for(const u of units){if(!alive(u))continue;const s=ms(u),limit=u.combatFloor??floor;
  const hurt=(fraction,why)=>{const loss=Math.min(Math.max(0,u.hp-limit),Math.max(1,Math.floor(u.maxHp*fraction)));u.hp-=loss;if(loss)out.push(`${unitName(u)} loses ${loss} HP to ${why}.`);return loss;};
  if(s.drowned?.turns>0){hurt(1/16,'Drowned Mark');if(--s.drowned.turns===0)delete s.drowned;}

@@ -1,4 +1,4 @@
-import {drawMountainQuestArtwork} from './mountain-art.js?v=0.87.0';
+import {drawMountainQuestArtwork} from './mountain-art.js?v=0.90.52';
 // Optional mountain stories. No growth or combat-stat bonuses are applied.
 export const CAELYNX_ID='windscar-caelynx';
 export const CAELYNX_ENCOUNTER={speciesId:'164',level:45,mountainId:CAELYNX_ID,tableId:'WINDSCAR-WATCHER'};

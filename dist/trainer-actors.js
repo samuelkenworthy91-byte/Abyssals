@@ -1,5 +1,5 @@
-import {beginStep,advanceStep} from './movement.js?v=0.87.0';
-import {pathfind} from './engine.js?v=0.90.51';
+import {beginStep,advanceStep} from './movement.js?v=0.90.52';
+import {pathfind} from './engine.js?v=0.90.52';
 
 // Hand-authored patrols always take precedence over generated routes.
 const patrols={

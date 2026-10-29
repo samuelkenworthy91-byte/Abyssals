@@ -1,168 +1,168 @@
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.49';
-import {eliteIdentity,lockVisitedLeaderTeams} from './elite-leaders.js?v=0.90.46';
-import {ensureFieldJournal,recordFieldBattle} from './field-journal.js?v=0.90.49';
-import {createFieldJournalUI} from './field-journal-ui.js?v=0.90.46';
-import {eggArtHTML} from './egg-art.js?v=0.90.41';
-import {itemIcon,codexIcon} from './item-art.js?v=0.90.41';
-import {evolutionOutlook,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.38';
-import {eggCapacity,nextPouchUpgrade,sellsPouchUpgrades,buyPouchUpgrade} from './egg-pouch.js?v=0.90.36';
-import {isPromenade,PROMENADE_SCALE,PROMENADE_Y_OFFSET,roomGrid,promenadeTap,promenadeTravelDuration,PROMENADE_PLAYER_SIZE,PROMENADE_COMPANION_SIZE} from './promenade.js?v=0.90.37';
-import {bulkCareMenu} from './bulk-care-ui.js?v=0.90.35';
-import {NURSERY_ITEMS,nurseryItemCount,prepareBreedingEffects} from './breeding-items.js?v=0.90.35';
-import {withTrainerProdigies,trainerProdigyWarning,initializeTrainerGrowth} from './trainer-prodigies.js?v=0.90.46';
-import {specialistAIPool} from './teamcraft-battle.js?v=0.90.49';
-import {canonicalMoveId,codexCompatible,TEAMCRAFT_IDS} from './teamcraft-data.js?v=0.90.49';
-import {normalizeTeamcraftUnit,migrateTeamcraftState,maximumPP} from './teamcraft-progress.js?v=0.90.49';
-import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.30';
-import {evolutionStage,matchesPartner} from './partner-filters.js?v=0.90.30';
-import {holdCapturedPartner,placeCapturedPartner} from './capture-placement.js?v=0.90.30';
-import {completedBattleOpponents,battleExperienceRecipients} from './battle-experience.js?v=0.90.25';
-import {arenaRoundMarks,isArenaBossRound,chooseArenaBossAction,switchArenaBoss,orderArenaBossReplacement} from './arena-bosses.js?v=0.90.46';
-import {createModalViewMemory} from './modal-view.js?v=0.90.22';
-import {levelTonicQuote,queueLevelTonics} from './training-tonics.js?v=0.90.22';
-import {FINALE_TRAINERS,FINAL_DARIUS,BURIAL_LINES,finaleRoute,installFinaleTrainers} from './finale-data.js?v=0.90.49';
-import {finaleState,finaleSpots,finaleUnlocked,finaleObjective,finaleJournal,finishBurialLine,grantMemorialPartners,settleFinalUnique,settleDariusFinale,canFightFinale} from './finale-rules.js?v=0.90.19';
-import {handleFinale,finaleFateMenu} from './finale-ui.js?v=0.90.19';
-import {drawFinaleCreatures} from './finale-art.js?v=0.90.19';
-import {refillDoubleFoes} from './relic-double.js?v=0.90.18';
-import {installStormTrainers,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.49';
-import {stormState,recordStormVictory,settleStormDragon,stormBound,stormMedicineAllowed,chooseStormMove,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.14';
-import {drawStormScreen} from './storm-weather.js?v=0.90.14';
-import {BOTRUNE_TRAINERS,BOTRUNE_GUARDS,TRIAL_BEATS,installBotruneTrainers,botruneRoute} from './botrune-data.js?v=0.90.49';
-import {botruneState,finishTrialBeat,botruneCanFight,botruneBlocked,botruneSpots,botruneObjective,botruneJournal} from './botrune-rules.js?v=0.90.17';
-import {handleBotrune,botruneFateMenu} from './botrune-ui.js?v=0.90.17';
-import {drawBotrunePeople,drawStormWeather,drawStormDragon} from './botrune-art.js?v=0.90.20';
-import {siteTabletHit,siteTabletJournalHTML} from './site-tablets.js?v=0.89.4';
-import {advanceFarm,farmActors,farmAnimalBlocked,farmAnimalHit} from './cossenne-farm.js?v=0.90.20';
-import {permanentRates,rehomeable,stewardshipCost,stewardshipQuote,rehomePartners,applyStewardship} from './stewardship.js?v=0.90.35';
-import {drawMarasenLife} from './marasen-art.js?v=0.90.20';
-import {marasenInteract as handleMarasen} from './marasen-ui.js?v=0.90.45';
-import {installMarasenTrainers,marasenRoute,MARASEN_TRAINERS,MARASEN_BRANCHES,VERDANT_ROAD} from './marasen-data.js?v=0.90.49';
-import {marasenBlocked,marasenJournal,marasenObjective,settleMarasenEncounter,marasenState,marasenLeaderReady} from './marasen-rules.js?v=0.87.0';
-import {handleCourtTrial} from './court-trials-ui.js?v=0.87.0';
-import {trialState,trialsReady} from './court-trials.js?v=0.87.0';
-import {COURT_RAIDERS,COURT_DARIUS,DARIUS_COURT_ARRIVAL,courtRaidCleared} from './court-raiders.js?v=0.87.0';
-import {cossenneServiceObjective,reliefJournal} from './cossenne-services.js?v=0.87.0';
-import {handleCossenneService} from './cossenne-services-ui.js?v=0.87.0';
-import {SPECIALIST_FOODS,SPECIALIST_MEDICINES,specialistFood,specialistStrength,medicinePreview,useSpecialistMedicine,specialistBagHTML} from './specialist-supplies.js?v=0.90.15';
-import {assignShiny,shinySummaryHTML} from './shinies.js?v=0.90.20';
-import {breedingPlanHTML,inheritanceSummaryHTML,availableProdigyStats} from './breeding-inheritance.js?v=0.90.35';
-import {drawRevoltDocuments} from './revolt-world.js?v=0.90.41';
-import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,revoltState,canReadRevolt,recordRevolt,revoltLines,revoltAid,installRevoltTrainers,revoltJournal} from './revolt.js?v=0.87.0';
-import {CHOICE_REWARDS,outcomeState,choiceRewardText,rewardText} from './choice-rewards.js?v=0.90.41';
-import {EXECUTION_BOUNTIES,leaderAceBaby,leaderOutcomeState,settleLeaderRewards,makeLeaderRematch,completeLeaderRematch} from './leader-outcomes.js?v=0.90.46';
-import {EGG_ICON,BREEDING_FEE,EGG_STEPS,nurseryState,breedingUnlocked,breedable,breedingPair,createBreedingEgg,breedingBatchLimit,createBreedingBatch,advanceEggSteps,hatchBreedingEgg} from './breeding.js?v=0.90.43';
-import {FRESH_MEAT,FRESH_MEAT_MODIFIER} from './fresh-meat.js?v=0.87.0';
-import {FORTIFIED_RATION,FORTIFIED_RATION_MODIFIER} from './fortified-ration.js?v=0.90.50';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.52';
+import {eliteIdentity,lockVisitedLeaderTeams} from './elite-leaders.js?v=0.90.52';
+import {ensureFieldJournal,recordFieldBattle} from './field-journal.js?v=0.90.52';
+import {createFieldJournalUI} from './field-journal-ui.js?v=0.90.52';
+import {eggArtHTML} from './egg-art.js?v=0.90.52';
+import {itemIcon,codexIcon} from './item-art.js?v=0.90.52';
+import {evolutionOutlook,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.52';
+import {eggCapacity,nextPouchUpgrade,sellsPouchUpgrades,buyPouchUpgrade} from './egg-pouch.js?v=0.90.52';
+import {isPromenade,PROMENADE_SCALE,PROMENADE_Y_OFFSET,roomGrid,promenadeTap,promenadeTravelDuration,PROMENADE_PLAYER_SIZE,PROMENADE_COMPANION_SIZE} from './promenade.js?v=0.90.52';
+import {bulkCareMenu} from './bulk-care-ui.js?v=0.90.52';
+import {NURSERY_ITEMS,nurseryItemCount,prepareBreedingEffects} from './breeding-items.js?v=0.90.52';
+import {withTrainerProdigies,trainerProdigyWarning,initializeTrainerGrowth} from './trainer-prodigies.js?v=0.90.52';
+import {specialistAIPool,selectedAlly} from './teamcraft-battle.js?v=0.90.52';
+import {canonicalMoveId,codexCompatible,TEAMCRAFT_IDS} from './teamcraft-data.js?v=0.90.52';
+import {normalizeTeamcraftUnit,migrateTeamcraftState,maximumPP} from './teamcraft-progress.js?v=0.90.52';
+import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.52';
+import {evolutionStage,matchesPartner} from './partner-filters.js?v=0.90.52';
+import {holdCapturedPartner,placeCapturedPartner} from './capture-placement.js?v=0.90.52';
+import {completedBattleOpponents,battleExperienceRecipients} from './battle-experience.js?v=0.90.52';
+import {arenaRoundMarks,isArenaBossRound,chooseArenaBossAction,switchArenaBoss,orderArenaBossReplacement} from './arena-bosses.js?v=0.90.52';
+import {createModalViewMemory} from './modal-view.js?v=0.90.52';
+import {levelTonicQuote,queueLevelTonics} from './training-tonics.js?v=0.90.52';
+import {FINALE_TRAINERS,FINAL_DARIUS,BURIAL_LINES,finaleRoute,installFinaleTrainers} from './finale-data.js?v=0.90.52';
+import {finaleState,finaleSpots,finaleUnlocked,finaleObjective,finaleJournal,finishBurialLine,grantMemorialPartners,settleFinalUnique,settleDariusFinale,canFightFinale} from './finale-rules.js?v=0.90.52';
+import {handleFinale,finaleFateMenu} from './finale-ui.js?v=0.90.52';
+import {drawFinaleCreatures} from './finale-art.js?v=0.90.52';
+import {refillDoubleFoes} from './relic-double.js?v=0.90.52';
+import {installStormTrainers,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.52';
+import {stormState,recordStormVictory,settleStormDragon,stormBound,stormMedicineAllowed,chooseStormMove,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.52';
+import {drawStormScreen} from './storm-weather.js?v=0.90.52';
+import {BOTRUNE_TRAINERS,BOTRUNE_GUARDS,TRIAL_BEATS,installBotruneTrainers,botruneRoute} from './botrune-data.js?v=0.90.52';
+import {botruneState,finishTrialBeat,botruneCanFight,botruneBlocked,botruneSpots,botruneObjective,botruneJournal} from './botrune-rules.js?v=0.90.52';
+import {handleBotrune,botruneFateMenu} from './botrune-ui.js?v=0.90.52';
+import {drawBotrunePeople,drawStormWeather,drawStormDragon} from './botrune-art.js?v=0.90.52';
+import {siteTabletHit,siteTabletJournalHTML} from './site-tablets.js?v=0.90.52';
+import {advanceFarm,farmActors,farmAnimalBlocked,farmAnimalHit} from './cossenne-farm.js?v=0.90.52';
+import {permanentRates,rehomeable,stewardshipCost,stewardshipQuote,rehomePartners,applyStewardship} from './stewardship.js?v=0.90.52';
+import {drawMarasenLife} from './marasen-art.js?v=0.90.52';
+import {marasenInteract as handleMarasen} from './marasen-ui.js?v=0.90.52';
+import {installMarasenTrainers,marasenRoute,MARASEN_TRAINERS,MARASEN_BRANCHES,VERDANT_ROAD} from './marasen-data.js?v=0.90.52';
+import {marasenBlocked,marasenJournal,marasenObjective,settleMarasenEncounter,marasenState,marasenLeaderReady} from './marasen-rules.js?v=0.90.52';
+import {handleCourtTrial} from './court-trials-ui.js?v=0.90.52';
+import {trialState,trialsReady} from './court-trials.js?v=0.90.52';
+import {COURT_RAIDERS,COURT_DARIUS,DARIUS_COURT_ARRIVAL,courtRaidCleared} from './court-raiders.js?v=0.90.52';
+import {cossenneServiceObjective,reliefJournal} from './cossenne-services.js?v=0.90.52';
+import {handleCossenneService} from './cossenne-services-ui.js?v=0.90.52';
+import {SPECIALIST_FOODS,SPECIALIST_MEDICINES,specialistFood,specialistStrength,medicinePreview,useSpecialistMedicine,specialistBagHTML} from './specialist-supplies.js?v=0.90.52';
+import {assignShiny,shinySummaryHTML} from './shinies.js?v=0.90.52';
+import {breedingPlanHTML,inheritanceSummaryHTML,availableProdigyStats} from './breeding-inheritance.js?v=0.90.52';
+import {drawRevoltDocuments} from './revolt-world.js?v=0.90.52';
+import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,revoltState,canReadRevolt,recordRevolt,revoltLines,revoltAid,installRevoltTrainers,revoltJournal} from './revolt.js?v=0.90.52';
+import {CHOICE_REWARDS,outcomeState,choiceRewardText,rewardText} from './choice-rewards.js?v=0.90.52';
+import {EXECUTION_BOUNTIES,leaderAceBaby,leaderOutcomeState,settleLeaderRewards,makeLeaderRematch,completeLeaderRematch} from './leader-outcomes.js?v=0.90.52';
+import {EGG_ICON,BREEDING_FEE,EGG_STEPS,nurseryState,breedingUnlocked,breedable,breedingPair,createBreedingEgg,breedingBatchLimit,createBreedingBatch,advanceEggSteps,hatchBreedingEgg} from './breeding.js?v=0.90.52';
+import {FRESH_MEAT,FRESH_MEAT_MODIFIER} from './fresh-meat.js?v=0.90.52';
+import {FORTIFIED_RATION,FORTIFIED_RATION_MODIFIER} from './fortified-ration.js?v=0.90.52';
 
-import {ORCHARD_ROUTES,orchardRoute,installCossenneTrainers} from './cossenne-data.js?v=0.90.49';
-import {handleCossenne,orchardHistoryHTML} from './cossenne-ui.js?v=0.90.20';
-import {cossenneState,cossenneEvent,cossenneReady,cossenneObjective,cossenneJournal,settleCossenneFate} from './cossenne-rules.js?v=0.87.0';
-import {drawOrchardLife} from './cossenne-art.js?v=0.90.20';
-import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.87.0';
-import {CAELYNX_ENCOUNTER,CAELYNX_ID,SCHOLAR,FOSSILS,WATCH_RECORD,BED_TEXT,QUEST_SPOTS,mountainQuestState,mountainFind,canMeetCaelynx,resolveCaelynx,reviveMountainFossil,mountainQuestHint,drawMountainQuestScene} from './mountain-quests.js?v=0.87.0';
-import {PASS_NPCS,passRecordHTML} from './mountain-pass.js?v=0.90.20';
-import {trainerPortraitId,trainerBattleArtId,dialoguePortraitId} from './side-trainer-art.js?v=0.90.16';
-import {courtState,rollCourtEncounter,courtEnemy,storeRoamer,courtRound,courtJournal} from './paladin-roaming.js?v=0.87.0';
-import {COURT_ROOMS,COURT_COMMANDER,COURT_INSCRIPTIONS,readCourtInscription,pressCourtSeal,acceptCourt,prepareCourtRelease,finishCourtRelease,courtGateOpen,courtGateHint,courtBlocked,courtObjective,courtSpots,courtRoute,installCourtTrainers} from './paladin-quest.js?v=0.87.0';
-import {COURT_DIALOGUE} from './paladin-dialogue.js?v=0.87.0';
-import {courtFrame,drawCourtScene,drawCourtHuman,prepareCourtArt} from './paladin-art.js?v=0.90.20';
-import {paladinEncounterRoute,jungleRoute} from './paladin-encounters.js?v=0.87.0';
-import {bindMenagerieParty} from './menagerie-rules.js?v=0.87.0';
-import {drawBoulder,drawQuestMechanism} from './quest-scenery.js?v=0.87.0';
-import {jettyFor,nextJettyEncounter,keepContestBait,canOfferRiverBait,spendRiverBait} from './jetty-fishing.js?v=0.90.20';
-import {QUEST_REWARDS,rewardPending,nurseryOffers,grantQuestReward,SECRET_MOVES,canLearnSecret,teachSecret,distinctAbilitySlots,abilityOptions,awakenAbility,selectAbility} from './quest-rewards.js?v=0.90.49';
-import {preserveStrength,WINTER_PRESERVE} from './quest-rewards-data.js?v=0.90.49';
-import {SIDE_CAMPAIGNS,campaignRoom,campaignArea,campaignState,campaignGuard,campaignGiver,campaignGiverSpot,campaignObjective,campaignReminder,campaignControlHelp,campaignPages,campaignRecordHTML,campaignParagraphs,campaignJournal,campaignGateOpen,campaignBlocked,campaignClue,campaignPuzzle,campaignReset,campaignAffinity,campaignAssist,campaignChoose,claimCampaign,campaignRoute,installCampaignTrainers,drawCampaignScene} from './side-campaigns.js?v=0.90.20';
-import {SALVATION_MOVE,SALVATION_ID,resolveSalvationMove,teachSalvation} from './salvation.js?v=0.90.49';
-import {variableEarlyTrainer} from './trainer-team-variety.js?v=0.87.0';
-import {drawBellLantern,drawAncientBellGate,bellLanternHit} from './bell-scenery.js?v=0.87.0';
-import {makeSaveFile,parseSaveFile,saveFileName,SAVE_FILE_LIMIT} from './save-transfer.js?v=0.90.36';
-import {BELL_GUARDS,BELL_SWITCHES,BELL_CORE_PRICE,bellPathBlocked,bellGateOpen,turnBellSwitch,defeatBellGuard,buyQuestCore,relicQuestState,collectBellFragment,restoreRelicBell,claimQuestCore,claimRescuedRivet,relicQuestSpots,relicQuestObjective,RELIC_RESCUE_OPPONENTS,RIVET_STANDOFF,relicRescueBlocked,relicRescueNearby,relicRescueHit} from './relic-quest.js?v=0.87.0';
-import {doubleRound,doubleLivingTargets} from './relic-double.js?v=0.90.18';
-import {RELIC_ITEMS,RELIC_BRANCHES,RIVET_ID,markWarbond} from './relic-family.js?v=0.87.0';
-import {promoteUsingItem} from './evolution.js?v=0.90.49';
-import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS,cybressaRoute,installCybressaTrainers} from './cybressa-data.js?v=0.90.49';
-import {cybressaUnlocked,cybressaState,acceptWarehouseQuest,warehouseReady,recordWarehouseEvidence,allocateCybressaGrain,receiveWatercraft,startCybressaQuest,cybressaQuestFinds,claimCybressaCache,finishCybressaQuest,cybressaObjective,cybressaJournal,createCybressaTrial,registerCybressaTrial,completeCybressaTrial,continueCybressaTrial,finishCybressaTrialRun} from './cybressa-rules.js?v=0.90.23';
-import {activeDraughts,draughtQuote,buyTrainingDraught,trainingBattleUids,settleTrainingBattle} from './training-draughts.js?v=0.90.22';
-import {migrateCanonicalBattle} from './canonical-character-names.js?v=0.87.0';
-import {migrateBattleCharacterNames} from './character-names.js?v=0.87.0';
-import {LIFE_EMBER,LIFE_EMBER_PICKUPS,livesRemaining,lifeCapacity,grantExtraLife,claimLifeEmber} from './extra-lives.js?v=0.87.0';
-import {HUMAN_MEMORIAL,companionHumanMemorial,memorialState,visitMemorialTown,resurrectionQuote,resurrectPartner} from './memorial.js?v=0.87.0';
-import {TRAVEL_HUBS,fastTravelUnlocked,travelQuote,payTravelFare,recordTravelVisit,travelDestinations,visitedTravelRooms} from './fast-travel.js?v=0.90.46';
-import {applyRelearn} from './move-relearning.js?v=0.90.49';
-import {battleDoubloonQuote} from './expedition-abilities.js?v=0.90.41';
-import {installFieldVoices,healFortParty,CACHE_LORE} from './field-polish.js?v=0.87.0';
-import {isRouteSign,signContains} from './route-signposts.js?v=0.87.0';
-import {biomeEncounterHint} from './biome-world.js?v=0.90.41';
-import {defeatExpMultiplier,rimebunWildMove} from './rimebun.js?v=0.87.0';
-import {activateBinoculars} from './binoculars.js?v=0.87.0';
-import {startingMoveIds} from './moveset-identity.js?v=0.90.49';
-import {pickupCollected,pickupFieldSpots,drawWorldPickups} from './world-pickups.js?v=0.87.0';
-import {LEADER_FORTS,FORT_SYMBOLS,fortForRoom,fortForLeader} from './leader-fort-data.js?v=0.90.49';
-import {leaderFortState,fortGateOpen,leaderFortBlocked,fortStoneAt,pushFortStone,resetFortPuzzle,turnFortRing,canChallengeFortLeader,fortGuardAvailable,claimFortCache,leaderFortObjective,leaderFortJournal,installLeaderFortTrainers} from './leader-fort-rules.js?v=0.90.20';
-import {drawLeaderFortState} from './leader-fort-world.js?v=0.90.41';
-import {huntFrame,prepareHuntArt,drawHuntActor,drawHuntScene,playHunt,shouldStartHunt} from './waran-hunt.js?v=0.90.20';
-import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.49';
-import {explorationState,claimExplorationCache,tradeCandidates,exchangeAbyssal,questFinds,recordExplorationFind,finishExplorationQuest,canMeetMythic,resolveCaveMythic,caveRoute,installExplorationTrainers,explorationJournal} from './exploration-rules.js?v=0.87.0';
-import {EXPANSION_HABITATS} from './full-encounters.js?v=0.87.0';
-import {expandEncounterRoute} from './roster-encounters.js?v=0.90.49';
-import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.87.0';
-import {RESCUE_GIFTS,rescueGiftPool,chooseRescueTypes,validRescueTypes,rescueGiftChoices,RESCUE_SOLDIERS,GAME_DAY_MS,FISH_DAYLIGHT_MS,fishingDeadline,fishingClosed,fishingCanSubmit,fishingReadyAt,canEnterCompetition,FISH_ENTRY_FEE,FISH_PRIZES,adventureState,gameDay,rescueReady,completeRescue,claimRescueGift,receiveRod,enterCompetition,nextFishingEncounter,waterBaitModifier,canUseWaterBait,recordFishingCatch,fishScore,finishCompetition,fishingResults,availableFishingPrizes,claimFishingPrize,canLearnScroll,sideObjective,sideJournal} from './side-adventures.js?v=0.90.41';
-import {sideFieldSpots} from './side-world.js?v=0.90.41';
-import {MEDICINE_GUARD,migrateHospiceQuest,hospiceQuest,requestHospiceMedicine,canFightMedicineGuard,defeatMedicineGuard,carryingHospiceMedicine,deliverHospiceMedicine,hospiceReady,hospiceFieldSpots,hospiceObjective,journalSummary} from './hospice-quest.js?v=0.87.0';
-import {createCompanion,resetCompanion,syncCompanion,followPlayerStep,advanceCompanion,recordCompanionStep,talkToCompanion,drawCompanion} from './companion.js?v=0.90.49';
-import {signatureArtReady} from './signature-effects.js?v=0.90.49';
-import {healthKey,captureHealth,healthChanges,presentedHP} from './health-presentation.js?v=0.87.0';
-import {statusHTML} from './battle-status.js?v=0.90.49';
-import {learnTreeHTML} from './learn-tree.js?v=0.90.49';
-import {moveUsable,movePriority} from './move-rules.js?v=0.90.49';
+import {ORCHARD_ROUTES,orchardRoute,installCossenneTrainers} from './cossenne-data.js?v=0.90.52';
+import {handleCossenne,orchardHistoryHTML} from './cossenne-ui.js?v=0.90.52';
+import {cossenneState,cossenneEvent,cossenneReady,cossenneObjective,cossenneJournal,settleCossenneFate} from './cossenne-rules.js?v=0.90.52';
+import {drawOrchardLife} from './cossenne-art.js?v=0.90.52';
+import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.90.52';
+import {CAELYNX_ENCOUNTER,CAELYNX_ID,SCHOLAR,FOSSILS,WATCH_RECORD,BED_TEXT,QUEST_SPOTS,mountainQuestState,mountainFind,canMeetCaelynx,resolveCaelynx,reviveMountainFossil,mountainQuestHint,drawMountainQuestScene} from './mountain-quests.js?v=0.90.52';
+import {PASS_NPCS,passRecordHTML} from './mountain-pass.js?v=0.90.52';
+import {trainerPortraitId,trainerBattleArtId,dialoguePortraitId} from './side-trainer-art.js?v=0.90.52';
+import {courtState,rollCourtEncounter,courtEnemy,storeRoamer,courtRound,courtJournal} from './paladin-roaming.js?v=0.90.52';
+import {COURT_ROOMS,COURT_COMMANDER,COURT_INSCRIPTIONS,readCourtInscription,pressCourtSeal,acceptCourt,prepareCourtRelease,finishCourtRelease,courtGateOpen,courtGateHint,courtBlocked,courtObjective,courtSpots,courtRoute,installCourtTrainers} from './paladin-quest.js?v=0.90.52';
+import {COURT_DIALOGUE} from './paladin-dialogue.js?v=0.90.52';
+import {courtFrame,drawCourtScene,drawCourtHuman,prepareCourtArt} from './paladin-art.js?v=0.90.52';
+import {paladinEncounterRoute,jungleRoute} from './paladin-encounters.js?v=0.90.52';
+import {bindMenagerieParty} from './menagerie-rules.js?v=0.90.52';
+import {drawBoulder,drawQuestMechanism} from './quest-scenery.js?v=0.90.52';
+import {jettyFor,nextJettyEncounter,keepContestBait,canOfferRiverBait,spendRiverBait} from './jetty-fishing.js?v=0.90.52';
+import {QUEST_REWARDS,rewardPending,nurseryOffers,grantQuestReward,SECRET_MOVES,canLearnSecret,teachSecret,distinctAbilitySlots,abilityOptions,awakenAbility,selectAbility} from './quest-rewards.js?v=0.90.52';
+import {preserveStrength,WINTER_PRESERVE} from './quest-rewards-data.js?v=0.90.52';
+import {SIDE_CAMPAIGNS,campaignRoom,campaignArea,campaignState,campaignGuard,campaignGiver,campaignGiverSpot,campaignObjective,campaignReminder,campaignControlHelp,campaignPages,campaignRecordHTML,campaignParagraphs,campaignJournal,campaignGateOpen,campaignBlocked,campaignClue,campaignPuzzle,campaignReset,campaignAffinity,campaignAssist,campaignChoose,claimCampaign,campaignRoute,installCampaignTrainers,drawCampaignScene} from './side-campaigns.js?v=0.90.52';
+import {SALVATION_MOVE,SALVATION_ID,resolveSalvationMove,teachSalvation} from './salvation.js?v=0.90.52';
+import {variableEarlyTrainer} from './trainer-team-variety.js?v=0.90.52';
+import {drawBellLantern,drawAncientBellGate,bellLanternHit} from './bell-scenery.js?v=0.90.52';
+import {makeSaveFile,parseSaveFile,saveFileName,SAVE_FILE_LIMIT} from './save-transfer.js?v=0.90.52';
+import {BELL_GUARDS,BELL_SWITCHES,BELL_CORE_PRICE,bellPathBlocked,bellGateOpen,turnBellSwitch,defeatBellGuard,buyQuestCore,relicQuestState,collectBellFragment,restoreRelicBell,claimQuestCore,claimRescuedRivet,relicQuestSpots,relicQuestObjective,RELIC_RESCUE_OPPONENTS,RIVET_STANDOFF,relicRescueBlocked,relicRescueNearby,relicRescueHit} from './relic-quest.js?v=0.90.52';
+import {doubleRound,doubleLivingTargets} from './relic-double.js?v=0.90.52';
+import {RELIC_ITEMS,RELIC_BRANCHES,RIVET_ID,markWarbond} from './relic-family.js?v=0.90.52';
+import {promoteUsingItem} from './evolution.js?v=0.90.52';
+import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS,cybressaRoute,installCybressaTrainers} from './cybressa-data.js?v=0.90.52';
+import {cybressaUnlocked,cybressaState,acceptWarehouseQuest,warehouseReady,recordWarehouseEvidence,allocateCybressaGrain,receiveWatercraft,startCybressaQuest,cybressaQuestFinds,claimCybressaCache,finishCybressaQuest,cybressaObjective,cybressaJournal,createCybressaTrial,registerCybressaTrial,completeCybressaTrial,continueCybressaTrial,finishCybressaTrialRun} from './cybressa-rules.js?v=0.90.52';
+import {activeDraughts,draughtQuote,buyTrainingDraught,trainingBattleUids,settleTrainingBattle} from './training-draughts.js?v=0.90.52';
+import {migrateCanonicalBattle} from './canonical-character-names.js?v=0.90.52';
+import {migrateBattleCharacterNames} from './character-names.js?v=0.90.52';
+import {LIFE_EMBER,LIFE_EMBER_PICKUPS,livesRemaining,lifeCapacity,grantExtraLife,claimLifeEmber} from './extra-lives.js?v=0.90.52';
+import {HUMAN_MEMORIAL,companionHumanMemorial,memorialState,visitMemorialTown,resurrectionQuote,resurrectPartner} from './memorial.js?v=0.90.52';
+import {TRAVEL_HUBS,fastTravelUnlocked,travelQuote,payTravelFare,recordTravelVisit,travelDestinations,visitedTravelRooms} from './fast-travel.js?v=0.90.52';
+import {applyRelearn} from './move-relearning.js?v=0.90.52';
+import {battleDoubloonQuote} from './expedition-abilities.js?v=0.90.52';
+import {installFieldVoices,healFortParty,CACHE_LORE} from './field-polish.js?v=0.90.52';
+import {isRouteSign,signContains} from './route-signposts.js?v=0.90.52';
+import {biomeEncounterHint} from './biome-world.js?v=0.90.52';
+import {defeatExpMultiplier,rimebunWildMove} from './rimebun.js?v=0.90.52';
+import {activateBinoculars} from './binoculars.js?v=0.90.52';
+import {startingMoveIds} from './moveset-identity.js?v=0.90.52';
+import {pickupCollected,pickupFieldSpots,drawWorldPickups} from './world-pickups.js?v=0.90.52';
+import {LEADER_FORTS,FORT_SYMBOLS,fortForRoom,fortForLeader} from './leader-fort-data.js?v=0.90.52';
+import {leaderFortState,fortGateOpen,leaderFortBlocked,fortStoneAt,pushFortStone,resetFortPuzzle,turnFortRing,canChallengeFortLeader,fortGuardAvailable,claimFortCache,leaderFortObjective,leaderFortJournal,installLeaderFortTrainers} from './leader-fort-rules.js?v=0.90.52';
+import {drawLeaderFortState} from './leader-fort-world.js?v=0.90.52';
+import {huntFrame,prepareHuntArt,drawHuntActor,drawHuntScene,playHunt,shouldStartHunt} from './waran-hunt.js?v=0.90.52';
+import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.52';
+import {explorationState,claimExplorationCache,tradeCandidates,exchangeAbyssal,questFinds,recordExplorationFind,finishExplorationQuest,canMeetMythic,resolveCaveMythic,caveRoute,installExplorationTrainers,explorationJournal} from './exploration-rules.js?v=0.90.52';
+import {EXPANSION_HABITATS} from './full-encounters.js?v=0.90.52';
+import {expandEncounterRoute} from './roster-encounters.js?v=0.90.52';
+import {isReducedMotion,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.90.52';
+import {RESCUE_GIFTS,rescueGiftPool,chooseRescueTypes,validRescueTypes,rescueGiftChoices,RESCUE_SOLDIERS,GAME_DAY_MS,FISH_DAYLIGHT_MS,fishingDeadline,fishingClosed,fishingCanSubmit,fishingReadyAt,canEnterCompetition,FISH_ENTRY_FEE,FISH_PRIZES,adventureState,gameDay,rescueReady,completeRescue,claimRescueGift,receiveRod,enterCompetition,nextFishingEncounter,waterBaitModifier,canUseWaterBait,recordFishingCatch,fishScore,finishCompetition,fishingResults,availableFishingPrizes,claimFishingPrize,canLearnScroll,sideObjective,sideJournal} from './side-adventures.js?v=0.90.52';
+import {sideFieldSpots} from './side-world.js?v=0.90.52';
+import {MEDICINE_GUARD,migrateHospiceQuest,hospiceQuest,requestHospiceMedicine,canFightMedicineGuard,defeatMedicineGuard,carryingHospiceMedicine,deliverHospiceMedicine,hospiceReady,hospiceFieldSpots,hospiceObjective,journalSummary} from './hospice-quest.js?v=0.90.52';
+import {createCompanion,resetCompanion,syncCompanion,followPlayerStep,advanceCompanion,recordCompanionStep,talkToCompanion,drawCompanion} from './companion.js?v=0.90.52';
+import {signatureArtReady} from './signature-effects.js?v=0.90.52';
+import {healthKey,captureHealth,healthChanges,presentedHP} from './health-presentation.js?v=0.90.52';
+import {statusHTML} from './battle-status.js?v=0.90.52';
+import {learnTreeHTML} from './learn-tree.js?v=0.90.52';
+import {moveUsable,movePriority} from './move-rules.js?v=0.90.52';
 let presentationHealth=null;
 const shownHP=u=>presentationHealth?.[healthKey(u)]??u.hp;
-import {growthSummaryHTML} from './growth-summary.js?v=0.90.35';
-import {ESCORT_STEPS,PRIEST_RETURNS,rememberPriestRest,evacDestination,activateEscort,advanceEscortStep,consumeEvac} from './field-items.js?v=0.90.39';
-import {evacHorses,drawEvacHorse} from './evac-horses.js?v=0.87.0';
-import {territoryBloom} from './expansion-world.js?v=0.90.42';
-import {worldPortrait,portraitBounds,drawWorldCharacter,WORLD_WALK_IDS} from './world-characters.js?v=0.90.41';
-import {enterTrainerArea,trainerStandingDown,standDownTrainer} from './trainer-stand-down.js?v=0.87.0';
-import {wildEscape} from './escape-rules.js?v=0.87.0';
-import {SHOPKEEPERS,SHOP_STOCK,shopStock,unlockGeneralStore,purchaseQuote,buySupplies} from './shopkeepers.js?v=0.90.41';
-import {recordFarewell} from './farewells.js?v=0.87.0';
-import {routeStage} from './route-progression.js?v=0.90.41';
-import {installRouteTrainers} from './route-roster.js?v=0.87.0';
-import {abilityInfo,abilityName,abilityMemory,abilityImmunity,beginAbilities,resumeAbilities,enterAbility,leaveAbility,canSwitch,heldInfo,healingMultiplier} from './abilities.js?v=0.90.49';
-import {HELD_ITEMS} from './held-data.js?v=0.90.49';
-import {tunedEvolution} from './evolution-tuning.js?v=0.87.0';
-import {BOARD,onBoard,boardWall,stoneAt,pushStone,resetStones,puzzleState,PUZZLE_CLUE} from './tunnel-puzzle.js?v=0.87.0';
-import {createTrainers,updateTrainers} from './trainer-actors.js?v=0.90.51';
-import {typeChartHTML,matchupHTML} from './type-chart.js?v=0.87.0';
-import {TYPES,TYPE_COLORS,typeEffectiveness,effectivenessLabel,effectivenessClass,categorySymbol,categoryLabel} from './type-rules.js?v=0.87.0';
-import {openingTrainer,starterCare,leaderVariant,restoreMove} from './opening-balance.js?v=0.90.46';
-import {migrateStats} from './stat-balance.js?v=0.87.0';
-import {migrateProgress} from './save-migration.js?v=0.90.41';
-import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.41';
-import {eligibleEvolutions,promote,levelMoves,entryMoves,relearnPool} from './evolution.js?v=0.90.49';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.49';
-import {trainerPayout,claimTrainerPayout,TRAINER_VOICES} from './trainer-rewards.js?v=0.90.20';
-import {NEW_MAPS,NEW_DOORS,isNewInterior} from './expansion-world.js?v=0.90.45';
-import {EXPANSION} from './expansion-data.js?v=0.90.49';
-import {revealLevel} from './level-reveal.js?v=0.87.0';
-import {nextCommand} from './menu-navigation.js?v=0.87.0';
-import {PLAYER_SPRITE} from './player-sprite.js?v=0.87.0';
-import {normalizeProgress,initializeProgress,growLevel,rewardsFor,STAT_KEYS,STAT_LABELS,permanentGrowthMultiplier,inheritedGrowthBonus} from './progression.js?v=0.90.41';
-import {createResidents,residentBlocks,updateResidents} from './residents.js?v=0.87.0';
-import {cleanName,escapeHTML,unitName} from './names.js?v=0.87.0';
-import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.90.20';
-import {ROUTE} from './route-data.js?v=0.90.49';
-import {phaseAt,pickEncounter,capturePreview,formatCaptureChance,resolveCapture,settleStarter,completeStarterReturn,captureMilestones} from './route-rules.js?v=0.90.39';
-import {effectSpec,effectHTML} from './effects.js?v=0.90.49';
-import {readSave,writeSave,clearSave,selectSlot,currentSlot,listSlots,migrateLegacy,writeImportedSave} from './save.js?v=0.87.0';
-import {createTitle,chapterCard} from './title.js?v=0.87.0';
-import {DATA} from './data.js?v=0.90.49';
-import {DOORS,AREA_GATES,gateAt,spotsFor,roomName,isBlocked,drawMap,drawWorldAsset,isEncounterTerrain,nearestWalkable} from './world.js?v=0.90.41';
-import {beginStep,advanceStep,walkFrame,travelDuration} from './movement.js?v=0.87.0';
-import {detailsHTML} from './move-details.js?v=0.90.49';
-import {instance,rng,turnOrder,applyMove,cleanupRound,heal,pathfind,stageMultiplier} from './engine.js?v=0.90.51';
+import {growthSummaryHTML} from './growth-summary.js?v=0.90.52';
+import {ESCORT_STEPS,PRIEST_RETURNS,rememberPriestRest,evacDestination,activateEscort,advanceEscortStep,consumeEvac} from './field-items.js?v=0.90.52';
+import {evacHorses,drawEvacHorse} from './evac-horses.js?v=0.90.52';
+import {territoryBloom} from './expansion-world.js?v=0.90.52';
+import {worldPortrait,portraitBounds,drawWorldCharacter,WORLD_WALK_IDS} from './world-characters.js?v=0.90.52';
+import {enterTrainerArea,trainerStandingDown,standDownTrainer} from './trainer-stand-down.js?v=0.90.52';
+import {wildEscape} from './escape-rules.js?v=0.90.52';
+import {SHOPKEEPERS,SHOP_STOCK,shopStock,unlockGeneralStore,purchaseQuote,buySupplies} from './shopkeepers.js?v=0.90.52';
+import {recordFarewell} from './farewells.js?v=0.90.52';
+import {routeStage} from './route-progression.js?v=0.90.52';
+import {installRouteTrainers} from './route-roster.js?v=0.90.52';
+import {abilityInfo,abilityName,abilityMemory,abilityImmunity,beginAbilities,resumeAbilities,enterAbility,leaveAbility,canSwitch,heldInfo,healingMultiplier} from './abilities.js?v=0.90.52';
+import {HELD_ITEMS} from './held-data.js?v=0.90.52';
+import {tunedEvolution} from './evolution-tuning.js?v=0.90.52';
+import {BOARD,onBoard,boardWall,stoneAt,pushStone,resetStones,puzzleState,PUZZLE_CLUE} from './tunnel-puzzle.js?v=0.90.52';
+import {createTrainers,updateTrainers} from './trainer-actors.js?v=0.90.52';
+import {typeChartHTML,matchupHTML} from './type-chart.js?v=0.90.52';
+import {TYPES,TYPE_COLORS,typeEffectiveness,effectivenessLabel,effectivenessClass,categorySymbol,categoryLabel} from './type-rules.js?v=0.90.52';
+import {openingTrainer,starterCare,leaderVariant,restoreMove} from './opening-balance.js?v=0.90.52';
+import {migrateStats} from './stat-balance.js?v=0.90.52';
+import {migrateProgress} from './save-migration.js?v=0.90.52';
+import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.52';
+import {eligibleEvolutions,promote,levelMoves,entryMoves,relearnPool} from './evolution.js?v=0.90.52';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.52';
+import {trainerPayout,claimTrainerPayout,TRAINER_VOICES} from './trainer-rewards.js?v=0.90.52';
+import {NEW_MAPS,NEW_DOORS,isNewInterior} from './expansion-world.js?v=0.90.52';
+import {EXPANSION} from './expansion-data.js?v=0.90.52';
+import {revealLevel} from './level-reveal.js?v=0.90.52';
+import {nextCommand} from './menu-navigation.js?v=0.90.52';
+import {PLAYER_SPRITE} from './player-sprite.js?v=0.90.52';
+import {normalizeProgress,initializeProgress,growLevel,rewardsFor,STAT_KEYS,STAT_LABELS,permanentGrowthMultiplier,inheritedGrowthBonus} from './progression.js?v=0.90.52';
+import {createResidents,residentBlocks,updateResidents} from './residents.js?v=0.90.52';
+import {cleanName,escapeHTML,unitName} from './names.js?v=0.90.52';
+import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.90.52';
+import {ROUTE} from './route-data.js?v=0.90.52';
+import {phaseAt,pickEncounter,capturePreview,formatCaptureChance,resolveCapture,settleStarter,completeStarterReturn,captureMilestones} from './route-rules.js?v=0.90.52';
+import {effectSpec,effectHTML} from './effects.js?v=0.90.52';
+import {readSave,writeSave,clearSave,selectSlot,currentSlot,listSlots,migrateLegacy,writeImportedSave} from './save.js?v=0.90.52';
+import {createTitle,chapterCard} from './title.js?v=0.90.52';
+import {DATA} from './data.js?v=0.90.52';
+import {DOORS,AREA_GATES,gateAt,spotsFor,roomName,isBlocked,drawMap,drawWorldAsset,isEncounterTerrain,nearestWalkable} from './world.js?v=0.90.52';
+import {beginStep,advanceStep,walkFrame,travelDuration} from './movement.js?v=0.90.52';
+import {detailsHTML} from './move-details.js?v=0.90.52';
+import {instance,rng,turnOrder,applyMove,cleanupRound,heal,pathfind,stageMultiplier} from './engine.js?v=0.90.52';
 const $=s=>document.querySelector(s), byId=id=>DATA.species.find(x=>x.id===id), moveId=id=>DATA.moves.find(x=>x.id===canonicalMoveId(id));
 preloadCombatArt(['001','004','007','010','012','014','018','033']);
 installRouteTrainers(EXPANSION,TRAINER_VOICES);
@@ -234,7 +234,7 @@ function refresh(){syncHellPortal();const chapterNode=$('#brand-chapter');if(cha
  renderFortLift();$('#party-button').textContent=`Expedition · ${state.party.filter(u=>u.hp>0).length} / 6`;for(const spot of spots){const el=$(`[data-spot="${spot.id}"]`);if(el){el.classList.toggle('current',(spot.id==='pate'&&!state.pate)||(spot.id==='trade'&&state.pate&&!state.trade)||(spot.id==='kurg'&&state.trade&&(!state.starter&&!state.starterChosen))||(spot.id==='aeric'&&state.starter&&!state.blessing)||(spot.id==='beric'&&state.blessing&&!state.test)||(spot.id==='exit'&&state.test));el.classList.toggle('complete',Boolean(state[spot.id]||(spot.id==='beric'&&state.test)||(spot.id==='aeric'&&state.blessing)));}}
 }
 function showDialogue(lines,onEnd){stopMovement();dialogue={lines,index:0,onEnd};$('#dialogue').hidden=false;renderDialogue();blip();}
-function renderDialogue(){const current=dialogue,line=current.lines[current.index],subject=line.abyssalUnit||line.abyssalId,portrait=dialoguePortraitId(line.portrait,EXPANSION.trainers);const centre={"CHR-AIMON":35.6,"CHR-KURG":53.1,"CHR-AERIC":51.2,"TRN-C01-001":44.6,"bystander":55.5}[portrait]??50;$('#dialogue').innerHTML=`<div class="dialogue-box fade ${portrait||line.abyssalId?'has-bust':''}">${line.abyssalId?`<div class="dialogue-bust companion-bust ${line.farmBust?'farm-bust':''}">${line.farmBust?`<svg viewBox="${line.farmBust.join(' ')}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeHTML(line.speaker)}, battle portrait"><image href="assets/${line.abyssalId}.webp?v=0.87.0" width="512" height="512"/></svg>`:`<img class="dialogue-creature-art" src="${combatArtSrc(subject)}" alt="${escapeHTML(line.speaker)}">`}</div>`:''}${portrait?`<div class="dialogue-bust" style="--portrait-centre:${centre}%"><img class="${portrait==='bystander'?'bystander-bust':''}" src="${portrait==='bystander'?'assets/bystander-bust.webp':imageCache[portrait]?.src||'assets/'+portrait+'.webp'}" alt="${escapeHTML(line.speaker)}, speaker portrait"></div>`:''}<div class="dialogue-content"><div class="speaker">${escapeHTML(line.speaker==='Aimon'?state.playerName:line.speaker)}</div>${line.mood?`<span class="companion-mood">Mood · ${escapeHTML(line.mood)}</span>`:''}<p class="dialogue-text">${escapeHTML(line.text.replace(/\bAimon\b/g,state.playerName))}</p><div class="dialogue-actions"><span class="line-counter">${current.index+1} / ${current.lines.length}</span>${line.choices?line.choices.map((c,i)=>`<button data-choice="${i}" class="${i===0?'primary':''}">${c.text}</button>`).join(''):`<button id="next-line" class="primary">${current.index===current.lines.length-1?'Continue':'Next'} <kbd>↵</kbd></button>`}</div></div></div>`;
+function renderDialogue(){const current=dialogue,line=current.lines[current.index],subject=line.abyssalUnit||line.abyssalId,portrait=dialoguePortraitId(line.portrait,EXPANSION.trainers);const centre={"CHR-AIMON":35.6,"CHR-KURG":53.1,"CHR-AERIC":51.2,"TRN-C01-001":44.6,"bystander":55.5}[portrait]??50;$('#dialogue').innerHTML=`<div class="dialogue-box fade ${portrait||line.abyssalId?'has-bust':''}">${line.abyssalId?`<div class="dialogue-bust companion-bust ${line.farmBust?'farm-bust':''}">${line.farmBust?`<svg viewBox="${line.farmBust.join(' ')}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeHTML(line.speaker)}, battle portrait"><image href="assets/${line.abyssalId}.webp?v=0.90.52" width="512" height="512"/></svg>`:`<img class="dialogue-creature-art" src="${combatArtSrc(subject)}" alt="${escapeHTML(line.speaker)}">`}</div>`:''}${portrait?`<div class="dialogue-bust" style="--portrait-centre:${centre}%"><img class="${portrait==='bystander'?'bystander-bust':''}" src="${portrait==='bystander'?'assets/bystander-bust.webp':imageCache[portrait]?.src||'assets/'+portrait+'.webp'}" alt="${escapeHTML(line.speaker)}, speaker portrait"></div>`:''}<div class="dialogue-content"><div class="speaker">${escapeHTML(line.speaker==='Aimon'?state.playerName:line.speaker)}</div>${line.mood?`<span class="companion-mood">Mood · ${escapeHTML(line.mood)}</span>`:''}<p class="dialogue-text">${escapeHTML(line.text.replace(/\bAimon\b/g,state.playerName))}</p><div class="dialogue-actions"><span class="line-counter">${current.index+1} / ${current.lines.length}</span>${line.choices?line.choices.map((c,i)=>`<button data-choice="${i}" class="${i===0?'primary':''}">${c.text}</button>`).join(''):`<button id="next-line" class="primary">${current.index===current.lines.length-1?'Continue':'Next'} <kbd>↵</kbd></button>`}</div></div></div>`;
  if(line.abyssalId&&!line.farmBust)void battleArtReady(subject).then(()=>{if(dialogue!==current||current.lines[current.index]!==line)return;const img=$('#dialogue .dialogue-creature-art');if(img)img.src=combatArtSrc(subject);});
  for(const img of $('#dialogue').querySelectorAll('img'))img.onerror=()=>{img.hidden=true;img.parentElement.classList.add('portrait-unavailable');};
  if(line.choices)document.querySelectorAll('[data-choice]').forEach(el=>el.onclick=()=>{const c=line.choices[+el.dataset.choice];closeDialogue();c.action();});else $('#next-line').onclick=nextLine;}
@@ -274,10 +274,10 @@ function openModal(title,content,onClose=null){modalOnClose=onClose;if(presentat
 function closeModal(){if(presentationLocked||state.rewardQueue?.length||state.pendingFate||[...state.party,...state.reserve].some(u=>u.capturePlacementPending))return;modalViews.remember($('.modal'),document.activeElement);modal=false;$('#modal-root').innerHTML='';held=null;const afterClose=modalOnClose;modalOnClose=null;afterClose?.();if(modalReturnFocus?.isConnected)modalReturnFocus.focus();}
 function chooseStarter(){
  const desc={'001':'Quick and elusive. Dark attacks reward decisive play.','004':'A thoughtful partner. Build special attack, then strike.','007':'A sturdy fighter. Powerful blows, with limited PP.'};
- openModal('Choose your first partner',`<p>Scarimp, Calibrit or Ruffurn. The other two will accompany Pate and Trade. Your original partner has three lives.</p><div class="starters">${['001','004','007'].map(id=>`<button class="starter selection-idle" data-starter="${id}"><img src="assets/${id}.webp?v=0.87.0" alt="${byId(id).name}"><h3>${byId(id).name}</h3><span>${byId(id).types[0]}</span><p>${desc[id]}</p></button>`).join('')}</div>`);
+ openModal('Choose your first partner',`<p>Scarimp, Calibrit or Ruffurn. The other two will accompany Pate and Trade. Your original partner has three lives.</p><div class="starters">${['001','004','007'].map(id=>`<button class="starter selection-idle" data-starter="${id}"><img src="assets/${id}.webp?v=0.90.52" alt="${byId(id).name}"><h3>${byId(id).name}</h3><span>${byId(id).types[0]}</span><p>${desc[id]}</p></button>`).join('')}</div>`);
  document.querySelectorAll('[data-starter]').forEach(btn=>btn.onclick=()=>confirmStarter(btn.dataset.starter));
 }
-function confirmStarter(id){if(state.starterChosen)return;const s=byId(id);openModal(s.name,`<p>You’ll set out with ${s.name}. Pate and Trade will take the remaining partners.</p><div class="partner-mini"><img src="assets/${id}.webp?v=0.87.0" alt="${s.name}"><div><b>${s.name}</b><small>${s.types.join(' / ')} · Three original lives</small></div></div><div class="modal-actions"><button id="back-starters">Back</button><button class="primary" id="confirm-starter">Choose ${s.name}</button></div>`);$('#back-starters').onclick=chooseStarter;$('#confirm-starter').onclick=async()=>{if(presentationLocked)return;presentationLocked=true;document.querySelectorAll('#modal-root button').forEach(b=>b.disabled=true);$('.modal').classList.add('partner-confirmed');$('.partner-mini').classList.add('bond-animation');$('.partner-mini').insertAdjacentHTML('afterend',`<p class="bond-caption">${s.name} joins your expedition.</p>`);await delay(reducedMotion()?100:850);const moves=startingMoveIds(DATA,s,8).map(moveId);state.starter=instance(s,8,moves);state.starter.uid='unit-'+state.nextUnitId++;initializeProgress(state.starter);state.starter.originalStarter=true;state.starterChosen=true;state.starter.lives=3;starterCare(state.starter);state.party=[state.starter];state.leadUid=state.starter.uid;persist();presentationLocked=false;closeModal();refresh();nicknamePrompt(state.starter,()=>showDialogue([line('Aimon',`All right, ${unitName(state.starter)}. We’re going to catch up with them.`,'CHR-AIMON'),line('General William de Montfort','Walter first. Geoffrey second. Don’t make me repeat myself.','CHR-KURG')]));};}
+function confirmStarter(id){if(state.starterChosen)return;const s=byId(id);openModal(s.name,`<p>You’ll set out with ${s.name}. Pate and Trade will take the remaining partners.</p><div class="partner-mini"><img src="assets/${id}.webp?v=0.90.52" alt="${s.name}"><div><b>${s.name}</b><small>${s.types.join(' / ')} · Three original lives</small></div></div><div class="modal-actions"><button id="back-starters">Back</button><button class="primary" id="confirm-starter">Choose ${s.name}</button></div>`);$('#back-starters').onclick=chooseStarter;$('#confirm-starter').onclick=async()=>{if(presentationLocked)return;presentationLocked=true;document.querySelectorAll('#modal-root button').forEach(b=>b.disabled=true);$('.modal').classList.add('partner-confirmed');$('.partner-mini').classList.add('bond-animation');$('.partner-mini').insertAdjacentHTML('afterend',`<p class="bond-caption">${s.name} joins your expedition.</p>`);await delay(reducedMotion()?100:850);const moves=startingMoveIds(DATA,s,8).map(moveId);state.starter=instance(s,8,moves);state.starter.uid='unit-'+state.nextUnitId++;initializeProgress(state.starter);state.starter.originalStarter=true;state.starterChosen=true;state.starter.lives=3;starterCare(state.starter);state.party=[state.starter];state.leadUid=state.starter.uid;persist();presentationLocked=false;closeModal();refresh();nicknamePrompt(state.starter,()=>showDialogue([line('Aimon',`All right, ${unitName(state.starter)}. We’re going to catch up with them.`,'CHR-AIMON'),line('General William de Montfort','Walter first. Geoffrey second. Don’t make me repeat myself.','CHR-KURG')]));};}
 function lifeEmberBagHTML(){return `<section class="field-supply"><div class="bag-item-heading"><h3>${itemIcon('lifeEmbers')}Life Ember</h3><b>× ${state.lifeEmbers||0}</b></div><p>${LIFE_EMBER.text}</p><button id="bag-use-life-ember" ${battle||state.wiped||!state.lifeEmbers?'disabled':''}>Give one extra life</button></section>`;}
 function lifeEmberTarget(){
  if(battle||presentationLocked||state.wiped||!state.lifeEmbers)return;
@@ -409,11 +409,21 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 function holdBeforeImpact(result){if(result.hpChanges?.length){presentationHealth??={};for(const h of result.hpChanges)presentationHealth[h.key]=h.before;}}
 async function drainHealth(result,durationOverride=null){const changes=(result.presentationMainChanges||result.hpChanges||[]).filter(h=>h.before!==h.after);if(!changes.length)return;presentationHealth??={};const duration=reducedMotion()?0:(durationOverride??760);await new Promise(resolve=>{const start=performance.now();function frame(now){const t=duration?Math.min(1,(now-start)/duration):1;for(const h of changes){const value=presentedHP(h,t);presentationHealth[h.key]=value;for(const hud of document.querySelectorAll('[data-health-key]'))if(hud.dataset.healthKey===h.key){const bar=hud.querySelector('.hp-track i');bar.style.width=(value/h.maxHp*100)+'%';bar.classList.toggle('low',value/h.maxHp<.3);hud.querySelector('.hp-numbers').textContent=value+' / '+h.maxHp+' HP';}}if(t<1)requestAnimationFrame(frame);else resolve();}requestAnimationFrame(frame);});}
 async function animateWrath(changes){const current=battle;if(!current)return;for(const change of changes){if(change.speciesId!=='381')continue;const u=[current.player,...current.enemies].find(u=>(u.uid||u.species.id)===change.uid);if(!u||u.hp<=0)continue;await Promise.all([combatArtReady({species:byId('381'),shiny:u.shiny}),combatArtReady({species:byId('381'),sunWrath:{active:true},shiny:u.shiny})]);if(battle!==current)return;const reduced=reducedMotion();$('#fx').innerHTML=`<div class="sun-wrath-scene ${reduced?'wrath-reduced':''}" role="status"><i class="wrath-tide"></i><i class="wrath-corona"></i><div class="wrath-forms"><img class="wrath-calm" src="${combatArtSrc({species:byId('381'),shiny:u.shiny})}" alt="Solmola before transformation"><img class="wrath-awakened" src="${combatArtSrc({species:byId('381'),sunWrath:{active:true},shiny:u.shiny})}" alt="Solmola in Sun God’s Wrath form"></div>${Array.from({length:12},(_,i)=>`<i class="wrath-spark" style="--n:${i}"></i>`).join('')}<div class="wrath-caption"><b>SUN GOD’S WRATH</b><span>${escapeHTML(unitName(u))} awakens · all six stats +25%</span></div></div>`;blip(220);await delay(reduced?350:2200);if(battle!==current)return;$('#fx').innerHTML='';renderBattle();}}
-async function animateResult(who,result,move){
- const current=battle;if(!current)return;await signatureArtReady(move);if(battle!==current)return;current.typeFeedback=move?.power&&!result.missed&&!result.skipped&&!result.immune?{value:result.effectiveness??1,type:move.type_id,who}:null;paintTypeFeedback();const visual=move||{id:0,type_id:result.messages?.some(t=>/poison/i.test(t))?'POISON':result.messages?.some(t=>/burn/i.test(t))?'FIRE':'NORMAL',power:0,effects:[]},spec=effectSpec(visual,result),enemy=$('.enemy-art'),viewport=$('#viewport');
- const self=!!result.skipped||!!result.selfDamage||!move||['SELF','ACTIVE_SIDE'].includes(move.target),enemyTarget=who==='player'?!self:self;
- const target=enemyTarget?$('.enemy-zone'):$('.battle-bottom .combat-hud'),source=who==='enemy'?$('.enemy-zone'):$('.battle-bottom .combat-hud'),v=viewport.getBoundingClientRect(),r=target?.getBoundingClientRect(),sr=source?.getBoundingClientRect(),x=r?r.left+r.width/2-v.left:v.width/2,y=r?r.top+r.height/2-v.top:v.height*.4,dx=self?0:sr?sr.left+sr.width/2-v.left-x:0,dy=self?0:sr?sr.top+sr.height/2-v.top-y:0;
- $('#fx').innerHTML=`<div class="fx-anchor" style="left:${x}px;top:${y}px;--source-x:${dx}px;--source-y:${dy}px;--travel-angle:${Math.atan2(-dy,-dx)*180/Math.PI}deg">${effectHTML(visual,{...result,targetArt:combatArtSrc(enemyTarget?current.enemies[current.index??0]:current.player)})}</div>`;
+function battleUnitNode(unit){const card=unit&&document.getElementById('double-unit-'+unit.uid);return card?.querySelector('img')||card;}
+async function animateFollowups(who,result,move,context,current){
+ if(result.visualMove&&battle===current)await animateResult(who,{...result,visualMove:null,reactions:[],hpChanges:[]},result.visualMove,context);
+ const units=[current.player,current.alliedRivet,...current.enemies].filter(Boolean);
+ const present=async reaction=>{if(battle!==current)return;holdBeforeImpact(reaction.result);const actor=units.find(u=>u.uid===reaction.actorUid)||context?.target,target=units.find(u=>u.uid===reaction.targetUid)||context?.actor;await animateResult(reaction.who,reaction.result,reaction.move,context&&actor&&target?{actor,target}:null);};
+ for(const reaction of result.reactions||[])await present(reaction);
+ if(!move&&result.messages?.some(t=>/Berry Pantry|Draining Roots/.test(t))){const queue=current.player.field?.orchardFX||[];if(current.player.field)current.player.field.orchardFX=[];for(const reaction of queue)await present(reaction);}
+}
+async function animateResult(who,result,move,context=null){
+ const current=battle;if(!current)return;await signatureArtReady(move);if(battle!==current)return;current.typeFeedback=move?.power&&!result.missed&&!result.skipped&&!result.immune?{value:result.effectiveness??1,type:move.type_id,who}:null;paintTypeFeedback();const visual=move||{id:0,type_id:result.messages?.some(t=>/poison/i.test(t))?'POISON':result.messages?.some(t=>/burn/i.test(t))?'FIRE':'NORMAL',power:0,effects:[]},spec=effectSpec(visual,result),viewport=$('#viewport');
+ // Hybrid attacks retain their foe target; secondary healing updates its ally's HP.
+ const actorModel=context?.actor||(who==='enemy'?current.enemies[current.index??0]:who==='ally'?current.alliedRivet:current.player),allyTarget=move?.allyTarget&&!move.power?selectedAlly(actorModel):null;
+ const self=!!result.skipped||!!result.selfDamage||!move||['SELF','ACTIVE_SIDE'].includes(move.target)||allyTarget===actorModel,targetModel=allyTarget||(context?(self?context.actor:context.target):null),enemyTarget=targetModel?current.enemies.includes(targetModel):who==='player'?!self:self;
+ const enemy=context?battleUnitNode(targetModel):$('.enemy-art'),target=context?battleUnitNode(targetModel):enemyTarget?$('.enemy-zone'):$('.battle-bottom .combat-hud'),source=context?battleUnitNode(context.actor):who==='enemy'?$('.enemy-zone'):$('.battle-bottom .combat-hud'),v=viewport.getBoundingClientRect(),r=target?.getBoundingClientRect(),sr=source?.getBoundingClientRect(),x=r?r.left+r.width/2-v.left:v.width/2,y=r?r.top+r.height/2-v.top:v.height*.4,dx=self?0:sr?sr.left+sr.width/2-v.left-x:0,dy=self?0:sr?sr.top+sr.height/2-v.top-y:0;
+ $('#fx').innerHTML=`<div class="fx-anchor" data-fx-actor="${escapeHTML(context?.actor?.uid||'')}" data-fx-target="${escapeHTML(targetModel?.uid||'')}" style="left:${x}px;top:${y}px;--source-x:${dx}px;--source-y:${dy}px;--travel-angle:${Math.atan2(-dy,-dx)*180/Math.PI}deg">${effectHTML(visual,{...result,targetArt:combatArtSrc(targetModel||(enemyTarget?current.enemies[current.index??0]:current.player))})}</div>`;
  if(spec.hit&&move?.power&&who==='enemy')enemy?.classList.add('charging');
  if(spec.pixel&&result.strikes?.length){
   let elapsed=0;const frames=move.id===790?(result.strikes.length===1?[1]:result.strikes.length===2?[1,4]:[1,4,7]):[spec.impact*16],frameCount=move.id===790?(result.strikes.length===1?12:result.strikes.length===2?15:16):16;
@@ -424,14 +434,12 @@ async function animateResult(who,result,move){
    await drainHealth(result.strikes[i],120);elapsed=at+120;
   }
   await delay(reducedMotion()?90:Math.max(0,spec.duration-elapsed));if(battle!==current)return;
-  enemy?.classList.remove('charging','hit');target?.classList.remove('hud-impact');viewport.classList.remove('power-hit');$('#fx').innerHTML='';return;
+  enemy?.classList.remove('charging','hit');target?.classList.remove('hud-impact');viewport.classList.remove('power-hit');$('#fx').innerHTML='';await animateFollowups(who,result,move,context,current);return;
  }
  const hitTime=Math.round(spec.duration*spec.impact);await delay(reducedMotion()?0:hitTime);if(battle!==current)return;
  enemy?.classList.remove('charging');if(result.damage||result.selfDamage){(enemyTarget?enemy:target)?.classList.add(enemyTarget?'hit':'hud-impact');if(result.critical)viewport.classList.add('power-hit');blip(who==='enemy'?180:620);}else blip(490);
  await drainHealth(result);if(battle!==current)return;await delay(reducedMotion()?90:Math.max(120,spec.duration-hitTime-((result.hpChanges||[]).some(h=>h.before!==h.after)?760:0)));enemy?.classList.remove('hit');target?.classList.remove('hud-impact');viewport.classList.remove('power-hit');$('#fx').innerHTML='';if(result.transforms?.length)await animateWrath(result.transforms);
- if(result.visualMove&&battle===current)await animateResult(who,{...result,visualMove:null,reactions:[],hpChanges:[]},result.visualMove);
- for(const reaction of result.reactions||[])if(battle===current)await animateResult(reaction.who,reaction.result,reaction.move);
- if(!move&&result.messages?.some(t=>/Berry Pantry|Draining Roots/.test(t))){const queue=current.player.field?.orchardFX||[];if(current.player.field)current.player.field.orchardFX=[];for(const reaction of queue)if(battle===current)await animateResult(reaction.who,reaction.result,reaction.move);}
+ await animateFollowups(who,result,move,context,current);
 }
 
 async function battleTurn(action){if(Number.isInteger(action)&&!battle?.player.teamcraftPracticeChosen&&pickTeamcraftRecipient({move:action},a=>{battle.player.teamcraftPracticeChosen=true;void battleTurn(a.move);}))return;if(battle)delete battle.player.teamcraftPracticeChosen;if(!battle||battle.busy||battle.finished||modal)return;const b=battle,p=b.player,e=b.enemies[b.index];if(!['heal','wait'].includes(action)&&(!p.moves[action]||!moveUsable(p,p.moves[action])))return;if(action==='heal'&&(!state.poultices||p.hp>=p.maxHp))return;b.commandMenu=null;b.busy=true;renderBattle();
@@ -1114,7 +1122,12 @@ async function relicDoubleTurn(action){if(!modal&&pickTeamcraftRecipient(action,
  if(p.hp<=0){settleStarter(p);if(!completeStarterReturn(p)&&p.hp<=0){p.dead=true;if(!state.dead.some(u=>u.uid===p.uid)){recordFarewell(state,p,b.random,roomName(room));state.dead.push(p);state.party=state.party.filter(u=>u.uid!==p.uid);if(state.leadUid===p.uid)state.leadUid=lead()?.uid||null;}}}
  if(b.finaleDouble){const previous=[...b.activeEnemyIndices];refillDoubleFoes(b);b.player.field.activeEnemyUids=b.activeEnemyIndices.filter(i=>i>=0).map(i=>b.enemies[i].uid);for(const i of b.activeEnemyIndices)if(i>=0&&!previous.includes(i)){const u=b.enemies[i];enterAbility(u,b.player,{party:b.enemies,field:b.player.field||{}});}}if(livesBefore!==null&&p.lives<livesBefore)state.lifeNotices.push({uid:p.uid,name:unitName(p),lives:p.lives,capacity:lifeCapacity(p),dead:!!p.dead});if(!state.party.some(u=>u.hp>0)){state.wiped=true;b.outcome='wipe';}else if(!doubleLivingTargets(b).length&&!b.outcome){b.outcome='defeated';b.log=b.finaleDouble?'Darius’s last company yields. Cruxwyrm is free.':'Both opponents fall. Rivet lowers its gauntlet and turns towards you.';}else if(p.hp<=0&&!b.outcome)b.log=b.finaleDouble?'Send out another living partner beside Hasan.':'Send out another living partner to help Rivet.';
  if(!skipRound&&!b.outcome)b.round++;for(const ev of events)b.history.push(ev.result.messages.join(' '));b.finished=!!b.outcome;if(!persist()){rollbackWild(before);return;}presentationHealth=Object.fromEntries(initialHealth.map(h=>[h.key,h.hp]));refresh();renderBattle();if(capture){$('#fx').innerHTML=`<div class="taming-progress" role="status"><b>${capture.success?'Befriended':'Kept its distance'}</b><progress max="100" value="${capture.closeness}"></progress></div>`;await delay(reducedMotion()?50:600);$('#fx').innerHTML='';}
- for(const ev of events){if(battle!==b)return;holdBeforeImpact(ev.result);b.log=ev.result.messages.join(' ');renderBattle();const actor=document.getElementById('double-unit-'+ev.actor.uid),victim=document.getElementById('double-unit-'+ev.target.uid);actor?.classList.add('is-acting');if(ev.result.damage>0)victim?.classList.add('is-hit');if(ev.move){const spec=effectSpec(ev.move,ev.result);$('#fx').innerHTML=`<div class="fx-anchor" style="left:${ev.side==='enemy'?85:190}px;top:${ev.side==='enemy'?145:55}px;--source-x:${ev.side==='enemy'?100:-100}px;--source-y:${ev.side==='enemy'?-90:90}px">${effectHTML(ev.move,ev.result)}</div>`;await delay(reducedMotion()?0:Math.min(550,(spec.duration||450)*(spec.impact||.5)));await drainHealth(ev.result);await delay(reducedMotion()?30:120);$('#fx').innerHTML='';}else{await drainHealth(ev.result);await delay(reducedMotion()?20:150);}}
+ for(const ev of events){
+  if(battle!==b)return;holdBeforeImpact(ev.result);b.log=ev.result.messages.join(' ');renderBattle();
+  const actor=document.getElementById('double-unit-'+ev.actor.uid);actor?.classList.add('is-acting');
+  await animateResult(ev.side,ev.result,ev.move,{actor:ev.actor,target:ev.target});
+  actor?.classList.remove('is-acting');
+ }
  if(battle!==b)return;presentationHealth=null;await showLifeNotices();await showFarewells();if(b.outcome){await finishRelicDouble(b.outcome);return;}b.busy=false;renderBattle();persist();}
 async function finishRelicDouble(outcome){if(battle?.finaleDouble)return finishFinaleDouble(outcome);const b=battle;if(!b?.relicDouble)return;b.finished=true;b.busy=true;if(modal)closeModal();if(['captured','defeated'].includes(outcome)){if(!b.rescueGranted){const grantBefore=b.rescueGranted;if(!rewardTransaction(()=>{claimRescuedRivet(state,b.alliedRivet);if(b.capturedUid){const captured=b.enemies.find(u=>u.uid===b.capturedUid);if(![...state.party,...state.reserve].some(u=>u.uid===captured.uid)){leaveAbility(captured);delete captured.captured;captured.dead=false;captured.originalStarter=false;captured.lives=1;holdCapturedPartner(state,captured);}}b.rescueGranted=true;})){b.rescueGranted=grantBefore;rewardSaveRetry(()=>{modal=false;$('#modal-root').innerHTML='';void finishRelicDouble(outcome);});return;}}if(!commitRewards(b,completedBattleOpponents(b,outcome),{kind:'relic-rescue'})){rewardSaveRetry(()=>{modal=false;$('#modal-root').innerHTML='';void finishRelicDouble(outcome);});return;}}
  else {if([...state.party,...(state.reserve||[]),...(state.dead||[])].some(u=>u.trainingEffects?.length)&&!closeTrainingBattle(b))return;if(state.binocularBattles>0&&!closeBinocularBattle(b))return;}hideBattleSurface();encounterGrace=3;refresh();buildMarkers();persist();if(['captured','defeated'].includes(outcome))showRewards();else if(outcome==='wipe')expeditionRecovery();else toast(b.log+' · No victory EXP');}
@@ -1448,5 +1461,6 @@ function heldSuppliesMenu(title,items){
   update();
  });
 }
+
 
 

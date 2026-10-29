@@ -10,18 +10,22 @@ on:
       - '.github/workflows/android-release.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: android-release-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  release:
+  validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
+    outputs:
+      browser-groups: ${{ steps.inventory.outputs.browser-groups }}
+      batches: ${{ steps.inventory.outputs.batches }}
     steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |
+            .github/workflows
             dist
             scripts
             tests
@@ -29,14 +33,19 @@ jobs:
             docs
             art-library/reviews/item-branches-2026-10-26
             art-library/action-vfx
-          sparse-checkout-cone-mode: true
+            art-library/finale
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Test game behavior and source
+      - name: Validate game, saves, graphics and declared release scope
         run: |
           python3 -m pip install --quiet Pillow==11.1.0
           python3 scripts/audit-action-art.py
+          node scripts/build-art-coverage.mjs --check
+          node scripts/build-environment-qa.mjs --check
+          python3 scripts/verify-art-release-scope.py
+          python3 tests/interim-art-scope.test.py
+          python3 scripts/audit-finale-art.py
           node scripts/build-journal-habitats.mjs
           git diff --exit-code -- dist/journal-habitats.js
           node scripts/audit-shiny-art.mjs
@@ -44,69 +53,116 @@ jobs:
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
           python3 tests/android-manifest.test.py
-      - name: Install Chromium for interaction checks
-        timeout-minutes: 8
+      - name: Discover all browser suites and animation batches
+        id: inventory
+        run: |
+          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
+          import fs from 'node:fs';
+          const files=fs.readdirSync('tests').filter(f=>f.endsWith('-browser.cjs')||f==='browser-smoke.cjs').filter(f=>f!=='art-revision-browser.cjs').sort();
+          const groups=Array.from({length:6},(_,i)=>({name:'group-'+(i+1),tests:files.filter((_,n)=>n%6===i).map(f=>'tests/'+f)})).filter(g=>g.tests.length);
+          const batches=fs.readdirSync('art-library/action-vfx').filter(f=>/^batch-\d+\.json$/.test(f)).map(f=>JSON.parse(fs.readFileSync('art-library/action-vfx/'+f)).batch).sort();
+          console.log('browser-groups='+JSON.stringify(groups));
+          console.log('batches='+JSON.stringify(batches));
+          NODE
+  browsers:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        include: ${{ fromJSON(needs.validate.outputs.browser-groups) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            dist
+            scripts
+            tests
+            art-library/reviews/item-branches-2026-10-26
+            art-library/action-vfx
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.51.1-${{ runner.os }}
+      - name: Prepare Chromium and game server
         run: |
           npm install --no-save --package-lock=false playwright@1.51.1
-          # Hosted Ubuntu already has Chrome runtime libraries; avoid upgrading unrelated font/system packages.
           npx playwright install chromium
           python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
-      - name: Verify pixel action artwork on phone
-        timeout-minutes: 3
-        run: node tests/action-vfx-browser.cjs
-      - name: Test Tide and Orchard moves, terrain and live battle graphics
-        timeout-minutes: 4
-        run: node tests/tide-orchard-browser.cjs
-      - name: Test elite leaders, visible sightings and switching
-        timeout-minutes: 5
+      - name: Verify real game interactions
+        env:
+          TEST_FILES: ${{ toJSON(matrix.tests) }}
         run: |
-          node tests/elite-leaders-browser.cjs
-          node tests/elite-offline-browser.cjs
-      - name: Test redesigned sins, Fighting pivot and type eggs on phone
-        timeout-minutes: 3
-        run: node tests/pride-wrath-eggs-browser.cjs
-      - name: Test berry pantry and new branch families on phone
-        timeout-minutes: 3
-        run: node tests/branches-berries-browser.cjs
-      - name: Test Sunken Fort care on every floor
-        timeout-minutes: 3
-        run: node tests/fort-care-browser.cjs
-      - name: Test fort lift, held bonuses, and Prodigy card indicators
-        timeout-minutes: 3
-        run: node tests/fort-lift-prodigy-browser.cjs
-      - name: Test evolution renewal on phone
-        timeout-minutes: 3
-        run: node tests/evolution-renewal-browser.cjs
-      - name: Test Rivet cores and sprites in Chromium
-        timeout-minutes: 3
-        run: node tests/rivet-armoury-browser.cjs
-      - name: Test remaining real game interactions in Chromium
-        timeout-minutes: 15
-        run: |
-          timeout 180s node tests/prodigy-evolution-browser.cjs
-          timeout 300s node tests/nursery-care-browser.cjs
-          timeout 240s node tests/egg-pouch-promenade-browser.cjs
-          timeout 180s node tests/teamcraft-browser.cjs
-          timeout 180s node tests/expedition-choices-browser.cjs
-          timeout 180s node tests/field-quality-browser.cjs
-          timeout 180s node tests/arena-bosses-browser.cjs
-          timeout 180s node tests/training-rapids-browser.cjs
-          timeout 180s node tests/character-art-browser.cjs
-          timeout 180s node tests/shiny-browser.cjs
-          timeout 180s node tests/quickbite-angling-browser.cjs
-          timeout 180s node tests/browser-smoke.cjs
-          timeout 180s node tests/botrune-browser.cjs
-          timeout 180s node tests/finale-browser.cjs
-          timeout 180s node tests/thunderplain-browser.cjs
-          timeout 180s node tests/storm-polish-browser.cjs
-          timeout 180s node tests/marasen-browser.cjs
-      - name: Retain game screenshots
+          node --input-type=module <<'NODE'
+          import {spawnSync} from 'node:child_process';
+          const files=JSON.parse(process.env.TEST_FILES);
+          if(files.includes('tests/item-review-browser.cjs')){const r=spawnSync('python3',['art-library/reviews/item-branches-2026-10-26/build_review.py'],{stdio:'inherit'});if(r.status!==0)process.exit(r.status||1);}
+          for(const file of files){console.log('VERIFY '+file);const r=spawnSync('timeout',['300s','node',file],{stdio:'inherit'});if(r.status!==0)process.exit(r.status||1);}
+          NODE
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: game-visual-checks-${{ github.sha }}
+          name: release-browser-${{ matrix.name }}
           path: build/qa/
           if-no-files-found: ignore
+  action-batches:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        batch: ${{ fromJSON(needs.validate.outputs.batches) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /dist/
+            /tests/
+            /art-library/action-vfx/batch-*.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.51.1-${{ runner.os }}
+      - name: Verify every authored batch in actual battles
+        env:
+          ART_BATCH: ${{ matrix.batch }}
+        run: |
+          npm install --no-save --package-lock=false playwright@1.51.1
+          npx playwright install chromium
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-http.log 2>&1 &
+          node tests/art-revision-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-actions-${{ matrix.batch }}
+          path: build/qa/action-review/
+          if-no-files-found: ignore
+  release:
+    needs: [validate, browsers, action-batches]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            dist
+            scripts
+            release
+      - name: Build from the fully verified commit
+        run: echo "All source and browser checks passed for $GITHUB_SHA"
       - name: Read release configuration
         id: config
         run: |
@@ -141,6 +197,14 @@ jobs:
           ABYSSALS_STORE_PASSWORD: ${{ secrets.ABYSSALS_STORE_PASSWORD }}
           ABYSSALS_KEY_ALIAS: ${{ secrets.ABYSSALS_KEY_ALIAS }}
         run: python3 scripts/sign-update.py
+      - name: Retain signing and package verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-verification-${{ steps.config.outputs.version }}
+          path: |
+            build/*.sha256
+            build/signature-verification-*.txt
+          if-no-files-found: error
       - name: Publish verified APK from this commit
         env:
           GH_TOKEN: ${{ github.token }}
@@ -157,9 +221,6 @@ jobs:
           gh release view "v$RELEASE_VERSION" >/dev/null 2>&1 || gh release create "v$RELEASE_VERSION" --target "$GITHUB_SHA" --title "$(cat build/release-title.txt)" --notes-file build/release-notes.md
           gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v$RELEASE_VERSION" -f sha="$GITHUB_SHA" -F force=true >/dev/null
           gh release upload "v$RELEASE_VERSION" "build/$APK_FILENAME" "build/$APK_FILENAME.sha256" "build/signature-verification-$RELEASE_VERSION.txt" "build/$PWA_FILENAME" "build/$PWA_FILENAME.sha256" --clobber
-
-
-
 
   pwa:
     needs: release
@@ -186,4 +247,5 @@ jobs:
       - name: Deploy tested PWA
         id: deployment
         uses: actions/deploy-pages@v4
+
 

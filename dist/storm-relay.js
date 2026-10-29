@@ -1,4 +1,4 @@
-import {stormState,relaySignal,settleRelaySignal,claimRelay,beginRelayRound,relayReward} from './thunderplain-rules.js?v=0.90.14';
+import {stormState,relaySignal,settleRelaySignal,claimRelay,beginRelayRound,relayReward} from './thunderplain-rules.js?v=0.90.52';
 export const RELAY_TIMING={watch:1800,catch:1600};
 export function relayPhase(elapsed){return elapsed<RELAY_TIMING.watch?'study':elapsed<RELAY_TIMING.watch+RELAY_TIMING.catch?'catch':'done';}
 export function stormRelayMenu(a){

@@ -1,4 +1,4 @@
-import {FAMILY_BRIEFS} from './family-learnset-briefs.js?v=0.87.0';
+import {FAMILY_BRIEFS} from './family-learnset-briefs.js?v=0.90.52';
 
 export const MODERN_LEARNSET_VERSION=1;
 const protectedIds=new Set(['001','002','003','079','080','139','140']);

@@ -1,0 +1,23 @@
+{
+  "id": 319,
+  "name": "Iron Strike",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "flinch",
+      "status": "FLINCH",
+      "chance_percent": 10,
+      "secondary": true
+    }
+  ],
+  "authoredAction": "one decisive impact arc with a strong contact flash.",
+  "batch": "07",
+  "sequence": "A broad blunt riveted steel striker on a short articulated shank draws back, strikes one downward diagonal with flat weighted contact, chips scatter, then rebounds and retracts. No sharpened sword or fist.",
+  "prompt": "Use case: stylized-concept. Original detailed pixel-art JRPG combat animation for Iron Strike, stable ID319. Exactly16 distinct temporal drawings in a strict4x4 equal-cell square sprite atlas, row-major. True transparent alpha background. Authored action: A broad blunt riveted steel striker on a short articulated shank draws back, strikes one downward diagonal with flat weighted contact, chips scatter, then rebounds and retracts. No sharpened sword or fist. Preparation frames1\u20134, purposeful motion5\u20138, one contact or gentle support settling9\u201310, consequences11\u201313, recovery14\u201316. Only isolated action forms and body parts: no entire creature, no full bird, no character portrait, no scenery, text, labels or grid. Crisp clustered shaded pixels, rich material volumes, readable at192x192 logical pixels. Every complete pose including every tip/glow/trail/particle must fit entirely INSIDE middle50% of its own cell with enormous transparent gutters. Do not crop any silhouette or cross cell boundaries. No duplicate drawings, generic symbol or recoloured shared effect. ONE successful hit only; multiple motion trails are not extra contacts.",
+  "source": "art-library/action-vfx/batch-07/319-source.png",
+  "sourceBlob": "916a1b3c88a520e0b42442c3589130827b5de376",
+  "status": "installed; source and gameplay reviewed",
+  "runtimeAsset": "dist/assets/vfx/action/319-iron-strike.png",
+  "runtimeSha256": "013905b8388fffa24b0749630cb1eed8d5d4afc66e9a43b61520626d2063b019"
+}

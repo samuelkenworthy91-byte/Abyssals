@@ -1,4 +1,4 @@
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.48';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.52';
 // Count actual evolution steps, including item and branching evolutions.
 const parents=new Map(),children=new Set();
 for(const e of EVOLUTIONS){if(!parents.has(e.to_species_id))parents.set(e.to_species_id,[]);parents.get(e.to_species_id).push(e.from_species_id);children.add(e.from_species_id);}

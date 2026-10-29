@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {DATA} from '../dist/data.js';
 import {capturePreview} from '../dist/route-rules.js';
 import {FORTIFIED_RATION,FORTIFIED_RATION_MODIFIER} from '../dist/fortified-ration.js';
@@ -20,7 +21,7 @@ const s={money:FORTIFIED_RATION.price*2,fortifiedRations:0};
 assert(buySupplies(s,FORTIFIED_RATION,2));assert.equal(s.fortifiedRations,2);assert.equal(s.money,0);
 for(const room of ['sporeRim','sporeDepths','sporeBridge','sporeGrotto','sporeCanopy']){
  const id=NEW_MAPS[room].finaleArt;
- assert(FINALE_ASSETS['finale-'+id]?.endsWith('.svg'),room+' should have individual SVG terrain');
+ const file=FINALE_ASSETS['finale-'+id];assert(file?.endsWith('.webp'),room+' should have authored raster terrain');assert(fs.statSync('dist/assets/pixel/'+file).size>100000,room+' must retain detailed source artwork');
 }
 for(const room of ['sporeGrotto','sporeCanopy']){
  const hits=Object.values(JOURNAL_HABITATS).flat().filter(row=>row.room===room);

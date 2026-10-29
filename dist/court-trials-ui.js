@@ -1,5 +1,5 @@
-import {trialState,channelFlow,CHANNEL_LINKS,rotateChannel,stepWardens,resetTrial,WARDEN_WALLS,WARDEN_GOALS} from './court-trials.js?v=0.87.0';
-import {PALADIN_HONOURS} from './paladin-honours.js?v=0.87.0';
+import {trialState,channelFlow,CHANNEL_LINKS,rotateChannel,stepWardens,resetTrial,WARDEN_WALLS,WARDEN_GOALS} from './court-trials.js?v=0.90.52';
+import {PALADIN_HONOURS} from './paladin-honours.js?v=0.90.52';
 export function handleCourtTrial(id,a){const {state,openModal,$,document,rewardTransaction,buildMarkers,toast}=a;
  const commit=fn=>{let changed=false;const saved=rewardTransaction(()=>changed=fn());if(saved&&changed)buildMarkers();return saved&&changed;};
  const common='<p class="court-trial-note">No timer. Each move is saved. You can leave and return, or reset this trial.</p>';

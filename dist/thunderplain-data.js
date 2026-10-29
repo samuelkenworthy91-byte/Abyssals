@@ -1,5 +1,5 @@
-import {DATA} from './data.js?v=0.90.48';
-import {legalForm,legalMoves} from './route-roster.js?v=0.87.0';
+import {DATA} from './data.js?v=0.90.52';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.52';
 export const STORM_SIDE_ROOMS=['stormRelay','stormDariusCamp','stormDariusRidge','stormDariusCrown'];
 export const DARIUS_STORM_ID='TRN-BT-DARIUS';
 const trainer=(id,name,portrait,ids,levels,before,after)=>({id,name,portraitId:portrait,faction:'Common Cause',role:'Thunderplain expedition',runtimeAuthored:true,expeditionTeam:true,ai_tier:'Advanced',before,after,team:ids.map((s,i)=>({slot:i+1,species_id:legalForm(s,levels[i]),level:levels[i],current_form_legal_move_ids:legalMoves(legalForm(s,levels[i]),levels[i])}))});

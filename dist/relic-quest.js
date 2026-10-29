@@ -1,4 +1,4 @@
-import {RELIC_ITEMS} from './relic-family.js?v=0.87.0';
+import {RELIC_ITEMS} from './relic-family.js?v=0.90.52';
 export const RELIC_RESCUE_OPPONENTS=[{id:'117',level:34,moves:[261,79]},{id:'296',level:34,moves:[296,79]}];
 export const RIVET_STANDOFF=[{id:'365',x:27,y:17,size:40},{id:'117',x:33,y:15,size:58},{id:'296',x:33,y:19,size:58}];
 export const relicRescueBlocked=(state,room,x,y)=>room==='relicGrove'&&!state.relicQuest?.rescued&&RIVET_STANDOFF.some(a=>a.x===x&&a.y===y);

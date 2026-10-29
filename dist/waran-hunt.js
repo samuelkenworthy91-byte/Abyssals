@@ -1,4 +1,4 @@
-import {companionArt,drawCompanion} from './companion.js?v=0.90.48';
+import {companionArt,drawCompanion} from './companion.js?v=0.90.52';
 export const PEACH_ORCHARD_MYTHICS=Object.freeze({Feirong:'175',Guanrong:'183',Liubeirow:'184'});
 export const HUNT_DURATION=9600;
 const lerp=(a,b,p)=>a+(b-a)*p;
@@ -11,7 +11,7 @@ export function huntFrame(elapsed,player={x:24,y:23},reduced=false){
  if(t>=6800){prey=null;camera={x:player.x,y:player.y};stage=t<7800?'rage':'charge';caption=t<7800?'Its meal has escaped. Waranwei turns on you, shaking with rage.':'Waranwei charges!';hunter=t<7800?{x:37,y:17,facing:'left'}:along([[37,17],[24,17],[player.x,player.y]],(t-7800)/1800);}
  return {stage,caption,hunter,prey,camera,impact:!reduced&&(t>=1850&&t<2100||t>=2500&&t<2750),elapsed:t,done:t===HUNT_DURATION};
 }
-export async function prepareHuntArt(){await Promise.all(['184','185'].map(id=>{const image=companionArt(id);if(image.complete&&image.naturalWidth)return;return new Promise((resolve,reject)=>{image.addEventListener('load',resolve,{once:true});image.addEventListener('error',()=>reject(Error('Cave sprite could not load')),{once:true});if(image.complete&&!image.naturalWidth)image.src=`assets/followers/${id}.webp?v=0.87.0&retry=${Date.now()}`;});}));}
+export async function prepareHuntArt(){await Promise.all(['184','185'].map(id=>{const image=companionArt(id);if(image.complete&&image.naturalWidth)return;return new Promise((resolve,reject)=>{image.addEventListener('load',resolve,{once:true});image.addEventListener('error',()=>reject(Error('Cave sprite could not load')),{once:true});if(image.complete&&!image.naturalWidth)image.src=`assets/followers/${id}.webp?v=0.90.52&retry=${Date.now()}`;});}));}
 export function drawHuntActor(ctx,pose,species,time,reduced=false,moving=false){if(!pose)return;drawCompanion(ctx,{unit:{species},px:pose.x*16+8,py:pose.y*16+8,facing:pose.facing,stride:0,reactionUntil:0,step:moving?{elapsed:(time%320)/1000,duration:.32}:null},time,reduced);}
 export function drawHuntScene(ctx,frame,species,time,reduced=false){
  drawHuntActor(ctx,frame.hunter,species('185'),time,reduced,['charge','strike'].includes(frame.stage));drawHuntActor(ctx,frame.prey,species('184'),time,reduced,frame.stage==='escape');

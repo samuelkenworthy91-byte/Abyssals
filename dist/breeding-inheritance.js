@@ -1,8 +1,8 @@
-import {BASE_PRODIGY_CHANCE,inheritanceChance,chanceLabel} from './breeding-items.js?v=0.90.35';
-import {DATA} from './data.js?v=0.90.48';
-import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,permanentGrowthSources,inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './progression.js?v=0.90.41';
-import {typeEffectiveness} from './type-rules.js?v=0.87.0';
-import {rootForm} from './route-roster.js?v=0.87.0';
+import {BASE_PRODIGY_CHANCE,inheritanceChance,chanceLabel} from './breeding-items.js?v=0.90.52';
+import {DATA} from './data.js?v=0.90.52';
+import {STAT_KEYS,STAT_LABELS,growthPercent,unitGrowthRates,permanentGrowthSources,inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './progression.js?v=0.90.52';
+import {typeEffectiveness} from './type-rules.js?v=0.90.52';
+import {rootForm} from './route-roster.js?v=0.90.52';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const nativeMoves=species=>new Set(DATA.learnsets.filter(l=>l.species_id===species.id).map(l=>l.move_id));
 const ordinary=m=>m&&['PHYSICAL','SPECIAL','STATUS'].includes(m.category)&&Number.isFinite(m.pp)&&m.pp>0&&!m.signature&&!m.signature_owner_family;

@@ -1,5 +1,5 @@
-import {routeStage} from './route-progression.js?v=0.90.41';
-import {legalForm} from './route-roster.js?v=0.87.0';
+import {routeStage} from './route-progression.js?v=0.90.52';
+import {legalForm} from './route-roster.js?v=0.90.52';
 export function normalizeEncounterRoute(route){
  if(route.encountersAudited)return route;const stage=routeStage(route.room);if(!stage)return route;
  const tables=route.tables.map(table=>({...table,slots:table.slots.flatMap(s=>{

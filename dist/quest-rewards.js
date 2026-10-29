@@ -1,9 +1,9 @@
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.48';
-import {DATA} from './data.js?v=0.90.48';
-import {ABILITIES} from './ability-data.js?v=0.90.48';
-import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.48';
-import {RELIC_ITEMS} from './relic-family.js?v=0.87.0';
-import {rootForm} from './route-roster.js?v=0.87.0';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.52';
+import {DATA} from './data.js?v=0.90.52';
+import {ABILITIES} from './ability-data.js?v=0.90.52';
+import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.52';
+import {RELIC_ITEMS} from './relic-family.js?v=0.90.52';
+import {rootForm} from './route-roster.js?v=0.90.52';
 export {QUEST_REWARDS,SECRET_MOVES};
 export function rewardPending(state,key){return !!state.sideCampaigns?.[key]?.claimed&&!state.sideCampaigns[key].rewardVersion;}
 // Fixed offers are saved before selection; no gift is generated again on reopen.

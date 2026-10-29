@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "policy": "Approval requires source/frame inspection and actual gameplay evidence at phone scale, current SHA-256, a reviewer and a specific rationale. Dimensions and file existence never grant approval. Protected original art hashes remain independently enforced.",
+  "moves": {
+    "2": {
+      "status": "approved",
+      "sha256": "09f0e6c3ca9312a428faebd7344dd192140ba0e49381462be4ff9b6e9bb92d48",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "White pressure knot winds up, expands into one blunt radial contact and decays into separate ring fragments; neutral palette and readable silhouette. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/2-plain-burst.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-2.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-2.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-2.png"
+      ]
+    },
+    "36": {
+      "status": "approved",
+      "sha256": "c5c22a222c8a7a3611daa38b9bd578457f3a9f0d399d60a6edf55b0956cc1b78",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Dark ember descends into wrapping water, is briefly smothered, then reignites with orange flame and dispersing blue droplets. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/36-drowned-ember.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-36.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-36.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-36.png"
+      ]
+    },
+    "37": {
+      "status": "approved",
+      "sha256": "ca36b117403af99ec9aa6270840c549c92ac08bebd9595c52922e06e592d6e3c",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Individual ember pawprints develop into a low stalking approach and a raking claw impact; soot and cooling embers finish the sequence. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/37-infernal-prowl.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-37.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-37.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-37.png"
+      ]
+    },
+    "39": {
+      "status": "approved",
+      "sha256": "ae4c3b999f39c2067dc6843b71d5257d9db92af3d42a75fb165064a36adb5de3",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Crimson fabric-like banner stretches behind the charge, whips across the contact and unwinds into scraps; sculpted folds distinguish it from a flame orb. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/39-red-banner-rush.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-39.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-39.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-39.png"
+      ]
+    },
+    "59": {
+      "status": "approved",
+      "sha256": "8e94d05f62793c9d9392410139026d5cfb4447ec77db890fe5cb26fca87396bb",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Segmented orange disc cleaves into foaming water crescents, collides in a clear white-blue impact and falls into individual droplets; rich rim and foam detail. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/59-jaffa-breaker.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-59.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-59.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-59.png"
+      ]
+    },
+    "76": {
+      "status": "approved",
+      "sha256": "4ce50a51dced014c7983c5c684d06060fb37737730fbf4e23e6cdaf2c990c8de",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Distinct circuit tracks and nodes interlock, overload at a central discharge and peel into broken conductive traces. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/76-alien-circuit.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-76.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-76.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-76.png"
+      ]
+    },
+    "97": {
+      "status": "approved",
+      "sha256": "7b6e40248920f75da259d29f90eb1c150f2aaa7bd5a8ba8de9270472a47fabaf",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Loose leaves and petals gather inward around a rising restorative column, settle as an enclosure and fall away; separate from the flower cup of Benevolent Bloom. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/97-kindness-gathers.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-97.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-97.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-97.png"
+      ]
+    },
+    "98": {
+      "status": "approved",
+      "sha256": "3f0722827b9f4b2ffc960bdcc03a32c8432e3b118c01d4ccb27c335a355a3a9e",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Woody vines form a recognisable organic blade, sweep into one cutting contact and uncurl into torn leaves; detailed root and leaf volumes. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/98-oathkeepers-edge.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-98.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-98.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-98.png"
+      ]
+    },
+    "116": {
+      "status": "approved",
+      "sha256": "8cdbda2ee2c67ba30a3f295d4aed75df6ece6ed83d2967a2283aec66ac0025d1",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Separated star-like ice crystals align into falling lances, contact in a faceted ice crown and shed splinters into a sparse recovery. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/116-celestial-rime.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-116.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-116.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-116.png"
+      ]
+    },
+    "246": {
+      "status": "approved",
+      "sha256": "68016ab901e838822e05da8d46fb5ca0ce828ffb04ccac32bba1c25dfe91b3f2",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Textured fossil nodule develops orange cracks, bursts into recognisable fossil shards and settles into dust rather than a generic rock flash. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/246-ancient-nodule.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-246.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-246.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-246.png"
+      ]
+    },
+    "352": {
+      "status": "approved",
+      "sha256": "b457e3d4334b0c7dd5065f95642010c2a76744a83fbd7c0999633f7b3e95e308",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Layered pink flower opens around a restorative core, cups the recipient, releases petals and closes into a calm recovery; phone detail remains readable. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/352-benevolent-bloom.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-352.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-352.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-352.png"
+      ]
+    },
+    "353": {
+      "status": "approved",
+      "sha256": "3131e41e6cb2250db5658150a245edc3435578a4116687f0ecb44e6527900a01",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Two differently shaped sigil streams approach, interlock and discharge at one contact; joint orbit and separated sparks express the pact. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification. Additional live round confirms the chosen owned ally heals while the caster does not, and the selected foe alone takes damage.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/353-concord-pact.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-353.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-353.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-353.png",
+        "art-library/action-vfx/reviews-2026-10-29/partner-heal-353.png"
+      ]
+    },
+    "1": {
+      "status": "approved",
+      "sha256": "fc67eaaa4a6e53d7ef91efbbd8961bb93516f11352b0a2bb2057d6f7b52f3552",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Articulated hands brace, layered bronze plates close, absorb a centered glint and unlock; clearly a defence buff rather than an attack. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/1-brace-yourself.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-1.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-1.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-1.png"
+      ]
+    },
+    "5": {
+      "status": "approved",
+      "sha256": "a6b7e2d185329aa49f4d0e79cfd847698ee2482fa8c46e37299e14ddd74717bb",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Lifted clawed foot plants with weight, compresses a dust crown and lifts again; contact and recovery remain distinct at phone size. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/5-first-footfall.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-5.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-5.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-5.png"
+      ]
+    },
+    "6": {
+      "status": "approved",
+      "sha256": "00e5ad8ac6f2afaf3c525009c3ea97ec27437bbc5bf122747a0146a2605e4874",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Cool decoy arc separates from the real low claw, one contact flashes and the false arc dissolves independently. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/6-parting-feint.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-6.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-6.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-6.png"
+      ]
+    },
+    "7": {
+      "status": "approved",
+      "sha256": "e251356a0c3e5fbeada67dd40278e7d982d8f6efb24d11fbca0cf082bfa93eee",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Three accelerating wind/dust placements compress into one forward impact before a streamlined wake; conveys momentum gain. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/7-gathering-pace.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-7.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-7.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-7.png"
+      ]
+    },
+    "8": {
+      "status": "approved",
+      "sha256": "f7589594055619da248b8f6ef77bf4a99f8319638514e0f6ca978e86bdd10ab7",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Bent arm winds back, extends into a single blunt blow and withdraws; material shading and limb motion communicate a physical punch. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/8-steady-blow.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-8.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-8.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-8.png"
+      ]
+    },
+    "9": {
+      "status": "approved",
+      "sha256": "ea1ea9112a9e3c125abd2ca4cdecfcebc9bf31505ea1828ace12a04b5f62d458",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "One narrow curved blade sweeps with tapering trails, contacts once and follows through; trails do not suggest separate hits. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/9-measured-cut.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-9.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-9.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-9.png"
+      ]
+    },
+    "10": {
+      "status": "approved",
+      "sha256": "b364a1522de93cec909b2337aed0c154d2f80de783cf1386d9c9591747318a94",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Faceted focus iris assembles and contracts around a steady sight glint, then opens; reads as an accuracy buff. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/10-quick-wit.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-10.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-10.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-10.png"
+      ]
+    },
+    "11": {
+      "status": "approved",
+      "sha256": "ba9e269cf88f131fe0c8e9c8624fdf2211448425a9fa7c82ac6aef47fdea6007",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Two distinct inhaling breath phases draw mint ribbons inward, settle in restorative light and disperse; distinct from floral healing. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/11-second-wind.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-11.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-11.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-11.png"
+      ]
+    },
+    "12": {
+      "status": "approved",
+      "sha256": "12ca9d92f47004b5eeea43b55a70b02ef5281206f3e628edf2287ef0b015caf6",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Measured paw placements and tightening wind settle into a grounded ring and upward motion marks without a damaging collision. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/12-sure-stride.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-12.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-12.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-12.png"
+      ]
+    },
+    "15": {
+      "status": "approved",
+      "sha256": "d36cdc7ddc7bc2d560164a58490beb7ec284692c3d5eb2eda4cb8897ac47a3a0",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Heavy ram form accelerates, compresses into a broad contact and settles with strained dust recovery; distinct from rolling momentum. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/15-full-commitment.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-15.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-15.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-15.png"
+      ]
+    },
+    "16": {
+      "status": "approved",
+      "sha256": "c835331a944fdeb5401157c525a3411ea669f5fa089d16dbe9ed75cce6537f04",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Segmented curled mass rotates through dust, impacts low, rebounds and slows; each segment changes orientation across frames. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/16-rolling-momentum.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-16.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-16.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-16.png"
+      ]
+    },
+    "17": {
+      "status": "approved",
+      "sha256": "d823314b0c71d00db5b26040cf8bae0518a4eea4c0edc0444efd2578daf45dd1",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Loaded edge overshoots its cutting arc, jolts back in a separate recoil consequence and drops into an uneven recovery. Inspected all sixteen packed frames and actual 390\u00d7844 single/double battle captures. This art approval does not claim physical Android device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/17-reckless-follow-through.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-17.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-17.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-17.png"
+      ]
+    },
+    "22": {
+      "status": "approved",
+      "sha256": "a5ae732bb53ea79913026e2893b0378dd10678d41d72764ad91f6ff1d2cdc0ad",
+      "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+      "rationale": "The separately authored complete contact pose replaces frame8 of the crowded atlas, removing the stray neighbour-cell fragment while preserving the coiling lash, one contact and recovery. All sixteen frames and390x844 live single/double captures were inspected; this is not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/22-scorchwhip.png",
+        "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-03/22-contact-frame-08.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-v0.90.52/single-22.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-0-22.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-1-22.png"
+      ]
+    },
+    "27": {
+      "status": "approved",
+      "sha256": "876d86b5fcaf4f733b1f23a00af7f399c055a4e3e351210ceb3fc397b208a43e",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Pink ceramic glaze develops from licking flames into a refined crescent stroke, contacts once, fractures into iridescent pieces and fades as heat haze. Revised source restores complete silhouettes and clear gutters. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/27-kiln-kiss.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-27.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-27.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-27.png"
+      ]
+    },
+    "18": {
+      "status": "approved",
+      "sha256": "f653de9c49999cffbc7665c0bc6a154dde335a074c7bb2aa1b62f2fbe6660c1a",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Individually winged fireflies kindle into a staggered crescent, sweep together into one puncture and scatter as live insects and embers; distinct from a flame orb. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/18-firefly-volley.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-18.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-18.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-18.png"
+      ]
+    },
+    "19": {
+      "status": "approved",
+      "sha256": "8e1524e7d4428d34f2c32b9734aca631d06672494d8db0458e094843ef38ca08",
+      "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+      "rationale": "The full textured branding stamp heats, presses once and recoils through smoke. Handle continuity and thermal surface detail are complete in the prepared sixteen frames. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/19-branding-iron.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-v0.90.52/single-19.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-0-19.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-1-19.png"
+      ]
+    },
+    "20": {
+      "status": "approved",
+      "sha256": "df5fe6f2112e5495ca1e288bda99e06467c2a6e97d7b7bd034bce35e80af05ba",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Charred stacked sticks split under pressure into a single pyre detonation, with recognisable fuel fragments, volumetric smoke and falling ash recovery. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/20-pyre-detonation.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-20.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-20.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-20.png"
+      ]
+    },
+    "21": {
+      "status": "approved",
+      "sha256": "fec2a1ec43eb7a12f9f395df9ba749325968b402ed3abff3d478605e7ddd3e38",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Opposing serrated coal jaws open, close in one biting contact and crumble into cooling teeth fragments; clearly a bite rather than a slash. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/21-cinder-rend.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-21.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-21.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-21.png"
+      ]
+    },
+    "23": {
+      "status": "approved",
+      "sha256": "7850b52d99988b4be75c0401bc8c91859e374ba6ad904b8951100fb0737dd066",
+      "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+      "rationale": "The light heated foot crouches, skims, makes a toe-first burning scuff and withdraws. Toe tips and the trailing grooves remain readable at game scale. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/23-hotfoot.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-v0.90.52/single-23.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-0-23.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-1-23.png"
+      ]
+    },
+    "24": {
+      "status": "approved",
+      "sha256": "1262a03b5bf3e999027b34bb1718a17c8dad696102ee6ce2761c0e8898a8aea2",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Charcoal forearm loads and delivers a hooked punch, fractures at contact and recoils before opening its hand; rich fissured material differentiates the physical action. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/24-charcoal-hook.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-24.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-24.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-24.png"
+      ]
+    },
+    "25": {
+      "status": "approved",
+      "sha256": "bb82476064a35d5124815ee4eca8feb3f3dab9c654137f9b5aaa851f3610c1fd",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Layered ash assembles into a tilted rolling wheel, compresses at its lower contact and disperses in a receding ash wake; distinct from the solid rolling mass of Rolling Momentum. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/25-ash-wheel.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-25.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-25.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-25.png"
+      ]
+    },
+    "26": {
+      "status": "approved",
+      "sha256": "7ec844afcc6248819baa4c753c51f7b8a68e49a879cdd1f7483889f0218a95af",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "An anatomical coal heart gathers motes inward, warms in two measured pulses and cools to a steady cinder; a calm self buff without damaging contact. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/26-stoke-the-heart.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-26.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-26.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-26.png"
+      ]
+    },
+    "28": {
+      "status": "approved",
+      "sha256": "f74e2e4520fc49f0d04c7d20463090d80b10453c333c70dfa5bcce846c14d118",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Hinged fired-clay shears open wide, slam together in one cutting contact and jolt apart with recoil; pivot, blades and cooling texture remain readable. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/28-kiln-scissor.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-28.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-28.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-28.png"
+      ]
+    },
+    "30": {
+      "status": "approved",
+      "sha256": "f5fe8ecb0ac93110e33f76b64928dd9c201decf347dc4b1a986b515cd04d969d",
+      "reviewer": "Codex visual inspection, 2026-10-29",
+      "rationale": "Two heavy burning forepaws rise together, arc through a high pounce and compress into one broad impact, then rebound and cool; visibly different from Hotfoot\u2019s quick toe skid. All sixteen packed frames and 390\u00d7844 actual single/double captures inspected; real battle mechanics, recipient bounds, command recovery and reduced motion pass. This is browser art approval, not physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/30-cinder-pounce.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-2026-10-29/single-30.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-0-30.png",
+        "art-library/action-vfx/reviews-2026-10-29/double-1-30.png"
+      ]
+    },
+    "155": {
+      "status": "approved",
+      "sha256": "20d616a4eaab170673fe13092da0f43ad15de3680523c2c275d3e9e00914072b",
+      "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+      "rationale": "The clay forearm rises into one uppercut, spatters at contact and forms layered defensive cuffs before lowering. The physical hook and defensive aftermath are both readable. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/155-clay-hook.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-v0.90.52/single-155.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-0-155.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-1-155.png"
+      ]
+    },
+    "176": {
+      "status": "approved",
+      "sha256": "32c4cf1e529a1eef164b7c4494eaa9827e3f8642df87ddfec516ab5d592e40f8",
+      "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+      "rationale": "The feathered talon quills rake once through three curved motion trails; one contact flare is followed by loose barbs and uncurling recovery. The trails do not imply extra hits. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/176-featherweight.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-v0.90.52/single-176.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-0-176.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-1-176.png"
+      ]
+    },
+    "319": {
+      "status": "approved",
+      "sha256": "013905b8388fffa24b0749630cb1eed8d5d4afc66e9a43b61520626d2063b019",
+      "reviewer": "Codex source-frame and live phone-scale battle inspection,2026-10-29",
+      "rationale": "A detailed articulated iron striker swings down into one heavy contact, scatters chips and rebounds. Material volume, joints and follow-through distinguish it from a sword or bare fist. Inspected source frames and390x844 live-battle captures; not a physical Android-device certification.",
+      "sourceEvidence": [
+        "dist/assets/vfx/action/319-iron-strike.png"
+      ],
+      "gameplayEvidence": [
+        "art-library/action-vfx/reviews-v0.90.52/single-319.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-0-319.png",
+        "art-library/action-vfx/reviews-v0.90.52/double-1-319.png"
+      ]
+    }
+  }
+}

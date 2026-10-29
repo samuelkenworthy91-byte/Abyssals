@@ -1,0 +1,115 @@
+{
+  "batch": "05",
+  "format": "PNG indexed transparent768x768;16frames of192x192",
+  "rasterTechnique": "Authored raster scenes; visual and gameplay approval tracked separately.",
+  "moves": [
+    {
+      "id": 49,
+      "name": "mist-screen",
+      "filename": "49-mist-screen.png",
+      "action": "Mist Screen",
+      "revision": "01",
+      "sequence": "Fine cool droplets rise into a thin vertical plane like a fogged window, a translucent grey-blue curtain slides across empty target space and breaks a small sight glint into blurred displaced copies, then the screen thins and lifts. Foe accuracy reduction, no damage flash or attack collision. A flat fog screen, not Heat Haze's rising warm refraction ribbons.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/49-source.png"
+    },
+    {
+      "id": 50,
+      "name": "tidal-poise",
+      "filename": "50-tidal-poise.png",
+      "action": "Tidal Poise",
+      "revision": "01",
+      "sequence": "Scattered droplet masses wobble around an empty standing-user space, collect into two opposed substantial curved water cuffs at shoulder/forearm level, brace symmetrically above a quiet shallow pool, absorb a tiny balanced ripple and settle, then relax into drops. Physical defence self buff; balanced braced wave arms, not Deepwater Brace's stacked pressure canopy.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/50-source.png"
+    },
+    {
+      "id": 51,
+      "name": "tide-break",
+      "filename": "51-tide-break.png",
+      "action": "Tide Break",
+      "revision": "01",
+      "sequence": "One sculpted open hand made of dense sea water draws back with fingers spread, drives its broad palm forward once, compresses into a flat forceful contact, fractures into five distinct finger-shaped water facets and spray, then the facets fall into a low pool. Physical palm impact with fracturing water motif; not a tall wave wall or a closed fist.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/51-source.png"
+    },
+    {
+      "id": 52,
+      "name": "coral-lunge",
+      "filename": "52-coral-lunge.png",
+      "action": "Coral Lunge",
+      "revision": "01",
+      "sequence": "Three richly textured branching coral talons emerge from a short coral wrist base, pull back, lunge together on converging curved paths, meet in ONE pointed piercing contact, shed pink coral grit and fine foam, then retract and cool. Physical hard coral claw action with three preparatory trails but one hit; no giant water claw or generic orb.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/52-source.png"
+    },
+    {
+      "id": 53,
+      "name": "keel-hammer",
+      "filename": "53-keel-hammer.png",
+      "action": "Keel Hammer",
+      "revision": "01",
+      "sequence": "A heavy worn keel-timber hammerhead encrusted with tiny barnacles lifts on a short water-formed haft, swings down with visible weight into ONE low smashing contact, wood chips and a broad circular shock ripple spread, hammer bounces once and lowers into the receding foam. Distinct descending weighted keel hammer, not an anchor hook.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/53-source.png"
+    },
+    {
+      "id": 54,
+      "name": "tide-lance",
+      "filename": "54-tide-lance.png",
+      "action": "Tide Lance",
+      "revision": "01",
+      "sequence": "Three short vertical jets align and compress into one narrow translucent ribbed water spear with an angular glass-like pointed head, tilt diagonally and spear straight through target space once, then fracture into sharp liquid facets and a sparse straight droplet line. A rigid pressure spear with angular ribs, clearly distinct from Foam Lance's soft pearly bubbling dart. Keep the complete short spear compact within each cell.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/54-source.png"
+    },
+    {
+      "id": 55,
+      "name": "tide-pulse",
+      "filename": "55-tide-pulse.png",
+      "action": "Tide Pulse",
+      "revision": "01",
+      "sequence": "A thin upright dense-water membrane stretches like an oval diaphragm, a falling droplet plucks it inward, it releases two expanding ridged pressure rings, folds tightly into ONE concentrated core pulse and springs outward, then shivers and breaks into flat droplets. Special attack weakening defence. A vibrating membrane and pressure ridges, not Foam Pulse's pearly bubble cloud.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/55-source.png"
+    },
+    {
+      "id": 56,
+      "name": "undertow-reap",
+      "filename": "56-undertow-reap.png",
+      "action": "Undertow Reap",
+      "revision": "01",
+      "sequence": "A narrow hooked scythe edge of dark water rises from a low undertow stream, shoots forward in a compact oblique streak, pinches into ONE sharp hooked collision at center, tears a notch through the stream and trails fine cut foam fragments before draining away. A fast narrow reaping hook, no heavy anchor, no healing backflow.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/56-source.png"
+    },
+    {
+      "id": 57,
+      "name": "monsoon-detonation",
+      "filename": "57-monsoon-detonation.png",
+      "action": "Monsoon Detonation",
+      "revision": "01",
+      "sequence": "Fine diagonal rain bands gather into one clearly corkscrewing beaded stream, wrap ONCE around empty target space, squeeze into a dense rain knot and burst radially in ONE monsoon detonation, a thin separate restorative backflow thread returns toward the origin while individual rain drops fall and vanish. Single special draining hit; not opposing water scissor blades or an endless tornado.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/57-source.png"
+    },
+    {
+      "id": 58,
+      "name": "tide-sweep",
+      "filename": "58-tide-sweep.png",
+      "action": "Tide Sweep",
+      "revision": "01",
+      "sequence": "A shallow broad tide ribbon unfurls low from one side, rises into a wide horizontal water curtain sweeping across most of empty target silhouette, lands ONE sustained low sweeping contact, breaks into rolling foam rows while a narrow restorative droplet thread returns toward origin, then the entire curtain recedes into a sparse line. Physical draining sweep; no anchor, scythe, lance or repeated impacts.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/58-source.png"
+    },
+    {
+      "id": 60,
+      "name": "static-warning",
+      "filename": "60-static-warning.png",
+      "action": "Static Warning",
+      "revision": "01",
+      "sequence": "Many fine conductive hair-like filaments rise around empty user space, tiny dust motes are attracted to their pointed ends, each filament stiffens and branches with contained gold static, a steady charged outline settles without jumping to any foe, then the filaments lower and sparks subside. Self special attack buff; warning charge stored rather than an electrical explosion.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/60-source.png"
+    },
+    {
+      "id": 61,
+      "name": "circuit-breaker",
+      "filename": "61-circuit-breaker.png",
+      "action": "Circuit Breaker",
+      "revision": "01",
+      "sequence": "A small detailed bronze knife-switch opens on a hinge and breaks two protective ceramic guard plates apart, the exposed switch body shifts rapidly twice leaving two thin fading positional afterimages, discarded plates fall away as a steady streamlined charge remains, then the switch lowers and the ghosts fade. Self speed+2 with defence-1, no damaging discharge. A physical opening switch and discarded protection, not Alien Circuit's assembled attack lattice.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-05/61-source.png"
+    }
+  ]
+}

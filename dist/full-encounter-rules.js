@@ -1,4 +1,4 @@
-import {FULL_ENCOUNTERS,EXPANSION_HABITATS} from './full-encounters.js?v=0.87.0';
+import {FULL_ENCOUNTERS,EXPANSION_HABITATS} from './full-encounters.js?v=0.90.52';
 // Largest-remainder allocation preserves a 100-point table and positive sightings for every entry.
 export function weightSlots(slots,total=100){
  if(!slots.length)return [];

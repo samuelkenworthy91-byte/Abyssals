@@ -1,0 +1,76 @@
+{
+  "generation": "built-in image generation",
+  "status": "source review and live battle approval pending",
+  "moves": [
+    {
+      "id": 117,
+      "name": "measured-force",
+      "filename": "117-measured-force.png",
+      "action": "Measured Force",
+      "revision": "01",
+      "sequence": "Two articulated bronze forepaws align and close slowly; fine force lines gather into a steady central glint, then hands relax. Self attack buff without target impact.",
+      "source": "art-library/action-vfx/batch-06/117-source.png",
+      "status": "requires-review"
+    },
+    {
+      "id": 124,
+      "name": "firm-footing",
+      "filename": "124-firm-footing.png",
+      "action": "Firm Footing",
+      "revision": "01",
+      "sequence": "Two textured clawed feet plant and grip; angular stone braces lock around soles, resist a lateral gust and relax. Self defence and anchoring buff.",
+      "source": "art-library/action-vfx/batch-06/124-source.png",
+      "status": "requires-review"
+    },
+    {
+      "id": 126,
+      "name": "iron-blow",
+      "filename": "126-iron-blow.png",
+      "action": "Iron Blow",
+      "revision": "01",
+      "sequence": "Wrapped iron-grey martial forearm draws back, makes one short precision knuckle punch with compressed pressure halo, then withdraws.",
+      "source": "art-library/action-vfx/batch-06/126-source.png",
+      "status": "requires-review"
+    },
+    {
+      "id": 153,
+      "name": "dune-break",
+      "filename": "153-dune-break.png",
+      "action": "Dune Break",
+      "revision": "01",
+      "sequence": "A granular sandstone ridge is struck at its base by compressed sand; visible cracks split it at one contact, blocks collapse and grit settles.",
+      "source": "art-library/action-vfx/batch-06/153-source.png",
+      "status": "requires-review"
+    },
+    {
+      "id": 173,
+      "name": "feather-veil",
+      "filename": "173-feather-veil.png",
+      "action": "Feather Veil",
+      "revision": "01",
+      "sequence": "Ivory flight feathers overlap around empty user space; displaced feather ghosts and thin air obscure the centre, then separate. Self evasion veil.",
+      "source": "art-library/action-vfx/batch-06/173-source.png",
+      "status": "requires-review"
+    },
+    {
+      "id": 175,
+      "name": "jetstream-detonation",
+      "filename": "175-jetstream-detonation.png",
+      "action": "Jetstream Detonation",
+      "revision": "01",
+      "sequence": "A braided air jet compresses into one pressure knot and detonates into a torn membrane; cloud fragments drift away.",
+      "source": "art-library/action-vfx/batch-06/175-source.png",
+      "status": "requires-review"
+    },
+    {
+      "id": 187,
+      "name": "tailwind-cry",
+      "filename": "187-tailwind-cry.png",
+      "action": "Tailwind Cry",
+      "revision": "01",
+      "sequence": "A feathered throat and beak give a short cry; soft sound rings draw out streamlined feather wisps into a settling tailwind. Self speed buff.",
+      "source": "art-library/action-vfx/batch-06/187-source.png",
+      "status": "requires-review"
+    }
+  ]
+}

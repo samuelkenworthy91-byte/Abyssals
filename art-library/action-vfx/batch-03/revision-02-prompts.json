@@ -1,0 +1,12 @@
+[
+  {
+    "id": 22,
+    "path": "/workspace/scratch/a57a27057f93/generated_images/exec-1e57d63c-13fb-4ed9-8e4e-57628fa2be5e.png",
+    "prompt": "Revise this 16-frame 4\u00d74 sprite sheet of Scorchwhip. Retain its detailed pixel-art material design and all 16 ordered temporal poses. CRITICAL REPAIR: redraw every independent frame at HALF its current relative size, centered in its own equal square cell with at least 25% fully transparent empty padding on all four sides. No limb, tool, flame, haze or particle may touch or cross any cell boundary; restore clipped whip tips and glaze arcs as complete visible forms. In particular row2 column4 and row3 column1 need fully visible undamaged tips and follow-through. No labels or grid, pure alpha background, crisp clustered pixels and complete distinct preparation, motion, contact, consequences, recovery. Do not crop existing forms; redraw the complete missing silhouettes. Exactly 16 frames in four equal rows and four equal columns."
+  },
+  {
+    "id": 27,
+    "path": "/workspace/scratch/a57a27057f93/generated_images/exec-e9d8e323-e405-4f42-87dd-be02b5e0ca90.png",
+    "prompt": "Revise this 16-frame 4\u00d74 sprite sheet of Kiln Kiss. Retain its detailed pixel-art material design and all 16 ordered temporal poses. CRITICAL REPAIR: redraw every independent frame at HALF its current relative size, centered in its own equal square cell with at least 25% fully transparent empty padding on all four sides. No limb, tool, flame, haze or particle may touch or cross any cell boundary; restore clipped whip tips and glaze arcs as complete visible forms. In particular row2 column4 and row3 column1 need fully visible undamaged tips and follow-through. No labels or grid, pure alpha background, crisp clustered pixels and complete distinct preparation, motion, contact, consequences, recovery. Do not crop existing forms; redraw the complete missing silhouettes. Exactly 16 frames in four equal rows and four equal columns."
+  }
+]

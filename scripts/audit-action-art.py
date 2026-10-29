@@ -26,3 +26,24 @@ with Image.open(root/'dist/assets/pixel/berry-shop-cabinet.webp') as im:
  assert im.width>0 and im.height>0
  im.verify()
 
+
+# Subsequent canonical move art is tracked independently from the 63 protected
+# original action sheets. Do not rewrite the Mercy source or the original hashes.
+batches=[json.loads(p.read_text()) for p in sorted((root/'art-library/action-vfx').glob('batch-*.json'))]
+moves=[m for batch in batches for m in batch['moves']]
+assert len({m['id'] for m in moves})==len(moves)
+assert len(batches[0]['moves'])==12
+new_signatures=[]
+for m in moves:
+ p=root/'dist/assets/vfx/action'/m['filename']
+ assert p.is_file(),m['filename']
+ with Image.open(p) as im:
+  assert im.size==(768,768),m['filename']
+  assert im.mode=='P' and 'transparency' in im.info,m['filename']
+  art=im.convert('RGBA')
+  assert art.getextrema()[3][0]==0 and art.getextrema()[3][1]==255,m['filename']
+  assert all(art.crop((i%4*192,i//4*192,(i%4+1)*192,(i//4+1)*192)).getbbox() for i in range(16)),m['filename']
+  assert len({hashlib.sha256(art.crop((i%4*192,i//4*192,(i%4+1)*192,(i//4+1)*192)).tobytes()).digest() for i in range(16)})>=12,m['filename']
+ new_signatures.append(hashlib.sha256(p.read_bytes()).hexdigest())
+assert len(set(new_signatures))==len(moves)
+print(f'PASS: {len(moves)} additional 192px animation sheets have unique frame content; artistic approval is tracked separately')

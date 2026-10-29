@@ -1,7 +1,7 @@
-import {REVOLT_ART_IDS} from './revolt-data.js?v=0.90.48';
-import {COSSENNE_PEOPLE} from './cossenne-data.js?v=0.90.48';
-import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.87.0';
-import {SIDE_TRAINER_ART,SIDE_TRAINER_IDS,RESTORED_TRAINER_ART} from './side-trainer-art.js?v=0.90.16';
+import {REVOLT_ART_IDS} from './revolt-data.js?v=0.90.52';
+import {COSSENNE_PEOPLE} from './cossenne-data.js?v=0.90.52';
+import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.90.52';
+import {SIDE_TRAINER_ART,SIDE_TRAINER_IDS,RESTORED_TRAINER_ART} from './side-trainer-art.js?v=0.90.52';
 // Four facing rows, with a passing pose between opposite planted-foot poses.
 export const WORLD_CHARACTER_HEIGHT=52;
 export const WORLD_WALK_IDS=['NPC-BERRY-MABEL','LDR-05',...REVOLT_ART_IDS,...COSSENNE_PEOPLE,...SIDE_TRAINER_IDS,...MOUNTAIN_NPC_IDS,'CHR-AIMON','CHR-KURG','CHR-AERIC','TRN-C01-001','TRN-C01-002','TRN-C01-003','TRN-C02-001','TRN-C02-002','LDR-01','LDR-02','SHOP-CIV','SHOP-DOR','SHOP-PHI','CHR-TREASURE','CHR-SALVAGER','CHR-BLOOM-ELITE'];

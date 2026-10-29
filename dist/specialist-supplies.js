@@ -1,4 +1,4 @@
-import {restoreHP,healingMultiplier} from './abilities.js?v=0.90.48';
+import {restoreHP,healingMultiplier} from './abilities.js?v=0.90.52';
 const item=(key,id,name,price,text,extra={})=>({key,id,name,price,text,icon:'assets/cossenne/'+id+'.webp',...extra});
 export const SPECIALIST_FOODS=[
  item('resinLoaves','resin-loaf','Resin Loaf',1200,'8× capture strength for Bug or Grass types; 1× otherwise.',{types:['BUG','GRASS']}),

@@ -1,8 +1,10 @@
 {
-  "version": "0.90.51",
-  "version_code": 146,
-  "filename": "Abyssals-v0.90.51-Trainer-Awareness-Criticals.apk",
-  "title": "Abyssals v0.90.51 — Trainer Awareness & Critical Hits",
-  "notes": "Trainer field AI: stationary trainers now notice Aimon on unobstructed sight lines, selected route trainers patrol short safe loops, solid obstacles block vision, defeated trainers stay inactive, and story/tutorial/sparring gates are preserved. Critical hits: effective in-battle Speed including stages contributes to critical chance (existing 50% cap); criticals only bypass positive defensive stat stages while preserving negative Defence, both positive and negative Attack stages, weather, status and held-item effects. Retains earlier v0.90.50 game content, save format and original Android signing identity.",
-  "pwa_filename": "Abyssals-v0.90.51-PWA.zip"
+  "version": "0.90.52",
+  "version_code": 147,
+  "filename": "Abyssals-v0.90.52-Artwork-Checkpoint.apk",
+  "title": "Abyssals v0.90.52 \u2014 Artwork & Sporefall Checkpoint",
+  "notes": "Interim artwork update requested before completion of the full overhaul. Includes all133 installed dedicated move-animation sheets (70 additions compared with the prior63-sheet release), repaired Branding Iron/Scorchwhip/Hotfoot sources, and all six authored Sporefall environment redesigns: Rim, Depths, Bridge, Crown/Darius, Moonpool Grotto and Crown of Roots. Preserves v0.90.51 trainer sight lines/patrols and effective-Speed critical-hit rules, existing saves and the original Android signing identity. The complete614-action overhaul and remaining visual review are still in progress; this release does not claim100% bespoke or approved artwork.",
+  "pwa_filename": "Abyssals-v0.90.52-PWA.zip",
+  "artwork_release_mode": "interim",
+  "artwork_scope_path": "docs/releases/v0.90.52-art-scope.json"
 }

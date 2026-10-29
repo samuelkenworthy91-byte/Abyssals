@@ -1,4 +1,4 @@
-import {statusCaptureMultiplier} from './status-rules.js?v=0.90.24';
+import {statusCaptureMultiplier} from './status-rules.js?v=0.90.52';
 export function statusDetails(u){const loss=n=>Math.max(1,Math.floor(u.maxHp*n)),s=u.moveState||{},out=[];
  if(u.status==='BURN')out.push(`Burn: Attack ×0.5 on physical moves; loses ${loss(1/8)} HP at turn end.`);
  if(u.status==='FROSTBITE')out.push(`Frostbite: Special Attack ×0.5 on special moves; loses ${loss(1/8)} HP at turn end.`);

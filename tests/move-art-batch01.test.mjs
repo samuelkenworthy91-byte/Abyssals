@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {DATA} from '../dist/data.js';
+import {ACTION_ART,actionFrames,readableDuration,pixelSceneHTML} from '../dist/action-vfx.js';
+import {JOURNAL_HABITATS} from '../dist/journal-habitats.js';
+const batch=JSON.parse(fs.readFileSync(new URL('../art-library/action-vfx/batch-01.json',import.meta.url),'utf8'));
+assert.equal(batch.moves.length,12);
+const names=new Set(),sources=new Set();
+for(const m of batch.moves){
+ const move=DATA.moves.find(x=>Number(x.id)===m.id);
+ assert(move,'must replace a canonical shared-atlas effect: '+m.id);
+ const art=ACTION_ART[m.id];assert(art,'missing action art for '+m.id);
+ assert.equal(art.batch,'01');
+ assert.equal(art.frames,16);
+ assert.equal(art.logicalCell,192);
+ assert.equal(art.individual,true);
+ assert.equal(art.src,'assets/vfx/action/'+m.filename);
+ assert(!sources.has(art.src));sources.add(art.src);
+ assert(!names.has(art.key));names.add(art.key);
+ assert.deepEqual(actionFrames(move),Array.from({length:16},(_,i)=>i));
+ assert(readableDuration(move,art.duration)>=art.duration);
+ assert(pixelSceneHTML(move,{hitCount:1}).includes('data-fx-move="'+m.id+'"'));
+ const png=fs.readFileSync(new URL('../dist/'+art.src,import.meta.url));
+ assert.equal(png.toString('hex',0,8),'89504e470d0a1a0a');
+ assert.equal(png.readUInt32BE(16),768);
+ assert.equal(png.readUInt32BE(20),768);
+ assert.equal(png[25],3,'indexed-colour PNG required, never a blurred vector overlay');
+}
+assert.equal(new Set(batch.moves.map(x=>x.action)).size,12);
+console.log('PASS: 12 independent canonical move sprite sheets, stable IDs, all 16 frames and player-sized pixel art rendering');

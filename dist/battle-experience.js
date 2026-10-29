@@ -1,4 +1,4 @@
-import {defeatExpMultiplier} from './rimebun.js?v=0.87.0';
+import {defeatExpMultiplier} from './rimebun.js?v=0.90.52';
 const opponentRecord=(u,b)=>({enemyUid:u.uid,level:u.rewardLevel??u.level,expMultiplier:defeatExpMultiplier(u),participants:[...(b.participants||[b.player.uid])]});
 // Capturing settles the same training encounter as a knockout. A retreat does not.
 export function completedBattleOpponents(b,outcome){
