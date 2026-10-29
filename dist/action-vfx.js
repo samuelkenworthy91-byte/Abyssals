@@ -12,6 +12,7 @@ export function pixelArtReady(move){
  }));return loading.get(s.src);
 }
 export function actionFrames(move,result={}){
+ if(result.missed||result.skipped||result.immune||result.blocked||result.hitCount===0&&move.power>0)return [];
  if(move.id!==790)return Array.from({length:16},(_,i)=>i);
  const hits=result.hitCount??3;
  if(hits<=0)return [];
@@ -21,7 +22,7 @@ export function actionFrames(move,result={}){
 }
 export function pixelSceneHTML(move,result={}){
  const s=ACTION_ART[move.id];if(!s)return '';
- const frames=actionFrames(move,result);if(!frames.length)return '<div class="fx-message">NO EFFECT</div>';
+ const frames=actionFrames(move,result);if(!frames.length)return '<div class="fx-message">'+(result.missed?'MISS':result.blocked?'BLOCKED':result.skipped?'INTERRUPTED':'NO EFFECT')+'</div>';
  const key='pixel-'+s.id+'-'+frames.length;
  const position=i=>((i%4)*100/3)+'% '+(Math.floor(i/4)*100/3)+'%';
  const css=frames.map((frame,i)=>(i*100/frames.length).toFixed(3)+'%{background-position:'+position(frame)+'}').join('')+'100%{background-position:'+position(frames.at(-1))+'}';

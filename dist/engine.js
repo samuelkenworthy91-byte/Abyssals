@@ -108,6 +108,6 @@ function tideReply(actor,target,reply,random,fallbackFloor=0){const messages=[],
   const beforeStrike=captureHealth(actor,target);const barrier=strikeBarrier(actor,target,m,Math.min(Math.max(0,target.hp-floor),amount),{floor},messages),n=heldSurvival(target,barrier.damage,messages);target.hp-=n;total+=n;hits++;consumeWard(target,m,n);messages.push(...afterDamage(actor,target,m,n,{effectiveness,floor:actor.combatFloor??0,random}),...activateHeldRecovery(target));strikes.push({damage:n,effectiveness,hpChanges:healthChanges(beforeStrike,actor,target)});
  }
  messages.push(`${unitName(actor)} · ${m.name}: ${hits} slash${hits===1?'':'es'}, ${total} damage.`);
- return {who:actor.side||'player',move:m,result:{damage:total,effectiveness:strikes[0]?.effectiveness??0,messages,hitCount:hits,reactionOnly:true,strikes,hpChanges:healthChanges(beforeReply,actor,target)}};
+ return {who:actor.side||'player',actorUid:actor.uid,targetUid:target.uid,move:m,result:{damage:total,effectiveness:strikes[0]?.effectiveness??0,messages,hitCount:hits,reactionOnly:true,strikes,hpChanges:healthChanges(beforeReply,actor,target)}};
 }
 

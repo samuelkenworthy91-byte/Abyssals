@@ -27,6 +27,10 @@ for(const art of Object.values(ACTION_ART)){
  assert.equal(art.frames,16);assert.equal(art.logicalCell,192);
 }
 assert.deepEqual(actionFrames({id:790},{hitCount:0}),[]);
+assert.deepEqual(actionFrames({id:59,power:90},{missed:true}),[],'misses must not show successful contact');
+assert.deepEqual(actionFrames({id:98,power:95},{blocked:true}),[],'blocked attacks must not show successful contact');
+assert.deepEqual(actionFrames({id:59,power:90},{hitCount:0}),[]);
+assert.equal(actionFrames({id:352,power:null},{hitCount:0}).length,16,'healing still needs its complete scene');
 assert(!actionFrames({id:790},{hitCount:1}).includes(4));
 assert(!actionFrames({id:790},{hitCount:2}).includes(7));
 assert.equal(actionFrames({id:790},{hitCount:3}).length,16);
