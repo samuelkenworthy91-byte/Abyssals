@@ -57,11 +57,11 @@
     "registered": 610,
     "battleReactions": 4,
     "total": 614,
-    "dedicated": 99,
-    "missing": 515,
+    "dedicated": 130,
+    "missing": 484,
     "approved": 33,
     "originalCatalogueStillRegistered": 325,
-    "originalCatalogueDedicated": 42
+    "originalCatalogueDedicated": 73
   },
   "aliases": [
     {
@@ -3125,8 +3125,21 @@
         }
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/31-brand-lunge.png",
+        "exists": true,
+        "sha256": "9c8a3f3e93bacb55c8c69eb9419170c786ba7bbeefbeee4aae7252550084316f",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A long barbed ember spear point and its charcoal socket pull back, align horizontally, lunge forward with a compressed straight thrust, stamp ONE sharp branded star on contact, then drag heavily backwards shedding cinders as the speed cost. Distinct piercing heavy physical lunge, no branding stamp tool or fist.",
+        "registeredName": "Brand Lunge"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3200,8 +3213,21 @@
         }
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/32-heat-haze.png",
+        "exists": true,
+        "sha256": "d4e8b5612ea36db75e5835166cf9ffef761b11393895cc0ebb94cadc54ba56d1",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Thin warm air ribbons rise around empty target space, wavy offset lens facets refract a small central sight glint into displaced ghost images, distort and settle as a restrained mirage veil, then gently fade. Foe accuracy reduction; no damaging impact, no flame orb or protective shield.",
+        "registeredName": "Heat Haze"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3265,8 +3291,21 @@
         }
       ],
       "authoredAction": "gather warm motes into a steady pulsing core near the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/33-kindled-heart.png",
+        "exists": true,
+        "sha256": "bf6e09c13f1bd01c86aa2d2cfe37f7501bacb23ec3b42f71d5f849c0b0402ef2",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two dark sculpted creature hands approach with open fingers, form an empty heart-shaped space between their knuckles, warm golden motes gather into that hollow, the hands close into two powerful fists with bright heated tendon-like lines, then relax apart as motes subside. Physical ATTACK self buff. No anatomical organ, clearly distinct from Stoke the Heart's literal coal heart.",
+        "registeredName": "Kindled Heart"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3320,8 +3359,21 @@
         }
       ],
       "authoredAction": "wrap the user in a thin translucent haze that partially obscures the silhouette. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/34-smoulder-veil.png",
+        "exists": true,
+        "sha256": "a301e069b2274063ee2313c3a3658d6af2a20d06ecebabda35ebdf4c3acc068a",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Soft charcoal-grey smoke unspools from five small smouldering feather-like scales, wraps in overlapping translucent draped bands around empty user silhouette space, small incoming orange sparks visibly fizzle against the cool outer soot layer, veil settles then unravels gently. SELF special defence and burn immunity; no strike or explosive flash.",
+        "registeredName": "Smoulder Veil"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3396,8 +3448,21 @@
         }
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/35-war-flame.png",
+        "exists": true,
+        "sha256": "6ed940a09361a9af8f660d7c0d4cf5f13ffdb3d983063657fa4fe6440201afc2",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A small red ember seal between two rugged forearm gauntlets splits and is consumed inward, leaving a brief dim gap that communicates personal cost; the braced gauntlets rise as two distinct tall braided war flames unfurl behind them, flare steadily with strength and forward speed wisps, then cool and lower. Self attack/speed buff at HP cost, no enemy collision or damage burst; not a battle flag or literal heart.",
+        "registeredName": "War Flame"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3783,8 +3848,21 @@
         }
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/40-deepwater-brace.png",
+        "exists": true,
+        "sha256": "435b3cbb002c786276471277c39f0e3e73bac6766ec9f412dc85db11ed7bf40e",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Several thick lens-shaped layers of deep teal water descend slowly and stack into a heavy flattened pressure arch over empty user space, small bubbles compress between strata, the arch firms into a dense braced water canopy absorbing a restrained ripple, then layers relax upward and separate into bubbles. Special defence self buff; no bronze armour, no attack wave.",
+        "registeredName": "Deepwater Brace"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3835,8 +3913,21 @@
         }
       ],
       "authoredAction": "a forceful impact that visibly fractures the effect motif into pieces.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/42-breakwater.png",
+        "exists": true,
+        "sha256": "42ceabcfef1abe22f88a9012cdc7f66c70ef9f272a6efbddaf8e156c420cb8ad",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A pale foaming vertical wave wall rises, a heavy dark-water wedge surges into it at right angles, the wall fractures into separate curled slabs of water around a single immense physical contact, foam and pebble chips kick backward in recoil, slabs collapse into low splashes and droplets. Powerful physical attack with recoil; recognisable broken wave wall, no sphere.",
+        "registeredName": "Breakwater"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3897,8 +3988,21 @@
         }
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/43-keel-rend.png",
+        "exists": true,
+        "sha256": "288f706ba26118c173512f0934f4d375146bc004fc7ca7a2db86c37545e9b44b",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Three narrow hooked keel-like fins of dark dense water rise together, draw back in a loaded claw rake, sweep down diagonally as three distinct curved cutting trails converging on ONE rending contact, drag a heavy low backwash and withdraw slowly with floating keel splinters. Single-hit physical clawing attack with speed cost, not a projectile lance.",
+        "registeredName": "Keel Rend"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -3968,8 +4072,21 @@
         }
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/44-undertow-hook.png",
+        "exists": true,
+        "sha256": "5b473594a57b10223be350ab02e249617dea367ac39063dd10117f2378692290",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A heavy corroded anchor hook emerges from coiling low undertow, sinks with a weighted straight descent, catches and pivots into one powerful upward hook impact from below, tears loose foam and grit in a suction ring, then sinks back into the receding water. Distinct sculpted hooked mass and downward-then-upward movement.",
+        "registeredName": "Undertow Hook"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4063,8 +4180,21 @@
       },
       "effects": [],
       "authoredAction": "a narrow piercing projectile that spears straight through the target space.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/45-foam-lance.png",
+        "exists": true,
+        "sha256": "db403711a7cfe8f740f233f2a5c7a586694700951e1c42e1c18ef70397211efd",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A slender compressed water needle with a dense foamy spearhead elongates from a tight bead, accelerates straight across center in a precise piercing thrust, punches through once with a small narrow star of spray, its trailing shaft unravels into elongated bubbles and fine droplets. Special piercing attack; no broad wave or curved claw.",
+        "registeredName": "Foam Lance"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4114,8 +4244,21 @@
         }
       ],
       "authoredAction": "two or three expanding rings followed by a concentrated core flash.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/46-foam-pulse.png",
+        "exists": true,
+        "sha256": "49287f5ac31454baea0ff1542597a9479a581345eaeacedaae9458cd5bd4e8f9",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A small pearly foam knot vibrates, releases three precisely separated expanding circular ripple rings, rings pass outward while a dense central bubble contracts, ONE concentrated bright core flash provides the actual damage contact, hollow foam bubbles wobble irregularly and dissipate afterward. Three preparatory pressure rings, only ONE impact, distinctive from Foam Lance.",
+        "registeredName": "Foam Pulse"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4165,8 +4308,21 @@
         }
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/47-riptide-scissor.png",
+        "exists": true,
+        "sha256": "f90e9e1851573836f08a7d0e315232b0f25c3002e6e01a76ae177ac730fee22a",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two opposing crescent liquid blades pull apart in counter-rotating currents, close across center in a single scissoring water impact, cut foam fragments spray outward while a narrow separate restorative backflow thread returns toward the origin, then both blade currents unwind into droplets. Physical damaging attack with draining backflow. Liquid scissor currents, no solid scissors tool or handles.",
+        "registeredName": "Riptide Scissor"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4262,8 +4418,21 @@
         }
       ],
       "authoredAction": "raise a thin plane or curved pane of translucent energy. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/49-mist-screen.png",
+        "exists": true,
+        "sha256": "7c72aca0143362bdb3de2227855e20883e81d0763b8ee7e806168d2c9467ea78",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Fine cool droplets rise into a thin vertical plane like a fogged window, a translucent grey-blue curtain slides across empty target space and breaks a small sight glint into blurred displaced copies, then the screen thins and lifts. Foe accuracy reduction, no damage flash or attack collision. A flat fog screen, not Heat Haze's rising warm refraction ribbons.",
+        "registeredName": "Mist Screen"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4341,8 +4510,21 @@
         }
       ],
       "authoredAction": "tighten scattered particles into a balanced symmetric aura. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/50-tidal-poise.png",
+        "exists": true,
+        "sha256": "77b67250019aac99cec84776485ce3b69908a998953c9d6fd74ce0a72da48c2e",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Scattered droplet masses wobble around an empty standing-user space, collect into two opposed substantial curved water cuffs at shoulder/forearm level, brace symmetrically above a quiet shallow pool, absorb a tiny balanced ripple and settle, then relax into drops. Physical defence self buff; balanced braced wave arms, not Deepwater Brace's stacked pressure canopy.",
+        "registeredName": "Tidal Poise"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4403,8 +4585,21 @@
         }
       ],
       "authoredAction": "a forceful impact that visibly fractures the effect motif into pieces.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/51-tide-break.png",
+        "exists": true,
+        "sha256": "e8b4885ee67731d1b7517b54d8707b687442faa9d862f7826296c9cade422973",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "One sculpted open hand made of dense sea water draws back with fingers spread, drives its broad palm forward once, compresses into a flat forceful contact, fractures into five distinct finger-shaped water facets and spray, then the facets fall into a low pool. Physical palm impact with fracturing water motif; not a tall wave wall or a closed fist.",
+        "registeredName": "Tide Break"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4467,8 +4662,21 @@
         }
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/52-coral-lunge.png",
+        "exists": true,
+        "sha256": "58fb0989c95ca5eec386face7f6352d2554926822c88b934e2450146ecb77533",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Three richly textured branching coral talons emerge from a short coral wrist base, pull back, lunge together on converging curved paths, meet in ONE pointed piercing contact, shed pink coral grit and fine foam, then retract and cool. Physical hard coral claw action with three preparatory trails but one hit; no giant water claw or generic orb.",
+        "registeredName": "Coral Lunge"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4565,8 +4773,21 @@
         }
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/53-keel-hammer.png",
+        "exists": true,
+        "sha256": "45bdd5fa1de51dc576fbe009c7827bb7cc8c042e25d7767421c87725fb1e4a34",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A heavy worn keel-timber hammerhead encrusted with tiny barnacles lifts on a short water-formed haft, swings down with visible weight into ONE low smashing contact, wood chips and a broad circular shock ripple spread, hammer bounces once and lowers into the receding foam. Distinct descending weighted keel hammer, not an anchor hook.",
+        "registeredName": "Keel Hammer"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4654,8 +4875,21 @@
         }
       ],
       "authoredAction": "a narrow piercing projectile that spears straight through the target space.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/54-tide-lance.png",
+        "exists": true,
+        "sha256": "4825b3f34ef0f661dbe855296a091cb6afbafc49c586b843c6bc7c0f4d9eee21",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Three short vertical jets align and compress into one narrow translucent ribbed water spear with an angular glass-like pointed head, tilt diagonally and spear straight through target space once, then fracture into sharp liquid facets and a sparse straight droplet line. A rigid pressure spear with angular ribs, clearly distinct from Foam Lance's soft pearly bubbling dart. Keep the complete short spear compact within each cell.",
+        "registeredName": "Tide Lance"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4748,8 +4982,21 @@
         }
       ],
       "authoredAction": "two or three expanding rings followed by a concentrated core flash.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/55-tide-pulse.png",
+        "exists": true,
+        "sha256": "bd183d6324c31720e21e6b022a7921e7a5859839ee91436bd04847fea5183dd7",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A thin upright dense-water membrane stretches like an oval diaphragm, a falling droplet plucks it inward, it releases two expanding ridged pressure rings, folds tightly into ONE concentrated core pulse and springs outward, then shivers and breaks into flat droplets. Special attack weakening defence. A vibrating membrane and pressure ridges, not Foam Pulse's pearly bubble cloud.",
+        "registeredName": "Tide Pulse"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4793,8 +5040,21 @@
       },
       "effects": [],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/56-undertow-reap.png",
+        "exists": true,
+        "sha256": "24890bf47c83c49a89c0714b02d6d644f4ec2fe6272e142166ab7fdf9916de3c",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A narrow hooked scythe edge of dark water rises from a low undertow stream, shoots forward in a compact oblique streak, pinches into ONE sharp hooked collision at center, tears a notch through the stream and trails fine cut foam fragments before draining away. A fast narrow reaping hook, no heavy anchor, no healing backflow.",
+        "registeredName": "Undertow Reap"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4863,8 +5123,21 @@
         }
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/57-monsoon-detonation.png",
+        "exists": true,
+        "sha256": "2ab980048c9b2b41142ffbbb7efeb8ad04ba3bc19f1fcef2e57c6058daf38cf2",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Fine diagonal rain bands gather into one clearly corkscrewing beaded stream, wrap ONCE around empty target space, squeeze into a dense rain knot and burst radially in ONE monsoon detonation, a thin separate restorative backflow thread returns toward the origin while individual rain drops fall and vanish. Single special draining hit; not opposing water scissor blades or an endless tornado.",
+        "registeredName": "Monsoon Detonation"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -4913,8 +5186,21 @@
         }
       ],
       "authoredAction": "a wide horizontal sweep spanning most of the target silhouette.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/58-tide-sweep.png",
+        "exists": true,
+        "sha256": "626456ef4b38231b04dc064b8c7d26c6be89083d50e27350d7c20926e871f963",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A shallow broad tide ribbon unfurls low from one side, rises into a wide horizontal water curtain sweeping across most of empty target silhouette, lands ONE sustained low sweeping contact, breaks into rolling foam rows while a narrow restorative droplet thread returns toward origin, then the entire curtain recedes into a sparse line. Physical draining sweep; no anchor, scythe, lance or repeated impacts.",
+        "registeredName": "Tide Sweep"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5063,8 +5349,21 @@
         }
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/60-static-warning.png",
+        "exists": true,
+        "sha256": "6c567defee6bd7f1859d2f1b45f78eb4e969c15751f9af7dba295e081a4089b0",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Many fine conductive hair-like filaments rise around empty user space, tiny dust motes are attracted to their pointed ends, each filament stiffens and branches with contained gold static, a steady charged outline settles without jumping to any foe, then the filaments lower and sparks subside. Self special attack buff; warning charge stored rather than an electrical explosion.",
+        "registeredName": "Static Warning"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5142,8 +5441,21 @@
         }
       ],
       "authoredAction": "leave one or two fading afterimages showing a sudden reposition. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/61-circuit-breaker.png",
+        "exists": true,
+        "sha256": "37b327382bbc6911cbc58d0dff46a3e3408cfab9689e82a0a904637d287bf724",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A small detailed bronze knife-switch opens on a hinge and breaks two protective ceramic guard plates apart, the exposed switch body shifts rapidly twice leaving two thin fading positional afterimages, discarded plates fall away as a steady streamlined charge remains, then the switch lowers and the ghosts fade. Self speed+2 with defence-1, no damaging discharge. A physical opening switch and discarded protection, not Alien Circuit's assembled attack lattice.",
+        "registeredName": "Circuit Breaker"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -8745,8 +9057,21 @@
         }
       ],
       "authoredAction": "pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/117-measured-force.png",
+        "exists": true,
+        "sha256": "d87a6d85a7d734ddf29f61bd519db2141b474d909912555acd1d17ea40395db3",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two articulated bronze forepaws align and close slowly; fine force lines gather into a steady central glint, then hands relax. Self attack buff without target impact.",
+        "registeredName": "Measured Force"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -9148,8 +9473,21 @@
         }
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/124-firm-footing.png",
+        "exists": true,
+        "sha256": "9fd46d3e248eab13acd8f32a2dc4a769fa92a072b7f23e5877d5994d3f9f86ac",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two textured clawed feet plant and grip; angular stone braces lock around soles, resist a lateral gust and relax. Self defence and anchoring buff.",
+        "registeredName": "Firm Footing"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -9342,8 +9680,21 @@
         }
       ],
       "authoredAction": "a blunt shockwave with a compact center and broad pressure halo.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/126-iron-blow.png",
+        "exists": true,
+        "sha256": "ce5570e4fdb9c477308290d29cf3ca36eb97276d11ab8e5e284ea42ee310fd50",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Wrapped iron-grey martial forearm draws back, makes one short precision knuckle punch with compressed pressure halo, then withdraws.",
+        "registeredName": "Iron Blow"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -11304,8 +11655,21 @@
         }
       ],
       "authoredAction": "a forceful impact that visibly fractures the effect motif into pieces.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/153-dune-break.png",
+        "exists": true,
+        "sha256": "01b1541a5b8c0b4fd89dbcbb79690f27b919db38732fcb63a1c1b6292b4f9c38",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A granular sandstone ridge is struck at its base by compressed sand; visible cracks split it at one contact, blocks collapse and grit settles.",
+        "registeredName": "Dune Break"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -12642,8 +13006,21 @@
         }
       ],
       "authoredAction": "wrap the user in a thin translucent haze that partially obscures the silhouette. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/173-feather-veil.png",
+        "exists": true,
+        "sha256": "bdf66e0058711aa3761d49decf888d225ee5ffe89575720b76c9a04e827a8a74",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Ivory flight feathers overlap around empty user space; displaced feather ghosts and thin air obscure the centre, then separate. Self evasion veil.",
+        "registeredName": "Feather Veil"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -12834,8 +13211,21 @@
         }
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/175-jetstream-detonation.png",
+        "exists": true,
+        "sha256": "10101a904fa7ff9262c36ba442a00d6efb55cc3fd703bb19bd0b39e1d575a7d3",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A braided air jet compresses into one pressure knot and detonates into a torn membrane; cloud fragments drift away.",
+        "registeredName": "Jetstream Detonation"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -13754,8 +14144,21 @@
         }
       ],
       "authoredAction": "emit short concentric sound rings from the user side. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/187-tailwind-cry.png",
+        "exists": true,
+        "sha256": "c8f3f077fe8dfb60f743f18cb60dc09da1985754d326fc8171d0dcfb41d11b97",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A feathered throat and beak give a short cry; soft sound rings draw out streamlined feather wisps into a settling tailwind. Self speed buff.",
+        "registeredName": "Tailwind Cry"
+      },
+      "status": "requires-review",
       "review": null
     },
     {

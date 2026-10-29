@@ -1,0 +1,115 @@
+{
+  "batch": "04",
+  "format": "PNG indexed transparent768x768;16frames of192x192",
+  "rasterTechnique": "Authored raster scenes; visual and gameplay approval tracked separately.",
+  "moves": [
+    {
+      "id": 31,
+      "name": "brand-lunge",
+      "filename": "31-brand-lunge.png",
+      "action": "Brand Lunge",
+      "revision": "01",
+      "sequence": "A long barbed ember spear point and its charcoal socket pull back, align horizontally, lunge forward with a compressed straight thrust, stamp ONE sharp branded star on contact, then drag heavily backwards shedding cinders as the speed cost. Distinct piercing heavy physical lunge, no branding stamp tool or fist.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/31-source.png"
+    },
+    {
+      "id": 32,
+      "name": "heat-haze",
+      "filename": "32-heat-haze.png",
+      "action": "Heat Haze",
+      "revision": "01",
+      "sequence": "Thin warm air ribbons rise around empty target space, wavy offset lens facets refract a small central sight glint into displaced ghost images, distort and settle as a restrained mirage veil, then gently fade. Foe accuracy reduction; no damaging impact, no flame orb or protective shield.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/32-source.png"
+    },
+    {
+      "id": 33,
+      "name": "kindled-heart",
+      "filename": "33-kindled-heart.png",
+      "action": "Kindled Heart",
+      "revision": "01",
+      "sequence": "Two dark sculpted creature hands approach with open fingers, form an empty heart-shaped space between their knuckles, warm golden motes gather into that hollow, the hands close into two powerful fists with bright heated tendon-like lines, then relax apart as motes subside. Physical ATTACK self buff. No anatomical organ, clearly distinct from Stoke the Heart's literal coal heart.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/33-source.png"
+    },
+    {
+      "id": 34,
+      "name": "smoulder-veil",
+      "filename": "34-smoulder-veil.png",
+      "action": "Smoulder Veil",
+      "revision": "01",
+      "sequence": "Soft charcoal-grey smoke unspools from five small smouldering feather-like scales, wraps in overlapping translucent draped bands around empty user silhouette space, small incoming orange sparks visibly fizzle against the cool outer soot layer, veil settles then unravels gently. SELF special defence and burn immunity; no strike or explosive flash.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/34-source.png"
+    },
+    {
+      "id": 35,
+      "name": "war-flame",
+      "filename": "35-war-flame.png",
+      "action": "War Flame",
+      "revision": "01",
+      "sequence": "A small red ember seal between two rugged forearm gauntlets splits and is consumed inward, leaving a brief dim gap that communicates personal cost; the braced gauntlets rise as two distinct tall braided war flames unfurl behind them, flare steadily with strength and forward speed wisps, then cool and lower. Self attack/speed buff at HP cost, no enemy collision or damage burst; not a battle flag or literal heart.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/35-source.png"
+    },
+    {
+      "id": 40,
+      "name": "deepwater-brace",
+      "filename": "40-deepwater-brace.png",
+      "action": "Deepwater Brace",
+      "revision": "01",
+      "sequence": "Several thick lens-shaped layers of deep teal water descend slowly and stack into a heavy flattened pressure arch over empty user space, small bubbles compress between strata, the arch firms into a dense braced water canopy absorbing a restrained ripple, then layers relax upward and separate into bubbles. Special defence self buff; no bronze armour, no attack wave.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/40-source.png"
+    },
+    {
+      "id": 42,
+      "name": "breakwater",
+      "filename": "42-breakwater.png",
+      "action": "Breakwater",
+      "revision": "01",
+      "sequence": "A pale foaming vertical wave wall rises, a heavy dark-water wedge surges into it at right angles, the wall fractures into separate curled slabs of water around a single immense physical contact, foam and pebble chips kick backward in recoil, slabs collapse into low splashes and droplets. Powerful physical attack with recoil; recognisable broken wave wall, no sphere.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/42-source.png"
+    },
+    {
+      "id": 43,
+      "name": "keel-rend",
+      "filename": "43-keel-rend.png",
+      "action": "Keel Rend",
+      "revision": "01",
+      "sequence": "Three narrow hooked keel-like fins of dark dense water rise together, draw back in a loaded claw rake, sweep down diagonally as three distinct curved cutting trails converging on ONE rending contact, drag a heavy low backwash and withdraw slowly with floating keel splinters. Single-hit physical clawing attack with speed cost, not a projectile lance.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/43-source.png"
+    },
+    {
+      "id": 44,
+      "name": "undertow-hook",
+      "filename": "44-undertow-hook.png",
+      "action": "Undertow Hook",
+      "revision": "01",
+      "sequence": "A heavy corroded anchor hook emerges from coiling low undertow, sinks with a weighted straight descent, catches and pivots into one powerful upward hook impact from below, tears loose foam and grit in a suction ring, then sinks back into the receding water. Distinct sculpted hooked mass and downward-then-upward movement.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/44-source.png"
+    },
+    {
+      "id": 45,
+      "name": "foam-lance",
+      "filename": "45-foam-lance.png",
+      "action": "Foam Lance",
+      "revision": "02",
+      "sequence": "A slender compressed water needle with a dense foamy spearhead elongates from a tight bead, accelerates straight across center in a precise piercing thrust, punches through once with a small narrow star of spray, its trailing shaft unravels into elongated bubbles and fine droplets. Special piercing attack; no broad wave or curved claw.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/45-source.png"
+    },
+    {
+      "id": 46,
+      "name": "foam-pulse",
+      "filename": "46-foam-pulse.png",
+      "action": "Foam Pulse",
+      "revision": "01",
+      "sequence": "A small pearly foam knot vibrates, releases three precisely separated expanding circular ripple rings, rings pass outward while a dense central bubble contracts, ONE concentrated bright core flash provides the actual damage contact, hollow foam bubbles wobble irregularly and dissipate afterward. Three preparatory pressure rings, only ONE impact, distinctive from Foam Lance.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/46-source.png"
+    },
+    {
+      "id": 47,
+      "name": "riptide-scissor",
+      "filename": "47-riptide-scissor.png",
+      "action": "Riptide Scissor",
+      "revision": "01",
+      "sequence": "Two opposing crescent liquid blades pull apart in counter-rotating currents, close across center in a single scissoring water impact, cut foam fragments spray outward while a narrow separate restorative backflow thread returns toward the origin, then both blade currents unwind into droplets. Physical damaging attack with draining backflow. Liquid scissor currents, no solid scissors tool or handles.",
+      "source": "art-library/action-vfx/pending-production/recovery-2026-10-29/batch-04/47-source.png"
+    }
+  ]
+}
