@@ -59,7 +59,7 @@
   ],
   "authoredAction": "construct a stable magical or elemental sigil that settles into a protective aura. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "Five thick root stakes grow upward around a central hollow gap, interlock into a low woven living barricade, settle with a quiet amber sap glint, and remain protective before fading. Self defence buff: NO damaging flash, blow or hit star.",
@@ -67,6 +67,12 @@
   "source": "art-library/action-vfx/batch-09/93-source.png",
   "prepared": "art-library/action-vfx/batch-09/93-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "c22b2e3ad5e1a20ca5cd2ac85b10010996a4e9181e15a5c5196f353005a3e608",
-  "preparedSha256": "9882c654103ef06e62111932034e08e2db3626429e3ee6a62e7ca9655ae573ca"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "9882c654103ef06e62111932034e08e2db3626429e3ee6a62e7ca9655ae573ca",
+  "sourceSha256": "c22b2e3ad5e1a20ca5cd2ac85b10010996a4e9181e15a5c5196f353005a3e608"
 }

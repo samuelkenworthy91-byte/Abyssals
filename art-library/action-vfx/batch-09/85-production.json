@@ -52,7 +52,7 @@
   ],
   "authoredAction": "one decisive impact arc with a strong contact flash.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "A broad folded leaf paddle draws back sideways, rotates flat, delivers ONE heavy diagonal slap that shakes loose a little sleepy pollen, then flexes back open. A blunt leaf strike, not a leaf blade cut.",
@@ -60,6 +60,12 @@
   "source": "art-library/action-vfx/batch-09/85-source.png",
   "prepared": "art-library/action-vfx/batch-09/85-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "fdaf237d3754307cc72183d011c67e5e2a83b55d9ed44f71709d4c2b88eeade7",
-  "preparedSha256": "5a7e5ed07194212843e18f1d932fafea86cdc3b830ce0e5ff2ce54c0c973aae1"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "5a7e5ed07194212843e18f1d932fafea86cdc3b830ce0e5ff2ce54c0c973aae1",
+  "sourceSha256": "fdaf237d3754307cc72183d011c67e5e2a83b55d9ed44f71709d4c2b88eeade7"
 }

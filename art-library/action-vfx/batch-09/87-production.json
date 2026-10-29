@@ -59,7 +59,7 @@
   ],
   "authoredAction": "a crisp blade-like streak with a delayed secondary glint.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "A flattened woody root blade reveals growth rings and a pale splinter edge, rotates edge-on, makes ONE short shearing cut, chips off two bark flakes and turns broadside in recovery. No floating leaf.",
@@ -67,6 +67,12 @@
   "source": "art-library/action-vfx/batch-09/87-source.png",
   "prepared": "art-library/action-vfx/batch-09/87-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "33345838d60ea45dd58bc81621a20c90b6a3f39773b2ca94eb8165b7b4e65bef",
-  "preparedSha256": "bc4cc08516814d14ef943f0777bc6b5f655fb52c876c0294e642b13a0979d5a8"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "bc4cc08516814d14ef943f0777bc6b5f655fb52c876c0294e642b13a0979d5a8",
+  "sourceSha256": "33345838d60ea45dd58bc81621a20c90b6a3f39773b2ca94eb8165b7b4e65bef"
 }

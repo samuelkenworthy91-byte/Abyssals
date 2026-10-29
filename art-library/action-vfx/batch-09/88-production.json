@@ -51,7 +51,7 @@
   ],
   "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "Two asymmetrical sickle-shaped leaf edges on curved stems open like shears, cross shut ONCE at one central contact, rebound with a little recoil twitch and unfold. Large notched leaf blades, no insect or jaws.",
@@ -59,6 +59,12 @@
   "source": "art-library/action-vfx/batch-09/88-source.png",
   "prepared": "art-library/action-vfx/batch-09/88-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "f4792a9061173fd907b936e3614a922088fc314404c2420c25c9eb9488ffefbb",
-  "preparedSha256": "bc23d610350e4acb75f45c9b16e217e75a2bc7209145975a7f779cb3f52dcba0"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "bc23d610350e4acb75f45c9b16e217e75a2bc7209145975a7f779cb3f52dcba0",
+  "sourceSha256": "f4792a9061173fd907b936e3614a922088fc314404c2420c25c9eb9488ffefbb"
 }

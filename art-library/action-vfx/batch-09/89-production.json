@@ -55,7 +55,7 @@
   ],
   "authoredAction": "a forceful multi-layered attack effect with a pronounced travel phase and heavy impact.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "A thick bundle of pale segmented roots reaches outward like grasping fingers, coils ONCE around a hollow central space, contracts with creaking purple pressure lines, then releases its loosening knots. Heavy restraining root magic, no whip.",
@@ -63,6 +63,12 @@
   "source": "art-library/action-vfx/batch-09/89-source.png",
   "prepared": "art-library/action-vfx/batch-09/89-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "b49a22415182400d0f0972ad56853b9ac51808e66249305a4ffb491c5e77edc0",
-  "preparedSha256": "cf0012f86f4a8a86534954df88341e14729362c2b827cef954f116a86cf55b25"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "cf0012f86f4a8a86534954df88341e14729362c2b827cef954f116a86cf55b25",
+  "sourceSha256": "b49a22415182400d0f0972ad56853b9ac51808e66249305a4ffb491c5e77edc0"
 }

@@ -45,3 +45,7 @@ Browser transfer succeeded in related checkpoints of25,12,24 and15 files. Use th
 ## Current authorization — continue to50%
 
 User explicitly requested continuing production until50%, superseding the earlier25% pause. Target307/614 authored sheets; baseline154 authored/prepared (133 installed plus21 batch08 prepared), so153 more distinct sources are required. Continue browser batch uploads, hash verification and durable snapshots. Keep installed and prepared counts separate; do not claim50% installed from source-only candidates. Snapshot workflow now includes artwork/** branches, fixing missed automatic recovery snapshots for this branch.
+
+## Batch09 production checkpoint
+
+17 new sources (IDs85,87–90,92–96,99–105) are packed, structurally validated and source/packed-frame inspected. All are candidates pending registration and actual battle/artistic approval. Authored/prepared stock171/614 (27.9%); installed remains133/614 (21.7%). Browser image uploads only. Batch10 and11 generation may be in progress; check their production records and use sources already saved before generating anything again. Goal remains307 authored sheets; continue without the superseded25% pause.

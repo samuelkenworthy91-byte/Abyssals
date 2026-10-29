@@ -47,7 +47,7 @@
   "effects": [],
   "authoredAction": "a whipping ribbon, vine, flame or shadow trail snapping across the target.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "A single long knotted root with small fibrous side roots winds into a tight spiral, uncoils in one long horizontal lash, makes ONE cracking tip contact, falls slack and recoils. Brown root distinct from green Leaf Lash.",
@@ -55,6 +55,12 @@
   "source": "art-library/action-vfx/batch-09/90-source.png",
   "prepared": "art-library/action-vfx/batch-09/90-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "03a4fda40e9b5bcbbdbbf977e51036e6092c33d32d25b0363f8ba4c06055458e",
-  "preparedSha256": "b4d573c76938a339c6640bf11053eba7a4b3d2d44b4d648821f8f4929a4834c7"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "b4d573c76938a339c6640bf11053eba7a4b3d2d44b4d648821f8f4929a4834c7",
+  "sourceSha256": "03a4fda40e9b5bcbbdbbf977e51036e6092c33d32d25b0363f8ba4c06055458e"
 }

@@ -56,7 +56,7 @@
   ],
   "authoredAction": "sprout quick curling shoots or light-vines around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
   "art": null,
-  "status": "generated; prepared validation and visual review pending",
+  "status": "prepared candidate; gameplay and artistic approval pending",
   "review": null,
   "batch": "09",
   "sequence": "Two curled fresh shoots unfold in alternating directions, grow into four bright young leaf fronds and one pink bud, gently arch around an empty central space and settle as a balanced growth aura. Self offensive buff, no target damage flash.",
@@ -64,6 +64,12 @@
   "source": "art-library/action-vfx/batch-09/94-source.png",
   "prepared": "art-library/action-vfx/batch-09/94-prepared.png",
   "generator": "built-in image_gen",
-  "sourceSha256": "b2c3a962a6417a4c0706b1a125de715e90b0144951b8aaa85d30226250886790",
-  "preparedSha256": "e923142bc6e9a6330fe736fb8a881dd68cfe31388f49aa51d11ba1c2210dee7f"
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "e923142bc6e9a6330fe736fb8a881dd68cfe31388f49aa51d11ba1c2210dee7f",
+  "sourceSha256": "b2c3a962a6417a4c0706b1a125de715e90b0144951b8aaa85d30226250886790"
 }

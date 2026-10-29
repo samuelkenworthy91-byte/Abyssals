@@ -1,0 +1,95 @@
+{
+  "id": 96,
+  "name": "Verdant Mend",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/full-expansion.js",
+    "dist/progression-renewal.js",
+    "dist/roster-expansion.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 97
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "042",
+      "043",
+      "060",
+      "061",
+      "077",
+      "078",
+      "101",
+      "102",
+      "106",
+      "117",
+      "135",
+      "136",
+      "140",
+      "162",
+      "163",
+      "165",
+      "175",
+      "183",
+      "184",
+      "200",
+      "287",
+      "288",
+      "290",
+      "291",
+      "292",
+      "294",
+      "296",
+      "411",
+      "414",
+      "519"
+    ],
+    "tutor": true,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "STATUS",
+  "type": "GRASS",
+  "target": "SELF",
+  "allyTarget": false,
+  "power": null,
+  "pp": 5,
+  "accuracy": "ALWAYS",
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "heal",
+      "target": "SELF",
+      "max_hp_fraction": [
+        1,
+        2
+      ]
+    }
+  ],
+  "authoredAction": "draw energy inward as small leaves or motes and seal with a soft flash. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "Three torn leaf fragments gather green sap droplets, spiral softly inward, join their torn veins into one restored whole leaf, and release gentle rising healing motes. Healing only, no attack star or outward strike.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Verdant Mend, stable ID96. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: Three torn leaf fragments gather green sap droplets, spiral softly inward, join their torn veins into one restored whole leaf, and release gentle rising healing motes. Healing only, no attack star or outward strike. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/96-source.png",
+  "prepared": "art-library/action-vfx/batch-09/96-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "82a65d25c0a714da4d2bbfeba6101522c8af56265fbc674d9d353599c9fc4855",
+  "sourceSha256": "909979d879710d98fd271a412b45487e11f0aebac51c84189d27aa04cb83bedc"
+}

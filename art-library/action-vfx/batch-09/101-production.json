@@ -1,0 +1,84 @@
+{
+  "id": 101,
+  "name": "Whiteout Detonation",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 102
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "144",
+      "194",
+      "195",
+      "258",
+      "259",
+      "260",
+      "283",
+      "284",
+      "299",
+      "300",
+      "303",
+      "304",
+      "305",
+      "306",
+      "321",
+      "322",
+      "364",
+      "404",
+      "405",
+      "423"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "SPECIAL",
+  "type": "ICE",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 60,
+  "pp": 20,
+  "accuracy": 100,
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "sp_defence"
+      ],
+      "stages": -1,
+      "chance_percent": 70,
+      "secondary": true
+    }
+  ],
+  "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "A compact rough white snowball draws wisps of powder inward, compresses into faceted ice, then breaks into ONE broad whiteout ring of snow chunks and cold blue dust which disperses. No thundercloud or fire explosion.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Whiteout Detonation, stable ID101. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: A compact rough white snowball draws wisps of powder inward, compresses into faceted ice, then breaks into ONE broad whiteout ring of snow chunks and cold blue dust which disperses. No thundercloud or fire explosion. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/101-source.png",
+  "prepared": "art-library/action-vfx/batch-09/101-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "781e5db753f3dc6403471346242b12f7f8ecb57fa97aa2f5bf832ee43f3036fa",
+  "sourceSha256": "512bef535a33eef9fd38443aa28520b525630467c1fe58bbc8b665cfbd78ad4e"
+}
