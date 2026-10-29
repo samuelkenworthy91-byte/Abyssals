@@ -1,17 +1,25 @@
 name: Development workspace snapshot
 on:
   push:
-    branches: ['feature/v0.90.51-bespoke-moves-batch-01']
-    paths: ['.github/workflows/development-snapshot.yml']
+    branches: ['feature/**', 'patch/**']
+    paths:
+      - '.github/workflows/development-snapshot.yml'
+      - 'scripts/development-snapshot.py'
+      - 'docs/development-resume.md'
 permissions:
   contents: read
+concurrency:
+  group: development-snapshot-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   snapshot:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |
+            .github/workflows
             dist
             scripts
             tests
@@ -19,10 +27,13 @@ jobs:
             art-library/action-vfx
             art-library/finale
             art-library/reviews/item-branches-2026-10-26
-      - name: Package current development assets
-        run: tar -czf development-workspace.tar.gz dist scripts tests docs art-library AGENTS.md release-config.json .github
+      - name: Package sources, prepared artwork and resume state
+        run: python3 scripts/development-snapshot.py create --commit "$GITHUB_SHA" --output build/development-snapshot
       - uses: actions/upload-artifact@v4
         with:
-          name: development-workspace
-          path: development-workspace.tar.gz
-          retention-days: 1
+          name: development-workspace-${{ github.sha }}
+          path: build/development-snapshot/*
+          retention-days: 30
+          compression-level: 0
+          if-no-files-found: error
+

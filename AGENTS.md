@@ -15,3 +15,11 @@
 - For Botrune and later companion story work, read `docs/botrune-story.md`. The 20 October 2026 user revision moves Pate/Trade deaths to Botrune; do not reintroduce their superseded Emmara Mill deaths. Preserve `BT-PUBLIC-SENTENCE-20261020`, independent `humanLives` history/current state, known locked CH07/WLD anchors and the protected abbey archive.
 
 - Every newly added move must have its own explicitly authored, keyed artwork and battle choreography, plus browser verification. Do not reuse a type-atlas effect with only a colour change. Preserve save-stable move IDs and add animation-coverage tests.
+
+
+## Durable artwork checkpoints
+
+- Read docs/development-resume.md before resuming interrupted artwork or build work.
+- Before ending an artwork batch, commit source art, prepared sheets, action intent/prompts and review/test state, and update docs/development-resume.md in the same commit. Never count source-only candidates as installed coverage.
+- That resume-file update refreshes the Development workspace snapshot workflow. Prefer its commit-labelled verified artifact over hundreds of individual file fetches. See scripts/development-snapshot.py for verified restore into an empty directory.
+- Scratch and tool-session variables are temporary. Reuse Git-tracked artwork after interruption; do not regenerate it solely because local files disappeared. Verify byte counts and hashes when downloading assets; the file connector can return empty content for large images.
