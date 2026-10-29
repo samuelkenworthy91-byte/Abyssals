@@ -33,3 +33,11 @@ Read docs/releases/v0.90.52-artwork-checkpoint.md and release-config.json. This 
 - Future finished-art transfers: browser batches of about25 files are the user-preferred default when available; verify paths/hashes and commit checkpoints. Blob/API transfer is the fallback. Speed has not yet been benchmarked.
 
 - Release browser QA uses Playwright1.62.1, matching the verified runtime. Older diagnostic cache imports were aligned and storm screenshots disable CSS animations with a60s capture timeout; actual gameplay assertions remain.
+
+## Continued production after APK — batch08
+
+User authorized continuation and explicitly requested browser uploads. Branch artwork/batch-08-quarter-coverage starts from main25477a4eb823fb3b27a68afffe2d659a193d39e5. Twenty-one additional sheets were generated separately using built-in image_gen, then packed; see art-library/action-vfx/batch-08/prepared-manifest.json, production-plan.json and prepared-validation.json. IDs63–75,77–84. Selected source/prepared hashes and exact per-move prompts are in each production JSON. Originals are retained;70/71/75 select revision02 files after neighboring-cell fragments were caught in packed contact-frame inspection. Revised packed sources were inspected and are clean.
+
+Production stock is154/614 (25.1%), including21 new prepared sheets. Installed/released coverage remains133/614 (21.7%). DO NOT count source-only prepared assets as installed or approved. The new batch still needs registration and live single/double/reduced-motion/leader recovery review, followed by quality-ledger entries and regenerated coverage. Latest released APK remains v0.90.52; no replacement APK was requested in this continuation.
+
+Browser transfer succeeded in related checkpoints of25,12,24 and15 files. Use the existing browser upload route for this branch/directory and synchronized scratch paths; no binary/blob image upload was used. All73 batch-file Git blob hashes verified against local bytes at commit0aa6e87a8956988909dcf52b693853b015148ae5; no mismatches. Keep all sources and selected revisions; do not regenerate them after interruption. Resume integration from saved prepared PNGs with `python scripts/install-prepared-action-batches.py 08` when continuing the upgrade. Pause new bulk generation at this roughly25% authored-stock point for user review.
