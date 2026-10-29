@@ -1,0 +1,27 @@
+name: Prepare reusable headless browser
+on:
+  push:
+    branches: ['feature/**']
+    paths: ['.github/workflows/development-browser.yml']
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare matching Playwright headless shell
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install chromium-headless-shell
+          tar -czf chromium-headless-runtime.tar.gz -C "$HOME/.cache" ms-playwright
+          sha256sum chromium-headless-runtime.tar.gz > chromium-headless-runtime.tar.gz.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chromium-headless-runtime-1.62.1
+          path: chromium-headless-runtime.tar.gz*
+          retention-days: 30
+          compression-level: 0
