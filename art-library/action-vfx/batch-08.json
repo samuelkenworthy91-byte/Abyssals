@@ -1,0 +1,196 @@
+{
+  "batch": "08",
+  "format": "PNG indexed transparent768x768;16frames of192x192",
+  "rasterTechnique": "Authored raster scenes; visual and gameplay approval tracked separately.",
+  "moves": [
+    {
+      "id": 63,
+      "name": "static-detonation",
+      "filename": "63-static-detonation.png",
+      "action": "Static Detonation",
+      "revision": "01",
+      "sequence": "A small tangled static knot winds tighter; one asymmetrical electrical detonation ruptures its shell into barbed filaments, then the filaments gutter away. No thundercloud or generic fire explosion.",
+      "source": "art-library/action-vfx/batch-08/63-source.png"
+    },
+    {
+      "id": 64,
+      "name": "livewire-rend",
+      "filename": "64-livewire-rend.png",
+      "action": "Livewire Rend",
+      "revision": "01",
+      "sequence": "Three exposed copper-wire claws flex, rake together once diagonally through one contact, shed little blue sparks from their frayed insulation, then withdraw. No whole creature.",
+      "source": "art-library/action-vfx/batch-08/64-source.png"
+    },
+    {
+      "id": 65,
+      "name": "coil-hook",
+      "filename": "65-coil-hook.png",
+      "action": "Coil Hook",
+      "revision": "01",
+      "sequence": "A thick spring-wound copper hook compresses, drives one upward hooking punch, flexes from recoil and loosens into separated spring turns. Mechanical hook shape, not a fist.",
+      "source": "art-library/action-vfx/batch-08/65-source.png"
+    },
+    {
+      "id": 66,
+      "name": "spark-dash",
+      "filename": "66-spark-dash.png",
+      "action": "Spark Dash",
+      "revision": "01",
+      "sequence": "A narrow wingless arrowhead of compressed speed-lines accelerates low left-to-right, touches once in a tiny hooked spark, then coasts into thin broken dashes. Speed travel dominates; no full creature.",
+      "source": "art-library/action-vfx/batch-08/66-source.png"
+    },
+    {
+      "id": 67,
+      "name": "arcwire-scissor",
+      "filename": "67-arcwire-scissor.png",
+      "action": "Arcwire Scissor",
+      "revision": "01",
+      "sequence": "Two jointed wire-cutter jaws with crackling copper cutting edges open, close once around a small central corona, then spring open and shed one backward recoil spark. No whole character.",
+      "source": "art-library/action-vfx/batch-08/67-source.png"
+    },
+    {
+      "id": 68,
+      "name": "spark-jolt",
+      "filename": "68-spark-jolt.png",
+      "action": "Spark Jolt",
+      "revision": "01",
+      "sequence": "One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile.",
+      "source": "art-library/action-vfx/batch-08/68-source.png"
+    },
+    {
+      "id": 69,
+      "name": "spark-ring",
+      "filename": "69-spark-ring.png",
+      "action": "Spark Ring",
+      "revision": "01",
+      "sequence": "An incomplete floating copper spark-loop closes into a thin oval ring, rotates forward, tightens once into a bright central pinprick, then unwinds into a graceful trailing spiral.",
+      "source": "art-library/action-vfx/batch-08/69-source.png"
+    },
+    {
+      "id": 70,
+      "name": "copper-lunge",
+      "filename": "70-copper-lunge.png",
+      "action": "Copper Lunge",
+      "revision": "02",
+      "sequence": "A narrow pointed copper ram prow pulls back, lunges forward horizontally with polished copper highlights, makes one pointed contact and draws out into two thin acceleration trails. No hammer or body.",
+      "source": "art-library/action-vfx/batch-08/70-source-v2.png"
+    },
+    {
+      "id": 71,
+      "name": "static-field",
+      "filename": "71-static-field.png",
+      "action": "Static Field",
+      "revision": "02",
+      "sequence": "Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact.",
+      "source": "art-library/action-vfx/batch-08/71-source-v2.png"
+    },
+    {
+      "id": 72,
+      "name": "thunderhead-resonance",
+      "filename": "72-thunderhead-resonance.png",
+      "action": "Thunderhead Resonance",
+      "revision": "01",
+      "sequence": "Three compact layered charcoal thundercloud lobes compress like a bellows; a luminous vibrating core opens beneath them, delivers one broad concentric thunder-pressure pulse, then the lobes lose charge and dissipate. No repeated strikes.",
+      "source": "art-library/action-vfx/batch-08/72-source.png"
+    },
+    {
+      "id": 73,
+      "name": "livewire-hammer",
+      "filename": "73-livewire-hammer.png",
+      "action": "Livewire Hammer",
+      "revision": "01",
+      "sequence": "A blunt rectangular hammerhead woven from thick live copper cables lifts, swings down once, strikes with crushed wire strands and a sharp corona, rebounds heavily and drops one backward recoil spark. No biting jaws, no full character.",
+      "source": "art-library/action-vfx/batch-08/73-source.png"
+    },
+    {
+      "id": 74,
+      "name": "volt-jolt",
+      "filename": "74-volt-jolt.png",
+      "action": "Volt Jolt",
+      "revision": "01",
+      "sequence": "A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt.",
+      "source": "art-library/action-vfx/batch-08/74-source.png"
+    },
+    {
+      "id": 75,
+      "name": "livewire-tackle",
+      "filename": "75-livewire-tackle.png",
+      "action": "Livewire Tackle",
+      "revision": "02",
+      "sequence": "A broad rounded armored shoulder-shaped mass wrapped in live wires braces, makes one low horizontal body-check with a blunt shoulder impact, recoils and retracts; no head, full creature, feet or arrowhead.",
+      "source": "art-library/action-vfx/batch-08/75-source-v2.png"
+    },
+    {
+      "id": 77,
+      "name": "storm-of-youth",
+      "filename": "77-storm-of-youth.png",
+      "action": "Storm of Youth",
+      "revision": "01",
+      "sequence": "A single reckless zigzag bolt bends twice while travelling toward ONE contact; a wide blue-violet discharge opens at that contact, and one small backward recoil spark traces its return. Travel bends are not separate hits.",
+      "source": "art-library/action-vfx/batch-08/77-source.png"
+    },
+    {
+      "id": 78,
+      "name": "thornwake",
+      "filename": "78-thornwake.png",
+      "action": "Thornwake",
+      "revision": "01",
+      "sequence": "A tight sleeping rosebud of dark thorns swells, opens into one directional fan of rising thorn shoots, releases a few soft sleepy gold pollen motes after impact and withers. No generic green orb.",
+      "source": "art-library/action-vfx/batch-08/78-source.png"
+    },
+    {
+      "id": 79,
+      "name": "leaf-cut",
+      "filename": "79-leaf-cut.png",
+      "action": "Leaf Cut",
+      "revision": "01",
+      "sequence": "One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit.",
+      "source": "art-library/action-vfx/batch-08/79-source.png"
+    },
+    {
+      "id": 80,
+      "name": "seeds-of-doubt",
+      "filename": "80-seeds-of-doubt.png",
+      "action": "Seeds of Doubt",
+      "revision": "01",
+      "sequence": "A pair of heavy dark seed husks opens into seed-clamp jaws, snaps ONCE at the center, cracks and leaves a few trailing root threads that sag before dissolving. Physical seed impact with slowing roots, no question marks or text.",
+      "source": "art-library/action-vfx/batch-08/80-source.png"
+    },
+    {
+      "id": 81,
+      "name": "leaf-grip",
+      "filename": "81-leaf-grip.png",
+      "action": "Leaf Grip",
+      "revision": "01",
+      "sequence": "Three broad ribbed leaves fold into grasping fingers, reach inward and squeeze once around a central gap, bruise and crumple from pressure, then uncurl. Clear gripping action; no vine whip or cut.",
+      "source": "art-library/action-vfx/batch-08/81-source.png"
+    },
+    {
+      "id": 82,
+      "name": "leaf-lash",
+      "filename": "82-leaf-lash.png",
+      "action": "Leaf Lash",
+      "revision": "01",
+      "sequence": "One long flexible leaf rib bends into a whip, draws a wide S-shaped preparation, snaps its leafy tip once across the center, and curls slack with fluttering torn leaflets. Whole whip remains in each cell.",
+      "source": "art-library/action-vfx/batch-08/82-source.png"
+    },
+    {
+      "id": 83,
+      "name": "thistle-hook",
+      "filename": "83-thistle-hook.png",
+      "action": "Thistle Hook",
+      "revision": "01",
+      "sequence": "A single purple thistle burr on a thick curved stem draws back, swings one upward hooking strike, sheds a few pointed burr bristles at contact and uncurls downward. Distinct thistle head and hooked stem.",
+      "source": "art-library/action-vfx/batch-08/83-source.png"
+    },
+    {
+      "id": 84,
+      "name": "canopy-resonance",
+      "filename": "84-canopy-resonance.png",
+      "action": "Canopy Resonance",
+      "revision": "01",
+      "sequence": "An arched canopy of four broad veined leaves sways in sequence; one twisting stream of leaf-vein resonance curls around a central gap and opens once, then small sap motes return left and the canopy relaxes. No generic hurricane or repeated hit.",
+      "source": "art-library/action-vfx/batch-08/84-source.png"
+    }
+  ]
+}

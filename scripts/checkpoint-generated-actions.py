@@ -10,7 +10,8 @@ p.add_argument('batch');p.add_argument('sources',help='JSON array of id/path map
 a=p.parse_args();root=Path(__file__).resolve().parents[1]
 folder=root/f'art-library/action-vfx/batch-{a.batch}';folder.mkdir(exist_ok=True)
 plan=json.loads((folder/'production-plan.json').read_text())['moves']
-sources={x['id']:Path(x['path']) for x in json.loads(Path(a.sources).read_text())}
+incoming_records={x['id']:x for x in json.loads(Path(a.sources).read_text())}
+sources={i:Path(x['path']) for i,x in incoming_records.items()}
 records=[]
 for planned in plan:
  m=dict(planned);id=m['id'];source=folder/f'{id}-source.png';prepared=folder/f'{id}-prepared.png'
@@ -19,6 +20,14 @@ for planned in plan:
   if source.exists() and source.read_bytes()!=incoming:raise ValueError('Refusing to overwrite source '+str(id))
   if not source.exists():shutil.copyfile(sources[id],source)
  if not source.exists():continue
+ record=folder/f'{id}-production.json'
+ if record.exists():
+  previous=json.loads(record.read_text())
+  for field in ['actualPrompt','referenceImages','visualReview']:
+   if field in previous:m[field]=previous[field]
+ if id in incoming_records:
+  for field in ['actualPrompt','referenceImages','visualReview']:
+   if field in incoming_records[id]:m[field]=incoming_records[id][field]
  m.update(source=str(source.relative_to(root)),prepared=str(prepared.relative_to(root)),generator='built-in image_gen',status='prepared candidate; gameplay and artistic approval pending')
  try:
   if not prepared.exists():subprocess.run(['python',str(root/'scripts/pack-action-sheet.py'),str(source),str(prepared)],check=True,capture_output=True)
