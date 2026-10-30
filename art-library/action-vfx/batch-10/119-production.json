@@ -1,0 +1,34 @@
+{
+  "id": 119,
+  "name": "Close Quarters",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "speed"
+      ],
+      "stages": -1,
+      "chance_percent": 100
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "Two close-set gauntlet shapes guard the centre, pivot sharply inward for a single elbow-and-shoulder-sized impact, skid a short distance and recover slowly with a weighted breath. Close physical fighting, no ranged beam.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Close Quarters, ID 119. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two close-set gauntlet shapes guard the centre, pivot sharply inward for a single elbow-and-shoulder-sized impact, skid a short distance and recover slowly with a weighted breath. Close physical fighting, no ranged beam. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Close Quarters, ID 119. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two close-set gauntlet shapes guard the centre, pivot sharply inward for a single elbow-and-shoulder-sized impact, skid a short distance and recover slowly with a weighted breath. Close physical fighting, no ranged beam. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+  "referenceImages": [],
+  "source": "art-library/action-vfx/batch-10/119-source.png",
+  "prepared": "art-library/action-vfx/batch-10/119-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "5e1a8817d2106af2ff3ea3893ae6eff189e0bc090db3f27a7db356854120caca",
+  "sourceSha256": "2a7011d7530b9741330ca049c6f2475ec04bf36850ce0383ea2657de1404929f"
+}
