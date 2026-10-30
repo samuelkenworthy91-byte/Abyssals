@@ -23,6 +23,7 @@
   "referenceImages": [
     "art-library/action-vfx/batch-09/105-prepared.png"
   ],
+  "impact": 0.4375,
   "source": "art-library/action-vfx/batch-10/106-source.png",
   "prepared": "art-library/action-vfx/batch-10/106-prepared.png",
   "generator": "built-in image_gen",

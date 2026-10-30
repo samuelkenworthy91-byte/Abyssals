@@ -24,5 +24,11 @@
   "generator": "built-in image_gen",
   "revision": "02",
   "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
-  "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments."
+  "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
 }

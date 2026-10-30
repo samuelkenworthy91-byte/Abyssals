@@ -30,7 +30,13 @@
       "prepared": "art-library/action-vfx/batch-08/63-prepared.png",
       "sourceSha256": "2009203feb60d652efb7b3b30e206a95efa6f2c550759333b1933a3cbf96a6d3",
       "preparedSha256": "714f809bda929dda757ddd46a8d2f55c95e359dad85a3a7da78d93c387de8d8a",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 64,
@@ -47,7 +53,13 @@
       "prepared": "art-library/action-vfx/batch-08/64-prepared.png",
       "sourceSha256": "1d7252d82b9038462874e894bc2bf2a5ffc8dd464c0016c8cce8276186fb159b",
       "preparedSha256": "dda85cae92a424a8fea308709148ea8c778afbad3964150368cb46e8e08be68b",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 65,
@@ -79,7 +91,13 @@
       "prepared": "art-library/action-vfx/batch-08/65-prepared.png",
       "sourceSha256": "fa18e3c39175364a857c82844b864f1fc56cb55e7af5167f559667e2e5fe98de",
       "preparedSha256": "35873dbd63197fff152e0c16ae1d75ef48977023dbecbe1e0ebd812dc0dab68b",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 66,
@@ -103,7 +121,13 @@
       "prepared": "art-library/action-vfx/batch-08/66-prepared.png",
       "sourceSha256": "d6a1e378356ac6a81cec55b0a427e3b77821fb05012d333f9875af8a3eeec403",
       "preparedSha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 67,
@@ -135,7 +159,13 @@
       "prepared": "art-library/action-vfx/batch-08/67-prepared.png",
       "sourceSha256": "2c406fd81bb6a7fc12c647c52fc538d202dd2642e85e6c770f6e4e5d7a0fde5c",
       "preparedSha256": "885c0f84df8555c8fb44c7532f2ba7f2b56fb21898228df9a2275a8ad18d7dd3",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 68,
@@ -159,7 +189,13 @@
       "prepared": "art-library/action-vfx/batch-08/68-prepared.png",
       "sourceSha256": "0030267d904ee5eeeacdbe9fb5a3e7e5879c51d48eb1192b6e4559546b9f60af",
       "preparedSha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 69,
@@ -187,7 +223,13 @@
       "prepared": "art-library/action-vfx/batch-08/69-prepared.png",
       "sourceSha256": "df60f45d0fa85a17b64ca71356b8cbfff03a6691dc368ab9e37d95942a23f266",
       "preparedSha256": "b807f04af2aa8acd1739b158e3c1fda69ef5d8b20acdcab0dafb72fc4007ad99",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 70,
@@ -218,7 +260,13 @@
       "generator": "built-in image_gen",
       "revision": "02",
       "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
-      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments."
+      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 71,
@@ -246,7 +294,13 @@
       "generator": "built-in image_gen",
       "revision": "02",
       "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
-      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments."
+      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 72,
@@ -273,7 +327,13 @@
       "prepared": "art-library/action-vfx/batch-08/72-prepared.png",
       "sourceSha256": "a2f8ca9109f4ffc7889c53df853583e7e9f2c919a8885ad525823e93b13b938c",
       "preparedSha256": "f6df58830cd6864490180853429096a1a59ed84ca23dc56ed02627e8151cec51",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 73,
@@ -299,7 +359,13 @@
       "prepared": "art-library/action-vfx/batch-08/73-prepared.png",
       "sourceSha256": "03ff24ce328186bc6ba49c4c5fd8c13ca45ae600f06cf19eb044a00f4f156f51",
       "preparedSha256": "b6a106b7df49959fda9e00105b7f0291163c44aedaa24da00f20887eb05e9a76",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 74,
@@ -327,7 +393,13 @@
       "prepared": "art-library/action-vfx/batch-08/74-prepared.png",
       "sourceSha256": "1c42c691d6c03be9ce0521cbcb54db8fd2dcafe3f2613ab0522733a44c0f32c1",
       "preparedSha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 75,
@@ -354,7 +426,13 @@
       "generator": "built-in image_gen",
       "revision": "02",
       "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
-      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments."
+      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 77,
@@ -386,7 +464,13 @@
       "prepared": "art-library/action-vfx/batch-08/77-prepared.png",
       "sourceSha256": "a799c7c78e8c5041d25bbe4334cdac67daf18aacd869353f342712abb4653080",
       "preparedSha256": "56edb127bc2030b29ef79df0520310663a13e6944c2f66b60df9b1d581a583b0",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 78,
@@ -410,7 +494,13 @@
       "prepared": "art-library/action-vfx/batch-08/78-prepared.png",
       "sourceSha256": "50606c90904067153092b3b91f8bb30dda866209d3b5706ff5d6a9426b66775a",
       "preparedSha256": "24bc7cf825b9b0f878487c7abc38d78263fcb6b3eaeb7d92f82d3f5c0c638e56",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 79,
@@ -435,7 +525,13 @@
       "prepared": "art-library/action-vfx/batch-08/79-prepared.png",
       "sourceSha256": "258ba4b6a41f4afba8b3066a04e9735977a4d944a60752b8db8b1b132aefaef7",
       "preparedSha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 80,
@@ -463,7 +559,13 @@
       "prepared": "art-library/action-vfx/batch-08/80-prepared.png",
       "sourceSha256": "ccdce1206e82ef3de6d72e3bddf1d15144bd88619c49bf2543fe60f9224dabc8",
       "preparedSha256": "bd12f6956f21c294791442e75512e771192735400af295777847fe764f5f72e4",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 81,
@@ -491,7 +593,13 @@
       "prepared": "art-library/action-vfx/batch-08/81-prepared.png",
       "sourceSha256": "e63770b21f6aee9cfe0b47e80987ff4dd3cca1c21d2f8cb8e0e7c9f26cba29eb",
       "preparedSha256": "69da6c0bb5b416a7314529a10c4a6cc4c874d395e363c13c4ae6410886835385",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 82,
@@ -519,7 +627,13 @@
       "prepared": "art-library/action-vfx/batch-08/82-prepared.png",
       "sourceSha256": "8d3859c0966874bf86903d4343763f4e5657fc92e104f9713860f14c3d27e091",
       "preparedSha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 83,
@@ -536,7 +650,13 @@
       "prepared": "art-library/action-vfx/batch-08/83-prepared.png",
       "sourceSha256": "bd51a7e5fdc096083a7e017210ab4df41bed923d65aadc103de9b5629df6eed8",
       "preparedSha256": "b50f239cea8aff703bafe9eceb4b70a1a80f2fcc1cc6b2c019bf91f3ad99ee83",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     },
     {
       "id": 84,
@@ -561,7 +681,13 @@
       "prepared": "art-library/action-vfx/batch-08/84-prepared.png",
       "sourceSha256": "c5068217b87ab11bd0390ae630eb5ddbea002e6c65ce728f1d3cce3db7c9ad1c",
       "preparedSha256": "5cc611423c3742428260f248f9b360dc9ae317fad83422a5573585321ce3370c",
-      "generator": "built-in image_gen"
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
     }
   ]
 }

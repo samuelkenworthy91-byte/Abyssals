@@ -90,6 +90,141 @@
         "art-library/finale/reviews-2026-10-29/sporeCanopy-390-night.png",
         "art-library/finale/reviews-2026-10-29/sporeCanopy-1280-night.png"
       ]
+    },
+    "sunBank": {
+      "status": "approved",
+      "sha256": "5dd3eb1456ffed6099718bfbda8b2e8477ccafde511a903e03ecbc99d67bc607",
+      "geometrySha256": "7716fc350808a195c4888d4bbb7cc9a7556081b4ef7c6c322da9dc7ad7827c13",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "Bright flowering riverbank, layered falls and bridge form a coherent approach to Cayfen. Main road and visible interactions remain legible in both light states. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/sunBank-390-day.png",
+        "art-library/finale/reviews-2026-10-30/sunBank-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/sunBank-390-night.png",
+        "art-library/finale/reviews-2026-10-30/sunBank-1280-night.png"
+      ]
+    },
+    "burialGrove": {
+      "status": "approved",
+      "sha256": "d835b4dcf108e79821d47066c08c8e0e1b2ed0ef2ec7f79bb4a8d42ab988e66a",
+      "geometrySha256": "4cffa8a4ba1d88a2309e9880fa182d3a147244ae60150fac87fd8efe3eb51beb",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "The great remembering willow provides a distinct focal point with room for Walter, memorial and gifts on the readable lower path. The mourning scene retains its existing artwork. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/burialGrove-390-day.png",
+        "art-library/finale/reviews-2026-10-30/burialGrove-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/burialGrove-390-night.png",
+        "art-library/finale/reviews-2026-10-30/burialGrove-1280-night.png"
+      ]
+    },
+    "sunFalls": {
+      "status": "approved",
+      "sha256": "5dc1270f393684723160d932d7e2255e04e4bc656e8427fa18b25c5ecf22c6ba",
+      "geometrySha256": "65eeecb8990adfacabe6e6696302d39154da32bd45d38609fa8f40bcaf642873",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "A broad stone crossing spans stepped turquoise falls and leads naturally into flowering terraces. The bridge route, guard positions and exit remain clear at phone scale. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/sunFalls-390-day.png",
+        "art-library/finale/reviews-2026-10-30/sunFalls-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/sunFalls-390-night.png",
+        "art-library/finale/reviews-2026-10-30/sunFalls-1280-night.png"
+      ]
+    },
+    "sunTerraces": {
+      "status": "approved",
+      "sha256": "fe5da453687dba71852a06a8193359bb8c3120c0382b0bd12fb67d3d8809f6b0",
+      "geometrySha256": "fb2ff586be1a54ed4134d34e6c4d6390d9bfd95557b129254769dc325caa3c7c",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "Layered garden terraces and pale steps lead toward Cayfen; main horizontal path, actors and flowering encounter edges remain distinguishable at night. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/sunTerraces-390-day.png",
+        "art-library/finale/reviews-2026-10-30/sunTerraces-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/sunTerraces-390-night.png",
+        "art-library/finale/reviews-2026-10-30/sunTerraces-1280-night.png"
+      ]
+    },
+    "cayfen": {
+      "status": "approved",
+      "sha256": "27d378e01a8a2e6c85d54369933c75ac0e6a847b26abfdbc46d72a22ab1badbc",
+      "geometrySha256": "fd80f9f83d28343fc923ceddff03ac916a3f4ad9dd70f97aaf420ea0901e2a43",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "Warm ochre studio architecture, blue banners, public mosaics and a central plaza establish the approved town benchmark. Doors and road exits are readable without repainting existing art. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/cayfen-390-day.png",
+        "art-library/finale/reviews-2026-10-30/cayfen-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/cayfen-390-night.png",
+        "art-library/finale/reviews-2026-10-30/cayfen-1280-night.png"
+      ]
+    },
+    "ramelle": {
+      "status": "approved",
+      "sha256": "275124038fbd3f9951a878a535372b26357b0a14248bacaad167ea960ab5a276",
+      "geometrySha256": "0ce7b5dfa5da2f76259e8c4f07bedf1895569175f30516cd0c47343bae5c30ab",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "White gothic buildings, violet roofing, gardens and water retain a distinct identity while matching Cayfen detail. Crossroads, fortress approach and actor silhouettes remain legible. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/ramelle-390-day.png",
+        "art-library/finale/reviews-2026-10-30/ramelle-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/ramelle-390-night.png",
+        "art-library/finale/reviews-2026-10-30/ramelle-1280-night.png"
+      ]
+    },
+    "cayfenGallery": {
+      "status": "approved",
+      "sha256": "a37b34af013c02592384a72b1dff9150497c961222df7ff8e80b42ac34234ffb",
+      "geometrySha256": "e456ca16bc7371b90dd1bfd0224b2a5b7d057b8cbed5bd7baf0f004d7aa613b1",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "Framed individual paintings, display alcoves and polished geometric floor provide rich interior detail. Clear central circulation and the entrance do not compete with artwork. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/cayfenGallery-390-day.png",
+        "art-library/finale/reviews-2026-10-30/cayfenGallery-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/cayfenGallery-390-night.png",
+        "art-library/finale/reviews-2026-10-30/cayfenGallery-1280-night.png"
+      ]
+    },
+    "cayfenHall": {
+      "status": "approved",
+      "sha256": "d4dc48667200e11c8a51474476d37741f7150aef4e5d843f3f1e307ee432c3d7",
+      "geometrySha256": "decc40c8a8c93320f3864c70dd6964166aeefbe0a0e3d5b8831698fdaa7fce27",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "Red standards, gilded stonework and sun mosaic create a distinct formal hall with clear central approach, side margins and entrance. Day/night screenshots retain sufficient contrast. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/cayfenHall-390-day.png",
+        "art-library/finale/reviews-2026-10-30/cayfenHall-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/cayfenHall-390-night.png",
+        "art-library/finale/reviews-2026-10-30/cayfenHall-1280-night.png"
+      ]
+    },
+    "ramelleSanctuary": {
+      "status": "approved",
+      "sha256": "f019ae6dfea4bdd7ce0cffdd447fe5d7c91846b74e65a19c34e5f9322c0fbb6e",
+      "geometrySha256": "9fac990ed40f0206bf3a628455b0ba45a7d2c55a347792076a9b7e6b81db1888",
+      "reviewer": "Codex visual inspection, 2026-10-30",
+      "rationale": "Violet glass, pale pillars, flower beds and a side pool give the water sanctuary a calm identity. The open central floor, priest and southern entry remain readable. Phone and desktop day/night captures were inspected; unchanged map geometry passes connectivity checks.",
+      "dayEvidence": [
+        "art-library/finale/reviews-2026-10-30/ramelleSanctuary-390-day.png",
+        "art-library/finale/reviews-2026-10-30/ramelleSanctuary-1280-day.png"
+      ],
+      "nightEvidence": [
+        "art-library/finale/reviews-2026-10-30/ramelleSanctuary-390-night.png",
+        "art-library/finale/reviews-2026-10-30/ramelleSanctuary-1280-night.png"
+      ]
     }
   }
 }

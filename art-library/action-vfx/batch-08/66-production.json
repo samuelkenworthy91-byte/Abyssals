@@ -20,5 +20,11 @@
   "prepared": "art-library/action-vfx/batch-08/66-prepared.png",
   "sourceSha256": "d6a1e378356ac6a81cec55b0a427e3b77821fb05012d333f9875af8a3eeec403",
   "preparedSha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
-  "generator": "built-in image_gen"
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
 }
