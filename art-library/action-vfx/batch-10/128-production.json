@@ -1,0 +1,30 @@
+{
+  "id": 128,
+  "name": "Iron Charge",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "flinch",
+      "status": "FLINCH",
+      "chance_percent": 10,
+      "secondary": true
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A blunt conical steel battering ram with repeated riveted ridges skids forward in one straight charge. Impact drives a narrow shock into the target and knocks a few rivets loose; ram then rebounds once.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Charge, ID 128. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A blunt conical steel battering ram with repeated riveted ridges skids forward in one straight charge. Impact drives a narrow shock into the target and knocks a few rivets loose; ram then rebounds once. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Charge, ID 128. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A blunt conical steel battering ram with repeated riveted ridges skids forward in one straight charge. Impact drives a narrow shock into the target and knocks a few rivets loose; ram then rebounds once. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "source": "art-library/action-vfx/batch-10/128-source.png",
+  "prepared": "art-library/action-vfx/batch-10/128-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "2f79ed9b3f10df4d89bd3b6b3053cceb64f0130ea885b5c9e775219a3d775519",
+  "sourceSha256": "fdbd3e0a32064fb03c6670e1eb183464eecbcc25871a4aaad1d27cec5a32f7a0"
+}

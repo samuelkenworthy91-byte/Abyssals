@@ -1,0 +1,34 @@
+{
+  "id": 127,
+  "name": "Iron Break",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "attack"
+      ],
+      "stages": 1,
+      "chance_percent": 25,
+      "secondary": true
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A heavy forged fist with chipped rivets cocks sideways and swings through a brittle iron brace in a single breaking blow. The blow dislodges rivets, then a brief fiery muscle highlight shows its own strengthening.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Break, ID 127. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A heavy forged fist with chipped rivets cocks sideways and swings through a brittle iron brace in a single breaking blow. The blow dislodges rivets, then a brief fiery muscle highlight shows its own strengthening. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Break, ID 127. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A heavy forged fist with chipped rivets cocks sideways and swings through a brittle iron brace in a single breaking blow. The blow dislodges rivets, then a brief fiery muscle highlight shows its own strengthening. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "source": "art-library/action-vfx/batch-10/127-source.png",
+  "prepared": "art-library/action-vfx/batch-10/127-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "c6f1028679ac85161231df182b61423db5dddb1a7377ff19e1e8be5a6bc9a6cc",
+  "sourceSha256": "582ddc792a8dbc0a3fe3fa313a136bc51e042398d2a8815f4bdf1494bb471014"
+}
