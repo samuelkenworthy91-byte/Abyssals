@@ -1,0 +1,36 @@
+{
+  "id": 109,
+  "name": "Frozen Poise",
+  "category": "STATUS",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "sp_defence"
+      ],
+      "stages": 1,
+      "chance_percent": 100
+    }
+  ],
+  "target": "SELF",
+  "batch": "10",
+  "sequence": "A lattice of icy ribs folds inward around the user's empty silhouette space, slows into perfectly balanced crystalline stillness, and catches a delicate glint on each layer before separating. Pure composure and special defence; no attack.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frozen Poise, ID 109. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A lattice of icy ribs folds inward around the user's empty silhouette space, slows into perfectly balanced crystalline stillness, and catches a delicate glint on each layer before separating. Pure composure and special defence; no attack. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frozen Poise, ID 109. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A lattice of icy ribs folds inward around the user's empty silhouette space, slows into perfectly balanced crystalline stillness, and catches a delicate glint on each layer before separating. Pure composure and special defence; no attack. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL LAYOUT: each subject is SMALL, strictly contained in central 40 percent of EACH cell, with 30 percent empty transparent margin on every side, including every glowing particle and trail. Every frame completely separated. Use fine crisp pixels and the same rich crystalline shading as the reference.",
+  "referenceImages": [
+    "art-library/action-vfx/batch-09/105-prepared.png"
+  ],
+  "source": "art-library/action-vfx/batch-10/109-source.png",
+  "prepared": "art-library/action-vfx/batch-10/109-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "1be2c31b4c066206bc3d4adcfa2ef3baac486a562b975def348493f6f8925006",
+  "sourceSha256": "fa35c512c31f6ced44ee4556e8729c5dd401b288da6c0359ca80dc7c93852f81"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 112,
+  "name": "Rime Reap",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "recoil",
+      "fraction": [
+        1,
+        8
+      ],
+      "basis": "MAX_HP"
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A hooked crescent of black-blue glacier ice curves into a reaping blade, slices once through empty target space, splinters and recoils with a visible self-crack along the back edge before fading. One strike.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Reap, ID 112. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hooked crescent of black-blue glacier ice curves into a reaping blade, slices once through empty target space, splinters and recoils with a visible self-crack along the back edge before fading. One strike. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Reap, ID 112. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hooked crescent of black-blue glacier ice curves into a reaping blade, slices once through empty target space, splinters and recoils with a visible self-crack along the back edge before fading. One strike. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+  "referenceImages": [],
+  "source": "art-library/action-vfx/batch-10/112-source.png",
+  "prepared": "art-library/action-vfx/batch-10/112-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "f6313c26c5c17a3783867fb2b0f586592949a60f22f7ed76407ee17c1d3ff008",
+  "sourceSha256": "2d93fb2b739c4e53b64f001db83f8497152a56a7aa84504df44fefa713492f8f"
+}
