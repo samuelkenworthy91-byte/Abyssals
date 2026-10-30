@@ -1,0 +1,78 @@
+{
+  "id": 92,
+  "name": "Spore Torrent",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 93
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "043",
+      "061",
+      "101",
+      "102",
+      "106",
+      "135",
+      "136",
+      "140",
+      "163",
+      "184",
+      "200",
+      "287",
+      "288",
+      "291",
+      "292"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "SPECIAL",
+  "type": "GRASS",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 110,
+  "pp": 5,
+  "accuracy": 90,
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "speed"
+      ],
+      "stages": -1,
+      "chance_percent": 100
+    }
+  ],
+  "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "Several small ochre mushroom gills tilt and release a corkscrewing jet of gold-green spores, the coherent stream wraps ONCE around a central gap, blooms into ONE dusty contact cloud and drifts away. No whole fungus creature, no repeated hits.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Spore Torrent, stable ID92. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, read row-major. GENUINE transparent alpha background. Action: Several small ochre mushroom gills tilt and release a corkscrewing jet of gold-green spores, the coherent stream wraps ONCE around a central gap, blooms into ONE dusty contact cloud and drifts away. No whole fungus creature, no repeated hits. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 poses are complete and individually isolated in the MIDDLE40% of each cell, leaving very large completely empty transparent gutters. Every tip, splinter, mote and any small hard-edged glint must stay inside that middle40%. No big glows or soft haze spanning gutters. Highly readable material shading with crisp clustered pixels, designed for192px logical cells. No whole creature, humans, scenery, text, labels, grid or borders. No duplicated poses, no additional hits, no generic recoloured effect.",
+  "source": "art-library/action-vfx/batch-09/92-source.png",
+  "prepared": "art-library/action-vfx/batch-09/92-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "6c143b58e35a36d4b44df26d2adc9efbdea338d2f735cccef5fb7b87eafb4b69",
+  "sourceSha256": "15a228b92ed3f66f0616aeb0a9f6143b669f937d1c1a9363f47687529e77f3e0"
+}

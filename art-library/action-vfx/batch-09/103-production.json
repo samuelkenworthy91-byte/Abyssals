@@ -1,0 +1,75 @@
+{
+  "id": 103,
+  "name": "Rime Hook",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 104
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "111",
+      "134",
+      "265",
+      "266",
+      "308",
+      "373",
+      "409",
+      "416",
+      "468",
+      "469",
+      "470"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "PHYSICAL",
+  "type": "ICE",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 80,
+  "pp": 15,
+  "accuracy": 100,
+  "priority": 0,
+  "contact": true,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "speed"
+      ],
+      "stages": -1,
+      "chance_percent": 25,
+      "secondary": true
+    }
+  ],
+  "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "A thick crescent of rime-coated ice grows from a short curved frozen wrist, swings in ONE upward hooking impact, cracks its frosty outer crust and curls down again. Readable hook punch, not an icicle projectile.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Rime Hook, stable ID103. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: A thick crescent of rime-coated ice grows from a short curved frozen wrist, swings in ONE upward hooking impact, cracks its frosty outer crust and curls down again. Readable hook punch, not an icicle projectile. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/103-source.png",
+  "prepared": "art-library/action-vfx/batch-09/103-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "f4da10abee47ac990912c0c7f3bf7a491a0f29075c956d0c46f234898a5184b9",
+  "sourceSha256": "8abd1fe18c8da083d5e1a4c1f932981f6c5a75dae575cdb7bf21fefb6a25f6c1"
+}

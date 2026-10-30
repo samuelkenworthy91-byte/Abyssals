@@ -1,0 +1,467 @@
+{
+  "batch": "14",
+  "status": "prompts only, not produced",
+  "moves": [
+    {
+      "id": 213,
+      "name": "Chitin Rattle",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A pair of broad chitin shoulder plates clacks together, sending a rapid row of small hard rattling shells outward. The final loud click sends one contact pulse; plates unlock and return with soft clicks.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Chitin Rattle, ID 213. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A pair of broad chitin shoulder plates clacks together, sending a rapid row of small hard rattling shells outward. The final loud click sends one contact pulse; plates unlock and return with soft clicks. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 214,
+      "name": "Chitin Hook",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "One asymmetrical beetle mandible made of banded black shell curls into a grappling hook, snatches a little cloth-shaped target edge, jerks once and withdraws without a second strike.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Chitin Hook, ID 214. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). One asymmetrical beetle mandible made of banded black shell curls into a grappling hook, snatches a little cloth-shaped target edge, jerks once and withdraws without a second strike. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 215,
+      "name": "Chitin Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A serrated green-brown chitin blade scrapes its opposite hard wingcase, draws back, makes one low horizontal cut with a dry scratch of pale flakes and returns behind the plate.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Chitin Cut, ID 215. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A serrated green-brown chitin blade scrapes its opposite hard wingcase, draws back, makes one low horizontal cut with a dry scratch of pale flakes and returns behind the plate. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 216,
+      "name": "Chitin Needle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A single hardened insect needle extrudes segment by segment from a dark telescopic sheath, fires in one straight short stab, chips one point and retreats into its tightly jointed housing.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Chitin Needle, ID 216. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A single hardened insect needle extrudes segment by segment from a dark telescopic sheath, fires in one straight short stab, chips one point and retreats into its tightly jointed housing. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 217,
+      "name": "Scythe Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "Two long mantis-style ivory scythes, only abstract forelimb blades without an animal, raise at unequal heights, cross in a single fast scissors strike and click apart with notched edges.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Scythe Scissor, ID 217. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Two long mantis-style ivory scythes, only abstract forelimb blades without an animal, raise at unequal heights, cross in a single fast scissors strike and click apart with notched edges. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 218,
+      "name": "Silken Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "Three stretched silk threads vibrate across an empty frame like taut strings, converge on a suspended cocoon knot and radiate one shimmering harmonic web pulse as the strings slacken.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Silken Resonance, ID 218. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Three stretched silk threads vibrate across an empty frame like taut strings, converge on a suspended cocoon knot and radiate one shimmering harmonic web pulse as the strings slacken. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 219,
+      "name": "Hive Call",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "ACTIVE_SIDE",
+          "type_filter": "BUG",
+          "stat": "attack",
+          "stages": 1
+        }
+      ],
+      "target": "ACTIVE_SIDE",
+      "batch": "14",
+      "sequence": "A honeycomb crown raises tiny lantern-like hive cells in synchronised succession, flashes a soft call signal, and smaller hexagonal silhouettes flock inward without any damaging collision.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Hive Call, ID 219. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A honeycomb crown raises tiny lantern-like hive cells in synchronised succession, flashes a soft call signal, and smaller hexagonal silhouettes flock inward without any damaging collision. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 220,
+      "name": "Shed Shell",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "speed",
+          "stages": 1
+        },
+        {
+          "effect_id": "clear_negative_stat_stages",
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF",
+      "batch": "14",
+      "sequence": "An empty dark beetle exoskeleton splits cleanly along its back seam, opens like two hinged doors and leaves a brighter fresh armour layer floating within; the husk falls apart quietly.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Shed Shell, ID 220. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). An empty dark beetle exoskeleton splits cleanly along its back seam, opens like two hinged doors and leaves a brighter fresh armour layer floating within; the husk falls apart quietly. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 221,
+      "name": "Silk Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "14",
+      "sequence": "Long filaments of off-white spider silk weave corner-to-corner into an intricate compact mesh shield, withstand a harmless test tremor and loosen into threads. An actual barrier, not poison cloud.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Silk Guard, ID 221. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Long filaments of off-white spider silk weave corner-to-corner into an intricate compact mesh shield, withstand a harmless test tremor and loosen into threads. An actual barrier, not poison cloud. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 222,
+      "name": "Swarm Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "Several separate mandibles tuck into a loose buzzing formation and execute one coordinated central snip; their segmented blades withdraw in alternating order, distinguishing this from paired Scythe Scissor.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Swarm Cut, ID 222. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Several separate mandibles tuck into a loose buzzing formation and execute one coordinated central snip; their segmented blades withdraw in alternating order, distinguishing this from paired Scythe Scissor. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 223,
+      "name": "Bedrock Calm",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "14",
+      "sequence": "A wide matte bedrock slab descends into a steady level base, its deep grain lines align and stop trembling while a pair of calming concentric rings fade across the stone. Pure status.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Bedrock Calm, ID 223. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A wide matte bedrock slab descends into a steady level base, its deep grain lines align and stop trembling while a pair of calming concentric rings fade across the stone. Pure status. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 224,
+      "name": "Cairn Ward",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "next_hit_damage_multiplier",
+          "multiplier": 0.5,
+          "uses": 1,
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF",
+      "batch": "14",
+      "sequence": "Three rough stone cairn blocks lift into a vertical protective gate and wedge together, their tiny moss patches meeting at seams. A soft test ripple rolls over the surface and disappears.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Cairn Ward, ID 224. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Three rough stone cairn blocks lift into a vertical protective gate and wedge together, their tiny moss patches meeting at seams. A soft test ripple rolls over the surface and disappears. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 226,
+      "name": "Geode Detonation",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A polished half-open geode rotates as pale amethyst crystals grow inward, concentrates a bright point, and blows outward once through its glittering crystal face, leaving a cracked hollow shell.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Geode Detonation, ID 226. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A polished half-open geode rotates as pale amethyst crystals grow inward, concentrates a bright point, and blows outward once through its glittering crystal face, leaving a cracked hollow shell. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 228,
+      "name": "Shale Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "Two thin layers of blue-grey shale with clearly laminated edges peel apart and cross shut like knives, chip their brittle outer ridges in one sharp scissor contact and settle as flat strata.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Shale Scissor, ID 228. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Two thin layers of blue-grey shale with clearly laminated edges peel apart and cross shut like knives, chip their brittle outer ridges in one sharp scissor contact and settle as flat strata. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 229,
+      "name": "Basalt Lunge",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A blunt volcanic basalt ram made of hexagonal columns rushes forward once, a red fracture web briefly glows under its skin at contact and cools into black stone chips.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Basalt Lunge, ID 229. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A blunt volcanic basalt ram made of hexagonal columns rushes forward once, a red fracture web briefly glows under its skin at contact and cools into black stone chips. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 230,
+      "name": "Bedrock Reply",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 2,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "14",
+      "sequence": "A short scarred rock wall absorbs a dull non-damaging pulse, rebounds its shape in a deliberate returning gesture and locks into a firmer raised formation. Response/buff rather than incoming attack.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Bedrock Reply, ID 230. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A short scarred rock wall absorbs a dull non-damaging pulse, rebounds its shape in a deliberate returning gesture and locks into a firmer raised formation. Response/buff rather than incoming attack. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 231,
+      "name": "Gravelock",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A chunky iron-bound gravel fist forms from many small angular stones, pinches shut around blank target space, compresses until grit rains down and releases a single cracked pebble.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Gravelock, ID 231. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A chunky iron-bound gravel fist forms from many small angular stones, pinches shut around blank target space, compresses until grit rains down and releases a single cracked pebble. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 232,
+      "name": "Flint Hammer",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A heavy angular flint hammer with a bandaged mineral handle strikes once down onto a hard stone disk, sending one sharp shower of hot pale sparks and broken slate wedges.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Flint Hammer, ID 232. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A heavy angular flint hammer with a bandaged mineral handle strikes once down onto a hard stone disk, sending one sharp shower of hot pale sparks and broken slate wedges. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 233,
+      "name": "Crag Spire",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "Several craggy orange-grey rock wedges climb vertically around a hollow spine, push upward into a tall jagged spire that pierces one centre point and crumble down in a staircase of stones.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Crag Spire, ID 233. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Several craggy orange-grey rock wedges climb vertically around a hollow spine, push upward into a tall jagged spire that pierces one centre point and crumble down in a staircase of stones. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 234,
+      "name": "Granite Reap",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A weighty granite crescent with speckled crystals draws one deliberate sweeping reap, fractures a small opposing rough slab, and carries the heavier debris off its edge before settling.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Granite Reap, ID 234. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A weighty granite crescent with speckled crystals draws one deliberate sweeping reap, fractures a small opposing rough slab, and carries the heavier debris off its edge before settling. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 235,
+      "name": "Fossil Memory",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "14",
+      "sequence": "An ammonite-like fossil spiral appears within a thin polished stone cross-section, lights ring by ring in a remembered golden order, then returns to dull quiet rock. No external hit.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Fossil Memory, ID 235. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). An ammonite-like fossil spiral appears within a thin polished stone cross-section, lights ring by ring in a remembered golden order, then returns to dull quiet rock. No external hit. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 236,
+      "name": "Shard Screen",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "Fifteen tiny mismatched stone chips align into a bristling protective fan, overlap into a tough translucent shard screen and ring lightly as a harmless ray skims across it.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Shard Screen, ID 236. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). Fifteen tiny mismatched stone chips align into a bristling protective fan, overlap into a tough translucent shard screen and ring lightly as a harmless ray skims across it. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 237,
+      "name": "Stone Break",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A crude masonry wall with three distinct block courses stands intact until a worn iron wedge drives once into the keystone; the structure breaks outward into heavy square chunks.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Stone Break, ID 237. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A crude masonry wall with three distinct block courses stands intact until a worn iron wedge drives once into the keystone; the structure breaks outward into heavy square chunks. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    },
+    {
+      "id": 238,
+      "name": "Meteor Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "14",
+      "sequence": "A small soot-black meteor fragment spins on a gravity-like orbit between concentric circular sound waves, peaks as a heavy resonant downward thud and crumbles into emberless dust.",
+      "prompt": "Original polished Abyssals JRPG action pixel art Meteor Resonance, ID 238. Draw STRICT sixteen temporal poses in a true transparent 4x4 sheet (16 equal square logical 192px frames). A small soot-black meteor fragment spins on a gravity-like orbit between concentric circular sound waves, peaks as a heavy resonant downward thud and crumbles into emberless dust. Explicit phases frames 1-4 windup, 5-7 travel, 8 one main contact or status peak, 9-12 aftereffects, 13-16 restoration. NO repeated attacks. Distinct recognisable anatomy of object/material with high-density deliberate clustered pixels and crisp edges, not an elemental swish. Central 40% of every cell must contain ALL pixels including particles, with large completely transparent gutters. No people, monster, scenery, writing, title, grid, blurred neon, generic recolouring.",
+      "status": "production specification; no art created yet"
+    }
+  ]
+}

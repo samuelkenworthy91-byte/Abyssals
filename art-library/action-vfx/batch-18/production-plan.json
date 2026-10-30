@@ -1,0 +1,275 @@
+{
+  "batch": "18",
+  "scope": "Distinct move artwork beyond50% toward369/614 integrated/tested60% milestone",
+  "status": "production briefs only; not artwork",
+  "moves": [
+    {
+      "id": 317,
+      "name": "Sawtooth Scissor",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "18",
+      "sequence": "Two toothed metal jaws unfold like compact shears, interlock their teeth in one diagonal scissor bite and then overlap into a locked defensive brace. A small silver strengthening glint remains on that brace before it folds away.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Sawtooth Scissor, stable ID 317. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two toothed metal jaws unfold like compact shears, interlock their teeth in one diagonal scissor bite and then overlap into a locked defensive brace. A small silver strengthening glint remains on that brace before it folds away. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 318,
+      "name": "Iron Spire",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "18",
+      "sequence": "A short conical stack of hammered iron collars telescopes upward into a blunt spire. It thrusts once, sheds a few iron scales on contact and retracts into a broad braced base whose remaining plates lock defensively.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Iron Spire, stable ID 318. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A short conical stack of hammered iron collars telescopes upward into a blunt spire. It thrusts once, sheds a few iron scales on contact and retracts into a broad braced base whose remaining plates lock defensively. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 320,
+      "name": "Iron Ward",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "next_hit_damage_multiplier",
+          "category": "PHYSICAL",
+          "multiplier": 0.5,
+          "uses": 1,
+          "target": "SELF"
+        }
+      ],
+      "batch": "18",
+      "sequence": "A single thick iron shield plate unfolds from a central hinge and catches one small blunt incoming contact. The plate visibly flexes to absorb it, then folds closed with a final restrained rim glint. One-hit physical protection, not an attack.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Iron Ward, stable ID 320. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A single thick iron shield plate unfolds from a central hinge and catches one small blunt incoming contact. The plate visibly flexes to absorb it, then folds closed with a final restrained rim glint. One-hit physical protection, not an attack. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 321,
+      "name": "Plate Guard",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 2,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "18",
+      "sequence": "Two overlapping rectangular armour plates descend around an empty central body-space, then a second layer locks behind them with four heavy rivets. Show the double reinforcement clearly before the plates lower. Pure defence self-buff.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Plate Guard, stable ID 321. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two overlapping rectangular armour plates descend around an empty central body-space, then a second layer locks behind them with four heavy rivets. Show the double reinforcement clearly before the plates lower. Pure defence self-buff. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 322,
+      "name": "Alloy Resonance",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "18",
+      "sequence": "Three unequal alloy tuning bars float in a triangular arrangement. One heavy strike makes differently coloured metal vibrations combine into a single pressure front; the bars then sag and settle slowly to show the speed sacrifice.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Alloy Resonance, stable ID 322. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Three unequal alloy tuning bars float in a triangular arrangement. One heavy strike makes differently coloured metal vibrations combine into a single pressure front; the bars then sag and settle slowly to show the speed sacrifice. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 323,
+      "name": "Ironheel Lunge",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "batch": "18",
+      "sequence": "A square iron boot lifts heel-first, braces at a hinged ankle and drives horizontally into a small layered armour panel. The heel dents and loosens an outer plate before the boot withdraws. One heel-led lunge, distinct from the rising Iron Kick.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Ironheel Lunge, stable ID 323. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A square iron boot lifts heel-first, braces at a hinged ankle and drives horizontally into a small layered armour panel. The heel dents and loosens an outer plate before the boot withdraws. One heel-led lunge, distinct from the rising Iron Kick. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 325,
+      "name": "Steel Cut",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "batch": "18",
+      "sequence": "A slim bright steel blade turns through three clear anticipatory angles, then makes one surgical downward cut ending in a tiny exact contact glint. It flicks a single clean metal shaving away and sheathes without a broad burst.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Steel Cut, stable ID 325. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A slim bright steel blade turns through three clear anticipatory angles, then makes one surgical downward cut ending in a tiny exact contact glint. It flicks a single clean metal shaving away and sheathes without a broad burst. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 327,
+      "name": "Cleaver Reap",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "18",
+      "sequence": "A huge crescent cleaver with a drilled spine swings once in a heavy low reaping arc. Its edge catches and lifts one loose leather strip, then the mass of the blade carries it downward into a quiet recovery. Distinct from small purse cutters.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Cleaver Reap, stable ID 327. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A huge crescent cleaver with a drilled spine swings once in a heavy low reaping arc. Its edge catches and lifts one loose leather strip, then the mass of the blade carries it downward into a quiet recovery. Distinct from small purse cutters. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 328,
+      "name": "Steel Spire",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "batch": "18",
+      "sequence": "A tall faceted steel spike compresses into a loaded collar and fires upward once. The contact sends chips outward while the launch collar itself buckles and cracks from recoil; spike and collar then collapse as separate fragments.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Steel Spire, stable ID 328. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A tall faceted steel spike compresses into a loaded collar and fires upward once. The contact sends chips outward while the launch collar itself buckles and cracks from recoil; spike and collar then collapse as separate fragments. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 329,
+      "name": "Tempered Body",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence",
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "18",
+      "sequence": "An open iron rib-frame receives a thin outer shell of pale alloy plates. Warm temper colours travel across both layers as the physical shell and inner lattice lock together, then cool to silver. Dual defence self-buff without a hit.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Tempered Body, stable ID 329. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: An open iron rib-frame receives a thin outer shell of pale alloy plates. Warm temper colours travel across both layers as the physical shell and inner lattice lock together, then cool to silver. Dual defence self-buff without a hit. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 330,
+      "name": "Blade-Tail Oath",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "power_multiplier",
+          "multiplier": 1.5,
+          "when": "FOE_DAMAGED_ALLY_PREVIOUS_TURN"
+        }
+      ],
+      "batch": "18",
+      "sequence": "A segmented bladed tail curls protectively around a small dim ally-token. The token shows a fresh nick; the tail uncurls into one decisive retaliatory lash with a warm oath-glint along its spine, then wraps back around the token.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Blade-Tail Oath, stable ID 330. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A segmented bladed tail curls protectively around a small dim ally-token. The token shows a fresh nick; the tail uncurls into one decisive retaliatory lash with a warm oath-glint along its spine, then wraps back around the token. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 331,
+      "name": "Starlit Detonation",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "18",
+      "sequence": "A small angular star of pale rose crystal gathers seven silver motes, folds inward and releases one pearly starlit detonation. The outer motes settle into a thin protective arc around the fading core, suggesting special-defence growth.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Starlit Detonation, stable ID 331. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small angular star of pale rose crystal gathers seven silver motes, folds inward and releases one pearly starlit detonation. The outer motes settle into a thin protective arc around the fading core, suggesting special-defence growth. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 332,
+      "name": "Borrowed Starlight",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": -1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "18",
+      "sequence": "A cupped crescent mirror catches a small pale star from an opposing violet flame. It redirects the borrowed light forward in one curved beam while the original flame dims, then releases the star as scattered silver dust.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Borrowed Starlight, stable ID 332. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A cupped crescent mirror catches a small pale star from an opposing violet flame. It redirects the borrowed light forward in one curved beam while the original flame dims, then releases the star as scattered silver dust. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 334,
+      "name": "Charm Kiss",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "18",
+      "sequence": "Two tiny rose-gold petals fold into a stylised kiss-shaped seal, lift gently and travel in one short arc. The seal touches target space once, opens into a small pair of petal wings and disperses into restrained pearly motes. No character or lips portrait.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Charm Kiss, stable ID 334. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two tiny rose-gold petals fold into a stylised kiss-shaped seal, lift gently and travel in one short arc. The seal touches target space once, opens into a small pair of petal wings and disperses into restrained pearly motes. No character or lips portrait. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": 80,
+  "name": "Seeds of Doubt",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "speed"
+      ],
+      "stages": -1,
+      "chance_percent": 50,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "A pair of heavy dark seed husks opens into seed-clamp jaws, snaps ONCE at the center, cracks and leaves a few trailing root threads that sag before dissolving. Physical seed impact with slowing roots, no question marks or text.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Seeds of Doubt, stable ID80. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A pair of heavy dark seed husks opens into seed-clamp jaws, snaps ONCE at the center, cracks and leaves a few trailing root threads that sag before dissolving. Physical seed impact with slowing roots, no question marks or text. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/80-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/80-prepared.png",
+  "sourceSha256": "ccdce1206e82ef3de6d72e3bddf1d15144bd88619c49bf2543fe60f9224dabc8",
+  "preparedSha256": "bd12f6956f21c294791442e75512e771192735400af295777847fe764f5f72e4",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
+}

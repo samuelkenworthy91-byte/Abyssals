@@ -1,0 +1,25 @@
+{
+  "id": 120,
+  "name": "Brave Kick",
+  "category": "PHYSICAL",
+  "effects": [],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A bandaged boot-foot silhouette turns at the ankle, lifts and extends in one clean forward kick, with leather creases and a brief heel-edge impact burst. Retract fully; do not draw a second kick.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Kick, ID 120. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A bandaged boot-foot silhouette turns at the ankle, lifts and extends in one clean forward kick, with leather creases and a brief heel-edge impact burst. Retract fully; do not draw a second kick. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Kick, ID 120. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A bandaged boot-foot silhouette turns at the ankle, lifts and extends in one clean forward kick, with leather creases and a brief heel-edge impact burst. Retract fully; do not draw a second kick. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+  "referenceImages": [],
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/120-source.png",
+  "prepared": "art-library/action-vfx/batch-10/120-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "e57afae7aa6b4cbd841456598c7a866dff78d7cccc2d12f25c707656f850afe9",
+  "sourceSha256": "a55acb7655168e1207c29ca4bf7a393150cf14ff7d134b7baf8880838e346e53"
+}

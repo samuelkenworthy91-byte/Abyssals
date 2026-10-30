@@ -1,0 +1,70 @@
+{
+  "id": 100,
+  "name": "Winter Shard",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 101
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "194",
+      "195",
+      "237",
+      "238",
+      "239",
+      "301",
+      "302"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "STATUS",
+  "type": "ICE",
+  "target": "SELF",
+  "allyTarget": false,
+  "power": null,
+  "pp": 15,
+  "accuracy": "ALWAYS",
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "accuracy"
+      ],
+      "stages": 1,
+      "chance_percent": 100
+    }
+  ],
+  "authoredAction": "pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "A small six-sided clear ice shard rotates slowly among fine inward-sweeping snow grains; its facets align into a precise centered glint, then settle in a balanced orbit. Self accuracy focus, no flying attack shard or damage burst.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Winter Shard, stable ID100. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: A small six-sided clear ice shard rotates slowly among fine inward-sweeping snow grains; its facets align into a precise centered glint, then settle in a balanced orbit. Self accuracy focus, no flying attack shard or damage burst. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/100-source.png",
+  "prepared": "art-library/action-vfx/batch-09/100-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "e3fced20428e7819fb42429a49a2159ad89aab916aa4d8883200504d74f97737",
+  "sourceSha256": "3c92ea66bfd8bd0e71f3425470982b9524b6af9883b335ea42af024348cf24b5"
+}

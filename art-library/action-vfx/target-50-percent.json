@@ -1,0 +1,2367 @@
+{
+  "target": 307,
+  "total": 614,
+  "baselinePrepared": 154,
+  "baselineInstalled": 133,
+  "remainingAtStart": 153,
+  "moves": [
+    {
+      "id": 85,
+      "name": "Leaf Strike",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "SLEEP",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 87,
+      "name": "Root Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 88,
+      "name": "Sickleleaf Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 89,
+      "name": "Root Grip",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -2,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 90,
+      "name": "Root Lash",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 92,
+      "name": "Spore Torrent",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 93,
+      "name": "Root Ward",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 94,
+      "name": "Spring Growth",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack",
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 95,
+      "name": "Thorn Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "contact_retaliation",
+          "fraction": [
+            1,
+            8
+          ],
+          "turns": 5,
+          "basis": null
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 96,
+      "name": "Verdant Mend",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "heal",
+          "target": "SELF",
+          "max_hp_fraction": [
+            1,
+            2
+          ]
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 99,
+      "name": "Rooted Pride",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "defence",
+          "stages": 1,
+          "timing": "AFTER_DAMAGE",
+          "secondary": true,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 100,
+      "name": "Winter Shard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 101,
+      "name": "Whiteout Detonation",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 102,
+      "name": "Brittle Point",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "FREEZE",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 103,
+      "name": "Rime Hook",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 104,
+      "name": "Glacier Scissor",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 105,
+      "name": "Frostbite Lunge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 106,
+      "name": "Frost Shard",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 107,
+      "name": "Frost Spire",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 108,
+      "name": "Frost Sweep",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "FREEZE",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 109,
+      "name": "Frozen Poise",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 110,
+      "name": "Icicle Hammer",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 111,
+      "name": "Rime Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 112,
+      "name": "Rime Reap",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 113,
+      "name": "Rime Shard",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 114,
+      "name": "Snow Veil",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 115,
+      "name": "Acre Grudge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 119,
+      "name": "Close Quarters",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 120,
+      "name": "Brave Kick",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 121,
+      "name": "Brave Palm",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 123,
+      "name": "Brave Throw",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 125,
+      "name": "Guarded Breath",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence",
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 127,
+      "name": "Iron Break",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 128,
+      "name": "Iron Charge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 129,
+      "name": "Iron Elbow",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 130,
+      "name": "Iron Kick",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 131,
+      "name": "Iron Palm",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 132,
+      "name": "Valor Breakthrough",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 2,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 133,
+      "name": "Iron Throw",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 134,
+      "name": "War Cry",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "attack",
+          "stages": 2
+        },
+        {
+          "effect_id": "inflict_status",
+          "target": "SELF",
+          "status": "CONFUSION",
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 135,
+      "name": "Noxious Cloud",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "target": "ALL_FOES",
+          "status": "POISON",
+          "chance_percent": 100
+        }
+      ],
+      "target": "ALL_FOES"
+    },
+    {
+      "id": 136,
+      "name": "Toxic Veil",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 137,
+      "name": "Venom Needle",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 138,
+      "name": "Barb Rend",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "drain",
+          "actual_hp_damage_fraction": [
+            25,
+            100
+          ]
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 139,
+      "name": "Bitter Medicine",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 140,
+      "name": "Toxin Spray",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 141,
+      "name": "Alkaline Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "drain",
+          "actual_hp_damage_fraction": [
+            25,
+            100
+          ]
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 142,
+      "name": "Venomtooth Hook",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 143,
+      "name": "Venom Coat",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "contact_status_retaliation",
+          "status": "POISON",
+          "chance_percent": 30,
+          "turns": 5
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 144,
+      "name": "Stinger Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 145,
+      "name": "Venom Lash",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 146,
+      "name": "Venom Mist",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 147,
+      "name": "Viper Lunge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 148,
+      "name": "Venom Spray",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 149,
+      "name": "Venom Sting",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 150,
+      "name": "Emperor's Scheme",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 100
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stat": "sp_defence",
+          "stages": -1
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 151,
+      "name": "Venom Cairn",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 152,
+      "name": "Burrow Calm",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 154,
+      "name": "Faultline Rend",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 156,
+      "name": "Buried Knuckle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 157,
+      "name": "Burrow Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 158,
+      "name": "Fault Line",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 159,
+      "name": "Seismic Detonation",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 160,
+      "name": "Dune Surge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 161,
+      "name": "Dust Screen",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 162,
+      "name": "Earth Break",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 164,
+      "name": "Clay Reap",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 165,
+      "name": "Burrow Gouge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 166,
+      "name": "Loam Tackle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 167,
+      "name": "Quicksand Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 168,
+      "name": "Earth Surge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 169,
+      "name": "Earth Ward",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 170,
+      "name": "Sand Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 171,
+      "name": "Stone Footing",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "prevent_flinch",
+          "turns": 5,
+          "target": "SELF"
+        },
+        {
+          "effect_id": "prevent_forced_switch",
+          "turns": 5,
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 172,
+      "name": "Island Crown",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "power_multiplier",
+          "multiplier": 1.25,
+          "when": "USER_MOVED_AFTER_TARGET"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 174,
+      "name": "Gale Arc",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 177,
+      "name": "Talon Hook",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 178,
+      "name": "Headwind",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 179,
+      "name": "Gale Dive",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 180,
+      "name": "Pinion Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 181,
+      "name": "Gale Sweep",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 182,
+      "name": "Crosswind Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 183,
+      "name": "Sky Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 184,
+      "name": "Sky Dive",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 185,
+      "name": "Sky Focus",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 188,
+      "name": "Updraft",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "speed",
+          "stages": 2
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "defence",
+          "stages": -1
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 189,
+      "name": "Pilgrim Echo",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 190,
+      "name": "Mind over Matter",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 193,
+      "name": "Unspoken Threat",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 194,
+      "name": "Aura Pulse",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 196,
+      "name": "Mnemonic Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 197,
+      "name": "Aura Wave",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 198,
+      "name": "Calm Thought",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 199,
+      "name": "Future Read",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "next_move_cannot_miss",
+          "target": "SELF",
+          "uses": 1
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 200,
+      "name": "Mind Arc",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 201,
+      "name": "Prism Fracture",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 202,
+      "name": "Mind Crush",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 203,
+      "name": "Mind Lance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 204,
+      "name": "Mind Pulse",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 205,
+      "name": "Mind Ring",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 206,
+      "name": "Mind Screen",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 207,
+      "name": "Oracle Torrent",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 208,
+      "name": "Mind Wave",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 2,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 209,
+      "name": "Long Game",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion",
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 210,
+      "name": "Sultan's Measure",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack",
+            "sp_defence"
+          ],
+          "stages": 1
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stat": "attack",
+          "stages": -1
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 211,
+      "name": "Antenna Guard",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 212,
+      "name": "Swarm Detonation",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 213,
+      "name": "Chitin Rattle",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 214,
+      "name": "Chitin Hook",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 215,
+      "name": "Chitin Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 216,
+      "name": "Chitin Needle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 217,
+      "name": "Scythe Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 218,
+      "name": "Silken Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 219,
+      "name": "Hive Call",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "ACTIVE_SIDE",
+          "type_filter": "BUG",
+          "stat": "attack",
+          "stages": 1
+        }
+      ],
+      "target": "ACTIVE_SIDE"
+    },
+    {
+      "id": 220,
+      "name": "Shed Shell",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "speed",
+          "stages": 1
+        },
+        {
+          "effect_id": "clear_negative_stat_stages",
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 221,
+      "name": "Silk Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 222,
+      "name": "Swarm Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 223,
+      "name": "Bedrock Calm",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 224,
+      "name": "Cairn Ward",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "next_hit_damage_multiplier",
+          "multiplier": 0.5,
+          "uses": 1,
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 226,
+      "name": "Geode Detonation",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 228,
+      "name": "Shale Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 229,
+      "name": "Basalt Lunge",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 230,
+      "name": "Bedrock Reply",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 2,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 231,
+      "name": "Gravelock",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 232,
+      "name": "Flint Hammer",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 233,
+      "name": "Crag Spire",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 234,
+      "name": "Granite Reap",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 235,
+      "name": "Fossil Memory",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 236,
+      "name": "Shard Screen",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 237,
+      "name": "Stone Break",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 238,
+      "name": "Meteor Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 239,
+      "name": "Shale Gouge",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 240,
+      "name": "Basalt Tackle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 241,
+      "name": "Flint Skewer",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 242,
+      "name": "Stone Lance",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 243,
+      "name": "Granite Cleave",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 244,
+      "name": "Stone Skin",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "defence",
+          "stages": 1
+        },
+        {
+          "effect_id": "critical_damage_multiplier",
+          "multiplier": 0.5,
+          "turns": 5,
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 245,
+      "name": "Fossil Awakening",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "stats": [
+            "attack",
+            "defence",
+            "sp_attack",
+            "sp_defence",
+            "speed"
+          ],
+          "stages": 1,
+          "target": "SELF",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 247,
+      "name": "Glacier Fossil",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "FREEZE",
+          "chance_percent": 10,
+          "secondary": true
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 248,
+      "name": "Sickle Talon",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        },
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 249,
+      "name": "Graveside Murmur",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 250,
+      "name": "Grave Silence",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "disable_last_move",
+          "target": "SINGLE_FOE",
+          "turns": 3
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 251,
+      "name": "Hollow Knell",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "prevent_switch",
+          "target": "SINGLE_FOE",
+          "turns": 3
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 253,
+      "name": "Spectral Rend",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 255,
+      "name": "Shade Lash",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 257,
+      "name": "Funeral Resonance",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 258,
+      "name": "Phantom Discharge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 259,
+      "name": "Spirit Veil",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF"
+    },
+    {
+      "id": 260,
+      "name": "Haunted Torrent",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 261,
+      "name": "Wraith Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 262,
+      "name": "Wraith Cry",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "prevent_switch",
+          "target": "SINGLE_FOE",
+          "turns": 1,
+          "chance_percent": 20
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 263,
+      "name": "Shroud Lunge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    },
+    {
+      "id": 264,
+      "name": "Wraith Lash",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE"
+    }
+  ]
+}

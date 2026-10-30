@@ -1,0 +1,1052 @@
+{
+  "batch": "10",
+  "status": "source production only; not installed",
+  "moves": [
+    {
+      "id": 106,
+      "name": "Frost Shard",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A milky six-point ice crystal grows as a single suspended shard, tips forward, fires across one short arc and shatters ONCE into jagged slivers, leaving tiny frost needles that cling and slow, then melt. Neither spear nor snowball.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Shard, ID 106. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A milky six-point ice crystal grows as a single suspended shard, tips forward, fires across one short arc and shatters ONCE into jagged slivers, leaving tiny frost needles that cling and slow, then melt. Neither spear nor snowball. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Shard, ID 106. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A milky six-point ice crystal grows as a single suspended shard, tips forward, fires across one short arc and shatters ONCE into jagged slivers, leaving tiny frost needles that cling and slow, then melt. Neither spear nor snowball. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Match the rich finely clustered pixel shading and blue-white crystalline material of the supplied Frostbite Lunge sheet, but create the distinctly different six-point crystal action described above. Output only the actual sprite atlas.",
+      "referenceImages": [
+        "art-library/action-vfx/batch-09/105-prepared.png"
+      ],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/106-source.png",
+      "prepared": "art-library/action-vfx/batch-10/106-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "3885aea4d2b002e403018de7adfbc5dc89a5910a74cd037ace747171e4cfda68",
+      "sourceSha256": "4a4028fa7fc8ba28746087c0f903269c48aaf6961f7644c8f72937f67383ec06"
+    },
+    {
+      "id": 107,
+      "name": "Frost Spire",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "Five thin translucent ice plates assemble vertically into one spiralling frozen spire. The spire twists to a needle tip, drives downward once with a precise piercing sparkle, then collapses into faceted chips. No radial explosion.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Spire, ID 107. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Five thin translucent ice plates assemble vertically into one spiralling frozen spire. The spire twists to a needle tip, drives downward once with a precise piercing sparkle, then collapses into faceted chips. No radial explosion. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Spire, ID 107. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Five thin translucent ice plates assemble vertically into one spiralling frozen spire. The spire twists to a needle tip, drives downward once with a precise piercing sparkle, then collapses into faceted chips. No radial explosion. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL LAYOUT: each subject is SMALL, strictly contained in central 40 percent of EACH cell, with 30 percent empty transparent margin on every side, including every glowing particle and trail. Every frame completely separated. Use fine crisp pixels and the same rich crystalline shading as the reference.",
+      "referenceImages": [
+        "art-library/action-vfx/batch-09/105-prepared.png"
+      ],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/107-source.png",
+      "prepared": "art-library/action-vfx/batch-10/107-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "35339074ffb4b42f542906ca409399c59955774aa8f46d03dc422fdf29653b3f",
+      "sourceSha256": "8484d822a316537fec9f881c0d1a826f4554f5a8449dd34ab2d6b92e50b2841d"
+    },
+    {
+      "id": 108,
+      "name": "Frost Sweep",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "FREEZE",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A low curved slab of compacted frost sweeps horizontally like a scything snowplough. The edge scuffs a line of crystalline powder, makes one broad contact, then leaves a thin hoarfrost trace that breaks away.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Sweep, ID 108. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A low curved slab of compacted frost sweeps horizontally like a scything snowplough. The edge scuffs a line of crystalline powder, makes one broad contact, then leaves a thin hoarfrost trace that breaks away. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Sweep, ID 108. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A low curved slab of compacted frost sweeps horizontally like a scything snowplough. The edge scuffs a line of crystalline powder, makes one broad contact, then leaves a thin hoarfrost trace that breaks away. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/108-source.png",
+      "prepared": "art-library/action-vfx/batch-10/108-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "44bb2ee9343a2799d168657fa0c36528ce4bb51572865aa4ee468406884e6812",
+      "sourceSha256": "bf24891998db4d9b3ea88a1b5b0776c2f0636f0241eb05abadea4530b600564e"
+    },
+    {
+      "id": 109,
+      "name": "Frozen Poise",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "10",
+      "sequence": "A lattice of icy ribs folds inward around the user's empty silhouette space, slows into perfectly balanced crystalline stillness, and catches a delicate glint on each layer before separating. Pure composure and special defence; no attack.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frozen Poise, ID 109. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A lattice of icy ribs folds inward around the user's empty silhouette space, slows into perfectly balanced crystalline stillness, and catches a delicate glint on each layer before separating. Pure composure and special defence; no attack. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frozen Poise, ID 109. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A lattice of icy ribs folds inward around the user's empty silhouette space, slows into perfectly balanced crystalline stillness, and catches a delicate glint on each layer before separating. Pure composure and special defence; no attack. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL LAYOUT: each subject is SMALL, strictly contained in central 40 percent of EACH cell, with 30 percent empty transparent margin on every side, including every glowing particle and trail. Every frame completely separated. Use fine crisp pixels and the same rich crystalline shading as the reference.",
+      "referenceImages": [
+        "art-library/action-vfx/batch-09/105-prepared.png"
+      ],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/109-source.png",
+      "prepared": "art-library/action-vfx/batch-10/109-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "1be2c31b4c066206bc3d4adcfa2ef3baac486a562b975def348493f6f8925006",
+      "sourceSha256": "fa35c512c31f6ced44ee4556e8729c5dd401b288da6c0359ca80dc7c93852f81"
+    },
+    {
+      "id": 110,
+      "name": "Icicle Hammer",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A hefty asymmetrical icicle grows a blunt hammerhead on a frozen handle, cocks back, delivers one downward crunch, sending chipped blue blocks outward, then fractures at its haft. Not a spear or sword.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Icicle Hammer, ID 110. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hefty asymmetrical icicle grows a blunt hammerhead on a frozen handle, cocks back, delivers one downward crunch, sending chipped blue blocks outward, then fractures at its haft. Not a spear or sword. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Icicle Hammer, ID 110. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hefty asymmetrical icicle grows a blunt hammerhead on a frozen handle, cocks back, delivers one downward crunch, sending chipped blue blocks outward, then fractures at its haft. Not a spear or sword. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Sheet layout: sixteen SMALL isolated drawings, each centred inside its own generous empty transparent square. Keep at least 25 percent of each cell empty on all sides. Detailed crisp pixel art with rich clustered material shading, polished old-school JRPG visual effects; hard pixel edges, no smooth painting. Make the HAMMER unmistakable: a blunt rectangular head on a long icicle handle with clear changing swing angle.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/110-source.png",
+      "prepared": "art-library/action-vfx/batch-10/110-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "67684e57bd5328525f60981437a581bb52fe576194afcfc10977396727d8e2dc",
+      "sourceSha256": "34c4e8f99dac6112c86cdb4275ab990e33668b0910e5c84486f9533eb4d5d433"
+    },
+    {
+      "id": 111,
+      "name": "Rime Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "10",
+      "sequence": "Chunky rimed stone-like ice slabs lift from below and overlap into a squat defensive parapet, absorb a small pulse, and lower in sequence. Distinct from Frozen Poise's fine lattice; no enemy hit.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Guard, ID 111. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Chunky rimed stone-like ice slabs lift from below and overlap into a squat defensive parapet, absorb a small pulse, and lower in sequence. Distinct from Frozen Poise's fine lattice; no enemy hit. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Guard, ID 111. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Chunky rimed stone-like ice slabs lift from below and overlap into a squat defensive parapet, absorb a small pulse, and lower in sequence. Distinct from Frozen Poise's fine lattice; no enemy hit. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/111-source.png",
+      "prepared": "art-library/action-vfx/batch-10/111-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "f7d422176592cc70bc98bf5d1642713de6a1094b55774b0a9786ef9dd32b2387",
+      "sourceSha256": "4388de60e404a442a053f6a065ac22d8a1d3cd3cd5fb37f39dffc894c3831224"
+    },
+    {
+      "id": 112,
+      "name": "Rime Reap",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A hooked crescent of black-blue glacier ice curves into a reaping blade, slices once through empty target space, splinters and recoils with a visible self-crack along the back edge before fading. One strike.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Reap, ID 112. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hooked crescent of black-blue glacier ice curves into a reaping blade, slices once through empty target space, splinters and recoils with a visible self-crack along the back edge before fading. One strike. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Reap, ID 112. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hooked crescent of black-blue glacier ice curves into a reaping blade, slices once through empty target space, splinters and recoils with a visible self-crack along the back edge before fading. One strike. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/112-source.png",
+      "prepared": "art-library/action-vfx/batch-10/112-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "f6313c26c5c17a3783867fb2b0f586592949a60f22f7ed76407ee17c1d3ff008",
+      "sourceSha256": "2d93fb2b739c4e53b64f001db83f8497152a56a7aa84504df44fefa713492f8f"
+    },
+    {
+      "id": 113,
+      "name": "Rime Shard",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A broad serrated wedge of old rime slides heavily forward, throws smaller wind-swept crystals backward and grinds to a halt, its backward drag expressing the attacker's speed sacrifice. Contrast Frost Shard's slender projectile.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Shard, ID 113. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A broad serrated wedge of old rime slides heavily forward, throws smaller wind-swept crystals backward and grinds to a halt, its backward drag expressing the attacker's speed sacrifice. Contrast Frost Shard's slender projectile. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Rime Shard, ID 113. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A broad serrated wedge of old rime slides heavily forward, throws smaller wind-swept crystals backward and grinds to a halt, its backward drag expressing the attacker's speed sacrifice. Contrast Frost Shard's slender projectile. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/113-source.png",
+      "prepared": "art-library/action-vfx/batch-10/113-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "23dd909de710040166fcde44d6182ad8b457300fb4c96b0faba78982081f0140",
+      "sourceSha256": "aee9eb2e4d50cc5b3bedb84f40d0d0af6e6a2a6ca43f7dae1cb917d695d85311"
+    },
+    {
+      "id": 114,
+      "name": "Snow Veil",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "10",
+      "sequence": "A delicate gauze of overlapping translucent snowflake veils rotates around an empty central silhouette. Layer after layer slips out of alignment into an elusive shimmer and vanishes without contact or impact.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Snow Veil, ID 114. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A delicate gauze of overlapping translucent snowflake veils rotates around an empty central silhouette. Layer after layer slips out of alignment into an elusive shimmer and vanishes without contact or impact. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Snow Veil, ID 114. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A delicate gauze of overlapping translucent snowflake veils rotates around an empty central silhouette. Layer after layer slips out of alignment into an elusive shimmer and vanishes without contact or impact. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/114-source.png",
+      "prepared": "art-library/action-vfx/batch-10/114-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "467cc22b62c68208b38d2671f727edc40366b63c79c3b9728eb995db343ba806",
+      "sourceSha256": "d63c65c64270eb843ae0951fe53490a7b747851cda3d6c091b24a0bda49755f5"
+    },
+    {
+      "id": 115,
+      "name": "Acre Grudge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "Dark peat and frost uproot from a square of haunted field soil; a crooked bleached thorn reaches out once, clawing a slowing chalk-white seam across the ground and collapsing back into earth. Earthbound resentment, not a ghost orb.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Acre Grudge, ID 115. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Dark peat and frost uproot from a square of haunted field soil; a crooked bleached thorn reaches out once, clawing a slowing chalk-white seam across the ground and collapsing back into earth. Earthbound resentment, not a ghost orb. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Acre Grudge, ID 115. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Dark peat and frost uproot from a square of haunted field soil; a crooked bleached thorn reaches out once, clawing a slowing chalk-white seam across the ground and collapsing back into earth. Earthbound resentment, not a ghost orb. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/115-source.png",
+      "prepared": "art-library/action-vfx/batch-10/115-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "9e8a7afe899003a036a55f315eecdcb1a3c38c0225444e1f6220a6821c970a5b",
+      "sourceSha256": "956f9b60acd927d399f64512006ad220ca2c9b396cf28b806e5538f00e29a2f6"
+    },
+    {
+      "id": 119,
+      "name": "Close Quarters",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "Two close-set gauntlet shapes guard the centre, pivot sharply inward for a single elbow-and-shoulder-sized impact, skid a short distance and recover slowly with a weighted breath. Close physical fighting, no ranged beam.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Close Quarters, ID 119. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two close-set gauntlet shapes guard the centre, pivot sharply inward for a single elbow-and-shoulder-sized impact, skid a short distance and recover slowly with a weighted breath. Close physical fighting, no ranged beam. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Close Quarters, ID 119. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two close-set gauntlet shapes guard the centre, pivot sharply inward for a single elbow-and-shoulder-sized impact, skid a short distance and recover slowly with a weighted breath. Close physical fighting, no ranged beam. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/119-source.png",
+      "prepared": "art-library/action-vfx/batch-10/119-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "5e1a8817d2106af2ff3ea3893ae6eff189e0bc090db3f27a7db356854120caca",
+      "sourceSha256": "2a7011d7530b9741330ca049c6f2475ec04bf36850ce0383ea2657de1404929f"
+    },
+    {
+      "id": 120,
+      "name": "Brave Kick",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A bandaged boot-foot silhouette turns at the ankle, lifts and extends in one clean forward kick, with leather creases and a brief heel-edge impact burst. Retract fully; do not draw a second kick.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Kick, ID 120. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A bandaged boot-foot silhouette turns at the ankle, lifts and extends in one clean forward kick, with leather creases and a brief heel-edge impact burst. Retract fully; do not draw a second kick. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Kick, ID 120. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A bandaged boot-foot silhouette turns at the ankle, lifts and extends in one clean forward kick, with leather creases and a brief heel-edge impact burst. Retract fully; do not draw a second kick. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+      "referenceImages": [],
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/120-source.png",
+      "prepared": "art-library/action-vfx/batch-10/120-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "e57afae7aa6b4cbd841456598c7a866dff78d7cccc2d12f25c707656f850afe9",
+      "sourceSha256": "a55acb7655168e1207c29ca4bf7a393150cf14ff7d134b7baf8880838e346e53"
+    },
+    {
+      "id": 121,
+      "name": "Brave Palm",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A wide open hand of warm bronze light rotates palm-forward, flattens into a precise one-point strike with a needle-thin critical glint at the heel, then fingers curl back to a guarded pose. No fist.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Palm, ID 121. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A wide open hand of warm bronze light rotates palm-forward, flattens into a precise one-point strike with a needle-thin critical glint at the heel, then fingers curl back to a guarded pose. No fist. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Palm, ID 121. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A wide open hand of warm bronze light rotates palm-forward, flattens into a precise one-point strike with a needle-thin critical glint at the heel, then fingers curl back to a guarded pose. No fist. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/121-source.png",
+      "prepared": "art-library/action-vfx/batch-10/121-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "67fa3819ab5badc8a46ef18e024a3f90e459233aeec763eeb4d3887aef63fee7",
+      "sourceSha256": "0ed01b66dfbab8c9a9bd92134b33c2685e75ad544d97c9864120996936da32d1"
+    },
+    {
+      "id": 123,
+      "name": "Brave Throw",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A grappling pair of forearms catches a rounded adversary-shaped shadow wedge, pivots its weight and executes one over-the-shoulder throw; the thrower's stance jolts on recoil before recovering. Never show a full character or face.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Throw, ID 123. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A grappling pair of forearms catches a rounded adversary-shaped shadow wedge, pivots its weight and executes one over-the-shoulder throw; the thrower's stance jolts on recoil before recovering. Never show a full character or face. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "revision": "02",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Throw, ID 123. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A grappling pair of forearms catches a rounded adversary-shaped shadow wedge, pivots its weight and executes one over-the-shoulder throw; the thrower's stance jolts on recoil before recovering. Never show a full character or face. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "visualReview": "Original authored pixels re-extracted on true transparent gutters; avoids quarter-cut fragments and retains the original source raster.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/123-source.png",
+      "prepared": "art-library/action-vfx/batch-10/123-prepared-revision02.png",
+      "generator": "built-in image_gen",
+      "preparation": {
+        "version": 2,
+        "method": "transparent-gutter extraction; unchanged authored raster",
+        "sourceRects": [
+          [
+            0,
+            0,
+            324,
+            314
+          ],
+          [
+            324,
+            0,
+            636,
+            314
+          ],
+          [
+            636,
+            0,
+            932,
+            314
+          ],
+          [
+            932,
+            0,
+            1254,
+            314
+          ],
+          [
+            0,
+            314,
+            313,
+            638
+          ],
+          [
+            313,
+            314,
+            627,
+            638
+          ],
+          [
+            627,
+            314,
+            974,
+            638
+          ],
+          [
+            974,
+            314,
+            1254,
+            638
+          ],
+          [
+            0,
+            638,
+            316,
+            962
+          ],
+          [
+            316,
+            638,
+            630,
+            962
+          ],
+          [
+            630,
+            638,
+            960,
+            962
+          ],
+          [
+            960,
+            638,
+            1254,
+            962
+          ],
+          [
+            0,
+            962,
+            320,
+            1254
+          ],
+          [
+            320,
+            962,
+            630,
+            1254
+          ],
+          [
+            630,
+            962,
+            940,
+            1254
+          ],
+          [
+            940,
+            962,
+            1254,
+            1254
+          ]
+        ],
+        "commonScale": 0.5072046109510087,
+        "outputCell": 192
+      },
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "64c313e5901c57e567b4c3fb6b4dda727f638e6a5ad4100d30e4a2b0f5d2ab1a",
+      "sourceSha256": "3dbec5509c91f5df08ba718fae197117d7ab4716be91862e68939e4c1f76d194"
+    },
+    {
+      "id": 125,
+      "name": "Guarded Breath",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence",
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "10",
+      "sequence": "Two cloth-wrapped guarding arms cross over empty space as slow visible breath condenses into twin rings. Rings settle separately into physical and magical ward plates and dissolve in quiet symmetry. No impact.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Guarded Breath, ID 125. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two cloth-wrapped guarding arms cross over empty space as slow visible breath condenses into twin rings. Rings settle separately into physical and magical ward plates and dissolve in quiet symmetry. No impact. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Guarded Breath, ID 125. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two cloth-wrapped guarding arms cross over empty space as slow visible breath condenses into twin rings. Rings settle separately into physical and magical ward plates and dissolve in quiet symmetry. No impact. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/125-source.png",
+      "prepared": "art-library/action-vfx/batch-10/125-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "00de5064c8cb45b6256d68449d41e0b7d6f6afd3fe2937af77141063c925935b",
+      "sourceSha256": "9931bd4ab6378c268c7a6cce7f3dcfe8beea00c905574410b1ea293fec5bbf7b"
+    },
+    {
+      "id": 127,
+      "name": "Iron Break",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A heavy forged fist with chipped rivets cocks sideways and swings through a brittle iron brace in a single breaking blow. The blow dislodges rivets, then a brief fiery muscle highlight shows its own strengthening.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Break, ID 127. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A heavy forged fist with chipped rivets cocks sideways and swings through a brittle iron brace in a single breaking blow. The blow dislodges rivets, then a brief fiery muscle highlight shows its own strengthening. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Break, ID 127. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A heavy forged fist with chipped rivets cocks sideways and swings through a brittle iron brace in a single breaking blow. The blow dislodges rivets, then a brief fiery muscle highlight shows its own strengthening. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/127-source.png",
+      "prepared": "art-library/action-vfx/batch-10/127-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "c6f1028679ac85161231df182b61423db5dddb1a7377ff19e1e8be5a6bc9a6cc",
+      "sourceSha256": "582ddc792a8dbc0a3fe3fa313a136bc51e042398d2a8815f4bdf1494bb471014"
+    },
+    {
+      "id": 128,
+      "name": "Iron Charge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A blunt conical steel battering ram with repeated riveted ridges skids forward in one straight charge. Impact drives a narrow shock into the target and knocks a few rivets loose; ram then rebounds once.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Charge, ID 128. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A blunt conical steel battering ram with repeated riveted ridges skids forward in one straight charge. Impact drives a narrow shock into the target and knocks a few rivets loose; ram then rebounds once. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Charge, ID 128. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A blunt conical steel battering ram with repeated riveted ridges skids forward in one straight charge. Impact drives a narrow shock into the target and knocks a few rivets loose; ram then rebounds once. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/128-source.png",
+      "prepared": "art-library/action-vfx/batch-10/128-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "2f79ed9b3f10df4d89bd3b6b3053cceb64f0130ea885b5c9e775219a3d775519",
+      "sourceSha256": "fdbd3e0a32064fb03c6670e1eb183464eecbcc25871a4aaad1d27cec5a32f7a0"
+    },
+    {
+      "id": 129,
+      "name": "Iron Elbow",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A rectangular plate-armored elbow hinges at a visible joint, rotates and delivers one compact sideways strike, denting an opposing plate and popping its outer layer. No repeated punches.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Elbow, ID 129. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A rectangular plate-armored elbow hinges at a visible joint, rotates and delivers one compact sideways strike, denting an opposing plate and popping its outer layer. No repeated punches. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Elbow, ID 129. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A rectangular plate-armored elbow hinges at a visible joint, rotates and delivers one compact sideways strike, denting an opposing plate and popping its outer layer. No repeated punches. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/129-source.png",
+      "prepared": "art-library/action-vfx/batch-10/129-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "fdca8dd70e4e8b6cc7d92a30caaa358eab33d4b29abc177588d95ddc340d1d27",
+      "sourceSha256": "5d9ee50ae20cfca892229684a484c0eccf692f015277c0be7fbdc940c0b8d5cd"
+    },
+    {
+      "id": 130,
+      "name": "Iron Kick",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A plated greave and square-toed steel boot pivots on a hinged ankle, swings once in a sharp shin-high kick and leaves an angular ringing impact mark before lowering. Separate from Iron Elbow.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Kick, ID 130. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A plated greave and square-toed steel boot pivots on a hinged ankle, swings once in a sharp shin-high kick and leaves an angular ringing impact mark before lowering. Separate from Iron Elbow. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Kick, ID 130. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A plated greave and square-toed steel boot pivots on a hinged ankle, swings once in a sharp shin-high kick and leaves an angular ringing impact mark before lowering. Separate from Iron Elbow. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/130-source.png",
+      "prepared": "art-library/action-vfx/batch-10/130-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "bb084c5df63297d026b61b4b7e83e33d3d29557f19491ec3cfbf4446cd28585a",
+      "sourceSha256": "894a1505c593606b7d19683d0d692abce02a01b019860bcf6041fb4cf34bf81d"
+    },
+    {
+      "id": 131,
+      "name": "Iron Palm",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "An open five-fingered metal hand unfolds from interlocked articulated plates and strikes palm-first. The impact sends a brief fracture through a small opposing shield, then palm segments lock again. Not a claw slash.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Palm, ID 131. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: An open five-fingered metal hand unfolds from interlocked articulated plates and strikes palm-first. The impact sends a brief fracture through a small opposing shield, then palm segments lock again. Not a claw slash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Palm, ID 131. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: An open five-fingered metal hand unfolds from interlocked articulated plates and strikes palm-first. The impact sends a brief fracture through a small opposing shield, then palm segments lock again. Not a claw slash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/131-source.png",
+      "prepared": "art-library/action-vfx/batch-10/131-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "d530781672479a1919e977b45d893bb786619fe5269b194666cf5ace313da477",
+      "sourceSha256": "852777e9bc17a661f8072f6380ea75c9d71851c9bfd4092a0eee9913c0676376"
+    },
+    {
+      "id": 132,
+      "name": "Valor Breakthrough",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 2,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "A battle-worn bannered iron gauntlet pierces through three staggered barricade plates in a SINGLE forward drive. A pair of rising red-gold strength chevrons cling to the hand on emergence and settle; no separate hits.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Valor Breakthrough, ID 132. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A battle-worn bannered iron gauntlet pierces through three staggered barricade plates in a SINGLE forward drive. A pair of rising red-gold strength chevrons cling to the hand on emergence and settle; no separate hits. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Valor Breakthrough, ID 132. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A battle-worn bannered iron gauntlet pierces through three staggered barricade plates in a SINGLE forward drive. A pair of rising red-gold strength chevrons cling to the hand on emergence and settle; no separate hits. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/132-source.png",
+      "prepared": "art-library/action-vfx/batch-10/132-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "97622b491f47029435c6991c6a1e5e1b7c642b8ac7ff224ab4ea9721ff5b4790",
+      "sourceSha256": "e62937dcaf0eaaf468b3a68cb019e028ab8d290bc1485f1b431dea7864e58ed4"
+    },
+    {
+      "id": 133,
+      "name": "Iron Throw",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "10",
+      "sequence": "Two steel wrist guards seize and launch a compact ring-bound weight. The weight tumbles end-over-end across space, lands with one dense metallic thud and bounces only as after-effect. Distinct from Brave Throw's grapple.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Throw, ID 133. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two steel wrist guards seize and launch a compact ring-bound weight. The weight tumbles end-over-end across space, lands with one dense metallic thud and bounces only as after-effect. Distinct from Brave Throw's grapple. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Throw, ID 133. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Two steel wrist guards seize and launch a compact ring-bound weight. The weight tumbles end-over-end across space, lands with one dense metallic thud and bounces only as after-effect. Distinct from Brave Throw's grapple. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/133-source.png",
+      "prepared": "art-library/action-vfx/batch-10/133-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "e374eba0a0030378f5335508199f5ab7d8920689d3986b00a701c33511118212",
+      "sourceSha256": "bc8d9e92445009f3951e5d83028ee92f1db63ee2c92e780e63c38b8509b7d226"
+    },
+    {
+      "id": 134,
+      "name": "War Cry",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "attack",
+          "stages": 2
+        },
+        {
+          "effect_id": "inflict_status",
+          "target": "SELF",
+          "status": "CONFUSION",
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "10",
+      "sequence": "A ragged red war pennant unfurls from a battered horn as one pulsing sonic ring swells outward, with a harsh doubled vibration curling unsteadily back toward the caller to show self-confusion. Pure status effect.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move War Cry, ID 134. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A ragged red war pennant unfurls from a battered horn as one pulsing sonic ring swells outward, with a harsh doubled vibration curling unsteadily back toward the caller to show self-confusion. Pure status effect. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move War Cry, ID 134. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A ragged red war pennant unfurls from a battered horn as one pulsing sonic ring swells outward, with a harsh doubled vibration curling unsteadily back toward the caller to show self-confusion. Pure status effect. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/134-source.png",
+      "prepared": "art-library/action-vfx/batch-10/134-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "1c3f7b8ee523e7a87353e48c0bc78be4e9b114d10d829cda1613ad5b15c4ea58",
+      "sourceSha256": "cc11d9e5ff79b5591745c7b28fcf1ba216a479d55b240c9ca6603f52f5dbbf31"
+    },
+    {
+      "id": 135,
+      "name": "Noxious Cloud",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "target": "ALL_FOES",
+          "status": "POISON",
+          "chance_percent": 100
+        }
+      ],
+      "target": "ALL_FOES",
+      "batch": "10",
+      "sequence": "Three different toxin flasks uncork in sequence and release one billowing sickly green-black cloud that branches toward BOTH opposing positions. Tiny purple venom droplets condense, then the cloud dissipates. No impact flash.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Noxious Cloud, ID 135. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Three different toxin flasks uncork in sequence and release one billowing sickly green-black cloud that branches toward BOTH opposing positions. Tiny purple venom droplets condense, then the cloud dissipates. No impact flash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "revision": "02",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Noxious Cloud, ID 135. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Three different toxin flasks uncork in sequence and release one billowing sickly green-black cloud that branches toward BOTH opposing positions. Tiny purple venom droplets condense, then the cloud dissipates. No impact flash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "visualReview": "Original authored pixels re-extracted on true transparent gutters; avoids quarter-cut fragments and retains the original source raster.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/135-source.png",
+      "prepared": "art-library/action-vfx/batch-10/135-prepared-revision02.png",
+      "generator": "built-in image_gen",
+      "preparation": {
+        "version": 2,
+        "method": "transparent-gutter extraction; unchanged authored raster",
+        "sourceRects": [
+          [
+            0,
+            0,
+            314,
+            327
+          ],
+          [
+            314,
+            0,
+            622,
+            327
+          ],
+          [
+            622,
+            0,
+            936,
+            327
+          ],
+          [
+            936,
+            0,
+            1254,
+            327
+          ],
+          [
+            0,
+            327,
+            299,
+            649
+          ],
+          [
+            299,
+            327,
+            614,
+            649
+          ],
+          [
+            614,
+            327,
+            940,
+            649
+          ],
+          [
+            940,
+            327,
+            1254,
+            649
+          ],
+          [
+            0,
+            649,
+            315,
+            965
+          ],
+          [
+            315,
+            649,
+            628,
+            965
+          ],
+          [
+            628,
+            649,
+            964,
+            965
+          ],
+          [
+            964,
+            649,
+            1254,
+            965
+          ],
+          [
+            0,
+            965,
+            324,
+            1254
+          ],
+          [
+            324,
+            965,
+            632,
+            1254
+          ],
+          [
+            632,
+            965,
+            940,
+            1254
+          ],
+          [
+            940,
+            965,
+            1254,
+            1254
+          ]
+        ],
+        "commonScale": 0.5238095238095238,
+        "outputCell": 192
+      },
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "0a064ffb376be8ee9884335858f8abf5c784b420e90b6c67e23a292df8809e79",
+      "sourceSha256": "9cfb8fc3127b7e24e16d82cfc78ca8fa912c000adc065d6e064490d89672f466"
+    },
+    {
+      "id": 136,
+      "name": "Toxic Veil",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "10",
+      "sequence": "A thin violet film leaks upward from a cracked ampoule and wraps an empty central figure-space in staggered translucent poison ribbons. Ribbons shift and flicker apart to imply evasiveness, then withdraw. No direct poison hit.",
+      "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Toxic Veil, ID 136. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A thin violet film leaks upward from a cracked ampoule and wraps an empty central figure-space in staggered translucent poison ribbons. Ribbons shift and flicker apart to imply evasiveness, then withdraw. No direct poison hit. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+      "status": "prepared candidate; gameplay and artistic approval pending",
+      "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Toxic Veil, ID 136. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A thin violet film leaks upward from a cracked ampoule and wraps an empty central figure-space in staggered translucent poison ribbons. Ribbons shift and flicker apart to imply evasiveness, then withdraw. No direct poison hit. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+      "impact": 0.4375,
+      "source": "art-library/action-vfx/batch-10/136-source.png",
+      "prepared": "art-library/action-vfx/batch-10/136-prepared.png",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      },
+      "preparedSha256": "f6cbc8e482ab2f442fb9b3b146107be465f05a39a8e5e0fd533183237c3877c2",
+      "sourceSha256": "1536658f25640691c82ce2071cda2099fc414afb2bf72f824e1bec3213e46b37"
+    }
+  ]
+}

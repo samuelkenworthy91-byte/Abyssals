@@ -27,7 +27,7 @@ for batch in args.batches:
   assert all(f.getbbox() for f in frames) and len({hashlib.sha256(f.tobytes()).digest() for f in frames})>=12,id
   entry={'id':id,'name':key,'filename':filename,'action':name,'revision':m.get('revision','01'),'sequence':m['sequence'],'source':m['source']}
   manifest['moves'].append(entry)
-  art[str(id)]={'id':id,'key':key,'name':name,'src':'assets/vfx/action/'+filename,'frames':16,'logicalCell':192,'duration':1500 if moves[id]['category']=='STATUS' else 1350,'impact':m.get('impact',0.5),'beats':[m.get('impact',0.5)],'orchard':False,'sequence':m['sequence'],'individual':True,'batch':batch,'revision':entry['revision']}
+  art[str(id)]={'id':id,'key':key,'name':name,'src':'assets/vfx/action/'+filename,'frames':16,'logicalCell':192,'duration':1500 if moves[id]['category']=='STATUS' else 1350,'impact':m.get('impact',7/16),'beats':[m.get('impact',7/16)],'orchard':False,'sequence':m['sequence'],'individual':True,'batch':batch,'revision':entry['revision']}
  (root/f'art-library/action-vfx/batch-{batch}.json').write_text(json.dumps(manifest,indent=2)+'\n')
 file.write_text(prefix+json.dumps(art,separators=(',',':'))+';\n')
 file=root/'dist/offline-assets.js';s=file.read_text();prefix='self.ABYSSALS_OFFLINE_ASSETS=';assets=json.loads(s.split(prefix,1)[1].strip().rstrip(';'));assets=sorted(set(assets)|{m['src'] for m in art.values()});s=s.split(prefix,1)[0]+prefix+json.dumps(assets,separators=(',',':'))+';\n';s=re.sub(r'(ABYSSALS_OFFLINE_REVISION=)(\d+)',lambda m:m[1]+str(int(m[2])+1),s);file.write_text(s)

@@ -1,0 +1,7 @@
+{
+  "id": 106,
+  "status": "resolved-after-existing-alpha-preparation",
+  "rationale": "The raw source has faint halos close to cell gutters; the unchanged pack-action-sheet alpha threshold removes them. Full packed sheet inspected: all sixteen frames are clean and separate. Selected original source retained; no redraw required.",
+  "source": "106-source-candidate-01.png",
+  "installed": true
+}

@@ -1,0 +1,36 @@
+{
+  "id": 110,
+  "name": "Icicle Hammer",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "sp_defence"
+      ],
+      "stages": -2,
+      "chance_percent": 20,
+      "secondary": true
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A hefty asymmetrical icicle grows a blunt hammerhead on a frozen handle, cocks back, delivers one downward crunch, sending chipped blue blocks outward, then fractures at its haft. Not a spear or sword.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Icicle Hammer, ID 110. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hefty asymmetrical icicle grows a blunt hammerhead on a frozen handle, cocks back, delivers one downward crunch, sending chipped blue blocks outward, then fractures at its haft. Not a spear or sword. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Icicle Hammer, ID 110. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A hefty asymmetrical icicle grows a blunt hammerhead on a frozen handle, cocks back, delivers one downward crunch, sending chipped blue blocks outward, then fractures at its haft. Not a spear or sword. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Sheet layout: sixteen SMALL isolated drawings, each centred inside its own generous empty transparent square. Keep at least 25 percent of each cell empty on all sides. Detailed crisp pixel art with rich clustered material shading, polished old-school JRPG visual effects; hard pixel edges, no smooth painting. Make the HAMMER unmistakable: a blunt rectangular head on a long icicle handle with clear changing swing angle.",
+  "referenceImages": [],
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/110-source.png",
+  "prepared": "art-library/action-vfx/batch-10/110-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "67684e57bd5328525f60981437a581bb52fe576194afcfc10977396727d8e2dc",
+  "sourceSha256": "34c4e8f99dac6112c86cdb4275ab990e33668b0910e5c84486f9533eb4d5d433"
+}

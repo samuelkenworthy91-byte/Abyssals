@@ -57,11 +57,11 @@
     "registered": 610,
     "battleReactions": 4,
     "total": 614,
-    "dedicated": 133,
-    "missing": 481,
+    "dedicated": 171,
+    "missing": 443,
     "approved": 39,
     "originalCatalogueStillRegistered": 325,
-    "originalCatalogueDedicated": 76
+    "originalCatalogueDedicated": 114
   },
   "aliases": [
     {
@@ -5598,8 +5598,21 @@
         }
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/63-static-detonation.png",
+        "exists": true,
+        "sha256": "714f809bda929dda757ddd46a8d2f55c95e359dad85a3a7da78d93c387de8d8a",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A small tangled static knot winds tighter; one asymmetrical electrical detonation ruptures its shell into barbed filaments, then the filaments gutter away. No thundercloud or generic fire explosion.",
+        "registeredName": "Static Detonation"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5643,8 +5656,21 @@
       },
       "effects": [],
       "authoredAction": "three curved claw trails that converge on the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/64-livewire-rend.png",
+        "exists": true,
+        "sha256": "dda85cae92a424a8fea308709148ea8c778afbad3964150368cb46e8e08be68b",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "Three exposed copper-wire claws flex, rake together once diagonally through one contact, shed little blue sparks from their frayed insulation, then withdraw. No whole creature.",
+        "registeredName": "Livewire Rend"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5706,8 +5732,21 @@
         }
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/65-coil-hook.png",
+        "exists": true,
+        "sha256": "35873dbd63197fff152e0c16ae1d75ef48977023dbecbe1e0ebd812dc0dab68b",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A thick spring-wound copper hook compresses, drives one upward hooking punch, flexes from recoil and loosens into separated spring turns. Mechanical hook shape, not a fist.",
+        "registeredName": "Coil Hook"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5767,8 +5806,21 @@
         }
       ],
       "authoredAction": "a short acceleration trail ending in a compact snap-impact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/66-spark-dash.png",
+        "exists": true,
+        "sha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A narrow wingless arrowhead of compressed speed-lines accelerates low left-to-right, touches once in a tiny hooked spark, then coasts into thin broken dashes. Speed travel dominates; no full creature.",
+        "registeredName": "Spark Dash"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5836,8 +5888,21 @@
         }
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/67-arcwire-scissor.png",
+        "exists": true,
+        "sha256": "885c0f84df8555c8fb44c7532f2ba7f2b56fb21898228df9a2275a8ad18d7dd3",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "Two jointed wire-cutter jaws with crackling copper cutting edges open, close once around a small central corona, then spring open and shed one backward recoil spark. No whole character.",
+        "registeredName": "Arcwire Scissor"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5911,8 +5976,21 @@
         }
       ],
       "authoredAction": "a quick compact projectile or contact flash with minimal battlefield coverage.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/68-spark-jolt.png",
+        "exists": true,
+        "sha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile.",
+        "registeredName": "Spark Jolt"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -5977,8 +6055,21 @@
         }
       ],
       "authoredAction": "a luminous ring forming around the target and tightening inward.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/69-spark-ring.png",
+        "exists": true,
+        "sha256": "b807f04af2aa8acd1739b158e3c1fda69ef5d8b20acdcab0dafb72fc4007ad99",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "An incomplete floating copper spark-loop closes into a thin oval ring, rotates forward, tightens once into a bright central pinprick, then unwinds into a graceful trailing spiral.",
+        "registeredName": "Spark Ring"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6037,8 +6128,21 @@
         }
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/70-copper-lunge.png",
+        "exists": true,
+        "sha256": "38f35715e3ff43b952eba247c4cdba4ab85cfe6dfb9b0d9d9b8148a93e47ff0f",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A narrow pointed copper ram prow pulls back, lunges forward horizontally with polished copper highlights, makes one pointed contact and draws out into two thin acceleration trails. No hammer or body.",
+        "registeredName": "Copper Lunge"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6104,8 +6208,21 @@
         }
       ],
       "authoredAction": "create a low battlefield-wide layer of particles or crackling lines. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/71-static-field.png",
+        "exists": true,
+        "sha256": "6c6a69f3f920914d32a2ea16fe661f0ac56fb6bfeba0dfa5f43a55eae10e1c04",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact.",
+        "registeredName": "Static Field"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6162,8 +6279,21 @@
         }
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/72-thunderhead-resonance.png",
+        "exists": true,
+        "sha256": "f6df58830cd6864490180853429096a1a59ed84ca23dc56ed02627e8151cec51",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "Three compact layered charcoal thundercloud lobes compress like a bellows; a luminous vibrating core opens beneath them, delivers one broad concentric thunder-pressure pulse, then the lobes lose charge and dissipate. No repeated strikes.",
+        "registeredName": "Thunderhead Resonance"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6222,8 +6352,21 @@
         }
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/73-livewire-hammer.png",
+        "exists": true,
+        "sha256": "b6a106b7df49959fda9e00105b7f0291163c44aedaa24da00f20887eb05e9a76",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A blunt rectangular hammerhead woven from thick live copper cables lifts, swings down once, strikes with crushed wire strands and a sharp corona, rebounds heavily and drops one backward recoil spark. No biting jaws, no full character.",
+        "registeredName": "Livewire Hammer"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6298,8 +6441,21 @@
         }
       ],
       "authoredAction": "a forceful multi-layered attack effect with a pronounced travel phase and heavy impact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/74-volt-jolt.png",
+        "exists": true,
+        "sha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt.",
+        "registeredName": "Volt Jolt"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6348,8 +6504,21 @@
         }
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/75-livewire-tackle.png",
+        "exists": true,
+        "sha256": "473b42ec0bf25e4cef8c409c507da80e60f0eef35ca2581079f36038737d190d",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A broad rounded armored shoulder-shaped mass wrapped in live wires braces, makes one low horizontal body-check with a blunt shoulder impact, recoils and retracts; no head, full creature, feet or arrowhead.",
+        "registeredName": "Livewire Tackle"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6480,8 +6649,21 @@
         }
       ],
       "authoredAction": "a reckless zigzag of yellow-white lightning ricochets twice through the target area, ending in a wide blue-violet electrical burst and backward recoil spark.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/77-storm-of-youth.png",
+        "exists": true,
+        "sha256": "56edb127bc2030b29ef79df0520310663a13e6944c2f66b60df9b1d581a583b0",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A single reckless zigzag bolt bends twice while travelling toward ONE contact; a wide blue-violet discharge opens at that contact, and one small backward recoil spark traces its return. Travel bends are not separate hits.",
+        "registeredName": "Storm of Youth"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6540,8 +6722,21 @@
         }
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/78-thornwake.png",
+        "exists": true,
+        "sha256": "24bc7cf825b9b0f878487c7abc38d78263fcb6b3eaeb7d92f82d3f5c0c638e56",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A tight sleeping rosebud of dark thorns swells, opens into one directional fan of rising thorn shoots, releases a few soft sleepy gold pollen motes after impact and withers. No generic green orb.",
+        "registeredName": "Thornwake"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6607,8 +6802,21 @@
         }
       ],
       "authoredAction": "a crisp blade-like streak with a delayed secondary glint.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/79-leaf-cut.png",
+        "exists": true,
+        "sha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit.",
+        "registeredName": "Leaf Cut"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6674,8 +6882,21 @@
         }
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/80-seeds-of-doubt.png",
+        "exists": true,
+        "sha256": "bd12f6956f21c294791442e75512e771192735400af295777847fe764f5f72e4",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A pair of heavy dark seed husks opens into seed-clamp jaws, snaps ONCE at the center, cracks and leaves a few trailing root threads that sag before dissolving. Physical seed impact with slowing roots, no question marks or text.",
+        "registeredName": "Seeds of Doubt"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6740,8 +6961,21 @@
         }
       ],
       "authoredAction": "a clearly readable mid-sized travelling effect that ends in a distinct impact burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/81-leaf-grip.png",
+        "exists": true,
+        "sha256": "69da6c0bb5b416a7314529a10c4a6cc4c874d395e363c13c4ae6410886835385",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "Three broad ribbed leaves fold into grasping fingers, reach inward and squeeze once around a central gap, bruise and crumple from pressure, then uncurl. Clear gripping action; no vine whip or cut.",
+        "registeredName": "Leaf Grip"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6811,8 +7045,21 @@
         }
       ],
       "authoredAction": "a whipping ribbon, vine, flame or shadow trail snapping across the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/82-leaf-lash.png",
+        "exists": true,
+        "sha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "One long flexible leaf rib bends into a whip, draws a wide S-shaped preparation, snaps its leafy tip once across the center, and curls slack with fluttering torn leaflets. Whole whip remains in each cell.",
+        "registeredName": "Leaf Lash"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6854,8 +7101,21 @@
       },
       "effects": [],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/83-thistle-hook.png",
+        "exists": true,
+        "sha256": "b50f239cea8aff703bafe9eceb4b70a1a80f2fcc1cc6b2c019bf91f3ad99ee83",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "A single purple thistle burr on a thick curved stem draws back, swings one upward hooking strike, sheds a few pointed burr bristles at contact and uncurls downward. Distinct thistle head and hooked stem.",
+        "registeredName": "Thistle Hook"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6931,8 +7191,21 @@
         }
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/84-canopy-resonance.png",
+        "exists": true,
+        "sha256": "5cc611423c3742428260f248f9b360dc9ae317fad83422a5573585321ce3370c",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.4375,
+        "beats": [
+          0.4375
+        ],
+        "sequence": "An arched canopy of four broad veined leaves sways in sequence; one twisting stream of leaf-vein resonance curls around a central gap and opens once, then small sap motes return left and the canopy relaxes. No generic hurricane or repeated hit.",
+        "registeredName": "Canopy Resonance"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -6988,8 +7261,21 @@
         }
       ],
       "authoredAction": "one decisive impact arc with a strong contact flash.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/85-leaf-strike.png",
+        "exists": true,
+        "sha256": "5a7e5ed07194212843e18f1d932fafea86cdc3b830ce0e5ff2ce54c0c973aae1",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A broad folded leaf paddle draws back sideways, rotates flat, delivers ONE heavy diagonal slap that shakes loose a little sleepy pollen, then flexes back open. A blunt leaf strike, not a leaf blade cut.",
+        "registeredName": "Leaf Strike"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7052,8 +7338,21 @@
         }
       ],
       "authoredAction": "a crisp blade-like streak with a delayed secondary glint.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/87-root-cut.png",
+        "exists": true,
+        "sha256": "bc4cc08516814d14ef943f0777bc6b5f655fb52c876c0294e642b13a0979d5a8",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A flattened woody root blade reveals growth rings and a pale splinter edge, rotates edge-on, makes ONE short shearing cut, chips off two bark flakes and turns broadside in recovery. No floating leaf.",
+        "registeredName": "Root Cut"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7108,8 +7407,21 @@
         }
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/88-sickleleaf-scissor.png",
+        "exists": true,
+        "sha256": "bc23d610350e4acb75f45c9b16e217e75a2bc7209145975a7f779cb3f52dcba0",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two asymmetrical sickle-shaped leaf edges on curved stems open like shears, cross shut ONCE at one central contact, rebound with a little recoil twitch and unfold. Large notched leaf blades, no insect or jaws.",
+        "registeredName": "Sickleleaf Scissor"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7168,8 +7480,21 @@
         }
       ],
       "authoredAction": "a forceful multi-layered attack effect with a pronounced travel phase and heavy impact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/89-root-grip.png",
+        "exists": true,
+        "sha256": "cf0012f86f4a8a86534954df88341e14729362c2b827cef954f116a86cf55b25",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A thick bundle of pale segmented roots reaches outward like grasping fingers, coils ONCE around a hollow central space, contracts with creaking purple pressure lines, then releases its loosening knots. Heavy restraining root magic, no whip.",
+        "registeredName": "Root Grip"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7220,8 +7545,21 @@
       },
       "effects": [],
       "authoredAction": "a whipping ribbon, vine, flame or shadow trail snapping across the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/90-root-lash.png",
+        "exists": true,
+        "sha256": "b4d573c76938a339c6640bf11053eba7a4b3d2d44b4d648821f8f4929a4834c7",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A single long knotted root with small fibrous side roots winds into a tight spiral, uncoils in one long horizontal lash, makes ONE cracking tip contact, falls slack and recoils. Brown root distinct from green Leaf Lash.",
+        "registeredName": "Root Lash"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7284,8 +7622,21 @@
         }
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/92-spore-torrent.png",
+        "exists": true,
+        "sha256": "6c143b58e35a36d4b44df26d2adc9efbdea338d2f735cccef5fb7b87eafb4b69",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Several small ochre mushroom gills tilt and release a corkscrewing jet of gold-green spores, the coherent stream wraps ONCE around a central gap, blooms into ONE dusty contact cloud and drifts away. No whole fungus creature, no repeated hits.",
+        "registeredName": "Spore Torrent"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7348,8 +7699,21 @@
         }
       ],
       "authoredAction": "construct a stable magical or elemental sigil that settles into a protective aura. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/93-root-ward.png",
+        "exists": true,
+        "sha256": "9882c654103ef06e62111932034e08e2db3626429e3ee6a62e7ca9655ae573ca",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Five thick root stakes grow upward around a central hollow gap, interlock into a low woven living barricade, settle with a quiet amber sap glint, and remain protective before fading. Self defence buff: NO damaging flash, blow or hit star.",
+        "registeredName": "Root Ward"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7409,8 +7773,21 @@
         }
       ],
       "authoredAction": "sprout quick curling shoots or light-vines around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/94-spring-growth.png",
+        "exists": true,
+        "sha256": "e923142bc6e9a6330fe736fb8a881dd68cfe31388f49aa51d11ba1c2210dee7f",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two curled fresh shoots unfold in alternating directions, grow into four bright young leaf fronds and one pink bud, gently arch around an empty central space and settle as a balanced growth aura. Self offensive buff, no target damage flash.",
+        "registeredName": "Spring Growth"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7487,8 +7864,21 @@
         }
       ],
       "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/95-thorn-guard.png",
+        "exists": true,
+        "sha256": "9595b92701e419deaa6c3e6cde01d34e7ac70dd2c87bb166dd4f4fb55518ff95",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A ring of six thorn-covered bramble ribs bends inward around an empty space, locks into a dense spiny guard, presents its outward thorns, then gently loosens. Contact-retaliation self guard; no blow, hit flash or projectile.",
+        "registeredName": "Thorn Guard"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7568,8 +7958,21 @@
         }
       ],
       "authoredAction": "draw energy inward as small leaves or motes and seal with a soft flash. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/96-verdant-mend.png",
+        "exists": true,
+        "sha256": "82a65d25c0a714da4d2bbfeba6101522c8af56265fbc674d9d353599c9fc4855",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Three torn leaf fragments gather green sap droplets, spiral softly inward, join their torn veins into one restored whole leaf, and release gentle rising healing motes. Healing only, no attack star or outward strike.",
+        "registeredName": "Verdant Mend"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7781,8 +8184,21 @@
         }
       ],
       "authoredAction": "thick roots lock into the ground beneath the user while a proud upright leaf crest rises, then a concentrated green impact surge travels forward from the anchored stance.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/99-rooted-pride.png",
+        "exists": true,
+        "sha256": "1ad3938dd0b85cebd59dfb7a476b33a97c722fed88cf2752fc59892fd4762fb6",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A compact root anchor spreads three thick feet, a proud upright leaf crest rises above it, and one narrow ridged green pressure surge launches from that rooted stance. The roots stay planted while the surge makes ONE contact.",
+        "registeredName": "Rooted Pride"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7837,8 +8253,21 @@
         }
       ],
       "authoredAction": "pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/100-winter-shard.png",
+        "exists": true,
+        "sha256": "e3fced20428e7819fb42429a49a2159ad89aab916aa4d8883200504d74f97737",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1500,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A small six-sided clear ice shard rotates slowly among fine inward-sweeping snow grains; its facets align into a precise centered glint, then settle in a balanced orbit. Self accuracy focus, no flying attack shard or damage burst.",
+        "registeredName": "Winter Shard"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7907,8 +8336,21 @@
         }
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/101-whiteout-detonation.png",
+        "exists": true,
+        "sha256": "781e5db753f3dc6403471346242b12f7f8ecb57fa97aa2f5bf832ee43f3036fa",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A compact rough white snowball draws wisps of powder inward, compresses into faceted ice, then breaks into ONE broad whiteout ring of snow chunks and cold blue dust which disperses. No thundercloud or fire explosion.",
+        "registeredName": "Whiteout Detonation"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -7976,8 +8418,21 @@
         }
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/102-brittle-point.png",
+        "exists": true,
+        "sha256": "6d39bbd61547d31a8976ef80d27130457058e7531607a1226af2d3e9f6dec198",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A narrow brittle ice claw with three unequal chisel points flexes backward, thrusts its longest point into ONE precise contact, fractures tiny ice chips from its edge, then recoils. Three points are one claw, no triple hit.",
+        "registeredName": "Brittle Point"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -8037,8 +8492,21 @@
         }
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/103-rime-hook.png",
+        "exists": true,
+        "sha256": "f4da10abee47ac990912c0c7f3bf7a491a0f29075c956d0c46f234898a5184b9",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A thick crescent of rime-coated ice grows from a short curved frozen wrist, swings in ONE upward hooking impact, cracks its frosty outer crust and curls down again. Readable hook punch, not an icicle projectile.",
+        "registeredName": "Rime Hook"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -8098,8 +8566,21 @@
       },
       "effects": [],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/104-glacier-scissor.png",
+        "exists": true,
+        "sha256": "3ed86a7d0df7e3a4efd9deaf83c305b3c6e8626cfc3fe1a7386cf1f1955cf074",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "Two thick asymmetrical glacier slabs have curved cutting faces, pivot open, shear past one another ONCE at the center, rebound with small shattered ice plates and separate. Heavy ice shears, not teeth or claws.",
+        "registeredName": "Glacier Scissor"
+      },
+      "status": "requires-review",
       "review": null
     },
     {
@@ -8167,8 +8648,21 @@
         }
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
-      "art": null,
-      "status": "incomplete",
+      "art": {
+        "src": "assets/vfx/action/105-frostbite-lunge.png",
+        "exists": true,
+        "sha256": "6098ea35ac3249108d4db09867f4c46094244b7d2374544700541d2a5e98dd60",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "sequence": "A long narrow frozen tusk with a hollow dark blue core angles forward, lunges on a single hairline trail into ONE needle-point collision, sheds a few sharp frost crystals and withdraws. Precision lunge distinct from basic Frost Shard.",
+        "registeredName": "Frostbite Lunge"
+      },
+      "status": "requires-review",
       "review": null
     },
     {

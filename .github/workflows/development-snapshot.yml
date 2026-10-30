@@ -1,11 +1,21 @@
 name: Development workspace snapshot
 on:
   push:
-    branches: ['feature/**', 'patch/**']
+    branches: ['feature/**', 'patch/**', 'artwork/**']
     paths:
       - '.github/workflows/development-snapshot.yml'
       - 'scripts/development-snapshot.py'
       - 'docs/development-resume.md'
+      - 'scripts/audit-halfway-artwork.py'
+      - 'scripts/audit-sixty-percent-artwork.py'
+      - 'scripts/pack-action-sheet.py'
+      - 'tests/action-sheet-packing.test.py'
+      - 'art-library/action-vfx/target-60-percent.json'
+      - 'art-library/action-vfx/integration-checks.json'
+      - 'art-library/action-vfx/upload-verification.json'
+      - 'art-library/action-vfx/batch-*/production-plan.json'
+      - 'art-library/action-vfx/batch-*/prepared-manifest.json'
+      - 'art-library/action-vfx/batch-*/*.png'
 permissions:
   contents: read
 concurrency:
@@ -27,6 +37,14 @@ jobs:
             art-library/action-vfx
             art-library/finale
             art-library/reviews/item-branches-2026-10-26
+      - name: Install image verification dependency
+        run: python3 -m pip install --quiet Pillow==11.1.0
+      - name: Verify complete frame extraction
+        run: python3 tests/action-sheet-packing.test.py
+      - name: Count only real authored animation sheets
+        run: python3 scripts/audit-halfway-artwork.py
+      - name: Report separately verified 60 percent progress
+        run: python3 scripts/audit-sixty-percent-artwork.py
       - name: Package sources, prepared artwork and resume state
         run: python3 scripts/development-snapshot.py create --commit "$GITHUB_SHA" --output build/development-snapshot
       - uses: actions/upload-artifact@v4

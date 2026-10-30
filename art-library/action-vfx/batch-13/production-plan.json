@@ -1,0 +1,387 @@
+{
+  "batch": "13",
+  "status": "planned only, no art generated",
+  "moves": [
+    {
+      "id": 193,
+      "name": "Unspoken Threat",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A narrow candlelit corridor of tiny hovering bronze eye motifs closes towards a single blank centre; the eyes narrow into a needle-shaped warning pressure, deliver one soft uncanny pulse and extinguish without striking physically.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Unspoken Threat #193. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A narrow candlelit corridor of tiny hovering bronze eye motifs closes towards a single blank centre; the eyes narrow into a needle-shaped warning pressure, deliver one soft uncanny pulse and extinguish without striking physically. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 194,
+      "name": "Aura Pulse",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A thick blue-white ring of concentrated will gathers between two opposing arcs, compresses into a bright central bead and pulses outward once in measured concentric aura bands before dimming.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Aura Pulse #194. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A thick blue-white ring of concentrated will gathers between two opposing arcs, compresses into a bright central bead and pulses outward once in measured concentric aura bands before dimming. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 196,
+      "name": "Mnemonic Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A cascade of translucent memory glyphs resembling knotted threads, never readable letters, cycles around a golden bell-like core; the threads snap into one harmonic pulse and unravel in reverse order.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mnemonic Resonance #196. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A cascade of translucent memory glyphs resembling knotted threads, never readable letters, cycles around a golden bell-like core; the threads snap into one harmonic pulse and unravel in reverse order. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 197,
+      "name": "Aura Wave",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "Two parallel spirit currents flow from left to right, curl into a wide rolling wave of violet-teal energy and break into a single broad crest with a clearly liquid-like wavefront but no water droplets.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Aura Wave #197. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. Two parallel spirit currents flow from left to right, curl into a wide rolling wave of violet-teal energy and break into a single broad crest with a clearly liquid-like wavefront but no water droplets. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 198,
+      "name": "Calm Thought",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "13",
+      "sequence": "Three smooth pearl-like thought stones align one above another, turn slowly, settle into a complete rotating mandala of fine radial lines and then become perfectly still; calm protective focus, no target contact.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Calm Thought #198. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. Three smooth pearl-like thought stones align one above another, turn slowly, settle into a complete rotating mandala of fine radial lines and then become perfectly still; calm protective focus, no target contact. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 199,
+      "name": "Future Read",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "next_move_cannot_miss",
+          "target": "SELF",
+          "uses": 1
+        }
+      ],
+      "target": "SELF",
+      "batch": "13",
+      "sequence": "A fan of translucent concentric clock-face arcs appears with a drifting spearhead-shaped prophecy mark; the arcs skip a visible beat and then project one delayed distant glint ahead before folding shut.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Future Read #199. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A fan of translucent concentric clock-face arcs appears with a drifting spearhead-shaped prophecy mark; the arcs skip a visible beat and then project one delayed distant glint ahead before folding shut. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 200,
+      "name": "Mind Arc",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A carved crescent of luminous mind glass bends into an elegant curved blade, arcs across one centre point in a sharp single slash, then crumbles into fine square purple facets instead of leaving a physical wound.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Arc #200. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A carved crescent of luminous mind glass bends into an elegant curved blade, arcs across one centre point in a sharp single slash, then crumbles into fine square purple facets instead of leaving a physical wound. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 201,
+      "name": "Prism Fracture",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A many-sided floating crystal prism takes in three narrow differently coloured beams, fractures along one jagged plane, sprays triangular rainbow shards at a single impact and reassembles as a cracked glass outline.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Prism Fracture #201. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A many-sided floating crystal prism takes in three narrow differently coloured beams, fractures along one jagged plane, sprays triangular rainbow shards at a single impact and reassembles as a cracked glass outline. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 202,
+      "name": "Mind Crush",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A heavy cracked violet sphere gathers inward rings of telekinetic pressure, compresses a small stone square into a paper-thin plate, and releases a sharp implosive psychic shock with trailing shards.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Crush #202. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A heavy cracked violet sphere gathers inward rings of telekinetic pressure, compresses a small stone square into a paper-thin plate, and releases a sharp implosive psychic shock with trailing shards. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 203,
+      "name": "Mind Lance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A long tapered lance made of interleaved sapphire psychic plates grows point by point, thrusts along one precise line, leaves a single white needle contact and peels back into separate plates.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Lance #203. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A long tapered lance made of interleaved sapphire psychic plates grows point by point, thrusts along one precise line, leaves a single white needle contact and peels back into separate plates. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 204,
+      "name": "Mind Pulse",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A glowing brain-coral knot throbs with one strong oscillation. Three segmented aura rings leap outward from its core and decay at different offsets without a physical projectile.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Pulse #204. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A glowing brain-coral knot throbs with one strong oscillation. Three segmented aura rings leap outward from its core and decay at different offsets without a physical projectile. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 205,
+      "name": "Mind Ring",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "Two overlapping circular glyphs form a tight interlocked chain around blank centre-space, rotate in opposite directions, tighten once like a conceptual restraint and drift apart without impact.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Ring #205. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. Two overlapping circular glyphs form a tight interlocked chain around blank centre-space, rotate in opposite directions, tighten once like a conceptual restraint and drift apart without impact. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 206,
+      "name": "Mind Screen",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "13",
+      "sequence": "Six almost invisible square panes of mind-glass stack into a vertical defensive screen. An incoming harmless ripple bends around their edges and the panes dissolve one at a time; no attack.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Screen #206. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. Six almost invisible square panes of mind-glass stack into a vertical defensive screen. An incoming harmless ripple bends around their edges and the panes dissolve one at a time; no attack. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 207,
+      "name": "Oracle Torrent",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A ceremonial oracle amphora pours a ribbon of tiny gold-purple geometric symbols, not letters, in a spiral torrent. It twists into a single forward wave and leaves short fading afterimages of predictions.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Oracle Torrent #207. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A ceremonial oracle amphora pours a ribbon of tiny gold-purple geometric symbols, not letters, in a spiral torrent. It twists into a single forward wave and leaves short fading afterimages of predictions. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 208,
+      "name": "Mind Wave",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 2,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A long slender ribbon of pale lavender thought energy rises and falls in three deliberate mental swells, with one central bright amplitude peak and increasingly faint curved ripples.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Mind Wave #208. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A long slender ribbon of pale lavender thought energy rises and falls in three deliberate mental swells, with one central bright amplitude peak and increasingly faint curved ripples. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 209,
+      "name": "Long Game",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion",
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "13",
+      "sequence": "A small hourglass with floating silver dust spins slowly and turns upside down; dust refuses to fall, then accelerates into one hardening strategic sigil and becomes steady. No direct damage.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Long Game #209. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A small hourglass with floating silver dust spins slowly and turns upside down; dust refuses to fall, then accelerates into one hardening strategic sigil and becomes steady. No direct damage. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 210,
+      "name": "Sultan's Measure",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack",
+            "sp_defence"
+          ],
+          "stages": 1
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stat": "attack",
+          "stages": -1
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "An ornate brass balance scale weighs a heavy obsidian bead against a golden sun-disc, dips decisively, stamps one precise square measure into a floating invisible field and returns to equilibrium.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Sultan's Measure #210. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. An ornate brass balance scale weighs a heavy obsidian bead against a golden sun-disc, dips decisively, stamps one precise square measure into a floating invisible field and returns to equilibrium. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 211,
+      "name": "Antenna Guard",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "Two long antennae made from jointed beetle chitin rise and cross into a protective V. The tips catch and deflect a small harmless falling pebble, then uncross and return to a watchful posture.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Antenna Guard #211. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. Two long antennae made from jointed beetle chitin rise and cross into a protective V. The tips catch and deflect a small harmless falling pebble, then uncross and return to a watchful posture. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    },
+    {
+      "id": 212,
+      "name": "Swarm Detonation",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "13",
+      "sequence": "A tightly packed honeycomb pod opens hexagonal doors in sequence, releases many individually readable flying chitin flecks that converge in a single centre burst, then closes its empty husk.",
+      "prompt": "Abyssals original high-detail sharp pixel-art JRPG move Swarm Detonation #212. EXACT 16-frame 4x4 temporal sprite sheet, 192px logical cells, row-major, real transparent alpha. A tightly packed honeycomb pod opens hexagonal doors in sequence, releases many individually readable flying chitin flecks that converge in a single centre burst, then closes its empty husk. Frames 1-4 anticipation; 5-7 travel; 8 single impact/status peak; 9-12 consequences; 13-16 full recovery, all frames distinct. Centre each fully isolated drawing strictly inside the MIDDLE 40% of its own frame, with very large empty gutters, including motes and glints. Rich pixel clusters and material shading; consistent direction, no whole creature, human, scene, grid or captions, no element-only generic effect.",
+      "status": "planned; no source image yet"
+    }
+  ]
+}

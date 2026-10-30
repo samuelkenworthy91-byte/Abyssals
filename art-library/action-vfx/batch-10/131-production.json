@@ -1,0 +1,35 @@
+{
+  "id": 131,
+  "name": "Iron Palm",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "defence"
+      ],
+      "stages": -1,
+      "chance_percent": 100,
+      "secondary": true
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "An open five-fingered metal hand unfolds from interlocked articulated plates and strikes palm-first. The impact sends a brief fracture through a small opposing shield, then palm segments lock again. Not a claw slash.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Palm, ID 131. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: An open five-fingered metal hand unfolds from interlocked articulated plates and strikes palm-first. The impact sends a brief fracture through a small opposing shield, then palm segments lock again. Not a claw slash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Iron Palm, ID 131. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: An open five-fingered metal hand unfolds from interlocked articulated plates and strikes palm-first. The impact sends a brief fracture through a small opposing shield, then palm segments lock again. Not a claw slash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/131-source.png",
+  "prepared": "art-library/action-vfx/batch-10/131-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "d530781672479a1919e977b45d893bb786619fe5269b194666cf5ace313da477",
+  "sourceSha256": "852777e9bc17a661f8072f6380ea75c9d71851c9bfd4092a0eee9913c0676376"
+}

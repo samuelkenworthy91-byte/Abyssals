@@ -1,0 +1,137 @@
+{
+  "id": 135,
+  "name": "Noxious Cloud",
+  "category": "STATUS",
+  "effects": [
+    {
+      "effect_id": "inflict_status",
+      "target": "ALL_FOES",
+      "status": "POISON",
+      "chance_percent": 100
+    }
+  ],
+  "target": "ALL_FOES",
+  "batch": "10",
+  "sequence": "Three different toxin flasks uncork in sequence and release one billowing sickly green-black cloud that branches toward BOTH opposing positions. Tiny purple venom droplets condense, then the cloud dissipates. No impact flash.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Noxious Cloud, ID 135. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Three different toxin flasks uncork in sequence and release one billowing sickly green-black cloud that branches toward BOTH opposing positions. Tiny purple venom droplets condense, then the cloud dissipates. No impact flash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "revision": "02",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Noxious Cloud, ID 135. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Three different toxin flasks uncork in sequence and release one billowing sickly green-black cloud that branches toward BOTH opposing positions. Tiny purple venom droplets condense, then the cloud dissipates. No impact flash. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "visualReview": "Original authored pixels re-extracted on true transparent gutters; avoids quarter-cut fragments and retains the original source raster.",
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/135-source.png",
+  "prepared": "art-library/action-vfx/batch-10/135-prepared-revision02.png",
+  "generator": "built-in image_gen",
+  "preparation": {
+    "version": 2,
+    "method": "transparent-gutter extraction; unchanged authored raster",
+    "sourceRects": [
+      [
+        0,
+        0,
+        314,
+        327
+      ],
+      [
+        314,
+        0,
+        622,
+        327
+      ],
+      [
+        622,
+        0,
+        936,
+        327
+      ],
+      [
+        936,
+        0,
+        1254,
+        327
+      ],
+      [
+        0,
+        327,
+        299,
+        649
+      ],
+      [
+        299,
+        327,
+        614,
+        649
+      ],
+      [
+        614,
+        327,
+        940,
+        649
+      ],
+      [
+        940,
+        327,
+        1254,
+        649
+      ],
+      [
+        0,
+        649,
+        315,
+        965
+      ],
+      [
+        315,
+        649,
+        628,
+        965
+      ],
+      [
+        628,
+        649,
+        964,
+        965
+      ],
+      [
+        964,
+        649,
+        1254,
+        965
+      ],
+      [
+        0,
+        965,
+        324,
+        1254
+      ],
+      [
+        324,
+        965,
+        632,
+        1254
+      ],
+      [
+        632,
+        965,
+        940,
+        1254
+      ],
+      [
+        940,
+        965,
+        1254,
+        1254
+      ]
+    ],
+    "commonScale": 0.5238095238095238,
+    "outputCell": 192
+  },
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "0a064ffb376be8ee9884335858f8abf5c784b420e90b6c67e23a292df8809e79",
+  "sourceSha256": "9cfb8fc3127b7e24e16d82cfc78ca8fa912c000adc065d6e064490d89672f466"
+}

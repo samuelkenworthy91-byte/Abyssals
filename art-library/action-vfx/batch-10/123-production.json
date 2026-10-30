@@ -1,0 +1,139 @@
+{
+  "id": 123,
+  "name": "Brave Throw",
+  "category": "PHYSICAL",
+  "effects": [
+    {
+      "effect_id": "recoil",
+      "fraction": [
+        1,
+        8
+      ],
+      "basis": "MAX_HP"
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A grappling pair of forearms catches a rounded adversary-shaped shadow wedge, pivots its weight and executes one over-the-shoulder throw; the thrower's stance jolts on recoil before recovering. Never show a full character or face.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Throw, ID 123. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A grappling pair of forearms catches a rounded adversary-shaped shadow wedge, pivots its weight and executes one over-the-shoulder throw; the thrower's stance jolts on recoil before recovering. Never show a full character or face. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "revision": "02",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Brave Throw, ID 123. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A grappling pair of forearms catches a rounded adversary-shaped shadow wedge, pivots its weight and executes one over-the-shoulder throw; the thrower's stance jolts on recoil before recovering. Never show a full character or face. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "visualReview": "Original authored pixels re-extracted on true transparent gutters; avoids quarter-cut fragments and retains the original source raster.",
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/123-source.png",
+  "prepared": "art-library/action-vfx/batch-10/123-prepared-revision02.png",
+  "generator": "built-in image_gen",
+  "preparation": {
+    "version": 2,
+    "method": "transparent-gutter extraction; unchanged authored raster",
+    "sourceRects": [
+      [
+        0,
+        0,
+        324,
+        314
+      ],
+      [
+        324,
+        0,
+        636,
+        314
+      ],
+      [
+        636,
+        0,
+        932,
+        314
+      ],
+      [
+        932,
+        0,
+        1254,
+        314
+      ],
+      [
+        0,
+        314,
+        313,
+        638
+      ],
+      [
+        313,
+        314,
+        627,
+        638
+      ],
+      [
+        627,
+        314,
+        974,
+        638
+      ],
+      [
+        974,
+        314,
+        1254,
+        638
+      ],
+      [
+        0,
+        638,
+        316,
+        962
+      ],
+      [
+        316,
+        638,
+        630,
+        962
+      ],
+      [
+        630,
+        638,
+        960,
+        962
+      ],
+      [
+        960,
+        638,
+        1254,
+        962
+      ],
+      [
+        0,
+        962,
+        320,
+        1254
+      ],
+      [
+        320,
+        962,
+        630,
+        1254
+      ],
+      [
+        630,
+        962,
+        940,
+        1254
+      ],
+      [
+        940,
+        962,
+        1254,
+        1254
+      ]
+    ],
+    "commonScale": 0.5072046109510087,
+    "outputCell": 192
+  },
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "64c313e5901c57e567b4c3fb6b4dda727f638e6a5ad4100d30e4a2b0f5d2ab1a",
+  "sourceSha256": "3dbec5509c91f5df08ba718fae197117d7ab4716be91862e68939e4c1f76d194"
+}
