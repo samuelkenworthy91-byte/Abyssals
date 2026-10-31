@@ -13,13 +13,17 @@ export function eligibleEvolutions(unit,state={},itemId=null){
   if(c.method==='STAT')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0)&&statEvolutionAllowed(unit,e);
   if(c.method==='LEVEL')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0);
   if(c.method==='ITEM')return branchEvolutionAllowed(e,state)&&c.item_id===itemId&&(state.evolutionItems?.[itemId]||0)>0;
+  // Cairant, Flaggrim and Jerbune evolve only at the moment a city leader's fate is decided.
+  // Historic scene-state flags may remain in older saves but cannot trigger an evolution.
+  if(c.method==='STORY_CHOICE'&&['070','073','092'].includes(e.from_species_id))return false;
   // A committed enum is authoritative; history is a compatibility fallback only.
   const choice=state[c.state_field]??state.storyChoices?.[c.state_field];
   return !itemId&&unit.level>(unit.evolutionBlockedLevel??0)&&(choice!==undefined?choice===c.equals:(state.storyHistory||[]).includes(c.history_trigger));
  });
 }
-export function promote(unit,path){
- if(!statEvolutionAllowed(unit,path)||unit.dead||unit.hp<=0||unit.species.id!==path.from_species_id||unit.level<path.condition.minimum_level||(unit.evolutionHistory||[]).some(e=>e.level===unit.level)||(path.condition.method!=='ITEM'&&unit.level<=(unit.evolutionBlockedLevel??0)))return null;
+export function promote(unit,path,{leaderFate=false}={}){
+ const eventGate=leaderFate&&path.condition.method==='STORY_CHOICE'&&['070','073','092'].includes(path.from_species_id);
+ if(!statEvolutionAllowed(unit,path)||unit.dead||unit.hp<=0||unit.species.id!==path.from_species_id||unit.level<path.condition.minimum_level||(unit.evolutionHistory||[]).some(e=>e.level===unit.level)||(path.condition.method!=='ITEM'&&!eventGate&&unit.level<=(unit.evolutionBlockedLevel??0)))return null;
  const target=DATA.species.find(s=>s.id===path.to_species_id);if(!target)return null;
  migrateStats(unit);
  const from=unit.species.id,oldHp=unit.hp,oldMax=unit.maxHp;
