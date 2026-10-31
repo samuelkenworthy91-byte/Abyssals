@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {DATA} from '../dist/data.js';
 import {instance} from '../dist/engine.js';
 import {eligibleEvolutions} from '../dist/evolution.js';
+import {evolutionOutlook} from '../dist/evolution-renewal.js';
 import {settleLeaderFateEvolutions} from '../dist/leader-outcomes.js';
 
 const forms=[
@@ -67,6 +68,8 @@ for(const fate of ['SPARED','EXECUTED']){
  assert.equal(s.dead[0].species.id,'073');
  assert.equal(s.party[0].species.id,'092');
 }
+// Summaries explain how to obtain the branches without a location-specific story flag.
+for(const f of forms){const hint=evolutionOutlook(unit(f.base,f.minimum));assert(hint.includes('Lv. '+f.minimum+'+'));assert(hint.includes('any city leader'));assert(hint.includes('Reserves do not count'));}
 // Existing story flags alone can no longer trigger the affected branches.
 for(const f of forms){
  const s=state('SPARED');const u=unit(f.base,f.minimum);
