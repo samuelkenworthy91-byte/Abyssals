@@ -718,7 +718,7 @@ function rewardTransaction(change){const backup=JSON.parse(JSON.stringify(state)
  for(const [id,fate] of Object.entries(state.fates||{}))if(/^LDR-0[1-8]$/.test(id)&&!backup.fates?.[id]&&['SPARED','EXECUTED'].includes(fate))settleLeaderFateEvolutions(state,id,fate);
  if(persist())return true;for(const key of Object.keys(state))if(!(key in backup))delete state[key];Object.assign(state,backup);state.party=state.party.map(hydrate);state.reserve=state.reserve.map(hydrate);state.dead=state.dead.map(hydrate);state.starter=state.party.concat(state.reserve,state.dead).find(u=>u.originalStarter)||null;return false;}
 function showLeaderFateEvolutionResults(){
- if(battle||dialogue||modal||!state.leaderFateEvolutionNotices?.length)return false;
+ if(battle||dialogue||modal||presentationLocked||!state.leaderFateEvolutionNotices?.length)return false;
  if(!rewardTransaction(()=>{state.rewardQueue??=[];state.rewardQueue.push(...state.leaderFateEvolutionNotices);state.leaderFateEvolutionNotices=[];})){rewardSaveRetry(showLeaderFateEvolutionResults);return false;}
  showRewards();return true;
 }
