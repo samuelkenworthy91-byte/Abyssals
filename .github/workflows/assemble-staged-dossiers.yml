@@ -1,0 +1,11 @@
+name: Assemble staged lossless dossier ZIPs
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  assemble:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Staging not yet complete"
