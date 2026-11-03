@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "files": {
+    "dist/assets/vfx/action/63-static-detonation.png": {
+      "sha256": "714f809bda929dda757ddd46a8d2f55c95e359dad85a3a7da78d93c387de8d8a",
+      "remoteBlobSha": "1dbe9485c280020ad009934cdb168329c6151731",
+      "id": 63,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/64-livewire-rend.png": {
+      "sha256": "dda85cae92a424a8fea308709148ea8c778afbad3964150368cb46e8e08be68b",
+      "remoteBlobSha": "7fca2839b3c6861ec8449c6eb1618913fa5b3887",
+      "id": 64,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/65-coil-hook.png": {
+      "sha256": "35873dbd63197fff152e0c16ae1d75ef48977023dbecbe1e0ebd812dc0dab68b",
+      "remoteBlobSha": "d966de9b9094cd11d07994d8759d6e894ccafeae",
+      "id": 65,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/66-spark-dash.png": {
+      "sha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
+      "remoteBlobSha": "7ffc38ea86d99c49be4ee563a1035fb26b24963c",
+      "id": 66,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/67-arcwire-scissor.png": {
+      "sha256": "885c0f84df8555c8fb44c7532f2ba7f2b56fb21898228df9a2275a8ad18d7dd3",
+      "remoteBlobSha": "3b2f290b85c1f4a0a6c7322b85a2cb2c103dff99",
+      "id": 67,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/68-spark-jolt.png": {
+      "sha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+      "remoteBlobSha": "f470ce3fc1f7cc9ca565028c0a368195f810be04",
+      "id": 68,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/69-spark-ring.png": {
+      "sha256": "b807f04af2aa8acd1739b158e3c1fda69ef5d8b20acdcab0dafb72fc4007ad99",
+      "remoteBlobSha": "4f22f034d69ec90562055f6b5cb2ade86410fd8c",
+      "id": 69,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/70-copper-lunge.png": {
+      "sha256": "38f35715e3ff43b952eba247c4cdba4ab85cfe6dfb9b0d9d9b8148a93e47ff0f",
+      "remoteBlobSha": "f7a4e5e48a9d792c25899663f6e018c19372bf8f",
+      "id": 70,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/71-static-field.png": {
+      "sha256": "6c6a69f3f920914d32a2ea16fe661f0ac56fb6bfeba0dfa5f43a55eae10e1c04",
+      "remoteBlobSha": "1507afc018e4cc42978e2d00c11b6e86b8d5f4e6",
+      "id": 71,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/72-thunderhead-resonance.png": {
+      "sha256": "f6df58830cd6864490180853429096a1a59ed84ca23dc56ed02627e8151cec51",
+      "remoteBlobSha": "8786cae6f0b80ed13b69fdff81e169aa460095fd",
+      "id": 72,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/73-livewire-hammer.png": {
+      "sha256": "b6a106b7df49959fda9e00105b7f0291163c44aedaa24da00f20887eb05e9a76",
+      "remoteBlobSha": "42f85dc08e86d0c9e52068caca3ab790b5538b50",
+      "id": 73,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/74-volt-jolt.png": {
+      "sha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+      "remoteBlobSha": "d3a3dccb1de9c18679e692155671c994a04806a8",
+      "id": 74,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/75-livewire-tackle.png": {
+      "sha256": "473b42ec0bf25e4cef8c409c507da80e60f0eef35ca2581079f36038737d190d",
+      "remoteBlobSha": "275e0cf440f2088725d6cb36368aa0f5d4f39ad6",
+      "id": 75,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/77-storm-of-youth.png": {
+      "sha256": "56edb127bc2030b29ef79df0520310663a13e6944c2f66b60df9b1d581a583b0",
+      "remoteBlobSha": "72a1068a0914605c35e1d30c2e1ae2c73fe244be",
+      "id": 77,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/78-thornwake.png": {
+      "sha256": "24bc7cf825b9b0f878487c7abc38d78263fcb6b3eaeb7d92f82d3f5c0c638e56",
+      "remoteBlobSha": "fd1a5b81d314f758f63e50100294d85d0ebd6126",
+      "id": 78,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/79-leaf-cut.png": {
+      "sha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+      "remoteBlobSha": "0df86796b9b91209adec7e0dd7c1ad395029e6a3",
+      "id": 79,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/80-seeds-of-doubt.png": {
+      "sha256": "bd12f6956f21c294791442e75512e771192735400af295777847fe764f5f72e4",
+      "remoteBlobSha": "b93978121e7d2b788692452e19c77f0d3434c1a8",
+      "id": 80,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/81-leaf-grip.png": {
+      "sha256": "69da6c0bb5b416a7314529a10c4a6cc4c874d395e363c13c4ae6410886835385",
+      "remoteBlobSha": "b491f37ce9f0b7816eab5461f18422f6f4c9b711",
+      "id": 81,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/82-leaf-lash.png": {
+      "sha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
+      "remoteBlobSha": "7f27420e839fe85de4d5f11243ea82b8e10c9478",
+      "id": 82,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/83-thistle-hook.png": {
+      "sha256": "b50f239cea8aff703bafe9eceb4b70a1a80f2fcc1cc6b2c019bf91f3ad99ee83",
+      "remoteBlobSha": "306fdeead1a2c695a9bbc9803ae0cd518edfc257",
+      "id": 83,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/84-canopy-resonance.png": {
+      "sha256": "5cc611423c3742428260f248f9b360dc9ae317fad83422a5573585321ce3370c",
+      "remoteBlobSha": "86de017ebb3638f1544adbd3a38ed57ade4c99a2",
+      "id": 84,
+      "batch": "08",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/85-leaf-strike.png": {
+      "sha256": "5a7e5ed07194212843e18f1d932fafea86cdc3b830ce0e5ff2ce54c0c973aae1",
+      "remoteBlobSha": "e862b0731b7296274220bf2dcb2baa1a1c824b0d",
+      "id": 85,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/87-root-cut.png": {
+      "sha256": "bc4cc08516814d14ef943f0777bc6b5f655fb52c876c0294e642b13a0979d5a8",
+      "remoteBlobSha": "00cb97b2c182fdd2b85200dac344d00f5337254a",
+      "id": 87,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/88-sickleleaf-scissor.png": {
+      "sha256": "bc23d610350e4acb75f45c9b16e217e75a2bc7209145975a7f779cb3f52dcba0",
+      "remoteBlobSha": "390d7d673dc85e09f83ae6a09164160be329b2ec",
+      "id": 88,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/89-root-grip.png": {
+      "sha256": "cf0012f86f4a8a86534954df88341e14729362c2b827cef954f116a86cf55b25",
+      "remoteBlobSha": "b3bd377d5110abe256243f2e394b34a225c5af2b",
+      "id": 89,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/90-root-lash.png": {
+      "sha256": "b4d573c76938a339c6640bf11053eba7a4b3d2d44b4d648821f8f4929a4834c7",
+      "remoteBlobSha": "c2a47a60c5c2cbcd40a2650378986e9b35409122",
+      "id": 90,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/92-spore-torrent.png": {
+      "sha256": "6c143b58e35a36d4b44df26d2adc9efbdea338d2f735cccef5fb7b87eafb4b69",
+      "remoteBlobSha": "98cc51c0bf049d72e4c69f32dcfc549ac2951fc8",
+      "id": 92,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/93-root-ward.png": {
+      "sha256": "9882c654103ef06e62111932034e08e2db3626429e3ee6a62e7ca9655ae573ca",
+      "remoteBlobSha": "ec41cee94d5faeeb7448a9a59769e092941bcb53",
+      "id": 93,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/94-spring-growth.png": {
+      "sha256": "e923142bc6e9a6330fe736fb8a881dd68cfe31388f49aa51d11ba1c2210dee7f",
+      "remoteBlobSha": "c15024dee075ff5597ad5c22585d16867b735d8e",
+      "id": 94,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/95-thorn-guard.png": {
+      "sha256": "9595b92701e419deaa6c3e6cde01d34e7ac70dd2c87bb166dd4f4fb55518ff95",
+      "remoteBlobSha": "1452cef6db6b7cd16f4a2fd1451c7d5bd4a7d756",
+      "id": 95,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/96-verdant-mend.png": {
+      "sha256": "82a65d25c0a714da4d2bbfeba6101522c8af56265fbc674d9d353599c9fc4855",
+      "remoteBlobSha": "7111b5f3121cb18a39fdd025bda2cfe99c0f33a5",
+      "id": 96,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/99-rooted-pride.png": {
+      "sha256": "1ad3938dd0b85cebd59dfb7a476b33a97c722fed88cf2752fc59892fd4762fb6",
+      "remoteBlobSha": "16ea9de07bd08f8dc34ac00368eddd7d6a8a7d10",
+      "id": 99,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/100-winter-shard.png": {
+      "sha256": "e3fced20428e7819fb42429a49a2159ad89aab916aa4d8883200504d74f97737",
+      "remoteBlobSha": "82f22f448cbd2a1728a1f35e98381352d679dee9",
+      "id": 100,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/101-whiteout-detonation.png": {
+      "sha256": "781e5db753f3dc6403471346242b12f7f8ecb57fa97aa2f5bf832ee43f3036fa",
+      "remoteBlobSha": "ec2d2650cc42bb46221981c5a035aaecefc71d88",
+      "id": 101,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/102-brittle-point.png": {
+      "sha256": "6d39bbd61547d31a8976ef80d27130457058e7531607a1226af2d3e9f6dec198",
+      "remoteBlobSha": "7f39851efab1cb0593d63bbc49a1a4ec56ea38cc",
+      "id": 102,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/103-rime-hook.png": {
+      "sha256": "f4da10abee47ac990912c0c7f3bf7a491a0f29075c956d0c46f234898a5184b9",
+      "remoteBlobSha": "508690add39a99c3a4eec91012caff451c7bdfa1",
+      "id": 103,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/104-glacier-scissor.png": {
+      "sha256": "3ed86a7d0df7e3a4efd9deaf83c305b3c6e8626cfc3fe1a7386cf1f1955cf074",
+      "remoteBlobSha": "26974f73f2935f14f6ed80f1248996795a533273",
+      "id": 104,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    },
+    "dist/assets/vfx/action/105-frostbite-lunge.png": {
+      "sha256": "6098ea35ac3249108d4db09867f4c46094244b7d2374544700541d2a5e98dd60",
+      "remoteBlobSha": "517e942494185e2ed47de5284e4a4d33e4a0c52e",
+      "id": 105,
+      "batch": "09",
+      "verifiedTreeSha": "85f8eabb22f1af2098804a4d8c6c5df86b0a9015"
+    }
+  }
+}

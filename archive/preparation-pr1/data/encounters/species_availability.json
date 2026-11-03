@@ -1,0 +1,2254 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx"
+  ],
+  "records": [
+    {
+      "id": "AVAILABILITY-001",
+      "species_id": "001",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 2
+      }
+    },
+    {
+      "id": "AVAILABILITY-002",
+      "species_id": "002",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 3
+      }
+    },
+    {
+      "id": "AVAILABILITY-003",
+      "species_id": "003",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 4
+      }
+    },
+    {
+      "id": "AVAILABILITY-004",
+      "species_id": "004",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 5
+      }
+    },
+    {
+      "id": "AVAILABILITY-005",
+      "species_id": "005",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 6
+      }
+    },
+    {
+      "id": "AVAILABILITY-006",
+      "species_id": "006",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 7
+      }
+    },
+    {
+      "id": "AVAILABILITY-007",
+      "species_id": "007",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 8
+      }
+    },
+    {
+      "id": "AVAILABILITY-008",
+      "species_id": "008",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 9
+      }
+    },
+    {
+      "id": "AVAILABILITY-009",
+      "species_id": "009",
+      "acquisition_mode": "Starter / story",
+      "first_access_text": "Opening campaign assignment",
+      "implementation_note": "Not a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 10
+      }
+    },
+    {
+      "id": "AVAILABILITY-010",
+      "species_id": "010",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (DAY, Lv 5–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 11
+      }
+    },
+    {
+      "id": "AVAILABILITY-011",
+      "species_id": "011",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 12
+      }
+    },
+    {
+      "id": "AVAILABILITY-012",
+      "species_id": "012",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (DAY, Lv 5–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 13
+      }
+    },
+    {
+      "id": "AVAILABILITY-013",
+      "species_id": "013",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — War Road (NIGHT, Lv 79–89)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 14
+      }
+    },
+    {
+      "id": "AVAILABILITY-014",
+      "species_id": "014",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (DAY, Lv 5–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 15
+      }
+    },
+    {
+      "id": "AVAILABILITY-015",
+      "species_id": "015",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 16
+      }
+    },
+    {
+      "id": "AVAILABILITY-016",
+      "species_id": "016",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Service Tunnels (DAY, Lv 17–28)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 17
+      }
+    },
+    {
+      "id": "AVAILABILITY-017",
+      "species_id": "017",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Drainage Basin (NIGHT, Lv 41–51)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 18
+      }
+    },
+    {
+      "id": "AVAILABILITY-018",
+      "species_id": "018",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (DAY, Lv 5–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 19
+      }
+    },
+    {
+      "id": "AVAILABILITY-019",
+      "species_id": "019",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Rivercause Road (DAY, Lv 38–49)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 20
+      }
+    },
+    {
+      "id": "AVAILABILITY-020",
+      "species_id": "020",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 21
+      }
+    },
+    {
+      "id": "AVAILABILITY-021",
+      "species_id": "021",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Mere of First Light (DAY, Lv 12–20)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 22
+      }
+    },
+    {
+      "id": "AVAILABILITY-022",
+      "species_id": "022",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Smugglers' Weir (DAY, Lv 40–50)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 23
+      }
+    },
+    {
+      "id": "AVAILABILITY-023",
+      "species_id": "023",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (NIGHT, Lv 5–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 24
+      }
+    },
+    {
+      "id": "AVAILABILITY-024",
+      "species_id": "024",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle I — Threshold — Roads of the Newly Dead (PALE, Lv 101–109)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 25
+      }
+    },
+    {
+      "id": "AVAILABILITY-025",
+      "species_id": "025",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (DAY, Lv 14–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 26
+      }
+    },
+    {
+      "id": "AVAILABILITY-026",
+      "species_id": "026",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 27
+      }
+    },
+    {
+      "id": "AVAILABILITY-027",
+      "species_id": "027",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (NIGHT, Lv 5–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 28
+      }
+    },
+    {
+      "id": "AVAILABILITY-028",
+      "species_id": "028",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Smugglers' Weir (NIGHT, Lv 40–50)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 29
+      }
+    },
+    {
+      "id": "AVAILABILITY-029",
+      "species_id": "029",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (NIGHT, Lv 63–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 30
+      }
+    },
+    {
+      "id": "AVAILABILITY-030",
+      "species_id": "030",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (NIGHT, Lv 14–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 31
+      }
+    },
+    {
+      "id": "AVAILABILITY-031",
+      "species_id": "031",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 32
+      }
+    },
+    {
+      "id": "AVAILABILITY-032",
+      "species_id": "032",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle IV — Dominion — Court of Petitions (PALE, Lv 132–143)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 33
+      }
+    },
+    {
+      "id": "AVAILABILITY-033",
+      "species_id": "033",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (DAY, Lv 6–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 34
+      }
+    },
+    {
+      "id": "AVAILABILITY-034",
+      "species_id": "034",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — North Scrub Road (DAY, Lv 26–37)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 35
+      }
+    },
+    {
+      "id": "AVAILABILITY-035",
+      "species_id": "035",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (DAY, Lv 14–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 36
+      }
+    },
+    {
+      "id": "AVAILABILITY-036",
+      "species_id": "036",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — North Scrub Road (DAY, Lv 26–37)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 37
+      }
+    },
+    {
+      "id": "AVAILABILITY-037",
+      "species_id": "037",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 38
+      }
+    },
+    {
+      "id": "AVAILABILITY-038",
+      "species_id": "038",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Stonecut Pass / Quarry Road (DAY, Lv 58–69)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 39
+      }
+    },
+    {
+      "id": "AVAILABILITY-039",
+      "species_id": "039",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Stonecut Pass / Quarry Road (NIGHT, Lv 58–69)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 40
+      }
+    },
+    {
+      "id": "AVAILABILITY-040",
+      "species_id": "040",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (DAY, Lv 14–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 41
+      }
+    },
+    {
+      "id": "AVAILABILITY-041",
+      "species_id": "041",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 42
+      }
+    },
+    {
+      "id": "AVAILABILITY-042",
+      "species_id": "042",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (DAY, Lv 6–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 43
+      }
+    },
+    {
+      "id": "AVAILABILITY-043",
+      "species_id": "043",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Ceasefire Field (DAY, Lv 80–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 44
+      }
+    },
+    {
+      "id": "AVAILABILITY-044",
+      "species_id": "044",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 45
+      }
+    },
+    {
+      "id": "AVAILABILITY-045",
+      "species_id": "045",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — War Road (DAY, Lv 78–89)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 46
+      }
+    },
+    {
+      "id": "AVAILABILITY-046",
+      "species_id": "046",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle II — Want — Medal Vault (PALE, Lv 112–120)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 47
+      }
+    },
+    {
+      "id": "AVAILABILITY-047",
+      "species_id": "047",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — War Road (DAY, Lv 78–89)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 48
+      }
+    },
+    {
+      "id": "AVAILABILITY-048",
+      "species_id": "048",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle III — Wrath — Endless Battlefield (PALE, Lv 120–131)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 49
+      }
+    },
+    {
+      "id": "AVAILABILITY-049",
+      "species_id": "049",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 50
+      }
+    },
+    {
+      "id": "AVAILABILITY-050",
+      "species_id": "050",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Burned Approaches (DAY, Lv 79–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 51
+      }
+    },
+    {
+      "id": "AVAILABILITY-051",
+      "species_id": "051",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Mere of First Light (DAY, Lv 12–20)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 52
+      }
+    },
+    {
+      "id": "AVAILABILITY-052",
+      "species_id": "052",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Scribe's Cistern (DAY, Lv 71–81)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 53
+      }
+    },
+    {
+      "id": "AVAILABILITY-053",
+      "species_id": "053",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Reedcut Cave (DAY, Lv 23–31)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 54
+      }
+    },
+    {
+      "id": "AVAILABILITY-054",
+      "species_id": "054",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Sunken Shrine (NIGHT, Lv 53–61)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 55
+      }
+    },
+    {
+      "id": "AVAILABILITY-055",
+      "species_id": "055",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 56
+      }
+    },
+    {
+      "id": "AVAILABILITY-056",
+      "species_id": "056",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 57
+      }
+    },
+    {
+      "id": "AVAILABILITY-057",
+      "species_id": "057",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Orchard Way (DAY, Lv 48–59)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 58
+      }
+    },
+    {
+      "id": "AVAILABILITY-058",
+      "species_id": "058",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 59
+      }
+    },
+    {
+      "id": "AVAILABILITY-059",
+      "species_id": "059",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 60
+      }
+    },
+    {
+      "id": "AVAILABILITY-060",
+      "species_id": "060",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Marchwood Hollow (DAY, Lv 18–28)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 61
+      }
+    },
+    {
+      "id": "AVAILABILITY-061",
+      "species_id": "061",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Orchard Way (DAY, Lv 48–59)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 62
+      }
+    },
+    {
+      "id": "AVAILABILITY-062",
+      "species_id": "062",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (NIGHT, Lv 15–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 63
+      }
+    },
+    {
+      "id": "AVAILABILITY-063",
+      "species_id": "063",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle II — Want — Unfinished Rooms (PALE, Lv 110–119)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 64
+      }
+    },
+    {
+      "id": "AVAILABILITY-064",
+      "species_id": "064",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Sunken Shrine (NIGHT, Lv 52–61)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 65
+      }
+    },
+    {
+      "id": "AVAILABILITY-065",
+      "species_id": "065",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle II — Want — Hoard Galleries (PALE, Lv 111–120)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 66
+      }
+    },
+    {
+      "id": "AVAILABILITY-066",
+      "species_id": "066",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (NIGHT, Lv 14–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 67
+      }
+    },
+    {
+      "id": "AVAILABILITY-067",
+      "species_id": "067",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (DAY, Lv 62–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 68
+      }
+    },
+    {
+      "id": "AVAILABILITY-068",
+      "species_id": "068",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — War Road (NIGHT, Lv 78–89)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 69
+      }
+    },
+    {
+      "id": "AVAILABILITY-069",
+      "species_id": "069",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (NIGHT, Lv 15–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 70
+      }
+    },
+    {
+      "id": "AVAILABILITY-070",
+      "species_id": "070",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Scribes' Road (DAY, Lv 69–79)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 71
+      }
+    },
+    {
+      "id": "AVAILABILITY-071",
+      "species_id": "071",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 72
+      }
+    },
+    {
+      "id": "AVAILABILITY-072",
+      "species_id": "072",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 73
+      }
+    },
+    {
+      "id": "AVAILABILITY-073",
+      "species_id": "073",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Stonecut Pass / Quarry Road (DAY, Lv 59–69)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 74
+      }
+    },
+    {
+      "id": "AVAILABILITY-074",
+      "species_id": "074",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 75
+      }
+    },
+    {
+      "id": "AVAILABILITY-075",
+      "species_id": "075",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 76
+      }
+    },
+    {
+      "id": "AVAILABILITY-076",
+      "species_id": "076",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Old Pilgrim Grove (DAY, Lv 51–60)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 77
+      }
+    },
+    {
+      "id": "AVAILABILITY-077",
+      "species_id": "077",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Reedcut Cave (DAY, Lv 22–31)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 78
+      }
+    },
+    {
+      "id": "AVAILABILITY-078",
+      "species_id": "078",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Quarry Tunnels (NIGHT, Lv 60–70)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 79
+      }
+    },
+    {
+      "id": "AVAILABILITY-079",
+      "species_id": "079",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Mere of First Light (DAY, Lv 12–20)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 80
+      }
+    },
+    {
+      "id": "AVAILABILITY-080",
+      "species_id": "080",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Tide Caves (NIGHT, Lv 72–82)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 81
+      }
+    },
+    {
+      "id": "AVAILABILITY-081",
+      "species_id": "081",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Rivercause Road (DAY, Lv 38–49)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 82
+      }
+    },
+    {
+      "id": "AVAILABILITY-082",
+      "species_id": "082",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 83
+      }
+    },
+    {
+      "id": "AVAILABILITY-083",
+      "species_id": "083",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Burned Approaches (DAY, Lv 79–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 84
+      }
+    },
+    {
+      "id": "AVAILABILITY-084",
+      "species_id": "084",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Burned Approaches (NIGHT, Lv 79–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 85
+      }
+    },
+    {
+      "id": "AVAILABILITY-085",
+      "species_id": "085",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Quarry Tunnels (DAY, Lv 60–70)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 86
+      }
+    },
+    {
+      "id": "AVAILABILITY-086",
+      "species_id": "086",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Quarry Tunnels (NIGHT, Lv 60–70)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 87
+      }
+    },
+    {
+      "id": "AVAILABILITY-087",
+      "species_id": "087",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 88
+      }
+    },
+    {
+      "id": "AVAILABILITY-088",
+      "species_id": "088",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle II — Want — Unfinished Rooms (PALE, Lv 110–119)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 89
+      }
+    },
+    {
+      "id": "AVAILABILITY-089",
+      "species_id": "089",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle II — Want — Unfinished Rooms (DARK, Lv 110–119)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 90
+      }
+    },
+    {
+      "id": "AVAILABILITY-090",
+      "species_id": "090",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — Hospice Road (DAY, Lv 27–38)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 91
+      }
+    },
+    {
+      "id": "AVAILABILITY-091",
+      "species_id": "091",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Buried Pre-Schism Archive (NIGHT, Lv 71–80)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 92
+      }
+    },
+    {
+      "id": "AVAILABILITY-092",
+      "species_id": "092",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Rivercause Road (DAY, Lv 38–49)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 93
+      }
+    },
+    {
+      "id": "AVAILABILITY-093",
+      "species_id": "093",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 94
+      }
+    },
+    {
+      "id": "AVAILABILITY-094",
+      "species_id": "094",
+      "acquisition_mode": "Story-choice evolution + Primeval resolver",
+      "first_access_text": "Chosen branch main game; unchosen final postgame",
+      "implementation_note": "Historical branch choice is preserved.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 95
+      }
+    },
+    {
+      "id": "AVAILABILITY-095",
+      "species_id": "095",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (DAY, Lv 62–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 96
+      }
+    },
+    {
+      "id": "AVAILABILITY-096",
+      "species_id": "096",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (NIGHT, Lv 62–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 97
+      }
+    },
+    {
+      "id": "AVAILABILITY-097",
+      "species_id": "097",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Rivercause Road (DAY, Lv 39–49)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 98
+      }
+    },
+    {
+      "id": "AVAILABILITY-098",
+      "species_id": "098",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Scribes' Road (NIGHT, Lv 68–79)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 99
+      }
+    },
+    {
+      "id": "AVAILABILITY-099",
+      "species_id": "099",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Civeton March (NIGHT, Lv 6–13)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 100
+      }
+    },
+    {
+      "id": "AVAILABILITY-100",
+      "species_id": "100",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Scribes' Road (NIGHT, Lv 68–79)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 101
+      }
+    },
+    {
+      "id": "AVAILABILITY-101",
+      "species_id": "101",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Marchwood Hollow (DAY, Lv 18–28)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 102
+      }
+    },
+    {
+      "id": "AVAILABILITY-102",
+      "species_id": "102",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle III — Wrath — Medic's Truce (PALE, Lv 122–131)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 103
+      }
+    },
+    {
+      "id": "AVAILABILITY-103",
+      "species_id": "103",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 104
+      }
+    },
+    {
+      "id": "AVAILABILITY-104",
+      "species_id": "104",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 105
+      }
+    },
+    {
+      "id": "AVAILABILITY-105",
+      "species_id": "105",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — Flooded Medicine Path (NIGHT, Lv 30–39)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 106
+      }
+    },
+    {
+      "id": "AVAILABILITY-106",
+      "species_id": "106",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Drainage Basin (NIGHT, Lv 41–51)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 107
+      }
+    },
+    {
+      "id": "AVAILABILITY-107",
+      "species_id": "107",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (DAY, Lv 15–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 108
+      }
+    },
+    {
+      "id": "AVAILABILITY-108",
+      "species_id": "108",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Drainage Basin (NIGHT, Lv 41–51)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 109
+      }
+    },
+    {
+      "id": "AVAILABILITY-109",
+      "species_id": "109",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Drainage Basin (DAY, Lv 41–51)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 110
+      }
+    },
+    {
+      "id": "AVAILABILITY-110",
+      "species_id": "110",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Mere of First Light (NIGHT, Lv 13–20)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 111
+      }
+    },
+    {
+      "id": "AVAILABILITY-111",
+      "species_id": "111",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Drainage Basin (NIGHT, Lv 41–51)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 112
+      }
+    },
+    {
+      "id": "AVAILABILITY-112",
+      "species_id": "112",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — Philomere Backwaters (NIGHT, Lv 33–41)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 113
+      }
+    },
+    {
+      "id": "AVAILABILITY-113",
+      "species_id": "113",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Burned Approaches (DAY, Lv 79–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 114
+      }
+    },
+    {
+      "id": "AVAILABILITY-114",
+      "species_id": "114",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Burned Approaches (NIGHT, Lv 79–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 115
+      }
+    },
+    {
+      "id": "AVAILABILITY-115",
+      "species_id": "115",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Scrub (DAY, Lv 15–25)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 116
+      }
+    },
+    {
+      "id": "AVAILABILITY-116",
+      "species_id": "116",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle III — Wrath — Endless Battlefield (PALE, Lv 121–131)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 117
+      }
+    },
+    {
+      "id": "AVAILABILITY-117",
+      "species_id": "117",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — Sanctuary Reeds (NIGHT, Lv 31–40)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 118
+      }
+    },
+    {
+      "id": "AVAILABILITY-118",
+      "species_id": "118",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Burned Approaches (DAY, Lv 79–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 119
+      }
+    },
+    {
+      "id": "AVAILABILITY-119",
+      "species_id": "119",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Marchwood Hollow (NIGHT, Lv 18–28)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 120
+      }
+    },
+    {
+      "id": "AVAILABILITY-120",
+      "species_id": "120",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Drainage Basin (NIGHT, Lv 42–51)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 121
+      }
+    },
+    {
+      "id": "AVAILABILITY-121",
+      "species_id": "121",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 122
+      }
+    },
+    {
+      "id": "AVAILABILITY-122",
+      "species_id": "122",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 123
+      }
+    },
+    {
+      "id": "AVAILABILITY-123",
+      "species_id": "123",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle IX — Failing Record — Failing Record Halls (PALE, Lv 185–198)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 124
+      }
+    },
+    {
+      "id": "AVAILABILITY-124",
+      "species_id": "124",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — Hospice Road (NIGHT, Lv 28–38)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 125
+      }
+    },
+    {
+      "id": "AVAILABILITY-125",
+      "species_id": "125",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Stonecut Pass / Quarry Road (DAY, Lv 58–69)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 126
+      }
+    },
+    {
+      "id": "AVAILABILITY-126",
+      "species_id": "126",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle II — Want — Unfinished Rooms (PALE, Lv 110–119)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 127
+      }
+    },
+    {
+      "id": "AVAILABILITY-127",
+      "species_id": "127",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Dorelem Service Tunnels (DAY, Lv 17–28)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 128
+      }
+    },
+    {
+      "id": "AVAILABILITY-128",
+      "species_id": "128",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Quarry Tunnels (NIGHT, Lv 60–70)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 129
+      }
+    },
+    {
+      "id": "AVAILABILITY-129",
+      "species_id": "129",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — North Scrub Road (DAY, Lv 27–37)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 130
+      }
+    },
+    {
+      "id": "AVAILABILITY-130",
+      "species_id": "130",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Tide Caves (DAY, Lv 73–82)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 131
+      }
+    },
+    {
+      "id": "AVAILABILITY-131",
+      "species_id": "131",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Tide Caves (NIGHT, Lv 73–82)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 132
+      }
+    },
+    {
+      "id": "AVAILABILITY-132",
+      "species_id": "132",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cayfen — Ceasefire Field (DAY, Lv 80–90)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 133
+      }
+    },
+    {
+      "id": "AVAILABILITY-133",
+      "species_id": "133",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Reedcut Cave (NIGHT, Lv 22–31)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 134
+      }
+    },
+    {
+      "id": "AVAILABILITY-134",
+      "species_id": "134",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Scribe's Cistern (NIGHT, Lv 71–81)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 135
+      }
+    },
+    {
+      "id": "AVAILABILITY-135",
+      "species_id": "135",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Mere of First Light (DAY, Lv 13–20)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 136
+      }
+    },
+    {
+      "id": "AVAILABILITY-136",
+      "species_id": "136",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Sacred Boundary Farms (NIGHT, Lv 89–100)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 137
+      }
+    },
+    {
+      "id": "AVAILABILITY-137",
+      "species_id": "137",
+      "acquisition_mode": "Evolution / authored acquisition",
+      "first_access_text": "Via obtainable family source or authored event",
+      "implementation_note": "Covered by canonical family progression.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 138
+      }
+    },
+    {
+      "id": "AVAILABILITY-138",
+      "species_id": "138",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle III — Wrath — Anchor Trenches (PALE, Lv 123–132)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 139
+      }
+    },
+    {
+      "id": "AVAILABILITY-139",
+      "species_id": "139",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — Flooded Medicine Path (DAY, Lv 30–39)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 140
+      }
+    },
+    {
+      "id": "AVAILABILITY-140",
+      "species_id": "140",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Botrune — Tide Caves (NIGHT, Lv 73–82)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 141
+      }
+    },
+    {
+      "id": "AVAILABILITY-141",
+      "species_id": "141",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Dorelem — Marchwood Hollow (DAY, Lv 18–28)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 142
+      }
+    },
+    {
+      "id": "AVAILABILITY-142",
+      "species_id": "142",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle I — Threshold — Lost Queue (PALE, Lv 102–110)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 143
+      }
+    },
+    {
+      "id": "AVAILABILITY-143",
+      "species_id": "143",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Pilgrim's Reach (NIGHT, Lv 88–99)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 144
+      }
+    },
+    {
+      "id": "AVAILABILITY-144",
+      "species_id": "144",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Civeton — Mere of First Light (DAY, Lv 13–20)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 145
+      }
+    },
+    {
+      "id": "AVAILABILITY-145",
+      "species_id": "145",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Smugglers' Weir (NIGHT, Lv 40–50)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 146
+      }
+    },
+    {
+      "id": "AVAILABILITY-146",
+      "species_id": "146",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Stonecut Pass / Quarry Road (DAY, Lv 59–69)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 147
+      }
+    },
+    {
+      "id": "AVAILABILITY-147",
+      "species_id": "147",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Sacred Boundary Farms (NIGHT, Lv 89–100)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 148
+      }
+    },
+    {
+      "id": "AVAILABILITY-148",
+      "species_id": "148",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cybressa — Rivercause Road (DAY, Lv 39–49)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 149
+      }
+    },
+    {
+      "id": "AVAILABILITY-149",
+      "species_id": "149",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Sacred Boundary Farms (NIGHT, Lv 89–100)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 150
+      }
+    },
+    {
+      "id": "AVAILABILITY-150",
+      "species_id": "150",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Orchard Way (DAY, Lv 49–59)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 151
+      }
+    },
+    {
+      "id": "AVAILABILITY-151",
+      "species_id": "151",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Pilgrim's Reach (NIGHT, Lv 88–99)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 152
+      }
+    },
+    {
+      "id": "AVAILABILITY-152",
+      "species_id": "152",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — North Scrub Road (DAY, Lv 27–37)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 153
+      }
+    },
+    {
+      "id": "AVAILABILITY-153",
+      "species_id": "153",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 154
+      }
+    },
+    {
+      "id": "AVAILABILITY-154",
+      "species_id": "154",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle III — Wrath — Medic's Truce (PALE, Lv 121–131)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 155
+      }
+    },
+    {
+      "id": "AVAILABILITY-155",
+      "species_id": "155",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (DAY, Lv 62–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 156
+      }
+    },
+    {
+      "id": "AVAILABILITY-156",
+      "species_id": "156",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (NIGHT, Lv 62–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 157
+      }
+    },
+    {
+      "id": "AVAILABILITY-157",
+      "species_id": "157",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Stonecut Pass / Quarry Road (DAY, Lv 58–69)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 158
+      }
+    },
+    {
+      "id": "AVAILABILITY-158",
+      "species_id": "158",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Fossil Cut (NIGHT, Lv 63–72)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 159
+      }
+    },
+    {
+      "id": "AVAILABILITY-159",
+      "species_id": "159",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Old Pilgrim Grove (NIGHT, Lv 51–60)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 160
+      }
+    },
+    {
+      "id": "AVAILABILITY-160",
+      "species_id": "160",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Philomere — North Scrub Road (NIGHT, Lv 27–37)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 161
+      }
+    },
+    {
+      "id": "AVAILABILITY-161",
+      "species_id": "161",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Marasen — Prison Galleries (NIGHT, Lv 62–71)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 162
+      }
+    },
+    {
+      "id": "AVAILABILITY-162",
+      "species_id": "162",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Cossenne — Orchard Way (DAY, Lv 49–59)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 163
+      }
+    },
+    {
+      "id": "AVAILABILITY-163",
+      "species_id": "163",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Sacred Boundary Farms (NIGHT, Lv 89–100)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 164
+      }
+    },
+    {
+      "id": "AVAILABILITY-164",
+      "species_id": "164",
+      "acquisition_mode": "Bespoke legendary",
+      "first_access_text": "Authored Watcher encounter",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 165
+      }
+    },
+    {
+      "id": "AVAILABILITY-165",
+      "species_id": "165",
+      "acquisition_mode": "Bespoke legendary",
+      "first_access_text": "Authored Watcher encounter",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 166
+      }
+    },
+    {
+      "id": "AVAILABILITY-166",
+      "species_id": "166",
+      "acquisition_mode": "Bespoke legendary",
+      "first_access_text": "Authored Watcher encounter",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 167
+      }
+    },
+    {
+      "id": "AVAILABILITY-167",
+      "species_id": "167",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Pilgrim's Reach (DAY, Lv 89–99)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 168
+      }
+    },
+    {
+      "id": "AVAILABILITY-168",
+      "species_id": "168",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Pilgrim Caves (NIGHT, Lv 92–102)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 169
+      }
+    },
+    {
+      "id": "AVAILABILITY-169",
+      "species_id": "169",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle IX — Failing Record — Failing Record Halls (DARK, Lv 185–198)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 170
+      }
+    },
+    {
+      "id": "AVAILABILITY-170",
+      "species_id": "170",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Ramelle — Pilgrim Caves (DAY, Lv 92–102)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 171
+      }
+    },
+    {
+      "id": "AVAILABILITY-171",
+      "species_id": "171",
+      "acquisition_mode": "Evolution",
+      "first_access_text": "Evolve an obtainable source species",
+      "implementation_note": "Dedicated first-access wild slot not required.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 172
+      }
+    },
+    {
+      "id": "AVAILABILITY-172",
+      "species_id": "172",
+      "acquisition_mode": "Random encounter",
+      "first_access_text": "Circle IX — Failing Record — Failing Record Halls (DARK, Lv 185–198)",
+      "implementation_note": "May also be obtainable by evolution.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 173
+      }
+    },
+    {
+      "id": "AVAILABILITY-173",
+      "species_id": "173",
+      "acquisition_mode": "Bespoke box legend",
+      "first_access_text": "Authored late-story / postgame event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 174
+      }
+    },
+    {
+      "id": "AVAILABILITY-174",
+      "species_id": "174",
+      "acquisition_mode": "Bespoke box legend",
+      "first_access_text": "Authored late-story / postgame event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 175
+      }
+    },
+    {
+      "id": "AVAILABILITY-175",
+      "species_id": "175",
+      "acquisition_mode": "Bespoke mythic",
+      "first_access_text": "Authored optional mythic event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 176
+      }
+    },
+    {
+      "id": "AVAILABILITY-176",
+      "species_id": "176",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 177
+      }
+    },
+    {
+      "id": "AVAILABILITY-177",
+      "species_id": "177",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 178
+      }
+    },
+    {
+      "id": "AVAILABILITY-178",
+      "species_id": "178",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 179
+      }
+    },
+    {
+      "id": "AVAILABILITY-179",
+      "species_id": "179",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 180
+      }
+    },
+    {
+      "id": "AVAILABILITY-180",
+      "species_id": "180",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 181
+      }
+    },
+    {
+      "id": "AVAILABILITY-181",
+      "species_id": "181",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 182
+      }
+    },
+    {
+      "id": "AVAILABILITY-182",
+      "species_id": "182",
+      "acquisition_mode": "Fossil restoration + Primeval wild",
+      "first_access_text": "Main campaign fossil discovery/restoration",
+      "implementation_note": "Living wild populations are postgame alternate access.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 183
+      }
+    },
+    {
+      "id": "AVAILABILITY-183",
+      "species_id": "183",
+      "acquisition_mode": "Bespoke mythic",
+      "first_access_text": "Authored optional mythic event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 184
+      }
+    },
+    {
+      "id": "AVAILABILITY-184",
+      "species_id": "184",
+      "acquisition_mode": "Bespoke mythic",
+      "first_access_text": "Authored optional mythic event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 185
+      }
+    },
+    {
+      "id": "AVAILABILITY-185",
+      "species_id": "185",
+      "acquisition_mode": "Bespoke mythic",
+      "first_access_text": "Authored optional mythic event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 186
+      }
+    },
+    {
+      "id": "AVAILABILITY-186",
+      "species_id": "186",
+      "acquisition_mode": "Bespoke mythic",
+      "first_access_text": "Authored optional mythic event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 187
+      }
+    },
+    {
+      "id": "AVAILABILITY-187",
+      "species_id": "187",
+      "acquisition_mode": "Bespoke mythic",
+      "first_access_text": "Authored optional mythic event",
+      "implementation_note": "Never a normal random encounter.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+        "sheet": "Species Coverage",
+        "row": 188
+      }
+    }
+  ],
+  "unresolved": []
+}

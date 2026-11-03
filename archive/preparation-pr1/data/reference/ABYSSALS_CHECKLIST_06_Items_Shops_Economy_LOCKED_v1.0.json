@@ -1,0 +1,1617 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+  "source_sha256": "21ab61e672c6e5830558384859f0c94b4593e28fd1a72ba5690ff036b6df09a0",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Items, Shops & Economy"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "STATUS"
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "COMPLETE / LOCKED at implementation-design level. This document closes CHECKLIST 06. It fixes the routine consumable catalogue, capture-food economy, evolution-item sourcing, held-item role mapping, town-by-town shop progression, trainer rewards, sellable treasure rules, and the Cybressa Trial Mark growth-training economy. Later implementation may tune presentation or fix defects, but mechanical changes require an explicit Checklist 06 revision rather than silent drift."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Canonical creature terminology: Abyssal / Abyssals. Legacy source filenames may still contain older project wording."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "No resurrection consumables exist. Normal shops use a compact FireRed-readable item economy; wild battles award no money and do not create a crafting-material grind. Capture remains food-based. Standard evolution items have authored guaranteed copies and late renewable access. Cybressa contains The Proven Grounds, which pays Trial Marks for repeatable deterministic procedural contracts; Trial Marks buy temporary +20 percentage-point stat-growth training effects lasting 1–5 future level-ups. Each Abyssal may hold five such active effects at once, all on one stat or split freely across stats."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01 remains the sole authority for deterministic Fire Emblem-style stat growth, growth seeds, exceptional growth above 100%, HP growth increments and evolution-history handling. Checklist 06 only supplies temporary effective-growth modifiers."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "CHECKLIST 04 remains the sole authority for trainer identities, teams, levels, AI, semantic held-item roles and healing-bag counts. Checklist 06 maps those semantic roles/counts to actual item IDs."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "CHECKLIST 05 remains the sole authority for Hell Warden native fields. Terrain held items defined here may interact with an active field, but may not change the field payload itself."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "The regional dex progression workbook remains the authority for the fifteen existing item-evolution names, source species, targets and minimum levels. Those names are preserved exactly here."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "There is no crafting economy, durability system, carry weight, random shop pricing, merchant haggling minigame or routine monster-material loop."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "Core medicine access must not depend on SPARE / EXECUTE outcomes. Town state may change NPCs, dialogue or shopkeeper identity, but equivalent essential stock remains available."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "IMPLEMENTATION PRINCIPLE"
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "The economy should create choices between healing, capture food, evolution and held equipment without making ordinary progression depend on repetitive money grinding. Specialised stat growth is deliberately moved into an optional repeatable side economy so players who enjoy long-form optimisation can pursue it without making it mandatory."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "2. Standard currency, inventory and sale rules"
+    },
+    {
+      "body_index": 21,
+      "kind": "table",
+      "rows": [
+        [
+          "Rule",
+          "Locked value"
+        ],
+        [
+          "Starting money",
+          "2,000 standard currency."
+        ],
+        [
+          "Wild battle money",
+          "0."
+        ],
+        [
+          "Wild material drops",
+          "None as a routine system. Scripted quest/relic encounter rewards are authored events, not random material farming."
+        ],
+        [
+          "Buy/sell ratio",
+          "Ordinary purchasable items sell for 50% of current standard shop price, rounded down to the nearest whole unit."
+        ],
+        [
+          "Sell-only treasure",
+          "Sells for its listed full value."
+        ],
+        [
+          "Key items",
+          "Cannot be sold, discarded, stolen through parley or consumed except by their explicit story function."
+        ],
+        [
+          "Rare item sale warning",
+          "Evolution items, held equipment and other unique/rare valuables require a second confirmation before sale."
+        ],
+        [
+          "Carry weight",
+          "None."
+        ],
+        [
+          "Routine stack limit",
+          "999 per item ID."
+        ],
+        [
+          "Held/evolution stack limit",
+          "99 per item ID unless the item is explicitly unique."
+        ],
+        [
+          "Price variation",
+          "No random or reputation-based price variation. Equivalent shops use the same base price."
+        ]
+      ]
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "3. Healing, status, PP and battle consumables"
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "3.1 HP healing"
+    },
+    {
+      "body_index": 24,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable ID",
+          "Player-facing item",
+          "Effect",
+          "Price"
+        ],
+        [
+          "ITEM_HEAL_POULTICE",
+          "Poultice",
+          "Restore 20 HP to one living Abyssal.",
+          "300"
+        ],
+        [
+          "ITEM_HEAL_FIELD_SALVE",
+          "Field Salve",
+          "Restore 50 HP to one living Abyssal.",
+          "700"
+        ],
+        [
+          "ITEM_HEAL_GREATER_REMEDY",
+          "Greater Remedy",
+          "Restore 200 HP to one living Abyssal.",
+          "1,500"
+        ],
+        [
+          "ITEM_HEAL_GRAND_RESTORATIVE",
+          "Grand Restorative",
+          "Restore all HP to one living Abyssal.",
+          "3,000"
+        ]
+      ]
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "Healing items cannot target a dead Abyssal. There is no Revive, Max Revive, Phoenix-style item or consumable resurrection analogue."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "If a healing item is used in battle, it consumes the acting trainer command according to the normal battle-item action rule."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "Checklist 04 trainer healing bags resolve to: level ≤30 Poultice; 31–60 Field Salve; 61–99 Greater Remedy; 100+ Grand Restorative."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "3.2 Status cures"
+    },
+    {
+      "body_index": 29,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable ID",
+          "Item",
+          "Effect",
+          "Price"
+        ],
+        [
+          "ITEM_CURE_ANTIVENOM",
+          "Antivenom",
+          "Cure Poison.",
+          "200"
+        ],
+        [
+          "ITEM_CURE_COOLING_BALM",
+          "Cooling Balm",
+          "Cure Burn.",
+          "250"
+        ],
+        [
+          "ITEM_CURE_NERVE_TONIC",
+          "Nerve Tonic",
+          "Cure Paralysis.",
+          "200"
+        ],
+        [
+          "ITEM_CURE_WAKING_SALTS",
+          "Waking Salts",
+          "Cure Sleep.",
+          "200"
+        ],
+        [
+          "ITEM_CURE_THAWING_DRAUGHT",
+          "Thawing Draught",
+          "Cure Freeze.",
+          "250"
+        ],
+        [
+          "ITEM_CURE_PANACEA",
+          "Panacea",
+          "Cure any standard persistent status condition.",
+          "800"
+        ]
+      ]
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "3.3 PP restoration"
+    },
+    {
+      "body_index": 31,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable ID",
+          "Item",
+          "Effect",
+          "Price",
+          "Normal availability"
+        ],
+        [
+          "ITEM_PP_FOCUS_TONIC",
+          "Focus Tonic",
+          "+10 PP to one move.",
+          "1,000",
+          "Philomere onward"
+        ],
+        [
+          "ITEM_PP_DEEP_TONIC",
+          "Deep Tonic",
+          "Fully restore one move's PP.",
+          "2,500",
+          "Botrune onward"
+        ],
+        [
+          "ITEM_PP_ELIXIR",
+          "Elixir",
+          "+10 PP to every move.",
+          "4,500",
+          "Ramelle onward"
+        ],
+        [
+          "ITEM_PP_GRAND_ELIXIR",
+          "Grand Elixir",
+          "Fully restore all moves.",
+          "8,000",
+          "Postgame standard stock; rare authored finds before then"
+        ]
+      ]
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "3.4 Temporary battle-stat draughts"
+    },
+    {
+      "body_index": 33,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable ID",
+          "Item",
+          "Battle effect",
+          "Price"
+        ],
+        [
+          "ITEM_BATTLE_MIGHT",
+          "Might Draught",
+          "+1 Attack stage.",
+          "500"
+        ],
+        [
+          "ITEM_BATTLE_GUARD",
+          "Guard Draught",
+          "+1 Defence stage.",
+          "500"
+        ],
+        [
+          "ITEM_BATTLE_MYSTIC",
+          "Mystic Draught",
+          "+1 Special Attack stage.",
+          "500"
+        ],
+        [
+          "ITEM_BATTLE_RESOLVE",
+          "Resolve Draught",
+          "+1 Special Defence stage.",
+          "500"
+        ],
+        [
+          "ITEM_BATTLE_HASTE",
+          "Haste Draught",
+          "+1 Speed stage.",
+          "500"
+        ]
+      ]
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "No X Accuracy or Dire Hit equivalent is part of the standard item catalogue."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "These are battle-stage items only. They do not modify permanent growth percentages and are separate from Proven Grounds training."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "3.5 Escape and encounter control"
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "Smoke Bomb (ITEM_UTILITY_SMOKE_BOMB): price 400; guarantees escape from an ordinary wild battle. It cannot escape trainer battles, mandatory encounters, Wardens, final bosses or encounters flagged noEscape."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "There is no purchasable Repel family. The permanent Resonator remains the encounter-suppression system: when enabled it suppresses generated encounters at least five levels below the lead living Abyssal."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "The Resonator has no charges, item cost or recurring money sink."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "4. Capture-food catalogue and economy"
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "The Generation III capture formula and shake checks remain unchanged. Food supplies the Ball Bonus / catch modifier."
+    },
+    {
+      "body_index": 42,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable ID",
+          "Food",
+          "Modifier",
+          "Condition",
+          "Price",
+          "First normal stock"
+        ],
+        [
+          "ITEM_CAPTURE_TRAIL_BREAD",
+          "Trail Bread",
+          "1×",
+          "Always",
+          "200",
+          "Civeton"
+        ],
+        [
+          "ITEM_CAPTURE_SEASONED_JERKY",
+          "Seasoned Jerky",
+          "1.5×",
+          "Always",
+          "600",
+          "Dorelem"
+        ],
+        [
+          "ITEM_CAPTURE_ROYAL_FEAST",
+          "Royal Feast",
+          "2×",
+          "Always",
+          "1,200",
+          "Marasen"
+        ],
+        [
+          "ITEM_CAPTURE_SAINTS_BANQUET",
+          "Saint's Banquet",
+          "Guaranteed",
+          "Always",
+          "Not sold",
+          "Authored finite sources"
+        ],
+        [
+          "ITEM_CAPTURE_RIVER_GRUB",
+          "River Grub",
+          "3×",
+          "Water or Bug target; otherwise 1×",
+          "800",
+          "Philomere"
+        ],
+        [
+          "ITEM_CAPTURE_FAMILIAR_STEW",
+          "Familiar Stew",
+          "3×",
+          "Species already registered as caught; otherwise 1×",
+          "800",
+          "Cybressa"
+        ],
+        [
+          "ITEM_CAPTURE_PATIENT_RATION",
+          "Patient Ration",
+          "min((turns+10)/10,4)×",
+          "1× at turn 0; reaches 4× at 30 turns",
+          "800",
+          "Cossenne"
+        ],
+        [
+          "ITEM_CAPTURE_YOUNGROOT_MASH",
+          "Youngroot Mash",
+          "max((40-target level)/10,1)×",
+          "Lv1 = 3.9×; Lv30+ = 1×",
+          "600",
+          "Botrune"
+        ]
+      ]
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "4.1 Saint's Banquet finite supply"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Guaranteed copy 1: Ramelle — awarded by the city alchemist after the Chapter 9 leader-resolution sequence and before the Old Catacombs descent becomes the active objective."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "Guaranteed copy 2: Circle II — awarded at the House of Unfinished Things safe threshold after Ossael is defeated."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "Hidden optional copy: Circle VIII — Missing Stanza Islet, in an authored exploration cache."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "Saint's Banquet is never normal shop stock and has no main-campaign renewable source. The three copies above are the complete v1.0 supply."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "Its scarcity cannot make a species permanently missable because all species remain capturable through the ordinary formula and other foods."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "5. Evolution items"
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "All fifteen existing item-evolution names are preserved exactly. Each is consumed on evolution. There are no trade evolutions."
+    },
+    {
+      "body_index": 51,
+      "kind": "table",
+      "rows": [
+        [
+          "Item",
+          "Source → Target",
+          "Min Lv",
+          "Guaranteed authored source",
+          "Late renewable source",
+          "Price"
+        ],
+        [
+          "Iron Sigil",
+          "Votress → Sigilume",
+          "30",
+          "Dorelem Service Tunnels — sealed armory reliquary",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Grave Salt",
+          "Votress → Sepulshade",
+          "30",
+          "Marchwood Hollow — grave-marker cache",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Gilded Idol",
+          "Votress → Idolure",
+          "30",
+          "Dorelem — post-leader keep treasury reward",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Gilded Nodule",
+          "Pebbettle → Avaroll",
+          "28",
+          "Rivercause Road — prospector cache",
+          "Ramelle relic/alchemy specialist",
+          "3,500"
+        ],
+        [
+          "Stormglass",
+          "Pebbettle → Prodiglow",
+          "28",
+          "Cybressa drainage / river-basin branch — charged sluice cache",
+          "Ramelle relic/alchemy specialist",
+          "3,500"
+        ],
+        [
+          "Bloodstone",
+          "Styxlet → Ragegill",
+          "28",
+          "Cybressa Smugglers' Weir — contraband strongbox",
+          "Ramelle relic/alchemy specialist",
+          "3,500"
+        ],
+        [
+          "Grief Pearl",
+          "Styxlet → Sulkoad",
+          "28",
+          "Philomere Backwaters — drowned memorial cache",
+          "Ramelle relic/alchemy specialist",
+          "3,500"
+        ],
+        [
+          "Tide Pearl",
+          "Triskit → Phlegacorn",
+          "30",
+          "Philomere Backwaters — watercraft-only deep alcove",
+          "Ramelle relic/alchemy specialist",
+          "4,500"
+        ],
+        [
+          "Mourning Briar",
+          "Triskit → Harpbriar",
+          "30",
+          "Sanctuary Reeds — living shrine reward",
+          "Ramelle relic/alchemy specialist",
+          "4,500"
+        ],
+        [
+          "Sunscar Glass",
+          "Triskit → Searwaste",
+          "30",
+          "Dorelem Scrub — heat-blasted roadside shrine cache",
+          "Ramelle relic/alchemy specialist",
+          "4,500"
+        ],
+        [
+          "Wayfarer Feather",
+          "Pilgrimp → Ganderiel",
+          "28",
+          "Hospice Road — pilgrimage side-quest reward",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Pilgrim Bell",
+          "Pilgrimp → Caproclaim",
+          "28",
+          "Cossenne Old Pilgrim Grove — ritual bell cache",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Trial Toxin",
+          "Acremink → Longspurr",
+          "28",
+          "Cybressa market ward — alchemist trial quest reward",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Saint's Tonic",
+          "Acremink → Elixirine",
+          "28",
+          "Philomere — medicine-chain authored reward",
+          "Ramelle relic/alchemy specialist",
+          "4,000"
+        ],
+        [
+          "Sun Relic",
+          "Suncub → Cehong",
+          "40",
+          "Ramelle Bellglass Ruins — authored late relic source",
+          "Postgame one-time replacement through Ramelle relic registrar if needed",
+          "Not routine stock"
+        ]
+      ]
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "Every authored guaranteed source is non-RNG and remains obtainable after the relevant area's first clear unless the source was already collected."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "Taking one branch evolution never removes the guaranteed source for another branch. Separate items remain separately obtainable."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "After Ramelle's standard relic/alchemy specialist unlocks, all fourteen non-Sun Relic items are unlimited renewable stock at the listed price."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "The Sun Relic remains exceptional: it is not unlimited standard stock. A postgame replacement exists so accidental pre-evolution sale cannot permanently block Cehong."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "6. Held-item pool and Checklist 04 role mapping"
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "The player and trainers use the same held-item effects. No trainer-only stat boost or boss-only equipment exists."
+    },
+    {
+      "body_index": 58,
+      "kind": "table",
+      "rows": [
+        [
+          "Role",
+          "Item / family",
+          "Stable ID",
+          "Effect",
+          "Standard price"
+        ],
+        [
+          "OFFENSE",
+          "Type Sigils (18 variants, one per battle type)",
+          "HELD_TYPE_SIGIL_[TYPE]",
+          "Holder's damaging moves of that type deal ×1.10 damage.",
+          "1,200 each"
+        ],
+        [
+          "GUARD",
+          "Iron Mantle",
+          "HELD_IRON_MANTLE",
+          "Holder's Defence ×1.10 as an effective-stat modifier.",
+          "2,500"
+        ],
+        [
+          "GUARD",
+          "Veil Charm",
+          "HELD_VEIL_CHARM",
+          "Holder's Special Defence ×1.10 as an effective-stat modifier.",
+          "2,500"
+        ],
+        [
+          "SPEED",
+          "Courier's Spur",
+          "HELD_COURIERS_SPUR",
+          "Holder's Speed ×1.10 as an effective-stat modifier.",
+          "2,500"
+        ],
+        [
+          "STATUS",
+          "Votive Thread",
+          "HELD_VOTIVE_THREAD",
+          "Holder's status moves gain +10 percentage points accuracy, capped at 100%.",
+          "2,500"
+        ],
+        [
+          "SUSTAIN",
+          "Pilgrim Cup",
+          "HELD_PILGRIM_CUP",
+          "At end of turn, restore 1/16 maximum HP if the holder is living.",
+          "4,000"
+        ],
+        [
+          "TERRAIN",
+          "Fieldglass",
+          "HELD_FIELDGLASS",
+          "While any non-neutral field/weather is active, holder's damaging moves deal ×1.10 damage.",
+          "3,500"
+        ]
+      ]
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "Checklist 04 OFFENSE resolves to the holder's strongest legal STAB Type Sigil; ties use primary type, then secondary type."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "Checklist 04 GUARD resolves to Iron Mantle when physical Defence is lower than Special Defence, otherwise Veil Charm. Authored exceptions may specify one of the two by stable ID without changing the role."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "SPEED → Courier's Spur; STATUS → Votive Thread; SUSTAIN → Pilgrim Cup; TERRAIN → Fieldglass."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "A held item is never consumed by battle, switching, defeat or field replacement."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "7. Town-by-town standard shop progression"
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "A '+' entry means the town adds that stock to the full catalogue already available in previous settlements. Essential stock remains equivalent after town-state changes."
+    },
+    {
+      "body_index": 65,
+      "kind": "table",
+      "rows": [
+        [
+          "Settlement",
+          "New standard stock / service",
+          "Notes"
+        ],
+        [
+          "Civeton",
+          "Trail Bread; Poultice; Antivenom; Cooling Balm; Nerve Tonic; Waking Salts; Thawing Draught; Smoke Bomb.",
+          "Basic survival stock from first free shopping opportunity."
+        ],
+        [
+          "Dorelem",
+          "+ Seasoned Jerky; Field Salve; five battle-stat draughts.",
+          "First meaningful capture/healing upgrade."
+        ],
+        [
+          "Philomere",
+          "+ River Grub; Focus Tonic.",
+          "Water-focused capture option enters with watercraft chapter."
+        ],
+        [
+          "Cybressa",
+          "+ Familiar Stew; Panacea. Separate Proven Grounds / Trial Mark shop unlocks here.",
+          "Market-city specialist economy."
+        ],
+        [
+          "Cossenne",
+          "+ Patient Ration.",
+          "Long-fight capture option; core medicine remains available."
+        ],
+        [
+          "Marasen",
+          "+ Royal Feast; Greater Remedy; Type Sigils; Iron Mantle; Veil Charm.",
+          "First broad held-item purchasing point."
+        ],
+        [
+          "Botrune",
+          "+ Youngroot Mash; Deep Tonic; Courier's Spur; Votive Thread; Pilgrim Cup; Fieldglass.",
+          "Backfill capture tool and full held-role utility."
+        ],
+        [
+          "Cayfen",
+          "Complete routine mortal consumable catalogue currently unlocked; no new routine tier.",
+          "War chapter prioritises reliable restocking."
+        ],
+        [
+          "Ramelle",
+          "+ Grand Restorative; Elixir; renewable fourteen-item standard evolution stock through relic/alchemy specialist.",
+          "Full mortal-world standard catalogue."
+        ],
+        [
+          "Postgame Ramelle",
+          "+ Grand Elixir; Sun Relic replacement service when eligibility conditions are met.",
+          "No new mandatory progression economy."
+        ]
+      ]
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "7.1 Hell threshold vendors"
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "Hell safe thresholds may sell essentials but do not create a separate inflated price economy."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "Baseline threshold stock: Trail Bread, Seasoned Jerky, Royal Feast, Field Salve, Greater Remedy, Grand Restorative, Panacea, Focus Tonic, Deep Tonic and Smoke Bomb."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "Threshold vendors use the same prices as mortal shops."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "The Proven Grounds and Trial Mark shop remain physically located in Cybressa; no duplicate Hell franchise is created."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "Carriage does not operate in Hell. This document does not alter the already-locked Hell transit/backtracking rules."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "8. Cybressa special economy — The Proven Grounds"
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Cybressa market ward contains The Proven Grounds: a repeatable procedural Trial Contract office and linked specialist item counter. Its currency is Trial Marks. This is optional optimisation content, not a main-story gate."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "8.1 Trial Marks"
+    },
+    {
+      "body_index": 75,
+      "kind": "table",
+      "rows": [
+        [
+          "Rule",
+          "Locked value"
+        ],
+        [
+          "Currency ID",
+          "CURRENCY_TRIAL_MARK"
+        ],
+        [
+          "Player-facing name",
+          "Trial Mark / Trial Marks"
+        ],
+        [
+          "Normal money conversion",
+          "None in either direction."
+        ],
+        [
+          "Sale / discard",
+          "Trial Marks cannot be sold or discarded."
+        ],
+        [
+          "Parley",
+          "Trial Marks cannot be selected or removed by parley-loss logic."
+        ],
+        [
+          "Cap",
+          "No practical progression cap; use a large integer storage ceiling."
+        ],
+        [
+          "Repeatability",
+          "Unlimited. No real-time daily/weekly gate."
+        ],
+        [
+          "Reload abuse",
+          "Contract generation is deterministic from save seed + completedTrialCount + rank, so reloading does not reroll a contract."
+        ]
+      ]
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "8.2 Procedural Trial Contracts"
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "A contract combines one unlocked eligible area, one objective family and one compatible modifier. It never selects a safe settlement, a no-encounter story sequence or an area not yet legitimately reached."
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "HUNT — defeat 3–5 marked generated wild encounters drawn from the area's current encounter table."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "CAPTURE — capture one eligible marked target selected from the area's current ecological table; mythics and finite authored encounters are excluded."
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "SURVEY — visit 2–3 marked nodes in the selected area; at least one node triggers a marked encounter before completion."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "GAUNTLET — win 2–4 marked encounters before returning to an alchemist or cancelling the contract."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "Modifiers may change eligible time-of-day table, target habitat/type family, number of marked nodes/encounters or route depth. They may not secretly scale enemy levels to the player."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "Contract encounters obey the authored area's normal level ranges and battle rules. Higher ranks use later unlocked areas rather than dynamic player-level scaling."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "Cancelling a contract pays no Trial Marks and increments no completion count. Once accepted, its seed and targets remain fixed until completed or cancelled."
+    },
+    {
+      "body_index": 85,
+      "kind": "table",
+      "rows": [
+        [
+          "Rank",
+          "Unlock",
+          "Eligible challenge band",
+          "Reward"
+        ],
+        [
+          "I",
+          "First access to Cybressa market ward",
+          "Cybressa-era unlocked areas",
+          "2 Trial Marks"
+        ],
+        [
+          "II",
+          "Provost Corvin Sair resolved",
+          "Cybressa/Cossenne bands",
+          "4 Trial Marks"
+        ],
+        [
+          "III",
+          "Marasen leader resolved",
+          "Mid/late mortal areas",
+          "6 Trial Marks"
+        ],
+        [
+          "IV",
+          "Ramelle leader resolved",
+          "Late mortal / Old Catacombs eligible areas",
+          "8 Trial Marks"
+        ],
+        [
+          "V",
+          "First entry into Hell after the Level-100 expectation is broken",
+          "Unlocked Hell-compatible challenge pool plus late mortal areas",
+          "10 Trial Marks"
+        ]
+      ]
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "8.3 Growth-training consumables"
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "Each training consumable adds +20 percentage points to one stat's effective growth chance for a fixed number of future level-up events. It does not grant a stat directly and does not change the immutable growth seed or deterministic roll value."
+    },
+    {
+      "body_index": 88,
+      "kind": "table",
+      "rows": [
+        [
+          "Stat family",
+          "Player-facing base name",
+          "Stat affected",
+          "Per-slot modifier",
+          "Stable ID prefix"
+        ],
+        [
+          "HP",
+          "Vital Draught",
+          "HP",
+          "+20 percentage points",
+          "TRAIN_VITAL"
+        ],
+        [
+          "Attack",
+          "Temper Draught",
+          "Attack",
+          "+20 percentage points",
+          "TRAIN_TEMPER"
+        ],
+        [
+          "Defence",
+          "Ward Draught",
+          "Defence",
+          "+20 percentage points",
+          "TRAIN_WARD"
+        ],
+        [
+          "Sp. Atk",
+          "Insight Draught",
+          "Special Attack",
+          "+20 percentage points",
+          "TRAIN_INSIGHT"
+        ],
+        [
+          "Sp. Def",
+          "Resolve Draught",
+          "Special Defence",
+          "+20 percentage points",
+          "TRAIN_RESOLVE"
+        ],
+        [
+          "Speed",
+          "Fleet Draught",
+          "Speed",
+          "+20 percentage points",
+          "TRAIN_FLEET"
+        ]
+      ]
+    },
+    {
+      "body_index": 89,
+      "kind": "table",
+      "rows": [
+        [
+          "Tier suffix",
+          "Duration",
+          "Cost",
+          "Example full item name"
+        ],
+        [
+          "I",
+          "Next 1 level-up",
+          "2 Trial Marks",
+          "Temper Draught I"
+        ],
+        [
+          "II",
+          "Next 2 level-ups",
+          "4 Trial Marks",
+          "Temper Draught II"
+        ],
+        [
+          "III",
+          "Next 3 level-ups",
+          "6 Trial Marks",
+          "Temper Draught III"
+        ],
+        [
+          "IV",
+          "Next 4 level-ups",
+          "8 Trial Marks",
+          "Temper Draught IV"
+        ],
+        [
+          "V",
+          "Next 5 level-ups",
+          "10 Trial Marks",
+          "Temper Draught V"
+        ]
+      ]
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "FIVE-SLOT TRAINING CONTRACT"
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "Each individual Abyssal instance has exactly five growth-training slots."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "A slot is either empty or stores: statId, modifier=+20 percentage points, and remainingLevels=1–5."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "The five active slots may all target the same stat or may be split across any combination of HP, Attack, Defence, Special Attack, Special Defence and Speed."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "Example: five active Attack effects = +100 percentage points to effective Attack growth while all five remain active."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "Example: 3× Attack + 2× Speed is legal. Example: five different stats is legal."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Using a training item when fewer than five slots are occupied fills one empty slot. If all five are occupied, use is blocked until at least one slot expires; existing effects are never silently overwritten."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "On each level-up, calculate that level's growth using base/current-species growth plus the sum of active modifiers for each stat, using Checklist 01's deterministic roll and exceptional-growth resolver unchanged."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "After the level-up has resolved, decrement remainingLevels by 1 on every active training slot. Remove any slot that reaches 0."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "All active slots tick on every level-up event whether or not their affected stat successfully grows."
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "Evolution does not clear or reroll training slots. The evolved species supplies future base growth, while the same still-active +20-point slot modifiers continue for their remaining levels."
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "Reserve storage does not pause or remove training slots; they simply do not tick while the Abyssal does not level."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "At Level 200 an Abyssal cannot consume a new growth-training item because there is no future level-up for it to affect."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "If fewer future level-ups remain before Level 200 than the item's duration, the UI warns that unused duration will be wasted before asking for confirmation."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "9. Trainer rewards, treasure and non-wild income"
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "Trainer rewards are deterministic and derive from the frozen Checklist 04 tier, maximum team level and team size."
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "STANDARD PAYOUT FORMULA"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "Let L = highest enemy Abyssal level and N = enemy team size. Round the final value to the nearest 10."
+    },
+    {
+      "body_index": 108,
+      "kind": "table",
+      "rows": [
+        [
+          "Trainer tier",
+          "Formula",
+          "Reference result"
+        ],
+        [
+          "Basic",
+          "10L + 50N",
+          "Lv20, N=2 → 300"
+        ],
+        [
+          "Advanced",
+          "16L + 50N",
+          "Lv50, N=3 → 950"
+        ],
+        [
+          "Leader-lite",
+          "24L + 75N",
+          "Lv50, N=4 → 1,500"
+        ],
+        [
+          "Leader / Rival",
+          "50L + 50N",
+          "Lv30, N=6 → 1,800; Lv100, N=6 → 5,300"
+        ],
+        [
+          "Warden / Final / Severin",
+          "0 standard currency",
+          "Use authored treasure/relic rewards instead"
+        ]
+      ]
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "Named story battles may add a one-time authored treasure reward on top of the formula, but do not silently substitute a different cash multiplier."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "Ordinary wild battles award no money."
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "Wardens and cosmic/postgame bosses do not inexplicably pay a purse; their authored rewards may be treasure, relics or unlock flags."
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "9.1 Sell-only treasure"
+    },
+    {
+      "body_index": 113,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable ID",
+          "Treasure",
+          "Sell value"
+        ],
+        [
+          "TREASURE_SILVER_RELIC",
+          "Silver Relic",
+          "500"
+        ],
+        [
+          "TREASURE_GILDED_RELIQUARY",
+          "Gilded Reliquary",
+          "1,500"
+        ],
+        [
+          "TREASURE_ROYAL_ICON",
+          "Royal Icon",
+          "4,000"
+        ],
+        [
+          "TREASURE_ANCIENT_TREASURY",
+          "Ancient Treasury Piece",
+          "10,000"
+        ],
+        [
+          "TREASURE_HELL_RELIC",
+          "Hell Relic",
+          "20,000"
+        ]
+      ]
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "Sell-only treasures have no battle, capture, evolution or quest use unless a separately authored quest explicitly references a different item ID."
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "Exploration treasure and finite trainer rewards must be placed generously enough that a normal critical-path player can maintain capture food and healing without grinding."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "10. Economy balance and parley boundary"
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "Healing, capture food and occasional evolution/held-item purchases are intended to compete for standard money."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "A player following the critical path, fighting a normal share of trainers and opening ordinary visible treasure should be able to maintain baseline Trail Bread / Seasoned Jerky and healing stock without repetitive farming."
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "Royal Feast, full heals, held items and renewable evolution items are deliberate discretionary purchases rather than assumed after every battle."
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "The repeatable Trial Contract economy does not generate standard money. It cannot be used as an infinite cash printer."
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "The exact retreat/parley loss transaction remains Checklist 13 territory. Checklist 06 only establishes eligibility: standard money and eligible non-key possessions may be lost; key items and Trial Marks may not."
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "Evolution items and held equipment remain eligible for parley loss under the previously approved high-stakes rule, subject to Checklist 13's final algorithm and confirmation safeguards."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "11. Implementation data contract"
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "Recommended stable data shapes below are implementation identifiers, not new mechanics."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "11.1 Item catalogue fields"
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "id, displayName, category, buyPrice, sellPriceRule, stackLimit, usableInBattle, usableOutOfBattle, targetRule, effectPayload, firstShopFlag, rarityTag."
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "Held items additionally store heldRole and passivePayload."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "Evolution items store evolutionSourceSpecies, evolutionTargetSpecies, minLevel and consumedOnEvolution=true."
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "Capture foods store catchModifierFunction / condition rather than duplicating the catch formula."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "11.2 Shop inventory fields"
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "shopId, settlementId, currencyType, inventoryItemIds, unlockFlag, stateVariantGroup."
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "State variants may swap NPC identity/dialogue but must resolve to equivalent essential stock."
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "SHOP_CYBRESSA_PROVEN_GROUNDS uses CURRENCY_TRIAL_MARK only and never accepts standard money."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "11.3 Training state"
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "Each Abyssal instance stores trainingSlots[5]."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "Training slot shape: {statId, modifierPoints:20, remainingLevels:1..5}."
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "The growth engine reads the sum of active slot modifiers at the moment of each deterministic level-up roll; it never mutates the immutable growth seed."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "Training state is instance state and must be serialised in Ironman saves. It cannot be rerolled by reload/action order."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "11.4 Procedural contract state"
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "completedTrialCount is persistent."
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "activeTrial stores rank, generationSeed, areaId, objectiveType, modifierId, targetIds and progress."
+    },
+    {
+      "body_index": 142,
+      "kind": "paragraph",
+      "text": "generationSeed derives deterministically from saveSeed + completedTrialCount + rank."
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "Completing a contract increments completedTrialCount exactly once, grants the rank reward exactly once, clears activeTrial and allows the next contract to generate."
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "12. Validation gates and Checklist 06 completion"
+    },
+    {
+      "body_index": 145,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Checklist item / handoff"
+        ],
+        [
+          "COMPLETE",
+          "Basic, mid, high and full HP healing items fixed; no resurrection consumables."
+        ],
+        [
+          "COMPLETE",
+          "Five single-status cures plus Panacea fixed."
+        ],
+        [
+          "COMPLETE",
+          "Four PP-restoring tiers fixed with late scarcity."
+        ],
+        [
+          "COMPLETE",
+          "Five temporary battle-stat draughts fixed; no X Accuracy / Dire Hit analogues."
+        ],
+        [
+          "COMPLETE",
+          "Smoke Bomb escape item fixed; Resonator replaces Repel economy."
+        ],
+        [
+          "COMPLETE",
+          "All eight capture foods have exact modifier, price and first availability; Saint's Banquet supply fixed at three authored copies."
+        ],
+        [
+          "COMPLETE",
+          "All fifteen evolution-item names, guaranteed sources, renewable rules and prices fixed."
+        ],
+        [
+          "COMPLETE",
+          "Standard money, wild reward policy, sale rules and five sell-only treasure tiers fixed."
+        ],
+        [
+          "COMPLETE",
+          "Checklist 04 held roles mapped to final player-obtainable held-item IDs/effects."
+        ],
+        [
+          "COMPLETE",
+          "Town-by-town mortal shop progression and Hell threshold essentials fixed."
+        ],
+        [
+          "COMPLETE",
+          "Trainer payout formulas fixed for Basic / Advanced / Leader-lite / Leader tiers; Wardens/final bosses use authored non-cash rewards."
+        ],
+        [
+          "COMPLETE",
+          "Cybressa Proven Grounds, Trial Marks, deterministic repeatable contract generation and rank rewards fixed."
+        ],
+        [
+          "COMPLETE",
+          "Six stat-training families, +20 percentage points per slot, 1–5 level durations and Trial Mark prices fixed."
+        ],
+        [
+          "COMPLETE",
+          "Five simultaneous training slots per Abyssal fixed; same-stat stacking and mixed-stat allocation both legal."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 07 may define how an exact resurrected instance exposes preserved training state after death; it may not reroll the stored growth seed or already-consumed durations."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 10 binds exact shop/quest/event unlock flags to story events without changing prices/effects."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 13 finalises the exact parley-loss algorithm while preserving key-item and Trial Mark immunity."
+        ],
+        [
+          "DEPENDENCY ONLY",
+          "Checklist 15 serialises money, inventory, Trial Marks, active Trial Contract and five-slot training state under Ironman persistence."
+        ],
+        [
+          "VALIDATION ONLY",
+          "Implementation playtest may verify money pressure, Trial Mark grind length and shop usability. Numeric mechanical changes require an explicit Checklist 06 revision."
+        ]
+      ]
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "FINAL STATUS"
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06 — ITEMS, SHOPS & ECONOMY: COMPLETE / LOCKED. Later work may bind IDs to maps, scripts and save data, but must not silently alter the item effects, prices, capture modifiers, evolution-item availability, trainer reward formulas, Trial Mark economy or five-slot stat-training contract in this specification."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "13. Source authority used for this lock"
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "Pre-Programming Planning Checklists Reference v1.0 — Checklist 06 scope and completion criteria."
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01 — Exact Stat Growth Algorithm — locked deterministic growth, exceptional-growth and HP increment rules."
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "CHECKLIST 04 — Trainer Database & Team Planning — frozen trainer tiers, teams, healing-bag counts and semantic held roles."
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "CHECKLIST 05 — Hell Terrain Finalisation — locked Warden field payloads and field replacement behaviour."
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "Regional Dex Progression Learnsets v3 — capture-food Generation III equivalents and fifteen evolution-item names/paths."
+    },
+    {
+      "body_index": 154,
+      "kind": "paragraph",
+      "text": "Regional Dex Growth & Evolution VALIDATED v4 — validated item-evolution timing and growth authority."
+    },
+    {
+      "body_index": 155,
+      "kind": "paragraph",
+      "text": "World Towns & Routes Reference — locked mortal settlement/route skeleton and Cybressa market-city identity."
+    },
+    {
+      "body_index": 156,
+      "kind": "paragraph",
+      "text": "Full Story Bible — LOCKED v1.0 — chapter sequence, Ramelle/Hell progression and branch-state boundaries."
+    },
+    {
+      "body_index": 157,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 158,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 06 — LOCKED v1.0"
+    }
+  ]
+}

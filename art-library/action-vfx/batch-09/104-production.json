@@ -1,0 +1,75 @@
+{
+  "id": 104,
+  "name": "Glacier Scissor",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 105
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "096",
+      "121",
+      "122",
+      "123",
+      "137",
+      "138",
+      "170",
+      "171",
+      "172",
+      "176",
+      "297",
+      "298",
+      "372",
+      "373",
+      "392",
+      "393",
+      "407",
+      "408",
+      "409",
+      "468",
+      "469",
+      "470"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "PHYSICAL",
+  "type": "ICE",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 70,
+  "pp": 20,
+  "accuracy": 100,
+  "priority": 0,
+  "contact": true,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [],
+  "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "Two thick asymmetrical glacier slabs have curved cutting faces, pivot open, shear past one another ONCE at the center, rebound with small shattered ice plates and separate. Heavy ice shears, not teeth or claws.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Glacier Scissor, stable ID104. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: Two thick asymmetrical glacier slabs have curved cutting faces, pivot open, shear past one another ONCE at the center, rebound with small shattered ice plates and separate. Heavy ice shears, not teeth or claws. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/104-source.png",
+  "prepared": "art-library/action-vfx/batch-09/104-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "3ed86a7d0df7e3a4efd9deaf83c305b3c6e8626cfc3fe1a7386cf1f1955cf074",
+  "sourceSha256": "59f7895e7ce3dc7f0c586a7e153a4fc8d760fa04f7572508d8c15205e7dfa22b"
+}

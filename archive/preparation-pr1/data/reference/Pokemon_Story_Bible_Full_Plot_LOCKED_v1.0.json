@@ -1,0 +1,5398 @@
+{
+  "source": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+  "source_sha256": "3035be45916658587e1309f4219599343b995d4fabd9597d936cafd8b683bb40",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "POKÉMON PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "FULL STORY BIBLE"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Narrative Implementation + Subplots + QC"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "v1.0  •  LOCKED NARRATIVE BASELINE"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": "Purpose"
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "Programming-ready story architecture for main quests, optional narrative chains, world-state changes, choice consequences, Hell progression, finale and postgame."
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "DOCUMENT STATUS & CANON BOUNDARIES"
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "This document is the locked implementation-level narrative baseline. The premise, cast, themes, mortal-world chapter sequence, subplots, Nine Circles progression, Hell wardens, choice logic, finale, postgame and location names are canon unless explicitly reopened. Exact monster teams and levels remain a cross-document combat/dex dependency and do not alter this story lock."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "LOCKED THEMATIC CANON"
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Morality belongs to the individual; authority does not make an action righteous."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Organised religion can divide people who are fundamentally similar and often in broad moral agreement."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Good and bad people exist on every side. No faction is the secret moral answer."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "The True Light and Dawn Bloom are rival religions unknowingly worshipping the same cosmic being, Illyr."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "Human traditions also give different names and stories to Nharos, the same underworld ruler."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Illyr and Nharos do not meaningfully care about human religions. Humanity is cosmically insignificant to them."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "The crusade is therefore not divinely ordered. Humans constructed the conflict themselves."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "Monster death is permanent at 0 HP in genuine combat. This must carry narrative weight."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "Pate and Trade genuinely love Aimon and leave him behind to protect him, not to reject him."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "Pate and Trade die in the meaningless taking of a mill. Aimon enters the underworld and brings them back."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "Severin guides Aimon through the Nine Circles, benefits from Aimon breaking the old underworld order, becomes ruler below, and is the secret superboss."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "LOCKED CHARACTER NUMBERS"
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "1 Aimon — renamable protagonist; Aimon is default/dev name."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "2 Pateric “Pate” Vann."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "3 Traden “Trade” Cor."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "4 General Kurg Halbrecht."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "5 Severin Vale."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "6 Illyr."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "7 Nharos."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "8 Ser Aldren March."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "9 Abbess Yselle Marot."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "10 Provost Corvin Sair."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "11 Warden Samiel Elow."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "12 Castellan Braska Morn."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "13 Canon Mirelle Avin."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "14 Marshal Oren Talv."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "15 Hierophant Lucain Serault."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "16 Chaplain Aeric Solm."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "17 Dame Rhoswen Vey."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "PROGRAMMING CONVENTIONS"
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "No visible morality meter. Choices are remembered through local flags and dialogue states only."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "Leader defeat always ends in SPARE or EXECUTE. Spare can mean imprisonment, exile or supervised local authority; it never automatically means restoration to power."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "No materially superior loot for execution. Moral choices must not become min-max traps."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "Aimon has no canonical fixed team. Pate and Trade receive the two starters not chosen by the player; exact species assignment resolves from starter selection."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Main story never requires a particular optional mercy profile. The player can complete the story after any mix of spare/execute decisions."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "Executed leaders may appear in the underworld. Spared leaders may reappear in mortal-world recovery and epilogue scenes."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "The game distinguishes “defeat/surrender” from “0 HP/death” in trainer battles where story logic demands capture or surrender before death."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "GLOBAL STORY STATE"
+    },
+    {
+      "body_index": 48,
+      "kind": "table",
+      "rows": [
+        [
+          "Flag",
+          "Purpose"
+        ],
+        [
+          "leader_01_spared … leader_08_spared",
+          "Boolean per leader. Drives occupation dialogue, underworld appearances and epilogue participation."
+        ],
+        [
+          "pate_clues_found",
+          "Count 0–8. Tracks mandatory and optional evidence of Pate’s path."
+        ],
+        [
+          "trade_clues_found",
+          "Count 0–8. Tracks mandatory and optional evidence of Trade’s path."
+        ],
+        [
+          "trade_notebook_pages",
+          "Bitset/count for optional journal fragments."
+        ],
+        [
+          "religious_parallels_found",
+          "Count for matched True Light/Dawn Bloom prayers, myths and symbols."
+        ],
+        [
+          "aeric_arc_state",
+          "0–5. Certainty → discomfort → doubt → faith without claimed certainty."
+        ],
+        [
+          "rhoswen_arc_state",
+          "0–5. Hardline certainty → challenge → fracture → independently chosen duty."
+        ],
+        [
+          "kurg_doubt_state",
+          "0–5. Institutional certainty → responsibility crisis → postwar uncertainty."
+        ],
+        [
+          "refugee_chain_state",
+          "Tracks a recurring civilian family/group moving across the front."
+        ],
+        [
+          "monster_memorial_count",
+          "Optional memorial interactions; changes late-game remembrance dialogue."
+        ],
+        [
+          "mill_foreshadow_seen",
+          "Bitset for early references to Emmara Mill before its importance is known."
+        ],
+        [
+          "severin_sightings",
+          "Count of optional pre-reveal Severin cameos."
+        ],
+        [
+          "hell_leader_encounters",
+          "Bitset for executed mortal leaders encountered below."
+        ],
+        [
+          "pate_trade_recovered",
+          "False until finale extraction succeeds."
+        ],
+        [
+          "severin_king_revealed",
+          "Postgame unlock flag."
+        ]
+      ]
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "CONTENTS"
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "ACT I — BROTHERS"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "Chapter 0 — Three Crusaders"
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "Chapter 1 — Left Behind"
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "ACT II — THE CRUSADE"
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "Chapter 2 — Dorelem"
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Chapter 3 — Philomere"
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Chapter 4 — Cybressa"
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Chapter 5 — Cossenne"
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "Chapter 6 — Marasen"
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "Chapter 7 — Botrune"
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Chapter 8 — Cayfen"
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Chapter 9 — Ramelle / The Holy Land"
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "ACT III — REFUSAL"
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "Chapter 10 — The Dead Stay Dead"
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "ACT IV — DESCENT"
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "Chapter 11 — Circle I: The Threshold"
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "Chapter 12 — Circle II: Want"
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "Chapter 13 — Circle III: Wrath"
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "Chapter 14 — Circle IV: Dominion"
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "Chapter 15 — Circle V: Dogma"
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "Chapter 16 — Circle VI: Grief"
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "Chapter 17 — Circle VII: Betrayal"
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Chapter 18 — Circle VIII: Silence"
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "Chapter 19 — Circle IX: The Throne"
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "ACT V — NO GODS, NO MASTERS"
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "Chapter 20 — Illyr and Nharos"
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "Chapter 21 — Bring Them Home"
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "Chapter 22 — The World After"
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "POSTGAME — THE POET KING"
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Chapter 23 — King Below"
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "RECURRING SUBPLOT CHAINS"
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "BRANCH & STATE MATRIX"
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "QC CHECKLIST & PROGRAMMING HANDOFF"
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "ACT I — BROTHERS"
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "Act I must feel sincerely exciting. The player should understand why Aimon wants to follow Pate and Trade before the game starts dismantling the heroic crusade story. The prologue and enlistment are the emotional control sample against which the rest of the game is measured."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "CHAPTER 0 — THREE CRUSADERS"
+    },
+    {
+      "body_index": 88,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act I — Brothers"
+        ],
+        [
+          "Primary location",
+          "Civeton village — childhood version"
+        ],
+        [
+          "Narrative job",
+          "Establish the three-brother bond, inherited religious tribalism as childhood play, and the difference between pretend defeat and real death."
+        ],
+        [
+          "Boss / climax",
+          "Tutorial pretend battle"
+        ],
+        [
+          "Key flags",
+          "prologue_complete"
+        ]
+      ]
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "CH00-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "Opening tableau"
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "Trigger: New game"
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "Late afternoon in Civeton. Children use carved wooden monster figures and sticks to imitate adult trainers and crusaders. Pate declares that he and Trade are righteous champions of the True Light. Aimon is assigned the Dawn Bloom defenders because he is the youngest and because someone has to be the ‘enemy’. Nothing about the boys’ behaviour suggests personal hatred; the language is inherited play."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "Environmental NPC snippets should show adults treating the coming crusade as history repeating itself: old veterans, shrine stories, and parents using phrases the children later mimic without understanding them."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "CH00-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Pretend battle tutorial"
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "Teach basic turn selection, type readability and HP with toy/imaginary monsters. At 0 HP the imaginary monster dramatically ‘falls’ and the children argue about whether the move was fair. No death language is used."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "Pate plays aggressively; Trade interrupts to clarify rules. Aimon is outnumbered but praised for improvising."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "Battle: Scripted tutorial; no persistent team state"
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "CH00-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "The fall"
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "During the game Aimon slips or is knocked over. Pate instantly drops the crusader performance and helps him up. Trade checks his hands/knees and scolds Pate for playing too hard. The thematic image is simple: ideology vanishes the moment a real person is hurt."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "Pate promises Aimon that when he is older he will come with them. Trade adds, ‘If you’re ready.’ Pate answers that of course he will be."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "State effects: prologue_complete=true"
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "CH00-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "Childhood shrine echo"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "Optional interaction with a small True Light shrine. A local elder tells a simplified creation story. A later Dawn Bloom version will be almost identical. The player has no reason to notice this yet."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found+=1 (hidden provenance marker, not yet matchable)"
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "CHAPTER 1 — LEFT BEHIND"
+    },
+    {
+      "body_index": 110,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act I — Brothers"
+        ],
+        [
+          "Primary location",
+          "Civeton + True Light mustering camp"
+        ],
+        [
+          "Narrative job",
+          "Move from childhood promise to perceived abandonment; introduce Kurg, Aeric and Rhoswen; choose starter; establish real-combat death rules."
+        ],
+        [
+          "Boss / climax",
+          "Enlistment test"
+        ],
+        [
+          "Key flags",
+          "starter_choice, pate_starter, trade_starter, aeric_arc_state, rhoswen_arc_state"
+        ]
+      ]
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "CH01-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "Morning of departure"
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "Trigger: prologue_complete"
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "Years later. Aimon wakes to bells, flags and an unusually busy village. The crusade has formally begun. NPCs are excited, frightened or proud. The tone intentionally resembles the start of a conventional heroic RPG."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "The player is free to revisit the childhood play site. The hill feels smaller now."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "CH01-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "Pate is gone"
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "At Pate’s home Aimon learns he departed before dawn after claiming a real monster. His family assumed Aimon had been told. A small personal item or unfinished breakfast reinforces the speed of departure."
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found=1"
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "CH01-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "Trade’s note"
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "Trade is gone too. Aimon finds a brief note: ‘Don’t follow us.’ It reads as an order because Trade writes concisely. Later context will reveal it was protection, not rejection."
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "Aimon is angry rather than tearful. His immediate goal becomes catching them."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "State effects: trade_clues_found=1"
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "CH01-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "Kurg refuses"
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "At the mustering camp, General Kurg Halbrecht refuses Aimon without ceremony. After repeated insistence, Kurg reveals that Pate and Trade specifically asked him not to enlist Aimon. Kurg says they were trying to keep him alive."
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "Aimon interprets this as proof they still think he is weak. He states that he will follow them with or without permission. Kurg believes him."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "State effects: kurg_doubt_state=0"
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "CH01-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "Starter choice"
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "Kurg authorises supervised enlistment rather than letting Aimon travel alone. Three starter species are presented. The player chooses one. The two remaining starters are assigned dynamically to Pate and Trade, with personality-preferred mapping used when both mappings are possible."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "This is a genuine emotional milestone: Aimon believes he is finally becoming the kind of person Pate and Trade thought he was not ready to be."
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "State effects: starter_choice set; pate_starter set; trade_starter set"
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "CH01-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "Aeric’s blessing"
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "Chaplain Aeric Solm gives Aimon travel supplies and a restrained blessing. He is religious, warm and worried about Aimon’s age. He never calls the Dawn Bloom people monsters or vermin. This distinction should be visible from his first appearance."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "State effects: aeric_arc_state=0"
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "CH01-E07  |  MANDATORY"
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "Rhoswen’s assessment"
+    },
+    {
+      "body_index": 142,
+      "kind": "paragraph",
+      "text": "Dame Rhoswen Vey bluntly tells Kurg that Aimon is a liability. She does not hate him; she believes unprepared soldiers get others killed. She becomes the recurring hardline foil who equates discipline and decisive force with moral seriousness."
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "State effects: rhoswen_arc_state=0"
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "CH01-E08  |  MANDATORY"
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": "Controlled enlistment battle"
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "A camp trainer tests Aimon. Before battle, Kurg explains that genuine combat has no magical fainting convention: if a monster is pushed to 0 HP, it dies. This test therefore uses formal surrender thresholds and a referee."
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "The player is taught that story battles can end by surrender before lethal damage, while wilderness/hostile combat can be permanent."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "Battle: Non-lethal supervised trainer test"
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "State effects: real_combat_rules_taught=true"
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "CH01-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "First memorial stone"
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "Optional memorial near camp lists soldiers and monster partners lost in earlier border fighting. A child has left a toy monster beside one name. This seeds the monster-memorial subplot without forcing a speech."
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "State effects: monster_memorial_count+=1"
+    },
+    {
+      "body_index": 154,
+      "kind": "paragraph",
+      "text": "CH01-E09  |  MANDATORY"
+    },
+    {
+      "body_index": 155,
+      "kind": "paragraph",
+      "text": "Departure"
+    },
+    {
+      "body_index": 156,
+      "kind": "paragraph",
+      "text": "Aimon leaves Civeton with the marching road ahead. Kurg’s final instruction is practical, not inspirational: stay alive, learn before committing, report when possible. Aimon’s own private objective remains Pate and Trade."
+    },
+    {
+      "body_index": 157,
+      "kind": "paragraph",
+      "text": "State effects: chapter_01_complete=true"
+    },
+    {
+      "body_index": 158,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 159,
+      "kind": "paragraph",
+      "text": "ACT II — THE CRUSADE"
+    },
+    {
+      "body_index": 160,
+      "kind": "paragraph",
+      "text": "Eight settlements form the mortal-world spine. Each chapter repeats a legible gameplay rhythm — arrive, explore, trace Pate/Trade, resolve local crisis, defeat leader, choose spare/execute, revisit changed town — while the moral context changes beneath that familiar structure. The repeated form is deliberate: the player’s mechanics remain stable while their interpretation of those mechanics changes."
+    },
+    {
+      "body_index": 161,
+      "kind": "paragraph",
+      "text": "CHAPTER 2 — DORELEM"
+    },
+    {
+      "body_index": 162,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Dorelem border keep and surrounding scrubland"
+        ],
+        [
+          "Narrative job",
+          "Give the player the version of the war they expect, then introduce the leader-life decision and occupation-state system."
+        ],
+        [
+          "Boss / climax",
+          "Ser Aldren March"
+        ],
+        [
+          "Key flags",
+          "leader_01_spared, occupation_dorelem, mill_foreshadow_seen"
+        ]
+      ]
+    },
+    {
+      "body_index": 163,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 164,
+      "kind": "paragraph",
+      "text": "CH02-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 165,
+      "kind": "paragraph",
+      "text": "Border road ambush"
+    },
+    {
+      "body_index": 166,
+      "kind": "paragraph",
+      "text": "A Dawn Bloom patrol attacks the True Light column after warnings are ignored. The fight is clearly military and reciprocal, allowing Aimon to read the conflict as straightforward defence versus invasion depending on perspective."
+    },
+    {
+      "body_index": 167,
+      "kind": "paragraph",
+      "text": "Rhoswen praises decisive action. Aeric tends wounded from both sides if the player remains nearby."
+    },
+    {
+      "body_index": 168,
+      "kind": "paragraph",
+      "text": "Battle: First lethal hostile-trainer encounter"
+    },
+    {
+      "body_index": 169,
+      "kind": "paragraph",
+      "text": "CH02-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 170,
+      "kind": "paragraph",
+      "text": "Dorelem under siege"
+    },
+    {
+      "body_index": 171,
+      "kind": "paragraph",
+      "text": "Aimon reaches a keep controlling the road. True Light soldiers have not breached it. Kurg authorises Aimon to seek a formal monster challenge against commander Ser Aldren March to avoid a larger assault."
+    },
+    {
+      "body_index": 172,
+      "kind": "paragraph",
+      "text": "Inside-town access is gained through neutral villagers and a service tunnel rather than slaughtering the garrison."
+    },
+    {
+      "body_index": 173,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=challenge_aldren"
+    },
+    {
+      "body_index": 174,
+      "kind": "paragraph",
+      "text": "CH02-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 175,
+      "kind": "paragraph",
+      "text": "Pate and Trade were here"
+    },
+    {
+      "body_index": 176,
+      "kind": "paragraph",
+      "text": "Stablehands remember Pate boasting that he would take the keep in an afternoon. Trade apologised for him and asked detailed questions about the northern road. The memory is affectionate and comic."
+    },
+    {
+      "body_index": 177,
+      "kind": "paragraph",
+      "text": "A minor Dawn Bloom soldier recalls that the two young crusaders spared him after he surrendered. This establishes that their conduct was not uniformly brutal."
+    },
+    {
+      "body_index": 178,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "body_index": 179,
+      "kind": "paragraph",
+      "text": "CH02-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 180,
+      "kind": "paragraph",
+      "text": "Emmara Mill on a requisition sheet"
+    },
+    {
+      "body_index": 181,
+      "kind": "paragraph",
+      "text": "Optional quartermaster ledger contains a route note: ‘Emmara Mill — reserve grain waypoint, status unverified.’ It looks like meaningless logistics. No character comments unless examined twice."
+    },
+    {
+      "body_index": 182,
+      "kind": "paragraph",
+      "text": "State effects: mill_foreshadow_seen add MILL_LEDGER_1"
+    },
+    {
+      "body_index": 183,
+      "kind": "paragraph",
+      "text": "CH02-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 184,
+      "kind": "paragraph",
+      "text": "Aldren challenge"
+    },
+    {
+      "body_index": 185,
+      "kind": "paragraph",
+      "text": "Aldren accepts because losing one formal battle is preferable to losing the keep and civilians in a siege. He is stern and hostile but honours surrender rules. His team is disciplined and direct."
+    },
+    {
+      "body_index": 186,
+      "kind": "paragraph",
+      "text": "On defeat, Aldren formally yields military control."
+    },
+    {
+      "body_index": 187,
+      "kind": "paragraph",
+      "text": "Battle: Leader 1 — Ser Aldren March"
+    },
+    {
+      "body_index": 188,
+      "kind": "paragraph",
+      "text": "CH02-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 189,
+      "kind": "paragraph",
+      "text": "The first sentence"
+    },
+    {
+      "body_index": 190,
+      "kind": "paragraph",
+      "text": "Rhoswen explains that Aldren remains the lawful military figurehead while alive and may become a rallying point. Aeric says a surrendered man is no longer an immediate threat. Kurg states that because Aldren surrendered to Aimon, Aimon must decide what responsibility to take for him."
+    },
+    {
+      "body_index": 191,
+      "kind": "paragraph",
+      "text": "Choice: SPARE or EXECUTE. No morality label, no extra loot for either result."
+    },
+    {
+      "body_index": 192,
+      "kind": "paragraph",
+      "text": "State effects: leader_01_spared set; occupation_dorelem set"
+    },
+    {
+      "body_index": 193,
+      "kind": "paragraph",
+      "text": "CH02-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 194,
+      "kind": "paragraph",
+      "text": "Occupation snapshot"
+    },
+    {
+      "body_index": 195,
+      "kind": "paragraph",
+      "text": "On immediate revisit the True Light flag is raised, checkpoints appear, local shops reopen unevenly, and civilians respond to Aldren’s fate. If spared he is imprisoned and later advises on preventing reprisals. If executed, flowers and hostile graffiti begin appearing near the keep."
+    },
+    {
+      "body_index": 196,
+      "kind": "paragraph",
+      "text": "The world communicates consequence rather than score."
+    },
+    {
+      "body_index": 197,
+      "kind": "paragraph",
+      "text": "State effects: chapter_02_complete=true"
+    },
+    {
+      "body_index": 198,
+      "kind": "paragraph",
+      "text": "CH02-O02  |  OPTIONAL"
+    },
+    {
+      "body_index": 199,
+      "kind": "paragraph",
+      "text": "Refugees on the road"
+    },
+    {
+      "body_index": 200,
+      "kind": "paragraph",
+      "text": "A small civilian group asks whether the next town is safe. Their origin is Dawn Bloom territory, but one member has a True Light-born spouse. They become a recurring subplot whose identity resists clean faction labels."
+    },
+    {
+      "body_index": 201,
+      "kind": "paragraph",
+      "text": "State effects: refugee_chain_state=1"
+    },
+    {
+      "body_index": 202,
+      "kind": "paragraph",
+      "text": "CHAPTER 3 — PHILOMERE"
+    },
+    {
+      "body_index": 203,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Philomere river hospice and gardens"
+        ],
+        [
+          "Narrative job",
+          "Humanise Dawn Bloom life; show institutional conflict over resources; create the first serious religious parallel."
+        ],
+        [
+          "Boss / climax",
+          "Abbess Yselle Marot"
+        ],
+        [
+          "Key flags",
+          "leader_02_spared, aeric_arc_state, religious_parallels_found, occupation_philomere"
+        ]
+      ]
+    },
+    {
+      "body_index": 204,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 205,
+      "kind": "paragraph",
+      "text": "CH03-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 206,
+      "kind": "paragraph",
+      "text": "The hospice road"
+    },
+    {
+      "body_index": 207,
+      "kind": "paragraph",
+      "text": "The route is crowded with wounded soldiers, displaced civilians and injured monsters. The settlement’s first visual is not a fortress but a queue for treatment."
+    },
+    {
+      "body_index": 208,
+      "kind": "paragraph",
+      "text": "Dawn Bloom volunteers initially refuse armed crusaders entry but allow Aimon after he helps recover medicine from a flooded path."
+    },
+    {
+      "body_index": 209,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=resolve_supply_dispute"
+    },
+    {
+      "body_index": 210,
+      "kind": "paragraph",
+      "text": "CH03-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 211,
+      "kind": "paragraph",
+      "text": "Whose supplies?"
+    },
+    {
+      "body_index": 212,
+      "kind": "paragraph",
+      "text": "True Light quartermasters have claimed grain and medicine as military requisitions. Abbess Yselle refuses because the stores are feeding refugees and patients. Aimon is ordered to ‘secure supplies’ but can inspect the hospice before acting."
+    },
+    {
+      "body_index": 213,
+      "kind": "paragraph",
+      "text": "Several patients are True Light civilians and wounded True Light soldiers. Yselle treats them exactly like Dawn Bloom patients."
+    },
+    {
+      "body_index": 214,
+      "kind": "paragraph",
+      "text": "State effects: aeric_arc_state=max(current,1)"
+    },
+    {
+      "body_index": 215,
+      "kind": "paragraph",
+      "text": "CH03-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 216,
+      "kind": "paragraph",
+      "text": "First matched prayer"
+    },
+    {
+      "body_index": 217,
+      "kind": "paragraph",
+      "text": "During treatment a Dawn Bloom nurse recites a morning prayer about first light revealing the road ahead. Aimon recognises the structure and moral lesson from a True Light prayer used in Civeton."
+    },
+    {
+      "body_index": 218,
+      "kind": "paragraph",
+      "text": "Aeric initially explains that false traditions often imitate truth. Aimon accepts this because he still wants an explanation that preserves the hierarchy he knows."
+    },
+    {
+      "body_index": 219,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found+=1"
+    },
+    {
+      "body_index": 220,
+      "kind": "paragraph",
+      "text": "CH03-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 221,
+      "kind": "paragraph",
+      "text": "Pate’s stitches"
+    },
+    {
+      "body_index": 222,
+      "kind": "paragraph",
+      "text": "Yselle recognises Aimon’s description of Pate and Trade. Pate arrived with a deep arm wound and tried to joke through treatment. Trade stayed awake helping distribute water and correcting Pate whenever he exaggerated how he was injured."
+    },
+    {
+      "body_index": 223,
+      "kind": "paragraph",
+      "text": "Yselle’s simple conclusion — ‘They were boys’ — unsettles Aimon because he expected her to define them first as crusaders."
+    },
+    {
+      "body_index": 224,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "body_index": 225,
+      "kind": "paragraph",
+      "text": "CH03-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 226,
+      "kind": "paragraph",
+      "text": "Monster sanctuary"
+    },
+    {
+      "body_index": 227,
+      "kind": "paragraph",
+      "text": "Optional side quest: return an injured wild monster to its nesting group rather than recruiting it. Completing this adds a later sanctuary NPC who discusses monsters as lives rather than resources."
+    },
+    {
+      "body_index": 228,
+      "kind": "paragraph",
+      "text": "State effects: monster_memorial_count+=1"
+    },
+    {
+      "body_index": 229,
+      "kind": "paragraph",
+      "text": "CH03-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 230,
+      "kind": "paragraph",
+      "text": "Yselle’s terms"
+    },
+    {
+      "body_index": 231,
+      "kind": "paragraph",
+      "text": "Yselle agrees to a leader battle if Aimon guarantees that losing will not immediately empty the hospice stores. The player cannot promise permanent policy, but can force a compromise: military requisition is capped and civilian rations protected."
+    },
+    {
+      "body_index": 232,
+      "kind": "paragraph",
+      "text": "The battle is defensive and restorative, making the player work to overcome endurance rather than aggression."
+    },
+    {
+      "body_index": 233,
+      "kind": "paragraph",
+      "text": "Battle: Leader 2 — Abbess Yselle Marot"
+    },
+    {
+      "body_index": 234,
+      "kind": "paragraph",
+      "text": "CH03-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 235,
+      "kind": "paragraph",
+      "text": "Spare / Execute"
+    },
+    {
+      "body_index": 236,
+      "kind": "paragraph",
+      "text": "Yselle accepts defeat without pleading. If spared, she remains under guard as medical administrator because even True Light officers recognise her value. If executed, the hospice loses experienced coordination; mortality and shortages visibly worsen on revisit until Aeric and local staff rebuild it."
+    },
+    {
+      "body_index": 237,
+      "kind": "paragraph",
+      "text": "State effects: leader_02_spared set; occupation_philomere set"
+    },
+    {
+      "body_index": 238,
+      "kind": "paragraph",
+      "text": "CH03-O02  |  OPTIONAL"
+    },
+    {
+      "body_index": 239,
+      "kind": "paragraph",
+      "text": "Refugee chain continuation"
+    },
+    {
+      "body_index": 240,
+      "kind": "paragraph",
+      "text": "If the road refugees were met, they are now among the hospice patients. One family member is caring for someone wearing the opposite faction’s symbol. No special dialogue calls attention to the contradiction unless Aimon speaks to them."
+    },
+    {
+      "body_index": 241,
+      "kind": "paragraph",
+      "text": "State effects: refugee_chain_state=2"
+    },
+    {
+      "body_index": 242,
+      "kind": "paragraph",
+      "text": "CHAPTER 4 — CYBRESSA"
+    },
+    {
+      "body_index": 243,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Cybressa market city"
+        ],
+        [
+          "Narrative job",
+          "Prevent moral reversal by showing Dawn Bloom corruption; demonstrate that replacing a flag does not automatically change exploitative systems."
+        ],
+        [
+          "Boss / climax",
+          "Provost Corvin Sair"
+        ],
+        [
+          "Key flags",
+          "leader_03_spared, cybressa_network_exposed, occupation_cybressa"
+        ]
+      ]
+    },
+    {
+      "body_index": 244,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 245,
+      "kind": "paragraph",
+      "text": "CH04-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 246,
+      "kind": "paragraph",
+      "text": "War market"
+    },
+    {
+      "body_index": 247,
+      "kind": "paragraph",
+      "text": "Cybressa is prosperous because war has made everything expensive. Merchants sell to both sides through intermediaries. Civilians resent the crusade and Corvin in equal measure."
+    },
+    {
+      "body_index": 248,
+      "kind": "paragraph",
+      "text": "Aimon sees True Light weapons in a Dawn Bloom warehouse and Dawn Bloom medicines in a True Light caravan."
+    },
+    {
+      "body_index": 249,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=investigate_corvin"
+    },
+    {
+      "body_index": 250,
+      "kind": "paragraph",
+      "text": "CH04-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 251,
+      "kind": "paragraph",
+      "text": "Corvin’s welcome"
+    },
+    {
+      "body_index": 252,
+      "kind": "paragraph",
+      "text": "Provost Corvin Sair receives Aimon politely and offers to transfer control in exchange for protection of his commercial privileges. This is the first leader who seems more interested in office than faith."
+    },
+    {
+      "body_index": 253,
+      "kind": "paragraph",
+      "text": "Aimon is allowed to explore instead of immediately accepting."
+    },
+    {
+      "body_index": 254,
+      "kind": "paragraph",
+      "text": "CH04-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 255,
+      "kind": "paragraph",
+      "text": "The Price of War"
+    },
+    {
+      "body_index": 256,
+      "kind": "paragraph",
+      "text": "Optional investigation chain follows false invoices, warehouse seals and displaced families being charged extortionate prices. Evidence proves Corvin and True Light intermediaries both profited. The corruption is cross-factional, not a Dawn Bloom-only vice."
+    },
+    {
+      "body_index": 257,
+      "kind": "paragraph",
+      "text": "Completing the chain lets the post-conquest administration break the network; ignoring it means the True Light occupation inherits it intact."
+    },
+    {
+      "body_index": 258,
+      "kind": "paragraph",
+      "text": "State effects: cybressa_network_exposed=true"
+    },
+    {
+      "body_index": 259,
+      "kind": "paragraph",
+      "text": "CH04-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 260,
+      "kind": "paragraph",
+      "text": "Pate overpays"
+    },
+    {
+      "body_index": 261,
+      "kind": "paragraph",
+      "text": "Corvin remembers Pate purchasing equipment at an absurd markup because he wanted to reach the front quickly. Trade returned later, furious, with the receipt. Corvin refunded part of it only because Trade threatened to report him."
+    },
+    {
+      "body_index": 262,
+      "kind": "paragraph",
+      "text": "The scene is funny, then sour when Corvin remarks that war makes sentimental young men excellent customers."
+    },
+    {
+      "body_index": 263,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "body_index": 264,
+      "kind": "paragraph",
+      "text": "CH04-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 265,
+      "kind": "paragraph",
+      "text": "Leader challenge"
+    },
+    {
+      "body_index": 266,
+      "kind": "paragraph",
+      "text": "Corvin attempts to bargain until it becomes clear neither faction trusts him. He accepts a formal battle to preserve legal status and uses a disruptive, opportunistic team reflecting his personality."
+    },
+    {
+      "body_index": 267,
+      "kind": "paragraph",
+      "text": "Battle: Leader 3 — Provost Corvin Sair"
+    },
+    {
+      "body_index": 268,
+      "kind": "paragraph",
+      "text": "CH04-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 269,
+      "kind": "paragraph",
+      "text": "Spare / Execute"
+    },
+    {
+      "body_index": 270,
+      "kind": "paragraph",
+      "text": "If spared, Corvin is removed from office and held for investigation; spare does not mean leaving a corrupt ruler in charge. If executed, some victims approve while others warn that killing him conveniently removes the chance to expose collaborators."
+    },
+    {
+      "body_index": 271,
+      "kind": "paragraph",
+      "text": "If the optional corruption chain was completed, documents later implicate True Light personnel as well."
+    },
+    {
+      "body_index": 272,
+      "kind": "paragraph",
+      "text": "State effects: leader_03_spared set; occupation_cybressa set"
+    },
+    {
+      "body_index": 273,
+      "kind": "paragraph",
+      "text": "CH04-O02  |  OPTIONAL"
+    },
+    {
+      "body_index": 274,
+      "kind": "paragraph",
+      "text": "War orphan courier"
+    },
+    {
+      "body_index": 275,
+      "kind": "paragraph",
+      "text": "A recurring adolescent courier admits carrying messages for whichever army pays. Their sibling was killed by a Dawn Bloom patrol and their father by True Light shelling. They reject Aimon’s attempts to sort their grief into sides."
+    },
+    {
+      "body_index": 276,
+      "kind": "paragraph",
+      "text": "State effects: civilian_choice_courier met"
+    },
+    {
+      "body_index": 277,
+      "kind": "paragraph",
+      "text": "CHAPTER 5 — COSSENNE"
+    },
+    {
+      "body_index": 278,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Cossenne orchard-shrine valley"
+        ],
+        [
+          "Narrative job",
+          "Make the theological similarity impossible to ignore; present deliberate surrender as courage rather than cowardice."
+        ],
+        [
+          "Boss / climax",
+          "Warden Samiel Elow"
+        ],
+        [
+          "Key flags",
+          "leader_04_spared, religious_parallels_found, rhoswen_arc_state, occupation_cossenne"
+        ]
+      ]
+    },
+    {
+      "body_index": 279,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 280,
+      "kind": "paragraph",
+      "text": "CH05-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 281,
+      "kind": "paragraph",
+      "text": "An undefended town"
+    },
+    {
+      "body_index": 282,
+      "kind": "paragraph",
+      "text": "Aimon arrives expecting resistance and finds almost no soldiers. Samiel evacuated the garrison and most combatants to prevent a battle among orchards and homes."
+    },
+    {
+      "body_index": 283,
+      "kind": "paragraph",
+      "text": "Rhoswen calls the withdrawal cowardice because it concedes strategically useful ground. Aimon is less certain."
+    },
+    {
+      "body_index": 284,
+      "kind": "paragraph",
+      "text": "State effects: rhoswen_arc_state=max(current,1)"
+    },
+    {
+      "body_index": 285,
+      "kind": "paragraph",
+      "text": "CH05-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 286,
+      "kind": "paragraph",
+      "text": "Samiel’s walk"
+    },
+    {
+      "body_index": 287,
+      "kind": "paragraph",
+      "text": "Instead of an immediate challenge, Samiel asks Aimon to walk through the town. This sequence is interactive: children play, farmers work, families pray, and monster partners help in orchards. The point is visual sameness with Civeton rather than exposition."
+    },
+    {
+      "body_index": 288,
+      "kind": "paragraph",
+      "text": "Samiel does not ask Aimon to convert or defect. He asks what Aimon believes the war is for."
+    },
+    {
+      "body_index": 289,
+      "kind": "paragraph",
+      "text": "CH05-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 290,
+      "kind": "paragraph",
+      "text": "The same story"
+    },
+    {
+      "body_index": 291,
+      "kind": "paragraph",
+      "text": "At the shrine Samiel compares creation narratives. Both religions describe darkness before first light, a radiant presence, and a moral duty to guide the lost. Names, ritual gestures and later commentaries differ; foundational images are nearly identical."
+    },
+    {
+      "body_index": 292,
+      "kind": "paragraph",
+      "text": "Samiel asks: ‘If your light teaches mercy and mine teaches mercy, what exactly are we killing one another over?’ Aimon has no answer."
+    },
+    {
+      "body_index": 293,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found+=2"
+    },
+    {
+      "body_index": 294,
+      "kind": "paragraph",
+      "text": "CH05-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 295,
+      "kind": "paragraph",
+      "text": "Two Prayers collection unlock"
+    },
+    {
+      "body_index": 296,
+      "kind": "paragraph",
+      "text": "Mirelle-style comparison UI/quest log unlocks. Previously collected fragments can now be paired. Each match yields lore text, not power rewards. The chain culminates in Botrune."
+    },
+    {
+      "body_index": 297,
+      "kind": "paragraph",
+      "text": "State effects: two_prayers_unlocked=true"
+    },
+    {
+      "body_index": 298,
+      "kind": "paragraph",
+      "text": "CH05-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 299,
+      "kind": "paragraph",
+      "text": "Samiel challenge"
+    },
+    {
+      "body_index": 300,
+      "kind": "paragraph",
+      "text": "Samiel agrees to fight Aimon alone under terms that spare the town a siege. His graceful nature-oriented team reinforces that he is not a military tyrant. He accepts the result before any monster dies if defeated decisively."
+    },
+    {
+      "body_index": 301,
+      "kind": "paragraph",
+      "text": "Battle: Leader 4 — Warden Samiel Elow"
+    },
+    {
+      "body_index": 302,
+      "kind": "paragraph",
+      "text": "CH05-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 303,
+      "kind": "paragraph",
+      "text": "Spare / Execute"
+    },
+    {
+      "body_index": 304,
+      "kind": "paragraph",
+      "text": "If spared, Samiel becomes a supervised community representative and mediates occupation disputes. If executed, Rhoswen initially calls it strategically clean but is disturbed by the town’s silent response; there is no riot, only people removing shrine flowers to make a memorial."
+    },
+    {
+      "body_index": 305,
+      "kind": "paragraph",
+      "text": "State effects: leader_04_spared set; occupation_cossenne set"
+    },
+    {
+      "body_index": 306,
+      "kind": "paragraph",
+      "text": "CH05-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 307,
+      "kind": "paragraph",
+      "text": "Kurg’s midpoint doctrine"
+    },
+    {
+      "body_index": 308,
+      "kind": "paragraph",
+      "text": "Kurg congratulates Aimon on four victories and notices he is not proud. He says doubt is normal and offers his central belief: ‘Duty is what remains when certainty fails.’ It sounds wise now. Later Aimon will recognise it as another way of outsourcing judgment."
+    },
+    {
+      "body_index": 309,
+      "kind": "paragraph",
+      "text": "State effects: kurg_doubt_state=1"
+    },
+    {
+      "body_index": 310,
+      "kind": "paragraph",
+      "text": "CHAPTER 6 — MARASEN"
+    },
+    {
+      "body_index": 311,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Marasen quarry fortress"
+        ],
+        [
+          "Narrative job",
+          "Show genuine Dawn Bloom cruelty and the difference between mercy and naivety; escalate Rhoswen’s challenge."
+        ],
+        [
+          "Boss / climax",
+          "Castellan Braska Morn"
+        ],
+        [
+          "Key flags",
+          "leader_05_spared, marasen_prisoners_freed, rhoswen_arc_state, occupation_marasen"
+        ]
+      ]
+    },
+    {
+      "body_index": 312,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 313,
+      "kind": "paragraph",
+      "text": "CH06-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 314,
+      "kind": "paragraph",
+      "text": "The quarry road"
+    },
+    {
+      "body_index": 315,
+      "kind": "paragraph",
+      "text": "Escaped labourers beg the True Light column for help. Some are Dawn Bloom believers imprisoned for criticising Castellan Braska Morn. Others are True Light captives. Braska’s cruelty is political and personal, not doctrinally exclusive."
+    },
+    {
+      "body_index": 316,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=free_quarry_prisoners"
+    },
+    {
+      "body_index": 317,
+      "kind": "paragraph",
+      "text": "CH06-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 318,
+      "kind": "paragraph",
+      "text": "The useful invasion"
+    },
+    {
+      "body_index": 319,
+      "kind": "paragraph",
+      "text": "For the first time some Dawn Bloom civilians actively welcome Aimon because they believe conquest may remove Braska. This must feel uncomfortable after previous chapters: military intervention can produce a real local good without making the crusade righteous as a whole."
+    },
+    {
+      "body_index": 320,
+      "kind": "paragraph",
+      "text": "CH06-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 321,
+      "kind": "paragraph",
+      "text": "Break the cages"
+    },
+    {
+      "body_index": 322,
+      "kind": "paragraph",
+      "text": "Optional route through quarry tunnels frees additional prisoners before the leader fight. Those NPCs later form part of the local council. If skipped, occupation forces eventually free them but some are transferred or lost in administrative confusion."
+    },
+    {
+      "body_index": 323,
+      "kind": "paragraph",
+      "text": "State effects: marasen_prisoners_freed=true"
+    },
+    {
+      "body_index": 324,
+      "kind": "paragraph",
+      "text": "CH06-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 325,
+      "kind": "paragraph",
+      "text": "Pate and Trade’s argument"
+    },
+    {
+      "body_index": 326,
+      "kind": "paragraph",
+      "text": "A former prisoner recalls Pate wanting to storm the quarry immediately after seeing labourers beaten. Trade stopped him because a frontal attack would kill prisoners. They argued badly, then worked together on a smaller rescue."
+    },
+    {
+      "body_index": 327,
+      "kind": "paragraph",
+      "text": "This gives both friends moral credit while showing their different instincts."
+    },
+    {
+      "body_index": 328,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found+=1; trade_clues_found+=1"
+    },
+    {
+      "body_index": 329,
+      "kind": "paragraph",
+      "text": "CH06-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 330,
+      "kind": "paragraph",
+      "text": "Braska battle"
+    },
+    {
+      "body_index": 331,
+      "kind": "paragraph",
+      "text": "Braska uses heavy attrition and treats his monsters as instruments. Where possible, battle barks show disregard for their survival. This is one of the few leader fights where the opponent may knowingly allow a partner to die rather than surrender early."
+    },
+    {
+      "body_index": 332,
+      "kind": "paragraph",
+      "text": "Battle: Leader 5 — Castellan Braska Morn"
+    },
+    {
+      "body_index": 333,
+      "kind": "paragraph",
+      "text": "CH06-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 334,
+      "kind": "paragraph",
+      "text": "Spare is not restoration"
+    },
+    {
+      "body_index": 335,
+      "kind": "paragraph",
+      "text": "Choice remains SPARE / EXECUTE. If spared, Braska is shackled and imprisoned; he never resumes authority. If executed, several former prisoners openly approve. The game refuses to simplify mercy into the universally kind outcome."
+    },
+    {
+      "body_index": 336,
+      "kind": "paragraph",
+      "text": "State effects: leader_05_spared set; occupation_marasen set"
+    },
+    {
+      "body_index": 337,
+      "kind": "paragraph",
+      "text": "CH06-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 338,
+      "kind": "paragraph",
+      "text": "Rhoswen confrontation I"
+    },
+    {
+      "body_index": 339,
+      "kind": "paragraph",
+      "text": "If Aimon has spared most leaders, Rhoswen accuses him of enjoying moral purity while soldiers handle the risks of prisoners and rebellions. If Aimon has executed most, she praises his resolve but asks whether he is becoming numb. Either path opens the same deeper conflict: she wants him to justify decisions, not hide behind a pattern."
+    },
+    {
+      "body_index": 340,
+      "kind": "paragraph",
+      "text": "State effects: rhoswen_arc_state=2"
+    },
+    {
+      "body_index": 341,
+      "kind": "paragraph",
+      "text": "CHAPTER 7 — BOTRUNE"
+    },
+    {
+      "body_index": 342,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Botrune abbey-library and buried pre-schism archive"
+        ],
+        [
+          "Narrative job",
+          "Move religious similarity from intuition to historical evidence; reveal that Trade was independently doubting; deepen Severin foreshadowing."
+        ],
+        [
+          "Boss / climax",
+          "Canon Mirelle Avin"
+        ],
+        [
+          "Key flags",
+          "leader_06_spared, trade_notebook_pages, religious_parallels_found, severin_sightings"
+        ]
+      ]
+    },
+    {
+      "body_index": 343,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 344,
+      "kind": "paragraph",
+      "text": "CH07-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 345,
+      "kind": "paragraph",
+      "text": "The archive under guard"
+    },
+    {
+      "body_index": 346,
+      "kind": "paragraph",
+      "text": "Botrune refuses military entry because both faiths have previously destroyed texts considered heretical. Aimon gains access by helping protect evacuees and manuscripts from opportunistic looters rather than by forcing the front gate."
+    },
+    {
+      "body_index": 347,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=reach_mirelle"
+    },
+    {
+      "body_index": 348,
+      "kind": "paragraph",
+      "text": "CH07-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 349,
+      "kind": "paragraph",
+      "text": "Mirelle’s hypothesis"
+    },
+    {
+      "body_index": 350,
+      "kind": "paragraph",
+      "text": "Canon Mirelle Avin shows pre-schism manuscripts whose radiant figure contains symbols later claimed separately by True Light and Dawn Bloom traditions. She does not know Illyr is real. Her scholarly claim is narrower: both religions likely descend from a shared source."
+    },
+    {
+      "body_index": 351,
+      "kind": "paragraph",
+      "text": "Aimon resists not because the evidence is weak but because accepting it threatens the moral framework he has used to understand every battle so far."
+    },
+    {
+      "body_index": 352,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found+=2"
+    },
+    {
+      "body_index": 353,
+      "kind": "paragraph",
+      "text": "CH07-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 354,
+      "kind": "paragraph",
+      "text": "Trade was here"
+    },
+    {
+      "body_index": 355,
+      "kind": "paragraph",
+      "text": "Mirelle recognises Trade’s handwriting in copied marginal notes. He asked about contradictory translations, repeatedly underlined parallel passages and left a page of questions behind."
+    },
+    {
+      "body_index": 356,
+      "kind": "paragraph",
+      "text": "Aimon learns for the first time that Trade’s certainty had begun cracking before his death."
+    },
+    {
+      "body_index": 357,
+      "kind": "paragraph",
+      "text": "State effects: trade_clues_found+=1; trade_notebook_pages add AVIN_PAGE"
+    },
+    {
+      "body_index": 358,
+      "kind": "paragraph",
+      "text": "CH07-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 359,
+      "kind": "paragraph",
+      "text": "Two Prayers completion stage"
+    },
+    {
+      "body_index": 360,
+      "kind": "paragraph",
+      "text": "Optional archive puzzle pairs previously collected verses. High completion reveals that several supposed doctrinal opposites are later commentary rather than differences in foundational text. Reward is access to lore rooms and altered dialogue with Aeric/Mirelle, not combat power."
+    },
+    {
+      "body_index": 361,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found variable"
+    },
+    {
+      "body_index": 362,
+      "kind": "paragraph",
+      "text": "CH07-O02  |  OPTIONAL"
+    },
+    {
+      "body_index": 363,
+      "kind": "paragraph",
+      "text": "The man with ink-stained fingers"
+    },
+    {
+      "body_index": 364,
+      "kind": "paragraph",
+      "text": "Optional Severin sighting: a thin traveller is reading in a closed gallery that should be inaccessible. When approached, he comments on a line about death being ‘a country no map survives’ and leaves before guards arrive. He is not named."
+    },
+    {
+      "body_index": 365,
+      "kind": "paragraph",
+      "text": "State effects: severin_sightings+=1"
+    },
+    {
+      "body_index": 366,
+      "kind": "paragraph",
+      "text": "CH07-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 367,
+      "kind": "paragraph",
+      "text": "Mirelle’s challenge"
+    },
+    {
+      "body_index": 368,
+      "kind": "paragraph",
+      "text": "Mirelle refuses to surrender the archive to an army without testing whether Aimon will preserve it. The battle is framed as custody of knowledge rather than sacred combat. Her team is technical and control-oriented."
+    },
+    {
+      "body_index": 369,
+      "kind": "paragraph",
+      "text": "Battle: Leader 6 — Canon Mirelle Avin"
+    },
+    {
+      "body_index": 370,
+      "kind": "paragraph",
+      "text": "CH07-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 371,
+      "kind": "paragraph",
+      "text": "Spare / Execute"
+    },
+    {
+      "body_index": 372,
+      "kind": "paragraph",
+      "text": "If spared, Mirelle remains archivist under guarantees that neither faction destroys texts. If executed, both Dawn Bloom mourners and some True Light scholars condemn the loss; Kurg orders the archive protected anyway, showing institutional complexity."
+    },
+    {
+      "body_index": 373,
+      "kind": "paragraph",
+      "text": "State effects: leader_06_spared set; occupation_botrune set; aeric_arc_state=max(current,2)"
+    },
+    {
+      "body_index": 374,
+      "kind": "paragraph",
+      "text": "CHAPTER 8 — CAYFEN"
+    },
+    {
+      "body_index": 375,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Cayfen war-town, burned approaches and field hospitals"
+        ],
+        [
+          "Narrative job",
+          "Strip away romantic war imagery; present the security dilemma; point directly toward Emmara Mill; resolve Rhoswen’s central duel."
+        ],
+        [
+          "Boss / climax",
+          "Marshal Oren Talv"
+        ],
+        [
+          "Key flags",
+          "leader_07_spared, rhoswen_arc_state, mill_foreshadow_seen, occupation_cayfen"
+        ]
+      ]
+    },
+    {
+      "body_index": 376,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 377,
+      "kind": "paragraph",
+      "text": "CH08-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 378,
+      "kind": "paragraph",
+      "text": "No clean battlefield"
+    },
+    {
+      "body_index": 379,
+      "kind": "paragraph",
+      "text": "The approach crosses burned fields, abandoned monster nests and mixed graves. Environmental storytelling should avoid spectacle: broken carts, field surgery, soldiers too tired to cheer."
+    },
+    {
+      "body_index": 380,
+      "kind": "paragraph",
+      "text": "True Light and Dawn Bloom wounded are sometimes treated in adjacent tents because medics ran out of segregated space."
+    },
+    {
+      "body_index": 381,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=reach_oren_lines"
+    },
+    {
+      "body_index": 382,
+      "kind": "paragraph",
+      "text": "CH08-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 383,
+      "kind": "paragraph",
+      "text": "Oren’s dilemma"
+    },
+    {
+      "body_index": 384,
+      "kind": "paragraph",
+      "text": "Marshal Oren Talv explains that he no longer believes victory will solve anything, but if he disarms while the True Light advances his people die. True Light officers say essentially the same thing about stopping. The war continues partly because neither side trusts the other to stop first."
+    },
+    {
+      "body_index": 385,
+      "kind": "paragraph",
+      "text": "CH08-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 386,
+      "kind": "paragraph",
+      "text": "Emmara Mill named"
+    },
+    {
+      "body_index": 387,
+      "kind": "paragraph",
+      "text": "Oren remembers Pate and Trade. They were transferred onward to a forward unit near Emmara Mill. He does not know their fate. This is the first mandatory spoken use of the mill’s name."
+    },
+    {
+      "body_index": 388,
+      "kind": "paragraph",
+      "text": "If the player saw earlier requisition references, Aimon can note that the mill sounded minor. Oren agrees: ‘It was.’"
+    },
+    {
+      "body_index": 389,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found+=1; trade_clues_found+=1; mill_foreshadow_seen add MILL_NAME"
+    },
+    {
+      "body_index": 390,
+      "kind": "paragraph",
+      "text": "CH08-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 391,
+      "kind": "paragraph",
+      "text": "The ceasefire hour"
+    },
+    {
+      "body_index": 392,
+      "kind": "paragraph",
+      "text": "Optional quest: negotiate a one-hour local ceasefire so both sides can retrieve dead monsters and soldiers from a contested field. Rhoswen initially objects on tactical grounds; participating becomes a key input to her arc."
+    },
+    {
+      "body_index": 393,
+      "kind": "paragraph",
+      "text": "State effects: rhoswen_ceasefire_seen=true; monster_memorial_count+=1"
+    },
+    {
+      "body_index": 394,
+      "kind": "paragraph",
+      "text": "CH08-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 395,
+      "kind": "paragraph",
+      "text": "Rhoswen duel"
+    },
+    {
+      "body_index": 396,
+      "kind": "paragraph",
+      "text": "Rhoswen privately challenges Aimon under non-lethal surrender rules. She believes his growing hesitation may endanger others. Dialogue adapts to his prior choices so she attacks inconsistency rather than mercy itself."
+    },
+    {
+      "body_index": 397,
+      "kind": "paragraph",
+      "text": "After defeat she admits that Aimon is not weak. If the ceasefire quest was completed, she also admits she watched enemy soldiers carry the same kinds of bodies they did."
+    },
+    {
+      "body_index": 398,
+      "kind": "paragraph",
+      "text": "Battle: Rival battle — Dame Rhoswen Vey"
+    },
+    {
+      "body_index": 399,
+      "kind": "paragraph",
+      "text": "State effects: rhoswen_arc_state=3"
+    },
+    {
+      "body_index": 400,
+      "kind": "paragraph",
+      "text": "CH08-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 401,
+      "kind": "paragraph",
+      "text": "Oren battle"
+    },
+    {
+      "body_index": 402,
+      "kind": "paragraph",
+      "text": "Oren’s team is siege-minded and efficient. He is one of the hardest mortal leaders but surrenders as soon as defeat is strategically clear, explicitly refusing to kill partners for symbolic defiance."
+    },
+    {
+      "body_index": 403,
+      "kind": "paragraph",
+      "text": "Battle: Leader 7 — Marshal Oren Talv"
+    },
+    {
+      "body_index": 404,
+      "kind": "paragraph",
+      "text": "CH08-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 405,
+      "kind": "paragraph",
+      "text": "Spare / Execute"
+    },
+    {
+      "body_index": 406,
+      "kind": "paragraph",
+      "text": "If spared, Oren becomes central to local ceasefire enforcement. If executed, his officers decentralise and skirmishing worsens temporarily because nobody can command a coherent withdrawal. Either result has understandable consequences."
+    },
+    {
+      "body_index": 407,
+      "kind": "paragraph",
+      "text": "State effects: leader_07_spared set; occupation_cayfen set"
+    },
+    {
+      "body_index": 408,
+      "kind": "paragraph",
+      "text": "CHAPTER 9 — RAMELLE — THE HOLY LAND"
+    },
+    {
+      "body_index": 409,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act II — The Crusade"
+        ],
+        [
+          "Primary location",
+          "Ramelle holy city, sacred precinct and Emmara Mill aftermath"
+        ],
+        [
+          "Narrative job",
+          "Deliver the mortal-world climax, destroy the heroic martyr narrative, and convert Aimon’s goal from “catch up” to “bring them back.”"
+        ],
+        [
+          "Boss / climax",
+          "Hierophant Lucain Serault"
+        ],
+        [
+          "Key flags",
+          "leader_08_spared, pate_trade_confirmed_dead, trade_notebook_pages, kurg_doubt_state"
+        ]
+      ]
+    },
+    {
+      "body_index": 410,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 411,
+      "kind": "paragraph",
+      "text": "CH09-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 412,
+      "kind": "paragraph",
+      "text": "The Holy Land looks ordinary"
+    },
+    {
+      "body_index": 413,
+      "kind": "paragraph",
+      "text": "Crossing the sacred boundary reveals farms, children, markets and working families rather than a mystical realm. Architecture is beautiful but lived-in. The banality is the point: both sides projected cosmic meaning onto other people’s homes."
+    },
+    {
+      "body_index": 414,
+      "kind": "paragraph",
+      "text": "State effects: holy_land_entered=true"
+    },
+    {
+      "body_index": 415,
+      "kind": "paragraph",
+      "text": "CH09-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 416,
+      "kind": "paragraph",
+      "text": "Ramelle under strain"
+    },
+    {
+      "body_index": 417,
+      "kind": "paragraph",
+      "text": "The city expects siege. Lucain has rationed supplies and armed defenders but also opened temples as shelters. Dawn Bloom zealots demand martyrdom; pragmatic civilians demand negotiation. Again, the faction contains internal moral diversity."
+    },
+    {
+      "body_index": 418,
+      "kind": "paragraph",
+      "text": "State effects: main_objective=reach_lucain"
+    },
+    {
+      "body_index": 419,
+      "kind": "paragraph",
+      "text": "CH09-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 420,
+      "kind": "paragraph",
+      "text": "Last pre-reveal mill clue"
+    },
+    {
+      "body_index": 421,
+      "kind": "paragraph",
+      "text": "A logistics office contains an outdated map showing Emmara Mill as a reserve grain point. A newer annotation marks the crossing washed out and grain moved elsewhere. The cancellation notice was never attached to the earlier attack order."
+    },
+    {
+      "body_index": 422,
+      "kind": "paragraph",
+      "text": "State effects: mill_foreshadow_seen add MILL_CANCELLED"
+    },
+    {
+      "body_index": 423,
+      "kind": "paragraph",
+      "text": "CH09-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 424,
+      "kind": "paragraph",
+      "text": "Lucain’s audience"
+    },
+    {
+      "body_index": 425,
+      "kind": "paragraph",
+      "text": "Lucain does not recognise Aimon personally but recognises Pate and Trade’s names. His reaction is the first unambiguous signal that something is wrong. He refuses to explain before the city’s surrender is settled because he will not use grief as leverage."
+    },
+    {
+      "body_index": 426,
+      "kind": "paragraph",
+      "text": "CH09-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 427,
+      "kind": "paragraph",
+      "text": "Final mortal leader battle"
+    },
+    {
+      "body_index": 428,
+      "kind": "paragraph",
+      "text": "Lucain’s team is ceremonial, powerful and endgame-level. The battle is the climax of the conventional monster-RPG conquest structure. On defeat he accepts that Ramelle cannot be held through a formal leader system without catastrophic civilian loss."
+    },
+    {
+      "body_index": 429,
+      "kind": "paragraph",
+      "text": "Battle: Leader 8 — Hierophant Lucain Serault"
+    },
+    {
+      "body_index": 430,
+      "kind": "paragraph",
+      "text": "CH09-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 431,
+      "kind": "paragraph",
+      "text": "Spare / Execute"
+    },
+    {
+      "body_index": 432,
+      "kind": "paragraph",
+      "text": "The choice remains available even here. If spared, Lucain personally delivers the truth. If executed, Mirelle/Yselle/Oren or a senior archive official delivers records after the sentence, making clear that executing the messenger cannot remove what happened."
+    },
+    {
+      "body_index": 433,
+      "kind": "paragraph",
+      "text": "The death choice must never block the main plot."
+    },
+    {
+      "body_index": 434,
+      "kind": "paragraph",
+      "text": "State effects: leader_08_spared set; occupation_ramelle set"
+    },
+    {
+      "body_index": 435,
+      "kind": "paragraph",
+      "text": "CH09-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 436,
+      "kind": "paragraph",
+      "text": "Emmara Mill"
+    },
+    {
+      "body_index": 437,
+      "kind": "paragraph",
+      "text": "Aimon is taken to the abandoned mill or shown the recovered field report and then allowed to visit the site. Pate and Trade were part of a small True Light unit ordered to take it. Old intelligence said the mill stored grain and supported a useful crossing. The grain had moved; the crossing was unusable; the cancellation never reached the assault unit."
+    },
+    {
+      "body_index": 438,
+      "kind": "paragraph",
+      "text": "Dawn Bloom defenders fought because an enemy attack convinced them the position must matter. Both groups died defending a significance neither actually understood. The site was abandoned soon after."
+    },
+    {
+      "body_index": 439,
+      "kind": "paragraph",
+      "text": "State effects: pate_trade_confirmed_dead=true; kurg_doubt_state=2"
+    },
+    {
+      "body_index": 440,
+      "kind": "paragraph",
+      "text": "CH09-E07  |  MANDATORY"
+    },
+    {
+      "body_index": 441,
+      "kind": "paragraph",
+      "text": "Personal effects"
+    },
+    {
+      "body_index": 442,
+      "kind": "paragraph",
+      "text": "Aimon receives Pate’s braided friendship cord and Trade’s field notebook. The notebook contains strategic doubts and questions from Botrune. Its final completed entry is painfully mundane: Pate thinks the mill job will be quick; Trade still doubts the objective but will not let Pate go alone."
+    },
+    {
+      "body_index": 443,
+      "kind": "paragraph",
+      "text": "There is no grand final speech. Their deaths remain small, human and preventable."
+    },
+    {
+      "body_index": 444,
+      "kind": "paragraph",
+      "text": "State effects: trade_notebook_pages add FINAL_PAGE"
+    },
+    {
+      "body_index": 445,
+      "kind": "paragraph",
+      "text": "CH09-E08  |  MANDATORY"
+    },
+    {
+      "body_index": 446,
+      "kind": "paragraph",
+      "text": "No martyrdom"
+    },
+    {
+      "body_index": 447,
+      "kind": "paragraph",
+      "text": "Aeric offers prayer. Military officers speak of honouring the fallen. Someone uses the word ‘martyrs’. Aimon finally rejects the language. He does not want statues, titles or meaning imposed after the fact. He wants Pate and Trade."
+    },
+    {
+      "body_index": 448,
+      "kind": "paragraph",
+      "text": "The conventional crusade arc ends here. Aimon’s new objective is impossible by normal world rules."
+    },
+    {
+      "body_index": 449,
+      "kind": "paragraph",
+      "text": "State effects: chapter_09_complete=true"
+    },
+    {
+      "body_index": 450,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 451,
+      "kind": "paragraph",
+      "text": "ACT III — REFUSAL"
+    },
+    {
+      "body_index": 452,
+      "kind": "paragraph",
+      "text": "This short act lets grief breathe before the supernatural pivot. Aimon tries normal responses first. Severin’s offer therefore feels like a genuine violation of the world rather than an obvious next quest marker."
+    },
+    {
+      "body_index": 453,
+      "kind": "paragraph",
+      "text": "CHAPTER 10 — THE DEAD STAY DEAD"
+    },
+    {
+      "body_index": 454,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act III — Refusal"
+        ],
+        [
+          "Primary location",
+          "Ramelle, Emmara Mill, old catacombs"
+        ],
+        [
+          "Narrative job",
+          "Process grief, confront Kurg, advance Aeric, reveal Severin, establish the metaphysical rescue rules and begin descent."
+        ],
+        [
+          "Boss / climax",
+          "None"
+        ],
+        [
+          "Key flags",
+          "aeric_arc_state, kurg_doubt_state, severin_sightings, descent_unlocked"
+        ]
+      ]
+    },
+    {
+      "body_index": 455,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 456,
+      "kind": "paragraph",
+      "text": "CH10-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 457,
+      "kind": "paragraph",
+      "text": "Funeral rites fail"
+    },
+    {
+      "body_index": 458,
+      "kind": "paragraph",
+      "text": "Aimon witnesses both True Light and Dawn Bloom funerary traditions. They use different names and gestures but promise strikingly similar rest, reunion and light. Neither offers literal return."
+    },
+    {
+      "body_index": 459,
+      "kind": "paragraph",
+      "text": "The player can choose whether Aimon participates, watches or leaves; this changes flavour dialogue only."
+    },
+    {
+      "body_index": 460,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found+=1"
+    },
+    {
+      "body_index": 461,
+      "kind": "paragraph",
+      "text": "CH10-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 462,
+      "kind": "paragraph",
+      "text": "Kurg reads the order"
+    },
+    {
+      "body_index": 463,
+      "kind": "paragraph",
+      "text": "Kurg arrives or is summoned. He examines the Emmara Mill paperwork and confirms the assault arose from stale intelligence within the broader campaign he commanded. He did not personally choose Pate and Trade, but refuses to claim that absolves him."
+    },
+    {
+      "body_index": 464,
+      "kind": "paragraph",
+      "text": "Aimon accuses commanders of claiming responsibility when orders succeed and hiding inside systems when they fail. Kurg has no clean response."
+    },
+    {
+      "body_index": 465,
+      "kind": "paragraph",
+      "text": "State effects: kurg_doubt_state=3"
+    },
+    {
+      "body_index": 466,
+      "kind": "paragraph",
+      "text": "CH10-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 467,
+      "kind": "paragraph",
+      "text": "Aeric cannot promise"
+    },
+    {
+      "body_index": 468,
+      "kind": "paragraph",
+      "text": "Aeric begins with orthodox reassurance, stops, and admits he no longer knows what lies beyond death. For the first time he refuses to pretend certainty simply because his position expects it."
+    },
+    {
+      "body_index": 469,
+      "kind": "paragraph",
+      "text": "This is progress, not loss of faith."
+    },
+    {
+      "body_index": 470,
+      "kind": "paragraph",
+      "text": "State effects: aeric_arc_state=3"
+    },
+    {
+      "body_index": 471,
+      "kind": "paragraph",
+      "text": "CH10-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 472,
+      "kind": "paragraph",
+      "text": "Emmara Mill memorial"
+    },
+    {
+      "body_index": 473,
+      "kind": "paragraph",
+      "text": "Optional: Aimon can return alone and place Pate’s childhood wooden figure, a copy of Trade’s note, or nothing at the site. The choice changes only later dialogue and one epilogue prop."
+    },
+    {
+      "body_index": 474,
+      "kind": "paragraph",
+      "text": "State effects: mill_memorial_choice set"
+    },
+    {
+      "body_index": 475,
+      "kind": "paragraph",
+      "text": "CH10-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 476,
+      "kind": "paragraph",
+      "text": "Severin steps out of the background"
+    },
+    {
+      "body_index": 477,
+      "kind": "paragraph",
+      "text": "Severin Vale approaches Aimon by name. If optional sightings were found, Aimon recognises him; otherwise this is the first formal meeting. Severin knows far too much about death and asks whether Aimon wants comfort or directions."
+    },
+    {
+      "body_index": 478,
+      "kind": "paragraph",
+      "text": "State effects: severin_revealed=true"
+    },
+    {
+      "body_index": 479,
+      "kind": "paragraph",
+      "text": "CH10-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 480,
+      "kind": "paragraph",
+      "text": "The rule of retrieval"
+    },
+    {
+      "body_index": 481,
+      "kind": "paragraph",
+      "text": "Severin explains that death is initially a transition of identity into the underworld. For a limited period, a coherent human self remains retrievable. Eventually identity passes beyond a boundary that cannot be reversed. Pate and Trade died recently enough that a window remains."
+    },
+    {
+      "body_index": 482,
+      "kind": "paragraph",
+      "text": "This is not general resurrection. Success requires physically entering the underworld, reaching the held souls, overcoming its ruler and returning before dissolution."
+    },
+    {
+      "body_index": 483,
+      "kind": "paragraph",
+      "text": "State effects: rescue_window_explained=true"
+    },
+    {
+      "body_index": 484,
+      "kind": "paragraph",
+      "text": "CH10-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 485,
+      "kind": "paragraph",
+      "text": "Aeric’s permission is irrelevant"
+    },
+    {
+      "body_index": 486,
+      "kind": "paragraph",
+      "text": "Aeric initially calls the plan sacrilege, then catches himself. He tells Aimon he cannot claim to know that. He asks only whether Aimon understands that wanting something desperately does not automatically make it right. Aimon answers that he knows — and is going anyway."
+    },
+    {
+      "body_index": 487,
+      "kind": "paragraph",
+      "text": "State effects: aeric_arc_state=4"
+    },
+    {
+      "body_index": 488,
+      "kind": "paragraph",
+      "text": "CH10-E07  |  MANDATORY"
+    },
+    {
+      "body_index": 489,
+      "kind": "paragraph",
+      "text": "Entrance below"
+    },
+    {
+      "body_index": 490,
+      "kind": "paragraph",
+      "text": "Severin leads Aimon to pre-religious catacombs beneath the Holy Land. Carvings predate both True Light and Dawn Bloom iconography. The descent point reacts to Severin in a way he does not explain."
+    },
+    {
+      "body_index": 491,
+      "kind": "paragraph",
+      "text": "At the threshold he states the one practical rule: if Aimon dies below, there is nobody coming after him."
+    },
+    {
+      "body_index": 492,
+      "kind": "paragraph",
+      "text": "State effects: descent_unlocked=true; chapter_10_complete=true"
+    },
+    {
+      "body_index": 493,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 494,
+      "kind": "paragraph",
+      "text": "ACT IV — DESCENT"
+    },
+    {
+      "body_index": 495,
+      "kind": "paragraph",
+      "text": "The Nine Circles are human names for regions of the underworld. They are not divinely designed punishments for a Christian-style list of sins. Humans imposed moral categories on natural/metaphysical processes they did not understand. Each chapter nonetheless mirrors an emotional or institutional problem Aimon has encountered, because human dead reshape local space through memory and fixation."
+    },
+    {
+      "body_index": 496,
+      "kind": "paragraph",
+      "text": "CHAPTER 11 — CIRCLE I — THE THRESHOLD"
+    },
+    {
+      "body_index": 497,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The Pale Gate"
+        ],
+        [
+          "Narrative job",
+          "Confront the newly dead and establish underworld neutrality."
+        ],
+        [
+          "Boss / climax",
+          "Veyr, Keeper of Names"
+        ],
+        [
+          "Key flags",
+          "threshold_clear, hell_leader_encounters"
+        ]
+      ]
+    },
+    {
+      "body_index": 498,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 499,
+      "kind": "paragraph",
+      "text": "CH11-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 500,
+      "kind": "paragraph",
+      "text": "The newly dead"
+    },
+    {
+      "body_index": 501,
+      "kind": "paragraph",
+      "text": "The Threshold resembles an immense transit space shaped by fragments of roads, doorways and memories. Newly dead souls often do not understand their state. True Light and Dawn Bloom dead stand in the same queues, argue, pray and search for relatives."
+    },
+    {
+      "body_index": 502,
+      "kind": "paragraph",
+      "text": "No visible cosmic sorting separates them."
+    },
+    {
+      "body_index": 503,
+      "kind": "paragraph",
+      "text": "CH11-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 504,
+      "kind": "paragraph",
+      "text": "First executed leader echo"
+    },
+    {
+      "body_index": 505,
+      "kind": "paragraph",
+      "text": "If any earlier leader was executed, one eligible spirit may appear here. The encounter is not automatically a revenge battle. Aldren might ask whether Dorelem survived; Yselle might ask about the hospice. Their concerns continue beyond their deaths."
+    },
+    {
+      "body_index": 506,
+      "kind": "paragraph",
+      "text": "If no leader died, use an ordinary trainer Aimon remembers from the campaign."
+    },
+    {
+      "body_index": 507,
+      "kind": "paragraph",
+      "text": "State effects: hell_leader_encounters update"
+    },
+    {
+      "body_index": 508,
+      "kind": "paragraph",
+      "text": "CH11-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 509,
+      "kind": "paragraph",
+      "text": "Severin names nothing"
+    },
+    {
+      "body_index": 510,
+      "kind": "paragraph",
+      "text": "Severin explains that humans call this ‘the first circle’, but Nharos’s realm uses no such moral taxonomy. The dead brought their own metaphors with them and later living religions treated those metaphors as geography."
+    },
+    {
+      "body_index": 511,
+      "kind": "paragraph",
+      "text": "CH11-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 512,
+      "kind": "paragraph",
+      "text": "Return a name"
+    },
+    {
+      "body_index": 513,
+      "kind": "paragraph",
+      "text": "Optional quest: help a confused soul remember the name of their monster partner by searching memory-fragments. The partner is dead too, but their reunion is quiet rather than miraculous. This reinforces individual attachment to monsters."
+    },
+    {
+      "body_index": 514,
+      "kind": "paragraph",
+      "text": "State effects: monster_memorial_count+=1"
+    },
+    {
+      "body_index": 515,
+      "kind": "paragraph",
+      "text": "CH11-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 516,
+      "kind": "paragraph",
+      "text": "Veyr"
+    },
+    {
+      "body_index": 517,
+      "kind": "paragraph",
+      "text": "Veyr is an ancient functionary that records coherent identities long enough for onward passage. It attacks because Severin and Aimon are moving against flow. Its motives are administrative, not evil."
+    },
+    {
+      "body_index": 518,
+      "kind": "paragraph",
+      "text": "Defeating Veyr opens the deeper route and begins destabilising the underworld’s normal hierarchy."
+    },
+    {
+      "body_index": 519,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 1 — Veyr, Keeper of Names"
+    },
+    {
+      "body_index": 520,
+      "kind": "paragraph",
+      "text": "State effects: threshold_clear=true"
+    },
+    {
+      "body_index": 521,
+      "kind": "paragraph",
+      "text": "CHAPTER 12 — CIRCLE II — WANT"
+    },
+    {
+      "body_index": 522,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The House of Unfinished Things"
+        ],
+        [
+          "Narrative job",
+          "Interrogate desire and attachment without condemning love."
+        ],
+        [
+          "Boss / climax",
+          "Ossael, the Gatherer"
+        ],
+        [
+          "Key flags",
+          "want_clear"
+        ]
+      ]
+    },
+    {
+      "body_index": 523,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 524,
+      "kind": "paragraph",
+      "text": "CH12-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 525,
+      "kind": "paragraph",
+      "text": "Rooms people refuse to leave"
+    },
+    {
+      "body_index": 526,
+      "kind": "paragraph",
+      "text": "The region manifests unfinished desires: homes, possessions, lovers, titles, battles not won. Souls repeat attempts to recover what they believe will make death tolerable."
+    },
+    {
+      "body_index": 527,
+      "kind": "paragraph",
+      "text": "Aimon sees petty wants beside profound ones, preventing a simplistic ‘desire is bad’ message."
+    },
+    {
+      "body_index": 528,
+      "kind": "paragraph",
+      "text": "CH12-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 529,
+      "kind": "paragraph",
+      "text": "Severin’s question"
+    },
+    {
+      "body_index": 530,
+      "kind": "paragraph",
+      "text": "Severin asks whether taking Pate and Trade back is love or merely Aimon refusing to accept loss. Aimon cannot prove his answer. He says he will ask Pate and Trade themselves if he reaches them."
+    },
+    {
+      "body_index": 531,
+      "kind": "paragraph",
+      "text": "This subtly establishes that their agency will matter after recovery."
+    },
+    {
+      "body_index": 532,
+      "kind": "paragraph",
+      "text": "State effects: severin_optional_dialogue+=1"
+    },
+    {
+      "body_index": 533,
+      "kind": "paragraph",
+      "text": "CH12-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 534,
+      "kind": "paragraph",
+      "text": "The soldier’s medal"
+    },
+    {
+      "body_index": 535,
+      "kind": "paragraph",
+      "text": "Optional soul begs Aimon to recover a medal that represents a supposedly glorious death. On finding the memory attached to it, Aimon learns the soldier died frightened and accidentally. The soul can choose to keep or discard the medal; Aimon does not decide for them."
+    },
+    {
+      "body_index": 536,
+      "kind": "paragraph",
+      "text": "CH12-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 537,
+      "kind": "paragraph",
+      "text": "Ossael"
+    },
+    {
+      "body_index": 538,
+      "kind": "paragraph",
+      "text": "Ossael has accumulated fragments people would not release. Its boss arena is cluttered with crowns, toys, weapons and letters of equal metaphysical weight because value belongs to the person who wanted them."
+    },
+    {
+      "body_index": 539,
+      "kind": "paragraph",
+      "text": "Victory breaks the hoard-path and opens the next circle."
+    },
+    {
+      "body_index": 540,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 2 — Ossael, the Gatherer"
+    },
+    {
+      "body_index": 541,
+      "kind": "paragraph",
+      "text": "State effects: want_clear=true"
+    },
+    {
+      "body_index": 542,
+      "kind": "paragraph",
+      "text": "CHAPTER 13 — CIRCLE III — WRATH"
+    },
+    {
+      "body_index": 543,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The Red Field"
+        ],
+        [
+          "Narrative job",
+          "Make endless factional hatred literal; let Aimon witness war continuing after reasons are gone."
+        ],
+        [
+          "Boss / climax",
+          "Mordren, Drum of War"
+        ],
+        [
+          "Key flags",
+          "wrath_clear"
+        ]
+      ]
+    },
+    {
+      "body_index": 544,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 545,
+      "kind": "paragraph",
+      "text": "CH13-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 546,
+      "kind": "paragraph",
+      "text": "The battle that forgot itself"
+    },
+    {
+      "body_index": 547,
+      "kind": "paragraph",
+      "text": "Dead soldiers fight across a shifting battlefield. Many remember which colour they wear but not the original dispute. True Light and Dawn Bloom slogans have collapsed into fragments shouted by habit."
+    },
+    {
+      "body_index": 548,
+      "kind": "paragraph",
+      "text": "Some combatants are centuries old and use obsolete names for the same faiths."
+    },
+    {
+      "body_index": 549,
+      "kind": "paragraph",
+      "text": "CH13-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 550,
+      "kind": "paragraph",
+      "text": "Break the loop"
+    },
+    {
+      "body_index": 551,
+      "kind": "paragraph",
+      "text": "Progress requires refusing the obvious route of defeating every soldier. Aimon must destroy or silence battlefield anchors that keep recreating the same charge. This mechanically reinforces that winning another fight cannot end an endlessly self-renewing war."
+    },
+    {
+      "body_index": 552,
+      "kind": "paragraph",
+      "text": "CH13-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 553,
+      "kind": "paragraph",
+      "text": "Two enemies carrying one body"
+    },
+    {
+      "body_index": 554,
+      "kind": "paragraph",
+      "text": "Optional scene: two dead soldiers from opposing sides discover they are both trying to carry the same fallen medic who treated them. They cooperate without theological resolution."
+    },
+    {
+      "body_index": 555,
+      "kind": "paragraph",
+      "text": "CH13-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 556,
+      "kind": "paragraph",
+      "text": "Mordren"
+    },
+    {
+      "body_index": 557,
+      "kind": "paragraph",
+      "text": "Mordren is not the cause of wrath; it amplifies the rhythmic repetition of conflict. Its battle uses momentum, forced rematches or reinforcements until the player disrupts its pattern."
+    },
+    {
+      "body_index": 558,
+      "kind": "paragraph",
+      "text": "Severin is visibly pleased by Aimon learning to attack the system sustaining the fight rather than the fighters themselves."
+    },
+    {
+      "body_index": 559,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 3 — Mordren, Drum of War"
+    },
+    {
+      "body_index": 560,
+      "kind": "paragraph",
+      "text": "State effects: wrath_clear=true"
+    },
+    {
+      "body_index": 561,
+      "kind": "paragraph",
+      "text": "CHAPTER 14 — CIRCLE IV — DOMINION"
+    },
+    {
+      "body_index": 562,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The Broken Court"
+        ],
+        [
+          "Narrative job",
+          "Examine authority and responsibility; foreshadow Severin’s interest in ruling."
+        ],
+        [
+          "Boss / climax",
+          "Caelor, the Last Magistrate"
+        ],
+        [
+          "Key flags",
+          "dominion_clear, severin_optional_dialogue"
+        ]
+      ]
+    },
+    {
+      "body_index": 563,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 564,
+      "kind": "paragraph",
+      "text": "CH14-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 565,
+      "kind": "paragraph",
+      "text": "Dead kings still giving orders"
+    },
+    {
+      "body_index": 566,
+      "kind": "paragraph",
+      "text": "Palaces, courts and command tents overlap. Dead rulers issue orders to dead subjects who often obey simply because they always did. Some subjects quietly leave when Aimon points out that punishment no longer has force."
+    },
+    {
+      "body_index": 567,
+      "kind": "paragraph",
+      "text": "The visual joke is dark: authority survives because everyone keeps performing it."
+    },
+    {
+      "body_index": 568,
+      "kind": "paragraph",
+      "text": "CH14-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 569,
+      "kind": "paragraph",
+      "text": "Kurg’s shadow"
+    },
+    {
+      "body_index": 570,
+      "kind": "paragraph",
+      "text": "A memory-echo recreates Kurg’s phrase: ‘Duty is what remains when certainty fails.’ Aimon now answers the idea directly: duty cannot replace judgment; someone still chooses what duty is owed to."
+    },
+    {
+      "body_index": 571,
+      "kind": "paragraph",
+      "text": "This is Aimon articulating his moral development without requiring Kurg to be present."
+    },
+    {
+      "body_index": 572,
+      "kind": "paragraph",
+      "text": "CH14-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 573,
+      "kind": "paragraph",
+      "text": "The empty chair"
+    },
+    {
+      "body_index": 574,
+      "kind": "paragraph",
+      "text": "Optional dialogue finds Severin sitting briefly on an abandoned throne ‘to see whether it improves the view.’ He dismisses it as a joke, but the composition is deliberate foreshadowing."
+    },
+    {
+      "body_index": 575,
+      "kind": "paragraph",
+      "text": "State effects: severin_optional_dialogue+=1"
+    },
+    {
+      "body_index": 576,
+      "kind": "paragraph",
+      "text": "CH14-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 577,
+      "kind": "paragraph",
+      "text": "Caelor"
+    },
+    {
+      "body_index": 578,
+      "kind": "paragraph",
+      "text": "Caelor attempts to bind Aimon into formal rules and hierarchies during battle. The encounter is about breaking imposed command structures and choosing actions outside expected sequences."
+    },
+    {
+      "body_index": 579,
+      "kind": "paragraph",
+      "text": "Defeat causes subordinate shades simply to stop obeying."
+    },
+    {
+      "body_index": 580,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 4 — Caelor, the Last Magistrate"
+    },
+    {
+      "body_index": 581,
+      "kind": "paragraph",
+      "text": "State effects: dominion_clear=true"
+    },
+    {
+      "body_index": 582,
+      "kind": "paragraph",
+      "text": "CHAPTER 15 — CIRCLE V — DOGMA"
+    },
+    {
+      "body_index": 583,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The Twin Heavens"
+        ],
+        [
+          "Narrative job",
+          "Literalise human-made religious walls and advance the same-god mystery immediately before the finale."
+        ],
+        [
+          "Boss / climax",
+          "Asterion, Voice of Certainty"
+        ],
+        [
+          "Key flags",
+          "dogma_clear, religious_parallels_found"
+        ]
+      ]
+    },
+    {
+      "body_index": 584,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 585,
+      "kind": "paragraph",
+      "text": "CH15-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 586,
+      "kind": "paragraph",
+      "text": "Two heavens beside each other"
+    },
+    {
+      "body_index": 587,
+      "kind": "paragraph",
+      "text": "True Light dead have built a radiant imitation heaven. Dawn Bloom dead have built another beyond a wall. Both insist the other side is a false afterlife. The environments use almost identical architecture with different symbols."
+    },
+    {
+      "body_index": 588,
+      "kind": "paragraph",
+      "text": "No cosmic force built the wall. The dead did."
+    },
+    {
+      "body_index": 589,
+      "kind": "paragraph",
+      "text": "CH15-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 590,
+      "kind": "paragraph",
+      "text": "The shared hymn"
+    },
+    {
+      "body_index": 591,
+      "kind": "paragraph",
+      "text": "A musical/ritual puzzle reveals that two supposedly different hymns share the same melody and most of the same structure. Old souls remember a pre-schism version without either modern name."
+    },
+    {
+      "body_index": 592,
+      "kind": "paragraph",
+      "text": "State effects: religious_parallels_found+=1"
+    },
+    {
+      "body_index": 593,
+      "kind": "paragraph",
+      "text": "CH15-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 594,
+      "kind": "paragraph",
+      "text": "Executed clergy confrontation"
+    },
+    {
+      "body_index": 595,
+      "kind": "paragraph",
+      "text": "If a religious leader was executed, they may appear here and respond according to their personality rather than as a generic damned spirit. Mirelle would be fascinated by the evidence; Samiel may simply ask whether Aimon finally sees the wall."
+    },
+    {
+      "body_index": 596,
+      "kind": "paragraph",
+      "text": "State effects: hell_leader_encounters update"
+    },
+    {
+      "body_index": 597,
+      "kind": "paragraph",
+      "text": "CH15-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 598,
+      "kind": "paragraph",
+      "text": "Asterion"
+    },
+    {
+      "body_index": 599,
+      "kind": "paragraph",
+      "text": "Asterion embodies certainty as enforcement, not truth. It repeats assertions until souls conform. The boss uses mirrored versions of Aimon’s tactics or locks choices behind false binaries."
+    },
+    {
+      "body_index": 600,
+      "kind": "paragraph",
+      "text": "Victory literally opens passages through both human-made heavens at once."
+    },
+    {
+      "body_index": 601,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 5 — Asterion, Voice of Certainty"
+    },
+    {
+      "body_index": 602,
+      "kind": "paragraph",
+      "text": "State effects: dogma_clear=true"
+    },
+    {
+      "body_index": 603,
+      "kind": "paragraph",
+      "text": "CHAPTER 16 — CIRCLE VI — GRIEF"
+    },
+    {
+      "body_index": 604,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The Garden of Returns"
+        ],
+        [
+          "Narrative job",
+          "Test whether Aimon wants the real Pate and Trade or merely relief from grief."
+        ],
+        [
+          "Boss / climax",
+          "Mirra, the Kindly Shape"
+        ],
+        [
+          "Key flags",
+          "grief_clear"
+        ]
+      ]
+    },
+    {
+      "body_index": 605,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 606,
+      "kind": "paragraph",
+      "text": "CH16-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 607,
+      "kind": "paragraph",
+      "text": "Everything lost can appear"
+    },
+    {
+      "body_index": 608,
+      "kind": "paragraph",
+      "text": "The Garden manifests convincing recreations of lost people and monsters from memory. It is beautiful, gentle and therefore more dangerous than the violent circles."
+    },
+    {
+      "body_index": 609,
+      "kind": "paragraph",
+      "text": "Aimon can encounter echoes of dead party monsters if the implementation records them; they are not recoverable, and the game avoids shaming the player for feeling attachment."
+    },
+    {
+      "body_index": 610,
+      "kind": "paragraph",
+      "text": "CH16-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 611,
+      "kind": "paragraph",
+      "text": "Perfect Pate and Trade"
+    },
+    {
+      "body_index": 612,
+      "kind": "paragraph",
+      "text": "Mirra offers versions of Pate and Trade who never left Aimon, never doubted, never died and say exactly what he wishes they would say. Aimon rejects them because their perfection proves they are not his friends."
+    },
+    {
+      "body_index": 613,
+      "kind": "paragraph",
+      "text": "He remembers Pate being annoying and Trade being controlling. Love is attachment to actual people, not idealised functions."
+    },
+    {
+      "body_index": 614,
+      "kind": "paragraph",
+      "text": "CH16-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 615,
+      "kind": "paragraph",
+      "text": "A dead monster’s echo"
+    },
+    {
+      "body_index": 616,
+      "kind": "paragraph",
+      "text": "Optional encounter lets Aimon say goodbye to one recorded dead monster partner. This is a memorial, not resurrection. If no monster has died, use a generic childhood animal/monster memory instead."
+    },
+    {
+      "body_index": 617,
+      "kind": "paragraph",
+      "text": "State effects: monster_memorial_count+=1"
+    },
+    {
+      "body_index": 618,
+      "kind": "paragraph",
+      "text": "CH16-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 619,
+      "kind": "paragraph",
+      "text": "Mirra"
+    },
+    {
+      "body_index": 620,
+      "kind": "paragraph",
+      "text": "Mirra attacks only after Aimon refuses the substitute. Its battle uses deceptive duplicates and healing illusions. Victory requires identifying the real target rather than simply dealing maximum damage."
+    },
+    {
+      "body_index": 621,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 6 — Mirra, the Kindly Shape"
+    },
+    {
+      "body_index": 622,
+      "kind": "paragraph",
+      "text": "State effects: grief_clear=true"
+    },
+    {
+      "body_index": 623,
+      "kind": "paragraph",
+      "text": "CHAPTER 17 — CIRCLE VII — BETRAYAL"
+    },
+    {
+      "body_index": 624,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The House of Closed Doors"
+        ],
+        [
+          "Narrative job",
+          "Allow Aimon to acknowledge anger at Pate and Trade without negating love; confront abandoned promises."
+        ],
+        [
+          "Boss / climax",
+          "Velcar, the Oath-Eater"
+        ],
+        [
+          "Key flags",
+          "betrayal_clear"
+        ]
+      ]
+    },
+    {
+      "body_index": 625,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 626,
+      "kind": "paragraph",
+      "text": "CH17-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 627,
+      "kind": "paragraph",
+      "text": "Doors that were shut"
+    },
+    {
+      "body_index": 628,
+      "kind": "paragraph",
+      "text": "Every corridor is shaped by a perceived abandonment: parents, lovers, commanders, gods. Some betrayals were real; others were protective choices that still hurt. The underworld does not adjudicate which pain is legitimate."
+    },
+    {
+      "body_index": 629,
+      "kind": "paragraph",
+      "text": "CH17-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 630,
+      "kind": "paragraph",
+      "text": "Don’t follow us"
+    },
+    {
+      "body_index": 631,
+      "kind": "paragraph",
+      "text": "Trade’s note reappears as a memory. Aimon finally says what he has avoided: he was furious they left him, and part of him still is. Severin does not correct him or turn the anger into a lesson."
+    },
+    {
+      "body_index": 632,
+      "kind": "paragraph",
+      "text": "Aimon can love them, understand why they acted, and still believe they were wrong to decide for him."
+    },
+    {
+      "body_index": 633,
+      "kind": "paragraph",
+      "text": "CH17-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 634,
+      "kind": "paragraph",
+      "text": "The other side of protection"
+    },
+    {
+      "body_index": 635,
+      "kind": "paragraph",
+      "text": "Optional memory fragment reconstructs Pate and Trade asking Kurg to keep Aimon home. Pate worries Aimon will hate them. Trade answers that hatred is survivable. This confirms their motive without making the choice painless."
+    },
+    {
+      "body_index": 636,
+      "kind": "paragraph",
+      "text": "State effects: pate_clues_found=max; trade_clues_found=max"
+    },
+    {
+      "body_index": 637,
+      "kind": "paragraph",
+      "text": "CH17-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 638,
+      "kind": "paragraph",
+      "text": "Velcar"
+    },
+    {
+      "body_index": 639,
+      "kind": "paragraph",
+      "text": "Velcar consumes broken promises and weaponises recorded dialogue. Its battle replays commitments from earlier chapters as taunts. Victory symbolically requires acting from present judgment rather than obeying old promises mechanically."
+    },
+    {
+      "body_index": 640,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 7 — Velcar, the Oath-Eater"
+    },
+    {
+      "body_index": 641,
+      "kind": "paragraph",
+      "text": "State effects: betrayal_clear=true"
+    },
+    {
+      "body_index": 642,
+      "kind": "paragraph",
+      "text": "CHAPTER 18 — CIRCLE VIII — SILENCE"
+    },
+    {
+      "body_index": 643,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "The Quiet Sea"
+        ],
+        [
+          "Narrative job",
+          "Increase urgency as identity dissolves; reveal Severin’s hidden access and competence."
+        ],
+        [
+          "Boss / climax",
+          "Nema, the Unremembered"
+        ],
+        [
+          "Key flags",
+          "silence_clear, severin_delay_revealed_partial"
+        ]
+      ]
+    },
+    {
+      "body_index": 644,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 645,
+      "kind": "paragraph",
+      "text": "CH18-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 646,
+      "kind": "paragraph",
+      "text": "Names disappearing"
+    },
+    {
+      "body_index": 647,
+      "kind": "paragraph",
+      "text": "Dialogue boxes for background souls become shorter or lose names as the region deepens. The environment contains blank monuments and half-remembered rooms. This is the point beyond which coherent identity starts failing."
+    },
+    {
+      "body_index": 648,
+      "kind": "paragraph",
+      "text": "Severin confirms Pate and Trade cannot remain intact much longer."
+    },
+    {
+      "body_index": 649,
+      "kind": "paragraph",
+      "text": "CH18-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 650,
+      "kind": "paragraph",
+      "text": "Severin opens a sealed path"
+    },
+    {
+      "body_index": 651,
+      "kind": "paragraph",
+      "text": "A gate no mortal should understand responds to Severin. He performs a precise ritual/function and refuses to explain how he knows it. Aimon challenges him directly; Severin admits he has been below before, but not how far or why."
+    },
+    {
+      "body_index": 652,
+      "kind": "paragraph",
+      "text": "State effects: severin_delay_revealed_partial=true"
+    },
+    {
+      "body_index": 653,
+      "kind": "paragraph",
+      "text": "CH18-O01  |  OPTIONAL"
+    },
+    {
+      "body_index": 654,
+      "kind": "paragraph",
+      "text": "The missing stanza"
+    },
+    {
+      "body_index": 655,
+      "kind": "paragraph",
+      "text": "Optional lore reveals references to an unnamed poet/scribe who has interfered with underworld records across centuries. It does not prove Severin’s age but makes his biography suspicious."
+    },
+    {
+      "body_index": 656,
+      "kind": "paragraph",
+      "text": "State effects: severin_optional_dialogue+=1"
+    },
+    {
+      "body_index": 657,
+      "kind": "paragraph",
+      "text": "CH18-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 658,
+      "kind": "paragraph",
+      "text": "Nema"
+    },
+    {
+      "body_index": 659,
+      "kind": "paragraph",
+      "text": "Nema erases identifiers and suppresses commands. The battle can temporarily hide move names/icons or strip familiar labels while preserving accessibility through symbols/tooltips. The thematic point is loss of categorisation, not player confusion for its own sake."
+    },
+    {
+      "body_index": 660,
+      "kind": "paragraph",
+      "text": "Victory preserves Aimon’s path long enough to reach the last circle."
+    },
+    {
+      "body_index": 661,
+      "kind": "paragraph",
+      "text": "Battle: Hell Warden 8 — Nema, the Unremembered"
+    },
+    {
+      "body_index": 662,
+      "kind": "paragraph",
+      "text": "State effects: silence_clear=true"
+    },
+    {
+      "body_index": 663,
+      "kind": "paragraph",
+      "text": "CHAPTER 19 — CIRCLE IX — THE THRONE"
+    },
+    {
+      "body_index": 664,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act IV — Descent"
+        ],
+        [
+          "Primary location",
+          "Hall of Last Names / Nharos’s throne realm"
+        ],
+        [
+          "Narrative job",
+          "Reach the friends, reveal Severin’s manipulation without making his help false, and trigger the Nharos confrontation."
+        ],
+        [
+          "Boss / climax",
+          "Nharos — first confrontation"
+        ],
+        [
+          "Key flags",
+          "throne_reached, pate_trade_found, severin_delay_revealed"
+        ]
+      ]
+    },
+    {
+      "body_index": 665,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 666,
+      "kind": "paragraph",
+      "text": "CH19-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 667,
+      "kind": "paragraph",
+      "text": "Hall of Last Names"
+    },
+    {
+      "body_index": 668,
+      "kind": "paragraph",
+      "text": "The final holding region contains the last coherent identifiers of souls before they pass beyond retrieval. Aimon finds Pate and Trade weak, disoriented but unmistakably themselves."
+    },
+    {
+      "body_index": 669,
+      "kind": "paragraph",
+      "text": "Their first interaction is incomplete: they recognise Aimon but cannot yet fully understand where they are."
+    },
+    {
+      "body_index": 670,
+      "kind": "paragraph",
+      "text": "State effects: pate_trade_found=true"
+    },
+    {
+      "body_index": 671,
+      "kind": "paragraph",
+      "text": "CH19-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 672,
+      "kind": "paragraph",
+      "text": "Severin’s admission"
+    },
+    {
+      "body_index": 673,
+      "kind": "paragraph",
+      "text": "Aimon discovers Pate and Trade should already have passed beyond this chamber. Severin quietly delayed their processing by interfering with records or pathways. He did not cause their deaths and could not simply remove them himself, but he preserved Aimon’s chance."
+    },
+    {
+      "body_index": 674,
+      "kind": "paragraph",
+      "text": "He admits he suspected Aimon might be capable of breaking the wardens that kept the old underworld order stable. Helping Aimon and using Aimon are both true."
+    },
+    {
+      "body_index": 675,
+      "kind": "paragraph",
+      "text": "State effects: severin_delay_revealed=true"
+    },
+    {
+      "body_index": 676,
+      "kind": "paragraph",
+      "text": "CH19-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 677,
+      "kind": "paragraph",
+      "text": "Nharos appears"
+    },
+    {
+      "body_index": 678,
+      "kind": "paragraph",
+      "text": "Nharos stops the extraction. The ruler is majestic, irritated and not morally theatrical. From Nharos’s perspective Aimon has invaded, broken eight critical functions and is attempting to remove dead souls from the system."
+    },
+    {
+      "body_index": 679,
+      "kind": "paragraph",
+      "text": "Nharos does not accuse Pate and Trade of sin. The objection is order and jurisdiction."
+    },
+    {
+      "body_index": 680,
+      "kind": "paragraph",
+      "text": "State effects: throne_reached=true"
+    },
+    {
+      "body_index": 681,
+      "kind": "paragraph",
+      "text": "CH19-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 682,
+      "kind": "paragraph",
+      "text": "Nharos phase one"
+    },
+    {
+      "body_index": 683,
+      "kind": "paragraph",
+      "text": "Aimon fights Nharos’s manifested battle form. The encounter ends before full resolution when Nharos calls for assistance against the increasingly anomalous human and the damaged realm."
+    },
+    {
+      "body_index": 684,
+      "kind": "paragraph",
+      "text": "Battle: Nharos — phase 1 / transition boss"
+    },
+    {
+      "body_index": 685,
+      "kind": "paragraph",
+      "text": "CH19-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 686,
+      "kind": "paragraph",
+      "text": "The light arrives"
+    },
+    {
+      "body_index": 687,
+      "kind": "paragraph",
+      "text": "A radiant presence manifests. Aimon recognises iconographic features from True Light art and immediately assumes divine rescue. He kneels or praises the True Light. Illyr’s first response is confusion, not judgment."
+    },
+    {
+      "body_index": 688,
+      "kind": "paragraph",
+      "text": "Chapter ends on Illyr asking Nharos what the human is talking about."
+    },
+    {
+      "body_index": 689,
+      "kind": "paragraph",
+      "text": "State effects: chapter_19_complete=true"
+    },
+    {
+      "body_index": 690,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 691,
+      "kind": "paragraph",
+      "text": "ACT V — NO GODS, NO MASTERS"
+    },
+    {
+      "body_index": 692,
+      "kind": "paragraph",
+      "text": "The finale must not reveal an evil god behind the war. The cosmic beings are indifferent, and that is more devastating. Human institutions created the conflict and therefore humans retain responsibility for ending it."
+    },
+    {
+      "body_index": 693,
+      "kind": "paragraph",
+      "text": "CHAPTER 20 — ILLYR AND NHAROS"
+    },
+    {
+      "body_index": 694,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act V — No Gods, No Masters"
+        ],
+        [
+          "Primary location",
+          "Nharos’s throne realm"
+        ],
+        [
+          "Narrative job",
+          "Deliver the same-god revelation, dismantle divine endorsement, and culminate in the joint final boss."
+        ],
+        [
+          "Boss / climax",
+          "Illyr + Nharos"
+        ],
+        [
+          "Key flags",
+          "same_god_revealed, final_boss_clear"
+        ]
+      ]
+    },
+    {
+      "body_index": 695,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 696,
+      "kind": "paragraph",
+      "text": "CH20-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 697,
+      "kind": "paragraph",
+      "text": "What is the True Light?"
+    },
+    {
+      "body_index": 698,
+      "kind": "paragraph",
+      "text": "Aimon identifies Illyr as the True Light and speaks of the church, crusade and prayers. Illyr genuinely does not recognise the name or institution. After description, Illyr realises some human encounters and old imagery may refer to them."
+    },
+    {
+      "body_index": 699,
+      "kind": "paragraph",
+      "text": "The emotional beat is not mockery. Illyr treats the issue with the mild attention one might give an unexpected pattern in insects."
+    },
+    {
+      "body_index": 700,
+      "kind": "paragraph",
+      "text": "State effects: same_god_revealed=true"
+    },
+    {
+      "body_index": 701,
+      "kind": "paragraph",
+      "text": "CH20-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 702,
+      "kind": "paragraph",
+      "text": "Dawn Bloom too"
+    },
+    {
+      "body_index": 703,
+      "kind": "paragraph",
+      "text": "Aimon mentions Dawn Bloom. Illyr recognises the same ancient encounters and iconography. The rival religions are both human interpretations of the same cosmic being. Neither was selected, commanded or endorsed."
+    },
+    {
+      "body_index": 704,
+      "kind": "paragraph",
+      "text": "Nharos confirms that human demon-names such as the Hollow Adversary and Ember Regent likewise refer to Nharos."
+    },
+    {
+      "body_index": 705,
+      "kind": "paragraph",
+      "text": "CH20-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 706,
+      "kind": "paragraph",
+      "text": "Old companions"
+    },
+    {
+      "body_index": 707,
+      "kind": "paragraph",
+      "text": "Aimon learns Illyr and Nharos are not cosmic moral opposites. They are ancient peers/companions whose relationship does not map onto human good-versus-evil theology. Illyr came because Nharos called about an unusual disturbance, not because Aimon prayed."
+    },
+    {
+      "body_index": 708,
+      "kind": "paragraph",
+      "text": "CH20-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 709,
+      "kind": "paragraph",
+      "text": "No one asked for the crusade"
+    },
+    {
+      "body_index": 710,
+      "kind": "paragraph",
+      "text": "Aimon asks about prayers, martyrs and generations of killing. Illyr did not request them and does not know the individuals involved. Nharos did not engineer the conflict either. There is no supernatural villain available to absorb human guilt."
+    },
+    {
+      "body_index": 711,
+      "kind": "paragraph",
+      "text": "When Aimon asks which religion was right, Illyr does not understand why that question should be theirs to answer."
+    },
+    {
+      "body_index": 712,
+      "kind": "paragraph",
+      "text": "CH20-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 713,
+      "kind": "paragraph",
+      "text": "Aimon refuses cosmic authority"
+    },
+    {
+      "body_index": 714,
+      "kind": "paragraph",
+      "text": "Nharos orders Aimon to leave the dead. Illyr supports the request because Aimon has destabilised a realm belonging to their friend. Aimon’s final moral step is not ‘gods are evil’; it is refusing to treat power as moral authority."
+    },
+    {
+      "body_index": 715,
+      "kind": "paragraph",
+      "text": "He states, in his own simple voice, that they do not get to decide what is right for him merely because they are greater."
+    },
+    {
+      "body_index": 716,
+      "kind": "paragraph",
+      "text": "CH20-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 717,
+      "kind": "paragraph",
+      "text": "Final boss"
+    },
+    {
+      "body_index": 718,
+      "kind": "paragraph",
+      "text": "Aimon fights manifested forms of Illyr and Nharos simultaneously. Mechanics should make the pair feel complementary rather than good/evil opposites: radiance and void, creation-like abundance and underworld control, old friends covering one another’s weaknesses."
+    },
+    {
+      "body_index": 719,
+      "kind": "paragraph",
+      "text": "Aimon defeats their ability to stop him in this place; he does not kill or permanently surpass the total cosmic beings."
+    },
+    {
+      "body_index": 720,
+      "kind": "paragraph",
+      "text": "Battle: FINAL BOSS — Illyr + Nharos"
+    },
+    {
+      "body_index": 721,
+      "kind": "paragraph",
+      "text": "State effects: final_boss_clear=true"
+    },
+    {
+      "body_index": 722,
+      "kind": "paragraph",
+      "text": "CH20-E07  |  MANDATORY"
+    },
+    {
+      "body_index": 723,
+      "kind": "paragraph",
+      "text": "The ant bites"
+    },
+    {
+      "body_index": 724,
+      "kind": "paragraph",
+      "text": "Illyr is surprised enough to become personally aware of Aimon for perhaps the first time. Nharos is furious but also forced to concede the immediate contest. Neither converts to Aimon’s worldview."
+    },
+    {
+      "body_index": 725,
+      "kind": "paragraph",
+      "text": "Aimon does not seek blessing. He takes Pate and Trade."
+    },
+    {
+      "body_index": 726,
+      "kind": "paragraph",
+      "text": "State effects: extraction_started=true"
+    },
+    {
+      "body_index": 727,
+      "kind": "paragraph",
+      "text": "CHAPTER 21 — BRING THEM HOME"
+    },
+    {
+      "body_index": 728,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act V — No Gods, No Masters"
+        ],
+        [
+          "Primary location",
+          "Ascending underworld route → Ramelle / mortal threshold"
+        ],
+        [
+          "Narrative job",
+          "Complete the emotional promise of the prologue and return the friends without making resurrection repeatable."
+        ],
+        [
+          "Boss / climax",
+          "Escape sequence"
+        ],
+        [
+          "Key flags",
+          "pate_trade_recovered, severin_missing"
+        ]
+      ]
+    },
+    {
+      "body_index": 729,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 730,
+      "kind": "paragraph",
+      "text": "CH21-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 731,
+      "kind": "paragraph",
+      "text": "Extraction"
+    },
+    {
+      "body_index": 732,
+      "kind": "paragraph",
+      "text": "Pate and Trade’s coherent identities are bound back to their mortal remains/anchor vessels through Severin’s route. The process is fragile and cannot be repeated once the underworld pathways collapse/reorder."
+    },
+    {
+      "body_index": 733,
+      "kind": "paragraph",
+      "text": "The game explicitly distinguishes this from ordinary resurrection: Aimon retrieved them before final dissolution during a unique breakdown of the realm’s hierarchy."
+    },
+    {
+      "body_index": 734,
+      "kind": "paragraph",
+      "text": "State effects: pate_trade_recovered=pending"
+    },
+    {
+      "body_index": 735,
+      "kind": "paragraph",
+      "text": "CH21-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 736,
+      "kind": "paragraph",
+      "text": "Severin disappears"
+    },
+    {
+      "body_index": 737,
+      "kind": "paragraph",
+      "text": "During ascent Severin is briefly separated or intentionally remains behind to stabilise a route. When Aimon looks back, he is gone. His notebook page or a line of verse is the only sign he chose not to return."
+    },
+    {
+      "body_index": 738,
+      "kind": "paragraph",
+      "text": "Do not reveal kingship yet."
+    },
+    {
+      "body_index": 739,
+      "kind": "paragraph",
+      "text": "State effects: severin_missing=true"
+    },
+    {
+      "body_index": 740,
+      "kind": "paragraph",
+      "text": "CH21-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 741,
+      "kind": "paragraph",
+      "text": "Threshold collapse"
+    },
+    {
+      "body_index": 742,
+      "kind": "paragraph",
+      "text": "The party escapes as routes altered by defeated wardens rearrange. This is a short playable escape/dungeon reprise, not nine full reverse circles. Optional rescued souls are not brought to life; they simply gain clearer onward paths."
+    },
+    {
+      "body_index": 743,
+      "kind": "paragraph",
+      "text": "CH21-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 744,
+      "kind": "paragraph",
+      "text": "Pate wakes"
+    },
+    {
+      "body_index": 745,
+      "kind": "paragraph",
+      "text": "Back in the mortal world, Pate wakes first or reacts first. His initial response is mundane confusion followed by recognition: ‘Aimon?’ The lack of grandiosity pays off the entire quest."
+    },
+    {
+      "body_index": 746,
+      "kind": "paragraph",
+      "text": "State effects: pate_trade_recovered=true"
+    },
+    {
+      "body_index": 747,
+      "kind": "paragraph",
+      "text": "CH21-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 748,
+      "kind": "paragraph",
+      "text": "Trade understands"
+    },
+    {
+      "body_index": 749,
+      "kind": "paragraph",
+      "text": "Trade quickly realises something impossible happened. Pate asks whether Aimon really came after them. Aimon confirms it. The emotional reversal is complete: the boy they left behind to keep safe crossed the underworld to retrieve them."
+    },
+    {
+      "body_index": 750,
+      "kind": "paragraph",
+      "text": "State effects: chapter_21_complete=true"
+    },
+    {
+      "body_index": 751,
+      "kind": "paragraph",
+      "text": "CHAPTER 22 — THE WORLD AFTER"
+    },
+    {
+      "body_index": 752,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Act V — No Gods, No Masters"
+        ],
+        [
+          "Primary location",
+          "Ramelle, occupied towns, Civeton"
+        ],
+        [
+          "Narrative job",
+          "Show that revelation does not automatically end institutions; resolve mortal arcs and establish a human responsibility for peace."
+        ],
+        [
+          "Boss / climax",
+          "Epilogue montage / optional conversations"
+        ],
+        [
+          "Key flags",
+          "aeric_arc_state, rhoswen_arc_state, kurg_doubt_state"
+        ]
+      ]
+    },
+    {
+      "body_index": 753,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 754,
+      "kind": "paragraph",
+      "text": "CH22-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 755,
+      "kind": "paragraph",
+      "text": "No divine proclamation"
+    },
+    {
+      "body_index": 756,
+      "kind": "paragraph",
+      "text": "Illyr does not appear in the sky to end the crusade. The proof comes through Aimon, Pate, Trade, underworld evidence and surviving scholars. Some people believe immediately, some reject it, some reinterpret doctrine, and some insist the revelation changes nothing."
+    },
+    {
+      "body_index": 757,
+      "kind": "paragraph",
+      "text": "The ceasefire/peace process is therefore political and human."
+    },
+    {
+      "body_index": 758,
+      "kind": "paragraph",
+      "text": "CH22-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 759,
+      "kind": "paragraph",
+      "text": "Kurg asks instead of orders"
+    },
+    {
+      "body_index": 760,
+      "kind": "paragraph",
+      "text": "Kurg receives Pate and Trade alive and the evidence surrounding Emmara Mill. His decisive epilogue beat is not conversion but uncertainty. He asks Aimon, ‘What do we do now?’ Aimon refuses to become the new authority who supplies everyone’s morality."
+    },
+    {
+      "body_index": 761,
+      "kind": "paragraph",
+      "text": "Kurg eventually begins ceasefire negotiations because he chooses to, not because Aimon or Illyr commands him."
+    },
+    {
+      "body_index": 762,
+      "kind": "paragraph",
+      "text": "State effects: kurg_doubt_state=5"
+    },
+    {
+      "body_index": 763,
+      "kind": "paragraph",
+      "text": "CH22-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 764,
+      "kind": "paragraph",
+      "text": "Aeric’s faith after certainty"
+    },
+    {
+      "body_index": 765,
+      "kind": "paragraph",
+      "text": "Aeric remains religious. He concludes that if compassion mattered before, it does not stop mattering because Illyr never authored a church. Moral responsibility was human all along."
+    },
+    {
+      "body_index": 766,
+      "kind": "paragraph",
+      "text": "He becomes a voice for faith without claims of divine military authority."
+    },
+    {
+      "body_index": 767,
+      "kind": "paragraph",
+      "text": "State effects: aeric_arc_state=5"
+    },
+    {
+      "body_index": 768,
+      "kind": "paragraph",
+      "text": "CH22-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 769,
+      "kind": "paragraph",
+      "text": "Rhoswen chooses a target worth fighting"
+    },
+    {
+      "body_index": 770,
+      "kind": "paragraph",
+      "text": "Rhoswen’s ending adapts to her arc. In the strongest state she helps protect refugees, enforce ceasefires and fight raiders exploiting instability. She remains hard, martial and willing to use force; the difference is that she now chooses why."
+    },
+    {
+      "body_index": 771,
+      "kind": "paragraph",
+      "text": "State effects: rhoswen_arc_state=5"
+    },
+    {
+      "body_index": 772,
+      "kind": "paragraph",
+      "text": "CH22-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 773,
+      "kind": "paragraph",
+      "text": "Pate after heroism"
+    },
+    {
+      "body_index": 774,
+      "kind": "paragraph",
+      "text": "Pate struggles with learning that his courage was used by a meaningless campaign. His recovery arc separates the reality of his bravery from the false righteousness of the cause. He can still be proud that he protected people without glorifying the mill."
+    },
+    {
+      "body_index": 775,
+      "kind": "paragraph",
+      "text": "CH22-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 776,
+      "kind": "paragraph",
+      "text": "Trade after doubt"
+    },
+    {
+      "body_index": 777,
+      "kind": "paragraph",
+      "text": "Trade confronts the fact that he had enough evidence to question the war but still went because he could not leave Pate. His lesson is that private doubt without action is not moral independence. He becomes more willing to speak against consensus."
+    },
+    {
+      "body_index": 778,
+      "kind": "paragraph",
+      "text": "CH22-E07  |  MANDATORY"
+    },
+    {
+      "body_index": 779,
+      "kind": "paragraph",
+      "text": "Leader-state montage"
+    },
+    {
+      "body_index": 780,
+      "kind": "paragraph",
+      "text": "Each settlement receives an epilogue state based on leader fate and optional quests. Spared leaders may assist reconstruction, remain imprisoned or act as witnesses. Executed leaders leave political vacancies, memorials or martyrs. No single spare/execute pattern produces a perfect world."
+    },
+    {
+      "body_index": 781,
+      "kind": "paragraph",
+      "text": "State effects: main_story_complete=true"
+    },
+    {
+      "body_index": 782,
+      "kind": "paragraph",
+      "text": "CH22-E08  |  MANDATORY"
+    },
+    {
+      "body_index": 783,
+      "kind": "paragraph",
+      "text": "Return to Civeton"
+    },
+    {
+      "body_index": 784,
+      "kind": "paragraph",
+      "text": "The three friends revisit the childhood hill. It is small. They can joke about the pretend crusade, but the scene does not pretend innocence can simply be restored."
+    },
+    {
+      "body_index": 785,
+      "kind": "paragraph",
+      "text": "The closing image mirrors the prologue: all three together, with Aimon no longer positioned as the little brother behind them."
+    },
+    {
+      "body_index": 786,
+      "kind": "paragraph",
+      "text": "State effects: epilogue_complete=true"
+    },
+    {
+      "body_index": 787,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 788,
+      "kind": "paragraph",
+      "text": "POSTGAME — THE POET KING"
+    },
+    {
+      "body_index": 789,
+      "kind": "paragraph",
+      "text": "CHAPTER 23 — KING BELOW"
+    },
+    {
+      "body_index": 790,
+      "kind": "table",
+      "rows": [
+        [
+          "Act",
+          "Postgame"
+        ],
+        [
+          "Primary location",
+          "Reordered underworld / new court"
+        ],
+        [
+          "Narrative job",
+          "Reveal Severin’s payoff, acknowledge that he both helped and used Aimon, and deliver the secret superboss without undoing the main ending."
+        ],
+        [
+          "Boss / climax",
+          "Severin Vale, King Below"
+        ],
+        [
+          "Key flags",
+          "severin_king_revealed, severin_superboss_clear"
+        ]
+      ]
+    },
+    {
+      "body_index": 791,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 792,
+      "kind": "paragraph",
+      "text": "CH23-E01  |  MANDATORY"
+    },
+    {
+      "body_index": 793,
+      "kind": "paragraph",
+      "text": "The underworld works again"
+    },
+    {
+      "body_index": 794,
+      "kind": "paragraph",
+      "text": "Trigger: epilogue_complete"
+    },
+    {
+      "body_index": 795,
+      "kind": "paragraph",
+      "text": "Postgame rumours describe occult phenomena stabilising. Death rites become less erratic. Scholars report a new order below. This is unsettling because Severin may actually be competent."
+    },
+    {
+      "body_index": 796,
+      "kind": "paragraph",
+      "text": "CH23-E02  |  MANDATORY"
+    },
+    {
+      "body_index": 797,
+      "kind": "paragraph",
+      "text": "Return route"
+    },
+    {
+      "body_index": 798,
+      "kind": "paragraph",
+      "text": "A new optional route to the underworld opens through the same catacombs, but the Nine Circles have been reorganised. Old wardens are absent or subordinate; signs of Severin’s administrative hand appear everywhere."
+    },
+    {
+      "body_index": 799,
+      "kind": "paragraph",
+      "text": "CH23-E03  |  MANDATORY"
+    },
+    {
+      "body_index": 800,
+      "kind": "paragraph",
+      "text": "The throne fits"
+    },
+    {
+      "body_index": 801,
+      "kind": "paragraph",
+      "text": "Aimon reaches the final court and finds Severin on Nharos’s former throne in an evolved poet-king form. He does not deny using Aimon. He points out that he promised to lead Aimon to his friends and did exactly that."
+    },
+    {
+      "body_index": 802,
+      "kind": "paragraph",
+      "text": "He also admits that every broken warden and challenged authority made his ascent possible."
+    },
+    {
+      "body_index": 803,
+      "kind": "paragraph",
+      "text": "State effects: severin_king_revealed=true"
+    },
+    {
+      "body_index": 804,
+      "kind": "paragraph",
+      "text": "CH23-E04  |  MANDATORY"
+    },
+    {
+      "body_index": 805,
+      "kind": "paragraph",
+      "text": "Why rule?"
+    },
+    {
+      "body_index": 806,
+      "kind": "paragraph",
+      "text": "Severin’s justification is practical and philosophically dangerous: the underworld requires coordination, old authority proved vulnerable, and he understood the system better than anyone positioned to replace it. Aimon asks whether challenging authority was merely Severin’s route to becoming authority."
+    },
+    {
+      "body_index": 807,
+      "kind": "paragraph",
+      "text": "Severin considers that a fair question rather than an accusation he must dodge."
+    },
+    {
+      "body_index": 808,
+      "kind": "paragraph",
+      "text": "CH23-E05  |  MANDATORY"
+    },
+    {
+      "body_index": 809,
+      "kind": "paragraph",
+      "text": "Secret superboss"
+    },
+    {
+      "body_index": 810,
+      "kind": "paragraph",
+      "text": "Severin wants to test the person who defeated gods and unknowingly made a king. His team is built around system mastery: control, prediction, efficient use of one apparently ordinary species, and a thematic ace."
+    },
+    {
+      "body_index": 811,
+      "kind": "paragraph",
+      "text": "The fight is affectionate, dangerous and intellectually competitive rather than hateful."
+    },
+    {
+      "body_index": 812,
+      "kind": "paragraph",
+      "text": "Battle: SUPERBOSS — Severin Vale, King Below"
+    },
+    {
+      "body_index": 813,
+      "kind": "paragraph",
+      "text": "State effects: severin_superboss_clear=true"
+    },
+    {
+      "body_index": 814,
+      "kind": "paragraph",
+      "text": "CH23-E06  |  MANDATORY"
+    },
+    {
+      "body_index": 815,
+      "kind": "paragraph",
+      "text": "After victory"
+    },
+    {
+      "body_index": 816,
+      "kind": "paragraph",
+      "text": "Aimon defeats Severin but does not automatically depose him. Severin yields the contest, amused. Aimon has no desire to rule the dead and no evidence that removing Severin would improve anything."
+    },
+    {
+      "body_index": 817,
+      "kind": "paragraph",
+      "text": "The ending remains uncomfortable: authority must still be judged by what it does, not by whether it calls itself divine, revolutionary or poetic."
+    },
+    {
+      "body_index": 818,
+      "kind": "paragraph",
+      "text": "State effects: postgame_story_complete=true"
+    },
+    {
+      "body_index": 819,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 820,
+      "kind": "paragraph",
+      "text": "RECURRING SUBPLOT CHAINS"
+    },
+    {
+      "body_index": 821,
+      "kind": "paragraph",
+      "text": "These chains are designed to make the world feel continuous rather than like eight disconnected leader towns. Most should be optional but persistent, with later payoffs that acknowledge whether the player engaged."
+    },
+    {
+      "body_index": 822,
+      "kind": "paragraph",
+      "text": "S01 — Pate & Trade Trail"
+    },
+    {
+      "body_index": 823,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Mandatory spine"
+        ],
+        [
+          "Implementation",
+          "Every mortal chapter contains at least one memory, witness or object connected to the friends. Early clues are comic and reassuring; middle clues show compassion and disagreement; later clues reveal Trade’s doubts and the mill transfer. The trail must make the player feel they are almost catching up until the Chapter 9 reversal."
+        ]
+      ]
+    },
+    {
+      "body_index": 824,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 825,
+      "kind": "paragraph",
+      "text": "S02 — Trade’s Notebook"
+    },
+    {
+      "body_index": 826,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Mixed mandatory/optional"
+        ],
+        [
+          "Implementation",
+          "Core pages are mandatory at Botrune and Emmara Mill. Optional pages record logistics, religious parallels, doubts, observations of Pate and small practical notes. The notebook must sound like Trade, not like the author delivering the game’s thesis."
+        ]
+      ]
+    },
+    {
+      "body_index": 827,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 828,
+      "kind": "paragraph",
+      "text": "S03 — The Two Prayers"
+    },
+    {
+      "body_index": 829,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Optional lore chain"
+        ],
+        [
+          "Implementation",
+          "Collect parallel prayers, creation myths, gestures and translations from both religions. Completion makes Mirelle/Aeric dialogue richer and strongly foreshadows Illyr, but the final revelation remains understandable without completion."
+        ]
+      ]
+    },
+    {
+      "body_index": 830,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 831,
+      "kind": "paragraph",
+      "text": "S04 — Aeric: Faith Without Certainty"
+    },
+    {
+      "body_index": 832,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Recurring character chain"
+        ],
+        [
+          "Implementation",
+          "Aeric begins sincere and certain that True Light doctrine is true. Philomere and Botrune make him uncomfortable. Emmara Mill breaks his willingness to offer automatic reassurance. By the finale he retains faith but rejects claims that religious institutions can outsource individual morality or warfare to a silent god."
+        ]
+      ]
+    },
+    {
+      "body_index": 833,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 834,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 835,
+      "kind": "paragraph",
+      "text": "S05 — Rhoswen: Mercy and Strength"
+    },
+    {
+      "body_index": 836,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Recurring rival chain"
+        ],
+        [
+          "Implementation",
+          "Rhoswen starts believing decisiveness is morally serious and mercy often sentimental. She reacts dynamically to Aimon’s leader choices, challenging consistency rather than always preferring execution. The Cayfen duel and ceasefire show her that restraint can be active strength. Postgame she remains a warrior but chooses causes case by case."
+        ]
+      ]
+    },
+    {
+      "body_index": 837,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 838,
+      "kind": "paragraph",
+      "text": "S06 — Kurg: Command Responsibility"
+    },
+    {
+      "body_index": 839,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Recurring command chain"
+        ],
+        [
+          "Implementation",
+          "Kurg begins as the competent adult Aimon wants approval from. Midgame he offers duty as the answer to doubt. Emmara Mill forces him to confront institutional responsibility. Postgame he asks what to do rather than issuing a doctrine, then makes his own choice to pursue ceasefire."
+        ]
+      ]
+    },
+    {
+      "body_index": 840,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 841,
+      "kind": "paragraph",
+      "text": "S07 — Conquered Towns"
+    },
+    {
+      "body_index": 842,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "World-state chain"
+        ],
+        [
+          "Implementation",
+          "Every town changes after conquest. Revisit states reflect leader fate, optional quest completion and occupation problems. The aim is to prevent victory screens from implying conquest solved local life."
+        ]
+      ]
+    },
+    {
+      "body_index": 843,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 844,
+      "kind": "paragraph",
+      "text": "S08 — The Refugee Road"
+    },
+    {
+      "body_index": 845,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Optional civilian chain"
+        ],
+        [
+          "Implementation",
+          "A mixed-family refugee group moves from Dorelem road to Philomere, later Cybressa/Cossenne and finally toward Cayfen/Ramelle. Their relationships cross religious identity. Their survival and destination depend on modest practical help, not theological choices."
+        ]
+      ]
+    },
+    {
+      "body_index": 846,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 847,
+      "kind": "paragraph",
+      "text": "S09 — Monster Memorials"
+    },
+    {
+      "body_index": 848,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Optional emotional chain"
+        ],
+        [
+          "Implementation",
+          "Memorial stones, sanctuaries, battlefield retrieval and dead partner stories reinforce the 0 HP rule. Hell later reflects recorded losses. No resurrection of ordinary dead monsters is offered, preserving stakes."
+        ]
+      ]
+    },
+    {
+      "body_index": 849,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 850,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 851,
+      "kind": "paragraph",
+      "text": "S10 — Emmara Mill Foreshadowing"
+    },
+    {
+      "body_index": 852,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Hidden continuity chain"
+        ],
+        [
+          "Implementation",
+          "The mill appears first as boring logistics, then as a stale waypoint, then by name, then as a cancelled strategic point. On replay the player can trace exactly how a bureaucratic error became fatal."
+        ]
+      ]
+    },
+    {
+      "body_index": 853,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 854,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 855,
+      "kind": "paragraph",
+      "text": "S11 — Severin in the Margins"
+    },
+    {
+      "body_index": 856,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Optional foreshadow chain"
+        ],
+        [
+          "Implementation",
+          "Severin can be glimpsed in markets, Botrune and other liminal spaces before Chapter 10. He is never quest-marked. More sightings give Aimon stronger recognition dialogue but do not change the main plot."
+        ]
+      ]
+    },
+    {
+      "body_index": 857,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 858,
+      "kind": "paragraph",
+      "text": "S12 — The Dead Remember"
+    },
+    {
+      "body_index": 859,
+      "kind": "table",
+      "rows": [
+        [
+          "Type",
+          "Conditional Hell chain"
+        ],
+        [
+          "Implementation",
+          "Executed leaders and selected dead NPCs appear below. They are not automatically hostile or punished. Their concerns remain individual: town survival, family, unfinished work, anger or curiosity. This is crucial evidence that the underworld is not a factional morality scoreboard."
+        ]
+      ]
+    },
+    {
+      "body_index": 860,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 861,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 862,
+      "kind": "paragraph",
+      "text": "BRANCH & STATE MATRIX"
+    },
+    {
+      "body_index": 863,
+      "kind": "paragraph",
+      "text": "The game should branch in texture rather than explode into eight incompatible main plots. These are the intended consequence classes."
+    },
+    {
+      "body_index": 864,
+      "kind": "table",
+      "rows": [
+        [
+          "Condition",
+          "Narrative consequence"
+        ],
+        [
+          "Leader spared",
+          "Leader may advise, mediate, remain imprisoned or appear in epilogue. Town avoids martyr narrative but may face security complications."
+        ],
+        [
+          "Leader executed",
+          "Leader can appear in Hell; town may gain memorial/martyr politics or lose administrative continuity. Execution is not automatically treated as evil."
+        ],
+        [
+          "Most leaders spared",
+          "Rhoswen challenges whether Aimon is avoiding hard consequences. Kurg worries about security but may later value continuity."
+        ],
+        [
+          "Most leaders executed",
+          "Rhoswen initially respects decisiveness but later asks whether Aimon is becoming numb. Aeric is more openly troubled."
+        ],
+        [
+          "Mixed pattern",
+          "Dialogue highlights case-by-case judgment. This is thematically ideal but not mechanically privileged."
+        ],
+        [
+          "High Two Prayers completion",
+          "Earlier explicit recognition that both faiths share roots; richer Mirelle/Aeric/Illyr dialogue."
+        ],
+        [
+          "Low Two Prayers completion",
+          "Final same-god reveal carries more surprise; all mandatory exposition still works."
+        ],
+        [
+          "High Severin sightings",
+          "Aimon recognises Severin in Chapter 10 and can challenge how long he has been watching."
+        ],
+        [
+          "Low Severin sightings",
+          "Severin is introduced cleanly in Chapter 10; postgame remains coherent."
+        ],
+        [
+          "Dead player monsters recorded",
+          "Grief circle may show echoes; memorial epilogue can reference them. They are never recoverable."
+        ],
+        [
+          "No player monster deaths",
+          "Use generic memory scenes so chapter logic remains intact without fabricating losses."
+        ]
+      ]
+    },
+    {
+      "body_index": 865,
+      "kind": "paragraph",
+      "text": "PROGRAMMING / CONTENT DEPENDENCIES"
+    },
+    {
+      "body_index": 866,
+      "kind": "paragraph",
+      "text": "World-state system capable of swapping NPCs, banners, dialogue and small environmental props after each town conquest."
+    },
+    {
+      "body_index": 867,
+      "kind": "paragraph",
+      "text": "Leader resolution function storing spare/execute independently for all eight leaders."
+    },
+    {
+      "body_index": 868,
+      "kind": "paragraph",
+      "text": "Dynamic starter allocation: player choice reserves chosen starter; Pate and Trade receive the other two."
+    },
+    {
+      "body_index": 869,
+      "kind": "paragraph",
+      "text": "Persistent dead-monster log if Hell memorial echoes are implemented from actual player losses."
+    },
+    {
+      "body_index": 870,
+      "kind": "paragraph",
+      "text": "Quest-log support for hidden/optional lore chains without exposing a morality score."
+    },
+    {
+      "body_index": 871,
+      "kind": "paragraph",
+      "text": "Conditional dialogue system reading choice counts and specific flags, especially for Rhoswen, Aeric, Kurg and Hell leader encounters."
+    },
+    {
+      "body_index": 872,
+      "kind": "paragraph",
+      "text": "Post-conquest revisit maps do not need fully new geometry; NPC/prop/banner layers can carry most state changes."
+    },
+    {
+      "body_index": 873,
+      "kind": "paragraph",
+      "text": "Nine Hell regions require distinct visual identities and one warden encounter each. Exact monster rosters belong in the combat/dex specification, not this story document."
+    },
+    {
+      "body_index": 874,
+      "kind": "paragraph",
+      "text": "Underworld escape can reuse abbreviated portions of the circles rather than requiring nine reverse dungeons."
+    },
+    {
+      "body_index": 875,
+      "kind": "paragraph",
+      "text": "Final boss needs a two-opponent joint encounter framework or equivalent paired-boss logic."
+    },
+    {
+      "body_index": 876,
+      "kind": "paragraph",
+      "text": "Postgame Severin route needs reordered underworld state after main-story completion."
+    },
+    {
+      "body_index": 877,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 878,
+      "kind": "paragraph",
+      "text": "QC CHECKLIST"
+    },
+    {
+      "body_index": 879,
+      "kind": "paragraph",
+      "text": "QC verification completed for locked v1.0. The checks below are accepted as the narrative implementation baseline; later regressions should reopen only the affected item."
+    },
+    {
+      "body_index": 880,
+      "kind": "paragraph",
+      "text": "Theme integrity"
+    },
+    {
+      "body_index": 881,
+      "kind": "paragraph",
+      "text": "☒  No chapter implies True Light is uniquely evil or Dawn Bloom uniquely virtuous."
+    },
+    {
+      "body_index": 882,
+      "kind": "paragraph",
+      "text": "☒  At least one admirable and one harmful individual exists on each side before the Holy Land."
+    },
+    {
+      "body_index": 883,
+      "kind": "paragraph",
+      "text": "☒  Illyr and Nharos do not secretly cause the crusade."
+    },
+    {
+      "body_index": 884,
+      "kind": "paragraph",
+      "text": "☒  The final revelation preserves human responsibility instead of transferring blame to gods."
+    },
+    {
+      "body_index": 885,
+      "kind": "paragraph",
+      "text": "☒  Aimon’s growth is from outsourced morality to individual judgment, not simply from believer to non-believer."
+    },
+    {
+      "body_index": 886,
+      "kind": "paragraph",
+      "text": "☒  Aeric demonstrates that personal faith can survive the critique of organised religious certainty."
+    },
+    {
+      "body_index": 887,
+      "kind": "paragraph",
+      "text": "Pate / Trade continuity"
+    },
+    {
+      "body_index": 888,
+      "kind": "paragraph",
+      "text": "☒  Every mortal leader chapter contains a credible trace of Pate and/or Trade."
+    },
+    {
+      "body_index": 889,
+      "kind": "paragraph",
+      "text": "☒  Early clues are warm enough that the player expects reunion."
+    },
+    {
+      "body_index": 890,
+      "kind": "paragraph",
+      "text": "☒  Trade’s doubt is foreshadowed before the final notebook page."
+    },
+    {
+      "body_index": 891,
+      "kind": "paragraph",
+      "text": "☒  Pate remains courageous and loving rather than being rewritten as a zealot villain."
+    },
+    {
+      "body_index": 892,
+      "kind": "paragraph",
+      "text": "☒  The mill order is demonstrably pointless through earlier logistics clues, not only Lucain’s exposition."
+    },
+    {
+      "body_index": 893,
+      "kind": "paragraph",
+      "text": "☒  Their retrieval window is unique enough that ordinary resurrection cannot become a routine solution."
+    },
+    {
+      "body_index": 894,
+      "kind": "paragraph",
+      "text": "Choice design"
+    },
+    {
+      "body_index": 895,
+      "kind": "paragraph",
+      "text": "☒  No spare/execute choice gives mechanically superior loot solely for one moral outcome."
+    },
+    {
+      "body_index": 896,
+      "kind": "paragraph",
+      "text": "☒  Spare does not always restore dangerous people to power."
+    },
+    {
+      "body_index": 897,
+      "kind": "paragraph",
+      "text": "☒  Execution has plausible reasons in some cases without being rewarded as the “hard but correct” path."
+    },
+    {
+      "body_index": 898,
+      "kind": "paragraph",
+      "text": "☒  Main story remains completable with every combination of leader choices."
+    },
+    {
+      "body_index": 899,
+      "kind": "paragraph",
+      "text": "☒  World states visibly acknowledge choices on revisit."
+    },
+    {
+      "body_index": 900,
+      "kind": "paragraph",
+      "text": "☒  Executed leaders’ Hell appearances do not label them damned."
+    },
+    {
+      "body_index": 901,
+      "kind": "paragraph",
+      "text": "Cosmology"
+    },
+    {
+      "body_index": 902,
+      "kind": "paragraph",
+      "text": "☒  The True Light and Dawn Bloom clearly refer to Illyr by the finale."
+    },
+    {
+      "body_index": 903,
+      "kind": "paragraph",
+      "text": "☒  Human demon-names clearly refer to Nharos."
+    },
+    {
+      "body_index": 904,
+      "kind": "paragraph",
+      "text": "☒  Illyr and Nharos’s friendship/peer relationship does not map to human good/evil categories."
+    },
+    {
+      "body_index": 905,
+      "kind": "paragraph",
+      "text": "☒  Nine Circles are human labels, not confirmed divine punishment categories."
+    },
+    {
+      "body_index": 906,
+      "kind": "paragraph",
+      "text": "☒  Final boss defeat is local/manifested, avoiding the implication that Aimon literally kills cosmic totalities."
+    },
+    {
+      "body_index": 907,
+      "kind": "paragraph",
+      "text": "☒  Severin can manipulate underworld administration without having secretly orchestrated the mortal war."
+    },
+    {
+      "body_index": 908,
+      "kind": "paragraph",
+      "text": "Programming clarity"
+    },
+    {
+      "body_index": 909,
+      "kind": "paragraph",
+      "text": "☒  Every mandatory scene has a trigger or obvious predecessor."
+    },
+    {
+      "body_index": 910,
+      "kind": "paragraph",
+      "text": "☒  Every chapter has a clear entry objective, climax and completion flag."
+    },
+    {
+      "body_index": 911,
+      "kind": "paragraph",
+      "text": "☒  Optional subplot state never blocks critical exposition."
+    },
+    {
+      "body_index": 912,
+      "kind": "paragraph",
+      "text": "☒  All leader choices resolve to defined town states."
+    },
+    {
+      "body_index": 913,
+      "kind": "paragraph",
+      "text": "☒  Hell conditional content has fallback scenes when no relevant leader or player-monster death exists."
+    },
+    {
+      "body_index": 914,
+      "kind": "paragraph",
+      "text": "☒  Postgame unlock requirements are explicit."
+    },
+    {
+      "body_index": 915,
+      "kind": "paragraph",
+      "text": "Pacing"
+    },
+    {
+      "body_index": 916,
+      "kind": "paragraph",
+      "text": "☒  Act I gives enough time to love Pate and Trade before separation."
+    },
+    {
+      "body_index": 917,
+      "kind": "paragraph",
+      "text": "☒  First four conquest chapters escalate discomfort gradually rather than revealing the thesis immediately."
+    },
+    {
+      "body_index": 918,
+      "kind": "paragraph",
+      "text": "☒  Marasen interrupts any simplistic “Dawn Bloom good” reversal."
+    },
+    {
+      "body_index": 919,
+      "kind": "paragraph",
+      "text": "☒  Botrune supplies evidence, Cayfen supplies exhaustion, Ramelle supplies emotional catastrophe."
+    },
+    {
+      "body_index": 920,
+      "kind": "paragraph",
+      "text": "☒  Chapter 10 allows grief before the underworld adventure begins."
+    },
+    {
+      "body_index": 921,
+      "kind": "paragraph",
+      "text": "☒  Each Hell circle advances Aimon emotionally or reveals Severin; none exists only to add dungeon count."
+    },
+    {
+      "body_index": 922,
+      "kind": "paragraph",
+      "text": "☒  Epilogue does not imply centuries of conflict vanish instantly after one revelation."
+    },
+    {
+      "body_index": 923,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION DECISIONS & CROSS-DOCUMENT DEPENDENCIES"
+    },
+    {
+      "body_index": 924,
+      "kind": "paragraph",
+      "text": "Mortal location naming is LOCKED. Route-derived fantasy names: Civeton (Civetot/Cibotus), Dorelem (Dorylaion), Philomere (Philomelium), Cybressa (Heraclea Cybistra), Cossenne (Coxon), Marasen (Marash), Botrune (Botroun), Cayfen (Cayphas), Ramelle (Ramlah), and Emmara Mill (Emmaus). These are affectations rather than direct historical reproductions."
+    },
+    {
+      "body_index": 925,
+      "kind": "paragraph",
+      "text": "Hell wardens are LOCKED as currently specified: Veyr, Ossael, Mordren, Caelor, Asterion, Mirra, Velcar and Nema."
+    },
+    {
+      "body_index": 926,
+      "kind": "paragraph",
+      "text": "Pate and Trade restoration rule is LOCKED: Aimon retrieves their coherent identities before final dissolution and rebinds them through their mortal remains/anchor vessels during the one-time collapse/reordering of the underworld routes. Exact visual implementation of the anchor may be decided during asset production without changing canon."
+    },
+    {
+      "body_index": 927,
+      "kind": "paragraph",
+      "text": "Leader fate rule is LOCKED: all eight defeated mortal leaders can receive the player’s SPARE or EXECUTE decision; SPARE does not automatically restore political authority."
+    },
+    {
+      "body_index": 928,
+      "kind": "paragraph",
+      "text": "Aimon dialogue model is LOCKED: primarily authored protagonist dialogue with occasional player-selected emotional responses; no visible morality meter."
+    },
+    {
+      "body_index": 929,
+      "kind": "paragraph",
+      "text": "Cross-document dependency: attach exact fixed trainer teams, levels, moves and abilities from the reconciled 187-mon dex/combat documentation. Aimon remains player-defined; Pate and Trade receive the two starters not selected by Aimon."
+    },
+    {
+      "body_index": 930,
+      "kind": "paragraph",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "body_index": 931,
+      "kind": "paragraph",
+      "text": "END OF STORY BIBLE — FULL PLOT LOCKED v1.0"
+    },
+    {
+      "body_index": 932,
+      "kind": "paragraph",
+      "text": "This document is the narrative baseline for event scripting and story implementation. Any subsequent alteration to plot, subplot, character role, choice consequence, location identity or chapter sequence must be treated as an explicit revision rather than implementation drift."
+    }
+  ]
+}

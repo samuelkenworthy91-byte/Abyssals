@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "data/battles/battles.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/battles/modes.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/characters/characters.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/dialogue/dialogue.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/encounters/acquisition.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/encounters/areas.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/encounters/species_availability.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/encounters/tables.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/evolutions/evolutions.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/evolutions/families.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/factions/factions.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/items/items.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/locations/locations.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/locations/world_routes.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/manifests/abyssal_art.json",
+      "schema": "data/schemas/abyssal_art.schema.json"
+    },
+    {
+      "path": "data/manifests/datasets.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/extracted_sources.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/id_aliases.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/import_status.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/portraits.json",
+      "schema": "data/schemas/portraits.schema.json"
+    },
+    {
+      "path": "data/manifests/readiness_blockers.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/schema_registry.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/source_files.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/manifests/unresolved_items.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/moves/learnsets.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/moves/moves.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/progression/chapter_bands.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/progression/core_rules.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/progression/learnset_rules.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/progression/locked_contracts.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/progression/trial_contracts.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CANON_CLEANUP_ADDENDUM_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CANON_SOURCE_INDEX_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_16_Battle_Presentation_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/ENCOUNTER_TABLE_REFERENCE_v1.1.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Pokemon_Fan_Game_354_Move_Catalogue.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Pokemon_Fan_Game_AI_VFX_Prompt_Log_354_Moves.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Pokemon_Pre_Programming_Planning_Checklists_Reference.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Pokemon_Story_Bible_Character_Roster_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Pokemon_Story_Bible_Full_Plot_QC_v0.1.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Regional_Dex_Progression_Learnsets_v3.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/Regional_Dex_Stats_and_Abilities_v1.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/reference/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/save_schema/contracts.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/shops/shops.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/shops/threshold_stock.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/species/abilities.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/species/species.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/story/chapters.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/story/scenes.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/story/state_contracts.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/story/state_model.json",
+      "schema": "data/schemas/metadata.schema.json"
+    },
+    {
+      "path": "data/terrain/fields.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainer_classes/classes.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainers/ai_tiers.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainers/companion_checkpoints.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainers/profiles.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/trainers/trainers.json",
+      "schema": "data/schemas/dataset.schema.json"
+    },
+    {
+      "path": "data/types/types.json",
+      "schema": "data/schemas/dataset.schema.json"
+    }
+  ]
+}

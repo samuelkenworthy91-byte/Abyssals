@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/handoff_v1/data/canon/factions.json"
+  ],
+  "records": [
+    {
+      "id": "TRUE_LIGHT",
+      "human_read": "white/European medieval-crusader-inspired",
+      "palette": [
+        "royal blue",
+        "navy",
+        "ivory/white",
+        "weathered steel",
+        "silver",
+        "sparse gold"
+      ]
+    },
+    {
+      "id": "DAWN_BLOOM",
+      "human_read": "grounded Middle Eastern/West Asian-inspired medieval fantasy",
+      "palette": [
+        "deep violet",
+        "plum",
+        "aubergine",
+        "cream/sand",
+        "brass/gold",
+        "restrained teal"
+      ]
+    },
+    {
+      "id": "NEUTRAL_UNDERWORLD",
+      "rule": "regional practical clothing; underworld retains former-role silhouette translated into ash/black iron/bruise-violet supernatural wear"
+    }
+  ],
+  "unresolved": []
+}

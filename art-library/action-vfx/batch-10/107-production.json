@@ -1,0 +1,32 @@
+{
+  "id": 107,
+  "name": "Frost Spire",
+  "category": "SPECIAL",
+  "effects": [
+    {
+      "effect_id": "high_critical_ratio",
+      "stage_bonus": null
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "Five thin translucent ice plates assemble vertically into one spiralling frozen spire. The spire twists to a needle tip, drives downward once with a precise piercing sparkle, then collapses into faceted chips. No radial explosion.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Spire, ID 107. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Five thin translucent ice plates assemble vertically into one spiralling frozen spire. The spire twists to a needle tip, drives downward once with a precise piercing sparkle, then collapses into faceted chips. No radial explosion. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Spire, ID 107. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: Five thin translucent ice plates assemble vertically into one spiralling frozen spire. The spire twists to a needle tip, drives downward once with a precise piercing sparkle, then collapses into faceted chips. No radial explosion. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL LAYOUT: each subject is SMALL, strictly contained in central 40 percent of EACH cell, with 30 percent empty transparent margin on every side, including every glowing particle and trail. Every frame completely separated. Use fine crisp pixels and the same rich crystalline shading as the reference.",
+  "referenceImages": [
+    "art-library/action-vfx/batch-09/105-prepared.png"
+  ],
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/107-source.png",
+  "prepared": "art-library/action-vfx/batch-10/107-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "35339074ffb4b42f542906ca409399c59955774aa8f46d03dc422fdf29653b3f",
+  "sourceSha256": "8484d822a316537fec9f881c0d1a826f4554f5a8449dd34ab2d6b92e50b2841d"
+}

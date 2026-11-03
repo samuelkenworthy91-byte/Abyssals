@@ -1,0 +1,438 @@
+{
+  "batch": "11",
+  "status": "planned prompts; NOT authored or installed",
+  "format": "16-frame 4x4 transparent sheets",
+  "moves": [
+    {
+      "id": 137,
+      "name": "Venom Needle",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A glass-green sewing needle forms from three stacked venom droplets, shivers on its point and shoots tip-first in one fast line; the trailing strand sags backward as spent momentum and evaporates. No insect or stinger body.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 137, Venom Needle. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A glass-green sewing needle forms from three stacked venom droplets, shivers on its point and shoots tip-first in one fast line; the trailing strand sags backward as spent momentum and evaporates. No insect or stinger body. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 138,
+      "name": "Barb Rend",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "drain",
+          "actual_hp_damage_fraction": [
+            25,
+            100
+          ]
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "Two hooked blackthorn barbs catch the edge of a torn leather plate, pull across once to leave a ragged rent, then siphon a narrow ruby thread back along the barbs before unclenching.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 138, Barb Rend. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. Two hooked blackthorn barbs catch the edge of a torn leather plate, pull across once to leave a ragged rent, then siphon a narrow ruby thread back along the barbs before unclenching. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 139,
+      "name": "Bitter Medicine",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A cracked medicine vial tips out bitter black fluid that wraps a stone-hard pestle; the pestle slams once, splashes green residue, then its own handle fissures under recoil and withdraws.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 139, Bitter Medicine. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A cracked medicine vial tips out bitter black fluid that wraps a stone-hard pestle; the pestle slams once, splashes green residue, then its own handle fissures under recoil and withdraws. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 140,
+      "name": "Toxin Spray",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "An articulated brass atomizer compresses and releases a wide fan of yellow-green venom beads. Beads coalesce on one contact patch and drip down in streaks; no flame or water jet.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 140, Toxin Spray. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. An articulated brass atomizer compresses and releases a wide fan of yellow-green venom beads. Beads coalesce on one contact patch and drip down in streaks; no flame or water jet. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 141,
+      "name": "Alkaline Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "drain",
+          "actual_hp_damage_fraction": [
+            25,
+            100
+          ]
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A pale alkaline tuning fork hums above a transparent flask, sends one concentric chemical vibration through suspended chalky crystals, and draws fine green stolen motes back into its stem.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 141, Alkaline Resonance. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A pale alkaline tuning fork hums above a transparent flask, sends one concentric chemical vibration through suspended chalky crystals, and draws fine green stolen motes back into its stem. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 142,
+      "name": "Venomtooth Hook",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A single hollow fang carved from dark jade hinges into a hook, plunges down once and pulls sideways through target space, leaving twin hanging poisonous droplets on its tip before release.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 142, Venomtooth Hook. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A single hollow fang carved from dark jade hinges into a hook, plunges down once and pulls sideways through target space, leaving twin hanging poisonous droplets on its tip before release. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 143,
+      "name": "Venom Coat",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "contact_status_retaliation",
+          "status": "POISON",
+          "chance_percent": 30,
+          "turns": 5
+        }
+      ],
+      "target": "SELF",
+      "batch": "11",
+      "sequence": "A cracked chitin shield is painted by a thick violet venom film in three slow passes. It hardens into glossy raised spines, catches an incoming harmless touch and prickles before subsiding.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 143, Venom Coat. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A cracked chitin shield is painted by a thick violet venom film in three slow passes. It hardens into glossy raised spines, catches an incoming harmless touch and prickles before subsiding. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 144,
+      "name": "Stinger Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "Two segmented insect stingers shaped as short scissors open wide, cross in one angular bite, splinter a dark leaf-shaped target fragment and withdraw with tiny poisoned sparks.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 144, Stinger Scissor. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. Two segmented insect stingers shaped as short scissors open wide, cross in one angular bite, splinter a dark leaf-shaped target fragment and withdraw with tiny poisoned sparks. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 145,
+      "name": "Venom Lash",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A flexible translucent venom tube coils twice, straightens into one low lash and snaps against a plated target edge, its toxic beads smearing across a newly cracked seam; no generic green streak.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 145, Venom Lash. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A flexible translucent venom tube coils twice, straightens into one low lash and snaps against a plated target edge, its toxic beads smearing across a newly cracked seam; no generic green streak. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 146,
+      "name": "Venom Mist",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "Dense hanging strands of oily purple mist wind around a hollow crescent, gather into a choking ribbon, roll over one target point and leave a dark droplet haze as they unravel.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 146, Venom Mist. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. Dense hanging strands of oily purple mist wind around a hollow crescent, gather into a choking ribbon, roll over one target point and leave a dark droplet haze as they unravel. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 147,
+      "name": "Viper Lunge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A viper-shaped metal fang without a snake head retracts against a springy dark coil, then leaps forward in a single diving stab that drives two cracks through a shield rim; spring snaps back.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 147, Viper Lunge. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A viper-shaped metal fang without a snake head retracts against a springy dark coil, then leaps forward in a single diving stab that drives two cracks through a shield rim; spring snaps back. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 148,
+      "name": "Venom Spray",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A ceramic serpent-mouth spout compresses a dark-green reservoir and spits a narrow high-pressure venom stream into one wet splatter; small violet drops linger in a vertical drip line.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 148, Venom Spray. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A ceramic serpent-mouth spout compresses a dark-green reservoir and spits a narrow high-pressure venom stream into one wet splatter; small violet drops linger in a vertical drip line. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 149,
+      "name": "Venom Sting",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A slim needle-fang emerges from an unfolding leather cuff, punctures one point with a tiny purple-black flash, leaves a single dangerous bead behind and retracts. Intentionally understated.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 149, Venom Sting. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A slim needle-fang emerges from an unfolding leather cuff, punctures one point with a tiny purple-black flash, leaves a single dangerous bead behind and retracts. Intentionally understated. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 150,
+      "name": "Emperor's Scheme",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 100
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stat": "sp_defence",
+          "stages": -1
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "An ornate poison-green imperial seal settles over a folded decree, strikes once to leave a branching malignant crest and a descending broken-resistance sigil, then paper curls into black ash.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 150, Emperor's Scheme. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. An ornate poison-green imperial seal settles over a folded decree, strikes once to leave a branching malignant crest and a descending broken-resistance sigil, then paper curls into black ash. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 151,
+      "name": "Venom Cairn",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "BAD_POISON",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A squat cairn of stacked green-veined stones stands up one rock at a time; venom glows in its seams, the centre splits toward the target in one toxic release, then the cairn slumps.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 151, Venom Cairn. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A squat cairn of stacked green-veined stones stands up one rock at a time; venom glows in its seams, the centre splits toward the target in one toxic release, then the cairn slumps. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 152,
+      "name": "Burrow Calm",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "11",
+      "sequence": "Loose earth from a little circular burrow rises in four slow spirals and forms a sheltered hollow around an empty figure-space; sand motes grow still and the ring lowers without attack.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 152, Burrow Calm. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. Loose earth from a little circular burrow rises in four slow spirals and forms a sheltered hollow around an empty figure-space; sand motes grow still and the ring lowers without attack. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 154,
+      "name": "Faultline Rend",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A broad angular fault crack races across a suspended stone shelf, catches a protruding shard, rips it sideways in one violent break, and drops a few stubborn blocks into the fissure.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 154, Faultline Rend. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A broad angular fault crack races across a suspended stone shelf, catches a protruding shard, rips it sideways in one violent break, and drops a few stubborn blocks into the fissure. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 156,
+      "name": "Buried Knuckle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A square clay fist pushes upward out of packed soil with grains and root fibres clinging, performs one rising knuckle blow and sinks back into the burrow, leaving a crumbling ring.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 156, Buried Knuckle. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A square clay fist pushes upward out of packed soil with grains and root fibres clinging, performs one rising knuckle blow and sinks back into the burrow, leaving a crumbling ring. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 157,
+      "name": "Burrow Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "Two spade-like earth blades hinged at the bottom of a sand pit cross like oversized shears. The blades close once, spray a low granular crescent and disappear below the surface.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 157, Burrow Scissor. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. Two spade-like earth blades hinged at the bottom of a sand pit cross like oversized shears. The blades close once, spray a low granular crescent and disappear below the surface. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 158,
+      "name": "Fault Line",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A jagged charcoal line opens through a miniature terrain cross-section from left to right; the two sides grind once out of alignment, sending a short dust upheaval above the seam.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 158, Fault Line. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A jagged charcoal line opens through a miniature terrain cross-section from left to right; the two sides grind once out of alignment, sending a short dust upheaval above the seam. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 159,
+      "name": "Seismic Detonation",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A compact floating block of sediment reveals a pulsing red fracture core, vibrates violently, shatters into a single compressed seismic burst, and collapses into falling rubble rather than a fireball.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 159, Seismic Detonation. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A compact floating block of sediment reveals a pulsing red fracture core, vibrates violently, shatters into a single compressed seismic burst, and collapses into falling rubble rather than a fireball. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 160,
+      "name": "Dune Surge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A rolling dune builds from tiny wind-pulled sand ridges, arches as one thick moving wall, hits and crumbles in heavy dry cascades, briefly leaving grit trapped in crystalline cracks.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 160, Dune Surge. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A rolling dune builds from tiny wind-pulled sand ridges, arches as one thick moving wall, hits and crumbles in heavy dry cascades, briefly leaving grit trapped in crystalline cracks. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    },
+    {
+      "id": 161,
+      "name": "Dust Screen",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "11",
+      "sequence": "A rough jute screen throws up a vertical veil of dust between opposing positions. Dense streaks cross and obscure its centre, then settle in delicate falling particles; no contact damage.",
+      "prompt": "Abyssals original hand-directed detailed pixel-art JRPG action, ID 161, Dust Screen. One 4x4 spritesheet of exactly 16 unique progressive frames with genuine transparent alpha, row-major. A rough jute screen throws up a vertical veil of dust between opposing positions. Dense streaks cross and obscure its centre, then settle in delicate falling particles; no contact damage. Frames 1-4 anticipation, 5-7 travel, frame 8 singular impact or status climax, 9-12 consequence, 13-16 distinct recovery; not 16 copies or extra strikes. One self-contained readable central animated object/motion per cell, all details, motes and effects inside MIDDLE 40% of each cell, immense transparent gutters. Rich 192px logical-cell pixel clusters, careful material and directional lighting. No background, humans, creatures, letters, borders, generic recolouring or broken fragments crossing gutters.",
+      "status": "planned only; no artwork created"
+    }
+  ]
+}

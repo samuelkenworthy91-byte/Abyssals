@@ -1,0 +1,1196 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md"
+  ],
+  "records": [
+    {
+      "id": "WORLD-CRITICAL_PATH",
+      "name": "Critical path",
+      "entries": [
+        {
+          "line": 6,
+          "text": "Civeton"
+        },
+        {
+          "line": 7,
+          "text": "→ Civeton March"
+        },
+        {
+          "line": 8,
+          "text": "→ Dorelem Scrub"
+        },
+        {
+          "line": 9,
+          "text": "→ Dorelem Service Tunnels"
+        },
+        {
+          "line": 10,
+          "text": "→ Dorelem"
+        },
+        {
+          "line": 11,
+          "text": "→ North Scrub Road"
+        },
+        {
+          "line": 12,
+          "text": "→ Philomere Floodplain / Flooded Medicine Path"
+        },
+        {
+          "line": 13,
+          "text": "→ Philomere"
+        },
+        {
+          "line": 14,
+          "text": "→ Rivercause Road"
+        },
+        {
+          "line": 15,
+          "text": "→ Cybressa"
+        },
+        {
+          "line": 16,
+          "text": "→ Orchard Way"
+        },
+        {
+          "line": 17,
+          "text": "→ Cossenne"
+        },
+        {
+          "line": 18,
+          "text": "→ Stonecut Pass"
+        },
+        {
+          "line": 19,
+          "text": "→ Marasen"
+        },
+        {
+          "line": 20,
+          "text": "→ Scribes' Road"
+        },
+        {
+          "line": 21,
+          "text": "→ Botrune"
+        },
+        {
+          "line": 22,
+          "text": "→ War Road / Burned Approaches / No-Man's Field"
+        },
+        {
+          "line": 23,
+          "text": "→ Cayfen"
+        },
+        {
+          "line": 24,
+          "text": "→ Pilgrim's Reach / Sacred Boundary Farms"
+        },
+        {
+          "line": 25,
+          "text": "→ Ramelle"
+        },
+        {
+          "line": 26,
+          "text": "→ Emmara Mill"
+        },
+        {
+          "line": 27,
+          "text": "→ Old Catacombs"
+        },
+        {
+          "line": 28,
+          "text": "→ Circle I"
+        },
+        {
+          "line": 29,
+          "text": "→ Circle II"
+        },
+        {
+          "line": 30,
+          "text": "→ Circle III"
+        },
+        {
+          "line": 31,
+          "text": "→ Circle IV"
+        },
+        {
+          "line": 32,
+          "text": "→ Circle V"
+        },
+        {
+          "line": 33,
+          "text": "→ Circle VI"
+        },
+        {
+          "line": 34,
+          "text": "→ Circle VII"
+        },
+        {
+          "line": 35,
+          "text": "→ Circle VIII"
+        },
+        {
+          "line": 36,
+          "text": "→ Circle IX"
+        },
+        {
+          "line": 37,
+          "text": "→ Nharos's Throne / Illyr + Nharos finale"
+        },
+        {
+          "line": 38,
+          "text": "→ short Ascending Underworld escape"
+        },
+        {
+          "line": 39,
+          "text": "→ Ramelle"
+        },
+        {
+          "line": 40,
+          "text": "→ world restoration"
+        },
+        {
+          "line": 41,
+          "text": "→ Civeton epilogue"
+        },
+        {
+          "line": 43,
+          "text": "Postgame:"
+        },
+        {
+          "line": 44,
+          "text": "- Botrune / Tide Caves expedition route → Primeval Reach"
+        },
+        {
+          "line": 45,
+          "text": "- Ramelle / Old Catacombs → reordered underworld → Severin Vale / King Below"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 5
+      }
+    },
+    {
+      "id": "WORLD-CIVETON",
+      "name": "Civeton",
+      "entries": [
+        {
+          "line": 48,
+          "text": "Safe hub:"
+        },
+        {
+          "line": 49,
+          "text": "- village"
+        },
+        {
+          "line": 50,
+          "text": "- Childhood Hill"
+        },
+        {
+          "line": 51,
+          "text": "- True Light shrine"
+        },
+        {
+          "line": 52,
+          "text": "- mustering camp"
+        },
+        {
+          "line": 53,
+          "text": "- memorial"
+        },
+        {
+          "line": 54,
+          "text": "- alchemist"
+        },
+        {
+          "line": 55,
+          "text": "- supplies"
+        },
+        {
+          "line": 56,
+          "text": "- reserve"
+        },
+        {
+          "line": 57,
+          "text": "- carriage stand"
+        },
+        {
+          "line": 59,
+          "text": "Main route:"
+        },
+        {
+          "line": 60,
+          "text": "- Civeton March"
+        },
+        {
+          "line": 62,
+          "text": "Optional:"
+        },
+        {
+          "line": 63,
+          "text": "- Mere of First Light — visible early, watercraft access after Philomere"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 47
+      }
+    },
+    {
+      "id": "WORLD-DORELEM",
+      "name": "Dorelem",
+      "entries": [
+        {
+          "line": 66,
+          "text": "Approach:"
+        },
+        {
+          "line": 67,
+          "text": "- Dorelem Scrub"
+        },
+        {
+          "line": 69,
+          "text": "Required dungeon/bypass:"
+        },
+        {
+          "line": 70,
+          "text": "- Dorelem Service Tunnels"
+        },
+        {
+          "line": 72,
+          "text": "Settlement:"
+        },
+        {
+          "line": 73,
+          "text": "- Dorelem"
+        },
+        {
+          "line": 75,
+          "text": "Optional:"
+        },
+        {
+          "line": 76,
+          "text": "- Marchwood Hollow"
+        },
+        {
+          "line": 77,
+          "text": "- Reedcut Cave — watercraft access"
+        },
+        {
+          "line": 79,
+          "text": "Permanent shortcut:"
+        },
+        {
+          "line": 80,
+          "text": "- inner portcullis / keep-side access after first clear"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 65
+      }
+    },
+    {
+      "id": "WORLD-PHILOMERE",
+      "name": "Philomere",
+      "entries": [
+        {
+          "line": 83,
+          "text": "Approach:"
+        },
+        {
+          "line": 84,
+          "text": "- North Scrub Road"
+        },
+        {
+          "line": 85,
+          "text": "- Hospice Road"
+        },
+        {
+          "line": 87,
+          "text": "Required exploration:"
+        },
+        {
+          "line": 88,
+          "text": "- Flooded Medicine Path"
+        },
+        {
+          "line": 90,
+          "text": "Settlement:"
+        },
+        {
+          "line": 91,
+          "text": "- Philomere"
+        },
+        {
+          "line": 93,
+          "text": "Key progression:"
+        },
+        {
+          "line": 94,
+          "text": "- permanent personal watercraft unlocks after Philomere"
+        },
+        {
+          "line": 96,
+          "text": "Optional:"
+        },
+        {
+          "line": 97,
+          "text": "- Sanctuary Reeds"
+        },
+        {
+          "line": 98,
+          "text": "- Philomere Backwaters"
+        },
+        {
+          "line": 100,
+          "text": "Cross-link:"
+        },
+        {
+          "line": 101,
+          "text": "- Philomere Backwaters ↔ Cybressa Smugglers' Weir"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 82
+      }
+    },
+    {
+      "id": "WORLD-CYBRESSA",
+      "name": "Cybressa",
+      "entries": [
+        {
+          "line": 104,
+          "text": "Approach:"
+        },
+        {
+          "line": 105,
+          "text": "- Rivercause Road"
+        },
+        {
+          "line": 107,
+          "text": "Settlement:"
+        },
+        {
+          "line": 108,
+          "text": "- Cybressa market city"
+        },
+        {
+          "line": 110,
+          "text": "Optional:"
+        },
+        {
+          "line": 111,
+          "text": "- Smugglers' Weir"
+        },
+        {
+          "line": 112,
+          "text": "- drainage/river-basin branch"
+        },
+        {
+          "line": 114,
+          "text": "Cross-link:"
+        },
+        {
+          "line": 115,
+          "text": "- Smugglers' Weir ↔ Philomere Backwaters"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 103
+      }
+    },
+    {
+      "id": "WORLD-COSSENNE",
+      "name": "Cossenne",
+      "entries": [
+        {
+          "line": 118,
+          "text": "Approach:"
+        },
+        {
+          "line": 119,
+          "text": "- Orchard Way"
+        },
+        {
+          "line": 121,
+          "text": "Settlement:"
+        },
+        {
+          "line": 122,
+          "text": "- Cossenne shrine/orchard settlement"
+        },
+        {
+          "line": 124,
+          "text": "Optional:"
+        },
+        {
+          "line": 125,
+          "text": "- Old Pilgrim Grove"
+        },
+        {
+          "line": 126,
+          "text": "- Sunken Shrine — watercraft access"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 117
+      }
+    },
+    {
+      "id": "WORLD-MARASEN",
+      "name": "Marasen",
+      "entries": [
+        {
+          "line": 129,
+          "text": "Approach:"
+        },
+        {
+          "line": 130,
+          "text": "- Stonecut Pass / Quarry Road"
+        },
+        {
+          "line": 132,
+          "text": "Settlement:"
+        },
+        {
+          "line": 133,
+          "text": "- Marasen"
+        },
+        {
+          "line": 135,
+          "text": "Traditional dungeon:"
+        },
+        {
+          "line": 136,
+          "text": "- Quarry Tunnels"
+        },
+        {
+          "line": 138,
+          "text": "Optional:"
+        },
+        {
+          "line": 139,
+          "text": "- Prison Galleries"
+        },
+        {
+          "line": 140,
+          "text": "- Fossil Cut"
+        },
+        {
+          "line": 142,
+          "text": "Permanent shortcut:"
+        },
+        {
+          "line": 143,
+          "text": "- Quarry Lift"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 128
+      }
+    },
+    {
+      "id": "WORLD-BOTRUNE",
+      "name": "Botrune",
+      "entries": [
+        {
+          "line": 146,
+          "text": "Approach:"
+        },
+        {
+          "line": 147,
+          "text": "- Scribes' Road"
+        },
+        {
+          "line": 149,
+          "text": "Settlement:"
+        },
+        {
+          "line": 150,
+          "text": "- Botrune / abbey complex"
+        },
+        {
+          "line": 152,
+          "text": "Traditional dungeon:"
+        },
+        {
+          "line": 153,
+          "text": "- Buried Pre-Schism Archive"
+        },
+        {
+          "line": 155,
+          "text": "Optional:"
+        },
+        {
+          "line": 156,
+          "text": "- Scribe's Cistern"
+        },
+        {
+          "line": 157,
+          "text": "- Tide Caves"
+        },
+        {
+          "line": 159,
+          "text": "Permanent shortcut:"
+        },
+        {
+          "line": 160,
+          "text": "- Archive spiral stair"
+        },
+        {
+          "line": 162,
+          "text": "Postgame departure:"
+        },
+        {
+          "line": 163,
+          "text": "- Tide Caves / expedition dock → Primeval Reach"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 145
+      }
+    },
+    {
+      "id": "WORLD-CAYFEN",
+      "name": "Cayfen",
+      "entries": [
+        {
+          "line": 166,
+          "text": "Approach:"
+        },
+        {
+          "line": 167,
+          "text": "- War Road"
+        },
+        {
+          "line": 168,
+          "text": "- Burned Approaches"
+        },
+        {
+          "line": 169,
+          "text": "- No-Man's Field"
+        },
+        {
+          "line": 171,
+          "text": "Settlement:"
+        },
+        {
+          "line": 172,
+          "text": "- Cayfen"
+        },
+        {
+          "line": 174,
+          "text": "Optional:"
+        },
+        {
+          "line": 175,
+          "text": "- Ceasefire Field"
+        },
+        {
+          "line": 176,
+          "text": "- Ash Culvert — deepest branch uses watercraft"
+        },
+        {
+          "line": 178,
+          "text": "State variation:"
+        },
+        {
+          "line": 179,
+          "text": "- Ceasefire Field may switch from wartime to truce encounter state after its quest"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 165
+      }
+    },
+    {
+      "id": "WORLD-RAMELLE_HOLY_LAND",
+      "name": "Ramelle / Holy Land",
+      "entries": [
+        {
+          "line": 182,
+          "text": "Approach:"
+        },
+        {
+          "line": 183,
+          "text": "- Pilgrim's Reach"
+        },
+        {
+          "line": 184,
+          "text": "- Sacred Boundary Farms"
+        },
+        {
+          "line": 186,
+          "text": "Settlement:"
+        },
+        {
+          "line": 187,
+          "text": "- Ramelle"
+        },
+        {
+          "line": 189,
+          "text": "Story route:"
+        },
+        {
+          "line": 190,
+          "text": "- Emmara Track"
+        },
+        {
+          "line": 191,
+          "text": "- Emmara Mill"
+        },
+        {
+          "line": 193,
+          "text": "Optional:"
+        },
+        {
+          "line": 194,
+          "text": "- Washed Crossing — watercraft"
+        },
+        {
+          "line": 195,
+          "text": "- Pilgrim Caves"
+        },
+        {
+          "line": 196,
+          "text": "- Bellglass Ruins"
+        },
+        {
+          "line": 198,
+          "text": "Major descent dungeon:"
+        },
+        {
+          "line": 199,
+          "text": "- Old Catacombs"
+        },
+        {
+          "line": 201,
+          "text": "Important:"
+        },
+        {
+          "line": 202,
+          "text": "- First-visit Emmara Mill revelation sequence has no random encounters."
+        },
+        {
+          "line": 203,
+          "text": "- The true final point of no return is not here; the player can still return from Hell until very late."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 181
+      }
+    },
+    {
+      "id": "WORLD-HELL",
+      "name": "Hell",
+      "entries": [],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 205
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_I_THRESHOLD",
+      "name": "Circle I — Threshold",
+      "entries": [
+        {
+          "line": 207,
+          "text": "- Pale Gate safe threshold"
+        },
+        {
+          "line": 208,
+          "text": "- Roads of the Newly Dead"
+        },
+        {
+          "line": 209,
+          "text": "- Registry of Names"
+        },
+        {
+          "line": 210,
+          "text": "- optional Lost Queue"
+        },
+        {
+          "line": 211,
+          "text": "- Warden: Veyr, Keeper of Names"
+        },
+        {
+          "line": 212,
+          "text": "- unlocks first Underway Relay functionality"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 206
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_II_WANT",
+      "name": "Circle II — Want",
+      "entries": [
+        {
+          "line": 215,
+          "text": "- House of Unfinished Things"
+        },
+        {
+          "line": 216,
+          "text": "- Unfinished Rooms"
+        },
+        {
+          "line": 217,
+          "text": "- Hoard Galleries"
+        },
+        {
+          "line": 218,
+          "text": "- optional Medal Vault"
+        },
+        {
+          "line": 219,
+          "text": "- Warden: Ossael, the Gatherer"
+        },
+        {
+          "line": 220,
+          "text": "- by the end of this Circle every species that is eligible on the current save during the main game is theoretically obtainable"
+        },
+        {
+          "line": 221,
+          "text": "- Checklist 11 exception: the four evolved forms excluded by the player's four story-branch choices remain deliberately unavailable until postgame Primeval Reach"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 214
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_III_WRATH",
+      "name": "Circle III — Wrath",
+      "entries": [
+        {
+          "line": 224,
+          "text": "- The Red Field"
+        },
+        {
+          "line": 225,
+          "text": "- Endless Battlefield"
+        },
+        {
+          "line": 226,
+          "text": "- Anchor Trenches"
+        },
+        {
+          "line": 227,
+          "text": "- optional Medic's Truce"
+        },
+        {
+          "line": 228,
+          "text": "- Warden: Mordren, Drum of War"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 223
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_IV_DOMINION",
+      "name": "Circle IV — Dominion",
+      "entries": [
+        {
+          "line": 231,
+          "text": "- The Broken Court"
+        },
+        {
+          "line": 232,
+          "text": "- Court of Petitions"
+        },
+        {
+          "line": 233,
+          "text": "- Command Arcade"
+        },
+        {
+          "line": 234,
+          "text": "- optional Empty Chair"
+        },
+        {
+          "line": 235,
+          "text": "- Warden: Caelor, Last Magistrate"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 230
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_V_DOGMA",
+      "name": "Circle V — Dogma",
+      "entries": [
+        {
+          "line": 238,
+          "text": "- The Twin Heavens"
+        },
+        {
+          "line": 239,
+          "text": "- True Light Heaven branch"
+        },
+        {
+          "line": 240,
+          "text": "- Dawn Bloom Heaven branch"
+        },
+        {
+          "line": 241,
+          "text": "- Shared Hymn Gate"
+        },
+        {
+          "line": 242,
+          "text": "- optional Old Hymn Chamber"
+        },
+        {
+          "line": 243,
+          "text": "- Warden: Asterion, Voice of Certainty"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 237
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_VI_GRIEF",
+      "name": "Circle VI — Grief",
+      "entries": [
+        {
+          "line": 246,
+          "text": "- The Garden of Returns"
+        },
+        {
+          "line": 247,
+          "text": "- Memory Orchards"
+        },
+        {
+          "line": 248,
+          "text": "- Mirror Pond"
+        },
+        {
+          "line": 249,
+          "text": "- optional Memorial Grove"
+        },
+        {
+          "line": 250,
+          "text": "- Warden: Mirra, Kindly Shape"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 245
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_VII_BETRAYAL",
+      "name": "Circle VII — Betrayal",
+      "entries": [
+        {
+          "line": 253,
+          "text": "- The House of Closed Doors"
+        },
+        {
+          "line": 254,
+          "text": "- Promise Hall"
+        },
+        {
+          "line": 255,
+          "text": "- Closed-Door Maze"
+        },
+        {
+          "line": 256,
+          "text": "- optional Brothers' Threshold"
+        },
+        {
+          "line": 257,
+          "text": "- Warden: Velcar, Oath-Eater"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 252
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_VIII_SILENCE",
+      "name": "Circle VIII — Silence",
+      "entries": [
+        {
+          "line": 260,
+          "text": "- The Quiet Sea"
+        },
+        {
+          "line": 261,
+          "text": "- Blank Shore"
+        },
+        {
+          "line": 262,
+          "text": "- Silent Crossing"
+        },
+        {
+          "line": 263,
+          "text": "- Drowned Monuments"
+        },
+        {
+          "line": 264,
+          "text": "- optional Missing Stanza Islet"
+        },
+        {
+          "line": 265,
+          "text": "- Warden: Nema, the Unremembered"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 259
+      }
+    },
+    {
+      "id": "WORLD-CIRCLE_IX_THRONE",
+      "name": "Circle IX — Throne",
+      "entries": [
+        {
+          "line": 268,
+          "text": "- Hall of Last Names"
+        },
+        {
+          "line": 269,
+          "text": "- failing record halls"
+        },
+        {
+          "line": 270,
+          "text": "- last-name chambers"
+        },
+        {
+          "line": 271,
+          "text": "- optional Misfiled Records"
+        },
+        {
+          "line": 272,
+          "text": "- Last Antechamber = explicit true point of no return"
+        },
+        {
+          "line": 273,
+          "text": "- Nharos's Throne Realm"
+        },
+        {
+          "line": 274,
+          "text": "- Illyr + Nharos finale"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 267
+      }
+    },
+    {
+      "id": "WORLD-UNDERWORLD_TRANSIT",
+      "name": "Underworld transit",
+      "entries": [
+        {
+          "line": 277,
+          "text": "- Defeating Wardens unlocks permanent shortcuts."
+        },
+        {
+          "line": 278,
+          "text": "- A central Underway Relay permits travel among cleared Circles."
+        },
+        {
+          "line": 279,
+          "text": "- No carriage travel operates in Hell."
+        },
+        {
+          "line": 280,
+          "text": "- Safe thresholds provide healing, reserve access, party management/save and possibly restricted essentials."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 276
+      }
+    },
+    {
+      "id": "WORLD-FINALE_AND_RESTORATION",
+      "name": "Finale and restoration",
+      "entries": [
+        {
+          "line": 283,
+          "text": "- The escape from the finale is a short new Ascending Underworld route, not a full reverse traversal of all Nine Circles."
+        },
+        {
+          "line": 284,
+          "text": "- Mortal settlements reuse the same physical maps with state changes such as occupation, recovery and restoration."
+        },
+        {
+          "line": 285,
+          "text": "- Leader spare/execute results and optional content can alter restored-state NPCs, services and side content."
+        },
+        {
+          "line": 286,
+          "text": "- Restoration cannot permanently remove any species from eventual obtainability."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 282
+      }
+    },
+    {
+      "id": "WORLD-PRIMEVAL_REACH_POSTGAME",
+      "name": "Primeval Reach postgame",
+      "entries": [
+        {
+          "line": 289,
+          "text": "Working structure:"
+        },
+        {
+          "line": 290,
+          "text": "- Botrune"
+        },
+        {
+          "line": 291,
+          "text": "- Tide Caves / expedition dock"
+        },
+        {
+          "line": 292,
+          "text": "- water crossing"
+        },
+        {
+          "line": 293,
+          "text": "- Primeval Reach"
+        },
+        {
+          "line": 294,
+          "text": "- Fern Basin"
+        },
+        {
+          "line": 295,
+          "text": "- Fossil Cliffs"
+        },
+        {
+          "line": 296,
+          "text": "- Primeval Jungle"
+        },
+        {
+          "line": 297,
+          "text": "- Caldera / nesting grounds"
+        },
+        {
+          "line": 299,
+          "text": "Purpose:"
+        },
+        {
+          "line": 300,
+          "text": "- living fossil populations"
+        },
+        {
+          "line": 301,
+          "text": "- alternate fossil hunting"
+        },
+        {
+          "line": 302,
+          "text": "- postgame completion access to the four final forms excluded by the current save's main-game story-branch choices"
+        },
+        {
+          "line": 303,
+          "text": "- those opposite story-branch forms are encountered/caught directly; Primeval Reach does not reverse the player's story choice or unlock the opposite evolution route for the source species"
+        },
+        {
+          "line": 304,
+          "text": "- no other postgame-exclusive first-access species without explicit revision"
+        },
+        {
+          "line": 306,
+          "text": "Story-branch completion set:"
+        },
+        {
+          "line": 307,
+          "text": "- Censmoke family: whichever of Thurafume / Malifume was not unlocked by the main-game relic choice"
+        },
+        {
+          "line": 308,
+          "text": "- Cairant family: whichever of Serapine / Pandemne was not unlocked by the main-game oath choice"
+        },
+        {
+          "line": 309,
+          "text": "- Flaggrim family: whichever of Oriflamme / Tattereign was not unlocked by the main-game banner choice"
+        },
+        {
+          "line": 310,
+          "text": "- Jerbune family: whichever of Concordune / Sundune was not unlocked by the main-game alliance choice"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 288
+      }
+    },
+    {
+      "id": "WORLD-KING_BELOW_POSTGAME",
+      "name": "King Below postgame",
+      "entries": [
+        {
+          "line": 313,
+          "text": "- Ramelle"
+        },
+        {
+          "line": 314,
+          "text": "- Old Catacombs"
+        },
+        {
+          "line": 315,
+          "text": "- reordered Pale Gate"
+        },
+        {
+          "line": 316,
+          "text": "- King's Causeway"
+        },
+        {
+          "line": 317,
+          "text": "- fragments/remixes of former Circles"
+        },
+        {
+          "line": 318,
+          "text": "- New Court"
+        },
+        {
+          "line": 319,
+          "text": "- Severin Vale / King Below"
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 312
+      }
+    },
+    {
+      "id": "WORLD-V1_1_SUPERSESSION_NOTE_CHECKLIST_11_STORY_BRANCH_EXCEPTION",
+      "name": "v1.1 supersession note — Checklist 11 story-branch exception",
+      "entries": [
+        {
+          "line": 322,
+          "text": "The former \"all 187 by Circle II\" and \"no postgame-exclusive first access\" wording is superseded only for the four unchosen story-choice final forms. The connection graph and all other availability rules remain locked."
+        }
+      ],
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+        "line": 321
+      }
+    }
+  ],
+  "unresolved": [],
+  "representation": "structured_authoring_specification"
+}

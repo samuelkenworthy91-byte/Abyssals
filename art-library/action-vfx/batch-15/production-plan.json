@@ -1,0 +1,436 @@
+{
+  "batch": "15",
+  "status": "unique prompts only; 0 sheets generated",
+  "moves": [
+    {
+      "id": 239,
+      "name": "Shale Gouge",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A slate-grey stone gouge with a broad jagged edge scrapes one deep channel through a hard mineral plate; fine shale dust clings to the curled tool before it pulls away.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Shale Gouge (stable ID 239), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A slate-grey stone gouge with a broad jagged edge scrapes one deep channel through a hard mineral plate; fine shale dust clings to the curled tool before it pulls away. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 240,
+      "name": "Basalt Tackle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A broad hornless block of black basalt with lava-frozen ridges leans into one dense shoulder-charge impact, opens thin orange cracks, then cools and drops one sharp corner.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Basalt Tackle (stable ID 240), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A broad hornless block of black basalt with lava-frozen ridges leans into one dense shoulder-charge impact, opens thin orange cracks, then cools and drops one sharp corner. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 241,
+      "name": "Flint Skewer",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A narrow fireworked flint spike is clamped into a rugged dark stone grip, thrusts once through a little plated target sliver, briefly throws orange sparks and retracts point-first.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Flint Skewer (stable ID 241), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A narrow fireworked flint spike is clamped into a rugged dark stone grip, thrusts once through a little plated target sliver, briefly throws orange sparks and retracts point-first. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 242,
+      "name": "Stone Lance",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A long spear shaft assembled from stacked stone beads snaps straight into a tapered chalk-white point, drives one piercing strike and collapses into separate rounded stones.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Stone Lance (stable ID 242), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A long spear shaft assembled from stacked stone beads snaps straight into a tapered chalk-white point, drives one piercing strike and collapses into separate rounded stones. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 243,
+      "name": "Granite Cleave",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A deep charcoal granite cleaver shows a speckled rough fracture face, swings as one heavy geometric slab and splits its target piece into two offset halves without any sparks.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Granite Cleave (stable ID 243), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A deep charcoal granite cleaver shows a speckled rough fracture face, swings as one heavy geometric slab and splits its target piece into two offset halves without any sparks. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 244,
+      "name": "Stone Skin",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "defence",
+          "stages": 1
+        },
+        {
+          "effect_id": "critical_damage_multiplier",
+          "multiplier": 0.5,
+          "turns": 5,
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF",
+      "batch": "15",
+      "sequence": "Overlapping stone tiles grow across an empty central figure-space from ankles upward like a protective shell; mineral veins connect, the tiles hold a faint glint and flake away. Status only.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Stone Skin (stable ID 244), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. Overlapping stone tiles grow across an empty central figure-space from ankles upward like a protective shell; mineral veins connect, the tiles hold a faint glint and flake away. Status only. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 245,
+      "name": "Fossil Awakening",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "stats": [
+            "attack",
+            "defence",
+            "sp_attack",
+            "sp_defence",
+            "speed"
+          ],
+          "stages": 1,
+          "target": "SELF",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A curled fossil skeleton impression lifts from rock, briefly gains a solid protective mineral ribcage and thrusts a single small bone-plate forward, then returns to its sediment silhouette.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Fossil Awakening (stable ID 245), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A curled fossil skeleton impression lifts from rock, briefly gains a solid protective mineral ribcage and thrusts a single small bone-plate forward, then returns to its sediment silhouette. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 247,
+      "name": "Glacier Fossil",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "FREEZE",
+          "chance_percent": 10,
+          "secondary": true
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A prehistoric shell fossil encased in opaque blue glacier ice unfolds spiked frozen ridges and drops once like a petrified relic, with fresh cracks tracing the fossil beneath the ice.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Glacier Fossil (stable ID 247), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A prehistoric shell fossil encased in opaque blue glacier ice unfolds spiked frozen ridges and drops once like a petrified relic, with fresh cracks tracing the fossil beneath the ice. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 248,
+      "name": "Sickle Talon",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        },
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A narrow curved bone talon with a sickle-tip swivels on an ancient tendon-like hinge, slashes once at an oblique angle and sheds bone powder from tiny serrations.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Sickle Talon (stable ID 248), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A narrow curved bone talon with a sickle-tip swivels on an ancient tendon-like hinge, slashes once at an oblique angle and sheds bone powder from tiny serrations. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 249,
+      "name": "Graveside Murmur",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "15",
+      "sequence": "Three wilting grave flowers bow toward a small weathered marker, and a wisp of silver breath moves between them in one quiet mournful pulse before the petals lie still. A status whisper, not damage.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Graveside Murmur (stable ID 249), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. Three wilting grave flowers bow toward a small weathered marker, and a wisp of silver breath moves between them in one quiet mournful pulse before the petals lie still. A status whisper, not damage. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 250,
+      "name": "Grave Silence",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "disable_last_move",
+          "target": "SINGLE_FOE",
+          "turns": 3
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A stark grey funeral bell stops ringing mid-swing; the air around it becomes a flat dark disc that swallows all faint ripple lines and then lets them return. Silence as visible absence.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Grave Silence (stable ID 250), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A stark grey funeral bell stops ringing mid-swing; the air around it becomes a flat dark disc that swallows all faint ripple lines and then lets them return. Silence as visible absence. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 251,
+      "name": "Hollow Knell",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "prevent_switch",
+          "target": "SINGLE_FOE",
+          "turns": 3
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A hollow oxidised bronze bell hangs alone on a frayed cord. It swings once without a striker, emits a dark concentric ring with one pale inner rim and returns slowly to stillness.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Hollow Knell (stable ID 251), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A hollow oxidised bronze bell hangs alone on a frayed cord. It swings once without a striker, emits a dark concentric ring with one pale inner rim and returns slowly to stillness. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 253,
+      "name": "Spectral Rend",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "An elegant jagged scythe-edge made from braided ghost wisps forms where no weapon was visible, executes one singular jagged tear through blank target space and drifts apart in ragged tails.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Spectral Rend (stable ID 253), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. An elegant jagged scythe-edge made from braided ghost wisps forms where no weapon was visible, executes one singular jagged tear through blank target space and drifts apart in ragged tails. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 255,
+      "name": "Shade Lash",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A long shadow ribbon runs along the floorless lower edge, curls upward into a narrow striking tendril, lashes once and recoils into a small sharply outlined ink-black knot.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Shade Lash (stable ID 255), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A long shadow ribbon runs along the floorless lower edge, curls upward into a narrow striking tendril, lashes once and recoils into a small sharply outlined ink-black knot. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 257,
+      "name": "Funeral Resonance",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "Four faded funeral ribbons stretch taut across a broken silver censer; an eerie internal vibration forms one giant desaturated sonic ripple that dissolves the ribbons into smoke.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Funeral Resonance (stable ID 257), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. Four faded funeral ribbons stretch taut across a broken silver censer; an eerie internal vibration forms one giant desaturated sonic ripple that dissolves the ribbons into smoke. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 258,
+      "name": "Phantom Discharge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A cracked ceramic ghost lamp pulls wisps inward, suddenly opens and ejects one straight lance of cold violet discharge with tiny needle-like afterimages before going dark.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Phantom Discharge (stable ID 258), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A cracked ceramic ghost lamp pulls wisps inward, suddenly opens and ejects one straight lance of cold violet discharge with tiny needle-like afterimages before going dark. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 259,
+      "name": "Spirit Veil",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "15",
+      "sequence": "Several faint violet gauze layers wrap around an empty centre in slowly changing angles, hiding and revealing a single tiny lantern glow; protection and evasive concealment, never a hit.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Spirit Veil (stable ID 259), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. Several faint violet gauze layers wrap around an empty centre in slowly changing angles, hiding and revealing a single tiny lantern glow; protection and evasive concealment, never a hit. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 260,
+      "name": "Haunted Torrent",
+      "category": "SPECIAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A rolling torrent of spectral cloth, not water, uncoils from a hollow mask-like relic, billows as a single forceful pale-blue current and washes through one target point before receding.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Haunted Torrent (stable ID 260), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A rolling torrent of spectral cloth, not water, uncoils from a hollow mask-like relic, billows as a single forceful pale-blue current and washes through one target point before receding. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 261,
+      "name": "Wraith Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "Two long ragged black-and-white phantom claw-blades pivot from opposite sides and close in one precise cross-cut; their edges leave thin torn strips of mist and re-open.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Wraith Scissor (stable ID 261), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. Two long ragged black-and-white phantom claw-blades pivot from opposite sides and close in one precise cross-cut; their edges leave thin torn strips of mist and re-open. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 262,
+      "name": "Wraith Cry",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "prevent_switch",
+          "target": "SINGLE_FOE",
+          "turns": 1,
+          "chance_percent": 20
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A translucent hollow ribcage shape contracts as though inhaling, then expels one ragged sound ring with three distinct vibrating teeth that hangs in the air and loses its voice.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Wraith Cry (stable ID 262), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A translucent hollow ribcage shape contracts as though inhaling, then expels one ragged sound ring with three distinct vibrating teeth that hangs in the air and loses its voice. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 263,
+      "name": "Shroud Lunge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A tightly wound shroud strips itself into narrow trailing burial cloths and darts forward once like a spectral spear, colliding with a small pallid white burst before collapsing into folds.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Shroud Lunge (stable ID 263), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A tightly wound shroud strips itself into narrow trailing burial cloths and darts forward once like a spectral spear, colliding with a small pallid white burst before collapsing into folds. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    },
+    {
+      "id": 264,
+      "name": "Wraith Lash",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -2,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "15",
+      "sequence": "A bony translucent wrist emerges from a pool of drifting ectoplasm, turns and pulls a single long wraith ribbon into a cracking lash, then dissolves back into the pool.",
+      "prompt": "Premium detailed original Abyssals pixel-art JRPG move Wraith Lash (stable ID 264), exactly 16 DISTINCT consecutive frames in STRICT 4x4 equal square grid, row-major, completely transparent alpha with NO visible grid lines. A bony translucent wrist emerges from a pool of drifting ectoplasm, turns and pulls a single long wraith ribbon into a cracking lash, then dissolves back into the pool. Frames 1-4 anticipation, 5-7 movement, frame 8 single action climax, 9-12 consequences, 13-16 full recovery. All drawn details including tips, vapours and individual sparkle points must be wholly inside MIDDLE 40% of EACH 192px logical cell; keep large clear transparent gutters. Sharp dense clustered pixel-shading, purposeful motion and move-specific shape, no duplicates, no full monsters, human, scene, glyph letters, generic ghost orb or elemental recolour.",
+      "status": "planned, awaiting separate image creation and pack validation"
+    }
+  ]
+}

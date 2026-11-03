@@ -1,0 +1,506 @@
+{
+  "batch": "16",
+  "scope": "Distinct move artwork beyond50% toward369/614 integrated/tested60% milestone",
+  "status": "production briefs only; not artwork",
+  "moves": [
+    {
+      "id": 265,
+      "name": "Wraith Pulse",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "prevent_switch",
+          "target": "SINGLE_FOE",
+          "turns": 1,
+          "chance_percent": 20
+        }
+      ],
+      "batch": "16",
+      "sequence": "A narrow violet ghost-light bead swells between three broken chain links, pulses once outward and snaps the links closed around empty target space. The links slacken into vapour after the binding pulse, suggesting a brief escape lock.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wraith Pulse, stable ID 265. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A narrow violet ghost-light bead swells between three broken chain links, pulses once outward and snaps the links closed around empty target space. The links slacken into vapour after the binding pulse, suggesting a brief escape lock. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 266,
+      "name": "Revenant Refraction",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "A cracked spectral prism rotates to catch one pale soul-flame, refracts it into unequal ghost rays that converge once on a translucent ward, and leaves the ward crazed before the prism dissolves. No ordinary mirror or rainbow beam.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Revenant Refraction, stable ID 266. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A cracked spectral prism rotates to catch one pale soul-flame, refracts it into unequal ghost rays that converge once on a translucent ward, and leaves the ward crazed before the prism dissolves. No ordinary mirror or rainbow beam. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 267,
+      "name": "Funeral Reverberation",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "An ancient handbell without a clapper forms from grave mist. One toll sends offset echo rings through a hollow mask; the rings return out of phase, making the mask sway before both unravel into ash-grey ribbons.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Funeral Reverberation, stable ID 267. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: An ancient handbell without a clapper forms from grave mist. One toll sends offset echo rings through a hollow mask; the rings return out of phase, making the mask sway before both unravel into ash-grey ribbons. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 268,
+      "name": "Uncrowned Quills",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "A broken crown sheds six long ivory quills that unfold like a writing fan. The quills align, pierce a faint magical veil together in one volley, and fall as splintered feather barbs. No bird or full creature.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Uncrowned Quills, stable ID 268. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A broken crown sheds six long ivory quills that unfold like a writing fan. The quills align, pierce a faint magical veil together in one volley, and fall as splintered feather barbs. No bird or full creature. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 269,
+      "name": "Wyrmwhisper",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "16",
+      "sequence": "A small coiled dragon-tooth talisman stirs beside a parchment ribbon. A whisper-like narrow spiral travels inward, wakes a red ember inside the tooth and tightens around it before settling, showing self-strengthening without an enemy impact.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyrmwhisper, stable ID 269. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small coiled dragon-tooth talisman stirs beside a parchment ribbon. A whisper-like narrow spiral travels inward, wakes a red ember inside the tooth and tightens around it before settling, showing self-strengthening without an enemy impact. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 270,
+      "name": "Scalequake",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "Overlapping jade dragon scales rise in staggered ripples as though a buried spine moves beneath them. One rippling scale-front fractures outward, then a warm inner glint collects back into the remaining scale to imply special power growth.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Scalequake, stable ID 270. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Overlapping jade dragon scales rise in staggered ripples as though a buried spine moves beneath them. One rippling scale-front fractures outward, then a warm inner glint collects back into the remaining scale to imply special power growth. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 271,
+      "name": "Elder Detonation",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "A weathered amber dragon egg floats inside a cracked stone collar. Ancient light leaks through branching fissures, the egg releases one dense detonation of angular amber fragments, and the collar crumbles into fine glowing grit.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Elder Detonation, stable ID 271. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A weathered amber dragon egg floats inside a cracked stone collar. Ancient light leaks through branching fissures, the egg releases one dense detonation of angular amber fragments, and the collar crumbles into fine glowing grit. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 272,
+      "name": "Drakescale Rend",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "Three thick teal drake scales overlap into a serrated ripping edge. The edge catches a small opposing armour plate, tears one long strip free in a forceful diagonal pull, and recoils while chipped enamel pieces tumble away.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Drakescale Rend, stable ID 272. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Three thick teal drake scales overlap into a serrated ripping edge. The edge catches a small opposing armour plate, tears one long strip free in a forceful diagonal pull, and recoils while chipped enamel pieces tumble away. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 273,
+      "name": "Wyrmtooth Hook",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "16",
+      "sequence": "A single long curved wyrm fang emerges from a dark gumless root, pivots backward, and hooks sharply upward through empty target space. A small curved contact spark follows the hooked tip, then the fang withdraws along its own arc.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyrmtooth Hook, stable ID 273. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A single long curved wyrm fang emerges from a dark gumless root, pivots backward, and hooks sharply upward through empty target space. A small curved contact spark follows the hooked tip, then the fang withdraws along its own arc. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 274,
+      "name": "Wyvern Scissor",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": null
+        }
+      ],
+      "batch": "16",
+      "sequence": "Two leathery wing-bone blades unfold from separate hinges, close in one steep X-shaped scissor strike, and rebound with fine cracks along their inner edges. Fragments shed from the attacker blades to communicate the recoil cost.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyvern Scissor, stable ID 274. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two leathery wing-bone blades unfold from separate hinges, close in one steep X-shaped scissor strike, and rebound with fine cracks along their inner edges. Fragments shed from the attacker blades to communicate the recoil cost. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 275,
+      "name": "Drake Roar",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_attack"
+          ],
+          "stages": 1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "A disembodied bronze drake throat-ring opens like overlapping scales around an empty mouth. One outward cone of visibly compressed air knocks loose floating dust; a warm resonance remains inside the ring before it closes.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Drake Roar, stable ID 275. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A disembodied bronze drake throat-ring opens like overlapping scales around an empty mouth. One outward cone of visibly compressed air knocks loose floating dust; a warm resonance remains inside the ring before it closes. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 276,
+      "name": "Dragonhorn Lunge",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "A short ridged dragon horn braces inside a leather collar, points forward and launches in one narrow lunge. Its pointed contact fractures a glass-like spell barrier, then the horn jerks back while barrier shards fade separately.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Dragonhorn Lunge, stable ID 276. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A short ridged dragon horn braces inside a leather collar, points forward and launches in one narrow lunge. Its pointed contact fractures a glass-like spell barrier, then the horn jerks back while barrier shards fade separately. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 277,
+      "name": "Draconic Resonance",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "Three differently sized hollow dragon scales hover like tuning plates. They vibrate in sequence and project one braided pressure front into a brittle magical membrane; the membrane wrinkles and separates into pale flakes.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Draconic Resonance, stable ID 277. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Three differently sized hollow dragon scales hover like tuning plates. They vibrate in sequence and project one braided pressure front into a brittle magical membrane; the membrane wrinkles and separates into pale flakes. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 278,
+      "name": "Royal Roar",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack",
+            "sp_attack"
+          ],
+          "stages": 1
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "speed",
+          "stages": -1
+        }
+      ],
+      "batch": "16",
+      "sequence": "A heavy crown of horn and bronze lifts above an empty central space. Two broad red-gold resonance bands swell inward around the crown, while a lower weight-ring settles heavily to show power gained at a speed cost. Self-buff only.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Royal Roar, stable ID 278. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A heavy crown of horn and bronze lifts above an empty central space. Two broad red-gold resonance bands swell inward around the crown, while a lower weight-ring settles heavily to show power gained at a speed cost. Self-buff only. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 279,
+      "name": "Scale Guard",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "16",
+      "sequence": "Five broad green-gold scales rise from below, overlap into an arched breastplate and lock with tiny bone pins. A restrained glint travels across the assembled surface before it folds away. No attack, no outward projectile.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Scale Guard, stable ID 279. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Five broad green-gold scales rise from below, overlap into an arched breastplate and lock with tiny bone pins. A restrained glint travels across the assembled surface before it folds away. No attack, no outward projectile. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 281,
+      "name": "Wyrmfire Discharge",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": null
+        }
+      ],
+      "batch": "16",
+      "sequence": "A blackened dragon-scale vent opens around a blue-white furnace core. One jagged wyrmfire discharge surges forward, then the vent recoils and develops a red stress crack before embers gutter away. Keep the backlash visible but restrained.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyrmfire Discharge, stable ID 281. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A blackened dragon-scale vent opens around a blue-white furnace core. One jagged wyrmfire discharge surges forward, then the vent recoils and develops a red stress crack before embers gutter away. Keep the backlash visible but restrained. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 282,
+      "name": "Drakescale Hammer",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": null
+        }
+      ],
+      "batch": "16",
+      "sequence": "A blunt hammerhead assembled from overlapping drake scales rises on a bone haft and delivers one heavy downward blow. The head sheds chips from its own back edge on impact, then tilts and breaks apart to communicate recoil.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Drakescale Hammer, stable ID 282. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A blunt hammerhead assembled from overlapping drake scales rises on a bone haft and delivers one heavy downward blow. The head sheds chips from its own back edge on impact, then tilts and breaks apart to communicate recoil. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 283,
+      "name": "Wyrmtooth Reap",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "A crescent jawbone carrying three uneven wyrm teeth swings in one low reaping arc. Its teeth rake once across target space, catch a narrow red ember on withdrawal, and hold that ember briefly before the jaw fades.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyrmtooth Reap, stable ID 283. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A crescent jawbone carrying three uneven wyrm teeth swings in one low reaping arc. Its teeth rake once across target space, catch a narrow red ember on withdrawal, and hold that ember briefly before the jaw fades. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 284,
+      "name": "Wyvern Gouge",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "batch": "16",
+      "sequence": "One wyvern talon with a thick knuckle joint curls inward, drives into a plated surface and gouges a single deep furrow. The talon pulls sideways to lift a curled metal shaving, then releases it and retracts.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyvern Gouge, stable ID 284. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: One wyvern talon with a thick knuckle joint curls inward, drives into a plated surface and gouges a single deep furrow. The talon pulls sideways to lift a curled metal shaving, then releases it and retracts. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 285,
+      "name": "Wyrm Roar",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "16",
+      "sequence": "A long narrow throat-ring of dusty bronze stretches open and emits a heavy low-frequency wave. The wave travels slowly while the ring sags under its own weight, showing that the exertion slows the caller. No repeated flashes.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Wyrm Roar, stable ID 285. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A long narrow throat-ring of dusty bronze stretches open and emits a heavy low-frequency wave. The wave travels slowly while the ring sags under its own weight, showing that the exertion slows the caller. No repeated flashes. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 286,
+      "name": "Dragonhorn Tackle",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "16",
+      "sequence": "A thick horned shoulder guard braces, tips into a compact horizontal tackle and lands one blunt impact. Its two short horns stay attached to the guard throughout the strike; the whole guard rebounds and settles without becoming a projectile spear.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Dragonhorn Tackle, stable ID 286. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A thick horned shoulder guard braces, tips into a compact horizontal tackle and lands one blunt impact. Its two short horns stay attached to the guard throughout the strike; the whole guard rebounds and settles without becoming a projectile spear. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 287,
+      "name": "Primal Torrent",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "batch": "16",
+      "sequence": "A small fossil vertebra unlocks a spiralling torrent of red-gold primal light mixed with rough mineral fragments. The surge travels once across the atlas centre, then a short backward lash cracks the vertebra before everything dissipates.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Primal Torrent, stable ID 287. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small fossil vertebra unlocks a spiralling torrent of red-gold primal light mixed with rough mineral fragments. The surge travels once across the atlas centre, then a short backward lash cracks the vertebra before everything dissipates. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 288,
+      "name": "Silent Ambition",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack",
+            "sp_attack",
+            "speed"
+          ],
+          "stages": 1
+        },
+        {
+          "effect_id": "hp_cost",
+          "basis": "MAX_HP",
+          "fraction": [
+            1,
+            6
+          ]
+        }
+      ],
+      "batch": "16",
+      "sequence": "A hoodless black cloak clasp gathers three thin crimson threads around an empty central silhouette. Each thread tightens inward as attack, special force and speed rise; one small red bead leaves the clasp to show the paid vitality cost.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Silent Ambition, stable ID 288. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A hoodless black cloak clasp gathers three thin crimson threads around an empty central silhouette. Each thread tightens inward as attack, special force and speed rise; one small red bead leaves the clasp to show the paid vitality cost. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 289,
+      "name": "Second Shadow",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "16",
+      "sequence": "A pair of offset shadow hands forms behind an empty centre, one solid and one delayed. The second hand catches up and locks over the first wrist, strengthening a clenched fist before both shadows merge and settle. No foe hit.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Second Shadow, stable ID 289. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A pair of offset shadow hands forms behind an empty centre, one solid and one delayed. The second hand catches up and locks over the first wrist, strengthening a clenched fist before both shadows merge and settle. No foe hit. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    }
+  ]
+}

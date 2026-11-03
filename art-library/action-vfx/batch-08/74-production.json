@@ -1,0 +1,34 @@
+{
+  "id": 74,
+  "name": "Volt Jolt",
+  "category": "SPECIAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "sp_defence"
+      ],
+      "stages": -1,
+      "chance_percent": 25,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Volt Jolt, stable ID74. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/74-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/74-prepared.png",
+  "sourceSha256": "1c42c691d6c03be9ce0521cbcb54db8fd2dcafe3f2613ab0522733a44c0f32c1",
+  "preparedSha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
+}

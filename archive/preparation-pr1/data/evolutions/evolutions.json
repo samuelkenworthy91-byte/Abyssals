@@ -1,0 +1,2925 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+    "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+    "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+    "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx"
+  ],
+  "records": [
+    {
+      "id": "EVOLUTION-001",
+      "path_number": 1,
+      "from_species_id": "001",
+      "to_species_id": "002",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 16
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 20,
+        "defence": 20,
+        "sp_attack": 15,
+        "sp_defence": 10,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 5
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 4
+      }
+    },
+    {
+      "id": "EVOLUTION-002",
+      "path_number": 2,
+      "from_species_id": "002",
+      "to_species_id": "003",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 36
+      },
+      "promotion_delta": {
+        "hp": 10,
+        "attack": 20,
+        "defence": 15,
+        "sp_attack": 40,
+        "sp_defence": 15,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 6
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 5
+      }
+    },
+    {
+      "id": "EVOLUTION-003",
+      "path_number": 3,
+      "from_species_id": "004",
+      "to_species_id": "005",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 16
+      },
+      "promotion_delta": {
+        "hp": 20,
+        "attack": 10,
+        "defence": 10,
+        "sp_attack": 20,
+        "sp_defence": 10,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 7
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 6
+      }
+    },
+    {
+      "id": "EVOLUTION-004",
+      "path_number": 4,
+      "from_species_id": "005",
+      "to_species_id": "006",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 36
+      },
+      "promotion_delta": {
+        "hp": 10,
+        "attack": 40,
+        "defence": 40,
+        "sp_attack": 15,
+        "sp_defence": 15,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 8
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 7
+      }
+    },
+    {
+      "id": "EVOLUTION-005",
+      "path_number": 5,
+      "from_species_id": "007",
+      "to_species_id": "008",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 16
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 15,
+        "defence": 25,
+        "sp_attack": 10,
+        "sp_defence": 10,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 9
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 8
+      }
+    },
+    {
+      "id": "EVOLUTION-006",
+      "path_number": 6,
+      "from_species_id": "008",
+      "to_species_id": "009",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 36
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 40,
+        "defence": 25,
+        "sp_attack": 5,
+        "sp_defence": 15,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 10
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 9
+      }
+    },
+    {
+      "id": "EVOLUTION-007",
+      "path_number": 7,
+      "from_species_id": "010",
+      "to_species_id": "011",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 15,
+        "defence": 25,
+        "sp_attack": 35,
+        "sp_defence": 30,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 11
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 10
+      }
+    },
+    {
+      "id": "EVOLUTION-008",
+      "path_number": 8,
+      "from_species_id": "012",
+      "to_species_id": "013",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 45,
+        "defence": 35,
+        "sp_attack": 10,
+        "sp_defence": 20,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 12
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 11
+      }
+    },
+    {
+      "id": "EVOLUTION-009",
+      "path_number": 9,
+      "from_species_id": "014",
+      "to_species_id": "015",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 45,
+        "defence": 50,
+        "sp_attack": 10,
+        "sp_defence": 20,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 13
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 12
+      }
+    },
+    {
+      "id": "EVOLUTION-010",
+      "path_number": 10,
+      "from_species_id": "016",
+      "to_species_id": "017",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 5,
+        "defence": 45,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 14
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 13
+      }
+    },
+    {
+      "id": "EVOLUTION-011",
+      "path_number": 11,
+      "from_species_id": "018",
+      "to_species_id": "019",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 20
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 30,
+        "defence": 20,
+        "sp_attack": 5,
+        "sp_defence": 10,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 15
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 14
+      }
+    },
+    {
+      "id": "EVOLUTION-012",
+      "path_number": 12,
+      "from_species_id": "019",
+      "to_species_id": "020",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 38
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 15,
+        "defence": 35,
+        "sp_attack": 10,
+        "sp_defence": 25,
+        "speed": -10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 16
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 15
+      }
+    },
+    {
+      "id": "EVOLUTION-013",
+      "path_number": 13,
+      "from_species_id": "021",
+      "to_species_id": "022",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 45,
+        "defence": 25,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 17
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 16
+      }
+    },
+    {
+      "id": "EVOLUTION-014",
+      "path_number": 14,
+      "from_species_id": "023",
+      "to_species_id": "024",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 15,
+        "defence": 25,
+        "sp_attack": 30,
+        "sp_defence": 45,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 18
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 17
+      }
+    },
+    {
+      "id": "EVOLUTION-015",
+      "path_number": 15,
+      "from_species_id": "025",
+      "to_species_id": "026",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 35,
+        "defence": 25,
+        "sp_attack": 50,
+        "sp_defence": 40,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 19
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 18
+      }
+    },
+    {
+      "id": "EVOLUTION-016",
+      "path_number": 16,
+      "from_species_id": "027",
+      "to_species_id": "028",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 20
+      },
+      "promotion_delta": {
+        "hp": 20,
+        "attack": 30,
+        "defence": 25,
+        "sp_attack": 5,
+        "sp_defence": 5,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 20
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 19
+      }
+    },
+    {
+      "id": "EVOLUTION-017",
+      "path_number": 17,
+      "from_species_id": "028",
+      "to_species_id": "029",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 38
+      },
+      "promotion_delta": {
+        "hp": 20,
+        "attack": 15,
+        "defence": 15,
+        "sp_attack": 20,
+        "sp_defence": 25,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 21
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 20
+      }
+    },
+    {
+      "id": "EVOLUTION-018",
+      "path_number": 18,
+      "from_species_id": "030",
+      "to_species_id": "031",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 20
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 30,
+        "defence": 15,
+        "sp_attack": 20,
+        "sp_defence": 10,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 22
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 21
+      }
+    },
+    {
+      "id": "EVOLUTION-019",
+      "path_number": 19,
+      "from_species_id": "031",
+      "to_species_id": "032",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 38
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 15,
+        "defence": 20,
+        "sp_attack": 25,
+        "sp_defence": 20,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 23
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 22
+      }
+    },
+    {
+      "id": "EVOLUTION-020",
+      "path_number": 20,
+      "from_species_id": "033",
+      "to_species_id": "034",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 45,
+        "defence": 30,
+        "sp_attack": 15,
+        "sp_defence": 20,
+        "speed": 60
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 24
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 23
+      }
+    },
+    {
+      "id": "EVOLUTION-021",
+      "path_number": 21,
+      "from_species_id": "035",
+      "to_species_id": "036",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 22
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 20,
+        "defence": 10,
+        "sp_attack": 5,
+        "sp_defence": 30,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 25
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 24
+      }
+    },
+    {
+      "id": "EVOLUTION-022",
+      "path_number": 22,
+      "from_species_id": "036",
+      "to_species_id": "037",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 40
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 10,
+        "defence": 30,
+        "sp_attack": 30,
+        "sp_defence": 15,
+        "speed": -10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 26
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 25
+      }
+    },
+    {
+      "id": "EVOLUTION-023",
+      "path_number": 23,
+      "from_species_id": "038",
+      "to_species_id": "039",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 55,
+        "defence": 45,
+        "sp_attack": 15,
+        "sp_defence": 25,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 27
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 26
+      }
+    },
+    {
+      "id": "EVOLUTION-024",
+      "path_number": 24,
+      "from_species_id": "040",
+      "to_species_id": "041",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 20,
+        "attack": 45,
+        "defence": 25,
+        "sp_attack": 25,
+        "sp_defence": 30,
+        "speed": 50
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 28
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 27
+      }
+    },
+    {
+      "id": "EVOLUTION-025",
+      "path_number": 25,
+      "from_species_id": "042",
+      "to_species_id": "043",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 20,
+        "defence": 30,
+        "sp_attack": 50,
+        "sp_defence": 45,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 29
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 28
+      }
+    },
+    {
+      "id": "EVOLUTION-026",
+      "path_number": 26,
+      "from_species_id": "044",
+      "to_species_id": "045",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 20
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 20,
+        "defence": 20,
+        "sp_attack": 5,
+        "sp_defence": 15,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 30
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 29
+      }
+    },
+    {
+      "id": "EVOLUTION-027",
+      "path_number": 27,
+      "from_species_id": "045",
+      "to_species_id": "046",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 38
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 10,
+        "defence": 25,
+        "sp_attack": 20,
+        "sp_defence": 35,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 31
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 30
+      }
+    },
+    {
+      "id": "EVOLUTION-028",
+      "path_number": 28,
+      "from_species_id": "047",
+      "to_species_id": "048",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 55,
+        "defence": 50,
+        "sp_attack": 10,
+        "sp_defence": 25,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 32
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 31
+      }
+    },
+    {
+      "id": "EVOLUTION-029",
+      "path_number": 29,
+      "from_species_id": "049",
+      "to_species_id": "050",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 25,
+        "defence": 25,
+        "sp_attack": 55,
+        "sp_defence": 40,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 33
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 32
+      }
+    },
+    {
+      "id": "EVOLUTION-030",
+      "path_number": 30,
+      "from_species_id": "051",
+      "to_species_id": "052",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 28
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 25,
+        "defence": 25,
+        "sp_attack": 45,
+        "sp_defence": 20,
+        "speed": 55
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 34
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 33
+      }
+    },
+    {
+      "id": "EVOLUTION-031",
+      "path_number": 31,
+      "from_species_id": "053",
+      "to_species_id": "054",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 28
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 20,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 35
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 34
+      }
+    },
+    {
+      "id": "EVOLUTION-032",
+      "path_number": 32,
+      "from_species_id": "055",
+      "to_species_id": "056",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 35,
+        "defence": 40,
+        "sp_attack": 30,
+        "sp_defence": 20,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 36
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 35
+      }
+    },
+    {
+      "id": "EVOLUTION-033",
+      "path_number": 33,
+      "from_species_id": "057",
+      "to_species_id": "058",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 30,
+        "state_field": "censmoke_relic_choice",
+        "equals": "SANCTIFIED",
+        "world_event_id": "WLD-COSSENNE-RELIC-001",
+        "history_trigger": "EVO-CENSMOKE-RELIC-SANCTIFIED",
+        "legacy_derived_flag": "STORY_SANCTIFY_RELIC"
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 15,
+        "defence": 30,
+        "sp_attack": 35,
+        "sp_defence": 55,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 37
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 36
+      }
+    },
+    {
+      "id": "EVOLUTION-034",
+      "path_number": 34,
+      "from_species_id": "057",
+      "to_species_id": "059",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 30,
+        "state_field": "censmoke_relic_choice",
+        "equals": "REFUSED",
+        "world_event_id": "WLD-COSSENNE-RELIC-001",
+        "history_trigger": "EVO-CENSMOKE-RELIC-REFUSED",
+        "legacy_derived_flag": "STORY_DEFILE_RELIC"
+      },
+      "promotion_delta": {
+        "hp": 20,
+        "attack": 30,
+        "defence": 30,
+        "sp_attack": 35,
+        "sp_defence": 25,
+        "speed": 55
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 38
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 37
+      }
+    },
+    {
+      "id": "EVOLUTION-035",
+      "path_number": 35,
+      "from_species_id": "060",
+      "to_species_id": "061",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 20,
+        "defence": 25,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 39
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 38
+      }
+    },
+    {
+      "id": "EVOLUTION-036",
+      "path_number": 36,
+      "from_species_id": "062",
+      "to_species_id": "063",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 30,
+        "item_id": "ITEM_EVOLUTION_IRON_SIGIL",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 10,
+        "defence": 45,
+        "sp_attack": 40,
+        "sp_defence": 30,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 40
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 39
+      }
+    },
+    {
+      "id": "EVOLUTION-037",
+      "path_number": 37,
+      "from_species_id": "062",
+      "to_species_id": "064",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 30,
+        "item_id": "ITEM_EVOLUTION_GRAVE_SALT",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 15,
+        "defence": 20,
+        "sp_attack": 45,
+        "sp_defence": 55,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 41
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 40
+      }
+    },
+    {
+      "id": "EVOLUTION-038",
+      "path_number": 38,
+      "from_species_id": "062",
+      "to_species_id": "065",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 30,
+        "item_id": "ITEM_EVOLUTION_GILDED_IDOL",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 15,
+        "defence": 10,
+        "sp_attack": 45,
+        "sp_defence": 35,
+        "speed": 55
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 42
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 41
+      }
+    },
+    {
+      "id": "EVOLUTION-039",
+      "path_number": 39,
+      "from_species_id": "066",
+      "to_species_id": "067",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 24
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 20,
+        "defence": 35,
+        "sp_attack": 10,
+        "sp_defence": 15,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 43
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 42
+      }
+    },
+    {
+      "id": "EVOLUTION-040",
+      "path_number": 40,
+      "from_species_id": "067",
+      "to_species_id": "068",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 42
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 15,
+        "defence": 15,
+        "sp_attack": 5,
+        "sp_defence": 35,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 44
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 43
+      }
+    },
+    {
+      "id": "EVOLUTION-041",
+      "path_number": 41,
+      "from_species_id": "070",
+      "to_species_id": "071",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 32,
+        "state_field": "cairant_oath_choice",
+        "equals": "KEPT",
+        "world_event_id": "WLD-BOTRUNE-OATH-001",
+        "history_trigger": "EVO-CAIRANT-OATH-KEPT",
+        "legacy_derived_flag": "STORY_KEEP_CELESTIAL_OATH"
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 5,
+        "defence": 20,
+        "sp_attack": 45,
+        "sp_defence": 65,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 45
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 44
+      }
+    },
+    {
+      "id": "EVOLUTION-042",
+      "path_number": 42,
+      "from_species_id": "070",
+      "to_species_id": "072",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 32,
+        "state_field": "cairant_oath_choice",
+        "equals": "BROKEN",
+        "world_event_id": "WLD-BOTRUNE-OATH-001",
+        "history_trigger": "EVO-CAIRANT-OATH-BROKEN",
+        "legacy_derived_flag": "STORY_BREAK_CELESTIAL_OATH"
+      },
+      "promotion_delta": {
+        "hp": 20,
+        "attack": 50,
+        "defence": 20,
+        "sp_attack": 50,
+        "sp_defence": 20,
+        "speed": 50
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 46
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 45
+      }
+    },
+    {
+      "id": "EVOLUTION-043",
+      "path_number": 43,
+      "from_species_id": "073",
+      "to_species_id": "074",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 30,
+        "state_field": "flaggrim_banner_choice",
+        "equals": "RAISED",
+        "world_event_id": "WLD-MARASEN-BANNER-001",
+        "history_trigger": "EVO-FLAGGRIM-BANNER-RAISED",
+        "legacy_derived_flag": "STORY_RAISE_BANNER"
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 25,
+        "defence": 20,
+        "sp_attack": 40,
+        "sp_defence": 45,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 47
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 46
+      }
+    },
+    {
+      "id": "EVOLUTION-044",
+      "path_number": 44,
+      "from_species_id": "073",
+      "to_species_id": "075",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 30,
+        "state_field": "flaggrim_banner_choice",
+        "equals": "TORN",
+        "world_event_id": "WLD-MARASEN-BANNER-001",
+        "history_trigger": "EVO-FLAGGRIM-BANNER-TORN",
+        "legacy_derived_flag": "STORY_TEAR_BANNER"
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 30,
+        "defence": 10,
+        "sp_attack": 40,
+        "sp_defence": 25,
+        "speed": 65
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 48
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 47
+      }
+    },
+    {
+      "id": "EVOLUTION-045",
+      "path_number": 45,
+      "from_species_id": "077",
+      "to_species_id": "078",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 45,
+        "defence": 25,
+        "sp_attack": 40,
+        "sp_defence": 40,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 49
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 48
+      }
+    },
+    {
+      "id": "EVOLUTION-046",
+      "path_number": 46,
+      "from_species_id": "079",
+      "to_species_id": "080",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 30
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 15,
+        "sp_defence": 35,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 50
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 49
+      }
+    },
+    {
+      "id": "EVOLUTION-047",
+      "path_number": 47,
+      "from_species_id": "081",
+      "to_species_id": "082",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 35,
+        "defence": 30,
+        "sp_attack": 45,
+        "sp_defence": 35,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 51
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 50
+      }
+    },
+    {
+      "id": "EVOLUTION-048",
+      "path_number": 48,
+      "from_species_id": "083",
+      "to_species_id": "084",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 30,
+        "defence": 35,
+        "sp_attack": 55,
+        "sp_defence": 30,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 52
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 51
+      }
+    },
+    {
+      "id": "EVOLUTION-049",
+      "path_number": 49,
+      "from_species_id": "085",
+      "to_species_id": "086",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 30
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 50,
+        "defence": 30,
+        "sp_attack": 25,
+        "sp_defence": 40,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 53
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 52
+      }
+    },
+    {
+      "id": "EVOLUTION-050",
+      "path_number": 50,
+      "from_species_id": "087",
+      "to_species_id": "088",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 24
+      },
+      "promotion_delta": {
+        "hp": 10,
+        "attack": 10,
+        "defence": 5,
+        "sp_attack": 20,
+        "sp_defence": 35,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 54
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 53
+      }
+    },
+    {
+      "id": "EVOLUTION-051",
+      "path_number": 51,
+      "from_species_id": "088",
+      "to_species_id": "089",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 42
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 35,
+        "defence": 35,
+        "sp_attack": 15,
+        "sp_defence": 10,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 55
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 54
+      }
+    },
+    {
+      "id": "EVOLUTION-052",
+      "path_number": 52,
+      "from_species_id": "090",
+      "to_species_id": "091",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 35,
+        "defence": 65,
+        "sp_attack": 10,
+        "sp_defence": 55,
+        "speed": -10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 56
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 55
+      }
+    },
+    {
+      "id": "EVOLUTION-053",
+      "path_number": 53,
+      "from_species_id": "092",
+      "to_species_id": "093",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 30,
+        "state_field": "jerbune_alliance_choice",
+        "equals": "ACCEPTED",
+        "world_event_id": "WLD-CYBRESSA-ALLIANCE-001",
+        "history_trigger": "EVO-JERBUNE-ALLIANCE-ACCEPTED",
+        "legacy_derived_flag": "STORY_ACCEPT_ALLIANCE"
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 15,
+        "defence": 40,
+        "sp_attack": 30,
+        "sp_defence": 50,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 57
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 56
+      }
+    },
+    {
+      "id": "EVOLUTION-054",
+      "path_number": 54,
+      "from_species_id": "092",
+      "to_species_id": "094",
+      "condition": {
+        "method": "STORY_CHOICE",
+        "minimum_level": 30,
+        "state_field": "jerbune_alliance_choice",
+        "equals": "REJECTED",
+        "world_event_id": "WLD-CYBRESSA-ALLIANCE-001",
+        "history_trigger": "EVO-JERBUNE-ALLIANCE-REJECTED",
+        "legacy_derived_flag": "STORY_REJECT_ALLIANCE"
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 35,
+        "defence": 25,
+        "sp_attack": 50,
+        "sp_defence": 20,
+        "speed": 50
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 58
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 57
+      }
+    },
+    {
+      "id": "EVOLUTION-055",
+      "path_number": 55,
+      "from_species_id": "095",
+      "to_species_id": "096",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 55,
+        "defence": 40,
+        "sp_attack": 15,
+        "sp_defence": 35,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 59
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 58
+      }
+    },
+    {
+      "id": "EVOLUTION-056",
+      "path_number": 56,
+      "from_species_id": "097",
+      "to_species_id": "098",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 30,
+        "defence": 25,
+        "sp_attack": 45,
+        "sp_defence": 30,
+        "speed": 50
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 60
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 59
+      }
+    },
+    {
+      "id": "EVOLUTION-057",
+      "path_number": 57,
+      "from_species_id": "099",
+      "to_species_id": "100",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 15,
+        "defence": 25,
+        "sp_attack": 40,
+        "sp_defence": 50,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 61
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 60
+      }
+    },
+    {
+      "id": "EVOLUTION-058",
+      "path_number": 58,
+      "from_species_id": "101",
+      "to_species_id": "102",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 15,
+        "defence": 55,
+        "sp_attack": 25,
+        "sp_defence": 60,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 62
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 61
+      }
+    },
+    {
+      "id": "EVOLUTION-059",
+      "path_number": 59,
+      "from_species_id": "103",
+      "to_species_id": "104",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 10,
+        "defence": 25,
+        "sp_attack": 55,
+        "sp_defence": 35,
+        "speed": 50
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 63
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 62
+      }
+    },
+    {
+      "id": "EVOLUTION-060",
+      "path_number": 60,
+      "from_species_id": "105",
+      "to_species_id": "106",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 30,
+        "defence": 45,
+        "sp_attack": 45,
+        "sp_defence": 45,
+        "speed": -5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 64
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 63
+      }
+    },
+    {
+      "id": "EVOLUTION-061",
+      "path_number": 61,
+      "from_species_id": "107",
+      "to_species_id": "108",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_GILDED_NODULE",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 45,
+        "defence": 45,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": -5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 65
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 64
+      }
+    },
+    {
+      "id": "EVOLUTION-062",
+      "path_number": 62,
+      "from_species_id": "107",
+      "to_species_id": "109",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_STORMGLASS",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 40,
+        "defence": 25,
+        "sp_attack": 60,
+        "sp_defence": 20,
+        "speed": 45
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 66
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 65
+      }
+    },
+    {
+      "id": "EVOLUTION-063",
+      "path_number": 63,
+      "from_species_id": "110",
+      "to_species_id": "111",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_BLOODSTONE",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 45,
+        "defence": 20,
+        "sp_attack": 45,
+        "sp_defence": 10,
+        "speed": 45
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 67
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 66
+      }
+    },
+    {
+      "id": "EVOLUTION-064",
+      "path_number": 64,
+      "from_species_id": "110",
+      "to_species_id": "112",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_GRIEF_PEARL",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 20,
+        "defence": 45,
+        "sp_attack": 35,
+        "sp_defence": 70,
+        "speed": -15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 68
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 67
+      }
+    },
+    {
+      "id": "EVOLUTION-065",
+      "path_number": 65,
+      "from_species_id": "113",
+      "to_species_id": "114",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 20,
+        "defence": 55,
+        "sp_attack": 50,
+        "sp_defence": 40,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 69
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 68
+      }
+    },
+    {
+      "id": "EVOLUTION-066",
+      "path_number": 66,
+      "from_species_id": "115",
+      "to_species_id": "116",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 30,
+        "item_id": "ITEM_EVOLUTION_TIDE_PEARL",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 40,
+        "defence": 45,
+        "sp_attack": 15,
+        "sp_defence": 30,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 70
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 69
+      }
+    },
+    {
+      "id": "EVOLUTION-067",
+      "path_number": 67,
+      "from_species_id": "115",
+      "to_species_id": "117",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 30,
+        "item_id": "ITEM_EVOLUTION_MOURNING_BRIAR",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 40,
+        "defence": 25,
+        "sp_attack": 40,
+        "sp_defence": 40,
+        "speed": 5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 71
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 70
+      }
+    },
+    {
+      "id": "EVOLUTION-068",
+      "path_number": 68,
+      "from_species_id": "115",
+      "to_species_id": "118",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 30,
+        "item_id": "ITEM_EVOLUTION_SUNSCAR_GLASS",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 45,
+        "defence": 65,
+        "sp_attack": 20,
+        "sp_defence": 20,
+        "speed": -5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 72
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 71
+      }
+    },
+    {
+      "id": "EVOLUTION-069",
+      "path_number": 69,
+      "from_species_id": "119",
+      "to_species_id": "120",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 30,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 30
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 73
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 72
+      }
+    },
+    {
+      "id": "EVOLUTION-070",
+      "path_number": 70,
+      "from_species_id": "121",
+      "to_species_id": "122",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 28
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 20,
+        "defence": 15,
+        "sp_attack": 5,
+        "sp_defence": 25,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 74
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 73
+      }
+    },
+    {
+      "id": "EVOLUTION-071",
+      "path_number": 71,
+      "from_species_id": "122",
+      "to_species_id": "123",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 45
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 50,
+        "defence": 40,
+        "sp_attack": 10,
+        "sp_defence": 15,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 75
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 74
+      }
+    },
+    {
+      "id": "EVOLUTION-072",
+      "path_number": 72,
+      "from_species_id": "125",
+      "to_species_id": "126",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 40,
+        "defence": 55,
+        "sp_attack": 10,
+        "sp_defence": 50,
+        "speed": -5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 76
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 75
+      }
+    },
+    {
+      "id": "EVOLUTION-073",
+      "path_number": 73,
+      "from_species_id": "127",
+      "to_species_id": "128",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 40,
+        "defence": 25,
+        "sp_attack": 50,
+        "sp_defence": 20,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 77
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 76
+      }
+    },
+    {
+      "id": "EVOLUTION-074",
+      "path_number": 74,
+      "from_species_id": "130",
+      "to_species_id": "131",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 55,
+        "attack": 30,
+        "defence": 35,
+        "sp_attack": 20,
+        "sp_defence": 40,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 78
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 77
+      }
+    },
+    {
+      "id": "EVOLUTION-075",
+      "path_number": 75,
+      "from_species_id": "133",
+      "to_species_id": "134",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 55,
+        "attack": 40,
+        "defence": 45,
+        "sp_attack": 15,
+        "sp_defence": 50,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 79
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 78
+      }
+    },
+    {
+      "id": "EVOLUTION-076",
+      "path_number": 76,
+      "from_species_id": "135",
+      "to_species_id": "136",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 35,
+        "defence": 45,
+        "sp_attack": 35,
+        "sp_defence": 50,
+        "speed": 0
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 80
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 79
+      }
+    },
+    {
+      "id": "EVOLUTION-077",
+      "path_number": 77,
+      "from_species_id": "137",
+      "to_species_id": "138",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 40,
+        "defence": 35,
+        "sp_attack": 15,
+        "sp_defence": 25,
+        "speed": 40
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 81
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 80
+      }
+    },
+    {
+      "id": "EVOLUTION-078",
+      "path_number": 78,
+      "from_species_id": "139",
+      "to_species_id": "140",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 45,
+        "defence": 30,
+        "sp_attack": 30,
+        "sp_defence": 45,
+        "speed": 15
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 82
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 81
+      }
+    },
+    {
+      "id": "EVOLUTION-079",
+      "path_number": 79,
+      "from_species_id": "141",
+      "to_species_id": "142",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_WAYFARER_FEATHER",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 35,
+        "defence": 20,
+        "sp_attack": 20,
+        "sp_defence": 35,
+        "speed": 50
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 83
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 82
+      }
+    },
+    {
+      "id": "EVOLUTION-080",
+      "path_number": 80,
+      "from_species_id": "141",
+      "to_species_id": "143",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_PILGRIM_BELL",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 20,
+        "defence": 35,
+        "sp_attack": 20,
+        "sp_defence": 45,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 84
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 83
+      }
+    },
+    {
+      "id": "EVOLUTION-081",
+      "path_number": 81,
+      "from_species_id": "144",
+      "to_species_id": "145",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 25,
+        "defence": 25,
+        "sp_attack": 35,
+        "sp_defence": 25,
+        "speed": 55
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 85
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 84
+      }
+    },
+    {
+      "id": "EVOLUTION-082",
+      "path_number": 82,
+      "from_species_id": "146",
+      "to_species_id": "147",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 40,
+        "defence": 25,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 45
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 86
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 85
+      }
+    },
+    {
+      "id": "EVOLUTION-083",
+      "path_number": 83,
+      "from_species_id": "148",
+      "to_species_id": "149",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 50,
+        "attack": 20,
+        "defence": 40,
+        "sp_attack": 55,
+        "sp_defence": 45,
+        "speed": -5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 87
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 86
+      }
+    },
+    {
+      "id": "EVOLUTION-084",
+      "path_number": 84,
+      "from_species_id": "150",
+      "to_species_id": "151",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 30,
+        "defence": 35,
+        "sp_attack": 40,
+        "sp_defence": 45,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 88
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 87
+      }
+    },
+    {
+      "id": "EVOLUTION-085",
+      "path_number": 85,
+      "from_species_id": "152",
+      "to_species_id": "153",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_TRIAL_TOXIN",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 50,
+        "defence": 40,
+        "sp_attack": 10,
+        "sp_defence": 20,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 89
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 88
+      }
+    },
+    {
+      "id": "EVOLUTION-086",
+      "path_number": 86,
+      "from_species_id": "152",
+      "to_species_id": "154",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 28,
+        "item_id": "ITEM_EVOLUTION_SAINT_S_TONIC",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 0,
+        "defence": 25,
+        "sp_attack": 45,
+        "sp_defence": 45,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 90
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 89
+      }
+    },
+    {
+      "id": "EVOLUTION-087",
+      "path_number": 87,
+      "from_species_id": "155",
+      "to_species_id": "156",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 35,
+        "defence": 25,
+        "sp_attack": 25,
+        "sp_defence": 30,
+        "speed": 60
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 91
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 90
+      }
+    },
+    {
+      "id": "EVOLUTION-088",
+      "path_number": 88,
+      "from_species_id": "157",
+      "to_species_id": "158",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 30,
+        "defence": 45,
+        "sp_attack": 30,
+        "sp_defence": 40,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 92
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 91
+      }
+    },
+    {
+      "id": "EVOLUTION-089",
+      "path_number": 89,
+      "from_species_id": "160",
+      "to_species_id": "161",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 35,
+        "attack": 45,
+        "defence": 30,
+        "sp_attack": 15,
+        "sp_defence": 40,
+        "speed": 35
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 93
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 92
+      }
+    },
+    {
+      "id": "EVOLUTION-090",
+      "path_number": 90,
+      "from_species_id": "162",
+      "to_species_id": "163",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 26
+      },
+      "promotion_delta": {
+        "hp": 40,
+        "attack": 15,
+        "defence": 35,
+        "sp_attack": 35,
+        "sp_defence": 45,
+        "speed": 25
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 94
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 93
+      }
+    },
+    {
+      "id": "EVOLUTION-091",
+      "path_number": 91,
+      "from_species_id": "167",
+      "to_species_id": "168",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 30
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 20,
+        "defence": 20,
+        "sp_attack": 20,
+        "sp_defence": 20,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 95
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 94
+      }
+    },
+    {
+      "id": "EVOLUTION-092",
+      "path_number": 92,
+      "from_species_id": "168",
+      "to_species_id": "169",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 50
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 0,
+        "sp_defence": 35,
+        "speed": 20
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 96
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 95
+      }
+    },
+    {
+      "id": "EVOLUTION-093",
+      "path_number": 93,
+      "from_species_id": "170",
+      "to_species_id": "171",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 30
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 35,
+        "defence": 20,
+        "sp_attack": 10,
+        "sp_defence": 20,
+        "speed": 5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 97
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 96
+      }
+    },
+    {
+      "id": "EVOLUTION-094",
+      "path_number": 94,
+      "from_species_id": "171",
+      "to_species_id": "172",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 50
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 50,
+        "defence": 50,
+        "sp_attack": 10,
+        "sp_defence": 35,
+        "speed": 5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 98
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 97
+      }
+    },
+    {
+      "id": "EVOLUTION-095",
+      "path_number": 95,
+      "from_species_id": "178",
+      "to_species_id": "179",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 40
+      },
+      "promotion_delta": {
+        "hp": 45,
+        "attack": 20,
+        "defence": 25,
+        "sp_attack": 55,
+        "sp_defence": 25,
+        "speed": 10
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 99
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 98
+      }
+    },
+    {
+      "id": "EVOLUTION-096",
+      "path_number": 96,
+      "from_species_id": "180",
+      "to_species_id": "181",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 28
+      },
+      "promotion_delta": {
+        "hp": 25,
+        "attack": 25,
+        "defence": 15,
+        "sp_attack": 5,
+        "sp_defence": 20,
+        "speed": 5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 100
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 99
+      }
+    },
+    {
+      "id": "EVOLUTION-097",
+      "path_number": 97,
+      "from_species_id": "181",
+      "to_species_id": "182",
+      "condition": {
+        "method": "LEVEL",
+        "minimum_level": 48
+      },
+      "promotion_delta": {
+        "hp": 15,
+        "attack": 40,
+        "defence": 35,
+        "sp_attack": 10,
+        "sp_defence": 25,
+        "speed": -5
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 101
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 100
+      }
+    },
+    {
+      "id": "EVOLUTION-098",
+      "path_number": 98,
+      "from_species_id": "186",
+      "to_species_id": "187",
+      "condition": {
+        "method": "ITEM",
+        "minimum_level": 40,
+        "item_id": "ITEM_EVOLUTION_SUN_RELIC",
+        "consumed": true
+      },
+      "promotion_delta": {
+        "hp": 30,
+        "attack": 20,
+        "defence": 20,
+        "sp_attack": 35,
+        "sp_defence": 30,
+        "speed": 45
+      },
+      "timing_verdict": "KEEP EXISTING",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+        "sheet": "Evolution Paths",
+        "row": 102
+      },
+      "timing_provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+        "sheet": "Evolution Validation",
+        "row": 101
+      }
+    }
+  ],
+  "unresolved": []
+}

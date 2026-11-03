@@ -1,0 +1,37 @@
+{
+  "id": 70,
+  "name": "Copper Lunge",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "speed"
+      ],
+      "stages": 1,
+      "chance_percent": 100,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "A narrow pointed copper ram prow pulls back, lunges forward horizontally with polished copper highlights, makes one pointed contact and draws out into two thin acceleration trails. No hammer or body.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Copper Lunge, stable ID70. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A narrow pointed copper ram prow pulls back, lunges forward horizontally with polished copper highlights, makes one pointed contact and draws out into two thin acceleration trails. No hammer or body. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/70-source-v2.png",
+  "impact": 0.4375,
+  "status": "revised source and prepared candidate; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/70-prepared-v2.png",
+  "sourceSha256": "01c4cb9ee77595dd14ed4659efe255e6137a783fdda0e9761ac60db8e3a8b2e5",
+  "preparedSha256": "38f35715e3ff43b952eba247c4cdba4ab85cfe6dfb9b0d9d9b8148a93e47ff0f",
+  "generator": "built-in image_gen",
+  "revision": "02",
+  "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
+  "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
+}

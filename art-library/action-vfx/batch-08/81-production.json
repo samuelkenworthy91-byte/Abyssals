@@ -1,0 +1,34 @@
+{
+  "id": 81,
+  "name": "Leaf Grip",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "defence"
+      ],
+      "stages": -1,
+      "chance_percent": 70,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "Three broad ribbed leaves fold into grasping fingers, reach inward and squeeze once around a central gap, bruise and crumple from pressure, then uncurl. Clear gripping action; no vine whip or cut.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Leaf Grip, stable ID81. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Three broad ribbed leaves fold into grasping fingers, reach inward and squeeze once around a central gap, bruise and crumple from pressure, then uncurl. Clear gripping action; no vine whip or cut. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/81-source.png",
+  "impact": 0.4375,
+  "status": "source and prepared sheet checkpointed; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/81-prepared.png",
+  "sourceSha256": "e63770b21f6aee9cfe0b47e80987ff4dd3cca1c21d2f8cb8e0e7c9f26cba29eb",
+  "preparedSha256": "69da6c0bb5b416a7314529a10c4a6cc4c874d395e363c13c4ae6410886835385",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
+}

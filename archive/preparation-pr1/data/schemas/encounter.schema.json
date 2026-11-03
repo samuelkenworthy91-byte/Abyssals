@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "encounter",
+  "type": "object",
+  "required": [
+    "id",
+    "area_id",
+    "phase",
+    "slots",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "area_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase": {
+      "enum": [
+        "DAY",
+        "NIGHT",
+        "PALE",
+        "DARK"
+      ]
+    },
+    "status": {
+      "enum": [
+        "missing_slots",
+        "complete"
+      ]
+    },
+    "slots": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "species_id",
+          "weight",
+          "min_level",
+          "max_level"
+        ],
+        "properties": {
+          "species_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{3}$"
+          },
+          "weight": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "min_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "max_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "condition": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "resolver": {
+            "type": "object",
+            "required": [
+              "state_field",
+              "cases"
+            ],
+            "properties": {
+              "state_field": {
+                "type": "string"
+              },
+              "cases": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          }
+        },
+        "oneOf": [
+          {
+            "properties": {
+              "species_id": {
+                "type": "string"
+              }
+            },
+            "not": {
+              "required": [
+                "resolver"
+              ]
+            }
+          },
+          {
+            "properties": {
+              "species_id": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "resolver"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "complete"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "slots": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  ]
+}

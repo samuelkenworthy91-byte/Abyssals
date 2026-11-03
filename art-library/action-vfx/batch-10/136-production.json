@@ -1,0 +1,34 @@
+{
+  "id": 136,
+  "name": "Toxic Veil",
+  "category": "STATUS",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "evasion"
+      ],
+      "stages": 1,
+      "chance_percent": 100
+    }
+  ],
+  "target": "SELF",
+  "batch": "10",
+  "sequence": "A thin violet film leaks upward from a cracked ampoule and wraps an empty central figure-space in staggered translucent poison ribbons. Ribbons shift and flicker apart to imply evasiveness, then withdraw. No direct poison hit.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Toxic Veil, ID 136. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A thin violet film leaks upward from a cracked ampoule and wraps an empty central figure-space in staggered translucent poison ribbons. Ribbons shift and flicker apart to imply evasiveness, then withdraw. No direct poison hit. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Toxic Veil, ID 136. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A thin violet film leaks upward from a cracked ampoule and wraps an empty central figure-space in staggered translucent poison ribbons. Ribbons shift and flicker apart to imply evasiveness, then withdraw. No direct poison hit. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/136-source.png",
+  "prepared": "art-library/action-vfx/batch-10/136-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "f6cbc8e482ab2f442fb9b3b146107be465f05a39a8e5e0fd533183237c3877c2",
+  "sourceSha256": "1536658f25640691c82ce2071cda2099fc414afb2bf72f824e1bec3213e46b37"
+}

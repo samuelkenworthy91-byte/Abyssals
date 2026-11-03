@@ -1,0 +1,15 @@
+{
+  "settlements_and_major_locations": [
+    "Civeton",
+    "Dorelem",
+    "Philomere",
+    "Cybressa",
+    "Cossenne",
+    "Marasen",
+    "Botrune",
+    "Cayfen",
+    "Ramelle",
+    "Jeros"
+  ],
+  "note": "Earlier short summaries omitted some intermediate locked settlements. Encounter workbook route IDs make Cybressa, Cossenne and Cayfen active location names."
+}

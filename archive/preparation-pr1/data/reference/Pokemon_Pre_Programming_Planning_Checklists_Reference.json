@@ -1,0 +1,3652 @@
+{
+  "source": "docs/source_archive/canon_sources/superseded/Pokemon_Pre_Programming_Planning_Checklists_Reference.docx",
+  "source_sha256": "67090b61709f0f7feb184eef6b0562d1a62713e8f7b51f432cdc3fc44f5ff9ef",
+  "authority": "NON-AUTHORITATIVE superseded history",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "POKEMON PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "Pre-Programming Planning Checklists"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "MASTER REFERENCE DOCUMENT"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "Reference version 1.0 - 17 independent planning workstreams"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 5,
+      "kind": "table",
+      "rows": [
+        [
+          "HOW TO USE THIS DOCUMENT IN OTHER PROJECT CHATS\nUse the stable checklist number and title. Example: \"Pull up CHECKLIST 01 - Exact Stat Growth Algorithm. This chat will finish that checklist.\"\nEach checklist is deliberately self-contained. The new chat should treat already-locked Pokemon project canon as fixed unless the checklist explicitly requires a new decision.\nWhen a checklist is completed, its decisions should be recorded back into the relevant canonical gameplay / design data rather than creating a competing rule set."
+        ]
+      ]
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Stable reference names: CHECKLIST 01 through CHECKLIST 17"
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "REFERENCE INDEX"
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Use these exact identifiers when referring to a checklist in another chat."
+    },
+    {
+      "body_index": 11,
+      "kind": "table",
+      "rows": [
+        [
+          "Reference",
+          "Checklist",
+          "Status"
+        ],
+        [
+          "CHECKLIST 01",
+          "Exact Stat Growth Algorithm",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 02",
+          "Route & Destination Encounter Tables",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 03",
+          "World Progression & Functional Map Structure",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 04",
+          "Trainer Database & Team Planning",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 05",
+          "Hell Terrain Finalisation",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 06",
+          "Items, Shops & Economy",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 07",
+          "Memorial & Resurrection System",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 08",
+          "Party & Reserve Management",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 09",
+          "Leader & Trainer Fate System",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 10",
+          "Story Event & Flag Master List",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 11",
+          "Evolution Validation",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 12",
+          "Learnset Validation",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 13",
+          "Battle Edge Cases",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 14",
+          "Starter Three-Life System",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 15",
+          "Ironman Save & Persistence Specification",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 16",
+          "Battle Presentation Specification",
+          "[ ] OPEN"
+        ],
+        [
+          "CHECKLIST 17",
+          "Overworld Interaction Rules",
+          "[ ] OPEN"
+        ]
+      ]
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01"
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "Exact Stat Growth Algorithm"
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "Purpose: Lock how canonical base stats become Fire Emblem-style growth percentages."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 01 - Exact Stat Growth Algorithm. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "[ ] Define the mathematical conversion from each species' six base stats into HP, Attack, Defence, Special Attack, Special Defence and Speed growth percentages."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether BST itself modifies overall growth quality or only the distribution between the six stats."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "[ ] Establish the minimum possible growth percentage."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "[ ] Establish the maximum possible growth percentage."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "[ ] Check low-BST first-stage monsters."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "[ ] Check normal mid-stage monsters."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "[ ] Check high-BST final evolutions."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "[ ] Check fossils."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "[ ] Check mythics / legendary-equivalent monsters."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "[ ] Confirm every level performs six independent growth rolls."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "[ ] Define the successful growth increment for normal stats."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether HP also gains +1 per successful roll or uses a different increment."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "[ ] Confirm failed rolls produce no increase."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether a level can produce zero successful growths."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether a level can produce all six successful growths."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether any bad-luck protection exists."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether any exceptional-growth mechanic exists."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "[ ] Define RNG seed behaviour."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "[ ] Confirm higher-level generated monsters simulate all prior growth rolls from their fixed seed."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "[ ] Confirm reloading cannot reroll historical growth."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "[ ] Confirm evolution does not reroll historical growth."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "[ ] Validate expected Level 50 and Level 100 stat distributions."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "[ ] Add final growth percentages to the canonical species data."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 41,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "CHECKLIST 02"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Route & Destination Encounter Tables"
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "Purpose: Create the complete authored wild-monster distribution for the world."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 02 - Route & Destination Encounter Tables. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "[ ] List every location where random encounters can occur."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "[ ] List every major route, minor path, forest, cave, ruin, dungeon, Hell encounter area and optional/postgame area."
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "[ ] Assign each encounter-enabled location its own encounter table."
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "[ ] Assign species percentages to every table."
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "[ ] Ensure encounter percentages total 100 percent."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "[ ] Give each species a minimum encounter level."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "[ ] Give each species a maximum encounter level."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "[ ] Define common encounters."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "[ ] Define uncommon encounters."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "[ ] Define rare encounters."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "[ ] Define extremely rare encounters if required."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether some monsters require particular terrain."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether some monsters require a particular story state."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether some monsters require a special interaction."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether some monsters require a hidden area."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "[ ] Identify fossil acquisition separately from ordinary encounters."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "[ ] Identify mythic encounters separately."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "[ ] Mark story-locked encounter-table changes."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "[ ] Establish encounter frequency per location."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether encounter terrain is visually marked."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether caves use step-based encounters throughout."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "[ ] Determine repel-equivalent mechanics, if any."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "[ ] Ensure early routes cannot generate unreasonable lethal spikes."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "[ ] Ensure later routes naturally become poor grinding locations through level-gap XP scaling."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "[ ] Confirm there is no dynamic monster-level scaling."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 74,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "CHECKLIST 03"
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "World Progression & Functional Map Structure"
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "Purpose: Establish the navigable world before finished city/map artwork."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 03 - World Progression & Functional Map Structure. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "[ ] List all eight mortal towns and Civeton / other major hubs."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "[ ] List all routes between settlements."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "[ ] List required dungeons."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "[ ] List optional areas."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "[ ] List Hell regions."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "[ ] List finale areas."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "[ ] List postgame areas."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "[ ] Create one complete world connection diagram."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "[ ] Define every map entrance and exit."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "[ ] Define route-to-route transitions."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "[ ] Define town-to-route transitions."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "[ ] Define dungeon entrances and exits."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "[ ] Identify one-way transitions."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "[ ] Identify unlockable shortcuts."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "[ ] Mark initially inaccessible areas."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "[ ] Assign story flags to blocked routes."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether traversal abilities or items are required anywhere."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "[ ] Position alchemists, shops, reserve access, the memorial, important NPCs and leader buildings."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "[ ] Decide how Hell travel operates."
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "[ ] Decide how returning to earlier towns operates."
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "[ ] Decide when restoration versions of towns replace conquest versions."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "[ ] Define fast travel, if any."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "[ ] Establish the expected critical path through the whole game."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 105,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "CHECKLIST 04"
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "Trainer Database & Team Planning"
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "Purpose: Create every combat-capable human opponent and appropriate AI/team progression."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 04 - Trainer Database & Team Planning. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "[ ] Define normal trainer archetypes / classes."
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether trainer class affects AI."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether trainer class affects monster preferences."
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "[ ] Build trainers for each early route."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "[ ] Build trainers for each midgame route."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "[ ] Build trainers for each late-game route."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "[ ] Build trainers inside dungeons."
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "[ ] Build optional trainers."
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "[ ] Build elite / rare trainers."
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "[ ] Define the expected level curve by chapter."
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "[ ] Assign every trainer a team size, monster species, levels, abilities, legal moves and held items if used."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "[ ] Build Pate's team at every encounter."
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "[ ] Build Trade's team at every encounter."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "[ ] Build recurring named-character teams."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "[ ] Build all eight mortal leader teams."
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "[ ] Build Severin's teams."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "[ ] Build all Hell Warden teams."
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "[ ] Make each Warden team exploit its terrain."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "[ ] Define Wild AI."
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "[ ] Define Basic Trainer AI."
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "[ ] Define Advanced Trainer AI."
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "[ ] Define Leader AI."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "[ ] Define Hell Warden AI."
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "[ ] Define Severin / final-boss AI."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "[ ] Decide which AI tiers switch monsters."
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "[ ] Decide which AI tiers use healing items."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "[ ] Decide which AI tiers predict type matchups."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "[ ] Decide which AI tiers use setup / status tactics."
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "[ ] Validate difficulty progression against permadeath."
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 142,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "CHECKLIST 05"
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": "Hell Terrain Finalisation"
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "Purpose: Finalise the eight Warden battlefield conditions and teams built around them."
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 05 - Hell Terrain Finalisation. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "[ ] Veyr: finalise Namefog."
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "[ ] Veyr: finalise exact modifiers."
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "[ ] Veyr: build the synergistic team."
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "[ ] Veyr: establish viable counters."
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "[ ] Ossael: finalise Gilded Dust."
+    },
+    {
+      "body_index": 154,
+      "kind": "paragraph",
+      "text": "[ ] Ossael: confirm sandstorm-style damage and immunities."
+    },
+    {
+      "body_index": 155,
+      "kind": "paragraph",
+      "text": "[ ] Ossael: build the synergistic team."
+    },
+    {
+      "body_index": 156,
+      "kind": "paragraph",
+      "text": "[ ] Ossael: establish viable counters."
+    },
+    {
+      "body_index": 157,
+      "kind": "paragraph",
+      "text": "[ ] Mordren: finalise Blood Sun."
+    },
+    {
+      "body_index": 158,
+      "kind": "paragraph",
+      "text": "[ ] Mordren: confirm Fire / Water modifiers."
+    },
+    {
+      "body_index": 159,
+      "kind": "paragraph",
+      "text": "[ ] Mordren: build the sun-style team."
+    },
+    {
+      "body_index": 160,
+      "kind": "paragraph",
+      "text": "[ ] Mordren: establish viable counters."
+    },
+    {
+      "body_index": 161,
+      "kind": "paragraph",
+      "text": "[ ] Caelor: finalise Iron Decree."
+    },
+    {
+      "body_index": 162,
+      "kind": "paragraph",
+      "text": "[ ] Caelor: confirm Steel / Fighting interaction."
+    },
+    {
+      "body_index": 163,
+      "kind": "paragraph",
+      "text": "[ ] Caelor: build the defensive team."
+    },
+    {
+      "body_index": 164,
+      "kind": "paragraph",
+      "text": "[ ] Caelor: establish viable counters."
+    },
+    {
+      "body_index": 165,
+      "kind": "paragraph",
+      "text": "[ ] Asterion: finalise Twin Radiance."
+    },
+    {
+      "body_index": 166,
+      "kind": "paragraph",
+      "text": "[ ] Asterion: confirm Fairy / Dark interaction."
+    },
+    {
+      "body_index": 167,
+      "kind": "paragraph",
+      "text": "[ ] Asterion: build the synergistic team."
+    },
+    {
+      "body_index": 168,
+      "kind": "paragraph",
+      "text": "[ ] Asterion: establish viable counters."
+    },
+    {
+      "body_index": 169,
+      "kind": "paragraph",
+      "text": "[ ] Mirra: finalise Mourning Rain."
+    },
+    {
+      "body_index": 170,
+      "kind": "paragraph",
+      "text": "[ ] Mirra: confirm rain modifiers."
+    },
+    {
+      "body_index": 171,
+      "kind": "paragraph",
+      "text": "[ ] Mirra: build the sustain team."
+    },
+    {
+      "body_index": 172,
+      "kind": "paragraph",
+      "text": "[ ] Mirra: establish viable counters."
+    },
+    {
+      "body_index": 173,
+      "kind": "paragraph",
+      "text": "[ ] Velcar: finalise Cocytus Hail."
+    },
+    {
+      "body_index": 174,
+      "kind": "paragraph",
+      "text": "[ ] Velcar: confirm hail damage and immunity."
+    },
+    {
+      "body_index": 175,
+      "kind": "paragraph",
+      "text": "[ ] Velcar: build the synergistic Ice team."
+    },
+    {
+      "body_index": 176,
+      "kind": "paragraph",
+      "text": "[ ] Velcar: establish viable counters."
+    },
+    {
+      "body_index": 177,
+      "kind": "paragraph",
+      "text": "[ ] Nema: finalise Quiet Night."
+    },
+    {
+      "body_index": 178,
+      "kind": "paragraph",
+      "text": "[ ] Nema: confirm Dark / Fairy modifiers."
+    },
+    {
+      "body_index": 179,
+      "kind": "paragraph",
+      "text": "[ ] Nema: build the Dark / Ghost team."
+    },
+    {
+      "body_index": 180,
+      "kind": "paragraph",
+      "text": "[ ] Nema: establish viable counters."
+    },
+    {
+      "body_index": 181,
+      "kind": "paragraph",
+      "text": "[ ] Determine whether Warden terrain lasts indefinitely."
+    },
+    {
+      "body_index": 182,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether player moves can remove or replace Warden terrain."
+    },
+    {
+      "body_index": 183,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether weather abilities can override it."
+    },
+    {
+      "body_index": 184,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether the Warden terrain resumes after a replacement expires."
+    },
+    {
+      "body_index": 185,
+      "kind": "paragraph",
+      "text": "[ ] Create a persistent HUD indicator."
+    },
+    {
+      "body_index": 186,
+      "kind": "paragraph",
+      "text": "[ ] Ensure every terrain uses the normal readable battle UI."
+    },
+    {
+      "body_index": 187,
+      "kind": "paragraph",
+      "text": "[ ] Playtest all eight for fairness."
+    },
+    {
+      "body_index": 188,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 189,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 190,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 191,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06"
+    },
+    {
+      "body_index": 192,
+      "kind": "paragraph",
+      "text": "Items, Shops & Economy"
+    },
+    {
+      "body_index": 193,
+      "kind": "paragraph",
+      "text": "Purpose: Build the entire non-monster inventory and economic system."
+    },
+    {
+      "body_index": 194,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 06 - Items, Shops & Economy. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 195,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 196,
+      "kind": "paragraph",
+      "text": "[ ] Define basic, mid-tier, high-tier and full HP healing items as appropriate."
+    },
+    {
+      "body_index": 197,
+      "kind": "paragraph",
+      "text": "[ ] Define status cures and any combined status cure."
+    },
+    {
+      "body_index": 198,
+      "kind": "paragraph",
+      "text": "[ ] Define PP-restoring items."
+    },
+    {
+      "body_index": 199,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether temporary battle-stat boosters exist."
+    },
+    {
+      "body_index": 200,
+      "kind": "paragraph",
+      "text": "[ ] Define an escape item if used."
+    },
+    {
+      "body_index": 201,
+      "kind": "paragraph",
+      "text": "[ ] Define a protection / repel equivalent if used."
+    },
+    {
+      "body_index": 202,
+      "kind": "paragraph",
+      "text": "[ ] Define other utility items."
+    },
+    {
+      "body_index": 203,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Trail Bread availability and price."
+    },
+    {
+      "body_index": 204,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Seasoned Jerky availability and price."
+    },
+    {
+      "body_index": 205,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Royal Feast availability and price."
+    },
+    {
+      "body_index": 206,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Saint's Banquet availability and rarity."
+    },
+    {
+      "body_index": 207,
+      "kind": "paragraph",
+      "text": "[ ] Finalise River Grub availability and price."
+    },
+    {
+      "body_index": 208,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Familiar Stew availability and price."
+    },
+    {
+      "body_index": 209,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Patient Ration availability and price."
+    },
+    {
+      "body_index": 210,
+      "kind": "paragraph",
+      "text": "[ ] Finalise Youngroot Mash availability and price."
+    },
+    {
+      "body_index": 211,
+      "kind": "paragraph",
+      "text": "[ ] Finalise every evolution-item name."
+    },
+    {
+      "body_index": 212,
+      "kind": "paragraph",
+      "text": "[ ] Determine guaranteed evolution-item locations."
+    },
+    {
+      "body_index": 213,
+      "kind": "paragraph",
+      "text": "[ ] Determine renewable evolution-item sources."
+    },
+    {
+      "body_index": 214,
+      "kind": "paragraph",
+      "text": "[ ] Determine evolution-item shop availability."
+    },
+    {
+      "body_index": 215,
+      "kind": "paragraph",
+      "text": "[ ] Determine evolution-item prices."
+    },
+    {
+      "body_index": 216,
+      "kind": "paragraph",
+      "text": "[ ] Define starting money."
+    },
+    {
+      "body_index": 217,
+      "kind": "paragraph",
+      "text": "[ ] Define trainer battle rewards."
+    },
+    {
+      "body_index": 218,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether wild battles reward currency."
+    },
+    {
+      "body_index": 219,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether wild monsters drop materials."
+    },
+    {
+      "body_index": 220,
+      "kind": "paragraph",
+      "text": "[ ] Define sellable treasures."
+    },
+    {
+      "body_index": 221,
+      "kind": "paragraph",
+      "text": "[ ] Define shop buy / sell ratios."
+    },
+    {
+      "body_index": 222,
+      "kind": "paragraph",
+      "text": "[ ] Create town-by-town shop inventories."
+    },
+    {
+      "body_index": 223,
+      "kind": "paragraph",
+      "text": "[ ] Define chapter-based shop upgrades."
+    },
+    {
+      "body_index": 224,
+      "kind": "paragraph",
+      "text": "[ ] Ensure capture and healing costs create meaningful decisions without excessive grinding."
+    },
+    {
+      "body_index": 225,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 226,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 227,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 228,
+      "kind": "paragraph",
+      "text": "CHECKLIST 07"
+    },
+    {
+      "body_index": 229,
+      "kind": "paragraph",
+      "text": "Memorial & Resurrection System"
+    },
+    {
+      "body_index": 230,
+      "kind": "paragraph",
+      "text": "Purpose: Fully specify death recording and costly resurrection."
+    },
+    {
+      "body_index": 231,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 07 - Memorial & Resurrection System. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 232,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 233,
+      "kind": "paragraph",
+      "text": "[ ] Define when the Civeton memorial becomes available."
+    },
+    {
+      "body_index": 234,
+      "kind": "paragraph",
+      "text": "[ ] Define the memorial visual interaction."
+    },
+    {
+      "body_index": 235,
+      "kind": "paragraph",
+      "text": "[ ] Create the dead-monster ledger structure."
+    },
+    {
+      "body_index": 236,
+      "kind": "paragraph",
+      "text": "[ ] Record unique monster ID."
+    },
+    {
+      "body_index": 237,
+      "kind": "paragraph",
+      "text": "[ ] Record species."
+    },
+    {
+      "body_index": 238,
+      "kind": "paragraph",
+      "text": "[ ] Record nickname."
+    },
+    {
+      "body_index": 239,
+      "kind": "paragraph",
+      "text": "[ ] Record level."
+    },
+    {
+      "body_index": 240,
+      "kind": "paragraph",
+      "text": "[ ] Record ability."
+    },
+    {
+      "body_index": 241,
+      "kind": "paragraph",
+      "text": "[ ] Record six rolled stats."
+    },
+    {
+      "body_index": 242,
+      "kind": "paragraph",
+      "text": "[ ] Record current / former moves as required."
+    },
+    {
+      "body_index": 243,
+      "kind": "paragraph",
+      "text": "[ ] Record evolution history if required."
+    },
+    {
+      "body_index": 244,
+      "kind": "paragraph",
+      "text": "[ ] Record place of death."
+    },
+    {
+      "body_index": 245,
+      "kind": "paragraph",
+      "text": "[ ] Record chapter / order of death."
+    },
+    {
+      "body_index": 246,
+      "kind": "paragraph",
+      "text": "[ ] Display the monster sprite."
+    },
+    {
+      "body_index": 247,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether flavour epitaphs are generated."
+    },
+    {
+      "body_index": 248,
+      "kind": "paragraph",
+      "text": "[ ] Create the resurrection option."
+    },
+    {
+      "body_index": 249,
+      "kind": "paragraph",
+      "text": "[ ] Require exactly ten living monsters to be sacrificed."
+    },
+    {
+      "body_index": 250,
+      "kind": "paragraph",
+      "text": "[ ] Build the sacrifice-selection interface."
+    },
+    {
+      "body_index": 251,
+      "kind": "paragraph",
+      "text": "[ ] Prevent accidental starter sacrifice if appropriate."
+    },
+    {
+      "body_index": 252,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether favourited / locked monsters need additional confirmation."
+    },
+    {
+      "body_index": 253,
+      "kind": "paragraph",
+      "text": "[ ] Permanently delete sacrificed monsters."
+    },
+    {
+      "body_index": 254,
+      "kind": "paragraph",
+      "text": "[ ] Ensure sacrificed monsters do not enter the resurrection ledger."
+    },
+    {
+      "body_index": 255,
+      "kind": "paragraph",
+      "text": "[ ] Restore the exact original resurrected monster instance."
+    },
+    {
+      "body_index": 256,
+      "kind": "paragraph",
+      "text": "[ ] Decide resurrection HP and status."
+    },
+    {
+      "body_index": 257,
+      "kind": "paragraph",
+      "text": "[ ] Decide where the resurrected monster is placed if the party is full."
+    },
+    {
+      "body_index": 258,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether humans have a separate memorial section."
+    },
+    {
+      "body_index": 259,
+      "kind": "paragraph",
+      "text": "[ ] Integrate memorial deaths into Mirra / Grief content where appropriate."
+    },
+    {
+      "body_index": 260,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 261,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 262,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 263,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08"
+    },
+    {
+      "body_index": 264,
+      "kind": "paragraph",
+      "text": "Party & Reserve Management"
+    },
+    {
+      "body_index": 265,
+      "kind": "paragraph",
+      "text": "Purpose: Define the six-monster party and off-party storage system."
+    },
+    {
+      "body_index": 266,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 08 - Party & Reserve Management. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 267,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 268,
+      "kind": "paragraph",
+      "text": "[ ] Lock active party maximum at six."
+    },
+    {
+      "body_index": 269,
+      "kind": "paragraph",
+      "text": "[ ] Decide reserve maximum."
+    },
+    {
+      "body_index": 270,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether reserve is effectively unlimited."
+    },
+    {
+      "body_index": 271,
+      "kind": "paragraph",
+      "text": "[ ] Define newly captured monster destination when the party has space."
+    },
+    {
+      "body_index": 272,
+      "kind": "paragraph",
+      "text": "[ ] Define newly captured monster destination when the party is full."
+    },
+    {
+      "body_index": 273,
+      "kind": "paragraph",
+      "text": "[ ] Build the party screen specification."
+    },
+    {
+      "body_index": 274,
+      "kind": "paragraph",
+      "text": "[ ] Build the reserve screen specification."
+    },
+    {
+      "body_index": 275,
+      "kind": "paragraph",
+      "text": "[ ] Allow party ordering."
+    },
+    {
+      "body_index": 276,
+      "kind": "paragraph",
+      "text": "[ ] Allow party / reserve swaps."
+    },
+    {
+      "body_index": 277,
+      "kind": "paragraph",
+      "text": "[ ] Show HP."
+    },
+    {
+      "body_index": 278,
+      "kind": "paragraph",
+      "text": "[ ] Show level."
+    },
+    {
+      "body_index": 279,
+      "kind": "paragraph",
+      "text": "[ ] Show status."
+    },
+    {
+      "body_index": 280,
+      "kind": "paragraph",
+      "text": "[ ] Show typing."
+    },
+    {
+      "body_index": 281,
+      "kind": "paragraph",
+      "text": "[ ] Show ability."
+    },
+    {
+      "body_index": 282,
+      "kind": "paragraph",
+      "text": "[ ] Show starter lives where applicable."
+    },
+    {
+      "body_index": 283,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether reserve monsters heal automatically."
+    },
+    {
+      "body_index": 284,
+      "kind": "paragraph",
+      "text": "[ ] Define alchemist healing interaction."
+    },
+    {
+      "body_index": 285,
+      "kind": "paragraph",
+      "text": "[ ] Define Aeric's reserve-caretaker role."
+    },
+    {
+      "body_index": 286,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether every alchemist gives reserve access."
+    },
+    {
+      "body_index": 287,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether reserve access is restricted in hostile areas."
+    },
+    {
+      "body_index": 288,
+      "kind": "paragraph",
+      "text": "[ ] Determine behaviour when the active party has no living monsters."
+    },
+    {
+      "body_index": 289,
+      "kind": "paragraph",
+      "text": "[ ] Determine behaviour if the reserve contains living monsters during a wipe."
+    },
+    {
+      "body_index": 290,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether the player must manually retrieve reserve replacements after losses."
+    },
+    {
+      "body_index": 291,
+      "kind": "paragraph",
+      "text": "[ ] Handle permanent deletion cleanly when a party member dies."
+    },
+    {
+      "body_index": 292,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 293,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 294,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 295,
+      "kind": "paragraph",
+      "text": "CHECKLIST 09"
+    },
+    {
+      "body_index": 296,
+      "kind": "paragraph",
+      "text": "Leader & Trainer Fate System"
+    },
+    {
+      "body_index": 297,
+      "kind": "paragraph",
+      "text": "Purpose: Fully separate battle defeat from human death."
+    },
+    {
+      "body_index": 298,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 09 - Leader & Trainer Fate System. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 299,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 300,
+      "kind": "paragraph",
+      "text": "[ ] Identify every battle requiring post-battle fate resolution."
+    },
+    {
+      "body_index": 301,
+      "kind": "paragraph",
+      "text": "[ ] Identify all eight leader fate scenes."
+    },
+    {
+      "body_index": 302,
+      "kind": "paragraph",
+      "text": "[ ] Define SPARE."
+    },
+    {
+      "body_index": 303,
+      "kind": "paragraph",
+      "text": "[ ] Define EXECUTE."
+    },
+    {
+      "body_index": 304,
+      "kind": "paragraph",
+      "text": "[ ] Define special authored exceptions where applicable."
+    },
+    {
+      "body_index": 305,
+      "kind": "paragraph",
+      "text": "[ ] Ensure monster-party defeat alone never automatically kills a human."
+    },
+    {
+      "body_index": 306,
+      "kind": "paragraph",
+      "text": "[ ] Decide when surrender occurs."
+    },
+    {
+      "body_index": 307,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether every important opponent is physically captured first."
+    },
+    {
+      "body_index": 308,
+      "kind": "paragraph",
+      "text": "[ ] Create the fate-choice UI specification."
+    },
+    {
+      "body_index": 309,
+      "kind": "paragraph",
+      "text": "[ ] Create irreversible-choice confirmation behaviour."
+    },
+    {
+      "body_index": 310,
+      "kind": "paragraph",
+      "text": "[ ] Autosave immediately after a fate decision."
+    },
+    {
+      "body_index": 311,
+      "kind": "paragraph",
+      "text": "[ ] Create one state value / flag per leader fate."
+    },
+    {
+      "body_index": 312,
+      "kind": "paragraph",
+      "text": "[ ] Define immediate dialogue consequences."
+    },
+    {
+      "body_index": 313,
+      "kind": "paragraph",
+      "text": "[ ] Define town-state consequences."
+    },
+    {
+      "body_index": 314,
+      "kind": "paragraph",
+      "text": "[ ] Define later NPC consequences."
+    },
+    {
+      "body_index": 315,
+      "kind": "paragraph",
+      "text": "[ ] Define Hell consequences."
+    },
+    {
+      "body_index": 316,
+      "kind": "paragraph",
+      "text": "[ ] Mark executed characters eligible to appear in Hell."
+    },
+    {
+      "body_index": 317,
+      "kind": "paragraph",
+      "text": "[ ] Mark spared characters eligible for restoration / postgame appearances."
+    },
+    {
+      "body_index": 318,
+      "kind": "paragraph",
+      "text": "[ ] Ensure neither option simply gives superior mechanical rewards."
+    },
+    {
+      "body_index": 319,
+      "kind": "paragraph",
+      "text": "[ ] Define Aimon / player defeat outcomes in scripted major battles."
+    },
+    {
+      "body_index": 320,
+      "kind": "paragraph",
+      "text": "[ ] Define story-controlled cases where an enemy chooses to spare the player."
+    },
+    {
+      "body_index": 321,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 322,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 323,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 324,
+      "kind": "paragraph",
+      "text": "CHECKLIST 10"
+    },
+    {
+      "body_index": 325,
+      "kind": "paragraph",
+      "text": "Story Event & Flag Master List"
+    },
+    {
+      "body_index": 326,
+      "kind": "paragraph",
+      "text": "Purpose: Convert the narrative Bible into implementation-ready game state."
+    },
+    {
+      "body_index": 327,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 10 - Story Event & Flag Master List. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 328,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 329,
+      "kind": "paragraph",
+      "text": "[ ] Establish a naming convention for flags."
+    },
+    {
+      "body_index": 330,
+      "kind": "paragraph",
+      "text": "[ ] Create chapter-start flags."
+    },
+    {
+      "body_index": 331,
+      "kind": "paragraph",
+      "text": "[ ] Create chapter-complete flags."
+    },
+    {
+      "body_index": 332,
+      "kind": "paragraph",
+      "text": "[ ] Create town-conquered flags."
+    },
+    {
+      "body_index": 333,
+      "kind": "paragraph",
+      "text": "[ ] Create leader-fate state variables."
+    },
+    {
+      "body_index": 334,
+      "kind": "paragraph",
+      "text": "[ ] Create important-NPC state variables."
+    },
+    {
+      "body_index": 335,
+      "kind": "paragraph",
+      "text": "[ ] Create optional quest flags."
+    },
+    {
+      "body_index": 336,
+      "kind": "paragraph",
+      "text": "[ ] Create starter-choice state."
+    },
+    {
+      "body_index": 337,
+      "kind": "paragraph",
+      "text": "[ ] Create Pate starter-assignment state."
+    },
+    {
+      "body_index": 338,
+      "kind": "paragraph",
+      "text": "[ ] Create Trade starter-assignment state."
+    },
+    {
+      "body_index": 339,
+      "kind": "paragraph",
+      "text": "[ ] Create story-evolution flags."
+    },
+    {
+      "body_index": 340,
+      "kind": "paragraph",
+      "text": "[ ] Create unique evolution-item acquisition flags where required."
+    },
+    {
+      "body_index": 341,
+      "kind": "paragraph",
+      "text": "[ ] Create Hell Circle completion flags."
+    },
+    {
+      "body_index": 342,
+      "kind": "paragraph",
+      "text": "[ ] Create Warden defeat flags."
+    },
+    {
+      "body_index": 343,
+      "kind": "paragraph",
+      "text": "[ ] Create Severin progression flags."
+    },
+    {
+      "body_index": 344,
+      "kind": "paragraph",
+      "text": "[ ] Create memorial unlock flag."
+    },
+    {
+      "body_index": 345,
+      "kind": "paragraph",
+      "text": "[ ] Create resurrection tutorial flag."
+    },
+    {
+      "body_index": 346,
+      "kind": "paragraph",
+      "text": "[ ] Create one-time encounter flags."
+    },
+    {
+      "body_index": 347,
+      "kind": "paragraph",
+      "text": "[ ] Create one-time treasure flags."
+    },
+    {
+      "body_index": 348,
+      "kind": "paragraph",
+      "text": "[ ] Create shortcut / open-door flags."
+    },
+    {
+      "body_index": 349,
+      "kind": "paragraph",
+      "text": "[ ] Create town restoration flags."
+    },
+    {
+      "body_index": 350,
+      "kind": "paragraph",
+      "text": "[ ] Create postgame unlock flags."
+    },
+    {
+      "body_index": 351,
+      "kind": "paragraph",
+      "text": "[ ] Define mutually exclusive state variables where appropriate."
+    },
+    {
+      "body_index": 352,
+      "kind": "paragraph",
+      "text": "[ ] Avoid duplicate / redundant booleans."
+    },
+    {
+      "body_index": 353,
+      "kind": "paragraph",
+      "text": "[ ] Define flag dependencies."
+    },
+    {
+      "body_index": 354,
+      "kind": "paragraph",
+      "text": "[ ] Create the master event-ID naming convention."
+    },
+    {
+      "body_index": 355,
+      "kind": "paragraph",
+      "text": "[ ] Map Story Bible scenes to event IDs."
+    },
+    {
+      "body_index": 356,
+      "kind": "paragraph",
+      "text": "[ ] Produce the implementation-ready event / flag table."
+    },
+    {
+      "body_index": 357,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 358,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 359,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 360,
+      "kind": "paragraph",
+      "text": "CHECKLIST 11"
+    },
+    {
+      "body_index": 361,
+      "kind": "paragraph",
+      "text": "Evolution Validation"
+    },
+    {
+      "body_index": 362,
+      "kind": "paragraph",
+      "text": "Purpose: Perform the final balance and logic pass over all 187 monsters' evolution rules."
+    },
+    {
+      "body_index": 363,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 11 - Evolution Validation. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 364,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 365,
+      "kind": "paragraph",
+      "text": "[ ] Review every three-stage line."
+    },
+    {
+      "body_index": 366,
+      "kind": "paragraph",
+      "text": "[ ] Review every two-stage line."
+    },
+    {
+      "body_index": 367,
+      "kind": "paragraph",
+      "text": "[ ] Review every single-stage monster."
+    },
+    {
+      "body_index": 368,
+      "kind": "paragraph",
+      "text": "[ ] Check first evolution levels against BST increases."
+    },
+    {
+      "body_index": 369,
+      "kind": "paragraph",
+      "text": "[ ] Check final evolution levels against BST increases."
+    },
+    {
+      "body_index": 370,
+      "kind": "paragraph",
+      "text": "[ ] Ensure strong final forms arrive later."
+    },
+    {
+      "body_index": 371,
+      "kind": "paragraph",
+      "text": "[ ] Ensure weaker ordinary forms evolve reasonably early."
+    },
+    {
+      "body_index": 372,
+      "kind": "paragraph",
+      "text": "[ ] Check starter evolution levels."
+    },
+    {
+      "body_index": 373,
+      "kind": "paragraph",
+      "text": "[ ] Check fossils."
+    },
+    {
+      "body_index": 374,
+      "kind": "paragraph",
+      "text": "[ ] Check mythic lines."
+    },
+    {
+      "body_index": 375,
+      "kind": "paragraph",
+      "text": "[ ] Check special high-BST monsters."
+    },
+    {
+      "body_index": 376,
+      "kind": "paragraph",
+      "text": "[ ] Review every item-based branch."
+    },
+    {
+      "body_index": 377,
+      "kind": "paragraph",
+      "text": "[ ] Ensure each item theme matches the transformation."
+    },
+    {
+      "body_index": 378,
+      "kind": "paragraph",
+      "text": "[ ] Ensure each item appears before evolution would reasonably be desired."
+    },
+    {
+      "body_index": 379,
+      "kind": "paragraph",
+      "text": "[ ] Ensure renewable item sources exist where appropriate."
+    },
+    {
+      "body_index": 380,
+      "kind": "paragraph",
+      "text": "[ ] Review every story-choice evolution."
+    },
+    {
+      "body_index": 381,
+      "kind": "paragraph",
+      "text": "[ ] Tie every story flag to a specific actual scene."
+    },
+    {
+      "body_index": 382,
+      "kind": "paragraph",
+      "text": "[ ] Decide what happens if a monster is obtained after the triggering story decision."
+    },
+    {
+      "body_index": 383,
+      "kind": "paragraph",
+      "text": "[ ] Decide what happens if a monster passes minimum evolution level before receiving the trigger."
+    },
+    {
+      "body_index": 384,
+      "kind": "paragraph",
+      "text": "[ ] Validate fixed promotion bonuses."
+    },
+    {
+      "body_index": 385,
+      "kind": "paragraph",
+      "text": "[ ] Confirm each promotion uses target base stat minus source base stat."
+    },
+    {
+      "body_index": 386,
+      "kind": "paragraph",
+      "text": "[ ] Check unusual cases where a target base stat is lower."
+    },
+    {
+      "body_index": 387,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether negative promotion deltas are allowed."
+    },
+    {
+      "body_index": 388,
+      "kind": "paragraph",
+      "text": "[ ] Confirm evolved growth weights switch immediately."
+    },
+    {
+      "body_index": 389,
+      "kind": "paragraph",
+      "text": "[ ] Finalise the canonical evolution table."
+    },
+    {
+      "body_index": 390,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 391,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 392,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 393,
+      "kind": "paragraph",
+      "text": "CHECKLIST 12"
+    },
+    {
+      "body_index": 394,
+      "kind": "paragraph",
+      "text": "Learnset Validation"
+    },
+    {
+      "body_index": 395,
+      "kind": "paragraph",
+      "text": "Purpose: Balance and validate the individual learnsets already created for all 187 species."
+    },
+    {
+      "body_index": 396,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 12 - Learnset Validation. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 397,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 398,
+      "kind": "paragraph",
+      "text": "[ ] Check every species has a legal learnset."
+    },
+    {
+      "body_index": 399,
+      "kind": "paragraph",
+      "text": "[ ] Check every move exists in the 354-move catalogue."
+    },
+    {
+      "body_index": 400,
+      "kind": "paragraph",
+      "text": "[ ] Check every move's type."
+    },
+    {
+      "body_index": 401,
+      "kind": "paragraph",
+      "text": "[ ] Check every monster receives usable early offence."
+    },
+    {
+      "body_index": 402,
+      "kind": "paragraph",
+      "text": "[ ] Ensure every monster receives STAB reasonably early."
+    },
+    {
+      "body_index": 403,
+      "kind": "paragraph",
+      "text": "[ ] Review dual-type monsters."
+    },
+    {
+      "body_index": 404,
+      "kind": "paragraph",
+      "text": "[ ] Ensure both types receive useful moves where appropriate."
+    },
+    {
+      "body_index": 405,
+      "kind": "paragraph",
+      "text": "[ ] Check physical attackers receive appropriate physical moves."
+    },
+    {
+      "body_index": 406,
+      "kind": "paragraph",
+      "text": "[ ] Check special attackers receive appropriate special moves."
+    },
+    {
+      "body_index": 407,
+      "kind": "paragraph",
+      "text": "[ ] Check defensive monsters receive support moves."
+    },
+    {
+      "body_index": 408,
+      "kind": "paragraph",
+      "text": "[ ] Check fast monsters receive suitable utility / priority where appropriate."
+    },
+    {
+      "body_index": 409,
+      "kind": "paragraph",
+      "text": "[ ] Prevent high-power moves from appearing too early."
+    },
+    {
+      "body_index": 410,
+      "kind": "paragraph",
+      "text": "[ ] Prevent excessively weak moves from remaining too late."
+    },
+    {
+      "body_index": 411,
+      "kind": "paragraph",
+      "text": "[ ] Review status-move distribution."
+    },
+    {
+      "body_index": 412,
+      "kind": "paragraph",
+      "text": "[ ] Review healing-move distribution."
+    },
+    {
+      "body_index": 413,
+      "kind": "paragraph",
+      "text": "[ ] Review setup-move distribution."
+    },
+    {
+      "body_index": 414,
+      "kind": "paragraph",
+      "text": "[ ] Review priority distribution."
+    },
+    {
+      "body_index": 415,
+      "kind": "paragraph",
+      "text": "[ ] Review recoil / drain move distribution."
+    },
+    {
+      "body_index": 416,
+      "kind": "paragraph",
+      "text": "[ ] Review signature moves."
+    },
+    {
+      "body_index": 417,
+      "kind": "paragraph",
+      "text": "[ ] Ensure signature moves arrive at sensible levels / evolution points."
+    },
+    {
+      "body_index": 418,
+      "kind": "paragraph",
+      "text": "[ ] Check starter learnsets carefully."
+    },
+    {
+      "body_index": 419,
+      "kind": "paragraph",
+      "text": "[ ] Check fossils."
+    },
+    {
+      "body_index": 420,
+      "kind": "paragraph",
+      "text": "[ ] Check mythics."
+    },
+    {
+      "body_index": 421,
+      "kind": "paragraph",
+      "text": "[ ] Check Hell Warden team learnsets."
+    },
+    {
+      "body_index": 422,
+      "kind": "paragraph",
+      "text": "[ ] Verify every planned trainer's moves are legal at their battle level."
+    },
+    {
+      "body_index": 423,
+      "kind": "paragraph",
+      "text": "[ ] Establish move-relearner rules."
+    },
+    {
+      "body_index": 424,
+      "kind": "paragraph",
+      "text": "[ ] Establish evolution-move rules."
+    },
+    {
+      "body_index": 425,
+      "kind": "paragraph",
+      "text": "[ ] Finalise all 187 learnsets as implementation data."
+    },
+    {
+      "body_index": 426,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 427,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 428,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 429,
+      "kind": "paragraph",
+      "text": "CHECKLIST 13"
+    },
+    {
+      "body_index": 430,
+      "kind": "paragraph",
+      "text": "Battle Edge Cases"
+    },
+    {
+      "body_index": 431,
+      "kind": "paragraph",
+      "text": "Purpose: Decide exactly what the battle engine does in every awkward scenario."
+    },
+    {
+      "body_index": 432,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 13 - Battle Edge Cases. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 433,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 434,
+      "kind": "paragraph",
+      "text": "[ ] Normal monster reaches 0 HP."
+    },
+    {
+      "body_index": 435,
+      "kind": "paragraph",
+      "text": "[ ] Starter reaches 0 HP with two lives remaining."
+    },
+    {
+      "body_index": 436,
+      "kind": "paragraph",
+      "text": "[ ] Starter reaches 0 HP with one life remaining."
+    },
+    {
+      "body_index": 437,
+      "kind": "paragraph",
+      "text": "[ ] Starter loses final life."
+    },
+    {
+      "body_index": 438,
+      "kind": "paragraph",
+      "text": "[ ] Both active monsters reach 0 HP simultaneously."
+    },
+    {
+      "body_index": 439,
+      "kind": "paragraph",
+      "text": "[ ] Entire player party reaches 0 HP."
+    },
+    {
+      "body_index": 440,
+      "kind": "paragraph",
+      "text": "[ ] Entire enemy party reaches 0 HP."
+    },
+    {
+      "body_index": 441,
+      "kind": "paragraph",
+      "text": "[ ] Recoil kills the attacker."
+    },
+    {
+      "body_index": 442,
+      "kind": "paragraph",
+      "text": "[ ] Drain attack kills the target."
+    },
+    {
+      "body_index": 443,
+      "kind": "paragraph",
+      "text": "[ ] Poison / burn kills a monster."
+    },
+    {
+      "body_index": 444,
+      "kind": "paragraph",
+      "text": "[ ] Weather / terrain kills a monster."
+    },
+    {
+      "body_index": 445,
+      "kind": "paragraph",
+      "text": "[ ] Self-destructing move kills the user."
+    },
+    {
+      "body_index": 446,
+      "kind": "paragraph",
+      "text": "[ ] Confusion / self-damage if supported."
+    },
+    {
+      "body_index": 447,
+      "kind": "paragraph",
+      "text": "[ ] Multi-hit attack crosses 0 HP mid-sequence."
+    },
+    {
+      "body_index": 448,
+      "kind": "paragraph",
+      "text": "[ ] Critical-hit handling."
+    },
+    {
+      "body_index": 449,
+      "kind": "paragraph",
+      "text": "[ ] Switch into damaging field / weather."
+    },
+    {
+      "body_index": 450,
+      "kind": "paragraph",
+      "text": "[ ] Switch when only one living monster remains."
+    },
+    {
+      "body_index": 451,
+      "kind": "paragraph",
+      "text": "[ ] Forced-switch effects."
+    },
+    {
+      "body_index": 452,
+      "kind": "paragraph",
+      "text": "[ ] Enemy tactical switching."
+    },
+    {
+      "body_index": 453,
+      "kind": "paragraph",
+      "text": "[ ] Switching after opponent death."
+    },
+    {
+      "body_index": 454,
+      "kind": "paragraph",
+      "text": "[ ] Capture with party under six."
+    },
+    {
+      "body_index": 455,
+      "kind": "paragraph",
+      "text": "[ ] Capture with a full party."
+    },
+    {
+      "body_index": 456,
+      "kind": "paragraph",
+      "text": "[ ] Capture with a full reserve."
+    },
+    {
+      "body_index": 457,
+      "kind": "paragraph",
+      "text": "[ ] Capture final enemy in a wild encounter."
+    },
+    {
+      "body_index": 458,
+      "kind": "paragraph",
+      "text": "[ ] Attempt capture on a trainer-owned monster."
+    },
+    {
+      "body_index": 459,
+      "kind": "paragraph",
+      "text": "[ ] Attempt capture on a boss / story monster."
+    },
+    {
+      "body_index": 460,
+      "kind": "paragraph",
+      "text": "[ ] Guaranteed-food capture."
+    },
+    {
+      "body_index": 461,
+      "kind": "paragraph",
+      "text": "[ ] Run from normal wild fight."
+    },
+    {
+      "body_index": 462,
+      "kind": "paragraph",
+      "text": "[ ] Failed escape."
+    },
+    {
+      "body_index": 463,
+      "kind": "paragraph",
+      "text": "[ ] Run from trainer battle."
+    },
+    {
+      "body_index": 464,
+      "kind": "paragraph",
+      "text": "[ ] Run from leader battle."
+    },
+    {
+      "body_index": 465,
+      "kind": "paragraph",
+      "text": "[ ] Run from Warden battle."
+    },
+    {
+      "body_index": 466,
+      "kind": "paragraph",
+      "text": "[ ] Run from special encounter."
+    },
+    {
+      "body_index": 467,
+      "kind": "paragraph",
+      "text": "[ ] XP calculation at battle end."
+    },
+    {
+      "body_index": 468,
+      "kind": "paragraph",
+      "text": "[ ] Multiple level-ups from one reward."
+    },
+    {
+      "body_index": 469,
+      "kind": "paragraph",
+      "text": "[ ] Learn a new move after battle."
+    },
+    {
+      "body_index": 470,
+      "kind": "paragraph",
+      "text": "[ ] Evolution after battle."
+    },
+    {
+      "body_index": 471,
+      "kind": "paragraph",
+      "text": "[ ] Evolution while injured."
+    },
+    {
+      "body_index": 472,
+      "kind": "paragraph",
+      "text": "[ ] Evolution when party is full."
+    },
+    {
+      "body_index": 473,
+      "kind": "paragraph",
+      "text": "[ ] Story event immediately after battle."
+    },
+    {
+      "body_index": 474,
+      "kind": "paragraph",
+      "text": "[ ] Fate decision immediately after battle."
+    },
+    {
+      "body_index": 475,
+      "kind": "paragraph",
+      "text": "[ ] Autosave ordering for all battle-end consequences."
+    },
+    {
+      "body_index": 476,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 477,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 478,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 479,
+      "kind": "paragraph",
+      "text": "CHECKLIST 14"
+    },
+    {
+      "body_index": 480,
+      "kind": "paragraph",
+      "text": "Starter Three-Life System"
+    },
+    {
+      "body_index": 481,
+      "kind": "paragraph",
+      "text": "Purpose: Completely define the exception to ordinary monster permadeath."
+    },
+    {
+      "body_index": 482,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 14 - Starter Three-Life System. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 483,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 484,
+      "kind": "paragraph",
+      "text": "[ ] Confirm which starter individuals receive three lives."
+    },
+    {
+      "body_index": 485,
+      "kind": "paragraph",
+      "text": "[ ] Store starterLivesRemaining."
+    },
+    {
+      "body_index": 486,
+      "kind": "paragraph",
+      "text": "[ ] Initial value equals 3."
+    },
+    {
+      "body_index": 487,
+      "kind": "paragraph",
+      "text": "[ ] First lethal defeat reduces lives to 2."
+    },
+    {
+      "body_index": 488,
+      "kind": "paragraph",
+      "text": "[ ] Second lethal defeat reduces lives to 1."
+    },
+    {
+      "body_index": 489,
+      "kind": "paragraph",
+      "text": "[ ] Third lethal defeat reduces lives to 0 and causes permanent death."
+    },
+    {
+      "body_index": 490,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether the starter disappears from the current battle immediately after losing a life."
+    },
+    {
+      "body_index": 491,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether the starter can be revived during that same battle."
+    },
+    {
+      "body_index": 492,
+      "kind": "paragraph",
+      "text": "[ ] Decide post-battle HP after a non-final life loss."
+    },
+    {
+      "body_index": 493,
+      "kind": "paragraph",
+      "text": "[ ] Decide post-battle status after a non-final life loss."
+    },
+    {
+      "body_index": 494,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether alchemist treatment is required."
+    },
+    {
+      "body_index": 495,
+      "kind": "paragraph",
+      "text": "[ ] Display lives clearly in the summary screen."
+    },
+    {
+      "body_index": 496,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether lives appear during battle."
+    },
+    {
+      "body_index": 497,
+      "kind": "paragraph",
+      "text": "[ ] Design first-life-loss message."
+    },
+    {
+      "body_index": 498,
+      "kind": "paragraph",
+      "text": "[ ] Design second-life-loss message."
+    },
+    {
+      "body_index": 499,
+      "kind": "paragraph",
+      "text": "[ ] Design final-death message."
+    },
+    {
+      "body_index": 500,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether life losses are stored in memorial history."
+    },
+    {
+      "body_index": 501,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether lost starter lives can ever be restored."
+    },
+    {
+      "body_index": 502,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether starter resurrection after final death uses ordinary memorial rules."
+    },
+    {
+      "body_index": 503,
+      "kind": "paragraph",
+      "text": "[ ] Define Pate's dynamically assigned starter lives."
+    },
+    {
+      "body_index": 504,
+      "kind": "paragraph",
+      "text": "[ ] Define Trade's dynamically assigned starter lives."
+    },
+    {
+      "body_index": 505,
+      "kind": "paragraph",
+      "text": "[ ] Handle starter evolution while lives are already lost."
+    },
+    {
+      "body_index": 506,
+      "kind": "paragraph",
+      "text": "[ ] Ensure evolution does not restore lives."
+    },
+    {
+      "body_index": 507,
+      "kind": "paragraph",
+      "text": "[ ] Save immediately after a starter life is lost."
+    },
+    {
+      "body_index": 508,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 509,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 510,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 511,
+      "kind": "paragraph",
+      "text": "CHECKLIST 15"
+    },
+    {
+      "body_index": 512,
+      "kind": "paragraph",
+      "text": "Ironman Save & Persistence Specification"
+    },
+    {
+      "body_index": 513,
+      "kind": "paragraph",
+      "text": "Purpose: Make permanent consequences genuinely permanent while protecting against corrupted files."
+    },
+    {
+      "body_index": 514,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 15 - Ironman Save & Persistence Specification. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 515,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 516,
+      "kind": "paragraph",
+      "text": "[ ] Decide total save-slot structure."
+    },
+    {
+      "body_index": 517,
+      "kind": "paragraph",
+      "text": "[ ] Establish the main persistent save."
+    },
+    {
+      "body_index": 518,
+      "kind": "paragraph",
+      "text": "[ ] Establish an automatic backup strategy."
+    },
+    {
+      "body_index": 519,
+      "kind": "paragraph",
+      "text": "[ ] Ensure backups cannot normally be selected for save-scumming."
+    },
+    {
+      "body_index": 520,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after monster death."
+    },
+    {
+      "body_index": 521,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after starter life loss."
+    },
+    {
+      "body_index": 522,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after capture."
+    },
+    {
+      "body_index": 523,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after monster sacrifice."
+    },
+    {
+      "body_index": 524,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after resurrection."
+    },
+    {
+      "body_index": 525,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after evolution."
+    },
+    {
+      "body_index": 526,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after move learning / replacement where required."
+    },
+    {
+      "body_index": 527,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after major item acquisition."
+    },
+    {
+      "body_index": 528,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after evolution-item consumption."
+    },
+    {
+      "body_index": 529,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after leader fate decisions."
+    },
+    {
+      "body_index": 530,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after important story choices."
+    },
+    {
+      "body_index": 531,
+      "kind": "paragraph",
+      "text": "[ ] Autosave after chapter completion."
+    },
+    {
+      "body_index": 532,
+      "kind": "paragraph",
+      "text": "[ ] Define safe save points during battles."
+    },
+    {
+      "body_index": 533,
+      "kind": "paragraph",
+      "text": "[ ] Prevent closing and reopening battle to reroll RNG."
+    },
+    {
+      "body_index": 534,
+      "kind": "paragraph",
+      "text": "[ ] Preserve encounter seed."
+    },
+    {
+      "body_index": 535,
+      "kind": "paragraph",
+      "text": "[ ] Preserve growth seed."
+    },
+    {
+      "body_index": 536,
+      "kind": "paragraph",
+      "text": "[ ] Preserve capture-outcome state where necessary."
+    },
+    {
+      "body_index": 537,
+      "kind": "paragraph",
+      "text": "[ ] Define behaviour on app / browser crash."
+    },
+    {
+      "body_index": 538,
+      "kind": "paragraph",
+      "text": "[ ] Define behaviour on device shutdown."
+    },
+    {
+      "body_index": 539,
+      "kind": "paragraph",
+      "text": "[ ] Define corruption recovery."
+    },
+    {
+      "body_index": 540,
+      "kind": "paragraph",
+      "text": "[ ] Define save-version migration when the game updates."
+    },
+    {
+      "body_index": 541,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether a manual Save button exists."
+    },
+    {
+      "body_index": 542,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether Save & Quit exists."
+    },
+    {
+      "body_index": 543,
+      "kind": "paragraph",
+      "text": "[ ] Define genuine soft-lock behaviour."
+    },
+    {
+      "body_index": 544,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether a completely unwinnable file remains canonically lost or receives an emergency recovery rule."
+    },
+    {
+      "body_index": 545,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 546,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 547,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 548,
+      "kind": "paragraph",
+      "text": "CHECKLIST 16"
+    },
+    {
+      "body_index": 549,
+      "kind": "paragraph",
+      "text": "Battle Presentation Specification"
+    },
+    {
+      "body_index": 550,
+      "kind": "paragraph",
+      "text": "Purpose: Define exactly how battle communicates information before building final art and VFX."
+    },
+    {
+      "body_index": 551,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 16 - Battle Presentation Specification. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 552,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 553,
+      "kind": "paragraph",
+      "text": "[ ] Define overworld-to-battle transition."
+    },
+    {
+      "body_index": 554,
+      "kind": "paragraph",
+      "text": "[ ] Define wild-encounter introduction."
+    },
+    {
+      "body_index": 555,
+      "kind": "paragraph",
+      "text": "[ ] Define trainer introduction."
+    },
+    {
+      "body_index": 556,
+      "kind": "paragraph",
+      "text": "[ ] Define leader introduction."
+    },
+    {
+      "body_index": 557,
+      "kind": "paragraph",
+      "text": "[ ] Define Warden introduction."
+    },
+    {
+      "body_index": 558,
+      "kind": "paragraph",
+      "text": "[ ] Define terrain announcement."
+    },
+    {
+      "body_index": 559,
+      "kind": "paragraph",
+      "text": "[ ] Define player monster position."
+    },
+    {
+      "body_index": 560,
+      "kind": "paragraph",
+      "text": "[ ] Define enemy monster position."
+    },
+    {
+      "body_index": 561,
+      "kind": "paragraph",
+      "text": "[ ] Define player trainer sprite position."
+    },
+    {
+      "body_index": 562,
+      "kind": "paragraph",
+      "text": "[ ] Define enemy trainer sprite position."
+    },
+    {
+      "body_index": 563,
+      "kind": "paragraph",
+      "text": "[ ] Define battle background composition."
+    },
+    {
+      "body_index": 564,
+      "kind": "paragraph",
+      "text": "[ ] Define HP bars."
+    },
+    {
+      "body_index": 565,
+      "kind": "paragraph",
+      "text": "[ ] Define level display."
+    },
+    {
+      "body_index": 566,
+      "kind": "paragraph",
+      "text": "[ ] Define status display."
+    },
+    {
+      "body_index": 567,
+      "kind": "paragraph",
+      "text": "[ ] Define starter-lives display if required."
+    },
+    {
+      "body_index": 568,
+      "kind": "paragraph",
+      "text": "[ ] Define terrain / weather display."
+    },
+    {
+      "body_index": 569,
+      "kind": "paragraph",
+      "text": "[ ] Define Fight command."
+    },
+    {
+      "body_index": 570,
+      "kind": "paragraph",
+      "text": "[ ] Define Monsters command."
+    },
+    {
+      "body_index": 571,
+      "kind": "paragraph",
+      "text": "[ ] Define Items command."
+    },
+    {
+      "body_index": 572,
+      "kind": "paragraph",
+      "text": "[ ] Define Run command."
+    },
+    {
+      "body_index": 573,
+      "kind": "paragraph",
+      "text": "[ ] Define four-move screen."
+    },
+    {
+      "body_index": 574,
+      "kind": "paragraph",
+      "text": "[ ] Define PP display."
+    },
+    {
+      "body_index": 575,
+      "kind": "paragraph",
+      "text": "[ ] Define move-type display."
+    },
+    {
+      "body_index": 576,
+      "kind": "paragraph",
+      "text": "[ ] Define power / effect information accessibility."
+    },
+    {
+      "body_index": 577,
+      "kind": "paragraph",
+      "text": "[ ] Define switch screen."
+    },
+    {
+      "body_index": 578,
+      "kind": "paragraph",
+      "text": "[ ] Define capture-food screen."
+    },
+    {
+      "body_index": 579,
+      "kind": "paragraph",
+      "text": "[ ] Define static-sprite attack lunge."
+    },
+    {
+      "body_index": 580,
+      "kind": "paragraph",
+      "text": "[ ] Define hit shake."
+    },
+    {
+      "body_index": 581,
+      "kind": "paragraph",
+      "text": "[ ] Define attack flash."
+    },
+    {
+      "body_index": 582,
+      "kind": "paragraph",
+      "text": "[ ] Define VFX overlay behaviour."
+    },
+    {
+      "body_index": 583,
+      "kind": "paragraph",
+      "text": "[ ] Define damage text."
+    },
+    {
+      "body_index": 584,
+      "kind": "paragraph",
+      "text": "[ ] Define status-effect presentation."
+    },
+    {
+      "body_index": 585,
+      "kind": "paragraph",
+      "text": "[ ] Define critical-hit presentation."
+    },
+    {
+      "body_index": 586,
+      "kind": "paragraph",
+      "text": "[ ] Define super-effective presentation."
+    },
+    {
+      "body_index": 587,
+      "kind": "paragraph",
+      "text": "[ ] Define resisted / immune presentation."
+    },
+    {
+      "body_index": 588,
+      "kind": "paragraph",
+      "text": "[ ] Define normal monster death animation."
+    },
+    {
+      "body_index": 589,
+      "kind": "paragraph",
+      "text": "[ ] Define species death / disappearance line presentation."
+    },
+    {
+      "body_index": 590,
+      "kind": "paragraph",
+      "text": "[ ] Define starter life-loss sequence."
+    },
+    {
+      "body_index": 591,
+      "kind": "paragraph",
+      "text": "[ ] Define final starter death presentation."
+    },
+    {
+      "body_index": 592,
+      "kind": "paragraph",
+      "text": "[ ] Define enemy monster death presentation."
+    },
+    {
+      "body_index": 593,
+      "kind": "paragraph",
+      "text": "[ ] Define XP display."
+    },
+    {
+      "body_index": 594,
+      "kind": "paragraph",
+      "text": "[ ] Define the 100-XP level-up transition."
+    },
+    {
+      "body_index": 595,
+      "kind": "paragraph",
+      "text": "[ ] Define Fire Emblem-style six-stat growth screen."
+    },
+    {
+      "body_index": 596,
+      "kind": "paragraph",
+      "text": "[ ] Define how successful stat rolls are shown."
+    },
+    {
+      "body_index": 597,
+      "kind": "paragraph",
+      "text": "[ ] Define new-move notification."
+    },
+    {
+      "body_index": 598,
+      "kind": "paragraph",
+      "text": "[ ] Define move replacement screen."
+    },
+    {
+      "body_index": 599,
+      "kind": "paragraph",
+      "text": "[ ] Define evolution sequence."
+    },
+    {
+      "body_index": 600,
+      "kind": "paragraph",
+      "text": "[ ] Define fixed promotion-stat display."
+    },
+    {
+      "body_index": 601,
+      "kind": "paragraph",
+      "text": "[ ] Define enemy defeat presentation."
+    },
+    {
+      "body_index": 602,
+      "kind": "paragraph",
+      "text": "[ ] Define surrender / capture transition."
+    },
+    {
+      "body_index": 603,
+      "kind": "paragraph",
+      "text": "[ ] Define SPARE / EXECUTE choice presentation."
+    },
+    {
+      "body_index": 604,
+      "kind": "paragraph",
+      "text": "[ ] Define important story-outcome presentation."
+    },
+    {
+      "body_index": 605,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 606,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 607,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    },
+    {
+      "body_index": 608,
+      "kind": "paragraph",
+      "text": "CHECKLIST 17"
+    },
+    {
+      "body_index": 609,
+      "kind": "paragraph",
+      "text": "Overworld Interaction Rules"
+    },
+    {
+      "body_index": 610,
+      "kind": "paragraph",
+      "text": "Purpose: Define exactly how the FireRed-style overworld controls and interacts before map production/programming."
+    },
+    {
+      "body_index": 611,
+      "kind": "paragraph",
+      "text": "Reference prompt: \"Pull up CHECKLIST 17 - Overworld Interaction Rules. This chat will finish this checklist.\""
+    },
+    {
+      "body_index": 612,
+      "kind": "paragraph",
+      "text": "________________________________________________________________________________"
+    },
+    {
+      "body_index": 613,
+      "kind": "paragraph",
+      "text": "[ ] Define tile / grid dimensions."
+    },
+    {
+      "body_index": 614,
+      "kind": "paragraph",
+      "text": "[ ] Define character sprite footprint."
+    },
+    {
+      "body_index": 615,
+      "kind": "paragraph",
+      "text": "[ ] Define walking speed."
+    },
+    {
+      "body_index": 616,
+      "kind": "paragraph",
+      "text": "[ ] Define directional movement."
+    },
+    {
+      "body_index": 617,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether diagonal movement exists."
+    },
+    {
+      "body_index": 618,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether movement is locked to four directions."
+    },
+    {
+      "body_index": 619,
+      "kind": "paragraph",
+      "text": "[ ] Define running / sprint mechanics."
+    },
+    {
+      "body_index": 620,
+      "kind": "paragraph",
+      "text": "[ ] Define running unlock condition if applicable."
+    },
+    {
+      "body_index": 621,
+      "kind": "paragraph",
+      "text": "[ ] Define movement while menus are open."
+    },
+    {
+      "body_index": 622,
+      "kind": "paragraph",
+      "text": "[ ] Define movement during NPC events."
+    },
+    {
+      "body_index": 623,
+      "kind": "paragraph",
+      "text": "[ ] Define solid-terrain collision."
+    },
+    {
+      "body_index": 624,
+      "kind": "paragraph",
+      "text": "[ ] Define NPC collision."
+    },
+    {
+      "body_index": 625,
+      "kind": "paragraph",
+      "text": "[ ] Define building collision."
+    },
+    {
+      "body_index": 626,
+      "kind": "paragraph",
+      "text": "[ ] Define water collision."
+    },
+    {
+      "body_index": 627,
+      "kind": "paragraph",
+      "text": "[ ] Define cliff / height collision."
+    },
+    {
+      "body_index": 628,
+      "kind": "paragraph",
+      "text": "[ ] Define decorative-object collision."
+    },
+    {
+      "body_index": 629,
+      "kind": "paragraph",
+      "text": "[ ] Define map-edge behaviour."
+    },
+    {
+      "body_index": 630,
+      "kind": "paragraph",
+      "text": "[ ] Define door collision and warps."
+    },
+    {
+      "body_index": 631,
+      "kind": "paragraph",
+      "text": "[ ] Define route exits."
+    },
+    {
+      "body_index": 632,
+      "kind": "paragraph",
+      "text": "[ ] Define town entrances."
+    },
+    {
+      "body_index": 633,
+      "kind": "paragraph",
+      "text": "[ ] Define building entrances."
+    },
+    {
+      "body_index": 634,
+      "kind": "paragraph",
+      "text": "[ ] Define dungeon transitions."
+    },
+    {
+      "body_index": 635,
+      "kind": "paragraph",
+      "text": "[ ] Define staircase transitions."
+    },
+    {
+      "body_index": 636,
+      "kind": "paragraph",
+      "text": "[ ] Define cave transitions."
+    },
+    {
+      "body_index": 637,
+      "kind": "paragraph",
+      "text": "[ ] Define teleports."
+    },
+    {
+      "body_index": 638,
+      "kind": "paragraph",
+      "text": "[ ] Define Hell transitions."
+    },
+    {
+      "body_index": 639,
+      "kind": "paragraph",
+      "text": "[ ] Define transition fade / screen effect."
+    },
+    {
+      "body_index": 640,
+      "kind": "paragraph",
+      "text": "[ ] Define interaction button."
+    },
+    {
+      "body_index": 641,
+      "kind": "paragraph",
+      "text": "[ ] Define interaction distance."
+    },
+    {
+      "body_index": 642,
+      "kind": "paragraph",
+      "text": "[ ] Define facing behaviour when talking to NPCs."
+    },
+    {
+      "body_index": 643,
+      "kind": "paragraph",
+      "text": "[ ] Define NPC facing behaviour."
+    },
+    {
+      "body_index": 644,
+      "kind": "paragraph",
+      "text": "[ ] Define dialogue-box behaviour."
+    },
+    {
+      "body_index": 645,
+      "kind": "paragraph",
+      "text": "[ ] Define choice menus."
+    },
+    {
+      "body_index": 646,
+      "kind": "paragraph",
+      "text": "[ ] Define shop NPC interaction."
+    },
+    {
+      "body_index": 647,
+      "kind": "paragraph",
+      "text": "[ ] Define alchemist NPC interaction."
+    },
+    {
+      "body_index": 648,
+      "kind": "paragraph",
+      "text": "[ ] Define Aeric reserve interaction."
+    },
+    {
+      "body_index": 649,
+      "kind": "paragraph",
+      "text": "[ ] Define story NPC interaction."
+    },
+    {
+      "body_index": 650,
+      "kind": "paragraph",
+      "text": "[ ] Define trainer line-of-sight encounters."
+    },
+    {
+      "body_index": 651,
+      "kind": "paragraph",
+      "text": "[ ] Define trainer movement toward the player."
+    },
+    {
+      "body_index": 652,
+      "kind": "paragraph",
+      "text": "[ ] Define encounter tiles / zones."
+    },
+    {
+      "body_index": 653,
+      "kind": "paragraph",
+      "text": "[ ] Define step-based encounter calculation."
+    },
+    {
+      "body_index": 654,
+      "kind": "paragraph",
+      "text": "[ ] Define encounter-rate differences between areas."
+    },
+    {
+      "body_index": 655,
+      "kind": "paragraph",
+      "text": "[ ] Define encounter transition."
+    },
+    {
+      "body_index": 656,
+      "kind": "paragraph",
+      "text": "[ ] Define repel / protection interaction if used."
+    },
+    {
+      "body_index": 657,
+      "kind": "paragraph",
+      "text": "[ ] Define story suppression of encounters where necessary."
+    },
+    {
+      "body_index": 658,
+      "kind": "paragraph",
+      "text": "[ ] Define visible item pickups."
+    },
+    {
+      "body_index": 659,
+      "kind": "paragraph",
+      "text": "[ ] Define hidden items."
+    },
+    {
+      "body_index": 660,
+      "kind": "paragraph",
+      "text": "[ ] Define signs."
+    },
+    {
+      "body_index": 661,
+      "kind": "paragraph",
+      "text": "[ ] Define books / plaques."
+    },
+    {
+      "body_index": 662,
+      "kind": "paragraph",
+      "text": "[ ] Define doors."
+    },
+    {
+      "body_index": 663,
+      "kind": "paragraph",
+      "text": "[ ] Define switches."
+    },
+    {
+      "body_index": 664,
+      "kind": "paragraph",
+      "text": "[ ] Define chests."
+    },
+    {
+      "body_index": 665,
+      "kind": "paragraph",
+      "text": "[ ] Define memorial interaction."
+    },
+    {
+      "body_index": 666,
+      "kind": "paragraph",
+      "text": "[ ] Define environmental story objects."
+    },
+    {
+      "body_index": 667,
+      "kind": "paragraph",
+      "text": "[ ] Define evolution-item pickups."
+    },
+    {
+      "body_index": 668,
+      "kind": "paragraph",
+      "text": "[ ] Define pause / menu button."
+    },
+    {
+      "body_index": 669,
+      "kind": "paragraph",
+      "text": "[ ] Define Party menu."
+    },
+    {
+      "body_index": 670,
+      "kind": "paragraph",
+      "text": "[ ] Define Reserve access where permitted."
+    },
+    {
+      "body_index": 671,
+      "kind": "paragraph",
+      "text": "[ ] Define Inventory menu."
+    },
+    {
+      "body_index": 672,
+      "kind": "paragraph",
+      "text": "[ ] Define Monster Information menu."
+    },
+    {
+      "body_index": 673,
+      "kind": "paragraph",
+      "text": "[ ] Define Map menu."
+    },
+    {
+      "body_index": 674,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether a Story / Objective log exists."
+    },
+    {
+      "body_index": 675,
+      "kind": "paragraph",
+      "text": "[ ] Define Settings menu."
+    },
+    {
+      "body_index": 676,
+      "kind": "paragraph",
+      "text": "[ ] Define Save / Quit presentation."
+    },
+    {
+      "body_index": 677,
+      "kind": "paragraph",
+      "text": "[ ] Define stationary NPC behaviour."
+    },
+    {
+      "body_index": 678,
+      "kind": "paragraph",
+      "text": "[ ] Define random-walker behaviour."
+    },
+    {
+      "body_index": 679,
+      "kind": "paragraph",
+      "text": "[ ] Define patrol NPC behaviour."
+    },
+    {
+      "body_index": 680,
+      "kind": "paragraph",
+      "text": "[ ] Define scripted NPC movement."
+    },
+    {
+      "body_index": 681,
+      "kind": "paragraph",
+      "text": "[ ] Define story-state NPC replacement."
+    },
+    {
+      "body_index": 682,
+      "kind": "paragraph",
+      "text": "[ ] Decide whether day / night NPC behaviour exists."
+    },
+    {
+      "body_index": 683,
+      "kind": "paragraph",
+      "text": "[ ] Maintain simple FireRed-like readability."
+    },
+    {
+      "body_index": 684,
+      "kind": "paragraph",
+      "text": "[ ] Keep maps tile-based."
+    },
+    {
+      "body_index": 685,
+      "kind": "paragraph",
+      "text": "[ ] Do not require complex physics."
+    },
+    {
+      "body_index": 686,
+      "kind": "paragraph",
+      "text": "[ ] Keep collision deterministic."
+    },
+    {
+      "body_index": 687,
+      "kind": "paragraph",
+      "text": "[ ] Allow map state to change through story flags."
+    },
+    {
+      "body_index": 688,
+      "kind": "paragraph",
+      "text": "[ ] Allow defeated / removed NPCs to disappear permanently."
+    },
+    {
+      "body_index": 689,
+      "kind": "paragraph",
+      "text": "[ ] Allow town restoration to swap NPC / object sets without rebuilding the whole map."
+    },
+    {
+      "body_index": 690,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 691,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist status",
+          "[ ] NOT STARTED   [ ] IN PROGRESS   [ ] COMPLETE"
+        ]
+      ]
+    },
+    {
+      "body_index": 692,
+      "kind": "paragraph",
+      "text": "Completion note / linked output: ____________________________________________________________"
+    }
+  ]
+}

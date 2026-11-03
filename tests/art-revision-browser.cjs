@@ -5,8 +5,8 @@ const art=JSON.parse(data.slice(data.indexOf(prefix)+prefix.length).trim().repla
 const selectedIds=process.env.ART_IDS?.split(',').map(Number);
 const ids=process.env.ART_PARTNER_ONLY?[]:Object.values(art).filter(a=>a.batch&&(!process.env.ART_BATCH||a.batch===process.env.ART_BATCH)&&(!selectedIds||selectedIds.includes(a.id))).map(a=>a.id);
 const fixture=String.raw`
-const artPrepare=(u,m,player=false)=>{u.species={...u.species,types:['NORMAL'],ability_names:{primary:'Plain'}};u.hp=u.maxHp=5000;u.stats={hp:5000,attack:50,sp_attack:50,defence:150,sp_defence:150,speed:player?200:50};u.stages={};u.status=null;u.heldItem=null;u.lastMove=1;u.moves=[{...m,left:m.pp}];};
-const artEquip=id=>{const p=battle.player,m=moveId(id);artPrepare(p,m,true);if([11,97,352,353].includes(id))p.hp=2000;if(id===352)p.status='POISON';if(m.allyTarget)p.teamcraftTargetUid=p.uid;const fixed=()=>.1;fixed.state=()=>123;battle.random=fixed;renderBattle();return {id,power:m.power,target:m.target,allyTarget:m.allyTarget,player:p.uid,foes:battle.enemies.slice(0,2).map(u=>u.uid)};};
+const artPrepare=(u,m,player=false)=>{u.species={...u.species,types:['WATER'],ability_names:{primary:'Plain'}};u.hp=u.maxHp=5000;u.stats={hp:5000,attack:50,sp_attack:50,defence:150,sp_defence:150,speed:player?200:50};u.stages={};u.status=null;u.confusion=0;u.toxicCounter=0;u.heldItem=null;u.lastMove=1;u.moves=[{...m,left:m.pp}];};
+const artEquip=id=>{const p=battle.player,m=moveId(id);artPrepare(p,m,true);if([11,97,352,353].includes(id)||(m.effects||[]).some(e=>e.effect_id==='heal'&&e.target==='SELF'))p.hp=2000;if(id===352)p.status='POISON';if(m.allyTarget)p.teamcraftTargetUid=p.uid;const fixed=()=>.1;fixed.state=()=>123;battle.random=fixed;renderBattle();return {id,power:m.power,target:m.target,allyTarget:m.allyTarget,player:p.uid,foes:battle.enemies.slice(0,2).map(u=>u.uid)};};
 window.__artQA={
  boot(id,leader=null,motion='full'){
   window.__fnQA.boot('cayfen');setMotionPreference(motion);const p=lead(),t=leader?openingTrainer(EXPANSION.trainers.find(t=>t.id===leader),state):null;
@@ -17,20 +17,26 @@ window.__artQA={
  doubleStart(){window.__fnQA.boot('sporeCrown');startFinaleDouble();},
  doubleEquip(id){for(const u of [battle.alliedRivet,...battle.enemies])artPrepare(u,moveId(1));return artEquip(id);},
  allyEquip(id){for(const u of [battle.alliedRivet,...battle.enemies])artPrepare(u,moveId(1));const m=artEquip(id);const ally=state.party.find(u=>u!==battle.player);artPrepare(ally,moveId(1));ally.hp=2000;battle.player.hp=5000;battle.player.teamcraftTargetUid=ally.uid;renderBattle();return {...m,ally:ally.uid};},
- async turn(index=null){const p=battle.player,before={ally:state.party.find(u=>u.uid===p.teamcraftTargetUid)?.hp,player:p.hp,foes:battle.enemies.slice(0,2).map(u=>u.hp)};if(index===null)await wildTurn({move:0,teamcraftChosen:true});else await relicDoubleTurn({move:0,targetIndex:index,teamcraftChosen:true});return {move:{id:p.moves[0].id,category:p.moves[0].category,effects:p.moves[0].effects,target:p.moves[0].target,power:p.moves[0].power},foeStates:battle.enemies.slice(0,2).map(u=>({status:u.status,stages:u.stages})),anchor:p.preventForcedSwitch,before,after:{ally:state.party.find(u=>u.uid===p.teamcraftTargetUid)?.hp,player:p.hp,foes:battle.enemies.slice(0,2).map(u=>u.hp)},stages:p.stages,status:p.status,round:battle.round,busy:battle.busy,fx:document.querySelector('#fx').textContent,enabled:!!document.querySelector('#battle button:not(:disabled)')};}
+ async turn(index=null){const p=battle.player,before={ally:state.party.find(u=>u.uid===p.teamcraftTargetUid)?.hp,player:p.hp,foes:battle.enemies.slice(0,2).map(u=>u.hp)};if(index===null)await wildTurn({move:0,teamcraftChosen:true});else await relicDoubleTurn({move:0,targetIndex:index,teamcraftChosen:true});return {move:{id:p.moves[0].id,category:p.moves[0].category,effects:p.moves[0].effects,target:p.moves[0].target,power:p.moves[0].power},foeStates:battle.enemies.slice(0,2).map(u=>({status:u.status,confusion:u.confusion,toxicCounter:u.toxicCounter,maxHp:u.maxHp,stages:u.stages})),anchor:p.preventForcedSwitch,before,after:{ally:state.party.find(u=>u.uid===p.teamcraftTargetUid)?.hp,player:p.hp,foes:battle.enemies.slice(0,2).map(u=>u.hp)},stages:p.stages,status:p.status,confusion:p.confusion,round:battle.round,busy:battle.busy,fx:document.querySelector('#fx').textContent,enabled:!!document.querySelector('#battle button:not(:disabled)')};}
 };`;
 function verify(id,r,target=0){
  assert.equal(r.round,2);assert.equal(r.busy,false);assert(r.enabled);assert.equal(r.fx,'');
  if([11,97,352].includes(id)){assert(r.after.player>r.before.player);assert.deepEqual(r.after.foes,r.before.foes);}
  else if(r.move.category==='STATUS'){
-  assert.deepEqual(r.after.foes,r.before.foes,'status move does not damage foes: '+id);
+  const expected=r.before.foes.map((hp,i)=>{const u=r.foeStates[i],fraction=['BURN','FROSTBITE','POISON'].includes(u.status)?1/8:u.status==='BAD_POISON'?Math.max(1,u.toxicCounter||1)/16:0;return hp-(fraction?Math.max(1,Math.floor(u.maxHp*fraction)):0);});assert.deepEqual(r.after.foes,expected,'status move applies only expected residual damage: '+id);
   for(const e of r.move.effects||[]){
    if(e.effect_id==='stat_stage'&&e.target==='SELF'&&(e.chance_percent??100)===100)for(const stat of e.stats||[e.stat])if(stat)assert(e.stages>0?r.stages[stat]>0:r.stages[stat]<0,'authored stat change '+id+' '+stat);
    if(e.effect_id==='prevent_forced_switch')assert(r.anchor>0,'anchor applied');
-   if(e.effect_id==='inflict_status'&&(e.chance_percent??100)===100)assert(r.foeStates.some(u=>u.status===e.status),'foe status applied '+id);
+   if(e.effect_id==='heal'&&e.target==='SELF')assert(r.after.player>r.before.player,'self healing applied '+id);
+   if(e.effect_id==='inflict_status'&&(e.chance_percent??100)===100){
+    const applied=u=>e.status==='CONFUSION'?u.confusion>0:u.status===e.status;
+    if(e.target==='SELF')assert(applied(r),'self status applied '+id);
+    else if(e.target==='ALL_FOES')assert(r.foeStates.every(applied),'all-foe status applied '+id);
+    else assert(r.foeStates.some(applied),'foe status applied '+id);
+   }
   }
  }
- else {assert(r.after.foes[target]<r.before.foes[target],'damage for '+id);if(r.before.foes.length>1)assert.equal(r.after.foes[1-target],r.before.foes[1-target]);}
+ else {assert(r.after.foes[target]<r.before.foes[target],'damage for '+id);if(r.before.foes.length>1){if(r.move.target==='ALL_FOES')assert(r.after.foes.every((hp,i)=>hp<r.before.foes[i]),'all foes damaged '+id);else assert.equal(r.after.foes[1-target],r.before.foes[1-target]);}}
  if(id===352)assert.equal(r.status,null);
  if(id===353)assert(r.after.player>r.before.player,'selected ally healed by Concord Pact');
  if((r.move.effects||[]).some(e=>e.effect_id==='recoil'))assert(r.after.player<r.before.player,'actual recoil');
@@ -54,7 +60,7 @@ function verify(id,r,target=0){
  for(const id of ids)for(const targetIndex of [0,1]){
   await page.evaluate(()=>window.__artQA.doubleStart());await page.waitForSelector('[data-double-menu="fight"]:not([disabled])');
   const m=await page.evaluate(id=>window.__artQA.doubleEquip(id),id),turn=page.evaluate(index=>window.__artQA.turn(index),targetIndex);
-  const placement=await capture(id,'double-'+targetIndex+'-'+id),uid=m.target==='SELF'||m.target==='ACTIVE_SIDE'||m.allyTarget&&!m.power?m.player:m.foes[targetIndex];
+  const placement=await capture(id,'double-'+targetIndex+'-'+id),uid=m.target==='SELF'||m.target==='ACTIVE_SIDE'||m.allyTarget&&!m.power?m.player:m.target==='ALL_FOES'?m.foes[0]:m.foes[targetIndex];
   assert.equal(placement.uid,uid);assert(placement.delta.every(x=>Math.abs(x)<1),'effect follows actual recipient bounds');verify(id,await turn,targetIndex);
  }
  for(const id of [353]){await page.evaluate(()=>window.__artQA.doubleStart());await page.waitForSelector('[data-double-menu="fight"]:not([disabled])');const m=await page.evaluate(id=>window.__artQA.allyEquip(id),id),turn=page.evaluate(()=>window.__artQA.turn(1)),placement=await capture(id,'partner-heal-'+id);assert.equal(placement.uid,id===352?m.ally:m.foes[1]);const r=await turn;assert(r.after.ally>r.before.ally,'actual chosen partner healed');assert.equal(r.after.player,r.before.player,'caster does not receive partner healing');if(id===353)assert(r.after.foes[1]<r.before.foes[1]);else assert.deepEqual(r.after.foes,r.before.foes);assert.equal(r.busy,false);}

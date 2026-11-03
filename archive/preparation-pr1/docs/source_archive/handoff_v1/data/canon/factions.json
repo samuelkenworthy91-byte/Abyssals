@@ -1,0 +1,27 @@
+{
+  "TRUE_LIGHT": {
+    "human_read": "white/European medieval-crusader-inspired",
+    "palette": [
+      "royal blue",
+      "navy",
+      "ivory/white",
+      "weathered steel",
+      "silver",
+      "sparse gold"
+    ]
+  },
+  "DAWN_BLOOM": {
+    "human_read": "grounded Middle Eastern/West Asian-inspired medieval fantasy",
+    "palette": [
+      "deep violet",
+      "plum",
+      "aubergine",
+      "cream/sand",
+      "brass/gold",
+      "restrained teal"
+    ]
+  },
+  "NEUTRAL_UNDERWORLD": {
+    "rule": "regional practical clothing; underworld retains former-role silhouette translated into ash/black iron/bruise-violet supernatural wear"
+  }
+}

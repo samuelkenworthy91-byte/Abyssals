@@ -1,0 +1,2143 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx"
+  ],
+  "records": [
+    {
+      "id": "ABILITY_ADAPTABLE_HIDE",
+      "name": "Adaptable Hide",
+      "class": "Standard",
+      "effect_text": "After it is hit by a damaging move, further damage from that move's type is reduced by 20% until this monster switches out.",
+      "species_usage_text": 7,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 3
+      },
+      "effects": [
+        {
+          "trigger": "AFTER_DAMAGING_HIT",
+          "effect_id": "remember_type"
+        },
+        {
+          "trigger": "INCOMING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.8,
+          "when": "remembered_type",
+          "expires": "SWITCH_OUT"
+        }
+      ],
+      "unresolved_fields": [
+        "The source does not specify whether remembered types accumulate or only the latest type persists."
+      ]
+    },
+    {
+      "id": "ABILITY_ALTERNATOR",
+      "name": "Alternator",
+      "class": "Standard",
+      "effect_text": "A damaging move deals 10% more damage if it is a different type from this monster's previous damaging move.",
+      "species_usage_text": 7,
+      "hidden_users_text": 5,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 4
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.1,
+          "when": "different_type_from_previous_damaging_move"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_AMBUSH",
+      "name": "Ambush",
+      "class": "Standard",
+      "effect_text": "The first damaging move used after entering battle deals 10% more damage.",
+      "species_usage_text": 17,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 5
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_BATTLE_NERVE",
+      "name": "Battle Nerve",
+      "class": "Standard",
+      "effect_text": "Opponents cannot lower this monster's Attack.",
+      "species_usage_text": 5,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 6
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_STAT_DROP",
+          "effect_id": "prevent",
+          "stats": [
+            "attack"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_BATTLE_RUSH",
+      "name": "Battle Rush",
+      "class": "Standard",
+      "effect_text": "After this monster knocks out a foe, its Speed rises by 1 stage. Can trigger once per switch-in.",
+      "species_usage_text": 7,
+      "hidden_users_text": 7,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 7
+      },
+      "effects": [
+        {
+          "trigger": "FOE_KO_BY_USER",
+          "effect_id": "stat_stage",
+          "stat": "speed",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_BERRY_HOARD",
+      "name": "Berry Hoard",
+      "class": "Standard",
+      "effect_text": "Once per battle, a Berry consumed by this monster regrows two turns later if it is still active and has no held item.",
+      "species_usage_text": 4,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 8
+      },
+      "effects": [
+        {
+          "trigger": "BERRY_CONSUMED",
+          "effect_id": "restore_consumed_item",
+          "delay_turns": 2,
+          "when": "still_active_and_unheld",
+          "uses_per_battle": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_BINDPROOF",
+      "name": "Bindproof",
+      "class": "Standard",
+      "effect_text": "This monster cannot be trapped, and residual damage from binding moves is halved.",
+      "species_usage_text": 2,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 9
+      },
+      "effects": [
+        {
+          "trigger": "TRAP",
+          "effect_id": "prevent"
+        },
+        {
+          "trigger": "BINDING_RESIDUAL_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.5
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_BULWARK",
+      "name": "Bulwark",
+      "class": "Standard",
+      "effect_text": "Damage from contact moves is reduced by 20%.",
+      "species_usage_text": 5,
+      "hidden_users_text": 5,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 10
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.8,
+          "when": "contact_move"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CALM_GUARD",
+      "name": "Calm Guard",
+      "class": "Standard",
+      "effect_text": "Opponents cannot lower this monster's Sp. Def.",
+      "species_usage_text": 10,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 11
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_STAT_DROP",
+          "effect_id": "prevent",
+          "stats": [
+            "sp_defence"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CAMOUFLAGE",
+      "name": "Camouflage",
+      "class": "Standard",
+      "effect_text": "The first damaging hit taken after entering battle is reduced by 15% if the move is not super effective.",
+      "species_usage_text": 6,
+      "hidden_users_text": 4,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 12
+      },
+      "effects": [
+        {
+          "trigger": "FIRST_DAMAGING_HIT_AFTER_ENTRY",
+          "effect_id": "multiply",
+          "factor": 0.85,
+          "when": "not_super_effective"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CAPACITOR",
+      "name": "Capacitor",
+      "class": "Rare",
+      "effect_text": "Electric-type moves deal no damage to this monster and instead raise its Sp. Atk by 1 stage.",
+      "species_usage_text": 6,
+      "hidden_users_text": 3,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 13
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_ELECTRIC_MOVE",
+          "effect_id": "immune"
+        },
+        {
+          "trigger": "INCOMING_ELECTRIC_MOVE",
+          "effect_id": "stat_stage",
+          "stat": "sp_attack",
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CELESTIAL_TEMPEST",
+      "name": "Celestial Tempest",
+      "class": "Signature",
+      "effect_text": "On entry, creates Tempest for 5 turns. Electric moves deal 20% more damage and Dragon moves 10% more; other weather is replaced.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 14
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY",
+          "effect_id": "replace_weather",
+          "field": "TEMPEST",
+          "turns": 5,
+          "damage_multipliers": {
+            "ELECTRIC": 1.2,
+            "DRAGON": 1.1
+          }
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CHORUS",
+      "name": "Chorus",
+      "class": "Standard",
+      "effect_text": "Sound-based moves used by this monster deal 20% more damage.",
+      "species_usage_text": 9,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 15
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.2,
+          "when": "sound_move"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CINDERHIDE",
+      "name": "Cinderhide",
+      "class": "Standard",
+      "effect_text": "A foe making contact has a 15% chance to be burned.",
+      "species_usage_text": 8,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 16
+      },
+      "effects": [
+        {
+          "trigger": "FOE_CONTACT",
+          "effect_id": "inflict_status",
+          "status": "BURN",
+          "chance_percent": 15
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CLEAR_JUDGMENT",
+      "name": "Clear Judgment",
+      "class": "Signature",
+      "effect_text": "On entry, removes this monster's negative stat stages. While it is active, opponents cannot raise evasion.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 17
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY",
+          "effect_id": "clear_negative_stages"
+        },
+        {
+          "trigger": "OPPONENT_EVASION_RAISE",
+          "effect_id": "prevent",
+          "condition": "while_active"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_COLDPROOF",
+      "name": "Coldproof",
+      "class": "Standard",
+      "effect_text": "This monster cannot be frozen.",
+      "species_usage_text": 6,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 18
+      },
+      "effects": [
+        {
+          "trigger": "FREEZE",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_CONQUEROR_S_SPARK",
+      "name": "Conqueror's Spark",
+      "class": "Signature",
+      "effect_text": "The first time this monster scores a knockout each battle, its Speed rises by 1 stage and its next Fire- or Electric-type move deals 20% more damage.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 19
+      },
+      "effects": [
+        {
+          "trigger": "FIRST_KO_PER_BATTLE",
+          "effect_id": "stat_stage",
+          "stat": "speed",
+          "stages": 1
+        },
+        {
+          "trigger": "FIRST_KO_PER_BATTLE",
+          "effect_id": "next_matching_damage_multiplier",
+          "types": [
+            "FIRE",
+            "ELECTRIC"
+          ],
+          "factor": 1.2
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_COUNTERCHARGE",
+      "name": "Countercharge",
+      "class": "Standard",
+      "effect_text": "After taking damage from a contact move, Attack rises by 1 stage. Can trigger once per switch-in.",
+      "species_usage_text": 12,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 20
+      },
+      "effects": [
+        {
+          "trigger": "AFTER_CONTACT_DAMAGE",
+          "effect_id": "stat_stage",
+          "stat": "attack",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_COVETOUS_MIRROR",
+      "name": "Covetous Mirror",
+      "class": "Rare",
+      "effect_text": "The first time an opponent raises one or more stats after this monster enters, this monster copies one of those positive stat stages.",
+      "species_usage_text": 2,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 21
+      },
+      "effects": [
+        {
+          "trigger": "FIRST_OPPONENT_STAT_RAISE_AFTER_ENTRY",
+          "effect_id": "copy_one_positive_stage",
+          "selection": null
+        }
+      ],
+      "unresolved_fields": [
+        "Which stat/stage is copied when the opponent raises multiple stats simultaneously is unspecified."
+      ]
+    },
+    {
+      "id": "ABILITY_EARTHROOT",
+      "name": "Earthroot",
+      "class": "Standard",
+      "effect_text": "Restores 1/16 of maximum HP at the end of each turn while Grassy or Ground terrain is active.",
+      "species_usage_text": 2,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 22
+      },
+      "effects": [
+        {
+          "trigger": "TURN_END",
+          "effect_id": "heal",
+          "max_hp_fraction": [
+            1,
+            16
+          ],
+          "when": "GRASSY_OR_GROUND_TERRAIN"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FEAST",
+      "name": "Feast",
+      "class": "Standard",
+      "effect_text": "Healing received from held Berries is increased by 50%.",
+      "species_usage_text": 2,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 23
+      },
+      "effects": [
+        {
+          "trigger": "HELD_BERRY_HEAL",
+          "effect_id": "multiply",
+          "factor": 1.5
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FEINTSTEP",
+      "name": "Feintstep",
+      "class": "Standard",
+      "effect_text": "After successfully using a non-damaging move, Speed rises by 1 stage. Can trigger once per switch-in.",
+      "species_usage_text": 12,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 24
+      },
+      "effects": [
+        {
+          "trigger": "SUCCESSFUL_STATUS_MOVE",
+          "effect_id": "stat_stage",
+          "stat": "speed",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FIRM_STANCE",
+      "name": "Firm Stance",
+      "class": "Standard",
+      "effect_text": "Opponents cannot force this monster to switch out.",
+      "species_usage_text": 16,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 25
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_FORCED_SWITCH",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FIRST_STRIKE",
+      "name": "First Strike",
+      "class": "Standard",
+      "effect_text": "Damaging moves deal 10% more damage when this monster acts before its target.",
+      "species_usage_text": 12,
+      "hidden_users_text": 6,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 26
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.1,
+          "when": "acts_before_target"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FLOODPLAIN",
+      "name": "Floodplain",
+      "class": "Rare",
+      "effect_text": "If rain is active when this monster enters, or rain begins while it is active, Defense rises by 1 stage. Can trigger once per switch-in.",
+      "species_usage_text": 2,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 27
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_IN_RAIN_OR_RAIN_BEGINS",
+          "effect_id": "stat_stage",
+          "stat": "defence",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FOCUS_EDGE",
+      "name": "Focus Edge",
+      "class": "Standard",
+      "effect_text": "Moves with an increased critical-hit ratio gain one additional critical-hit stage.",
+      "species_usage_text": 7,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 28
+      },
+      "effects": [
+        {
+          "trigger": "HIGH_CRITICAL_MOVE",
+          "effect_id": "critical_stage",
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FORAGER",
+      "name": "Forager",
+      "class": "Standard",
+      "effect_text": "Whenever this monster consumes a Berry, it also restores 1/16 of its maximum HP.",
+      "species_usage_text": 10,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 29
+      },
+      "effects": [
+        {
+          "trigger": "BERRY_CONSUMED",
+          "effect_id": "heal",
+          "max_hp_fraction": [
+            1,
+            16
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_FORESIGHT",
+      "name": "Foresight",
+      "class": "Standard",
+      "effect_text": "The first super-effective hit taken after entering battle is reduced by 20%.",
+      "species_usage_text": 25,
+      "hidden_users_text": 9,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 30
+      },
+      "effects": [
+        {
+          "trigger": "FIRST_SUPER_EFFECTIVE_HIT_AFTER_ENTRY",
+          "effect_id": "multiply",
+          "factor": 0.8
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_GATEKEEPER",
+      "name": "Gatekeeper",
+      "class": "Rare",
+      "effect_text": "If this monster enters as the last conscious member of its party, Defense and Sp. Def each rise by 1 stage.",
+      "species_usage_text": 5,
+      "hidden_users_text": 5,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 31
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_AS_LAST_LIVING_PARTY_MEMBER",
+          "effect_id": "stat_stage",
+          "stats": [
+            "defence",
+            "sp_defence"
+          ],
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_GHOST_HULL",
+      "name": "Ghost Hull",
+      "class": "Rare",
+      "effect_text": "Once per battle, if at full HP, a hit that would knock this monster out leaves it at 1 HP instead.",
+      "species_usage_text": 2,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 32
+      },
+      "effects": [
+        {
+          "trigger": "LETHAL_HIT_AT_FULL_HP",
+          "effect_id": "survive_at_hp",
+          "hp": 1,
+          "uses_per_battle": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_HARD_HEAD",
+      "name": "Hard Head",
+      "class": "Standard",
+      "effect_text": "This monster takes no recoil damage from its own attacks.",
+      "species_usage_text": 13,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 33
+      },
+      "effects": [
+        {
+          "trigger": "OWN_ATTACK_RECOIL",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_HEARTWOOD_CORE",
+      "name": "Heartwood Core",
+      "class": "Rare",
+      "effect_text": "Once per battle, when HP falls to one-third or less, this monster restores 25% of its maximum HP.",
+      "species_usage_text": 2,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 34
+      },
+      "effects": [
+        {
+          "trigger": "HP_FALLS_TO_THRESHOLD",
+          "effect_id": "heal",
+          "threshold": [
+            1,
+            3
+          ],
+          "max_hp_fraction": [
+            1,
+            4
+          ],
+          "uses_per_battle": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_HOVERCORE",
+      "name": "Hovercore",
+      "class": "Rare",
+      "effect_text": "Ground-type moves do not affect this monster.",
+      "species_usage_text": 2,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 35
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_GROUND_MOVE",
+          "effect_id": "immune"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_IMPROVISER",
+      "name": "Improviser",
+      "class": "Signature",
+      "effect_text": "A damaging move deals 15% more damage when it is a different type from this monster's previous damaging move.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 36
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.15,
+          "when": "different_type_from_previous_damaging_move"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_KEEN_SENSE",
+      "name": "Keen Sense",
+      "class": "Standard",
+      "effect_text": "Opponents cannot lower this monster's accuracy.",
+      "species_usage_text": 20,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 37
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_STAT_DROP",
+          "effect_id": "prevent",
+          "stats": [
+            "accuracy"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_LAST_STAND",
+      "name": "Last Stand",
+      "class": "Rare",
+      "effect_text": "If this monster enters as the last conscious party member, Attack and Speed each rise by 1 stage.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 38
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_AS_LAST_LIVING_PARTY_MEMBER",
+          "effect_id": "stat_stage",
+          "stats": [
+            "attack",
+            "speed"
+          ],
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_MANY_BANNERS",
+      "name": "Many Banners",
+      "class": "Signature",
+      "effect_text": "At battle start, if the party contains at least four different primary types among conscious members, this monster's Sp. Def rises by 1 stage.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 39
+      },
+      "effects": [
+        {
+          "trigger": "BATTLE_START",
+          "effect_id": "stat_stage",
+          "stat": "sp_defence",
+          "stages": 1,
+          "when": "at_least_four_distinct_living_party_primary_types"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_MARKED_QUARRY",
+      "name": "Marked Quarry",
+      "class": "Standard",
+      "effect_text": "The first foe damaged by this monster after entry becomes marked. This monster deals 10% more damage to it until that foe switches out or faints.",
+      "species_usage_text": 4,
+      "hidden_users_text": 3,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 40
+      },
+      "effects": [
+        {
+          "trigger": "FIRST_FOE_DAMAGED_AFTER_ENTRY",
+          "effect_id": "mark_target"
+        },
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.1,
+          "when": "marked_target",
+          "expires": "target_switch_or_death"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_MEDICINAL_SAP",
+      "name": "Medicinal Sap",
+      "class": "Standard",
+      "effect_text": "HP restored by this monster's healing moves is increased by 15%.",
+      "species_usage_text": 14,
+      "hidden_users_text": 5,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 41
+      },
+      "effects": [
+        {
+          "trigger": "OWN_HEALING_MOVE",
+          "effect_id": "multiply_healing",
+          "factor": 1.15
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_MIMIC_EAR",
+      "name": "Mimic Ear",
+      "class": "Rare",
+      "effect_text": "After this monster is hit by a sound-based move, its next sound-based move deals 50% more damage.",
+      "species_usage_text": 3,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 42
+      },
+      "effects": [
+        {
+          "trigger": "HIT_BY_SOUND_MOVE",
+          "effect_id": "next_matching_damage_multiplier",
+          "tag": "SOUND",
+          "factor": 1.5
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_OATH_ROAR",
+      "name": "Oath Roar",
+      "class": "Signature",
+      "effect_text": "Sound-based moves deal 20% more damage; the first sound move used after entry also raises this monster's Attack by 1 stage.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 43
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.2,
+          "when": "sound_move"
+        },
+        {
+          "trigger": "FIRST_SOUND_MOVE_AFTER_ENTRY",
+          "effect_id": "stat_stage",
+          "stat": "attack",
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_OATHKEEPER",
+      "name": "Oathkeeper",
+      "class": "Signature",
+      "effect_text": "When this monster enters immediately after an ally faints, Defense and Sp. Def each rise by 1 stage.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 44
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_AFTER_ALLY_DEATH",
+          "effect_id": "stat_stage",
+          "stats": [
+            "defence",
+            "sp_defence"
+          ],
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_OPPORTUNIST",
+      "name": "Opportunist",
+      "class": "Standard",
+      "effect_text": "Damaging moves deal 15% more damage to targets at half HP or less.",
+      "species_usage_text": 7,
+      "hidden_users_text": 6,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 45
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.15,
+          "when": "target_hp_at_or_below_half"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_PACK_GUARD",
+      "name": "Pack Guard",
+      "class": "Standard",
+      "effect_text": "Damage taken is reduced by 10% while at least one other conscious party member remains.",
+      "species_usage_text": 3,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 46
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.9,
+          "when": "another_living_party_member"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_PALIMPSEST",
+      "name": "Palimpsest",
+      "class": "Rare",
+      "effect_text": "After being hit by a damaging move, further hits from that same named move deal 25% less damage until this monster switches out.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 47
+      },
+      "effects": [
+        {
+          "trigger": "AFTER_DAMAGING_HIT",
+          "effect_id": "remember_move"
+        },
+        {
+          "trigger": "INCOMING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.75,
+          "when": "remembered_move",
+          "expires": "SWITCH_OUT"
+        }
+      ],
+      "unresolved_fields": [
+        "The source does not specify whether remembered moves accumulate or only the latest move persists."
+      ]
+    },
+    {
+      "id": "ABILITY_PATIENCE",
+      "name": "Patience",
+      "class": "Standard",
+      "effect_text": "After a turn in which this monster deals no damage, its next damaging move deals 20% more damage.",
+      "species_usage_text": 8,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 48
+      },
+      "effects": [
+        {
+          "trigger": "TURN_WITH_NO_DAMAGE_DEALT",
+          "effect_id": "next_damage_multiplier",
+          "factor": 1.2
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_POISON_BARBS",
+      "name": "Poison Barbs",
+      "class": "Standard",
+      "effect_text": "A foe making contact has a 20% chance to be poisoned.",
+      "species_usage_text": 10,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 49
+      },
+      "effects": [
+        {
+          "trigger": "FOE_CONTACT",
+          "effect_id": "inflict_status",
+          "status": "POISON",
+          "chance_percent": 20
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_PROOF_BY_CUT",
+      "name": "Proof by Cut",
+      "class": "Signature",
+      "effect_text": "After two consecutive damaging moves hit, this monster's next damaging move gains one extra critical-hit stage. Missing or switching resets the count.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 50
+      },
+      "effects": [
+        {
+          "trigger": "TWO_CONSECUTIVE_DAMAGING_HITS",
+          "effect_id": "next_move_critical_stage",
+          "stages": 1,
+          "reset_on": [
+            "MISS",
+            "SWITCH"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_PROTECTOR",
+      "name": "Protector",
+      "class": "Standard",
+      "effect_text": "When this monster enters immediately after an ally faints, Defense rises by 1 stage.",
+      "species_usage_text": 18,
+      "hidden_users_text": 6,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 51
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_AFTER_ALLY_DEATH",
+          "effect_id": "stat_stage",
+          "stat": "defence",
+          "stages": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_PURSUIT_INSTINCT",
+      "name": "Pursuit Instinct",
+      "class": "Standard",
+      "effect_text": "If the target attempts to switch out that turn, this monster's damaging move against it deals 30% more damage.",
+      "species_usage_text": 3,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 52
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.3,
+          "when": "target_attempts_switch_this_turn"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_RAINRUNNER",
+      "name": "Rainrunner",
+      "class": "Standard",
+      "effect_text": "Speed is increased by 50% while rain is active.",
+      "species_usage_text": 4,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 53
+      },
+      "effects": [
+        {
+          "trigger": "EFFECTIVE_SPEED",
+          "effect_id": "multiply",
+          "factor": 1.5,
+          "when": "RAIN"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_RALLYING_CRY",
+      "name": "Rallying Cry",
+      "class": "Standard",
+      "effect_text": "Opponents cannot lower this monster's Attack; in multi-mon battles, active allies receive the same protection.",
+      "species_usage_text": 14,
+      "hidden_users_text": 8,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 54
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_STAT_DROP",
+          "effect_id": "prevent",
+          "stats": [
+            "attack"
+          ],
+          "scope": "SELF_AND_ACTIVE_ALLIES"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_RENEWAL",
+      "name": "Renewal",
+      "class": "Standard",
+      "effect_text": "This monster's non-volatile status condition is cured when it switches out.",
+      "species_usage_text": 13,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 55
+      },
+      "effects": [
+        {
+          "trigger": "SWITCH_OUT",
+          "effect_id": "cure_nonvolatile_status"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_RESERVOIR",
+      "name": "Reservoir",
+      "class": "Rare",
+      "effect_text": "Water-type moves deal no damage to this monster and instead restore 25% of its maximum HP.",
+      "species_usage_text": 5,
+      "hidden_users_text": 1,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 56
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_WATER_MOVE",
+          "effect_id": "immune"
+        },
+        {
+          "trigger": "INCOMING_WATER_MOVE",
+          "effect_id": "heal",
+          "max_hp_fraction": [
+            1,
+            4
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_REVENGE_MARK",
+      "name": "Revenge Mark",
+      "class": "Standard",
+      "effect_text": "After this monster is damaged, its next damaging move against that attacker deals 20% more damage.",
+      "species_usage_text": 3,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 57
+      },
+      "effects": [
+        {
+          "trigger": "DAMAGED",
+          "effect_id": "remember_attacker"
+        },
+        {
+          "trigger": "NEXT_DAMAGE_TO_REMEMBERED_ATTACKER",
+          "effect_id": "multiply",
+          "factor": 1.2
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_ROYAL_GLARE",
+      "name": "Royal Glare",
+      "class": "Signature",
+      "effect_text": "When this monster enters battle, the opposing active monster's Speed falls by 1 stage.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 58
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY",
+          "effect_id": "stat_stage",
+          "target": "OPPOSING_ACTIVE",
+          "stat": "speed",
+          "stages": -1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SAFEKEEP",
+      "name": "Safekeep",
+      "class": "Standard",
+      "effect_text": "This monster's held item cannot be removed, stolen or swapped by an opponent.",
+      "species_usage_text": 22,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 59
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_ITEM_REMOVE_STEAL_SWAP",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SANDCOAT",
+      "name": "Sandcoat",
+      "class": "Standard",
+      "effect_text": "This monster takes no damage from sandstorm weather.",
+      "species_usage_text": 5,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 60
+      },
+      "effects": [
+        {
+          "trigger": "SANDSTORM_DAMAGE",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SCAVENGER",
+      "name": "Scavenger",
+      "class": "Standard",
+      "effect_text": "Once per battle, after an opposing monster faints, this monster restores a Berry it previously consumed if it is holding no item.",
+      "species_usage_text": 6,
+      "hidden_users_text": 2,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 61
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_DEATH",
+          "effect_id": "restore_consumed_berry",
+          "when": "unheld",
+          "uses_per_battle": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SCREENMENDER",
+      "name": "Screenmender",
+      "class": "Rare",
+      "effect_text": "Reflect and Light Screen created by this monster last two additional turns.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 62
+      },
+      "effects": [
+        {
+          "trigger": "CREATE_REFLECT_OR_LIGHT_SCREEN",
+          "effect_id": "duration_add",
+          "turns": 2
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SEPTIC_HUNGER",
+      "name": "Septic Hunger",
+      "class": "Signature",
+      "effect_text": "Damaging moves deal 20% more damage to poisoned or badly poisoned targets.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 63
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.2,
+          "when": "target_poisoned_or_badly_poisoned"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SIEGE_BREAKER",
+      "name": "Siege Breaker",
+      "class": "Standard",
+      "effect_text": "After this monster deals direct damage, it removes Reflect and Light Screen from the opposing side.",
+      "species_usage_text": 8,
+      "hidden_users_text": 6,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 64
+      },
+      "effects": [
+        {
+          "trigger": "AFTER_DIRECT_DAMAGE",
+          "effect_id": "remove_foe_screens",
+          "screens": [
+            "REFLECT",
+            "LIGHT_SCREEN"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SINMARK",
+      "name": "Sinmark",
+      "class": "Signature",
+      "effect_text": "The first foe damaged after entry is marked. This monster's attacks ignore that marked foe's positive Defense and Sp. Def stat stages.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 65
+      },
+      "effects": [
+        {
+          "trigger": "FIRST_FOE_DAMAGED_AFTER_ENTRY",
+          "effect_id": "mark_target"
+        },
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "ignore_positive_defensive_stages",
+          "when": "marked_target"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SNOWFOOT",
+      "name": "Snowfoot",
+      "class": "Standard",
+      "effect_text": "Speed is increased by 50% while hail or snow is active.",
+      "species_usage_text": 5,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 66
+      },
+      "effects": [
+        {
+          "trigger": "EFFECTIVE_SPEED",
+          "effect_id": "multiply",
+          "factor": 1.5,
+          "when": "HAIL_OR_SNOW"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SOUNDPROOF",
+      "name": "Soundproof",
+      "class": "Standard",
+      "effect_text": "Sound-based moves do not affect this monster.",
+      "species_usage_text": 7,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 67
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_SOUND_MOVE",
+          "effect_id": "immune"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SOVEREIGN_DECREE",
+      "name": "Sovereign Decree",
+      "class": "Signature",
+      "effect_text": "On entry, creates Decree for 5 turns: opponents cannot raise evasion or lower this monster's side's stats.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 68
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY",
+          "effect_id": "create_decree",
+          "turns": 5,
+          "prevent": [
+            "OPPONENT_EVASION_RAISE",
+            "OWN_SIDE_STAT_DROP"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_STABLE_CORE",
+      "name": "Stable Core",
+      "class": "Rare",
+      "effect_text": "Opponents cannot lower any of this monster's stats.",
+      "species_usage_text": 3,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 69
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_STAT_DROP",
+          "effect_id": "prevent",
+          "stats": "ALL"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_STATIC_HIDE",
+      "name": "Static Hide",
+      "class": "Standard",
+      "effect_text": "A foe making contact has a 20% chance to be paralyzed.",
+      "species_usage_text": 6,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 70
+      },
+      "effects": [
+        {
+          "trigger": "FOE_CONTACT",
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 20
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_STEAMHEART",
+      "name": "Steamheart",
+      "class": "Rare",
+      "effect_text": "Damage from Water-type moves is halved. After being hit by one, Sp. Atk rises by 1 stage once per switch-in.",
+      "species_usage_text": 3,
+      "hidden_users_text": 2,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 71
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_WATER_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.5
+        },
+        {
+          "trigger": "AFTER_WATER_HIT",
+          "effect_id": "stat_stage",
+          "stat": "sp_attack",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_STONEPLATE",
+      "name": "Stoneplate",
+      "class": "Standard",
+      "effect_text": "Damage received from critical hits is reduced by 25%.",
+      "species_usage_text": 12,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 72
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_CRITICAL_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.75
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_STORED_CHARGE",
+      "name": "Stored Charge",
+      "class": "Signature",
+      "effect_text": "Contact hits give one Charge, up to 2. The next Electric- or Fighting-type damaging move consumes all Charges for +15% damage per Charge.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 73
+      },
+      "effects": [
+        {
+          "trigger": "CONTACT_HIT",
+          "effect_id": "add_charge",
+          "maximum": 2
+        },
+        {
+          "trigger": "NEXT_ELECTRIC_OR_FIGHTING_DAMAGE",
+          "effect_id": "consume_charges",
+          "damage_bonus_per_charge": 0.15
+        }
+      ],
+      "unresolved_fields": [
+        "Contact hits do not specify receiving versus dealing contact damage."
+      ]
+    },
+    {
+      "id": "ABILITY_STORMSENSE",
+      "name": "Stormsense",
+      "class": "Standard",
+      "effect_text": "When the weather changes while this monster is active, Speed rises by 1 stage. Can trigger once per switch-in.",
+      "species_usage_text": 10,
+      "hidden_users_text": 4,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 74
+      },
+      "effects": [
+        {
+          "trigger": "WEATHER_CHANGE_WHILE_ACTIVE",
+          "effect_id": "stat_stage",
+          "stat": "speed",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_STRATEGEM",
+      "name": "Strategem",
+      "class": "Signature",
+      "effect_text": "If a foe uses the same move on consecutive turns, this monster deals 15% more damage to that foe until it changes move or switches.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 75
+      },
+      "effects": [
+        {
+          "trigger": "FOE_REPEATS_MOVE_CONSECUTIVELY",
+          "effect_id": "mark_target"
+        },
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.15,
+          "when": "marked_target",
+          "expires": "target_changes_move_or_switches"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SUNSTRIDE",
+      "name": "Sunstride",
+      "class": "Standard",
+      "effect_text": "Speed is increased by 50% while harsh sunlight is active.",
+      "species_usage_text": 3,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 76
+      },
+      "effects": [
+        {
+          "trigger": "EFFECTIVE_SPEED",
+          "effect_id": "multiply",
+          "factor": 1.5,
+          "when": "HARSH_SUNLIGHT"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_SUREFOOT",
+      "name": "Surefoot",
+      "class": "Standard",
+      "effect_text": "Opponents cannot lower this monster's Speed.",
+      "species_usage_text": 14,
+      "hidden_users_text": 6,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 77
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_STAT_DROP",
+          "effect_id": "prevent",
+          "stats": [
+            "speed"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_THICK_PELT",
+      "name": "Thick Pelt",
+      "class": "Standard",
+      "effect_text": "Damage from Fire- and Ice-type moves is reduced by 25%.",
+      "species_usage_text": 1,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 78
+      },
+      "effects": [
+        {
+          "trigger": "INCOMING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.75,
+          "when_types": [
+            "FIRE",
+            "ICE"
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_THORNHIDE",
+      "name": "Thornhide",
+      "class": "Standard",
+      "effect_text": "A foe making contact loses 1/16 of its maximum HP.",
+      "species_usage_text": 5,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 79
+      },
+      "effects": [
+        {
+          "trigger": "FOE_CONTACT",
+          "effect_id": "damage_foe",
+          "foe_max_hp_fraction": [
+            1,
+            16
+          ]
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_TITHE_CHARGE",
+      "name": "Tithe Charge",
+      "class": "Signature",
+      "effect_text": "Whenever any party member consumes a held item, this monster gains one Tithe Charge, up to 3. Its next Electric-type damaging move consumes them for +10% damage per Charge.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 80
+      },
+      "effects": [
+        {
+          "trigger": "PARTY_MEMBER_CONSUMES_HELD_ITEM",
+          "effect_id": "add_charge",
+          "maximum": 3
+        },
+        {
+          "trigger": "NEXT_ELECTRIC_DAMAGE",
+          "effect_id": "consume_charges",
+          "damage_bonus_per_charge": 0.1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_TOXINPROOF",
+      "name": "Toxinproof",
+      "class": "Standard",
+      "effect_text": "This monster cannot be poisoned or badly poisoned.",
+      "species_usage_text": 6,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 81
+      },
+      "effects": [
+        {
+          "trigger": "POISON_OR_BAD_POISON",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_TRAILBLAZER",
+      "name": "Trailblazer",
+      "class": "Standard",
+      "effect_text": "Damage this monster takes from entry hazards is reduced by 50%.",
+      "species_usage_text": 10,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 82
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_HAZARD_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.5
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_TRUCE",
+      "name": "Truce",
+      "class": "Standard",
+      "effect_text": "After a turn in which this monster deals no damage, Sp. Def rises by 1 stage. Can trigger once per switch-in.",
+      "species_usage_text": 12,
+      "hidden_users_text": 10,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 83
+      },
+      "effects": [
+        {
+          "trigger": "TURN_WITH_NO_DAMAGE_DEALT",
+          "effect_id": "stat_stage",
+          "stat": "sp_defence",
+          "stages": 1,
+          "uses_per_entry": 1
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_UNFAZED",
+      "name": "Unfazed",
+      "class": "Standard",
+      "effect_text": "This monster cannot flinch.",
+      "species_usage_text": 6,
+      "hidden_users_text": 0,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 84
+      },
+      "effects": [
+        {
+          "trigger": "FLINCH",
+          "effect_id": "prevent"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_WAYFARER",
+      "name": "Wayfarer",
+      "class": "Standard",
+      "effect_text": "This monster cannot be trapped and may always switch out normally.",
+      "species_usage_text": 25,
+      "hidden_users_text": 5,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 85
+      },
+      "effects": [
+        {
+          "trigger": "TRAP",
+          "effect_id": "prevent"
+        },
+        {
+          "trigger": "VOLUNTARY_SWITCH",
+          "effect_id": "allow_normally"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_WAYSTONE_MASTER",
+      "name": "Waystone Master",
+      "class": "Signature",
+      "effect_text": "Entry-hazard damage is halved; when this monster enters, it removes one layer of entry hazards from its own side.",
+      "species_usage_text": 3,
+      "hidden_users_text": 3,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 86
+      },
+      "effects": [
+        {
+          "trigger": "ENTRY_HAZARD_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 0.5
+        },
+        {
+          "trigger": "ENTRY",
+          "effect_id": "remove_own_hazard_layer",
+          "layers": 1,
+          "selection": null
+        }
+      ],
+      "unresolved_fields": [
+        "Which hazard layer is removed if multiple distinct hazards are present is unspecified."
+      ]
+    },
+    {
+      "id": "ABILITY_WEAKPOINT_HUNTER",
+      "name": "Weakpoint Hunter",
+      "class": "Standard",
+      "effect_text": "Super-effective damaging moves deal 10% more damage.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Reusable core ability; intentionally simple and broadly shareable.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 87
+      },
+      "effects": [
+        {
+          "trigger": "OUTGOING_DAMAGE",
+          "effect_id": "multiply",
+          "factor": 1.1,
+          "when": "super_effective"
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_WEATHER_CALM",
+      "name": "Weather Calm",
+      "class": "Rare",
+      "effect_text": "While this monster is active, weather remains in place but its residual damage and stat-modifying effects are suppressed.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Stronger/specialised reusable effect; assign sparingly.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 88
+      },
+      "effects": [
+        {
+          "trigger": "WHILE_ACTIVE",
+          "effect_id": "suppress_weather_components",
+          "components": [
+            "RESIDUAL_DAMAGE",
+            "STAT_MODIFIERS"
+          ],
+          "preserve_weather_state": true
+        }
+      ],
+      "unresolved_fields": []
+    },
+    {
+      "id": "ABILITY_WORLD_ANCHOR",
+      "name": "World Anchor",
+      "class": "Signature",
+      "effect_text": "Opponents cannot change the active terrain or force this monster out. It restores 1/16 HP each turn on Grassy or Ground terrain.",
+      "species_usage_text": 1,
+      "hidden_users_text": 1,
+      "design_intent": "Defining bespoke mechanic; keep implementation and tuning isolated.",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+        "sheet": "Ability Glossary",
+        "row": 89
+      },
+      "effects": [
+        {
+          "trigger": "OPPONENT_TERRAIN_CHANGE",
+          "effect_id": "prevent"
+        },
+        {
+          "trigger": "OPPONENT_FORCED_SWITCH",
+          "effect_id": "prevent"
+        },
+        {
+          "trigger": "TURN_END",
+          "effect_id": "heal",
+          "max_hp_fraction": [
+            1,
+            16
+          ],
+          "when": "GRASSY_OR_GROUND_TERRAIN"
+        }
+      ],
+      "unresolved_fields": []
+    }
+  ],
+  "unresolved": [
+    "ABILITY_ADAPTABLE_HIDE: The source does not specify whether remembered types accumulate or only the latest type persists.",
+    "ABILITY_COVETOUS_MIRROR: Which stat/stage is copied when the opponent raises multiple stats simultaneously is unspecified.",
+    "ABILITY_PALIMPSEST: The source does not specify whether remembered moves accumulate or only the latest move persists.",
+    "ABILITY_STORED_CHARGE: Contact hits do not specify receiving versus dealing contact damage.",
+    "ABILITY_WAYSTONE_MASTER: Which hazard layer is removed if multiple distinct hazards are present is unspecified.",
+    "Move contact/sound tags and generic weather/hazard/screen/berry contracts are not fully enumerated by the supplied catalogue. Preserve these authored ability dependencies; do not invent Berry items or copy conventional battle defaults."
+  ]
+}

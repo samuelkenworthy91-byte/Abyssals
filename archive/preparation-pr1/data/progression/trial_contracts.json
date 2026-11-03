@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "TRIAL-RANK-001",
+      "fields": {
+        "Rank": "I",
+        "Unlock": "First access to Cybressa market ward",
+        "Eligible challenge band": "Cybressa-era unlocked areas",
+        "Reward": "2 Trial Marks"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 85,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "TRIAL-RANK-002",
+      "fields": {
+        "Rank": "II",
+        "Unlock": "Provost Corvin Sair resolved",
+        "Eligible challenge band": "Cybressa/Cossenne bands",
+        "Reward": "4 Trial Marks"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 85,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "TRIAL-RANK-003",
+      "fields": {
+        "Rank": "III",
+        "Unlock": "Marasen leader resolved",
+        "Eligible challenge band": "Mid/late mortal areas",
+        "Reward": "6 Trial Marks"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 85,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "TRIAL-RANK-004",
+      "fields": {
+        "Rank": "IV",
+        "Unlock": "Ramelle leader resolved",
+        "Eligible challenge band": "Late mortal / Old Catacombs eligible areas",
+        "Reward": "8 Trial Marks"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 85,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "TRIAL-RANK-005",
+      "fields": {
+        "Rank": "V",
+        "Unlock": "First entry into Hell after the Level-100 expectation is broken",
+        "Eligible challenge band": "Unlocked Hell-compatible challenge pool plus late mortal areas",
+        "Reward": "10 Trial Marks"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 85,
+        "table_row": 6
+      }
+    }
+  ],
+  "unresolved": []
+}

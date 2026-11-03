@@ -1,0 +1,850 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.docx",
+  "source_sha256": "d448fb66eba92ea87a973d8bf06c3bd7b8a9d400fa13b120e432c202755ce18d",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 14"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Starter Three-Life System"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": "STATUS — COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "This document closes CHECKLIST 14 at implementation-design level. It fully defines the three-life exception to ordinary Abyssal permadeath for the three original starter individuals, including life-counter ownership, lethal-hit interception, end-of-round return, UI/history rules, evolution behaviour and final-death memorial resurrection. Later implementation may refine presentation or serialization, but mechanical changes require an explicit Checklist 14 revision rather than silent drift."
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Only Aimon's original chosen starter and the two original starter individuals dynamically assigned to Pate and Trade receive the special life system. Each begins with three lives. A non-final lethal defeat spends exactly one life, leaves the starter down for the rest of that round, then returns it during turn-end cleanup at 10% maximum HP, rounded up, after ordinary end-of-turn layers but before battle-end or wipe classification. The third lethal defeat spends the final life and becomes ordinary permanent death. Lost bonus lives never regenerate. A finally dead starter may use the ordinary Civeton memorial resurrection transaction and returns as the same individual with exactly one life remaining."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "CHECKLIST 07 remains authority for permanent-death records, held-item return on permanent death, the Civeton memorial, ten-distinct-species resurrection cost and exact-instance restoration. Checklist 14 supplies the starter-specific life state restored after final-death resurrection."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08 remains authority for party/reserve capacity and normal reserve healing. Reserve entry cannot refill spent starter lives."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "CHECKLIST 10 remains authority for lower_snake_case authoritative save-state conventions and the dynamic starter assignments for Aimon, Pate and Trade."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "CHECKLIST 13 remains authority for KO batches, multi-hit handling, end-of-turn layer order and battle-outcome classification. Checklist 14 inserts the starter revival window into turn-end cleanup without changing the earlier residual layers."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "CHECKLIST 15 remains authority for atomic disk writes, checksums, crash recovery and anti-rollback. Checklist 14 defines the semantic event that must be made irreversible."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "CHECKLIST 16 may refine life-pip art, animation, sound and wording presentation without changing the mechanical information or timing locked here."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "IMPLEMENTATION PRINCIPLE"
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "The three-life rule is a finite protection attached to three unique individuals, not a species trait or renewable resource. A spent bonus life must matter permanently, while the end-of-round 10% return creates an immediate tactical decision: switch, heal, or risk the weakened starter again."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "2. Eligible starter individuals and state ownership"
+    },
+    {
+      "body_index": 18,
+      "kind": "table",
+      "rows": [
+        [
+          "Individual",
+          "Eligibility",
+          "Initial state"
+        ],
+        [
+          "Aimon starter",
+          "The exact original starter instance created from the player's opening choice.",
+          "starter_lives_remaining = 3"
+        ],
+        [
+          "Pate starter",
+          "The exact original starter instance dynamically assigned to Pate from the two unchosen starters.",
+          "starter_lives_remaining = 3"
+        ],
+        [
+          "Trade starter",
+          "The exact original starter instance dynamically assigned to Trade from the remaining starter.",
+          "starter_lives_remaining = 3"
+        ],
+        [
+          "Any later same-species Abyssal",
+          "Not eligible. Species identity alone never grants the life system.",
+          "No starter-life field required / not special"
+        ]
+      ]
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "The special property follows the unique individual instance through evolution, renaming, party/reserve movement and resurrection."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "Sacrificing or permanently deleting an original starter does not transfer the property to another Abyssal of the same species or evolutionary family."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "The canonical saved field is starter_lives_remaining, following Checklist 10 lower_snake_case conventions. The older planning label starterLivesRemaining is a legacy reference to the same concept, not a separate field."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "3. Life-state machine"
+    },
+    {
+      "body_index": 24,
+      "kind": "table",
+      "rows": [
+        [
+          "Before lethal result",
+          "Lethal resolution",
+          "After resolution",
+          "Permanent death?"
+        ],
+        [
+          "3 lives",
+          "Spend one special life",
+          "2 lives; end-of-round return pending",
+          "No"
+        ],
+        [
+          "2 lives",
+          "Spend one special life",
+          "1 life; end-of-round return pending",
+          "No"
+        ],
+        [
+          "1 life",
+          "Spend final life",
+          "0 lives",
+          "Yes — ordinary permanent death"
+        ],
+        [
+          "0 lives / dead",
+          "No special interception remains",
+          "Ordinary dead state",
+          "Already dead"
+        ]
+      ]
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "One ACTION or one simultaneous lethal KO batch may spend at most one life from the same starter. A multi-hit move stops hitting that target at 0 HP and cannot burn multiple lives in one action."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "Separate later lethal events in the same battle may spend additional lives. The protection is per lethal resolution, not per battle."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "Critical hits, recoil, self-damage, poison, burn, weather, terrain and other legal lethal sources all route through the same special-life handler while at least one special life remains."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "4. Non-final life loss: exact battle timing"
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "LOCKED TIMING RULE"
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "When a starter at 2 or 3 lives reaches 0 HP, decrement starter_lives_remaining immediately and mark a special end-of-round revival as pending. The starter remains at 0 HP and unavailable for the rest of the current round. It returns only during turn-end cleanup, after all normal end-of-turn layers have finished and before battle-end/wipe classification."
+    },
+    {
+      "body_index": 32,
+      "kind": "table",
+      "rows": [
+        [
+          "Timing point",
+          "Locked behaviour"
+        ],
+        [
+          "Lethal action / KO batch",
+          "Clamp to 0 HP; spend exactly one life; do not create ordinary DEATH or memorial state; mark revival pending."
+        ],
+        [
+          "Remaining actions this round",
+          "Starter is down, cannot act, cannot be selected for another command and cannot be force-replaced merely to bypass the life-loss consequence. If its own queued action had not occurred, that action is lost."
+        ],
+        [
+          "End-turn field/weather/status/item/other layers",
+          "Resolve using Checklist 13 order. The downed starter is not a living active combatant and is skipped by ordinary damage/healing effects."
+        ],
+        [
+          "Turn-end cleanup",
+          "Clear the status condition that existed at lethal defeat, return the starter in the same active slot at max(1, ceil(max_hp × 0.10)) HP, clear revival-pending state, then make it eligible for next-turn commands."
+        ],
+        [
+          "Battle-end / wipe classification",
+          "Occurs only after the pending starter revival has resolved. A party is not a wipe while a legal non-final starter revival remains pending."
+        ]
+      ]
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "The 10% restoration is based on current maximum HP at the moment of return and always rounds upward. Examples: max HP 41 → 5 HP; max HP 100 → 10 HP; max HP 201 → 21 HP."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "Because the return occurs after ordinary residual layers, the newly returned starter is not immediately struck again by poison, weather or terrain in the same round. Those effects may apply normally on later rounds if still relevant."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "The starter returns to the same battle slot. This is not a free switch and does not open reserve access."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "5. State preserved and cleared on a non-final life loss"
+    },
+    {
+      "body_index": 38,
+      "kind": "table",
+      "rows": [
+        [
+          "State component",
+          "Locked result"
+        ],
+        [
+          "HP",
+          "0 for the remainder of the round; then 10% max HP rounded up at turn-end cleanup."
+        ],
+        [
+          "Status",
+          "The status condition present at the lethal result is cleared for the return. New status inflicted after return works normally."
+        ],
+        [
+          "Move PP",
+          "Preserved exactly after costs already paid by resolved actions. No PP refill."
+        ],
+        [
+          "Held item",
+          "Remains equipped/owned. Non-final life loss is not permanent death and does not trigger Checklist 07 held-item return."
+        ],
+        [
+          "Level / XP / stats / growth seed",
+          "Unchanged."
+        ],
+        [
+          "Checklist 06 training effects",
+          "Unchanged, including remaining durations."
+        ],
+        [
+          "Moves / ability / form / evolution history",
+          "Unchanged."
+        ],
+        [
+          "Party slot",
+          "Same active slot on return."
+        ],
+        [
+          "Alchemist/reserve requirement",
+          "None. The 10% return is automatic and internal to the starter-life mechanic."
+        ]
+      ]
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "6. Final-life loss and permanent death"
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "When starter_lives_remaining is 1 and the starter suffers a lethal result, the counter becomes 0 and no special return is scheduled. From that point the individual follows the ordinary permanent-death contract: 0 HP, unusable, Checklist 07 death recording, held-item return to inventory, memorial eligibility and any distinct starter-final-death history event."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "The final death message must make it clear that the protection has ended before or alongside the ordinary death presentation."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "A final-dead starter does not receive the end-of-round 10% return and can contribute to ordinary wipe/mutual-KO outcome classification exactly like any other permanently dead Abyssal."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "7. UI and player-facing messages"
+    },
+    {
+      "body_index": 45,
+      "kind": "table",
+      "rows": [
+        [
+          "Surface",
+          "Locked requirement"
+        ],
+        [
+          "Party/summary screen",
+          "Show the special starter instance with clear life pips/icons supporting 3, 2, 1 and 0 states."
+        ],
+        [
+          "Battle HUD",
+          "Show remaining starter lives beside the active starter so final-life risk is visible before commands are chosen."
+        ],
+        [
+          "First loss",
+          "Mechanically clear message equivalent to: “[Name] survives the fatal blow! 2 lives remain.”"
+        ],
+        [
+          "Second loss",
+          "Escalated clear message equivalent to: “[Name] survives again. Only 1 life remains.”"
+        ],
+        [
+          "Final loss",
+          "Clear message equivalent to: “[Name]’s final life is lost.” Then ordinary permanent-death presentation follows."
+        ],
+        [
+          "Presentation latitude",
+          "Checklist 16 may change exact prose, iconography, sound and animation while preserving the same information and neutral readability."
+        ]
+      ]
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "Colour may supplement life state but cannot be the sole carrier of remaining-life information."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "The UI must not imply that the spent life can be restored by resting, healing or evolution."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "8. History, memorial and resurrection"
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "Non-final life losses are historically meaningful but are not permanent deaths. They are recorded separately from the visible memorial and ordinary death counters."
+    },
+    {
+      "body_index": 51,
+      "kind": "table",
+      "rows": [
+        [
+          "Event / state",
+          "Locked rule"
+        ],
+        [
+          "STARTER_LIFE_LOSS",
+          "Append a historical event for each non-final life spent. Minimum useful payload: instance ID, resulting lives remaining, battle/location/story context and stable order key."
+        ],
+        [
+          "DEATH",
+          "Do not create for a non-final life loss. Create normally when the final life is lost."
+        ],
+        [
+          "STARTER_FINAL_DEATH",
+          "May coexist with the ordinary DEATH event to preserve starter-specific narrative/history queries."
+        ],
+        [
+          "Visible memorial",
+          "Non-final life losses never create an entry. Final death does."
+        ],
+        [
+          "Memorial resurrection cost",
+          "Use the ordinary Checklist 07 transaction: exactly ten living Abyssals of ten different Dex/species IDs. No starter discount or special substitute."
+        ],
+        [
+          "Life state after memorial resurrection",
+          "Restore the same original starter instance with starter_lives_remaining = 1. The two spent bonus lives do not return."
+        ],
+        [
+          "Later final death",
+          "The restored one-life starter may die permanently again and remains eligible for the ordinary memorial resurrection system again, subject to the same cost."
+        ]
+      ]
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "Checklist 07 still controls restored HP/PP/status and party/reserve destination after memorial resurrection. Checklist 14 changes only the starter life counter to exactly 1."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "9. Evolution, healing and other non-restoration rules"
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "Evolution preserves starter_lives_remaining exactly. A starter that evolves at 2 lives remains at 2; at 1 remains at 1."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Evolution never refills spent special lives, even if it changes maximum HP, typing, form, ability or stat growth weights."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Ordinary healing items, alchemists, reserve healing, resting, full heals, story progression and town restoration cannot increase starter_lives_remaining."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "There is no life-restoration item, shop service, quest reward or renewable resource in v1.0."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "A supervised/nonlethal encounter does not consume a starter life unless that battle explicitly invokes the lethal starter-life handler. Scripted “defeat” that never reaches lethal 0-HP handling is not secretly charged as a life loss."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "10. Pate and Trade"
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Pate and Trade each possess one dynamically assigned original starter individual. Their life counters are independent of Aimon’s and independent of one another. The chosen species assignment may change between playthroughs according to the player’s opening choice, but the three-life property always attaches to the correct original instance."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Each begins at 3 when instantiated and retains the same counter across recurring appearances; it does not reset between chapters or rematches."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "Evolution of Pate’s or Trade’s starter preserves its counter exactly."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "Story scripting may determine whether a particular encounter is genuinely lethal or supervised/nonlethal; the life system follows that encounter flag rather than character identity alone."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "11. Semantic persistence contract"
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "Starter-life loss is irreversible gameplay state. As soon as a non-final lethal result is accepted, the life decrement is semantically committed before the battle continues. The matching end-of-round revival is part of the same battle state and must not be duplicated, skipped or used to refund the spent life after a crash."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "Checklist 15 must persist enough battle transaction state to recover a starter that has spent a life but is still awaiting its end-of-round return."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "A reload/crash cannot restore the old life count, trigger the same decrement twice, or convert a pending legal revival into a wipe."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "Exact autosave files, rolling generations, write order, checksums and anti-rollback enforcement remain Checklist 15 responsibilities."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "12. Checklist 14 completion matrix"
+    },
+    {
+      "body_index": 71,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist requirement",
+          "Status",
+          "Locked result"
+        ],
+        [
+          "Confirm which starter individuals receive three lives",
+          "COMPLETE",
+          "Three original starter instances only."
+        ],
+        [
+          "Store starterLivesRemaining",
+          "COMPLETE",
+          "Canonical field: starter_lives_remaining."
+        ],
+        [
+          "Initial value equals 3",
+          "COMPLETE",
+          "All three original starter individuals start at 3."
+        ],
+        [
+          "First lethal defeat reduces lives to 2",
+          "COMPLETE",
+          "Spend one life; end-of-round return pending."
+        ],
+        [
+          "Second lethal defeat reduces lives to 1",
+          "COMPLETE",
+          "Spend one life; end-of-round return pending."
+        ],
+        [
+          "Third lethal defeat reduces lives to 0 and causes permanent death",
+          "COMPLETE",
+          "Ordinary Checklist 07 death thereafter."
+        ],
+        [
+          "Starter disappears from current battle immediately after losing a life",
+          "COMPLETE",
+          "Down/unavailable for rest of current round; returns in same slot at cleanup."
+        ],
+        [
+          "Starter can be revived during same battle",
+          "COMPLETE",
+          "Automatic end-of-round special return; not an item action."
+        ],
+        [
+          "Post-battle HP after non-final life loss",
+          "COMPLETE",
+          "Actual battle HP is retained; return itself sets 10% max HP rounded up."
+        ],
+        [
+          "Post-battle status after non-final life loss",
+          "COMPLETE",
+          "Lethal-result status cleared on return."
+        ],
+        [
+          "Whether alchemist treatment is required",
+          "COMPLETE",
+          "No."
+        ],
+        [
+          "Display lives clearly in summary screen",
+          "COMPLETE",
+          "3/2/1/0 life pips/icons."
+        ],
+        [
+          "Whether lives appear during battle",
+          "COMPLETE",
+          "Yes, beside starter HUD."
+        ],
+        [
+          "First-life-loss message",
+          "COMPLETE",
+          "Clear survival + 2 lives remaining."
+        ],
+        [
+          "Second-life-loss message",
+          "COMPLETE",
+          "Clear survival + only 1 life remaining."
+        ],
+        [
+          "Final-death message",
+          "COMPLETE",
+          "Final life lost, followed by ordinary death presentation."
+        ],
+        [
+          "Life losses stored in memorial history",
+          "COMPLETE",
+          "Separate STARTER_LIFE_LOSS history; not memorial death."
+        ],
+        [
+          "Whether lost starter lives can ever be restored",
+          "COMPLETE",
+          "Bonus lives never regenerate through ordinary systems."
+        ],
+        [
+          "Starter resurrection after final death",
+          "COMPLETE",
+          "Ordinary memorial rules; return with exactly 1 life."
+        ],
+        [
+          "Pate dynamically assigned starter lives",
+          "COMPLETE",
+          "Independent persistent 3-life counter."
+        ],
+        [
+          "Trade dynamically assigned starter lives",
+          "COMPLETE",
+          "Independent persistent 3-life counter."
+        ],
+        [
+          "Starter evolution while lives already lost",
+          "COMPLETE",
+          "Counter follows same individual through evolution."
+        ],
+        [
+          "Ensure evolution does not restore lives",
+          "COMPLETE",
+          "Explicitly prohibited."
+        ],
+        [
+          "Save immediately after starter life is lost",
+          "COMPLETE",
+          "Semantic irreversible commit; Checklist 15 defines atomic disk mechanics."
+        ]
+      ]
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "13. Validation gates and implementation tests"
+    },
+    {
+      "body_index": 74,
+      "kind": "table",
+      "rows": [
+        [
+          "Test ID",
+          "Scenario",
+          "Required result"
+        ],
+        [
+          "B14-01",
+          "Starter at 3 takes lethal ordinary hit",
+          "Lives 3→2; no DEATH; down for round; returns at cleanup with 10% max HP rounded up."
+        ],
+        [
+          "B14-02",
+          "Starter at 2 takes lethal multi-hit move",
+          "Only one life spent; later hits stop; lives 2→1."
+        ],
+        [
+          "B14-03",
+          "Starter at 1 takes lethal hit",
+          "Lives 1→0; permanent death; no special return."
+        ],
+        [
+          "B14-04",
+          "Starter dies before its queued action",
+          "Queued action is lost; starter returns only at cleanup."
+        ],
+        [
+          "B14-05",
+          "Starter dies from poison/weather/end-turn layer",
+          "Spend one life; remain down through remaining ordinary layers; return in cleanup."
+        ],
+        [
+          "B14-06",
+          "Only usable party member is pending non-final starter return",
+          "Do not classify wipe; revive first, then continue/battle-end check."
+        ],
+        [
+          "B14-07",
+          "Both sides otherwise reach 0 while starter return is pending",
+          "Resolve starter return before final outcome classification."
+        ],
+        [
+          "B14-08",
+          "Evolution after losing one or two lives",
+          "Counter unchanged through evolution."
+        ],
+        [
+          "B14-09",
+          "Reserve/alchemist/full heal after spent life",
+          "HP/status recover normally; spent life does not refill."
+        ],
+        [
+          "B14-10",
+          "Final-dead starter memorial resurrection",
+          "Same instance restored under Checklist 07 with starter_lives_remaining=1."
+        ],
+        [
+          "B14-11",
+          "Crash after decrement before cleanup",
+          "Checklist 15 recovery must preserve spent life and exactly one pending return."
+        ],
+        [
+          "B14-12",
+          "Same-species later capture",
+          "No special life field/property inherited."
+        ]
+      ]
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "14. Cross-checklist handoffs"
+    },
+    {
+      "body_index": 77,
+      "kind": "table",
+      "rows": [
+        [
+          "Later workstream",
+          "May define without reopening Checklist 14"
+        ],
+        [
+          "Checklist 15 — Ironman Save & Persistence",
+          "Exact save-slot structure, atomic transaction/write ordering, backup generations, crash recovery and anti-rollback implementation for life decrements and pending revival."
+        ],
+        [
+          "Checklist 16 — Battle Presentation",
+          "Life-pip art, animation, sound, timing polish and final message prose, provided mechanics/timing/information remain unchanged."
+        ],
+        [
+          "Checklist 17 — Overworld Interaction",
+          "No special new rule required; may reflect injured starter state in ordinary interaction/party presentation without restoring lives."
+        ],
+        [
+          "Implementation battle tests",
+          "Must execute B14-01 through B14-12 and Checklist 13 multi-hit/residual/wipe edge tests together."
+        ]
+      ]
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "15. Source authority used for this lock"
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx — Checklist 14 purpose and all 24 completion items."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx — final-dead starter memorial eligibility, exact-instance resurrection and permanent-death semantics."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx — party/reserve UI life-pip handoff and reserve healing boundaries."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx — lower_snake_case authoritative-state convention and dynamic starter assignment state."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx — KO batches, single-life-per-multi-hit-action rule, residual-layer order and battle-end classification."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "User-approved Checklist 14 validation pass — all proposed rules accepted, with the explicit amendment that non-final life loss returns the starter at 10% maximum HP at the end of the round rather than immediately at 1 HP."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "FINAL STATUS"
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "CHECKLIST 14 — STARTER THREE-LIFE SYSTEM: COMPLETE / LOCKED. No unresolved starter-life design blocker remains. Checklist 15 may define crash-safe persistence and Checklist 16 may refine presentation, but neither may silently alter eligibility, the 3→2→1→0 state machine, end-of-round 10% return, final-death memorial behaviour, or the rule that bonus lives never regenerate."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 14 — LOCKED v1.0"
+    }
+  ]
+}

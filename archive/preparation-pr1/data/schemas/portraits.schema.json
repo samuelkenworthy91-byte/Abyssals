@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "canvas",
+    "records",
+    "missing_targets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "canvas": {
+      "type": "object"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "id",
+          "source_filename",
+          "runtime_filename",
+          "dimensions",
+          "source_sha256",
+          "processing_status",
+          "selection_status",
+          "uncertainty",
+          "pixel_audit"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_filename": {
+            "type": "string",
+            "minLength": 1
+          },
+          "runtime_filename": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dimensions": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "runtime_sha256": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "processing_status": {
+            "enum": [
+              "source_only",
+              "blocked_nonexact_background",
+              "ready",
+              "pending_constrained_background_cleanup"
+            ]
+          },
+          "selection_status": {
+            "enum": [
+              "canonical",
+              "variant",
+              "alternate",
+              "superseded"
+            ]
+          },
+          "uncertainty": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "pixel_audit": {
+            "type": "object",
+            "required": [
+              "background_gate_passed",
+              "exact_magenta_pixels"
+            ],
+            "properties": {
+              "background_gate_passed": {
+                "type": "boolean"
+              },
+              "exact_magenta_pixels": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "missing_targets": {
+      "type": "array"
+    }
+  }
+}

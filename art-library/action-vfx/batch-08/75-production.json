@@ -1,0 +1,33 @@
+{
+  "id": 75,
+  "name": "Livewire Tackle",
+  "category": "PHYSICAL",
+  "target": "SINGLE_FOE",
+  "effects": [
+    {
+      "effect_id": "inflict_status",
+      "status": "PARALYSIS",
+      "chance_percent": 30,
+      "secondary": true
+    }
+  ],
+  "batch": "08",
+  "sequence": "A broad rounded armored shoulder-shaped mass wrapped in live wires braces, makes one low horizontal body-check with a blunt shoulder impact, recoils and retracts; no head, full creature, feet or arrowhead.",
+  "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Livewire Tackle, stable ID75. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A broad rounded armored shoulder-shaped mass wrapped in live wires braces, makes one low horizontal body-check with a blunt shoulder impact, recoils and retracts; no head, full creature, feet or arrowhead. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+  "source": "art-library/action-vfx/batch-08/75-source-v2.png",
+  "impact": 0.4375,
+  "status": "revised source and prepared candidate; gameplay review pending",
+  "prepared": "art-library/action-vfx/batch-08/75-prepared-v2.png",
+  "sourceSha256": "5515b200fdaf230317fdf3a9ad2595125232759be61678eb7772512f153aa564",
+  "preparedSha256": "473b42ec0bf25e4cef8c409c507da80e60f0eef35ca2581079f36038737d190d",
+  "generator": "built-in image_gen",
+  "revision": "02",
+  "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
+  "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  }
+}

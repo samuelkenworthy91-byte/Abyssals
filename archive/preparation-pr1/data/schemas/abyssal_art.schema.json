@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "expected_species_count",
+    "records"
+  ],
+  "properties": {
+    "expected_species_count": {
+      "const": 187
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "species_id",
+          "source_filename",
+          "runtime_filename",
+          "dimensions",
+          "file_type",
+          "sha256",
+          "status"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "species_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "canonical_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_filename": {
+            "type": "string",
+            "minLength": 1
+          },
+          "runtime_filename": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dimensions": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "file_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "batch": "09",
+  "format": "PNG indexed transparent768x768;16frames of192x192",
+  "rasterTechnique": "Authored raster scenes; visual and gameplay approval tracked separately.",
+  "moves": [
+    {
+      "id": 85,
+      "name": "leaf-strike",
+      "filename": "85-leaf-strike.png",
+      "action": "Leaf Strike",
+      "revision": "01",
+      "sequence": "A broad folded leaf paddle draws back sideways, rotates flat, delivers ONE heavy diagonal slap that shakes loose a little sleepy pollen, then flexes back open. A blunt leaf strike, not a leaf blade cut.",
+      "source": "art-library/action-vfx/batch-09/85-source.png"
+    },
+    {
+      "id": 87,
+      "name": "root-cut",
+      "filename": "87-root-cut.png",
+      "action": "Root Cut",
+      "revision": "01",
+      "sequence": "A flattened woody root blade reveals growth rings and a pale splinter edge, rotates edge-on, makes ONE short shearing cut, chips off two bark flakes and turns broadside in recovery. No floating leaf.",
+      "source": "art-library/action-vfx/batch-09/87-source.png"
+    },
+    {
+      "id": 88,
+      "name": "sickleleaf-scissor",
+      "filename": "88-sickleleaf-scissor.png",
+      "action": "Sickleleaf Scissor",
+      "revision": "01",
+      "sequence": "Two asymmetrical sickle-shaped leaf edges on curved stems open like shears, cross shut ONCE at one central contact, rebound with a little recoil twitch and unfold. Large notched leaf blades, no insect or jaws.",
+      "source": "art-library/action-vfx/batch-09/88-source.png"
+    },
+    {
+      "id": 89,
+      "name": "root-grip",
+      "filename": "89-root-grip.png",
+      "action": "Root Grip",
+      "revision": "01",
+      "sequence": "A thick bundle of pale segmented roots reaches outward like grasping fingers, coils ONCE around a hollow central space, contracts with creaking purple pressure lines, then releases its loosening knots. Heavy restraining root magic, no whip.",
+      "source": "art-library/action-vfx/batch-09/89-source.png"
+    },
+    {
+      "id": 90,
+      "name": "root-lash",
+      "filename": "90-root-lash.png",
+      "action": "Root Lash",
+      "revision": "01",
+      "sequence": "A single long knotted root with small fibrous side roots winds into a tight spiral, uncoils in one long horizontal lash, makes ONE cracking tip contact, falls slack and recoils. Brown root distinct from green Leaf Lash.",
+      "source": "art-library/action-vfx/batch-09/90-source.png"
+    },
+    {
+      "id": 92,
+      "name": "spore-torrent",
+      "filename": "92-spore-torrent.png",
+      "action": "Spore Torrent",
+      "revision": "01",
+      "sequence": "Several small ochre mushroom gills tilt and release a corkscrewing jet of gold-green spores, the coherent stream wraps ONCE around a central gap, blooms into ONE dusty contact cloud and drifts away. No whole fungus creature, no repeated hits.",
+      "source": "art-library/action-vfx/batch-09/92-source.png"
+    },
+    {
+      "id": 93,
+      "name": "root-ward",
+      "filename": "93-root-ward.png",
+      "action": "Root Ward",
+      "revision": "01",
+      "sequence": "Five thick root stakes grow upward around a central hollow gap, interlock into a low woven living barricade, settle with a quiet amber sap glint, and remain protective before fading. Self defence buff: NO damaging flash, blow or hit star.",
+      "source": "art-library/action-vfx/batch-09/93-source.png"
+    },
+    {
+      "id": 94,
+      "name": "spring-growth",
+      "filename": "94-spring-growth.png",
+      "action": "Spring Growth",
+      "revision": "01",
+      "sequence": "Two curled fresh shoots unfold in alternating directions, grow into four bright young leaf fronds and one pink bud, gently arch around an empty central space and settle as a balanced growth aura. Self offensive buff, no target damage flash.",
+      "source": "art-library/action-vfx/batch-09/94-source.png"
+    },
+    {
+      "id": 95,
+      "name": "thorn-guard",
+      "filename": "95-thorn-guard.png",
+      "action": "Thorn Guard",
+      "revision": "01",
+      "sequence": "A ring of six thorn-covered bramble ribs bends inward around an empty space, locks into a dense spiny guard, presents its outward thorns, then gently loosens. Contact-retaliation self guard; no blow, hit flash or projectile.",
+      "source": "art-library/action-vfx/batch-09/95-source.png"
+    },
+    {
+      "id": 96,
+      "name": "verdant-mend",
+      "filename": "96-verdant-mend.png",
+      "action": "Verdant Mend",
+      "revision": "01",
+      "sequence": "Three torn leaf fragments gather green sap droplets, spiral softly inward, join their torn veins into one restored whole leaf, and release gentle rising healing motes. Healing only, no attack star or outward strike.",
+      "source": "art-library/action-vfx/batch-09/96-source.png"
+    },
+    {
+      "id": 99,
+      "name": "rooted-pride",
+      "filename": "99-rooted-pride.png",
+      "action": "Rooted Pride",
+      "revision": "01",
+      "sequence": "A compact root anchor spreads three thick feet, a proud upright leaf crest rises above it, and one narrow ridged green pressure surge launches from that rooted stance. The roots stay planted while the surge makes ONE contact.",
+      "source": "art-library/action-vfx/batch-09/99-source.png"
+    },
+    {
+      "id": 100,
+      "name": "winter-shard",
+      "filename": "100-winter-shard.png",
+      "action": "Winter Shard",
+      "revision": "01",
+      "sequence": "A small six-sided clear ice shard rotates slowly among fine inward-sweeping snow grains; its facets align into a precise centered glint, then settle in a balanced orbit. Self accuracy focus, no flying attack shard or damage burst.",
+      "source": "art-library/action-vfx/batch-09/100-source.png"
+    },
+    {
+      "id": 101,
+      "name": "whiteout-detonation",
+      "filename": "101-whiteout-detonation.png",
+      "action": "Whiteout Detonation",
+      "revision": "01",
+      "sequence": "A compact rough white snowball draws wisps of powder inward, compresses into faceted ice, then breaks into ONE broad whiteout ring of snow chunks and cold blue dust which disperses. No thundercloud or fire explosion.",
+      "source": "art-library/action-vfx/batch-09/101-source.png"
+    },
+    {
+      "id": 102,
+      "name": "brittle-point",
+      "filename": "102-brittle-point.png",
+      "action": "Brittle Point",
+      "revision": "01",
+      "sequence": "A narrow brittle ice claw with three unequal chisel points flexes backward, thrusts its longest point into ONE precise contact, fractures tiny ice chips from its edge, then recoils. Three points are one claw, no triple hit.",
+      "source": "art-library/action-vfx/batch-09/102-source.png"
+    },
+    {
+      "id": 103,
+      "name": "rime-hook",
+      "filename": "103-rime-hook.png",
+      "action": "Rime Hook",
+      "revision": "01",
+      "sequence": "A thick crescent of rime-coated ice grows from a short curved frozen wrist, swings in ONE upward hooking impact, cracks its frosty outer crust and curls down again. Readable hook punch, not an icicle projectile.",
+      "source": "art-library/action-vfx/batch-09/103-source.png"
+    },
+    {
+      "id": 104,
+      "name": "glacier-scissor",
+      "filename": "104-glacier-scissor.png",
+      "action": "Glacier Scissor",
+      "revision": "01",
+      "sequence": "Two thick asymmetrical glacier slabs have curved cutting faces, pivot open, shear past one another ONCE at the center, rebound with small shattered ice plates and separate. Heavy ice shears, not teeth or claws.",
+      "source": "art-library/action-vfx/batch-09/104-source.png"
+    },
+    {
+      "id": 105,
+      "name": "frostbite-lunge",
+      "filename": "105-frostbite-lunge.png",
+      "action": "Frostbite Lunge",
+      "revision": "01",
+      "sequence": "A long narrow frozen tusk with a hollow dark blue core angles forward, lunges on a single hairline trail into ONE needle-point collision, sheds a few sharp frost crystals and withdraws. Precision lunge distinct from basic Frost Shard.",
+      "source": "art-library/action-vfx/batch-09/105-source.png"
+    }
+  ]
+}

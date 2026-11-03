@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "PROFILE-DIRECT",
+      "fields": {
+        "Profile": "DIRECT",
+        "Selection priority": "Highest-value legal STAB first; coverage second; utility only when it creates immediate advantage",
+        "Primary users": "Soldier, Knight, Pate, Aldren"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "PROFILE-BALANCED",
+      "fields": {
+        "Profile": "BALANCED",
+        "Selection priority": "Two reliable attacks + one coverage + one utility/recovery/status option",
+        "Primary users": "General-purpose trainers"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "PROFILE-TEMPO",
+      "fields": {
+        "Profile": "TEMPO",
+        "Selection priority": "Priority/speed control/pivot utility weighted above raw power when it preserves momentum",
+        "Primary users": "Scout, Courier, Riverhand"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "PROFILE-CONTROL",
+      "fields": {
+        "Profile": "CONTROL",
+        "Selection priority": "Status, accuracy, debuff and setup moves get higher value; still keeps at least two damaging options",
+        "Primary users": "Scribe, Canon, Mirelle"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "PROFILE-SUSTAIN",
+      "fields": {
+        "Profile": "SUSTAIN",
+        "Selection priority": "Recovery/protection is retained when legal; avoids two redundant healing moves",
+        "Primary users": "Hospitaller, Yselle, Samiel"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "PROFILE-SIEGE",
+      "fields": {
+        "Profile": "SIEGE",
+        "Selection priority": "Bulky STAB, defence break, recoil/drain where appropriate, lower switching preference",
+        "Primary users": "Siege Engineer, Braska, Oren"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "PROFILE-TERRAIN",
+      "fields": {
+        "Profile": "TERRAIN",
+        "Selection priority": "Moves benefiting from the active Warden field are scored first without forcing mono-type teams",
+        "Primary users": "Wardens"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+        "body_index": 51,
+        "table_row": 8
+      }
+    }
+  ],
+  "unresolved": []
+}

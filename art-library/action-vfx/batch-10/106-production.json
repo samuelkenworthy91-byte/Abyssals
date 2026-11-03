@@ -1,0 +1,38 @@
+{
+  "id": 106,
+  "name": "Frost Shard",
+  "category": "SPECIAL",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SINGLE_FOE",
+      "stats": [
+        "speed"
+      ],
+      "stages": -1,
+      "chance_percent": 100,
+      "secondary": true
+    }
+  ],
+  "target": "SINGLE_FOE",
+  "batch": "10",
+  "sequence": "A milky six-point ice crystal grows as a single suspended shard, tips forward, fires across one short arc and shatters ONCE into jagged slivers, leaving tiny frost needles that cling and slow, then melt. Neither spear nor snowball.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Shard, ID 106. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A milky six-point ice crystal grows as a single suspended shard, tips forward, fires across one short arc and shatters ONCE into jagged slivers, leaving tiny frost needles that cling and slow, then melt. Neither spear nor snowball. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Frost Shard, ID 106. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A milky six-point ice crystal grows as a single suspended shard, tips forward, fires across one short arc and shatters ONCE into jagged slivers, leaving tiny frost needles that cling and slow, then melt. Neither spear nor snowball. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Match the rich finely clustered pixel shading and blue-white crystalline material of the supplied Frostbite Lunge sheet, but create the distinctly different six-point crystal action described above. Output only the actual sprite atlas.",
+  "referenceImages": [
+    "art-library/action-vfx/batch-09/105-prepared.png"
+  ],
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/106-source.png",
+  "prepared": "art-library/action-vfx/batch-10/106-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "3885aea4d2b002e403018de7adfbc5dc89a5910a74cd037ace747171e4cfda68",
+  "sourceSha256": "4a4028fa7fc8ba28746087c0f903269c48aaf6961f7644c8f72937f67383ec06"
+}

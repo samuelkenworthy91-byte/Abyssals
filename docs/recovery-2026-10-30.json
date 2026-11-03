@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-30",
+  "status": "Blocked before the requested 60 percent milestone: execution workspace and upload browser became unavailable.",
+  "target": {
+    "moves": 369,
+    "totalMoves": 614,
+    "reviewedEnvironments": 15,
+    "totalEnvironments": 25
+  },
+  "lastObserved": {
+    "localIntegratedMoves": 261,
+    "localIntegratedPercent": 42.51,
+    "remoteRegisteredMoves": 171,
+    "remoteRegisteredPercent": 27.85,
+    "releasedMoves": 133,
+    "reviewedEnvironments": 15,
+    "environmentTechnicalIssues": 0,
+    "latestAuditAuthoredUnique": 272,
+    "latestAuditMilestoneReached": false
+  },
+  "durableCheckpoints": {
+    "integrationAndRecovered38": "ab4a17c3c1fe04df9b81dde5e57a07670adb4f96",
+    "codeEvidenceEnvironmentLedger": "d6724cbed832d7b9f086b966c80c82e8cadaf9b6",
+    "batch10SourceComplete": "b2dbf2c4602aa22a54d57c0839024d1b4c35fcfa",
+    "batch11RasterComplete": "983207aa4df4aa6f7a636c1a4b9d3d63f057cca2"
+  },
+  "verification": {
+    "batches10_12": "Current asset and choreography hashes saved with passing single/double/reduced-motion checks in integration-checks.json.",
+    "batch13": "Final-packing local report observed passed; full hash report was not uploaded before workspace loss.",
+    "batch08": "Original live battle tests and eight leader layouts passed earlier. New hash checkpoint rerun was in progress when workspace failed."
+  },
+  "incompleteUploads": [
+    "Batch11 all59 raster files committed; selected provenance JSON/manifest still needs recovery/upload.",
+    "Batch12 first25 raster files selected in browser; no commit confirmed. Do not count as uploaded.",
+    "Batch13 source/runtime files not yet uploaded.",
+    "New runtime registration remains171 until new runtime binaries are uploaded."
+  ],
+  "localRecoveryRoot": "/workspace/scratch/b9ca846d4666/Abyssals",
+  "resume": [
+    "Recover workspace if available. Preserve all generated_images, incoming-ID JSON, source revisions and production records; do not regenerate completed assets blindly.",
+    "Use docs/development-resume.md, target-60-percent.json, scripts/checkpoint-generated-actions.py and saved batch plans. Batches10-13 total90 genuinely created and locally installed new sheets; batch14/15 partially saved, batch16 started, batch17 plan read failed at workspace shutdown. Inspect actual records before counts.",
+    "Retain complete transparent-gutter extraction with one common scale, contact frame8 timing, and Venom Lash selected source revision03. Never modify protected originals/Mercy art.",
+    "Upload remaining source PNGs and chosen runtime PNGs in browser groups around25, verify Git blob hashes, then commit matching provenance/registration/offline manifests.",
+    "Continue distinct new raster production to369. Inspect frames and phone gameplay, record hashes and artistic reviews separately. Run live single/double/reduced-motion and leader checks.",
+    "Refresh coverage/environment reports. Confirm created+uploaded+integrated+tested intersection369 and15 environment reviews with0 technical issues; only then prepare scoped signed Android/PWA checkpoint and pause."
+  ]
+}

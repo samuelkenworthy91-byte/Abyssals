@@ -1,0 +1,840 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.docx",
+  "source_sha256": "067931de32c2365df2c6794d1383e8470dc2636a7698d9ff604ecd0c0d198678",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 17Overworld Interaction Rules"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "COMPLETE & LOCKED  •  v1.0  •  27 August 2026"
+    },
+    {
+      "body_index": 3,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "COMPLETE & LOCKED"
+        ],
+        [
+          "Authority",
+          "Authoritative implementation-design specification for overworld movement, interaction, transitions, encounters, NPC behaviour and map-state handling."
+        ],
+        [
+          "Scope",
+          "Implements and reconciles the already-locked rules from Checklists 02–16. Where older wording conflicts, the later and more specific locked rule takes precedence."
+        ],
+        [
+          "Core presentation",
+          "Four-direction, tile-based movement on a 16×16 logical grid with fixed screen-to-screen overworld views rather than continuous camera scrolling."
+        ]
+      ]
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "LOCKED DESIGN INTENT"
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "Classic monster-RPG readability and determinism: simple cardinal movement, authored screen transitions, clear interaction rules, and no hidden free-form physics underneath the player experience."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "1. Purpose and Precedence"
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "Checklist 17 defines the final overworld interaction contract required before map implementation. It does not redesign combat, capture, persistence, progression, leader fate, reserve access or story-state systems; it specifies how those already-locked systems are reached, represented and safely executed in the overworld."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Precedence rule: If an older checklist contains broad wording that conflicts with a later, more specific locked rule, the later specific rule controls. In particular, reserve and move-relearner access are Aeric-only; generic settlement “storage access” wording does not create remote reserve access."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "2. Logical Grid, Player Footprint and Cardinal Movement"
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Logical grid: All overworld movement and collision use a 16×16 pixel logical tile grid."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "Sprite footprint: Aimon and ordinary NPCs occupy one logical tile at their feet for movement and collision. Their rendered artwork may extend above or sideways beyond that logical footprint."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "Directions: Movement is four-direction only: north, south, east and west. There is no diagonal movement."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Animation requirement: The core overworld character set therefore requires four facing directions. Each direction may use a simple two- or three-frame walk cycle; no diagonal animation set is required."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "Tile stepping: A successful movement command advances exactly one logical tile. Rendering may interpolate smoothly between tile centres, but gameplay state changes only at deterministic tile positions."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "3. Walking, Running and Input Handling"
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "Walk speed: 64 logical pixels per second, equivalent to 4 tiles per second."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "Run speed: 112 logical pixels per second, equivalent to 7 tiles per second."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "Run unlock: Running becomes permanently available once Aimon has received his starter and the opening Civeton sequence releases him into normal travel."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "Default control: Hold-to-run is the standard control. A Run by Default accessibility/convenience setting may invert that behaviour for touch play."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "No physics drift: There is no acceleration, momentum, inertia or analogue collision resolution. The movement model remains deterministic and tile-based."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "Input clearing: Opening dialogue, menus, choices, scripted scenes or battle transitions locks movement. When control returns, stale held or buffered movement input is cleared so Aimon does not automatically step into a door, trigger or encounter."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "4. Fixed Screen-to-Screen Overworld Presentation"
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "The overworld uses the classic presentation approved for Abyssals: authored fixed screens rather than a continuously scrolling camera. The behaviour is intentionally comparable to original Dragon Warrior Monsters and classic Pokémon-era map presentation."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "Aimon moves freely within the current authored screen using the tile rules above."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "When Aimon crosses an authored screen-exit boundary, the current view transitions to the adjoining fixed screen and places him on its corresponding entry tile."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "The camera does not continuously follow Aimon across a larger seamless map."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "Screen edges are not automatically exits. Only authored exit strips, doors, stairs, caves, Hell thresholds, teleports or other explicit warp objects can change the active screen/map."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "Each transition stores destination map/screen, destination tile, arrival facing and a known-safe arrival/return position."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "Ordinary screen swaps use a short unobtrusive transition. Battle entry retains Checklist 16's battle-specific dark ink/slash transition rather than inventing a competing overworld effect."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "5. Collision and Terrain Rules"
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "Authoritative collision data: Collision is defined by map/object data, never inferred from decorative artwork."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Solid: walls, substantial furniture, blocked building edges, closed barriers, ordinary NPC footprints and other authored blockers."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "Non-solid: ground decoration, minor debris, visual grass detail and other artwork that is not explicitly authored as a blocker."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "Water: solid while Aimon is on foot; traversable only while using the locked personal watercraft at valid access points."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "Elevation: represented through discrete authored layers linked by stairs, ramps or explicit ledges. There is no free-form jumping physics."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "One-way drops: allowed only where intentionally authored and where they cannot create an unwinnable traversal trap."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "6. Universal Interaction Rules"
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "Interact target: The universal Interact/A action checks the single logical tile immediately in front of Aimon."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "Supported interactions: Talking, reading, opening, searching, activating, embarking and other standard contextual interactions all use this same rule unless a scripted scene explicitly overrides it."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "Facing: When ordinary dialogue begins, Aimon faces the target. Standard NPCs turn to face Aimon unless the scene locks their pose or orientation."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "Dialogue presentation: Dialogue uses a compact bottom dialogue box, short readable chunks and tap/A to advance. Text-speed settings may accelerate presentation without changing event order."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Choices: Choice boxes are vertical and clearly cancellable unless the story explicitly marks a decision as irreversible. Irreversible leader/fate choices commit through the Ironman persistence rules."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "7. Service NPC Contracts"
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "7.1 Shops"
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "BUY"
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "SELL"
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "LEAVE"
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "7.2 Alchemists"
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "HEAL PARTY"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "LEAVE"
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "Alchemists heal the active party/reserves only according to the already-locked healing rules; they do not create remote reserve-management access."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "7.3 Aeric"
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "RESERVE"
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "RELEARN MOVES"
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "LEAVE"
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Aeric is the authoritative reserve and move-relearner access point. Relearning remains free under the previously locked rules. Reserve management is not exposed as an ordinary pause-menu function."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "8. Trainer Encounter Behaviour"
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "Sight model: Trainer sight uses a straight cardinal ray in the trainer's facing direction, normally authored at 1–6 tiles."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Line blockers: Walls, closed doors and other explicit sight-blocking objects terminate the sight ray."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Trigger sequence: On valid detection: movement freezes → exclamation/sting → trainer advances in a straight line along the already-clear path until adjacent → pre-battle dialogue → battle."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "Pathfinding: No general free-form pathfinding is required for ordinary trainer challenge behaviour. If the straight authored approach is blocked, the trainer cannot trigger from that position."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "Defeated state: Defeated trainers permanently stop initiating challenge battles, while their post-defeat overworld dialogue/presence remains story-state dependent."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "9. Wild Encounters, Day/Night and Resonator"
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "Eligible step: A wild-encounter check occurs only after a successfully completed tile step into encounter-enabled terrain."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "No-roll actions: Bumping a wall, turning in place, standing still, menu use, dialogue, scripted movement, warp entry and other non-step actions do not roll a wild encounter."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "Encounter density: LOW / NORMAL / HIGH retain the approved approximate per-step rates of 6% / 10% / 14%. Exact per-zone values remain balance data, not a new design rule."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "Table selection: When a step triggers an encounter, the game uses the active DAY or NIGHT encounter table for that habitat/zone."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "Day/night cycle: The already-locked 10-minute day/night cycle remains authoritative. Safe settlements, scripted scenes and other explicitly suppressed states do not roll encounters."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "Resonator: When enabled, generate the encounter normally, then suppress it if the generated wild level is at least 5 levels below the first living party Abyssal. Do not reroll repeatedly until a stronger target appears."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "Ironman determinism: Encounter and RNG persistence continue to follow the locked save rules, preventing reload-based rerolls where persistence requires the result to be fixed."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "10. Personal Watercraft / Skiff Traversal"
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "Access: Embark only from explicit readable water-access tiles after the personal watercraft has been unlocked by the story."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "Movement: Water traversal reuses the same four-direction logical grid and deterministic tile stepping."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "Disembark: Disembark only at authored landing/access tiles."
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "No party gating: Traversal never requires an HM, a particular Abyssal species or a party ability check."
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "Water encounters: Water tiles only generate wild encounters where an explicit authored water encounter zone/table says they do."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "11. Pickups, Chests, Switches and Environmental Objects"
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Persistent object IDs: Every stateful pickup or interactive object has a stable unique identifier so its state persists through Ironman saves and screen reloads."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "Visible pickups use setting-appropriate item/relic/satchel art; they need not imitate a Poké Ball."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "One-time pickups disappear or swap to a collected visual state immediately after a successful committed acquisition."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "Hidden items do not require a floating sparkle; they are discovered by interacting with the correct adjacent search tile, preferably supported by environmental clues."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "Chests persist OPENED; persistent doors and switches store their authored states; evolution items use the same atomic one-time acquisition architecture."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "Signs, books, plaques and ordinary lore props are front-tile interactions."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "Story objects may be repeatable or one-shot according to their Checklist 10 event/state identifier."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "12. Civeton Memorial Overworld Access"
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "Physical access: The memorial remains a physical Civeton world object, not a generic pause-menu feature."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "Availability: Once the memorial has been established under the already-locked death/memorial rules, interacting with it opens the appropriate Abyssal/Human memorial interface."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "Scope: Checklist 17 governs the object, collision, facing and opening interaction only; death, sacrifice and resurrection mechanics remain controlled by their existing locked specifications."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "13. Pause Menu and Objectives"
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "Top-level menu: Abyssals/Party; Inventory; Map; Objectives; Settings; Save Now; Save & Quit."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "Monster information: Selecting an Abyssal from Party opens its detailed information screen; there is no redundant second top-level monster-info menu entry."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "Map: The Map is informational. Carriage fast travel continues to require the appropriate courier/network interaction and is not replaced by unrestricted map teleporting."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "Objectives: The Objectives log shows the current main objective and known optional quests only. It provides no glowing GPS trail, does not reveal undiscovered objectives and never exposes a morality score."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Saving: Save Now and Save & Quit write the authoritative Ironman state under Checklist 15 and never create a player-selectable rollback point."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "14. NPC Movement and Day/Night Variation"
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "Supported NPC modes: Stationary; random walker inside a small permitted region; fixed patrol loop; scripted movement sequence."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "Random-walker safety: Random walkers cannot enter warps, doors, critical story triggers or tiles where they can block required progression."
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "Authored behaviour: NPC movement is intentionally simple and authored rather than a complex life-simulation system."
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "Day/night scope: Use limited day/night variation: selected ambient NPCs, positions and dialogue can change, but the project does not require a full daily schedule for every citizen."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "Essential availability: Essential services and major story NPCs remain findable unless a specific story event deliberately moves or removes them."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "15. Town Restoration and World-State Swaps"
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "Single underlying map: Restoration normally changes state on the same underlying authored map/screen set rather than maintaining a separate duplicate town for every restoration stage."
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "Town-state changes may swap NPC sets, rubble/debris, decorations, doors, shop availability, selected collision objects and ambient dialogue."
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "The authoritative Checklist 10 town-state value drives those swaps."
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "If a state change would make Aimon's current tile invalid or solid, the scene first relocates him to a predetermined safe tile before applying the collision change."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "16. Mutual-Final-KO Recovery to Aeric"
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "The special victory state already defined by Battle Edge Cases requires an explicit overworld recovery flow when Aimon wins a mutual final KO while living reserve Abyssals still exist but no living deployed Abyssal is available."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "Do not resume free exploration."
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "Fade/transition to the authored Aeric recovery anchor appropriate to the battle/chapter."
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "Force Aeric reserve access."
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "Require the player to withdraw at least one living reserve Abyssal; no free rescue Abyssal is created."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "Execute the authored return/handoff to the guarded defeated leader or unresolved climax location."
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "Resolve any still-pending SPARE/EXECUTE or equivalent story choice."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "Only then restore normal overworld control."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "No remote reserve exception: This recovery route does not create a general remote reserve menu. It is a scripted relocation to the legitimate Aeric interaction required to restore a viable active party."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "17. Leader Fate and Permanent NPC Removal"
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "Executed/removed leaders: When the committed story state requires removal, the leader is removed from the normal overworld entity set immediately after the fate sequence."
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "Spared leaders: Spared leaders follow their authored escort/removal/retention path according to story state."
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "Revived humans: Later revival may install a new authored life-state position/entity without erasing the historical leader-fate record."
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "Escort movement: Short deterministic tile scripts are preferred over general navigation AI for escorts and scene choreography."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "18. Soft-Lock Safety and Recovery"
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "Safe anchors: Every screen transition, warp and scripted relocation registers a valid safe arrival/return tile."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "Technical recovery only: If a genuine collision or script defect traps Aimon, the persistence system may relocate him only to the last compatible safe position allowed by Checklist 15."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "Never reverse canon: Soft-lock recovery must never undo permanent deaths, starter-life losses, sacrifices, captures, leader fates, story choices, chapter completion, committed item ownership or any other canonical progression."
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "Implementation goal: Deterministic tile collision and explicit destinations should make technical relocation an exceptional fallback rather than normal gameplay."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "19. Minimum Implementation Data Contract"
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "The following fields are the minimum recommended data model needed to implement the locked behaviour consistently. Names may be adapted to the project's final schema, but the represented information is required."
+    },
+    {
+      "body_index": 130,
+      "kind": "table",
+      "rows": [
+        [
+          "Data object",
+          "Required information",
+          "Purpose"
+        ],
+        [
+          "Map/screen",
+          "screen_id; logical width/height; collision grid; encounter-zone grid; background/art reference",
+          "Defines each fixed authored overworld screen."
+        ],
+        [
+          "Exit/warp",
+          "trigger tiles; destination screen; destination tile; arrival facing; safe return/arrival anchor; transition type",
+          "Makes every screen change explicit and recoverable."
+        ],
+        [
+          "NPC",
+          "entity_id; tile; facing; movement mode; permitted region/path; interaction/dialogue id; state conditions",
+          "Supports deterministic interaction and world-state swaps."
+        ],
+        [
+          "Trainer",
+          "trainer id; facing; sight range; line-block rules; approach data; defeated flag/state",
+          "Implements classic cardinal sight encounters."
+        ],
+        [
+          "Encounter zone",
+          "zone id; density; day table; night table; suppression/state conditions",
+          "Defines step-triggered wild encounters."
+        ],
+        [
+          "Persistent object",
+          "object id; tile; interaction type; current state; state transition/commit behaviour",
+          "Persists pickups, chests, doors, switches and story props."
+        ],
+        [
+          "Safe anchor",
+          "anchor id; screen; tile; facing; compatibility/state conditions",
+          "Supports legitimate scripted relocations and technical recovery."
+        ]
+      ]
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "20. Final Locked Summary"
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "16×16 logical movement/collision grid."
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "Four cardinal directions only; no diagonal overworld movement."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "Simple four-facing overworld animation set."
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "Walk 64 px/sec; run 112 px/sec."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "Running available after the opening starter sequence."
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "Smooth visual interpolation while gameplay remains tile-deterministic."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "Fixed authored screen-to-screen overworld presentation; no continuous scrolling camera."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "Explicit exits/warps with safe destination tiles and arrival facing."
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "Single-tile front interaction model."
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "Aeric-only reserve and move-relearner access."
+    },
+    {
+      "body_index": 142,
+      "kind": "paragraph",
+      "text": "Classic straight-line trainer sight/approach behaviour."
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": "Eligible-step wild encounters using day/night tables and Resonator suppression."
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "Skiff/watercraft traversal reuses the same four-direction grid."
+    },
+    {
+      "body_index": 145,
+      "kind": "paragraph",
+      "text": "Stateful objects use persistent IDs and atomic committed acquisition/state changes."
+    },
+    {
+      "body_index": 146,
+      "kind": "paragraph",
+      "text": "Civeton memorial remains a physical world interaction."
+    },
+    {
+      "body_index": 147,
+      "kind": "paragraph",
+      "text": "Restrained Objectives log; no GPS trail or morality display."
+    },
+    {
+      "body_index": 148,
+      "kind": "paragraph",
+      "text": "Limited day/night NPC variation rather than full schedules."
+    },
+    {
+      "body_index": 149,
+      "kind": "paragraph",
+      "text": "Town restoration uses state swaps on the same underlying maps/screens."
+    },
+    {
+      "body_index": 150,
+      "kind": "paragraph",
+      "text": "Mutual-final-KO victory recovery routes through a legitimate forced Aeric reserve interaction."
+    },
+    {
+      "body_index": 151,
+      "kind": "paragraph",
+      "text": "Leader fate/removal and revival states produce literal overworld entity changes."
+    },
+    {
+      "body_index": 152,
+      "kind": "paragraph",
+      "text": "Soft-lock recovery may relocate technically but can never reverse canonical losses or choices."
+    },
+    {
+      "body_index": 153,
+      "kind": "paragraph",
+      "text": "CHECKLIST 17 — COMPLETE & LOCKED"
+    },
+    {
+      "body_index": 154,
+      "kind": "paragraph",
+      "text": "With this specification approved, all 17 pre-programming checklists are locked at implementation-design level."
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx",
+  "source_sha256": "3e766e108d42874ffd01ba5d5489758f458223b2ab5a956c74a09a697dd70c09",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01Exact Stat Growth Algorithm"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "STATUS — COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": "This document consolidates the already-approved Checklist 01 stat-growth rules into a single readable implementation authority. It does not rebalance the validated Regional Dex. The canonical per-species percentages remain those generated from the exact formula and current base-stat data in Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx."
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "• Every level-up performs six independent deterministic growth checks: HP, Attack, Defense, Sp. Atk, Sp. Def and Speed."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "• The per-stat growth percentage is formula-driven from the current form's exact BST and base-stat distribution, with a hard minimum of 10%."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "• A successful HP growth increment gives +10 HP. A successful non-HP growth increment gives +1 to that stat."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "• Growth above 100% is exceptional growth: the first increment is guaranteed and the percentage above 100 is the chance of one second increment."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "• Each individual Abyssal has one immutable deterministic Growth Seed. Reloading, action order and save manipulation cannot reroll its growth history."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "• Evolution applies the fixed signed target-minus-source base-stat delta once, then all subsequent level-ups immediately use the evolved form's growth percentages."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "• Higher-level generated Abyssals simulate their complete prior growth history from the same deterministic rules rather than receiving approximate bonus stats."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "• The hard level cap is 200."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "1. Canon authority and boundary"
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Checklist 01 is the sole authority for the exact stat-growth formula, growth-roll semantics, immutable individual growth seeds, historical growth reconstruction and the change of growth weights after evolution. Later systems may serialize, display, test or temporarily modify future growth chances where another locked checklist explicitly authorizes that effect, but they may not replace the base formula or allow growth history to reroll."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "Exact species base stats and typing come from Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx. The validated derived percentages and evolution integration come from Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "2. Locked formula"
+    },
+    {
+      "body_index": 18,
+      "kind": "table",
+      "rows": [
+        [
+          "Parameter",
+          "Locked value"
+        ],
+        [
+          "Reference BST",
+          "300"
+        ],
+        [
+          "Mean Growth",
+          "32 + 0.06 × (BST − 300)"
+        ],
+        [
+          "Mean Stat",
+          "BST ÷ 6"
+        ],
+        [
+          "Specialisation exponent",
+          "2.25"
+        ],
+        [
+          "Growth %",
+          "MAX(10, ROUND(Mean Growth × (Base Stat ÷ Mean Stat)^2.25))"
+        ],
+        [
+          "Minimum growth",
+          "10%"
+        ],
+        [
+          "HP per successful increment",
+          "+10"
+        ],
+        [
+          "Other stat per successful increment",
+          "+1"
+        ],
+        [
+          "Hard level cap",
+          "200"
+        ]
+      ]
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "The calculation is performed independently for each of the six stats using the current form's base stat for that stat. The rounded integer percentage is canonical for that form while its underlying base-stat spread remains unchanged."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "3. Per-level growth resolution"
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "1. On each level gained, resolve exactly six stat growth checks: HP, Attack, Defense, Sp. Atk, Sp. Def and Speed."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "2. If a stat's growth percentage is 100% or below, one deterministic roll decides whether that stat receives its one increment."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "3. If a stat's growth percentage is above 100%, its first increment is guaranteed. The amount above 100 is the deterministic chance of one second increment."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "4. For HP, one increment is +10 HP and a double exceptional result is +20 HP for that level."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "5. For each other stat, one increment is +1 and a double exceptional result is +2 for that level."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "6. Failed growth checks add nothing. A level with zero successful stat increments is legal. A level where all six stats grow is also legal."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "7. There is no pity system, streak protection, minimum-per-level guarantee or bad-luck correction."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "4. Deterministic Growth Seed contract"
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "• Every individual Abyssal is created with one immutable Growth Seed associated with that permanent instance."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "• The seed survives party/reserve transfers, evolution, permanent-death recording and exact-instance resurrection."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "• A reload may reproduce already-determined outcomes but may never choose a new seed or new growth result for the same historical level/stat check."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "• Changing battle action order, menu order, animation timing or unrelated RNG use must not alter the individual's growth history."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "• Implementation may use a versioned deterministic PRNG stream or stable keyed derivation by instance/level/stat, provided the complete history remains reproducible and save migration preserves shipped outcomes."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "• The exact low-level PRNG algorithm is an engineering choice owned by implementation/persistence work; the no-reroll semantics are not optional."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "5. Sequential multi-level gains"
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "When an Abyssal gains enough XP for more than one level at once, levels resolve sequentially. Each level performs its own six deterministic growth checks before the next level begins. Any evolution that legally occurs between those levels changes the growth percentages used by subsequent levels. Later battle-order specifications control when the sequence is entered; they may not collapse several levels into one averaged growth event."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "6. Evolution integration"
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "• Evolution applies a single deterministic promotion transaction using the signed difference between the target form's six base stats and the source form's six base stats."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "• Negative target-minus-source deltas are legal where the validated evolution data requires them; do not clamp them to zero."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "• The promotion delta is not a growth roll and consumes no growth RNG."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "• Immediately after the evolution transaction, future levels use the target form's formula-derived growth percentages."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "• Growth already earned before evolution is retained exactly. Delaying an available evolution therefore permanently forgoes the target form's higher expected future growth where the validated data shows that advantage."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "7. Higher-level generated Abyssals"
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Any Abyssal instantiated above its canonical starting level must possess a legitimate deterministic prior history. Implementation must simulate each previous level's six growth checks from that individual's immutable Growth Seed, including any canonical form/evolution timing required for that generated individual. It may cache the result, but it may not approximate the history by multiplying expected growth."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "8. Interaction with other locked systems"
+    },
+    {
+      "body_index": 46,
+      "kind": "table",
+      "rows": [
+        [
+          "System",
+          "Boundary"
+        ],
+        [
+          "Checklist 06",
+          "May define temporary stat-growth training effects and their duration. Those effects layer onto future level growth without replacing Checklist 01's identity, seed or permanent historical outcomes."
+        ],
+        [
+          "Checklist 07",
+          "Must preserve exact rolled stats and the immutable Growth Seed through death/resurrection."
+        ],
+        [
+          "Checklist 11",
+          "Owns evolution timing/methods and uses Checklist 01's fixed promotion delta and immediate evolved-growth switch."
+        ],
+        [
+          "Checklist 13",
+          "Owns post-battle progression ordering and sequential level processing."
+        ],
+        [
+          "Checklist 15",
+          "Owns persistence, atomic commits, schema migration and anti-rollback storage of growth state."
+        ]
+      ]
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "9. Mandatory validation cases"
+    },
+    {
+      "body_index": 48,
+      "kind": "table",
+      "rows": [
+        [
+          "ID",
+          "Required result"
+        ],
+        [
+          "B01-01",
+          "Same instance + same level history always reproduces identical six-stat growth results."
+        ],
+        [
+          "B01-02",
+          "Reload before/after a level-up cannot change the result."
+        ],
+        [
+          "B01-03",
+          "Changing battle/action order cannot change the instance's historical growth result."
+        ],
+        [
+          "B01-04",
+          "A normal ≤100% success gives +10 HP or +1 non-HP stat; failure gives zero."
+        ],
+        [
+          "B01-05",
+          "Exceptional >100% growth guarantees the first increment and resolves only the excess percentage for the second."
+        ],
+        [
+          "B01-06",
+          "Zero-success and six-success ordinary level-ups are both accepted as legal."
+        ],
+        [
+          "B01-07",
+          "Sequential multi-level gains resolve one level at a time."
+        ],
+        [
+          "B01-08",
+          "Evolution applies the exact signed target-minus-source stat delta once and never consumes a growth roll."
+        ],
+        [
+          "B01-09",
+          "The first level after evolution uses the target form's growth percentages."
+        ],
+        [
+          "B01-10",
+          "A generated higher-level Abyssal reproduces the same stats when its prior levels are resimulated from the stored seed."
+        ],
+        [
+          "B01-11",
+          "Death/resurrection preserves exact stats and Growth Seed without reroll."
+        ],
+        [
+          "B01-12",
+          "No stat can fall below the locked 10% formula minimum."
+        ]
+      ]
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "10. Completion matrix"
+    },
+    {
+      "body_index": 50,
+      "kind": "table",
+      "rows": [
+        [
+          "Status",
+          "Locked result"
+        ],
+        [
+          "COMPLETE",
+          "Exact formula fixed."
+        ],
+        [
+          "COMPLETE",
+          "Six independent per-level stat checks fixed."
+        ],
+        [
+          "COMPLETE",
+          "HP +10 and ordinary-stat +1 increments fixed."
+        ],
+        [
+          "COMPLETE",
+          "Exceptional >100% second-increment rule fixed."
+        ],
+        [
+          "COMPLETE",
+          "Immutable deterministic Growth Seed fixed."
+        ],
+        [
+          "COMPLETE",
+          "Reload/action-order anti-reroll rule fixed."
+        ],
+        [
+          "COMPLETE",
+          "Sequential multi-level resolution fixed."
+        ],
+        [
+          "COMPLETE",
+          "Evolution signed promotion delta and immediate target-growth switch fixed."
+        ],
+        [
+          "COMPLETE",
+          "Higher-level historical simulation fixed."
+        ],
+        [
+          "COMPLETE",
+          "Hard level cap 200 fixed."
+        ]
+      ]
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "11. Source authority used for this lock"
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "• Pokemon_Pre_Programming_Planning_Checklists_Reference.docx — Checklist 01 scope and completion criteria."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "• Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx — exact 187-species base stats, BST and type authority."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "• Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx — locked formula, all six generated growth percentages, exceptional-growth semantics, hard Level 200 cap and validated evolution-growth integration."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "• Later locked Checklists 06, 07, 11, 13 and 15 — consistent dependency references to Checklist 01 deterministic growth/seed/history authority."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "FINAL STATUSCHECKLIST 01 — EXACT STAT GROWTH ALGORITHM: COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Later implementation may choose a versioned deterministic RNG representation, caching strategy, serialization layout or UI animation, but may not silently change the formula, minimum growth, increment sizes, exceptional-growth rule, immutable-seed/no-reroll contract, signed evolution promotion transaction, immediate evolved-growth switch or historical simulation requirement."
+    }
+  ]
+}

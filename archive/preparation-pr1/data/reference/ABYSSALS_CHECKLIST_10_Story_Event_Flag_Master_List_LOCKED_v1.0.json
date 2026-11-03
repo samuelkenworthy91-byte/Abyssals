@@ -1,0 +1,1766 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+  "source_sha256": "36e27692bbb85bb576792a0a51b263779a9af438725070ccfcd4e86cf4f8ad4c",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 10Story Event & Flag Master List"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "STATUS — COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS\nThis document closes CHECKLIST 10 at implementation-design level. It converts the locked narrative baseline and the decisions from Checklists 01–09 into a single authoritative game-state model: stable event IDs, enums, counters, sets, dependencies, historical records and postgame restoration state. Later implementation may alter serialization syntax, tooling or presentation, but may not silently change the state meanings or story consequences fixed here."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "The save stores the smallest authoritative facts and derives convenience conditions from them. Chapters, towns, leaders, Hell circles, NPC arcs and quests use compact state machines instead of contradictory boolean piles. Existing Story Bible scene IDs remain canonical. Historical facts are never overwritten by later restoration: an executed leader remains historically EXECUTED even if revived. Human restoration is separate from Abyssal memorial resurrection and provides exactly five elective uses; Pate and Trade are optional targets, so declining either or both frees uses for leaders Aimon executed. Human memorial entries remain after revival because they record historical death and remembrance."
+    },
+    {
+      "body_index": 8,
+      "kind": "table",
+      "rows": [
+        [
+          "CANON SUPERSESSION — HUMAN RESTORATION\nThe latest approved Checklist 10 decision supersedes the earlier wording in CHECKLIST 09 v1.0 that automatically allocated two of the five human restorations to Pate and Trade. The authoritative rule is now: five total elective human restorations. Pate and Trade each consume one only if the player chooses to restore them. Unused capacity may instead restore eligible executed mortal leaders."
+        ]
+      ]
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "• The Pre-Programming Planning Checklists Reference defines Checklist 10 as the workstream that converts narrative canon into implementation-ready game state."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "• The locked Story Bible remains authority for chapter order, authored scene content, existing CHxx-Eyy / CHxx-Oyy IDs, character arcs and narrative causality, except where a later explicit user decision supersedes it."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "• Checklist 09 remains authority for SPARE / EXECUTE presentation and human-fate consequences. Checklist 10 owns the final state schema, identifiers and restoration wiring."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "• Checklist 07 remains authority for the Abyssal memorial and ten-distinct-species resurrection transaction. Human restoration is not part of that system."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "• Checklist 11 owns final species-specific evolution validation; Checklist 10 only defines how story-evolution triggers are stored."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "• Checklist 14 owns starter three-life state; Checklist 15 owns Ironman persistence and autosave timing; Checklist 17 owns exact overworld object movement and interaction."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "2. Governing implementation principle"
+    },
+    {
+      "body_index": 18,
+      "kind": "table",
+      "rows": [
+        [
+          "AUTHORITATIVE-STATE RULE\nStore the smallest authoritative fact once, then derive every convenience flag from it. Do not save multiple booleans that can contradict one another. Historical choices must remain queryable even when later events change a character’s current condition."
+        ]
+      ]
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "• No visible morality meter. Dialogue may derive counts or patterns from individual leader fates, but the game never stores or displays a single morality score."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "• Player-facing names are not save keys. Stable IDs survive localisation, renaming and presentation changes."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "• Irreversible story choices and their directly dependent world-state mutations are one logical transaction. Checklist 15 will define the exact disk-write order."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "• Append-only history is used where later dialogue must know what happened, not merely what is true now."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "3. Naming and identifier conventions"
+    },
+    {
+      "body_index": 25,
+      "kind": "table",
+      "rows": [
+        [
+          "Domain",
+          "Canonical form",
+          "Example / rule"
+        ],
+        [
+          "Saved fields",
+          "lower_snake_case",
+          "current_story_chapter, memorial_state"
+        ],
+        [
+          "Stable character / leader IDs",
+          "UPPER-Kebab / existing registry IDs",
+          "LDR-01 … LDR-08; character IDs remain stable"
+        ],
+        [
+          "Story Bible scenes",
+          "CHxx-Eyy / CHxx-Oyy",
+          "Preserved exactly; E = mandatory, O = optional"
+        ],
+        [
+          "System events",
+          "SYS-<DOMAIN>-nnn",
+          "SYS-MEM-001, SYS-HRS-001"
+        ],
+        [
+          "Quest events",
+          "QST-<SLUG>-nnn",
+          "Stable slug + sequence; never reused"
+        ],
+        [
+          "World one-offs",
+          "WLD-<MAP>-nnn",
+          "One-time authored interactions"
+        ],
+        [
+          "Treasure / pickup IDs",
+          "TRS-<MAP>-nnn",
+          "Persistent claimed-object identity"
+        ],
+        [
+          "Door / shortcut IDs",
+          "DOR-… / SCT-…",
+          "Persistent map-state registries"
+        ],
+        [
+          "Story evolution triggers",
+          "EVO-<STABLE-ID>",
+          "Stored as earned historical triggers; species binding belongs to Checklist 11"
+        ]
+      ]
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "• IDs are immutable after shipping. Deleted content leaves the identifier retired rather than reusing it for a different event."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "• Display labels, chapter names and NPC names may change without changing stored IDs."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "• Implementation may serialize enums numerically, but code and data definitions must expose named constants."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "4. Core state schema"
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "4.1 Chapter progression"
+    },
+    {
+      "body_index": 32,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Type / values",
+          "Locked rule"
+        ],
+        [
+          "chapter_state[00..23]",
+          "LOCKED / AVAILABLE / STARTED / COMPLETE",
+          "One authoritative state per chapter."
+        ],
+        [
+          "current_story_chapter",
+          "0–23",
+          "Navigation/debugging pointer; not a substitute for chapter_state."
+        ],
+        [
+          "chapter_started(ch)",
+          "Derived query",
+          "True when STARTED or COMPLETE; never saved separately."
+        ],
+        [
+          "chapter_complete(ch)",
+          "Derived query",
+          "True only when COMPLETE; never saved separately."
+        ]
+      ]
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "• Chapter completion is set by the authored chapter endpoint, not merely by defeating a boss."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "• Normal critical-path availability requires the preceding required chapter endpoint unless an authored exception exists."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "4.2 Town progression"
+    },
+    {
+      "body_index": 37,
+      "kind": "table",
+      "rows": [
+        [
+          "State",
+          "Meaning"
+        ],
+        [
+          "UNREACHED",
+          "The tracked settlement has not yet entered the player’s critical-path state."
+        ],
+        [
+          "CONTESTED",
+          "The relevant chapter / conflict is active."
+        ],
+        [
+          "CONQUERED",
+          "The leader conflict and fate resolution are complete; occupation aftermath is active."
+        ],
+        [
+          "RESTORING",
+          "Later recovery content has begun but the final restoration state is not yet active."
+        ],
+        [
+          "RESTORED",
+          "Postwar / epilogue restoration version is active."
+        ]
+      ]
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "• town_conquered[town] and town_restored[town] are derived conditions, not duplicate booleans."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "• Leader fate is not embedded into town_state. Maps, NPCs and dialogue read both town_state and leader_fate."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "4.3 Mortal leader fate and current life"
+    },
+    {
+      "body_index": 42,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Values",
+          "Purpose"
+        ],
+        [
+          "leader_fate[LDR-01..08]",
+          "UNRESOLVED / SPARED / EXECUTED",
+          "Immutable historical decision after commit."
+        ],
+        [
+          "human_life_state[id]",
+          "ALIVE / DEAD / REVIVED",
+          "Current physical condition for restoration-eligible humans."
+        ],
+        [
+          "hell_leader_encounters",
+          "Set / bitset of LDR IDs",
+          "Executed leaders actually encountered below."
+        ],
+        [
+          "leader_spared_count",
+          "Derived",
+          "Count of leader_fate == SPARED; dialogue use only."
+        ],
+        [
+          "leader_executed_count",
+          "Derived",
+          "Count of leader_fate == EXECUTED; dialogue use only."
+        ]
+      ]
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "• Reviving an executed leader changes human_life_state from DEAD to REVIVED. leader_fate remains EXECUTED forever."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "• SPARED leaders remain ALIVE unless a later explicit authored event says otherwise; restoration never returns a leader automatically to office."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "4.4 Starter ownership and rival assignment"
+    },
+    {
+      "body_index": 47,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Type",
+          "Commit rule"
+        ],
+        [
+          "player_starter_species_id",
+          "Species/Dex ID",
+          "Written once at CH01-E05."
+        ],
+        [
+          "pate_starter_species_id",
+          "Species/Dex ID",
+          "Written atomically with player choice."
+        ],
+        [
+          "trade_starter_species_id",
+          "Species/Dex ID",
+          "Written atomically with player choice."
+        ]
+      ]
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "• The three starter assignment fields are the authority. No parallel starter-choice booleans are stored."
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "• Pate and Trade always receive the two starters not selected by the player, using the locked personality-preferred mapping where applicable."
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "4.5 Pate and Trade progression"
+    },
+    {
+      "body_index": 52,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Values"
+        ],
+        [
+          "pate_progress_state",
+          "ABSENT / TRACKED / CONFIRMED_DEAD / FOUND_BELOW / RESTORATION_AVAILABLE / RESOLVED"
+        ],
+        [
+          "trade_progress_state",
+          "ABSENT / TRACKED / CONFIRMED_DEAD / FOUND_BELOW / RESTORATION_AVAILABLE / RESOLVED"
+        ],
+        [
+          "pate_clues_found",
+          "Integer counter with Story Bible-defined maximum / provenance"
+        ],
+        [
+          "trade_clues_found",
+          "Integer counter with Story Bible-defined maximum / provenance"
+        ],
+        [
+          "trade_notebook_pages",
+          "Set/bitset of discovered page IDs"
+        ]
+      ]
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "• Pate and Trade are tracked separately because the player may restore one, both or neither."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "• RESOLVED does not imply REVIVED. Final physical outcome is read from human_life_state[PATE] / [TRADE]."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "• The earlier combined pate_trade_recovered boolean is deprecated."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "4.6 Important NPC arc state"
+    },
+    {
+      "body_index": 58,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Named ordered values (0→5 semantic mapping)"
+        ],
+        [
+          "aeric_state",
+          "CERTAINTY → DISCOMFORT → QUESTIONING → DOUBT → FAITH_WITHOUT_CLAIMED_CERTAINTY → RESOLVED_SERVICE"
+        ],
+        [
+          "rhoswen_state",
+          "HARDLINE_CERTAINTY → CHALLENGED → FRACTURE → SELF_QUESTIONING → INDEPENDENT_CHOICE → CHOSEN_DUTY"
+        ],
+        [
+          "kurg_state",
+          "INSTITUTIONAL_CERTAINTY → DISCOMFORT → RESPONSIBILITY → CRISIS → POSTWAR_DOUBT → UNCERTAINTY"
+        ],
+        [
+          "refugee_chain_state",
+          "Named ordered states defined by the recurring civilian chain data"
+        ],
+        [
+          "severin_state",
+          "UNMET → SIGHTED → GUIDE → PARTIAL_REVEAL → FULL_REVEAL → MISSING → KING_REVEALED → SUPERBOSS_DEFEATED"
+        ]
+      ]
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "• Numeric serialization is allowed, but story scripts must use named enum constants rather than unexplained integers."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "• severin_sightings remains a counter because optional pre-reveal cameos are individually meaningful."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "4.7 Hell progression"
+    },
+    {
+      "body_index": 63,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Values / scope",
+          "Rule"
+        ],
+        [
+          "hell_circle_state[01..09]",
+          "LOCKED / ENTERED / CLIMAX_DEFEATED / COMPLETE",
+          "Nine circles tracked independently."
+        ],
+        [
+          "warden_defeated[01..08]",
+          "Boolean/bitset by Warden ID",
+          "Eight Warden defeat facts only; Circle IX uses its own climax."
+        ],
+        [
+          "hell_circle_complete(circle)",
+          "Derived query",
+          "True only when the circle state is COMPLETE."
+        ],
+        [
+          "hell_leader_encounters",
+          "Set of LDR IDs",
+          "Conditional gauntlet history for executed leaders."
+        ]
+      ]
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "• Old convenience flags such as grief_clear, betrayal_clear or silence_clear are derived from the matching circle state and are not authoritative saved booleans."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "4.8 Memorial, Abyssal resurrection and Mirra-readable history"
+    },
+    {
+      "body_index": 67,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Values / type",
+          "Locked use"
+        ],
+        [
+          "memorial_state",
+          "ABSENT / PENDING_ESTABLISHMENT / ESTABLISHED",
+          "First permanent Abyssal death sets PENDING; next Civeton revisit establishes it."
+        ],
+        [
+          "resurrection_tutorial_state",
+          "NOT_AVAILABLE / AVAILABLE / SEEN",
+          "Becomes AVAILABLE with the established memorial; first interaction can show it."
+        ],
+        [
+          "total_permanent_deaths",
+          "Counter",
+          "Append-only death history."
+        ],
+        [
+          "current_memorial_count",
+          "Derived / maintained count",
+          "Currently dead, unresolved Abyssals on visible Abyssal memorial."
+        ],
+        [
+          "total_resurrections",
+          "Counter",
+          "Successful Abyssal memorial restorations."
+        ],
+        [
+          "total_sacrifices",
+          "Counter",
+          "Abyssals permanently sacrificed through resurrection transactions."
+        ],
+        [
+          "memorial_reflection_count",
+          "Counter",
+          "Renamed Story Bible optional memorial/reflection interaction count."
+        ]
+      ]
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "• Mirra reads the real death/resurrection/sacrifice history. There is no hidden grief or morality score."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "• The old Story Bible name monster_memorial_count is deprecated because it could be confused with the actual current memorial population."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "4.9 Optional quests and one-time world state"
+    },
+    {
+      "body_index": 72,
+      "kind": "table",
+      "rows": [
+        [
+          "Registry / field",
+          "Type",
+          "Rule"
+        ],
+        [
+          "quest_state[quest_id]",
+          "LOCKED / AVAILABLE / ACTIVE / COMPLETE / FAILED",
+          "FAILED exists only for quests explicitly authored to permit permanent failure."
+        ],
+        [
+          "story_evolution_triggers",
+          "Set of EVO IDs",
+          "Historical triggers, permanently earned once the relevant story event occurs."
+        ],
+        [
+          "unique_pickups_claimed",
+          "Set of TRS IDs",
+          "Tracks one-time acquisition independently of current inventory ownership."
+        ],
+        [
+          "completed_one_time_encounters",
+          "Set of WLD/ENC IDs",
+          "Prevents replay of authored one-offs."
+        ],
+        [
+          "opened_persistent_doors",
+          "Set of DOR IDs",
+          "Persistent open/unlocked state."
+        ],
+        [
+          "unlocked_shortcuts",
+          "Set of SCT IDs",
+          "Persistent traversal unlocks."
+        ],
+        [
+          "mill_foreshadow_seen",
+          "Set/bitset",
+          "Tracks which authored early mill references were seen."
+        ],
+        [
+          "religious_parallels_found",
+          "Counter + provenance where required",
+          "Tracks matched religious echoes without exposing a score."
+        ]
+      ]
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "• Story-evolution triggers are historical. Capturing the relevant Abyssal after the triggering scene does not erase the fact that the save satisfied that story condition; Checklist 11 defines species-specific behaviour."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "• Unique item acquisition and current inventory are separate concepts. Spending or losing an item does not cause its world pickup to respawn."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "5. Five-use human restoration system"
+    },
+    {
+      "body_index": 77,
+      "kind": "table",
+      "rows": [
+        [
+          "LOCKED HUMAN RESTORATION RULE\nHuman restoration is a separate authored postgame/finale system with exactly five total elective uses. It shares no cost, UI, sacrifice rule or transaction with the Abyssal memorial."
+        ]
+      ]
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 79,
+      "kind": "table",
+      "rows": [
+        [
+          "Target",
+          "Eligibility",
+          "Cost from pool",
+          "After restoration"
+        ],
+        [
+          "Pate",
+          "Historical mill death; restoration system unlocked",
+          "1",
+          "human_life_state = REVIVED; memorial entry remains"
+        ],
+        [
+          "Trade",
+          "Historical mill death; restoration system unlocked",
+          "1",
+          "human_life_state = REVIVED; memorial entry remains"
+        ],
+        [
+          "Any mortal leader",
+          "leader_fate == EXECUTED and current life state == DEAD",
+          "1 each",
+          "leader_fate stays EXECUTED; human_life_state = REVIVED; no automatic return to office"
+        ]
+      ]
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 81,
+      "kind": "table",
+      "rows": [
+        [
+          "Player choice",
+          "Maximum executed leaders restorable"
+        ],
+        [
+          "Restore Pate and Trade",
+          "3"
+        ],
+        [
+          "Restore exactly one of Pate / Trade",
+          "4"
+        ],
+        [
+          "Restore neither",
+          "5"
+        ]
+      ]
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 83,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Type / rule"
+        ],
+        [
+          "human_restoration_budget_total",
+          "Constant = 5"
+        ],
+        [
+          "human_restored_ids",
+          "Set of eligible human IDs; maximum size 5"
+        ],
+        [
+          "human_restoration_uses_spent",
+          "Derived = size(human_restored_ids)"
+        ],
+        [
+          "human_restoration_uses_remaining",
+          "Derived = 5 − size(human_restored_ids)"
+        ],
+        [
+          "human_memorial_entries",
+          "Historical authored entry set; restoration does not remove an entry"
+        ]
+      ]
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "• Restoration choices are individual. The player is not forced to spend all five uses in a single menu or to restore Pate and Trade."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "• A revived human may leave, retire, wander, serve another role or otherwise live a different life. Revival never silently reinstates former political authority."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "• Human memorial entries represent historical death and commemoration, not a list of only those currently dead. They therefore persist after revival."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "• The Abyssal memorial remains different: restored Abyssals are removed from the visible Abyssal memorial because that section lists currently dead Abyssals."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "6. Derived conditions and deprecated predecessor flags"
+    },
+    {
+      "body_index": 90,
+      "kind": "table",
+      "rows": [
+        [
+          "Predecessor / convenience name",
+          "Authoritative replacement"
+        ],
+        [
+          "prologue_complete",
+          "chapter_state[00] == COMPLETE"
+        ],
+        [
+          "chapter_started_X",
+          "chapter_state[X] in {STARTED, COMPLETE}"
+        ],
+        [
+          "chapter_complete_X",
+          "chapter_state[X] == COMPLETE"
+        ],
+        [
+          "town_conquered_X",
+          "town_state[X] in {CONQUERED, RESTORING, RESTORED}"
+        ],
+        [
+          "town_restored_X",
+          "town_state[X] == RESTORED"
+        ],
+        [
+          "leader_01_spared … leader_08_spared",
+          "leader_fate[LDR-01..08]"
+        ],
+        [
+          "pate_trade_recovered",
+          "Separate Pate/Trade progress + human_life_state"
+        ],
+        [
+          "aeric_arc_state / rhoswen_arc_state / kurg_doubt_state numbers",
+          "Named enum states with stable serialized ordinal"
+        ],
+        [
+          "monster_memorial_count",
+          "memorial_reflection_count"
+        ],
+        [
+          "severin_king_revealed",
+          "severin_state in {KING_REVEALED, SUPERBOSS_DEFEATED}"
+        ],
+        [
+          "grief_clear / betrayal_clear / silence_clear etc.",
+          "Matching hell_circle_state == COMPLETE"
+        ],
+        [
+          "has_resurrected / has_sacrificed",
+          "Derived from total_resurrections > 0 / total_sacrifices > 0"
+        ]
+      ]
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "• Deprecated names may exist temporarily in migration/debug adapters but must not be written as competing save-state authorities."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "7. Event-ID master convention and Story Bible mapping"
+    },
+    {
+      "body_index": 94,
+      "kind": "table",
+      "rows": [
+        [
+          "NO REMAPPING OF LOCKED STORY SCENES\nEvery locked Story Bible scene keeps its existing identifier exactly as authored. CH00-E01 remains CH00-E01, CH01-E05 remains CH01-E05, and so on. The Story Bible itself is the canonical scene catalogue; Checklist 10 defines how those scene events mutate and query state."
+        ]
+      ]
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 96,
+      "kind": "table",
+      "rows": [
+        [
+          "Pattern",
+          "Meaning",
+          "One-time default"
+        ],
+        [
+          "CHxx-Eyy",
+          "Mandatory authored Story Bible event",
+          "Yes unless explicitly repeatable"
+        ],
+        [
+          "CHxx-Oyy",
+          "Optional authored Story Bible event",
+          "Yes unless explicitly repeatable"
+        ],
+        [
+          "SYS-MEM-nnn",
+          "Memorial lifecycle / tutorial event",
+          "Yes"
+        ],
+        [
+          "SYS-RES-nnn",
+          "Abyssal resurrection system-level story binding",
+          "Transaction/event history"
+        ],
+        [
+          "SYS-HRS-nnn",
+          "Human restoration unlock / use event",
+          "Unlock once; uses individually logged"
+        ],
+        [
+          "QST-<slug>-nnn",
+          "Optional quest step",
+          "Per quest design"
+        ],
+        [
+          "WLD-<map>-nnn",
+          "One-time world narrative interaction",
+          "Yes"
+        ],
+        [
+          "TRS-<map>-nnn",
+          "Unique treasure acquisition",
+          "Yes"
+        ],
+        [
+          "DOR-<map>-nnn",
+          "Persistent door state",
+          "Yes"
+        ],
+        [
+          "SCT-<map>-nnn",
+          "Persistent shortcut unlock",
+          "Yes"
+        ]
+      ]
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "8. Chapter registry"
+    },
+    {
+      "body_index": 99,
+      "kind": "table",
+      "rows": [
+        [
+          "Chapter",
+          "Title",
+          "Story event namespace",
+          "Completion authority"
+        ],
+        [
+          "00",
+          "Three CrusadersAct I — Brothers",
+          "CH00-Eyy / CH00-Oyy",
+          "Authored final required event in CH00"
+        ],
+        [
+          "01",
+          "Left BehindAct I — Brothers",
+          "CH01-Eyy / CH01-Oyy",
+          "Authored final required event in CH01"
+        ],
+        [
+          "02",
+          "DorelemAct II — The Crusade",
+          "CH02-Eyy / CH02-Oyy",
+          "Authored final required event in CH02"
+        ],
+        [
+          "03",
+          "PhilomereAct II — The Crusade",
+          "CH03-Eyy / CH03-Oyy",
+          "Authored final required event in CH03"
+        ],
+        [
+          "04",
+          "CybressaAct II — The Crusade",
+          "CH04-Eyy / CH04-Oyy",
+          "Authored final required event in CH04"
+        ],
+        [
+          "05",
+          "CossenneAct II — The Crusade",
+          "CH05-Eyy / CH05-Oyy",
+          "Authored final required event in CH05"
+        ],
+        [
+          "06",
+          "MarasenAct II — The Crusade",
+          "CH06-Eyy / CH06-Oyy",
+          "Authored final required event in CH06"
+        ],
+        [
+          "07",
+          "BotruneAct II — The Crusade",
+          "CH07-Eyy / CH07-Oyy",
+          "Authored final required event in CH07"
+        ],
+        [
+          "08",
+          "CayfenAct II — The Crusade",
+          "CH08-Eyy / CH08-Oyy",
+          "Authored final required event in CH08"
+        ],
+        [
+          "09",
+          "Ramelle / The Holy LandAct II — The Crusade",
+          "CH09-Eyy / CH09-Oyy",
+          "Authored final required event in CH09"
+        ],
+        [
+          "10",
+          "The Dead Stay DeadAct III — Refusal",
+          "CH10-Eyy / CH10-Oyy",
+          "Authored final required event in CH10"
+        ],
+        [
+          "11",
+          "Circle I: The ThresholdAct IV — Descent",
+          "CH11-Eyy / CH11-Oyy",
+          "Authored final required event in CH11"
+        ],
+        [
+          "12",
+          "Circle II: WantAct IV — Descent",
+          "CH12-Eyy / CH12-Oyy",
+          "Authored final required event in CH12"
+        ],
+        [
+          "13",
+          "Circle III: WrathAct IV — Descent",
+          "CH13-Eyy / CH13-Oyy",
+          "Authored final required event in CH13"
+        ],
+        [
+          "14",
+          "Circle IV: DominionAct IV — Descent",
+          "CH14-Eyy / CH14-Oyy",
+          "Authored final required event in CH14"
+        ],
+        [
+          "15",
+          "Circle V: DogmaAct IV — Descent",
+          "CH15-Eyy / CH15-Oyy",
+          "Authored final required event in CH15"
+        ],
+        [
+          "16",
+          "Circle VI: GriefAct IV — Descent",
+          "CH16-Eyy / CH16-Oyy",
+          "Authored final required event in CH16"
+        ],
+        [
+          "17",
+          "Circle VII: BetrayalAct IV — Descent",
+          "CH17-Eyy / CH17-Oyy",
+          "Authored final required event in CH17"
+        ],
+        [
+          "18",
+          "Circle VIII: SilenceAct IV — Descent",
+          "CH18-Eyy / CH18-Oyy",
+          "Authored final required event in CH18"
+        ],
+        [
+          "19",
+          "Circle IX: The ThroneAct IV — Descent",
+          "CH19-Eyy / CH19-Oyy",
+          "Authored final required event in CH19"
+        ],
+        [
+          "20",
+          "Illyr and NharosAct V — No Gods, No Masters",
+          "CH20-Eyy / CH20-Oyy",
+          "Authored final required event in CH20"
+        ],
+        [
+          "21",
+          "Bring Them HomeAct V — No Gods, No Masters",
+          "CH21-Eyy / CH21-Oyy",
+          "Authored final required event in CH21"
+        ],
+        [
+          "22",
+          "The World AfterAct V — No Gods, No Masters",
+          "CH22-Eyy / CH22-Oyy",
+          "Authored final required event in CH22"
+        ],
+        [
+          "23",
+          "King BelowPostgame — The Poet King",
+          "CH23-Eyy / CH23-Oyy",
+          "Authored final required event in CH23"
+        ]
+      ]
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "• Chapter 23 remains postgame and is not treated as a normal required chapter for reaching the main epilogue."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "• The Story Bible event list under each chapter is imported unchanged; Checklist 10 does not duplicate scene prose."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "9. Master event / flag transaction table"
+    },
+    {
+      "body_index": 104,
+      "kind": "table",
+      "rows": [
+        [
+          "Event / class",
+          "Prerequisite / trigger",
+          "Authoritative writes",
+          "Important reads / consequence"
+        ],
+        [
+          "CH00-E03 — prologue endpoint",
+          "CH00-E01/E02 resolved",
+          "chapter_state[00]=COMPLETE; chapter_state[01]=AVAILABLE",
+          "Unlock adult-era opening"
+        ],
+        [
+          "CH01-E05 — starter choice",
+          "CH01 enlistment sequence active",
+          "player/pate/trade starter species IDs atomically",
+          "Rival teams; later starter dialogue"
+        ],
+        [
+          "Each mortal leader fate commit",
+          "Leader battle/surrender resolved; fate still UNRESOLVED",
+          "leader_fate[LDR]=SPARED or EXECUTED; human_life_state; town_state→CONQUERED",
+          "Town dialogue; Kurg/Aeric/Rhoswen reactions; Hell eligibility"
+        ],
+        [
+          "First permanent Abyssal death",
+          "Checklist 07 death transaction",
+          "memorial_state: ABSENT→PENDING_ESTABLISHMENT; death history increments",
+          "Next Civeton arrival can establish memorial"
+        ],
+        [
+          "SYS-MEM-001 — establish memorial",
+          "memorial_state=PENDING + arrival in Civeton",
+          "memorial_state=ESTABLISHED; resurrection_tutorial_state=AVAILABLE",
+          "Memorial world object/UI becomes active"
+        ],
+        [
+          "SYS-MEM-002 — first memorial interaction",
+          "memorial established; tutorial not seen",
+          "resurrection_tutorial_state=SEEN",
+          "Explain ten-distinct-species system; no forced resurrection"
+        ],
+        [
+          "Story-evolution scene",
+          "Relevant CH/QST event resolves",
+          "Add EVO trigger ID to story_evolution_triggers",
+          "Checklist 11 species evolution eligibility"
+        ],
+        [
+          "Unique pickup",
+          "Interact with unclaimed TRS object",
+          "Add TRS ID to unique_pickups_claimed; inventory transaction separately",
+          "Object disappears permanently; item may later be spent"
+        ],
+        [
+          "Warden victory 01–08",
+          "Matching Warden battle resolves",
+          "warden_defeated[id]=true; advance matching hell_circle_state",
+          "Circle progression; later dialogue"
+        ],
+        [
+          "Circle IX climax",
+          "Authored throne climax resolves",
+          "hell_circle_state[09] advances to COMPLETE",
+          "Act V availability"
+        ],
+        [
+          "Executed-leader Hell encounter",
+          "leader_fate=EXECUTED; correct Hell placement",
+          "Add LDR ID to hell_leader_encounters",
+          "Prevents duplicate one-time gauntlet event; dialogue history"
+        ],
+        [
+          "Mirra / Grief dialogue",
+          "Chapter 16 authored trigger",
+          "No new morality state required",
+          "Reads total deaths, current memorial, resurrections, sacrifices, memorial reflections"
+        ],
+        [
+          "Pate or Trade confirmed dead",
+          "Authored mill/death reveal",
+          "progress state→CONFIRMED_DEAD; human_life_state=DEAD; human memorial entry unlock",
+          "Later Hell search and restoration eligibility"
+        ],
+        [
+          "Pate / Trade found below",
+          "Matching authored encounter",
+          "individual progress state→FOUND_BELOW",
+          "Restoration sequence availability later"
+        ],
+        [
+          "SYS-HRS-001 — human restoration unlock",
+          "Authored finale/postgame unlock",
+          "Restoration system available; budget constant 5",
+          "Pate/Trade + executed leaders become selectable if eligible"
+        ],
+        [
+          "SYS-HRS-use — restore human",
+          "Eligible target; uses_remaining>0",
+          "Add human ID to human_restored_ids; human_life_state=REVIVED; progress→RESOLVED where applicable",
+          "Memorial entry remains; leader fate stays EXECUTED; no office restoration"
+        ],
+        [
+          "CH22 epilogue endpoint",
+          "Required World After events complete",
+          "chapter_state[22]=COMPLETE; postgame_state=UNLOCKED; chapter_state[23]=AVAILABLE",
+          "King Below / postgame systems"
+        ],
+        [
+          "Severin king reveal",
+          "CH23 authored reveal",
+          "severin_state=KING_REVEALED",
+          "Secret superboss availability"
+        ],
+        [
+          "Severin superboss victory",
+          "King reveal + battle victory",
+          "severin_state=SUPERBOSS_DEFEATED",
+          "Postgame completion record"
+        ]
+      ]
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "10. Dependency and impossibility rules"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "• A leader fate cannot be SPARED or EXECUTED before that leader’s authored defeat/surrender resolution point."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "• A tracked conquest town cannot enter CONQUERED merely because the leader’s final Abyssal is defeated; the human fate scene must resolve first."
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "• Leader_fate can never return to UNRESOLVED after commit."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "• human_life_state=REVIVED never changes leader_fate from EXECUTED to SPARED."
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "• An executed leader is eligible for human restoration only while current life state is DEAD and the restoration system is unlocked."
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "• The human restoration pool can never exceed five successful unique human restorations; the same person cannot consume a second use."
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "• Pate and Trade are not mandatory restoration targets. Main/postgame state must support both dead, either revived, or both revived."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "• Human memorial entries, once authored by historical death, persist after revival."
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "• Abyssal memorial establishment requires a recorded permanent Abyssal death plus a later Civeton arrival."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "• Abyssal resurrection cannot occur through human restoration state, and human restoration cannot invoke the ten-Abyssal sacrifice economy."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "• A Warden defeat cannot be recorded unless its battle resolves; a Hell circle cannot be COMPLETE before its required climax."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "• Story-evolution triggers, claimed treasures, opened persistent doors and unlocked shortcuts never revert under ordinary play."
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "• A one-time object ID cannot be claimed/completed twice."
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "• Chapter N+1 normally cannot become AVAILABLE before the required endpoint of Chapter N, except explicit authored branches/postgame routing."
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "• Impossible state combinations are development validation errors, not states the runtime silently repairs."
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "11. Event transaction contract"
+    },
+    {
+      "body_index": 123,
+      "kind": "table",
+      "rows": [
+        [
+          "Column required in implementation data",
+          "Meaning"
+        ],
+        [
+          "event_id",
+          "Stable identifier; never reused."
+        ],
+        [
+          "event_type",
+          "Mandatory story, optional story, system, quest, world one-off, treasure, door, shortcut, etc."
+        ],
+        [
+          "chapter / scope",
+          "Owning chapter, quest, map or system."
+        ],
+        [
+          "prerequisites",
+          "State expressions required before the event can start."
+        ],
+        [
+          "trigger",
+          "Interaction, arrival, battle result, dialogue endpoint, inventory action, etc."
+        ],
+        [
+          "conditions",
+          "Additional branches such as leader fate, clue count, memorial history or restored-human set."
+        ],
+        [
+          "state_mutations",
+          "Authoritative writes committed by this event."
+        ],
+        [
+          "world_mutations",
+          "NPC/object/map version changes caused by the event."
+        ],
+        [
+          "one_time",
+          "Whether completion is permanently recorded."
+        ],
+        [
+          "follow_up",
+          "Events/chapters/quests made AVAILABLE by successful completion."
+        ]
+      ]
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "• All state mutations directly caused by one irreversible choice are one logical transaction. The exact autosave sequencing belongs to Checklist 15."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "• Battle result, human fate choice and world aftermath remain distinct phases even if one transaction commits their final story state."
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "12. Postgame unlock state"
+    },
+    {
+      "body_index": 128,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Values / rule"
+        ],
+        [
+          "postgame_state",
+          "LOCKED / UNLOCKED"
+        ],
+        [
+          "severin_state",
+          "Carries King Below reveal and superboss completion"
+        ],
+        [
+          "human_restoration system",
+          "Unlocked by its authored finale/postgame event; independent of Chapter 23 completion"
+        ],
+        [
+          "postgame leader availability",
+          "Derived from leader_fate + human_life_state; living/restored leaders can appear in living-world content, dead executed leaders remain underworld-only as authored"
+        ],
+        [
+          "postgame rematch/tournament state",
+          "Own later system state; Checklist 10 only provides prerequisite flags"
+        ]
+      ]
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "13. Checklist 10 completion matrix"
+    },
+    {
+      "body_index": 131,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist requirement",
+          "Status",
+          "Locked implementation result"
+        ],
+        [
+          "Establish a naming convention for flags",
+          "COMPLETE",
+          "lower_snake_case fields; stable ID namespaces"
+        ],
+        [
+          "Create chapter-start flags",
+          "COMPLETE",
+          "Derived from chapter_state"
+        ],
+        [
+          "Create chapter-complete flags",
+          "COMPLETE",
+          "Derived from chapter_state"
+        ],
+        [
+          "Create town-conquered flags",
+          "COMPLETE",
+          "Derived from town_state"
+        ],
+        [
+          "Create leader-fate state variables",
+          "COMPLETE",
+          "UNRESOLVED / SPARED / EXECUTED"
+        ],
+        [
+          "Create important-NPC state variables",
+          "COMPLETE",
+          "Named arc enums"
+        ],
+        [
+          "Create optional quest flags",
+          "COMPLETE",
+          "quest_state enum"
+        ],
+        [
+          "Create starter-choice state",
+          "COMPLETE",
+          "player_starter_species_id"
+        ],
+        [
+          "Create Pate starter-assignment state",
+          "COMPLETE",
+          "pate_starter_species_id"
+        ],
+        [
+          "Create Trade starter-assignment state",
+          "COMPLETE",
+          "trade_starter_species_id"
+        ],
+        [
+          "Create story-evolution flags",
+          "COMPLETE",
+          "story_evolution_triggers set"
+        ],
+        [
+          "Create unique evolution-item acquisition flags",
+          "COMPLETE",
+          "unique_pickups_claimed set"
+        ],
+        [
+          "Create Hell Circle completion flags",
+          "COMPLETE",
+          "Derived from hell_circle_state[01..09]"
+        ],
+        [
+          "Create Warden defeat flags",
+          "COMPLETE",
+          "warden_defeated[01..08]"
+        ],
+        [
+          "Create Severin progression flags",
+          "COMPLETE",
+          "severin_state"
+        ],
+        [
+          "Create memorial unlock flag",
+          "COMPLETE",
+          "memorial_state"
+        ],
+        [
+          "Create resurrection tutorial flag",
+          "COMPLETE",
+          "resurrection_tutorial_state"
+        ],
+        [
+          "Create one-time encounter flags",
+          "COMPLETE",
+          "completed_one_time_encounters"
+        ],
+        [
+          "Create one-time treasure flags",
+          "COMPLETE",
+          "unique_pickups_claimed"
+        ],
+        [
+          "Create shortcut / open-door flags",
+          "COMPLETE",
+          "unlocked_shortcuts / opened_persistent_doors"
+        ],
+        [
+          "Create town restoration flags",
+          "COMPLETE",
+          "Derived from town_state"
+        ],
+        [
+          "Create postgame unlock flags",
+          "COMPLETE",
+          "postgame_state + specific system states"
+        ],
+        [
+          "Define mutually exclusive state variables",
+          "COMPLETE",
+          "Enums/state machines used throughout"
+        ],
+        [
+          "Avoid duplicate / redundant booleans",
+          "COMPLETE",
+          "Derived queries replace duplicate state"
+        ],
+        [
+          "Define flag dependencies",
+          "COMPLETE",
+          "Section 10 validation rules"
+        ],
+        [
+          "Create master event-ID naming convention",
+          "COMPLETE",
+          "Section 3 / 7 namespaces"
+        ],
+        [
+          "Map Story Bible scenes to event IDs",
+          "COMPLETE",
+          "Existing CHxx-Eyy / CHxx-Oyy IDs retained literally"
+        ],
+        [
+          "Produce implementation-ready event / flag table",
+          "COMPLETE",
+          "Sections 4, 8, 9 and 11"
+        ]
+      ]
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "14. Cross-checklist handoffs"
+    },
+    {
+      "body_index": 134,
+      "kind": "table",
+      "rows": [
+        [
+          "Later workstream",
+          "What it may define without reopening Checklist 10"
+        ],
+        [
+          "Checklist 11 — Evolution Validation",
+          "Species-specific mapping from EVO trigger IDs to evolution eligibility, minimum levels and late-acquisition behaviour."
+        ],
+        [
+          "Checklist 13 — Battle Edge Cases",
+          "Battle-end ordering needed before story transactions can safely read survivors / active Abyssal."
+        ],
+        [
+          "Checklist 14 — Starter Three-Life System",
+          "Exact starter life counter restored after a final-death Abyssal memorial resurrection."
+        ],
+        [
+          "Checklist 15 — Ironman Save & Persistence",
+          "On-disk schema, atomic autosave ordering, checksums/anti-rollback and crash recovery."
+        ],
+        [
+          "Checklist 16 — Battle Presentation",
+          "Visual presentation of fate and story-adjacent battle endpoints."
+        ],
+        [
+          "Checklist 17 — Overworld Interaction",
+          "Exact NPC escort paths, object removal, door interaction and map transition presentation."
+        ]
+      ]
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "15. Source authority used for this lock"
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "• Pre-Programming Planning Checklists Reference v1.0 — Checklist 10 scope and completion criteria."
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "• Full Story Bible — LOCKED v1.0 — chapter sequence, scene IDs, global story-state predecessors, NPC arcs, Hell structure, finale and postgame baseline."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 07 — Memorial & Resurrection System — memorial establishment, exact Abyssal resurrection history and Mirra-readable counters."
+    },
+    {
+      "body_index": 140,
+      "kind": "paragraph",
+      "text": "• CHECKLIST 09 — Leader & Trainer Fate System — SPARE / EXECUTE logic, executed-leader Hell consequences and human restoration concept."
+    },
+    {
+      "body_index": 141,
+      "kind": "paragraph",
+      "text": "• User-approved Checklist 10 decision pass — compact authoritative state model, enum/set/counter architecture, event transaction rules, separate Pate/Trade states, Story Bible ID preservation, five elective human restorations, optional Pate/Trade revival, persistent human memorial entries and no automatic restoration to former office."
+    },
+    {
+      "body_index": 142,
+      "kind": "table",
+      "rows": [
+        [
+          "FINAL STATUS\nCHECKLIST 10 — STORY EVENT & FLAG MASTER LIST: COMPLETE / LOCKED. Later code may change representation details, database layout or serialization format, but must preserve the authoritative state meanings, historical-choice semantics, Story Bible event IDs, five-use elective human restoration pool, separate Abyssal memorial system and dependency rules fixed in this specification."
+        ]
+      ]
+    },
+    {
+      "body_index": 143,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 144,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 10 — LOCKED v1.0"
+    }
+  ]
+}

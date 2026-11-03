@@ -1,0 +1,35 @@
+{
+  "id": 114,
+  "name": "Snow Veil",
+  "category": "STATUS",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stats": [
+        "evasion"
+      ],
+      "stages": 1,
+      "chance_percent": 100
+    }
+  ],
+  "target": "SELF",
+  "batch": "10",
+  "sequence": "A delicate gauze of overlapping translucent snowflake veils rotates around an empty central silhouette. Layer after layer slips out of alignment into an elusive shimmer and vanishes without contact or impact.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Snow Veil, ID 114. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A delicate gauze of overlapping translucent snowflake veils rotates around an empty central silhouette. Layer after layer slips out of alignment into an elusive shimmer and vanishes without contact or impact. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move Snow Veil, ID 114. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A delicate gauze of overlapping translucent snowflake veils rotates around an empty central silhouette. Layer after layer slips out of alignment into an elusive shimmer and vanishes without contact or impact. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. Critical sheet layout: sixteen SMALL independent drawings, precisely centered in a strict four-by-four sheet. Every object and trail must have broad transparent gutters: at least 25% of cell width empty on every side. Detailed rich crisp pixel shading, hand-crafted JRPG material definition. No smooth vector shapes.",
+  "referenceImages": [],
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/114-source.png",
+  "prepared": "art-library/action-vfx/batch-10/114-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "467cc22b62c68208b38d2671f727edc40366b63c79c3b9728eb995db343ba806",
+  "sourceSha256": "d63c65c64270eb843ae0951fe53490a7b747851cda3d6c091b24a0bda49755f5"
+}

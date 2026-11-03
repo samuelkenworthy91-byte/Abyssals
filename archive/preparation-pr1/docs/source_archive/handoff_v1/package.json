@@ -1,0 +1,19 @@
+{
+  "name": "abyssals",
+  "private": true,
+  "version": "0.0.0-handoff",
+  "type": "module",
+  "scripts": {
+    "validate:canon": "python3 tools/validate_project.py",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "dev": "vite",
+    "build": "tsc -b && vite build"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}

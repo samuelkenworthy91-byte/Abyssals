@@ -1,0 +1,1265 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx",
+  "source_sha256": "20c5955bd54999a9011977b4d98e546630c6ddf2b933e5d38d6b27d2b8b00092",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 13"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Battle Edge Cases"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS — COMPLETE / LOCKEDThis document closes CHECKLIST 13 at implementation-design level. It fixes battle-end death resolution, simultaneous KO semantics, switching edge cases, capture legality, retreat/parley outcomes, post-battle XP/level/evolution order, fate handoff and the semantic autosave sequence. Exact starter-life restoration belongs to Checklist 14 and exact on-disk transaction/crash behaviour belongs to Checklist 15; those dependencies do not leave Checklist 13 mechanically open."
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "LOCK SUMMARY"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "0 HP is lethal for ordinary Abyssals regardless of whether the source is an attack, recoil, poison, burn, weather, terrain, self-damage or a self-destruct effect. Starter KOs route through the later Checklist 14 life-state handler until final death."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "KO events are resolved in deterministic batches. A mutual final KO is normally a PLAYER VICTORY if at least one living reserve Abyssal still exists; the army/rearguard secures Aimon, all deployed Abyssals remain dead, and he must rebuild before ordinary combat. If no living Abyssal exists anywhere, the same mutual final KO is treated as a normal wipe instead."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "Battles use Set-style replacement: the player receives no free switch prompt after defeating an opposing Abyssal."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Trainer and leader retreat is SURRENDER/PARLEY with the approved 50/25/15/10 loss table. Warden battles cannot be escaped or surrendered. Smoke Bomb guarantees escape only from otherwise-escapable ordinary wild battles."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Post-battle XP is settled only after a valid outcome is known. Multi-level rewards resolve one level at a time, with growth/training/evolution checks between levels. Evolution preserves HP percentage rather than raw HP."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Battle-owned consequences resolve before story/fate scenes. Checklist 15 will make the sequence atomic on disk without changing the semantic order fixed here."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01 remains authority for deterministic stat growth, fixed growth seeds, six stat rolls, exceptional growth and higher-level historical simulation. Checklist 13 only orders when those already-locked level-up transactions occur."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "CHECKLIST 04 remains authority for trainer teams, battle AI, switching permissions and battle difficulty. Checklist 13 defines legality at edge cases without broadening AI tiers."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "CHECKLIST 05 remains authority for the eight Hell Warden native-field payloads. Checklist 13 defines lethal field timing and generic end-of-turn resolution without changing any field modifier."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06 remains authority for items, capture foods, Smoke Bomb, held equipment, money, Trial Marks and training slots. Checklist 13 supplies the exact retreat/parley transaction and capture edge behaviour."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "CHECKLIST 07 remains authority for permanent-death records, held-item return, memorial eligibility and exact-instance resurrection."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08 remains authority for six active slots, effectively unlimited reserve, Aeric-only reserve access, instant reserve healing and ordinary wipe behaviour. The mutual-final-KO victory rule here is a narrow explicit exception to the ordinary wipe rule."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "CHECKLIST 09 remains authority for mortal-leader SPARE / EXECUTE decisions and human death. Checklist 13 supplies battle-end and no-surviving-active fallback semantics only."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "CHECKLIST 10 remains authority for story/event state. CHECKLIST 11 remains evolution-method/timing authority. CHECKLIST 12 remains move/relearner/evolution-move authority."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "CHECKLIST 14 owns the starter three-life state machine. CHECKLIST 15 owns atomic persistence and crash recovery. CHECKLIST 16 owns final battle/fate presentation. CHECKLIST 17 owns overworld interaction choreography."
+    },
+    {
+      "body_index": 23,
+      "kind": "table",
+      "rows": [
+        [
+          "IMPLEMENTATION PRINCIPLEThe engine must never infer victory, death, capture, retreat or progression from UI order. It resolves an explicit mechanical batch, classifies the encounter outcome, commits irreversible battle consequences, then performs progression and story handoff in a fixed sequence."
+        ]
+      ]
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "2. Resolution model and timing windows"
+    },
+    {
+      "body_index": 26,
+      "kind": "table",
+      "rows": [
+        [
+          "Stable term",
+          "Locked meaning"
+        ],
+        [
+          "ACTION",
+          "One chosen move/item/switch command and all of its direct hit/self-cost components."
+        ],
+        [
+          "HIT",
+          "One hit inside a multi-hit action. A target that reaches 0 HP stops receiving further hits."
+        ],
+        [
+          "KO_BATCH",
+          "All 0-HP results created by the same simultaneous layer before replacements or outcome classification."
+        ],
+        [
+          "END_TURN_LAYER",
+          "One shared residual layer applied to all active combatants before the next residual layer."
+        ],
+        [
+          "BATTLE_END",
+          "Outcome classification after no unresolved KO/replacement state remains."
+        ],
+        [
+          "PROGRESSION",
+          "XP, sequential levels, move offers and evolution after a valid outcome."
+        ],
+        [
+          "STORY_HANDOFF",
+          "Immediate authored story/fate event after battle-owned state is final."
+        ]
+      ]
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "2.1 End-of-turn layer order"
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "1. Active field/weather damage or healing/effects."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "2. Persistent status damage (including poison and burn)."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "3. Held-item end-of-turn sustain/healing and equivalent passive recovery."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "4. Other explicitly authored end-of-turn effects, ordered by stable effect priority rather than animation timing."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "5. Turn-end cleanup and next-turn readiness."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Each layer applies across both active sides, then resolves its KO batch before the next layer. An Abyssal that reaches 0 HP in an earlier layer cannot be restored by a later passive-healing layer unless a future explicit mechanic says it can revive the dead; no such standard mechanic exists in v1.0."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "Two combatants that reach 0 HP in the same layer count as simultaneous even if their animations play sequentially."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "3. Death, simultaneous KOs and battle result"
+    },
+    {
+      "body_index": 37,
+      "kind": "table",
+      "rows": [
+        [
+          "Edge case",
+          "Locked result"
+        ],
+        [
+          "Normal Abyssal reaches 0 HP",
+          "Permanent death. Clamp HP to 0, make the instance immediately unusable, queue/commit the Checklist 07 death record and return its held item under the existing ownership rule."
+        ],
+        [
+          "Starter reaches 0 with special life available",
+          "Do not create ordinary permanent-death state. Route the KO through Checklist 14 starter-life handling. The current action cannot consume more than one starter life."
+        ],
+        [
+          "Starter final life exhausted",
+          "Final permanent death. From this point it follows ordinary Checklist 07 memorial/resurrection eligibility plus any distinct starter-final-death event required by Checklist 14."
+        ],
+        [
+          "Recoil kills attacker",
+          "Resolve target damage first, then recoil as part of the same action. Recoil can permanently kill the user and can create a mutual-final-KO result."
+        ],
+        [
+          "Drain kills target",
+          "Resolve target damage/KO, then heal the user from actual HP damage inflicted, capped by the move rule. Overkill does not increase drain."
+        ],
+        [
+          "Poison / burn",
+          "Lethal at 0 HP; no status-death exemption."
+        ],
+        [
+          "Weather / terrain",
+          "Lethal at 0 HP; same-layer deaths are simultaneous."
+        ],
+        [
+          "Self-destruct",
+          "The user dies as an intended self-cost after the damaging effect resolves. It may trade for one or more enemy deaths."
+        ],
+        [
+          "Confusion / self-damage",
+          "If a supported move/effect creates self-damage, that damage is lethal at 0 HP. If the final move catalogue has no such mechanic, this branch is simply unused."
+        ],
+        [
+          "Multi-hit crosses 0 mid-sequence",
+          "Stop further hits to that target immediately. Route once through death/starter-life handling; one multi-hit action cannot burn multiple starter lives."
+        ],
+        [
+          "Critical hit",
+          "A critical modifies damage only according to the core damage rule. It never bypasses starter-life interception, authored non-lethal safeguards or fate/story protections."
+        ]
+      ]
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "3.1 Mutual final KO — explicit victory exception"
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "If the final living deployed player Abyssal and the enemy side's final Abyssal both reach 0 HP in the same KO batch, check the player's living reserve immediately after all permanent-death handling."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "If at least one living reserve Abyssal exists, classify the encounter as PLAYER VICTORY. The enemy/leader/Warden is defeated exactly as in an ordinary win; all deployed player Abyssals remain genuinely dead. The supporting army/rearguard secures Aimon, so protagonist permadeath does not occur from this specific mutual wipe."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "Aimon resumes from the authored recovery flow with zero living active Abyssals and must build a new legal party from surviving reserve before ordinary combat. Reserve Abyssals did not participate in the battle and receive no XP."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "If no living Abyssal exists anywhere — active or reserve — the mutual final KO is treated as a NORMAL WIPE instead. Do not commit leader/Warden/story victory progression from that battle; ordinary wipe/mercy rules apply."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "This reserve-sensitive survival check exists only for the mutual-final-KO victory exception. In an ordinary wipe while any enemy remains, living reserve Abyssals still do not prevent the protagonist-death/mercy check from Checklist 08."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "3.2 Ordinary full-side results"
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "Player party reaches 0 while an enemy remains: normal wipe. Reserve does not auto-deploy. Authored sparing/mercy may preserve Aimon exactly as already locked."
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": "Enemy party reaches 0 while at least one player active remains: victory."
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "Enemy party reaches 0 in a mutual final KO: use Section 3.1 before any ordinary victory/wipe branch."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "4. Switching and replacement"
+    },
+    {
+      "body_index": 50,
+      "kind": "table",
+      "rows": [
+        [
+          "Edge case",
+          "Locked result"
+        ],
+        [
+          "Switch into damaging field/weather",
+          "No bonus damage tick occurs merely for entering. The incoming Abyssal is affected at the next normal field/weather timing unless a specific authored effect explicitly has an on-entry payload."
+        ],
+        [
+          "Only one living active-party Abyssal remains",
+          "Voluntary Switch is disabled because no legal destination exists."
+        ],
+        [
+          "Forced switch",
+          "Select only living legal active-party replacements. If the effect grants player choice, the player chooses; enemy AI chooses by its existing profile. If no replacement exists, the switch component fails while the rest of the action resolves."
+        ],
+        [
+          "Enemy tactical switching",
+          "Uses identical legality rules and only for AI tiers already authorised by Checklist 04."
+        ],
+        [
+          "Opponent Abyssal is defeated",
+          "SET STYLE. The opponent sends the next legal Abyssal without offering the player a free switch prompt. The player may switch only on the next normal player command opportunity."
+        ]
+      ]
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "5. Capture edge cases"
+    },
+    {
+      "body_index": 53,
+      "kind": "table",
+      "rows": [
+        [
+          "Edge case",
+          "Locked result"
+        ],
+        [
+          "Party below six",
+          "Successful capture joins the next free active-party slot."
+        ],
+        [
+          "Party full",
+          "Successful capture goes directly to reserve. No forced swap. Checklist 08 instant reserve restoration applies."
+        ],
+        [
+          "Reserve technical ceiling reached",
+          "Not a legitimate gameplay state. If an unreachable sanity ceiling is hit, fail the capture safely and do not consume the capture food."
+        ],
+        [
+          "Capture final wild enemy",
+          "Successful capture ends the encounter successfully. The captured target grants no defeat XP; XP already earned from earlier defeated enemies in the encounter still settles."
+        ],
+        [
+          "Trainer-owned target",
+          "Illegal. Capture command is blocked and food is not consumed."
+        ],
+        [
+          "Boss/story target",
+          "Illegal unless that encounter explicitly sets captureAllowed=true. Otherwise food is not consumed."
+        ],
+        [
+          "Guaranteed food",
+          "Guarantees probability only after legality is established. It does not override trainer ownership, no-capture story flags or other illegality."
+        ]
+      ]
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "6. Run, surrender and parley"
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "6.1 Ordinary wild escape"
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "Run is legal only when the encounter is not flagged noEscape and is not a trainer/leader/Warden/mandatory special encounter."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Escape check uses current active Speed against current opposing active Speed and becomes easier after each failed attempt."
+    },
+    {
+      "body_index": 59,
+      "kind": "table",
+      "rows": [
+        [
+          "LOCKED ESCAPE FORMULALet A = player active Speed, B = opposing active Speed (minimum 1), and C = number of earlier failed Run attempts in this encounter. Compute escapeScore = floor(128 × A / B) + 30 × C. If escapeScore ≥ 255, escape succeeds automatically. Otherwise draw one deterministic battle RNG integer r from 0..254; escape succeeds when r < escapeScore. A failed escape consumes the player action and increments C by 1. Smoke Bomb bypasses this roll only in an otherwise-escapable ordinary wild battle."
+        ]
+      ]
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "6.2 Trainer and leader surrender/parley"
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Run in an ordinary trainer or mortal-leader battle means SURRENDER/PARLEY. It does not use the Speed formula."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "After confirmation, surrender succeeds, ends the battle as a loss, grants no victory XP/reward and applies exactly one parley-loss outcome."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "Leader surrender leaves the leader undefeated and fate UNRESOLVED. The player returns through the authored defeat/recovery route and must rematch later."
+    },
+    {
+      "body_index": 65,
+      "kind": "table",
+      "rows": [
+        [
+          "Base weight",
+          "Loss category",
+          "Locked consequence"
+        ],
+        [
+          "50%",
+          "MONEY",
+          "Lose 15% of current standard money, rounded down. If current money is 0, this category is empty."
+        ],
+        [
+          "25%",
+          "HELD EQUIPMENT",
+          "Lose one randomly selected eligible held-equipment item instance from inventory or currently equipped ownership. If equipped, it is unequipped as part of the same loss transaction."
+        ],
+        [
+          "15%",
+          "EVOLUTION ITEM",
+          "Lose one randomly selected eligible evolution-item instance."
+        ],
+        [
+          "10%",
+          "OTHER ELIGIBLE POSSESSION / TREASURE",
+          "Lose one randomly selected eligible non-key possession not already in the held/evolution categories; prioritise sell-only treasure when any is owned, otherwise ordinary eligible inventory may be selected."
+        ]
+      ]
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "Key items and Trial Marks are absolutely immune. Categories with no eligible candidate are removed and the remaining base weights are renormalised proportionally for that surrender. If no eligible loss exists at all, surrender still succeeds with no material loss."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "The selected loss is shown before final surrender confirmation when practical; the exact presentation can be refined by Checklist 16 without changing eligibility or weights."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "6.3 Warden and special encounters"
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "WARDEN BATTLES: Run/Surrender is disabled. Wardens do not surrender as a battle-resolution shortcut. Once combat begins, the encounter ends only through victory or the normal wipe/defeat flow."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "SPECIAL ENCOUNTERS: every authored encounter stores one retreat mode: WILD_ESCAPE, PARLEY, or FORBIDDEN. No special encounter inherits behaviour accidentally from its visual presentation or enemy class."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "7. XP, multiple level-ups, move learning and evolution"
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Participation is tracked during combat against each defeated enemy, but XP is committed only after a valid victory/capture outcome is known. Dead Abyssals receive no XP. Reserve nonparticipants receive no XP. Run, surrender and loss produce no victory XP."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "A captured target is not a defeated target for XP. Earlier enemies defeated in the same encounter still contribute normally if the encounter ends by capturing the final wild enemy."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "7.1 Sequential level-up transaction"
+    },
+    {
+      "body_index": 76,
+      "kind": "table",
+      "rows": [
+        [
+          "Step",
+          "Locked order"
+        ],
+        [
+          "1",
+          "Spend one 100-XP threshold and increment level by exactly 1."
+        ],
+        [
+          "2",
+          "Resolve all six Checklist 01 growth rolls using the current species/form and every active Checklist 06 training modifier."
+        ],
+        [
+          "3",
+          "After that level's growth resolves, decrement all active training-slot durations by 1 and remove slots reaching 0."
+        ],
+        [
+          "4",
+          "Offer any move learned exactly at the new level by the current species, respecting the four-move limit and Checklist 12 legality."
+        ],
+        [
+          "5",
+          "Check any evolution eligibility that is allowed to trigger at this safe post-level point. If evolution occurs, apply the Checklist 11 promotion transaction and immediately switch future growth weights."
+        ],
+        [
+          "6",
+          "If the target form has an explicit Level 0 / evolution move, offer it once exactly as Checklist 12 requires. Lower/equal target-form moves become relearner-eligible without a cascade of forced prompts."
+        ],
+        [
+          "7",
+          "If enough XP remains for another level, repeat from Step 1 using the now-current form and remaining training state."
+        ]
+      ]
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "This permits multiple legitimate evolutions from one unusually large reward if separate thresholds are crossed in sequence; each later level uses the form reached before that level begins."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "7.2 Evolution while injured"
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Evolution preserves HP PERCENTAGE, not raw HP and not full HP."
+    },
+    {
+      "body_index": 81,
+      "kind": "table",
+      "rows": [
+        [
+          "LOCKED HP CONVERSIONFor a living Abyssal: newCurrentHP = clamp(1, newMaxHP, round_nearest(oldCurrentHP × newMaxHP / oldMaxHP)). Use deterministic integer half-up rounding. Temporary status remains unchanged. Evolution does not restore PP or otherwise heal. An Abyssal at 0 HP cannot enter the ordinary evolution transaction."
+        ]
+      ]
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "Evolution does not consume a new party slot and is legal with a full six-member party because the same individual remains in the same slot."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "8. Story and fate handoff immediately after battle"
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "Battle-owned consequences resolve first: KO/death/life handling, capture result, outcome classification, rewards/XP, sequential levels, move offers and normal post-battle evolutions."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "Only after that settled battle state does an immediate story scene begin. Story logic therefore reads the final living/dead roster and evolved forms, not a pre-settlement snapshot."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "If an authored story event itself unlocks a Checklist 11 story evolution, that evolution is checked at the next safe opportunity after the event and before ordinary control resumes."
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "8.1 Mortal-leader fate executor"
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "If the Abyssal active at battle end remains living, it is the actual EXECUTE actor exactly as Checklist 09 requires; its primary/Type 1 selects the generic execution sprite."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "If that active Abyssal died in the final resolution but another living deployed party member remains, use the first living active-party member in existing party-slot order as the deterministic fallback executor."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "If a mutual-final-KO leader victory leaves zero living deployed Abyssals but living reserve exists, the army secures both Aimon and the defeated leader. Before ordinary play, Aimon is taken through the authored recovery route to Aeric and must select at least one living reserve Abyssal. The unresolved leader is held under guard; the fate choice then occurs before free exploration. If EXECUTE is chosen, active Slot 1 is the fallback executor. This is the no-surviving-active fallback explicitly delegated to Checklist 13 by Checklist 09; it does not grant remote reserve access during battle."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "If the mutual-final-KO has no living reserve, Section 3.1 converts it to a normal wipe, so no victorious fate decision occurs from that battle."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "9. Semantic autosave / commit ordering"
+    },
+    {
+      "body_index": 94,
+      "kind": "table",
+      "rows": [
+        [
+          "BOUNDARYChecklist 13 fixes what must logically happen before what. Checklist 15 will define files, generations, checksums, anti-rollback, crash recovery and exact write barriers. It may not reorder these semantic consequences."
+        ]
+      ]
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 96,
+      "kind": "table",
+      "rows": [
+        [
+          "Order",
+          "Semantic transaction"
+        ],
+        [
+          "1",
+          "Finish the current action and all direct hit/self-cost components."
+        ],
+        [
+          "2",
+          "Resolve the current KO batch, starter-life interception and any immediate capture result."
+        ],
+        [
+          "3",
+          "Resolve remaining end-turn layers if the battle has not already ended."
+        ],
+        [
+          "4",
+          "Classify encounter result: victory, capture success, surrender/parley, ordinary loss/wipe, or mutual-final-KO special branch."
+        ],
+        [
+          "5",
+          "Commit irreversible battle consequences: permanent deaths/held-item returns, capture ownership/destination, parley loss, leader/Warden defeat state where legally won."
+        ],
+        [
+          "6",
+          "Settle rewards and progression: XP, sequential levels, move choices and evolution transactions."
+        ],
+        [
+          "7",
+          "Commit progression state."
+        ],
+        [
+          "8",
+          "Run immediate story/fate scene using the settled post-battle state."
+        ],
+        [
+          "9",
+          "When an irreversible story/fate choice is confirmed, commit it and autosave before ordinary play resumes."
+        ]
+      ]
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "A surrender penalty and its retreat destination are one logical transaction: no save state may permanently lose the item/money while leaving the player inside the unresolved battle."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "A mutual-final-KO victory and its recovery-to-rebuild state are one logical outcome: no save state may award the leader/Warden victory while also applying ordinary protagonist permadeath from the same batch when living reserve exists."
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "10. Recommended implementation state contract"
+    },
+    {
+      "body_index": 101,
+      "kind": "table",
+      "rows": [
+        [
+          "Field",
+          "Meaning"
+        ],
+        [
+          "battle_outcome",
+          "IN_PROGRESS / VICTORY / CAPTURE_SUCCESS / SURRENDER / LOSS / WIPE"
+        ],
+        [
+          "ko_batch_id",
+          "Monotonic per-battle batch index for simultaneous resolution."
+        ],
+        [
+          "run_fail_count",
+          "Number of earlier failed ordinary-wild Run attempts."
+        ],
+        [
+          "retreat_mode",
+          "WILD_ESCAPE / PARLEY / FORBIDDEN."
+        ],
+        [
+          "capture_allowed",
+          "Boolean authored per encounter/target ownership rules."
+        ],
+        [
+          "mutual_final_ko",
+          "True only when both sides lose their final active combatant in the same KO batch."
+        ],
+        [
+          "mutual_victory_recovery_required",
+          "True when mutual_final_ko and living reserve exists; forces rebuild recovery before ordinary combat."
+        ],
+        [
+          "battle_end_active_instance_id",
+          "Living active at battle end when one exists."
+        ],
+        [
+          "fate_executor_instance_id",
+          "Resolved actual Abyssal instance used by Checklist 09 EXECUTE presentation."
+        ],
+        [
+          "progression_queue",
+          "Ordered XP/level/move/evolution transactions pending settlement."
+        ],
+        [
+          "parley_loss",
+          "Resolved loss category + exact currency amount or item instance/ID."
+        ],
+        [
+          "story_handoff_id",
+          "Immediate authored event/fate event to run after progression, if any."
+        ]
+      ]
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "11. Validation gates"
+    },
+    {
+      "body_index": 104,
+      "kind": "table",
+      "rows": [
+        [
+          "Test ID",
+          "Required assertion"
+        ],
+        [
+          "B13-001",
+          "Ordinary 0-HP deaths are identical regardless of lethal source and cannot be healed later in the same layer."
+        ],
+        [
+          "B13-002",
+          "Multi-hit cannot consume more than one starter life from one target in one action."
+        ],
+        [
+          "B13-003",
+          "Recoil/self-destruct mutual final KO reaches the same outcome classifier as residual mutual final KO."
+        ],
+        [
+          "B13-004",
+          "Mutual final KO + living reserve => victory/rebuild; same state + no living reserve => normal wipe."
+        ],
+        [
+          "B13-005",
+          "Ordinary wipe + living reserve remains a wipe unless an authored mercy event applies."
+        ],
+        [
+          "B13-006",
+          "No free switch prompt appears after an enemy KO."
+        ],
+        [
+          "B13-007",
+          "Illegal captures consume no food; full-party capture routes to reserve without remote withdrawal."
+        ],
+        [
+          "B13-008",
+          "Saint's Banquet/guaranteed capture never bypasses captureAllowed/ownership rules."
+        ],
+        [
+          "B13-009",
+          "Smoke Bomb works only in ordinary escapable wild encounters; Warden Run/Surrender is unavailable."
+        ],
+        [
+          "B13-010",
+          "Parley categories renormalise correctly and never remove a key item or Trial Mark."
+        ],
+        [
+          "B13-011",
+          "A multi-level reward produces the same deterministic stat/evolution result as applying the same levels one at a time."
+        ],
+        [
+          "B13-012",
+          "Evolution preserves HP percentage with deterministic rounding and does not clear status."
+        ],
+        [
+          "B13-013",
+          "Immediate story/fate scenes observe the final post-progression roster and evolution state."
+        ],
+        [
+          "B13-014",
+          "Mutual-final-KO leader victory with no living active enters the guarded recovery/fate fallback without remote battle reserve access."
+        ],
+        [
+          "B13-015",
+          "Crash-recovery implementation in Checklist 15 cannot expose half-applied death/capture/parley/fate transactions."
+        ]
+      ]
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "12. Checklist 13 completion matrix"
+    },
+    {
+      "body_index": 107,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist item",
+          "Status",
+          "Locked result"
+        ],
+        [
+          "Normal monster reaches 0 HP",
+          "COMPLETE",
+          "Permanent death pipeline."
+        ],
+        [
+          "Starter reaches 0 HP with two lives remaining",
+          "COMPLETE",
+          "Route to Checklist 14 life handler; no ordinary death yet."
+        ],
+        [
+          "Starter reaches 0 HP with one life remaining",
+          "COMPLETE",
+          "Same life-handler boundary; one action consumes at most one life."
+        ],
+        [
+          "Starter loses final life",
+          "COMPLETE",
+          "Final permanent death + memorial eligibility."
+        ],
+        [
+          "Both active monsters reach 0 HP simultaneously",
+          "COMPLETE",
+          "Batch resolution; mutual-final-KO victory if reserve survives, otherwise normal wipe."
+        ],
+        [
+          "Entire player party reaches 0 HP",
+          "COMPLETE",
+          "Ordinary wipe unless authored mercy or mutual-final-KO exception."
+        ],
+        [
+          "Entire enemy party reaches 0 HP",
+          "COMPLETE",
+          "Victory subject to mutual/no-reserve exception."
+        ],
+        [
+          "Recoil kills the attacker",
+          "COMPLETE",
+          "Lethal; may create mutual KO."
+        ],
+        [
+          "Drain attack kills the target",
+          "COMPLETE",
+          "Heal from actual HP damage after target damage resolves."
+        ],
+        [
+          "Poison / burn kills a monster",
+          "COMPLETE",
+          "Lethal."
+        ],
+        [
+          "Weather / terrain kills a monster",
+          "COMPLETE",
+          "Lethal; layer-batched."
+        ],
+        [
+          "Self-destructing move kills the user",
+          "COMPLETE",
+          "Lethal self-cost after move damage."
+        ],
+        [
+          "Confusion / self-damage if supported",
+          "COMPLETE",
+          "Lethal when mechanic exists; otherwise unused branch."
+        ],
+        [
+          "Multi-hit crosses 0 HP mid-sequence",
+          "COMPLETE",
+          "Stop hits and resolve death/life once."
+        ],
+        [
+          "Critical-hit handling",
+          "COMPLETE",
+          "Damage-only modifier; protections remain intact."
+        ],
+        [
+          "Switch into damaging field / weather",
+          "COMPLETE",
+          "No bonus entry tick."
+        ],
+        [
+          "Switch when only one living monster remains",
+          "COMPLETE",
+          "Voluntary switch disabled."
+        ],
+        [
+          "Forced-switch effects",
+          "COMPLETE",
+          "Living legal targets only; switch component fails if none."
+        ],
+        [
+          "Enemy tactical switching",
+          "COMPLETE",
+          "Same legality; existing AI permissions only."
+        ],
+        [
+          "Switching after opponent death",
+          "COMPLETE",
+          "SET STYLE; no free switch prompt."
+        ],
+        [
+          "Capture with party under six",
+          "COMPLETE",
+          "Next free active slot."
+        ],
+        [
+          "Capture with a full party",
+          "COMPLETE",
+          "Direct to reserve; no forced swap."
+        ],
+        [
+          "Capture with a full reserve",
+          "COMPLETE",
+          "No gameplay cap; technical-ceiling safe failure/no food consumption."
+        ],
+        [
+          "Capture final enemy in a wild encounter",
+          "COMPLETE",
+          "Capture success; captured target gives no defeat XP."
+        ],
+        [
+          "Attempt capture on a trainer-owned monster",
+          "COMPLETE",
+          "Blocked/no food consumed."
+        ],
+        [
+          "Attempt capture on a boss / story monster",
+          "COMPLETE",
+          "Blocked unless captureAllowed explicitly authored."
+        ],
+        [
+          "Guaranteed-food capture",
+          "COMPLETE",
+          "Probability guarantee only; legality still required."
+        ],
+        [
+          "Run from normal wild fight",
+          "COMPLETE",
+          "Exact Speed/attempt formula + Smoke Bomb boundary."
+        ],
+        [
+          "Failed escape",
+          "COMPLETE",
+          "Consumes action; later attempts easier."
+        ],
+        [
+          "Run from trainer battle",
+          "COMPLETE",
+          "Surrender/parley + loss transaction."
+        ],
+        [
+          "Run from leader battle",
+          "COMPLETE",
+          "Surrender; leader undefeated/fate unresolved."
+        ],
+        [
+          "Run from Warden battle",
+          "COMPLETE",
+          "Forbidden; no surrender."
+        ],
+        [
+          "Run from special encounter",
+          "COMPLETE",
+          "Explicit retreat_mode authored per encounter."
+        ],
+        [
+          "XP calculation at battle end",
+          "COMPLETE",
+          "Commit after valid outcome; dead/reserve nonparticipants excluded."
+        ],
+        [
+          "Multiple level-ups from one reward",
+          "COMPLETE",
+          "One level at a time with deterministic growth/training ticks."
+        ],
+        [
+          "Learn a new move after battle",
+          "COMPLETE",
+          "Per-level offer; Checklist 12 relearner/evolution-move rules."
+        ],
+        [
+          "Evolution after battle",
+          "COMPLETE",
+          "Safe post-level/story checks; future levels use new form."
+        ],
+        [
+          "Evolution while injured",
+          "COMPLETE",
+          "Preserve HP percentage with deterministic rounding."
+        ],
+        [
+          "Evolution when party is full",
+          "COMPLETE",
+          "Same instance/slot; no capacity issue."
+        ],
+        [
+          "Story event immediately after battle",
+          "COMPLETE",
+          "Runs after battle progression settles."
+        ],
+        [
+          "Fate decision immediately after battle",
+          "COMPLETE",
+          "Living active/fallback executor; guarded recovery fallback for mutual victory."
+        ],
+        [
+          "Autosave ordering for all battle-end consequences",
+          "COMPLETE",
+          "Semantic order locked; physical persistence handed to Checklist 15."
+        ]
+      ]
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "13. Cross-checklist handoffs"
+    },
+    {
+      "body_index": 110,
+      "kind": "table",
+      "rows": [
+        [
+          "Later workstream",
+          "May define without reopening Checklist 13"
+        ],
+        [
+          "Checklist 14 — Starter Three-Life System",
+          "Define exact starterLivesRemaining state transitions, revival HP/status/placement after a life is consumed, and the life state restored after memorial resurrection. It may not let one multi-hit action consume multiple lives."
+        ],
+        [
+          "Checklist 15 — Ironman Save & Persistence",
+          "Define atomic writes, rolling generations, checksums, anti-rollback and crash recovery for the semantic transaction order in Section 9."
+        ],
+        [
+          "Checklist 16 — Battle Presentation",
+          "Animate simultaneous KOs, Set-style replacement, capture/run/parley feedback, fate fallback and irreversible warnings without changing mechanics."
+        ],
+        [
+          "Checklist 17 — Overworld Interaction",
+          "Implement the mutual-victory recovery route to Aeric, rebuild gating and guarded unresolved-leader choreography without adding remote reserve access."
+        ],
+        [
+          "Implementation battle tests",
+          "Validate all B13 test IDs, especially mutual KO, multi-hit starter protection, residual-layer order, parley renormalisation and crash-state handoff."
+        ]
+      ]
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "14. Source authority used for this lock"
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx — Checklist 13 scope and all 42 completion items."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx — AI switching permissions, Warden retreat handoff and battle difficulty contracts."
+    },
+    {
+      "body_index": 115,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx — persistent Warden fields and Checklist 13 end-of-turn handoff."
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx — Smoke Bomb, capture-food legality basis, key-item/Trial Mark parley immunity, held/evolution-item parley eligibility and five-slot training ticks."
+    },
+    {
+      "body_index": 117,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx — permanent-death ledger, held-item return and final-dead starter memorial eligibility."
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx — six-member active party, effectively unlimited reserve, Aeric-only access, instant reserve healing and generic wipe semantics."
+    },
+    {
+      "body_index": 119,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.docx — SPARE/EXECUTE boundary, active-Abyssal execution rule and Checklist 13 fallback delegation."
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx — authoritative state and story transaction handoff."
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx — evolution timing, promotion deltas and immediate growth-weight switch."
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx — evolution-move/relearner transaction and move legality."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "User-approved Checklist 13 decision pass — Set style; mutual-final-KO victory/rebuild rule with no-reserve normal-wipe exception; Warden no-surrender; approved parley split; HP-percentage preservation on evolution; final lock instruction."
+    },
+    {
+      "body_index": 124,
+      "kind": "table",
+      "rows": [
+        [
+          "FINAL STATUSCHECKLIST 13 — BATTLE EDGE CASES: COMPLETE / LOCKED. No unresolved battle-edge-case design blocker remains. Later Checklists 14–17 may fill their delegated starter-life, persistence, presentation and overworld details but may not silently change the 0-HP lethality rule, simultaneous-KO classifier, Set-style switching, capture legality, Warden no-surrender rule, parley weights, sequential progression order, HP-percentage evolution rule or battle-to-story semantic ordering fixed here."
+        ]
+      ]
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 13 — LOCKED v1.0"
+    }
+  ]
+}

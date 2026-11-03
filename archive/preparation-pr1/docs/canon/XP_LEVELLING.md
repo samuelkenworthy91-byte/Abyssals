@@ -1,0 +1,24 @@
+# Xp Levelling
+
+- 187 species are in the regional/project dex; the canonical front-facing species sprites are complete.
+- 98 evolution paths.
+- 100 XP per level.
+- Participant XP scales using the participant's own level relative to the defeated enemy; do not award one shared level-gap result to all participants.
+- Growth uses independent Fire Emblem-style stat rolls, seeded per individual.
+- Mean Growth = `32 + 0.06 × (BST - 300)`.
+- Mean Stat = `BST / 6`.
+- Stat growth % = `max(10, round(Mean Growth × (BaseStat / MeanStat)^2.25))`.
+- Growth over 100% allows deterministic exceptional +2 outcomes according to the locked roll logic.
+- Checklist 01 is the sole growth authority: HP gains +10 per successful increment; a failed roll adds zero. There is no guaranteed baseline or minimum growth per level. See conflict C16.
+- Evolution applies fixed promotion jumps and reweights future growth; it does not retroactively reroll the individual.
+- Wild growth is seeded/deterministic.
+
+## Authority and structured data
+
+Authority: Checklist 01; Progression v3; handoff XP rule. Pristine files are under `docs/source_archive/canon_sources/active/`; searchable lossless equivalents are under `data/reference/`. Apply [SUPERSESSIONS.md](SUPERSESSIONS.md) before using historical source wording.
+
+Repository paths: `data/progression/core_rules.json`; `data/progression/chapter_bands.json`; `data/moves/learnsets.json`.
+
+## Implementation contract and remaining boundary
+
+Every level costs 100 XP; hard cap 200. Evaluate each participant against the defeated enemy using that participant’s own level. Twenty-one authored progression bands and all 1,893 learnset entries are extracted. Resolve multiple gains one level at a time with required move/evolution choices. The exact XP amount/formula and rounding remain absent; do not supply a conventional formula.

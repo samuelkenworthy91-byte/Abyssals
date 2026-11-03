@@ -1,0 +1,538 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+  "source_sha256": "908f1044fcc2fa6a76ce03e773f9c6dbb1580f7617f2428617ffc516ba06946c",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 11 ADDENDUM"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Evolution Implementation Addendum"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS — LOCKED v1.0 — authoritative overlay for non-level evolution paths"
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "This addendum sits on top of the existing canonical evolution workbooks. It does not duplicate the 75 level-based rows. It freezes the implementation detail that is easiest to lose in code: all 15 item paths, all 8 story-choice paths, exact story event/state identifiers, late-acquisition behaviour, and Primeval Reach completion access."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "1. Authority stack"
+    },
+    {
+      "body_index": 8,
+      "kind": "table",
+      "rows": [
+        [
+          "Priority",
+          "Authority",
+          "Owns"
+        ],
+        [
+          "1",
+          "Regional_Dex_Progression_Learnsets_v3.xlsx — Dex Progression",
+          "187-row species registry; all 98 canonical source→target paths and base method/minimum/item data."
+        ],
+        [
+          "2",
+          "Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx — Evolution Validation",
+          "Validated KEEP EXISTING timing verdict for all 98 paths."
+        ],
+        [
+          "3",
+          "This addendum",
+          "Final non-level implementation wiring, stable story IDs, mutually exclusive state model and Primeval Reach exception."
+        ],
+        [
+          "4",
+          "Checklist 06 / Checklist 10 / Story Bible",
+          "Item sourcing; save/event conventions; narrative scene anchors."
+        ]
+      ]
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "2. Item evolution implementation ledger — 15 paths"
+    },
+    {
+      "body_index": 11,
+      "kind": "table",
+      "rows": [
+        [
+          "Source",
+          "Min",
+          "Consumed item",
+          "Target",
+          "Transformation theme"
+        ],
+        [
+          "Votress",
+          "30",
+          "Iron Sigil",
+          "Sigilume",
+          "Forged sacred seal → Psychic/Steel"
+        ],
+        [
+          "Votress",
+          "30",
+          "Grave Salt",
+          "Sepulshade",
+          "Consecrated funerary salt → Psychic/Ghost"
+        ],
+        [
+          "Votress",
+          "30",
+          "Gilded Idol",
+          "Idolure",
+          "Devotional idol → Psychic/Fairy"
+        ],
+        [
+          "Pebbettle",
+          "28",
+          "Gilded Nodule",
+          "Avaroll",
+          "Mineral greed-token → avarice branch"
+        ],
+        [
+          "Pebbettle",
+          "28",
+          "Stormglass",
+          "Prodiglow",
+          "Charged crystal glass → Steel/Electric branch"
+        ],
+        [
+          "Styxlet",
+          "28",
+          "Bloodstone",
+          "Ragegill",
+          "Hot iron-red stone → Water/Fire wrath branch"
+        ],
+        [
+          "Styxlet",
+          "28",
+          "Grief Pearl",
+          "Sulkoad",
+          "Cold funerary pearl → Water/Ice grief branch"
+        ],
+        [
+          "Triskit",
+          "30",
+          "Tide Pearl",
+          "Phlegacorn",
+          "Dense sea pearl → Fighting/Water branch"
+        ],
+        [
+          "Triskit",
+          "30",
+          "Mourning Briar",
+          "Harpbriar",
+          "Living thorn relic → Grass/Ghost branch"
+        ],
+        [
+          "Triskit",
+          "30",
+          "Sunscar Glass",
+          "Searwaste",
+          "Heat-blasted glass → Ground/Fire branch"
+        ],
+        [
+          "Pilgrimp",
+          "28",
+          "Wayfarer Feather",
+          "Ganderiel",
+          "Pilgrim feather-token → roaming Flying branch"
+        ],
+        [
+          "Pilgrimp",
+          "28",
+          "Pilgrim Bell",
+          "Caproclaim",
+          "Ritual road bell → heraldic Fairy branch"
+        ],
+        [
+          "Acremink",
+          "28",
+          "Trial Toxin",
+          "Longspurr",
+          "Alchemical trial poison → Fighting/Poison"
+        ],
+        [
+          "Acremink",
+          "28",
+          "Saint’s Tonic",
+          "Elixirine",
+          "Rare restorative draught → Fairy/Poison"
+        ],
+        [
+          "Suncub",
+          "40",
+          "Sun Relic",
+          "Cehong",
+          "Late rare sun relic → Fire/Electric mythic evolution"
+        ]
+      ]
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "Items are consumed on evolution; there are no trade evolutions."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "The minimum level is a floor. The item may be used at any later eligible level."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "Guaranteed authored sources and renewable/replacement sourcing are governed by Checklist 06. Fourteen ordinary evolution items are renewable at Ramelle; Sun Relic uses its special late source plus postgame replacement service."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "3. Story event transaction ledger — four one-time decisions"
+    },
+    {
+      "body_index": 17,
+      "kind": "table",
+      "rows": [
+        [
+          "World event ID",
+          "Narrative anchor",
+          "Authoritative field",
+          "Atomic state commit",
+          "History write"
+        ],
+        [
+          "WLD-CYBRESSA-ALLIANCE-001",
+          "After CH04-E01 — War Market",
+          "jerbune_alliance_choice",
+          "UNRESOLVED → ACCEPTED or REJECTED",
+          "Exactly one Jerbune EVO trigger"
+        ],
+        [
+          "WLD-COSSENNE-RELIC-001",
+          "After CH05-E03 — The Same Story",
+          "censmoke_relic_choice",
+          "UNRESOLVED → SANCTIFIED or REFUSED",
+          "Exactly one Censmoke EVO trigger"
+        ],
+        [
+          "WLD-MARASEN-BANNER-001",
+          "After CH06-E02, before CH06-E03",
+          "flaggrim_banner_choice",
+          "UNRESOLVED → RAISED or TORN",
+          "Exactly one Flaggrim EVO trigger"
+        ],
+        [
+          "WLD-BOTRUNE-OATH-001",
+          "After CH07-E02 — Mirelle’s Hypothesis",
+          "cairant_oath_choice",
+          "UNRESOLVED → KEPT or BROKEN",
+          "Exactly one Cairant EVO trigger"
+        ]
+      ]
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "4. Story evolution path ledger — 8 paths"
+    },
+    {
+      "body_index": 20,
+      "kind": "table",
+      "rows": [
+        [
+          "Source",
+          "Min",
+          "Required enum value",
+          "Historical EVO trigger",
+          "Legacy derived check",
+          "Target"
+        ],
+        [
+          "Jerbune",
+          "30",
+          "ACCEPTED",
+          "EVO-JERBUNE-ALLIANCE-ACCEPTED",
+          "STORY_ACCEPT_ALLIANCE",
+          "Concordune"
+        ],
+        [
+          "Jerbune",
+          "30",
+          "REJECTED",
+          "EVO-JERBUNE-ALLIANCE-REJECTED",
+          "STORY_REJECT_ALLIANCE",
+          "Sundune"
+        ],
+        [
+          "Censmoke",
+          "30",
+          "SANCTIFIED",
+          "EVO-CENSMOKE-RELIC-SANCTIFIED",
+          "STORY_SANCTIFY_RELIC",
+          "Thurafume"
+        ],
+        [
+          "Censmoke",
+          "30",
+          "REFUSED",
+          "EVO-CENSMOKE-RELIC-REFUSED",
+          "STORY_DEFILE_RELIC",
+          "Malifume"
+        ],
+        [
+          "Flaggrim",
+          "30",
+          "RAISED",
+          "EVO-FLAGGRIM-BANNER-RAISED",
+          "STORY_RAISE_BANNER",
+          "Oriflamme"
+        ],
+        [
+          "Flaggrim",
+          "30",
+          "TORN",
+          "EVO-FLAGGRIM-BANNER-TORN",
+          "STORY_TEAR_BANNER",
+          "Tattereign"
+        ],
+        [
+          "Cairant",
+          "32",
+          "KEPT",
+          "EVO-CAIRANT-OATH-KEPT",
+          "STORY_KEEP_CELESTIAL_OATH",
+          "Serapine"
+        ],
+        [
+          "Cairant",
+          "32",
+          "BROKEN",
+          "EVO-CAIRANT-OATH-BROKEN",
+          "STORY_BREAK_CELESTIAL_OATH",
+          "Pandemne"
+        ]
+      ]
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "Legacy STORY_* identifiers are compatibility/path checks only. Code must derive them from the authoritative enum or matching historical EVO trigger rather than persisting a second independent truth."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "5. Universal eligibility algorithm"
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "Read the source species’ canonical evolution row(s)."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "For LEVEL method: eligibility begins when current level reaches the authored level. Resolve the triggering level-up growth rolls first, then evolve if the normal evolution opportunity is accepted/automatic under the game’s standard presentation."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "For ITEM method: require current level ≥ minimum and possession/use of the exact evolution item. Passing the minimum does not close the opportunity."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "For STORY CHOICE method: require current level ≥ minimum and the matching authoritative family enum value / EVO trigger. The opposite branch must evaluate false throughout the main game."
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "If a story decision is committed while an eligible source is already above the minimum, queue the chosen evolution for the next safe evolution opportunity after the WLD event. Never interrupt the decision scene."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "If the source is obtained after the WLD event, read the save’s existing family choice; do not recreate or replay the choice."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "On evolution, apply the signed six-stat target-minus-source base-stat deltas once; preserve the instance and growth history. All later level-ups use the target form’s growth weights."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "6. Primeval Reach completion ledger"
+    },
+    {
+      "body_index": 32,
+      "kind": "table",
+      "rows": [
+        [
+          "Family",
+          "Main-game selected branch",
+          "Main-game blocked branch",
+          "Postgame Primeval Reach"
+        ],
+        [
+          "Censmoke",
+          "Thurafume or Malifume",
+          "The opposite one",
+          "Direct encounter/capture of the blocked final form"
+        ],
+        [
+          "Cairant",
+          "Serapine or Pandemne",
+          "The opposite one",
+          "Direct encounter/capture of the blocked final form"
+        ],
+        [
+          "Flaggrim",
+          "Oriflamme or Tattereign",
+          "The opposite one",
+          "Direct encounter/capture of the blocked final form"
+        ],
+        [
+          "Jerbune",
+          "Concordune or Sundune",
+          "The opposite one",
+          "Direct encounter/capture of the blocked final form"
+        ]
+      ]
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Single-save main-game collection maximum is 183/187 under the current fixed roster."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "Primeval Reach makes all 187 species obtainable on the same save in postgame."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "Directly catching an unchosen final form does not mutate the family choice, write the opposite EVO trigger or permit the source species to evolve down the opposite route."
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "Exact Primeval Reach encounter weights, levels and habitat slots remain encounter-authoring data."
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "7. Promotion transaction invariant"
+    },
+    {
+      "body_index": 39,
+      "kind": "table",
+      "rows": [
+        [
+          "Invariant",
+          "Locked rule"
+        ],
+        [
+          "Promotion bonus",
+          "For each of HP / Attack / Defense / Sp. Atk / Sp. Def / Speed: target base stat − source base stat."
+        ],
+        [
+          "Negative delta",
+          "Legal. Do not clamp to zero or preserve the higher source stat."
+        ],
+        [
+          "RNG",
+          "None at evolution. Do not reroll growth history or Growth Seed."
+        ],
+        [
+          "Current HP",
+          "If new max HP is lower, cap current HP to the new max. Evolution grants no separate full heal."
+        ],
+        [
+          "Growth weights",
+          "Target-form growth percentages apply to every level-up after the evolution transaction."
+        ],
+        [
+          "Identity",
+          "The same individual instance persists through evolution."
+        ]
+      ]
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 41,
+      "kind": "table",
+      "rows": [
+        [
+          "LOCKED DATA HANDOFF\nProgrammers should load the 98 canonical paths from the existing progression/validation workbooks, then apply this addendum as the non-level story/item wiring overlay. Do not hand-maintain a second 98-row table in code or documentation unless it is generated from those authorities."
+        ]
+      ]
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "END OF EVOLUTION IMPLEMENTATION ADDENDUM — LOCKED v1.0"
+    }
+  ]
+}

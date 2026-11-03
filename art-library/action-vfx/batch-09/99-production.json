@@ -1,0 +1,64 @@
+{
+  "id": 99,
+  "name": "Rooted Pride",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 100
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "165"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "SPECIAL",
+  "type": "GRASS",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 65,
+  "pp": 10,
+  "accuracy": 95,
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stat": "defence",
+      "stages": 1,
+      "timing": "AFTER_DAMAGE",
+      "secondary": true,
+      "chance_percent": 100
+    }
+  ],
+  "authoredAction": "thick roots lock into the ground beneath the user while a proud upright leaf crest rises, then a concentrated green impact surge travels forward from the anchored stance.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "A compact root anchor spreads three thick feet, a proud upright leaf crest rises above it, and one narrow ridged green pressure surge launches from that rooted stance. The roots stay planted while the surge makes ONE contact.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Rooted Pride, stable ID99. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: A compact root anchor spreads three thick feet, a proud upright leaf crest rises above it, and one narrow ridged green pressure surge launches from that rooted stance. The roots stay planted while the surge makes ONE contact. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/99-source.png",
+  "prepared": "art-library/action-vfx/batch-09/99-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "1ad3938dd0b85cebd59dfb7a476b33a97c722fed88cf2752fc59892fd4762fb6",
+  "sourceSha256": "73e28c1569bbba14e4f55c8bf516c9ec79127cfa5dbe43286d61e2f5b1195fb3"
+}

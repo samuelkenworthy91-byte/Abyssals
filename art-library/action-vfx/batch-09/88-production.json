@@ -1,0 +1,70 @@
+{
+  "id": 88,
+  "name": "Sickleleaf Scissor",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 89
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "042",
+      "060",
+      "105",
+      "183",
+      "289",
+      "290",
+      "293",
+      "294"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "PHYSICAL",
+  "type": "GRASS",
+  "target": "SINGLE_FOE",
+  "allyTarget": false,
+  "power": 120,
+  "pp": 5,
+  "accuracy": 90,
+  "priority": 0,
+  "contact": true,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "recoil",
+      "fraction": [
+        1,
+        8
+      ],
+      "basis": "MAX_HP"
+    }
+  ],
+  "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "Two asymmetrical sickle-shaped leaf edges on curved stems open like shears, cross shut ONCE at one central contact, rebound with a little recoil twitch and unfold. Large notched leaf blades, no insect or jaws.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Sickleleaf Scissor, stable ID88. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, read row-major. GENUINE transparent alpha background. Action: Two asymmetrical sickle-shaped leaf edges on curved stems open like shears, cross shut ONCE at one central contact, rebound with a little recoil twitch and unfold. Large notched leaf blades, no insect or jaws. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 poses are complete and individually isolated in the MIDDLE40% of each cell, leaving very large completely empty transparent gutters. Every tip, splinter, mote and any small hard-edged glint must stay inside that middle40%. No big glows or soft haze spanning gutters. Highly readable material shading with crisp clustered pixels, designed for192px logical cells. No whole creature, humans, scenery, text, labels, grid or borders. No duplicated poses, no additional hits, no generic recoloured effect.",
+  "source": "art-library/action-vfx/batch-09/88-source.png",
+  "prepared": "art-library/action-vfx/batch-09/88-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "bc23d610350e4acb75f45c9b16e217e75a2bc7209145975a7f779cb3f52dcba0",
+  "sourceSha256": "f4792a9061173fd907b936e3614a922088fc314404c2420c25c9eb9488ffefbb"
+}

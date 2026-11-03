@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "CHAPTER-00",
+      "fields": {
+        "Chapter": "00",
+        "Title": "Three CrusadersAct I — Brothers",
+        "Story event namespace": "CH00-Eyy / CH00-Oyy",
+        "Completion authority": "Authored final required event in CH00"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 2
+      }
+    },
+    {
+      "id": "CHAPTER-01",
+      "fields": {
+        "Chapter": "01",
+        "Title": "Left BehindAct I — Brothers",
+        "Story event namespace": "CH01-Eyy / CH01-Oyy",
+        "Completion authority": "Authored final required event in CH01"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 3
+      }
+    },
+    {
+      "id": "CHAPTER-02",
+      "fields": {
+        "Chapter": "02",
+        "Title": "DorelemAct II — The Crusade",
+        "Story event namespace": "CH02-Eyy / CH02-Oyy",
+        "Completion authority": "Authored final required event in CH02"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 4
+      }
+    },
+    {
+      "id": "CHAPTER-03",
+      "fields": {
+        "Chapter": "03",
+        "Title": "PhilomereAct II — The Crusade",
+        "Story event namespace": "CH03-Eyy / CH03-Oyy",
+        "Completion authority": "Authored final required event in CH03"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 5
+      }
+    },
+    {
+      "id": "CHAPTER-04",
+      "fields": {
+        "Chapter": "04",
+        "Title": "CybressaAct II — The Crusade",
+        "Story event namespace": "CH04-Eyy / CH04-Oyy",
+        "Completion authority": "Authored final required event in CH04"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 6
+      }
+    },
+    {
+      "id": "CHAPTER-05",
+      "fields": {
+        "Chapter": "05",
+        "Title": "CossenneAct II — The Crusade",
+        "Story event namespace": "CH05-Eyy / CH05-Oyy",
+        "Completion authority": "Authored final required event in CH05"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 7
+      }
+    },
+    {
+      "id": "CHAPTER-06",
+      "fields": {
+        "Chapter": "06",
+        "Title": "MarasenAct II — The Crusade",
+        "Story event namespace": "CH06-Eyy / CH06-Oyy",
+        "Completion authority": "Authored final required event in CH06"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 8
+      }
+    },
+    {
+      "id": "CHAPTER-07",
+      "fields": {
+        "Chapter": "07",
+        "Title": "BotruneAct II — The Crusade",
+        "Story event namespace": "CH07-Eyy / CH07-Oyy",
+        "Completion authority": "Authored final required event in CH07"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 9
+      }
+    },
+    {
+      "id": "CHAPTER-08",
+      "fields": {
+        "Chapter": "08",
+        "Title": "CayfenAct II — The Crusade",
+        "Story event namespace": "CH08-Eyy / CH08-Oyy",
+        "Completion authority": "Authored final required event in CH08"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 10
+      }
+    },
+    {
+      "id": "CHAPTER-09",
+      "fields": {
+        "Chapter": "09",
+        "Title": "Ramelle / The Holy LandAct II — The Crusade",
+        "Story event namespace": "CH09-Eyy / CH09-Oyy",
+        "Completion authority": "Authored final required event in CH09"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 11
+      }
+    },
+    {
+      "id": "CHAPTER-10",
+      "fields": {
+        "Chapter": "10",
+        "Title": "The Dead Stay DeadAct III — Refusal",
+        "Story event namespace": "CH10-Eyy / CH10-Oyy",
+        "Completion authority": "Authored final required event in CH10"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 12
+      }
+    },
+    {
+      "id": "CHAPTER-11",
+      "fields": {
+        "Chapter": "11",
+        "Title": "Circle I: The ThresholdAct IV — Descent",
+        "Story event namespace": "CH11-Eyy / CH11-Oyy",
+        "Completion authority": "Authored final required event in CH11"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 13
+      }
+    },
+    {
+      "id": "CHAPTER-12",
+      "fields": {
+        "Chapter": "12",
+        "Title": "Circle II: WantAct IV — Descent",
+        "Story event namespace": "CH12-Eyy / CH12-Oyy",
+        "Completion authority": "Authored final required event in CH12"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 14
+      }
+    },
+    {
+      "id": "CHAPTER-13",
+      "fields": {
+        "Chapter": "13",
+        "Title": "Circle III: WrathAct IV — Descent",
+        "Story event namespace": "CH13-Eyy / CH13-Oyy",
+        "Completion authority": "Authored final required event in CH13"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 15
+      }
+    },
+    {
+      "id": "CHAPTER-14",
+      "fields": {
+        "Chapter": "14",
+        "Title": "Circle IV: DominionAct IV — Descent",
+        "Story event namespace": "CH14-Eyy / CH14-Oyy",
+        "Completion authority": "Authored final required event in CH14"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 16
+      }
+    },
+    {
+      "id": "CHAPTER-15",
+      "fields": {
+        "Chapter": "15",
+        "Title": "Circle V: DogmaAct IV — Descent",
+        "Story event namespace": "CH15-Eyy / CH15-Oyy",
+        "Completion authority": "Authored final required event in CH15"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 17
+      }
+    },
+    {
+      "id": "CHAPTER-16",
+      "fields": {
+        "Chapter": "16",
+        "Title": "Circle VI: GriefAct IV — Descent",
+        "Story event namespace": "CH16-Eyy / CH16-Oyy",
+        "Completion authority": "Authored final required event in CH16"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 18
+      }
+    },
+    {
+      "id": "CHAPTER-17",
+      "fields": {
+        "Chapter": "17",
+        "Title": "Circle VII: BetrayalAct IV — Descent",
+        "Story event namespace": "CH17-Eyy / CH17-Oyy",
+        "Completion authority": "Authored final required event in CH17"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 19
+      }
+    },
+    {
+      "id": "CHAPTER-18",
+      "fields": {
+        "Chapter": "18",
+        "Title": "Circle VIII: SilenceAct IV — Descent",
+        "Story event namespace": "CH18-Eyy / CH18-Oyy",
+        "Completion authority": "Authored final required event in CH18"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 20
+      }
+    },
+    {
+      "id": "CHAPTER-19",
+      "fields": {
+        "Chapter": "19",
+        "Title": "Circle IX: The ThroneAct IV — Descent",
+        "Story event namespace": "CH19-Eyy / CH19-Oyy",
+        "Completion authority": "Authored final required event in CH19"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 21
+      }
+    },
+    {
+      "id": "CHAPTER-20",
+      "fields": {
+        "Chapter": "20",
+        "Title": "Illyr and NharosAct V — No Gods, No Masters",
+        "Story event namespace": "CH20-Eyy / CH20-Oyy",
+        "Completion authority": "Authored final required event in CH20"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 22
+      }
+    },
+    {
+      "id": "CHAPTER-21",
+      "fields": {
+        "Chapter": "21",
+        "Title": "Bring Them HomeAct V — No Gods, No Masters",
+        "Story event namespace": "CH21-Eyy / CH21-Oyy",
+        "Completion authority": "Authored final required event in CH21"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 23
+      }
+    },
+    {
+      "id": "CHAPTER-22",
+      "fields": {
+        "Chapter": "22",
+        "Title": "The World AfterAct V — No Gods, No Masters",
+        "Story event namespace": "CH22-Eyy / CH22-Oyy",
+        "Completion authority": "Authored final required event in CH22"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 24
+      }
+    },
+    {
+      "id": "CHAPTER-23",
+      "fields": {
+        "Chapter": "23",
+        "Title": "King BelowPostgame — The Poet King",
+        "Story event namespace": "CH23-Eyy / CH23-Oyy",
+        "Completion authority": "Authored final required event in CH23"
+      },
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+        "body_index": 99,
+        "table_row": 25
+      }
+    }
+  ],
+  "unresolved": []
+}

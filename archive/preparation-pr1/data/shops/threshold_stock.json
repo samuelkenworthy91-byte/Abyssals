@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "complete_for_supplied_source",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx"
+  ],
+  "records": [
+    {
+      "id": "HELL_THRESHOLD_ESSENTIALS",
+      "item_ids": [
+        "ITEM_CAPTURE_TRAIL_BREAD",
+        "ITEM_CAPTURE_SEASONED_JERKY",
+        "ITEM_CAPTURE_ROYAL_FEAST",
+        "ITEM_HEAL_FIELD_SALVE",
+        "ITEM_HEAL_GREATER_REMEDY",
+        "ITEM_HEAL_GRAND_RESTORATIVE",
+        "ITEM_CURE_PANACEA",
+        "ITEM_PP_FOCUS_TONIC",
+        "ITEM_PP_DEEP_TONIC",
+        "ITEM_UTILITY_SMOKE_BOMB"
+      ],
+      "prices": "same_as_mortal_shops",
+      "placement": "eligible_safe_thresholds",
+      "provenance": {
+        "file": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+        "body_index": 68
+      }
+    }
+  ],
+  "unresolved": []
+}

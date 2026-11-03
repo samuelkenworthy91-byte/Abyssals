@@ -1,0 +1,1186 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_16_Battle_Presentation_LOCKED_v1.0.docx",
+  "source_sha256": "1c4c9e05d556430f9042bcaf800d6587351890ef679230709bdf5be00b1da536",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 16"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Battle Presentation Specification"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "paragraph",
+      "text": "STATUS — COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": "This document closes CHECKLIST 16 at implementation-design level. It defines how battle communicates mechanics using a deliberate first-person Dragon Warrior Monsters-style camera, the existing 187 front-facing Abyssal sprites, compact mobile-first HUD/command layouts, one-direction player attack VFX, readable enemy-impact feedback, capture-progress presentation, permadeath/farewell presentation, starter-life feedback, XP/growth/evolution displays and neutral leader fate presentation. Later art production may refine timing, animation polish, sprite scale, sound and exact copy, but may not silently change the information contract or require a canonical 187-species back-sprite set."
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "Lock summary"
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Battles use a first-person player-side viewpoint inspired by the original Dragon Warrior Monsters: Aimon’s active Abyssal is understood to be immediately in front of / behind the camera and is not rendered as a battle sprite."
+    },
+    {
+      "body_index": 8,
+      "kind": "paragraph",
+      "text": "The visible opposing wild/enemy Abyssal uses the project’s existing front-facing species sprite. A canonical 187-species back-sprite set is not required for combat."
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "Player attacks alone receive move/type VFX travelling from the foreground/player side into the visible enemy. Enemy attacks use only simple enemy-sprite motion where desired, a foreground/screen impact, damage number and HP-bar loss; no enemy-direction move VFX set is required."
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "Both sides show an HP bar plus small exact current/max HP numbers. Small damage popups show resolved damage."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Capture food is thrown from the foreground; while the wild Abyssal eats, a 0–100% progress bar visibly reports the closeness of that actual attempt. Success reaches 100%; failure stops below 100%."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Permanent player-Abyssal death uses an authored pool of about 40 emotional, anatomy-neutral farewell beats/lines selected by the battle RNG/persisted event state; enemy deaths use the visible front sprite and a shorter death/disappearance treatment."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "Evolution is intentionally simple: the current front sprite is shown, a brief flash occurs, and the evolved front sprite replaces it. The fixed promotion-stat panel follows separately."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "SPARE / EXECUTE remains visually neutral and equally irreversible. EXECUTE uses Checklist 09 v1.1’s eighteen generic primary-type presentation proxies."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "CHECKLIST 05 remains authority for Warden native-field mechanics. Checklist 16 must keep the active field continuously readable and may not hide mechanical information behind atmosphere."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "CHECKLIST 08 remains authority for party/reserve data and six active-party slots. Checklist 16 only defines the in-battle presentation of party state and switching."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "CHECKLIST 09 v1.1 remains authority for leader SPARE / EXECUTE semantics and the eighteen generic Type-1 execution proxies. Checklist 16 defines their screen treatment only."
+    },
+    {
+      "body_index": 19,
+      "kind": "paragraph",
+      "text": "CHECKLIST 12 remains authority for move legality, category, accuracy, priority and target semantics. Checklist 16 may expose this information but may not alter it."
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": "CHECKLIST 13 remains authority for Set-style replacement, surrender/parley, capture legality, simultaneous-KO ordering and post-battle transaction order. Presentation follows that order."
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "CHECKLIST 14 remains authority for starter-life decrement and end-of-round return timing. Checklist 16 supplies pips, break/return feedback and final-death treatment."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "CHECKLIST 15 remains authority for deterministic RNG persistence, capture outcome persistence, irreversible commits and crash recovery. Presentation state must not create a reload reroll."
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "CHECKLIST 17 may later define overworld interaction choreography without changing any battle presentation rule here."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "2. Battle camera and sprite asset strategy"
+    },
+    {
+      "body_index": 25,
+      "kind": "table",
+      "rows": [
+        [
+          "Element",
+          "Locked presentation"
+        ],
+        [
+          "Player active Abyssal",
+          "Not rendered during ordinary battle. It occupies the immediate foreground / behind-camera position in fiction."
+        ],
+        [
+          "Enemy / wild Abyssal",
+          "Rendered centrally/upper-centre using the existing canonical front-facing species sprite."
+        ],
+        [
+          "Player trainer",
+          "May appear briefly in battle entry/story beats; not persistent during normal command selection."
+        ],
+        [
+          "Enemy trainer / leader",
+          "Appears in introduction, switch/reaction and outcome beats as appropriate; not required to remain beside the enemy Abyssal during ordinary turns."
+        ],
+        [
+          "Back sprites",
+          "Not required for the canonical combat presentation. A future optional art experiment may create them, but the renderer and content pipeline must never depend on them."
+        ],
+        [
+          "Sprite mirroring",
+          "Do not horizontally mirror a species merely to fake a rear view. Existing front artwork remains canonical."
+        ],
+        [
+          "Enemy sprite motion",
+          "Procedural micro-movement is allowed: short lunge, shake, recoil, scale pulse or offset. It must not require per-move/per-species animation sheets."
+        ]
+      ]
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "ART-PRODUCTION CONSEQUENCE: the game needs one visible combat species sprite per Abyssal rather than front + back sets. The current 187 front-facing sprites are therefore sufficient for the battle roster."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "3. Battle entry, introductions and background"
+    },
+    {
+      "body_index": 28,
+      "kind": "paragraph",
+      "text": "Overworld-to-battle transition: a fast roughly 250–350 ms dark wipe/fade with restrained ink/slash texture. It should feel deliberate but not delay repeat encounters."
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": "Wild introduction: reveal the wild Abyssal first with a concise appearance line, then establish Aimon’s active HUD. No player-side send-out sprite is required."
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "Trainer introduction: brief opponent trainer/class presentation, then the opponent’s opening Abyssal front sprite."
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "Leader introduction: same framework with a stronger title band and short sting; do not turn every leader encounter into a long cutscene."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "Warden introduction: Circle number → Warden name/title → battlefield → native terrain announcement before Turn 1."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "Battle backgrounds use reusable layered families (route, forest, cave, ruin, settlement, interior/dungeon, Hell) with location-specific palette/details rather than a bespoke painting per encounter."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Weather/terrain is an overlay layer and may never make command labels, HP, status, type or field-state information unreadable."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "4. HUD and persistent information"
+    },
+    {
+      "body_index": 36,
+      "kind": "table",
+      "rows": [
+        [
+          "HUD component",
+          "Locked rule"
+        ],
+        [
+          "HP",
+          "Both sides show a conventional HP bar and small exact current/max HP text directly beneath/adjacent. Exact values remain readable through Level 200."
+        ],
+        [
+          "Level",
+          "Visible beside name/species on both sides; layout supports three-digit levels through 200."
+        ],
+        [
+          "Status",
+          "Visible icon + text abbreviation/label; colour is supplementary, never the only signal."
+        ],
+        [
+          "Starter lives",
+          "Only special starter instances show discrete life pips/icons beside the player HUD. Three, two, one and zero states must be unambiguous."
+        ],
+        [
+          "Terrain/weather",
+          "Persistent top-centre field chip. Inspect/hold/tap reveals exact mechanics. Temporary replacement shows ACTIVE plus the native Warden field as DORMANT / RETURNS AFTER REPLACEMENT."
+        ],
+        [
+          "Damage",
+          "Small numeric popup such as −34 appears at the affected HP panel/impact moment, while the HP bar animates to the new exact value."
+        ],
+        [
+          "Critical/effectiveness",
+          "Explicit CRITICAL!, SUPER EFFECTIVE, RESISTED or NO EFFECT text; never colour-only."
+        ]
+      ]
+    },
+    {
+      "body_index": 37,
+      "kind": "paragraph",
+      "text": "5. Command, move and switch screens"
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": "Use a mobile-first 2×2 command grid: FIGHT / ABYSSALS / ITEMS / RUN or SURRENDER."
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "The canonical creature term in UI is ABYSSALS, not legacy “Monsters”."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "Wild battles show RUN. Trainer/leader battles show SURRENDER so the parley mechanic is explicit. Warden battles show the command disabled/unavailable rather than pretending escape is legal."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "FIGHT opens a 2×2 four-move grid showing move name, type and PP immediately."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "A compact info affordance exposes power, accuracy, physical/special/status category, priority, target and full effect text where applicable."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "Switch opens all six active-party slots with HP/status and starter lives where relevant. Dead/down/illegal selections are visibly unavailable."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "Set style is preserved: defeating an opposing Abyssal never creates a free “switch before the next enemy” prompt."
+    },
+    {
+      "body_index": 45,
+      "kind": "paragraph",
+      "text": "ITEMS opens only legal battle-usable items; capture-food presentation is handled by the dedicated capture flow below."
+    },
+    {
+      "body_index": 46,
+      "kind": "paragraph",
+      "text": "6. Attack and hit presentation: one-direction VFX budget"
+    },
+    {
+      "body_index": 47,
+      "kind": "table",
+      "rows": [
+        [
+          "Case",
+          "Locked presentation"
+        ],
+        [
+          "Player damaging move",
+          "No player species sprite appears. Move/type VFX originates from the foreground/screen edge and travels into / manifests on the visible enemy Abyssal. Enemy sprite may recoil/shake; damage number appears; enemy HP decreases."
+        ],
+        [
+          "Player status/support move",
+          "Use foreground-originating iconography, screen treatment or enemy-target overlay only as needed to communicate the effect. Avoid unnecessary bespoke animation."
+        ],
+        [
+          "Enemy damaging move",
+          "Enemy front sprite may make a short procedural lunge/shake. No move projectile/type VFX is rendered. Instead the screen/foreground receives a concise impact pulse/flash/shake, the player damage number appears and the player HP bar decreases."
+        ],
+        [
+          "Enemy status/support move",
+          "Communicate through status/field HUD changes, concise text and minimal screen feedback; no reverse-direction move VFX set is required."
+        ],
+        [
+          "Routine screen shake",
+          "Local/short only. Avoid large full-screen shake for ordinary attacks."
+        ],
+        [
+          "Attack flash",
+          "Small impact/contact flash is allowed for readability. It is not a second full move-animation system."
+        ]
+      ]
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "ASSET-BUDGET RULE: authored move/type VFX only need to be built in the player→enemy direction. Enemy→player resolution reuses procedural impact feedback and HUD animation. This deliberately avoids producing a mirrored second set of fight graphics."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "7. Capture-food presentation and closeness feedback"
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "The capture flow must look unlike a Poké Ball shake sequence. Aimon’s side throws/offers the selected food from the foreground toward the visible wild Abyssal."
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "The wild Abyssal begins eating. During that action a clearly labelled 0–100% capture-progress bar fills."
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "Successful capture reaches 100%, gives a concise success effect, then resolves party/reserve destination under Checklist 08."
+    },
+    {
+      "body_index": 53,
+      "kind": "paragraph",
+      "text": "Failed capture visibly stops below 100%—including genuine near misses such as 99%—then combat resumes."
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": "The displayed closeness must be derived from the actual capture probability and actual deterministic RNG roll, rather than a fake decorative random number. Near-threshold failures display near 100%; poor attempts display much lower progress."
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "The capture outcome and displayed closeness are bound to the persisted capture transaction/RNG state. Reloading/crashing cannot produce a different percentage or success result for the same committed attempt."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "Do not show the underlying calculated capture probability before the attempt by default; the bar reports how close that actual attempt came."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "8. Status, critical and effectiveness presentation"
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "Applying a status shows a concise icon/effect at the target, updates the persistent status display and gives a short text line."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "Residual status/weather/terrain damage uses the same damage-number + HP-bar contract; it does not require a large bespoke animation every tick."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "Critical hits use a sharper impact/audio sting plus CRITICAL! text."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "Super-effective, resisted and immune outcomes always receive explicit readable text. “No effect” is distinct from ordinary zero damage."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "Field changes update the field chip immediately and, in Warden fights, expose native-field dormancy/resumption state."
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "9. Permanent death and farewell presentation"
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "0 HP for an ordinary player Abyssal is presented as death, never “fainting”."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "Because the player Abyssal is behind the camera, its permanent death does not require a back/front species death animation. The impact/HP transition is followed by one authored farewell beat from a pool of approximately 40 emotional, personalityful lines."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "The farewell pool should be mostly anatomy-neutral so any line can fit almost any species: looking back, steadying itself, refusing to fall, giving one last cry, one final nod, holding position for Aimon, etc."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "The chosen farewell line is selected through the deterministic battle/event RNG and persisted so reopening the same committed death cannot reroll for a preferred line."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "After the farewell beat, show an unambiguous factual death confirmation and commit the death under Checklist 15."
+    },
+    {
+      "body_index": 69,
+      "kind": "paragraph",
+      "text": "Exact prose for the approximately 40 lines is content-writing polish and may be authored later without reopening Checklist 16, provided the pool size/intent and deterministic selection remain intact."
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "9.1 Enemy death"
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "The opposing Abyssal is visible, so enemy death may use the existing front sprite: brief arrest/recoil, desaturation/flash and dissolve/ash/mote disappearance."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "Use a concise factual line such as “[Species] fell.” or equivalent. Enemy death may be shorter than a player-Abyssal farewell."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "Do not call enemy 0 HP “fainting” when the mechanics classify it as lethal."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "10. Starter three-life presentation"
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "A non-final lethal starter event drops HP to zero, fractures/shatters one visible life pip and displays the appropriate survival/lives-remaining message."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "The starter remains down/off-camera for the remainder of that round. No fake visible sprite revival is required."
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "At the locked end-of-round return window, the HUD animates back to the returned starter at max(1, ceil(max_hp×0.10)) HP, with the already-spent life pip still gone."
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "A final 1→0 life loss shatters the last pip, explicitly states that the final life is lost, and then routes into the ordinary permanent-death/farewell presentation."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "Presentation may be accelerated but may not change the timing/order fixed by Checklist 14."
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "11. XP, level-up and Fire Emblem-style growth"
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "XP uses a simple 0–100 progress bar plus numeric progress because every level requires exactly 100 XP."
+    },
+    {
+      "body_index": 82,
+      "kind": "paragraph",
+      "text": "Crossing 100 shows a concise LEVEL UP — Lv. X transition."
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": "Each level then shows the six-stat growth panel: HP / Attack / Defence / Sp. Atk / Sp. Def / Speed."
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "Display old value → new value. Successful rolls animate/show their actual +N. Failed rolls simply remain unchanged rather than filling the screen with +0 clutter."
+    },
+    {
+      "body_index": 85,
+      "kind": "paragraph",
+      "text": "Multiple level gains resolve and display one level at a time, preserving the locked growth/training/move/evolution order between levels."
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": "The player may tap/hold to accelerate repeated non-choice animation, but required move/evolution decisions cannot be skipped."
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "12. New moves and replacement"
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "New move notification: “[Name] can learn [Move]!” or equivalent concise wording."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "If replacement is required, show the current four moves plus the candidate move using the same move-information contract as the Fight screen."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "The player can inspect type, PP, power, accuracy, category, priority, target and effect before confirming replacement."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "The save transaction remains Checklist 15 authority; presentation may not allow duplicate/rollback learning states."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "13. Evolution and fixed promotion-stat display"
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "Evolution deliberately avoids a large bespoke cutscene. Show the current canonical front sprite centred on a simple evolution screen."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "Use a brief flash transition between the two species sprites: current form → flash → evolved form. A short repeated flicker is allowed if desired, but no silhouette morph or rear sprite is required."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "Resolve to the evolved front sprite and species/name confirmation."
+    },
+    {
+      "body_index": 96,
+      "kind": "paragraph",
+      "text": "Immediately afterward show a separate EVOLUTION CHANGES six-stat panel containing the fixed signed promotion deltas."
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "Evolution deltas remain visually distinct from random level-up growth rolls, including when an authored fixed delta is negative."
+    },
+    {
+      "body_index": 98,
+      "kind": "paragraph",
+      "text": "HP percentage preservation and the mechanical order of evolution remain governed by Checklist 13/11."
+    },
+    {
+      "body_index": 99,
+      "kind": "paragraph",
+      "text": "14. Battle outcome, defeat, escape and surrender"
+    },
+    {
+      "body_index": 100,
+      "kind": "paragraph",
+      "text": "Wild escape uses a fast retreat transition back to the overworld."
+    },
+    {
+      "body_index": 101,
+      "kind": "paragraph",
+      "text": "Capture success resolves destination messaging clearly: joins active party if space exists, otherwise goes directly to reserve."
+    },
+    {
+      "body_index": 102,
+      "kind": "paragraph",
+      "text": "Enemy final death → enemy trainer reaction/outcome → battle-owned XP/levels/moves/evolutions → story/fate handoff. Presentation may not reorder the locked battle-end transaction sequence."
+    },
+    {
+      "body_index": 103,
+      "kind": "paragraph",
+      "text": "Trainer/leader RUN is presented as SURRENDER/PARLEY. The UI explains the applicable loss/penalty before final confirmation where the mechanic supplies a selectable/known loss."
+    },
+    {
+      "body_index": 104,
+      "kind": "paragraph",
+      "text": "Warden SURRENDER is disabled/unavailable."
+    },
+    {
+      "body_index": 105,
+      "kind": "paragraph",
+      "text": "A spared protagonist wipe, mutual-KO recovery or other special edge case follows Checklist 13/09 outcomes and receives clear factual text rather than inventing a new mechanical result."
+    },
+    {
+      "body_index": 106,
+      "kind": "paragraph",
+      "text": "15. SPARE / EXECUTE and story-outcome presentation"
+    },
+    {
+      "body_index": 107,
+      "kind": "paragraph",
+      "text": "After the short leader conversation, display SPARE and EXECUTE as two equal-size, identically styled options."
+    },
+    {
+      "body_index": 108,
+      "kind": "paragraph",
+      "text": "No green/red moral coding, halo/skull iconography, reward previews, recommended choice or hidden moral score."
+    },
+    {
+      "body_index": 109,
+      "kind": "paragraph",
+      "text": "Both choices receive the same style of irreversible confirmation. EXECUTE must state plainly that the human leader will die; SPARE must state plainly that they live but are removed from power."
+    },
+    {
+      "body_index": 110,
+      "kind": "paragraph",
+      "text": "After final confirmation, the fate transaction autosaves under Checklist 15 before ordinary play resumes."
+    },
+    {
+      "body_index": 111,
+      "kind": "paragraph",
+      "text": "EXECUTE clears the ordinary battle UI and uses Checklist 09 v1.1’s actual executing Abyssal represented by one of eighteen generic primary/Type-1 proxies. The proxy performs a restrained type-appropriate attack/VFX on the human leader."
+    },
+    {
+      "body_index": 112,
+      "kind": "paragraph",
+      "text": "Execution presentation should be intentional and unmistakable but stylised rather than dependent on graphic gore."
+    },
+    {
+      "body_index": 113,
+      "kind": "paragraph",
+      "text": "Important story outcomes may use brief factual banners such as WARDEN DEFEATED, CHAPTER COMPLETE or [Town] RESTORED. They never grade the player morally."
+    },
+    {
+      "body_index": 114,
+      "kind": "paragraph",
+      "text": "16. Asset and implementation budget"
+    },
+    {
+      "body_index": 115,
+      "kind": "table",
+      "rows": [
+        [
+          "Asset area",
+          "Locked production requirement"
+        ],
+        [
+          "187 species combat art",
+          "187 existing front sprites are sufficient. No 187 back-sprite production requirement."
+        ],
+        [
+          "Player move VFX",
+          "One directional set: foreground/player → visible enemy."
+        ],
+        [
+          "Enemy move VFX",
+          "No mirrored reverse-direction move VFX library. Use procedural foreground impact + HUD change."
+        ],
+        [
+          "Species attack animation",
+          "No species-specific attack animation sheet required. Existing front enemy sprite may use transforms/lunge/shake."
+        ],
+        [
+          "Evolution art",
+          "Reuse old and new front sprites plus flash; no bespoke evolution morph frames."
+        ],
+        [
+          "Capture art",
+          "Food projectile/placement + enemy-eating presentation + generic progress bar/success treatment."
+        ],
+        [
+          "Death art",
+          "Player: text/impact/HUD/farewell pool. Enemy: existing front sprite disappearance treatment."
+        ],
+        [
+          "Execution art",
+          "18 generic type proxies from Checklist 09 v1.1, not 187 species-specific overworld executions."
+        ]
+      ]
+    },
+    {
+      "body_index": 116,
+      "kind": "paragraph",
+      "text": "17. Checklist 16 completion matrix"
+    },
+    {
+      "body_index": 117,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist requirement",
+          "Status",
+          "Locked implementation result"
+        ],
+        [
+          "Define overworld-to-battle transition",
+          "COMPLETE",
+          "Fast 250–350 ms dark/ink-slash wipe/fade."
+        ],
+        [
+          "Define wild-encounter introduction",
+          "COMPLETE",
+          "Reveal visible wild front sprite; establish player HUD."
+        ],
+        [
+          "Define trainer introduction",
+          "COMPLETE",
+          "Brief trainer/class card then enemy front sprite."
+        ],
+        [
+          "Define leader introduction",
+          "COMPLETE",
+          "Enhanced title band/sting; concise."
+        ],
+        [
+          "Define Warden introduction",
+          "COMPLETE",
+          "Circle → Warden → battlefield → native field before Turn 1."
+        ],
+        [
+          "Define terrain announcement",
+          "COMPLETE",
+          "Pre-Turn-1 announcement + persistent field chip."
+        ],
+        [
+          "Define player monster position",
+          "COMPLETE",
+          "Behind camera / foreground; no rendered player battle sprite."
+        ],
+        [
+          "Define enemy monster position",
+          "COMPLETE",
+          "Visible central/upper-centre front-facing sprite."
+        ],
+        [
+          "Define player trainer sprite position",
+          "COMPLETE",
+          "Entry/story beats only; not persistent."
+        ],
+        [
+          "Define enemy trainer sprite position",
+          "COMPLETE",
+          "Intro/reaction/outcome beats; not persistent during normal turns."
+        ],
+        [
+          "Define battle background composition",
+          "COMPLETE",
+          "Reusable layered environment families + safe overlays."
+        ],
+        [
+          "Define HP bars",
+          "COMPLETE",
+          "Both sides: bar + exact current/max small text."
+        ],
+        [
+          "Define level display",
+          "COMPLETE",
+          "Visible; supports Lv. 200."
+        ],
+        [
+          "Define status display",
+          "COMPLETE",
+          "Icon + text; colour not sole carrier."
+        ],
+        [
+          "Define starter-lives display if required",
+          "COMPLETE",
+          "Discrete 3/2/1/0 life pips beside starter HUD."
+        ],
+        [
+          "Define terrain / weather display",
+          "COMPLETE",
+          "Persistent chip with inspectable exact mechanics."
+        ],
+        [
+          "Define Fight command",
+          "COMPLETE",
+          "2×2 root command grid."
+        ],
+        [
+          "Define Monsters command",
+          "COMPLETE",
+          "Renamed canonical ABYSSALS."
+        ],
+        [
+          "Define Items command",
+          "COMPLETE",
+          "Battle-legal items only."
+        ],
+        [
+          "Define Run command",
+          "COMPLETE",
+          "RUN wild; SURRENDER trainer/leader; disabled Warden."
+        ],
+        [
+          "Define four-move screen",
+          "COMPLETE",
+          "2×2 move grid."
+        ],
+        [
+          "Define PP display",
+          "COMPLETE",
+          "Immediate on move buttons."
+        ],
+        [
+          "Define move-type display",
+          "COMPLETE",
+          "Immediate on move buttons."
+        ],
+        [
+          "Define power / effect information accessibility",
+          "COMPLETE",
+          "Inspectable power/accuracy/category/priority/target/effect."
+        ],
+        [
+          "Define switch screen",
+          "COMPLETE",
+          "Six party slots; HP/status/lives; illegal/dead/down disabled."
+        ],
+        [
+          "Define capture-food screen",
+          "COMPLETE",
+          "Food throw/eating + real closeness 0–100% progress bar."
+        ],
+        [
+          "Define static-sprite attack lunge",
+          "COMPLETE",
+          "Enemy procedural lunge; player not rendered."
+        ],
+        [
+          "Define hit shake",
+          "COMPLETE",
+          "Short local/procedural impact only."
+        ],
+        [
+          "Define attack flash",
+          "COMPLETE",
+          "Concise contact/foreground impact flash."
+        ],
+        [
+          "Define VFX overlay behaviour",
+          "COMPLETE",
+          "Player→enemy authored VFX only; no reverse-direction enemy VFX set."
+        ],
+        [
+          "Define damage text",
+          "COMPLETE",
+          "Small numeric damage popup + HP animation."
+        ],
+        [
+          "Define status-effect presentation",
+          "COMPLETE",
+          "Icon/effect/text + persistent HUD state."
+        ],
+        [
+          "Define critical-hit presentation",
+          "COMPLETE",
+          "Sharper impact/sting + CRITICAL!."
+        ],
+        [
+          "Define super-effective presentation",
+          "COMPLETE",
+          "Explicit SUPER EFFECTIVE text."
+        ],
+        [
+          "Define resisted / immune presentation",
+          "COMPLETE",
+          "Explicit RESISTED / NO EFFECT text."
+        ],
+        [
+          "Define normal monster death animation",
+          "COMPLETE",
+          "Player: first-person farewell/confirmation; enemy: front-sprite dissolve."
+        ],
+        [
+          "Define species death / disappearance line presentation",
+          "COMPLETE",
+          "~40 emotional reusable deterministic-RNG farewell beats."
+        ],
+        [
+          "Define starter life-loss sequence",
+          "COMPLETE",
+          "Pip shatter + message; down until locked cleanup return."
+        ],
+        [
+          "Define final starter death presentation",
+          "COMPLETE",
+          "Final pip shatter → final-life message → ordinary death flow."
+        ],
+        [
+          "Define enemy monster death presentation",
+          "COMPLETE",
+          "Visible front sprite arrest/recoil/desaturate/dissolve + concise line."
+        ],
+        [
+          "Define XP display",
+          "COMPLETE",
+          "0–100 numeric + progress bar."
+        ],
+        [
+          "Define the 100-XP level-up transition",
+          "COMPLETE",
+          "LEVEL UP card then six-stat panel."
+        ],
+        [
+          "Define Fire Emblem-style six-stat growth screen",
+          "COMPLETE",
+          "Old→new values for all six stats."
+        ],
+        [
+          "Define how successful stat rolls are shown",
+          "COMPLETE",
+          "Successful +N animates; failed roll stays unchanged."
+        ],
+        [
+          "Define new-move notification",
+          "COMPLETE",
+          "Concise learn-notification."
+        ],
+        [
+          "Define move replacement screen",
+          "COMPLETE",
+          "4 current + candidate; inspect full mechanics."
+        ],
+        [
+          "Define evolution sequence",
+          "COMPLETE",
+          "Front sprite → flash → evolved front sprite."
+        ],
+        [
+          "Define fixed promotion-stat display",
+          "COMPLETE",
+          "Separate EVOLUTION CHANGES signed six-stat panel."
+        ],
+        [
+          "Define enemy defeat presentation",
+          "COMPLETE",
+          "Enemy death/reaction then locked post-battle sequence."
+        ],
+        [
+          "Define surrender / capture transition",
+          "COMPLETE",
+          "Clear wild escape/capture destination and trainer parley transition."
+        ],
+        [
+          "Define SPARE / EXECUTE choice presentation",
+          "COMPLETE",
+          "Equal neutral options + equal irreversible confirmation."
+        ],
+        [
+          "Define important story-outcome presentation",
+          "COMPLETE",
+          "Short factual banners; no moral scoring."
+        ]
+      ]
+    },
+    {
+      "body_index": 118,
+      "kind": "paragraph",
+      "text": "18. Validation gates / implementation tests"
+    },
+    {
+      "body_index": 119,
+      "kind": "table",
+      "rows": [
+        [
+          "Test ID",
+          "Scenario",
+          "Required result"
+        ],
+        [
+          "B16-01",
+          "Ordinary battle begins",
+          "Transition completes quickly; enemy front sprite + HUD appear; no player species sprite/back sprite requested."
+        ],
+        [
+          "B16-02",
+          "Player uses damaging move",
+          "Foreground-origin VFX hits enemy; enemy reacts; exact damage popup and HP update agree with mechanics."
+        ],
+        [
+          "B16-03",
+          "Enemy uses damaging move",
+          "No reverse move VFX; enemy may lunge; foreground impact + exact damage + player HP update are clear."
+        ],
+        [
+          "B16-04",
+          "Wild capture fails narrowly",
+          "Food/eating animation; closeness bar stops near 100%; result is deterministic after reload/crash recovery."
+        ],
+        [
+          "B16-05",
+          "Wild capture succeeds",
+          "Progress reaches 100%; destination message matches party/reserve rule."
+        ],
+        [
+          "B16-06",
+          "Ordinary player Abyssal dies",
+          "No faint wording; deterministic farewell beat from ~40 pool; death confirmation and save commit occur."
+        ],
+        [
+          "B16-07",
+          "Starter loses non-final life",
+          "One pip breaks; starter stays down for round; return presentation occurs only at locked cleanup with correct HP."
+        ],
+        [
+          "B16-08",
+          "Starter loses final life",
+          "Final pip breaks; final-life message then ordinary permanent-death flow."
+        ],
+        [
+          "B16-09",
+          "Enemy dies",
+          "Visible front sprite death/disappearance is clear; no player-side back sprite involved."
+        ],
+        [
+          "B16-10",
+          "Multi-level XP award",
+          "Each 100-XP level resolves sequentially with growth/move/evolution ordering preserved."
+        ],
+        [
+          "B16-11",
+          "Evolution occurs",
+          "Old front sprite flashes to new front sprite; fixed signed promotion-stat panel appears separately."
+        ],
+        [
+          "B16-12",
+          "Warden field replaced",
+          "HUD shows replacement ACTIVE and native Warden field DORMANT/returns later; mechanical text remains accessible."
+        ],
+        [
+          "B16-13",
+          "Leader fate choice",
+          "SPARE/EXECUTE visual weight is equal; both confirmations are irreversible and non-moralising."
+        ],
+        [
+          "B16-14",
+          "EXECUTE selected",
+          "Correct primary-Type-1 one-of-18 proxy is used under Checklist 09 v1.1."
+        ],
+        [
+          "B16-15",
+          "Accessibility/readability pass",
+          "All essential state is readable without relying on colour or obscuring overlays."
+        ]
+      ]
+    },
+    {
+      "body_index": 120,
+      "kind": "paragraph",
+      "text": "19. Dependency-only handoffs"
+    },
+    {
+      "body_index": 121,
+      "kind": "paragraph",
+      "text": "Final sprite scale, pixel dimensions, font metrics, animation frame timings and sound design may be tuned during implementation/playtesting without reopening the lock if the information contract remains intact."
+    },
+    {
+      "body_index": 122,
+      "kind": "paragraph",
+      "text": "Exact authored text for the approximately 40 farewell lines is a writing/content task; the pool size, emotional purpose, anatomy-neutral guidance and deterministic selection are locked here."
+    },
+    {
+      "body_index": 123,
+      "kind": "paragraph",
+      "text": "The project may optionally create back sprites in the future as bonus/gallery/alternate presentation assets, but battle implementation must not require them."
+    },
+    {
+      "body_index": 124,
+      "kind": "paragraph",
+      "text": "Checklist 17 may choreograph overworld transitions before/after battle. It may not introduce a second battle-camera requirement that forces back sprites."
+    },
+    {
+      "body_index": 125,
+      "kind": "paragraph",
+      "text": "Checklist 09 v1.1 supplies the authoritative eighteen-type EXECUTE proxy mapping; Checklist 16 only renders it."
+    },
+    {
+      "body_index": 126,
+      "kind": "paragraph",
+      "text": "20. Source authority used for this lock"
+    },
+    {
+      "body_index": 127,
+      "kind": "paragraph",
+      "text": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx — Checklist 16 scope and 52 completion items."
+    },
+    {
+      "body_index": 128,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx — persistent Warden field readability and replacement/resumption HUD handoff."
+    },
+    {
+      "body_index": 129,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx — active-party UI data, reserve destination and canonical Abyssals terminology context."
+    },
+    {
+      "body_index": 130,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx — neutral fate contract and eighteen primary-type execution proxies."
+    },
+    {
+      "body_index": 131,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx — move information that may be exposed by UI."
+    },
+    {
+      "body_index": 132,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx — Set style, lethal 0 HP, surrender/capture legality and post-battle ordering."
+    },
+    {
+      "body_index": 133,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.docx — starter life pips, life loss and return timing."
+    },
+    {
+      "body_index": 134,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.docx — deterministic outcomes, capture persistence, autosave and anti-reroll constraints."
+    },
+    {
+      "body_index": 135,
+      "kind": "paragraph",
+      "text": "User-approved Checklist 16 validation pass — first-person Dragon Warrior Monsters-style battle view; exact HP numbers; closeness progress capture bar; approximately 40 farewell lines; flash-only evolution; player-direction-only move VFX and enemy foreground-impact presentation."
+    },
+    {
+      "body_index": 136,
+      "kind": "paragraph",
+      "text": "FINAL STATUS"
+    },
+    {
+      "body_index": 137,
+      "kind": "paragraph",
+      "text": "CHECKLIST 16 — BATTLE PRESENTATION SPECIFICATION: COMPLETE / LOCKED"
+    },
+    {
+      "body_index": 138,
+      "kind": "paragraph",
+      "text": "No unresolved battle-presentation design blocker remains. Later implementation may refine visual polish, exact pixel dimensions, timing, audio and line copy, but may not silently add a mandatory 187-species back-sprite requirement, build a second enemy→player move-VFX library, hide exact HP/closeness information, change deterministic death/capture presentation state, reorder battle mechanics, or morally weight SPARE / EXECUTE."
+    },
+    {
+      "body_index": 139,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 16 — LOCKED v1.0"
+    }
+  ]
+}

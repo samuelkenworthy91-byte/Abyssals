@@ -1,0 +1,451 @@
+{
+  "batch": "17",
+  "scope": "Distinct move artwork beyond50% toward369/614 integrated/tested60% milestone",
+  "status": "production briefs only; not artwork",
+  "moves": [
+    {
+      "id": 290,
+      "name": "Grudge Mark",
+      "category": "STATUS",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "incoming_type_damage_multiplier",
+          "type_id": "DARK",
+          "multiplier": 1.25,
+          "turns": 3,
+          "target": "SINGLE_FOE"
+        }
+      ],
+      "batch": "17",
+      "sequence": "A thorn-tipped charcoal stylus draws a single incomplete black sigil over empty target space. The final notch closes with a dull crimson glint; three short dark barbs remain attached to the mark before it thins away. A curse, not damage.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Grudge Mark, stable ID 290. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A thorn-tipped charcoal stylus draws a single incomplete black sigil over empty target space. The final notch closes with a dull crimson glint; three short dark barbs remain attached to the mark before it thins away. A curse, not damage. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 291,
+      "name": "No Witness",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "A narrow lantern shutter closes over a pale watching eye. A sudden wedge of black light passes through the gap exactly once, extinguishes the eye and leaves a momentary stunned white outline before the shutter opens into empty darkness.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move No Witness, stable ID 291. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A narrow lantern shutter closes over a pale watching eye. A sudden wedge of black light passes through the gap exactly once, extinguishes the eye and leaves a momentary stunned white outline before the shutter opens into empty darkness. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 292,
+      "name": "Nightblade Rend",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "17",
+      "sequence": "A long narrow nightsteel knife appears edge-first, rolls to expose a chipped bevel and pulls diagonally through a leather strap. One clean torn strap follows the blade, which withdraws without a second slash or extra weapon.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Nightblade Rend, stable ID 292. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A long narrow nightsteel knife appears edge-first, rolls to expose a chipped bevel and pulls diagonally through a leather strap. One clean torn strap follows the blade, which withdraws without a second slash or extra weapon. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 293,
+      "name": "Cutpurse Hook",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "A small hooked stealing knife and a loose purse cord enter opposite sides of the same cell. The hook snags and jerks the cord in one sideways strike; a few buttons tumble from the cut knot before the knife folds away.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Cutpurse Hook, stable ID 293. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small hooked stealing knife and a loose purse cord enter opposite sides of the same cell. The hook snags and jerks the cord in one sideways strike; a few buttons tumble from the cut knot before the knife folds away. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 295,
+      "name": "Night Lash",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "A braided black cord uncoils from a small iron spool, whips once through an opposing buckle and strips its fastening loose. The cord snaps back into a loose coil while the broken buckle rotates and falls.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Night Lash, stable ID 295. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A braided black cord uncoils from a small iron spool, whips once through an opposing buckle and strips its fastening loose. The cord snaps back into a loose coil while the broken buckle rotates and falls. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 296,
+      "name": "Blackthorn Scissor",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "Two blackthorn branch-blades unfold with pale exposed wood beneath dark bark. They close once around an armour strap in a wide scissor action, bite through it and separate while hooked thorns retain tiny torn fibres.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Blackthorn Scissor, stable ID 296. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two blackthorn branch-blades unfold with pale exposed wood beneath dark bark. They close once around an armour strap in a wide scissor action, bite through it and separate while hooked thorns retain tiny torn fibres. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 297,
+      "name": "Night Slash",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "batch": "17",
+      "sequence": "A polished obsidian sabre tilts until only a thin silver edge is visible. One precise rising slash creates a narrow clean cut and a single bright contact star, then the sabre turns flat and disappears into its own shadow.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Night Slash, stable ID 297. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A polished obsidian sabre tilts until only a thin silver edge is visible. One precise rising slash creates a narrow clean cut and a single bright contact star, then the sabre turns flat and disappears into its own shadow. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 298,
+      "name": "Night Strike",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "batch": "17",
+      "sequence": "A compact black leather knuckle guard draws back beneath a small crescent glint, snaps forward in one short direct strike and withdraws immediately. Keep the silhouette blunt and close-range, distinct from all knife and sabre animations.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Night Strike, stable ID 298. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A compact black leather knuckle guard draws back beneath a small crescent glint, snaps forward in one short direct strike and withdraws immediately. Keep the silhouette blunt and close-range, distinct from all knife and sabre animations. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 299,
+      "name": "Night Veil",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "17",
+      "sequence": "A small ebony clasp releases layered midnight cloth strips around an empty central silhouette. The strips overlap into a soft protective veil, briefly catch a pale magical glint and unwind inward. Pure special-defence self-buff.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Night Veil, stable ID 299. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small ebony clasp releases layered midnight cloth strips around an empty central silhouette. The strips overlap into a soft protective veil, briefly catch a pale magical glint and unwind inward. Pure special-defence self-buff. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 300,
+      "name": "Eclipse Resonance",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "17",
+      "sequence": "Two offset dark discs align to eclipse a small pale light. Their alignment produces one slow concentric pressure wave, after which the discs droop and separate heavily to show the caster speed cost. No sword and no repeated explosions.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Eclipse Resonance, stable ID 300. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two offset dark discs align to eclipse a small pale light. Their alignment produces one slow concentric pressure wave, after which the discs droop and separate heavily to show the caster speed cost. No sword and no repeated explosions. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 301,
+      "name": "Ambush Lunge",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "batch": "17",
+      "sequence": "A small folded ambusher dagger rises from a patch of pooled shadow, lunges once from low left to high right and catches briefly on impact. It tears free with a crack in its own hilt to express recoil, then folds back into darkness.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Ambush Lunge, stable ID 301. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small folded ambusher dagger rises from a patch of pooled shadow, lunges once from low left to high right and catches briefly on impact. It tears free with a crack in its own hilt to express recoil, then folds back into darkness. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 302,
+      "name": "Nightblade Hammer",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": -1,
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "An angular blacksteel hammerhead with one blade-like rear spur lifts sideways and slams down once. Oily dark fragments briefly cloud the impact space, implying accuracy disruption, before the hammer rebounds and the fragments fall away.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Nightblade Hammer, stable ID 302. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: An angular blacksteel hammerhead with one blade-like rear spur lifts sideways and slams down once. Oily dark fragments briefly cloud the impact space, implying accuracy disruption, before the hammer rebounds and the fragments fall away. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 304,
+      "name": "Cutpurse Reap",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "17",
+      "sequence": "A curved purse-cutter blade hooks under a hanging cord and sweeps in one low outward reaping arc. The cord separates cleanly and its loop tumbles end over end while the blade reverses and tucks away. No grasping hand or multiple attacks.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Cutpurse Reap, stable ID 304. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A curved purse-cutter blade hooks under a hanging cord and sweeps in one low outward reaping arc. The cord separates cleanly and its loop tumbles end over end while the blade reverses and tucks away. No grasping hand or multiple attacks. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 305,
+      "name": "Rogue Slash",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "A mismatched chipped dagger flicks out of a patched wrist sheath, cuts sideways once and snaps back before its trailing leather strap catches up. The quick interrupted aftermath gives a readable flinching rhythm, distinct from the slow nightsteel rend.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Rogue Slash, stable ID 305. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A mismatched chipped dagger flicks out of a patched wrist sheath, cuts sideways once and snaps back before its trailing leather strap catches up. The quick interrupted aftermath gives a readable flinching rhythm, distinct from the slow nightsteel rend. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 306,
+      "name": "Rogue Step",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "speed",
+          "stages": 2
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "accuracy",
+          "stages": -1
+        }
+      ],
+      "batch": "17",
+      "sequence": "Two soft rogue boots stamp in alternating preparatory poses, then one rapid sidestep leaves two staggered dust trails and a slightly misaligned pale aim-marker. The boots settle on a new angle. Self speed gain with accuracy loss, no enemy hit.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Rogue Step, stable ID 306. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two soft rogue boots stamp in alternating preparatory poses, then one rapid sidestep leaves two staggered dust trails and a slightly misaligned pale aim-marker. The boots settle on a new angle. Self speed gain with accuracy loss, no enemy hit. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 307,
+      "name": "Sly Feint",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "evasion"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "17",
+      "sequence": "A tiny weighted practice dagger is offered forward while its mirrored shadow slips to one side. The offered blade retracts untouched and only the displaced shadow remains briefly, conveying an evasive feint rather than an attack.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Sly Feint, stable ID 307. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A tiny weighted practice dagger is offered forward while its mirrored shadow slips to one side. The offered blade retracts untouched and only the displaced shadow remains briefly, conveying an evasive feint rather than an attack. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 308,
+      "name": "Broken Alliance",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "power_multiplier",
+          "multiplier": 1.5,
+          "when": "TARGET_HAS_POSITIVE_STAT_STAGE"
+        }
+      ],
+      "batch": "17",
+      "sequence": "Two linked silver oath rings draw apart until their joining chain becomes taut. A small opposing gilded crest pushes against the chain; the link snaps once and the broken ends lash through the crest, leaving unequal ring fragments.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Broken Alliance, stable ID 308. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two linked silver oath rings draw apart until their joining chain becomes taut. A small opposing gilded crest pushes against the chain; the link snaps once and the broken ends lash through the crest, leaving unequal ring fragments. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 309,
+      "name": "Devilish Encore",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "power_multiplier",
+          "multiplier": 2,
+          "when": "TARGET_USED_STATUS_MOVE_LAST_TURN"
+        }
+      ],
+      "batch": "17",
+      "sequence": "A battered theatrical clapper with two small curled horns closes once over a fading support sigil. The captured sigil erupts into one mocking crimson echo wave, then the clapper springs open and the echo ribbon curls back into silence.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Devilish Encore, stable ID 309. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A battered theatrical clapper with two small curled horns closes once over a fading support sigil. The captured sigil erupts into one mocking crimson echo wave, then the clapper springs open and the echo ribbon curls back into silence. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 310,
+      "name": "Rebellious Jab",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "17",
+      "sequence": "A patched dark gauntlet with a bent brass badge cocks at the wrist and delivers one compact upward jab. Its badge breaks loose at contact, spins once and falls while the fist retracts. No sword, energy beam or repeated punches.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Rebellious Jab, stable ID 310. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A patched dark gauntlet with a bent brass badge cocks at the wrist and delivers one compact upward jab. Its badge breaks loose at contact, spins once and falls while the fist retracts. No sword, energy beam or repeated punches. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 311,
+      "name": "Temper the Frame",
+      "category": "STATUS",
+      "target": "SELF",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "attack"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "17",
+      "sequence": "A small skeletal iron torso frame glows dull orange at its joints. A smithing grip tightens each brace inward until the frame straightens; sparks settle into the metal and the glow cools. Self attack preparation, no opposing target.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Temper the Frame, stable ID 311. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A small skeletal iron torso frame glows dull orange at its joints. A smithing grip tightens each brace inward until the frame straightens; sparks settle into the metal and the glow cools. Self attack preparation, no opposing target. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category STATUS; target SELF. Preserve that action identity."
+    },
+    {
+      "id": 312,
+      "name": "Magnetic Detonation",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "Two rough horseshoe magnets pull a cluster of iron filings into a trembling dense knot. The poles abruptly reverse and the knot detonates once into radial filings that dent a nearby plate, after which the magnets drift apart.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Magnetic Detonation, stable ID 312. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: Two rough horseshoe magnets pull a cluster of iron filings into a trembling dense knot. The poles abruptly reverse and the knot detonates once into radial filings that dent a nearby plate, after which the magnets drift apart. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category SPECIAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 313,
+      "name": "Anvil Answer",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "A squat blacksmith anvil rises with its worn horn visible, receives a narrow incoming glint and answers with one heavy forward shove. A dense ring-shaped impact bursts against target space; the anvil rocks back and comes to rest.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Anvil Answer, stable ID 313. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A squat blacksmith anvil rises with its worn horn visible, receives a narrow incoming glint and answers with one heavy forward shove. A dense ring-shaped impact bursts against target space; the anvil rocks back and comes to rest. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 314,
+      "name": "Cleaver Hook",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "batch": "17",
+      "sequence": "A broad nicked kitchen-like battle cleaver rotates around a short leather grip, hooks upward with its sharpened inner heel and lands one precise catching cut. The heavy blade follows through and lowers while one clean chip falls.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Cleaver Hook, stable ID 314. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A broad nicked kitchen-like battle cleaver rotates around a short leather grip, hooks upward with its sharpened inner heel and lands one precise catching cut. The heavy blade follows through and lowers while one clean chip falls. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    },
+    {
+      "id": 315,
+      "name": "Iron Cut",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "17",
+      "sequence": "A straight dull iron blade emerges from a riveted sleeve, slides through one exposed buckle strap and peels the buckle open. The blade stays straight throughout the cut and withdraws, distinct from curved cleavers and saw-tooth scissors.",
+      "status": "planned; not generated, uploaded, integrated or approved",
+      "prompt": "Original detailed polished pixel-art JRPG action sprite sheet for Abyssals move Iron Cut, stable ID 315. Exactly sixteen distinct temporal drawings in a precise 4x4 square atlas, read row-major. Genuine transparent alpha, no text or grid. Action: A straight dull iron blade emerges from a riveted sleeve, slides through one exposed buckle strap and peels the buckle open. The blade stays straight throughout the cut and withdraws, distinct from curved cleavers and saw-tooth scissors. Frames 1-4 anticipation, 5-7 action travel or self-buff assembly, frame8 the single impact or status culmination, 9-12 aftermath, 13-16 recovery. Every complete drawing and particle stays inside middle50% of its own equal cell with large empty transparent gutters. Detailed clustered source pixels at192x192 logical cells, nuanced material volume, restrained highlights, readable silhouettes. No full creature, person, background scene, repeated generic explosion, recoloured substitute or blurry enlargement. Category PHYSICAL; target SINGLE_FOE. Preserve that action identity."
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+{
+  "source": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx",
+  "source_sha256": "e02b0358ba6dd9e0796443b4b652ecfb9d96a503aebc8deac2d5b0228e74b5ac",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "blocks": [
+    {
+      "body_index": 0,
+      "kind": "paragraph",
+      "text": "ABYSSALS PROJECT"
+    },
+    {
+      "body_index": 1,
+      "kind": "paragraph",
+      "text": "CHECKLIST 11"
+    },
+    {
+      "body_index": 2,
+      "kind": "paragraph",
+      "text": "Evolution Validation"
+    },
+    {
+      "body_index": 3,
+      "kind": "paragraph",
+      "text": "LOCKED IMPLEMENTATION SPECIFICATION v1.0"
+    },
+    {
+      "body_index": 4,
+      "kind": "table",
+      "rows": [
+        [
+          "STATUS — COMPLETE / LOCKED at implementation-design level"
+        ]
+      ]
+    },
+    {
+      "body_index": 5,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 6,
+      "kind": "paragraph",
+      "text": "This document closes CHECKLIST 11. It validates the complete 187-species evolution model, preserves all 98 canonical evolution paths and their validated thresholds, fixes the story-choice branch implementation, and defines the final promotion/growth transaction rules. Later implementation may change data layout, UI presentation or serialization details, but mechanical or narrative changes require an explicit Checklist 11 revision rather than silent drift."
+    },
+    {
+      "body_index": 7,
+      "kind": "paragraph",
+      "text": "Canonical creature terminology: Abyssal / Abyssals. Legacy source filenames may retain earlier project wording."
+    },
+    {
+      "body_index": 8,
+      "kind": "table",
+      "rows": [
+        [
+          "LOCK SUMMARY\nAll 98 existing evolution thresholds/minimums are retained. The roster contains 75 level-based paths, 15 item-based paths and 8 story-choice paths. The four story-choice families are the only main-game branch locks: each save can obtain only its chosen evolved branch before the finale; the four opposite final forms become direct captures in postgame Primeval Reach. Evolution promotion is always a signed target-minus-source base-stat delta applied once, with no rerolling. Negative per-stat deltas are legal. Evolved growth weights govern every later level-up after the evolution transaction."
+        ]
+      ]
+    },
+    {
+      "body_index": 9,
+      "kind": "paragraph",
+      "text": "1. Canon authority and completion boundary"
+    },
+    {
+      "body_index": 10,
+      "kind": "paragraph",
+      "text": "The Pre-Programming Planning Checklists Reference defines Checklist 11 as the final balance and logic pass over all 187 species’ evolution rules."
+    },
+    {
+      "body_index": 11,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Progression_Learnsets_v3.xlsx remains the canonical species-by-species evolution registry: family, stage, target, method, minimum level, item/legacy story flag and fixed-promotion rule."
+    },
+    {
+      "body_index": 12,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx remains the canonical timing-validation layer. Its Evolution Validation sheet audits all 98 paths and retains every existing threshold/minimum."
+    },
+    {
+      "body_index": 13,
+      "kind": "paragraph",
+      "text": "CHECKLIST 01 remains authority for deterministic growth, immutable Growth Seeds and the base growth formula. Checklist 11 only fixes when the form changes and how the promotion transaction is applied."
+    },
+    {
+      "body_index": 14,
+      "kind": "paragraph",
+      "text": "CHECKLIST 06 remains authority for guaranteed and renewable evolution-item sourcing. Checklist 11 validates those sources against evolution timing but does not create a competing shop economy."
+    },
+    {
+      "body_index": 15,
+      "kind": "paragraph",
+      "text": "CHECKLIST 10 remains authority for global save-state conventions and event namespaces. Checklist 11 owns the species-specific story-evolution bindings and late-acquisition behaviour."
+    },
+    {
+      "body_index": 16,
+      "kind": "paragraph",
+      "text": "The locked Story Bible remains authority for chapter order and existing CHxx-Eyy / CHxx-Oyy scene IDs. Checklist 11 adds one-time WLD events adjacent to those scenes; it does not renumber or replace Story Bible scenes."
+    },
+    {
+      "body_index": 17,
+      "kind": "paragraph",
+      "text": "The Checklist 02/03 world/encounter availability rule is explicitly revised only for the four mutually exclusive story branches, as recorded in the v1.1 references bundled with this lock."
+    },
+    {
+      "body_index": 18,
+      "kind": "paragraph",
+      "text": "2. Final validation result"
+    },
+    {
+      "body_index": 19,
+      "kind": "table",
+      "rows": [
+        [
+          "Measure",
+          "Locked value",
+          "Validation result"
+        ],
+        [
+          "Regional species",
+          "187",
+          "Validated as one fixed regional roster."
+        ],
+        [
+          "Canonical evolution paths",
+          "98",
+          "All retained; none requires a changed minimum."
+        ],
+        [
+          "Level-based paths",
+          "75",
+          "Existing authored levels retained."
+        ],
+        [
+          "Item-based paths",
+          "15",
+          "Existing items, targets and minimums retained."
+        ],
+        [
+          "Story-choice paths",
+          "8",
+          "Four source families × two mutually exclusive outcomes."
+        ],
+        [
+          "Paths helped by delaying",
+          "0",
+          "Every evolved target has a higher expected total growth budget than its source."
+        ],
+        [
+          "Hard level cap",
+          "200",
+          "No evolution threshold is doubled merely because the cap is high."
+        ]
+      ]
+    },
+    {
+      "body_index": 20,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 21,
+      "kind": "paragraph",
+      "text": "Timing verdict: KEEP EXISTING for all 98 paths. The validated growth model means delaying an available evolution permanently gives up expected stat growth; there is therefore no hidden optimisation incentive to postpone evolution."
+    },
+    {
+      "body_index": 22,
+      "kind": "paragraph",
+      "text": "3. Level timing and family-structure validation"
+    },
+    {
+      "body_index": 23,
+      "kind": "paragraph",
+      "text": "Every three-stage line was reviewed as a complete progression rather than as two isolated transitions. Earlier first promotions and later final promotions remain appropriate where the final BST jump is stronger."
+    },
+    {
+      "body_index": 24,
+      "kind": "paragraph",
+      "text": "Every two-stage line was reviewed against its source-to-target BST jump and expected growth-budget improvement. Ordinary two-stage lines generally resolve in the mid-20s, with stronger/specialised lines later where already authored."
+    },
+    {
+      "body_index": 25,
+      "kind": "paragraph",
+      "text": "Every single-stage species remains deliberately single-stage. Balance is handled through availability, rarity and authored encounter timing rather than inventing unnecessary evolution mechanics."
+    },
+    {
+      "body_index": 26,
+      "kind": "paragraph",
+      "text": "Strong final forms are paced later through higher existing level thresholds, rarer acquisition, authored item access or story gates. Weaker ordinary forms retain reasonably early progression."
+    },
+    {
+      "body_index": 27,
+      "kind": "paragraph",
+      "text": "There are no trade evolutions."
+    },
+    {
+      "body_index": 28,
+      "kind": "table",
+      "rows": [
+        [
+          "Validation class",
+          "Representative locked examples",
+          "Result"
+        ],
+        [
+          "Starter three-stage",
+          "Scarimp → Grimscar Lv16 → Noctafey Lv36; Calibrit → Severyn Lv16 → Axiomaro Lv36; Ruffurn → Revhound Lv16 → Revault Lv36",
+          "Retain 16 / 36."
+        ],
+        [
+          "Ordinary three-stage",
+          "Rouncolt → Coursire Lv20 → Destridon Lv38; Dromble → Caskamel Lv22 → Cisternel Lv40; Regulet → Thronelorn Lv24 → Cyprigon Lv42",
+          "Retain existing cadence."
+        ],
+        [
+          "Late / high-BST three-stage",
+          "Dustisk → Cairisk Lv30 → Mausolisk Lv50; Chipkid → Rimebex Lv30 → Aegishorn Lv50",
+          "Late finals remain appropriately late."
+        ],
+        [
+          "Ordinary two-stage",
+          "Pennkit → Hareald Lv26; Tatterook → Corvassal Lv26; Rillip → Galvaneel Lv28",
+          "Retain existing thresholds."
+        ],
+        [
+          "Late specialised two-stage",
+          "Sidermite → Xenolithid Lv40",
+          "Retain late fossil threshold."
+        ]
+      ]
+    },
+    {
+      "body_index": 29,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 30,
+      "kind": "paragraph",
+      "text": "4. Starters, fossils, mythics and special high-BST species"
+    },
+    {
+      "body_index": 31,
+      "kind": "paragraph",
+      "text": "Starter evolution levels are locked at 16 then 36 for all three starter families. Their parallel timing keeps starter choice mechanically fair while the final forms remain meaningfully delayed."
+    },
+    {
+      "body_index": 32,
+      "kind": "paragraph",
+      "text": "Fossils retain their authored structures: Paleursa and Raptyrale are single-stage; Sidermite evolves to Xenolithid at Level 40; Gravodo evolves to Cairnodo at Level 28 and Cairnodo to Kronodo at Level 48."
+    },
+    {
+      "body_index": 33,
+      "kind": "paragraph",
+      "text": "Mythic structures remain: Guanrong, Liubeirow and Waranwei are single-stage; Suncub evolves to Cehong with the Sun Relic at minimum Level 40."
+    },
+    {
+      "body_index": 34,
+      "kind": "paragraph",
+      "text": "Special 600-BST finals such as Mausolisk and Aegishorn retain Level 50 final promotions. Their late access is appropriate and does not need an artificial cap-driven delay."
+    },
+    {
+      "body_index": 35,
+      "kind": "paragraph",
+      "text": "No single-stage fossil, mythic or high-BST species receives a newly invented evolution solely to normalise line length."
+    },
+    {
+      "body_index": 36,
+      "kind": "paragraph",
+      "text": "5. Item-based branch validation"
+    },
+    {
+      "body_index": 37,
+      "kind": "table",
+      "rows": [
+        [
+          "Source",
+          "Minimum",
+          "Branches / items",
+          "Theme verdict"
+        ],
+        [
+          "Votress",
+          "30",
+          "Sigilume — Iron Sigil; Sepulshade — Grave Salt; Idolure — Gilded Idol",
+          "Forged seal / funerary salt / devotional idol correctly express Steel, Ghost and Fairy transformations."
+        ],
+        [
+          "Pebbettle",
+          "28",
+          "Avaroll — Gilded Nodule; Prodiglow — Stormglass",
+          "Greed-mineral vs charged glass correctly separates the two branches."
+        ],
+        [
+          "Styxlet",
+          "28",
+          "Ragegill — Bloodstone; Sulkoad — Grief Pearl",
+          "Wrath/heat vs grief/cold theme is explicit and readable."
+        ],
+        [
+          "Triskit",
+          "30",
+          "Phlegacorn — Tide Pearl; Harpbriar — Mourning Briar; Searwaste — Sunscar Glass",
+          "Water, living thorn/ghost and heat-blasted desert material each match the target form."
+        ],
+        [
+          "Pilgrimp",
+          "28",
+          "Ganderiel — Wayfarer Feather; Caproclaim — Pilgrim Bell",
+          "Roaming/pilgrimage vs ritual/heraldic identity is coherent."
+        ],
+        [
+          "Acremink",
+          "28",
+          "Longspurr — Trial Toxin; Elixirine — Saint’s Tonic",
+          "Alchemical poison trial vs restorative tonic cleanly maps to the two outcomes."
+        ],
+        [
+          "Suncub",
+          "40",
+          "Cehong — Sun Relic",
+          "Late rare sun relic appropriately gates the mythic Fire/Electric transformation."
+        ]
+      ]
+    },
+    {
+      "body_index": 38,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 39,
+      "kind": "paragraph",
+      "text": "All fifteen item paths retain their existing item names, source species, target species and minimum levels."
+    },
+    {
+      "body_index": 40,
+      "kind": "paragraph",
+      "text": "All guaranteed authored item sources are non-RNG and remain obtainable after the relevant area’s first clear unless already collected."
+    },
+    {
+      "body_index": 41,
+      "kind": "paragraph",
+      "text": "All fourteen non-Sun Relic evolution items become unlimited renewable stock through the Ramelle relic/alchemy specialist."
+    },
+    {
+      "body_index": 42,
+      "kind": "paragraph",
+      "text": "The Sun Relic remains exceptional: one guaranteed late authored source exists in Ramelle Bellglass Ruins, with a postgame one-time replacement through the Ramelle relic registrar when needed."
+    },
+    {
+      "body_index": 43,
+      "kind": "paragraph",
+      "text": "The minimum level is a floor, never a timing window. If the player obtains or uses the item after the minimum, the evolution remains valid."
+    },
+    {
+      "body_index": 44,
+      "kind": "paragraph",
+      "text": "6. Story-choice evolution bindings — LOCKED"
+    },
+    {
+      "body_index": 45,
+      "kind": "table",
+      "rows": [
+        [
+          "MAIN-GAME CONSEQUENCE RULE\nOnly these four families are mutually exclusive during the main game. The player’s authored story decision determines which final form can be evolved into and obtained before the finale. The opposite branch has no alternate item, reset, second choice or workaround before postgame."
+        ]
+      ]
+    },
+    {
+      "body_index": 46,
+      "kind": "table",
+      "rows": [
+        [
+          "Source",
+          "Min",
+          "Story Bible anchor / one-time world event",
+          "Authoritative outcome → target"
+        ],
+        [
+          "Jerbune",
+          "30",
+          "CH04-E01 — War Market → WLD-CYBRESSA-ALLIANCE-001",
+          "ACCEPTED → Concordune / REJECTED → Sundune"
+        ],
+        [
+          "Censmoke",
+          "30",
+          "CH05-E03 — The Same Story → WLD-COSSENNE-RELIC-001",
+          "SANCTIFIED → Thurafume / REFUSED → Malifume"
+        ],
+        [
+          "Flaggrim",
+          "30",
+          "CH06-E02 — The Useful Invasion → WLD-MARASEN-BANNER-001 → before CH06-E03",
+          "RAISED → Oriflamme / TORN → Tattereign"
+        ],
+        [
+          "Cairant",
+          "32",
+          "CH07-E02 — Mirelle’s Hypothesis → WLD-BOTRUNE-OATH-001",
+          "KEPT → Serapine / BROKEN → Pandemne"
+        ]
+      ]
+    },
+    {
+      "body_index": 47,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 48,
+      "kind": "paragraph",
+      "text": "Jerbune’s Cybressa event asks whether opposing groups should cooperate on a protected supply arrangement or remain independent. It is cooperation versus independence, not a hidden good/evil choice."
+    },
+    {
+      "body_index": 49,
+      "kind": "paragraph",
+      "text": "Censmoke’s Cossenne event uses a contested pre-schism sacred relic. The player-facing negative option is framed as refusing its sanctity rather than cartoonish desecration; the legacy STORY_DEFILE_RELIC label survives only as a compatibility check."
+    },
+    {
+      "body_index": 50,
+      "kind": "paragraph",
+      "text": "Flaggrim’s Marasen event asks whether a faction standard should be used as a practical rallying symbol during a genuine local rescue, or rejected to avoid recasting liberation as factional conquest."
+    },
+    {
+      "body_index": 51,
+      "kind": "paragraph",
+      "text": "Cairant’s Botrune event asks whether a pre-schism oath retains value independently of institutions that later appropriated it. Keeping and breaking it are both narratively defensible."
+    },
+    {
+      "body_index": 52,
+      "kind": "paragraph",
+      "text": "7. Story evolution save-state contract"
+    },
+    {
+      "body_index": 53,
+      "kind": "table",
+      "rows": [
+        [
+          "Family",
+          "Authoritative saved field",
+          "Allowed values",
+          "Exactly one historical EVO trigger written"
+        ],
+        [
+          "Jerbune",
+          "jerbune_alliance_choice",
+          "UNRESOLVED / ACCEPTED / REJECTED",
+          "EVO-JERBUNE-ALLIANCE-ACCEPTED or EVO-JERBUNE-ALLIANCE-REJECTED"
+        ],
+        [
+          "Censmoke",
+          "censmoke_relic_choice",
+          "UNRESOLVED / SANCTIFIED / REFUSED",
+          "EVO-CENSMOKE-RELIC-SANCTIFIED or EVO-CENSMOKE-RELIC-REFUSED"
+        ],
+        [
+          "Flaggrim",
+          "flaggrim_banner_choice",
+          "UNRESOLVED / RAISED / TORN",
+          "EVO-FLAGGRIM-BANNER-RAISED or EVO-FLAGGRIM-BANNER-TORN"
+        ],
+        [
+          "Cairant",
+          "cairant_oath_choice",
+          "UNRESOLVED / KEPT / BROKEN",
+          "EVO-CAIRANT-OATH-KEPT or EVO-CAIRANT-OATH-BROKEN"
+        ]
+      ]
+    },
+    {
+      "body_index": 54,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 55,
+      "kind": "paragraph",
+      "text": "The enum/state field is authoritative. Do not save two independent branch booleans that can contradict each other."
+    },
+    {
+      "body_index": 56,
+      "kind": "paragraph",
+      "text": "The eight legacy STORY_* identifiers from the regional progression workbook remain derived compatibility/path labels, not competing authoritative save facts."
+    },
+    {
+      "body_index": 57,
+      "kind": "paragraph",
+      "text": "The matching EVO-* trigger is an earned historical trigger in Checklist 10’s story_evolution_triggers set. Exactly one trigger from each family pair can ever be written on a normal save."
+    },
+    {
+      "body_index": 58,
+      "kind": "paragraph",
+      "text": "If the story choice happens while the source Abyssal is below its minimum level, the branch is stored and becomes evolution-eligible when that minimum is reached."
+    },
+    {
+      "body_index": 59,
+      "kind": "paragraph",
+      "text": "If the source Abyssal is already at or above its minimum when the story choice resolves, the selected evolution becomes eligible at the next safe evolution opportunity after the scene. Evolution never interrupts the story cutscene itself."
+    },
+    {
+      "body_index": 60,
+      "kind": "paragraph",
+      "text": "A source species caught or otherwise obtained after its story decision reads the already-saved family choice and may evolve only into that save’s selected branch once its level condition is met."
+    },
+    {
+      "body_index": 61,
+      "kind": "paragraph",
+      "text": "The story decision is historical and irreversible. Postgame completion access never changes the saved enum or writes the opposite EVO trigger."
+    },
+    {
+      "body_index": 62,
+      "kind": "paragraph",
+      "text": "8. Primeval Reach postgame completion exception"
+    },
+    {
+      "body_index": 63,
+      "kind": "paragraph",
+      "text": "During the main game a single save can obtain at most 183 of the 187 species because one final form from each of the four story-choice pairs is deliberately unavailable."
+    },
+    {
+      "body_index": 64,
+      "kind": "paragraph",
+      "text": "By the end of Circle II, 100% availability therefore means 100% of the species eligible on that save during the main game, not all 187 species."
+    },
+    {
+      "body_index": 65,
+      "kind": "paragraph",
+      "text": "In postgame Primeval Reach, the four unchosen evolved forms become direct encounter/capture targets: the unchosen one of Thurafume/Malifume, Serapine/Pandemne, Oriflamme/Tattereign and Concordune/Sundune."
+    },
+    {
+      "body_index": 66,
+      "kind": "paragraph",
+      "text": "Primeval Reach is direct capture access only. Catching the opposite final form does not unlock the opposite evolution route for Censmoke, Cairant, Flaggrim or Jerbune."
+    },
+    {
+      "body_index": 67,
+      "kind": "paragraph",
+      "text": "No other species becomes postgame-first-access without an explicit future canon revision."
+    },
+    {
+      "body_index": 68,
+      "kind": "paragraph",
+      "text": "9. Fixed promotion and growth transaction"
+    },
+    {
+      "body_index": 69,
+      "kind": "table",
+      "rows": [
+        [
+          "SIGNED PROMOTION DELTA RULE\nFor every evolution, each live stat receives exactly: target species base stat − source species base stat. Apply the six signed deltas once. Do not reroll growth history, do not recompute the individual from scratch, and do not clamp negative deltas to zero."
+        ]
+      ]
+    },
+    {
+      "body_index": 70,
+      "kind": "paragraph",
+      "text": "Resolve the triggering level-up’s six deterministic growth rolls using the source form if the evolution is level-triggered."
+    },
+    {
+      "body_index": 71,
+      "kind": "paragraph",
+      "text": "After that level-up resolves, perform the evolution transaction and apply the six fixed signed target-minus-source base-stat deltas once."
+    },
+    {
+      "body_index": 72,
+      "kind": "paragraph",
+      "text": "If any target base stat is lower than the source equivalent, that stat legitimately decreases by the negative delta. The target species’ authored stat profile is authoritative; evolution may redistribute power rather than only add it."
+    },
+    {
+      "body_index": 73,
+      "kind": "paragraph",
+      "text": "If maximum HP decreases, cap current HP to the new maximum. Do not heal the Abyssal merely because evolution occurred. If maximum HP increases, current HP does not receive free healing beyond the signed max-HP/stat change itself."
+    },
+    {
+      "body_index": 74,
+      "kind": "paragraph",
+      "text": "All subsequent level-ups use the evolved form’s growth percentages immediately after the evolution transaction. Item- and story-triggered evolutions likewise use target-form growth percentages from the next level-up onward."
+    },
+    {
+      "body_index": 75,
+      "kind": "paragraph",
+      "text": "Growth Seed, prior growth history, XP, moves, ability instance and other persistent individual state are preserved unless another locked system explicitly changes them."
+    },
+    {
+      "body_index": 76,
+      "kind": "paragraph",
+      "text": "10. Canonical evolution table — final authority"
+    },
+    {
+      "body_index": 77,
+      "kind": "paragraph",
+      "text": "The canonical table is not retyped into a competing document. The Dex Progression sheet of Regional_Dex_Progression_Learnsets_v3.xlsx remains the 187-row species registry and source of all 98 evolution paths."
+    },
+    {
+      "body_index": 78,
+      "kind": "paragraph",
+      "text": "The Evolution Validation sheet of Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx is the timing-verdict layer for all 98 paths and records KEEP EXISTING for every threshold/minimum."
+    },
+    {
+      "body_index": 79,
+      "kind": "paragraph",
+      "text": "ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx, created alongside this specification, is the authoritative overlay for all 23 non-level paths: 15 item evolutions plus 8 story-choice evolutions, including exact WLD/EVO bindings and the Primeval Reach main-game exception."
+    },
+    {
+      "body_index": 80,
+      "kind": "paragraph",
+      "text": "Where old files say all 187 species are obtainable before the finale, the narrow four-family exception in CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.md, WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md and ENCOUNTER_TABLE_REFERENCE_v1.1.md supersedes that wording."
+    },
+    {
+      "body_index": 81,
+      "kind": "paragraph",
+      "text": "11. Checklist 11 completion matrix"
+    },
+    {
+      "body_index": 82,
+      "kind": "table",
+      "rows": [
+        [
+          "Checklist requirement",
+          "Status",
+          "Locked implementation result"
+        ],
+        [
+          "Review every three-stage line",
+          "COMPLETE",
+          "Validated through the 187-row progression registry and 98-path timing sheet; existing line cadences retained."
+        ],
+        [
+          "Review every two-stage line",
+          "COMPLETE",
+          "All source→target transitions audited; existing minima retained."
+        ],
+        [
+          "Review every single-stage monster",
+          "COMPLETE",
+          "Singles remain intentional; no forced evolutions added."
+        ],
+        [
+          "Check first evolution levels against BST increases",
+          "COMPLETE",
+          "All first-stage timing retained after growth-budget validation."
+        ],
+        [
+          "Check final evolution levels against BST increases",
+          "COMPLETE",
+          "Late finals retain later thresholds, including Lv45–50 cases."
+        ],
+        [
+          "Ensure strong final forms arrive later",
+          "COMPLETE",
+          "Higher thresholds, authored item timing, rarity and story gates provide late access."
+        ],
+        [
+          "Ensure weaker ordinary forms evolve reasonably early",
+          "COMPLETE",
+          "Common ordinary transitions remain predominantly in the 20s."
+        ],
+        [
+          "Check starter evolution levels",
+          "COMPLETE",
+          "All three starter lines remain 16 → 36."
+        ],
+        [
+          "Check fossils",
+          "COMPLETE",
+          "Paleursa/Raptyrale singles; Sidermite 40; Gravodo 28 → Kronodo 48 line retained."
+        ],
+        [
+          "Check mythic lines",
+          "COMPLETE",
+          "Three mythic singles retained; Suncub → Cehong via Sun Relic at min 40."
+        ],
+        [
+          "Check special high-BST monsters",
+          "COMPLETE",
+          "Late 600-BST finals remain at Lv50; single-stage high-BSTs balanced by acquisition."
+        ],
+        [
+          "Review every item-based branch",
+          "COMPLETE",
+          "All 15 paths reviewed and preserved."
+        ],
+        [
+          "Ensure each item theme matches transformation",
+          "COMPLETE",
+          "All seven item families have coherent material/elemental/ritual themes."
+        ],
+        [
+          "Ensure each item appears before evolution would reasonably be desired",
+          "COMPLETE",
+          "Guaranteed authored sources and late stock/replacement rules prevent progression locks."
+        ],
+        [
+          "Ensure renewable item sources exist where appropriate",
+          "COMPLETE",
+          "14 items renewable at Ramelle; Sun Relic has a postgame replacement service."
+        ],
+        [
+          "Review every story-choice evolution",
+          "COMPLETE",
+          "All 8 paths / 4 source families explicitly bound."
+        ],
+        [
+          "Tie every story flag to a specific actual scene",
+          "COMPLETE",
+          "Four exact WLD events anchored to CH04-E01, CH05-E03, CH06-E02/03 gap and CH07-E02."
+        ],
+        [
+          "Decide post-decision acquisition behaviour",
+          "COMPLETE",
+          "Later-caught source species reads the saved family choice."
+        ],
+        [
+          "Decide passed-minimum-before-trigger behaviour",
+          "COMPLETE",
+          "Eligibility activates at next safe opportunity after trigger; no lost window."
+        ],
+        [
+          "Validate fixed promotion bonuses",
+          "COMPLETE",
+          "Single deterministic signed delta transaction."
+        ],
+        [
+          "Confirm target minus source base stat",
+          "COMPLETE",
+          "Required for every one of the six live stats."
+        ],
+        [
+          "Check lower-target-stat cases",
+          "COMPLETE",
+          "Lower target stats are preserved through signed negative deltas."
+        ],
+        [
+          "Decide whether negative promotion deltas are allowed",
+          "COMPLETE",
+          "Allowed; no zero-clamping."
+        ],
+        [
+          "Confirm evolved growth weights switch immediately",
+          "COMPLETE",
+          "All future level-ups after the evolution transaction use target-form growth weights."
+        ],
+        [
+          "Finalise canonical evolution table",
+          "COMPLETE",
+          "Existing 98-path workbooks designated as table authority; locked non-level addendum supplies final overlay."
+        ]
+      ]
+    },
+    {
+      "body_index": 83,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 84,
+      "kind": "paragraph",
+      "text": "12. Cross-checklist handoffs"
+    },
+    {
+      "body_index": 85,
+      "kind": "table",
+      "rows": [
+        [
+          "Later workstream",
+          "May define without reopening Checklist 11"
+        ],
+        [
+          "Checklist 12 — Learnset Validation",
+          "Evolution-move / relearn behaviour and final legal learnsets, without changing evolution method or timing."
+        ],
+        [
+          "Checklist 13 — Battle Edge Cases",
+          "Exact battle-end ordering if a level-up/evolution is earned at unusual battle endpoints."
+        ],
+        [
+          "Checklist 15 — Ironman Save & Persistence",
+          "Atomic persistence of story-choice commits, EVO triggers and evolution transactions."
+        ],
+        [
+          "Checklist 17 — Overworld Interaction",
+          "NPC/object choreography for the four WLD story-choice events and exact Primeval Reach encounter presentation."
+        ],
+        [
+          "Encounter authoring",
+          "Exact Primeval Reach habitat, encounter percentages, day/night slots and level ranges for the four postgame opposite forms."
+        ]
+      ]
+    },
+    {
+      "body_index": 86,
+      "kind": "paragraph",
+      "text": ""
+    },
+    {
+      "body_index": 87,
+      "kind": "paragraph",
+      "text": "13. Source authority used for this lock"
+    },
+    {
+      "body_index": 88,
+      "kind": "paragraph",
+      "text": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx — Checklist 11 scope and completion criteria."
+    },
+    {
+      "body_index": 89,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Progression_Learnsets_v3.xlsx — canonical family structure, targets, methods, levels/minimums, items and legacy story flags."
+    },
+    {
+      "body_index": 90,
+      "kind": "paragraph",
+      "text": "Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx — all-98-path timing audit, deterministic growth rules and KEEP EXISTING verdicts."
+    },
+    {
+      "body_index": 91,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx — guaranteed/renewable item sourcing and Sun Relic replacement rule."
+    },
+    {
+      "body_index": 92,
+      "kind": "paragraph",
+      "text": "ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx — authoritative-state principle, WLD/EVO ID namespaces and Checklist 11 handoff."
+    },
+    {
+      "body_index": 93,
+      "kind": "paragraph",
+      "text": "Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx — chapter sequence and scene anchors CH04-E01, CH05-E03, CH06-E02/CH06-E03 and CH07-E02."
+    },
+    {
+      "body_index": 94,
+      "kind": "paragraph",
+      "text": "CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.md, WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md and ENCOUNTER_TABLE_REFERENCE_v1.1.md — approved 183/187 main-game availability exception and Primeval Reach completion access."
+    },
+    {
+      "body_index": 95,
+      "kind": "paragraph",
+      "text": "User-approved Checklist 11 decision pass — main-game story branch lock, postgame opposite-form access, exact four story-event concepts/bindings, late-trigger behaviour and final lock instruction."
+    },
+    {
+      "body_index": 96,
+      "kind": "table",
+      "rows": [
+        [
+          "FINAL STATUS\nCHECKLIST 11 — EVOLUTION VALIDATION: COMPLETE / LOCKED. No unresolved evolution-design decision remains. Later implementation may tune presentation or fix defects, but may not silently alter the 98 canonical paths, their validated thresholds/minimums, the four main-game story branch locks, Primeval Reach completion access, or the signed deterministic promotion/growth rules fixed here."
+        ]
+      ]
+    },
+    {
+      "body_index": 97,
+      "kind": "paragraph",
+      "text": "END OF CHECKLIST 11 — LOCKED v1.0"
+    }
+  ]
+}

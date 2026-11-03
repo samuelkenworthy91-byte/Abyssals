@@ -1,0 +1,5078 @@
+{
+  "schema_version": 1,
+  "archives": [
+    {
+      "filename": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "sha256": "c616afd5f2aea0d30331f83fd4383d0c87aabfc74fafa77f10b16a2ebf094295",
+      "size": 78037
+    },
+    {
+      "filename": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "sha256": "306cf4c4634afe145d094426b63fc9b51f1e5240827391b2039de611dc073f9f",
+      "size": 149384649
+    },
+    {
+      "filename": "03-All-Monster-Generations-Compressed.zip",
+      "sha256": "9d5217a18672d714e872426e608bbf46d78990cf40000add1ade1b58b8124df7",
+      "size": 11335834
+    }
+  ],
+  "files": [
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/.github/workflows/ci.yml",
+      "size": 391,
+      "sha256": "73d76e9948fca551e33bfde29d2a9dca915e87d9e26613f8c60d8ec64601e8d9",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/.github/workflows/ci.yml",
+      "source_id": "SRC-6ba8d43be23f7653",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".yml",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/.gitignore",
+      "size": 118,
+      "sha256": "2aaa33806410d21894c2dfed8d1f4d7bec1f552b8a8659a6b18b67bd8bb20616",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/.gitignore",
+      "source_id": "SRC-55b7e00af0c40e35",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": "",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/.vscode/extensions.json",
+      "size": 118,
+      "sha256": "13924d97d181cad0e7a09c349025b949130d10416da8d14908fa4efc50e0043b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/.vscode/extensions.json",
+      "source_id": "SRC-fa03ee6958eb1d75",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/AGENTS.md",
+      "size": 2036,
+      "sha256": "c73318d346055aaa326d3578e154c0d74996daa855fd1707b990ae03a0fb8fcf",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/AGENTS.md",
+      "source_id": "SRC-c304b052056cc669",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/ARENA_AI.md",
+      "size": 801,
+      "sha256": "c8e5c992922e2da58bb347dfbfbcfda006bdf81b99602033f211bf1f26971b32",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/ARENA_AI.md",
+      "source_id": "SRC-76afad67f90db18c",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/CLAUDE.md",
+      "size": 74,
+      "sha256": "9028b6d9aebb60f7d891dec44f5d775a1952728da52f287de871c91d1c08dc79",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/CLAUDE.md",
+      "source_id": "SRC-8605f0c77f13ff4a",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/CODEX.md",
+      "size": 450,
+      "sha256": "54f786011184a18b77b17aa4b7cbc73b94662b65c567ae2e43b9c409cf95a161",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/CODEX.md",
+      "source_id": "SRC-8ac844b44db07e28",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/CONTEXT.md",
+      "size": 1314,
+      "sha256": "1674e26e59f18838a03d8dde69c7a596026cfb3558149f2291433f6eb0728c43",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/CONTEXT.md",
+      "source_id": "SRC-73f9255a3ab8d0d6",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/README_FIRST.md",
+      "size": 1861,
+      "sha256": "d2d68b957ef8fd80eee715f94ce61906bfabb15c84d2c78520c926128bf70cdd",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/README_FIRST.md",
+      "source_id": "SRC-06ad85b601e4ad5b",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/assets/README.md",
+      "size": 359,
+      "sha256": "7d8eabbffc77c33e6d3b5ff0e490ba3edd50c9d8c9779340df9c1bc294c65d3c",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/assets/README.md",
+      "source_id": "SRC-9b2900102b5cda38",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/assets/generated/characters/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/assets/generated/characters/.gitkeep",
+      "source_id": "SRC-fdab6cb11e00b8e6",
+      "authority": "historical_source_only",
+      "duplicates": [
+        "SRC-76dab23e5b443cee",
+        "SRC-910fa868a8837cb7"
+      ],
+      "extension": "",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/assets/production/abyssals/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/assets/production/abyssals/.gitkeep",
+      "source_id": "SRC-76dab23e5b443cee",
+      "authority": "historical_source_only",
+      "duplicates": [
+        "SRC-fdab6cb11e00b8e6",
+        "SRC-910fa868a8837cb7"
+      ],
+      "extension": "",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/assets/production/characters/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/assets/production/characters/.gitkeep",
+      "source_id": "SRC-910fa868a8837cb7",
+      "authority": "historical_source_only",
+      "duplicates": [
+        "SRC-fdab6cb11e00b8e6",
+        "SRC-76dab23e5b443cee"
+      ],
+      "extension": "",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/characters.json",
+      "size": 1780,
+      "sha256": "c580cc10d3a2fac7d536a3e1604da826adbc75309d1182fd78e07ad2a017abfa",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/characters.json",
+      "source_id": "SRC-a46f9c6c8a270c4c",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/core_rules.json",
+      "size": 1643,
+      "sha256": "519c99ed6d54ba91b41d8a57ef2627c23219b7f3946861c3bd096f063d247e8d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/core_rules.json",
+      "source_id": "SRC-9e03beb05c1ba798",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/encounter_area_summary.json",
+      "size": 20388,
+      "sha256": "3269269b22afc889eb095367b2adbbc0bd19e59bf0405d4ebe6c44e3f2027647",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/encounter_area_summary.json",
+      "source_id": "SRC-8ed413033d15382d",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/factions.json",
+      "size": 653,
+      "sha256": "c61b1ff02411a74d5e9157e89506db9a74b1b34e7393c8b248bde107244a286d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/factions.json",
+      "source_id": "SRC-47e36b4ef9628e18",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/learnset_rules.json",
+      "size": 574,
+      "sha256": "f25af35a89a0da7987947f42f142e38b76883ba997f0cfe8e941f85347e180e1",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/learnset_rules.json",
+      "source_id": "SRC-4b808de9c147b2e8",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/locations.json",
+      "size": 367,
+      "sha256": "b403d50601071bc0f6610cf13d0a8bd48077f4cccd41e547ea1a8fe0f3fb158f",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/locations.json",
+      "source_id": "SRC-78da520676d8fd72",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/portrait_manifest_meta.json",
+      "size": 420,
+      "sha256": "5105db8de9a65208ac89ea1c71c2d3b8a0cb28784ed3b8cbcc539befa6d2e944",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/portrait_manifest_meta.json",
+      "source_id": "SRC-14925c2e2acfe892",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/state_model.json",
+      "size": 1022,
+      "sha256": "bec9b7d6c90d5a383abc2024d83825636f710fb506344b5bf494cf7edec863fd",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/state_model.json",
+      "source_id": "SRC-5b08955006906ab3",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/data/canon/warden_fields.json",
+      "size": 398,
+      "sha256": "e2fb5312feabf2a2027822bf749015456671e47933e6715f564dd6d9a5fc6519",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/data/canon/warden_fields.json",
+      "source_id": "SRC-40402c615bc6f850",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/agents/START_HERE_ARENA.md",
+      "size": 699,
+      "sha256": "329aab83af7db219ba4343c3f460a9d687206c6679d64548e775ac3f6f915e0e",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/agents/START_HERE_ARENA.md",
+      "source_id": "SRC-5d43ced36f3318be",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/agents/START_HERE_CODEX.md",
+      "size": 588,
+      "sha256": "94acca05e506ee9877d5da65f4b96644c5398e84d98434a4ef1fafa662eac45e",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/agents/START_HERE_CODEX.md",
+      "source_id": "SRC-6a63e95394b6cf6e",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/canon/ACTIVE_CANON.md",
+      "size": 13470,
+      "sha256": "e1a652635fdcfa49cc040480ec1ec5f5db8abe2ecdcb58532097d7c36e93ed3f",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/canon/ACTIVE_CANON.md",
+      "source_id": "SRC-478a322f8fea07e2",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/canon/ART_DIRECTION.md",
+      "size": 1299,
+      "sha256": "ef72c807a4c2eda4ec668f52990cb6dc7dfd4998e33184cf550b2e2975d98f0a",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/canon/ART_DIRECTION.md",
+      "source_id": "SRC-86e590468e4b30d6",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/canon/CHECKLIST_INDEX.md",
+      "size": 2980,
+      "sha256": "d379d45b52a8bfe74a72b914c6c57223721677599eb66b2051500b2fc0566b0d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/canon/CHECKLIST_INDEX.md",
+      "source_id": "SRC-d2de7d86ef5552ee",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/canon/STORY_IMPLEMENTATION.md",
+      "size": 1355,
+      "sha256": "04f0edf58f10a845051b4da694ca42e379355bb8fbc421aa4024f9d546fc2015",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/canon/STORY_IMPLEMENTATION.md",
+      "source_id": "SRC-113a4530c859e829",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/canon/SUPERSESSIONS.md",
+      "size": 1460,
+      "sha256": "d6cf391c8ad0e2afba5865850443f8e34c0d426e99cf55667d6d4f985cbecf0b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/canon/SUPERSESSIONS.md",
+      "source_id": "SRC-65e89cccb0f9c884",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/dev/ABYSSALS_BUILD_AND_PLAYTEST_GUIDE_v1.0.docx",
+      "size": 42048,
+      "sha256": "7260a9b6ebab7313faa465e261d940eaffaf4bbab37565efb53361c31bc0de1b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/dev/ABYSSALS_BUILD_AND_PLAYTEST_GUIDE_v1.0.docx",
+      "source_id": "SRC-19d83286307b8661",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".docx",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/dev/IMPLEMENTATION_ROADMAP.md",
+      "size": 2481,
+      "sha256": "7ec92478d088f030be12061d4d4691d1331f8c345855f9a12a1979aecfbae4a0",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/dev/IMPLEMENTATION_ROADMAP.md",
+      "source_id": "SRC-b265d6989676bc06",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/dev/TEST_PLAN.md",
+      "size": 2214,
+      "sha256": "32b7208ddb4af60db40360edf73714842da6ecb38a75099e79f12af5725b4f50",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/dev/TEST_PLAN.md",
+      "source_id": "SRC-6f16fa9e515f0e28",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/docs/source_material/ORIGINAL_SOURCE_INVENTORY.md",
+      "size": 2718,
+      "sha256": "a581e2a09c38bcd3ee3809b24b18bf1415ce634213c8315ec38e9f615a625745",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/docs/source_material/ORIGINAL_SOURCE_INVENTORY.md",
+      "source_id": "SRC-dce078ce162a1c3c",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/legacy/dev_environment/README.md",
+      "size": 629,
+      "sha256": "b49518614464f2330b79d0ad70eef27c3dbfaa9e8ba465db41e724ba863e0c2d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/legacy/dev_environment/README.md",
+      "source_id": "SRC-7e54dfc6ec366282",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/package.json",
+      "size": 424,
+      "sha256": "22515e70e7cdcac9aa06a6597fa223133df3a8d65f7f8b4b68a628684303f07c",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/package.json",
+      "source_id": "SRC-fab814dfea38b710",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/schemas/encounter.schema.json",
+      "size": 1383,
+      "sha256": "94b8c2f04d55656f34bf93414a14c7469a666c51d69a51a7bcee73f1ed9b242f",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/schemas/encounter.schema.json",
+      "source_id": "SRC-872b3d99a4c41472",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/schemas/move.schema.json",
+      "size": 817,
+      "sha256": "7723c2c4b234df9a487604869172ea5aeae2273d59a8d4b1cf8cc4df2baf6c65",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/schemas/move.schema.json",
+      "source_id": "SRC-58fcc2ce9e04a136",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/schemas/species.schema.json",
+      "size": 978,
+      "sha256": "e7a98cbd1c8896562f094d39c085ac63b4d65a1d33b4ac69e324d48c8a4e29b6",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/schemas/species.schema.json",
+      "source_id": "SRC-610e7fcccb8d0ce4",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/schemas/trainer.schema.json",
+      "size": 1101,
+      "sha256": "14768fc0201305e0041263e6ec8619cd2f8fbb1742697c37b6f103d4ef67d57a",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/schemas/trainer.schema.json",
+      "source_id": "SRC-3efff4c7e7d2a6c4",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/src/core/README.md",
+      "size": 104,
+      "sha256": "48064883a65118096d86bb231e7e80bd66b90b5f75c7aacbd0cf54b9aa4daead",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/src/core/README.md",
+      "source_id": "SRC-558ac642f1aaffc8",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/src/game/README.md",
+      "size": 77,
+      "sha256": "fb5cc3e0ffc28367eae2a1c34f0d14ad8fd92c3048b3ad321a4f333069112e1e",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/src/game/README.md",
+      "source_id": "SRC-77cdb4cc071304f7",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/src/ui/README.md",
+      "size": 90,
+      "sha256": "6bb22041d712c7434016ce06e71d0325c88a2df8cf5996a75680f2124b0674ec",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/src/ui/README.md",
+      "source_id": "SRC-3ec57ed1bd03d449",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/tests/README.md",
+      "size": 107,
+      "sha256": "62848b650d4632a604baecdc428918fdbaaad36839c72c5c2cbecbc47c7bbd06",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/tests/README.md",
+      "source_id": "SRC-bedbc29dd420d1c3",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".md",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/tools/deck_dev_bootstrap.sh",
+      "size": 764,
+      "sha256": "17acdaa7c573fddc7016d0b883847463e3a0b935e9767e1b45f630bebab1f9ac",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/tools/deck_dev_bootstrap.sh",
+      "source_id": "SRC-445bd237908b9ed9",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".sh",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/tools/process_portraits.py",
+      "size": 2035,
+      "sha256": "0740a4c76be26ac5a220eb3af73bc37d432dc5e87ddd20516471ff54a2350737",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/tools/process_portraits.py",
+      "source_id": "SRC-64fc3f295e5cf4eb",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".py",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/tools/validate_portraits.py",
+      "size": 857,
+      "sha256": "0627755c89f3d16563ea11a8e91772977e3517359dfc905a6f6a34aaa7e90211",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/tools/validate_portraits.py",
+      "source_id": "SRC-f77a2f2889c378c3",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".py",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/tools/validate_project.py",
+      "size": 968,
+      "sha256": "af4ec1fed38e2e3f094f436b4a0576b152fc66aa0fbb09ecdfebfb24057b3ed3",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/tools/validate_project.py",
+      "source_id": "SRC-a5dfd4dbbead3279",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".py",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "01-ABYSSALS_CODING_HANDOFF_v1.0.zip",
+      "member": "ABYSSALS_CODING_HANDOFF_v1.0/tsconfig.json",
+      "size": 166,
+      "sha256": "785079e1875c955cc2bff0ff32fb46929ef36dcd2213be8b1c1de4fe3e58cf1f",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        32,
+        2
+      ],
+      "repository_path": "docs/source_archive/handoff_v1/tsconfig.json",
+      "source_id": "SRC-30c5c93883715296",
+      "authority": "historical_source_only",
+      "duplicates": [],
+      "extension": ".json",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/README.txt",
+      "size": 1879,
+      "sha256": "0a3822ba6c7499f3ebee417cc78b515cb7e1e149505f38a84183c078c1dee1bd",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        58,
+        16
+      ],
+      "repository_path": "docs/source_archive/portrait_package/README.txt",
+      "source_id": "SRC-93ded606480979cd",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".txt",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-001__Aimon.png",
+      "size": 201481,
+      "sha256": "5ca3fe0d0ee964e731dc362125a9d6d49c72d4fe04788b50f9697c4719fa9703",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-001__Aimon.png",
+      "source_id": "SRC-315e3cfe33ea579c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-002__Pateric_Pate_Vann.png",
+      "size": 214914,
+      "sha256": "9cd4b325e6013c1c88f468efb8ac1fc2d33692f2b094cb3e52359b05a5c3b910",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-002__Pateric_Pate_Vann.png",
+      "source_id": "SRC-ed5e7d675c10c80c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-003__Traden_Trade_Cor.png",
+      "size": 200336,
+      "sha256": "fc45933c29fff9874c9ea887d52a548c3d1009158580b69736a51447d125fed1",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-003__Traden_Trade_Cor.png",
+      "source_id": "SRC-e9ca0527b4063387",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-004__General_Kurg_Halbrecht.png",
+      "size": 1908360,
+      "sha256": "f0553460d47cf92e3b2c898483680bf6c004edea61344b470950af1a9e287526",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-004__General_Kurg_Halbrecht.png",
+      "source_id": "SRC-33f3edcb7a6e9138",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-005__Severin_Vale_Guide_Form.png",
+      "size": 1586273,
+      "sha256": "3583a5d12d48d537da86c610fcd05f1cdaf2237f7ac365ff407c3c4e4b4a22aa",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-005__Severin_Vale_Guide_Form.png",
+      "source_id": "SRC-f892ef4af353772e",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-006__Illyr.png",
+      "size": 1870413,
+      "sha256": "fb23349fde11d208f425cf2daf73f4024ac129af8c21f39cfa305cb260b29fe1",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-006__Illyr.png",
+      "source_id": "SRC-560c1f6945ebdf93",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-007__Nharos.png",
+      "size": 2023075,
+      "sha256": "a392ab9845006c5a13f904704bebc0d7594843e59564ec40c4257dd67613101d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-007__Nharos.png",
+      "source_id": "SRC-7eb79fa35c336a88",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-009__Abbess_Yselle_Marot.png",
+      "size": 1975153,
+      "sha256": "f909b2fe264642915217da3fc81780b1c95da449321e0eb6b86ba94edb02d2a5",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-009__Abbess_Yselle_Marot.png",
+      "source_id": "SRC-6a8ee006471c8553",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-010__Provost_Corvin_Sair.png",
+      "size": 2009958,
+      "sha256": "efa22709e46fe828f118ed3e98ad5a4607059a5580f7674c0ecebdc2d9928fa0",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-010__Provost_Corvin_Sair.png",
+      "source_id": "SRC-0f52624c1a58bc64",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-012__Castellan_Braska_Morn.png",
+      "size": 2229736,
+      "sha256": "84e876ec0c7540026ad74042e83391245e83ef16caa1ff11ee1d4a02aa265fd7",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-012__Castellan_Braska_Morn.png",
+      "source_id": "SRC-49ec8e785d5fa6b7",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-013__Canon_Mirelle_Avin.png",
+      "size": 2097289,
+      "sha256": "5cf2a2d3c9fe1e0a7243cccb57be1c23aae5aaa918af80e2124497b5c5ad28b8",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-013__Canon_Mirelle_Avin.png",
+      "source_id": "SRC-64d391d145d02658",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-014__Marshal_Oren_Talv.png",
+      "size": 2033629,
+      "sha256": "694733c8ee644374e7f1949196bb7d343c64604c47088489b60ec35b3dc77d4e",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-014__Marshal_Oren_Talv.png",
+      "source_id": "SRC-d3d6e9a0d5d6614c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-015__Hierophant_Lucain_Serault.png",
+      "size": 1721044,
+      "sha256": "f109832e126598b607cc571c387f33ed2a3317f60c574c9a1b44ead1fe1f4778",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-015__Hierophant_Lucain_Serault.png",
+      "source_id": "SRC-1e237f6595ecfa2b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/core/CORE-016__Chaplain_Aeric_Solm.png",
+      "size": 2060265,
+      "sha256": "82d9a6e7868f4e89048acd56fbe3df703d54de51cfd8dbd011deb0fb4f4e6515",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/core/CORE-016__Chaplain_Aeric_Solm.png",
+      "source_id": "SRC-7f8ec6fe02873253",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C01-001__Instructor_Beric.png",
+      "size": 144110,
+      "sha256": "5e1caf6182673723145848bdf7ef12a35398f4109bb60f7c7e2c052976a9730b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C01-001__Instructor_Beric.png",
+      "source_id": "SRC-85469c88ea4cf999",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C01-002__Recruit_Elsen.png",
+      "size": 1834953,
+      "sha256": "8d38f7bb192fefbb773e7f1ba362c6991e57f9c275944e9558864ba9801d16aa",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C01-002__Recruit_Elsen.png",
+      "source_id": "SRC-a73d31e8b32a2100",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C01-003__Scout_Maela.png",
+      "size": 1954433,
+      "sha256": "db61d128a5f44206665a8e8d6a8e674d52d6a58900066cc76677ccc1f00bcda5",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C01-003__Scout_Maela.png",
+      "source_id": "SRC-689b7f0513f9dc8c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-001__Scout_Rell.png",
+      "size": 2010787,
+      "sha256": "597006c14e505580c0660bc1063c3795164b82c74b80109b624a0fc1f16532e7",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-001__Scout_Rell.png",
+      "source_id": "SRC-79bb151dab7bf4fc",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-002__Soldier_Varo.png",
+      "size": 1973633,
+      "sha256": "0a54ed2d782b7d61b735525db1ad29a5c072272615e2d699fb0cbab2d9289bce",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-002__Soldier_Varo.png",
+      "source_id": "SRC-fea5234ec8621901",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-003__Hunter_Neris.png",
+      "size": 1977959,
+      "sha256": "3ef606377165018256ea534a523a6d3b8f87ad998f20ec6d7fa697e583fa13fe",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-003__Hunter_Neris.png",
+      "source_id": "SRC-96a35fb18fee8d54",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-004__Officer_Halven.png",
+      "size": 1975567,
+      "sha256": "e0531adca8f5c6a0d2b439362965715492c9a6e8e4c226505d6c122f7e7a9b0b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-004__Officer_Halven.png",
+      "source_id": "SRC-2cb078d6a7d847cd",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-005__Sapper_Corren.png",
+      "size": 1986897,
+      "sha256": "008e2a357463e40047646c9b9a5e38b714c8991fc68b86410ac30d96e45f0111",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-005__Sapper_Corren.png",
+      "source_id": "SRC-49fa5978cc5758b9",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-006__Guard_Ysarn.png",
+      "size": 1837920,
+      "sha256": "2c9a19da0f91693f05d42f20393ba2d46a9140e0bdc0c86a50a1eedbfead1db4",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-006__Guard_Ysarn.png",
+      "source_id": "SRC-d9b1e6ce96954615",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-007__Beastkeeper_Selka.png",
+      "size": 2011195,
+      "sha256": "38b4dc7e3c63ecf7e168dc5429846b03b54d2648b787006c6c21413a323bf0e5",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-007__Beastkeeper_Selka.png",
+      "source_id": "SRC-a29e3290037971aa",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-008__Veteran_Brann.png",
+      "size": 2005779,
+      "sha256": "49c9b5dc449942f3a6351ea60860b3b25fb2e789cdb7e73edf938b48adea8c8b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-008__Veteran_Brann.png",
+      "source_id": "SRC-12a1f1ce670e7fdd",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [
+        "SRC-d74ee7437e364e3a"
+      ],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C02-009__Ferryman_Pella.png",
+      "size": 1720694,
+      "sha256": "77de388baaa96124154be8fbbb69ecdeda3b2262de8ae1f80da4d56f488a0fb8",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C02-009__Ferryman_Pella.png",
+      "source_id": "SRC-37ed55ade43ebb09",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-001__Guard_Ansel.png",
+      "size": 1902890,
+      "sha256": "0988cfa98fc8bdb72f7544f0850fd4d68b59fba0f4fe91a55be20729f5411749",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-001__Guard_Ansel.png",
+      "source_id": "SRC-26dcf22c3d843f63",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-002__Ferryman_Mera.png",
+      "size": 2043370,
+      "sha256": "181b692c148f08c98ffc042d76a40f98041fe4f77f83071677d0395ac819ecc3",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-002__Ferryman_Mera.png",
+      "source_id": "SRC-8adddc5bf65f5e21",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-003__Hospitaller_Ione.png",
+      "size": 1818426,
+      "sha256": "1ae9301f290bdf44f2dc35130586fcca866cd93ee01b59e94b2a5e320183241a",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-003__Hospitaller_Ione.png",
+      "source_id": "SRC-14d21a92bd5bdfdb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-004__Pilgrim_Tomas.png",
+      "size": 2096902,
+      "sha256": "451e806f076af20a906655e86af159267c6f334c1ac6934c74eee62bf56dbb15",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-004__Pilgrim_Tomas.png",
+      "source_id": "SRC-eb7940266a010817",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-005__Smuggler_Jarek.png",
+      "size": 1736166,
+      "sha256": "5faaf9bb04edfefcd21cf38da783bb120109cb2f6a7fa880325b8fc33e1d5e71",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-005__Smuggler_Jarek.png",
+      "source_id": "SRC-467ea221a7e1b1c4",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-006__Field_Nurse_Selene.png",
+      "size": 1831481,
+      "sha256": "ea8b7b2ec55e7d9635333278954e45d29f1a488ede59d0131cc6e34e35154f75",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-006__Field_Nurse_Selene.png",
+      "source_id": "SRC-e34ba775bed8e840",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-007__Officer_Reth.png",
+      "size": 1547170,
+      "sha256": "7671f8ae7564b4e5f0a8d0ecaa3e14b36c8d09c90b43184bafd18df7d04a97e3",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-007__Officer_Reth.png",
+      "source_id": "SRC-c6185f2876ed9b41",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-008__Shrine_Keeper_Elia.png",
+      "size": 2068123,
+      "sha256": "14edc09ee1fb92ca61c9c23b8cb60d8b64bf9b237efccb723e33db68a3597b11",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-008__Shrine_Keeper_Elia.png",
+      "source_id": "SRC-15d9021b24825a98",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C03-009__Riverhand_Marrec.png",
+      "size": 2030062,
+      "sha256": "fbb52bebdb7f47500e7f346051c164266e4276df5c17d5ea47021567b649778d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C03-009__Riverhand_Marrec.png",
+      "source_id": "SRC-d42b6471e1cbe189",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C04-002__Merchant_Sella.png",
+      "size": 1996506,
+      "sha256": "9b935ab63e6c6739536b15a8eaa2fce92d9518542378f7eea1a2b28f801447ed",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C04-002__Merchant_Sella.png",
+      "source_id": "SRC-ec20f205fe5e8e16",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C04-004__Mercenary_Joss.png",
+      "size": 1436782,
+      "sha256": "964ca117426955367d28556eb5e5a5c5fce996cb2ddec2fcbb03e58f0d04197d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C04-004__Mercenary_Joss.png",
+      "source_id": "SRC-8a471fff3acaf110",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C04-005__Ledger_Guard_Perrin.png",
+      "size": 1738379,
+      "sha256": "295d31bf240a95961f63d80b3c03db841330a104f5b71ce9808d848206348ed6",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C04-005__Ledger_Guard_Perrin.png",
+      "source_id": "SRC-8a886a7f1162fdbb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C04-006__Fixer_Vael.png",
+      "size": 1573962,
+      "sha256": "5f8dc0c0d3d05314abc42ffefd5473e949dac62b06f165459f73521d7c019418",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C04-006__Fixer_Vael.png",
+      "source_id": "SRC-1ce43ab2e1e511ee",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C05-006__Peacekeeper_Olan.png",
+      "size": 2126850,
+      "sha256": "58e094e2f0a19dfd1741f0853e3476ed757ed3b5780b2be3bd719aa89d5971bf",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C05-006__Peacekeeper_Olan.png",
+      "source_id": "SRC-17045b2ea7dfb287",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C05-007__Relic_Keeper_Noa.png",
+      "size": 1704965,
+      "sha256": "45b9165878a03967e2f44b6f2d6e92dd9b22278fe785c1a8602732af7e16c553",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C05-007__Relic_Keeper_Noa.png",
+      "source_id": "SRC-3f618d11fe30b5b8",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C05-008__Veteran_Vaun.png",
+      "size": 1939493,
+      "sha256": "8f0143293d62aaadd5f860caa396542923dba262c93803019bab0a0e709763ec",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C05-008__Veteran_Vaun.png",
+      "source_id": "SRC-d5b0507d15c395bd",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-001__Quarry_Guard_Dorr.png",
+      "size": 2267029,
+      "sha256": "f99d6728833a32eda96bd2e8e5fc6e857488beb2d5ec53d168b647773a1551a4",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-001__Quarry_Guard_Dorr.png",
+      "source_id": "SRC-a158d113fa06403b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-002__Sapper_Helka.png",
+      "size": 2184354,
+      "sha256": "107fb4289b0cc0d8ce7e216a2dc4924a270b5ad9e51e79e59242022302f3c07d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        46
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-002__Sapper_Helka.png",
+      "source_id": "SRC-8d57066c914cd448",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-003__Overseer_Malk.png",
+      "size": 1947222,
+      "sha256": "ed07fc0105ad13cbc948ce6fcb87a3f067beca820064f4fc9dbe31303711b880",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-003__Overseer_Malk.png",
+      "source_id": "SRC-7ff2ac4e14663eeb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-004__Prison_Guard_Veer.png",
+      "size": 2200176,
+      "sha256": "b4192974f39e3e7b7ef5398c16c0a38d8ee285b83876ea5b6f3d068b4895946b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-004__Prison_Guard_Veer.png",
+      "source_id": "SRC-260adab2523ccd06",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-005__Mason_Edda.png",
+      "size": 1846123,
+      "sha256": "ce53cbdb5e0ee31eaa9c53ae9bcf02b7c46fba0d6d23a8d4d556b0e63f723af9",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-005__Mason_Edda.png",
+      "source_id": "SRC-526d4ef981468a8a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-006__Officer_Sorn.png",
+      "size": 1984274,
+      "sha256": "8974557291ffb0fff9ce47294fa1547d9175b4bbae4cc4d499976d5543d3230a",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-006__Officer_Sorn.png",
+      "source_id": "SRC-04a04ad43856caa6",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-007__Enforcer_Kelm.png",
+      "size": 1679611,
+      "sha256": "1e1db894c397c64aeb03f58a89539353d1d614c285815163b249d0dd5a040e69",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-007__Enforcer_Kelm.png",
+      "source_id": "SRC-d1fc0d405319062e",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-008__Defector_Mara.png",
+      "size": 1780759,
+      "sha256": "18e1067df88037ed402a595a7cdbb8c5b2b27cf571deb62bba8d9a8c1bbc0aa5",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-008__Defector_Mara.png",
+      "source_id": "SRC-d03c0394e9e36c28",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C06-009__Prospector_Venn.png",
+      "size": 1857297,
+      "sha256": "4d9aab1019a068faee275b6a8772e1af0be33e6ac1c35842be83114b9d01eb58",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C06-009__Prospector_Venn.png",
+      "source_id": "SRC-85d50f68ceaaae51",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C07-001__Scribe_Lio.png",
+      "size": 2062917,
+      "sha256": "d7d17018f0773f913a2020230ef672f0265c7366a78e02f2ac77f39dc34082f9",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C07-001__Scribe_Lio.png",
+      "source_id": "SRC-d988cf084aaa8061",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C07-002__Archive_Guard_Fenn.png",
+      "size": 2114807,
+      "sha256": "04493a6239a525b09d5c39cd725a9e335978eb1ee025830a0601d996aeccb00f",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C07-002__Archive_Guard_Fenn.png",
+      "source_id": "SRC-7c832fbfee78c4b4",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C07-003__Scholar_Yara.png",
+      "size": 2073412,
+      "sha256": "099d66956872031bf4f307294732d3d670632588eb55fc2666a6e37fb53283dd",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C07-003__Scholar_Yara.png",
+      "source_id": "SRC-c8ceda4b18565eeb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C07-006__Guard_Captain_Vessa.png",
+      "size": 1963486,
+      "sha256": "478d4f54d459666374cf642fcd56a44f67aeefc9b53aa85ef32803795053f213",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C07-006__Guard_Captain_Vessa.png",
+      "source_id": "SRC-e655af6d205d81c0",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C07-007__Heretic_Scribe_Omel.png",
+      "size": 1811239,
+      "sha256": "ef232d5ffc53a8d89768ee23ab099e27545591f25d2ebb4c9006d34fd6abefe4",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C07-007__Heretic_Scribe_Omel.png",
+      "source_id": "SRC-138074c1eb1b587c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-001__Soldier_Arven.png",
+      "size": 2245121,
+      "sha256": "a584ecea6974a79485a50a0812f426b8cd05f81a37aa3f048def9975b78d79a2",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-001__Soldier_Arven.png",
+      "source_id": "SRC-84f238e1cf3d69f4",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-003__Field_Captain_Mor.png",
+      "size": 2057375,
+      "sha256": "431c913a07524e6b336fa1c0d3ba834ac4a71c3961aea932b29b9fdff4695527",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-003__Field_Captain_Mor.png",
+      "source_id": "SRC-c011ba56120426cd",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-004__Siege_Crew_Pell.png",
+      "size": 2205756,
+      "sha256": "65c7ea28dab6674dcb17d11d08de511258a680ec1a1932947ad52ceb6f25743c",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-004__Siege_Crew_Pell.png",
+      "source_id": "SRC-b246bbae2a477b31",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-006__Hospitaller_Senn.png",
+      "size": 1915386,
+      "sha256": "4d87372135e31b4cd183815ca2ae01f55939ce66be872eb28ea4eca9937cbf10",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-006__Hospitaller_Senn.png",
+      "source_id": "SRC-c5aae5af43e267a6",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-007__War_Captain_Elric.png",
+      "size": 1903508,
+      "sha256": "5886070ad72d1c4746c51c2d2485198e1f378c0aa51644e229400fe3b4f082d4",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-007__War_Captain_Elric.png",
+      "source_id": "SRC-45dc6c294199bfd3",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-008__Duelist_Avel.png",
+      "size": 1756689,
+      "sha256": "b7f7bad491af32b88e59f595717b1229ed8b0e7c9d0f8ba975b373bbb6b77860",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-008__Duelist_Avel.png",
+      "source_id": "SRC-ec4589877d374d41",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C08-009__Duelist_Caia.png",
+      "size": 1575965,
+      "sha256": "fdbdff3e3a401b4f68745ecd93977b75bcb973b192222ed433f16b49fa240ec8",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C08-009__Duelist_Caia.png",
+      "source_id": "SRC-95db125b2b5374a2",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-001__Temple_Guard_Aurel.png",
+      "size": 1850677,
+      "sha256": "2432cf8a18650446be12ca58b25a48921ac7db2ff23d214150d38b8b31866f83",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-001__Temple_Guard_Aurel.png",
+      "source_id": "SRC-2cc7fbb0fa0ae5a4",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-003__Scholar-Guard_Nere.png",
+      "size": 2168133,
+      "sha256": "e1c477c8c2111192f44ba031864ef13abb9d5b7e55f29ed909a810d4e2c6d8fe",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-003__Scholar-Guard_Nere.png",
+      "source_id": "SRC-1433ceaf347cf12c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-004__Zealot_Caldus.png",
+      "size": 2198414,
+      "sha256": "fa285157bf411f80efb43ebe3019008431905cf5d48348678abd43b8bbc3076b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-004__Zealot_Caldus.png",
+      "source_id": "SRC-45d25e77dce8a13a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-005__Marshal_Retainer_Jorin.png",
+      "size": 2083174,
+      "sha256": "c724118f9577d2c268e224ce3693461416a7c0364d604f45787705cc7e6f6dae",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-005__Marshal_Retainer_Jorin.png",
+      "source_id": "SRC-ff13de7324405986",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-006__Temple_Captain_Erys.png",
+      "size": 2297518,
+      "sha256": "7e58c08a64377a34c3f3ac29a21078819dba90d8b7d8acb086af4d98f277baf8",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-006__Temple_Captain_Erys.png",
+      "source_id": "SRC-e0dd546103533849",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-007__Relic_Keeper_Sava.png",
+      "size": 2167629,
+      "sha256": "1c65ae07b3f20a6c1ab1ff524b41be73fbafea44aca6730e8c5d120e5a831e2c",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-007__Relic_Keeper_Sava.png",
+      "source_id": "SRC-3da56af934988bec",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/trainers/TRN-C09-008__Antiquarian_Sol.png",
+      "size": 2095799,
+      "sha256": "176e7b41c1aaaea1ec3ce1ed14c689519a298711f126a0489e263474db24ff56",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/trainers/TRN-C09-008__Antiquarian_Sol.png",
+      "source_id": "SRC-5fca3f6e492d8a59",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-01__Veyr_Keeper_of_Names.jpg",
+      "size": 224069,
+      "sha256": "cf997245ef0303ac549c4848c293dc27f1f0cc0534cc547d4028dc10067cf759",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-01__Veyr_Keeper_of_Names.jpg",
+      "source_id": "SRC-e940b7cc5531ffb3",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-02__Ossael_the_Gatherer.jpg",
+      "size": 393168,
+      "sha256": "839bc19a4314f02c7157192ebf0e7d34a305e6e63419e69034b41597b36fd428",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-02__Ossael_the_Gatherer.jpg",
+      "source_id": "SRC-4704ba8927eea97c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-03__Mordren_Drum_of_War.jpg",
+      "size": 322560,
+      "sha256": "d1c02224b307cd41c2779e5b39f0922cd239386f7f1e40fa9811a4fbfdade7fa",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-03__Mordren_Drum_of_War.jpg",
+      "source_id": "SRC-b7e57b08f7c9d3b5",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-04__Caelor_Last_Magistrate.jpg",
+      "size": 262751,
+      "sha256": "4edc8c751409a9b87b3f2c457fc606309d81c845da5a878e6ed9437de5b549ae",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-04__Caelor_Last_Magistrate.jpg",
+      "source_id": "SRC-5d8d75433fe097f1",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-05__Asterion_Voice_of_Certainty.jpg",
+      "size": 262751,
+      "sha256": "f49f53644fff1922299171a22b67d79a7e76a77dadb2ef6dd86ab0aeaef7f3fb",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-05__Asterion_Voice_of_Certainty.jpg",
+      "source_id": "SRC-46eb7a74a67922e3",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-06__Mirra_Kindly_Shape.jpg",
+      "size": 365241,
+      "sha256": "dd50423cab692b2654e8a89deeb5d5b6390b766e841862e7deb42f089c4abbd9",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-06__Mirra_Kindly_Shape.jpg",
+      "source_id": "SRC-8fb906338ace7961",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-07__Velcar_Oath_Eater.jpg",
+      "size": 189633,
+      "sha256": "253896b9e3c9d845a620c05033b746295f7a953c554281428e78b3063a978111",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-07__Velcar_Oath_Eater.jpg",
+      "source_id": "SRC-0c7456bfaee8649a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/canonical/wardens/WRD-08__Nema_the_Unremembered.jpg",
+      "size": 193241,
+      "sha256": "b36e8d17d3849144eff22abd22be4d3379fdd6160db7c1edb2a5862295be6e0e",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        42
+      ],
+      "repository_path": "assets/portraits/source/canonical/wardens/WRD-08__Nema_the_Unremembered.jpg",
+      "source_id": "SRC-bb889b7e8a121acb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".jpg",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/documentation/CONTENTS.csv",
+      "size": 12510,
+      "sha256": "c38881b0c0dab32bb70f695ade73e70b117b187445ddc02bbc67a56d3eed6814",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        58,
+        16
+      ],
+      "repository_path": "docs/source_archive/portrait_package/documentation/CONTENTS.csv",
+      "source_id": "SRC-814196d49b9915fb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".csv",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/documentation/EXCLUDED_NON_STANDALONE_FILES.txt",
+      "size": 607,
+      "sha256": "b3dab36c2b7b9e781978d1a83fbab682c126d8ab8063f816a6d9098950456dbb",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        58,
+        16
+      ],
+      "repository_path": "docs/source_archive/portrait_package/documentation/EXCLUDED_NON_STANDALONE_FILES.txt",
+      "source_id": "SRC-655b00cc7e9cbb68",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".txt",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/documentation/MISSING_FROM_CURRENT_STANDALONE_SET.txt",
+      "size": 1020,
+      "sha256": "f71a78cd10c803356e61013f04db8db3a38a35d26316b55137f4f5e4596993b8",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        58,
+        16
+      ],
+      "repository_path": "docs/source_archive/portrait_package/documentation/MISSING_FROM_CURRENT_STANDALONE_SET.txt",
+      "source_id": "SRC-db21422515003a9b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".txt",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/documentation/SHA256SUMS.txt",
+      "size": 11229,
+      "sha256": "a4181a273f54e6a2b303abb2853b0b26037275f25ae736c77f834ca62e418512",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        58,
+        16
+      ],
+      "repository_path": "docs/source_archive/portrait_package/documentation/SHA256SUMS.txt",
+      "source_id": "SRC-8bfd6f20d2aa3ab6",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".txt",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/documentation/TARGET_STATUS_100.csv",
+      "size": 8483,
+      "sha256": "23c9917856785ebe941852a876b102cfd1bdca9b11e1a4cef35d3b5cc131cea6",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        58,
+        16
+      ],
+      "repository_path": "docs/source_archive/portrait_package/documentation/TARGET_STATUS_100.csv",
+      "source_id": "SRC-735589d273ac6c40",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".csv",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-002__Samira__LEGACY.png",
+      "size": 2087048,
+      "sha256": "a478ecb2136a6a3e0b083098478640265af321e8879886a721f7dc4b40295ff5",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-002__Samira__LEGACY.png",
+      "source_id": "SRC-4dec20f1326882bc",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-003__Idris__LEGACY.png",
+      "size": 2088595,
+      "sha256": "73ae9d867e7b60c16b3ac9aba988a71db72ba7949e99b66b893a686633feae68",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-003__Idris__LEGACY.png",
+      "source_id": "SRC-4d48c6b54dd78755",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-004__Laleh__LEGACY.png",
+      "size": 2070552,
+      "sha256": "2d466b1a4db212f84e517ff3ee5f282c86997182a534157a9cced61f46b7ed82",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-004__Laleh__LEGACY.png",
+      "source_id": "SRC-6beaa15d5a332a97",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-005__Nasir__LEGACY.png",
+      "size": 2211706,
+      "sha256": "602c8a741756bc7ba04a4fe26543002d1684e3704907e5fae72faf56f019a84c",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-005__Nasir__LEGACY.png",
+      "source_id": "SRC-10212a90fb0f5a23",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-006__Zahra__LEGACY.png",
+      "size": 2140335,
+      "sha256": "c26161e8ecd5474cb68c3658cf9ecefa0eb886da5be71e0e43dfb651cd066ac2",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-006__Zahra__LEGACY.png",
+      "source_id": "SRC-c5300c9870c8b3ea",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-007__Farid__LEGACY.png",
+      "size": 2100962,
+      "sha256": "97fad809ecc73a3f1eb74230da8cb7bfc9f62f09e478ba80f9542419a6b62b0f",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        54
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-007__Farid__LEGACY.png",
+      "source_id": "SRC-99a30e21d75eba43",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/superseded_legacy/TRN-C03-008__Soraya__LEGACY.png",
+      "size": 2200279,
+      "sha256": "c9c76a119ce439951d4804aee5e4827ce7bc479a0997b2349cb1300ade4e0f33",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/superseded_legacy/TRN-C03-008__Soraya__LEGACY.png",
+      "source_id": "SRC-0ff1d17f2f10472a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/variants_and_alternates/core/CORE-005-VARIANT__Severin_Vale_King_Below.png",
+      "size": 2076080,
+      "sha256": "846b338bcef6de0e478cf2da362cf0707202aa676c9958df4e66a006e20bf7fb",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        48
+      ],
+      "repository_path": "assets/portraits/source/variants_and_alternates/core/CORE-005-VARIANT__Severin_Vale_King_Below.png",
+      "source_id": "SRC-47b124d4d8f8807b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/variants_and_alternates/core/CORE-006__Illyr__ALT-REFERENCE.png",
+      "size": 305509,
+      "sha256": "f4ecd45b75f644e33f7d59c226fe1a43df73fd0efdf80cff961fe26ae755f521",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/variants_and_alternates/core/CORE-006__Illyr__ALT-REFERENCE.png",
+      "source_id": "SRC-968e3efd5db0ace9",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/variants_and_alternates/core/CORE-007__Nharos__ALT-REFERENCE.png",
+      "size": 261862,
+      "sha256": "524c7df87903c8377164a689c31870be19d79021f3f9487e6380f9294c8e03f5",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/variants_and_alternates/core/CORE-007__Nharos__ALT-REFERENCE.png",
+      "source_id": "SRC-c6a6b28bdac6329a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/variants_and_alternates/trainers/TRN-C01-001__Instructor_Beric__ALT-01.png",
+      "size": 1860737,
+      "sha256": "f709329ec95a697dc797ef94bac11173438d70868226183c5e474112886b9947",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        52
+      ],
+      "repository_path": "assets/portraits/source/variants_and_alternates/trainers/TRN-C01-001__Instructor_Beric__ALT-01.png",
+      "source_id": "SRC-cd97ccd0c2acff86",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/variants_and_alternates/trainers/TRN-C02-008__Veteran_Brann__ALT-01.png",
+      "size": 2005779,
+      "sha256": "49c9b5dc449942f3a6351ea60860b3b25fb2e789cdb7e73edf938b48adea8c8b",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        50
+      ],
+      "repository_path": "assets/portraits/source/variants_and_alternates/trainers/TRN-C02-008__Veteran_Brann__ALT-01.png",
+      "source_id": "SRC-d74ee7437e364e3a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [
+        "SRC-12a1f1ce670e7fdd"
+      ],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "02-ABYSSALS_All_Standalone_Portraits_ID_Named_2026-09-02.zip",
+      "member": "ABYSSALS_Portraits/variants_and_alternates/trainers/TRN-C09-008__Antiquarian_Sol__ALT-01.png",
+      "size": 2170206,
+      "sha256": "af0ac5c88c9967f65da49f886141db5b8a6efec2929f1b45f81abfbe9bee366d",
+      "zip_timestamp": [
+        2026,
+        9,
+        2,
+        8,
+        37,
+        44
+      ],
+      "repository_path": "assets/portraits/source/variants_and_alternates/trainers/TRN-C09-008__Antiquarian_Sol__ALT-01.png",
+      "source_id": "SRC-aed4aa019f5a330a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".png",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Acremink.webp",
+      "size": 112812,
+      "sha256": "8f727fab4c5e033d08930bfa9d82f24d35aef3675b91c2ee64a31fef5b7938ed",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Acremink.webp",
+      "source_id": "SRC-3f55d63c4bba7f0a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Amplet.webp",
+      "size": 145046,
+      "sha256": "2f784de49cdecad366afd625bb2d853d3d52a252a93f721f57121a429a1da709",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Amplet.webp",
+      "source_id": "SRC-dfb2b8942d2e5864",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Bantisk.webp",
+      "size": 127910,
+      "sha256": "cffd81342686b004da596f4134af7552a04ac35514cc459d87809212ff91db3b",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Bantisk.webp",
+      "source_id": "SRC-1739528e8fe2d771",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Brackhound.webp",
+      "size": 134180,
+      "sha256": "c0383fba2648bd2ec7bc893c86c5255e0030cae87c287003b0ef568bb1f5d9a2",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Brackhound.webp",
+      "source_id": "SRC-0dfdba3d8dbb4c78",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Caelynx.webp",
+      "size": 90574,
+      "sha256": "c5effa1635c10f4480043842c501ff30768ab90f8106a05f8879d2cc78221270",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Caelynx.webp",
+      "source_id": "SRC-68f4bfea7dc30e4f",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Cairant.webp",
+      "size": 160182,
+      "sha256": "d572d9603d104535078a1164ef09045c593a37390017c429a60c1998118c7d4d",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Cairant.webp",
+      "source_id": "SRC-74631910ca577feb",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Calibrit.webp",
+      "size": 106158,
+      "sha256": "362467cde5bf1eb773207b44eeea23d8f4063ec3fef32ee2719ffcef22dc8fc6",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        46
+      ],
+      "repository_path": "assets/abyssals/source/Calibrit.webp",
+      "source_id": "SRC-bc7bbce1fc867234",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Caprune.webp",
+      "size": 140420,
+      "sha256": "df6411cdb7dcc12e5f300f61ecb219f2efb643e92402dff261d3cd41398238ae",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Caprune.webp",
+      "source_id": "SRC-7cb4f4de2a9a0750",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Censmoke.webp",
+      "size": 174372,
+      "sha256": "9c3f166558bbb157b20f227865636e9e201edeb2c97424857eb8071e05a75b67",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Censmoke.webp",
+      "source_id": "SRC-b3ec6f96efa2cda8",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Chalkit.webp",
+      "size": 94244,
+      "sha256": "a05f66318119ac623a9a49271ea7a2140718967075850960e4797426d0608b84",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Chalkit.webp",
+      "source_id": "SRC-c7090f29447bf99d",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Chantlet.webp",
+      "size": 125712,
+      "sha256": "b648f00d60d94a807e799dd0ae280d3b62ef3d021acee4d7b767b39bc58b2f06",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Chantlet.webp",
+      "source_id": "SRC-ec5486687b2e1cde",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Chipkid.webp",
+      "size": 171784,
+      "sha256": "406a47fab480e6ae448258e21bff74b119ff2bb751191e032651efda58e73286",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Chipkid.webp",
+      "source_id": "SRC-23f9d19d205410d8",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Choughlet.webp",
+      "size": 110542,
+      "sha256": "53df3d1c205454432483a3d454b793ba28a405337705cae0216bb4786b429daf",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Choughlet.webp",
+      "source_id": "SRC-6b5499323d2e5f0f",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Courstoat.webp",
+      "size": 87574,
+      "sha256": "8ebe2317b990d37885c12fcbc1c6e5a73720d0d3d73376c265ef7f0a13473b7f",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Courstoat.webp",
+      "source_id": "SRC-9e9347be4eadcd81",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Cruxwyrm.webp",
+      "size": 215278,
+      "sha256": "4de5302af1491f2016cd7dc357cb231865eda64954fde8eb7e87b64064f5f4b1",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Cruxwyrm.webp",
+      "source_id": "SRC-ebb6cde79236ec9e",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Cubanner.webp",
+      "size": 131396,
+      "sha256": "a29deeeecb68c8a1251dd765c91da8adf2fe4eb8cb77643ea1aa620aaead31bb",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Cubanner.webp",
+      "source_id": "SRC-66f16c2750556721",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Dartfin.webp",
+      "size": 77386,
+      "sha256": "df83acbe46e46c0c6763876007664025fac99773ce147c3052d3cd765b768679",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Dartfin.webp",
+      "source_id": "SRC-a400c6a15c179468",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Decimite.webp",
+      "size": 92460,
+      "sha256": "41bd7dde7bcf6236ea440bcf0f17ddec3c9f8e83c526f96be7400e32d24fcbe7",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Decimite.webp",
+      "source_id": "SRC-ef0da61f26980aa1",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Dromble.webp",
+      "size": 109384,
+      "sha256": "70dcfa815011f034e55df957780ab00558f991d8e412d06eaf7a45a9820f8cc2",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Dromble.webp",
+      "source_id": "SRC-25cbe25af98623fa",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Dunetuft.webp",
+      "size": 86148,
+      "sha256": "b3247dc74bf4c666f84764ff8936e731c24ae3c10581b87148e437c2ee4fb6e2",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Dunetuft.webp",
+      "source_id": "SRC-c7c8d7232cc9f16e",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Dustisk.webp",
+      "size": 156868,
+      "sha256": "0785e09c0140b83c0ce4de41543f54c72c5cf1b97511baf0854e1e15ee4206e3",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Dustisk.webp",
+      "source_id": "SRC-0dec8f0deedcad34",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Embertle.webp",
+      "size": 164634,
+      "sha256": "28e9ca1da8fc1b25eef1a3e35fbf66bdc8feb9e5750bdbbabff069223628a7d4",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Embertle.webp",
+      "source_id": "SRC-b0dc4d0c7544569f",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Eyret.webp",
+      "size": 89258,
+      "sha256": "2d45f5851415a822f724b9303310e55a0015378c911cdc2642bcf5b03b2c8f27",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Eyret.webp",
+      "source_id": "SRC-a5aa961e7f6b2d76",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Feignid.webp",
+      "size": 137944,
+      "sha256": "4ada0c0d06a1c60704a1f68a64aed4a8129e6cdaa637a2abc8abf4bd0e624e73",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Feignid.webp",
+      "source_id": "SRC-658b3fabccfb4cc9",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Feirong.webp",
+      "size": 132888,
+      "sha256": "76ebc0cfe72c7ea15abd054e9753395851d20aa1f693cc0d8ff04374db31127a",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Feirong.webp",
+      "source_id": "SRC-fee48933e7e2e263",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Fieflet.webp",
+      "size": 113324,
+      "sha256": "2833fa1b290edac50c3ccd81caf673faee083e3c18a6788cf28f580e483cd8fb",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Fieflet.webp",
+      "source_id": "SRC-fb8874df555e9594",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Flaggrim.webp",
+      "size": 202432,
+      "sha256": "d928795e9bdeb01b8e8ed465b22cc126747c65a1d38018b5b683534c2c3cc5da",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Flaggrim.webp",
+      "source_id": "SRC-0b796cbb8c547232",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Foamwhelp.webp",
+      "size": 93876,
+      "sha256": "c4f9e34a09d1e25c198bfc5a4630de184643e3187319e6efb9588c9c86418fc2",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Foamwhelp.webp",
+      "source_id": "SRC-6ae30bdd6763b5b6",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Gehennuar.webp",
+      "size": 167052,
+      "sha256": "52652c32d7b9c6a6c8e3f62f4d992ff1b82bc3097ad8d9fc47fee5f95e931f4b",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Gehennuar.webp",
+      "source_id": "SRC-bad2a02d511aca06",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Grailhare.webp",
+      "size": 60016,
+      "sha256": "87443fe969a2d22c07fea121a907f6cd940316fea462dd9f01cb958bf9bd8957",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Grailhare.webp",
+      "source_id": "SRC-d369849ceaff29ef",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Gravodo.webp",
+      "size": 177750,
+      "sha256": "5d180608632d8730052d74f8e6ee19aa23b1b776263f319191cc19804199f97e",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        6
+      ],
+      "repository_path": "assets/abyssals/source/Gravodo.webp",
+      "source_id": "SRC-4f61f048e9c259d9",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Guanrong.webp",
+      "size": 170074,
+      "sha256": "1f7117a61c66a6b9c47e300aa911a52c6cd831754241cb670c3817af8e0e6b30",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        6
+      ],
+      "repository_path": "assets/abyssals/source/Guanrong.webp",
+      "source_id": "SRC-c8101b7f792fab9a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Hexamuse.webp",
+      "size": 113318,
+      "sha256": "0deb9e7105a1d423673ff270a442b7c0cd7139c3ff7ae9ae6dad314fb59854ec",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Hexamuse.webp",
+      "source_id": "SRC-020ac9ec0c7a1f19",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Jerbune.webp",
+      "size": 122494,
+      "sha256": "95a87f8440195aba38483589e72022ef1584fa0106fd698d37b4f4e4298405d3",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Jerbune.webp",
+      "source_id": "SRC-f7620faa8af495a1",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Keelcrab.webp",
+      "size": 137922,
+      "sha256": "9a10589911899ae221128953988e630accfdea6a0291190a4bd38757218e085b",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Keelcrab.webp",
+      "source_id": "SRC-f6069599da82f74b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Kincoil.webp",
+      "size": 181194,
+      "sha256": "6f6d4ac99daa3338ccd92f7507f7fe4480ae9ddcc36d8d2583400822ce1e2296",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Kincoil.webp",
+      "source_id": "SRC-aa0a9b8b63594216",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Lanspup.webp",
+      "size": 104784,
+      "sha256": "0936e2a7c530381b21109bf0786a2bec2cdcb4ce3210258f1c69bc310bfa9887",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Lanspup.webp",
+      "source_id": "SRC-3e6ce72196c25383",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Limbud.webp",
+      "size": 137836,
+      "sha256": "f4c0b0a9830306dabe7176745ecc175cbbabc7f219cac213e3785d13cf9a0777",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Limbud.webp",
+      "source_id": "SRC-871d99ef19b9a656",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Liubeirow.webp",
+      "size": 151702,
+      "sha256": "e2f674c73a2c1e4b1e088fc702996cef91fd4a77e9d67b34d14c92a0ed174262",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        6
+      ],
+      "repository_path": "assets/abyssals/source/Liubeirow.webp",
+      "source_id": "SRC-cb6de90176f7a7ea",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Lyrlet.webp",
+      "size": 141894,
+      "sha256": "c2c4d1900f9be151583854a3732d021123efecd8b7f8682392caa5984701d6cf",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Lyrlet.webp",
+      "source_id": "SRC-0ace2096e93ccc58",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Mirascal.webp",
+      "size": 101684,
+      "sha256": "1bace3a6798b2cf8b8ff5cc09eaa6b6103565e06137259f330598d5081b38111",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Mirascal.webp",
+      "source_id": "SRC-f0513158cb7a0e40",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Mortargek.webp",
+      "size": 103646,
+      "sha256": "7287bde221691130d6f43de744d5f3a34c814eeec743171f74e91c4e1996cf56",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Mortargek.webp",
+      "source_id": "SRC-4b83926a469d20a3",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Mottlet.webp",
+      "size": 54438,
+      "sha256": "ac4df4ad55e32b317d695ab3367ed0d1288ed9930f3e618a474e90770460aee8",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Mottlet.webp",
+      "source_id": "SRC-f6d8f32cba786d27",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Murmite.webp",
+      "size": 61874,
+      "sha256": "593bc3e789352c5684609db58730ae5ea6f0a9a9a0ce5f3fb1b715fd3a6ab6aa",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Murmite.webp",
+      "source_id": "SRC-3046c2dc481b8a5d",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Nibblub.webp",
+      "size": 138408,
+      "sha256": "271dbcb5c617bb1e382a9c9076ce7ae389c2a15f7ea50fa6d976984bf98912bf",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Nibblub.webp",
+      "source_id": "SRC-994705bdf95c318a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Niblust.webp",
+      "size": 103762,
+      "sha256": "7f8454aab8538fec16ec4e27e3121962476b2a454046e7738fd0cc0541ff2faa",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Niblust.webp",
+      "source_id": "SRC-6b18d9e179b90309",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Oathlet.webp",
+      "size": 133612,
+      "sha256": "fbd68c812871d30fb85f1c36117629dc913e76065d9ba9f4abd58022c8857863",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Oathlet.webp",
+      "source_id": "SRC-715b485a25e17aa0",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Paleursa.webp",
+      "size": 191808,
+      "sha256": "c3c910a015971a2026315275aa570a04c1d7ef555db7a9bbb2844c6ed90d258d",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Paleursa.webp",
+      "source_id": "SRC-76124d4b808610a0",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Paxibis.webp",
+      "size": 61976,
+      "sha256": "89847f921716a82cc0dbee22a56dd7a3b80abdf1d572387800eda40448d60bad",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Paxibis.webp",
+      "source_id": "SRC-4b689749d26cc48a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Pearlfrond.webp",
+      "size": 156528,
+      "sha256": "0b0ac2392802c219bf0347c9c516059276e63ce0833174af3f61cd420f656b50",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Pearlfrond.webp",
+      "source_id": "SRC-b756050309b1d239",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Pebbettle.webp",
+      "size": 194628,
+      "sha256": "cd04484127e0cb4e075737b2cce5b7ee23b79643b78ac737ec1a40c48d5a6b48",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Pebbettle.webp",
+      "source_id": "SRC-93d49e9ed158a55c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Pennkit.webp",
+      "size": 97138,
+      "sha256": "2dc1e0061e42e7dd93b0723385ba1a7f927778ea27aa8386631aefffc84a97bd",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        46
+      ],
+      "repository_path": "assets/abyssals/source/Pennkit.webp",
+      "source_id": "SRC-af6be8c303f88945",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Pennmot.webp",
+      "size": 115928,
+      "sha256": "543e89bd1a179e20b1540267d966f6fa30912c2b81b0180d161e3ecc292adbbc",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Pennmot.webp",
+      "source_id": "SRC-b4ede14285b1a4fe",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Pilgrimp.webp",
+      "size": 113812,
+      "sha256": "59887ca4afd86b4f36f93c36e5a6530f172eae41f67e37015851a6139f453cc5",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Pilgrimp.webp",
+      "source_id": "SRC-e39ca89cf0bed5da",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Pomling.webp",
+      "size": 96362,
+      "sha256": "8b98b52d3039f725fd010ec828ed2b20829381d0dbbcee4cf498ab12c2383478",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Pomling.webp",
+      "source_id": "SRC-5c5fd988b8fb9851",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Raptyrale.webp",
+      "size": 125058,
+      "sha256": "502ed9113bb6b2d029e165e54c72f4246c8623ded16966d75489db53e7ffebe2",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Raptyrale.webp",
+      "source_id": "SRC-c2431d90d9eaa26f",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Reedile.webp",
+      "size": 129188,
+      "sha256": "e83d282a11122dfad5794e7e644452cbd8303fa8b6e0cde3b113fdd79ed80983",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Reedile.webp",
+      "source_id": "SRC-11236bee9f33b089",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Regulet.webp",
+      "size": 178942,
+      "sha256": "36b746795f3112fdb817645e38be4c49ca7b9b651749a4e77d792a6023a89538",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Regulet.webp",
+      "source_id": "SRC-4f3b74f85bd30001",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Rillip.webp",
+      "size": 72958,
+      "sha256": "a8a994cfe69bdf4fa69e1292e1f4eb396604cc03e34a0e2c45eeaa829a909f1a",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Rillip.webp",
+      "source_id": "SRC-d2dc5b9d09ae7ba1",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Rouncolt.webp",
+      "size": 112486,
+      "sha256": "f94cdda12d1b294ba0f239a011ac79662aab187a7486b5fa02016edb6da21fee",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Rouncolt.webp",
+      "source_id": "SRC-c5437a4d895a8219",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Ruffurn.webp",
+      "size": 153840,
+      "sha256": "665961f4461b83ce8fb5927f7e5b4b045e33396b499ee82c3775feecee80d7b4",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        46
+      ],
+      "repository_path": "assets/abyssals/source/Ruffurn.webp",
+      "source_id": "SRC-b035bd0e9e2706b8",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Rufram.webp",
+      "size": 135702,
+      "sha256": "59ddb0096a0760a0eb2f446f6c721d3b6c5906ea0ef4dbb5c3db745e06d8e177",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Rufram.webp",
+      "source_id": "SRC-1210d51bab075124",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Rutlet.webp",
+      "size": 85366,
+      "sha256": "4970f07153622115a42a14083fd5fe02c13090390c73c0edb96ea53d6aadaeed",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Rutlet.webp",
+      "source_id": "SRC-8c0f8b1b7150ba75",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Saltinel.webp",
+      "size": 132242,
+      "sha256": "e56c4ad368815684957107f57bc870ce2d0d5083c43fa1ae062cac369fa11b1e",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Saltinel.webp",
+      "source_id": "SRC-99f678887252c03b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Scarabel.webp",
+      "size": 105138,
+      "sha256": "a0cf63fd0e511b7817b76c693ea673cd782323443c30580a4d60166d6b5c1ea6",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Scarabel.webp",
+      "source_id": "SRC-f32db51f8890e402",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Scarimp.webp",
+      "size": 118534,
+      "sha256": "d9875646eb8fe87a7369ed6036abe7fab200b6eec3e097ef94aa6e94f499357b",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        46
+      ],
+      "repository_path": "assets/abyssals/source/Scarimp.webp",
+      "source_id": "SRC-15cdc0320ae8dda3",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Scripquid.webp",
+      "size": 147420,
+      "sha256": "19ce7b7823ab8f5f6e6365dcd398fcebc742bf27aa4c0a538fef23dbdb92e16a",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Scripquid.webp",
+      "source_id": "SRC-e082a9062929d004",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Sidermite.webp",
+      "size": 188144,
+      "sha256": "21b65b7a32ca404f4184d14b66ef46f8cb860435df6210cf83bdddd3b297440b",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Sidermite.webp",
+      "source_id": "SRC-530405c239c6e205",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Skatelk.webp",
+      "size": 141050,
+      "sha256": "990d1e7d7f0f3b7f14edb33f7915ac9865c1db21822c6d57bfa42c58d043f9bd",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Skatelk.webp",
+      "source_id": "SRC-c1b60994e8efd1c9",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Snickal.webp",
+      "size": 110318,
+      "sha256": "f3dd2001a7f5fbcfb257be4d722bc114a04c25a2a03d934352f02478e5d45691",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Snickal.webp",
+      "source_id": "SRC-967db9d8d05ee774",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Sprigfawn.webp",
+      "size": 89708,
+      "sha256": "3fccc8d798ccfd4228c45f058b854384dbdf8e7ee5d684a19942f9e939145a69",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Sprigfawn.webp",
+      "source_id": "SRC-65b02c776c9ea46b",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Stinglet.webp",
+      "size": 123058,
+      "sha256": "8cf25e641aedbde398d35a0dc0f3d71cf40085bd68fac9ee6ad866bc5ca2159b",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        50
+      ],
+      "repository_path": "assets/abyssals/source/Stinglet.webp",
+      "source_id": "SRC-a32cac4204f12720",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Styxlet.webp",
+      "size": 161132,
+      "sha256": "08b5f56002215b6d728fec4228e875bac34df10e554584950b0d019d4d92771e",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Styxlet.webp",
+      "source_id": "SRC-a869f9091fadaa9a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Suncub.webp",
+      "size": 158074,
+      "sha256": "a69b17c314ce4bc434db91174b6e8446d56f4be8f593463f6d4cb2320dea3f7a",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        6
+      ],
+      "repository_path": "assets/abyssals/source/Suncub.webp",
+      "source_id": "SRC-a8411f282cf82b3a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Tatterook.webp",
+      "size": 64464,
+      "sha256": "568c826417a8bebf55bab82fe3864d2704547afd238b077c053c57fb46e1756e",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Tatterook.webp",
+      "source_id": "SRC-cedcee2447c82a2a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Tellurion.webp",
+      "size": 206588,
+      "sha256": "8d1c92f80c329ce3a1ba23070653c73fafceb99b54e84bdf0aab070f72605a43",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Tellurion.webp",
+      "source_id": "SRC-199b8a92a3fc499f",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Tempestrel.webp",
+      "size": 65696,
+      "sha256": "c8d3015fb9426e63deec6374b462e9625c015cd62eff1dce025be8de50bedaf4",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Tempestrel.webp",
+      "source_id": "SRC-49d938c7c0ef887d",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Tianzhar.webp",
+      "size": 156672,
+      "sha256": "55e59bacfd51a3f9d1ec6a433f57a57f0c3a1cb46fd739ee56b02e9c4ed6446f",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        4
+      ],
+      "repository_path": "assets/abyssals/source/Tianzhar.webp",
+      "source_id": "SRC-5befffe8aab45e50",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Tokenail.webp",
+      "size": 84418,
+      "sha256": "dab631acba7a513eadd0b1138792a9d857954f325b4e493c848c400ec71ededd",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Tokenail.webp",
+      "source_id": "SRC-546ffcd540705b93",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Triskit.webp",
+      "size": 209804,
+      "sha256": "0441420ba991155612345a53c032b55e769e293d3ce322f789f3ae1fe8c25cca",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Triskit.webp",
+      "source_id": "SRC-9b813d356b3fb56a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Trucepoe.webp",
+      "size": 83834,
+      "sha256": "12800e0d94cd80c4cbb3fad525077c16a5347e2b3fe0c1f1143be80911d3be53",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Trucepoe.webp",
+      "source_id": "SRC-33444aa3d082a0c6",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Tyrquill.webp",
+      "size": 122520,
+      "sha256": "c846a7d43103e97b692749992a51aeebca44d4850f1c45a067ac960de664d669",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        54
+      ],
+      "repository_path": "assets/abyssals/source/Tyrquill.webp",
+      "source_id": "SRC-1722aecfcbf11044",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Veiltern.webp",
+      "size": 146278,
+      "sha256": "f13d4405fe81b9a763c983125976f4443ac9f2a54ece3f39e82c31fa4969c21a",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        58
+      ],
+      "repository_path": "assets/abyssals/source/Veiltern.webp",
+      "source_id": "SRC-5162e79004c1a42c",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Votress.webp",
+      "size": 190038,
+      "sha256": "e0400672396467c05e636de32deb88771b5db3fab5cb1865125d26ab7128017f",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        52
+      ],
+      "repository_path": "assets/abyssals/source/Votress.webp",
+      "source_id": "SRC-652e0b0599a9ce1d",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Vowcolt.webp",
+      "size": 104268,
+      "sha256": "c0345387187407cd8dfaf75224d24befde1afcc43fbe5a382b4ba96151221176",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        2
+      ],
+      "repository_path": "assets/abyssals/source/Vowcolt.webp",
+      "source_id": "SRC-c350f3e0940afb9d",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Wadopot.webp",
+      "size": 119964,
+      "sha256": "5d2cb1d3f07feef78c1c0b402ab158a51eabb7507be822463b275036ff28e7f9",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        0
+      ],
+      "repository_path": "assets/abyssals/source/Wadopot.webp",
+      "source_id": "SRC-884cb2f3b88de7c8",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Waranwei.webp",
+      "size": 158242,
+      "sha256": "629c4087b99d348a8399275200744f03c6e8fcfa396f8e7312ef8a3aa4daf9b4",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        33,
+        6
+      ],
+      "repository_path": "assets/abyssals/source/Waranwei.webp",
+      "source_id": "SRC-0594313e87a78bd0",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Whisbat.webp",
+      "size": 88672,
+      "sha256": "96945872916a4ed12435a1924ee269b7daf2d6c2a507bc2f23f43cbfa44130c0",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        56
+      ],
+      "repository_path": "assets/abyssals/source/Whisbat.webp",
+      "source_id": "SRC-a4bdf2510934459a",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    },
+    {
+      "archive": "03-All-Monster-Generations-Compressed.zip",
+      "member": "Wickmidge.webp",
+      "size": 93234,
+      "sha256": "8019a489352d4ebe4980783ebd3daa3d4e8ec36c2ac3dd95821f529af478c4d8",
+      "zip_timestamp": [
+        2026,
+        8,
+        26,
+        5,
+        32,
+        48
+      ],
+      "repository_path": "assets/abyssals/source/Wickmidge.webp",
+      "source_id": "SRC-04852c311c89a1c9",
+      "authority": "source_asset_or_package_metadata",
+      "duplicates": [],
+      "extension": ".webp",
+      "normalization_note": "Source spelling preserved; runtime names use canonical IDs if established."
+    }
+  ],
+  "prior_repository_files": [
+    {
+      "original_path": ".handoff_chunks/part01.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_chunks/part01.b64",
+      "sha256": "95ce0bc1abb410d61fde6f5d7a18245c0cc45b246a0f00243ce3a5010be05f0b",
+      "size": 12000
+    },
+    {
+      "original_path": ".handoff_chunks/part02.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_chunks/part02.b64",
+      "sha256": "700934733577110b95e40644f5e930003f1e7275fc5abba7385e5566f3a459d3",
+      "size": 12000
+    },
+    {
+      "original_path": ".handoff_chunks/part03.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_chunks/part03.b64",
+      "sha256": "2c367235e11e12e2c22a5319607fd29664c819934d5bbaf7c84c6128d2da1c89",
+      "size": 19999
+    },
+    {
+      "original_path": ".handoff_chunks/part04.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_chunks/part04.b64",
+      "sha256": "c3e65e6027c4ad4d9b40280c71d916db5b5c03c5e92f5ec2881ad3c3634d0963",
+      "size": 19999
+    },
+    {
+      "original_path": ".handoff_chunks/part05.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_chunks/part05.b64",
+      "sha256": "08dace44ad903f956eaad69926242f8fc51b4774584bb99727c1826fb66467b0",
+      "size": 19999
+    },
+    {
+      "original_path": ".handoff_chunks/part06.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_chunks/part06.b64",
+      "sha256": "9ec028b9a5fda8b5183d93666cfc8cf4c56541cc2ea256fd9ff5e0998b1ff066",
+      "size": 14287
+    },
+    {
+      "original_path": ".handoff_exact/chunk00.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk00.b64",
+      "sha256": "6229607433f6c8442768c9ed99b13c34314726088a03920ad97a228716cfe0c3",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk01.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk01.b64",
+      "sha256": "8f13df2bb0b37d741aecc2c451d47951430e0c2cff9a3b533d6f5f8d71760520",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk02.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk02.b64",
+      "sha256": "1c1065bf3709bee5e61fcf1ddcce57507c5f48fbabd21556d0a1d77ff47b8c59",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk03.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk03.b64",
+      "sha256": "e4c21a4a6815d73d027c786b8ea5f5e641546f8eaf59216cc1166daceeddcc34",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk04.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk04.b64",
+      "sha256": "ac7acf771cf9e404fc3a3db4da92026e2352fed6b555da401ea04ee95bff024b",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk05.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk05.b64",
+      "sha256": "ceb9ac4b64e545e40f667639556fa7c4a60279c6aaafae210a2614f5a8c44a75",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk06.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk06.b64",
+      "sha256": "dec6729ac276c644abdd901e6108e455a59d1701c8fc1540c5185d8cedb77c2c",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk07.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk07.b64",
+      "sha256": "66696b2d773a927b1bed32ec2095bab054e59a42beb702e72bc68aeb4f20545e",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk08.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk08.b64",
+      "sha256": "be99f3020a0afaa0de02fd7791640ddb618213dbe2770ff6ee75e211e09f6bf9",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk09.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk09.b64",
+      "sha256": "29038d67019218f4e62bba783a665d2937eab6b0282190f3634deb8a6f336303",
+      "size": 8000
+    },
+    {
+      "original_path": ".handoff_exact/chunk10.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk10.b64",
+      "sha256": "e567acb316a07dd1c1c654d45a66815a084ee70349b2bf0628eb8b3cb20562fc",
+      "size": 17863
+    },
+    {
+      "original_path": ".handoff_exact/chunk11.b64",
+      "repository_path": "docs/source_archive/prior_repository/handoff_exact/chunk11.b64",
+      "sha256": "9419ecc2c9ba27640df8dee1d5aecb10783e166cf507c8e1b1740633cb042ae4",
+      "size": 3745
+    },
+    {
+      "original_path": "README.md",
+      "repository_path": "docs/source_archive/prior_repository/README.md",
+      "sha256": "bb3bb25c63875a4ad7293853d4d1cb9c0cfa1a524460574aeeb3553958b06b97",
+      "size": 10
+    }
+  ],
+  "recovered_canon_sources": [
+    {
+      "filename": "ABYSSALS_CANON_CLEANUP_ADDENDUM_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CANON_CLEANUP_ADDENDUM_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 40918,
+      "sha256": "ad750df590f785637a4ea5f66bee8680a8c70b93a24a84e731bf758fcbb1b7e8"
+    },
+    {
+      "filename": "ABYSSALS_CANON_SOURCE_INDEX_LOCKED_v1.0.md",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CANON_SOURCE_INDEX_LOCKED_v1.0.md",
+      "authority": "active_authority_chain",
+      "size": 3636,
+      "sha256": "45c8065cdc49086b78d7a66cc6f65e420141070ec55ed6dc4b8ba7c027101410"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_01_Exact_Stat_Growth_Algorithm_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 42364,
+      "sha256": "3e766e108d42874ffd01ba5d5489758f458223b2ab5a956c74a09a697dd70c09"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_02_DAY_NIGHT_ENCOUNTER_TABLES_LOCKED_v1.0.xlsx",
+      "authority": "active_authority_chain",
+      "size": 104477,
+      "sha256": "58f62c700a36e5a39b22e1d8b8f380438a1fb87b019b8928a1d20648f599efc5"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_04_Trainer_Database_Team_Planning_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 67274,
+      "sha256": "85ed568c013babd0b6d57dcffbe77b3135452b5587b496ebd7f31f3893c28271"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_05_Hell_Terrain_Finalisation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 53455,
+      "sha256": "6bd3160a6340b952916e68cd91da1f933fd107163c83418d52ca3615f0e2833f"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_06_Items_Shops_Economy_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 55832,
+      "sha256": "21ab61e672c6e5830558384859f0c94b4593e28fd1a72ba5690ff036b6df09a0"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_07_Memorial_Resurrection_System_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 48444,
+      "sha256": "363e795260c2dd5cc006e7f789d693d132bca96845dea5ee848d15f11af1e604"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_08_Party_Reserve_Management_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 47401,
+      "sha256": "9757d2362e606da421bb766558d64dcd62ac8fd2f8cb1406e25fb7b4c97efd3e"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.0.docx",
+      "authority": "superseded_reference_only",
+      "size": 49381,
+      "sha256": "c2a9424f7afe6f056030f32e9e2fed62d240f33ec7838e03297d5725fd8e36b5"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.1.docx",
+      "authority": "active_authority_chain",
+      "size": 48574,
+      "sha256": "6140da69422d5b153142ade8d10e8cf19ae9dcefb001436f329440885d54063a"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
+      "authority": "active_authority_chain",
+      "size": 40664,
+      "sha256": "3dd30d8cc5e6a36107cf8a1b23431b99d57446a8d4048150f0b94468fa42c0cd"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_10_Story_Event_Flag_Master_List_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 57265,
+      "sha256": "36e27692bbb85bb576792a0a51b263779a9af438725070ccfcd4e86cf4f8ad4c"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_11_Evolution_Validation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 50375,
+      "sha256": "e02b0358ba6dd9e0796443b4b652ecfb9d96a503aebc8deac2d5b0228e74b5ac"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_12_Learnset_Validation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 55817,
+      "sha256": "31d1e39ee7f4765ba94fffe1517dac180bda7a91edbff7ecc67afba92a0617ec"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_13_Battle_Edge_Cases_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 54324,
+      "sha256": "20c5955bd54999a9011977b4d98e546630c6ddf2b933e5d38d6b27d2b8b00092"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_14_Starter_Three_Life_System_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 49494,
+      "sha256": "d448fb66eba92ea87a973d8bf06c3bd7b8a9d400fa13b120e432c202755ce18d"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_15_Ironman_Save_Persistence_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 54782,
+      "sha256": "bfe17dd1a6a030638920b92810c1001a39a4f6224709cb377bdfc389573cc1b2"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_16_Battle_Presentation_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_16_Battle_Presentation_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 51794,
+      "sha256": "1c4c9e05d556430f9042bcaf800d6587351890ef679230709bdf5be00b1da536"
+    },
+    {
+      "filename": "ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_17_Overworld_Interaction_Rules_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 47012,
+      "sha256": "067931de32c2365df2c6794d1383e8470dc2636a7698d9ff604ecd0c0d198678"
+    },
+    {
+      "filename": "ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_EVOLUTION_IMPLEMENTATION_ADDENDUM_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 44341,
+      "sha256": "908f1044fcc2fa6a76ce03e773f9c6dbb1580f7617f2428617ffc516ba06946c"
+    },
+    {
+      "filename": "ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/ABYSSALS_Human_NPC_Portrait_Prompt_Manifest_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 73929,
+      "sha256": "da8620cd85b1b244338ae1471edcc71f852e574aba816a6967649a49f215d1fd"
+    },
+    {
+      "filename": "CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.md",
+      "repository_path": "docs/source_archive/canon_sources/active/CHECKLIST_02_03_LOCKED_REFERENCE_v1.1.md",
+      "authority": "active_authority_chain",
+      "size": 11194,
+      "sha256": "c5a95aefd9e771d58f26d8b8d694cd2badd54d1ed3ab04cb72c5bea12ffb2a2d"
+    },
+    {
+      "filename": "ENCOUNTER_TABLE_REFERENCE_v1.1.md",
+      "repository_path": "docs/source_archive/canon_sources/active/ENCOUNTER_TABLE_REFERENCE_v1.1.md",
+      "authority": "active_authority_chain",
+      "size": 9721,
+      "sha256": "202e8e2a1d537d1f9ab802daae757efebf5b2102ee9f211ed38b437201be3277"
+    },
+    {
+      "filename": "Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+      "authority": "active_authority_chain",
+      "size": 24586,
+      "sha256": "b621315c5891425a40fa385e7f8a7b63700076b4b9f606cf7c7d9c256da55411"
+    },
+    {
+      "filename": "Pokemon_Fan_Game_AI_VFX_Prompt_Log_354_Moves.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_AI_VFX_Prompt_Log_354_Moves.xlsx",
+      "authority": "active_authority_chain",
+      "size": 46377,
+      "sha256": "894fe49964c3073ef31b56d4bb42de9eef2363d6f0e2b01f4c92bde282c3061c"
+    },
+    {
+      "filename": "Pokemon_Pre_Programming_Planning_Checklists_Reference.docx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/Pokemon_Pre_Programming_Planning_Checklists_Reference.docx",
+      "authority": "superseded_reference_only",
+      "size": 49248,
+      "sha256": "67090b61709f0f7feb184eef6b0562d1a62713e8f7b51f432cdc3fc44f5ff9ef"
+    },
+    {
+      "filename": "Pokemon_Story_Bible_Character_Roster_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Character_Roster_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 53458,
+      "sha256": "9430bfe9a6c54ead52eb40332e3466a1f5218a32f1c40e11606a295a18d1fe42"
+    },
+    {
+      "filename": "Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+      "repository_path": "docs/source_archive/canon_sources/active/Pokemon_Story_Bible_Full_Plot_LOCKED_v1.0.docx",
+      "authority": "active_authority_chain",
+      "size": 76743,
+      "sha256": "3035be45916658587e1309f4219599343b995d4fabd9597d936cafd8b683bb40"
+    },
+    {
+      "filename": "Pokemon_Story_Bible_Full_Plot_QC_v0.1.docx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/Pokemon_Story_Bible_Full_Plot_QC_v0.1.docx",
+      "authority": "superseded_reference_only",
+      "size": 76512,
+      "sha256": "073e83c09a2b127bdc54ebf4aaa9c415bacb658824a97b964304be4fdf8f583e"
+    },
+    {
+      "filename": "Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Regional_Dex_Growth_and_Evolution_VALIDATED_v4.xlsx",
+      "authority": "active_authority_chain",
+      "size": 61100,
+      "sha256": "94c2e81eccae37f86965d3ccbacdf2202b23f0797850c45665cede0540d72040"
+    },
+    {
+      "filename": "Regional_Dex_Progression_Learnsets_v3.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Regional_Dex_Progression_Learnsets_v3.xlsx",
+      "authority": "active_authority_chain",
+      "size": 99235,
+      "sha256": "c93115399f4ede890a202a160c096577d2f341cf11754ae699c05bd4c8812b1c"
+    },
+    {
+      "filename": "Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/active/Regional_Dex_Stats_and_Abilities_COMPLETE_v2.xlsx",
+      "authority": "active_authority_chain",
+      "size": 89383,
+      "sha256": "4e97ca8a3784106693ed8da9437868b0925fee92a358798ddea2656dce5578fe"
+    },
+    {
+      "filename": "Regional_Dex_Stats_and_Abilities_v1.xlsx",
+      "repository_path": "docs/source_archive/canon_sources/superseded/Regional_Dex_Stats_and_Abilities_v1.xlsx",
+      "authority": "superseded_reference_only",
+      "size": 35018,
+      "sha256": "f028fe39c3cc7f54326f2a5d2b6ab170a6b35442c1246652c55ad0f22dda2ca7"
+    },
+    {
+      "filename": "WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+      "repository_path": "docs/source_archive/canon_sources/active/WORLD_TOWNS_ROUTES_REFERENCE_v1.1.md",
+      "authority": "active_authority_chain",
+      "size": 7649,
+      "sha256": "873ee4b1557b6b6abb9cb978eb04b74082aad9a5221cd9fa453479c2511398cc"
+    }
+  ]
+}

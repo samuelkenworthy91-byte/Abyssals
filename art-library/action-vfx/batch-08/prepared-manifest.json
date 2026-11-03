@@ -1,0 +1,693 @@
+{
+  "batch": "08",
+  "status": "21 sources prepared; not installed",
+  "generator": "built-in image_gen",
+  "transfer": "GitHub browser uploader, checkpoints of25/12/24 files then final corrections",
+  "moves": [
+    {
+      "id": 63,
+      "name": "Static Detonation",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -2,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A small tangled static knot winds tighter; one asymmetrical electrical detonation ruptures its shell into barbed filaments, then the filaments gutter away. No thundercloud or generic fire explosion.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Static Detonation, stable ID63. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A small tangled static knot winds tighter; one asymmetrical electrical detonation ruptures its shell into barbed filaments, then the filaments gutter away. No thundercloud or generic fire explosion. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/63-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/63-prepared.png",
+      "sourceSha256": "2009203feb60d652efb7b3b30e206a95efa6f2c550759333b1933a3cbf96a6d3",
+      "preparedSha256": "714f809bda929dda757ddd46a8d2f55c95e359dad85a3a7da78d93c387de8d8a",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 64,
+      "name": "Livewire Rend",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "08",
+      "sequence": "Three exposed copper-wire claws flex, rake together once diagonally through one contact, shed little blue sparks from their frayed insulation, then withdraw. No whole creature.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Livewire Rend, stable ID64. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Three exposed copper-wire claws flex, rake together once diagonally through one contact, shed little blue sparks from their frayed insulation, then withdraw. No whole creature. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/64-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/64-prepared.png",
+      "sourceSha256": "1d7252d82b9038462874e894bc2bf2a5ffc8dd464c0016c8cce8276186fb159b",
+      "preparedSha256": "dda85cae92a424a8fea308709148ea8c778afbad3964150368cb46e8e08be68b",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 65,
+      "name": "Coil Hook",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 30,
+          "secondary": true
+        },
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            10
+          ],
+          "basis": null
+        }
+      ],
+      "batch": "08",
+      "sequence": "A thick spring-wound copper hook compresses, drives one upward hooking punch, flexes from recoil and loosens into separated spring turns. Mechanical hook shape, not a fist.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Coil Hook, stable ID65. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A thick spring-wound copper hook compresses, drives one upward hooking punch, flexes from recoil and loosens into separated spring turns. Mechanical hook shape, not a fist. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/65-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/65-prepared.png",
+      "sourceSha256": "fa18e3c39175364a857c82844b864f1fc56cb55e7af5167f559667e2e5fe98de",
+      "preparedSha256": "35873dbd63197fff152e0c16ae1d75ef48977023dbecbe1e0ebd812dc0dab68b",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 66,
+      "name": "Spark Dash",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A narrow wingless arrowhead of compressed speed-lines accelerates low left-to-right, touches once in a tiny hooked spark, then coasts into thin broken dashes. Speed travel dominates; no full creature.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Spark Dash, stable ID66. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A narrow wingless arrowhead of compressed speed-lines accelerates low left-to-right, touches once in a tiny hooked spark, then coasts into thin broken dashes. Speed travel dominates; no full creature. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/66-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/66-prepared.png",
+      "sourceSha256": "d6a1e378356ac6a81cec55b0a427e3b77821fb05012d333f9875af8a3eeec403",
+      "preparedSha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 67,
+      "name": "Arcwire Scissor",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 30,
+          "secondary": true
+        },
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            10
+          ],
+          "basis": null
+        }
+      ],
+      "batch": "08",
+      "sequence": "Two jointed wire-cutter jaws with crackling copper cutting edges open, close once around a small central corona, then spring open and shed one backward recoil spark. No whole character.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Arcwire Scissor, stable ID67. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Two jointed wire-cutter jaws with crackling copper cutting edges open, close once around a small central corona, then spring open and shed one backward recoil spark. No whole character. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/67-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/67-prepared.png",
+      "sourceSha256": "2c406fd81bb6a7fc12c647c52fc538d202dd2642e85e6c770f6e4e5d7a0fde5c",
+      "preparedSha256": "885c0f84df8555c8fb44c7532f2ba7f2b56fb21898228df9a2275a8ad18d7dd3",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 68,
+      "name": "Spark Jolt",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Spark Jolt, stable ID68. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/68-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/68-prepared.png",
+      "sourceSha256": "0030267d904ee5eeeacdbe9fb5a3e7e5879c51d48eb1192b6e4559546b9f60af",
+      "preparedSha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 69,
+      "name": "Spark Ring",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "An incomplete floating copper spark-loop closes into a thin oval ring, rotates forward, tightens once into a bright central pinprick, then unwinds into a graceful trailing spiral.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Spark Ring, stable ID69. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: An incomplete floating copper spark-loop closes into a thin oval ring, rotates forward, tightens once into a bright central pinprick, then unwinds into a graceful trailing spiral. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/69-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/69-prepared.png",
+      "sourceSha256": "df60f45d0fa85a17b64ca71356b8cbfff03a6691dc368ab9e37d95942a23f266",
+      "preparedSha256": "b807f04af2aa8acd1739b158e3c1fda69ef5d8b20acdcab0dafb72fc4007ad99",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 70,
+      "name": "Copper Lunge",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A narrow pointed copper ram prow pulls back, lunges forward horizontally with polished copper highlights, makes one pointed contact and draws out into two thin acceleration trails. No hammer or body.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Copper Lunge, stable ID70. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A narrow pointed copper ram prow pulls back, lunges forward horizontally with polished copper highlights, makes one pointed contact and draws out into two thin acceleration trails. No hammer or body. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/70-source-v2.png",
+      "impact": 0.4375,
+      "status": "revised source and prepared candidate; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/70-prepared-v2.png",
+      "sourceSha256": "01c4cb9ee77595dd14ed4659efe255e6137a783fdda0e9761ac60db8e3a8b2e5",
+      "preparedSha256": "38f35715e3ff43b952eba247c4cdba4ab85cfe6dfb9b0d9d9b8148a93e47ff0f",
+      "generator": "built-in image_gen",
+      "revision": "02",
+      "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
+      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 71,
+      "name": "Static Field",
+      "category": "STATUS",
+      "target": "FOE_SIDE",
+      "effects": [
+        {
+          "effect_id": "recurring_status",
+          "status": "PARALYSIS",
+          "chance_percent": 25,
+          "turns": 3,
+          "target": "FOE_SIDE"
+        }
+      ],
+      "batch": "08",
+      "sequence": "Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Static Field, stable ID71. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Several separated low charge nodes lift tiny filaments into an oval floor lattice; softly crackling static settles between the nodes and remains low, then fades. Debuff field only: no explosion, lightning strike, hit star or damage contact. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/71-source-v2.png",
+      "impact": 0.4375,
+      "status": "revised source and prepared candidate; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/71-prepared-v2.png",
+      "sourceSha256": "6d21135626796b5e9fb8036229a5268fc9402843bd773075bd941ac941614637",
+      "preparedSha256": "6c6a69f3f920914d32a2ea16fe661f0ac56fb6bfeba0dfa5f43a55eae10e1c04",
+      "generator": "built-in image_gen",
+      "revision": "02",
+      "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
+      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 72,
+      "name": "Thunderhead Resonance",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "batch": "08",
+      "sequence": "Three compact layered charcoal thundercloud lobes compress like a bellows; a luminous vibrating core opens beneath them, delivers one broad concentric thunder-pressure pulse, then the lobes lose charge and dissipate. No repeated strikes.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Thunderhead Resonance, stable ID72. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Three compact layered charcoal thundercloud lobes compress like a bellows; a luminous vibrating core opens beneath them, delivers one broad concentric thunder-pressure pulse, then the lobes lose charge and dissipate. No repeated strikes. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/72-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/72-prepared.png",
+      "sourceSha256": "a2f8ca9109f4ffc7889c53df853583e7e9f2c919a8885ad525823e93b13b938c",
+      "preparedSha256": "f6df58830cd6864490180853429096a1a59ed84ca23dc56ed02627e8151cec51",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 73,
+      "name": "Livewire Hammer",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "batch": "08",
+      "sequence": "A blunt rectangular hammerhead woven from thick live copper cables lifts, swings down once, strikes with crushed wire strands and a sharp corona, rebounds heavily and drops one backward recoil spark. No biting jaws, no full character.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Livewire Hammer, stable ID73. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A blunt rectangular hammerhead woven from thick live copper cables lifts, swings down once, strikes with crushed wire strands and a sharp corona, rebounds heavily and drops one backward recoil spark. No biting jaws, no full character. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/73-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/73-prepared.png",
+      "sourceSha256": "03ff24ce328186bc6ba49c4c5fd8c13ca45ae600f06cf19eb044a00f4f156f51",
+      "preparedSha256": "b6a106b7df49959fda9e00105b7f0291163c44aedaa24da00f20887eb05e9a76",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 74,
+      "name": "Volt Jolt",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Volt Jolt, stable ID74. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/74-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/74-prepared.png",
+      "sourceSha256": "1c42c691d6c03be9ce0521cbcb54db8fd2dcafe3f2613ab0522733a44c0f32c1",
+      "preparedSha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 75,
+      "name": "Livewire Tackle",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 30,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A broad rounded armored shoulder-shaped mass wrapped in live wires braces, makes one low horizontal body-check with a blunt shoulder impact, recoils and retracts; no head, full creature, feet or arrowhead.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Livewire Tackle, stable ID75. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A broad rounded armored shoulder-shaped mass wrapped in live wires braces, makes one low horizontal body-check with a blunt shoulder impact, recoils and retracts; no head, full creature, feet or arrowhead. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/75-source-v2.png",
+      "impact": 0.4375,
+      "status": "revised source and prepared candidate; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/75-prepared-v2.png",
+      "sourceSha256": "5515b200fdaf230317fdf3a9ad2595125232759be61678eb7772512f153aa564",
+      "preparedSha256": "473b42ec0bf25e4cef8c409c507da80e60f0eef35ca2581079f36038737d190d",
+      "generator": "built-in image_gen",
+      "revision": "02",
+      "revisionReason": "Remove neighboring cell fragments by generating a smaller complete drawing in each cell",
+      "revisionPrompt": "Preserve exact design and sixteen-frame sequence; isolate complete poses in middle45% of each cell with enormous empty transparent gutters; no strips or fragments.",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 77,
+      "name": "Storm of Youth",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "PARALYSIS",
+          "chance_percent": 20,
+          "secondary": true
+        },
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            10
+          ],
+          "basis": null
+        }
+      ],
+      "batch": "08",
+      "sequence": "A single reckless zigzag bolt bends twice while travelling toward ONE contact; a wide blue-violet discharge opens at that contact, and one small backward recoil spark traces its return. Travel bends are not separate hits.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Storm of Youth, stable ID77. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A single reckless zigzag bolt bends twice while travelling toward ONE contact; a wide blue-violet discharge opens at that contact, and one small backward recoil spark traces its return. Travel bends are not separate hits. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/77-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/77-prepared.png",
+      "sourceSha256": "a799c7c78e8c5041d25bbe4334cdac67daf18aacd869353f342712abb4653080",
+      "preparedSha256": "56edb127bc2030b29ef79df0520310663a13e6944c2f66b60df9b1d581a583b0",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 78,
+      "name": "Thornwake",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "SLEEP",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A tight sleeping rosebud of dark thorns swells, opens into one directional fan of rising thorn shoots, releases a few soft sleepy gold pollen motes after impact and withers. No generic green orb.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Thornwake, stable ID78. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A tight sleeping rosebud of dark thorns swells, opens into one directional fan of rising thorn shoots, releases a few soft sleepy gold pollen motes after impact and withers. No generic green orb. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/78-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/78-prepared.png",
+      "sourceSha256": "50606c90904067153092b3b91f8bb30dda866209d3b5706ff5d6a9426b66775a",
+      "preparedSha256": "24bc7cf825b9b0f878487c7abc38d78263fcb6b3eaeb7d92f82d3f5c0c638e56",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 79,
+      "name": "Leaf Cut",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "drain",
+          "actual_hp_damage_fraction": [
+            25,
+            100
+          ]
+        }
+      ],
+      "batch": "08",
+      "sequence": "One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Leaf Cut, stable ID79. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/79-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/79-prepared.png",
+      "sourceSha256": "258ba4b6a41f4afba8b3066a04e9735977a4d944a60752b8db8b1b132aefaef7",
+      "preparedSha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 80,
+      "name": "Seeds of Doubt",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 50,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "A pair of heavy dark seed husks opens into seed-clamp jaws, snaps ONCE at the center, cracks and leaves a few trailing root threads that sag before dissolving. Physical seed impact with slowing roots, no question marks or text.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Seeds of Doubt, stable ID80. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A pair of heavy dark seed husks opens into seed-clamp jaws, snaps ONCE at the center, cracks and leaves a few trailing root threads that sag before dissolving. Physical seed impact with slowing roots, no question marks or text. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/80-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/80-prepared.png",
+      "sourceSha256": "ccdce1206e82ef3de6d72e3bddf1d15144bd88619c49bf2543fe60f9224dabc8",
+      "preparedSha256": "bd12f6956f21c294791442e75512e771192735400af295777847fe764f5f72e4",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 81,
+      "name": "Leaf Grip",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 70,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "Three broad ribbed leaves fold into grasping fingers, reach inward and squeeze once around a central gap, bruise and crumple from pressure, then uncurl. Clear gripping action; no vine whip or cut.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Leaf Grip, stable ID81. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: Three broad ribbed leaves fold into grasping fingers, reach inward and squeeze once around a central gap, bruise and crumple from pressure, then uncurl. Clear gripping action; no vine whip or cut. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/81-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/81-prepared.png",
+      "sourceSha256": "e63770b21f6aee9cfe0b47e80987ff4dd3cca1c21d2f8cb8e0e7c9f26cba29eb",
+      "preparedSha256": "69da6c0bb5b416a7314529a10c4a6cc4c874d395e363c13c4ae6410886835385",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 82,
+      "name": "Leaf Lash",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "batch": "08",
+      "sequence": "One long flexible leaf rib bends into a whip, draws a wide S-shaped preparation, snaps its leafy tip once across the center, and curls slack with fluttering torn leaflets. Whole whip remains in each cell.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Leaf Lash, stable ID82. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: One long flexible leaf rib bends into a whip, draws a wide S-shaped preparation, snaps its leafy tip once across the center, and curls slack with fluttering torn leaflets. Whole whip remains in each cell. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/82-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/82-prepared.png",
+      "sourceSha256": "8d3859c0966874bf86903d4343763f4e5657fc92e104f9713860f14c3d27e091",
+      "preparedSha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 83,
+      "name": "Thistle Hook",
+      "category": "PHYSICAL",
+      "target": "SINGLE_FOE",
+      "effects": [],
+      "batch": "08",
+      "sequence": "A single purple thistle burr on a thick curved stem draws back, swings one upward hooking strike, sheds a few pointed burr bristles at contact and uncurls downward. Distinct thistle head and hooked stem.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Thistle Hook, stable ID83. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: A single purple thistle burr on a thick curved stem draws back, swings one upward hooking strike, sheds a few pointed burr bristles at contact and uncurls downward. Distinct thistle head and hooked stem. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/83-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/83-prepared.png",
+      "sourceSha256": "bd51a7e5fdc096083a7e017210ab4df41bed923d65aadc103de9b5629df6eed8",
+      "preparedSha256": "b50f239cea8aff703bafe9eceb4b70a1a80f2fcc1cc6b2c019bf91f3ad99ee83",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    },
+    {
+      "id": 84,
+      "name": "Canopy Resonance",
+      "category": "SPECIAL",
+      "target": "SINGLE_FOE",
+      "effects": [
+        {
+          "effect_id": "drain",
+          "actual_hp_damage_fraction": [
+            25,
+            100
+          ]
+        }
+      ],
+      "batch": "08",
+      "sequence": "An arched canopy of four broad veined leaves sways in sequence; one twisting stream of leaf-vein resonance curls around a central gap and opens once, then small sap motes return left and the canopy relaxes. No generic hurricane or repeated hit.",
+      "prompt": "Use case: stylized-concept. Asset: original detailed pixel-art JRPG combat animation sprite sheet for Abyssals move Canopy Resonance, stable ID84. Exactly SIXTEEN distinct temporal drawings in a strict 4x4 equal-cell square atlas, row-major. Genuine transparent alpha background. Action sequence: An arched canopy of four broad veined leaves sways in sequence; one twisting stream of leaf-vein resonance curls around a central gap and opens once, then small sap motes return left and the canopy relaxes. No generic hurricane or repeated hit. Frames1-4 preparation,5-7 action travel,8 ONE contact (or field settling for status),9-12 consequences,13-16 recovery. Rich clustered shaded pixels with readable material volume at192x192 logical pixels. Isolated effect forms/body parts only; no full creature or people, scenery, ground rectangle, lettering, labels, borders or drawn grid. Each drawing and EVERY tip, trail, particle and glow stays inside the central60% of its own cell, leaving wide transparent gutters. No overlapping cells, no cropping. Every frame differs. Match a polished detailed pixel JRPG effect, restrained bright highlights and strongly readable silhouettes. No recolour of another attack.",
+      "source": "art-library/action-vfx/batch-08/84-source.png",
+      "impact": 0.4375,
+      "status": "source and prepared sheet checkpointed; gameplay review pending",
+      "prepared": "art-library/action-vfx/batch-08/84-prepared.png",
+      "sourceSha256": "c5068217b87ab11bd0390ae630eb5ddbea002e6c65ce728f1d3cce3db7c9ad1c",
+      "preparedSha256": "5cc611423c3742428260f248f9b360dc9ae317fad83422a5573585321ce3370c",
+      "generator": "built-in image_gen",
+      "structuralValidation": {
+        "frames": 16,
+        "uniqueFrames": 16,
+        "logicalCell": 192,
+        "transparent": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,4900 @@
+{
+  "source": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+  "source_sha256": "b621315c5891425a40fa385e7f8a7b63700076b4b9f606cf7c7d9c256da55411",
+  "authority": "Evidence only; apply docs/canon/SUPERSESSIONS.md before use.",
+  "sheets": {
+    "Moves": [
+      {
+        "row": 1,
+        "cells": [
+          "Move #",
+          "Move Name",
+          "Type",
+          "Uses (PP)",
+          "Base Power",
+          "Secondary Effect",
+          "Signature / Best Fit"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 2,
+        "cells": [
+          1,
+          "Open Guard",
+          "Normal",
+          15,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          2,
+          "Plain Burst",
+          "Normal",
+          20,
+          70,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 4,
+        "cells": [
+          3,
+          "Plain Call",
+          "Normal",
+          20,
+          75,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 5,
+        "cells": [
+          4,
+          "Plain Clap",
+          "Normal",
+          25,
+          50,
+          "Lowers foe's Defense 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 6,
+        "cells": [
+          5,
+          "Plain Dash",
+          "Normal",
+          35,
+          45,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 7,
+        "cells": [
+          6,
+          "Plain Feint",
+          "Normal",
+          15,
+          80,
+          "Lowers foe's Defense 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 8,
+        "cells": [
+          7,
+          "Plain Rush",
+          "Normal",
+          25,
+          60,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 9,
+        "cells": [
+          8,
+          "Plain Strike",
+          "Normal",
+          35,
+          40,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 10,
+        "cells": [
+          9,
+          "Plain Swipe",
+          "Normal",
+          20,
+          65,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 11,
+        "cells": [
+          10,
+          "Quick Wit",
+          "Normal",
+          15,
+          "—",
+          "Raises accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 12,
+        "cells": [
+          11,
+          "Second Wind",
+          "Normal",
+          20,
+          "—",
+          "Restores 25% max HP.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 13,
+        "cells": [
+          12,
+          "Steady Stance",
+          "Normal",
+          20,
+          "—",
+          "Raises Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 14,
+        "cells": [
+          13,
+          "Swift Clap",
+          "Normal",
+          10,
+          100,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 15,
+        "cells": [
+          14,
+          "Swift Dash",
+          "Normal",
+          15,
+          90,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 16,
+        "cells": [
+          15,
+          "Swift Rush",
+          "Normal",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 17,
+        "cells": [
+          16,
+          "Swift Strike",
+          "Normal",
+          15,
+          85,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 18,
+        "cells": [
+          17,
+          "Swift Swipe",
+          "Normal",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 19,
+        "cells": [
+          18,
+          "Ash Arc",
+          "Fire",
+          25,
+          50,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 20,
+        "cells": [
+          19,
+          "Ash Brand",
+          "Fire",
+          15,
+          80,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 21,
+        "cells": [
+          20,
+          "Ash Burst",
+          "Fire",
+          20,
+          75,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 22,
+        "cells": [
+          21,
+          "Ash Fang",
+          "Fire",
+          20,
+          65,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 23,
+        "cells": [
+          22,
+          "Ash Lash",
+          "Fire",
+          35,
+          45,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 24,
+        "cells": [
+          23,
+          "Ash Pounce",
+          "Fire",
+          35,
+          40,
+          "10% chance to burn.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 25,
+        "cells": [
+          24,
+          "Ash Rush",
+          "Fire",
+          25,
+          60,
+          "30% chance to burn; user takes 1/10 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 26,
+        "cells": [
+          25,
+          "Ash Wheel",
+          "Fire",
+          20,
+          70,
+          "10% chance to burn.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 27,
+        "cells": [
+          26,
+          "Ashen Focus",
+          "Fire",
+          15,
+          "—",
+          "Raises Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 28,
+        "cells": [
+          27,
+          "Cinder Arc",
+          "Fire",
+          10,
+          100,
+          "10% chance to burn.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 29,
+        "cells": [
+          28,
+          "Cinder Fang",
+          "Fire",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 30,
+        "cells": [
+          29,
+          "Cinder Lash",
+          "Fire",
+          15,
+          90,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 31,
+        "cells": [
+          30,
+          "Cinder Pounce",
+          "Fire",
+          15,
+          85,
+          "30% chance to burn; user takes 1/10 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 32,
+        "cells": [
+          31,
+          "Cinder Rush",
+          "Fire",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 33,
+        "cells": [
+          32,
+          "Heat Haze",
+          "Fire",
+          20,
+          "—",
+          "Lowers foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 34,
+        "cells": [
+          33,
+          "Kindled Heart",
+          "Fire",
+          15,
+          "—",
+          "Raises Attack 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 35,
+        "cells": [
+          34,
+          "Smoulder Veil",
+          "Fire",
+          15,
+          "—",
+          "Raises Sp. Def 1 stage; user becomes immune to burn for 5 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 36,
+        "cells": [
+          35,
+          "War Flame",
+          "Fire",
+          20,
+          "—",
+          "Raises Attack and Speed 1 stage; user loses 1/8 max HP.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 37,
+        "cells": [
+          36,
+          "Drowned Ember",
+          "Fire",
+          10,
+          85,
+          "30% chance to burn; if user is Ghost-type, power is 1.2×.",
+          "Fordossa"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 38,
+        "cells": [
+          37,
+          "Infernal Prowl",
+          "Fire",
+          10,
+          90,
+          "20% chance to burn; power rises 25% if the foe is confused.",
+          "Gehennuar"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 39,
+        "cells": [
+          38,
+          "Little Conqueror",
+          "Fire",
+          10,
+          90,
+          "User's Speed rises 1 stage after damage.",
+          "Cehong"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 40,
+        "cells": [
+          39,
+          "Red Banner Rush",
+          "Fire",
+          10,
+          100,
+          "20% chance to flinch; user's Speed rises 1 stage if it KOs.",
+          "Cehong"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 41,
+        "cells": [
+          40,
+          "Calm Current",
+          "Water",
+          20,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 42,
+        "cells": [
+          41,
+          "Deep Breath",
+          "Water",
+          20,
+          "—",
+          "Restores 25% max HP.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 43,
+        "cells": [
+          42,
+          "Foam Break",
+          "Water",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 44,
+        "cells": [
+          43,
+          "Foam Claw",
+          "Water",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 45,
+        "cells": [
+          44,
+          "Foam Crash",
+          "Water",
+          15,
+          80,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 46,
+        "cells": [
+          45,
+          "Foam Lance",
+          "Water",
+          15,
+          85,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 47,
+        "cells": [
+          46,
+          "Foam Pulse",
+          "Water",
+          10,
+          95,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 48,
+        "cells": [
+          47,
+          "Foam Rush",
+          "Water",
+          10,
+          100,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 49,
+        "cells": [
+          48,
+          "Foam Sweep",
+          "Water",
+          15,
+          90,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 50,
+        "cells": [
+          49,
+          "Mist Screen",
+          "Water",
+          15,
+          "—",
+          "Lowers foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 51,
+        "cells": [
+          50,
+          "Tidal Poise",
+          "Water",
+          15,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 52,
+        "cells": [
+          51,
+          "Tide Break",
+          "Water",
+          20,
+          70,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 53,
+        "cells": [
+          52,
+          "Tide Claw",
+          "Water",
+          20,
+          65,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 54,
+        "cells": [
+          53,
+          "Tide Crash",
+          "Water",
+          35,
+          40,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 55,
+        "cells": [
+          54,
+          "Tide Lance",
+          "Water",
+          35,
+          45,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 56,
+        "cells": [
+          55,
+          "Tide Pulse",
+          "Water",
+          25,
+          55,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 57,
+        "cells": [
+          56,
+          "Tide Rush",
+          "Water",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 58,
+        "cells": [
+          57,
+          "Tide Spiral",
+          "Water",
+          20,
+          75,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 59,
+        "cells": [
+          58,
+          "Tide Sweep",
+          "Water",
+          25,
+          50,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 60,
+        "cells": [
+          59,
+          "Jaffa Breaker",
+          "Water",
+          10,
+          95,
+          "30% chance to raise user's Attack 1 stage.",
+          "Liontide"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 61,
+        "cells": [
+          60,
+          "Charge Up",
+          "Electric",
+          15,
+          "—",
+          "Raises Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 62,
+        "cells": [
+          61,
+          "Flash Step",
+          "Electric",
+          20,
+          "—",
+          "Raises Speed 2 stages; Defense falls 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 63,
+        "cells": [
+          62,
+          "Live Wire",
+          "Electric",
+          20,
+          "—",
+          "Raises Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 64,
+        "cells": [
+          63,
+          "Spark Burst",
+          "Electric",
+          25,
+          60,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 65,
+        "cells": [
+          64,
+          "Spark Claw",
+          "Electric",
+          20,
+          65,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 66,
+        "cells": [
+          65,
+          "Spark Crash",
+          "Electric",
+          15,
+          85,
+          "30% chance to paralyze; user takes 1/10 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 67,
+        "cells": [
+          66,
+          "Spark Dash",
+          "Electric",
+          20,
+          70,
+          "20% chance to paralyze.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 68,
+        "cells": [
+          67,
+          "Spark Fang",
+          "Electric",
+          25,
+          55,
+          "30% chance to paralyze; user takes 1/10 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 69,
+        "cells": [
+          68,
+          "Spark Jolt",
+          "Electric",
+          35,
+          40,
+          "20% chance to paralyze.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 70,
+        "cells": [
+          69,
+          "Spark Ring",
+          "Electric",
+          15,
+          80,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 71,
+        "cells": [
+          70,
+          "Spark Rush",
+          "Electric",
+          35,
+          45,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 72,
+        "cells": [
+          71,
+          "Static Field",
+          "Electric",
+          15,
+          "—",
+          "25% chance each turn to paralyze foes for 3 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 73,
+        "cells": [
+          72,
+          "Volt Burst",
+          "Electric",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 74,
+        "cells": [
+          73,
+          "Volt Fang",
+          "Electric",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 75,
+        "cells": [
+          74,
+          "Volt Jolt",
+          "Electric",
+          15,
+          90,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 76,
+        "cells": [
+          75,
+          "Volt Rush",
+          "Electric",
+          10,
+          95,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 77,
+        "cells": [
+          76,
+          "Alien Circuit",
+          "Electric",
+          10,
+          95,
+          "20% chance to paralyze; ignores foe's positive evasion stages.",
+          "Xenolithid"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 78,
+        "cells": [
+          77,
+          "Storm of Youth",
+          "Electric",
+          10,
+          100,
+          "20% chance to paralyze; user takes 1/10 recoil.",
+          "Cehong"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 79,
+        "cells": [
+          78,
+          "Leaf Burst",
+          "Grass",
+          25,
+          50,
+          "10% chance to put target to sleep.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 80,
+        "cells": [
+          79,
+          "Leaf Cut",
+          "Grass",
+          35,
+          40,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 81,
+        "cells": [
+          80,
+          "Leaf Fang",
+          "Grass",
+          20,
+          70,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 82,
+        "cells": [
+          81,
+          "Leaf Grip",
+          "Grass",
+          25,
+          55,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 83,
+        "cells": [
+          82,
+          "Leaf Lash",
+          "Grass",
+          35,
+          45,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 84,
+        "cells": [
+          83,
+          "Leaf Rush",
+          "Grass",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 85,
+        "cells": [
+          84,
+          "Leaf Spiral",
+          "Grass",
+          20,
+          65,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 86,
+        "cells": [
+          85,
+          "Leaf Strike",
+          "Grass",
+          20,
+          75,
+          "10% chance to put target to sleep.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 87,
+        "cells": [
+          86,
+          "Root Burst",
+          "Grass",
+          15,
+          90,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 88,
+        "cells": [
+          87,
+          "Root Cut",
+          "Grass",
+          15,
+          80,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 89,
+        "cells": [
+          88,
+          "Root Fang",
+          "Grass",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 90,
+        "cells": [
+          89,
+          "Root Grip",
+          "Grass",
+          10,
+          95,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 91,
+        "cells": [
+          90,
+          "Root Lash",
+          "Grass",
+          15,
+          85,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 92,
+        "cells": [
+          91,
+          "Root Rush",
+          "Grass",
+          10,
+          100,
+          "10% chance to put target to sleep.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 93,
+        "cells": [
+          92,
+          "Root Spiral",
+          "Grass",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 94,
+        "cells": [
+          93,
+          "Root Ward",
+          "Grass",
+          20,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 95,
+        "cells": [
+          94,
+          "Spring Growth",
+          "Grass",
+          20,
+          "—",
+          "Raises Attack and Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 96,
+        "cells": [
+          95,
+          "Thorn Guard",
+          "Grass",
+          15,
+          "—",
+          "Damages contact attackers for 1/8 max HP for 5 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 97,
+        "cells": [
+          96,
+          "Verdant Mend",
+          "Grass",
+          15,
+          "—",
+          "Restores 50% max HP.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 98,
+        "cells": [
+          97,
+          "Kindness Gathers",
+          "Grass",
+          10,
+          "—",
+          "Restores 25% max HP to the whole active side in doubles; 50% to user in singles.",
+          "Liubeirow"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 99,
+        "cells": [
+          98,
+          "Oathkeeper's Edge",
+          "Grass",
+          10,
+          95,
+          "If user has full HP, Defense rises 1 stage after damage.",
+          "Guanrong"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 100,
+        "cells": [
+          99,
+          "Rooted Pride",
+          "Grass",
+          10,
+          95,
+          "User's Defense rises 1 stage after damage.",
+          "Tellurion"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 101,
+        "cells": [
+          100,
+          "Cold Focus",
+          "Ice",
+          15,
+          "—",
+          "Raises accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 102,
+        "cells": [
+          101,
+          "Frost Burst",
+          "Ice",
+          25,
+          60,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 103,
+        "cells": [
+          102,
+          "Frost Claw",
+          "Ice",
+          35,
+          40,
+          "10% chance to freeze.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 104,
+        "cells": [
+          103,
+          "Frost Crash",
+          "Ice",
+          15,
+          80,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 105,
+        "cells": [
+          104,
+          "Frost Fang",
+          "Ice",
+          20,
+          70,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 106,
+        "cells": [
+          105,
+          "Frost Rush",
+          "Ice",
+          25,
+          55,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 107,
+        "cells": [
+          106,
+          "Frost Shard",
+          "Ice",
+          35,
+          45,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 108,
+        "cells": [
+          107,
+          "Frost Spire",
+          "Ice",
+          15,
+          90,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 109,
+        "cells": [
+          108,
+          "Frost Sweep",
+          "Ice",
+          20,
+          75,
+          "10% chance to freeze.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 110,
+        "cells": [
+          109,
+          "Frozen Poise",
+          "Ice",
+          20,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 111,
+        "cells": [
+          110,
+          "Rime Claw",
+          "Ice",
+          10,
+          95,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 112,
+        "cells": [
+          111,
+          "Rime Guard",
+          "Ice",
+          20,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 113,
+        "cells": [
+          112,
+          "Rime Rush",
+          "Ice",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 114,
+        "cells": [
+          113,
+          "Rime Shard",
+          "Ice",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 115,
+        "cells": [
+          114,
+          "Snow Veil",
+          "Ice",
+          15,
+          "—",
+          "Raises evasion 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 116,
+        "cells": [
+          115,
+          "Acre Grudge",
+          "Ice",
+          10,
+          95,
+          "30% chance to lower foe's Speed 1 stage.",
+          "Grudgemont"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 117,
+        "cells": [
+          116,
+          "Celestial Rime",
+          "Ice",
+          10,
+          95,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "Caelynx"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 118,
+        "cells": [
+          117,
+          "Battle Focus",
+          "Fighting",
+          20,
+          "—",
+          "Raises Attack 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 119,
+        "cells": [
+          118,
+          "Brave Blow",
+          "Fighting",
+          10,
+          100,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 120,
+        "cells": [
+          119,
+          "Brave Elbow",
+          "Fighting",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 121,
+        "cells": [
+          120,
+          "Brave Kick",
+          "Fighting",
+          15,
+          90,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 122,
+        "cells": [
+          121,
+          "Brave Palm",
+          "Fighting",
+          15,
+          85,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 123,
+        "cells": [
+          122,
+          "Brave Rush",
+          "Fighting",
+          10,
+          95,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 124,
+        "cells": [
+          123,
+          "Brave Throw",
+          "Fighting",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 125,
+        "cells": [
+          124,
+          "Firm Footing",
+          "Fighting",
+          20,
+          "—",
+          "Prevents forced switching and raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 126,
+        "cells": [
+          125,
+          "Guarded Breath",
+          "Fighting",
+          15,
+          "—",
+          "Raises Defense and Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 127,
+        "cells": [
+          126,
+          "Iron Blow",
+          "Fighting",
+          25,
+          55,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 128,
+        "cells": [
+          127,
+          "Iron Break",
+          "Fighting",
+          15,
+          80,
+          "User's Attack rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 129,
+        "cells": [
+          128,
+          "Iron Charge",
+          "Fighting",
+          20,
+          70,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 130,
+        "cells": [
+          129,
+          "Iron Elbow",
+          "Fighting",
+          20,
+          65,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 131,
+        "cells": [
+          130,
+          "Iron Kick",
+          "Fighting",
+          35,
+          45,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 132,
+        "cells": [
+          131,
+          "Iron Palm",
+          "Fighting",
+          35,
+          40,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 133,
+        "cells": [
+          132,
+          "Valor Breakthrough",
+          "Fighting",
+          25,
+          50,
+          "User's Attack rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 134,
+        "cells": [
+          133,
+          "Iron Throw",
+          "Fighting",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 135,
+        "cells": [
+          134,
+          "War Cry",
+          "Fighting",
+          15,
+          "—",
+          "Raises Attack 2 stages; user is confused.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 136,
+        "cells": [
+          135,
+          "Noxious Cloud",
+          "Poison",
+          15,
+          "—",
+          "Poisons all foes.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 137,
+        "cells": [
+          136,
+          "Toxic Veil",
+          "Poison",
+          20,
+          "—",
+          "Raises evasion 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 138,
+        "cells": [
+          137,
+          "Toxin Burst",
+          "Poison",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 139,
+        "cells": [
+          138,
+          "Toxin Fang",
+          "Poison",
+          15,
+          90,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 140,
+        "cells": [
+          139,
+          "Toxin Lash",
+          "Poison",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 141,
+        "cells": [
+          140,
+          "Toxin Spray",
+          "Poison",
+          10,
+          95,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 142,
+        "cells": [
+          141,
+          "Venom Burst",
+          "Poison",
+          25,
+          60,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 143,
+        "cells": [
+          142,
+          "Venom Claw",
+          "Poison",
+          20,
+          65,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 144,
+        "cells": [
+          143,
+          "Venom Coat",
+          "Poison",
+          15,
+          "—",
+          "Contact attackers have a 30% chance to be poisoned for 5 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 145,
+        "cells": [
+          144,
+          "Venom Fang",
+          "Poison",
+          35,
+          40,
+          "30% chance to poison.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 146,
+        "cells": [
+          145,
+          "Venom Lash",
+          "Poison",
+          25,
+          55,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 147,
+        "cells": [
+          146,
+          "Venom Mist",
+          "Poison",
+          20,
+          70,
+          "30% chance to poison.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 148,
+        "cells": [
+          147,
+          "Venom Rush",
+          "Poison",
+          15,
+          85,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 149,
+        "cells": [
+          148,
+          "Venom Spray",
+          "Poison",
+          35,
+          45,
+          "10% chance to badly poison.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 150,
+        "cells": [
+          149,
+          "Venom Sting",
+          "Poison",
+          15,
+          80,
+          "10% chance to badly poison.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 151,
+        "cells": [
+          150,
+          "Emperor's Scheme",
+          "Poison",
+          10,
+          "—",
+          "Badly poisons the foe and lowers its Sp. Def 1 stage.",
+          "Waranwei"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 152,
+        "cells": [
+          151,
+          "Venom Cairn",
+          "Poison",
+          10,
+          100,
+          "30% chance to badly poison.",
+          "Kronodo"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 153,
+        "cells": [
+          152,
+          "Burrow Calm",
+          "Ground",
+          15,
+          "—",
+          "Raises evasion 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 154,
+        "cells": [
+          153,
+          "Dune Break",
+          "Ground",
+          35,
+          45,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 155,
+        "cells": [
+          154,
+          "Dune Claw",
+          "Ground",
+          25,
+          50,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 156,
+        "cells": [
+          155,
+          "Dune Crash",
+          "Ground",
+          25,
+          55,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 157,
+        "cells": [
+          156,
+          "Dune Drop",
+          "Ground",
+          20,
+          75,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 158,
+        "cells": [
+          157,
+          "Dune Fang",
+          "Ground",
+          20,
+          65,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 159,
+        "cells": [
+          158,
+          "Dune Rush",
+          "Ground",
+          35,
+          40,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 160,
+        "cells": [
+          159,
+          "Dune Spiral",
+          "Ground",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 161,
+        "cells": [
+          160,
+          "Dune Surge",
+          "Ground",
+          20,
+          70,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 162,
+        "cells": [
+          161,
+          "Dust Screen",
+          "Ground",
+          20,
+          "—",
+          "Lowers foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 163,
+        "cells": [
+          162,
+          "Earth Break",
+          "Ground",
+          15,
+          85,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 164,
+        "cells": [
+          163,
+          "Earth Claw",
+          "Ground",
+          15,
+          90,
+          "20% chance to lower foe's Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 165,
+        "cells": [
+          164,
+          "Earth Crash",
+          "Ground",
+          10,
+          95,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 166,
+        "cells": [
+          165,
+          "Earth Fang",
+          "Ground",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 167,
+        "cells": [
+          166,
+          "Earth Rush",
+          "Ground",
+          15,
+          80,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 168,
+        "cells": [
+          167,
+          "Earth Spiral",
+          "Ground",
+          10,
+          100,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 169,
+        "cells": [
+          168,
+          "Earth Surge",
+          "Ground",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 170,
+        "cells": [
+          169,
+          "Earth Ward",
+          "Ground",
+          15,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 171,
+        "cells": [
+          170,
+          "Sand Guard",
+          "Ground",
+          20,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 172,
+        "cells": [
+          171,
+          "Stone Footing",
+          "Ground",
+          15,
+          "—",
+          "Prevents flinching and forced switching for 5 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 173,
+        "cells": [
+          172,
+          "Island Crown",
+          "Ground",
+          10,
+          100,
+          "If user moved after the target, power is 1.25×.",
+          "Cyprigon"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 174,
+        "cells": [
+          173,
+          "Feather Veil",
+          "Flying",
+          15,
+          "—",
+          "Raises evasion 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 175,
+        "cells": [
+          174,
+          "Gale Arc",
+          "Flying",
+          15,
+          80,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 176,
+        "cells": [
+          175,
+          "Gale Burst",
+          "Flying",
+          25,
+          60,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 177,
+        "cells": [
+          176,
+          "Gale Claw",
+          "Flying",
+          20,
+          70,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 178,
+        "cells": [
+          177,
+          "Gale Crash",
+          "Flying",
+          15,
+          85,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 179,
+        "cells": [
+          178,
+          "Gale Cut",
+          "Flying",
+          35,
+          40,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 180,
+        "cells": [
+          179,
+          "Gale Dive",
+          "Flying",
+          25,
+          55,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 181,
+        "cells": [
+          180,
+          "Gale Rush",
+          "Flying",
+          35,
+          45,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 182,
+        "cells": [
+          181,
+          "Gale Sweep",
+          "Flying",
+          20,
+          65,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 183,
+        "cells": [
+          182,
+          "Sky Burst",
+          "Flying",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 184,
+        "cells": [
+          183,
+          "Sky Cut",
+          "Flying",
+          15,
+          90,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 185,
+        "cells": [
+          184,
+          "Sky Dive",
+          "Flying",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 186,
+        "cells": [
+          185,
+          "Sky Focus",
+          "Flying",
+          15,
+          "—",
+          "Raises accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 187,
+        "cells": [
+          186,
+          "Sky Rush",
+          "Flying",
+          10,
+          95,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 188,
+        "cells": [
+          187,
+          "Tailwind Cry",
+          "Flying",
+          20,
+          "—",
+          "Raises Speed 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 189,
+        "cells": [
+          188,
+          "Updraft",
+          "Flying",
+          20,
+          "—",
+          "Raises Speed 2 stages; Defense falls 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 190,
+        "cells": [
+          189,
+          "Pilgrim Echo",
+          "Flying",
+          15,
+          80,
+          "20% chance to confuse; deals special damage.",
+          "Pactecho"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 191,
+        "cells": [
+          190,
+          "Aura Arc",
+          "Psychic",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 192,
+        "cells": [
+          191,
+          "Aura Burst",
+          "Psychic",
+          10,
+          100,
+          "20% chance to lower foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 193,
+        "cells": [
+          192,
+          "Aura Crush",
+          "Psychic",
+          15,
+          90,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 194,
+        "cells": [
+          193,
+          "Aura Lance",
+          "Psychic",
+          15,
+          80,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 195,
+        "cells": [
+          194,
+          "Aura Pulse",
+          "Psychic",
+          20,
+          75,
+          "20% chance to lower foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 196,
+        "cells": [
+          195,
+          "Aura Ring",
+          "Psychic",
+          10,
+          95,
+          "User's Sp. Atk rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 197,
+        "cells": [
+          196,
+          "Aura Spiral",
+          "Psychic",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 198,
+        "cells": [
+          197,
+          "Aura Wave",
+          "Psychic",
+          15,
+          85,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 199,
+        "cells": [
+          198,
+          "Calm Thought",
+          "Psychic",
+          15,
+          "—",
+          "Raises Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 200,
+        "cells": [
+          199,
+          "Future Read",
+          "Psychic",
+          15,
+          "—",
+          "User's next move cannot miss.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 201,
+        "cells": [
+          200,
+          "Mind Arc",
+          "Psychic",
+          20,
+          70,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 202,
+        "cells": [
+          201,
+          "Mind Burst",
+          "Psychic",
+          20,
+          65,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 203,
+        "cells": [
+          202,
+          "Mind Crush",
+          "Psychic",
+          25,
+          55,
+          "20% chance to lower foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 204,
+        "cells": [
+          203,
+          "Mind Lance",
+          "Psychic",
+          35,
+          45,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 205,
+        "cells": [
+          204,
+          "Mind Pulse",
+          "Psychic",
+          35,
+          40,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 206,
+        "cells": [
+          205,
+          "Mind Ring",
+          "Psychic",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 207,
+        "cells": [
+          206,
+          "Mind Screen",
+          "Psychic",
+          20,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 208,
+        "cells": [
+          207,
+          "Mind Spiral",
+          "Psychic",
+          20,
+          75,
+          "User's Sp. Atk rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 209,
+        "cells": [
+          208,
+          "Mind Wave",
+          "Psychic",
+          25,
+          50,
+          "User's Sp. Atk rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 210,
+        "cells": [
+          209,
+          "Long Game",
+          "Psychic",
+          15,
+          "—",
+          "Raises evasion and Sp. Def 1 stage.",
+          "Reversire"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 211,
+        "cells": [
+          210,
+          "Sultan's Measure",
+          "Psychic",
+          10,
+          "—",
+          "Raises Sp. Atk and Sp. Def 1 stage; foe's Attack falls 1 stage.",
+          "Accordacal"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 212,
+        "cells": [
+          211,
+          "Chitin Bite",
+          "Bug",
+          10,
+          100,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 213,
+        "cells": [
+          212,
+          "Chitin Burst",
+          "Bug",
+          20,
+          65,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 214,
+        "cells": [
+          213,
+          "Chitin Claw",
+          "Bug",
+          20,
+          75,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 215,
+        "cells": [
+          214,
+          "Chitin Crash",
+          "Bug",
+          15,
+          85,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 216,
+        "cells": [
+          215,
+          "Chitin Cut",
+          "Bug",
+          35,
+          40,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 217,
+        "cells": [
+          216,
+          "Chitin Needle",
+          "Bug",
+          25,
+          60,
+          "User's Speed rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 218,
+        "cells": [
+          217,
+          "Chitin Rush",
+          "Bug",
+          25,
+          50,
+          "10% chance to poison.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 219,
+        "cells": [
+          218,
+          "Chitin Spiral",
+          "Bug",
+          15,
+          90,
+          "10% chance to poison.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 220,
+        "cells": [
+          219,
+          "Hive Call",
+          "Bug",
+          20,
+          "—",
+          "Raises Attack 1 stage for all Bug allies.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 221,
+        "cells": [
+          220,
+          "Shed Shell",
+          "Bug",
+          15,
+          "—",
+          "Raises Speed 1 stage and cures stat drops.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 222,
+        "cells": [
+          221,
+          "Silk Guard",
+          "Bug",
+          15,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 223,
+        "cells": [
+          222,
+          "Swarm Cut",
+          "Bug",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 224,
+        "cells": [
+          223,
+          "Bedrock Calm",
+          "Rock",
+          15,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 225,
+        "cells": [
+          224,
+          "Cairn Ward",
+          "Rock",
+          20,
+          "—",
+          "Reduces damage from the next hit by 50%.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 226,
+        "cells": [
+          225,
+          "Crag Break",
+          "Rock",
+          10,
+          100,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 227,
+        "cells": [
+          226,
+          "Crag Burst",
+          "Rock",
+          10,
+          95,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 228,
+        "cells": [
+          227,
+          "Crag Claw",
+          "Rock",
+          15,
+          90,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 229,
+        "cells": [
+          228,
+          "Crag Crash",
+          "Rock",
+          20,
+          75,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 230,
+        "cells": [
+          229,
+          "Crag Fang",
+          "Rock",
+          15,
+          80,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 231,
+        "cells": [
+          230,
+          "Crag Guard",
+          "Rock",
+          20,
+          "—",
+          "Raises Defense 2 stages.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 232,
+        "cells": [
+          231,
+          "Crag Lance",
+          "Rock",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 233,
+        "cells": [
+          232,
+          "Crag Rush",
+          "Rock",
+          15,
+          85,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 234,
+        "cells": [
+          233,
+          "Crag Spire",
+          "Rock",
+          15,
+          90,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 235,
+        "cells": [
+          234,
+          "Fossil Crash",
+          "Rock",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 236,
+        "cells": [
+          235,
+          "Fossil Memory",
+          "Rock",
+          15,
+          "—",
+          "Raises accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 237,
+        "cells": [
+          236,
+          "Shard Screen",
+          "Rock",
+          15,
+          "—",
+          "Lowers foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 238,
+        "cells": [
+          237,
+          "Stone Break",
+          "Rock",
+          20,
+          65,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 239,
+        "cells": [
+          238,
+          "Stone Burst",
+          "Rock",
+          25,
+          60,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 240,
+        "cells": [
+          239,
+          "Stone Claw",
+          "Rock",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 241,
+        "cells": [
+          240,
+          "Stone Crash",
+          "Rock",
+          35,
+          40,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 242,
+        "cells": [
+          241,
+          "Stone Fang",
+          "Rock",
+          35,
+          45,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 243,
+        "cells": [
+          242,
+          "Stone Lance",
+          "Rock",
+          20,
+          70,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 244,
+        "cells": [
+          243,
+          "Stone Rush",
+          "Rock",
+          25,
+          50,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 245,
+        "cells": [
+          244,
+          "Stone Skin",
+          "Rock",
+          15,
+          "—",
+          "Raises Defense 1 stage and halves critical-hit damage for 5 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 246,
+        "cells": [
+          245,
+          "Stone Spire",
+          "Rock",
+          25,
+          55,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 247,
+        "cells": [
+          246,
+          "Ancient Nodule",
+          "Rock",
+          15,
+          80,
+          "30% chance to lower foe's Speed 1 stage.",
+          "Sidermite"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 248,
+        "cells": [
+          247,
+          "Glacier Fossil",
+          "Rock",
+          10,
+          100,
+          "10% chance to freeze; user’s Defense rises 1 stage 20% of the time.",
+          "Paleursa"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 249,
+        "cells": [
+          248,
+          "Sickle Talon",
+          "Rock",
+          10,
+          90,
+          "High critical-hit ratio; 10% chance to flinch.",
+          "Raptyrale"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 250,
+        "cells": [
+          249,
+          "Dusk Focus",
+          "Ghost",
+          20,
+          "—",
+          "Raises Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 251,
+        "cells": [
+          250,
+          "Grave Silence",
+          "Ghost",
+          15,
+          "—",
+          "Prevents the target from using its last move for 3 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 252,
+        "cells": [
+          251,
+          "Haunt Mark",
+          "Ghost",
+          20,
+          "—",
+          "Target cannot switch for 3 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 253,
+        "cells": [
+          252,
+          "Shade Burst",
+          "Ghost",
+          10,
+          100,
+          "Target cannot switch next turn 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 254,
+        "cells": [
+          253,
+          "Shade Claw",
+          "Ghost",
+          15,
+          80,
+          "User's Sp. Atk rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 255,
+        "cells": [
+          254,
+          "Shade Fang",
+          "Ghost",
+          10,
+          95,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 256,
+        "cells": [
+          255,
+          "Shade Lash",
+          "Ghost",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 257,
+        "cells": [
+          256,
+          "Shade Pulse",
+          "Ghost",
+          15,
+          90,
+          "20% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 258,
+        "cells": [
+          257,
+          "Shade Rush",
+          "Ghost",
+          15,
+          85,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 259,
+        "cells": [
+          258,
+          "Shade Spiral",
+          "Ghost",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 260,
+        "cells": [
+          259,
+          "Spirit Veil",
+          "Ghost",
+          15,
+          "—",
+          "Raises evasion 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 261,
+        "cells": [
+          260,
+          "Wraith Burst",
+          "Ghost",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 262,
+        "cells": [
+          261,
+          "Wraith Claw",
+          "Ghost",
+          35,
+          40,
+          "20% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 263,
+        "cells": [
+          262,
+          "Wraith Cry",
+          "Ghost",
+          20,
+          75,
+          "Target cannot switch next turn 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 264,
+        "cells": [
+          263,
+          "Wraith Fang",
+          "Ghost",
+          25,
+          55,
+          "User's Sp. Atk rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 265,
+        "cells": [
+          264,
+          "Wraith Lash",
+          "Ghost",
+          20,
+          70,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 266,
+        "cells": [
+          265,
+          "Wraith Pulse",
+          "Ghost",
+          25,
+          50,
+          "Target cannot switch next turn 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 267,
+        "cells": [
+          266,
+          "Wraith Rush",
+          "Ghost",
+          35,
+          45,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 268,
+        "cells": [
+          267,
+          "Wraith Spiral",
+          "Ghost",
+          20,
+          65,
+          "20% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 269,
+        "cells": [
+          268,
+          "Uncrowned Quills",
+          "Ghost",
+          10,
+          90,
+          "20% chance to lower foe's Defense 1 stage.",
+          "Wraithrone"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 270,
+        "cells": [
+          269,
+          "Ancient Pride",
+          "Dragon",
+          20,
+          "—",
+          "Raises Attack 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 271,
+        "cells": [
+          270,
+          "Drake Breath",
+          "Dragon",
+          25,
+          50,
+          "User's Attack rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 272,
+        "cells": [
+          271,
+          "Drake Burst",
+          "Dragon",
+          20,
+          65,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 273,
+        "cells": [
+          272,
+          "Drake Claw",
+          "Dragon",
+          35,
+          40,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 274,
+        "cells": [
+          273,
+          "Drake Crash",
+          "Dragon",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 275,
+        "cells": [
+          274,
+          "Drake Fang",
+          "Dragon",
+          25,
+          55,
+          "User takes 1/8 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 276,
+        "cells": [
+          275,
+          "Drake Roar",
+          "Dragon",
+          20,
+          75,
+          "User's Attack rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 277,
+        "cells": [
+          276,
+          "Drake Rush",
+          "Dragon",
+          35,
+          45,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 278,
+        "cells": [
+          277,
+          "Drake Spiral",
+          "Dragon",
+          20,
+          70,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 279,
+        "cells": [
+          278,
+          "Royal Roar",
+          "Dragon",
+          15,
+          "—",
+          "Raises Attack and Sp. Atk 1 stage; Speed falls 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 280,
+        "cells": [
+          279,
+          "Scale Guard",
+          "Dragon",
+          15,
+          "—",
+          "Raises Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 281,
+        "cells": [
+          280,
+          "Wyrm Breath",
+          "Dragon",
+          15,
+          85,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 282,
+        "cells": [
+          281,
+          "Wyrm Burst",
+          "Dragon",
+          10,
+          100,
+          "User takes 1/8 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 283,
+        "cells": [
+          282,
+          "Wyrm Claw",
+          "Dragon",
+          20,
+          75,
+          "User takes 1/8 recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 284,
+        "cells": [
+          283,
+          "Wyrm Crash",
+          "Dragon",
+          10,
+          95,
+          "User's Attack rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 285,
+        "cells": [
+          284,
+          "Wyrm Fang",
+          "Dragon",
+          15,
+          90,
+          "20% chance to lower foe's Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 286,
+        "cells": [
+          285,
+          "Wyrm Roar",
+          "Dragon",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 287,
+        "cells": [
+          286,
+          "Wyrm Rush",
+          "Dragon",
+          15,
+          80,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 288,
+        "cells": [
+          287,
+          "Wyrm Spiral",
+          "Dragon",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 289,
+        "cells": [
+          288,
+          "Silent Ambition",
+          "Dragon",
+          10,
+          "—",
+          "Raises Attack, Sp. Atk and Speed 1 stage; user loses 1/6 max HP.",
+          "Waranwei"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 290,
+        "cells": [
+          289,
+          "Black Focus",
+          "Dark",
+          20,
+          "—",
+          "Raises Attack 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 291,
+        "cells": [
+          290,
+          "Grudge Mark",
+          "Dark",
+          15,
+          "—",
+          "Target takes 25% more damage from Dark moves for 3 turns.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 292,
+        "cells": [
+          291,
+          "Night Burst",
+          "Dark",
+          20,
+          65,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 293,
+        "cells": [
+          292,
+          "Night Claw",
+          "Dark",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 294,
+        "cells": [
+          293,
+          "Night Fang",
+          "Dark",
+          35,
+          40,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 295,
+        "cells": [
+          294,
+          "Night Feint",
+          "Dark",
+          25,
+          55,
+          "20% chance to lower foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 296,
+        "cells": [
+          295,
+          "Night Lash",
+          "Dark",
+          20,
+          70,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 297,
+        "cells": [
+          296,
+          "Night Rush",
+          "Dark",
+          35,
+          45,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 298,
+        "cells": [
+          297,
+          "Night Slash",
+          "Dark",
+          25,
+          50,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 299,
+        "cells": [
+          298,
+          "Night Strike",
+          "Dark",
+          15,
+          80,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 300,
+        "cells": [
+          299,
+          "Night Veil",
+          "Dark",
+          15,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 301,
+        "cells": [
+          300,
+          "Rogue Burst",
+          "Dark",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 302,
+        "cells": [
+          301,
+          "Rogue Claw",
+          "Dark",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 303,
+        "cells": [
+          302,
+          "Rogue Fang",
+          "Dark",
+          15,
+          85,
+          "20% chance to lower foe's accuracy 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 304,
+        "cells": [
+          303,
+          "Rogue Feint",
+          "Dark",
+          10,
+          100,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 305,
+        "cells": [
+          304,
+          "Rogue Rush",
+          "Dark",
+          15,
+          90,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 306,
+        "cells": [
+          305,
+          "Rogue Slash",
+          "Dark",
+          10,
+          95,
+          "20% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 307,
+        "cells": [
+          306,
+          "Rogue Step",
+          "Dark",
+          15,
+          "—",
+          "Raises Speed 2 stages; accuracy falls 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 308,
+        "cells": [
+          307,
+          "Sly Feint",
+          "Dark",
+          20,
+          "—",
+          "Raises evasion 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 309,
+        "cells": [
+          308,
+          "Broken Alliance",
+          "Dark",
+          10,
+          90,
+          "Power rises by 50% if the target has a stat boost.",
+          "Sundune"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 310,
+        "cells": [
+          309,
+          "Devilish Encore",
+          "Dark",
+          15,
+          85,
+          "If the target used a status move last turn, power doubles.",
+          "Noctafey"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 311,
+        "cells": [
+          310,
+          "Rebellious Jab",
+          "Dark",
+          20,
+          60,
+          "Always acts before moves with normal priority if user is below 50% HP.",
+          "Scarimp"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 312,
+        "cells": [
+          311,
+          "Forge Focus",
+          "Steel",
+          15,
+          "—",
+          "Raises Attack 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 313,
+        "cells": [
+          312,
+          "Iron Burst",
+          "Steel",
+          20,
+          65,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 314,
+        "cells": [
+          313,
+          "Iron Claw",
+          "Steel",
+          25,
+          50,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 315,
+        "cells": [
+          314,
+          "Iron Crash",
+          "Steel",
+          25,
+          55,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 316,
+        "cells": [
+          315,
+          "Iron Cut",
+          "Steel",
+          35,
+          40,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 317,
+        "cells": [
+          316,
+          "Iron Lance",
+          "Steel",
+          25,
+          60,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 318,
+        "cells": [
+          317,
+          "Iron Rush",
+          "Steel",
+          35,
+          45,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 319,
+        "cells": [
+          318,
+          "Iron Spire",
+          "Steel",
+          20,
+          70,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 320,
+        "cells": [
+          319,
+          "Iron Strike",
+          "Steel",
+          20,
+          75,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 321,
+        "cells": [
+          320,
+          "Iron Ward",
+          "Steel",
+          20,
+          "—",
+          "Halves damage from the next physical hit.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 322,
+        "cells": [
+          321,
+          "Plate Guard",
+          "Steel",
+          20,
+          "—",
+          "Raises Defense 2 stages.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 323,
+        "cells": [
+          322,
+          "Steel Burst",
+          "Steel",
+          5,
+          110,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 324,
+        "cells": [
+          323,
+          "Steel Claw",
+          "Steel",
+          15,
+          90,
+          "20% chance to lower foe's Defense 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 325,
+        "cells": [
+          324,
+          "Steel Crash",
+          "Steel",
+          10,
+          95,
+          "User's Defense rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 326,
+        "cells": [
+          325,
+          "Steel Cut",
+          "Steel",
+          15,
+          80,
+          "High critical-hit ratio.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 327,
+        "cells": [
+          326,
+          "Steel Lance",
+          "Steel",
+          10,
+          100,
+          "10% chance to flinch.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 328,
+        "cells": [
+          327,
+          "Steel Rush",
+          "Steel",
+          15,
+          85,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 329,
+        "cells": [
+          328,
+          "Steel Spire",
+          "Steel",
+          5,
+          120,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 330,
+        "cells": [
+          329,
+          "Tempered Body",
+          "Steel",
+          15,
+          "—",
+          "Raises Defense and Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 331,
+        "cells": [
+          330,
+          "Blade-Tail Oath",
+          "Steel",
+          10,
+          90,
+          "Power rises 50% if the foe damaged an ally on the previous turn.",
+          "Guanrong"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 332,
+        "cells": [
+          331,
+          "Charm Burst",
+          "Fairy",
+          20,
+          75,
+          "User's Sp. Def rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 333,
+        "cells": [
+          332,
+          "Charm Dance",
+          "Fairy",
+          10,
+          100,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 334,
+        "cells": [
+          333,
+          "Charm Gleam",
+          "Fairy",
+          10,
+          95,
+          "User's Sp. Def rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 335,
+        "cells": [
+          334,
+          "Charm Kiss",
+          "Fairy",
+          20,
+          75,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 336,
+        "cells": [
+          335,
+          "Charm Lance",
+          "Fairy",
+          10,
+          100,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 337,
+        "cells": [
+          336,
+          "Charm Pulse",
+          "Fairy",
+          15,
+          85,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 338,
+        "cells": [
+          337,
+          "Charm Rush",
+          "Fairy",
+          15,
+          80,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 339,
+        "cells": [
+          338,
+          "Charm Spiral",
+          "Fairy",
+          15,
+          90,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 340,
+        "cells": [
+          339,
+          "Charm Veil",
+          "Fairy",
+          20,
+          "—",
+          "Raises Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 341,
+        "cells": [
+          340,
+          "Glimmer Burst",
+          "Fairy",
+          35,
+          40,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 342,
+        "cells": [
+          341,
+          "Glimmer Dance",
+          "Fairy",
+          20,
+          70,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 343,
+        "cells": [
+          342,
+          "Glimmer Gleam",
+          "Fairy",
+          25,
+          60,
+          "20% chance to lower foe's Sp. Atk 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 344,
+        "cells": [
+          343,
+          "Glimmer Kiss",
+          "Fairy",
+          35,
+          45,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 345,
+        "cells": [
+          344,
+          "Glimmer Lance",
+          "Fairy",
+          20,
+          65,
+          "10% chance to confuse.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 346,
+        "cells": [
+          345,
+          "Glimmer Pulse",
+          "Fairy",
+          25,
+          50,
+          "User's Sp. Def rises 1 stage 20% of the time.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 347,
+        "cells": [
+          346,
+          "Glimmer Rush",
+          "Fairy",
+          25,
+          50,
+          "Restores HP equal to 25% of damage dealt.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 348,
+        "cells": [
+          347,
+          "Glimmer Spiral",
+          "Fairy",
+          25,
+          55,
+          "No secondary effect.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 349,
+        "cells": [
+          348,
+          "Moon Blessing",
+          "Fairy",
+          15,
+          "—",
+          "Raises Sp. Atk and Sp. Def 1 stage.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 350,
+        "cells": [
+          349,
+          "Star Burst",
+          "Fairy",
+          5,
+          110,
+          "User takes 1/8 max HP recoil.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 351,
+        "cells": [
+          350,
+          "Star Kiss",
+          "Fairy",
+          5,
+          120,
+          "User's Speed falls 1 stage after use.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 352,
+        "cells": [
+          351,
+          "Wishful Heart",
+          "Fairy",
+          15,
+          "—",
+          "Restores 25% max HP.",
+          "General"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 353,
+        "cells": [
+          352,
+          "Benevolent Bloom",
+          "Fairy",
+          10,
+          "—",
+          "Restores 50% max HP and cures one major status ailment.",
+          "Liubeirow"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 354,
+        "cells": [
+          353,
+          "Concord Pact",
+          "Fairy",
+          10,
+          85,
+          "Heals the user's partner for 1/8 max HP in doubles.",
+          "Concordune"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 355,
+        "cells": [
+          354,
+          "Oathwall",
+          "Fairy",
+          10,
+          "—",
+          "Raises Defense and Sp. Def 1 stage; prevents forced switching for 5 turns.",
+          "Parlethorn"
+        ],
+        "formulas": {}
+      }
+    ],
+    "Type Allocation": [
+      {
+        "row": 1,
+        "cells": [
+          "Type",
+          "Move Count",
+          "Share of 354",
+          "Design Weight"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 2,
+        "cells": [
+          "Normal",
+          17,
+          0.0480225988700565,
+          "Low"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          "Fire",
+          22,
+          0.062146892655367235,
+          "High"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 4,
+        "cells": [
+          "Water",
+          20,
+          0.05649717514124294,
+          "Medium"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 5,
+        "cells": [
+          "Electric",
+          18,
+          0.05084745762711865,
+          "Medium"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 6,
+        "cells": [
+          "Grass",
+          22,
+          0.062146892655367235,
+          "High"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 7,
+        "cells": [
+          "Ice",
+          17,
+          0.0480225988700565,
+          "Low"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 8,
+        "cells": [
+          "Fighting",
+          18,
+          0.05084745762711865,
+          "Medium"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 9,
+        "cells": [
+          "Poison",
+          17,
+          0.0480225988700565,
+          "Low"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 10,
+        "cells": [
+          "Ground",
+          21,
+          0.059322033898305086,
+          "High"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 11,
+        "cells": [
+          "Flying",
+          17,
+          0.0480225988700565,
+          "Low"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 12,
+        "cells": [
+          "Psychic",
+          21,
+          0.059322033898305086,
+          "High"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 13,
+        "cells": [
+          "Bug",
+          12,
+          0.03389830508474576,
+          "Low"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 14,
+        "cells": [
+          "Rock",
+          26,
+          0.07344632768361582,
+          "Very high"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 15,
+        "cells": [
+          "Ghost",
+          20,
+          0.05649717514124294,
+          "Medium"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 16,
+        "cells": [
+          "Dragon",
+          20,
+          0.05649717514124294,
+          "Medium"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 17,
+        "cells": [
+          "Dark",
+          22,
+          0.062146892655367235,
+          "High"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 18,
+        "cells": [
+          "Steel",
+          20,
+          0.05649717514124294,
+          "Medium"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 19,
+        "cells": [
+          "Fairy",
+          24,
+          0.06779661016949153,
+          "Very high"
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 20,
+        "cells": [
+          "TOTAL",
+          354,
+          1,
+          null
+        ],
+        "formulas": {}
+      }
+    ],
+    "Design Notes": [
+      {
+        "row": 1,
+        "cells": [
+          "MOVE CATALOGUE DESIGN NOTES",
+          null
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 2,
+        "cells": [
+          "Total moves",
+          354
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 3,
+        "cells": [
+          "Regional roster basis",
+          "187 monsters after the latest fossil + mythic batch."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 4,
+        "cells": [
+          "Allocation rule",
+          "Move counts are weighted approximately toward the roster's observed type mix, not evenly split across 18 types."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 5,
+        "cells": [
+          "Mechanical baseline",
+          "PP and base-power bands are tuned in the spirit of FireRed-era pacing: common moves have more PP; high-power/signature moves have less."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 6,
+        "cells": [
+          "Status power",
+          "A dash (—) means the move deals no direct damage."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 7,
+        "cells": [
+          "Secondary effects",
+          "Percentages are proc chances unless the text says the effect is guaranteed."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 8,
+        "cells": [
+          "Signature column",
+          "General = broadly teachable/learnable. A named monster indicates a bespoke signature-style move designed around that line."
+        ],
+        "formulas": {}
+      },
+      {
+        "row": 9,
+        "cells": [
+          "Next implementation pass",
+          "Accuracy, physical/special category, priority, targeting, learnsets, TMs/tutors, and level-up acquisition can be layered onto this catalogue without changing the 354-move cap."
+        ],
+        "formulas": {}
+      }
+    ]
+  }
+}

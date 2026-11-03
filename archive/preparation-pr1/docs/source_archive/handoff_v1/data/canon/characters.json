@@ -1,0 +1,90 @@
+[
+  {
+    "id": "CHR-AIMON",
+    "name": "Aimon",
+    "role": "Renamable protagonist"
+  },
+  {
+    "id": "CHR-PATE",
+    "name": "Pateric 'Pate' Vann",
+    "role": "Core companion/rival"
+  },
+  {
+    "id": "CHR-TRADE",
+    "name": "Traden 'Trade' Cor",
+    "role": "Core companion/rival"
+  },
+  {
+    "id": "CHR-KURG",
+    "name": "General Kurg Halbrecht",
+    "role": "General / story character"
+  },
+  {
+    "id": "CHR-SEVERIN",
+    "name": "Severin Vale",
+    "role": "Guide; later Underworld King / King Below"
+  },
+  {
+    "id": "CHR-ILLYR",
+    "name": "Illyr",
+    "role": "Cosmic god-being"
+  },
+  {
+    "id": "CHR-AERIC",
+    "name": "Chaplain Aeric Solm",
+    "role": "Recurring reserve access / relearning NPC"
+  },
+  {
+    "id": "CHR-RHOSWEN",
+    "name": "Dame Rhoswen Vey",
+    "role": "Supporting named character"
+  },
+  {
+    "id": "LDR-01",
+    "name": "Ser Aldren March",
+    "role": "Mortal leader",
+    "leader_code": "L01"
+  },
+  {
+    "id": "LDR-02",
+    "name": "Abbess Yselle Marot",
+    "role": "Mortal leader",
+    "leader_code": "L02"
+  },
+  {
+    "id": "LDR-03",
+    "name": "Provost Corvin Sair",
+    "role": "Mortal leader",
+    "leader_code": "L03"
+  },
+  {
+    "id": "LDR-04",
+    "name": "Warden Samiel Elow",
+    "role": "Mortal leader",
+    "leader_code": "L04"
+  },
+  {
+    "id": "LDR-05",
+    "name": "Castellan Braska Morn",
+    "role": "Mortal leader",
+    "leader_code": "L05"
+  },
+  {
+    "id": "LDR-06",
+    "name": "Canon Mirelle Avin",
+    "role": "Mortal leader",
+    "leader_code": "L06"
+  },
+  {
+    "id": "LDR-07",
+    "name": "Marshal Oren Talv",
+    "role": "Mortal leader",
+    "leader_code": "L07"
+  },
+  {
+    "id": "LDR-08",
+    "name": "Hierophant Lucain Serault",
+    "role": "Mortal leader",
+    "leader_code": "L08"
+  }
+]

@@ -1,0 +1,452 @@
+{
+  "batch": "12",
+  "status": "planned prompts only",
+  "moves": [
+    {
+      "id": 162,
+      "name": "Earth Break",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "An interlocked slab of compact clay splits diagonally under the blow of a blunt square stone wedge, scattering block-shaped shards then grinding the halves together; a clear geological break, not generic impact particles.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Earth Break (ID 162), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. An interlocked slab of compact clay splits diagonally under the blow of a blunt square stone wedge, scattering block-shaped shards then grinding the halves together; a clear geological break, not generic impact particles. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 164,
+      "name": "Clay Reap",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A worn agricultural soil-sickle swings up from a dark furrow, catches a fringe of roots and cuts once through packed loam before the handle recoils with earth sticking to its edge.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Clay Reap (ID 164), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A worn agricultural soil-sickle swings up from a dark furrow, catches a fringe of roots and cuts once through packed loam before the handle recoils with earth sticking to its edge. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 165,
+      "name": "Burrow Gouge",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A broad digging claw made of coarse mud and flat flint gouges one deep trench across a miniature soil layer, leaving clumps piled along both rims as it digs back underground.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Burrow Gouge (ID 165), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A broad digging claw made of coarse mud and flat flint gouges one deep trench across a miniature soil layer, leaving clumps piled along both rims as it digs back underground. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 166,
+      "name": "Loam Tackle",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A boulder with an unmistakable loamy brown mantle builds forward speed, stumbles over uneven little soil lumps, slams once at shoulder height and sheds its soft earthy coat on landing.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Loam Tackle (ID 166), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A boulder with an unmistakable loamy brown mantle builds forward speed, stumbles over uneven little soil lumps, slams once at shoulder height and sheds its soft earthy coat on landing. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 167,
+      "name": "Quicksand Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 10,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "Black grains of quicksand arrange into a spinning vortex ring around a swallowed pebble, pulse outward with a low harmonic wobble, then drag the pebble inward as the ring sinks flat.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Quicksand Resonance (ID 167), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. Black grains of quicksand arrange into a spinning vortex ring around a swallowed pebble, pulse outward with a low harmonic wobble, then drag the pebble inward as the ring sinks flat. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 168,
+      "name": "Earth Surge",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A low raised earthwave rolls over successive layers of strata, lifts jagged reddish sediment plates, pushes a single heavy crest across the contact and crumbles into stepped terraces.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Earth Surge (ID 168), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A low raised earthwave rolls over successive layers of strata, lifts jagged reddish sediment plates, pushes a single heavy crest across the contact and crumbles into stepped terraces. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 169,
+      "name": "Earth Ward",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "sp_defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "12",
+      "sequence": "Four dark blocks of earth rise like short battlements in alternating order, fill the gaps with root threads, take a faint shock ripple and return to the soil intact.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Earth Ward (ID 169), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. Four dark blocks of earth rise like short battlements in alternating order, fill the gaps with root threads, take a faint shock ripple and return to the soil intact. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 170,
+      "name": "Sand Guard",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "defence"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "12",
+      "sequence": "Dry sand grains circle inward like a tightened ribbon, form a hollow thick-walled dune shield with diagonal granular weave, deflect a harmless glint and blow apart in strips.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Sand Guard (ID 170), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. Dry sand grains circle inward like a tightened ribbon, form a hollow thick-walled dune shield with diagonal granular weave, deflect a harmless glint and blow apart in strips. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 171,
+      "name": "Stone Footing",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "prevent_flinch",
+          "turns": 5,
+          "target": "SELF"
+        },
+        {
+          "effect_id": "prevent_forced_switch",
+          "turns": 5,
+          "target": "SELF"
+        }
+      ],
+      "target": "SELF",
+      "batch": "12",
+      "sequence": "A pair of boot-shaped impressions forms in wet brown earth; stone chips lock into the prints as a broad angular stance becomes anchored, showing stability without a strike.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Stone Footing (ID 171), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A pair of boot-shaped impressions forms in wet brown earth; stone chips lock into the prints as a broad angular stance becomes anchored, showing stability without a strike. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 172,
+      "name": "Island Crown",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "power_multiplier",
+          "multiplier": 1.25,
+          "when": "USER_MOVED_AFTER_TARGET"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A tiny crowned island erupts from black water as three layers of rock and one ancient tree-root arch, releases a ring of soil-rich force once, and slowly sinks back to silence.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Island Crown (ID 172), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A tiny crowned island erupts from black water as three layers of rock and one ancient tree-root arch, releases a ring of soil-rich force once, and slowly sinks back to silence. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 174,
+      "name": "Gale Arc",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A sharp pale blue wind arc grows from a narrow leaf-shaped pressure line, folds twice along its travel path and releases one clean slicing gust with streamers unspooling behind.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Gale Arc (ID 174), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A sharp pale blue wind arc grows from a narrow leaf-shaped pressure line, folds twice along its travel path and releases one clean slicing gust with streamers unspooling behind. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 177,
+      "name": "Talon Hook",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A long curved wing-talon made of layered pinion feathers closes into a hook, tears one small notch in the air with a clear central contact, then the feathers straighten out of tension.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Talon Hook (ID 177), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A long curved wing-talon made of layered pinion feathers closes into a hook, tears one small notch in the air with a clear central contact, then the feathers straighten out of tension. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 178,
+      "name": "Headwind",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "flinch",
+          "status": "FLINCH",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A strong opposing headwind pushes three horizontal bands of pale air directly against a sturdy shape; each band buckles and flattens into one main collision, leaving visibly slowed ripples.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Headwind (ID 178), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A strong opposing headwind pushes three horizontal bands of pale air directly against a sturdy shape; each band buckles and flattens into one main collision, leaving visibly slowed ripples. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 179,
+      "name": "Gale Dive",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "high_critical_ratio",
+          "stage_bonus": null
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A raptor-like abstract silhouette of spread feathers pulls back into a sharp downward dive, feathers streaming toward the tip, then impacts once in a compressed ring of air and climbs away.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Gale Dive (ID 179), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A raptor-like abstract silhouette of spread feathers pulls back into a sharp downward dive, feathers streaming toward the tip, then impacts once in a compressed ring of air and climbs away. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 180,
+      "name": "Pinion Scissor",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": 1,
+          "chance_percent": 100,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "Two asymmetrical fan-like pinion edges cross like shears in a high arcing cut, shed several loose feather barbs at the crossing, and uncross in a slow graceful release.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Pinion Scissor (ID 180), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. Two asymmetrical fan-like pinion edges cross like shears in a high arcing cut, shed several loose feather barbs at the crossing, and uncross in a slow graceful release. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 181,
+      "name": "Gale Sweep",
+      "category": "PHYSICAL",
+      "effects": [],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A broad low sweep of wind forms from overlapping crescent feather impressions, pushes sideways across the target in one wide airy pass and dissipates in fine curved contrails.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Gale Sweep (ID 181), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A broad low sweep of wind forms from overlapping crescent feather impressions, pushes sideways across the target in one wide airy pass and dissipates in fine curved contrails. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 182,
+      "name": "Crosswind Resonance",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "speed"
+          ],
+          "stages": -1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "Three crossing threads of air meet at a spinning knot of wing-shaped pressure waves, resonate as offset translucent rings and fire a single tight blue gust before untangling.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Crosswind Resonance (ID 182), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. Three crossing threads of air meet at a spinning knot of wing-shaped pressure waves, resonate as offset translucent rings and fire a single tight blue gust before untangling. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 183,
+      "name": "Sky Cut",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SINGLE_FOE",
+          "stats": [
+            "defence"
+          ],
+          "stages": -1,
+          "chance_percent": 25,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "An upright razor-thin vertical wind blade reveals a faint cloud-slit down its centre, descends along one clean line, cuts with a short white gleam and leaves only drifting cloud halves.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Sky Cut (ID 183), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. An upright razor-thin vertical wind blade reveals a faint cloud-slit down its centre, descends along one clean line, cuts with a short white gleam and leaves only drifting cloud halves. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 184,
+      "name": "Sky Dive",
+      "category": "PHYSICAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A compact abstract winged blur folds its feathered edges in, dives from high in the cell to one central impact with a burst of displaced air, then opens and rises out again.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Sky Dive (ID 184), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A compact abstract winged blur folds its feathered edges in, dives from high in the cell to one central impact with a burst of displaced air, then opens and rises out again. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 185,
+      "name": "Sky Focus",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stats": [
+            "accuracy"
+          ],
+          "stages": 1,
+          "chance_percent": 100
+        }
+      ],
+      "target": "SELF",
+      "batch": "12",
+      "sequence": "A single feather hangs upright and perfectly balanced. Two concentric circles of feather quills form slowly around it, narrow toward one point and lock into a calm focus sigil without damage.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Sky Focus (ID 185), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A single feather hangs upright and perfectly balanced. Two concentric circles of feather quills form slowly around it, narrow toward one point and lock into a calm focus sigil without damage. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 188,
+      "name": "Updraft",
+      "category": "STATUS",
+      "effects": [
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "speed",
+          "stages": 2
+        },
+        {
+          "effect_id": "stat_stage",
+          "target": "SELF",
+          "stat": "defence",
+          "stages": -1
+        }
+      ],
+      "target": "SELF",
+      "batch": "12",
+      "sequence": "Four staggered upward air columns lift loose pale feathers one after another, spiral into a strong rising shaft and gently dissolve while the feathers hover briefly aloft.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Updraft (ID 188), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. Four staggered upward air columns lift loose pale feathers one after another, spiral into a strong rising shaft and gently dissolve while the feathers hover briefly aloft. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 189,
+      "name": "Pilgrim Echo",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "inflict_status",
+          "status": "CONFUSION",
+          "chance_percent": 20,
+          "secondary": true
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A worn pilgrim's small bronze bell swings beneath an airy ribbon, sends out two delayed translucent echo outlines that resolve into one focused magical strike and fade into stillness.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Pilgrim Echo (ID 189), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A worn pilgrim's small bronze bell swings beneath an airy ribbon, sends out two delayed translucent echo outlines that resolve into one focused magical strike and fade into stillness. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    },
+    {
+      "id": 190,
+      "name": "Mind over Matter",
+      "category": "SPECIAL",
+      "effects": [
+        {
+          "effect_id": "recoil",
+          "fraction": [
+            1,
+            8
+          ],
+          "basis": "MAX_HP"
+        }
+      ],
+      "target": "SINGLE_FOE",
+      "batch": "12",
+      "sequence": "A dense black iron cube floats in a violet psychic grip, cracks without being touched and recomposes above an open glowing palm-shaped sigil; an impossible telekinetic display, no flame.",
+      "prompt": "Detailed original Abyssals pixel-art action animation Mind over Matter (ID 190), STRICT 4x4 equal-cell transparent sprite sheet of 16 successive distinct temporal drawings in row-major. A dense black iron cube floats in a violet psychic grip, cracks without being touched and recomposes above an open glowing palm-shaped sigil; an impossible telekinetic display, no flame. Anticipation frames 1-4, travel frames 5-7, one central meaningful contact or status peak at 8, aftermath 9-12, recovery 13-16. Readable action silhouette and richly shaded distinctive materials in clustered sharp pixels, 192px logical cells. Keep every drawn pixel, sparkle, dust mote and loose part inside the MIDDLE 40% of EACH cell, large empty transparent gutters. No full monsters, people, environment, labels, grid, captions, generic recolour or extra attacks.",
+      "status": "planned only; art creation and testing outstanding"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": 95,
+  "name": "Thorn Guard",
+  "originalCatalogue": true,
+  "sourceFiles": [
+    "dist/data.js",
+    "dist/progression-renewal.js",
+    "dist/teamcraft-data.js"
+  ],
+  "provenance": {
+    "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
+    "sheet": "Moves",
+    "row": 96
+  },
+  "acquisition": {
+    "learnsetSpecies": [
+      "043",
+      "061",
+      "102",
+      "105",
+      "106",
+      "117",
+      "125",
+      "126",
+      "136",
+      "165",
+      "175",
+      "183",
+      "184",
+      "288",
+      "289",
+      "290",
+      "292",
+      "293",
+      "294",
+      "296",
+      "361",
+      "362",
+      "363",
+      "411",
+      "414",
+      "486",
+      "487",
+      "519"
+    ],
+    "tutor": false,
+    "registered": true,
+    "battleReaction": false
+  },
+  "category": "STATUS",
+  "type": "GRASS",
+  "target": "SELF",
+  "allyTarget": false,
+  "power": null,
+  "pp": 15,
+  "accuracy": "ALWAYS",
+  "priority": 0,
+  "contact": false,
+  "hits": {
+    "min": 1,
+    "max": 1
+  },
+  "effects": [
+    {
+      "effect_id": "contact_retaliation",
+      "fraction": [
+        1,
+        8
+      ],
+      "turns": 5,
+      "basis": null
+    }
+  ],
+  "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+  "art": null,
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "review": null,
+  "batch": "09",
+  "sequence": "A ring of six thorn-covered bramble ribs bends inward around an empty space, locks into a dense spiny guard, presents its outward thorns, then gently loosens. Contact-retaliation self guard; no blow, hit flash or projectile.",
+  "prompt": "Use case: stylized-concept. Original polished detailed pixel-art JRPG combat animation for Abyssals move Thorn Guard, stable ID95. Exactly16 DIFFERENT temporal drawings in strict4x4 equal square cells, row-major. GENUINE transparent alpha background. Action: A ring of six thorn-covered bramble ribs bends inward around an empty space, locks into a dense spiny guard, presents its outward thorns, then gently loosens. Contact-retaliation self guard; no blow, hit flash or projectile. Frames1\u20134 anticipation;5\u20137 action travel;8 one contact OR soft status settling;9\u201312 consequences;13\u201316 recovery. All16 complete poses individually isolated in the MIDDLE40% of each cell, with enormous EMPTY transparent gutters. Every tip, mote and hard-edged glint stays inside that middle40%. No soft glow or haze across gutters. Crisp clustered shaded pixels, rich volumes, readable at192px. No full creature, humans, scenery, lettering, labels, grid or borders. No duplicate frames, additional hits or recoloured shared effect.",
+  "source": "art-library/action-vfx/batch-09/95-source.png",
+  "prepared": "art-library/action-vfx/batch-09/95-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "9595b92701e419deaa6c3e6cde01d34e7ac70dd2c87bb166dd4f4fb55518ff95",
+  "sourceSha256": "72cccba96f3473967c758ba112e9952c4385b24613c5ed8f2e19265f737e3fa8"
+}

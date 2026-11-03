@@ -1,0 +1,25 @@
+ABYSSALS — targets not represented by a canonical standalone portrait in this ZIP
+These entries are from the 100-target portrait queue but no standalone source file is currently available in the active chat sandbox.
+
+008 | CORE-008 | Ser Aldren March
+011 | CORE-011 | Warden Samiel Elow
+017 | CORE-017 | Dame Rhoswen Vey
+039 | TRN-C04-001 | Caravan Guard Tovin
+041 | TRN-C04-003 | Smuggler Caro
+045 | TRN-C04-007 | Captain Niva
+046 | TRN-C04-008 | Relic Broker Ors
+047 | TRN-C05-001 | Orchard Keeper Rene
+048 | TRN-C05-002 | Pilgrim Ada
+049 | TRN-C05-003 | Shrine Guard Lucen
+050 | TRN-C05-004 | Hunter Mirek
+051 | TRN-C05-005 | Grove Warden Sera
+064 | TRN-C06-010 | War Captain Drask
+068 | TRN-C07-004 | Looting Mercenary Kerr
+069 | TRN-C07-005 | Archivist Sorel
+072 | TRN-C07-008 | Relic Keeper Cael
+073 | TRN-C07-009 | Tide Scribe Hessa
+074 | TRN-C07-010 | Antiquarian Nox
+076 | TRN-C08-002 | Deserter Jula
+079 | TRN-C08-005 | Veteran Tars
+085 | TRN-C09-002 | Sacred Knight Moira
+092 | TRN-C09-009 | Champion Daven

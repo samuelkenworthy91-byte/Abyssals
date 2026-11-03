@@ -1,0 +1,37 @@
+{
+  "id": 134,
+  "name": "War Cry",
+  "category": "STATUS",
+  "effects": [
+    {
+      "effect_id": "stat_stage",
+      "target": "SELF",
+      "stat": "attack",
+      "stages": 2
+    },
+    {
+      "effect_id": "inflict_status",
+      "target": "SELF",
+      "status": "CONFUSION",
+      "chance_percent": 100
+    }
+  ],
+  "target": "SELF",
+  "batch": "10",
+  "sequence": "A ragged red war pennant unfurls from a battered horn as one pulsing sonic ring swells outward, with a harsh doubled vibration curling unsteadily back toward the caller to show self-confusion. Pure status effect.",
+  "prompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move War Cry, ID 134. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A ragged red war pennant unfurls from a battered horn as one pulsing sonic ring swells outward, with a harsh doubled vibration curling unsteadily back toward the caller to show self-confusion. Pure status effect. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant.",
+  "status": "prepared candidate; gameplay and artistic approval pending",
+  "actualPrompt": "Original detailed polished pixel-art JRPG 16-frame action sheet for Abyssals move War Cry, ID 134. Square sheet with EXACTLY 4x4 equal cells, read row-major, 16 visibly different temporal poses, no text or cell grid. Absolutely genuine transparent alpha. The sequence is: A ragged red war pennant unfurls from a battered horn as one pulsing sonic ring swells outward, with a harsh doubled vibration curling unsteadily back toward the caller to show self-confusion. Pure status effect. Frames 1-4 anticipation; 5-7 action travel; 8 single contact or status culmination; 9-12 aftermath; 13-16 distinct recovery. Entire objects, glints, fragments and particles strictly within central 40% of EACH independent cell (huge transparent gutters, never adjacent cell bleed). Rich clustered-pixel shading and high-detail silhouettes at 192-pixel logical cells; no blurred low-resolution stretching, generic recoloured type effects, entire creatures, humans, backgrounds or scenery. Unique physical action and readable single impact where relevant. CRITICAL: make a precisely aligned 4-by-4 atlas, sixteen independent SMALL drawings with huge transparent gutters. All opaque pixels must stay within the middle 50% of each cell, including trails and chips. Crisp detailed hand-clustered pixel shading, rich material volume, readable silhouettes and restrained highlights. Do not enlarge or blur pixels. No repeated generic burst, no full creature, no ground scenery. Maintain the requested distinct action.",
+  "impact": 0.4375,
+  "source": "art-library/action-vfx/batch-10/134-source.png",
+  "prepared": "art-library/action-vfx/batch-10/134-prepared.png",
+  "generator": "built-in image_gen",
+  "structuralValidation": {
+    "frames": 16,
+    "uniqueFrames": 16,
+    "logicalCell": 192,
+    "transparent": true
+  },
+  "preparedSha256": "1c3f7b8ee523e7a87353e48c0bc78be4e9b114d10d829cda1613ad5b15c4ea58",
+  "sourceSha256": "cc11d9e5ff79b5591745c7b28fcf1ba216a479d55b240c9ca6603f52f5dbbf31"
+}

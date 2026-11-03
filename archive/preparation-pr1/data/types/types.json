@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "sources": [
+    "docs/source_archive/canon_sources/active/ABYSSALS_CHECKLIST_09_Leader_Trainer_Fate_System_LOCKED_v1.2_CORRECTION.docx",
+    "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx"
+  ],
+  "records": [
+    {
+      "id": "NORMAL",
+      "name": "Normal"
+    },
+    {
+      "id": "FIRE",
+      "name": "Fire"
+    },
+    {
+      "id": "WATER",
+      "name": "Water"
+    },
+    {
+      "id": "ELECTRIC",
+      "name": "Electric"
+    },
+    {
+      "id": "GRASS",
+      "name": "Grass"
+    },
+    {
+      "id": "ICE",
+      "name": "Ice"
+    },
+    {
+      "id": "FIGHTING",
+      "name": "Fighting"
+    },
+    {
+      "id": "POISON",
+      "name": "Poison"
+    },
+    {
+      "id": "GROUND",
+      "name": "Ground"
+    },
+    {
+      "id": "FLYING",
+      "name": "Flying"
+    },
+    {
+      "id": "PSYCHIC",
+      "name": "Psychic"
+    },
+    {
+      "id": "BUG",
+      "name": "Bug"
+    },
+    {
+      "id": "ROCK",
+      "name": "Rock"
+    },
+    {
+      "id": "GHOST",
+      "name": "Ghost"
+    },
+    {
+      "id": "DRAGON",
+      "name": "Dragon"
+    },
+    {
+      "id": "DARK",
+      "name": "Dark"
+    },
+    {
+      "id": "STEEL",
+      "name": "Steel"
+    },
+    {
+      "id": "FAIRY",
+      "name": "Fairy"
+    }
+  ],
+  "unresolved": [
+    "All 18 canonical type identities are recovered. The source package names a Gen III-style battle foundation but does not supply an explicit 18x18 effectiveness matrix (including Fairy) or a versioned import contract. Supply/approve that exact matrix; do not assume a conventional generation."
+  ]
+}
