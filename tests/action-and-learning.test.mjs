@@ -19,7 +19,7 @@ assert.equal(protectedOriginals.length,63,'the original separately approved effe
 assert.equal(firstNewBatch.length,12,'all batch-one canonical move effects are registered');
 const batches=fs.readdirSync('art-library/action-vfx').filter(f=>/^batch-\d+\.json$/.test(f)).flatMap(f=>JSON.parse(fs.readFileSync('art-library/action-vfx/'+f)).moves);
 for(const m of batches)assert.equal(ACTION_ART[m.id].src,'assets/vfx/action/'+m.filename);
-const expectedCount=63+batches.length;assert.equal(Object.keys(ACTION_ART).length,expectedCount);
+const expectedCount=63+batches.length+1;assert.equal(Object.keys(ACTION_ART).length,expectedCount);
 assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,expectedCount);
 for(const art of Object.values(ACTION_ART)){
  assert(fs.existsSync('dist/'+art.src),art.name);

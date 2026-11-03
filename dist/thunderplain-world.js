@@ -1,4 +1,4 @@
-import {registerBiome} from './biome-world.js?v=0.90.52';
+import {registerBiome} from './biome-world.js?v=0.90.53';
 const gate=(id,label,x,y,to,arrival,action)=>({id,label,x,y,to,arrival,action,door:true});
 const actor=(id,label,x,y,portrait)=>({id,label,x,y,sprite:0,revoltCharacter:portrait});
 export const BOTRUNE_BUILDINGS=[

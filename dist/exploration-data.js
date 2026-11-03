@@ -1,4 +1,5 @@
-import {FORT_POOLS} from './encounter-pools.js?v=0.90.52';
+import {installDossierTrades} from './dossier-encounters.js?v=0.90.53';
+import {FORT_POOLS} from './encounter-pools.js?v=0.90.53';
 // Optional exploration content. Ordinary evolutions remain level-based.
 export const SIDE_CONTENT=[
  ['marchMeadow','Nest keeper Alice de Beaumont','010','361','Sheltered pine nests keep young Abyssals warm. Pricklet is shy; I raised this one away from the road.',{bread:4,poultices:2},'hedgerow'],
@@ -34,3 +35,5 @@ export const EXPLORATION_QUESTS={
  relic:{room:'relicCrags',title:'The broken shellstone record',description:'Read three scattered shellstone fragments and bring their rubbings to Amina bint Ibrahim.',reward:{trainingTonics:2}},
  cave:{room:'waranCave1',title:'Rubbings from the drowned fort',description:'Read the plaques on the first three bastion floors and bring their rubbings to Freya in the gatehouse.',reward:{trainingTonics:2,emergencyEvacs:1}}
 };
+
+installDossierTrades(SIDE_CONTENT);

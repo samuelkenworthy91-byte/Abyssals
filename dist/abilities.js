@@ -1,12 +1,13 @@
-import {endOrchard} from './tide-orchard-battle.js?v=0.90.52';
-import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.52';
-import {randomStatusDuration} from './status-rules.js?v=0.90.52';
-import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.90.52';
-import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.90.52';
-import {menagerieParty,bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.90.52';
-import {ABILITIES} from './ability-data.js?v=0.90.52';
-import {HELD_ITEMS} from './held-data.js?v=0.90.52';
-import {unitName} from './names.js?v=0.90.52';
+import {dossierEnter,dossierEvasion,dossierCritBonus,dossierIncomingCritStage,dossierMultiplier,dossierDamaged,tagDossierStatus,dossierStatusFactor,endDossierRound} from './dossier-battle.js?v=0.90.53';
+import {endOrchard} from './tide-orchard-battle.js?v=0.90.53';
+import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.53';
+import {randomStatusDuration} from './status-rules.js?v=0.90.53';
+import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.90.53';
+import {paladinLeave,paladinEnter,paladinStatProtected,paladinMultiplier,paladinAfterDamage,paladinAfterStatus,paladinCritStage,preventsCritical} from './paladin-abilities.js?v=0.90.53';
+import {menagerieParty,bindMenagerieParty,relaySpread,otherPartyDamaged,recordMenagerieDamage} from './menagerie-rules.js?v=0.90.53';
+import {ABILITIES} from './ability-data.js?v=0.90.53';
+import {HELD_ITEMS} from './held-data.js?v=0.90.53';
+import {unitName} from './names.js?v=0.90.53';
 export function abilityName(u){return u.species.ability_names?.[u.abilitySlot||'primary']||null;}
 export function abilityInfo(u){return ABILITIES.find(a=>a.name===abilityName(u));}
 export function has(u,...names){return names.includes(abilityName(u));}
@@ -17,7 +18,7 @@ export function abilityBattle(u){return u.abilityBattle??={flags:{},turn:0};}
 export function heldInfo(u){return HELD_ITEMS.find(i=>i.id===u.heldItem)||u.heldDefinition||null;}
 export function heldStat(u,key){const e=heldInfo(u)?.effect;return (e?.operation==='assault_vest'&&key==='sp_defence'?e.multiplier:1)*(e?.operation==='quest_stats'?e.stats[key]||1:1)*(e?.operation==='effective_stat'&&e.stat===key?e.multiplier:1)*(key!=='hp'&&u.sunWrath?.active?1.25:1);}
 export function weatherSuppressed(...units){return units.some(u=>u.hp>0&&has(u,'Weather Calm'));}
-export function effectiveStage(u,key,foe=null){return Math.max(-6,Math.min(6,u.stages?.[key]||0));}
+export function effectiveStage(u,key,foe=null){return Math.max(-6,Math.min(6,(u.stages?.[key]||0)+dossierEvasion(u,key,foe)));}
 export function speedFactor(u,opponent){const w=u.field?.weather,suppressed=weatherSuppressed(u,opponent||u);return (u.field?.orchardTailwind?.[u.side||'player']>0?2:1)*(u.status==='PARALYSIS'?.5:1)*heldStat(u,'speed')*(!suppressed&&(has(u,'Rainrunner')&&w==='RAIN'||has(u,'Sunstride')&&w==='SUN'||has(u,'Snowfoot')&&['SNOW','HAIL'].includes(w))?1.5:1);}
 export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattle=false}={}){
  bindMenagerieParty(party);u.abilitySlot??='primary';u.abilityState={types:[],moves:[],flags:{},charges:0,dealt:0,hits:0};if(newBattle)u.abilityBattle={flags:{},turn:0};abilityBattle(u);u.field=field;
@@ -39,7 +40,7 @@ export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattl
  if(has(u,'Sovereign Decree')){field.decree={side:u.side||'player',turns:5};messages.push(note(u,'Decree protects its side for five turns.'));}
  if(has(u,'Floodplain')&&field.weather==='RAIN'){stage(u,'defence',1);u.abilityState.flags.flood=true;messages.push(note(u,'rain raised Defence.'));}
  if(has(u,'Waystone Master')&&u.hazards?.length){u.hazards.shift();messages.push(note(u,'one entry-hazard layer removed.'));}
- messages.push(...activateHeldRecovery(u,party));return messages;
+ dossierEnter(u,foe,messages);messages.push(...activateHeldRecovery(u,party));return messages;
 }
 export function triggerArcticEndurance(u){const b=abilityBattle(u);if(!has(u,'Arctic Endurance')||u.hp<=0||u.hp>=u.maxHp/2||b.flags.arctic)return false;b.flags.arctic=true;stage(u,'defence',1);stage(u,'sp_defence',1);return true;}
 export function triggerSunWrath(u){if(!has(u,"Sun God's Wrath")||u.hp<=0||u.hp>=u.maxHp/2||u.sunWrath?.active)return false;const baseMax=u.maxHp;u.sunWrath={active:true,baseMax};u.maxHp=u.stats.hp=Math.round(baseMax*1.25);u.hp=Math.max(1,Math.round(u.hp*u.maxHp/baseMax));return true;}
@@ -69,9 +70,9 @@ export function changeWeather(weather,units,turns=5){const messages=[];const old
 }
 export function isContact(m){return m.contact??(m.category==='PHYSICAL'&&!/shot|arrow|projectile|launch|beam|wave|pulse/i.test(m.name));}
 export function isSound(m){return m.sound??(/roar|cry|call|chorus|song|chant|howl|chime|echo|shriek|resonance|sound|sonic/i.test(m.name));}
-export function inflictStatus(u,status,messages=[],random=Math.random){if(u.hp<=0)return false;if(u.field?.orchardSafeguard?.[u.side||'player']>0||status==='SLEEP'&&u.moveState?.wakeful>0)return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
+export function inflictStatus(u,status,messages=[],random=Math.random,source=null){if(u.hp<=0)return false;if(u.field?.orchardSafeguard?.[u.side||'player']>0||status==='SLEEP'&&(u.moveState?.wakeful>0||u.field?.terrain==='ELECTRIC'&&!u.species.types.includes('FLYING')&&!has(u,'Hovercore')))return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
  if(u.status||u.statusImmunity?.[status]||has(u,'Toxinproof')&&['POISON','BAD_POISON'].includes(status)||has(u,'Coldproof')&&status==='FREEZE'||['POISON','BAD_POISON'].includes(status)&&u.species.types.some(t=>['POISON','STEEL'].includes(t))||status==='BURN'&&u.species.types.includes('FIRE')||['FREEZE','FROSTBITE'].includes(status)&&u.species.types.includes('ICE')||status==='PARALYSIS'&&u.species.types.includes('ELECTRIC'))return false;
- u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);messages.push(...activateHeldRecovery(u));return true;
+ delete u.dossierBloomStatus;tagDossierStatus(u,source);u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);messages.push(...activateHeldRecovery(u));return true;
 }
 export function blockedByAbility(actor,target,move,messages=[]){
  let why=null;if(has(target,'Hovercore')&&move.type_id==='GROUND')why='Ground immunity';if(has(target,'Soundproof')&&isSound(move))why='sound immunity';
@@ -83,10 +84,10 @@ export function blockedByAbility(actor,target,move,messages=[]){
 // paralysis, weather abilities and Tailwind all affect the crit differential.
 // Slower attackers receive no differential bonus; ordinary crits cap at 50%.
 function criticalSpeed(unit,opponent){const s=effectiveStage(unit,'speed',opponent);const stageFactor=s>=0?(2+s)/2:2/(2-s);return unit.stats.speed*stageFactor*speedFactor(unit,opponent);}
-export function critChance(actor,move,target){if(target&&preventsCritical(target))return 0;if(move.guaranteedCritical)return 1;let stage=move.effects?.some(e=>e.effect_id==='high_critical_ratio')?1:0;if(stage&&has(actor,'Focus Edge'))stage++;if(has(actor,'Proof by Cut')&&abilityMemory(actor).hits>=2)stage++;stage+=paladinCritStage(actor,target);const ratio=target?Math.max(1,criticalSpeed(actor,target)/Math.max(1,criticalSpeed(target,actor))):1;return Math.min(.5,[1/16,1/8,1/4,1/3][Math.min(3,stage)]+(ratio-1)/16);}
+export function critChance(actor,move,target){if(target&&preventsCritical(target))return 0;if(move.guaranteedCritical)return 1;let stage=move.effects?.some(e=>e.effect_id==='high_critical_ratio')?1:0;if(stage&&has(actor,'Focus Edge'))stage++;if(has(actor,'Proof by Cut')&&abilityMemory(actor).hits>=2)stage++;stage+=paladinCritStage(actor,target)+dossierIncomingCritStage(target);const ratio=target?Math.max(1,criticalSpeed(actor,target)/Math.max(1,criticalSpeed(target,actor))):1;return Math.min(.5,[1/16,1/8,1/4,1/3][Math.min(3,stage)]+(ratio-1)/16+dossierCritBonus(actor,target,move));}
 export function ignoresDefence(actor,target){const a=actor.abilityState||{};return has(actor,'Sinmark')&&a.mark===(target.uid||target.species.id);}
 export function abilityMultiplier(actor,target,move,{effectiveness=1,critical=false,movedFirst=false,switching=false}={}){
- const a=actor.abilityState||{flags:{},charges:0},t=target.abilityState||{flags:{},types:[],moves:[]};let multiplier=paladinMultiplier(actor,target,move,{effectiveness,critical})*birdMultiplier(actor,target,move,{effectiveness});const previous=a.previousType,key=target.uid||target.species.id;
+ const a=actor.abilityState||{flags:{},charges:0},t=target.abilityState||{flags:{},types:[],moves:[]};let multiplier=dossierMultiplier(actor,target,move)*paladinMultiplier(actor,target,move,{effectiveness,critical})*birdMultiplier(actor,target,move,{effectiveness});const previous=a.previousType,key=target.uid||target.species.id;
  if(has(actor,'Pack Pursuit')&&otherPartyDamaged(actor,target))multiplier*=1.2;
  if(move.menagerieRule==='GREY_HUNT'&&otherPartyDamaged(actor,target))multiplier*=1.2;
  if(move.menagerieRule==='BAMBOO_REPRISAL'&&abilityBattle(actor).directDamageTurn===abilityBattle(actor).turn)multiplier*=1.25;
@@ -154,9 +155,9 @@ export function afterDamage(actor,target,move,damage,{effectiveness=1,critical=f
  const helmet=heldInfo(target)?.effect;if(helmet?.operation==='contact_helmet'&&isContact(move)&&actor.hp>0){const loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp/6)));actor.hp-=loss;messages.push(`${unitName(actor)} loses ${loss} HP to Reprisal Helm.`);}
  damagedTeamcraft(actor,target,move,damage,{changeStage,messages});
  messages.push(...paladinAfterDamage(actor,target,move,damage,{effectiveness,critical}),...birdAfterDamage(actor,target,move,damage,{effectiveness,floor,changeStage,isContact}));
- recordMenagerieDamage(actor,target);tb.directDamageTurn=tb.turn;
+ dossierDamaged(actor,target,move,damage,{floor,random},messages);recordMenagerieDamage(actor,target);tb.directDamageTurn=tb.turn;
  if(has(target,'Fortress Curl')&&move.category==='PHYSICAL')t.flags.fortress=true;
- if(has(actor,'Venom Grip')&&isContact(move)&&target.hp>0&&random()<.3)inflictStatus(target,'POISON',messages,random);
+ if(has(actor,'Venom Grip')&&isContact(move)&&target.hp>0&&random()<.3)inflictStatus(target,'POISON',messages,random,actor);
  if(has(target,'Sensitive Ears')&&move.category==='SPECIAL'&&target.hp>0&&tb.earsTurn!==tb.turn){tb.earsTurn=tb.turn;stage(target,'speed',1);say(target,'special hit raised Speed.');}
  if(has(actor,'Afterglow')&&move.category==='SPECIAL'&&actor.hp>0&&ab.afterglowTurn!==ab.turn){ab.afterglowTurn=ab.turn;say(actor,`restored ${restoreHP(actor,Math.max(1,Math.floor(actor.maxHp/16)))} HP.`);}
  if(has(target,'Arctic Endurance')&&target.hp>0&&target.hp<target.maxHp/2&&!tb.flags.arctic){tb.flags.arctic=true;stage(target,'defence',1);stage(target,'sp_defence',1);say(target,'below half HP: Defence and Special Defence rose.');}
@@ -212,7 +213,7 @@ export function activateHeldRecovery(u,party=menagerieParty(u)){
 }
 export function heldSurvival(target,damage,messages){if(heldInfo(target)?.effect?.operation==='focus_sash'&&target.hp===target.maxHp&&damage>=target.hp&&target.hp>1){target.heldItem=null;target.heldDefinition=null;messages.push(`${unitName(target)} consumed Last Thread and held on at 1 HP.`);return target.hp-1;}return damage;}
 export function finishHeldMove(actor,target,move,damage,{floor=0}={}){const messages=[];if(damage>0&&move.category==='SPECIAL'&&has(actor,'The Fixer'))delete abilityMemory(actor).flags.fixerPrepared;const siphon=heldInfo(actor)?.effect;if(damage>0&&siphon?.operation==='damage_heal'&&actor.hp>0){const n=restoreHP(actor,Math.max(1,Math.floor(damage*siphon.fraction[0]/siphon.fraction[1])));if(n)messages.push(`${unitName(actor)} · Siphon Charm: restored ${n} HP.`);}if(damage>0&&heldInfo(actor)?.effect?.operation==='life_orb'&&actor.hp>0){const loss=Math.min(Math.max(0,actor.hp-floor),Math.max(1,Math.floor(actor.maxHp/10)));actor.hp-=loss;messages.push(`${unitName(actor)} loses ${loss} HP to Pressure Orb.`);}messages.push(...activateHeldRecovery(actor),...activateHeldRecovery(target));return messages;}
-export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){const messages=[];const field=units[0]?.field||{},suppressed=weatherSuppressed(...units);
+export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){const messages=[];const field=units[0]?.field||{},suppressed=weatherSuppressed(...units),poisoned=[];
  for(const u of units){if(u.hp<=0)continue;const a=abilityMemory(u),b=abilityBattle(u);b.turn++;
   if(has(u,'Patience'))a.flags.patient=a.dealt===0&&!(u.moveState?.protectChain>1);
   if(has(u,'Truce')&&a.dealt===0&&!a.flags.truce){stage(u,'sp_defence',1);a.flags.truce=true;messages.push(note(u,'a turn without damage raised Special Defence.'));}
@@ -222,6 +223,7 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
   if(has(u,'Warm Current')&&field.weather==='SUN'&&!suppressed){const n=restoreHP(u,Math.max(1,Math.floor(u.maxHp/16)));if(n)messages.push(note(u,`sunlight restored ${n} HP.`));}
   if(has(u,'Earthroot','World Anchor')&&['GRASSY','GROUND'].includes(field.terrain)){const n=restoreHP(u,Math.max(1,Math.floor(u.maxHp/16)));if(n)messages.push(note(u,`terrain restored ${n} HP.`));}
   let residual=0;if(['BURN','FROSTBITE','POISON'].includes(u.status))residual=Math.max(1,Math.floor(u.maxHp/8));if(u.status==='BAD_POISON')residual=Math.max(1,Math.floor(u.maxHp*(u.toxicCounter=Math.min(15,(u.toxicCounter||0)+1))/16));
+  if(!u.status)delete u.dossierBloomStatus;if(['BURN','FROSTBITE','POISON','BAD_POISON'].includes(u.status))residual=Math.floor(residual*dossierStatusFactor(u,units));const poisonLoss=['POISON','BAD_POISON'].includes(u.status)&&residual>0&&u.hp>(u.combatFloor??floor);if(poisonLoss)poisoned.push(u);
   if(!suppressed&&field.weather==='SAND'&&!has(u,'Sandcoat','Sand Reservoir')&&!u.species.types.some(t=>['ROCK','GROUND','STEEL'].includes(t)))residual+=Math.max(1,Math.floor(u.maxHp/16));
   if(!suppressed&&field.weather==='HAIL'&&!u.species.types.includes('ICE'))residual+=Math.max(1,Math.floor(u.maxHp/16));
   const loss=Math.min(Math.max(0,u.hp-(u.combatFloor??floor)),residual);u.hp-=loss;if(loss)messages.push(`${unitName(u)} loses ${loss} HP to ${u.status?.toLowerCase()||'weather'}.`);
@@ -231,10 +233,10 @@ export function endAbilities(units,{floor=0,party=units,random=Math.random}={}){
  for(const source of units){if(source.hp<=0||source.captured||!has(source,'Miasma'))continue;
   for(const foe of units){if(foe===source||foe.hp<=0||foe.captured||foe.status||foe.statusImmunity?.POISON||foe.statusImmunity?.BAD_POISON||has(foe,'Toxinproof')||foe.species.types.some(t=>['POISON','STEEL'].includes(t)))continue;
    if(source.side&&foe.side&&source.side===foe.side)continue;
-   if(random()<.33&&inflictStatus(foe,'BAD_POISON',messages,random))messages.push(note(source,'venomous mist badly poisoned '+unitName(foe)+'.'));
+   if(random()<.33&&inflictStatus(foe,'BAD_POISON',messages,random,source))messages.push(note(source,'venomous mist badly poisoned '+unitName(foe)+'.'));
   }
  }
- messages.push(...endOrchard(units,{floor,random}));
+ endDossierRound(units,poisoned,messages,random);messages.push(...endOrchard(units,{floor,random}));
  if(field.weatherTurns>0&&--field.weatherTurns===0){messages.push(...changeWeather(null,units,0));}
  if(field.decree?.turns>0)field.decree.turns--;return messages;
 }

@@ -33,3 +33,7 @@ Read docs/releases/v0.90.52-artwork-checkpoint.md and release-config.json. This 
 - Future finished-art transfers: browser batches of about25 files are the user-preferred default when available; verify paths/hashes and commit checkpoints. Blob/API transfer is the fallback. Speed has not yet been benchmarked.
 
 - Release browser QA uses Playwright1.62.1, matching the verified runtime. Older diagnostic cache imports were aligned and storm screenshots disable CSS animations with a60s capture timeout; actual gameplay assertions remain.
+
+## 3 November 2026 — source-only dossier integration
+
+54 dossier species (520–573) are implemented on feature/dossier-roster-integration. See docs/dossier-integration.md and art-library/dossiers for final stats, source provenance, renamed families, trade receipts and tests. Version 0.90.53/code148 is reserved; no APK build or publication was requested. Keep the incomplete move-art overhaul paused. New Nectarbane art is installed and technically verified but not falsely marked freshly approved.

@@ -1,4 +1,4 @@
-import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.52';
+import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.53';
 // Eighteen approved three-stage avian families. Each stage has its own identity.
 export const BIRD_FAMILIES=[
   {

@@ -1,0 +1,446 @@
+[
+  {
+    "id": "520",
+    "name": "Sprigrel",
+    "sourceArchive": "Abyssals_Lotus_Squirrel_Full_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Sprigrel_stage1_battle.webp",
+    "sha256": "d6eea6f3b46dec946d1d04fba1a6665dd4445ec5e6da350d628b8e866226e0cc",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "521",
+    "name": "Budrel",
+    "sourceArchive": "Abyssals_Lotus_Squirrel_Full_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Budrel_stage2_battle.webp",
+    "sha256": "90f5ad2417daeae41a0353fff69573e6d8ea114f99625f9539dbc0d3e81d6ed3",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "522",
+    "name": "Thornexus",
+    "sourceArchive": "Abyssals_Lotus_Squirrel_Full_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Thornexus_stage3_battle.webp",
+    "sha256": "1a8722e6be4894a281a9c2cf47fa377d092e2104970506ef44b56e6138ff53a2",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "523",
+    "name": "Acoroot",
+    "sourceArchive": "Acoroot_Canopowl_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Acoroot_battle.webp",
+    "sha256": "59b6fb866f14aafb95b67750a75ea25b87c62f370862a11f066d36cb0c96ef5f",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "524",
+    "name": "Canopowl",
+    "sourceArchive": "Acoroot_Canopowl_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Canopowl_battle.webp",
+    "sha256": "e81d143158906cac09a9f8c2a4de113666b6807b1b375f282bb3d1f2c3b0e145",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "525",
+    "name": "Cinderoot",
+    "sourceArchive": "Cinderoot_Blazebramble_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Cinderoot_battle.webp",
+    "sha256": "afd51ddaad8ffe99b5f8ac61dd8c810bbfbade5b80d8f4b93f82ce94780eca68",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "526",
+    "name": "Blazebramble",
+    "sourceArchive": "Cinderoot_Blazebramble_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Blazebramble_battle.webp",
+    "sha256": "1e5b6f1f86e39a251360c5006b0f5c7ba8996d222513caca628d26220ec73c56",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "527",
+    "name": "Cobalisp",
+    "sourceArchive": "Cobalisp_Lankinder_Sapphyrax_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Cobalisp_battle.webp",
+    "sha256": "d16b333ce28c023c2cad961d4f0ee1d861b979abbf04767628348624edda462a",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "528",
+    "name": "Lankinder",
+    "sourceArchive": "Cobalisp_Lankinder_Sapphyrax_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Lankinder_battle.webp",
+    "sha256": "088475addde52eec211560de6518b287ab6f71cb9ccb779fdd5d1c84a7c2d036",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "529",
+    "name": "Sapphyrax",
+    "sourceArchive": "Cobalisp_Lankinder_Sapphyrax_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Sapphyrax_battle.webp",
+    "sha256": "9c2f9162bca8e1558523c1411202719c6a4bb563e8254079b1566fe086d88387",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "530",
+    "name": "Crownlet",
+    "sourceArchive": "Crownlet_Imperydrake_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Crownlet_battle.webp",
+    "sha256": "14b80768618ed5ba87b26c65b540e2a1547320d10f02e7ea1e9c47e8828c5789",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "531",
+    "name": "Imperydrake",
+    "sourceArchive": "Crownlet_Imperydrake_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Imperydrake_battle.webp",
+    "sha256": "0f2405e1cbb6bb7922f37dfd245513bf8bef30e7bc806e6dd0ee570b57706ad7",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "532",
+    "name": "Eldrakor",
+    "sourceArchive": "Eldrakor_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Eldrakor_battle.webp",
+    "sha256": "ac6d01de3286f35ca3201e602b6d4763f90b783a3123cf774923221e6a148c2e",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "533",
+    "name": "Ferrub",
+    "sourceArchive": "Ferrub_Scythorax_Aurelytron_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Ferrub_battle.webp",
+    "sha256": "64d6011b56da09b29612bff64be28fb28b966066978d7507b9db25f6d1f07d6e",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "534",
+    "name": "Scythorax",
+    "sourceArchive": "Ferrub_Scythorax_Aurelytron_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Scythorax_battle.webp",
+    "sha256": "5c6f77923709cc6a7f5271b3f841d103000af4b3da95d62c1a4c82285641d0ec",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "535",
+    "name": "Aurelytron",
+    "sourceArchive": "Ferrub_Scythorax_Aurelytron_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Aurelytron_battle.webp",
+    "sha256": "ffee6d99c4cc772bdc82243d2759c135640bf68c27dd9277dad8a93f4057c0ed",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "536",
+    "name": "Follicant",
+    "sourceArchive": "Follicant_Myrmaleon_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Follicant_battle.webp",
+    "sha256": "98e737d66f0f898aef73d5cb3d30d275f28cf3aaa1396139f0c81b665e4b8aa4",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "537",
+    "name": "Myrmaleon",
+    "sourceArchive": "Follicant_Myrmaleon_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Myrmaleon_battle.webp",
+    "sha256": "2ce780f15217137300a9e7c2f8ae4a8d0a519aa3a25cd55b1b80c4dc73d835b9",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "538",
+    "name": "Gloamsip",
+    "sourceArchive": "Gloamsip_Adzraith_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Gloamsip_battle.webp",
+    "sha256": "f717d986602fe11727bc1c6ec437d4dadce151dc5cc27b3805a9f3092e8f07e2",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "539",
+    "name": "Adzraith",
+    "sourceArchive": "Gloamsip_Adzraith_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Adzraith_battle.webp",
+    "sha256": "171eb9dc588638ae98afe2fc5d0348f40a73b66709bed2faf4521738f09c239d",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "540",
+    "name": "Gratzel",
+    "sourceArchive": "Gratzel_Ice_Dragon_Work_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Gratzel_battle.webp",
+    "sha256": "b6ebae894c61cf4ea9d75d52d18f4015d67935f4a86aef67b17f1f6cc223e64f",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "541",
+    "name": "Luton",
+    "sourceArchive": "Luton_Lutromage_Lutrasage_COMPLETE_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Luton_battle.webp",
+    "sha256": "29aec5d54be4658fe5e008ad30febb75f351e5232661984953b85f0ed4f6e00d",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "542",
+    "name": "Lutromage",
+    "sourceArchive": "Luton_Lutromage_Lutrasage_COMPLETE_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Lutromage_battle.webp",
+    "sha256": "5d6fdee344522ee939cdee447c814b6f0f08df7451411a6a6f2ee969bf962d70",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "543",
+    "name": "Lutrasage",
+    "sourceArchive": "Luton_Lutromage_Lutrasage_COMPLETE_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Lutrasage_battle.webp",
+    "sha256": "c8f92f31866da24fe2820c85b88f5dea449ba3b00fcf5bef8d2ae61306bbef99",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "544",
+    "name": "Meltelier",
+    "sourceArchive": "Meltelier_FRESH_Work_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Meltelier_Battle_Sprite.webp",
+    "sha256": "5237528553a79f20e0c497431be3584a2aa7996813078f950e527fa46da7a86b",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "545",
+    "name": "Mindlarv",
+    "sourceArchive": "Mindlarv_Oraculuna_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Mindlarv_battle.webp",
+    "sha256": "1fc6d15c227e086acf0fc1ce84c3e73801b142945568d47fe6be0ca80c54ec0d",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "546",
+    "name": "Omenluna",
+    "sourceArchive": "Mindlarv_Oraculuna_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Oraculuna_battle.webp",
+    "sha256": "33635b16b5d83dfad01628c02959696a5c5564c594107a43a2607207491f2084",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "547",
+    "name": "Orchidit",
+    "sourceArchive": "Orchid_Mantis_Rogue_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Orchidit_stage1_battle.webp",
+    "sha256": "1b9664f0a23822b4a5f88a85e05fb86382df30fb07ae020022b3633ed8530b42",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "548",
+    "name": "Cinderchid",
+    "sourceArchive": "Orchid_Mantis_Rogue_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Cinderchid_stage2_battle.webp",
+    "sha256": "c802227f8bf9b74047575095127405c2e1b7d4433f05b1ca28a4a3ad8228036b",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "549",
+    "name": "Roguorchid",
+    "sourceArchive": "Orchid_Mantis_Rogue_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Roguorchid_stage3_battle.webp",
+    "sha256": "1024422c09f38d03a79cc39848b1800f2c819572780759eb5429c58085404639",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "550",
+    "name": "Pebbloyle",
+    "sourceArchive": "Pebbloyle_Slateryx_Cathedralyx_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Pebbloyle_battle.webp",
+    "sha256": "3ff16b7edfd6f603719b9b50d2c4015f569db978050ada353555dc80cb6cae1f",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "551",
+    "name": "Slateryx",
+    "sourceArchive": "Pebbloyle_Slateryx_Cathedralyx_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Slateryx_battle.webp",
+    "sha256": "92bad7996b0da434cd3250995d7fefb49d8deac315e97ce99b89af8c4376cee5",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "552",
+    "name": "Cathedralyx",
+    "sourceArchive": "Pebbloyle_Slateryx_Cathedralyx_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Cathedralyx_battle.webp",
+    "sha256": "82326c830ea65759cb0e2036c42568533b80bcc1c49adcf8a23fbf930f858473",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "553",
+    "name": "Pomantler",
+    "sourceArchive": "Pomantler_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Pomantler_battle.webp",
+    "sha256": "59b6767daad3bc245b2bf746fd4e66223ef04838d0049c6c88f7f5176e00d62e",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "554",
+    "name": "Brookisk",
+    "sourceArchive": "Rillisk_Torravyr_Abyssals_Complete_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Rillisk_battle.webp",
+    "sha256": "9dcc4e76537f99b9c729b4e0f03ead8e3505a5c6fc8f0b801589422c6db24c94",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "555",
+    "name": "Torravyr",
+    "sourceArchive": "Rillisk_Torravyr_Abyssals_Complete_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Torravyr_battle.webp",
+    "sha256": "8d2e26e2ad9d91f013a36bdf415154ae4893e092e97a81f00c10021590c71f0e",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "556",
+    "name": "Rimecub",
+    "sourceArchive": "Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Rimecub_battle.webp",
+    "sha256": "25c7f4c3463ed501c0e0735f9444c755e4cfd4b81f0a68be307ecff80a9b6093",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "557",
+    "name": "Frostfang",
+    "sourceArchive": "Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Frostfang_battle.webp",
+    "sha256": "ef676a86f044bf0d107b16cc82572808b22b58a847cbafea60e4e8b7a865c277",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "558",
+    "name": "Borewraith",
+    "sourceArchive": "Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Borewraith_battle.webp",
+    "sha256": "3d03c3322b213691e47190efe2739af60ccfc426290372e1d4739cd91d27836f",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "559",
+    "name": "Sparkgecko",
+    "sourceArchive": "Sparkgecko_Voltfrill_Thunderbasilisk_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Sparkgecko_battle.webp",
+    "sha256": "9940c973f863f819ec0f50d3b0088167dbeb4076cb1d79ea92f93ac0db53b372",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "560",
+    "name": "Frillvolt",
+    "sourceArchive": "Sparkgecko_Voltfrill_Thunderbasilisk_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Voltfrill_battle.webp",
+    "sha256": "08de94c7c76698e66872db40f3bbf76750e77407b4a70481495c03e5fe1501ba",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "561",
+    "name": "Thunderbasilisk",
+    "sourceArchive": "Sparkgecko_Voltfrill_Thunderbasilisk_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Thunderbasilisk_battle.webp",
+    "sha256": "f9dc6971fc10e4773ac3690e76e8696965309b01dadb8412acd2b43cffdbd473",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "562",
+    "name": "Sparrcoo",
+    "sourceArchive": "Sparrcoo_Coronox_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Sparrcoo_battle.webp",
+    "sha256": "012501ceb492b1dd23551307bd78a74f5df1d320feec2906ee90d8981bd7b841",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "563",
+    "name": "Coronox",
+    "sourceArchive": "Sparrcoo_Coronox_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Coronox_battle.webp",
+    "sha256": "ee53b252345c147a0afd314fb140d8f1b7e078cb62deb461e7dc15a5c69b661f",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "564",
+    "name": "Sproutolin",
+    "sourceArchive": "Sproutolin_Fernscale_Elderpangrove_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Sproutolin_battle.webp",
+    "sha256": "19a324a24196acec05e6380eef90519231b7acc26697e174dc779711abb4bc5c",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "565",
+    "name": "Fernscale",
+    "sourceArchive": "Sproutolin_Fernscale_Elderpangrove_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Fernscale_battle.webp",
+    "sha256": "1c886f067e9517022b1f8c20e0d926ef64436de92a84ea2940ef4871a7d70358",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "566",
+    "name": "Elderpangrove",
+    "sourceArchive": "Sproutolin_Fernscale_Elderpangrove_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Elderpangrove_battle.webp",
+    "sha256": "c8bc371c540198e2c769fd37bf69c722e5abfc911f3bd49800e0fa040da8dc17",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "567",
+    "name": "Terraforge",
+    "sourceArchive": "Terraforge_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Terraforge_battle.webp",
+    "sha256": "45767378daa3c149e1620314a7c36ac716d6cd329aba330163b0aa81575dff12",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "568",
+    "name": "Thimbril",
+    "sourceArchive": "Thimbril_Carrionyx_Test_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "thimbril_carrionyx_concept_sheet.webp",
+    "sha256": "54c4461c35edd8db2f881d3cd727d7961e10771490bd3a8d8e19b592707ff123",
+    "source_rect": [
+      18,
+      412,
+      119,
+      499
+    ],
+    "method": "Connected sheet-matte extraction; source sprite rows; no redesign"
+  },
+  {
+    "id": "569",
+    "name": "Carrionyx",
+    "sourceArchive": "Thimbril_Carrionyx_Test_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "thimbril_carrionyx_concept_sheet.webp",
+    "sha256": "b6e89652d67caac37e39c2b0f00db3f04dca51eee40bcc8a31bacfcf4e180b63",
+    "source_rect": [
+      806,
+      402,
+      1067,
+      545
+    ],
+    "method": "Connected sheet-matte extraction; source sprite rows; no redesign"
+  },
+  {
+    "id": "570",
+    "name": "Voltinix",
+    "sourceArchive": "Voltinix_Approval_Dossier_WEBP_lossless.zip",
+    "sourceEntry": "Voltinix_battle_sprite.webp",
+    "sha256": "efa775f8eed2d76e1d870f6823883a9732b0a68c09133d2781e4a38f61987016",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "571",
+    "name": "Voltisl",
+    "sourceArchive": "Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Voltisl_battle.webp",
+    "sha256": "6cfc7b7a30154ec11b3502324c95c6429e382a9ac5f70e936bd6553a15eb084b",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "572",
+    "name": "Thunderaze",
+    "sourceArchive": "Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sourceEntry": "Thunderaze_battle.webp",
+    "sha256": "9b02c26e17a98282ecdfee04d686279fb587e12587ae68aa046070e928a734f6",
+    "method": "Exact approved WebP bytes"
+  },
+  {
+    "id": "573",
+    "name": "Voltoceros",
+    "sourceArchive": "Voltoceros_Abyssals_Dossier_2026-11-02_WEBP_lossless.zip",
+    "sourceEntry": "Voltoceros_battle.webp",
+    "sha256": "78437e71f3039642d089ac4856090ea24ccd9518a6dac29fcc4a60786437c81e",
+    "method": "Exact approved WebP bytes"
+  }
+]

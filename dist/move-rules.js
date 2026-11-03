@@ -1,11 +1,12 @@
-import {orchardUsable,orchardGrounded} from './tide-orchard-battle.js?v=0.90.52';
-import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.52';
-import {unitName} from './names.js?v=0.90.52';
-export const SUPPORTED_EFFECTS = new Set(['orchard_mist','undertow_mark','brine_veil','blank_horizon','moonlit_reprisal','berry_supper','orchard_tailwind','draining_roots','orchard_carpet','pantry_refill','breeze_relay','orchard_taunt','orchard_rest','dream_murmur','binding_eddy','orchard_safeguard','wakeful_seed','clearcut_breeze','refrain_lock','pivot','healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
+import {dossierPriority,healDossierMove} from './dossier-battle.js?v=0.90.53';
+import {orchardUsable,orchardGrounded} from './tide-orchard-battle.js?v=0.90.53';
+import {heldInfo,restoreHP,has,isContact,inflictStatus,changeWeather,setTerrain,screenTurns} from './abilities.js?v=0.90.53';
+import {unitName} from './names.js?v=0.90.53';
+export const SUPPORTED_EFFECTS = new Set(['nectarbane','orchard_mist','undertow_mark','brine_veil','blank_horizon','moonlit_reprisal','berry_supper','orchard_tailwind','draining_roots','orchard_carpet','pantry_refill','breeze_relay','orchard_taunt','orchard_rest','dream_murmur','binding_eddy','orchard_safeguard','wakeful_seed','clearcut_breeze','refrain_lock','pivot','healing_relay','active_cleanse','protect','effigy','relay','clear_weather','clear_offence','rain_mantle','single_ward','crit_guard','entry_cleanse','ally_cure','aurora_screen','party_heal','party_stage','stat_stage','flinch','high_critical_ratio','heal','recoil','inflict_status','status_immunity','hp_cost','power_multiplier','drain','recurring_status','ignore_positive_evasion','contact_retaliation','heal_by_format','prevent_forced_switch','contact_status_retaliation','prevent_flinch','next_move_cannot_miss','clear_negative_stat_stages','next_hit_damage_multiplier','critical_damage_multiplier','disable_last_move','prevent_switch','incoming_type_damage_multiplier','cure_major_status','weather','terrain','screen']);
 export function moveHPCost(actor,move){return (move?.effects||[]).filter(e=>e.effect_id==='hp_cost').reduce((sum,e)=>sum+Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1])),0);}
 export function canPayMoveHP(actor,move){return actor.hp>moveHPCost(actor,move);}
 export function moveUsable(u,m){return !!m&&orchardUsable(u,m)&&!(heldInfo(u)?.effect?.operation==='assault_vest'&&m.category==='STATUS')&&m.left>0&&canPayMoveHP(u,m)&&!(u.moveState?.disabled?.turns>0&&u.moveState.disabled.moveId===m.id);}
-export function movePriority(m,u){return (m.priority||0)+(m.id===310&&u?.hp<u?.maxHp/2?1:0);}
+export function movePriority(m,u){return (m.priority||0)+dossierPriority(m,u)+(m.id===310&&u?.hp<u?.maxHp/2?1:0);}
 export function moveDamageMultiplier(actor,target,move,{critical=false,movedFirst=true}={}){
  let n=1;for(const e of move.effects||[])if(e.effect_id==='power_multiplier'){
  const w=e.when,yes=typeof w==='object'?(!w.user_type||actor.species.types.includes(w.user_type))&&(!w.foe_status||(w.foe_status==='CONFUSION'?target.confusion>0:target.status===w.foe_status)):
@@ -18,17 +19,18 @@ export function moveDamageMultiplier(actor,target,move,{critical=false,movedFirs
  if(!calm&&weather==='RAIN')n*=move.type_id==='WATER'?1.5:move.type_id==='FIRE'?.5:1;
  if(!calm&&weather==='SUN')n*=move.type_id==='FIRE'?1.5:move.type_id==='WATER'?.5:1;
  if(field.terrain==='GRASSY'&&move.type_id==='GRASS')n*=field.orchardCarpet?(orchardGrounded(actor)?1.3:1):1.2;
+ if(field.terrain==='ELECTRIC'&&move.type_id==='ELECTRIC'&&orchardGrounded(actor))n*=1.2;
  if(target.moveState?.brineVeil&&move.category==='SPECIAL')n*=.5;
  const screen=field.screens?.[target.side]?.[move.category];if(screen>0)n*=.5;
  return n;
 }
 export function trackMove(actor,move){actor.moveState??={};actor.moveState.currentCategory=move.category;actor.moveState.lastMove=move.id;}
 export function consumeWard(target,move,damage){if(damage>0&&target.moveState?.ward?.uses>0&&(!target.moveState.ward.category||target.moveState.ward.category===move.category))if(--target.moveState.ward.uses===0)delete target.moveState.ward;}
-export function extraMoveEffect(actor,target,move,e,messages,{floor=0}={}){
+export function extraMoveEffect(actor,target,move,e,messages,{floor=0,context={}}={}){
  const who=e.target==='SELF'||!e.target?actor:target;who.moveState??={};const s=who.moveState;
  const note=t=>messages.push(`${unitName(who)}: ${t}`);
  if(e.effect_id==='hp_cost'){const cost=Math.max(1,Math.floor(actor.maxHp*e.fraction[0]/e.fraction[1]));if(actor.hp<=cost)return;actor.hp-=cost;messages.push(`${unitName(actor)} pays ${cost} HP.`);}
- if(e.effect_id==='heal_by_format'){const [n,d]=e.singles.max_hp_fraction,amount=restoreHP(actor,Math.floor(actor.maxHp*n/d*(has(actor,'Medicinal Sap')?1.15:1)));messages.push(`${unitName(actor)} restores ${amount} HP.`);}
+ if(e.effect_id==='heal_by_format'){const [n,d]=e.singles.max_hp_fraction,amount=healDossierMove(actor,actor,Math.floor(actor.maxHp*n/d*(has(actor,'Medicinal Sap')?1.15:1)),context);messages.push(`${unitName(actor)} restores ${amount} HP.`);}
  if(e.effect_id==='next_move_cannot_miss'){s.sureHit=e.uses||1;note('next move cannot miss.');}
  if(e.effect_id==='next_hit_damage_multiplier'){s.ward={...e};note(`next ${e.category==='PHYSICAL'?'physical ':''}hit deals ${e.multiplier*100}% damage.`);}
  if(e.effect_id==='critical_damage_multiplier'){s.criticalWard={...e};note(`critical damage reduced for ${e.turns} turns.`);}

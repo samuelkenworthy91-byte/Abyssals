@@ -1,8 +1,9 @@
-import {ORCHARD_IDS as I,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.52';
-import {has,heldInfo,consumedBerry,activateHeldRecovery,abilityBattle,restoreHP,changeStage,canSwitch} from './abilities.js?v=0.90.52';
-import {menagerieParty} from './menagerie-rules.js?v=0.90.52';
-import {selectedAlly} from './teamcraft-battle.js?v=0.90.52';
-import {unitName} from './names.js?v=0.90.52';
+import {healDossierMove} from './dossier-battle.js?v=0.90.53';
+import {ORCHARD_IDS as I,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.53';
+import {has,heldInfo,consumedBerry,activateHeldRecovery,abilityBattle,restoreHP,changeStage,canSwitch} from './abilities.js?v=0.90.53';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.53';
+import {selectedAlly} from './teamcraft-battle.js?v=0.90.53';
+import {unitName} from './names.js?v=0.90.53';
 const ms=u=>u.moveState??={};
 const alive=u=>u&&u.hp>0&&!u.dead&&!u.captured;
 const sameSide=(a,b)=>a===b||a.side&&a.side===b.side;
@@ -36,7 +37,7 @@ export function orchardEffect(a,t,m,e,messages){const s=ms(a),f=a.field??={},say
  case 'orchard_carpet':if(f.terrain==='GRASSY')f.orchardCarpet=true;return true;
  case 'breeze_relay':s.breezeOnly=true;s.relayRequested=selectedAlly(a)?.uid;delete s.effigyHandoff;say('Breeze Relay carries only the effigy to the chosen partner.');return true;
  case 'orchard_taunt':ms(t).orchardTaunt=3;say(`${unitName(t)} cannot use status moves for three turns.`);return true;
- case 'orchard_rest':a.status=null;a.statusTurns=0;a.toxicCounter=0;restoreHP(a,a.maxHp);a.status='SLEEP';a.statusTurns=2;say(`${unitName(a)} fully recovers and sleeps for two actions.`);return true;
+ case 'orchard_rest':a.status=null;a.statusTurns=0;a.toxicCounter=0;healDossierMove(a,a,a.maxHp);a.status='SLEEP';a.statusTurns=2;say(`${unitName(a)} fully recovers and sleeps for two actions.`);return true;
  case 'dream_murmur':return true; // Engine calls the selected legal equipped move without PP cost.
  case 'binding_eddy':if(!has(t,'Bindproof','Wayfarer')){ms(t).eddy=4;t.trapped=Math.max(t.trapped||0,4);say('Binding Eddy holds the foe for four turn ends.');}return true;
  case 'orchard_safeguard':(f.orchardSafeguard??={})[a.side||'player']=5;say('Sanctuary Air wards this side against new status for five turns.');return true;
