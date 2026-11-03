@@ -1,11 +1,11 @@
-import {hasVisitedTown} from './fast-travel.js?v=0.90.52';
-import {DATA} from './data.js?v=0.90.52';
-import {JOURNAL_HABITATS} from './journal-habitats.js?v=0.90.52';
-import {SIDE_CONTENT} from './exploration-data.js?v=0.90.52';
-import {FOSSILS} from './mountain-quests.js?v=0.90.52';
-import {BREEDING_ONLY_FIRST_FORMS} from './encounter-access.js?v=0.90.52';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.52';
-import {growthPercent,STAT_KEYS,STAT_LABELS,unitGrowthRates} from './progression.js?v=0.90.52';
+import {hasVisitedTown} from './fast-travel.js?v=0.90.53';
+import {DATA} from './data.js?v=0.90.53';
+import {JOURNAL_HABITATS} from './journal-habitats.js?v=0.90.53';
+import {SIDE_CONTENT} from './exploration-data.js?v=0.90.53';
+import {FOSSILS} from './mountain-quests.js?v=0.90.53';
+import {BREEDING_ONLY_FIRST_FORMS} from './encounter-access.js?v=0.90.53';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.53';
+import {growthPercent,STAT_KEYS,STAT_LABELS,unitGrowthRates} from './progression.js?v=0.90.53';
 
 // Small, append-only observations. A captured species stays registered after
 // evolution, rehoming or permanent death. Ownership is calculated from the
@@ -99,6 +99,7 @@ function specialAcquisition(id){
  return {kind:'special',message:'No ordinary wild sighting is recorded. Seek a special encounter, gift or reward as your expedition progresses.'};
 }
 export function fieldJournalRumours(id,state={}){
+ const species=DATA.species.find(s=>s.id===id);if(species?.dossierSpecies)return species.rumour;
  const towns=[...new Set((speciesHabitatIndex.get(id)||[]).map(r=>r.town).filter(Boolean))];
  if(towns.length){const known=towns.filter(t=>hasVisitedTown(state,t));return known.length?'Rumour has it this Abyssal can be found somewhere near '+known.slice(0,2).join(' or ')+'.':'Rumour has it this Abyssal can be found somewhere far off ahead.';}
  if(EVOLUTIONS.some(e=>e.to_species_id===id))return 'Rumour has it this form is reached by evolving another Abyssal, rather than hunting for it here.';

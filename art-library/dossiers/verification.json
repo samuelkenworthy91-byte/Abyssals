@@ -1,0 +1,20 @@
+{
+  "sourceOnly": true,
+  "apkBuilt": false,
+  "javascriptSuites": 47,
+  "newSpecies": 54,
+  "registeredSpecies": 572,
+  "eligibleSpeciesReachable": 556,
+  "collectionAuditMissing": 0,
+  "mapsChecked": 25,
+  "mapTechnicalIssues": 0,
+  "browserChecks": [
+    "54 portraits decode and frame",
+    "Nectarbane dedicated animation",
+    "live poison/heal/terrain buttons",
+    "75 percent healing ceiling",
+    "old-save replacement trade",
+    "save serialization"
+  ],
+  "artReview": "Nectarbane installed and technically verified; requires fresh artistic review. Thimbril/Carrionyx use lower-resolution concept-sheet source extractions."
+}

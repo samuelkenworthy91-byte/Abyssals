@@ -1,4 +1,4 @@
-import {recordMemorialDeath} from './memorial.js?v=0.90.52';
+import {recordMemorialDeath} from './memorial.js?v=0.90.53';
 // Newly authored implementation prose for the revised sixty-line farewell pool.
 // The locked specification contains the presentation contract, not these exact lines.
 // Sixty newly authored dramatic beats following the user’s revised brief.

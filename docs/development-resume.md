@@ -33,3 +33,15 @@ Read docs/releases/v0.90.52-artwork-checkpoint.md and release-config.json. This 
 - Future finished-art transfers: browser batches of about25 files are the user-preferred default when available; verify paths/hashes and commit checkpoints. Blob/API transfer is the fallback. Speed has not yet been benchmarked.
 
 - Release browser QA uses Playwright1.62.1, matching the verified runtime. Older diagnostic cache imports were aligned and storm screenshots disable CSS animations with a60s capture timeout; actual gameplay assertions remain.
+
+## 3 November 2026 — source-only dossier integration
+
+54 dossier species (520–573) are implemented on feature/dossier-roster-integration. See docs/dossier-integration.md and art-library/dossiers for final stats, source provenance, renamed families, trade receipts and tests. Version 0.90.53/code148 is reserved; no APK build or publication was requested. Keep the incomplete move-art overhaul paused. New Nectarbane art is installed and technically verified but not falsely marked freshly approved.
+
+Source-only CI follow-up: pin the audit job to Python 3.12 (Pillow 11.1.0 has no Python 3.14 wheel), and keep Nectarbane inside the declarative ACTION_ART registry so existing artwork tools can parse all entries. Refresh the machine-readable move-coverage report for the new roster and Nectarbane entry. No gameplay or artwork content changed.
+
+## Approved bat portraits and initial soundtrack
+
+Thimbril 568 and Carrionyx 569 now use the approved four-limbed standalone portraits, preserved as PNG masters in art-library/dossiers/bat-portraits and lossless WebPs at the existing runtime paths. The concept-sheet extracts remain recorded as superseded provenance. adventure1.mp3 and BattleTheme1.mp3 from music-mp3s on main are copied byte-for-byte into dist/assets/music. Exploration loops the adventure track; every battle surface uses the battle track; exit resumes exploration. Existing Sound on/off controls both music and interface tones. Hidden pages pause playback, input unlocks browser audio, and both files are included offline. Offline revision2 refreshes the sprites; version0.90.53/code148 remains reserved. No APK built.
+
+Local verification: music transition/autoplay unit checks, dossier integration, runtime cache identity and offline import validation pass. Chromium verified actual MP3 decoding/looping, three battle modes, adventure resume, settings mute, hidden-page pause/resume and both approved portraits in the battle UI. Phone evidence is saved in art-library/dossiers/verification.

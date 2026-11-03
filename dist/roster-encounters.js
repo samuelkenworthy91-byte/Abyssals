@@ -1,22 +1,23 @@
-import {tideOrchardRoute} from './tide-orchard-habitats.js?v=0.90.52';
-import {branchEncounterRoute} from './branch-families.js?v=0.90.52';
-import {caveRoute} from './exploration-rules.js?v=0.90.52';
-import {collectionEncounterRoute} from './collection-access.js?v=0.90.52';
-import {accessEncounterRoute} from './encounter-access.js?v=0.90.52';
-import {birdEncounterRoute} from './bird-encounters.js?v=0.90.52';
-import {biodiversityEncounterRoute} from './biome-biodiversity.js?v=0.90.52';
-import {orchardRoute} from './cossenne-data.js?v=0.90.52';
-import {courtRoute} from './paladin-quest.js?v=0.90.52';
-import {jungleRoute,paladinEncounterRoute} from './paladin-encounters.js?v=0.90.52';
-import {menagerieEncounterRoute} from './menagerie-encounters.js?v=0.90.52';
-import {aquaticEncounterRoute} from './approved-aquatic.js?v=0.90.52';
-import {relicGroveRoute} from './relic-quest.js?v=0.90.52';
-import {relicEncounterRoute} from './relic-family.js?v=0.90.52';
-import {cybressaRoute} from './cybressa-data.js?v=0.90.52';
-import {pacedEncounterRoute} from './encounter-pacing.js?v=0.90.52';
-import {expandFullRoute} from './full-encounter-rules.js?v=0.90.52';
-import {normalizeEncounterRoute} from './encounter-audit.js?v=0.90.52';
-import {routeStage} from './route-progression.js?v=0.90.52';
+import {dossierEncounterRoute} from './dossier-encounters.js?v=0.90.53';
+import {tideOrchardRoute} from './tide-orchard-habitats.js?v=0.90.53';
+import {branchEncounterRoute} from './branch-families.js?v=0.90.53';
+import {caveRoute} from './exploration-rules.js?v=0.90.53';
+import {collectionEncounterRoute} from './collection-access.js?v=0.90.53';
+import {accessEncounterRoute} from './encounter-access.js?v=0.90.53';
+import {birdEncounterRoute} from './bird-encounters.js?v=0.90.53';
+import {biodiversityEncounterRoute} from './biome-biodiversity.js?v=0.90.53';
+import {orchardRoute} from './cossenne-data.js?v=0.90.53';
+import {courtRoute} from './paladin-quest.js?v=0.90.53';
+import {jungleRoute,paladinEncounterRoute} from './paladin-encounters.js?v=0.90.53';
+import {menagerieEncounterRoute} from './menagerie-encounters.js?v=0.90.53';
+import {aquaticEncounterRoute} from './approved-aquatic.js?v=0.90.53';
+import {relicGroveRoute} from './relic-quest.js?v=0.90.53';
+import {relicEncounterRoute} from './relic-family.js?v=0.90.53';
+import {cybressaRoute} from './cybressa-data.js?v=0.90.53';
+import {pacedEncounterRoute} from './encounter-pacing.js?v=0.90.53';
+import {expandFullRoute} from './full-encounter-rules.js?v=0.90.53';
+import {normalizeEncounterRoute} from './encounter-audit.js?v=0.90.53';
+import {routeStage} from './route-progression.js?v=0.90.53';
 // Habitats placed along the currently playable road. Later forms never appear below evolution level.
 export const ROSTER_ENCOUNTERS=[
  ['188','march','NIGHT',5,8,8],['190','march','BOTH',5,9,10],
@@ -37,4 +38,4 @@ function expandExistingEncounterRoute(route){const orchard=orchardRoute(route?.r
 
 function authoredEncounterRoute(route){if(route?.birdsExpanded)return accessEncounterRoute(route);if(route?.biodiversityExpanded)return accessEncounterRoute(birdEncounterRoute(route));return accessEncounterRoute(birdEncounterRoute(biodiversityEncounterRoute(expandExistingEncounterRoute(route))));}
 
-export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return collectionEncounterRoute(fort);return tideOrchardRoute(branchEncounterRoute(collectionEncounterRoute(authoredEncounterRoute(route))));}
+export function expandEncounterRoute(route){const fort=caveRoute(route?.room);if(fort)return dossierEncounterRoute(collectionEncounterRoute(fort));return dossierEncounterRoute(tideOrchardRoute(branchEncounterRoute(collectionEncounterRoute(authoredEncounterRoute(route)))));}

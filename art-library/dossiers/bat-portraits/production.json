@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-03",
+  "status": "user-approved",
+  "tool": "built-in image generation",
+  "anatomy": "Two hind legs and two integrated wing-arms; no extra arms.",
+  "prompts": {
+    "thimbril": "Edit this Thimbril standalone monster battle sprite. ANATOMY CORRECTION ONLY: it is a true bat, with EXACTLY FOUR LIMBS TOTAL: TWO small hind legs/feet below its body, and TWO upper limbs that ARE ITS WINGS. The wing skeleton is the arms and long fingers with pink membrane; wings attach at shoulders, each has one small thumb claw at its wrist, and membrane stretches toward the sides of the body. REMOVE the extra furry front paws/forelegs below the chest. There must be exactly TWO dangling furry leg-and-foot silhouettes in the lower body, one on each side, clearly separate, not three or four paws. No separate arms in addition to wings. Preserve tiny round charcoal-purple body, giant pink-inner ears, glossy violet eyes, tiny fangs, pink forehead marking, cream chest ruff, adorable hovering pose, outstretched pink membrane wings, high-detail clean anime/painterly illustration. Preserve character identity and palette. Entire creature visible, centered, 8% safe empty margin, TRUE transparent background with crisp alpha. No background, ground, glow, text or additional creatures.",
+    "carrionyx": "Revise this Carrionyx creature illustration. Critical ANATOMY correction: a BAT with EXACTLY FOUR LIMBS TOTAL, not a six-limbed dragon. TWO hind legs attached to pelvis, and TWO upper limbs that ARE THE WINGS. The long skeletal forearms MUST become the leading structural edges of the wings. Each shoulder leads into one long elbow, forearm, wrist and clawed wing-hand; elongated fingers from THAT SAME wing-hand support the torn mauve membrane, which stretches back to its flank/hip. NO separate wings attached to the back, NO extra wing shoulder/upper joint behind the arms, NO separate free front legs in addition to wings. Repose as needed so the single integrated wing-arm construction is completely clear: lean forward using the TWO clawed wing-wrists as supports, with ragged membranes visibly hanging directly from those arms and trailing behind; TWO smaller hind feet under the pelvis. Like a grounded vampire bat's four-limbed crawling stance, not a dragon. Remove the old separate tall wing-support limb structures. Preserve all character identity: flightless gaunt starving undead bat, exaggerated long arched striking neck, bat head facing LEFT with giant ears, gaping fanged maw and purple saliva, exposed rib impression, charcoal-purple ridged fur, bruised purple torn membranes, long bony claws, thin unhealthy body, eerie posture. Crisp polished anime monster battle illustration and rich smooth cel/painterly shading. Entire creature within canvas with ample 8% empty padding. TRANSPARENT CUTOUT ONLY: remove ALL smoky mauve glow, gradient, halo and floor, zero-alpha background and holes through the wings. No extra limbs, no background, no ground plane, no text, no border, no extra creature."
+  },
+  "sources": {
+    "Thimbril": "568-thimbril-approved.png",
+    "Carrionyx": "569-carrionyx-approved.png"
+  },
+  "runtime": {
+    "Thimbril": "dist/assets/568.webp",
+    "Carrionyx": "dist/assets/569.webp"
+  },
+  "preparation": "Exact approved PNG masters; lossless WebP conversion. No upscaling or redraw after approval."
+}

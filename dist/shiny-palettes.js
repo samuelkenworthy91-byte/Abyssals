@@ -1,3 +1,4 @@
+import {DOSSIER_SPECIES} from './dossier-data.js?v=0.90.53';
 // Explicit family colour directions; outlines, whites, lightness and alpha remain intact.
 const families={
  "FAMILY-001": {
@@ -1738,3 +1739,6 @@ const tideShiny={family:'FAMILY-515',name:'Rillkit',sourceHue:240,targetHue:60,c
 const orchardShiny={family:'FAMILY-518',name:'Mewisp',sourceHue:140,targetHue:320,chroma:.96,neutralTint:0};
 for(const id of ['515','516','517'])SHINY_PALETTES[id]=tideShiny;
 for(const id of ['518','519'])SHINY_PALETTES[id]=orchardShiny;
+
+const dossierShinyFamilies=new Map();
+for(const s of DOSSIER_SPECIES){if(dossierShinyFamilies.has(s.family_id)){SHINY_PALETTES[s.id]=dossierShinyFamilies.get(s.family_id);continue;}const sourceHue=({GRASS:130,FIRE:25,WATER:185,BUG:80,ICE:200,GHOST:270,DRAGON:270,ROCK:35,ELECTRIC:55,PSYCHIC:285,GROUND:35,FLYING:270})[s.types[0]]||130;SHINY_PALETTES[s.id]={family:s.family_id,name:s.name,sourceHue,targetHue:(sourceHue+170)%360,chroma:.88,neutralTint:0};dossierShinyFamilies.set(s.family_id,SHINY_PALETTES[s.id]);}

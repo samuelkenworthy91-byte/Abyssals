@@ -1,6 +1,6 @@
-import {BIRD_ART} from './bird-art.js?v=0.90.52';
-import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.52';
-import {clippedAtlasPanel} from './atlas-clip.js?v=0.90.52';
+import {BIRD_ART} from './bird-art.js?v=0.90.53';
+import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.53';
+import {clippedAtlasPanel} from './atlas-clip.js?v=0.90.53';
 // Approved creature panels are drawn from untouched transparent imagegen atlases.
 export const RELIC_ART={
  "376":{"file": "shark.png", "folder": "approved-aquatic", "rect": [0, 0, 960, 724]},
@@ -53,3 +53,8 @@ export function relicArtPath(id){const s=RELIC_ART[id];return s?(s.root?'assets/
 export function drawRelicPanel(ctx,im,id,x,y,size){if(RELIC_ART[id]?.clipRows){const panel=clippedAtlasPanel(im,RELIC_ART[id]);const scale=size/Math.max(panel.width,panel.height),w=panel.width*scale,h=panel.height*scale;ctx.drawImage(panel,x+(size-w)/2,y+(size-h)/2,w,h);return;}const r=RELIC_ART[id]?.rect||[0,0,im.naturalWidth,im.naturalHeight],scale=size/Math.max(r[2],r[3]),w=r[2]*scale,h=r[3]*scale;ctx.drawImage(im,...r,x+(size-w)/2,y+(size-h)/2,w,h);}
 
 for(const id of ['515','516','517','518','519'])RELIC_ART[id]={file:id+'.webp',root:true,facesLeft:true,rect:null};
+
+for(const id of ["520", "521", "522", "523", "524", "525", "526", "527", "528", "529", "530", "531", "532", "533", "534", "535", "536", "537", "538", "539", "540", "541", "542", "543", "544", "545", "546", "547", "548", "549", "550", "551", "552", "553", "554", "555", "556", "557", "558", "559", "560", "561", "562", "563", "564", "565", "566", "567", "568", "569", "570", "571", "572", "573"])RELIC_ART[id]={file:id+'.webp',root:true,facesLeft:true,rect:null};
+
+// Approved standalone bat portraits: Thimbril's three-quarter view faces right.
+RELIC_ART['568'].facesLeft=false;

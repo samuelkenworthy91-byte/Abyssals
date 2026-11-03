@@ -1,5 +1,5 @@
-import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.52';
-import {TYPE_COLORS,TYPES} from './type-rules.js?v=0.90.52';
+import {fieldJournalAllSpecies,fieldJournalCounts,fieldJournalStatus,fieldJournalLiving,fieldJournalLosses,fieldJournalGrowth,fieldJournalEvolutions,fieldJournalMoves,fieldJournalHabitats,fieldJournalRumours,fieldJournalAvailability,ensureFieldJournal,STAT_KEYS,STAT_LABELS} from './field-journal.js?v=0.90.53';
+import {TYPE_COLORS,TYPES} from './type-rules.js?v=0.90.53';
 const LIMIT=30;
 const statuses={all:'Every entry',unknown:'Undiscovered',seen:'Seen · never caught',owned:'Caught · no living specimen',living:'Caught · alive'};
 const fallback='No verified wild habitat in the current encounter records. This form may require an evolution, trade, reward or special event.';
@@ -86,6 +86,7 @@ export function createFieldJournalUI({state,openModal,menuBack,gameMenu,escapeHT
    '<p>'+(seen?species.types.map(t=>'<span class="field-journal-type" style="--journal-type:'+esc(TYPE_COLORS[t]||'#728598')+'">'+esc(t)+'</span>').join(' '):'Typing revealed on sight')+'</p></div></div>'+
    '<section class="field-journal-section"><h3>Where to encounter</h3>'+placeText+(caught&&noted?'<p><b>First sighting:</b> '+esc(roomName(noted))+'</p>':'')+'</section>'+
    (caught?'<section class="field-journal-section"><h3>Ownership record</h3><p>'+living.length+' living in party or reserves · '+losses+' recorded at the memorial.</p>'+(abilities?'<p><b>Possible abilities:</b> '+abilities+'</p>':'')+'</section>':'')+
+   (caught&&species.dossierSpecies?'<section class="field-journal-section"><h3>Ecology</h3><p>'+esc(species.journal_entry)+'</p></section>':'')+
    growthHtml+evolutionHtml+movesHtml+
    '<div class="field-journal-footer"><button id="field-journal-back" class="primary">Back to entries</button></div></div>';
   openModal(journalTitle(),html);

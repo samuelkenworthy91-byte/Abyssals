@@ -1,6 +1,6 @@
 // First-form habitats are finalized by collection-access; three families retain NPC trades.
 export const BREEDING_ONLY_FIRST_FORMS=[];
-export const TRADE_ONLY_FAMILIES=["307","313","343"];
+export const TRADE_ONLY_FAMILIES=["307","554","545"];
 export const RESERVED_STARTERS=['001','004','007'];
 export const ACCESS_CHANGES={
  "orchardBend": {

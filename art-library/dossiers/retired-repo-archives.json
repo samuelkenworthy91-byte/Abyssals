@@ -1,0 +1,100 @@
+[
+  {
+    "path": "Cinderoot_Blazebramble_Abyssals_Dossier_2026-11-01.zip",
+    "sha256": "ade8333fe4734260ce7d2ecdaf6d50ec66320c78d6a451cb34c35619abb57bed",
+    "preservedText": "art-library/dossiers/references/Cinderoot_Blazebramble_Abyssals_Dossier_2026-11-01_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "Rillisk_Torravyr_Abyssals_Complete_Dossier.zip",
+    "sha256": "0b6adecc461a0a49f9ed2fd06783e50283d6bc73b825dc633650e5188a4c9ae6",
+    "preservedText": "art-library/dossiers/references/Rillisk_Torravyr_Abyssals_Complete_Dossier_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02.zip",
+    "sha256": "b716b09ffe505b71ff46a2ac7dbc0fcd3785996366391ac5da93e0caf3e4e1a6",
+    "preservedText": "art-library/dossiers/references/Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01.zip",
+    "sha256": "c765b0cd23af7ac40bf8c0ce793ce2a6ca1662f4da5b945c5bbdac9daa453ff0",
+    "preservedText": "art-library/dossiers/references/Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "Mindlarv_Oraculuna_Abyssals_Dossier_2026-11-02.zip",
+    "sha256": "8bb121e4b2c14c90923d4f239e2fbd254cfe39efcb7de2f28359041f1b7afb35",
+    "preservedText": "art-library/dossiers/references/Mindlarv_Oraculuna_Abyssals_Dossier_2026-11-02_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sha256": "8dd41502a89f3e614a8c418ff328231399d5f1ed7f0d1fe54608c1ca96a87fb3",
+    "preservedText": "art-library/dossiers/references/Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Voltoceros_Abyssals_Dossier_2026-11-02.zip",
+    "sha256": "0fbce9237df44b20331620bb339d7f916832930ad7d125a3c1f53d10dfdf79df",
+    "preservedText": "art-library/dossiers/references/Voltoceros_Abyssals_Dossier_2026-11-02_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Cinderoot_Blazebramble_Abyssals_Dossier_2026-11-01.zip",
+    "sha256": "ade8333fe4734260ce7d2ecdaf6d50ec66320c78d6a451cb34c35619abb57bed",
+    "preservedText": "art-library/dossiers/references/Cinderoot_Blazebramble_Abyssals_Dossier_2026-11-01_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Rillisk_Torravyr_Abyssals_Complete_Dossier.zip",
+    "sha256": "0b6adecc461a0a49f9ed2fd06783e50283d6bc73b825dc633650e5188a4c9ae6",
+    "preservedText": "art-library/dossiers/references/Rillisk_Torravyr_Abyssals_Complete_Dossier_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02.zip",
+    "sha256": "b716b09ffe505b71ff46a2ac7dbc0fcd3785996366391ac5da93e0caf3e4e1a6",
+    "preservedText": "art-library/dossiers/references/Rimecub_Frostfang_Borewraith_Abyssals_Dossier_2026-11-02_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Voltinix_Approval_Dossier_WEBP_lossless.zip",
+    "sha256": "ceab21c428a9a8d938b62d51d9e5d21081c244206affa113058dcaf81fcb6280",
+    "preservedText": "art-library/dossiers/references/Voltinix_Approval_Dossier_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Gratzel_Ice_Dragon_Work_Dossier_2026-11-01_WEBP_lossless.zip",
+    "sha256": "08ca25d1a893591f36cd072ae8abcd365d989af4b91a00db842a0c415470e81d",
+    "preservedText": "art-library/dossiers/references/Gratzel_Ice_Dragon_Work_Dossier_2026-11-01_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01.zip",
+    "sha256": "c765b0cd23af7ac40bf8c0ce793ce2a6ca1662f4da5b945c5bbdac9daa453ff0",
+    "preservedText": "art-library/dossiers/references/Voltisl_Thunderaze_Abyssals_Dossier_2026-11-01_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  },
+  {
+    "path": "dossier-zips/Mindlarv_Oraculuna_Abyssals_Dossier_2026-11-02.zip",
+    "sha256": "8bb121e4b2c14c90923d4f239e2fbd254cfe39efcb7de2f28359041f1b7afb35",
+    "preservedText": "art-library/dossiers/references/Mindlarv_Oraculuna_Abyssals_Dossier_2026-11-02_WEBP_lossless.md",
+    "art": "art-library/dossiers/art-provenance.json",
+    "archiveRetainedOnDrive": true
+  }
+]
