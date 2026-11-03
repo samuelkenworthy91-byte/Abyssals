@@ -37,3 +37,5 @@ Read docs/releases/v0.90.52-artwork-checkpoint.md and release-config.json. This 
 ## 3 November 2026 — source-only dossier integration
 
 54 dossier species (520–573) are implemented on feature/dossier-roster-integration. See docs/dossier-integration.md and art-library/dossiers for final stats, source provenance, renamed families, trade receipts and tests. Version 0.90.53/code148 is reserved; no APK build or publication was requested. Keep the incomplete move-art overhaul paused. New Nectarbane art is installed and technically verified but not falsely marked freshly approved.
+
+Source-only CI follow-up: pin the audit job to Python 3.12 (Pillow 11.1.0 has no Python 3.14 wheel), and keep Nectarbane inside the declarative ACTION_ART registry so existing artwork tools can parse all entries. Refresh the machine-readable move-coverage report for the new roster and Nectarbane entry. No gameplay or artwork content changed.
