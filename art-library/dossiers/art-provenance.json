@@ -387,29 +387,55 @@
     "id": "568",
     "name": "Thimbril",
     "sourceArchive": "Thimbril_Carrionyx_Test_Dossier_WEBP_lossless.zip",
-    "sourceEntry": "thimbril_carrionyx_concept_sheet.webp",
-    "sha256": "54c4461c35edd8db2f881d3cd727d7961e10771490bd3a8d8e19b592707ff123",
-    "source_rect": [
-      18,
-      412,
-      119,
-      499
+    "sourceEntry": "art-library/dossiers/bat-portraits/568-thimbril-approved.png",
+    "sha256": "4998d93a71d5d1b9ea2f08ec2074792f5ad879f43c1e196f2036bc50489b56c1",
+    "method": "User-approved generated standalone portrait; lossless WebP conversion; two hind legs and integrated wing-arms",
+    "sourceSha256": "f36b6761c708341a2c4c5909f30f003aa9fa1915616f3556980f91aed3bd0b62",
+    "dimensions": [
+      1254,
+      1254
     ],
-    "method": "Connected sheet-matte extraction; source sprite rows; no redesign"
+    "superseded": {
+      "id": "568",
+      "name": "Thimbril",
+      "sourceArchive": "Thimbril_Carrionyx_Test_Dossier_WEBP_lossless.zip",
+      "sourceEntry": "thimbril_carrionyx_concept_sheet.webp",
+      "sha256": "54c4461c35edd8db2f881d3cd727d7961e10771490bd3a8d8e19b592707ff123",
+      "source_rect": [
+        18,
+        412,
+        119,
+        499
+      ],
+      "method": "Connected sheet-matte extraction; source sprite rows; no redesign"
+    }
   },
   {
     "id": "569",
     "name": "Carrionyx",
     "sourceArchive": "Thimbril_Carrionyx_Test_Dossier_WEBP_lossless.zip",
-    "sourceEntry": "thimbril_carrionyx_concept_sheet.webp",
-    "sha256": "b6e89652d67caac37e39c2b0f00db3f04dca51eee40bcc8a31bacfcf4e180b63",
-    "source_rect": [
-      806,
-      402,
-      1067,
-      545
+    "sourceEntry": "art-library/dossiers/bat-portraits/569-carrionyx-approved.png",
+    "sha256": "bbc028ff4585b07003eb33771817e5a3cf57d820b26cc495454befdc81e412b5",
+    "method": "User-approved generated standalone portrait; lossless WebP conversion; two hind legs and integrated wing-arms",
+    "sourceSha256": "49ee036c593c99dda02146d6a2d4ae1b26b4e2f9f9bfaec49e41c05cb3c196c5",
+    "dimensions": [
+      1536,
+      1024
     ],
-    "method": "Connected sheet-matte extraction; source sprite rows; no redesign"
+    "superseded": {
+      "id": "569",
+      "name": "Carrionyx",
+      "sourceArchive": "Thimbril_Carrionyx_Test_Dossier_WEBP_lossless.zip",
+      "sourceEntry": "thimbril_carrionyx_concept_sheet.webp",
+      "sha256": "b6e89652d67caac37e39c2b0f00db3f04dca51eee40bcc8a31bacfcf4e180b63",
+      "source_rect": [
+        806,
+        402,
+        1067,
+        545
+      ],
+      "method": "Connected sheet-matte extraction; source sprite rows; no redesign"
+    }
   },
   {
     "id": "570",

@@ -91,7 +91,7 @@ All proposed encounter locations use existing mortal-world rooms. The final enco
 
 Oraculuna → Omenluna, Voltfrill → Frillvolt, Rillisk → Brookisk. Existing species names and saves are untouched.
 
-Approved source art is byte-preserved for the 52 standalone portraits, including Roguorchid restored from Drive. Thimbril/Carrionyx are extracted from their existing concept-sheet sprite rows; these two remain lower-resolution source derivatives. All 54 portraits decode and frame in the actual browser. Followers use the existing animated-portrait companion path; this update does not claim new four-direction follower atlases.
+Approved source art is byte-preserved for the 52 standalone portraits, including Roguorchid restored from Drive. Thimbril/Carrionyx now use the user-approved native-resolution standalone portraits, with two hind legs and integrated wing-arms, replacing the lower-resolution concept-sheet extracts. Exact PNG masters and lossless runtime WebPs are preserved. All 54 portraits decode and frame in the actual browser. Followers use the existing animated-portrait companion path; this update does not claim new four-direction follower atlases.
 
 All 26 original dossier texts, archive hashes, final configuration, art provenance and exact Drive source references are retained under art-library/dossiers. Fourteen redundant repo ZIP copies were removed only after text equality verification; originals remain in Drive. Staged source artwork remains intact.
 

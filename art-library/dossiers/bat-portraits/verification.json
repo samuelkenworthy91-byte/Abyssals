@@ -1,0 +1,41 @@
+{
+  "userApproved": true,
+  "apkBuilt": false,
+  "checks": [
+    "Native-resolution transparent portraits decode in actual battle UI",
+    "MP3s match main exactly and decode in Chromium",
+    "Overworld looping and position resume",
+    "Wild, practice and trainer battle routing",
+    "No overlapping music",
+    "Existing Sound on/off setting",
+    "Hidden-page pause and resume",
+    "Silent title screen",
+    "Autoplay denial and late-play isolation unit tests",
+    "Dossier integration and release-cache identity regressions",
+    "2199 offline assets and all module imports"
+  ],
+  "portraits": {
+    "568": {
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "4998d93a71d5d1b9ea2f08ec2074792f5ad879f43c1e196f2036bc50489b56c1"
+    },
+    "569": {
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "bbc028ff4585b07003eb33771817e5a3cf57d820b26cc495454befdc81e412b5"
+    }
+  }
+}

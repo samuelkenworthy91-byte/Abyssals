@@ -71,6 +71,7 @@ jobs:
           node tests/finale-art-browser.cjs
           node tests/tide-orchard-browser.cjs
           node tests/dossier-browser.cjs
+          node tests/music-portraits-browser.cjs
           node tests/elite-leaders-browser.cjs
           node tests/finale-browser.cjs
       - name: Check every bag pocket and all six lift journeys

@@ -1,0 +1,17 @@
+{
+  "sourceBranch": "main",
+  "tracks": {
+    "adventure1.mp3": {
+      "source": "music-mp3s/adventure1.mp3",
+      "runtime": "dist/assets/music/adventure1.mp3",
+      "sha256": "a0902eb4c9730a0ff26d12f34a1da217920b15fb0ea300fbf463e2ff4982b347",
+      "bytes": 5813037
+    },
+    "BattleTheme1.mp3": {
+      "source": "music-mp3s/BattleTheme1.mp3",
+      "runtime": "dist/assets/music/BattleTheme1.mp3",
+      "sha256": "7851ebe85a558c1056ac77b737031b6e0bc6afa6b67f355e5034e9d4dfda07a7",
+      "bytes": 2742381
+    }
+  }
+}
