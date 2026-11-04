@@ -1,0 +1,130 @@
+{
+  "purpose": "Approved Next100 batch-one recovery; source artwork uploaded for deliberate runtime installation",
+  "assets": [
+    {
+      "id": 398,
+      "filename": "398-Thermal-Crossing.png",
+      "sha256": "3147a7d5e59af3b93440d560c5d394a8745414abd523dcec9e5cc1504c6e65e9"
+    },
+    {
+      "id": 400,
+      "filename": "400-Censer-Coil.png",
+      "sha256": "b9a0ad44fca931aa7c46d643b21ccd963d83dc4b328793080e1e5d785d7f187e"
+    },
+    {
+      "id": 407,
+      "filename": "407-Reef-Ribbon.png",
+      "sha256": "1546a75b29c589bcef2c95cfb06f729047c8430aef99fb24e2b887d87281d63c"
+    },
+    {
+      "id": 415,
+      "filename": "415-Lattice-Thought.png",
+      "sha256": "36f1f88a7e3fd43c68048faad38fae5325c21424e469acf16bb2b37c8e570b93"
+    },
+    {
+      "id": 417,
+      "filename": "417-Clover-Vision.png",
+      "sha256": "03cb21b0200f1c9a99452d1f0d79c381137e3c2221ea1899ef2d222c3793d838"
+    },
+    {
+      "id": 420,
+      "filename": "420-Arbor-Coil.png",
+      "sha256": "73c5e40ac56715bd85621de885588544033af426945fdd9be90d3680920e172e"
+    },
+    {
+      "id": 427,
+      "filename": "427-Palm-Resolve.png",
+      "sha256": "cca24f78b2ede1f0c6d29732562b485aa6a8e3c510b53080b9dab6d58907a07d"
+    },
+    {
+      "id": 429,
+      "filename": "429-Granite-Hook.png",
+      "sha256": "e427745e97c1f4db87e755b8ba9db414ca032b88b4066389e5c584879c1bfc6a"
+    },
+    {
+      "id": 435,
+      "filename": "435-Bitter-Ambush.png",
+      "sha256": "4b7bac4f780190c040da5fe4ed2657d01eaa811758a5393d8ad313f050975bd3"
+    },
+    {
+      "id": 439,
+      "filename": "439-Buried-Seed.png",
+      "sha256": "b098bd0d020e3010be50cd35eafd450a791dce500c7d50dc3fd43ee4dcca6743"
+    },
+    {
+      "id": 444,
+      "filename": "444-Folded-Gale.png",
+      "sha256": "ac5cd3265d27facccd7a628972ba9027342617a875fc6a495eed2ef54058dc35"
+    },
+    {
+      "id": 452,
+      "filename": "452-Keepsake-Circle.png",
+      "sha256": "ec6abc4d3882b2e30c2699403661355a389874385de32718138c4e5fe3225292"
+    },
+    {
+      "id": 456,
+      "filename": "456-Vigil-Sever.png",
+      "sha256": "06e34b38fbd11078d36d810104a8bd7680652b84806ca172a4d386efae57bba0"
+    },
+    {
+      "id": 459,
+      "filename": "459-Glacier-Impale.png",
+      "sha256": "96bcc9b1122cc9e9e9b7bd77b4fc00233120d06e692d628c7ad8d8e7f909cc70"
+    },
+    {
+      "id": 475,
+      "filename": "475-Gorgon-s-Breath.png",
+      "sha256": "19e83c3c795187f1fa1e31ceff401fa193eb3ad22516a9112884bd12e956510d"
+    },
+    {
+      "id": 493,
+      "filename": "493-Reliquary-Flame.png",
+      "sha256": "249680ad0d276c4189d786a249b6e97dcfdeb39a9f604eeb921e89daf4d0932c"
+    },
+    {
+      "id": 503,
+      "filename": "503-Ember-Updraft.png",
+      "sha256": "aeb9422a3e252f0b1a843e2c2e8405e2b27367da77d8001db9d49c4ba842eb02"
+    },
+    {
+      "id": 505,
+      "filename": "505-Pinion-Pierce.png",
+      "sha256": "a3dc80b25dba4d21faa468f7fed9a3720608efc71924755c8115f5ab4927eac8"
+    },
+    {
+      "id": 507,
+      "filename": "507-Lantern-Requiem.png",
+      "sha256": "6d9c6d57749052f727cc0249036264736c265138b569f14d973ae436b408f0c5"
+    },
+    {
+      "id": 525,
+      "filename": "525-Masterwork-Riposte.png",
+      "sha256": "fff8896c8317eab5e5bf01a7876ed4c9f3e7856031083a83863268f8a499364a"
+    },
+    {
+      "id": 533,
+      "filename": "533-Mindsteel-Cleave.png",
+      "sha256": "2e02a613718435332e14890fdc6ce52763a3b92a3ea68a378a2d813d7be8bc59"
+    },
+    {
+      "id": 535,
+      "filename": "535-Astral-Rend.png",
+      "sha256": "1295923fbec04a00ff1b6cfede714f1de4aff15753fdb0024701a2f48da387d3"
+    },
+    {
+      "id": 716,
+      "filename": "716-Briar-Bequest.png",
+      "sha256": "c0e6ba5a83982b1eb6a5e05ea9ffcbb1abeca955ce5ffbdf0976afd5eec9ccc1"
+    },
+    {
+      "id": 731,
+      "filename": "731-Look-Upon-Me.png",
+      "sha256": "e9821c58cf65ff2299c65f6e5df158afeda0f34043c904221a8d94b4c0e51688"
+    },
+    {
+      "id": 739,
+      "filename": "739-Quiet-Arrangement.png",
+      "sha256": "3737fa77c4467b37beec5d72abcaa5aef4861d77f0b2659e14648b610e3d72fe"
+    }
+  ]
+}
