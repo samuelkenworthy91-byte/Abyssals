@@ -22,7 +22,7 @@ for(const m of moves){
  const a=ACTION_ART[m.id];assert(a,m.name);assert.equal(a.id,m.id);assert(sources.has(a.sourceId));
  const expected=sources.has(m.id)?m.id:sources.has(manifest.partialAssignment[m.id])?manifest.partialAssignment[m.id]:manifest.baselineAssignment[m.id];
  assert.equal(a.sourceId,expected,'intended direct assignment '+m.id);assert.equal(a.src,ACTION_ART[a.sourceId].src);
- if(m.salvation&&m.id!==710){assert.equal(effectSpec(m).style,'salvation');continue;}
+ if(m.salvation&&ACTION_ART[m.id]?.sourceId!==m.id){assert.equal(effectSpec(m).style,'salvation');continue;}
  assert(effectHTML(m).includes('data-fx-move="'+m.id+'"'),m.name);
  for(const count of [1,2,3,5]){
   const times=pixelImpactTimes(m,{strikes:Array(count).fill({damage:1})},effectSpec(m));
@@ -30,6 +30,8 @@ for(const m of moves){
   assert.equal(times.length,count);assert(times.every(Number.isFinite));assert(times.every((x,i)=>x>=0&&x<=effectSpec(m).duration&&(!i||x>=times[i-1])));
  }
 }
-assert.equal(manifest.missingUploads.length,0);assert.equal(manifest.recoveredUploads.length,50);assert.equal(manifest.outstandingArtIds.length,58);assert.equal(sources.size,557);assert.equal(manifest.rejectedArenaPilotsInstalled,false);
+assert.equal(effectSpec(DATA.moves.find(m=>m.id===470)).pixel,true,'Mercy Edge actually uses its own sheet');assert(effectHTML(DATA.moves.find(m=>m.id===470),{damage:1,remainingHp:1}).includes('1 HP · MERCY'));
+assert.equal(manifest.completedOutstandingArtIds.length,58);
+assert.equal(manifest.missingUploads.length,0);assert.equal(manifest.recoveredUploads.length,50);assert.equal(manifest.outstandingArtIds.length,0);assert.equal(sources.size,615);assert.equal(manifest.rejectedArenaPilotsInstalled,false);
 assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,checks.dedicated);
 console.log('PASS: stable action inventory, hash-bound direct assignments, unique uploaded sources, offline references, Mercy preservation and finite multi-hit clocks.');

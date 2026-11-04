@@ -1,0 +1,1162 @@
+[
+  {
+    "id": 359,
+    "name": "First Knuckle",
+    "filename": "359-First-Knuckle.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 309,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "a282a06fc61408c4f2e90de1f61578458febf47221fe00acafc9d78bc415051b",
+    "sha256": "bffd243f0a178b3c1be147d5039e879dc3241e29cf90238a33dbd6f5163e9c63"
+  },
+  {
+    "id": 361,
+    "name": "Burrow Blitz",
+    "filename": "361-Burrow-Blitz.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 139,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "bc1f1aebc020425e0e7cf248c5e0a1266334d2cdc5ef8aee1613a5877ffa459d",
+    "sha256": "ba9c57c2138ef0bb564e57da880da20ab33b6a19e93cc4848bf85ad877d537a2"
+  },
+  {
+    "id": 362,
+    "name": "Slipstream Cut",
+    "filename": "362-Slipstream-Cut.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 155,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "f1757804da209ae3bc84d62656a2200793bf2d7e3cd98591c5a6c68e0490fd66",
+    "sha256": "3ba275f3fc01b9f8bc001da8a66449803601671de8f58cf680831c26ff5b0fbe"
+  },
+  {
+    "id": 364,
+    "name": "Skitter Strike",
+    "filename": "364-Skitter-Strike.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 55,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "0b9de263ece7f6f444ec8e154ca449932c53877b6ff748b93de5578bc3a59483",
+    "sha256": "c54b96756328c32bbb1e63fbc2b2f7e0b611ff64d85a58baf3af96372069bd9f"
+  },
+  {
+    "id": 365,
+    "name": "Pebble Skip",
+    "filename": "365-Pebble-Skip.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 161,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "828bf7084c78faeb4734098cf3437b68d206093da6ebc737c4490815f603925d",
+    "sha256": "1035a64bbbcfae16fe4dd3c41753dcee18b8266a694c6a9ffe6608c0e6976081"
+  },
+  {
+    "id": 368,
+    "name": "Shadow Intercept",
+    "filename": "368-Shadow-Intercept.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 135,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "990f4e2a08d3948e61a5600d6c312e79eea89cc0de8cca38970df293412d002e",
+    "sha256": "d9cadefdaa0ec06f10240252ff8f3df05f269a53442aad58c645d62e7e0f0bab"
+  },
+  {
+    "id": 369,
+    "name": "Quicksteel",
+    "filename": "369-Quicksteel.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 59,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "ae6d868fc99d7cfab58aae47d76488bda465c3281ed5521528587e73c4e4decb",
+    "sha256": "8a533b7e0d8f41ea3b15e54d4f46543b6bdcde8e48ff122a459692d44495c737"
+  },
+  {
+    "id": 370,
+    "name": "Wish Flash",
+    "filename": "370-Wish-Flash.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 79,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "ccd17b5cfb39db4e29ce9ad89367d1d318c546601ebf82856b289d29fb3c9a28",
+    "sha256": "1c158c1859dc57c3eb01960ef25a956ebb3efff1df8a21663ea17631ce58c88f"
+  },
+  {
+    "id": 371,
+    "name": "Raincall",
+    "filename": "371-Raincall.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 300,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "2831dcceddec20c2f09ed1a2605251025facb5f38272a92aac9dd8dd50454d75",
+    "sha256": "cd08c5c1deaec6acf02a12514c67f8e2beba2a6fd356f9a096978777f2e188ce"
+  },
+  {
+    "id": 372,
+    "name": "Solar Vigil",
+    "filename": "372-Solar-Vigil.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 302,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "e05a8df2181c2af2378ccb2a32809ece4c4c2a2f68f10b34468f736e016c2787",
+    "sha256": "5d5060032b2012bfd5dd087a8e4d32a337749fa3128e29e091f127b7d942c8c7"
+  },
+  {
+    "id": 373,
+    "name": "Sandwake",
+    "filename": "373-Sandwake.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 592,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "d055a48343a07286802081d22890f90eede973b058fb82b3155434b41d513724",
+    "sha256": "3b3922b4480b1c63794e06a1f477470a3800bca415d15786bb33286d6e4f0e9e"
+  },
+  {
+    "id": 375,
+    "name": "Meadow Weave",
+    "filename": "375-Meadow-Weave.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 453,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "fefca265e092b6dd7a92f3631e2ac81c3707c0ca0f180afd30ca6775dfaf29ac",
+    "sha256": "58a988c09f7bb518dc195c6bc6c99102fd012b7334a4fa44553a6470597db029"
+  },
+  {
+    "id": 376,
+    "name": "Mirror Rampart",
+    "filename": "376-Mirror-Rampart.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 399,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "4992980b53a579c79526ec37f0541846db3d237e7dca0aa633dcf44849f4a926",
+    "sha256": "dcccd2a55230dce8fbd40cb8ce2b2f2233b0a1468449901e536f610fa0fe8a20"
+  },
+  {
+    "id": 377,
+    "name": "Iron Curtain",
+    "filename": "377-Iron-Curtain.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 1079,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "4f5ba86ae5d2c9bd80aa05dc5feff3e08f80b65363b834a67fa162278dd09771",
+    "sha256": "b42bd362732298e2afd99512e9f4f57fb0a0f022e699255502a6934f25196f60"
+  },
+  {
+    "id": 461,
+    "name": "Wake Palm",
+    "filename": "461-Wake-Palm.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 130,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "52ff14620174c5339384fae3d03fc0444198854b23d84ee51d29f0ae1c2ea018",
+    "sha256": "f727495528f58bac87d7659dd66d6b08e60fa4b374efc1903432476c0bf4d148"
+  },
+  {
+    "id": 462,
+    "name": "Undertow Pulse",
+    "filename": "462-Undertow-Pulse.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 211,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "2bc50a252fd4aa82ef0649be478786a21b1d53ce09049ddf0897b85a5cda678e",
+    "sha256": "4673d2911d5aaa9f54795daceb54d602edd2c58378e97ea6406df0f05e073854"
+  },
+  {
+    "id": 464,
+    "name": "Sapping Spiral",
+    "filename": "464-Sapping-Spiral.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 316,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "af2ecf80ea9dacda201c7e1ab399282110f69b918b15f708175e98e9656357a6",
+    "sha256": "4cccd9ee16b47432b78c05f8f531fe7263e5213d3a1895de2023e2042dd1e287"
+  },
+  {
+    "id": 465,
+    "name": "Focus Lance",
+    "filename": "465-Focus-Lance.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 121,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "ceaf1f245557d2dcf15a3a4b9d00efbb28f19cdb7a0b9a6a7a4606593f12b893",
+    "sha256": "7a8ba0eb822aef458152d113428c5bcde2ed0842134be6235e679ed52c8df74e"
+  },
+  {
+    "id": 470,
+    "name": "Mercy Edge",
+    "filename": "470-Mercy-Edge.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 180,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "cc0ec91cf3b7660021315e135e6b72ccd8a146b57f731f69381c3e02aef98e2c",
+    "sha256": "0079610a9af74c3bf47ca8dbe0e3f1704d68c0a7e258efdc272bba18dd0aab43"
+  },
+  {
+    "id": 527,
+    "name": "Riptide Haymaker",
+    "filename": "527-Riptide-Haymaker.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 252,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "f86531c548295b164608efce7887f3684c7693abddc0b188e9e5298b7948a7c3",
+    "sha256": "8afd7e5d36695d378582e6b18add167300d51650957f854460bdc8b3f7e10531"
+  },
+  {
+    "id": 528,
+    "name": "Canopy Joust",
+    "filename": "528-Canopy-Joust.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 217,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "83945ee0825fbb77d87f6c6793897f06d7996a7529ee0b253aa06e5eb3c7005a",
+    "sha256": "64ef3fc874e060f143734d6dec29a0491fbf270f43aaa86231193b57e029894a"
+  },
+  {
+    "id": 529,
+    "name": "Bossbreaker Chop",
+    "filename": "529-Bossbreaker-Chop.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 169,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "79acbdb2cde67e99bbc23d91644be8560aac276df3562a1b72aa40fb396226dd",
+    "sha256": "09cec23cc5ee9b7251bdebe814d3c4d58ddbdddce4c835588fa68dfa24faeb4b"
+  },
+  {
+    "id": 530,
+    "name": "Entropic Reap",
+    "filename": "530-Entropic-Reap.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 233,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "1382095d1204d4a3cb0df6d75ac1bd50cbd969e68b04d0c840f3fa46177edac0",
+    "sha256": "6300a7024b79888705e193f9f2db6e537523021262d1eb80e71ff85e656e4efb"
+  },
+  {
+    "id": 531,
+    "name": "Faultline Crusher",
+    "filename": "531-Faultline-Crusher.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 1256,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "a800dc058271db024e822754aca839a0dfcf9c1f8be63bfc6d27ac52b55d421b",
+    "sha256": "e690ec2ebbdc5b770efef5b5006abfa2e8ebc326990fc98bb734f97a87805c8f"
+  },
+  {
+    "id": 532,
+    "name": "Silent Vector",
+    "filename": "532-Silent-Vector.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 173,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "adca9c2ea42036c19b635c49d4c16979c37e77fb93453d1375df7c262f2ae2ad",
+    "sha256": "b276a212a9a9374a4653560c0855a52b698bca3e4bb2893cd325eebc9089467b"
+  },
+  {
+    "id": 534,
+    "name": "Mica Skewer",
+    "filename": "534-Mica-Skewer.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 145,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "56f9733bf4c3900cb11f6ee121858752c9b99b4fccabf2d29f83566ed416d191",
+    "sha256": "e1c70003228181f8d7973a1a8c0abfd8f3b7b5ebdd77131a928d819900604705"
+  },
+  {
+    "id": 536,
+    "name": "Encore Bonk",
+    "filename": "536-Encore-Bonk.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 129,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "e4ea315d837c9d4a724d388258d23eb92c9bfac75d7e4f26fe66513cc932388e",
+    "sha256": "e4ce4d5ef5b107cfd218794ffaea844c6da56501d0457f0a1b4b0f6f79361519"
+  },
+  {
+    "id": 537,
+    "name": "Resonant Chime",
+    "filename": "537-Resonant-Chime.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 2644,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "a9c1cd4f158c95aaf2a5bc8eb3b399abd0fbf9aac0826a33341d6d1243c6d746",
+    "sha256": "7bc2df1097fc8db227d8d858708a72e5c9ca6edd8e8321438d8d9275b6579795"
+  },
+  {
+    "id": 538,
+    "name": "Shrapnel Barrage",
+    "filename": "538-Shrapnel-Barrage.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 150,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "274fc22ecd8176328f9a507fd0bf34ebd362eca2362a3f58a59db447575154e9",
+    "sha256": "a519424dc8b4eea4e97b9e95547512f9f12fa5357a114d1eba70696b727b1837"
+  },
+  {
+    "id": 540,
+    "name": "Phantom Knives",
+    "filename": "540-Phantom-Knives.png",
+    "folder": "Batch_1",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 198,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "a5fb95c392027a66dc948a5bde8c5133251558b1a502d9f6489afd7044cf466f",
+    "sha256": "7aa5600f3fc6263800368d76ed5c0f4df12bc1f964d37459e2d096bb093a2e0e"
+  },
+  {
+    "id": 541,
+    "name": "Claw Rattle",
+    "filename": "541-Claw-Rattle.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 278,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "74fd89b02dc0cb4ed46258e2b5096db61eff5d795f8d6544c957fc0bfff5a60e",
+    "sha256": "d2d6eea62a7eccf533dc8a5ba5fbcdaf7290310e6477fe8e8e63848501c5e41d"
+  },
+  {
+    "id": 542,
+    "name": "Arc Volley",
+    "filename": "542-Arc-Volley.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 927,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "466e64bf4585a23c2de5a33f4633320643d3cddab67d8695448e488e5c906183",
+    "sha256": "89dbfb8e8f777c18927572dba5e2613358b49cab22ebd8295e3cfc22d4906319"
+  },
+  {
+    "id": 543,
+    "name": "Mica Volley",
+    "filename": "543-Mica-Volley.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 139,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "9ba9a690b2475dedbea1e8868965d2f6a834739f7ba047eb44ac5ffc0178fb06",
+    "sha256": "abc02286f05df0a3fddbe553ae6c838c558821c4cf6fe2114c950b6fd4e38e04"
+  },
+  {
+    "id": 544,
+    "name": "Riptide Combo",
+    "filename": "544-Riptide-Combo.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 431,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "fba6f742ade1d28e1db7eca6715afd841c581522a0c300195177cc7e158249b9",
+    "sha256": "89f8164d9006a549dda6b3f8dbfd7a8a49592cb667c46b2f1e58cadb4dc6dfe9"
+  },
+  {
+    "id": 545,
+    "name": "Soundstorm",
+    "filename": "545-Soundstorm.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 332,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "098df92c998af8a1a649685242e0591fa4e074127adcc5459cd38f8340a83ec4",
+    "sha256": "eee96a727cc3232f6a85b44d3fe61c78f582497eb27c2accd3585fe56671ea87"
+  },
+  {
+    "id": 546,
+    "name": "Icebound Shards",
+    "filename": "546-Icebound-Shards.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 283,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "6d0a396be6ab779b41e0e0ee0382572f018b8f750c1798ea06cc656913b03a07",
+    "sha256": "92cbafcdca6aa95ad5827e1a258f8863ac16276fb4d83f736623664d621730bc"
+  },
+  {
+    "id": 547,
+    "name": "Reforged Bulwark",
+    "filename": "547-Reforged-Bulwark.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 559,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "6392bfcc1fba1a4c8e364b70d651f58565f05d7f79f9fc5a47fd0c06c64efcae",
+    "sha256": "ceb4bcb6ed6fa0912f8697412e3aaea9dc2a685102aa1f7fc9d05ff88e43d970"
+  },
+  {
+    "id": 548,
+    "name": "Warforged Tempo",
+    "filename": "548-Warforged-Tempo.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 181,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "13443fbcbff6aa481c0f74be0236bc54cbfc1a4c467336505dea4deb97fba7ab",
+    "sha256": "a22ca7e3fd22d5ececd2ba8a744a7b2f43253b70357b300c0ca7204a66766ce4"
+  },
+  {
+    "id": 549,
+    "name": "Chorus of Renewal",
+    "filename": "549-Chorus-of-Renewal.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 866,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "b306f5778f2de39be1efdfcd93ab41fe7766cf58dd6c9c0b779146cb7ab56cd6",
+    "sha256": "8393a97b5f1fec649440ef2eb717f72d848c5c5f7afcb02214e7dbc2f71a19d9"
+  },
+  {
+    "id": 550,
+    "name": "Warding Chorus",
+    "filename": "550-Warding-Chorus.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 333,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "cb91d26ea964be358119012cab20398c65eba80de22d53211f62db581c54daed",
+    "sha256": "3c1a2c0dffd4e99319abc6fc50bd50881b2872bca12068fd7a272e8f459f6126"
+  },
+  {
+    "id": 553,
+    "name": "Executioner's Bargain",
+    "filename": "553-Executioner-s-Bargain.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 449,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "04c9b8d797e8bdd34fdf59c2eeab86de4114fd97996d13e25c99b2325240f9d5",
+    "sha256": "6e4002b1665c6b4670699cd377710f014761289b86f70bc9c31117ce94b5c813"
+  },
+  {
+    "id": 559,
+    "name": "Astral Sacrifice",
+    "filename": "559-Astral-Sacrifice.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 1193,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "11b515f33bf24643fbaba9acb6c4951044ddd8fa4235d0900b9f88daa142a773",
+    "sha256": "08b1ccb741388c6e5e220e96d7deccfa08e97bd928f513fd699c34b8caa96cec"
+  },
+  {
+    "id": 566,
+    "name": "Mind Toll",
+    "filename": "566-Mind-Toll.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 792,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "e1d5a1389cc466b331eba73dac37ede917220e5f15f8ec1d4568937d67dda113",
+    "sha256": "ca637072c2cd3ceeded6a63d0d2318c1e49439f8a56f8e16f2ae36863ae31cf6"
+  },
+  {
+    "id": 568,
+    "name": "Shield Relay",
+    "filename": "568-Shield-Relay.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 2407,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "a9d8a3adfe1b15ef0f10004750d215b7e5438870c9da7d0cf2ab2df1f4c0c1ba",
+    "sha256": "8d3bff2e73080e594f00a60ae06e64c0a3969f20fdca443a5a2642856bbfb45a"
+  },
+  {
+    "id": 569,
+    "name": "Momentum Feast",
+    "filename": "569-Momentum-Feast.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 1199,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "8f3af99a64c0d0e1b94b844f30ad97a08a8ae72dcffdf81c7f88652308a82afd",
+    "sha256": "2b411e741de23ca934834d317753251db56a583dace1dcbad7e1c1c73ff0903d"
+  },
+  {
+    "id": 704,
+    "name": "Pressure Front",
+    "filename": "704-Pressure-Front.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 480,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "2df488ed85dc2d691c504f48a098c50eef2588eb77b3eedcd4ba17ac3fab47da",
+    "sha256": "51d06ba23a0c6a3c638efecd7e107b4c16fdc52e440bdef2f37ce6e6317175e2"
+  },
+  {
+    "id": 707,
+    "name": "Winter Stillness",
+    "filename": "707-Winter-Stillness.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 95,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "099c8d10d734b702db7106bafea304ce1a4d7e790a4b1d104f580aa9d09c8f4f",
+    "sha256": "e3d4f9a23bc2527499f65348c2af3a691e7f028447823805ab857805aa75b2c2"
+  },
+  {
+    "id": 708,
+    "name": "Curtain Call",
+    "filename": "708-Curtain-Call.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 893,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "0d278efdc49f2a9b4feb0ea5e14397930e4c85f7094b182493b9135d6de855b2",
+    "sha256": "aa3d7a98115632f40d177461380c71ba42c68a6be247c22be5602548fb5da22d"
+  },
+  {
+    "id": 709,
+    "name": "Frayed Nerve",
+    "filename": "709-Frayed-Nerve.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 600,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "a057c129f4c1ae5e0164f57f79ec52ea1136aea81329dd0151f547692c360773",
+    "sha256": "ac3223a53a173a24cb63b04976ffc2ed44bb290c5b6e9060619af2305441e616"
+  },
+  {
+    "id": 713,
+    "name": "Mind Unbound",
+    "filename": "713-Mind-Unbound.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 375,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "0fc10b675a8cde5a6614e45042093cc897ceaa87941d6f84d0faa8de5bc9368d",
+    "sha256": "ef28feddbe2de4ce6cbe44621ccc435e904a3c0bcccf17bae5ea9262f6e762b0"
+  },
+  {
+    "id": 715,
+    "name": "Caldera Edict",
+    "filename": "715-Caldera-Edict.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 1537,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "1942a2c4a97480b23fda9e0ef99ec13b3b35f3f9f083e0b0dca877d2722f7106",
+    "sha256": "1c0f3fd3a7f71d158bc1f4c86a6317d8b7f241c6ee1c24abcc3ed9c233762c06"
+  },
+  {
+    "id": 717,
+    "name": "Mourning Dew",
+    "filename": "717-Mourning-Dew.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 160,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "5dc3f4d46bc9853cc617a24d0ff4d3bf1bc2cba0a9d61a8d8d8e3be2bc83f922",
+    "sha256": "768bd5561f97ec5c872e3172f41f570a53dfbe28b69205d4356857d6a3f108fa"
+  },
+  {
+    "id": 730,
+    "name": "Feeble Pulse",
+    "filename": "730-Feeble-Pulse.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 85,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "41510fa4eebedf42088dcf7a03e2a38680fe663f4d5149cc9dff3c1090ece3ed",
+    "sha256": "4eb7469859ff6e2950fd1e747b2191215b28884dd153f9846ee5f46b947dfb6a"
+  },
+  {
+    "id": 732,
+    "name": "Fury Unsealed",
+    "filename": "732-Fury-Unsealed.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 628,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "4d9b1c7c2fe92d4259c473882df62edc18a12a614e2da1dd7716a2791cf8f668",
+    "sha256": "a552931213f5878fe96d79cf9acf59f7bf1cfa3726d95c18698bb48b6d468c1b"
+  },
+  {
+    "id": 734,
+    "name": "Empty the Table",
+    "filename": "734-Empty-the-Table.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 175,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "7de929769205daad98bd62f8e3d4aacb365d87a42c92460a950bc98d82916e5c",
+    "sha256": "6098fa02391c47c74d5e1231e02f42786111800804be97b69bc3dbf7075e8aba"
+  },
+  {
+    "id": 735,
+    "name": "Practice Bout",
+    "filename": "735-Practice-Bout.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 2762,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "8132af233fcba0dd065295fde1ef8053f0d238a84c7b3fc788befd14a4f83dc1",
+    "sha256": "abfcc2129487d9e0c9874bd93276703aa35c83ae07ea51a5f97c282e10605de5"
+  },
+  {
+    "id": 736,
+    "name": "Avalon Cleave",
+    "filename": "736-Avalon-Cleave.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 295,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "dba4eab50e8a6f6b20a9b64ec6ae95abd54ed930725c0977c058f20d60811f19",
+    "sha256": "6c2904454eaf72cf04e9ec3902558ae578c3e9462b1c42bcf645ed76b058b350"
+  },
+  {
+    "id": 738,
+    "name": "Back-Alley Barrage",
+    "filename": "738-Back-Alley-Barrage.png",
+    "folder": "Batch_2",
+    "status": "ready",
+    "size": [
+      768,
+      768
+    ],
+    "frames": 16,
+    "unique_frames": 16,
+    "min_visible_pixels": 2777,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_sha256": "96628f6ea8c0e80b6e8868cee6b46b8a5dbfc8cea90156afb87d7374f3c625ba",
+    "sha256": "39d865a0bd7780bb40466275b3c7cd5141ef734a9eaced1e1064e712658a7794"
+  }
+]

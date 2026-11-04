@@ -61,10 +61,10 @@
     "battleReactions": 4,
     "total": 615,
     "wired": 615,
-    "sources": 557,
-    "shared": 58,
-    "dedicated": 557,
-    "missing": 58,
+    "sources": 615,
+    "shared": 0,
+    "dedicated": 615,
+    "missing": 0,
     "approved": 39,
     "originalCatalogueStillRegistered": 325,
     "originalCatalogueDedicated": 325
@@ -28591,10 +28591,8 @@
       "name": "First Knuckle",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/full-expansion.js",
         "dist/move-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -28626,11 +28624,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/121-brave-palm.png",
-        "sourceId": 121,
-        "shared": true,
+        "src": "assets/vfx/action/359-First-Knuckle.png",
+        "sourceId": 359,
+        "shared": false,
         "exists": true,
-        "sha256": "67fa3819ab5badc8a46ef18e024a3f90e459233aeec763eeb4d3887aef63fee7",
+        "sha256": "bffd243f0a178b3c1be147d5039e879dc3241e29cf90238a33dbd6f5163e9c63",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28638,8 +28636,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Brave Palm",
-        "registeredName": "Brave Palm"
+        "sequence": "A compact bronze force-knuckle draws back briefly, darts forward with two short staggered afterimages, lands one small hard contact and withdraws. No whole hand or arm.",
+        "registeredName": "First Knuckle"
       },
       "status": "requires-review",
       "review": null
@@ -28736,11 +28734,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/153-dune-break.png",
-        "sourceId": 153,
-        "shared": true,
+        "src": "assets/vfx/action/361-Burrow-Blitz.png",
+        "sourceId": 361,
+        "shared": false,
         "exists": true,
-        "sha256": "01b1541a5b8c0b4fd89dbcbb79690f27b919db38732fcb63a1c1b6292b4f9c38",
+        "sha256": "ba9c57c2138ef0bb564e57da880da20ab33b6a19e93cc4848bf85ad877d537a2",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28748,8 +28746,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A granular sandstone ridge is struck at its base by compressed sand; visible cracks split it at one contact, blocks collapse and grit settles.",
-        "registeredName": "Dune Break"
+        "sequence": "A compressed ochre grit coil disappears into a low mound-like arc of particles, erupts forward once as a narrow earth spike and scatters into soil chips. No landscape.",
+        "registeredName": "Burrow Blitz"
       },
       "status": "requires-review",
       "review": null
@@ -28792,11 +28790,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/181-Gale-Sweep.png",
-        "sourceId": 181,
-        "shared": true,
+        "src": "assets/vfx/action/362-Slipstream-Cut.png",
+        "sourceId": 362,
+        "shared": false,
         "exists": true,
-        "sha256": "9aeadce4f304ba0a597d5ffbc98d5301c3a8ba905c78eb09545b27a1f1ed29ab",
+        "sha256": "3ba275f3fc01b9f8bc001da8a66449803601671de8f58cf680831c26ff5b0fbe",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28804,8 +28802,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three crisp feather-shaped air blades gather into a broad low swept fan, make one clean diagonal wind cut and trail separated narrow feather slivers.",
-        "registeredName": "Gale Sweep"
+        "sequence": "A thin pale-silver air blade follows a hooked slipstream; two wind ribbons converge into one clean cutting pass and unwind.",
+        "registeredName": "Slipstream Cut"
       },
       "status": "requires-review",
       "review": null
@@ -28874,8 +28872,7 @@
       "sourceFiles": [
         "dist/full-expansion.js",
         "dist/move-expansion.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "authoring": "Slice move expansion, 2026-10-07"
@@ -28904,11 +28901,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/783-leafbound-exit.png",
-        "sourceId": 783,
-        "shared": true,
+        "src": "assets/vfx/action/364-Skitter-Strike.png",
+        "sourceId": 364,
+        "shared": false,
         "exists": true,
-        "sha256": "53ac864550ea9bc011d42af21ee2f3dae1124a239dd1947cbcb9af55e98e6cd7",
+        "sha256": "c54b96756328c32bbb1e63fbc2b2f7e0b611ff64d85a58baf3af96372069bd9f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28916,8 +28913,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A contact strike, leaf wake, and directional retreat into the replacement.",
-        "registeredName": "Leafbound Exit"
+        "sequence": "Three tiny chitin-coloured hooked streaks skitter into a zigzag approach and converge into one compact diagonal strike. No insect body.",
+        "registeredName": "Skitter Strike"
       },
       "status": "requires-review",
       "review": null
@@ -28960,11 +28957,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/241-Flint-Skewer.png",
-        "sourceId": 241,
-        "shared": true,
+        "src": "assets/vfx/action/365-Pebble-Skip.png",
+        "sourceId": 365,
+        "shared": false,
         "exists": true,
-        "sha256": "e221712afcfb15c9d3c07df018bb786ff0dffb8d5e432e86b9d169886fb13d9c",
+        "sha256": "1035a64bbbcfae16fe4dd3c41753dcee18b8266a694c6a9ffe6608c0e6976081",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28972,8 +28969,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three uneven flint chips align into one short serrated mineral spear, thrust forward once, snap at the tip on contact and fall as sharp stone fragments.",
-        "registeredName": "Flint Skewer"
+        "sequence": "One small angular pebble travels in a shallow skipping arc, with two brief dust ticks along its approach, makes one clear impact and crumbles. Dust ticks must read as travel rather than extra hits.",
+        "registeredName": "Pebble Skip"
       },
       "status": "requires-review",
       "review": null
@@ -29103,7 +29100,6 @@
       "name": "Shadow Intercept",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/full-expansion.js",
         "dist/move-expansion.js",
         "dist/teamcraft-data.js"
@@ -29137,11 +29133,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/294-night-feint.png",
-        "sourceId": 294,
-        "shared": true,
+        "src": "assets/vfx/action/368-Shadow-Intercept.png",
+        "sourceId": 368,
+        "shared": false,
         "exists": true,
-        "sha256": "6f0e088198622e04ae2714910be465f34b1e11f3a7451543b1d55a9306eb2401",
+        "sha256": "d9cadefdaa0ec06f10240252ff8f3df05f269a53442aad58c645d62e7e0f0bab",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -29149,8 +29145,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "An off-centre dark false strike appears briefly; it vanishes, then the real compact cut contacts from the opposite side. Misdirection before impact.",
-        "registeredName": "Night Feint"
+        "sequence": "A crescent of charcoal shadow overtakes its own two trailing fragments and snaps shut in one intercepting slash; dusk wisps retract.",
+        "registeredName": "Shadow Intercept"
       },
       "status": "requires-review",
       "review": null
@@ -29220,11 +29216,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/397-Rivet-Gnaw.png",
-        "sourceId": 397,
-        "shared": true,
+        "src": "assets/vfx/action/369-Quicksteel.png",
+        "sourceId": 369,
+        "shared": false,
         "exists": true,
-        "sha256": "b8a9fdcfb43f819274701e3d03f9e1455f1049473655c743bc91d46413cdb5a9",
+        "sha256": "8a533b7e0d8f41ea3b15e54d4f46543b6bdcde8e48ff122a459692d44495c737",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -29232,8 +29228,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two riveted cog segments mesh, compress a little spring, rotate apart and settle; mechanical assembly cue without a jaw or bite.",
-        "registeredName": "Rivet Gnaw"
+        "sequence": "One very narrow gunmetal blade streak draws two steel afterimages into a single bright silver contact and leaves sparse metal flakes.",
+        "registeredName": "Quicksteel"
       },
       "status": "requires-review",
       "review": null
@@ -29276,11 +29272,11 @@
       "effects": [],
       "authoredAction": "A charged elemental spark races from caster to target.",
       "art": {
-        "src": "assets/vfx/action/350-Star-Kiss.png",
-        "sourceId": 350,
-        "shared": true,
+        "src": "assets/vfx/action/370-Wish-Flash.png",
+        "sourceId": 370,
+        "shared": false,
         "exists": true,
-        "sha256": "4dc9fd792d40032b993025731962c0f05609d6b69a35dd27a3f3bd4d9789cd7b",
+        "sha256": "1c158c1859dc57c3eb01960ef25a956ebb3efff1df8a21663ea17631ce58c88f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -29288,8 +29284,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "One compact four-point pearl spark travels on two bent ribbon traces, expands into a single diamond-petal flash and fades into three asymmetrical chips.",
-        "registeredName": "Star Kiss"
+        "sequence": "A small pearl-rose wishing star compresses, darts forward with a short ivory trail, flares once and scatters into four dim petal sparks.",
+        "registeredName": "Wish Flash"
       },
       "status": "requires-review",
       "review": null
@@ -29299,7 +29295,6 @@
       "name": "Raincall",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/move-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
@@ -29366,20 +29361,20 @@
       ],
       "authoredAction": "A layered elemental field settles across the battlefield.",
       "art": {
-        "src": "assets/vfx/action/49-mist-screen.png",
-        "sourceId": 49,
-        "shared": true,
+        "src": "assets/vfx/action/371-Raincall.png",
+        "sourceId": 371,
+        "shared": false,
         "exists": true,
-        "sha256": "7c72aca0143362bdb3de2227855e20883e81d0763b8ee7e806168d2c9467ea78",
+        "sha256": "cd08c5c1deaec6acf02a12514c67f8e2beba2a6fd356f9a096978777f2e188ce",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Fine cool droplets rise into a thin vertical plane like a fogged window, a translucent grey-blue curtain slides across empty target space and breaks a small sight glint into blurred displaced copies, then the screen thins and lifts. Foe accuracy reduction, no damage flash or attack collision. A flat fog screen, not Heat Haze's rising warm refraction ribbons.",
-        "registeredName": "Mist Screen"
+        "sequence": "Three short descending rain ribbons thicken into a low hollow rain canopy, hold and thin to droplets. Weather field, no scenery.",
+        "registeredName": "Raincall"
       },
       "status": "requires-review",
       "review": null
@@ -29389,9 +29384,7 @@
       "name": "Solar Vigil",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/move-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -29447,11 +29440,11 @@
       ],
       "authoredAction": "A layered elemental field settles across the battlefield.",
       "art": {
-        "src": "assets/vfx/action/26-stoke-the-heart.png",
-        "sourceId": 26,
-        "shared": true,
+        "src": "assets/vfx/action/372-Solar-Vigil.png",
+        "sourceId": 372,
+        "shared": false,
         "exists": true,
-        "sha256": "7ec844afcc6248819baa4c753c51f7b8a68e49a879cdd1f7483889f0218a95af",
+        "sha256": "5d5060032b2012bfd5dd087a8e4d32a337749fa3128e29e091f127b7d942c8c7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -29459,8 +29452,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A tiny coal heart with anatomical chamber-like faceted volumes gently opens, inward-drawn small ember motes fan into its chambers, it warms from deep garnet to gold in two steady glowing pulses, protective heat lines settle close around heart, the glow rests and contracts to a single steady cinder. SELF special attack buff, no damaging strike or contact explosion.",
-        "registeredName": "Stoke the Heart"
+        "sequence": "A small warm solar disc with cracked ember rays rises above an empty centre, sets a quiet heat canopy and diminishes. Sun weather, no scenery.",
+        "registeredName": "Solar Vigil"
       },
       "status": "requires-review",
       "review": null
@@ -29470,7 +29463,6 @@
       "name": "Sandwake",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/bird-family.js",
         "dist/move-expansion.js",
         "dist/teamcraft-data.js"
       ],
@@ -29518,11 +29510,11 @@
       ],
       "authoredAction": "A layered elemental field settles across the battlefield.",
       "art": {
-        "src": "assets/vfx/action/509-Dune-Vault.png",
-        "sourceId": 509,
-        "shared": true,
+        "src": "assets/vfx/action/373-Sandwake.png",
+        "sourceId": 373,
+        "shared": false,
         "exists": true,
-        "sha256": "3cb010022667751f9a5bffad9011ccd738347921fe8a375224d642a3ed97b5ee",
+        "sha256": "3b3922b4480b1c63794e06a1f477470a3800bca415d15786bb33286d6e4f0e9e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -29530,8 +29522,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A low sand crescent rises into a compact arch, rolls forward and drops into a small grounded dust veil. Several pebbles mark the grounded arc.",
-        "registeredName": "Dune Vault"
+        "sequence": "A low grain spiral raises two rough sand veils around an empty centre, establishes a quiet gritty field and thins out.",
+        "registeredName": "Sandwake"
       },
       "status": "requires-review",
       "review": null
@@ -29626,8 +29618,7 @@
       "sourceFiles": [
         "dist/move-expansion.js",
         "dist/progression-renewal.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "authoring": "Slice move expansion, 2026-10-07"
@@ -29679,20 +29670,20 @@
       ],
       "authoredAction": "A layered elemental field settles across the battlefield.",
       "art": {
-        "src": "assets/vfx/action/762-orchard-carpet.png",
-        "sourceId": 762,
-        "shared": true,
+        "src": "assets/vfx/action/375-Meadow-Weave.png",
+        "sourceId": 375,
+        "shared": false,
         "exists": true,
-        "sha256": "a9b52efba59ebddaa524bed1734614c49123add41539c61822988f5052fe6a60",
+        "sha256": "58a988c09f7bb518dc195c6bc6c99102fd012b7334a4fa44553a6470597db029",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Low foliage spreads across the field with readable terrain boundaries.",
-        "registeredName": "Orchard Carpet"
+        "sequence": "Five braided meadow leaf strips interlace into a low hollow woven field, bud quietly and unravel. Grass terrain, no scenery.",
+        "registeredName": "Meadow Weave"
       },
       "status": "requires-review",
       "review": null
@@ -29702,7 +29693,6 @@
       "name": "Mirror Rampart",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/move-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
@@ -29765,20 +29755,20 @@
       ],
       "authoredAction": "A layered elemental field settles across the battlefield.",
       "art": {
-        "src": "assets/vfx/action/206-mind-screen.png",
-        "sourceId": 206,
-        "shared": true,
+        "src": "assets/vfx/action/376-Mirror-Rampart.png",
+        "sourceId": 376,
+        "shared": false,
         "exists": true,
-        "sha256": "199e42ec05261747e7b6a2bebf32a763dba1a248bbbcb1e59fe4d013a72f5f2d",
+        "sha256": "dcccd2a55230dce8fbd40cb8ce2b2f2233b0a1468449901e536f610fa0fe8a20",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Muted palette, crisp material shading and unclipped distinct silhouette match the established source style. Protective plates visibly lock and unlock; no damaging flash, distinct from Calm Thought orbits.",
-        "registeredName": "Mind Screen"
+        "sequence": "Three thin uneven mirror panes align into a curved hollow rampart, catch a harmless violet gleam and fold shut. Special defence screen.",
+        "registeredName": "Mirror Rampart"
       },
       "status": "requires-review",
       "review": null
@@ -29789,7 +29779,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/move-expansion.js",
-        "dist/paladin-data.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -29857,20 +29846,20 @@
       ],
       "authoredAction": "A layered elemental field settles across the battlefield.",
       "art": {
-        "src": "assets/vfx/action/486-Royal-Mandate.png",
-        "sourceId": 486,
-        "shared": true,
+        "src": "assets/vfx/action/377-Iron-Curtain.png",
+        "sourceId": 377,
+        "shared": false,
         "exists": true,
-        "sha256": "eb3230622cc0ee598bace83b83e5704b21d7dea133c050d9f06a6cdc3fe42ced",
+        "sha256": "b42bd362732298e2afd99512e9f4f57fb0a0f022e699255502a6934f25196f60",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "An angular iron crown and three overlapping bastion plates rise together above an open centre, lock into a disciplined protective crest, then lower and unlock. Quiet self-support, no impact.",
-        "registeredName": "Royal Mandate"
+        "sequence": "Four rough iron curtain plates descend into a hollow defensive enclosure, brace quietly and lift apart. Physical defence screen.",
+        "registeredName": "Iron Curtain"
       },
       "status": "requires-review",
       "review": null
@@ -35195,8 +35184,6 @@
       "name": "Wake Palm",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/special-fighting.js",
         "dist/teamcraft-data.js"
       ],
@@ -35238,11 +35225,11 @@
       "effects": [],
       "authoredAction": "A small palm-shaped pressure wave snaps forward, then splinters into five sparks.",
       "art": {
-        "src": "assets/vfx/action/216-Chitin-Needle.png",
-        "sourceId": 216,
-        "shared": true,
+        "src": "assets/vfx/action/461-Wake-Palm.png",
+        "sourceId": 461,
+        "shared": false,
         "exists": true,
-        "sha256": "ae8c564adac2ab370cde2cfcda7fb6813540d982a3201fad2127b9b2b27ae500",
+        "sha256": "f727495528f58bac87d7659dd66d6b08e60fa4b374efc1903432476c0bf4d148",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -35250,8 +35237,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A narrow ribbed needle of pale chitin-light with three short trailing barbs extends forward in a single precise thrust, contacts once and splinters into tiny angled grains. Neutral material usable for bug/fairy/fighting thrust effects.",
-        "registeredName": "Chitin Needle"
+        "sequence": "Distinct visual motif for Wake Palm: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A small palm-shaped pressure wave snaps forward, then splinters into five sparks.",
+        "registeredName": "Wake Palm"
       },
       "status": "requires-review",
       "review": null
@@ -35261,8 +35248,6 @@
       "name": "Undertow Pulse",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/special-fighting.js",
         "dist/teamcraft-data.js"
       ],
@@ -35305,11 +35290,11 @@
       "effects": [],
       "authoredAction": "Three orange pressure rings draw inward before a concentrated outward pulse.",
       "art": {
-        "src": "assets/vfx/action/216-Chitin-Needle.png",
-        "sourceId": 216,
-        "shared": true,
+        "src": "assets/vfx/action/462-Undertow-Pulse.png",
+        "sourceId": 462,
+        "shared": false,
         "exists": true,
-        "sha256": "ae8c564adac2ab370cde2cfcda7fb6813540d982a3201fad2127b9b2b27ae500",
+        "sha256": "4673d2911d5aaa9f54795daceb54d602edd2c58378e97ea6406df0f05e073854",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -35317,8 +35302,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A narrow ribbed needle of pale chitin-light with three short trailing barbs extends forward in a single precise thrust, contacts once and splinters into tiny angled grains. Neutral material usable for bug/fairy/fighting thrust effects.",
-        "registeredName": "Chitin Needle"
+        "sequence": "Distinct visual motif for Undertow Pulse: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Three orange pressure rings draw inward before a concentrated outward pulse.",
+        "registeredName": "Undertow Pulse"
       },
       "status": "requires-review",
       "review": null
@@ -35437,11 +35422,11 @@
       ],
       "authoredAction": "A spiral of aura strikes, then four restorative wisps curl back to the caster.",
       "art": {
-        "src": "assets/vfx/action/463-Breaker-Aura.png",
-        "sourceId": 463,
-        "shared": true,
+        "src": "assets/vfx/action/464-Sapping-Spiral.png",
+        "sourceId": 464,
+        "shared": false,
         "exists": true,
-        "sha256": "e0f3cc0dae3f9d11dbfceceaba8970241dcdd2c2ccd8314a5f10656ae53647c3",
+        "sha256": "4cccd9ee16b47432b78c05f8f531fe7263e5213d3a1895de2023e2042dd1e287",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -35449,8 +35434,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A compact folded ribbon of force forms a blunt wedge with layered palm-like pressure ridges, drives one piercing surge and uncoils into hard-edged streamers after contact.",
-        "registeredName": "Breaker Aura"
+        "sequence": "Distinct visual motif for Sapping Spiral: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A spiral of aura strikes, then four restorative wisps curl back to the caster.",
+        "registeredName": "Sapping Spiral"
       },
       "status": "requires-review",
       "review": null
@@ -35497,11 +35482,11 @@
       "effects": [],
       "authoredAction": "A narrow focused aura lance aligns, pierces its target and leaves a clean radiant trail.",
       "art": {
-        "src": "assets/vfx/action/463-Breaker-Aura.png",
-        "sourceId": 463,
-        "shared": true,
+        "src": "assets/vfx/action/465-Focus-Lance.png",
+        "sourceId": 465,
+        "shared": false,
         "exists": true,
-        "sha256": "e0f3cc0dae3f9d11dbfceceaba8970241dcdd2c2ccd8314a5f10656ae53647c3",
+        "sha256": "7a8ba0eb822aef458152d113428c5bcde2ed0842134be6235e679ed52c8df74e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -35509,8 +35494,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A compact folded ribbon of force forms a blunt wedge with layered palm-like pressure ridges, drives one piercing surge and uncoils into hard-edged streamers after contact.",
-        "registeredName": "Breaker Aura"
+        "sequence": "Distinct visual motif for Focus Lance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A narrow focused aura lance aligns, pierces its target and leaves a clean radiant trail.",
+        "registeredName": "Focus Lance"
       },
       "status": "requires-review",
       "review": null
@@ -35736,7 +35721,6 @@
       "name": "Mercy Edge",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/paladin-data.js",
         "dist/salvation.js",
         "dist/teamcraft-data.js"
       ],
@@ -35765,20 +35749,20 @@
       "effects": [],
       "authoredAction": "An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains.",
       "art": {
-        "src": "assets/vfx/action/499-Three-Ring-Verdict.png",
-        "sourceId": 499,
-        "shared": true,
+        "src": "assets/vfx/action/470-Mercy-Edge.png",
+        "sourceId": 470,
+        "shared": false,
         "exists": true,
-        "sha256": "89b8f6f5cc1f0a2c9d83570ae58d8c66c0c6eac0485c7459d2233de557af7ec2",
+        "sha256": "0079610a9af74c3bf47ca8dbe0e3f1704d68c0a7e258efdc272bba18dd0aab43",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1600,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Three small broken crescent blades sweep sequentially along one curved path, converge as ONE interlocking three-lobed cut at contact, then break into petal facets. Not three repeated hits.",
-        "registeredName": "Three-Ring Verdict"
+        "sequence": "Distinct visual motif for Mercy Edge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains.",
+        "registeredName": "Mercy Edge"
       },
       "status": "requires-review",
       "review": null
@@ -39048,11 +39032,11 @@
       "effects": [],
       "authoredAction": "A steel-finned hook punch carries a curling wave through the impact.",
       "art": {
-        "src": "assets/vfx/action/53-keel-hammer.png",
-        "sourceId": 53,
-        "shared": true,
+        "src": "assets/vfx/action/527-Riptide-Haymaker.png",
+        "sourceId": 527,
+        "shared": false,
         "exists": true,
-        "sha256": "45bdd5fa1de51dc576fbe009c7827bb7cc8c042e25d7767421c87725fb1e4a34",
+        "sha256": "8afd7e5d36695d378582e6b18add167300d51650957f854460bdc8b3f7e10531",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39060,8 +39044,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A heavy worn keel-timber hammerhead encrusted with tiny barnacles lifts on a short water-formed haft, swings down with visible weight into ONE low smashing contact, wood chips and a broad circular shock ripple spread, hammer bounces once and lowers into the receding foam. Distinct descending weighted keel hammer, not an anchor hook.",
-        "registeredName": "Keel Hammer"
+        "sequence": "Distinct visual motif for Riptide Haymaker: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A steel-finned hook punch carries a curling wave through the impact.",
+        "registeredName": "Riptide Haymaker"
       },
       "status": "requires-review",
       "review": null
@@ -39071,7 +39055,6 @@
       "name": "Canopy Joust",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/relic-armoury.js",
         "dist/teamcraft-data.js"
       ],
@@ -39102,20 +39085,20 @@
       "effects": [],
       "authoredAction": "A graceful bounding lunge brings its reinforced leaf crest and ankle-mounted leaf swords through one sweeping strike.",
       "art": {
-        "src": "assets/vfx/action/79-leaf-cut.png",
-        "sourceId": 79,
-        "shared": true,
+        "src": "assets/vfx/action/528-Canopy-Joust.png",
+        "sourceId": 528,
+        "shared": false,
         "exists": true,
-        "sha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+        "sha256": "64ef3fc874e060f143734d6dec29a0491fbf270f43aaa86231193b57e029894a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit.",
-        "registeredName": "Leaf Cut"
+        "sequence": "Distinct visual motif for Canopy Joust: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A graceful bounding lunge brings its reinforced leaf crest and ankle-mounted leaf swords through one sweeping strike.",
+        "registeredName": "Canopy Joust"
       },
       "status": "requires-review",
       "review": null
@@ -39125,8 +39108,6 @@
       "name": "Bossbreaker Chop",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/relic-armoury.js",
         "dist/teamcraft-data.js"
       ],
@@ -39157,11 +39138,11 @@
       "effects": [],
       "authoredAction": "The power claw braces the foe before one heavy cleaver chop, resolved as a single attack.",
       "art": {
-        "src": "assets/vfx/action/127-iron-break.png",
-        "sourceId": 127,
-        "shared": true,
+        "src": "assets/vfx/action/529-Bossbreaker-Chop.png",
+        "sourceId": 529,
+        "shared": false,
         "exists": true,
-        "sha256": "c6f1028679ac85161231df182b61423db5dddb1a7377ff19e1e8be5a6bc9a6cc",
+        "sha256": "09cec23cc5ee9b7251bdebe814d3c4d58ddbdddce4c835588fa68dfa24faeb4b",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39169,8 +39150,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Iron Break",
-        "registeredName": "Iron Break"
+        "sequence": "Distinct visual motif for Bossbreaker Chop: interpret its named material and action literally as standalone fantasy VFX. Canonical action: The power claw braces the foe before one heavy cleaver chop, resolved as a single attack.",
+        "registeredName": "Bossbreaker Chop"
       },
       "status": "requires-review",
       "review": null
@@ -39180,8 +39161,6 @@
       "name": "Entropic Reap",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/full-expansion.js",
         "dist/relic-armoury.js",
         "dist/teamcraft-data.js"
       ],
@@ -39219,11 +39198,11 @@
       ],
       "authoredAction": "Its curved forearm blades and toxin tail sweep through one coordinated strike; a modest poison chance remains a balance proposal.",
       "art": {
-        "src": "assets/vfx/action/145-venom-lash.png",
-        "sourceId": 145,
-        "shared": true,
+        "src": "assets/vfx/action/530-Entropic-Reap.png",
+        "sourceId": 530,
+        "shared": false,
         "exists": true,
-        "sha256": "94bfbe3f52bc1b8cd9ad410369d612a56b415bbb22bb1be5681c06d7ed0dcddd",
+        "sha256": "6300a7024b79888705e193f9f2db6e537523021262d1eb80e71ff85e656e4efb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39231,8 +39210,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Venom Lash",
-        "registeredName": "Venom Lash"
+        "sequence": "Distinct visual motif for Entropic Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its curved forearm blades and toxin tail sweep through one coordinated strike; a modest poison chance remains a balance proposal.",
+        "registeredName": "Entropic Reap"
       },
       "status": "requires-review",
       "review": null
@@ -39242,7 +39221,6 @@
       "name": "Faultline Crusher",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/relic-armoury.js",
         "dist/teamcraft-data.js"
       ],
@@ -39273,11 +39251,11 @@
       "effects": [],
       "authoredAction": "Its huge mechanical claw drives the target into a short burst of fractured earth.",
       "art": {
-        "src": "assets/vfx/action/733-Burden-of-Ages.png",
-        "sourceId": 733,
-        "shared": true,
+        "src": "assets/vfx/action/531-Faultline-Crusher.png",
+        "sourceId": 531,
+        "shared": false,
         "exists": true,
-        "sha256": "f1a062a76071002e061fbd18a657703afb374c85e1ece276ad922aacfb9939d6",
+        "sha256": "e690ec2ebbdc5b770efef5b5006abfa2e8ebc326990fc98bb734f97a87805c8f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39285,8 +39263,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three heavy angular sediment blocks compress vertically, sink together with a single grounded knuckle-like impact and release a low fan of gravel.",
-        "registeredName": "Burden of Ages"
+        "sequence": "Distinct visual motif for Faultline Crusher: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its huge mechanical claw drives the target into a short burst of fractured earth.",
+        "registeredName": "Faultline Crusher"
       },
       "status": "requires-review",
       "review": null
@@ -39296,7 +39274,6 @@
       "name": "Silent Vector",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/relic-armoury.js",
         "dist/teamcraft-data.js"
       ],
@@ -39327,11 +39304,11 @@
       "effects": [],
       "authoredAction": "Four articulated wing panels snap into a diving formation as its forearm blades deliver a single cutting pass.",
       "art": {
-        "src": "assets/vfx/action/181-Gale-Sweep.png",
-        "sourceId": 181,
-        "shared": true,
+        "src": "assets/vfx/action/532-Silent-Vector.png",
+        "sourceId": 532,
+        "shared": false,
         "exists": true,
-        "sha256": "9aeadce4f304ba0a597d5ffbc98d5301c3a8ba905c78eb09545b27a1f1ed29ab",
+        "sha256": "b276a212a9a9374a4653560c0855a52b698bca3e4bb2893cd325eebc9089467b",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39339,8 +39316,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three crisp feather-shaped air blades gather into a broad low swept fan, make one clean diagonal wind cut and trail separated narrow feather slivers.",
-        "registeredName": "Gale Sweep"
+        "sequence": "Distinct visual motif for Silent Vector: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Four articulated wing panels snap into a diving formation as its forearm blades deliver a single cutting pass.",
+        "registeredName": "Silent Vector"
       },
       "status": "requires-review",
       "review": null
@@ -39433,11 +39410,11 @@
       "effects": [],
       "authoredAction": "It darts through the opponent with a pointed geode tail while its mica wings shed a short stone arc.",
       "art": {
-        "src": "assets/vfx/action/241-Flint-Skewer.png",
-        "sourceId": 241,
-        "shared": true,
+        "src": "assets/vfx/action/534-Mica-Skewer.png",
+        "sourceId": 534,
+        "shared": false,
         "exists": true,
-        "sha256": "e221712afcfb15c9d3c07df018bb786ff0dffb8d5e432e86b9d169886fb13d9c",
+        "sha256": "e1c70003228181f8d7973a1a8c0abfd8f3b7b5ebdd77131a928d819900604705",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39445,8 +39422,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three uneven flint chips align into one short serrated mineral spear, thrust forward once, snap at the tip on contact and fall as sharp stone fragments.",
-        "registeredName": "Flint Skewer"
+        "sequence": "Distinct visual motif for Mica Skewer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: It darts through the opponent with a pointed geode tail while its mica wings shed a short stone arc.",
+        "registeredName": "Mica Skewer"
       },
       "status": "requires-review",
       "review": null
@@ -39539,11 +39516,11 @@
       "effects": [],
       "authoredAction": "A flourish of spectral bells ends with an oversized illusory hammer bonk. The comic action still resolves as one normal attack.",
       "art": {
-        "src": "assets/vfx/action/350-Star-Kiss.png",
-        "sourceId": 350,
-        "shared": true,
+        "src": "assets/vfx/action/536-Encore-Bonk.png",
+        "sourceId": 536,
+        "shared": false,
         "exists": true,
-        "sha256": "4dc9fd792d40032b993025731962c0f05609d6b69a35dd27a3f3bd4d9789cd7b",
+        "sha256": "e4ce4d5ef5b107cfd218794ffaea844c6da56501d0457f0a1b4b0f6f79361519",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39551,8 +39528,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "One compact four-point pearl spark travels on two bent ribbon traces, expands into a single diamond-petal flash and fades into three asymmetrical chips.",
-        "registeredName": "Star Kiss"
+        "sequence": "Distinct visual motif for Encore Bonk: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A flourish of spectral bells ends with an oversized illusory hammer bonk. The comic action still resolves as one normal attack.",
+        "registeredName": "Encore Bonk"
       },
       "status": "requires-review",
       "review": null
@@ -39563,7 +39540,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/relic-armoury.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -39599,11 +39575,11 @@
       "effects": [],
       "authoredAction": "Armoured bells vibrate and the trunk projects three narrow metallic pressure rings.",
       "art": {
-        "src": "assets/vfx/action/383-Tollwave.png",
-        "sourceId": 383,
-        "shared": true,
+        "src": "assets/vfx/action/537-Resonant-Chime.png",
+        "sourceId": 537,
+        "shared": false,
         "exists": true,
-        "sha256": "00025fb2e490f9453ed5167685d034d8915d440b134aa04dba0b49b3e47ed065",
+        "sha256": "7bc2df1097fc8db227d8d858708a72e5c9ca6edd8e8321438d8d9275b6579795",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39611,8 +39587,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A heavy short brass bell-lip silhouette vibrates, launches one broad flattened corrugated sound front and trailing tiny angular metal flecks; a single contact then quiet. No full church or bell tower.",
-        "registeredName": "Tollwave"
+        "sequence": "Distinct visual motif for Resonant Chime: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Armoured bells vibrate and the trunk projects three narrow metallic pressure rings.",
+        "registeredName": "Resonant Chime"
       },
       "status": "requires-review",
       "review": null
@@ -39653,11 +39629,11 @@
       "effects": [],
       "authoredAction": "Shrapnel Barrage: 2–4 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/242-Stone-Lance.png",
-        "sourceId": 242,
-        "shared": true,
+        "src": "assets/vfx/action/538-Shrapnel-Barrage.png",
+        "sourceId": 538,
+        "shared": false,
         "exists": true,
-        "sha256": "48ed998cef6aab7ae5d0079ab38d174ca0bddc9deab8099bc9fbf12fb9e662f1",
+        "sha256": "a519424dc8b4eea4e97b9e95547512f9f12fa5357a114d1eba70696b727b1837",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39665,8 +39641,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three thin mineral plates align into a long narrow stone lance, thrust once and fracture at one contact into stone slivers.",
-        "registeredName": "Stone Lance"
+        "sequence": "Four jagged iron shrapnel splinters launch in succession, producing four separately timed tiny spark contacts, then settle.",
+        "registeredName": "Shrapnel Barrage"
       },
       "status": "requires-review",
       "review": null
@@ -39757,11 +39733,11 @@
       "effects": [],
       "authoredAction": "Phantom Knives: 2–3 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/346-Moonthorn-Hook.png",
-        "sourceId": 346,
-        "shared": true,
+        "src": "assets/vfx/action/540-Phantom-Knives.png",
+        "sourceId": 540,
+        "shared": false,
         "exists": true,
-        "sha256": "984c2631a6325756d60c8e35a64bf64edd1d14c497ef3a847b732b16e6077c3c",
+        "sha256": "7aa5600f3fc6263800368d76ed5c0f4df12bc1f964d37459e2d096bb093a2e0e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39769,8 +39745,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A curved thorn with three moon-pale mineral facets sweeps one hooked diagonal stroke, contacts once and breaks into tiny petal chips.",
-        "registeredName": "Moonthorn Hook"
+        "sequence": "Three thin spectral knives sweep in succession with three separate compact slash contacts, then shred into shroud wisps.",
+        "registeredName": "Phantom Knives"
       },
       "status": "requires-review",
       "review": null
@@ -39809,11 +39785,11 @@
       "effects": [],
       "authoredAction": "Claw Rattle: 2–5 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/9-measured-cut.png",
-        "sourceId": 9,
-        "shared": true,
+        "src": "assets/vfx/action/541-Claw-Rattle.png",
+        "sourceId": 541,
+        "shared": false,
         "exists": true,
-        "sha256": "ea1ea9112a9e3c125abd2ca4cdecfcebc9bf31505ea1828ace12a04b5f62d458",
+        "sha256": "d2d6eea62a7eccf533dc8a5ba5fbcdaf7290310e6477fe8e8e63848501c5e41d",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39821,8 +39797,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "One finely edged silver crescent blade aligns carefully, sweeps a broad horizontal lateral cut with THREE tapering motion trails (not three contacts), makes a precise narrow white contact notch and follows through, shedding tiny steel flecks.",
-        "registeredName": "Measured Cut"
+        "sequence": "Five short claw-like pressure hooks rake in succession, each with its own tiny contact, then diminish.",
+        "registeredName": "Claw Rattle"
       },
       "status": "requires-review",
       "review": null
@@ -39832,7 +39808,6 @@
       "name": "Arc Volley",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -39862,20 +39837,20 @@
       "effects": [],
       "authoredAction": "Arc Volley: 2–4 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/68-spark-jolt.png",
-        "sourceId": 68,
-        "shared": true,
+        "src": "assets/vfx/action/542-Arc-Volley.png",
+        "sourceId": 542,
+        "shared": false,
         "exists": true,
-        "sha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+        "sha256": "89dbfb8e8f777c18927572dba5e2613358b49cab22ebd8295e3cfc22d4906319",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile.",
-        "registeredName": "Spark Jolt"
+        "sequence": "Four angular electrical forks discharge in succession, with four separate tiny star contacts, then die away.",
+        "registeredName": "Arc Volley"
       },
       "status": "requires-review",
       "review": null
@@ -39885,7 +39860,6 @@
       "name": "Mica Volley",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -39915,11 +39889,11 @@
       "effects": [],
       "authoredAction": "Mica Volley: 2–4 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/233-Crag-Spire.png",
-        "sourceId": 233,
-        "shared": true,
+        "src": "assets/vfx/action/543-Mica-Volley.png",
+        "sourceId": 543,
+        "shared": false,
         "exists": true,
-        "sha256": "214c9905462fdf82262dabb76fc51a87a9c9803d6e41d9c1e0a62d7a56305f45",
+        "sha256": "abc02286f05df0a3fddbe553ae6c838c558821c4cf6fe2114c950b6fd4e38e04",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39927,8 +39901,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A thin faceted crag spire rises from a handful of pebbles, angles forward into one tight projectile pulse and shatters into slender mineral splinters.",
-        "registeredName": "Crag Spire"
+        "sequence": "Four mica flakes sharpen into pointed wedges, launch separately into four gritty contacts and scatter mineral dust.",
+        "registeredName": "Mica Volley"
       },
       "status": "requires-review",
       "review": null
@@ -39967,11 +39941,11 @@
       "effects": [],
       "authoredAction": "Riptide Combo: 2–4 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/43-keel-rend.png",
-        "sourceId": 43,
-        "shared": true,
+        "src": "assets/vfx/action/544-Riptide-Combo.png",
+        "sourceId": 544,
+        "shared": false,
         "exists": true,
-        "sha256": "288f706ba26118c173512f0934f4d375146bc004fc7ca7a2db86c37545e9b44b",
+        "sha256": "89f8164d9006a549dda6b3f8dbfd7a8a49592cb667c46b2f1e58cadb4dc6dfe9",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39979,8 +39953,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three narrow hooked keel-like fins of dark dense water rise together, draw back in a loaded claw rake, sweep down diagonally as three distinct curved cutting trails converging on ONE rending contact, drag a heavy low backwash and withdraw slowly with floating keel splinters. Single-hit physical clawing attack with speed cost, not a projectile lance.",
-        "registeredName": "Keel Rend"
+        "sequence": "Four compact curling water fists strike successively with four distinct foam contacts before receding.",
+        "registeredName": "Riptide Combo"
       },
       "status": "requires-review",
       "review": null
@@ -40023,11 +39997,11 @@
       "effects": [],
       "authoredAction": "Soundstorm: 2–4 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/2-plain-burst.png",
-        "sourceId": 2,
-        "shared": true,
+        "src": "assets/vfx/action/545-Soundstorm.png",
+        "sourceId": 545,
+        "shared": false,
         "exists": true,
-        "sha256": "09f0e6c3ca9312a428faebd7344dd192140ba0e49381462be4ff9b6e9bb92d48",
+        "sha256": "eee96a727cc3232f6a85b44d3fe61c78f582497eb27c2accd3585fe56671ea87",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -40035,8 +40009,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "a compact orb or knot of energy that blooms outward on contact.",
-        "registeredName": "Sound Off"
+        "sequence": "Four corrugated sound-pressure fronts advance successively, each peaks separately before dissipating.",
+        "registeredName": "Soundstorm"
       },
       "status": "requires-review",
       "review": null
@@ -40046,8 +40020,6 @@
       "name": "Icebound Shards",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/move-expansion.js",
-        "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -40077,20 +40049,20 @@
       "effects": [],
       "authoredAction": "Icebound Shards: 2–4 individually timed strikes with visible hit counters.",
       "art": {
-        "src": "assets/vfx/action/374-Hail-Choir.png",
-        "sourceId": 374,
-        "shared": true,
+        "src": "assets/vfx/action/546-Icebound-Shards.png",
+        "sourceId": 546,
+        "shared": false,
         "exists": true,
-        "sha256": "2022abaae54098d131895da2fc3e9bb96b7343a6c50e9f06eb08ad6ce98295bd",
+        "sha256": "92cbafcdca6aa95ad5827e1a258f8863ac16276fb4d83f736623664d621730bc",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Small six-sided frost shards float upward in an orderly layered choir, lock into a quiet cold canopy over an open centre, then drift gently apart. This is weather/status, NO damaging flash.",
-        "registeredName": "Hail Choir"
+        "sequence": "Four narrow icebound shards launch in succession, each making its own icy contact before dissolving.",
+        "registeredName": "Icebound Shards"
       },
       "status": "requires-review",
       "review": null
@@ -40100,7 +40072,6 @@
       "name": "Reforged Bulwark",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
@@ -40146,20 +40117,20 @@
       ],
       "authoredAction": "Reforged Bulwark: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/737-Hold-the-Burh.png",
-        "sourceId": 737,
-        "shared": true,
+        "src": "assets/vfx/action/547-Reforged-Bulwark.png",
+        "sourceId": 547,
+        "shared": false,
         "exists": true,
-        "sha256": "23791dabe5889e684ac863c63f34d90b65cfd71fa9044e04d29253caa63823bd",
+        "sha256": "ceb4bcb6ed6fa0912f8697412e3aaea9dc2a685102aa1f7fc9d05ff88e43d970",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Six small staggered stone-and-iron blocks assemble into a low crenellated defensive arch around empty space, hold against a harmless dust wisp and disassemble. No damage.",
-        "registeredName": "Hold the Burh"
+        "sequence": "Two rough gunmetal plate arcs reforge around an empty centre into a hollow double-layer bulwark, one solid outer plate and one fine inner ward. Both brace, hold, then separate. Quiet dual defensive buff; no impact.",
+        "registeredName": "Reforged Bulwark"
       },
       "status": "requires-review",
       "review": null
@@ -40169,7 +40140,6 @@
       "name": "Warforged Tempo",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
@@ -40219,20 +40189,20 @@
       ],
       "authoredAction": "Warforged Tempo: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/737-Hold-the-Burh.png",
-        "sourceId": 737,
-        "shared": true,
+        "src": "assets/vfx/action/548-Warforged-Tempo.png",
+        "sourceId": 548,
+        "shared": false,
         "exists": true,
-        "sha256": "23791dabe5889e684ac863c63f34d90b65cfd71fa9044e04d29253caa63823bd",
+        "sha256": "a22ca7e3fd22d5ececd2ba8a744a7b2f43253b70357b300c0ca7204a66766ce4",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Six small staggered stone-and-iron blocks assemble into a low crenellated defensive arch around empty space, hold against a harmless dust wisp and disassemble. No damage.",
-        "registeredName": "Hold the Burh"
+        "sequence": "A low riveted iron guard ring braces while two heavy blade-shaped tempo fins rise in alternating rhythm; both settle into a stable hollow crest and dissolve. Attack and defence buff; no enemy hit.",
+        "registeredName": "Warforged Tempo"
       },
       "status": "requires-review",
       "review": null
@@ -40243,7 +40213,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/progression-renewal.js",
-        "dist/rimebun.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -40299,20 +40268,20 @@
       ],
       "authoredAction": "Chorus of Renewal: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/455-Aurora-Reprieve.png",
-        "sourceId": 455,
-        "shared": true,
+        "src": "assets/vfx/action/549-Chorus-of-Renewal.png",
+        "sourceId": 549,
+        "shared": false,
         "exists": true,
-        "sha256": "7e76790eed029ed475747246d0271d21408639ef55e8bad8f0afeafa94e763d9",
+        "sha256": "8393a97b5f1fec649440ef2eb717f72d848c5c5f7afcb02214e7dbc2f71a19d9",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Three folded petal streamers and small uneven frost-pearl facets descend around a hollow protected centre, knit into a restorative garland, hold softly then drift apart. Healing/status, NO attack contact.",
-        "registeredName": "Aurora Reprieve"
+        "sequence": "Three warm ivory sound rings support small budding restorative leaves, expand softly together and settle into a few motes. Party healing, no revival.",
+        "registeredName": "Chorus of Renewal"
       },
       "status": "requires-review",
       "review": null
@@ -40322,7 +40291,6 @@
       "name": "Warding Chorus",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
@@ -40375,20 +40343,20 @@
       ],
       "authoredAction": "Warding Chorus: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/339-Charm-Veil.png",
-        "sourceId": 339,
-        "shared": true,
+        "src": "assets/vfx/action/550-Warding-Chorus.png",
+        "sourceId": 550,
+        "shared": false,
         "exists": true,
-        "sha256": "75cfabf6c548ac02e2b8f977fdd55440f4305f54f31e804605a88a39b4cd1265",
+        "sha256": "3c1a2c0dffd4e99319abc6fc50bd50881b2872bca12068fd7a272e8f459f6126",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Four translucent petal-shaped armour panels gather around a hollow centre, overlap into a quiet scalloped protective veil, shimmer by shifting facets and unfold. No damaging flash.",
-        "registeredName": "Charm Veil"
+        "sequence": "Three softly overlapping ivory-rose sound rings support two curved translucent ward panels, establish a protective harmony around an empty centre, then withdraw. Defensive ally buff, not healing.",
+        "registeredName": "Warding Chorus"
       },
       "status": "requires-review",
       "review": null
@@ -40553,7 +40521,6 @@
       "name": "Executioner's Bargain",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
@@ -40614,20 +40581,20 @@
       ],
       "authoredAction": "Executioner's Bargain: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/307-Sly-Feint.png",
-        "sourceId": 307,
-        "shared": true,
+        "src": "assets/vfx/action/553-Executioner-s-Bargain.png",
+        "sourceId": 553,
+        "shared": false,
         "exists": true,
-        "sha256": "57130c097dc4ebb6d788aef45303cc1601fd0520952d316901ca28822045f93c",
+        "sha256": "6e4002b1665c6b4670699cd377710f014761289b86f70bc9c31117ce94b5c813",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Two short folded shadow-cloth ribbons swap positions around an empty centre, form a quiet off-centre sheltering hood, then slide away. Concealment self-buff, NO damaging slash or flash.",
-        "registeredName": "Sly Feint"
+        "sequence": "Three jagged burgundy force fins surge upward and a thin quicksilver speed ribbon whips around them while two dark protective plates crack away. Costly attack/speed boost, no character, execution scene or injury.",
+        "registeredName": "Executioner's Bargain"
       },
       "status": "requires-review",
       "review": null
@@ -40942,7 +40909,6 @@
       "name": "Astral Sacrifice",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -41000,20 +40966,20 @@
       ],
       "authoredAction": "Astral Sacrifice: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/269-Wyrmwhisper.png",
-        "sourceId": 269,
-        "shared": true,
+        "src": "assets/vfx/action/559-Astral-Sacrifice.png",
+        "sourceId": 559,
+        "shared": false,
         "exists": true,
-        "sha256": "61cd9568dc9a53d36c08910f2a629d5549a7e6ff0c175ac62a14a43f7a312138",
+        "sha256": "08b1ccb741388c6e5e220e96d7deccfa08e97bd928f513fd699c34b8caa96cec",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Three overlapping elongated scale-shaped breath wisps gather around an open central void, turn quietly in an ordered slow spiral, hold and disperse. Supportive focus, no damage flash.",
-        "registeredName": "Wyrmwhisper"
+        "sequence": "Five pale astral facets flare upward from a dimmed inner core while two protective arcs break away. Sacrificial stat boost, no injury.",
+        "registeredName": "Astral Sacrifice"
       },
       "status": "requires-review",
       "review": null
@@ -41391,8 +41357,6 @@
       "name": "Mind Toll",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -41444,20 +41408,20 @@
       ],
       "authoredAction": "Mind Toll: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/278-Royal-Roar.png",
-        "sourceId": 278,
-        "shared": true,
+        "src": "assets/vfx/action/566-Mind-Toll.png",
+        "sourceId": 566,
+        "shared": false,
         "exists": true,
-        "sha256": "8f7fced9f546b76e453885c09dd007d0386eccbc3db81d6588053de5810cc167",
+        "sha256": "ca637072c2cd3ceeded6a63d0d2318c1e49439f8a56f8e16f2ae36863ae31cf6",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Three scale-shaped banners fan outward from a hollow centre, ripple with a quiet corrugated breath plume, hold and fold. Rally status, no damage flash.",
-        "registeredName": "Royal Roar"
+        "sequence": "Three violet thought facets rise as a warm core dims and a thin guard strip loosens. Costly special attack boost, no collision.",
+        "registeredName": "Mind Toll"
       },
       "status": "requires-review",
       "review": null
@@ -41467,7 +41431,6 @@
       "name": "Shield Relay",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
@@ -41510,20 +41473,20 @@
       ],
       "authoredAction": "Shield Relay: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/702-standard-relay.png",
-        "sourceId": 702,
-        "shared": true,
+        "src": "assets/vfx/action/568-Shield-Relay.png",
+        "sourceId": 568,
+        "shared": false,
         "exists": true,
-        "sha256": "553b96f84251af3eb4adf6bd01e6a7c2dc18c5d6a464300ee11d102ee4915b4a",
+        "sha256": "8d3bff2e73080e594f00a60ae06e64c0a3969f20fdca443a5a2642856bbfb45a",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "A folded neutral pennant unfurls and passes left to right; a small clasp signifies receipt; cloth folds away without damage.",
-        "registeredName": "Standard Relay"
+        "sequence": "Two small interlocking iron shield outlines pass a silver connecting ribbon between them, lock into matching double protective arcs, then dissolve evenly. Shared defensive buff, visually distinct from a single bulwark.",
+        "registeredName": "Shield Relay"
       },
       "status": "requires-review",
       "review": null
@@ -41533,7 +41496,6 @@
       "name": "Momentum Feast",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -41588,20 +41550,20 @@
       ],
       "authoredAction": "Momentum Feast: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/117-measured-force.png",
-        "sourceId": 117,
-        "shared": true,
+        "src": "assets/vfx/action/569-Momentum-Feast.png",
+        "sourceId": 569,
+        "shared": false,
         "exists": true,
-        "sha256": "d87a6d85a7d734ddf29f61bd519db2141b474d909912555acd1d17ea40395db3",
+        "sha256": "2b411e741de23ca934834d317753251db56a583dace1dcbad7e1c1c73ff0903d",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Two articulated bronze forepaws align and close slowly; fine force lines gather into a steady central glint, then hands relax. Self attack buff without target impact.",
-        "registeredName": "Measured Force"
+        "sequence": "Two bronze attack fins gather an accelerating circular momentum trail while a brittle lower guard arc fractures and falls away. Power and speed gain with weakened defence; no food, eating or creature.",
+        "registeredName": "Momentum Feast"
       },
       "status": "requires-review",
       "review": null
@@ -41846,8 +41808,7 @@
       "name": "Pressure Front",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -41902,11 +41863,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/773-widewater-rush.png",
-        "sourceId": 773,
-        "shared": true,
+        "src": "assets/vfx/action/704-Pressure-Front.png",
+        "sourceId": 704,
+        "shared": false,
         "exists": true,
-        "sha256": "65fbd47af2687fdcf19e75e4a16428f406da22e07a49b6495a444259f1ba365b",
+        "sha256": "51d06ba23a0c6a3c638efecd7e107b4c16fdc52e440bdef2f37ce6e6317175e2",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -41914,8 +41875,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A broad travelling water sheet with foam and a heavy landing.",
-        "registeredName": "Widewater Rush"
+        "sequence": "A dense rain-scalloped water pressure front advances once and leaves short heavy droplets settling downward.",
+        "registeredName": "Pressure Front"
       },
       "status": "requires-review",
       "review": null
@@ -42043,7 +42004,6 @@
       "name": "Winter Stillness",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -42079,20 +42039,20 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/114-snow-veil.png",
-        "sourceId": 114,
-        "shared": true,
+        "src": "assets/vfx/action/707-Winter-Stillness.png",
+        "sourceId": 707,
+        "shared": false,
         "exists": true,
-        "sha256": "467cc22b62c68208b38d2671f727edc40366b63c79c3b9728eb995db343ba806",
+        "sha256": "e3d4f9a23bc2527499f65348c2af3a691e7f028447823805ab857805aa75b2c2",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Snow Veil",
-        "registeredName": "Snow Veil"
+        "sequence": "Two cold veils and a ring of fine frost still quietly into a subdued hollow shell, then loosen into cold dust. Debuff, no collision.",
+        "registeredName": "Winter Stillness"
       },
       "status": "requires-review",
       "review": null
@@ -42102,8 +42062,7 @@
       "name": "Curtain Call",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42132,20 +42091,20 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/782-refrain-lock.png",
-        "sourceId": 782,
-        "shared": true,
+        "src": "assets/vfx/action/708-Curtain-Call.png",
+        "sourceId": 708,
+        "shared": false,
         "exists": true,
-        "sha256": "0f60b3ccfee43fc6fce8dc27790daca14726711f4b40b8f2cf09009f58835caf",
+        "sha256": "aa3d7a98115632f40d177461380c71ba42c68a6be247c22be5602548fb5da22d",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "A repeating closed rhythm around the target communicates the move lock.",
-        "registeredName": "Refrain Lock"
+        "sequence": "Three theatre-curtain-shaped strips of smoke open around two rising aura plumes; one restrained sound ring erases the plumes and folds shut. No scenery or text.",
+        "registeredName": "Curtain Call"
       },
       "status": "requires-review",
       "review": null
@@ -42155,7 +42114,6 @@
       "name": "Frayed Nerve",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -42207,11 +42165,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/393-Felt-Snare.png",
-        "sourceId": 393,
-        "shared": true,
+        "src": "assets/vfx/action/709-Frayed-Nerve.png",
+        "sourceId": 709,
+        "shared": false,
         "exists": true,
-        "sha256": "d0e8c6543cbb58a7ddf3883950da5bb095970021359de88a2f4db8796569131c",
+        "sha256": "ac3223a53a173a24cb63b04976ffc2ed44bb290c5b6e9060619af2305441e616",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42219,8 +42177,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small knot of soft felt-like threads unravels into a broad loose mesh, tightens gently around an EMPTY centre, releases one small pressure knot then loosens into frayed ends. No complete creature, violent impact or neon web.",
-        "registeredName": "Felt Snare"
+        "sequence": "Two thin violet tension filaments fray around a dim thought facet, sag and dissolve quietly. No collision.",
+        "registeredName": "Frayed Nerve"
       },
       "status": "requires-review",
       "review": null
@@ -42419,7 +42377,6 @@
       "name": "Mind Unbound",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/menagerie-family.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -42467,11 +42424,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/483-Starfall-Echo.png",
-        "sourceId": 483,
-        "shared": true,
+        "src": "assets/vfx/action/713-Mind-Unbound.png",
+        "sourceId": 713,
+        "shared": false,
         "exists": true,
-        "sha256": "14c28d116437e84c16dfcca7739a02f53ff6834fd701ef481e3f2e9b50194709",
+        "sha256": "ef28feddbe2de4ce6cbe44621ccc435e904a3c0bcccf17bae5ea9262f6e762b0",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42479,8 +42436,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small uneven cluster of faceted stars falls in one slanting cascade, blooms at a single compact contact and fades as tiny pearl chips.",
-        "registeredName": "Starfall Echo"
+        "sequence": "A rigid violet thought lattice opens its restraints, releases one wide psychic wave and leaves five small angular motes.",
+        "registeredName": "Mind Unbound"
       },
       "status": "requires-review",
       "review": null
@@ -42553,8 +42510,7 @@
       "name": "Caldera Edict",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/evolution-renewal-data.js",
-        "dist/teamcraft-data.js"
+        "dist/evolution-renewal-data.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42592,11 +42548,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/159-seismic-detonation.png",
-        "sourceId": 159,
-        "shared": true,
+        "src": "assets/vfx/action/715-Caldera-Edict.png",
+        "sourceId": 715,
+        "shared": false,
         "exists": true,
-        "sha256": "0001260df5351598e0b3e4f8e0d7a72610f45de4438e211cfbbcc81cd07d7cfa",
+        "sha256": "1c0f3fd3a7f71d158bc1f4c86a6317d8b7f241c6ee1c24abcc3ed9c233762c06",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42604,8 +42560,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Seismic Detonation",
-        "registeredName": "Seismic Detonation"
+        "sequence": "A layered cracked volcanic rim exhales one dense forward heat plume, which cools into dark crust flakes. No whole volcano or scene.",
+        "registeredName": "Caldera Edict"
       },
       "status": "requires-review",
       "review": null
@@ -42669,11 +42625,7 @@
       "name": "Mourning Dew",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/evolution-renewal-data.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
-        "dist/roster-expansion.js",
-        "dist/teamcraft-data.js"
+        "dist/evolution-renewal-data.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42705,20 +42657,20 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/96-verdant-mend.png",
-        "sourceId": 96,
-        "shared": true,
+        "src": "assets/vfx/action/717-Mourning-Dew.png",
+        "sourceId": 717,
+        "shared": false,
         "exists": true,
-        "sha256": "82a65d25c0a714da4d2bbfeba6101522c8af56265fbc674d9d353599c9fc4855",
+        "sha256": "768bd5561f97ec5c872e3172f41f570a53dfbe28b69205d4356857d6a3f108fa",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1500,
+        "duration": 1350,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Three torn leaf fragments gather green sap droplets, spiral softly inward, join their torn veins into one restored whole leaf, and release gentle rising healing motes. Healing only, no attack star or outward strike.",
-        "registeredName": "Verdant Mend"
+        "sequence": "Three mourning dew droplets sweep separate grey status wisps from an empty centre, then evaporate softly. Cleansing only, no healing bloom.",
+        "registeredName": "Mourning Dew"
       },
       "status": "requires-review",
       "review": null
@@ -42728,8 +42680,7 @@
       "name": "Feeble Pulse",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/teamcraft-data.js"
+        "dist/branch-families.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42756,11 +42707,11 @@
       "effects": [],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/309-Devilish-Encore.png",
-        "sourceId": 309,
-        "shared": true,
+        "src": "assets/vfx/action/730-Feeble-Pulse.png",
+        "sourceId": 730,
+        "shared": false,
         "exists": true,
-        "sha256": "943ddf491cd3a394cb5d6dd694f693306ebc1c49674cad116bd83e45b80337a2",
+        "sha256": "4eb7469859ff6e2950fd1e747b2191215b28884dd153f9846ee5f46b947dfb6a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42768,8 +42719,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small crooked shadow-plume with two hooked echo tails unfurls, sends one low hollow pulse forward and retracts into a tiny knot. No mouth or face.",
-        "registeredName": "Devilish Encore"
+        "sequence": "A tiny frail charcoal pulse forms with a ragged weak edge, advances once and breaks into a few dim flakes. Deliberately modest.",
+        "registeredName": "Feeble Pulse"
       },
       "status": "requires-review",
       "review": null
@@ -42829,8 +42780,7 @@
       "name": "Fury Unsealed",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/teamcraft-data.js"
+        "dist/branch-families.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42865,11 +42815,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/21-cinder-rend.png",
-        "sourceId": 21,
-        "shared": true,
+        "src": "assets/vfx/action/732-Fury-Unsealed.png",
+        "sourceId": 732,
+        "shared": false,
         "exists": true,
-        "sha256": "fec2a1ec43eb7a12f9f395df9ba749325968b402ed3abff3d478605e7ddd3e38",
+        "sha256": "a552931213f5878fe96d79cf9acf59f7bf1cfa3726d95c18698bb48b6d468c1b",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42877,8 +42827,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two opposing asymmetrical jaw crescents formed from rough black coal fangs open wide, serrated ember teeth mesh in a single violent snapping bite across center, charcoal fragments tear outward, jaws pull apart and crumble. Convincing tooth forms and closing movement, no generic slash ring.",
-        "registeredName": "Cinder Rend"
+        "sequence": "Two folded ember blade ribbons burst from a broken dark clasp, deliver one forceful forward strike and leave a cracked fading guard fragment.",
+        "registeredName": "Fury Unsealed"
       },
       "status": "requires-review",
       "review": null
@@ -42947,8 +42897,7 @@
       "name": "Empty the Table",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/teamcraft-data.js"
+        "dist/branch-families.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42985,11 +42934,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/292-Nightblade-Rend.png",
-        "sourceId": 292,
-        "shared": true,
+        "src": "assets/vfx/action/734-Empty-the-Table.png",
+        "sourceId": 734,
+        "shared": false,
         "exists": true,
-        "sha256": "ec01863e23eb3daa7d598fa4801b662325b0095e36c656ed7197a15a9a06db2e",
+        "sha256": "6098fa02391c47c74d5e1231e02f42786111800804be97b69bc3dbf7075e8aba",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42997,8 +42946,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three angular dark-metal blade fragments sweep together in one steep diagonal rend, release a single compact contact and scatter stiff dark chips.",
-        "registeredName": "Nightblade Rend"
+        "sequence": "Three dark crescent scoops sweep once through an empty centre; small warm energy beads return along their wake. Drainage, no literal table or food.",
+        "registeredName": "Empty the Table"
       },
       "status": "requires-review",
       "review": null
@@ -43008,9 +42957,7 @@
       "name": "Practice Bout",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/full-expansion.js",
-        "dist/teamcraft-data.js"
+        "dist/branch-families.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -43037,11 +42984,11 @@
       "effects": [],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/126-iron-blow.png",
-        "sourceId": 126,
-        "shared": true,
+        "src": "assets/vfx/action/735-Practice-Bout.png",
+        "sourceId": 735,
+        "shared": false,
         "exists": true,
-        "sha256": "ce5570e4fdb9c477308290d29cf3ca36eb97276d11ab8e5e284ea42ee310fd50",
+        "sha256": "abfcc2129487d9e0c9874bd93276703aa35c83ae07ea51a5f97c282e10605de5",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -43049,8 +42996,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Wrapped iron-grey martial forearm draws back, makes one short precision knuckle punch with compressed pressure halo, then withdraws.",
-        "registeredName": "Iron Blow"
+        "sequence": "One plain bronze padded-force knuckle draws back, makes a modest straight practice jab and recoils. No fighter or whole arm.",
+        "registeredName": "Practice Bout"
       },
       "status": "requires-review",
       "review": null
@@ -43060,9 +43007,7 @@
       "name": "Avalon Cleave",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/paladin-data.js",
-        "dist/teamcraft-data.js"
+        "dist/branch-families.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -43089,11 +43034,11 @@
       "effects": [],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/499-Three-Ring-Verdict.png",
-        "sourceId": 499,
-        "shared": true,
+        "src": "assets/vfx/action/736-Avalon-Cleave.png",
+        "sourceId": 736,
+        "shared": false,
         "exists": true,
-        "sha256": "89b8f6f5cc1f0a2c9d83570ae58d8c66c0c6eac0485c7459d2233de557af7ec2",
+        "sha256": "6c2904454eaf72cf04e9ec3902558ae578c3e9462b1c42bcf645ed76b058b350",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -43101,8 +43046,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three small broken crescent blades sweep sequentially along one curved path, converge as ONE interlocking three-lobed cut at contact, then break into petal facets. Not three repeated hits.",
-        "registeredName": "Three-Ring Verdict"
+        "sequence": "A pearl-edged fairy sword fragment makes one clean diagonal cleave, leaves a broad rose-ivory crescent and falls into sparse petal facets.",
+        "registeredName": "Avalon Cleave"
       },
       "status": "requires-review",
       "review": null
@@ -43173,8 +43118,7 @@
       "name": "Back-Alley Barrage",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
-        "dist/progression-renewal.js"
+        "dist/branch-families.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -43201,11 +43145,11 @@
       "effects": [],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/741-Parting-Blow.png",
-        "sourceId": 741,
-        "shared": true,
+        "src": "assets/vfx/action/738-Back-Alley-Barrage.png",
+        "sourceId": 738,
+        "shared": false,
         "exists": true,
-        "sha256": "3900a9289367776397ff9a52743fa84c6a179c4207e200dc02c95d8245014057",
+        "sha256": "39d865a0bd7780bb40466275b3c7cd5141ef734a9eaced1e1064e712658a7794",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -43213,8 +43157,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A wrapped blunt forepaw-shaped strike silhouette withdraws, darts outward once with two short departing dust streamers, lands one compact hit and retreats. No whole character.",
-        "registeredName": "Parting Blow"
+        "sequence": "Two compact brass pressure knuckles alternate two separate straight punches with two separate contact peaks, then withdraw. No character or whole arms.",
+        "registeredName": "Back-Alley Barrage"
       },
       "status": "requires-review",
       "review": null

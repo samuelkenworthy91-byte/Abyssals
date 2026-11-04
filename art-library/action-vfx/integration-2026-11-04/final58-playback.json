@@ -1,0 +1,4379 @@
+{
+  "decoded": 615,
+  "results": [
+    {
+      "id": 359,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            377,
+            136,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1894.5,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 361,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            207.484375,
+            239.15625,
+            334.484375,
+            319.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1838.7999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 362,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            39.5,
+            221.15625,
+            153.5,
+            330.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1846.699999999255,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 364,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            382,
+            106,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1846.2999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 365,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            48.5,
+            253.15625,
+            157.5,
+            318.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1842.5999999996275,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 368,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            213.484375,
+            220.15625,
+            321.484375,
+            324.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1841.300000000745,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 369,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            383,
+            103,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1848.1000000005588,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 370,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            211.484375,
+            224.15625,
+            324.484375,
+            320.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1859.5,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 371,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            364,
+            126,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1834.7000000001863,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "RAIN",
+        "weatherTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 372,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            197.484375,
+            202.15625,
+            335.484375,
+            334.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1833.2000000001863,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "weather": "SUN",
+        "weatherTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 373,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            313.65625,
+            141,
+            425.65625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "unit-1",
+          "delta": [
+            -0.000024999999993724487,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "unit-1",
+      "actor": "unit-1",
+      "elapsed": 1832.7999999998137,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "weather": "SAND",
+        "weatherTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 375,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            375,
+            130,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1833.2999999998137,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 376,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            206.484375,
+            220.15625,
+            328.484375,
+            326.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1827.2999999998137,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "screens": {
+          "enemy": {
+            "SPECIAL": 5
+          }
+        }
+      },
+      "width": 390
+    },
+    {
+      "id": 377,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            314.65625,
+            133,
+            423.65625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "unit-1",
+          "delta": [
+            -0.000024999999993724487,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "unit-1",
+      "actor": "unit-1",
+      "elapsed": 1826.9000000003725,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "screens": {
+          "player": {
+            "PHYSICAL": 5
+          }
+        }
+      },
+      "width": 390
+    },
+    {
+      "id": 461,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            35.5,
+            216.15625,
+            161.5,
+            325.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1837.7999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 462,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            352,
+            138,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1841.7999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 464,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            34.5,
+            204.15625,
+            165.5,
+            331.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1849.7000000001863,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 465,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            201.484375,
+            223.15625,
+            336.484375,
+            321.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1843.8999999994412,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 470,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            346,
+            137,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1709.5999999996275,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 527,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            194.484375,
+            211.15625,
+            342.484375,
+            330.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1842.5,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 528,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            29.5,
+            221.15625,
+            164.5,
+            325.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1857.0999999996275,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 529,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            358,
+            124,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1840.2000000001863,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 530,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            29.5,
+            217.15625,
+            160.5,
+            333.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1841.9000000003725,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 531,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            202.484375,
+            208.15625,
+            331.484375,
+            337.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1860.6000000005588,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 532,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            353,
+            137,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1842.699999999255,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 534,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            200.484375,
+            217.15625,
+            335.484375,
+            326.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1864.6000000005588,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 536,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            31.5,
+            208.15625,
+            163.5,
+            331.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1850.2999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 537,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            372,
+            138,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1848.7999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 538,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            47.5,
+            228.15625,
+            155.5,
+            315.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1843.699999999255,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 540,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            212.484375,
+            228.15625,
+            324.484375,
+            329.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1841,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 541,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            376,
+            113,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1846.8999999994412,
+      "hitCount": 3,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          },
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          },
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 542,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            216.484375,
+            219.15625,
+            327.484375,
+            327.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1857.8999999994412,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 543,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            34.5,
+            212.15625,
+            156.5,
+            338.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1842.9000000003725,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 544,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            351,
+            162,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1849.1000000005588,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          },
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 545,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            35.5,
+            216.15625,
+            164.5,
+            329.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1842.5,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 546,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            200.484375,
+            211.15625,
+            330.484375,
+            335.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1839.2000000001863,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 547,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            204.484375,
+            209.15625,
+            335.484375,
+            339.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1832,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 548,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            315.65625,
+            131,
+            418.65625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "unit-1",
+          "delta": [
+            -0.000024999999993724487,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "unit-1",
+      "actor": "unit-1",
+      "elapsed": 1841,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 549,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            339,
+            153,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1849.2999999998137,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 550,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            188.484375,
+            191.15625,
+            348.484375,
+            351.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1842.2000000001863,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 553,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            289.65625,
+            141,
+            427.65625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "unit-1",
+          "delta": [
+            -0.000024999999993724487,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "unit-1",
+      "actor": "unit-1",
+      "elapsed": 1851.7000000001863,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 559,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            345,
+            131,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1864.5999999996275,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 566,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            197.484375,
+            203.15625,
+            336.484375,
+            342.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1847.9000000003725,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 568,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            302.65625,
+            143,
+            423.65625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "unit-1",
+          "delta": [
+            -0.000024999999993724487,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "unit-1",
+      "actor": "unit-1",
+      "elapsed": 1833.7000000001863,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 569,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            345,
+            136,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1833.9000000003725,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 704,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            371,
+            143,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1840.0999999996275,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 707,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            38.5,
+            218.15625,
+            155.5,
+            328.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1844.5,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 708,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            200.484375,
+            215.15625,
+            338.484375,
+            326.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1838.2000000001863,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 709,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            370,
+            121,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1837.0999999996275,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 713,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            197.484375,
+            216.15625,
+            342.484375,
+            324.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1848.0999999996275,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 715,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            33.5,
+            215.15625,
+            172.5,
+            324.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1855.8999999994412,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 717,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            208.484375,
+            212.15625,
+            330.484375,
+            340.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1833.7999999998137,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 390
+    },
+    {
+      "id": 730,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            48.5,
+            236.15625,
+            143.5,
+            309.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1842.4000000003725,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 732,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            209.484375,
+            223.15625,
+            336.484375,
+            326.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1844.1000000005588,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 734,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            343,
+            140,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1840,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 735,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            201.484375,
+            229.15625,
+            322.484375,
+            323.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00037500000001955414,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1841.4000000003725,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 736,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            32.5,
+            211.15625,
+            165.5,
+            326.15625
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1847.3999999994412,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 390
+    },
+    {
+      "id": 738,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            6,
+            372,
+            134,
+            477
+          ],
+          "viewport": [
+            362,
+            483.15625
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            -0.0002499999999940883
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1856,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          },
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 390
+    },
+    {
+      "id": 359,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            6,
+            527.546875,
+            179.33333333333334,
+            660.8802083333334
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            0.00012500000002546585
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1838.800000000745,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 1280
+    },
+    {
+      "id": 371,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            82.74479166666666,
+            378.97395833333337,
+            242.74479166666663,
+            529.640625
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "unit-1",
+          "target": "unit-1",
+          "delta": [
+            -0.00012499999999704414,
+            0.00037500000001955414
+          ]
+        }
+      ],
+      "expected": "unit-1",
+      "actor": "unit-1",
+      "elapsed": 1825.0999999996275,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "weather": "RAIN",
+        "weatherTurns": 5
+      },
+      "width": 1280
+    },
+    {
+      "id": 375,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            5.999997456868492,
+            534.2135416666666,
+            171.3333307902018,
+            670.2135416666666
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            0.00012500000002546585
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1824.5,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 1280
+    },
+    {
+      "id": 470,
+      "side": "enemy",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            5.999992609024048,
+            506.21354166666663,
+            180.6666488647461,
+            680.8802083333334
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "darius-final-1",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            0.00012500000002546585
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "darius-final-1",
+      "elapsed": 1693.7999999998137,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "player"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "darius-final-1",
+            "victim": "finale-hasan-serapine",
+            "side": "enemy"
+          }
+        ]
+      },
+      "width": 1280
+    },
+    {
+      "id": 538,
+      "side": "player",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            224.73958333333331,
+            142.10416666666669,
+            368.73958333333337,
+            258.10416666666663
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "unit-1",
+          "target": "finale-unique-crux",
+          "delta": [
+            -0.0002499999999940883,
+            -0.0003125000000068212
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "unit-1",
+      "elapsed": 1840.800000000745,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 1280
+    },
+    {
+      "id": 549,
+      "side": "ally",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            5.999993324279785,
+            497.9999796549479,
+            201.9999816417694,
+            681.9999796549479
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-hasan-serapine",
+          "delta": [
+            0,
+            0.00012500000002546585
+          ]
+        }
+      ],
+      "expected": "finale-hasan-serapine",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1826.3999999994412,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 1280
+    },
+    {
+      "id": 568,
+      "side": "enemy",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            480.578125,
+            118.10416666666669,
+            663.2447916666666,
+            279.4375
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "darius-final-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00012500000002546585,
+            -0.0003125000000068212
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "darius-final-1",
+      "elapsed": 1828.4000000003725,
+      "hitCount": 0,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": []
+      },
+      "width": 1280
+    },
+    {
+      "id": 713,
+      "side": "player",
+      "targetIndex": 1,
+      "seen": [
+        {
+          "visible": [
+            477.91145833333337,
+            126.10416666666669,
+            671.2447916666666,
+            270.10416666666663
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "unit-1",
+          "target": "darius-final-1",
+          "delta": [
+            -0.00012500000002546585,
+            -0.0003125000000068212
+          ]
+        }
+      ],
+      "expected": "darius-final-1",
+      "actor": "unit-1",
+      "elapsed": 1841.8999999994412,
+      "hitCount": 1,
+      "remainingFx": true,
+      "field": {
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "unit-1",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ]
+      },
+      "width": 1280
+    },
+    {
+      "id": 738,
+      "side": "ally",
+      "targetIndex": 0,
+      "seen": [
+        {
+          "visible": [
+            202.07291666666669,
+            132.77083333333331,
+            372.73958333333337,
+            272.77083333333337
+          ],
+          "viewport": [
+            860,
+            688
+          ],
+          "actor": "finale-hasan-serapine",
+          "target": "finale-unique-crux",
+          "delta": [
+            -0.0002499999999940883,
+            -0.0003125000000068212
+          ]
+        }
+      ],
+      "expected": "finale-unique-crux",
+      "actor": "finale-hasan-serapine",
+      "elapsed": 1837.9000000003725,
+      "hitCount": 2,
+      "remainingFx": true,
+      "field": {
+        "activeEnemyUids": [
+          "finale-unique-crux",
+          "darius-final-1"
+        ],
+        "activePlayerUids": [
+          "unit-1",
+          "finale-hasan-serapine"
+        ],
+        "titheUnits": [],
+        "currentMoveDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "enemy"
+          }
+        ],
+        "menagerieDamage": [
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "finale-unique-crux",
+            "side": "player"
+          },
+          {
+            "actor": "finale-hasan-serapine",
+            "victim": "darius-final-1",
+            "side": "player"
+          }
+        ],
+        "weather": "SUN",
+        "weatherTurns": 5,
+        "terrain": "GRASSY",
+        "terrainTurns": 5
+      },
+      "width": 1280
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "screenshots": "Paused impact rendered after completed real playback; screenshots are not proof of full motion."
+}

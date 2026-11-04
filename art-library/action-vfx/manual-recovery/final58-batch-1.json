@@ -1,0 +1,1176 @@
+{
+  "count": 30,
+  "status": "source upload; not yet installed",
+  "sheets": [
+    {
+      "id": 359,
+      "name": "First Knuckle",
+      "filename": "359-First-Knuckle.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 309,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "a282a06fc61408c4f2e90de1f61578458febf47221fe00acafc9d78bc415051b",
+      "sha256": "bffd243f0a178b3c1be147d5039e879dc3241e29cf90238a33dbd6f5163e9c63",
+      "production_intent": {
+        "index": 101,
+        "batch": 3,
+        "id": 359,
+        "name": "First Knuckle",
+        "filename": "359-First-Knuckle.png",
+        "type": "FIGHTING",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/714-Flowing-Palm.png",
+        "visual_brief": "A compact bronze force-knuckle draws back briefly, darts forward with two short staggered afterimages, lands one small hard contact and withdraws. No whole hand or arm.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre pressure light, linen ivory, dark bronze",
+        "prompt_file": "Prompts/Batch_3/359-First-Knuckle.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 359 \u2014 First Knuckle\nTYPE: FIGHTING; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre pressure light, linen ivory, dark bronze.\nVISUAL ACTION: A compact bronze force-knuckle draws back briefly, darts forward with two short staggered afterimages, lands one small hard contact and withdraws. No whole hand or arm.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 714-Flowing-Palm.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 359-First-Knuckle.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 361,
+      "name": "Burrow Blitz",
+      "filename": "361-Burrow-Blitz.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 139,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "bc1f1aebc020425e0e7cf248c5e0a1266334d2cdc5ef8aee1613a5877ffa459d",
+      "sha256": "ba9c57c2138ef0bb564e57da880da20ab33b6a19e93cc4848bf85ad877d537a2",
+      "production_intent": {
+        "index": 103,
+        "batch": 3,
+        "id": 361,
+        "name": "Burrow Blitz",
+        "filename": "361-Burrow-Blitz.png",
+        "type": "GROUND",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "A compressed ochre grit coil disappears into a low mound-like arc of particles, erupts forward once as a narrow earth spike and scatters into soil chips. No landscape.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre clay, umber earth, dusty sandstone",
+        "prompt_file": "Prompts/Batch_3/361-Burrow-Blitz.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 361 \u2014 Burrow Blitz\nTYPE: GROUND; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre clay, umber earth, dusty sandstone.\nVISUAL ACTION: A compressed ochre grit coil disappears into a low mound-like arc of particles, erupts forward once as a narrow earth spike and scatters into soil chips. No landscape.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 361-Burrow-Blitz.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 362,
+      "name": "Slipstream Cut",
+      "filename": "362-Slipstream-Cut.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 155,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "f1757804da209ae3bc84d62656a2200793bf2d7e3cd98591c5a6c68e0490fd66",
+      "sha256": "3ba275f3fc01b9f8bc001da8a66449803601671de8f58cf680831c26ff5b0fbe",
+      "production_intent": {
+        "index": 104,
+        "batch": 3,
+        "id": 362,
+        "name": "Slipstream Cut",
+        "filename": "362-Slipstream-Cut.png",
+        "type": "FLYING",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/504-Cascade-Lance.png",
+        "visual_brief": "A thin pale-silver air blade follows a hooked slipstream; two wind ribbons converge into one clean cutting pass and unwind.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "silver blue, smoke grey, pale feather ivory",
+        "prompt_file": "Prompts/Batch_3/362-Slipstream-Cut.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 362 \u2014 Slipstream Cut\nTYPE: FLYING; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: silver blue, smoke grey, pale feather ivory.\nVISUAL ACTION: A thin pale-silver air blade follows a hooked slipstream; two wind ribbons converge into one clean cutting pass and unwind.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 504-Cascade-Lance.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 362-Slipstream-Cut.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 364,
+      "name": "Skitter Strike",
+      "filename": "364-Skitter-Strike.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 55,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "0b9de263ece7f6f444ec8e154ca449932c53877b6ff748b93de5578bc3a59483",
+      "sha256": "c54b96756328c32bbb1e63fbc2b2f7e0b611ff64d85a58baf3af96372069bd9f",
+      "production_intent": {
+        "index": 105,
+        "batch": 3,
+        "id": 364,
+        "name": "Skitter Strike",
+        "filename": "364-Skitter-Strike.png",
+        "type": "BUG",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/297-Night-Slash.png",
+        "visual_brief": "Three tiny chitin-coloured hooked streaks skitter into a zigzag approach and converge into one compact diagonal strike. No insect body.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "dull jade chitin, moss green, old amber",
+        "prompt_file": "Prompts/Batch_3/364-Skitter-Strike.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 364 \u2014 Skitter Strike\nTYPE: BUG; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: dull jade chitin, moss green, old amber.\nVISUAL ACTION: Three tiny chitin-coloured hooked streaks skitter into a zigzag approach and converge into one compact diagonal strike. No insect body.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 297-Night-Slash.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 364-Skitter-Strike.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 365,
+      "name": "Pebble Skip",
+      "filename": "365-Pebble-Skip.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 161,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "828bf7084c78faeb4734098cf3437b68d206093da6ebc737c4490815f603925d",
+      "sha256": "1035a64bbbcfae16fe4dd3c41753dcee18b8266a694c6a9ffe6608c0e6976081",
+      "production_intent": {
+        "index": 106,
+        "batch": 3,
+        "id": 365,
+        "name": "Pebble Skip",
+        "filename": "365-Pebble-Skip.png",
+        "type": "ROCK",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "One small angular pebble travels in a shallow skipping arc, with two brief dust ticks along its approach, makes one clear impact and crumbles. Dust ticks must read as travel rather than extra hits.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "slate grey, weathered granite, muted mineral ivory",
+        "prompt_file": "Prompts/Batch_3/365-Pebble-Skip.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 365 \u2014 Pebble Skip\nTYPE: ROCK; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: slate grey, weathered granite, muted mineral ivory.\nVISUAL ACTION: One small angular pebble travels in a shallow skipping arc, with two brief dust ticks along its approach, makes one clear impact and crumbles. Dust ticks must read as travel rather than extra hits.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 365-Pebble-Skip.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 368,
+      "name": "Shadow Intercept",
+      "filename": "368-Shadow-Intercept.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 135,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "990f4e2a08d3948e61a5600d6c312e79eea89cc0de8cca38970df293412d002e",
+      "sha256": "d9cadefdaa0ec06f10240252ff8f3df05f269a53442aad58c645d62e7e0f0bab",
+      "production_intent": {
+        "index": 107,
+        "batch": 3,
+        "id": 368,
+        "name": "Shadow Intercept",
+        "filename": "368-Shadow-Intercept.png",
+        "type": "DARK",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/297-Night-Slash.png",
+        "visual_brief": "A crescent of charcoal shadow overtakes its own two trailing fragments and snaps shut in one intercepting slash; dusk wisps retract.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "charcoal plum, soot grey, restrained garnet",
+        "prompt_file": "Prompts/Batch_3/368-Shadow-Intercept.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 368 \u2014 Shadow Intercept\nTYPE: DARK; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: charcoal plum, soot grey, restrained garnet.\nVISUAL ACTION: A crescent of charcoal shadow overtakes its own two trailing fragments and snaps shut in one intercepting slash; dusk wisps retract.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 297-Night-Slash.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 368-Shadow-Intercept.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 369,
+      "name": "Quicksteel",
+      "filename": "369-Quicksteel.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 59,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "ae6d868fc99d7cfab58aae47d76488bda465c3281ed5521528587e73c4e4decb",
+      "sha256": "8a533b7e0d8f41ea3b15e54d4f46543b6bdcde8e48ff122a459692d44495c737",
+      "production_intent": {
+        "index": 108,
+        "batch": 3,
+        "id": 369,
+        "name": "Quicksteel",
+        "filename": "369-Quicksteel.png",
+        "type": "STEEL",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "One very narrow gunmetal blade streak draws two steel afterimages into a single bright silver contact and leaves sparse metal flakes.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "gunmetal, worn iron, small silver highlights",
+        "prompt_file": "Prompts/Batch_3/369-Quicksteel.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 369 \u2014 Quicksteel\nTYPE: STEEL; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: gunmetal, worn iron, small silver highlights.\nVISUAL ACTION: One very narrow gunmetal blade streak draws two steel afterimages into a single bright silver contact and leaves sparse metal flakes.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 369-Quicksteel.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 370,
+      "name": "Wish Flash",
+      "filename": "370-Wish-Flash.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 79,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "ccd17b5cfb39db4e29ce9ad89367d1d318c546601ebf82856b289d29fb3c9a28",
+      "sha256": "1c158c1859dc57c3eb01960ef25a956ebb3efff1df8a21663ea17631ce58c88f",
+      "production_intent": {
+        "index": 109,
+        "batch": 3,
+        "id": 370,
+        "name": "Wish Flash",
+        "filename": "370-Wish-Flash.png",
+        "type": "FAIRY",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "A small pearl-rose wishing star compresses, darts forward with a short ivory trail, flares once and scatters into four dim petal sparks.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "dusty pearl rose, muted lavender, cream",
+        "prompt_file": "Prompts/Batch_3/370-Wish-Flash.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 370 \u2014 Wish Flash\nTYPE: FAIRY; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: dusty pearl rose, muted lavender, cream.\nVISUAL ACTION: A small pearl-rose wishing star compresses, darts forward with a short ivory trail, flares once and scatters into four dim petal sparks.\nGAMEPLAY CONTEXT (do not draw explanatory text): Priority +1: acts before normal-priority moves. Speed breaks ties within the same priority.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 370-Wish-Flash.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 371,
+      "name": "Raincall",
+      "filename": "371-Raincall.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 300,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "2831dcceddec20c2f09ed1a2605251025facb5f38272a92aac9dd8dd50454d75",
+      "sha256": "cd08c5c1deaec6acf02a12514c67f8e2beba2a6fd356f9a096978777f2e188ce",
+      "production_intent": {
+        "index": 110,
+        "batch": 3,
+        "id": 371,
+        "name": "Raincall",
+        "filename": "371-Raincall.png",
+        "type": "WATER",
+        "category": "STATUS",
+        "target": "SELF",
+        "effect_text": "Rain for 5 turns: Water damage \u00d71.5; Fire damage \u00d70.5. Activates rain abilities.",
+        "reference_image": "Samples/504-Cascade-Lance.png",
+        "visual_brief": "Three short descending rain ribbons thicken into a low hollow rain canopy, hold and thin to droplets. Weather field, no scenery.",
+        "timing": "Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.",
+        "palette": "deep muted teal, slate blue, pale foam",
+        "prompt_file": "Prompts/Batch_3/371-Raincall.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 371 \u2014 Raincall\nTYPE: WATER; CATEGORY: STATUS; TARGET: SELF\nMATERIAL PALETTE: deep muted teal, slate blue, pale foam.\nVISUAL ACTION: Three short descending rain ribbons thicken into a low hollow rain canopy, hold and thin to droplets. Weather field, no scenery.\nGAMEPLAY CONTEXT (do not draw explanatory text): Rain for 5 turns: Water damage \u00d71.5; Fire damage \u00d70.5. Activates rain abilities.\nSEQUENCE: Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.\nREFERENCE: 504-Cascade-Lance.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 371-Raincall.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 372,
+      "name": "Solar Vigil",
+      "filename": "372-Solar-Vigil.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 302,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "e05a8df2181c2af2378ccb2a32809ece4c4c2a2f68f10b34468f736e016c2787",
+      "sha256": "5d5060032b2012bfd5dd087a8e4d32a337749fa3128e29e091f127b7d942c8c7",
+      "production_intent": {
+        "index": 111,
+        "batch": 3,
+        "id": 372,
+        "name": "Solar Vigil",
+        "filename": "372-Solar-Vigil.png",
+        "type": "FIRE",
+        "category": "STATUS",
+        "target": "SELF",
+        "effect_text": "Sun for 5 turns: Fire damage \u00d71.5; Water damage \u00d70.5. Activates sun abilities.",
+        "reference_image": "Samples/522-Cinder-Hex.png",
+        "visual_brief": "A small warm solar disc with cracked ember rays rises above an empty centre, sets a quiet heat canopy and diminishes. Sun weather, no scenery.",
+        "timing": "Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.",
+        "palette": "burnt orange, deep ember red, pale hot ivory",
+        "prompt_file": "Prompts/Batch_3/372-Solar-Vigil.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 372 \u2014 Solar Vigil\nTYPE: FIRE; CATEGORY: STATUS; TARGET: SELF\nMATERIAL PALETTE: burnt orange, deep ember red, pale hot ivory.\nVISUAL ACTION: A small warm solar disc with cracked ember rays rises above an empty centre, sets a quiet heat canopy and diminishes. Sun weather, no scenery.\nGAMEPLAY CONTEXT (do not draw explanatory text): Sun for 5 turns: Fire damage \u00d71.5; Water damage \u00d70.5. Activates sun abilities.\nSEQUENCE: Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.\nREFERENCE: 522-Cinder-Hex.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 372-Solar-Vigil.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 373,
+      "name": "Sandwake",
+      "filename": "373-Sandwake.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 592,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "d055a48343a07286802081d22890f90eede973b058fb82b3155434b41d513724",
+      "sha256": "3b3922b4480b1c63794e06a1f477470a3800bca415d15786bb33286d6e4f0e9e",
+      "production_intent": {
+        "index": 112,
+        "batch": 3,
+        "id": 373,
+        "name": "Sandwake",
+        "filename": "373-Sandwake.png",
+        "type": "GROUND",
+        "category": "STATUS",
+        "target": "SELF",
+        "effect_text": "Sand for 5 turns: non-Rock/Ground/Steel partners lose 1/16 max HP each turn unless protected.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "A low grain spiral raises two rough sand veils around an empty centre, establishes a quiet gritty field and thins out.",
+        "timing": "Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.",
+        "palette": "ochre clay, umber earth, dusty sandstone",
+        "prompt_file": "Prompts/Batch_3/373-Sandwake.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 373 \u2014 Sandwake\nTYPE: GROUND; CATEGORY: STATUS; TARGET: SELF\nMATERIAL PALETTE: ochre clay, umber earth, dusty sandstone.\nVISUAL ACTION: A low grain spiral raises two rough sand veils around an empty centre, establishes a quiet gritty field and thins out.\nGAMEPLAY CONTEXT (do not draw explanatory text): Sand for 5 turns: non-Rock/Ground/Steel partners lose 1/16 max HP each turn unless protected.\nSEQUENCE: Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 373-Sandwake.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 375,
+      "name": "Meadow Weave",
+      "filename": "375-Meadow-Weave.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 453,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "fefca265e092b6dd7a92f3631e2ac81c3707c0ca0f180afd30ca6775dfaf29ac",
+      "sha256": "58a988c09f7bb518dc195c6bc6c99102fd012b7334a4fa44553a6470597db029",
+      "production_intent": {
+        "index": 113,
+        "batch": 3,
+        "id": 375,
+        "name": "Meadow Weave",
+        "filename": "375-Meadow-Weave.png",
+        "type": "GRASS",
+        "category": "STATUS",
+        "target": "SELF",
+        "effect_text": "Grassy terrain for 5 turns: Grass damage \u00d71.2; supports Earthroot and World Anchor healing. World Anchor blocks terrain changes.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "Five braided meadow leaf strips interlace into a low hollow woven field, bud quietly and unravel. Grass terrain, no scenery.",
+        "timing": "Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.",
+        "palette": "moss green, leaf olive, weathered bark",
+        "prompt_file": "Prompts/Batch_3/375-Meadow-Weave.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 375 \u2014 Meadow Weave\nTYPE: GRASS; CATEGORY: STATUS; TARGET: SELF\nMATERIAL PALETTE: moss green, leaf olive, weathered bark.\nVISUAL ACTION: Five braided meadow leaf strips interlace into a low hollow woven field, bud quietly and unravel. Grass terrain, no scenery.\nGAMEPLAY CONTEXT (do not draw explanatory text): Grassy terrain for 5 turns: Grass damage \u00d71.2; supports Earthroot and World Anchor healing. World Anchor blocks terrain changes.\nSEQUENCE: Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 375-Meadow-Weave.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 376,
+      "name": "Mirror Rampart",
+      "filename": "376-Mirror-Rampart.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 399,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "4992980b53a579c79526ec37f0541846db3d237e7dca0aa633dcf44849f4a926",
+      "sha256": "dcccd2a55230dce8fbd40cb8ce2b2f2233b0a1468449901e536f610fa0fe8a20",
+      "production_intent": {
+        "index": 114,
+        "batch": 3,
+        "id": 376,
+        "name": "Mirror Rampart",
+        "filename": "376-Mirror-Rampart.png",
+        "type": "PSYCHIC",
+        "category": "STATUS",
+        "target": "SELF",
+        "effect_text": "Halves incoming special damage to this side for 5 turns; Screenmender adds 2 turns.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "Three thin uneven mirror panes align into a curved hollow rampart, catch a harmless violet gleam and fold shut. Special defence screen.",
+        "timing": "Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.",
+        "palette": "muted violet, dusty lavender, pale amethyst",
+        "prompt_file": "Prompts/Batch_3/376-Mirror-Rampart.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 376 \u2014 Mirror Rampart\nTYPE: PSYCHIC; CATEGORY: STATUS; TARGET: SELF\nMATERIAL PALETTE: muted violet, dusty lavender, pale amethyst.\nVISUAL ACTION: Three thin uneven mirror panes align into a curved hollow rampart, catch a harmless violet gleam and fold shut. Special defence screen.\nGAMEPLAY CONTEXT (do not draw explanatory text): Halves incoming special damage to this side for 5 turns; Screenmender adds 2 turns.\nSEQUENCE: Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 376-Mirror-Rampart.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 377,
+      "name": "Iron Curtain",
+      "filename": "377-Iron-Curtain.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 1079,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "4f5ba86ae5d2c9bd80aa05dc5feff3e08f80b65363b834a67fa162278dd09771",
+      "sha256": "b42bd362732298e2afd99512e9f4f57fb0a0f022e699255502a6934f25196f60",
+      "production_intent": {
+        "index": 115,
+        "batch": 3,
+        "id": 377,
+        "name": "Iron Curtain",
+        "filename": "377-Iron-Curtain.png",
+        "type": "STEEL",
+        "category": "STATUS",
+        "target": "SELF",
+        "effect_text": "Halves incoming physical damage to this side for 5 turns; Screenmender adds 2 turns.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "Four rough iron curtain plates descend into a hollow defensive enclosure, brace quietly and lift apart. Physical defence screen.",
+        "timing": "Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.",
+        "palette": "gunmetal, worn iron, small silver highlights",
+        "prompt_file": "Prompts/Batch_3/377-Iron-Curtain.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 377 \u2014 Iron Curtain\nTYPE: STEEL; CATEGORY: STATUS; TARGET: SELF\nMATERIAL PALETTE: gunmetal, worn iron, small silver highlights.\nVISUAL ACTION: Four rough iron curtain plates descend into a hollow defensive enclosure, brace quietly and lift apart. Physical defence screen.\nGAMEPLAY CONTEXT (do not draw explanatory text): Halves incoming physical damage to this side for 5 turns; Screenmender adds 2 turns.\nSEQUENCE: Frames 1-4 quietly establish the motif; 5-8 form the field, ward, cleansing or stat aura; 9-12 hold with subtle visible progression; 13-16 gently unwind into sparse nonempty remnants. No attack-like collision unless explicitly described in the brief.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 377-Iron-Curtain.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 461,
+      "name": "Wake Palm",
+      "filename": "461-Wake-Palm.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 130,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "52ff14620174c5339384fae3d03fc0444198854b23d84ee51d29f0ae1c2ea018",
+      "sha256": "f727495528f58bac87d7659dd66d6b08e60fa4b374efc1903432476c0bf4d148",
+      "production_intent": {
+        "index": 116,
+        "batch": 3,
+        "id": 461,
+        "name": "Wake Palm",
+        "filename": "461-Wake-Palm.png",
+        "type": "FIGHTING",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals special Fighting damage.",
+        "reference_image": "Samples/714-Flowing-Palm.png",
+        "visual_brief": "Distinct visual motif for Wake Palm: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A small palm-shaped pressure wave snaps forward, then splinters into five sparks.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre pressure light, linen ivory, dark bronze",
+        "prompt_file": "Prompts/Batch_3/461-Wake-Palm.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 461 \u2014 Wake Palm\nTYPE: FIGHTING; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre pressure light, linen ivory, dark bronze.\nVISUAL ACTION: Distinct visual motif for Wake Palm: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A small palm-shaped pressure wave snaps forward, then splinters into five sparks.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals special Fighting damage.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 714-Flowing-Palm.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 461-Wake-Palm.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 462,
+      "name": "Undertow Pulse",
+      "filename": "462-Undertow-Pulse.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 211,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "2bc50a252fd4aa82ef0649be478786a21b1d53ce09049ddf0897b85a5cda678e",
+      "sha256": "4673d2911d5aaa9f54795daceb54d602edd2c58378e97ea6406df0f05e073854",
+      "production_intent": {
+        "index": 117,
+        "batch": 3,
+        "id": 462,
+        "name": "Undertow Pulse",
+        "filename": "462-Undertow-Pulse.png",
+        "type": "FIGHTING",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals special Fighting damage.",
+        "reference_image": "Samples/714-Flowing-Palm.png",
+        "visual_brief": "Distinct visual motif for Undertow Pulse: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Three orange pressure rings draw inward before a concentrated outward pulse.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre pressure light, linen ivory, dark bronze",
+        "prompt_file": "Prompts/Batch_3/462-Undertow-Pulse.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 462 \u2014 Undertow Pulse\nTYPE: FIGHTING; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre pressure light, linen ivory, dark bronze.\nVISUAL ACTION: Distinct visual motif for Undertow Pulse: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Three orange pressure rings draw inward before a concentrated outward pulse.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals special Fighting damage.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 714-Flowing-Palm.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 462-Undertow-Pulse.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 464,
+      "name": "Sapping Spiral",
+      "filename": "464-Sapping-Spiral.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 316,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "af2ecf80ea9dacda201c7e1ab399282110f69b918b15f708175e98e9656357a6",
+      "sha256": "4cccd9ee16b47432b78c05f8f531fe7263e5213d3a1895de2023e2042dd1e287",
+      "production_intent": {
+        "index": 118,
+        "batch": 3,
+        "id": 464,
+        "name": "Sapping Spiral",
+        "filename": "464-Sapping-Spiral.png",
+        "type": "FIGHTING",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Restores HP equal to 25% of damage dealt.",
+        "reference_image": "Samples/714-Flowing-Palm.png",
+        "visual_brief": "Distinct visual motif for Sapping Spiral: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A spiral of aura strikes, then four restorative wisps curl back to the caster.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre pressure light, linen ivory, dark bronze",
+        "prompt_file": "Prompts/Batch_3/464-Sapping-Spiral.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 464 \u2014 Sapping Spiral\nTYPE: FIGHTING; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre pressure light, linen ivory, dark bronze.\nVISUAL ACTION: Distinct visual motif for Sapping Spiral: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A spiral of aura strikes, then four restorative wisps curl back to the caster.\nGAMEPLAY CONTEXT (do not draw explanatory text): Restores HP equal to 25% of damage dealt.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 714-Flowing-Palm.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 464-Sapping-Spiral.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 465,
+      "name": "Focus Lance",
+      "filename": "465-Focus-Lance.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 121,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "ceaf1f245557d2dcf15a3a4b9d00efbb28f19cdb7a0b9a6a7a4606593f12b893",
+      "sha256": "7a8ba0eb822aef458152d113428c5bcde2ed0842134be6235e679ed52c8df74e",
+      "production_intent": {
+        "index": 119,
+        "batch": 3,
+        "id": 465,
+        "name": "Focus Lance",
+        "filename": "465-Focus-Lance.png",
+        "type": "FIGHTING",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Always hits, ignoring accuracy and evasion stages.",
+        "reference_image": "Samples/714-Flowing-Palm.png",
+        "visual_brief": "Distinct visual motif for Focus Lance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A narrow focused aura lance aligns, pierces its target and leaves a clean radiant trail.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre pressure light, linen ivory, dark bronze",
+        "prompt_file": "Prompts/Batch_3/465-Focus-Lance.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 465 \u2014 Focus Lance\nTYPE: FIGHTING; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre pressure light, linen ivory, dark bronze.\nVISUAL ACTION: Distinct visual motif for Focus Lance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A narrow focused aura lance aligns, pierces its target and leaves a clean radiant trail.\nGAMEPLAY CONTEXT (do not draw explanatory text): Always hits, ignoring accuracy and evasion stages.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 714-Flowing-Palm.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 465-Focus-Lance.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 470,
+      "name": "Mercy Edge",
+      "filename": "470-Mercy-Edge.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 180,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "cc0ec91cf3b7660021315e135e6b72ccd8a146b57f731f69381c3e02aef98e2c",
+      "sha256": "0079610a9af74c3bf47ca8dbe0e3f1704d68c0a7e258efdc272bba18dd0aab43",
+      "production_intent": {
+        "index": 120,
+        "batch": 3,
+        "id": 470,
+        "name": "Mercy Edge",
+        "filename": "470-Mercy-Edge.png",
+        "type": "FAIRY",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Physical restraint strike. Direct damage leaves the target at 1 HP or more.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "Distinct visual motif for Mercy Edge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "dusty pearl rose, muted lavender, cream",
+        "prompt_file": "Prompts/Batch_3/470-Mercy-Edge.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 470 \u2014 Mercy Edge\nTYPE: FAIRY; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: dusty pearl rose, muted lavender, cream.\nVISUAL ACTION: Distinct visual motif for Mercy Edge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains.\nGAMEPLAY CONTEXT (do not draw explanatory text): Physical restraint strike. Direct damage leaves the target at 1 HP or more.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 470-Mercy-Edge.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 527,
+      "name": "Riptide Haymaker",
+      "filename": "527-Riptide-Haymaker.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 252,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "f86531c548295b164608efce7887f3684c7693abddc0b188e9e5298b7948a7c3",
+      "sha256": "8afd7e5d36695d378582e6b18add167300d51650957f854460bdc8b3f7e10531",
+      "production_intent": {
+        "index": 140,
+        "batch": 3,
+        "id": 527,
+        "name": "Riptide Haymaker",
+        "filename": "527-Riptide-Haymaker.png",
+        "type": "WATER",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/504-Cascade-Lance.png",
+        "visual_brief": "Distinct visual motif for Riptide Haymaker: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A steel-finned hook punch carries a curling wave through the impact.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "deep muted teal, slate blue, pale foam",
+        "prompt_file": "Prompts/Batch_3/527-Riptide-Haymaker.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 527 \u2014 Riptide Haymaker\nTYPE: WATER; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: deep muted teal, slate blue, pale foam.\nVISUAL ACTION: Distinct visual motif for Riptide Haymaker: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A steel-finned hook punch carries a curling wave through the impact.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 504-Cascade-Lance.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 527-Riptide-Haymaker.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 528,
+      "name": "Canopy Joust",
+      "filename": "528-Canopy-Joust.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 217,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "83945ee0825fbb77d87f6c6793897f06d7996a7529ee0b253aa06e5eb3c7005a",
+      "sha256": "64ef3fc874e060f143734d6dec29a0491fbf270f43aaa86231193b57e029894a",
+      "production_intent": {
+        "index": 141,
+        "batch": 3,
+        "id": 528,
+        "name": "Canopy Joust",
+        "filename": "528-Canopy-Joust.png",
+        "type": "GRASS",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "Distinct visual motif for Canopy Joust: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A graceful bounding lunge brings its reinforced leaf crest and ankle-mounted leaf swords through one sweeping strike.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "moss green, leaf olive, weathered bark",
+        "prompt_file": "Prompts/Batch_3/528-Canopy-Joust.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 528 \u2014 Canopy Joust\nTYPE: GRASS; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: moss green, leaf olive, weathered bark.\nVISUAL ACTION: Distinct visual motif for Canopy Joust: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A graceful bounding lunge brings its reinforced leaf crest and ankle-mounted leaf swords through one sweeping strike.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 528-Canopy-Joust.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 529,
+      "name": "Bossbreaker Chop",
+      "filename": "529-Bossbreaker-Chop.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 169,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "79acbdb2cde67e99bbc23d91644be8560aac276df3562a1b72aa40fb396226dd",
+      "sha256": "09cec23cc5ee9b7251bdebe814d3c4d58ddbdddce4c835588fa68dfa24faeb4b",
+      "production_intent": {
+        "index": 142,
+        "batch": 3,
+        "id": 529,
+        "name": "Bossbreaker Chop",
+        "filename": "529-Bossbreaker-Chop.png",
+        "type": "FIGHTING",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/714-Flowing-Palm.png",
+        "visual_brief": "Distinct visual motif for Bossbreaker Chop: interpret its named material and action literally as standalone fantasy VFX. Canonical action: The power claw braces the foe before one heavy cleaver chop, resolved as a single attack.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre pressure light, linen ivory, dark bronze",
+        "prompt_file": "Prompts/Batch_3/529-Bossbreaker-Chop.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 529 \u2014 Bossbreaker Chop\nTYPE: FIGHTING; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre pressure light, linen ivory, dark bronze.\nVISUAL ACTION: Distinct visual motif for Bossbreaker Chop: interpret its named material and action literally as standalone fantasy VFX. Canonical action: The power claw braces the foe before one heavy cleaver chop, resolved as a single attack.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 714-Flowing-Palm.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 529-Bossbreaker-Chop.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 530,
+      "name": "Entropic Reap",
+      "filename": "530-Entropic-Reap.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 233,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "1382095d1204d4a3cb0df6d75ac1bd50cbd969e68b04d0c840f3fa46177edac0",
+      "sha256": "6300a7024b79888705e193f9f2db6e537523021262d1eb80e71ff85e656e4efb",
+      "production_intent": {
+        "index": 143,
+        "batch": 3,
+        "id": 530,
+        "name": "Entropic Reap",
+        "filename": "530-Entropic-Reap.png",
+        "type": "POISON",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "20% chance to poison.",
+        "reference_image": "Samples/297-Night-Slash.png",
+        "visual_brief": "Distinct visual motif for Entropic Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its curved forearm blades and toxin tail sweep through one coordinated strike; a modest poison chance remains a balance proposal.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "deep plum, dusty mauve, muted venom green",
+        "prompt_file": "Prompts/Batch_3/530-Entropic-Reap.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 530 \u2014 Entropic Reap\nTYPE: POISON; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: deep plum, dusty mauve, muted venom green.\nVISUAL ACTION: Distinct visual motif for Entropic Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its curved forearm blades and toxin tail sweep through one coordinated strike; a modest poison chance remains a balance proposal.\nGAMEPLAY CONTEXT (do not draw explanatory text): 20% chance to poison.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 297-Night-Slash.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 530-Entropic-Reap.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 531,
+      "name": "Faultline Crusher",
+      "filename": "531-Faultline-Crusher.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 1256,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "a800dc058271db024e822754aca839a0dfcf9c1f8be63bfc6d27ac52b55d421b",
+      "sha256": "e690ec2ebbdc5b770efef5b5006abfa2e8ebc326990fc98bb734f97a87805c8f",
+      "production_intent": {
+        "index": 144,
+        "batch": 3,
+        "id": 531,
+        "name": "Faultline Crusher",
+        "filename": "531-Faultline-Crusher.png",
+        "type": "GROUND",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "Distinct visual motif for Faultline Crusher: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its huge mechanical claw drives the target into a short burst of fractured earth.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "ochre clay, umber earth, dusty sandstone",
+        "prompt_file": "Prompts/Batch_3/531-Faultline-Crusher.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 531 \u2014 Faultline Crusher\nTYPE: GROUND; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: ochre clay, umber earth, dusty sandstone.\nVISUAL ACTION: Distinct visual motif for Faultline Crusher: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its huge mechanical claw drives the target into a short burst of fractured earth.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 531-Faultline-Crusher.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 532,
+      "name": "Silent Vector",
+      "filename": "532-Silent-Vector.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 173,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "adca9c2ea42036c19b635c49d4c16979c37e77fb93453d1375df7c262f2ae2ad",
+      "sha256": "b276a212a9a9374a4653560c0855a52b698bca3e4bb2893cd325eebc9089467b",
+      "production_intent": {
+        "index": 145,
+        "batch": 3,
+        "id": 532,
+        "name": "Silent Vector",
+        "filename": "532-Silent-Vector.png",
+        "type": "FLYING",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/504-Cascade-Lance.png",
+        "visual_brief": "Distinct visual motif for Silent Vector: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Four articulated wing panels snap into a diving formation as its forearm blades deliver a single cutting pass.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "silver blue, smoke grey, pale feather ivory",
+        "prompt_file": "Prompts/Batch_3/532-Silent-Vector.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 532 \u2014 Silent Vector\nTYPE: FLYING; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: silver blue, smoke grey, pale feather ivory.\nVISUAL ACTION: Distinct visual motif for Silent Vector: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Four articulated wing panels snap into a diving formation as its forearm blades deliver a single cutting pass.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 504-Cascade-Lance.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 532-Silent-Vector.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 534,
+      "name": "Mica Skewer",
+      "filename": "534-Mica-Skewer.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 145,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "56f9733bf4c3900cb11f6ee121858752c9b99b4fccabf2d29f83566ed416d191",
+      "sha256": "e1c70003228181f8d7973a1a8c0abfd8f3b7b5ebdd77131a928d819900604705",
+      "production_intent": {
+        "index": 146,
+        "batch": 3,
+        "id": 534,
+        "name": "Mica Skewer",
+        "filename": "534-Mica-Skewer.png",
+        "type": "ROCK",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/162-Earth-Break.png",
+        "visual_brief": "Distinct visual motif for Mica Skewer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: It darts through the opponent with a pointed geode tail while its mica wings shed a short stone arc.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "slate grey, weathered granite, muted mineral ivory",
+        "prompt_file": "Prompts/Batch_3/534-Mica-Skewer.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 534 \u2014 Mica Skewer\nTYPE: ROCK; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: slate grey, weathered granite, muted mineral ivory.\nVISUAL ACTION: Distinct visual motif for Mica Skewer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: It darts through the opponent with a pointed geode tail while its mica wings shed a short stone arc.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 162-Earth-Break.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 534-Mica-Skewer.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 536,
+      "name": "Encore Bonk",
+      "filename": "536-Encore-Bonk.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 129,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "e4ea315d837c9d4a724d388258d23eb92c9bfac75d7e4f26fe66513cc932388e",
+      "sha256": "e4ce4d5ef5b107cfd218794ffaea844c6da56501d0457f0a1b4b0f6f79361519",
+      "production_intent": {
+        "index": 147,
+        "batch": 3,
+        "id": 536,
+        "name": "Encore Bonk",
+        "filename": "536-Encore-Bonk.png",
+        "type": "FAIRY",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals damage with no additional effect.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "Distinct visual motif for Encore Bonk: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A flourish of spectral bells ends with an oversized illusory hammer bonk. The comic action still resolves as one normal attack.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "dusty pearl rose, muted lavender, cream",
+        "prompt_file": "Prompts/Batch_3/536-Encore-Bonk.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 536 \u2014 Encore Bonk\nTYPE: FAIRY; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: dusty pearl rose, muted lavender, cream.\nVISUAL ACTION: Distinct visual motif for Encore Bonk: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A flourish of spectral bells ends with an oversized illusory hammer bonk. The comic action still resolves as one normal attack.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals damage with no additional effect.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 536-Encore-Bonk.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 537,
+      "name": "Resonant Chime",
+      "filename": "537-Resonant-Chime.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 2644,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "a9c1cd4f158c95aaf2a5bc8eb3b399abd0fbf9aac0826a33341d6d1243c6d746",
+      "sha256": "7bc2df1097fc8db227d8d858708a72e5c9ca6edd8e8321438d8d9275b6579795",
+      "production_intent": {
+        "index": 148,
+        "batch": 3,
+        "id": 537,
+        "name": "Resonant Chime",
+        "filename": "537-Resonant-Chime.png",
+        "type": "STEEL",
+        "category": "SPECIAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Deals sound-based Steel damage.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "Distinct visual motif for Resonant Chime: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Armoured bells vibrate and the trunk projects three narrow metallic pressure rings.",
+        "timing": "Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.",
+        "palette": "gunmetal, worn iron, small silver highlights",
+        "prompt_file": "Prompts/Batch_3/537-Resonant-Chime.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 537 \u2014 Resonant Chime\nTYPE: STEEL; CATEGORY: SPECIAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: gunmetal, worn iron, small silver highlights.\nVISUAL ACTION: Distinct visual motif for Resonant Chime: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Armoured bells vibrate and the trunk projects three narrow metallic pressure rings.\nGAMEPLAY CONTEXT (do not draw explanatory text): Deals sound-based Steel damage.\nSEQUENCE: Frames 1-4 anticipation; 5-7 execute; 8 one compact contact peak; 9-12 aftermath; 13-16 diminish into small nonempty remnants. Keep each phase visually distinct.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 537-Resonant-Chime.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 538,
+      "name": "Shrapnel Barrage",
+      "filename": "538-Shrapnel-Barrage.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 150,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "274fc22ecd8176328f9a507fd0bf34ebd362eca2362a3f58a59db447575154e9",
+      "sha256": "a519424dc8b4eea4e97b9e95547512f9f12fa5357a114d1eba70696b727b1837",
+      "production_intent": {
+        "index": 149,
+        "batch": 3,
+        "id": 538,
+        "name": "Shrapnel Barrage",
+        "filename": "538-Shrapnel-Barrage.png",
+        "type": "STEEL",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Hits 2\u20134 times (24 power each); each hit rolls its own critical chance.",
+        "reference_image": "Samples/471-Prism-Ward.png",
+        "visual_brief": "Four jagged iron shrapnel splinters launch in succession, producing four separately timed tiny spark contacts, then settle.",
+        "timing": "Frames 1-3 gather/aim. Across frames 4-12 show 4 separately timed contacts in sequence, with clear small recovery gaps. Frames 13-16 break into sparse remnants, each frame still nonempty. Multiple contacts must not collapse into a single explosion. The artwork illustrates the move; the existing game still controls its hit count.",
+        "palette": "gunmetal, worn iron, small silver highlights",
+        "prompt_file": "Prompts/Batch_3/538-Shrapnel-Barrage.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 538 \u2014 Shrapnel Barrage\nTYPE: STEEL; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: gunmetal, worn iron, small silver highlights.\nVISUAL ACTION: Four jagged iron shrapnel splinters launch in succession, producing four separately timed tiny spark contacts, then settle.\nGAMEPLAY CONTEXT (do not draw explanatory text): Hits 2\u20134 times (24 power each); each hit rolls its own critical chance.\nSEQUENCE: Frames 1-3 gather/aim. Across frames 4-12 show 4 separately timed contacts in sequence, with clear small recovery gaps. Frames 13-16 break into sparse remnants, each frame still nonempty. Multiple contacts must not collapse into a single explosion. The artwork illustrates the move; the existing game still controls its hit count.\nREFERENCE: 471-Prism-Ward.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 538-Shrapnel-Barrage.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    },
+    {
+      "id": 540,
+      "name": "Phantom Knives",
+      "filename": "540-Phantom-Knives.png",
+      "folder": "Batch_1",
+      "status": "ready",
+      "size": [
+        768,
+        768
+      ],
+      "frames": 16,
+      "unique_frames": 16,
+      "min_visible_pixels": 198,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "a5fb95c392027a66dc948a5bde8c5133251558b1a502d9f6489afd7044cf466f",
+      "sha256": "7aa5600f3fc6263800368d76ed5c0f4df12bc1f964d37459e2d096bb093a2e0e",
+      "production_intent": {
+        "index": 150,
+        "batch": 3,
+        "id": 540,
+        "name": "Phantom Knives",
+        "filename": "540-Phantom-Knives.png",
+        "type": "GHOST",
+        "category": "PHYSICAL",
+        "target": "SINGLE_FOE",
+        "effect_text": "Hits 2\u20133 times (23 power each); each hit rolls its own critical chance.",
+        "reference_image": "Samples/297-Night-Slash.png",
+        "visual_brief": "Three thin spectral knives sweep in succession with three separate compact slash contacts, then shred into shroud wisps.",
+        "timing": "Frames 1-3 gather/aim. Across frames 4-12 show 3 separately timed contacts in sequence, with clear small recovery gaps. Frames 13-16 break into sparse remnants, each frame still nonempty. Multiple contacts must not collapse into a single explosion. The artwork illustrates the move; the existing game still controls its hit count.",
+        "palette": "pale spectral teal, shroud grey, desaturated violet",
+        "prompt_file": "Prompts/Batch_3/540-Phantom-Knives.txt",
+        "prompt": "Create ONE new production animation sprite sheet for the dark-fantasy monster RPG Abyssals. Use the attached approved PNG as a STYLE AND GRID reference only: match its pixel density, stepped contours, clustered hand-shading, hard highlights, subdued material colours and amount of transparent space. Create the new move below; do not recolour or trace the sample animation.\n\nOUTPUT: one square PNG with genuine transparent alpha, exactly FOUR equal columns by FOUR equal rows, containing SIXTEEN distinct consecutive frames. Read left to right, then top to bottom. Preferred size 768 x 768 pixels (each cell 192 x 192). If your renderer uses a different fixed square size, keep that native resolution, preserve all 16 cells and disclose the dimensions; do not fake a 768px export. No screenshot or JPEG.\n\nLAYOUT: keep the same anchor and scale throughout. Centre each whole effect in its cell. Fit every visible fragment inside the central 55 percent of each cell, with generous alpha-zero margins on all sides. No content crosses cell boundaries. Include every frame, including the small but nonempty last frame. These are changing animation phases, not 16 alternate designs.\n\nSTYLE: detailed high-density pixel art, dimensional material fragments and deliberate dark shading, restrained highlights that remain readable on a dark battle backdrop. No smooth gradients, soft bloom, neon glow, vector shapes, low-resolution doodles, scenery, UI, captions, letters, numerals, visible grid lines or borders. No complete creature, humanoid, whole limb, blood or injury. Abstract force forms and move-relevant material fragments are allowed. Do not paint a checkerboard, black or white background: empty pixels must be genuinely transparent.\n\nMOVE: 540 \u2014 Phantom Knives\nTYPE: GHOST; CATEGORY: PHYSICAL; TARGET: SINGLE_FOE\nMATERIAL PALETTE: pale spectral teal, shroud grey, desaturated violet.\nVISUAL ACTION: Three thin spectral knives sweep in succession with three separate compact slash contacts, then shred into shroud wisps.\nGAMEPLAY CONTEXT (do not draw explanatory text): Hits 2\u20133 times (23 power each); each hit rolls its own critical chance.\nSEQUENCE: Frames 1-3 gather/aim. Across frames 4-12 show 3 separately timed contacts in sequence, with clear small recovery gaps. Frames 13-16 break into sparse remnants, each frame still nonempty. Multiple contacts must not collapse into a single explosion. The artwork illustrates the move; the existing game still controls its hit count.\nREFERENCE: 297-Night-Slash.png \u2014 match rendering and 4x4 format only; the new move controls material, silhouette, colour and action.\nOUTPUT FILENAME: 540-Phantom-Knives.png (set the downloaded file name; never draw it on the image).\nDeliver only the one new 4x4 atlas. If real alpha PNG export is unavailable, say so; do not disguise a painted background as transparency.\n",
+        "status": "not generated in this handoff"
+      },
+      "review": "technical and static visual pass; runtime playback pending"
+    }
+  ]
+}

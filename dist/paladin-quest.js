@@ -1,8 +1,8 @@
-import {trialState,trialsReady} from './court-trials.js?v=0.90.53';
-import {COURT_RAIDERS,pendingCourtRaider,courtRaidCleared,installCourtRaiders,installCourtRaidTrainers} from './court-raiders.js?v=0.90.53';
-import {legalForm,legalMoves} from './route-roster.js?v=0.90.53';
-import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.53';
-import {courtState} from './paladin-roaming.js?v=0.90.53';
+import {trialState,trialsReady} from './court-trials.js?v=0.90.54';
+import {COURT_RAIDERS,pendingCourtRaider,courtRaidCleared,installCourtRaiders,installCourtRaidTrainers} from './court-raiders.js?v=0.90.54';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.54';
+import {claimChoiceReward,choiceRewardText} from './choice-rewards.js?v=0.90.54';
+import {courtState} from './paladin-roaming.js?v=0.90.54';
 export const COURT_ROOMS=['courtTurn','bannerwood','courtProcession','courtPlinths','crownfall','courtApproach','emptyThrone'];
 export const COURT_TITLES=['The Forgotten Turn','Bannerwood','The Broken Procession','The Thirteen Plinths','Crownfall Ravine','The Sceptre Road','The Empty Throne'];
 export const COURT_COMMANDER='TRN-COURT-HUGH';

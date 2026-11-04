@@ -1,4 +1,4 @@
-import {SOUNDTRACK} from './soundtrack.js?v=0.90.53';
+import {SOUNDTRACK} from './soundtrack.js?v=0.90.54';
 export const MUSIC_TRACKS=Object.fromEntries(Object.entries(SOUNDTRACK).map(([id,file])=>[id,'assets/music/'+file]));
 
 export function createMusicController({createAudio=()=>new Audio(),tracks=MUSIC_TRACKS,fadeMs=0}={}){

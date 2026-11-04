@@ -9,7 +9,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  try{
  const page=await browser.newPage({viewport:{width:430,height:932},serviceWorkers:'block',reducedMotion:'reduce'}),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.addInitScript(()=>{const Native=Audio;window.__audios=[];window.Audio=function(...args){const a=new Native(...args);window.__audios.push(a);return a;};});
- await page.route(/\/app\.js(?:\?.*)?$/,async route=>{const response=await route.fetch();await route.fulfill({response,body:`import {MUSIC_TRACKS} from './music.js?v=0.90.53';\n`+await response.text()+`\nwindow.__soundtrackQA={
+ await page.route(/\/app\.js(?:\?.*)?$/,async route=>{const response=await route.fetch();await route.fulfill({response,body:`import {MUSIC_TRACKS} from './music.js?v=0.90.54';\n`+await response.text()+`\nwindow.__soundtrackQA={
  boot(){selectSlot(1);closeDialogue();closeModal();const f=structuredClone(initialExpeditionState);Object.assign(f,{begun:true,openingDone:true,tamingTaught:true,pate:true,trade:true,kurg:true,departed:true,nextUnitId:9000,party:[newUnit(byId('568'),100)],sound:true,fates:{'LDR-05':'SPARED'},botrune:{version:1,cursor:0,phase:'trial',witnesses:[],keepsakes:false}});resumeSnapshot({state:f,room:'town',player:{x:25,y:18,facing:'up'},phaseElapsed:0,worldRandom:123});},
  go:async r=>{closeDialogue();closeModal();await warp(r,24,24,'up');},state:()=>JSON.parse(JSON.stringify(state)),
  guard(id){startRouteTrainer(BOTRUNE_GUARDS.find(t=>t.id===id));return battle?.trainer?.id;},endGuard(id){hideBattleSurface();state.defeatedTrainers.push(id);persist();refresh();},

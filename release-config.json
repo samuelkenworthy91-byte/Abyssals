@@ -1,10 +1,10 @@
 {
-  "version": "0.90.53",
-  "version_code": 148,
-  "filename": "Abyssals-v0.90.53-Animation-Playtest.apk",
-  "title": "Abyssals v0.90.53 \u2014 Animation Playtest",
-  "notes": "Signed playtest from verified main: all 615 action bindings covered by 557 dedicated uploaded sheets and 58 shared bindings. Includes the balanced dossier roster, approved bat portraits, soundtrack and leader-fate evolutions. Multi-hit timing and lower-HUD animation clipping repaired. All 50 recovered Next100 batch-one sheets are installed; 58 dedicated sheets remain outstanding. Original Mercy Edge renderer preserved. Uses original uk.co.abyssals.game package and signing certificate; existing saves retained. Production/static checks, regression tests and sampled live battle verification passed; this is an interim playtest, not individual final visual approval for every animation.",
-  "pwa_filename": "Abyssals-v0.90.53-PWA.zip",
+  "version": "0.90.54",
+  "version_code": 149,
+  "filename": "Abyssals-v0.90.54-Individual-Move-Animations.apk",
+  "title": "Abyssals v0.90.54 \u2014 Individual Move Animations",
+  "notes": "All 615 action bindings now use their own dedicated animation source: 611 selectable move IDs plus four engine reactions. Final 58 sheets uploaded in two independently verified browser commits. Preserves original package/signing identity, saves, non-lethal Mercy rules and existing game content. Technical checks and sampled gameplay verification are recorded separately from final individual artistic approval.",
+  "pwa_filename": "Abyssals-v0.90.54-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.53-art-scope.json"
+  "artwork_scope_path": "docs/releases/v0.90.54-art-scope.json"
 }

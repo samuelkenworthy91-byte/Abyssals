@@ -1,7 +1,7 @@
-import {activeDraughts} from './training-draughts.js?v=0.90.53';
-import {shinySummaryHTML} from './shinies.js?v=0.90.53';
-import {inheritanceSummaryHTML} from './breeding-inheritance.js?v=0.90.53';
-import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,inheritedGrowthRate,GROWTH_BONUS_FACTOR,permanentGrowthDetails} from './progression.js?v=0.90.53';
+import {activeDraughts} from './training-draughts.js?v=0.90.54';
+import {shinySummaryHTML} from './shinies.js?v=0.90.54';
+import {inheritanceSummaryHTML} from './breeding-inheritance.js?v=0.90.54';
+import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,inheritedGrowthRate,GROWTH_BONUS_FACTOR,permanentGrowthDetails} from './progression.js?v=0.90.54';
 export function growthDescription(percent,key){
  const increment=key==='hp'?10:1,guaranteed=Math.floor(percent/100)*increment,remainder=Math.round(percent%100*10)/10;
  const parts=[];

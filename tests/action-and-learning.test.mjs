@@ -25,7 +25,7 @@ assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,scope.expecte
 for(const art of Object.values(ACTION_ART)){
  assert(fs.existsSync('dist/'+art.src),art.name);
  const m=move(art.id)||{id:art.id,type_id:'WATER',category:'SPECIAL',power:50};
- if(m.salvation&&m.id!==710){assert.equal(effectSpec(m).style,'salvation');continue;}
+ if(m.salvation&&ACTION_ART[m.id]?.sourceId!==m.id){assert.equal(effectSpec(m).style,'salvation');continue;}
  assert(effectSpec(m).pixel,art.name);assert.equal(effectSpec(m).duration,readableDuration(m,art.duration));
  const html=effectHTML(m);assert(html.includes('data-action-art='),art.name);assert(!html.includes('<svg'),art.name);
  assert.equal(art.frames,16);assert.equal(art.logicalCell,192);

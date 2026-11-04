@@ -1,6 +1,6 @@
-import {has,abilityMemory,abilityBattle,changeStage,restoreHP,healingMultiplier,isContact,inflictStatus,changeWeather,setTerrain,weatherSuppressed,heldInfo} from './abilities.js?v=0.90.53';
-import {menagerieParty} from './menagerie-rules.js?v=0.90.53';
-import {unitName} from './names.js?v=0.90.53';
+import {has,abilityMemory,abilityBattle,changeStage,restoreHP,healingMultiplier,isContact,inflictStatus,changeWeather,setTerrain,weatherSuppressed,heldInfo} from './abilities.js?v=0.90.54';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.54';
+import {unitName} from './names.js?v=0.90.54';
 
 const alive=u=>u&&u.hp>0&&!u.dead&&!u.captured;
 const opposite=(a,b)=>a!==b&&(!a.side||!b.side||a.side!==b.side);

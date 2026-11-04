@@ -1,14 +1,14 @@
-import {itemIcon,codexIcon} from './item-art.js?v=0.90.53';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.53';
-import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.53';
-import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.53';
+import {itemIcon,codexIcon} from './item-art.js?v=0.90.54';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.54';
+import {NURSERY_ITEMS,buyNurseryItem,nurseryItemCount} from './breeding-items.js?v=0.90.54';
+import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.54';
 // Marasen: commercial floors, permanent growth, and the Rapids Arena.
 // All permanent transactions are committed through the game's save rollback guard.
-import {marasenObjective} from './marasen-rules.js?v=0.90.53';
-import {DATA} from './data.js?v=0.90.53';
-import {HELD_ITEMS} from './held-data.js?v=0.90.53';
-import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.53';
-import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.53';
+import {marasenObjective} from './marasen-rules.js?v=0.90.54';
+import {DATA} from './data.js?v=0.90.54';
+import {HELD_ITEMS} from './held-data.js?v=0.90.54';
+import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.54';
+import {STAT_KEYS,STAT_LABELS,unitGrowthPercent,permanentGrowthMultiplier,permanentGrowthDetails} from './progression.js?v=0.90.54';
 const FLOOR_NAMES=['General Provisions','Technique Library','Relic Gallery','Evolution Atelier','Growth Apothecary','Merchant’s Terrace'];
 const money=n=>Math.floor(n||0).toLocaleString('en-GB');
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

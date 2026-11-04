@@ -13255,6 +13255,1398 @@
         "revision": "approved-upload",
         "sequence": "A folded dark cloth hood rises low, quietly draws a small shadow shard inward and releases one short hollow pulse before folding flat."
       }
+    },
+    {
+      "id": 359,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/359-First-Knuckle.png",
+      "sha256": "bffd243f0a178b3c1be147d5039e879dc3241e29cf90238a33dbd6f5163e9c63",
+      "art": {
+        "id": 359,
+        "name": "First Knuckle",
+        "key": "first-knuckle",
+        "src": "assets/vfx/action/359-First-Knuckle.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A compact bronze force-knuckle draws back briefly, darts forward with two short staggered afterimages, lands one small hard contact and withdraws. No whole hand or arm."
+      }
+    },
+    {
+      "id": 361,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/361-Burrow-Blitz.png",
+      "sha256": "ba9c57c2138ef0bb564e57da880da20ab33b6a19e93cc4848bf85ad877d537a2",
+      "art": {
+        "id": 361,
+        "name": "Burrow Blitz",
+        "key": "burrow-blitz",
+        "src": "assets/vfx/action/361-Burrow-Blitz.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A compressed ochre grit coil disappears into a low mound-like arc of particles, erupts forward once as a narrow earth spike and scatters into soil chips. No landscape."
+      }
+    },
+    {
+      "id": 362,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/362-Slipstream-Cut.png",
+      "sha256": "3ba275f3fc01b9f8bc001da8a66449803601671de8f58cf680831c26ff5b0fbe",
+      "art": {
+        "id": 362,
+        "name": "Slipstream Cut",
+        "key": "slipstream-cut",
+        "src": "assets/vfx/action/362-Slipstream-Cut.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A thin pale-silver air blade follows a hooked slipstream; two wind ribbons converge into one clean cutting pass and unwind."
+      }
+    },
+    {
+      "id": 364,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/364-Skitter-Strike.png",
+      "sha256": "c54b96756328c32bbb1e63fbc2b2f7e0b611ff64d85a58baf3af96372069bd9f",
+      "art": {
+        "id": 364,
+        "name": "Skitter Strike",
+        "key": "skitter-strike",
+        "src": "assets/vfx/action/364-Skitter-Strike.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three tiny chitin-coloured hooked streaks skitter into a zigzag approach and converge into one compact diagonal strike. No insect body."
+      }
+    },
+    {
+      "id": 365,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/365-Pebble-Skip.png",
+      "sha256": "1035a64bbbcfae16fe4dd3c41753dcee18b8266a694c6a9ffe6608c0e6976081",
+      "art": {
+        "id": 365,
+        "name": "Pebble Skip",
+        "key": "pebble-skip",
+        "src": "assets/vfx/action/365-Pebble-Skip.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "One small angular pebble travels in a shallow skipping arc, with two brief dust ticks along its approach, makes one clear impact and crumbles. Dust ticks must read as travel rather than extra hits."
+      }
+    },
+    {
+      "id": 368,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/368-Shadow-Intercept.png",
+      "sha256": "d9cadefdaa0ec06f10240252ff8f3df05f269a53442aad58c645d62e7e0f0bab",
+      "art": {
+        "id": 368,
+        "name": "Shadow Intercept",
+        "key": "shadow-intercept",
+        "src": "assets/vfx/action/368-Shadow-Intercept.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A crescent of charcoal shadow overtakes its own two trailing fragments and snaps shut in one intercepting slash; dusk wisps retract."
+      }
+    },
+    {
+      "id": 369,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/369-Quicksteel.png",
+      "sha256": "8a533b7e0d8f41ea3b15e54d4f46543b6bdcde8e48ff122a459692d44495c737",
+      "art": {
+        "id": 369,
+        "name": "Quicksteel",
+        "key": "quicksteel",
+        "src": "assets/vfx/action/369-Quicksteel.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "One very narrow gunmetal blade streak draws two steel afterimages into a single bright silver contact and leaves sparse metal flakes."
+      }
+    },
+    {
+      "id": 370,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/370-Wish-Flash.png",
+      "sha256": "1c158c1859dc57c3eb01960ef25a956ebb3efff1df8a21663ea17631ce58c88f",
+      "art": {
+        "id": 370,
+        "name": "Wish Flash",
+        "key": "wish-flash",
+        "src": "assets/vfx/action/370-Wish-Flash.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A small pearl-rose wishing star compresses, darts forward with a short ivory trail, flares once and scatters into four dim petal sparks."
+      }
+    },
+    {
+      "id": 371,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/371-Raincall.png",
+      "sha256": "cd08c5c1deaec6acf02a12514c67f8e2beba2a6fd356f9a096978777f2e188ce",
+      "art": {
+        "id": 371,
+        "name": "Raincall",
+        "key": "raincall",
+        "src": "assets/vfx/action/371-Raincall.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three short descending rain ribbons thicken into a low hollow rain canopy, hold and thin to droplets. Weather field, no scenery."
+      }
+    },
+    {
+      "id": 372,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/372-Solar-Vigil.png",
+      "sha256": "5d5060032b2012bfd5dd087a8e4d32a337749fa3128e29e091f127b7d942c8c7",
+      "art": {
+        "id": 372,
+        "name": "Solar Vigil",
+        "key": "solar-vigil",
+        "src": "assets/vfx/action/372-Solar-Vigil.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A small warm solar disc with cracked ember rays rises above an empty centre, sets a quiet heat canopy and diminishes. Sun weather, no scenery."
+      }
+    },
+    {
+      "id": 373,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/373-Sandwake.png",
+      "sha256": "3b3922b4480b1c63794e06a1f477470a3800bca415d15786bb33286d6e4f0e9e",
+      "art": {
+        "id": 373,
+        "name": "Sandwake",
+        "key": "sandwake",
+        "src": "assets/vfx/action/373-Sandwake.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A low grain spiral raises two rough sand veils around an empty centre, establishes a quiet gritty field and thins out."
+      }
+    },
+    {
+      "id": 375,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/375-Meadow-Weave.png",
+      "sha256": "58a988c09f7bb518dc195c6bc6c99102fd012b7334a4fa44553a6470597db029",
+      "art": {
+        "id": 375,
+        "name": "Meadow Weave",
+        "key": "meadow-weave",
+        "src": "assets/vfx/action/375-Meadow-Weave.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Five braided meadow leaf strips interlace into a low hollow woven field, bud quietly and unravel. Grass terrain, no scenery."
+      }
+    },
+    {
+      "id": 376,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/376-Mirror-Rampart.png",
+      "sha256": "dcccd2a55230dce8fbd40cb8ce2b2f2233b0a1468449901e536f610fa0fe8a20",
+      "art": {
+        "id": 376,
+        "name": "Mirror Rampart",
+        "key": "mirror-rampart",
+        "src": "assets/vfx/action/376-Mirror-Rampart.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three thin uneven mirror panes align into a curved hollow rampart, catch a harmless violet gleam and fold shut. Special defence screen."
+      }
+    },
+    {
+      "id": 377,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/377-Iron-Curtain.png",
+      "sha256": "b42bd362732298e2afd99512e9f4f57fb0a0f022e699255502a6934f25196f60",
+      "art": {
+        "id": 377,
+        "name": "Iron Curtain",
+        "key": "iron-curtain",
+        "src": "assets/vfx/action/377-Iron-Curtain.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four rough iron curtain plates descend into a hollow defensive enclosure, brace quietly and lift apart. Physical defence screen."
+      }
+    },
+    {
+      "id": 461,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/461-Wake-Palm.png",
+      "sha256": "f727495528f58bac87d7659dd66d6b08e60fa4b374efc1903432476c0bf4d148",
+      "art": {
+        "id": 461,
+        "name": "Wake Palm",
+        "key": "wake-palm",
+        "src": "assets/vfx/action/461-Wake-Palm.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Wake Palm: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A small palm-shaped pressure wave snaps forward, then splinters into five sparks."
+      }
+    },
+    {
+      "id": 462,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/462-Undertow-Pulse.png",
+      "sha256": "4673d2911d5aaa9f54795daceb54d602edd2c58378e97ea6406df0f05e073854",
+      "art": {
+        "id": 462,
+        "name": "Undertow Pulse",
+        "key": "undertow-pulse",
+        "src": "assets/vfx/action/462-Undertow-Pulse.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Undertow Pulse: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Three orange pressure rings draw inward before a concentrated outward pulse."
+      }
+    },
+    {
+      "id": 464,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/464-Sapping-Spiral.png",
+      "sha256": "4cccd9ee16b47432b78c05f8f531fe7263e5213d3a1895de2023e2042dd1e287",
+      "art": {
+        "id": 464,
+        "name": "Sapping Spiral",
+        "key": "sapping-spiral",
+        "src": "assets/vfx/action/464-Sapping-Spiral.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Sapping Spiral: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A spiral of aura strikes, then four restorative wisps curl back to the caster."
+      }
+    },
+    {
+      "id": 465,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/465-Focus-Lance.png",
+      "sha256": "7a8ba0eb822aef458152d113428c5bcde2ed0842134be6235e679ed52c8df74e",
+      "art": {
+        "id": 465,
+        "name": "Focus Lance",
+        "key": "focus-lance",
+        "src": "assets/vfx/action/465-Focus-Lance.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Focus Lance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A narrow focused aura lance aligns, pierces its target and leaves a clean radiant trail."
+      }
+    },
+    {
+      "id": 470,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/470-Mercy-Edge.png",
+      "sha256": "0079610a9af74c3bf47ca8dbe0e3f1704d68c0a7e258efdc272bba18dd0aab43",
+      "art": {
+        "id": 470,
+        "name": "Mercy Edge",
+        "key": "mercy-edge",
+        "src": "assets/vfx/action/470-Mercy-Edge.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1600,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Mercy Edge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains."
+      }
+    },
+    {
+      "id": 527,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/527-Riptide-Haymaker.png",
+      "sha256": "8afd7e5d36695d378582e6b18add167300d51650957f854460bdc8b3f7e10531",
+      "art": {
+        "id": 527,
+        "name": "Riptide Haymaker",
+        "key": "riptide-haymaker",
+        "src": "assets/vfx/action/527-Riptide-Haymaker.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Riptide Haymaker: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A steel-finned hook punch carries a curling wave through the impact."
+      }
+    },
+    {
+      "id": 528,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/528-Canopy-Joust.png",
+      "sha256": "64ef3fc874e060f143734d6dec29a0491fbf270f43aaa86231193b57e029894a",
+      "art": {
+        "id": 528,
+        "name": "Canopy Joust",
+        "key": "canopy-joust",
+        "src": "assets/vfx/action/528-Canopy-Joust.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Canopy Joust: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A graceful bounding lunge brings its reinforced leaf crest and ankle-mounted leaf swords through one sweeping strike."
+      }
+    },
+    {
+      "id": 529,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/529-Bossbreaker-Chop.png",
+      "sha256": "09cec23cc5ee9b7251bdebe814d3c4d58ddbdddce4c835588fa68dfa24faeb4b",
+      "art": {
+        "id": 529,
+        "name": "Bossbreaker Chop",
+        "key": "bossbreaker-chop",
+        "src": "assets/vfx/action/529-Bossbreaker-Chop.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Bossbreaker Chop: interpret its named material and action literally as standalone fantasy VFX. Canonical action: The power claw braces the foe before one heavy cleaver chop, resolved as a single attack."
+      }
+    },
+    {
+      "id": 530,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/530-Entropic-Reap.png",
+      "sha256": "6300a7024b79888705e193f9f2db6e537523021262d1eb80e71ff85e656e4efb",
+      "art": {
+        "id": 530,
+        "name": "Entropic Reap",
+        "key": "entropic-reap",
+        "src": "assets/vfx/action/530-Entropic-Reap.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Entropic Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its curved forearm blades and toxin tail sweep through one coordinated strike; a modest poison chance remains a balance proposal."
+      }
+    },
+    {
+      "id": 531,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/531-Faultline-Crusher.png",
+      "sha256": "e690ec2ebbdc5b770efef5b5006abfa2e8ebc326990fc98bb734f97a87805c8f",
+      "art": {
+        "id": 531,
+        "name": "Faultline Crusher",
+        "key": "faultline-crusher",
+        "src": "assets/vfx/action/531-Faultline-Crusher.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Faultline Crusher: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Its huge mechanical claw drives the target into a short burst of fractured earth."
+      }
+    },
+    {
+      "id": 532,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/532-Silent-Vector.png",
+      "sha256": "b276a212a9a9374a4653560c0855a52b698bca3e4bb2893cd325eebc9089467b",
+      "art": {
+        "id": 532,
+        "name": "Silent Vector",
+        "key": "silent-vector",
+        "src": "assets/vfx/action/532-Silent-Vector.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Silent Vector: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Four articulated wing panels snap into a diving formation as its forearm blades deliver a single cutting pass."
+      }
+    },
+    {
+      "id": 534,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/534-Mica-Skewer.png",
+      "sha256": "e1c70003228181f8d7973a1a8c0abfd8f3b7b5ebdd77131a928d819900604705",
+      "art": {
+        "id": 534,
+        "name": "Mica Skewer",
+        "key": "mica-skewer",
+        "src": "assets/vfx/action/534-Mica-Skewer.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Mica Skewer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: It darts through the opponent with a pointed geode tail while its mica wings shed a short stone arc."
+      }
+    },
+    {
+      "id": 536,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/536-Encore-Bonk.png",
+      "sha256": "e4ce4d5ef5b107cfd218794ffaea844c6da56501d0457f0a1b4b0f6f79361519",
+      "art": {
+        "id": 536,
+        "name": "Encore Bonk",
+        "key": "encore-bonk",
+        "src": "assets/vfx/action/536-Encore-Bonk.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Encore Bonk: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A flourish of spectral bells ends with an oversized illusory hammer bonk. The comic action still resolves as one normal attack."
+      }
+    },
+    {
+      "id": 537,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/537-Resonant-Chime.png",
+      "sha256": "7bc2df1097fc8db227d8d858708a72e5c9ca6edd8e8321438d8d9275b6579795",
+      "art": {
+        "id": 537,
+        "name": "Resonant Chime",
+        "key": "resonant-chime",
+        "src": "assets/vfx/action/537-Resonant-Chime.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Distinct visual motif for Resonant Chime: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Armoured bells vibrate and the trunk projects three narrow metallic pressure rings."
+      }
+    },
+    {
+      "id": 538,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/538-Shrapnel-Barrage.png",
+      "sha256": "a519424dc8b4eea4e97b9e95547512f9f12fa5357a114d1eba70696b727b1837",
+      "art": {
+        "id": 538,
+        "name": "Shrapnel Barrage",
+        "key": "shrapnel-barrage",
+        "src": "assets/vfx/action/538-Shrapnel-Barrage.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four jagged iron shrapnel splinters launch in succession, producing four separately timed tiny spark contacts, then settle."
+      }
+    },
+    {
+      "id": 540,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/540-Phantom-Knives.png",
+      "sha256": "7aa5600f3fc6263800368d76ed5c0f4df12bc1f964d37459e2d096bb093a2e0e",
+      "art": {
+        "id": 540,
+        "name": "Phantom Knives",
+        "key": "phantom-knives",
+        "src": "assets/vfx/action/540-Phantom-Knives.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three thin spectral knives sweep in succession with three separate compact slash contacts, then shred into shroud wisps."
+      }
+    },
+    {
+      "id": 541,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/541-Claw-Rattle.png",
+      "sha256": "d2d6eea62a7eccf533dc8a5ba5fbcdaf7290310e6477fe8e8e63848501c5e41d",
+      "art": {
+        "id": 541,
+        "name": "Claw Rattle",
+        "key": "claw-rattle",
+        "src": "assets/vfx/action/541-Claw-Rattle.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Five short claw-like pressure hooks rake in succession, each with its own tiny contact, then diminish."
+      }
+    },
+    {
+      "id": 542,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/542-Arc-Volley.png",
+      "sha256": "89dbfb8e8f777c18927572dba5e2613358b49cab22ebd8295e3cfc22d4906319",
+      "art": {
+        "id": 542,
+        "name": "Arc Volley",
+        "key": "arc-volley",
+        "src": "assets/vfx/action/542-Arc-Volley.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four angular electrical forks discharge in succession, with four separate tiny star contacts, then die away."
+      }
+    },
+    {
+      "id": 543,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/543-Mica-Volley.png",
+      "sha256": "abc02286f05df0a3fddbe553ae6c838c558821c4cf6fe2114c950b6fd4e38e04",
+      "art": {
+        "id": 543,
+        "name": "Mica Volley",
+        "key": "mica-volley",
+        "src": "assets/vfx/action/543-Mica-Volley.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four mica flakes sharpen into pointed wedges, launch separately into four gritty contacts and scatter mineral dust."
+      }
+    },
+    {
+      "id": 544,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/544-Riptide-Combo.png",
+      "sha256": "89f8164d9006a549dda6b3f8dbfd7a8a49592cb667c46b2f1e58cadb4dc6dfe9",
+      "art": {
+        "id": 544,
+        "name": "Riptide Combo",
+        "key": "riptide-combo",
+        "src": "assets/vfx/action/544-Riptide-Combo.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four compact curling water fists strike successively with four distinct foam contacts before receding."
+      }
+    },
+    {
+      "id": 545,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/545-Soundstorm.png",
+      "sha256": "eee96a727cc3232f6a85b44d3fe61c78f582497eb27c2accd3585fe56671ea87",
+      "art": {
+        "id": 545,
+        "name": "Soundstorm",
+        "key": "soundstorm",
+        "src": "assets/vfx/action/545-Soundstorm.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four corrugated sound-pressure fronts advance successively, each peaks separately before dissipating."
+      }
+    },
+    {
+      "id": 546,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/546-Icebound-Shards.png",
+      "sha256": "92cbafcdca6aa95ad5827e1a258f8863ac16276fb4d83f736623664d621730bc",
+      "art": {
+        "id": 546,
+        "name": "Icebound Shards",
+        "key": "icebound-shards",
+        "src": "assets/vfx/action/546-Icebound-Shards.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Four narrow icebound shards launch in succession, each making its own icy contact before dissolving."
+      }
+    },
+    {
+      "id": 547,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/547-Reforged-Bulwark.png",
+      "sha256": "ceb4bcb6ed6fa0912f8697412e3aaea9dc2a685102aa1f7fc9d05ff88e43d970",
+      "art": {
+        "id": 547,
+        "name": "Reforged Bulwark",
+        "key": "reforged-bulwark",
+        "src": "assets/vfx/action/547-Reforged-Bulwark.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two rough gunmetal plate arcs reforge around an empty centre into a hollow double-layer bulwark, one solid outer plate and one fine inner ward. Both brace, hold, then separate. Quiet dual defensive buff; no impact."
+      }
+    },
+    {
+      "id": 548,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/548-Warforged-Tempo.png",
+      "sha256": "a22ca7e3fd22d5ececd2ba8a744a7b2f43253b70357b300c0ca7204a66766ce4",
+      "art": {
+        "id": 548,
+        "name": "Warforged Tempo",
+        "key": "warforged-tempo",
+        "src": "assets/vfx/action/548-Warforged-Tempo.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A low riveted iron guard ring braces while two heavy blade-shaped tempo fins rise in alternating rhythm; both settle into a stable hollow crest and dissolve. Attack and defence buff; no enemy hit."
+      }
+    },
+    {
+      "id": 549,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/549-Chorus-of-Renewal.png",
+      "sha256": "8393a97b5f1fec649440ef2eb717f72d848c5c5f7afcb02214e7dbc2f71a19d9",
+      "art": {
+        "id": 549,
+        "name": "Chorus of Renewal",
+        "key": "chorus-of-renewal",
+        "src": "assets/vfx/action/549-Chorus-of-Renewal.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three warm ivory sound rings support small budding restorative leaves, expand softly together and settle into a few motes. Party healing, no revival."
+      }
+    },
+    {
+      "id": 550,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/550-Warding-Chorus.png",
+      "sha256": "3c1a2c0dffd4e99319abc6fc50bd50881b2872bca12068fd7a272e8f459f6126",
+      "art": {
+        "id": 550,
+        "name": "Warding Chorus",
+        "key": "warding-chorus",
+        "src": "assets/vfx/action/550-Warding-Chorus.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three softly overlapping ivory-rose sound rings support two curved translucent ward panels, establish a protective harmony around an empty centre, then withdraw. Defensive ally buff, not healing."
+      }
+    },
+    {
+      "id": 553,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/553-Executioner-s-Bargain.png",
+      "sha256": "6e4002b1665c6b4670699cd377710f014761289b86f70bc9c31117ce94b5c813",
+      "art": {
+        "id": 553,
+        "name": "Executioner's Bargain",
+        "key": "executioner-s-bargain",
+        "src": "assets/vfx/action/553-Executioner-s-Bargain.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three jagged burgundy force fins surge upward and a thin quicksilver speed ribbon whips around them while two dark protective plates crack away. Costly attack/speed boost, no character, execution scene or injury."
+      }
+    },
+    {
+      "id": 559,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/559-Astral-Sacrifice.png",
+      "sha256": "08b1ccb741388c6e5e220e96d7deccfa08e97bd928f513fd699c34b8caa96cec",
+      "art": {
+        "id": 559,
+        "name": "Astral Sacrifice",
+        "key": "astral-sacrifice",
+        "src": "assets/vfx/action/559-Astral-Sacrifice.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Five pale astral facets flare upward from a dimmed inner core while two protective arcs break away. Sacrificial stat boost, no injury."
+      }
+    },
+    {
+      "id": 566,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/566-Mind-Toll.png",
+      "sha256": "ca637072c2cd3ceeded6a63d0d2318c1e49439f8a56f8e16f2ae36863ae31cf6",
+      "art": {
+        "id": 566,
+        "name": "Mind Toll",
+        "key": "mind-toll",
+        "src": "assets/vfx/action/566-Mind-Toll.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three violet thought facets rise as a warm core dims and a thin guard strip loosens. Costly special attack boost, no collision."
+      }
+    },
+    {
+      "id": 568,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/568-Shield-Relay.png",
+      "sha256": "8d3bff2e73080e594f00a60ae06e64c0a3969f20fdca443a5a2642856bbfb45a",
+      "art": {
+        "id": 568,
+        "name": "Shield Relay",
+        "key": "shield-relay",
+        "src": "assets/vfx/action/568-Shield-Relay.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two small interlocking iron shield outlines pass a silver connecting ribbon between them, lock into matching double protective arcs, then dissolve evenly. Shared defensive buff, visually distinct from a single bulwark."
+      }
+    },
+    {
+      "id": 569,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/569-Momentum-Feast.png",
+      "sha256": "2b411e741de23ca934834d317753251db56a583dace1dcbad7e1c1c73ff0903d",
+      "art": {
+        "id": 569,
+        "name": "Momentum Feast",
+        "key": "momentum-feast",
+        "src": "assets/vfx/action/569-Momentum-Feast.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two bronze attack fins gather an accelerating circular momentum trail while a brittle lower guard arc fractures and falls away. Power and speed gain with weakened defence; no food, eating or creature."
+      }
+    },
+    {
+      "id": 704,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/704-Pressure-Front.png",
+      "sha256": "51d06ba23a0c6a3c638efecd7e107b4c16fdc52e440bdef2f37ce6e6317175e2",
+      "art": {
+        "id": 704,
+        "name": "Pressure Front",
+        "key": "pressure-front",
+        "src": "assets/vfx/action/704-Pressure-Front.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A dense rain-scalloped water pressure front advances once and leaves short heavy droplets settling downward."
+      }
+    },
+    {
+      "id": 707,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/707-Winter-Stillness.png",
+      "sha256": "e3d4f9a23bc2527499f65348c2af3a691e7f028447823805ab857805aa75b2c2",
+      "art": {
+        "id": 707,
+        "name": "Winter Stillness",
+        "key": "winter-stillness",
+        "src": "assets/vfx/action/707-Winter-Stillness.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two cold veils and a ring of fine frost still quietly into a subdued hollow shell, then loosen into cold dust. Debuff, no collision."
+      }
+    },
+    {
+      "id": 708,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/708-Curtain-Call.png",
+      "sha256": "aa3d7a98115632f40d177461380c71ba42c68a6be247c22be5602548fb5da22d",
+      "art": {
+        "id": 708,
+        "name": "Curtain Call",
+        "key": "curtain-call",
+        "src": "assets/vfx/action/708-Curtain-Call.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three theatre-curtain-shaped strips of smoke open around two rising aura plumes; one restrained sound ring erases the plumes and folds shut. No scenery or text."
+      }
+    },
+    {
+      "id": 709,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/709-Frayed-Nerve.png",
+      "sha256": "ac3223a53a173a24cb63b04976ffc2ed44bb290c5b6e9060619af2305441e616",
+      "art": {
+        "id": 709,
+        "name": "Frayed Nerve",
+        "key": "frayed-nerve",
+        "src": "assets/vfx/action/709-Frayed-Nerve.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two thin violet tension filaments fray around a dim thought facet, sag and dissolve quietly. No collision."
+      }
+    },
+    {
+      "id": 713,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/713-Mind-Unbound.png",
+      "sha256": "ef28feddbe2de4ce6cbe44621ccc435e904a3c0bcccf17bae5ea9262f6e762b0",
+      "art": {
+        "id": 713,
+        "name": "Mind Unbound",
+        "key": "mind-unbound",
+        "src": "assets/vfx/action/713-Mind-Unbound.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A rigid violet thought lattice opens its restraints, releases one wide psychic wave and leaves five small angular motes."
+      }
+    },
+    {
+      "id": 715,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/715-Caldera-Edict.png",
+      "sha256": "1c0f3fd3a7f71d158bc1f4c86a6317d8b7f241c6ee1c24abcc3ed9c233762c06",
+      "art": {
+        "id": 715,
+        "name": "Caldera Edict",
+        "key": "caldera-edict",
+        "src": "assets/vfx/action/715-Caldera-Edict.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A layered cracked volcanic rim exhales one dense forward heat plume, which cools into dark crust flakes. No whole volcano or scene."
+      }
+    },
+    {
+      "id": 717,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/717-Mourning-Dew.png",
+      "sha256": "768bd5561f97ec5c872e3172f41f570a53dfbe28b69205d4356857d6a3f108fa",
+      "art": {
+        "id": 717,
+        "name": "Mourning Dew",
+        "key": "mourning-dew",
+        "src": "assets/vfx/action/717-Mourning-Dew.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three mourning dew droplets sweep separate grey status wisps from an empty centre, then evaporate softly. Cleansing only, no healing bloom."
+      }
+    },
+    {
+      "id": 730,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/730-Feeble-Pulse.png",
+      "sha256": "4eb7469859ff6e2950fd1e747b2191215b28884dd153f9846ee5f46b947dfb6a",
+      "art": {
+        "id": 730,
+        "name": "Feeble Pulse",
+        "key": "feeble-pulse",
+        "src": "assets/vfx/action/730-Feeble-Pulse.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A tiny frail charcoal pulse forms with a ragged weak edge, advances once and breaks into a few dim flakes. Deliberately modest."
+      }
+    },
+    {
+      "id": 732,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/732-Fury-Unsealed.png",
+      "sha256": "a552931213f5878fe96d79cf9acf59f7bf1cfa3726d95c18698bb48b6d468c1b",
+      "art": {
+        "id": 732,
+        "name": "Fury Unsealed",
+        "key": "fury-unsealed",
+        "src": "assets/vfx/action/732-Fury-Unsealed.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two folded ember blade ribbons burst from a broken dark clasp, deliver one forceful forward strike and leave a cracked fading guard fragment."
+      }
+    },
+    {
+      "id": 734,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/734-Empty-the-Table.png",
+      "sha256": "6098fa02391c47c74d5e1231e02f42786111800804be97b69bc3dbf7075e8aba",
+      "art": {
+        "id": 734,
+        "name": "Empty the Table",
+        "key": "empty-the-table",
+        "src": "assets/vfx/action/734-Empty-the-Table.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Three dark crescent scoops sweep once through an empty centre; small warm energy beads return along their wake. Drainage, no literal table or food."
+      }
+    },
+    {
+      "id": 735,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/735-Practice-Bout.png",
+      "sha256": "abfcc2129487d9e0c9874bd93276703aa35c83ae07ea51a5f97c282e10605de5",
+      "art": {
+        "id": 735,
+        "name": "Practice Bout",
+        "key": "practice-bout",
+        "src": "assets/vfx/action/735-Practice-Bout.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "One plain bronze padded-force knuckle draws back, makes a modest straight practice jab and recoils. No fighter or whole arm."
+      }
+    },
+    {
+      "id": 736,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/736-Avalon-Cleave.png",
+      "sha256": "6c2904454eaf72cf04e9ec3902558ae578c3e9462b1c42bcf645ed76b058b350",
+      "art": {
+        "id": 736,
+        "name": "Avalon Cleave",
+        "key": "avalon-cleave",
+        "src": "assets/vfx/action/736-Avalon-Cleave.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "A pearl-edged fairy sword fragment makes one clean diagonal cleave, leaves a broad rose-ivory crescent and falls into sparse petal facets."
+      }
+    },
+    {
+      "id": 738,
+      "stage": 4,
+      "source": "art-library/action-vfx/manual-recovery/738-Back-Alley-Barrage.png",
+      "sha256": "39d865a0bd7780bb40466275b3c7cd5141ef734a9eaced1e1064e712658a7794",
+      "art": {
+        "id": 738,
+        "name": "Back-Alley Barrage",
+        "key": "back-alley-barrage",
+        "src": "assets/vfx/action/738-Back-Alley-Barrage.png",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 1350,
+        "impact": 0.5,
+        "beats": [
+          0.5
+        ],
+        "orchard": false,
+        "individual": true,
+        "batch": "integration-4",
+        "revision": "approved-upload",
+        "sequence": "Two compact brass pressure knuckles alternate two separate straight punches with two separate contact peaks, then withdraw. No character or whole arms."
+      }
     }
   ],
   "baselineAssignment": {
@@ -13882,7 +15274,7 @@
     "221": 221,
     "279": 279,
     "2": 2,
-    "545": 2,
+    "545": 545,
     "3": 3,
     "275": 275,
     "277": 277,
@@ -13894,14 +15286,14 @@
     "312": 312,
     "383": 383,
     "322": 322,
-    "537": 383,
+    "537": 537,
     "5": 5,
     "6": 6,
     "7": 7,
     "8": 8,
     "516": 516,
     "9": 9,
-    "541": 9,
+    "541": 541,
     "222": 222,
     "217": 217,
     "382": 382,
@@ -13920,7 +15312,7 @@
     "327": 327,
     "397": 397,
     "330": 330,
-    "369": 397,
+    "369": 369,
     "214": 214,
     "407": 407,
     "525": 525,
@@ -13952,7 +15344,7 @@
     "493": 493,
     "503": 503,
     "21": 21,
-    "732": 21,
+    "732": 732,
     "22": 22,
     "400": 400,
     "23": 23,
@@ -13960,7 +15352,7 @@
     "25": 25,
     "355": 355,
     "26": 26,
-    "372": 26,
+    "372": 372,
     "27": 27,
     "28": 28,
     "30": 30,
@@ -13981,21 +15373,21 @@
     "471": 471,
     "42": 42,
     "43": 43,
-    "544": 43,
+    "544": 544,
     "495": 495,
     "44": 44,
     "45": 45,
     "46": 46,
     "47": 47,
     "49": 49,
-    "371": 49,
+    "371": 371,
     "50": 50,
     "479": 479,
     "556": 556,
     "51": 51,
     "52": 52,
     "53": 53,
-    "527": 53,
+    "527": 527,
     "54": 54,
     "504": 504,
     "55": 55,
@@ -14018,7 +15410,7 @@
     "379": 379,
     "67": 67,
     "68": 68,
-    "542": 68,
+    "542": 542,
     "520": 520,
     "416": 416,
     "69": 69,
@@ -14039,7 +15431,7 @@
     "78": 78,
     "79": 79,
     "358": 358,
-    "528": 79,
+    "528": 528,
     "488": 488,
     "485": 485,
     "500": 500,
@@ -14060,7 +15452,7 @@
     "94": 94,
     "95": 95,
     "96": 96,
-    "717": 96,
+    "717": 717,
     "97": 97,
     "98": 98,
     "99": 99,
@@ -14089,34 +15481,34 @@
     "381": 381,
     "424": 424,
     "374": 374,
-    "546": 374,
+    "546": 546,
     "114": 114,
     "524": 524,
-    "707": 114,
+    "707": 707,
     "519": 519,
     "115": 115,
     "411": 411,
     "564": 564,
     "116": 116,
     "117": 117,
-    "569": 117,
+    "569": 569,
     "119": 119,
     "120": 120,
     "399": 399,
     "430": 430,
     "121": 121,
-    "359": 121,
+    "359": 359,
     "123": 123,
     "428": 428,
     "124": 124,
     "125": 125,
     "126": 126,
     "711": 711,
-    "735": 126,
+    "735": 735,
     "741": 741,
-    "738": 741,
+    "738": 738,
     "127": 127,
-    "529": 127,
+    "529": 529,
     "502": 502,
     "128": 128,
     "487": 487,
@@ -14145,7 +15537,7 @@
     "557": 557,
     "144": 144,
     "145": 145,
-    "530": 145,
+    "530": 530,
     "146": 146,
     "147": 147,
     "148": 148,
@@ -14161,10 +15553,10 @@
     "169": 169,
     "153": 153,
     "166": 166,
-    "361": 153,
+    "361": 361,
     "509": 509,
     "491": 491,
-    "373": 509,
+    "373": 373,
     "154": 154,
     "164": 164,
     "165": 165,
@@ -14173,12 +15565,12 @@
     "162": 162,
     "413": 413,
     "733": 733,
-    "531": 733,
+    "531": 531,
     "157": 157,
     "158": 158,
     "159": 159,
     "172": 172,
-    "715": 159,
+    "715": 715,
     "167": 167,
     "160": 160,
     "168": 168,
@@ -14216,8 +15608,8 @@
     "347": 347,
     "349": 349,
     "350": 350,
-    "370": 350,
-    "536": 350,
+    "370": 370,
+    "536": 536,
     "513": 513,
     "196": 196,
     "197": 197,
@@ -14232,7 +15624,7 @@
     "208": 208,
     "483": 483,
     "415": 415,
-    "713": 483,
+    "713": 713,
     "508": 508,
     "731": 731,
     "198": 198,
@@ -14240,51 +15632,51 @@
     "209": 209,
     "269": 269,
     "288": 288,
-    "559": 269,
+    "559": 559,
     "565": 565,
     "417": 417,
     "551": 551,
     "278": 278,
-    "566": 278,
+    "566": 566,
     "200": 200,
     "533": 533,
     "253": 253,
     "499": 499,
-    "470": 499,
-    "736": 499,
+    "470": 470,
+    "736": 736,
     "261": 261,
     "255": 255,
     "264": 264,
     "346": 346,
     "456": 456,
-    "540": 346,
+    "540": 540,
     "203": 203,
     "467": 467,
     "344": 344,
     "216": 216,
-    "461": 216,
-    "462": 216,
+    "461": 461,
+    "462": 462,
     "463": 463,
-    "464": 463,
-    "465": 463,
+    "464": 464,
+    "465": 465,
     "539": 539,
     "710": 710,
     "714": 714,
     "206": 206,
-    "376": 206,
+    "376": 376,
     "249": 249,
     "339": 339,
-    "550": 339,
+    "550": 550,
     "259": 259,
     "320": 320,
     "311": 311,
     "321": 321,
     "486": 486,
     "329": 329,
-    "377": 486,
+    "377": 377,
     "737": 737,
-    "547": 737,
-    "548": 737,
+    "547": 547,
+    "548": 548,
     "354": 354,
     "560": 560,
     "246": 246,
@@ -14313,7 +15705,7 @@
     "380": 380,
     "425": 425,
     "393": 393,
-    "709": 393,
+    "709": 709,
     "262": 262,
     "265": 265,
     "266": 266,
@@ -14328,7 +15720,7 @@
     "507": 507,
     "294": 294,
     "301": 301,
-    "368": 294,
+    "368": 368,
     "477": 477,
     "498": 498,
     "506": 506,
@@ -14339,13 +15731,13 @@
     "318": 318,
     "328": 328,
     "241": 241,
-    "365": 241,
-    "534": 241,
+    "365": 365,
+    "534": 534,
     "233": 233,
-    "543": 233,
+    "543": 543,
     "236": 236,
     "242": 242,
-    "538": 242,
+    "538": 538,
     "505": 505,
     "319": 319,
     "313": 313,
@@ -14359,7 +15751,7 @@
     "441": 441,
     "455": 455,
     "489": 489,
-    "549": 455,
+    "549": 549,
     "348": 348,
     "353": 353,
     "334": 334,
@@ -14379,7 +15771,7 @@
     "306": 306,
     "307": 307,
     "473": 473,
-    "553": 307,
+    "553": 553,
     "740": 740,
     "703": 703,
     "223": 223,
@@ -14402,11 +15794,11 @@
     "310": 310,
     "421": 421,
     "292": 292,
-    "734": 292,
+    "734": 734,
     "494": 494,
     "701": 701,
     "702": 702,
-    "568": 702,
+    "568": 568,
     "716": 716,
     "705": 705,
     "234": 234,
@@ -14429,7 +15821,7 @@
     "308": 308,
     "309": 309,
     "396": 396,
-    "730": 309,
+    "730": 730,
     "291": 291,
     "749": 749,
     "750": 750,
@@ -14445,8 +15837,8 @@
     "405": 405,
     "423": 423,
     "181": 181,
-    "362": 181,
-    "532": 181,
+    "362": 362,
+    "532": 532,
     "492": 492,
     "517": 517,
     "442": 442,
@@ -14455,7 +15847,7 @@
     "760": 760,
     "761": 761,
     "762": 762,
-    "375": 762,
+    "375": 375,
     "763": 763,
     "518": 518,
     "764": 764,
@@ -14470,7 +15862,7 @@
     "772": 772,
     "773": 773,
     "408": 408,
-    "704": 773,
+    "704": 704,
     "774": 774,
     "775": 775,
     "776": 776,
@@ -14480,9 +15872,9 @@
     "780": 780,
     "781": 781,
     "782": 782,
-    "708": 782,
+    "708": 708,
     "783": 783,
-    "364": 783,
+    "364": 364,
     "445": 445,
     "784": 784,
     "790": 790,
@@ -14492,7 +15884,261 @@
     "810": 810
   },
   "missingUploads": [],
-  "outstandingArtIds": [
+  "outstandingArtIds": [],
+  "rejectedArenaPilotsInstalled": false,
+  "recoveredUploads": [
+    {
+      "id": 247,
+      "filename": "247-Glacier-Fossil.png",
+      "sha256": "aa777c657f0775bae684d45ea0f5231ed0ed1d50627c6ab298f03d9410a4e591"
+    },
+    {
+      "id": 429,
+      "filename": "429-Granite-Hook.png",
+      "sha256": "e427745e97c1f4db87e755b8ba9db414ca032b88b4066389e5c584879c1bfc6a"
+    },
+    {
+      "id": 210,
+      "filename": "210-Sultan-s-Measure.png",
+      "sha256": "33e1cd4b6651cd78d9d14bbededb2558029bb69db4f40aef84d64d8ad030e7f5"
+    },
+    {
+      "id": 391,
+      "filename": "391-Bitter-Ink.png",
+      "sha256": "c05000d059eec22f16486b18a2e39ade1c81f412e8cb1c7f92acd45789ca11ae"
+    },
+    {
+      "id": 400,
+      "filename": "400-Censer-Coil.png",
+      "sha256": "b9a0ad44fca931aa7c46d643b21ccd963d83dc4b328793080e1e5d785d7f187e"
+    },
+    {
+      "id": 420,
+      "filename": "420-Arbor-Coil.png",
+      "sha256": "73c5e40ac56715bd85621de885588544033af426945fdd9be90d3680920e172e"
+    },
+    {
+      "id": 444,
+      "filename": "444-Folded-Gale.png",
+      "sha256": "ac5cd3265d27facccd7a628972ba9027342617a875fc6a495eed2ef54058dc35"
+    },
+    {
+      "id": 459,
+      "filename": "459-Glacier-Impale.png",
+      "sha256": "96bcc9b1122cc9e9e9b7bd77b4fc00233120d06e692d628c7ad8d8e7f909cc70"
+    },
+    {
+      "id": 475,
+      "filename": "475-Gorgon-s-Breath.png",
+      "sha256": "19e83c3c795187f1fa1e31ceff401fa193eb3ad22516a9112884bd12e956510d"
+    },
+    {
+      "id": 533,
+      "filename": "533-Mindsteel-Cleave.png",
+      "sha256": "2e02a613718435332e14890fdc6ce52763a3b92a3ea68a378a2d813d7be8bc59"
+    },
+    {
+      "id": 739,
+      "filename": "739-Quiet-Arrangement.png",
+      "sha256": "3737fa77c4467b37beec5d72abcaa5aef4861d77f0b2659e14648b610e3d72fe"
+    },
+    {
+      "id": 394,
+      "filename": "394-Milestone-Roll.png",
+      "sha256": "dfbb5c6910e8b23499be02bc62ea0506a732208a4cea2a01e6978e60d8e3023a"
+    },
+    {
+      "id": 398,
+      "filename": "398-Thermal-Crossing.png",
+      "sha256": "3147a7d5e59af3b93440d560c5d394a8745414abd523dcec9e5cc1504c6e65e9"
+    },
+    {
+      "id": 407,
+      "filename": "407-Reef-Ribbon.png",
+      "sha256": "1546a75b29c589bcef2c95cfb06f729047c8430aef99fb24e2b887d87281d63c"
+    },
+    {
+      "id": 415,
+      "filename": "415-Lattice-Thought.png",
+      "sha256": "36f1f88a7e3fd43c68048faad38fae5325c21424e469acf16bb2b37c8e570b93"
+    },
+    {
+      "id": 417,
+      "filename": "417-Clover-Vision.png",
+      "sha256": "03cb21b0200f1c9a99452d1f0d79c381137e3c2221ea1899ef2d222c3793d838"
+    },
+    {
+      "id": 427,
+      "filename": "427-Palm-Resolve.png",
+      "sha256": "cca24f78b2ede1f0c6d29732562b485aa6a8e3c510b53080b9dab6d58907a07d"
+    },
+    {
+      "id": 435,
+      "filename": "435-Bitter-Ambush.png",
+      "sha256": "4b7bac4f780190c040da5fe4ed2657d01eaa811758a5393d8ad313f050975bd3"
+    },
+    {
+      "id": 439,
+      "filename": "439-Buried-Seed.png",
+      "sha256": "b098bd0d020e3010be50cd35eafd450a791dce500c7d50dc3fd43ee4dcca6743"
+    },
+    {
+      "id": 452,
+      "filename": "452-Keepsake-Circle.png",
+      "sha256": "ec6abc4d3882b2e30c2699403661355a389874385de32718138c4e5fe3225292"
+    },
+    {
+      "id": 456,
+      "filename": "456-Vigil-Sever.png",
+      "sha256": "06e34b38fbd11078d36d810104a8bd7680652b84806ca172a4d386efae57bba0"
+    },
+    {
+      "id": 493,
+      "filename": "493-Reliquary-Flame.png",
+      "sha256": "249680ad0d276c4189d786a249b6e97dcfdeb39a9f604eeb921e89daf4d0932c"
+    },
+    {
+      "id": 503,
+      "filename": "503-Ember-Updraft.png",
+      "sha256": "aeb9422a3e252f0b1a843e2c2e8405e2b27367da77d8001db9d49c4ba842eb02"
+    },
+    {
+      "id": 505,
+      "filename": "505-Pinion-Pierce.png",
+      "sha256": "a3dc80b25dba4d21faa468f7fed9a3720608efc71924755c8115f5ab4927eac8"
+    },
+    {
+      "id": 507,
+      "filename": "507-Lantern-Requiem.png",
+      "sha256": "6d9c6d57749052f727cc0249036264736c265138b569f14d973ae436b408f0c5"
+    },
+    {
+      "id": 525,
+      "filename": "525-Masterwork-Riposte.png",
+      "sha256": "fff8896c8317eab5e5bf01a7876ed4c9f3e7856031083a83863268f8a499364a"
+    },
+    {
+      "id": 535,
+      "filename": "535-Astral-Rend.png",
+      "sha256": "1295923fbec04a00ff1b6cfede714f1de4aff15753fdb0024701a2f48da387d3"
+    },
+    {
+      "id": 716,
+      "filename": "716-Briar-Bequest.png",
+      "sha256": "c0e6ba5a83982b1eb6a5e05ea9ffcbb1abeca955ce5ffbdf0976afd5eec9ccc1"
+    },
+    {
+      "id": 731,
+      "filename": "731-Look-Upon-Me.png",
+      "sha256": "e9821c58cf65ff2299c65f6e5df158afeda0f34043c904221a8d94b4c0e51688"
+    },
+    {
+      "id": 172,
+      "filename": "172-Island-Crown.png",
+      "sha256": "237cc082d1003e94aea973f679c8a7dafc6d6c15a4063671962e3fab96cc409a"
+    },
+    {
+      "id": 189,
+      "filename": "189-Pilgrim-Echo.png",
+      "sha256": "b2a2854e59b339562bcaf29a296b065d75d9f11857bd8014da75e7224646276c"
+    },
+    {
+      "id": 209,
+      "filename": "209-Long-Game.png",
+      "sha256": "1f8f8f4928ec1c0672e71bf38754ac0fa4f289189c89e88a21385562f0b642f7"
+    },
+    {
+      "id": 248,
+      "filename": "248-Sickle-Talon.png",
+      "sha256": "1d4a239eb3164a36d1a49e946cd913668e2401041e87d7d38203e65933b96f46"
+    },
+    {
+      "id": 268,
+      "filename": "268-Uncrowned-Quills.png",
+      "sha256": "d7e2f0957c3a0f1a34da022f941ad00d156b58ccb8d46cd6bd82f6aa594b0550"
+    },
+    {
+      "id": 288,
+      "filename": "288-Silent-Ambition.png",
+      "sha256": "e3ec37c329b21f1d99cf0523285d9a5ce8c5d16308a28d8edcb993a28fda3eb3"
+    },
+    {
+      "id": 308,
+      "filename": "308-Broken-Alliance.png",
+      "sha256": "9a31ef645f029e9a5ade84c7564fea778b4cfaa91177f798f11d381a11f5c70c"
+    },
+    {
+      "id": 310,
+      "filename": "310-Rebellious-Jab.png",
+      "sha256": "0e3dba353a1028a54ba666b48eef22b0514bb85cd4df0bffb7d56a8caf6de062"
+    },
+    {
+      "id": 330,
+      "filename": "330-Blade-Tail-Oath.png",
+      "sha256": "eda002cd3f2796465f141dbc0a4970d08602723dc57bbbfe03ab6378f2340252"
+    },
+    {
+      "id": 378,
+      "filename": "378-Spirit-Bastion.png",
+      "sha256": "a5e03a1334ba1289cf838e1e2c8d7516db278b6588197fa0ff39a716bdb679f9"
+    },
+    {
+      "id": 379,
+      "filename": "379-Surge-Skitter.png",
+      "sha256": "1353a3128d5e931699c362764a542e0304e658a165b3a7556049ba27285feac7"
+    },
+    {
+      "id": 380,
+      "filename": "380-Lace-Lullaby.png",
+      "sha256": "14d0575f1f1bd2b7f38c478ec6f312ea84df56cda62ef243a156578f055fee90"
+    },
+    {
+      "id": 381,
+      "filename": "381-Brineglass.png",
+      "sha256": "6e85af62743d572d24d8b34e5efa5834c0f3cbc8b91ab86cf77c301fe937e30f"
+    },
+    {
+      "id": 382,
+      "filename": "382-Wyvern-Shear.png",
+      "sha256": "ec95fb1e297a3cce07e66de541470df29d99bc0b5e3d1e4a3c52c24f7a09a6fc"
+    },
+    {
+      "id": 385,
+      "filename": "385-Emberbloom.png",
+      "sha256": "be73c37bc9e4dbd8c5e8f6a81b991c7ad2ad6c00c0cd5217d3f6723ef20866c9"
+    },
+    {
+      "id": 386,
+      "filename": "386-Ember-Quilt.png",
+      "sha256": "ecef1c19027e7e4a45a57266e7a6ed119f2a3f6ded59281c1db65b9e866546f3"
+    },
+    {
+      "id": 387,
+      "filename": "387-Rain-Mantle.png",
+      "sha256": "baeea0898db8f21458b27f01b8a18851833054a6f1c2b5f0575afcb0390b5945"
+    },
+    {
+      "id": 389,
+      "filename": "389-Fleece-Freeze.png",
+      "sha256": "533cb09e7dcc63de6b4dd5c39a0095d85d9b6101c10df1725ff95361f3d5a6a6"
+    },
+    {
+      "id": 392,
+      "filename": "392-Clay-Burrow.png",
+      "sha256": "3f975de8bb5e6dd45b211946ec9f0267037b78080706a2ebaa6f2af5e12bf71a"
+    },
+    {
+      "id": 395,
+      "filename": "395-Fable-Echo.png",
+      "sha256": "c61615972f6609d0db666c46d3cd7e293678e54ec7d7ae0573cab85b48f730c7"
+    },
+    {
+      "id": 396,
+      "filename": "396-Hushed-Retrieval.png",
+      "sha256": "bacca0e377ce3f9d9b0c7953ce79280f2d2106219ed7b2b31bdd03d0fdbecce0"
+    }
+  ],
+  "completedOutstandingArtIds": [
     {
       "index": 101,
       "batch": 3,
@@ -14958,257 +16604,8 @@
       "outstanding_reason": "Image generation rejected at account usage limit"
     }
   ],
-  "rejectedArenaPilotsInstalled": false,
-  "recoveredUploads": [
-    {
-      "id": 247,
-      "filename": "247-Glacier-Fossil.png",
-      "sha256": "aa777c657f0775bae684d45ea0f5231ed0ed1d50627c6ab298f03d9410a4e591"
-    },
-    {
-      "id": 429,
-      "filename": "429-Granite-Hook.png",
-      "sha256": "e427745e97c1f4db87e755b8ba9db414ca032b88b4066389e5c584879c1bfc6a"
-    },
-    {
-      "id": 210,
-      "filename": "210-Sultan-s-Measure.png",
-      "sha256": "33e1cd4b6651cd78d9d14bbededb2558029bb69db4f40aef84d64d8ad030e7f5"
-    },
-    {
-      "id": 391,
-      "filename": "391-Bitter-Ink.png",
-      "sha256": "c05000d059eec22f16486b18a2e39ade1c81f412e8cb1c7f92acd45789ca11ae"
-    },
-    {
-      "id": 400,
-      "filename": "400-Censer-Coil.png",
-      "sha256": "b9a0ad44fca931aa7c46d643b21ccd963d83dc4b328793080e1e5d785d7f187e"
-    },
-    {
-      "id": 420,
-      "filename": "420-Arbor-Coil.png",
-      "sha256": "73c5e40ac56715bd85621de885588544033af426945fdd9be90d3680920e172e"
-    },
-    {
-      "id": 444,
-      "filename": "444-Folded-Gale.png",
-      "sha256": "ac5cd3265d27facccd7a628972ba9027342617a875fc6a495eed2ef54058dc35"
-    },
-    {
-      "id": 459,
-      "filename": "459-Glacier-Impale.png",
-      "sha256": "96bcc9b1122cc9e9e9b7bd77b4fc00233120d06e692d628c7ad8d8e7f909cc70"
-    },
-    {
-      "id": 475,
-      "filename": "475-Gorgon-s-Breath.png",
-      "sha256": "19e83c3c795187f1fa1e31ceff401fa193eb3ad22516a9112884bd12e956510d"
-    },
-    {
-      "id": 533,
-      "filename": "533-Mindsteel-Cleave.png",
-      "sha256": "2e02a613718435332e14890fdc6ce52763a3b92a3ea68a378a2d813d7be8bc59"
-    },
-    {
-      "id": 739,
-      "filename": "739-Quiet-Arrangement.png",
-      "sha256": "3737fa77c4467b37beec5d72abcaa5aef4861d77f0b2659e14648b610e3d72fe"
-    },
-    {
-      "id": 394,
-      "filename": "394-Milestone-Roll.png",
-      "sha256": "dfbb5c6910e8b23499be02bc62ea0506a732208a4cea2a01e6978e60d8e3023a"
-    },
-    {
-      "id": 398,
-      "filename": "398-Thermal-Crossing.png",
-      "sha256": "3147a7d5e59af3b93440d560c5d394a8745414abd523dcec9e5cc1504c6e65e9"
-    },
-    {
-      "id": 407,
-      "filename": "407-Reef-Ribbon.png",
-      "sha256": "1546a75b29c589bcef2c95cfb06f729047c8430aef99fb24e2b887d87281d63c"
-    },
-    {
-      "id": 415,
-      "filename": "415-Lattice-Thought.png",
-      "sha256": "36f1f88a7e3fd43c68048faad38fae5325c21424e469acf16bb2b37c8e570b93"
-    },
-    {
-      "id": 417,
-      "filename": "417-Clover-Vision.png",
-      "sha256": "03cb21b0200f1c9a99452d1f0d79c381137e3c2221ea1899ef2d222c3793d838"
-    },
-    {
-      "id": 427,
-      "filename": "427-Palm-Resolve.png",
-      "sha256": "cca24f78b2ede1f0c6d29732562b485aa6a8e3c510b53080b9dab6d58907a07d"
-    },
-    {
-      "id": 435,
-      "filename": "435-Bitter-Ambush.png",
-      "sha256": "4b7bac4f780190c040da5fe4ed2657d01eaa811758a5393d8ad313f050975bd3"
-    },
-    {
-      "id": 439,
-      "filename": "439-Buried-Seed.png",
-      "sha256": "b098bd0d020e3010be50cd35eafd450a791dce500c7d50dc3fd43ee4dcca6743"
-    },
-    {
-      "id": 452,
-      "filename": "452-Keepsake-Circle.png",
-      "sha256": "ec6abc4d3882b2e30c2699403661355a389874385de32718138c4e5fe3225292"
-    },
-    {
-      "id": 456,
-      "filename": "456-Vigil-Sever.png",
-      "sha256": "06e34b38fbd11078d36d810104a8bd7680652b84806ca172a4d386efae57bba0"
-    },
-    {
-      "id": 493,
-      "filename": "493-Reliquary-Flame.png",
-      "sha256": "249680ad0d276c4189d786a249b6e97dcfdeb39a9f604eeb921e89daf4d0932c"
-    },
-    {
-      "id": 503,
-      "filename": "503-Ember-Updraft.png",
-      "sha256": "aeb9422a3e252f0b1a843e2c2e8405e2b27367da77d8001db9d49c4ba842eb02"
-    },
-    {
-      "id": 505,
-      "filename": "505-Pinion-Pierce.png",
-      "sha256": "a3dc80b25dba4d21faa468f7fed9a3720608efc71924755c8115f5ab4927eac8"
-    },
-    {
-      "id": 507,
-      "filename": "507-Lantern-Requiem.png",
-      "sha256": "6d9c6d57749052f727cc0249036264736c265138b569f14d973ae436b408f0c5"
-    },
-    {
-      "id": 525,
-      "filename": "525-Masterwork-Riposte.png",
-      "sha256": "fff8896c8317eab5e5bf01a7876ed4c9f3e7856031083a83863268f8a499364a"
-    },
-    {
-      "id": 535,
-      "filename": "535-Astral-Rend.png",
-      "sha256": "1295923fbec04a00ff1b6cfede714f1de4aff15753fdb0024701a2f48da387d3"
-    },
-    {
-      "id": 716,
-      "filename": "716-Briar-Bequest.png",
-      "sha256": "c0e6ba5a83982b1eb6a5e05ea9ffcbb1abeca955ce5ffbdf0976afd5eec9ccc1"
-    },
-    {
-      "id": 731,
-      "filename": "731-Look-Upon-Me.png",
-      "sha256": "e9821c58cf65ff2299c65f6e5df158afeda0f34043c904221a8d94b4c0e51688"
-    },
-    {
-      "id": 172,
-      "filename": "172-Island-Crown.png",
-      "sha256": "237cc082d1003e94aea973f679c8a7dafc6d6c15a4063671962e3fab96cc409a"
-    },
-    {
-      "id": 189,
-      "filename": "189-Pilgrim-Echo.png",
-      "sha256": "b2a2854e59b339562bcaf29a296b065d75d9f11857bd8014da75e7224646276c"
-    },
-    {
-      "id": 209,
-      "filename": "209-Long-Game.png",
-      "sha256": "1f8f8f4928ec1c0672e71bf38754ac0fa4f289189c89e88a21385562f0b642f7"
-    },
-    {
-      "id": 248,
-      "filename": "248-Sickle-Talon.png",
-      "sha256": "1d4a239eb3164a36d1a49e946cd913668e2401041e87d7d38203e65933b96f46"
-    },
-    {
-      "id": 268,
-      "filename": "268-Uncrowned-Quills.png",
-      "sha256": "d7e2f0957c3a0f1a34da022f941ad00d156b58ccb8d46cd6bd82f6aa594b0550"
-    },
-    {
-      "id": 288,
-      "filename": "288-Silent-Ambition.png",
-      "sha256": "e3ec37c329b21f1d99cf0523285d9a5ce8c5d16308a28d8edcb993a28fda3eb3"
-    },
-    {
-      "id": 308,
-      "filename": "308-Broken-Alliance.png",
-      "sha256": "9a31ef645f029e9a5ade84c7564fea778b4cfaa91177f798f11d381a11f5c70c"
-    },
-    {
-      "id": 310,
-      "filename": "310-Rebellious-Jab.png",
-      "sha256": "0e3dba353a1028a54ba666b48eef22b0514bb85cd4df0bffb7d56a8caf6de062"
-    },
-    {
-      "id": 330,
-      "filename": "330-Blade-Tail-Oath.png",
-      "sha256": "eda002cd3f2796465f141dbc0a4970d08602723dc57bbbfe03ab6378f2340252"
-    },
-    {
-      "id": 378,
-      "filename": "378-Spirit-Bastion.png",
-      "sha256": "a5e03a1334ba1289cf838e1e2c8d7516db278b6588197fa0ff39a716bdb679f9"
-    },
-    {
-      "id": 379,
-      "filename": "379-Surge-Skitter.png",
-      "sha256": "1353a3128d5e931699c362764a542e0304e658a165b3a7556049ba27285feac7"
-    },
-    {
-      "id": 380,
-      "filename": "380-Lace-Lullaby.png",
-      "sha256": "14d0575f1f1bd2b7f38c478ec6f312ea84df56cda62ef243a156578f055fee90"
-    },
-    {
-      "id": 381,
-      "filename": "381-Brineglass.png",
-      "sha256": "6e85af62743d572d24d8b34e5efa5834c0f3cbc8b91ab86cf77c301fe937e30f"
-    },
-    {
-      "id": 382,
-      "filename": "382-Wyvern-Shear.png",
-      "sha256": "ec95fb1e297a3cce07e66de541470df29d99bc0b5e3d1e4a3c52c24f7a09a6fc"
-    },
-    {
-      "id": 385,
-      "filename": "385-Emberbloom.png",
-      "sha256": "be73c37bc9e4dbd8c5e8f6a81b991c7ad2ad6c00c0cd5217d3f6723ef20866c9"
-    },
-    {
-      "id": 386,
-      "filename": "386-Ember-Quilt.png",
-      "sha256": "ecef1c19027e7e4a45a57266e7a6ed119f2a3f6ded59281c1db65b9e866546f3"
-    },
-    {
-      "id": 387,
-      "filename": "387-Rain-Mantle.png",
-      "sha256": "baeea0898db8f21458b27f01b8a18851833054a6f1c2b5f0575afcb0390b5945"
-    },
-    {
-      "id": 389,
-      "filename": "389-Fleece-Freeze.png",
-      "sha256": "533cb09e7dcc63de6b4dd5c39a0095d85d9b6101c10df1725ff95361f3d5a6a6"
-    },
-    {
-      "id": 392,
-      "filename": "392-Clay-Burrow.png",
-      "sha256": "3f975de8bb5e6dd45b211946ec9f0267037b78080706a2ebaa6f2af5e12bf71a"
-    },
-    {
-      "id": 395,
-      "filename": "395-Fable-Echo.png",
-      "sha256": "c61615972f6609d0db666c46d3cd7e293678e54ec7d7ae0573cab85b48f730c7"
-    },
-    {
-      "id": 396,
-      "filename": "396-Hushed-Retrieval.png",
-      "sha256": "bacca0e377ce3f9d9b0c7953ce79280f2d2106219ed7b2b31bdd03d0fdbecce0"
-    }
+  "final58UploadCommits": [
+    "a7de397",
+    "6a7bd2fd5c455c038226ed4c9ab03b4058537afe"
   ]
 }
