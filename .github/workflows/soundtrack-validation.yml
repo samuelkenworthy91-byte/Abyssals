@@ -1,6 +1,11 @@
 name: Validate soundtrack without Android release
 on:
   workflow_dispatch:
+    inputs:
+      browser_only:
+        description: 'Retest browsers after an already-passing JavaScript run'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -24,15 +29,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --no-save playwright@1.56.1
+      - run: npm install --no-save playwright@1.62.1
       - run: npx playwright install --with-deps chromium
       - name: Install whole-stream audio decoder
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Verify source and runtime checksums, decode all supplied streams
         run: python3 scripts/verify-soundtrack.py
-      - name: JavaScript and offline regression suites
+      - name: JavaScript regression suites
+        if: ${{ !inputs.browser_only }}
+        run: for test in tests/*.test.mjs; do node "$test"; done
+      - name: Offline and Android manifest checks
         run: |
-          for test in tests/*.test.mjs; do node "$test"; done
           python3 scripts/validate-game.py
           python3 tests/android-manifest.test.py
       - name: Real music and story browser checks
