@@ -70,3 +70,16 @@ Stage-0 validation: all sheets decode in Chromium; actual full-motion single and
 ### Stage 1 — uploaded Next100 batch 2
 
 Added 50 dedicated source sheets, yielding 371 unique sources, 244 direct shared bindings and 615 total registered action bindings. Every installed byte matches its production manifest. Exact missing batch-one filenames remain in art-library/action-vfx/integration-2026-11-04/missing-uploads.md. Representative full single/double-both-target/reduced-motion checks passed for 399,414,428 and chosen-ally healing. Offline validation passes with 2436 assets. Stage-0 remote commit is 551f28d7bb1d7a2eff4aa4d50aaad0a66f12d921. No APK build claimed.
+
+
+### Stage 2 — all 136 checked recent uploads integrated
+
+Final verified registry: 615 action bindings (611 registered runtime move IDs plus four engine reactions), 507 distinct source sheets and 108 direct shared bindings. Starting registry was 172 sources/bindings: 335 additional sources are newly wired and 443 additional IDs covered. Existing source revisions 70,71,75,810 were updated to their manifest-selected approved bytes. The intended 557-source production total is not installed: exactly 50 Next100 batch-one filenames are absent by hash; the 58 remaining production sheets also stay shared. All missing and outstanding IDs reconcile exactly to the 108 shared IDs. No Arena pilots installed.
+
+Evidence: art-library/action-vfx/integration-2026-11-04/{manifest,technical-checks,verification,playback}.json, exact missing-uploads.md and outstanding-art.md, and committed test logs. Every selected source is hash-bound and every runtime/offline reference resolves. All recent 136 sheets have 16 distinct occupied frames and at least 18px transparent cell gutters. Historic original edge frames and Leafbound Exit's one empty recovery cell are retained.
+
+50 JavaScript regression suites passed. Fresh Chromium checks decode all 615 references / 507 sources; selected real singles, both double targets, chosen-ally healing, reduced motion, Nectarbane, weather/terrain, physical/special/status, rabbit retaliation and eight leaders pass. Sixteen full-motion phone/desktop side/target cases also verify visible alpha-content bounds. These are sampled playback checks, not fresh individual gameplay visual approval of every sheet.
+
+Presentation fixes: finite timestamps for each non-rabbit multi-hit strike; per-sheet alpha-content bounds keep lower-HUD effects inside the viewport while preserving true recipient anchors. Original Mercy Edge renderer stays intact; newly supplied Mercy Ray now uses its own sheet with mercy feedback. Save schema, stable IDs, combat rules, package/signing identity and reserved source version0.90.53/code148 are unchanged. No signed APK build or physical-device verification is claimed. Offline PWA packaging is checked separately against all507 source hashes.
+
+Next: upload the exact50 files in missing-uploads.md; re-audit remote hashes and extend the manifest/installer deliberately. Do not apply the all-unique final production map to any of the outstanding58 sheets.

@@ -159,7 +159,7 @@ import {cleanName,escapeHTML,unitName} from './names.js?v=0.90.53';
 import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.90.53';
 import {ROUTE} from './route-data.js?v=0.90.53';
 import {phaseAt,pickEncounter,capturePreview,formatCaptureChance,resolveCapture,settleStarter,completeStarterReturn,captureMilestones} from './route-rules.js?v=0.90.53';
-import {pixelImpactTimes} from './action-vfx.js?v=0.90.53';
+import {pixelImpactTimes,pixelPlacement} from './action-vfx.js?v=0.90.53';
 import {effectSpec,effectHTML} from './effects.js?v=0.90.53';
 import {readSave,writeSave,clearSave,selectSlot,currentSlot,listSlots,migrateLegacy,writeImportedSave} from './save.js?v=0.90.53';
 import {createTitle,chapterCard} from './title.js?v=0.90.53';
@@ -434,7 +434,8 @@ async function animateResult(who,result,move,context=null){
  const actorModel=context?.actor||(who==='enemy'?current.enemies[current.index??0]:who==='ally'?current.alliedRivet:current.player),allyTarget=move?.allyTarget&&!move.power?selectedAlly(actorModel):null;
  const self=!!result.skipped||!!result.selfDamage||!move||['SELF','ACTIVE_SIDE'].includes(move.target)||allyTarget===actorModel,targetModel=allyTarget||(context?(self?context.actor:context.target):null),enemyTarget=targetModel?current.enemies.includes(targetModel):who==='player'?!self:self;
  const enemy=context?battleUnitNode(targetModel):$('.enemy-art'),target=context?battleUnitNode(targetModel):enemyTarget?$('.enemy-zone'):$('.battle-bottom .combat-hud'),source=context?battleUnitNode(context.actor):who==='enemy'?$('.enemy-zone'):$('.battle-bottom .combat-hud'),v=viewport.getBoundingClientRect(),r=target?.getBoundingClientRect(),sr=source?.getBoundingClientRect(),x=r?r.left+r.width/2-v.left:v.width/2,y=r?r.top+r.height/2-v.top:v.height*.4,dx=self?0:sr?sr.left+sr.width/2-v.left-x:0,dy=self?0:sr?sr.top+sr.height/2-v.top-y:0;
- $('#fx').innerHTML=`<div class="fx-anchor" data-fx-actor="${escapeHTML(context?.actor?.uid||'')}" data-fx-target="${escapeHTML(targetModel?.uid||'')}" style="left:${x}px;top:${y}px;--source-x:${dx}px;--source-y:${dy}px;--travel-angle:${Math.atan2(-dy,-dx)*180/Math.PI}deg">${effectHTML(visual,{...result,targetArt:combatArtSrc(targetModel||(enemyTarget?current.enemies[current.index??0]:current.player))})}</div>`;
+ const pixelShift=spec.pixel?pixelPlacement(visual,{x,y,width:viewport.clientWidth,height:viewport.clientHeight,cellSize:innerWidth<=400?192:256}):{x:0,y:0};
+ $('#fx').innerHTML=`<div class="fx-anchor" data-fx-actor="${escapeHTML(context?.actor?.uid||'')}" data-fx-target="${escapeHTML(targetModel?.uid||'')}" style="left:${x}px;top:${y}px;--pixel-shift-x:${pixelShift.x}px;--pixel-shift-y:${pixelShift.y}px;--source-x:${dx}px;--source-y:${dy}px;--travel-angle:${Math.atan2(-dy,-dx)*180/Math.PI}deg">${effectHTML(visual,{...result,targetArt:combatArtSrc(targetModel||(enemyTarget?current.enemies[current.index??0]:current.player))})}</div>`;
  if(spec.hit&&move?.power&&who==='enemy')enemy?.classList.add('charging');
  if(spec.pixel&&result.strikes?.length){
   let elapsed=0;const impacts=pixelImpactTimes(move,result,spec);

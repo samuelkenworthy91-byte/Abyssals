@@ -61,13 +61,13 @@
     "battleReactions": 4,
     "total": 615,
     "wired": 615,
-    "sources": 371,
-    "shared": 244,
-    "dedicated": 371,
-    "missing": 244,
+    "sources": 507,
+    "shared": 108,
+    "dedicated": 507,
+    "missing": 108,
     "approved": 39,
     "originalCatalogueStillRegistered": 325,
-    "originalCatalogueDedicated": 218
+    "originalCatalogueDedicated": 314
   },
   "aliases": [
     {
@@ -14067,7 +14067,6 @@
         "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -14106,11 +14105,11 @@
       "effects": [],
       "authoredAction": "a forceful impact that visibly fractures the effect motif into pieces.",
       "art": {
-        "src": "assets/vfx/action/156-buried-knuckle.png",
-        "sourceId": 156,
-        "shared": true,
+        "src": "assets/vfx/action/162-Earth-Break.png",
+        "sourceId": 162,
+        "shared": false,
         "exists": true,
-        "sha256": "10860f886e377703e5833c459e61d5a7805465da217f5add1ba94b2a849f4171",
+        "sha256": "e9a6485dffac4c32c47240610c839852a549a35e1bfd0d3aabf96da33b89ab78",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -14118,8 +14117,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Buried Knuckle",
-        "registeredName": "Buried Knuckle"
+        "sequence": "Distinct visual motif for Earth Break: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a forceful impact that visibly fractures the effect motif into pieces.",
+        "registeredName": "Earth Break"
       },
       "status": "requires-review",
       "review": null
@@ -14181,11 +14180,11 @@
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
       "art": {
-        "src": "assets/vfx/action/154-faultline-rend.png",
-        "sourceId": 154,
-        "shared": true,
+        "src": "assets/vfx/action/164-Clay-Reap.png",
+        "sourceId": 164,
+        "shared": false,
         "exists": true,
-        "sha256": "127f631b5cc6a36decede01742d33ae6f1c7e74d5414c939946cc196d842549c",
+        "sha256": "0de3e20a9e516dfec376dd80b2b8b3569769486820db29772a6969d067ce48f2",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -14193,8 +14192,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Faultline Rend",
-        "registeredName": "Faultline Rend"
+        "sequence": "Distinct visual motif for Clay Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a heavy descending or forward mass that ends in debris and a large shock ring.",
+        "registeredName": "Clay Reap"
       },
       "status": "requires-review",
       "review": null
@@ -14271,11 +14270,11 @@
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/154-faultline-rend.png",
-        "sourceId": 154,
-        "shared": true,
+        "src": "assets/vfx/action/165-Burrow-Gouge.png",
+        "sourceId": 165,
+        "shared": false,
         "exists": true,
-        "sha256": "127f631b5cc6a36decede01742d33ae6f1c7e74d5414c939946cc196d842549c",
+        "sha256": "2320f45a8dfd85af1e9c63545f0e5fbae253d7e986cc019fb2b567d6590ec5ff",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -14283,8 +14282,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Faultline Rend",
-        "registeredName": "Faultline Rend"
+        "sequence": "Distinct visual motif for Burrow Gouge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Burrow Gouge"
       },
       "status": "requires-review",
       "review": null
@@ -14295,7 +14294,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -14376,11 +14374,11 @@
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/153-dune-break.png",
-        "sourceId": 153,
-        "shared": true,
+        "src": "assets/vfx/action/166-Loam-Tackle.png",
+        "sourceId": 166,
+        "shared": false,
         "exists": true,
-        "sha256": "01b1541a5b8c0b4fd89dbcbb79690f27b919db38732fcb63a1c1b6292b4f9c38",
+        "sha256": "2785061bd6a137956605f3fc5b770730bfd5a40104549f5b8a141de39a19827c",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -14388,8 +14386,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A granular sandstone ridge is struck at its base by compressed sand; visible cracks split it at one contact, blocks collapse and grit settles.",
-        "registeredName": "Dune Break"
+        "sequence": "Distinct visual motif for Loam Tackle: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Loam Tackle"
       },
       "status": "requires-review",
       "review": null
@@ -14464,9 +14462,7 @@
       "name": "Earth Surge",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -14508,11 +14504,11 @@
       ],
       "authoredAction": "a large high-impact finisher effect that briefly dominates the target area but still preserves sprite readability.",
       "art": {
-        "src": "assets/vfx/action/160-dune-surge.png",
-        "sourceId": 160,
-        "shared": true,
+        "src": "assets/vfx/action/168-Earth-Surge.png",
+        "sourceId": 168,
+        "shared": false,
         "exists": true,
-        "sha256": "cd760066724e9bcf70ab1dca3a792c35ee7783a262e184c3e1af422a806ee6a5",
+        "sha256": "92188e904c1372d32693fb085ba97caf0a7ca94343992452e413057bd88312c3",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -14520,8 +14516,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Dune Surge",
-        "registeredName": "Dune Surge"
+        "sequence": "Distinct visual motif for Earth Surge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a large high-impact finisher effect that briefly dominates the target area but still preserves sprite readability.",
+        "registeredName": "Earth Surge"
       },
       "status": "requires-review",
       "review": null
@@ -14677,11 +14673,11 @@
       ],
       "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/152-burrow-calm.png",
-        "sourceId": 152,
-        "shared": true,
+        "src": "assets/vfx/action/170-Sand-Guard.png",
+        "sourceId": 170,
+        "shared": false,
         "exists": true,
-        "sha256": "c61cbef109803cb5779d30eff7dac0e26d261f13ae0a32b3325aebd416d588af",
+        "sha256": "34b8b4d4a3e9302cac77bde1359456dedc248ea808eb3d11cb1171079137f056",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -14689,8 +14685,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Burrow Calm",
-        "registeredName": "Burrow Calm"
+        "sequence": "Distinct visual motif for Sand Guard: interpret its named material and action literally as standalone fantasy VFX. Canonical action: form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Sand Guard"
       },
       "status": "requires-review",
       "review": null
@@ -14701,8 +14697,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -14748,11 +14742,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/152-burrow-calm.png",
-        "sourceId": 152,
-        "shared": true,
+        "src": "assets/vfx/action/171-Stone-Footing.png",
+        "sourceId": 171,
+        "shared": false,
         "exists": true,
-        "sha256": "c61cbef109803cb5779d30eff7dac0e26d261f13ae0a32b3325aebd416d588af",
+        "sha256": "f3711b71f11e6d5b49ed9c7b77fd3a46a163246535a6275c8c45685be5b50aa0",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -14760,8 +14754,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Burrow Calm",
-        "registeredName": "Burrow Calm"
+        "sequence": "Distinct visual motif for Stone Footing: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Stone Footing"
       },
       "status": "requires-review",
       "review": null
@@ -15054,11 +15048,11 @@
       ],
       "authoredAction": "a curved crescent of energy sweeping diagonally across the target.",
       "art": {
-        "src": "assets/vfx/action/175-jetstream-detonation.png",
-        "sourceId": 175,
-        "shared": true,
+        "src": "assets/vfx/action/174-Gale-Arc.png",
+        "sourceId": 174,
+        "shared": false,
         "exists": true,
-        "sha256": "10101a904fa7ff9262c36ba442a00d6efb55cc3fd703bb19bd0b39e1d575a7d3",
+        "sha256": "8c681967b77230a34ce465d46a067f8ac4885434fb3e6e9552a64de97481fe9a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -15066,8 +15060,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A braided air jet compresses into one pressure knot and detonates into a torn membrane; cloud fragments drift away.",
-        "registeredName": "Jetstream Detonation"
+        "sequence": "Distinct visual motif for Gale Arc: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a curved crescent of energy sweeping diagonally across the target.",
+        "registeredName": "Gale Arc"
       },
       "status": "requires-review",
       "review": null
@@ -15374,11 +15368,11 @@
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
       "art": {
-        "src": "assets/vfx/action/176-featherweight.png",
-        "sourceId": 176,
-        "shared": true,
+        "src": "assets/vfx/action/177-Talon-Hook.png",
+        "sourceId": 177,
+        "shared": false,
         "exists": true,
-        "sha256": "32c4cf1e529a1eef164b7c4494eaa9827e3f8642df87ddfec516ab5d592e40f8",
+        "sha256": "c6106efd907768642412a97b58662dae4689978c3fe6377c67d1588183b24acb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -15386,8 +15380,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three delicate feather-tipped talon quills flex and sweep together in one weightless claw rake; three curved trails converge at ONE contact, white barbs drift away and tips uncurl. No full bird.",
-        "registeredName": "Featherweight"
+        "sequence": "Distinct visual motif for Talon Hook: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a heavy descending or forward mass that ends in debris and a large shock ring.",
+        "registeredName": "Talon Hook"
       },
       "status": "requires-review",
       "review": null
@@ -15478,11 +15472,11 @@
       ],
       "authoredAction": "a crisp blade-like streak with a delayed secondary glint.",
       "art": {
-        "src": "assets/vfx/action/176-featherweight.png",
-        "sourceId": 176,
-        "shared": true,
+        "src": "assets/vfx/action/178-Headwind.png",
+        "sourceId": 178,
+        "shared": false,
         "exists": true,
-        "sha256": "32c4cf1e529a1eef164b7c4494eaa9827e3f8642df87ddfec516ab5d592e40f8",
+        "sha256": "8336c75b1bd4f7187b43cbfffcf50bb6445a34f9f318dd56d950b60d0265c745",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -15490,8 +15484,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three delicate feather-tipped talon quills flex and sweep together in one weightless claw rake; three curved trails converge at ONE contact, white barbs drift away and tips uncurl. No full bird.",
-        "registeredName": "Featherweight"
+        "sequence": "Distinct visual motif for Headwind: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a crisp blade-like streak with a delayed secondary glint.",
+        "registeredName": "Headwind"
       },
       "status": "requires-review",
       "review": null
@@ -15584,11 +15578,11 @@
       ],
       "authoredAction": "a steep diagonal descent trail ending in a fast ground-level impact.",
       "art": {
-        "src": "assets/vfx/action/184-Sky-Dive.png",
-        "sourceId": 184,
-        "shared": true,
+        "src": "assets/vfx/action/179-Gale-Dive.png",
+        "sourceId": 179,
+        "shared": false,
         "exists": true,
-        "sha256": "c7d6af0f0ec197c9c41986de8c41a0ccb9024499b220d448f2f73373afe4d75e",
+        "sha256": "2a170c250fcee1f1acddde25a974578d9a11242ed054a5089d37e36db928257f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -15596,8 +15590,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two long tapered feather-shaped air blades tilt steeply downward in one diving V, make a small wind contact and sweep away close to the floor.",
-        "registeredName": "Sky Dive"
+        "sequence": "Distinct visual motif for Gale Dive: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a steep diagonal descent trail ending in a fast ground-level impact.",
+        "registeredName": "Gale Dive"
       },
       "status": "requires-review",
       "review": null
@@ -15608,8 +15602,7 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
@@ -15674,11 +15667,11 @@
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/769-canopy-cleave.png",
-        "sourceId": 769,
-        "shared": true,
+        "src": "assets/vfx/action/180-Pinion-Scissor.png",
+        "sourceId": 180,
+        "shared": false,
         "exists": true,
-        "sha256": "571ea5214844d186a7814ae585182259d759082c08001cdc723cb5fa6fc7d9b0",
+        "sha256": "1b82605645e0a070d235118a910b0d55fa18f1e1e9cf1503383f4458cdfd2902",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -15686,8 +15679,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A broad cutting wind arc breaks through a sweep of leaves.",
-        "registeredName": "Canopy Cleave"
+        "sequence": "Distinct visual motif for Pinion Scissor: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Pinion Scissor"
       },
       "status": "requires-review",
       "review": null
@@ -15828,11 +15821,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/175-jetstream-detonation.png",
-        "sourceId": 175,
-        "shared": true,
+        "src": "assets/vfx/action/182-Crosswind-Resonance.png",
+        "sourceId": 182,
+        "shared": false,
         "exists": true,
-        "sha256": "10101a904fa7ff9262c36ba442a00d6efb55cc3fd703bb19bd0b39e1d575a7d3",
+        "sha256": "387ca98bcfaf1f787d6bf4850ce86701f09407dd6fe9e54e8f627a03ba01fcfa",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -15840,8 +15833,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A braided air jet compresses into one pressure knot and detonates into a torn membrane; cloud fragments drift away.",
-        "registeredName": "Jetstream Detonation"
+        "sequence": "Distinct visual motif for Crosswind Resonance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Crosswind Resonance"
       },
       "status": "requires-review",
       "review": null
@@ -16351,11 +16344,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/187-tailwind-cry.png",
-        "sourceId": 187,
-        "shared": true,
+        "src": "assets/vfx/action/188-Updraft.png",
+        "sourceId": 188,
+        "shared": false,
         "exists": true,
-        "sha256": "c8f3f077fe8dfb60f743f18cb60dc09da1985754d326fc8171d0dcfb41d11b97",
+        "sha256": "c604b70a3459bbf6a3388352bbb9ee7a1e478f372cd0f553b9ab8814b5f7c2e6",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -16363,8 +16356,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A feathered throat and beak give a short cry; soft sound rings draw out streamlined feather wisps into a settling tailwind. Self speed buff.",
-        "registeredName": "Tailwind Cry"
+        "sequence": "Distinct visual motif for Updraft: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Updraft"
       },
       "status": "requires-review",
       "review": null
@@ -16437,9 +16430,7 @@
       "name": "Mind over Matter",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -16503,11 +16494,11 @@
       ],
       "authoredAction": "a curved crescent of energy sweeping diagonally across the target.",
       "art": {
-        "src": "assets/vfx/action/194-aura-pulse.png",
-        "sourceId": 194,
-        "shared": true,
+        "src": "assets/vfx/action/190-Mind-over-Matter.png",
+        "sourceId": 190,
+        "shared": false,
         "exists": true,
-        "sha256": "95f2cd49ace8d2c8960f55df8ac8bcd9d8c6eeae569d2956afeff2be79ba6ab4",
+        "sha256": "ad8d2449c45e05b522b1dff596ca84a7df9dd2fdb0e0b955def0e28d063bbef4",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -16515,8 +16506,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Crisp shaded facets/clustered bands, muted palette, complete unclipped silhouettes and separate preparation/action/recovery match established source quality. One contact at frame8; the later broken crescents are aftermath, not extra strikes.",
-        "registeredName": "Aura Pulse"
+        "sequence": "Distinct visual motif for Mind over Matter: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a curved crescent of energy sweeping diagonally across the target.",
+        "registeredName": "Mind over Matter"
       },
       "status": "requires-review",
       "review": null
@@ -16528,7 +16519,6 @@
       "sourceFiles": [
         "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -16586,11 +16576,11 @@
       "effects": [],
       "authoredAction": "a narrow piercing projectile that spears straight through the target space.",
       "art": {
-        "src": "assets/vfx/action/194-aura-pulse.png",
-        "sourceId": 194,
-        "shared": true,
+        "src": "assets/vfx/action/193-Unspoken-Threat.png",
+        "sourceId": 193,
+        "shared": false,
         "exists": true,
-        "sha256": "95f2cd49ace8d2c8960f55df8ac8bcd9d8c6eeae569d2956afeff2be79ba6ab4",
+        "sha256": "51f58e743f927756fa675b7e22bf3e91eaff86fcfc948607cdd1bcbef2d2c64a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -16598,8 +16588,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Crisp shaded facets/clustered bands, muted palette, complete unclipped silhouettes and separate preparation/action/recovery match established source quality. One contact at frame8; the later broken crescents are aftermath, not extra strikes.",
-        "registeredName": "Aura Pulse"
+        "sequence": "Distinct visual motif for Unspoken Threat: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a narrow piercing projectile that spears straight through the target space.",
+        "registeredName": "Unspoken Threat"
       },
       "status": "requires-review",
       "review": null
@@ -16685,7 +16675,6 @@
       "name": "Mnemonic Resonance",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/bird-family.js",
         "dist/data.js",
         "dist/teamcraft-data.js"
       ],
@@ -16728,11 +16717,11 @@
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/513-Oneiric-Wings.png",
-        "sourceId": 513,
-        "shared": true,
+        "src": "assets/vfx/action/196-Mnemonic-Resonance.png",
+        "sourceId": 196,
+        "shared": false,
         "exists": true,
-        "sha256": "5f0403c58dd0565bf54045b92c62e6986a7f4408a0017169d6c6d39e1bcef85d",
+        "sha256": "0967910e5218d163005d6464dea6d35538e26e215da42f48f2c1f5566e67ba0e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -16740,8 +16729,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A pair of folded moth-like THOUGHT WINGS made of angular glassy planes opens around an empty centre, drives one wave of fractured facets forward, then folds away. No living butterfly.",
-        "registeredName": "Oneiric Wings"
+        "sequence": "Distinct visual motif for Mnemonic Resonance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Mnemonic Resonance"
       },
       "status": "requires-review",
       "review": null
@@ -16751,7 +16740,6 @@
       "name": "Aura Wave",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/bird-family.js",
         "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
@@ -16805,11 +16793,11 @@
       ],
       "authoredAction": "a broad travelling wave front crossing the battlefield.",
       "art": {
-        "src": "assets/vfx/action/513-Oneiric-Wings.png",
-        "sourceId": 513,
-        "shared": true,
+        "src": "assets/vfx/action/197-Aura-Wave.png",
+        "sourceId": 197,
+        "shared": false,
         "exists": true,
-        "sha256": "5f0403c58dd0565bf54045b92c62e6986a7f4408a0017169d6c6d39e1bcef85d",
+        "sha256": "433ede8bde651f38848d6cc21188c997e5a208a4546949fa20b0c07fa52a0bd0",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -16817,8 +16805,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A pair of folded moth-like THOUGHT WINGS made of angular glassy planes opens around an empty centre, drives one wave of fractured facets forward, then folds away. No living butterfly.",
-        "registeredName": "Oneiric Wings"
+        "sequence": "Distinct visual motif for Aura Wave: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a broad travelling wave front crossing the battlefield.",
+        "registeredName": "Aura Wave"
       },
       "status": "requires-review",
       "review": null
@@ -17003,11 +16991,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/198-calm-thought.png",
-        "sourceId": 198,
-        "shared": true,
+        "src": "assets/vfx/action/199-Future-Read.png",
+        "sourceId": 199,
+        "shared": false,
         "exists": true,
-        "sha256": "96c8f4d6007044497f152f6f2441b384119a7ba40d3886d01c77a2c526df543d",
+        "sha256": "996e1bc3b600fc1957e77b6f3f99d4ce3342e2c59ad72278999c7b443a2d78fa",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -17015,8 +17003,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Crisp shaded facets/clustered bands, muted palette, complete unclipped silhouettes and separate preparation/action/recovery match established source quality. Quiet mental orbits without a damaging impact; open centre preserves caster visibility.",
-        "registeredName": "Calm Thought"
+        "sequence": "Distinct visual motif for Future Read: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Future Read"
       },
       "status": "requires-review",
       "review": null
@@ -17122,9 +17110,7 @@
       "name": "Prism Fracture",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -17181,11 +17167,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/204-Mind-Pulse.png",
-        "sourceId": 204,
-        "shared": true,
+        "src": "assets/vfx/action/201-Prism-Fracture.png",
+        "sourceId": 201,
+        "shared": false,
         "exists": true,
-        "sha256": "d3dae05f590b160b4e6e4ef7808bcdb7e80b4d659d9c4148f9c7cfb1b3681331",
+        "sha256": "60c9b655c40feef0dc029eebeb8148a3ccce0ef4bf33c10180cbf88e930f1a32",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -17193,8 +17179,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three nested segmented hexagonal pressure plates gather, compress into one forward mental pulse and fracture into staggered straight bars after contact. No smooth magic circle.",
-        "registeredName": "Mind Pulse"
+        "sequence": "Distinct visual motif for Prism Fracture: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Prism Fracture"
       },
       "status": "requires-review",
       "review": null
@@ -17204,7 +17190,6 @@
       "name": "Mind Crush",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
         "dist/teamcraft-data.js"
@@ -17273,11 +17258,11 @@
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/204-Mind-Pulse.png",
-        "sourceId": 204,
-        "shared": true,
+        "src": "assets/vfx/action/202-Mind-Crush.png",
+        "sourceId": 202,
+        "shared": false,
         "exists": true,
-        "sha256": "d3dae05f590b160b4e6e4ef7808bcdb7e80b4d659d9c4148f9c7cfb1b3681331",
+        "sha256": "e0b693bf3ec46e882192e36b45eb828798e0363d4865f056aeb4dc92fda35f9a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -17285,8 +17270,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three nested segmented hexagonal pressure plates gather, compress into one forward mental pulse and fracture into staggered straight bars after contact. No smooth magic circle.",
-        "registeredName": "Mind Pulse"
+        "sequence": "Distinct visual motif for Mind Crush: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Mind Crush"
       },
       "status": "requires-review",
       "review": null
@@ -17502,7 +17487,6 @@
       "sourceFiles": [
         "dist/data.js",
         "dist/full-expansion.js",
-        "dist/move-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -17554,11 +17538,11 @@
       "effects": [],
       "authoredAction": "a luminous ring forming around the target and tightening inward.",
       "art": {
-        "src": "assets/vfx/action/363-Thought-Spark.png",
-        "sourceId": 363,
-        "shared": true,
+        "src": "assets/vfx/action/205-Mind-Ring.png",
+        "sourceId": 205,
+        "shared": false,
         "exists": true,
-        "sha256": "6a692737a442e14b530a1e51e7552de57b728daace4875e69a275dda53719cbc",
+        "sha256": "9bbd86b47a3f48a4b1bba1a3abc6b0fcdf25ecd457389fd184a52143e6b317a7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -17566,8 +17550,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A branching lattice of short angular thought sparks forms a small prismatic knot, extends one uneven fork, makes one contact and snaps into short shards.",
-        "registeredName": "Thought Spark"
+        "sequence": "Distinct visual motif for Mind Ring: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a luminous ring forming around the target and tightening inward.",
+        "registeredName": "Mind Ring"
       },
       "status": "requires-review",
       "review": null
@@ -17669,8 +17653,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/move-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -17717,11 +17699,11 @@
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/363-Thought-Spark.png",
-        "sourceId": 363,
-        "shared": true,
+        "src": "assets/vfx/action/207-Oracle-Torrent.png",
+        "sourceId": 207,
+        "shared": false,
         "exists": true,
-        "sha256": "6a692737a442e14b530a1e51e7552de57b728daace4875e69a275dda53719cbc",
+        "sha256": "632d8894b7c807d12988a86179d17f87287468bdb0b4e26dbbb329d4f7192f60",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -17729,8 +17711,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A branching lattice of short angular thought sparks forms a small prismatic knot, extends one uneven fork, makes one contact and snaps into short shards.",
-        "registeredName": "Thought Spark"
+        "sequence": "Distinct visual motif for Oracle Torrent: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Oracle Torrent"
       },
       "status": "requires-review",
       "review": null
@@ -17741,7 +17723,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -17808,11 +17789,11 @@
       ],
       "authoredAction": "a broad travelling wave front crossing the battlefield.",
       "art": {
-        "src": "assets/vfx/action/384-Bower-Bash.png",
-        "sourceId": 384,
-        "shared": true,
+        "src": "assets/vfx/action/208-Mind-Wave.png",
+        "sourceId": 208,
+        "shared": false,
         "exists": true,
-        "sha256": "4ed9d237c7d5c4b07e5998188c873eeee64ef9970b9338a1676c999efc59155b",
+        "sha256": "6fe13efdac365679e3207c042bfc9e85908b6c967b9c2b988eb04a148bd1b74e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -17820,8 +17801,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A blunt lattice of bent thorn branches wrapped in petal facets draws back, makes one short bash and sheds leaf chips.",
-        "registeredName": "Bower Bash"
+        "sequence": "Distinct visual motif for Mind Wave: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a broad travelling wave front crossing the battlefield.",
+        "registeredName": "Mind Wave"
       },
       "status": "requires-review",
       "review": null
@@ -18196,11 +18177,11 @@
       "effects": [],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/211-Antenna-Guard.png",
-        "sourceId": 211,
-        "shared": true,
+        "src": "assets/vfx/action/213-Chitin-Rattle.png",
+        "sourceId": 213,
+        "shared": false,
         "exists": true,
-        "sha256": "796c9384a9e81f87fa1b5fe7eff32d0e289d46dd7b11bb2f61cc28a195f09a6c",
+        "sha256": "377102936c214c1d6abbac17b25a714ee4ffa9b34e2c261f189349a3a825a679",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -18208,8 +18189,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A paired bent chitin antenna fork draws back, taps forward ONCE with a compact jagged pressure rattle, then curls back. No full insect or face.",
-        "registeredName": "Antenna Guard"
+        "sequence": "Distinct visual motif for Chitin Rattle: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Chitin Rattle"
       },
       "status": "requires-review",
       "review": null
@@ -18812,20 +18793,20 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/1-brace-yourself.png",
-        "sourceId": 1,
-        "shared": true,
+        "src": "assets/vfx/action/220-Shed-Shell.png",
+        "sourceId": 220,
+        "shared": false,
         "exists": true,
-        "sha256": "fc67eaaa4a6e53d7ef91efbbd8961bb93516f11352b0a2bb2057d6f7b52f3552",
+        "sha256": "29c3479c5602b598106b9deaf6d22376661793206eebb5ca1e4e76f6f7e52a4c",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1500,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Two sculpted forearm/forepaw guard silhouettes lower and brace, interlocking bronze-grey layered shell plates close around empty central sprite space, absorb a tiny harmless test ripple, settle firmly, then unlock. Texture plates and joints; no damage explosion.",
-        "registeredName": "Brace Yourself"
+        "sequence": "Distinct visual motif for Shed Shell: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Shed Shell"
       },
       "status": "requires-review",
       "review": null
@@ -18911,11 +18892,11 @@
       ],
       "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/219-Hive-Call.png",
-        "sourceId": 219,
-        "shared": true,
+        "src": "assets/vfx/action/221-Silk-Guard.png",
+        "sourceId": 221,
+        "shared": false,
         "exists": true,
-        "sha256": "4cf86268ca89c93a7f6d252b39691ef3ad47deae409d380898b554d782764ebd",
+        "sha256": "b3dffa65553c45a9f48c37883b86f7425fe13d2bb48cac400ea6a0ec6c2e6f10",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -18923,8 +18904,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three overlapping chitin-scale plates and tiny folded wing-shaped rally chevrons gather around an OPEN protected centre, interlock, hold briefly, then unlock. A protective rally, no damaging strike.",
-        "registeredName": "Hive Call"
+        "sequence": "Distinct visual motif for Silk Guard: interpret its named material and action literally as standalone fantasy VFX. Canonical action: form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Silk Guard"
       },
       "status": "requires-review",
       "review": null
@@ -18976,11 +18957,11 @@
       ],
       "authoredAction": "a crisp blade-like streak with a delayed secondary glint.",
       "art": {
-        "src": "assets/vfx/action/9-measured-cut.png",
-        "sourceId": 9,
-        "shared": true,
+        "src": "assets/vfx/action/222-Swarm-Cut.png",
+        "sourceId": 222,
+        "shared": false,
         "exists": true,
-        "sha256": "ea1ea9112a9e3c125abd2ca4cdecfcebc9bf31505ea1828ace12a04b5f62d458",
+        "sha256": "1447a447563d5e697707059f7ebebcb32e1aa2472f97d44851d18f31c37fe41e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -18988,8 +18969,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "One finely edged silver crescent blade aligns carefully, sweeps a broad horizontal lateral cut with THREE tapering motion trails (not three contacts), makes a precise narrow white contact notch and follows through, shedding tiny steel flecks.",
-        "registeredName": "Measured Cut"
+        "sequence": "Distinct visual motif for Swarm Cut: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a crisp blade-like streak with a delayed secondary glint.",
+        "registeredName": "Swarm Cut"
       },
       "status": "requires-review",
       "review": null
@@ -18999,7 +18980,6 @@
       "name": "Bedrock Calm",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
         "dist/teamcraft-data.js"
@@ -19073,11 +19053,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/740-Cower.png",
-        "sourceId": 740,
-        "shared": true,
+        "src": "assets/vfx/action/223-Bedrock-Calm.png",
+        "sourceId": 223,
+        "shared": false,
         "exists": true,
-        "sha256": "656551ed86bc92f2310d61d3c4601ec5fbeae1de816b9c2b3df098ca387fc971",
+        "sha256": "81675f74add0c6aa21bc9990131343e23cfdb6b82728a1781f713bb908836cdb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -19085,8 +19065,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small hollow dark shell-like canopy of three broad mineral plates curls inward protectively, settles low, then opens with two harmless dust motes. Quiet self-defence, no damage.",
-        "registeredName": "Cower"
+        "sequence": "Distinct visual motif for Bedrock Calm: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Bedrock Calm"
       },
       "status": "requires-review",
       "review": null
@@ -19147,11 +19127,11 @@
       ],
       "authoredAction": "construct a stable magical or elemental sigil that settles into a protective aura. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/235-Fossil-Memory.png",
-        "sourceId": 235,
-        "shared": true,
+        "src": "assets/vfx/action/224-Cairn-Ward.png",
+        "sourceId": 224,
+        "shared": false,
         "exists": true,
-        "sha256": "77b10f63a1c9cb74b18c543753f1afad2a95f802794ab573d27739751e8d7743",
+        "sha256": "456972d01288a3e2f708c0487fc7393582a1e9ab8a231fb1b7e964db9a4e67c1",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -19159,8 +19139,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A worn fossil spiral embossed in a rough stone slab brightens along its natural seams, divides into three protective rock plates around empty space, holds and closes. No letters or runes, no attack.",
-        "registeredName": "Fossil Memory"
+        "sequence": "Distinct visual motif for Cairn Ward: interpret its named material and action literally as standalone fantasy VFX. Canonical action: construct a stable magical or elemental sigil that settles into a protective aura. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Cairn Ward"
       },
       "status": "requires-review",
       "review": null
@@ -19366,20 +19346,20 @@
       "effects": [],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/246-ancient-nodule.png",
-        "sourceId": 246,
-        "shared": true,
+        "src": "assets/vfx/action/229-Basalt-Lunge.png",
+        "sourceId": 229,
+        "shared": false,
         "exists": true,
-        "sha256": "68016ab901e838822e05da8d46fb5ca0ce828ffb04ccac32bba1c25dfe91b3f2",
+        "sha256": "554b0f6d50691ac749924707539020971358b58ceb0371414a8e60d41efe02dd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "a rough prehistoric stone nodule spins slowly into view, cracks along glowing fossil seams, then launches compact fragments in a dense rock burst.",
-        "registeredName": "Ancient Nodule"
+        "sequence": "Distinct visual motif for Basalt Lunge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Basalt Lunge"
       },
       "status": "requires-review",
       "review": null
@@ -19451,11 +19431,11 @@
       ],
       "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/235-Fossil-Memory.png",
-        "sourceId": 235,
-        "shared": true,
+        "src": "assets/vfx/action/230-Bedrock-Reply.png",
+        "sourceId": 230,
+        "shared": false,
         "exists": true,
-        "sha256": "77b10f63a1c9cb74b18c543753f1afad2a95f802794ab573d27739751e8d7743",
+        "sha256": "7d038771e1839d761d0581e91393a5c586385921ed2a3d557bab403e171f00e6",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -19463,8 +19443,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A worn fossil spiral embossed in a rough stone slab brightens along its natural seams, divides into three protective rock plates around empty space, holds and closes. No letters or runes, no attack.",
-        "registeredName": "Fossil Memory"
+        "sequence": "Distinct visual motif for Bedrock Reply: interpret its named material and action literally as standalone fantasy VFX. Canonical action: form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Bedrock Reply"
       },
       "status": "requires-review",
       "review": null
@@ -19531,20 +19511,20 @@
       ],
       "authoredAction": "a narrow piercing projectile that spears straight through the target space.",
       "art": {
-        "src": "assets/vfx/action/246-ancient-nodule.png",
-        "sourceId": 246,
-        "shared": true,
+        "src": "assets/vfx/action/231-Gravelock.png",
+        "sourceId": 231,
+        "shared": false,
         "exists": true,
-        "sha256": "68016ab901e838822e05da8d46fb5ca0ce828ffb04ccac32bba1c25dfe91b3f2",
+        "sha256": "59afe194e4102d4ef01aa19fdd9ee5f3153b183cdc41f1eb447a727b86ad78a9",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "a rough prehistoric stone nodule spins slowly into view, cracks along glowing fossil seams, then launches compact fragments in a dense rock burst.",
-        "registeredName": "Ancient Nodule"
+        "sequence": "Distinct visual motif for Gravelock: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a narrow piercing projectile that spears straight through the target space.",
+        "registeredName": "Gravelock"
       },
       "status": "requires-review",
       "review": null
@@ -19598,11 +19578,11 @@
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/240-Basalt-Tackle.png",
-        "sourceId": 240,
-        "shared": true,
+        "src": "assets/vfx/action/232-Flint-Hammer.png",
+        "sourceId": 232,
+        "shared": false,
         "exists": true,
-        "sha256": "a8ced0c4f64f7c62413c24c03c3d3a9ba1512276840f433c0ea5d83493fb443a",
+        "sha256": "59f06ace211edd7c82def396b99bab8e69ba66c4d35d10e502259cee56d6f0cd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -19610,8 +19590,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A short blunt basalt boulder with fossil-like mineral ribs rolls and lunges once, strikes a small gravel fan, then crumbles into rounded stone chips.",
-        "registeredName": "Basalt Tackle"
+        "sequence": "Distinct visual motif for Flint Hammer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Flint Hammer"
       },
       "status": "requires-review",
       "review": null
@@ -19740,11 +19720,11 @@
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
       "art": {
-        "src": "assets/vfx/action/705-heatglass-edge.png",
-        "sourceId": 705,
-        "shared": true,
+        "src": "assets/vfx/action/234-Granite-Reap.png",
+        "sourceId": 234,
+        "shared": false,
         "exists": true,
-        "sha256": "dba726d0eae23d1c808905922b77d4348decb09078f8d61c7b24c158e154a6b3",
+        "sha256": "85b22830f4458c8cee19aef17114e91dbc19bdcb533d2ef41dda7f5be62407cb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -19752,8 +19732,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A solid heated glass blade grows a bright molten rim, makes one broad horizontal cutting pass, then irregular amber glass splinters cool into dark fragments. The blade action comes first.",
-        "registeredName": "Heatglass Edge"
+        "sequence": "Distinct visual motif for Granite Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a heavy descending or forward mass that ends in debris and a large shock ring.",
+        "registeredName": "Granite Reap"
       },
       "status": "requires-review",
       "review": null
@@ -19881,20 +19861,20 @@
       ],
       "authoredAction": "raise a thin plane or curved pane of translucent energy. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/233-Crag-Spire.png",
-        "sourceId": 233,
-        "shared": true,
+        "src": "assets/vfx/action/236-Shard-Screen.png",
+        "sourceId": 236,
+        "shared": false,
         "exists": true,
-        "sha256": "214c9905462fdf82262dabb76fc51a87a9c9803d6e41d9c1e0a62d7a56305f45",
+        "sha256": "9c0a9ba375cc0262dad0931954b866e3bc1afe058bf4f5c46276ae3376624122",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1500,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "A thin faceted crag spire rises from a handful of pebbles, angles forward into one tight projectile pulse and shatters into slender mineral splinters.",
-        "registeredName": "Crag Spire"
+        "sequence": "Distinct visual motif for Shard Screen: interpret its named material and action literally as standalone fantasy VFX. Canonical action: raise a thin plane or curved pane of translucent energy. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Shard Screen"
       },
       "status": "requires-review",
       "review": null
@@ -19958,11 +19938,11 @@
       ],
       "authoredAction": "a forceful impact that visibly fractures the effect motif into pieces.",
       "art": {
-        "src": "assets/vfx/action/240-Basalt-Tackle.png",
-        "sourceId": 240,
-        "shared": true,
+        "src": "assets/vfx/action/237-Stone-Break.png",
+        "sourceId": 237,
+        "shared": false,
         "exists": true,
-        "sha256": "a8ced0c4f64f7c62413c24c03c3d3a9ba1512276840f433c0ea5d83493fb443a",
+        "sha256": "41778909c1a585bc22186f9d5ffad99074a2200604c3d21a10e7c36a86a3b4b7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -19970,8 +19950,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A short blunt basalt boulder with fossil-like mineral ribs rolls and lunges once, strikes a small gravel fan, then crumbles into rounded stone chips.",
-        "registeredName": "Basalt Tackle"
+        "sequence": "Distinct visual motif for Stone Break: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a forceful impact that visibly fractures the effect motif into pieces.",
+        "registeredName": "Stone Break"
       },
       "status": "requires-review",
       "review": null
@@ -20033,11 +20013,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/270-Scalequake.png",
-        "sourceId": 270,
-        "shared": true,
+        "src": "assets/vfx/action/238-Meteor-Resonance.png",
+        "sourceId": 238,
+        "shared": false,
         "exists": true,
-        "sha256": "2ccf05ea5b3f50b012f023b900f44a2b9a859170ca4a1843932b90d16c15c9ea",
+        "sha256": "2f28e96a020e138c55b06cd8019280df7bb58c0216c1b73a77dfb629292f7645",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -20045,8 +20025,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A compact cluster of overlapping cracked scales and stone plates draws inward, punches outward in ONE low radial quake and sheds angular gravel.",
-        "registeredName": "Scalequake"
+        "sequence": "Distinct visual motif for Meteor Resonance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Meteor Resonance"
       },
       "status": "requires-review",
       "review": null
@@ -20109,11 +20089,11 @@
       "effects": [],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/705-heatglass-edge.png",
-        "sourceId": 705,
-        "shared": true,
+        "src": "assets/vfx/action/239-Shale-Gouge.png",
+        "sourceId": 239,
+        "shared": false,
         "exists": true,
-        "sha256": "dba726d0eae23d1c808905922b77d4348decb09078f8d61c7b24c158e154a6b3",
+        "sha256": "e119ccc046e40a15fd9ad1367bc49115415a5f30f085080b486531b434b32bd4",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -20121,8 +20101,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A solid heated glass blade grows a bright molten rim, makes one broad horizontal cutting pass, then irregular amber glass splinters cool into dark fragments. The blade action comes first.",
-        "registeredName": "Heatglass Edge"
+        "sequence": "Distinct visual motif for Shale Gouge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Shale Gouge"
       },
       "status": "requires-review",
       "review": null
@@ -20539,11 +20519,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/289-Second-Shadow.png",
-        "sourceId": 289,
-        "shared": true,
+        "src": "assets/vfx/action/244-Stone-Skin.png",
+        "sourceId": 244,
+        "shared": false,
         "exists": true,
-        "sha256": "d494afb4149a1d4327c7fc9d408b5c77f04ee6bab7a3b2e1118bedf39efcfeff",
+        "sha256": "501d55e33bc28dd8fa3c3f31da20427f41b300b63c4ca9288518b50fa63fd494",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -20551,8 +20531,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two offset shadow-cloth silhouettes curl protectively around an empty centre, exchange places, hold and fade. Self-support status, no contact.",
-        "registeredName": "Second Shadow"
+        "sequence": "Distinct visual motif for Stone Skin: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Stone Skin"
       },
       "status": "requires-review",
       "review": null
@@ -20563,7 +20543,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -20632,11 +20611,11 @@
       ],
       "authoredAction": "a vertical spike or pillar erupting beneath or around the target.",
       "art": {
-        "src": "assets/vfx/action/448-Marker-Mending.png",
-        "sourceId": 448,
-        "shared": true,
+        "src": "assets/vfx/action/245-Fossil-Awakening.png",
+        "sourceId": 245,
+        "shared": false,
         "exists": true,
-        "sha256": "c5126a6775f113dd6958ed8d1c292d5da7404b67b58493bc0fa4c3990f42b4dd",
+        "sha256": "da51fa2a9997717f4a81cf2deae293178c687712d7c1875af55c2eff404314c3",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -20644,8 +20623,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A low chipped standing-stone fragment with a rough opaline core unfolds into one forward mineral pulse, then closes and sheds small luminous stone dust. No text/runes.",
-        "registeredName": "Marker Mending"
+        "sequence": "Distinct visual motif for Fossil Awakening: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a vertical spike or pillar erupting beneath or around the target.",
+        "registeredName": "Fossil Awakening"
       },
       "status": "requires-review",
       "review": null
@@ -20874,7 +20853,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -20925,11 +20903,11 @@
       ],
       "authoredAction": "pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/206-mind-screen.png",
-        "sourceId": 206,
-        "shared": true,
+        "src": "assets/vfx/action/249-Graveside-Murmur.png",
+        "sourceId": 249,
+        "shared": false,
         "exists": true,
-        "sha256": "199e42ec05261747e7b6a2bebf32a763dba1a248bbbcb1e59fe4d013a72f5f2d",
+        "sha256": "500a4d16f6e360ceec11a656fdf5532caebe7620a05139ae0c9ee6d3a64eb6bc",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -20937,8 +20915,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Muted palette, crisp material shading and unclipped distinct silhouette match the established source style. Protective plates visibly lock and unlock; no damaging flash, distinct from Calm Thought orbits.",
-        "registeredName": "Mind Screen"
+        "sequence": "Distinct visual motif for Graveside Murmur: interpret its named material and action literally as standalone fantasy VFX. Canonical action: pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Graveside Murmur"
       },
       "status": "requires-review",
       "review": null
@@ -20951,8 +20929,7 @@
         "dist/data.js",
         "dist/progression-renewal.js",
         "dist/roster-expansion.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
@@ -21031,11 +21008,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/745-undertow-mark.png",
-        "sourceId": 745,
-        "shared": true,
+        "src": "assets/vfx/action/250-Grave-Silence.png",
+        "sourceId": 250,
+        "shared": false,
         "exists": true,
-        "sha256": "b00e5b6ef2614d151fb7f0666e75f297de3017c84c0e24a87af8b429f1d6a5f2",
+        "sha256": "1a0209ba9edd29ce78caa7b912db4edbe976ed7180e0ad2d2227ac2c64dd30e2",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -21043,8 +21020,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A dark current closes around the target and leaves a readable brief mark.",
-        "registeredName": "Undertow Mark"
+        "sequence": "Distinct visual motif for Grave Silence: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Grave Silence"
       },
       "status": "requires-review",
       "review": null
@@ -21056,8 +21033,7 @@
       "sourceFiles": [
         "dist/data.js",
         "dist/progression-renewal.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
@@ -21102,11 +21078,11 @@
       ],
       "authoredAction": "stamp a clear emblem-like effect onto the target, then leave a faint lingering icon-shaped glow without text. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/745-undertow-mark.png",
-        "sourceId": 745,
-        "shared": true,
+        "src": "assets/vfx/action/251-Hollow-Knell.png",
+        "sourceId": 251,
+        "shared": false,
         "exists": true,
-        "sha256": "b00e5b6ef2614d151fb7f0666e75f297de3017c84c0e24a87af8b429f1d6a5f2",
+        "sha256": "7f8f3239fa816813bd37d6c34c97e2008ea284a44c9560d7fb5565e2d1bafa9c",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -21114,8 +21090,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A dark current closes around the target and leaves a readable brief mark.",
-        "registeredName": "Undertow Mark"
+        "sequence": "Distinct visual motif for Hollow Knell: interpret its named material and action literally as standalone fantasy VFX. Canonical action: stamp a clear emblem-like effect onto the target, then leave a faint lingering icon-shaped glow without text. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Hollow Knell"
       },
       "status": "requires-review",
       "review": null
@@ -21126,8 +21102,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -21178,11 +21152,11 @@
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/200-mind-arc.png",
-        "sourceId": 200,
-        "shared": true,
+        "src": "assets/vfx/action/253-Spectral-Rend.png",
+        "sourceId": 253,
+        "shared": false,
         "exists": true,
-        "sha256": "51785b33f0afec5e1a0971231232603862c7906a1d45f6f2efe5d0688c1564d2",
+        "sha256": "078b0c18c635dd2b6bb414daa62238347e354f752a15597cbe55de07f3e860bb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21190,8 +21164,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Muted palette, crisp material shading and unclipped distinct silhouette match the established source style. One curved psychic blade with trailing chips; contact sustains briefly over adjacent phases rather than replaying a second strike.",
-        "registeredName": "Mind Arc"
+        "sequence": "Distinct visual motif for Spectral Rend: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Spectral Rend"
       },
       "status": "requires-review",
       "review": null
@@ -21246,11 +21220,11 @@
       ],
       "authoredAction": "a whipping ribbon, vine, flame or shadow trail snapping across the target.",
       "art": {
-        "src": "assets/vfx/action/261-Wraith-Scissor.png",
-        "sourceId": 261,
-        "shared": true,
+        "src": "assets/vfx/action/255-Shade-Lash.png",
+        "sourceId": 255,
+        "shared": false,
         "exists": true,
-        "sha256": "5c423b1ba1f50f514d44f72c4d3e110cb427c83ab5209c7e7f1152c223df12c0",
+        "sha256": "d1c927303a05706049763bb48204ef6efae0822cd38353e93f1aa79861923f7a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21258,8 +21232,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two ragged spectral sickle ribbons slide past each other in one scissor slash, leave torn empty gaps and detach into thin shroud-like chips. No metal weapon.",
-        "registeredName": "Wraith Scissor"
+        "sequence": "Distinct visual motif for Shade Lash: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a whipping ribbon, vine, flame or shadow trail snapping across the target.",
+        "registeredName": "Shade Lash"
       },
       "status": "requires-review",
       "review": null
@@ -21394,11 +21368,11 @@
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/257-funeral-resonance.png",
-        "sourceId": 257,
-        "shared": true,
+        "src": "assets/vfx/action/258-Phantom-Discharge.png",
+        "sourceId": 258,
+        "shared": false,
         "exists": true,
-        "sha256": "1411188c7def21f768d5e590d44d5e85aeb3742df80683a4f84b965dc66e6c99",
+        "sha256": "ca6d9b78a7071afb993049d5b25be3d9a6e5805a2ea36de1d003a510110fcfad",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21406,8 +21380,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Torn spectral shroud gathers, opens into one ragged resonance contact, then frays into wisps. Contact is frame8; later fragments are aftermath.",
-        "registeredName": "Funeral Resonance"
+        "sequence": "Distinct visual motif for Phantom Discharge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Phantom Discharge"
       },
       "status": "requires-review",
       "review": null
@@ -21475,11 +21449,11 @@
       ],
       "authoredAction": "wrap the user in a thin translucent haze that partially obscures the silhouette. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/339-Charm-Veil.png",
-        "sourceId": 339,
-        "shared": true,
+        "src": "assets/vfx/action/259-Spirit-Veil.png",
+        "sourceId": 259,
+        "shared": false,
         "exists": true,
-        "sha256": "75cfabf6c548ac02e2b8f977fdd55440f4305f54f31e804605a88a39b4cd1265",
+        "sha256": "f91df73c5e08c7034edc717a53b3cb14ad8d640f663dd7a6540027615164d454",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -21487,8 +21461,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Four translucent petal-shaped armour panels gather around a hollow centre, overlap into a quiet scalloped protective veil, shimmer by shifting facets and unfold. No damaging flash.",
-        "registeredName": "Charm Veil"
+        "sequence": "Distinct visual motif for Spirit Veil: interpret its named material and action literally as standalone fantasy VFX. Canonical action: wrap the user in a thin translucent haze that partially obscures the silhouette. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Spirit Veil"
       },
       "status": "requires-review",
       "review": null
@@ -21548,11 +21522,11 @@
       "effects": [],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/257-funeral-resonance.png",
-        "sourceId": 257,
-        "shared": true,
+        "src": "assets/vfx/action/260-Haunted-Torrent.png",
+        "sourceId": 260,
+        "shared": false,
         "exists": true,
-        "sha256": "1411188c7def21f768d5e590d44d5e85aeb3742df80683a4f84b965dc66e6c99",
+        "sha256": "8f2ae4c3a78349a5b9c1dd0414793474d72b416f89c1f7fe0fa2a6b0cc97beb2",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21560,8 +21534,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Torn spectral shroud gathers, opens into one ragged resonance contact, then frays into wisps. Contact is frame8; later fragments are aftermath.",
-        "registeredName": "Funeral Resonance"
+        "sequence": "Distinct visual motif for Haunted Torrent: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Haunted Torrent"
       },
       "status": "requires-review",
       "review": null
@@ -21700,11 +21674,11 @@
       ],
       "authoredAction": "concentric sound rings and vibrating particles radiating from the user side.",
       "art": {
-        "src": "assets/vfx/action/393-Felt-Snare.png",
-        "sourceId": 393,
-        "shared": true,
+        "src": "assets/vfx/action/262-Wraith-Cry.png",
+        "sourceId": 262,
+        "shared": false,
         "exists": true,
-        "sha256": "d0e8c6543cbb58a7ddf3883950da5bb095970021359de88a2f4db8796569131c",
+        "sha256": "209dfa1e19226a9f6e801a2f41540da45f974bc8330cea029f713442260cb927",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21712,8 +21686,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small knot of soft felt-like threads unravels into a broad loose mesh, tightens gently around an EMPTY centre, releases one small pressure knot then loosens into frayed ends. No complete creature, violent impact or neon web.",
-        "registeredName": "Felt Snare"
+        "sequence": "Distinct visual motif for Wraith Cry: interpret its named material and action literally as standalone fantasy VFX. Canonical action: concentric sound rings and vibrating particles radiating from the user side.",
+        "registeredName": "Wraith Cry"
       },
       "status": "requires-review",
       "review": null
@@ -21724,7 +21698,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -21784,11 +21757,11 @@
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/443-Bridge-Veil.png",
-        "sourceId": 443,
-        "shared": true,
+        "src": "assets/vfx/action/263-Shroud-Lunge.png",
+        "sourceId": 263,
+        "shared": false,
         "exists": true,
-        "sha256": "81e5cd512f7c35dd93102708a3e09104c89390d7ee619804801cde0863d6e168",
+        "sha256": "de6ea0a256803e25350032c094a4f72109510c3418872d1348081579790918de",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21796,8 +21769,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two narrow spectral cloth strips cross as a low bridge arch, slide forward as one short concealed lunge, make one muted contact and fall apart into ragged strips.",
-        "registeredName": "Bridge Veil"
+        "sequence": "Distinct visual motif for Shroud Lunge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Shroud Lunge"
       },
       "status": "requires-review",
       "review": null
@@ -21863,11 +21836,11 @@
       ],
       "authoredAction": "a whipping ribbon, vine, flame or shadow trail snapping across the target.",
       "art": {
-        "src": "assets/vfx/action/261-Wraith-Scissor.png",
-        "sourceId": 261,
-        "shared": true,
+        "src": "assets/vfx/action/264-Wraith-Lash.png",
+        "sourceId": 264,
+        "shared": false,
         "exists": true,
-        "sha256": "5c423b1ba1f50f514d44f72c4d3e110cb427c83ab5209c7e7f1152c223df12c0",
+        "sha256": "c241e07613d483447e727b35ae73b7219898325576c32057c3da2dbee72ccdd1",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -21875,8 +21848,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two ragged spectral sickle ribbons slide past each other in one scissor slash, leave torn empty gaps and detach into thin shroud-like chips. No metal weapon.",
-        "registeredName": "Wraith Scissor"
+        "sequence": "Distinct visual motif for Wraith Lash: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a whipping ribbon, vine, flame or shadow trail snapping across the target.",
+        "registeredName": "Wraith Lash"
       },
       "status": "requires-review",
       "review": null
@@ -21955,8 +21928,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -22022,11 +21993,11 @@
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/265-Wraith-Pulse.png",
-        "sourceId": 265,
-        "shared": true,
+        "src": "assets/vfx/action/266-Revenant-Refraction.png",
+        "sourceId": 266,
+        "shared": false,
         "exists": true,
-        "sha256": "effe3865d8142f6a3a1f9fc93ba709730ff17c4531cb6b10303e7746e01abfc0",
+        "sha256": "1292f58dca2ac19b3ea0e2bd015f54f5f6f7373b41a54551565632e2833856d6",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22034,8 +22005,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A ragged folded shroud plume rises into three off-centre spectral fins, pushes forward in one hollow pulse and dissolves into pointed quill-like wisps. Distinct from the broad funeral fan.",
-        "registeredName": "Wraith Pulse"
+        "sequence": "Distinct visual motif for Revenant Refraction: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Revenant Refraction"
       },
       "status": "requires-review",
       "review": null
@@ -22046,8 +22017,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -22105,11 +22074,11 @@
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/265-Wraith-Pulse.png",
-        "sourceId": 265,
-        "shared": true,
+        "src": "assets/vfx/action/267-Funeral-Reverberation.png",
+        "sourceId": 267,
+        "shared": false,
         "exists": true,
-        "sha256": "effe3865d8142f6a3a1f9fc93ba709730ff17c4531cb6b10303e7746e01abfc0",
+        "sha256": "41562040fa9536d2a1f3b8bfae5f059d1409c2282f5612d1970b983cd679de26",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22117,8 +22086,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A ragged folded shroud plume rises into three off-centre spectral fins, pushes forward in one hollow pulse and dissolves into pointed quill-like wisps. Distinct from the broad funeral fan.",
-        "registeredName": "Wraith Pulse"
+        "sequence": "Distinct visual motif for Funeral Reverberation: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Funeral Reverberation"
       },
       "status": "requires-review",
       "review": null
@@ -22446,7 +22415,6 @@
       "name": "Drakescale Rend",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/bird-family.js",
         "dist/data.js",
         "dist/teamcraft-data.js"
       ],
@@ -22503,11 +22471,11 @@
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/515-Horizon-Rend.png",
-        "sourceId": 515,
-        "shared": true,
+        "src": "assets/vfx/action/272-Drakescale-Rend.png",
+        "sourceId": 272,
+        "shared": false,
         "exists": true,
-        "sha256": "77de5b55337e9c999cc0ea68620579ea979a3e2f8ebabfbf63cc97d303a0d6e4",
+        "sha256": "64a9caedbd1e8f04b6d3586653729d15dd30f886518829cfc169e33852ceaa6f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22515,8 +22483,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A curved row of three scaled draconic talon fragments sweeps one long diagonal rend through an angular empty gap, leaving hard-edged scale chips. No dragon body.",
-        "registeredName": "Horizon Rend"
+        "sequence": "Distinct visual motif for Drakescale Rend: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Drakescale Rend"
       },
       "status": "requires-review",
       "review": null
@@ -22526,7 +22494,6 @@
       "name": "Wyrmtooth Hook",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/bird-family.js",
         "dist/data.js",
         "dist/teamcraft-data.js"
       ],
@@ -22565,11 +22532,11 @@
       "effects": [],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
       "art": {
-        "src": "assets/vfx/action/515-Horizon-Rend.png",
-        "sourceId": 515,
-        "shared": true,
+        "src": "assets/vfx/action/273-Wyrmtooth-Hook.png",
+        "sourceId": 273,
+        "shared": false,
         "exists": true,
-        "sha256": "77de5b55337e9c999cc0ea68620579ea979a3e2f8ebabfbf63cc97d303a0d6e4",
+        "sha256": "0889a2589069282f04f65d0c55c0ec4ab83963819bf7419328de9bbc6b569d4a",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22577,8 +22544,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A curved row of three scaled draconic talon fragments sweeps one long diagonal rend through an angular empty gap, leaving hard-edged scale chips. No dragon body.",
-        "registeredName": "Horizon Rend"
+        "sequence": "Distinct visual motif for Wyrmtooth Hook: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a heavy descending or forward mass that ends in debris and a large shock ring.",
+        "registeredName": "Wyrmtooth Hook"
       },
       "status": "requires-review",
       "review": null
@@ -22642,11 +22609,11 @@
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/283-Wyrmtooth-Reap.png",
-        "sourceId": 283,
-        "shared": true,
+        "src": "assets/vfx/action/274-Wyvern-Scissor.png",
+        "sourceId": 274,
+        "shared": false,
         "exists": true,
-        "sha256": "a395aec68b21af766590dd335fc169ccc1ea60221eeb09ae561e40f0f61ab190",
+        "sha256": "b53e025a84fa1ee3832211bdde3e1a4950cf55b7ee456eb91cf81b0348656818",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22654,8 +22621,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "One long hooked wyrm fang edged with overlapping scales sweeps upward in a hooked reap; three narrow ribbon-like slivers trail it and disintegrate after ONE contact.",
-        "registeredName": "Wyrmtooth Reap"
+        "sequence": "Distinct visual motif for Wyvern Scissor: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Wyvern Scissor"
       },
       "status": "requires-review",
       "review": null
@@ -22710,11 +22677,11 @@
       ],
       "authoredAction": "a larger cone of vibrating energy rings and pressure distortion.",
       "art": {
-        "src": "assets/vfx/action/3-rattling-cry.png",
-        "sourceId": 3,
-        "shared": true,
+        "src": "assets/vfx/action/275-Drake-Roar.png",
+        "sourceId": 275,
+        "shared": false,
         "exists": true,
-        "sha256": "5dccf8e37d4c7ee28084a0eaa66ce9d676e094c30c48014da037dcaf110f92ce",
+        "sha256": "dffb6fafe80ee608e13cf6c86f1f3e4c97b8224965200d48a7622b3bd7bf3c1f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22722,8 +22689,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A jagged vibrating sound pressure front breaks into uneven staccato bands; successive short pulses, then an abrupt silence. A cry, not a projectile orb.",
-        "registeredName": "Rattling Cry"
+        "sequence": "Distinct visual motif for Drake Roar: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a larger cone of vibrating energy rings and pressure distortion.",
+        "registeredName": "Drake Roar"
       },
       "status": "requires-review",
       "review": null
@@ -22875,11 +22842,11 @@
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/3-rattling-cry.png",
-        "sourceId": 3,
-        "shared": true,
+        "src": "assets/vfx/action/277-Draconic-Resonance.png",
+        "sourceId": 277,
+        "shared": false,
         "exists": true,
-        "sha256": "5dccf8e37d4c7ee28084a0eaa66ce9d676e094c30c48014da037dcaf110f92ce",
+        "sha256": "6288617f10004ce67961d02d32408ac7f2ba7059fcf8c8614b0022607a597824",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -22887,8 +22854,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A jagged vibrating sound pressure front breaks into uneven staccato bands; successive short pulses, then an abrupt silence. A cry, not a projectile orb.",
-        "registeredName": "Rattling Cry"
+        "sequence": "Distinct visual motif for Draconic Resonance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Draconic Resonance"
       },
       "status": "requires-review",
       "review": null
@@ -23061,11 +23028,11 @@
       ],
       "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/219-Hive-Call.png",
-        "sourceId": 219,
-        "shared": true,
+        "src": "assets/vfx/action/279-Scale-Guard.png",
+        "sourceId": 279,
+        "shared": false,
         "exists": true,
-        "sha256": "4cf86268ca89c93a7f6d252b39691ef3ad47deae409d380898b554d782764ebd",
+        "sha256": "2bad120ab45615cd70c4fcf19921da894e8c80fb15f3735ae19c76fdd1738814",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -23073,8 +23040,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three overlapping chitin-scale plates and tiny folded wing-shaped rally chevrons gather around an OPEN protected centre, interlock, hold briefly, then unlock. A protective rally, no damaging strike.",
-        "registeredName": "Hive Call"
+        "sequence": "Distinct visual motif for Scale Guard: interpret its named material and action literally as standalone fantasy VFX. Canonical action: form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Scale Guard"
       },
       "status": "requires-review",
       "review": null
@@ -23085,7 +23052,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/menagerie-family.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -23130,11 +23096,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/481-Sirocco-Spiral.png",
-        "sourceId": 481,
-        "shared": true,
+        "src": "assets/vfx/action/281-Wyrmfire-Discharge.png",
+        "sourceId": 281,
+        "shared": false,
         "exists": true,
-        "sha256": "654bdd7d4a502fd5b27dc719a7966062886d938f3ede0a9f700f9a3da4cb211e",
+        "sha256": "617a154029a0db45d7708a49ac53bee03a54c75bbbafe914b69611be1fe23acb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -23142,8 +23108,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A tight conical spiral of DRY heated wind ribbons winds forward like a corkscrew, briefly compresses at one contact then unfurls into ember flecks. Distinct from a fireball.",
-        "registeredName": "Sirocco Spiral"
+        "sequence": "Distinct visual motif for Wyrmfire Discharge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Wyrmfire Discharge"
       },
       "status": "requires-review",
       "review": null
@@ -23153,9 +23119,7 @@
       "name": "Drakescale Hammer",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -23204,11 +23168,11 @@
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/319-iron-strike.png",
-        "sourceId": 319,
-        "shared": true,
+        "src": "assets/vfx/action/282-Drakescale-Hammer.png",
+        "sourceId": 282,
+        "shared": false,
         "exists": true,
-        "sha256": "013905b8388fffa24b0749630cb1eed8d5d4afc66e9a43b61520626d2063b019",
+        "sha256": "e9a2bd60a4939c1504d74ea57d74fbd598b8c4da4e4531a2d5337089b433c5fd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -23216,8 +23180,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A broad blunt riveted steel striker on a short articulated shank draws back, strikes one downward diagonal with flat weighted contact, chips scatter, then rebounds and retracts. No sharpened sword or fist.",
-        "registeredName": "Iron Strike"
+        "sequence": "Distinct visual motif for Drakescale Hammer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Drakescale Hammer"
       },
       "status": "requires-review",
       "review": null
@@ -23360,11 +23324,11 @@
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/283-Wyrmtooth-Reap.png",
-        "sourceId": 283,
-        "shared": true,
+        "src": "assets/vfx/action/284-Wyvern-Gouge.png",
+        "sourceId": 284,
+        "shared": false,
         "exists": true,
-        "sha256": "a395aec68b21af766590dd335fc169ccc1ea60221eeb09ae561e40f0f61ab190",
+        "sha256": "b4d02810304e1a622d60c8c91f4c3b0314880f125551ff1955a0785aca70cf81",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -23372,8 +23336,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "One long hooked wyrm fang edged with overlapping scales sweeps upward in a hooked reap; three narrow ribbon-like slivers trail it and disintegrate after ONE contact.",
-        "registeredName": "Wyrmtooth Reap"
+        "sequence": "Distinct visual motif for Wyvern Gouge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Wyvern Gouge"
       },
       "status": "requires-review",
       "review": null
@@ -23426,11 +23390,11 @@
       ],
       "authoredAction": "a larger cone of vibrating energy rings and pressure distortion.",
       "art": {
-        "src": "assets/vfx/action/211-Antenna-Guard.png",
-        "sourceId": 211,
-        "shared": true,
+        "src": "assets/vfx/action/285-Wyrm-Roar.png",
+        "sourceId": 285,
+        "shared": false,
         "exists": true,
-        "sha256": "796c9384a9e81f87fa1b5fe7eff32d0e289d46dd7b11bb2f61cc28a195f09a6c",
+        "sha256": "cff1def8c33c72e8ebacfc928027047c6001502c43a6f7512cb2c1235cc10eda",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -23438,8 +23402,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A paired bent chitin antenna fork draws back, taps forward ONCE with a compact jagged pressure rattle, then curls back. No full insect or face.",
-        "registeredName": "Antenna Guard"
+        "sequence": "Distinct visual motif for Wyrm Roar: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a larger cone of vibrating energy rings and pressure distortion.",
+        "registeredName": "Wyrm Roar"
       },
       "status": "requires-review",
       "review": null
@@ -23507,7 +23471,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/menagerie-family.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -23556,11 +23519,11 @@
       ],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/481-Sirocco-Spiral.png",
-        "sourceId": 481,
-        "shared": true,
+        "src": "assets/vfx/action/287-Primal-Torrent.png",
+        "sourceId": 287,
+        "shared": false,
         "exists": true,
-        "sha256": "654bdd7d4a502fd5b27dc719a7966062886d938f3ede0a9f700f9a3da4cb211e",
+        "sha256": "169f6212df8232219e3a8b2b8c5c9e3ea4aa3bc0532d0bb9302e08ae28cf7239",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -23568,8 +23531,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A tight conical spiral of DRY heated wind ribbons winds forward like a corkscrew, briefly compresses at one contact then unfurls into ember flecks. Distinct from a fireball.",
-        "registeredName": "Sirocco Spiral"
+        "sequence": "Distinct visual motif for Primal Torrent: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Primal Torrent"
       },
       "status": "requires-review",
       "review": null
@@ -23987,7 +23950,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/relic-family.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -24037,11 +23999,11 @@
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/460-dusk-guillotine.png",
-        "sourceId": 460,
-        "shared": true,
+        "src": "assets/vfx/action/293-Cutpurse-Hook.png",
+        "sourceId": 293,
+        "shared": false,
         "exists": true,
-        "sha256": "c5d5d6d5a238947e49a45328447d4673906c20b93a34e4ef2b4fe069f55f51d7",
+        "sha256": "5fc4bc53e95c472e8cd6d2eb25c5f9c17445e5022f728384265bab4686da35dd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24049,8 +24011,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A heavy broad dark execution blade drops vertically in one committed cut, pauses at its contact, then dust and tiny metal chips settle. Not a swooping claw swipe.",
-        "registeredName": "Dusk Guillotine"
+        "sequence": "Distinct visual motif for Cutpurse Hook: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Cutpurse Hook"
       },
       "status": "requires-review",
       "review": null
@@ -24149,7 +24111,6 @@
         "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
-        "dist/relic-family.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -24223,11 +24184,11 @@
       ],
       "authoredAction": "a whipping ribbon, vine, flame or shadow trail snapping across the target.",
       "art": {
-        "src": "assets/vfx/action/460-dusk-guillotine.png",
-        "sourceId": 460,
-        "shared": true,
+        "src": "assets/vfx/action/295-Night-Lash.png",
+        "sourceId": 295,
+        "shared": false,
         "exists": true,
-        "sha256": "c5d5d6d5a238947e49a45328447d4673906c20b93a34e4ef2b4fe069f55f51d7",
+        "sha256": "bf11049492071d2472994cb35757f659375760c146e5ee7f6d30109ba7fd07b7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24235,8 +24196,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A heavy broad dark execution blade drops vertically in one committed cut, pauses at its contact, then dust and tiny metal chips settle. Not a swooping claw swipe.",
-        "registeredName": "Dusk Guillotine"
+        "sequence": "Distinct visual motif for Night Lash: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a whipping ribbon, vine, flame or shadow trail snapping across the target.",
+        "registeredName": "Night Lash"
       },
       "status": "requires-review",
       "review": null
@@ -24401,11 +24362,11 @@
       ],
       "authoredAction": "a dark or metallic diagonal slash with one delayed crossing afterimage.",
       "art": {
-        "src": "assets/vfx/action/296-Blackthorn-Scissor.png",
-        "sourceId": 296,
-        "shared": true,
+        "src": "assets/vfx/action/297-Night-Slash.png",
+        "sourceId": 297,
+        "shared": false,
         "exists": true,
-        "sha256": "70429be7406b33355c0253fa496522cdde5e76526efdecaf53a79f7a9894f463",
+        "sha256": "9853f70d40318990b4cfe11e5cd322f596367a172209894734c11d504c9c7a27",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24413,8 +24374,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two opposing hooked blackthorn blade silhouettes cross in one crisp diagonal scissor action, release hard dark thorn chips at one contact and part.",
-        "registeredName": "Blackthorn Scissor"
+        "sequence": "Distinct visual motif for Night Slash: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a dark or metallic diagonal slash with one delayed crossing afterimage.",
+        "registeredName": "Night Slash"
       },
       "status": "requires-review",
       "review": null
@@ -24493,11 +24454,11 @@
       ],
       "authoredAction": "one decisive impact arc with a strong contact flash.",
       "art": {
-        "src": "assets/vfx/action/296-Blackthorn-Scissor.png",
-        "sourceId": 296,
-        "shared": true,
+        "src": "assets/vfx/action/298-Night-Strike.png",
+        "sourceId": 298,
+        "shared": false,
         "exists": true,
-        "sha256": "70429be7406b33355c0253fa496522cdde5e76526efdecaf53a79f7a9894f463",
+        "sha256": "175bf930154ba7386ceac2b93563715f064eb3d4be283acb971837aff03e2a5c",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24505,8 +24466,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two opposing hooked blackthorn blade silhouettes cross in one crisp diagonal scissor action, release hard dark thorn chips at one contact and part.",
-        "registeredName": "Blackthorn Scissor"
+        "sequence": "Distinct visual motif for Night Strike: interpret its named material and action literally as standalone fantasy VFX. Canonical action: one decisive impact arc with a strong contact flash.",
+        "registeredName": "Night Strike"
       },
       "status": "requires-review",
       "review": null
@@ -24598,20 +24559,20 @@
       ],
       "authoredAction": "wrap the user in a thin translucent haze that partially obscures the silhouette. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/449-obsidian-shelter.png",
-        "sourceId": 449,
-        "shared": true,
+        "src": "assets/vfx/action/299-Night-Veil.png",
+        "sourceId": 299,
+        "shared": false,
         "exists": true,
-        "sha256": "5023b3b9aea205b07f2b733c64ade8e04a670476b170886fe5635567ce88225f",
+        "sha256": "65c7791d02fed2c0d8945e9682aae6236295ea9f382f951aad2688c34e4c0af9",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1500,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Solid black volcanic glass slabs rise and interlock around the user into a low shelter, facets catching sparse warm highlights; settle protectively without attack flash.",
-        "registeredName": "Obsidian Shelter"
+        "sequence": "Distinct visual motif for Night Veil: interpret its named material and action literally as standalone fantasy VFX. Canonical action: wrap the user in a thin translucent haze that partially obscures the silhouette. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Night Veil"
       },
       "status": "requires-review",
       "review": null
@@ -24623,8 +24584,7 @@
       "sourceFiles": [
         "dist/branch-families.js",
         "dist/data.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "file": "docs/source_archive/canon_sources/active/Pokemon_Fan_Game_354_Move_Catalogue.xlsx",
@@ -24668,11 +24628,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/748-nightwater-pulse.png",
-        "sourceId": 748,
-        "shared": true,
+        "src": "assets/vfx/action/300-Eclipse-Resonance.png",
+        "sourceId": 300,
+        "shared": false,
         "exists": true,
-        "sha256": "33807f8d842b8e523ba20b512628d62694ef13eb1b4df7af73bbd8d795d9a530",
+        "sha256": "6f6c3612a26dc30d6cdff396a1b9f4384ee506a92c5387c9533544b03c502c23",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24680,8 +24640,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A dense dark-water surge with a different cadence from Rill Pulse.",
-        "registeredName": "Nightwater Pulse"
+        "sequence": "Distinct visual motif for Eclipse Resonance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Eclipse Resonance"
       },
       "status": "requires-review",
       "review": null
@@ -24691,9 +24651,7 @@
       "name": "Ambush Lunge",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -24748,11 +24706,11 @@
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/294-night-feint.png",
-        "sourceId": 294,
-        "shared": true,
+        "src": "assets/vfx/action/301-Ambush-Lunge.png",
+        "sourceId": 301,
+        "shared": false,
         "exists": true,
-        "sha256": "6f0e088198622e04ae2714910be465f34b1e11f3a7451543b1d55a9306eb2401",
+        "sha256": "c98fd8953bba9a1b197d26d41f2d1a99d5c7995194829feb21eed409538dd708",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24760,8 +24718,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "An off-centre dark false strike appears briefly; it vanishes, then the real compact cut contacts from the opposite side. Misdirection before impact.",
-        "registeredName": "Night Feint"
+        "sequence": "Distinct visual motif for Ambush Lunge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Ambush Lunge"
       },
       "status": "requires-review",
       "review": null
@@ -24819,11 +24777,11 @@
       ],
       "authoredAction": "two opposing crescent bite marks that snap shut around the target.",
       "art": {
-        "src": "assets/vfx/action/304-Cutpurse-Reap.png",
-        "sourceId": 304,
-        "shared": true,
+        "src": "assets/vfx/action/302-Nightblade-Hammer.png",
+        "sourceId": 302,
+        "shared": false,
         "exists": true,
-        "sha256": "688f6299bf0dea4458c173f75420b48d056f7e64432d0eac82de6ed9c3d78a00",
+        "sha256": "c49c5eb499e4be47309ea85750f878e0978c3bc328a699349647d7e1be205f15",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24831,8 +24789,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A narrow hooked dark-metal edge makes one short rising reap, followed by a stiff crooked shadow ribbon and three tiny cache-like angular chips.",
-        "registeredName": "Cutpurse Reap"
+        "sequence": "Distinct visual motif for Nightblade Hammer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two opposing crescent bite marks that snap shut around the target.",
+        "registeredName": "Nightblade Hammer"
       },
       "status": "requires-review",
       "review": null
@@ -24950,11 +24908,11 @@
       ],
       "authoredAction": "a dark or metallic diagonal slash with one delayed crossing afterimage.",
       "art": {
-        "src": "assets/vfx/action/304-Cutpurse-Reap.png",
-        "sourceId": 304,
-        "shared": true,
+        "src": "assets/vfx/action/305-Rogue-Slash.png",
+        "sourceId": 305,
+        "shared": false,
         "exists": true,
-        "sha256": "688f6299bf0dea4458c173f75420b48d056f7e64432d0eac82de6ed9c3d78a00",
+        "sha256": "5ebbdd28c82d1f49a1a78c8940a4b26506a1fce38775d1ff7148abe6588db931",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -24962,8 +24920,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A narrow hooked dark-metal edge makes one short rising reap, followed by a stiff crooked shadow ribbon and three tiny cache-like angular chips.",
-        "registeredName": "Cutpurse Reap"
+        "sequence": "Distinct visual motif for Rogue Slash: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a dark or metallic diagonal slash with one delayed crossing afterimage.",
+        "registeredName": "Rogue Slash"
       },
       "status": "requires-review",
       "review": null
@@ -25032,20 +24990,20 @@
       ],
       "authoredAction": "leave one or two fading afterimages showing a sudden reposition. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/449-obsidian-shelter.png",
-        "sourceId": 449,
-        "shared": true,
+        "src": "assets/vfx/action/306-Rogue-Step.png",
+        "sourceId": 306,
+        "shared": false,
         "exists": true,
-        "sha256": "5023b3b9aea205b07f2b733c64ade8e04a670476b170886fe5635567ce88225f",
+        "sha256": "c349d51f8afa5ba6167800bc094b9bdc08201b2ffb8e374ec18c86835cb3a8c0",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1500,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Solid black volcanic glass slabs rise and interlock around the user into a low shelter, facets catching sparse warm highlights; settle protectively without attack flash.",
-        "registeredName": "Obsidian Shelter"
+        "sequence": "Distinct visual motif for Rogue Step: interpret its named material and action literally as standalone fantasy VFX. Canonical action: leave one or two fading afterimages showing a sudden reposition. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Rogue Step"
       },
       "status": "requires-review",
       "review": null
@@ -25329,11 +25287,7 @@
       "name": "Temper the Frame",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -25383,11 +25337,11 @@
       ],
       "authoredAction": "pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/320-Iron-Ward.png",
-        "sourceId": 320,
-        "shared": true,
+        "src": "assets/vfx/action/311-Temper-the-Frame.png",
+        "sourceId": 311,
+        "shared": false,
         "exists": true,
-        "sha256": "94a29f25dc7c609fd307ea87496fb6ee73af949c0e41e3a882be326ca06912c6",
+        "sha256": "c629260332c759a359d43286faa06ca9c16c5b388623788e6b7ec6ef580b5f44",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -25395,8 +25349,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Four thick riveted steel plates rise around an open centre, lock into a boxy iron ward with visible hinges, settle and release. No damaging flash or explosion.",
-        "registeredName": "Iron Ward"
+        "sequence": "Distinct visual motif for Temper the Frame: interpret its named material and action literally as standalone fantasy VFX. Canonical action: pull small particles inward toward the user, ending in a sharp centered glint. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Temper the Frame"
       },
       "status": "requires-review",
       "review": null
@@ -25469,11 +25423,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/4-resounding-clap.png",
-        "sourceId": 4,
-        "shared": true,
+        "src": "assets/vfx/action/312-Magnetic-Detonation.png",
+        "sourceId": 312,
+        "shared": false,
         "exists": true,
-        "sha256": "e9ebdfd1f592da75cfdffec215e382a306b4c39ce663ceabf90d0b7b6714a0ae",
+        "sha256": "027b0ac6a2ed5bd911c84cf1fd88f2f302fc41564c1fb25a7e50259321104211",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -25481,8 +25435,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two short opposing pressure fronts meet like hands clapping; a single flat white impact and concentric compressed sound bands ring out. Different from a cry.",
-        "registeredName": "Resounding Clap"
+        "sequence": "Distinct visual motif for Magnetic Detonation: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Magnetic Detonation"
       },
       "status": "requires-review",
       "review": null
@@ -25492,9 +25446,7 @@
       "name": "Anvil Answer",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -25563,11 +25515,11 @@
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/319-iron-strike.png",
-        "sourceId": 319,
-        "shared": true,
+        "src": "assets/vfx/action/313-Anvil-Answer.png",
+        "sourceId": 313,
+        "shared": false,
         "exists": true,
-        "sha256": "013905b8388fffa24b0749630cb1eed8d5d4afc66e9a43b61520626d2063b019",
+        "sha256": "cb0e3791ceff3d15959511744af2046b7241aa5441f845235507de1edcc0f607",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -25575,8 +25527,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A broad blunt riveted steel striker on a short articulated shank draws back, strikes one downward diagonal with flat weighted contact, chips scatter, then rebounds and retracts. No sharpened sword or fist.",
-        "registeredName": "Iron Strike"
+        "sequence": "Distinct visual motif for Anvil Answer: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Anvil Answer"
       },
       "status": "requires-review",
       "review": null
@@ -25587,7 +25539,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/menagerie-family.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -25640,11 +25591,11 @@
       ],
       "authoredAction": "a heavy descending or forward mass that ends in debris and a large shock ring.",
       "art": {
-        "src": "assets/vfx/action/476-Bastion-Rend.png",
-        "sourceId": 476,
-        "shared": true,
+        "src": "assets/vfx/action/314-Cleaver-Hook.png",
+        "sourceId": 314,
+        "shared": false,
         "exists": true,
-        "sha256": "920a4eed1e3bd8c00a7a759b69cab4abcea52ac8a9eb26d00e0081c7f3910df3",
+        "sha256": "3baffb193d830516304e581cb91e5028ab014fd059a8ee2aac8e4712383e6b97",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -25652,8 +25603,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A thick bevelled fortress-plate cleaver edge draws back then shears diagonally through a narrow contact point; rectangular plate chips spill after one impact.",
-        "registeredName": "Bastion Rend"
+        "sequence": "Distinct visual motif for Cleaver Hook: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a heavy descending or forward mass that ends in debris and a large shock ring.",
+        "registeredName": "Cleaver Hook"
       },
       "status": "requires-review",
       "review": null
@@ -25666,7 +25617,6 @@
         "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
-        "dist/menagerie-family.js",
         "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
@@ -25749,11 +25699,11 @@
       ],
       "authoredAction": "a crisp blade-like streak with a delayed secondary glint.",
       "art": {
-        "src": "assets/vfx/action/476-Bastion-Rend.png",
-        "sourceId": 476,
-        "shared": true,
+        "src": "assets/vfx/action/315-Iron-Cut.png",
+        "sourceId": 315,
+        "shared": false,
         "exists": true,
-        "sha256": "920a4eed1e3bd8c00a7a759b69cab4abcea52ac8a9eb26d00e0081c7f3910df3",
+        "sha256": "fd735e5a70ce23ca10d4e3f773a77c2270378226d3ca0427a6caa168a22915c0",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -25761,8 +25711,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A thick bevelled fortress-plate cleaver edge draws back then shears diagonally through a narrow contact point; rectangular plate chips spill after one impact.",
-        "registeredName": "Bastion Rend"
+        "sequence": "Distinct visual motif for Iron Cut: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a crisp blade-like streak with a delayed secondary glint.",
+        "registeredName": "Iron Cut"
       },
       "status": "requires-review",
       "review": null
@@ -25863,8 +25813,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -25941,11 +25889,11 @@
       ],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/325-Steel-Cut.png",
-        "sourceId": 325,
-        "shared": true,
+        "src": "assets/vfx/action/317-Sawtooth-Scissor.png",
+        "sourceId": 317,
+        "shared": false,
         "exists": true,
-        "sha256": "dcc812ff25a820c9122bf596ccaf8e50839f41fc5ff4db6aab04f78c59d3c820",
+        "sha256": "02cf643a1c09f62fe9cf592cbd986b4025535e9c471cc9e4f772eec732f5e990",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -25953,8 +25901,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A slim polished steel edge makes one fast clean horizontal cut with two rigid straight wake segments and tiny cool metal shavings; no handle or full sword.",
-        "registeredName": "Steel Cut"
+        "sequence": "Distinct visual motif for Sawtooth Scissor: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Sawtooth Scissor"
       },
       "status": "requires-review",
       "review": null
@@ -26051,11 +25999,11 @@
       ],
       "authoredAction": "a vertical spike or pillar erupting beneath or around the target.",
       "art": {
-        "src": "assets/vfx/action/316-iron-lance.png",
-        "sourceId": 316,
-        "shared": true,
+        "src": "assets/vfx/action/318-Iron-Spire.png",
+        "sourceId": 318,
+        "shared": false,
         "exists": true,
-        "sha256": "b7e793d4bfb45765a2a5361a79a3f1ee09bb6689f7bcaa2c90f2a6666c9731ab",
+        "sha256": "aa063b413ba8bb77a336f79c25ac52b69c8a231928d1a3de362c4ed5e1d84bd5",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -26063,8 +26011,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A long solid steel lance point thrusts forward rapidly and punctures at one tiny bright contact, then withdraws. Straight piercing motion, not a slash.",
-        "registeredName": "Iron Lance"
+        "sequence": "Distinct visual motif for Iron Spire: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a vertical spike or pillar erupting beneath or around the target.",
+        "registeredName": "Iron Spire"
       },
       "status": "requires-review",
       "review": null
@@ -26390,11 +26338,11 @@
       ],
       "authoredAction": "form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/320-Iron-Ward.png",
-        "sourceId": 320,
-        "shared": true,
+        "src": "assets/vfx/action/321-Plate-Guard.png",
+        "sourceId": 321,
+        "shared": false,
         "exists": true,
-        "sha256": "94a29f25dc7c609fd307ea87496fb6ee73af949c0e41e3a882be326ca06912c6",
+        "sha256": "8d2e0d9340c561b9c302273511ed22adafff7c60e1ef17dfc9d2762a4f13983e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -26402,8 +26350,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Four thick riveted steel plates rise around an open centre, lock into a boxy iron ward with visible hinges, settle and release. No damaging flash or explosion.",
-        "registeredName": "Iron Ward"
+        "sequence": "Distinct visual motif for Plate Guard: interpret its named material and action literally as standalone fantasy VFX. Canonical action: form a protective shell, ring or layered barrier around the user. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Plate Guard"
       },
       "status": "requires-review",
       "review": null
@@ -26414,7 +26362,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -26465,11 +26412,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/383-Tollwave.png",
-        "sourceId": 383,
-        "shared": true,
+        "src": "assets/vfx/action/322-Alloy-Resonance.png",
+        "sourceId": 322,
+        "shared": false,
         "exists": true,
-        "sha256": "00025fb2e490f9453ed5167685d034d8915d440b134aa04dba0b49b3e47ed065",
+        "sha256": "72d107420d4b135432734bfac9f2e3082dc41befa3692779166a14f3537f6007",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -26477,8 +26424,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A heavy short brass bell-lip silhouette vibrates, launches one broad flattened corrugated sound front and trailing tiny angular metal flecks; a single contact then quiet. No full church or bell tower.",
-        "registeredName": "Tollwave"
+        "sequence": "Distinct visual motif for Alloy Resonance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Alloy Resonance"
       },
       "status": "requires-review",
       "review": null
@@ -26489,7 +26436,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -26542,11 +26488,11 @@
       ],
       "authoredAction": "three curved claw trails that converge on the target.",
       "art": {
-        "src": "assets/vfx/action/431-anvil-shoulder.png",
-        "sourceId": 431,
-        "shared": true,
+        "src": "assets/vfx/action/323-Ironheel-Lunge.png",
+        "sourceId": 323,
+        "shared": false,
         "exists": true,
-        "sha256": "1f015b507eee0cc76c47414678bad7036f09b169848751a5c21ac80c8d62877b",
+        "sha256": "860c0fe2b03d1ac30887b06551e0b5e9bb8232a4584bb92827fe4bcfb262ef56",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -26554,8 +26500,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A heavy armoured shoulder plate rushes horizontally and compresses a squat anvil-shaped impact; short heavy recoil and falling metal chips.",
-        "registeredName": "Anvil Shoulder"
+        "sequence": "Distinct visual motif for Ironheel Lunge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: three curved claw trails that converge on the target.",
+        "registeredName": "Ironheel Lunge"
       },
       "status": "requires-review",
       "review": null
@@ -26674,8 +26620,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -26710,11 +26654,11 @@
       "effects": [],
       "authoredAction": "a fast forward streak that compresses into a sharp collision burst.",
       "art": {
-        "src": "assets/vfx/action/325-Steel-Cut.png",
-        "sourceId": 325,
-        "shared": true,
+        "src": "assets/vfx/action/327-Cleaver-Reap.png",
+        "sourceId": 327,
+        "shared": false,
         "exists": true,
-        "sha256": "dcc812ff25a820c9122bf596ccaf8e50839f41fc5ff4db6aab04f78c59d3c820",
+        "sha256": "83d5aa9b65b4ae4158d1a8d4ff6031c93026f2a0ce3610b1bbc188a1f481497d",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -26722,8 +26666,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A slim polished steel edge makes one fast clean horizontal cut with two rigid straight wake segments and tiny cool metal shavings; no handle or full sword.",
-        "registeredName": "Steel Cut"
+        "sequence": "Distinct visual motif for Cleaver Reap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a fast forward streak that compresses into a sharp collision burst.",
+        "registeredName": "Cleaver Reap"
       },
       "status": "requires-review",
       "review": null
@@ -26734,7 +26678,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -26775,11 +26718,11 @@
       ],
       "authoredAction": "a vertical spike or pillar erupting beneath or around the target.",
       "art": {
-        "src": "assets/vfx/action/316-iron-lance.png",
-        "sourceId": 316,
-        "shared": true,
+        "src": "assets/vfx/action/328-Steel-Spire.png",
+        "sourceId": 328,
+        "shared": false,
         "exists": true,
-        "sha256": "b7e793d4bfb45765a2a5361a79a3f1ee09bb6689f7bcaa2c90f2a6666c9731ab",
+        "sha256": "eed4b74ecc78dce59ea5fc89b628d139ccb10cbfb0c67a6b048076cbbfddb567",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -26787,8 +26730,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A long solid steel lance point thrusts forward rapidly and punctures at one tiny bright contact, then withdraws. Straight piercing motion, not a slash.",
-        "registeredName": "Iron Lance"
+        "sequence": "Distinct visual motif for Steel Spire: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a vertical spike or pillar erupting beneath or around the target.",
+        "registeredName": "Steel Spire"
       },
       "status": "requires-review",
       "review": null
@@ -26800,7 +26743,6 @@
       "sourceFiles": [
         "dist/data.js",
         "dist/full-expansion.js",
-        "dist/paladin-data.js",
         "dist/progression-renewal.js",
         "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
@@ -26869,11 +26811,11 @@
       ],
       "authoredAction": "build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
       "art": {
-        "src": "assets/vfx/action/486-Royal-Mandate.png",
-        "sourceId": 486,
-        "shared": true,
+        "src": "assets/vfx/action/329-Tempered-Body.png",
+        "sourceId": 329,
+        "shared": false,
         "exists": true,
-        "sha256": "eb3230622cc0ee598bace83b83e5704b21d7dea133c050d9f06a6cdc3fe42ced",
+        "sha256": "4ab177a441bc42d4703365597648ec6737d3b3af32742f489615369e25c1bf56",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -26881,8 +26823,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "An angular iron crown and three overlapping bastion plates rise together above an open centre, lock into a disciplined protective crest, then lower and unlock. Quiet self-support, no impact.",
-        "registeredName": "Royal Mandate"
+        "sequence": "Distinct visual motif for Tempered Body: interpret its named material and action literally as standalone fantasy VFX. Canonical action: build a restrained aura or particle formation around the user or target, with no damaging collision. Do not use a damaging contact flash; the visual climax is the aura, mark, field, healing bloom or barrier settling into place.",
+        "registeredName": "Tempered Body"
       },
       "status": "requires-review",
       "review": null
@@ -27090,11 +27032,11 @@
       ],
       "authoredAction": "orbiting particles tracing a graceful circular path around the user.",
       "art": {
-        "src": "assets/vfx/action/337-Unwritten-Wish.png",
-        "sourceId": 337,
-        "shared": true,
+        "src": "assets/vfx/action/332-Borrowed-Starlight.png",
+        "sourceId": 332,
+        "shared": false,
         "exists": true,
-        "sha256": "82b2f6fec90ac72296882b2fabaa759b8f96bd743b707aacf5723137cea28232",
+        "sha256": "5b1d2b2ee2e39b18c12430b7eb6595b6984b2d0372d3593fb056c11c37649976",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27102,8 +27044,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "An irregular four-point folded wish-star made of pearl-like facets opens from a small seed, presses forward into one broad soft-edged but pixel-crisp star contact and breaks into petals. No circular ring.",
-        "registeredName": "Unwritten Wish"
+        "sequence": "Distinct visual motif for Borrowed Starlight: interpret its named material and action literally as standalone fantasy VFX. Canonical action: orbiting particles tracing a graceful circular path around the user.",
+        "registeredName": "Borrowed Starlight"
       },
       "status": "requires-review",
       "review": null
@@ -27150,11 +27092,11 @@
       "effects": [],
       "authoredAction": "a small glowing mote or heart-like puff travelling gently before bursting into sparkles.",
       "art": {
-        "src": "assets/vfx/action/353-concord-pact.png",
-        "sourceId": 353,
-        "shared": true,
+        "src": "assets/vfx/action/334-Charm-Kiss.png",
+        "sourceId": 334,
+        "shared": false,
         "exists": true,
-        "sha256": "3131e41e6cb2250db5658150a245edc3435578a4116687f0ecb44e6527900a01",
+        "sha256": "0a15741e10b1018595e0d452d0448450a443bf69dd0e0c1330ef5bf7453b68fc",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27162,8 +27104,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "two soft fairy-light ribbons circle separately, cross into a glowing knot between allies, then release a gentle starry pulse outward.",
-        "registeredName": "Concord Pact"
+        "sequence": "Distinct visual motif for Charm Kiss: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a small glowing mote or heart-like puff travelling gently before bursting into sparkles.",
+        "registeredName": "Charm Kiss"
       },
       "status": "requires-review",
       "review": null
@@ -27421,11 +27363,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/337-Unwritten-Wish.png",
-        "sourceId": 337,
-        "shared": true,
+        "src": "assets/vfx/action/340-Fable-Discharge.png",
+        "sourceId": 340,
+        "shared": false,
         "exists": true,
-        "sha256": "82b2f6fec90ac72296882b2fabaa759b8f96bd743b707aacf5723137cea28232",
+        "sha256": "f07e76469bca61793af1f6682aabbbc82fe9f39d4787e3bc3394481ad96dbab0",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27433,8 +27375,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "An irregular four-point folded wish-star made of pearl-like facets opens from a small seed, presses forward into one broad soft-edged but pixel-crisp star contact and breaks into petals. No circular ring.",
-        "registeredName": "Unwritten Wish"
+        "sequence": "Distinct visual motif for Fable Discharge: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Fable Discharge"
       },
       "status": "requires-review",
       "review": null
@@ -27509,11 +27451,11 @@
       ],
       "authoredAction": "orbiting particles tracing a graceful circular path around the user.",
       "art": {
-        "src": "assets/vfx/action/331-Starlit-Detonation.png",
-        "sourceId": 331,
-        "shared": true,
+        "src": "assets/vfx/action/341-Glimmer-Dance.png",
+        "sourceId": 341,
+        "shared": false,
         "exists": true,
-        "sha256": "743806acfc92325c60296693ca88f6b0702aed5e3a1b2e24d147a4518f8b22fb",
+        "sha256": "324a678534b94b39a2e9cb11f9b716d6e564dd473a942b618a9c32b293411beb",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27521,8 +27463,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small cluster of five uneven faceted stars gathers, briefly forms a jagged crown-like constellation, blooms into one compact starburst then scatters.",
-        "registeredName": "Starlit Detonation"
+        "sequence": "Distinct visual motif for Glimmer Dance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: orbiting particles tracing a graceful circular path around the user.",
+        "registeredName": "Glimmer Dance"
       },
       "status": "requires-review",
       "review": null
@@ -27625,7 +27567,6 @@
       "name": "Glimmer Lance",
       "originalCatalogue": true,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/data.js",
         "dist/full-expansion.js",
         "dist/teamcraft-data.js"
@@ -27675,11 +27616,11 @@
       ],
       "authoredAction": "a narrow piercing projectile that spears straight through the target space.",
       "art": {
-        "src": "assets/vfx/action/203-mind-lance.png",
-        "sourceId": 203,
-        "shared": true,
+        "src": "assets/vfx/action/344-Glimmer-Lance.png",
+        "sourceId": 344,
+        "shared": false,
         "exists": true,
-        "sha256": "86705682329d2750c3a984b19aa7049f2b3be18473c92e4c9209e590118d3775",
+        "sha256": "f78e0f0727f68ef0d7283f7264e7f99d159ed9d54f9f51979fb49e6b84db9c75",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27687,8 +27628,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Muted palette, crisp material shading and unclipped distinct silhouette match the established source style. Faceted spear travel with one tip contact and aftermath; narrower horizontal silhouette distinguishes it from the pulse.",
-        "registeredName": "Mind Lance"
+        "sequence": "Distinct visual motif for Glimmer Lance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a narrow piercing projectile that spears straight through the target space.",
+        "registeredName": "Glimmer Lance"
       },
       "status": "requires-review",
       "review": null
@@ -27749,11 +27690,11 @@
       ],
       "authoredAction": "two or three expanding rings followed by a concentrated core flash.",
       "art": {
-        "src": "assets/vfx/action/331-Starlit-Detonation.png",
-        "sourceId": 331,
-        "shared": true,
+        "src": "assets/vfx/action/345-Glimmer-Pulse.png",
+        "sourceId": 345,
+        "shared": false,
         "exists": true,
-        "sha256": "743806acfc92325c60296693ca88f6b0702aed5e3a1b2e24d147a4518f8b22fb",
+        "sha256": "b3403198317cb83c74e4350ba3503b41ebb42b241f4e88b9ab5954f8ac3eb2f5",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27761,8 +27702,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small cluster of five uneven faceted stars gathers, briefly forms a jagged crown-like constellation, blooms into one compact starburst then scatters.",
-        "registeredName": "Starlit Detonation"
+        "sequence": "Distinct visual motif for Glimmer Pulse: interpret its named material and action literally as standalone fantasy VFX. Canonical action: two or three expanding rings followed by a concentrated core flash.",
+        "registeredName": "Glimmer Pulse"
       },
       "status": "requires-review",
       "review": null
@@ -27857,8 +27798,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -27905,11 +27844,11 @@
       "effects": [],
       "authoredAction": "a corkscrewing stream that wraps once around the target before bursting.",
       "art": {
-        "src": "assets/vfx/action/343-Glimmer-Kiss.png",
-        "sourceId": 343,
-        "shared": true,
+        "src": "assets/vfx/action/347-Glamour-Torrent.png",
+        "sourceId": 347,
+        "shared": false,
         "exists": true,
-        "sha256": "339702c374385976ac65bef12a24dbf9ff76b62b2b377d5d89d757846415b8e1",
+        "sha256": "b92f08d4c97ded1e2ed2775833b0d5cdac660751b33ed2ade35b1e2c24c296f1",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -27917,8 +27856,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small bow-like knot of petal-shaped glimmer facets releases one low broad scalloped wave, a tiny single contact point and curling after-fragments. No lips or face.",
-        "registeredName": "Glimmer Kiss"
+        "sequence": "Distinct visual motif for Glamour Torrent: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a corkscrewing stream that wraps once around the target before bursting.",
+        "registeredName": "Glamour Torrent"
       },
       "status": "requires-review",
       "review": null
@@ -28027,8 +27966,6 @@
       "originalCatalogue": true,
       "sourceFiles": [
         "dist/data.js",
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -28081,11 +28018,11 @@
       ],
       "authoredAction": "a compact orb or knot of energy that blooms outward on contact.",
       "art": {
-        "src": "assets/vfx/action/343-Glimmer-Kiss.png",
-        "sourceId": 343,
-        "shared": true,
+        "src": "assets/vfx/action/349-Starlit-Refraction.png",
+        "sourceId": 349,
+        "shared": false,
         "exists": true,
-        "sha256": "339702c374385976ac65bef12a24dbf9ff76b62b2b377d5d89d757846415b8e1",
+        "sha256": "7a43c715d6552d3b20674cdcfc4faf76277a3884868cd535d66ef0d098805e77",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28093,8 +28030,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small bow-like knot of petal-shaped glimmer facets releases one low broad scalloped wave, a tiny single contact point and curling after-fragments. No lips or face.",
-        "registeredName": "Glimmer Kiss"
+        "sequence": "Distinct visual motif for Starlit Refraction: interpret its named material and action literally as standalone fantasy VFX. Canonical action: a compact orb or knot of energy that blooms outward on contact.",
+        "registeredName": "Starlit Refraction"
       },
       "status": "requires-review",
       "review": null
@@ -28455,11 +28392,11 @@
       "effects": [],
       "authoredAction": "A charged elemental spark races from caster to target.",
       "art": {
-        "src": "assets/vfx/action/25-ash-wheel.png",
-        "sourceId": 25,
-        "shared": true,
+        "src": "assets/vfx/action/355-Ember-Snap.png",
+        "sourceId": 355,
+        "shared": false,
         "exists": true,
-        "sha256": "bb82476064a35d5124815ee4eca8feb3f3dab9c654137f9b5aaa851f3610c1fd",
+        "sha256": "3b9cf0f48daea05ed5eaac85a8c6bd39aafc3f78d2a7595aef25d8c0aab1fd0d",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28467,8 +28404,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A rim of layered drifting grey ash flakes assembles around an ember hub, spins in a tilted vertical plane and rolls diagonally forward, rim flexes and splashes ash on one contact point, keeps rolling through before disintegrating into a thin rolling ash wake. Fine grey layers with sparse orange rim coals, not a solid stone ball or flame ring.",
-        "registeredName": "Ash Wheel"
+        "sequence": "Distinct visual motif for Ember Snap: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A charged elemental spark races from caster to target.",
+        "registeredName": "Ember Snap"
       },
       "status": "requires-review",
       "review": null
@@ -28531,11 +28468,11 @@
       "effects": [],
       "authoredAction": "A charged elemental spark races from caster to target.",
       "art": {
-        "src": "assets/vfx/action/55-tide-pulse.png",
-        "sourceId": 55,
-        "shared": true,
+        "src": "assets/vfx/action/356-Jet-Skim.png",
+        "sourceId": 356,
+        "shared": false,
         "exists": true,
-        "sha256": "bd183d6324c31720e21e6b022a7921e7a5859839ee91436bd04847fea5183dd7",
+        "sha256": "d0e033a29b00e3efaa7624ae5da672daef818859cca78c4483c4d2f05a1b9689",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28543,8 +28480,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A thin upright dense-water membrane stretches like an oval diaphragm, a falling droplet plucks it inward, it releases two expanding ridged pressure rings, folds tightly into ONE concentrated core pulse and springs outward, then shivers and breaks into flat droplets. Special attack weakening defence. A vibrating membrane and pressure ridges, not Foam Pulse's pearly bubble cloud.",
-        "registeredName": "Tide Pulse"
+        "sequence": "Distinct visual motif for Jet Skim: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A charged elemental spark races from caster to target.",
+        "registeredName": "Jet Skim"
       },
       "status": "requires-review",
       "review": null
@@ -28585,20 +28522,20 @@
       "effects": [],
       "authoredAction": "A charged elemental spark races from caster to target.",
       "art": {
-        "src": "assets/vfx/action/72-thunderhead-resonance.png",
-        "sourceId": 72,
-        "shared": true,
+        "src": "assets/vfx/action/357-Flash-Circuit.png",
+        "sourceId": 357,
+        "shared": false,
         "exists": true,
-        "sha256": "f6df58830cd6864490180853429096a1a59ed84ca23dc56ed02627e8151cec51",
+        "sha256": "a25bcfe491b881b9a598410170e4024f1671738089549f5f2cf470f7ac7675d0",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "Three compact layered charcoal thundercloud lobes compress like a bellows; a luminous vibrating core opens beneath them, delivers one broad concentric thunder-pressure pulse, then the lobes lose charge and dissipate. No repeated strikes.",
-        "registeredName": "Thunderhead Resonance"
+        "sequence": "Distinct visual motif for Flash Circuit: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A charged elemental spark races from caster to target.",
+        "registeredName": "Flash Circuit"
       },
       "status": "requires-review",
       "review": null
@@ -28641,20 +28578,20 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/79-leaf-cut.png",
-        "sourceId": 79,
-        "shared": true,
+        "src": "assets/vfx/action/358-Briar-Flick.png",
+        "sourceId": 358,
+        "shared": false,
         "exists": true,
-        "sha256": "456d4d49fdd45821ab498a0a9cf7b422a25295c47b9913eef67fbfd709f3ac37",
+        "sha256": "8708a444aa216b09448d18bca1e0615017c032a989c162a2158a88422f71a366",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "One serrated curved leaf blade turns edge-on, slices diagonally ONCE, turns back to show its veins, then sheds a few small green restorative sap motes toward the left. One blade, one hit.",
-        "registeredName": "Leaf Cut"
+        "sequence": "Distinct visual motif for Briar Flick: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A fast converging slash with afterimages.",
+        "registeredName": "Briar Flick"
       },
       "status": "requires-review",
       "review": null
@@ -28755,11 +28692,11 @@
       "effects": [],
       "authoredAction": "A fast converging slash with afterimages.",
       "art": {
-        "src": "assets/vfx/action/149-venom-sting.png",
-        "sourceId": 149,
-        "shared": true,
+        "src": "assets/vfx/action/360-Needle-Ambush.png",
+        "sourceId": 360,
+        "shared": false,
         "exists": true,
-        "sha256": "1ed1d3c2e132e35d78cd34e2e4b9f1f70e262a158b7fdd352b827ca870588da1",
+        "sha256": "6fb9c6802e831758f83a8a1bb53e687642f3d065a0418cb14c6084fcfc88eb10",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -28767,8 +28704,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Venom Sting",
-        "registeredName": "Venom Sting"
+        "sequence": "Distinct visual motif for Needle Ambush: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A fast converging slash with afterimages.",
+        "registeredName": "Needle Ambush"
       },
       "status": "requires-review",
       "review": null
@@ -35876,7 +35813,6 @@
       "name": "Prism Ward",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/progression-renewal.js",
         "dist/quest-rewards-data.js",
         "dist/teamcraft-data.js"
       ],
@@ -35913,11 +35849,11 @@
       ],
       "authoredAction": "Three glass sluice prisms gather waterlight into a transparent guardian shell.",
       "art": {
-        "src": "assets/vfx/action/40-deepwater-brace.png",
-        "sourceId": 40,
-        "shared": true,
+        "src": "assets/vfx/action/471-Prism-Ward.png",
+        "sourceId": 471,
+        "shared": false,
         "exists": true,
-        "sha256": "435b3cbb002c786276471277c39f0e3e73bac6766ec9f412dc85db11ed7bf40e",
+        "sha256": "57dc00e1ec59c365ba134cce7cba10f81b5c1903791bb3a4c3243442c323a2dd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -35925,8 +35861,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Several thick lens-shaped layers of deep teal water descend slowly and stack into a heavy flattened pressure arch over empty user space, small bubbles compress between strata, the arch firms into a dense braced water canopy absorbing a restrained ripple, then layers relax upward and separate into bubbles. Special defence self buff; no bronze armour, no attack wave.",
-        "registeredName": "Deepwater Brace"
+        "sequence": "Distinct visual motif for Prism Ward: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Three glass sluice prisms gather waterlight into a transparent guardian shell.",
+        "registeredName": "Prism Ward"
       },
       "status": "requires-review",
       "review": null
@@ -35936,9 +35872,7 @@
       "name": "Beacon Bolt",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/quest-rewards-data.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -35966,20 +35900,20 @@
       "effects": [],
       "authoredAction": "An old beacon ignites and guides a golden lightning lance precisely to the foe.",
       "art": {
-        "src": "assets/vfx/action/74-volt-jolt.png",
-        "sourceId": 74,
-        "shared": true,
+        "src": "assets/vfx/action/472-Beacon-Bolt.png",
+        "sourceId": 472,
+        "shared": false,
         "exists": true,
-        "sha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+        "sha256": "f7879f2441923fcd6223518812a3b420587e34628b62a9398ea4cb036352dd21",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt.",
-        "registeredName": "Volt Jolt"
+        "sequence": "Distinct visual motif for Beacon Bolt: interpret its named material and action literally as standalone fantasy VFX. Canonical action: An old beacon ignites and guides a golden lightning lance precisely to the foe.",
+        "registeredName": "Beacon Bolt"
       },
       "status": "requires-review",
       "review": null
@@ -35989,7 +35923,6 @@
       "name": "Quiet Passage",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/quest-rewards-data.js",
         "dist/teamcraft-data.js"
       ],
@@ -36026,11 +35959,11 @@
       ],
       "authoredAction": "A hooded ferry lantern draws a dark veil around the partner; its next impact breaks the veil.",
       "art": {
-        "src": "assets/vfx/action/307-Sly-Feint.png",
-        "sourceId": 307,
-        "shared": true,
+        "src": "assets/vfx/action/473-Quiet-Passage.png",
+        "sourceId": 473,
+        "shared": false,
         "exists": true,
-        "sha256": "57130c097dc4ebb6d788aef45303cc1601fd0520952d316901ca28822045f93c",
+        "sha256": "7fc48fa2f3187fdcdedad93c1e6b1b212a29a50e3f2c7b44f739b6bebb4119c6",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -36038,8 +35971,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two short folded shadow-cloth ribbons swap positions around an empty centre, form a quiet off-centre sheltering hood, then slide away. Concealment self-buff, NO damaging slash or flash.",
-        "registeredName": "Sly Feint"
+        "sequence": "Distinct visual motif for Quiet Passage: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A hooded ferry lantern draws a dark veil around the partner; its next impact breaks the veil.",
+        "registeredName": "Quiet Passage"
       },
       "status": "requires-review",
       "review": null
@@ -37525,7 +37458,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/paladin-data.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -37562,11 +37494,11 @@
       ],
       "authoredAction": "A bramble robin silhouette sweeps through a spiral of grass feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/488-Hauteclear-Cut.png",
-        "sourceId": 488,
-        "shared": true,
+        "src": "assets/vfx/action/500-Bramble-Swoop.png",
+        "sourceId": 500,
+        "shared": false,
         "exists": true,
-        "sha256": "6e9bf605f250d59dd6bc48599761261f2280cea8088a46b8d547556cb9508ff4",
+        "sha256": "e2870fa49b3e1b0fa8a31a8e9b756af1e82b576cfa8898b1a158730dd21e7c66",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -37574,8 +37506,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A long leaf-shaped sabre edge with a raised central vein curves through one elegant green crescent cut, trailing stiff thorn-shaped chips.",
-        "registeredName": "Hauteclear Cut"
+        "sequence": "Distinct visual motif for Bramble Swoop: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A bramble robin silhouette sweeps through a spiral of grass feathers before the final wing strike.",
+        "registeredName": "Bramble Swoop"
       },
       "status": "requires-review",
       "review": null
@@ -37586,8 +37518,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -37624,20 +37554,20 @@
       ],
       "authoredAction": "A storm swift silhouette sweeps through a spiral of electric feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/74-volt-jolt.png",
-        "sourceId": 74,
-        "shared": true,
+        "src": "assets/vfx/action/501-Thunder-Draft.png",
+        "sourceId": 501,
+        "shared": false,
         "exists": true,
-        "sha256": "024aec3394adbfd79f84d24a466cc74e9aa4d81e57cceaaaf806a94113fffd29",
+        "sha256": "3f0264b7b3e718a88af26fdab2580fb488fb0a756c571698223a8ee93b410d6c",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
-        "impact": 0.4375,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "A thick short stepped lightning lance assembles from offset rectangular voltage plates, travels into one angular impact, cracks the outer plates and collapses to fading afterimages. Heavier layered projectile than Spark Jolt.",
-        "registeredName": "Volt Jolt"
+        "sequence": "Distinct visual motif for Thunder Draft: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A storm swift silhouette sweeps through a spiral of electric feathers before the final wing strike.",
+        "registeredName": "Thunder Draft"
       },
       "status": "requires-review",
       "review": null
@@ -37648,8 +37578,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -37686,11 +37614,11 @@
       ],
       "authoredAction": "A banner swallow silhouette sweeps through a spiral of fighting feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/127-iron-break.png",
-        "sourceId": 127,
-        "shared": true,
+        "src": "assets/vfx/action/502-Pennant-Break.png",
+        "sourceId": 502,
+        "shared": false,
         "exists": true,
-        "sha256": "c6f1028679ac85161231df182b61423db5dddb1a7377ff19e1e8be5a6bc9a6cc",
+        "sha256": "9fbdd107d2baeca2effae58ceb96e1ad28b2f19d008cc9ae50f473e906faff39",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -37698,8 +37626,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Iron Break",
-        "registeredName": "Iron Break"
+        "sequence": "Distinct visual motif for Pennant Break: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A banner swallow silhouette sweeps through a spiral of fighting feathers before the final wing strike.",
+        "registeredName": "Pennant Break"
       },
       "status": "requires-review",
       "review": null
@@ -37771,7 +37699,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -37808,11 +37735,11 @@
       ],
       "authoredAction": "A river kingfisher silhouette sweeps through a spiral of water feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/54-tide-lance.png",
-        "sourceId": 54,
-        "shared": true,
+        "src": "assets/vfx/action/504-Cascade-Lance.png",
+        "sourceId": 504,
+        "shared": false,
         "exists": true,
-        "sha256": "4825b3f34ef0f661dbe855296a091cb6afbafc49c586b843c6bc7c0f4d9eee21",
+        "sha256": "603371e5684715d7e7560a50128e4a96b60d96881fb711f3f0e1635c19d2b0df",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -37820,8 +37747,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three short vertical jets align and compress into one narrow translucent ribbed water spear with an angular glass-like pointed head, tilt diagonally and spear straight through target space once, then fracture into sharp liquid facets and a sparse straight droplet line. A rigid pressure spear with angular ribs, clearly distinct from Foam Lance's soft pearly bubbling dart. Keep the complete short spear compact within each cell.",
-        "registeredName": "Tide Lance"
+        "sequence": "Distinct visual motif for Cascade Lance: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A river kingfisher silhouette sweeps through a spiral of water feathers before the final wing strike.",
+        "registeredName": "Cascade Lance"
       },
       "status": "requires-review",
       "review": null
@@ -37892,7 +37819,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/menagerie-family.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -37929,11 +37855,11 @@
       ],
       "authoredAction": "A dusk magpie silhouette sweeps through a spiral of dark feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/477-Grey-Hunt.png",
-        "sourceId": 477,
-        "shared": true,
+        "src": "assets/vfx/action/506-Gloaming-Plunder.png",
+        "sourceId": 506,
+        "shared": false,
         "exists": true,
-        "sha256": "78980f0c28793d58e2b5948215dd3b3b540e1f114bebdc0eeac4d61d0c4139d4",
+        "sha256": "57812d2ae73a32ea57251f4aea3a9bd54262790c5985d254e3512f76c027c3a4",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -37941,8 +37867,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A low angular dark slash-wake shaped like a crouched arrowhead compresses, darts forward once with two trailing claw-like grooves and frays into smoke. No full animal.",
-        "registeredName": "Grey Hunt"
+        "sequence": "Distinct visual motif for Gloaming Plunder: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A dusk magpie silhouette sweeps through a spiral of dark feathers before the final wing strike.",
+        "registeredName": "Gloaming Plunder"
       },
       "status": "requires-review",
       "review": null
@@ -38253,8 +38179,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -38291,11 +38215,11 @@
       ],
       "authoredAction": "A marsh ibis silhouette sweeps through a spiral of poison feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/148-venom-spray.png",
-        "sourceId": 148,
-        "shared": true,
+        "src": "assets/vfx/action/512-Venom-Flight.png",
+        "sourceId": 512,
+        "shared": false,
         "exists": true,
-        "sha256": "b92fd106c501cbf35fb5ca101f45455e03cf85a69fa6c5c7fb713a5472d78b3a",
+        "sha256": "5cdf60d0bc2ac235ce63f1321932feb8d8110f420c8d197aa92dfc39221b87d7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -38303,8 +38227,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Venom Spray",
-        "registeredName": "Venom Spray"
+        "sequence": "Distinct visual motif for Venom Flight: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A marsh ibis silhouette sweeps through a spiral of poison feathers before the final wing strike.",
+        "registeredName": "Venom Flight"
       },
       "status": "requires-review",
       "review": null
@@ -38411,11 +38335,11 @@
       ],
       "authoredAction": "A frost puffin silhouette sweeps through a spiral of ice feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/105-frostbite-lunge.png",
-        "sourceId": 105,
-        "shared": true,
+        "src": "assets/vfx/action/514-Rimewake-Dive.png",
+        "sourceId": 514,
+        "shared": false,
         "exists": true,
-        "sha256": "6098ea35ac3249108d4db09867f4c46094244b7d2374544700541d2a5e98dd60",
+        "sha256": "f35dd3aa59d51fb660d01362f70367bda9779f0878b7a696db5b357e5bc1db6f",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -38423,8 +38347,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A long narrow frozen tusk with a hollow dark blue core angles forward, lunges on a single hairline trail into ONE needle-point collision, sheds a few sharp frost crystals and withdraws. Precision lunge distinct from basic Frost Shard.",
-        "registeredName": "Frostbite Lunge"
+        "sequence": "Distinct visual motif for Rimewake Dive: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A frost puffin silhouette sweeps through a spiral of ice feathers before the final wing strike.",
+        "registeredName": "Rimewake Dive"
       },
       "status": "requires-review",
       "review": null
@@ -38531,11 +38455,11 @@
       ],
       "authoredAction": "A dawn skylark silhouette sweeps through a spiral of normal feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/8-steady-blow.png",
-        "sourceId": 8,
-        "shared": true,
+        "src": "assets/vfx/action/516-Dawn-Crescendo.png",
+        "sourceId": 516,
+        "shared": false,
         "exists": true,
-        "sha256": "f7589594055619da248b8f6ef77bf4a99f8319638514e0f6ca978e86bdd10ab7",
+        "sha256": "c8bba9fd49cc20df1f6092212d385f6bb7211c9af226473c7ed7d1deec40f2dd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -38543,8 +38467,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A dense shaded bare forepaw/fist draws back, holds steady, swings ONE controlled compact arc, lands a clean blunt contact with a short pressure rim, follows through and withdraws. No claws, projectile, blade or repeated hit.",
-        "registeredName": "Steady Blow"
+        "sequence": "Distinct visual motif for Dawn Crescendo: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A dawn skylark silhouette sweeps through a spiral of normal feathers before the final wing strike.",
+        "registeredName": "Dawn Crescendo"
       },
       "status": "requires-review",
       "review": null
@@ -38555,7 +38479,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/bird-family.js",
-        "dist/paladin-data.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -38592,11 +38515,11 @@
       ],
       "authoredAction": "A gale tern silhouette sweeps through a spiral of wind feathers before the final wing strike.",
       "art": {
-        "src": "assets/vfx/action/492-Lunar-Voyage.png",
-        "sourceId": 492,
-        "shared": true,
+        "src": "assets/vfx/action/517-Zephyr-Relay.png",
+        "sourceId": 517,
+        "shared": false,
         "exists": true,
-        "sha256": "8e047b21911cd095ba5ce922286a6724114d57c3ef64f47b7c60207af82b98b5",
+        "sha256": "df7f75a7e47551deead9b8368161edc48c8f871a38de42615e48e23258e8af11",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -38604,8 +38527,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A large curved sail-like wind ribbon with three short folded fins unfurls, travels forward in one broad arcing gale, then folds into two small streamlined wisps. No boat, moon icon or scenery.",
-        "registeredName": "Lunar Voyage"
+        "sequence": "Distinct visual motif for Zephyr Relay: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A gale tern silhouette sweeps through a spiral of wind feathers before the final wing strike.",
+        "registeredName": "Zephyr Relay"
       },
       "status": "requires-review",
       "review": null
@@ -38616,8 +38539,7 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/exchange-techniques.js",
-        "dist/teamcraft-data.js",
-        "dist/tide-orchard-data.js"
+        "dist/teamcraft-data.js"
       ],
       "provenance": {
         "authoring": "User-requested department-store status lessons, 21 October 2026"
@@ -38650,11 +38572,11 @@
       ],
       "authoredAction": "Soft violet mist settles around the foe as slow rings fade into sleep.",
       "art": {
-        "src": "assets/vfx/action/763-spore-drowse.png",
-        "sourceId": 763,
-        "shared": true,
+        "src": "assets/vfx/action/518-Slumber-Mist.png",
+        "sourceId": 518,
+        "shared": false,
         "exists": true,
-        "sha256": "103cc73a8e1f65d64d119786739c6407582c29e6f497c6b0926dedca99de6612",
+        "sha256": "7ae88af0458f2b873983b1e917bf574cd8bac24654d6c5dc9e7358adbbe2a6d6",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -38662,8 +38584,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A sleepy drifting spore cloud with a distinct settling beat.",
-        "registeredName": "Spore Drowse"
+        "sequence": "Distinct visual motif for Slumber Mist: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Soft violet mist settles around the foe as slow rings fade into sleep.",
+        "registeredName": "Slumber Mist"
       },
       "status": "requires-review",
       "review": null
@@ -38731,7 +38653,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/exchange-techniques.js",
-        "dist/full-expansion.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -38765,20 +38686,20 @@
       ],
       "authoredAction": "Fine golden sparks form a brief paralysing net around the foe.",
       "art": {
-        "src": "assets/vfx/action/68-spark-jolt.png",
-        "sourceId": 68,
-        "shared": true,
+        "src": "assets/vfx/action/520-Nerve-Spark.png",
+        "sourceId": 520,
+        "shared": false,
         "exists": true,
-        "sha256": "2b8a002f1dda9d6b3a64a60b95392fb8f664fc5af560337d7cde60f3a0c5247c",
+        "sha256": "33603c5b00e9c9d8762e5fb28292b3381baf76a1396dff48becf2895bff44f44",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
-        "impact": 0.4375,
+        "duration": 1500,
+        "impact": 0.5,
         "beats": [
-          0.4375
+          0.5
         ],
-        "sequence": "One tiny white-hot electrical bead gathers two short sparks, darts a short distance, snaps once into a compact jagged flash, then dwindles into three motes. Small quick basic projectile.",
-        "registeredName": "Spark Jolt"
+        "sequence": "Distinct visual motif for Nerve Spark: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Fine golden sparks form a brief paralysing net around the foe.",
+        "registeredName": "Nerve Spark"
       },
       "status": "requires-review",
       "review": null
@@ -38822,11 +38743,11 @@
       ],
       "authoredAction": "A deep violet venom mark pulses beneath the foe and dissolves into toxic vapour.",
       "art": {
-        "src": "assets/vfx/action/150-emperor-s-scheme.png",
-        "sourceId": 150,
-        "shared": true,
+        "src": "assets/vfx/action/521-Venom-Mark.png",
+        "sourceId": 521,
+        "shared": false,
         "exists": true,
-        "sha256": "2f1bc8482fbcb8640a6b41a1df0b5acc64b1f897521ba49c408c1369f9225b84",
+        "sha256": "3174deb8c8ff763cbd058baf0a8d3d427e7d7bf0d7e35fa571f0039f0e0ca3de",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -38834,8 +38755,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Emperor's Scheme",
-        "registeredName": "Emperor's Scheme"
+        "sequence": "Distinct visual motif for Venom Mark: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A deep violet venom mark pulses beneath the foe and dissolves into toxic vapour.",
+        "registeredName": "Venom Mark"
       },
       "status": "requires-review",
       "review": null
@@ -38846,7 +38767,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/exchange-techniques.js",
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -38883,11 +38803,11 @@
       ],
       "authoredAction": "A ring of floating embers settles into a small burning sigil around the foe.",
       "art": {
-        "src": "assets/vfx/action/32-heat-haze.png",
-        "sourceId": 32,
-        "shared": true,
+        "src": "assets/vfx/action/522-Cinder-Hex.png",
+        "sourceId": 522,
+        "shared": false,
         "exists": true,
-        "sha256": "d4e8b5612ea36db75e5835166cf9ffef761b11393895cc0ebb94cadc54ba56d1",
+        "sha256": "89e0c566db7538092810b26d6b3c60b5d3c3581ad165b16632163386ac824d2e",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -38895,8 +38815,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Thin warm air ribbons rise around empty target space, wavy offset lens facets refract a small central sight glint into displaced ghost images, distort and settle as a restrained mirage veil, then gently fade. Foe accuracy reduction; no damaging impact, no flame orb or protective shield.",
-        "registeredName": "Heat Haze"
+        "sequence": "Distinct visual motif for Cinder Hex: interpret its named material and action literally as standalone fantasy VFX. Canonical action: A ring of floating embers settles into a small burning sigil around the foe.",
+        "registeredName": "Cinder Hex"
       },
       "status": "requires-review",
       "review": null
@@ -38907,8 +38827,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/exchange-techniques.js",
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -38942,11 +38860,11 @@
       ],
       "authoredAction": "Green-purple haze gathers around the foe before drifting away.",
       "art": {
-        "src": "assets/vfx/action/135-noxious-cloud.png",
-        "sourceId": 135,
-        "shared": true,
+        "src": "assets/vfx/action/523-Poison-Haze.png",
+        "sourceId": 523,
+        "shared": false,
         "exists": true,
-        "sha256": "0a064ffb376be8ee9884335858f8abf5c784b420e90b6c67e23a292df8809e79",
+        "sha256": "1544e1147b5ee6831b1ac4a5e5346070ca9aef56bebb8718c6fd98c1f0e4b6f7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -38954,8 +38872,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Noxious Cloud",
-        "registeredName": "Noxious Cloud"
+        "sequence": "Distinct visual motif for Poison Haze: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Green-purple haze gathers around the foe before drifting away.",
+        "registeredName": "Poison Haze"
       },
       "status": "requires-review",
       "review": null
@@ -38966,7 +38884,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/exchange-techniques.js",
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -39000,11 +38917,11 @@
       ],
       "authoredAction": "White frost curls around the foe, dulling its special attacks.",
       "art": {
-        "src": "assets/vfx/action/114-snow-veil.png",
-        "sourceId": 114,
-        "shared": true,
+        "src": "assets/vfx/action/524-Hoarfrost-Hex.png",
+        "sourceId": 524,
+        "shared": false,
         "exists": true,
-        "sha256": "467cc22b62c68208b38d2671f727edc40366b63c79c3b9728eb995db343ba806",
+        "sha256": "9837bf30550416b55eaf6aab211ba55753a00b72a95ec79b5f780f193d6cddda",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -39012,8 +38929,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Snow Veil",
-        "registeredName": "Snow Veil"
+        "sequence": "Distinct visual motif for Hoarfrost Hex: interpret its named material and action literally as standalone fantasy VFX. Canonical action: White frost curls around the foe, dulling its special attacks.",
+        "registeredName": "Hoarfrost Hex"
       },
       "status": "requires-review",
       "review": null
@@ -39106,11 +39023,11 @@
       "effects": [],
       "authoredAction": "Back bells resonate, ear plates focus the tone, and the trunk fires a concentrated cone of pressure rings. The damage comes from sound rather than a stomp or contact hit.",
       "art": {
-        "src": "assets/vfx/action/4-resounding-clap.png",
-        "sourceId": 4,
-        "shared": true,
+        "src": "assets/vfx/action/526-Carillon-Cannon.png",
+        "sourceId": 526,
+        "shared": false,
         "exists": true,
-        "sha256": "e9ebdfd1f592da75cfdffec215e382a306b4c39ce663ceabf90d0b7b6714a0ae",
+        "sha256": "e53acde553caad8fc5c1b44cf1a991197c4fde7eaf86fd305a8578b41f632ed7",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -39118,8 +39035,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two short opposing pressure fronts meet like hands clapping; a single flat white impact and concentric compressed sound bands ring out. Different from a cry.",
-        "registeredName": "Resounding Clap"
+        "sequence": "Distinct visual motif for Carillon Cannon: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Back bells resonate, ear plates focus the tone, and the trunk fires a concentrated cone of pressure rings. The damage comes from sound rather than a stomp or contact hit.",
+        "registeredName": "Carillon Cannon"
       },
       "status": "requires-review",
       "review": null
@@ -40563,11 +40480,11 @@
       ],
       "authoredAction": "Coordinated Focus: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/565-Duality-Crest.png",
-        "sourceId": 565,
-        "shared": true,
+        "src": "assets/vfx/action/551-Coordinated-Focus.png",
+        "sourceId": 551,
+        "shared": false,
         "exists": true,
-        "sha256": "4bf4181c92d3518c2205321eac895a37117adb06d22da16aa3cdd4fbe2ea53b0",
+        "sha256": "e87fdae5ccda1cda1775780c0f013c2069ef5c84fc616a73abcf4191d44fbf7d",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -40575,8 +40492,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two opposing small prismatic crest-halves fold together above an open centre, align into a balanced crown-like mental crest, pause then separate. A quiet self-focus buff, no impact.",
-        "registeredName": "Duality Crest"
+        "sequence": "Distinct visual motif for Coordinated Focus: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Coordinated Focus: distinct tactical aura and visible stage or healing effects.",
+        "registeredName": "Coordinated Focus"
       },
       "status": "requires-review",
       "review": null
@@ -40586,9 +40503,7 @@
       "name": "Overcharge Protocol",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
-        "dist/roster-expansion.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -40647,11 +40562,11 @@
       ],
       "authoredAction": "Overcharge Protocol: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/62-live-wire.png",
-        "sourceId": 62,
-        "shared": true,
+        "src": "assets/vfx/action/552-Overcharge-Protocol.png",
+        "sourceId": 552,
+        "shared": false,
         "exists": true,
-        "sha256": "621457fc2294280855bd1a7ffc47950a7270433128b4bab4781e095ee442a5c1",
+        "sha256": "de1050d49fdaf489d475348cc640937783a82251cc4a93398f438eedfb6477f3",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -40659,8 +40574,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A loose physical electrical wire whips forward, bends around the target, contacts with a few local sparks, then springs away. A wire, not a generic lightning orb.",
-        "registeredName": "Live Wire"
+        "sequence": "Distinct visual motif for Overcharge Protocol: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Overcharge Protocol: distinct tactical aura and visible stage or healing effects.",
+        "registeredName": "Overcharge Protocol"
       },
       "status": "requires-review",
       "review": null
@@ -40754,8 +40669,6 @@
       "name": "Furnace Lockdown",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
-        "dist/roster-expansion.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -40803,11 +40716,11 @@
       ],
       "authoredAction": "Furnace Lockdown: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/34-smoulder-veil.png",
-        "sourceId": 34,
-        "shared": true,
+        "src": "assets/vfx/action/554-Furnace-Lockdown.png",
+        "sourceId": 554,
+        "shared": false,
         "exists": true,
-        "sha256": "a301e069b2274063ee2313c3a3658d6af2a20d06ecebabda35ebdf4c3acc068a",
+        "sha256": "3f725020efeacff37f185becff80cad5ac546c88fa7ca44599ecab991ccebfe5",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -40815,8 +40728,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Soft charcoal-grey smoke unspools from five small smouldering feather-like scales, wraps in overlapping translucent draped bands around empty user silhouette space, small incoming orange sparks visibly fizzle against the cool outer soot layer, veil settles then unravels gently. SELF special defence and burn immunity; no strike or explosive flash.",
-        "registeredName": "Smoulder Veil"
+        "sequence": "Distinct visual motif for Furnace Lockdown: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Furnace Lockdown: distinct tactical aura and visible stage or healing effects.",
+        "registeredName": "Furnace Lockdown"
       },
       "status": "requires-review",
       "review": null
@@ -40826,8 +40739,6 @@
       "name": "Second Tide",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
-        "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -40882,11 +40793,11 @@
       ],
       "authoredAction": "Second Tide: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/50-tidal-poise.png",
-        "sourceId": 50,
-        "shared": true,
+        "src": "assets/vfx/action/556-Second-Tide.png",
+        "sourceId": 556,
+        "shared": false,
         "exists": true,
-        "sha256": "77b67250019aac99cec84776485ce3b69908a998953c9d6fd74ce0a72da48c2e",
+        "sha256": "e0de33e44295f7ec6e029d991bba8ea696461a361be490c2087072731bd4ebf2",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -40894,8 +40805,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Scattered droplet masses wobble around an empty standing-user space, collect into two opposed substantial curved water cuffs at shoulder/forearm level, brace symmetrically above a quiet shallow pool, absorb a tiny balanced ripple and settle, then relax into drops. Physical defence self buff; balanced braced wave arms, not Deepwater Brace's stacked pressure canopy.",
-        "registeredName": "Tidal Poise"
+        "sequence": "A low restorative water tide curls inward carrying warm energy beads, a small bronze attack spur rises and one shield flake loosens. Healing and attack boost.",
+        "registeredName": "Second Tide"
       },
       "status": "requires-review",
       "review": null
@@ -40963,11 +40874,11 @@
       ],
       "authoredAction": "Entropic Ritual: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/143-venom-coat.png",
-        "sourceId": 143,
-        "shared": true,
+        "src": "assets/vfx/action/557-Entropic-Ritual.png",
+        "sourceId": 557,
+        "shared": false,
         "exists": true,
-        "sha256": "81d791e8f4618595afde759bb06416ad4779c229c025143dce95f4f67289ac31",
+        "sha256": "8b72082aa77bc9facd6bd666c96605c7d8e0d2866e2c0cbba9495a1a71316115",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -40975,8 +40886,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Venom Coat",
-        "registeredName": "Venom Coat"
+        "sequence": "A plum ritual spiral draws one warm mote from its centre into an ascending thought prism; the prism steadies inside a thin guard ring. Cost and special boost, no blood.",
+        "registeredName": "Entropic Ritual"
       },
       "status": "requires-review",
       "review": null
@@ -40986,7 +40897,6 @@
       "name": "Anchored Artillery",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -41041,11 +40951,11 @@
       ],
       "authoredAction": "Anchored Artillery: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/289-Second-Shadow.png",
-        "sourceId": 289,
-        "shared": true,
+        "src": "assets/vfx/action/558-Anchored-Artillery.png",
+        "sourceId": 558,
+        "shared": false,
         "exists": true,
-        "sha256": "d494afb4149a1d4327c7fc9d408b5c77f04ee6bab7a3b2e1118bedf39efcfeff",
+        "sha256": "a4f1f3509f470554bc47321cf3e026f101354ac4e9dc6cefb048dd9ecdbd29ee",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -41053,8 +40963,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Two offset shadow-cloth silhouettes curl protectively around an empty centre, exchange places, hold and fade. Self-support status, no contact.",
-        "registeredName": "Second Shadow"
+        "sequence": "Distinct visual motif for Anchored Artillery: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Anchored Artillery: distinct tactical aura and visible stage or healing effects.",
+        "registeredName": "Anchored Artillery"
       },
       "status": "requires-review",
       "review": null
@@ -41198,11 +41108,11 @@
       ],
       "authoredAction": "Last Bastion: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/354-Oathwall.png",
-        "sourceId": 354,
-        "shared": true,
+        "src": "assets/vfx/action/560-Last-Bastion.png",
+        "sourceId": 560,
+        "shared": false,
         "exists": true,
-        "sha256": "c3e798f5791d98910a270f74608eb963d5584c0d744044e43ac213026a3fa9fb",
+        "sha256": "d763db4269ddc638c274b71c395f2960812ced5e4885dbb4f8d309d8d0c8e5e9",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -41210,8 +41120,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Three overlapping broad petal armour plates assemble into a protective wall around an empty centre, hold quietly and unfold. No impact.",
-        "registeredName": "Oathwall"
+        "sequence": "Distinct visual motif for Last Bastion: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Last Bastion: distinct tactical aura and visible stage or healing effects.",
+        "registeredName": "Last Bastion"
       },
       "status": "requires-review",
       "review": null
@@ -41221,7 +41131,6 @@
       "name": "Battle Rally",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
@@ -41290,20 +41199,20 @@
       ],
       "authoredAction": "Battle Rally: distinct tactical aura and visible stage or healing effects.",
       "art": {
-        "src": "assets/vfx/action/10-quick-wit.png",
-        "sourceId": 10,
-        "shared": true,
+        "src": "assets/vfx/action/561-Battle-Rally.png",
+        "sourceId": 561,
+        "shared": false,
         "exists": true,
-        "sha256": "b364a1522de93cec909b2337aed0c154d2f80de783cf1386d9c9591747318a94",
+        "sha256": "0e9c01cde5aa12b276288c23a9c71057c24e2673f79cfd933d6df31731556683",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1500,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "A faceted clear focus lens unfolds from small overlapping glass slivers, subtle sight-lines converge into a precise iris around empty sprite space, the lens focuses to a calm steady glint and folds away. Accuracy self buff: no attack, no readable text, no damage contact.",
-        "registeredName": "Quick Wit"
+        "sequence": "Distinct visual motif for Battle Rally: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Battle Rally: distinct tactical aura and visible stage or healing effects.",
+        "registeredName": "Battle Rally"
       },
       "status": "requires-review",
       "review": null
@@ -41313,7 +41222,6 @@
       "name": "Ember Attrition",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
@@ -41350,11 +41258,11 @@
       ],
       "authoredAction": "Lingering embers strike, leaving a burning wake.",
       "art": {
-        "src": "assets/vfx/action/402-Kiln-Fracture.png",
-        "sourceId": 402,
-        "shared": true,
+        "src": "assets/vfx/action/563-Ember-Attrition.png",
+        "sourceId": 563,
+        "shared": false,
         "exists": true,
-        "sha256": "393f9a6e543a37e55187c56d82c335b99bf1744cb5948202e6385035774e1da0",
+        "sha256": "868980bb30cf30218fc039191b38123a7cbab22a4276b7c6d8a43b08fc68b20d",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -41362,8 +41270,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small rough kiln-crust sphere develops glowing angular cracks, splits outward in one sharp plate-like flare and crumbles into cooling chunks.",
-        "registeredName": "Kiln Fracture"
+        "sequence": "Distinct visual motif for Ember Attrition: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Lingering embers strike, leaving a burning wake.",
+        "registeredName": "Ember Attrition"
       },
       "status": "requires-review",
       "review": null
@@ -41418,11 +41326,11 @@
       ],
       "authoredAction": "Ice rings close around the target and scatter into frosty shards.",
       "art": {
-        "src": "assets/vfx/action/115-acre-grudge.png",
-        "sourceId": 115,
-        "shared": true,
+        "src": "assets/vfx/action/564-Rime-Halo.png",
+        "sourceId": 564,
+        "shared": false,
         "exists": true,
-        "sha256": "9e8a7afe899003a036a55f315eecdcb1a3c38c0225444e1f6220a6821c970a5b",
+        "sha256": "d73667a37eaf358129abba042ebb4d4cdc868d814e49b50e0e539dcffc7a11dd",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -41430,8 +41338,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Acre Grudge",
-        "registeredName": "Acre Grudge"
+        "sequence": "Distinct visual motif for Rime Halo: interpret its named material and action literally as standalone fantasy VFX. Canonical action: Ice rings close around the target and scatter into frosty shards.",
+        "registeredName": "Rime Halo"
       },
       "status": "requires-review",
       "review": null
@@ -41735,7 +41643,6 @@
       "name": "Holdfast",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -41771,20 +41678,20 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/1-brace-yourself.png",
-        "sourceId": 1,
-        "shared": true,
+        "src": "assets/vfx/action/700-Holdfast.png",
+        "sourceId": 700,
+        "shared": false,
         "exists": true,
-        "sha256": "fc67eaaa4a6e53d7ef91efbbd8961bb93516f11352b0a2bb2057d6f7b52f3552",
+        "sha256": "9c27c4015d08934f80e942360e5f236a57320eae415fe1f1177d23fc762aa918",
         "frames": 16,
         "logicalCell": 192,
-        "duration": 1350,
+        "duration": 1500,
         "impact": 0.5,
         "beats": [
           0.5
         ],
-        "sequence": "Two sculpted forearm/forepaw guard silhouettes lower and brace, interlocking bronze-grey layered shell plates close around empty central sprite space, absorb a tiny harmless test ripple, settle firmly, then unlock. Texture plates and joints; no damage explosion.",
-        "registeredName": "Brace Yourself"
+        "sequence": "Three heavy angular shield plates lock into one hollow fortress-like guard, hold without damage and unlock gently.",
+        "registeredName": "Holdfast"
       },
       "status": "requires-review",
       "review": null
@@ -41910,7 +41817,6 @@
       "name": "Gutter the Sky",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/branch-families.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": null,
@@ -41949,11 +41855,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/740-Cower.png",
-        "sourceId": 740,
-        "shared": true,
+        "src": "assets/vfx/action/703-Gutter-the-Sky.png",
+        "sourceId": 703,
+        "shared": false,
         "exists": true,
-        "sha256": "656551ed86bc92f2310d61d3c4601ec5fbeae1de816b9c2b3df098ca387fc971",
+        "sha256": "5ee27bfbe73a399e9a45c43a74fbbe08b050542ad836e3415e8724fcac6bc2e3",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -41961,8 +41867,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A small hollow dark shell-like canopy of three broad mineral plates curls inward protectively, settles low, then opens with two harmless dust motes. Quiet self-defence, no damage.",
-        "registeredName": "Cower"
+        "sequence": "Three tiny storm ribbons and a rain bead collapse into a hollow downward funnel; the cloud wisps dissipate until the space is clear. Weather clearing; no damaging explosion.",
+        "registeredName": "Gutter the Sky"
       },
       "status": "requires-review",
       "review": null
@@ -42099,7 +42005,6 @@
       "name": "Dune Toll",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -42147,11 +42052,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/161-dust-screen.png",
-        "sourceId": 161,
-        "shared": true,
+        "src": "assets/vfx/action/706-Dune-Toll.png",
+        "sourceId": 706,
+        "shared": false,
         "exists": true,
-        "sha256": "10b236c3311e2e68f841ef377b03539556770d8b296b76e377176d9c8416bc55",
+        "sha256": "c6d20a33ddbd07879c22877c5952b1c64ea9b53302c70fe52533b52a3bc28aa4",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1500,
@@ -42159,8 +42064,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Dust Screen",
-        "registeredName": "Dust Screen"
+        "sequence": "Three weighted sand bands close low around an empty centre, press downward and crumble quietly. Debuff, no collision.",
+        "registeredName": "Dune Toll"
       },
       "status": "requires-review",
       "review": null
@@ -42358,7 +42263,6 @@
       "originalCatalogue": false,
       "sourceFiles": [
         "dist/salvation.js",
-        "dist/tactical-moves.js",
         "dist/teamcraft-data.js"
       ],
       "provenance": {
@@ -42386,11 +42290,11 @@
       "effects": [],
       "authoredAction": "An ivory-gold blade or pulse halts at the foe; broken rays fold into a protective First Light seal and a single ember remains.",
       "art": {
-        "src": "assets/vfx/action/539-Needle-Frenzy.png",
-        "sourceId": 539,
-        "shared": true,
+        "src": "assets/vfx/action/710-Mercy-Ray.png",
+        "sourceId": 710,
+        "shared": false,
         "exists": true,
-        "sha256": "3e6bf54c70f39b260e97e8fb1cf546dd6279af4cc366f0ec73c00faf02913028",
+        "sha256": "e76d57420cfa606a2e388ca7238ccb039365e3dc400dbcb3b882df79255c80cc",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42398,8 +42302,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A fan of three pale chitin needles gathers into a tight point, extends in one rapid forward surge, recoils into tiny barbed shell grains. One action peak.",
-        "registeredName": "Needle Frenzy"
+        "sequence": "A narrow ivory-gold ray advances once, stops before crossing a tiny protective seal, folds back and leaves one ember. Restraint, no violent burst.",
+        "registeredName": "Mercy Ray"
       },
       "status": "requires-review",
       "review": null
@@ -42409,7 +42313,6 @@
       "name": "Full Release",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/full-expansion.js",
         "dist/progression-renewal.js",
         "dist/teamcraft-data.js"
       ],
@@ -42458,11 +42361,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/126-iron-blow.png",
-        "sourceId": 126,
-        "shared": true,
+        "src": "assets/vfx/action/711-Full-Release.png",
+        "sourceId": 711,
+        "shared": false,
         "exists": true,
-        "sha256": "ce5570e4fdb9c477308290d29cf3ca36eb97276d11ab8e5e284ea42ee310fd50",
+        "sha256": "0b6571986032aa2e7afc17bd2b64ba2fca0d6adbf9baa2cf7414238f8ca15a91",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42470,8 +42373,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "Wrapped iron-grey martial forearm draws back, makes one short precision knuckle punch with compressed pressure halo, then withdraws.",
-        "registeredName": "Iron Blow"
+        "sequence": "Five differently shaped pale force facets unfold from a warm grey core into one broad pulse, then settle as five tiny rising motes.",
+        "registeredName": "Full Release"
       },
       "status": "requires-review",
       "review": null
@@ -42619,9 +42522,7 @@
       "name": "Flowing Palm",
       "originalCatalogue": false,
       "sourceFiles": [
-        "dist/evolution-renewal-data.js",
-        "dist/tactical-moves.js",
-        "dist/teamcraft-data.js"
+        "dist/evolution-renewal-data.js"
       ],
       "provenance": null,
       "acquisition": {
@@ -42661,11 +42562,11 @@
       ],
       "authoredAction": null,
       "art": {
-        "src": "assets/vfx/action/539-Needle-Frenzy.png",
-        "sourceId": 539,
-        "shared": true,
+        "src": "assets/vfx/action/714-Flowing-Palm.png",
+        "sourceId": 714,
+        "shared": false,
         "exists": true,
-        "sha256": "3e6bf54c70f39b260e97e8fb1cf546dd6279af4cc366f0ec73c00faf02913028",
+        "sha256": "e8b48fc7b0b870f244b5a8e913653306521ded358e0fdc250d3841f4126d3862",
         "frames": 16,
         "logicalCell": 192,
         "duration": 1350,
@@ -42673,8 +42574,8 @@
         "beats": [
           0.5
         ],
-        "sequence": "A fan of three pale chitin needles gathers into a tight point, extends in one rapid forward surge, recoils into tiny barbed shell grains. One action peak.",
-        "registeredName": "Needle Frenzy"
+        "sequence": "One curved palm-shaped pressure ribbon guides a low flowing strike, opens into a compact wave and recedes. No whole hand or fighter.",
+        "registeredName": "Flowing Palm"
       },
       "status": "requires-review",
       "review": null

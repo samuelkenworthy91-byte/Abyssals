@@ -3,7 +3,7 @@
   "version_code": 148,
   "filename": "Abyssals-v0.90.53-Dossier-Roster.apk",
   "title": "Abyssals v0.90.53 \u2014 Balanced Dossier Roster",
-  "notes": "Main consolidation: 54 dossier species (572 total), approved standalone Thimbril/Carrionyx portraits, exploration and battle soundtrack, party evolutions from all city leader fate decisions, and 172 already-uploaded animation sheets. Preserves saves, package and original signing identity. Recovered missing sheets await manual upload; the overhaul and fresh visual approvals remain incomplete.",
+  "notes": "Main source integration: 54 dossier species, approved bat portraits and soundtrack, leader-fate evolutions, and 615 registered animation bindings using 507 verified uploaded sheets. 108 bindings retain shared art: 50 dedicated uploads are missing and 58 sheets remain outstanding. Preserves saves, stable move/species IDs, package and original signing identity. Fresh gameplay visual checks are sampled; no blanket artistic approval or APK verification is claimed.",
   "pwa_filename": "Abyssals-v0.90.53-PWA.zip",
   "artwork_release_mode": "interim",
   "artwork_scope_path": "docs/releases/v0.90.53-art-scope.json"

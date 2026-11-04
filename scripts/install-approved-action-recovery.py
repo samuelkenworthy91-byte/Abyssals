@@ -22,6 +22,7 @@ for id,s in sources.items():
  target=ROOT/'dist'/s['art']['src'];target.parent.mkdir(parents=True,exist_ok=True)
  if source!=target:shutil.copyfile(source,target)
  art[id]={**s['art'],'sourceId':int(id)}
+ art[id]['frameBounds']=[min(b[0] for b in boxes if b),min(b[1] for b in boxes if b),max(b[2] for b in boxes if b),max(b[3] for b in boxes if b)]
  checks.append({'id':int(id),'sha256':s['sha256'],'source':s['source'],'src':s['art']['src'],'frames':16,'distinctFrames':distinct,'nonemptyFrames':sum(bool(b) for b in boxes),'minimumGutter':gutter})
 for id,baseline in manifest['baselineAssignment'].items():
  if id in art:continue

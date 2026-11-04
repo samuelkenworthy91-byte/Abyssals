@@ -3,6 +3,11 @@ export {ACTION_ART};
 // Keep the render clock and battle impact clock identical. Mercy's original
 // First Light scene deliberately retains its authored timing.
 export const readableDuration=(move,duration)=>move?.salvation?duration:Math.round(duration*1.35);
+export function pixelPlacement(move,{x,y,width,height,cellSize}){
+ const b=ACTION_ART[move?.id]?.frameBounds||[0,0,192,192],scale=cellSize/192;
+ const offset=(at,min,max,limit)=>Math.min(Math.max(0,4-at-(min-96)*scale),limit-4-at-(max-96)*scale);
+ return {x:offset(x,b[0],b[2],width),y:offset(y,b[1],b[3],height)};
+}
 // Match per-strike HP presentation to the atlas clock without undefined times.
 export function pixelImpactTimes(move,result,spec){
  const count=result.strikes?.length||1;

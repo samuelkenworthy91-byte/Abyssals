@@ -1,5 +1,5 @@
 {
-  "stage": 1,
+  "stage": 2,
   "sources": [
     {
       "id": 1,
@@ -3710,10 +3710,1370 @@
       "distinctFrames": 16,
       "nonemptyFrames": 16,
       "minimumGutter": 28
+    },
+    {
+      "id": 162,
+      "sha256": "e9a6485dffac4c32c47240610c839852a549a35e1bfd0d3aabf96da33b89ab78",
+      "source": "art-library/action-vfx/manual-recovery/162-Earth-Break.png",
+      "src": "assets/vfx/action/162-Earth-Break.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 164,
+      "sha256": "0de3e20a9e516dfec376dd80b2b8b3569769486820db29772a6969d067ce48f2",
+      "source": "art-library/action-vfx/manual-recovery/164-Clay-Reap.png",
+      "src": "assets/vfx/action/164-Clay-Reap.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 165,
+      "sha256": "2320f45a8dfd85af1e9c63545f0e5fbae253d7e986cc019fb2b567d6590ec5ff",
+      "source": "art-library/action-vfx/manual-recovery/165-Burrow-Gouge.png",
+      "src": "assets/vfx/action/165-Burrow-Gouge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 166,
+      "sha256": "2785061bd6a137956605f3fc5b770730bfd5a40104549f5b8a141de39a19827c",
+      "source": "art-library/action-vfx/manual-recovery/166-Loam-Tackle.png",
+      "src": "assets/vfx/action/166-Loam-Tackle.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 168,
+      "sha256": "92188e904c1372d32693fb085ba97caf0a7ca94343992452e413057bd88312c3",
+      "source": "art-library/action-vfx/manual-recovery/168-Earth-Surge.png",
+      "src": "assets/vfx/action/168-Earth-Surge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 170,
+      "sha256": "34b8b4d4a3e9302cac77bde1359456dedc248ea808eb3d11cb1171079137f056",
+      "source": "art-library/action-vfx/manual-recovery/170-Sand-Guard.png",
+      "src": "assets/vfx/action/170-Sand-Guard.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 171,
+      "sha256": "f3711b71f11e6d5b49ed9c7b77fd3a46a163246535a6275c8c45685be5b50aa0",
+      "source": "art-library/action-vfx/manual-recovery/171-Stone-Footing.png",
+      "src": "assets/vfx/action/171-Stone-Footing.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 174,
+      "sha256": "8c681967b77230a34ce465d46a067f8ac4885434fb3e6e9552a64de97481fe9a",
+      "source": "art-library/action-vfx/manual-recovery/174-Gale-Arc.png",
+      "src": "assets/vfx/action/174-Gale-Arc.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 20
+    },
+    {
+      "id": 177,
+      "sha256": "c6106efd907768642412a97b58662dae4689978c3fe6377c67d1588183b24acb",
+      "source": "art-library/action-vfx/manual-recovery/177-Talon-Hook.png",
+      "src": "assets/vfx/action/177-Talon-Hook.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 18
+    },
+    {
+      "id": 178,
+      "sha256": "8336c75b1bd4f7187b43cbfffcf50bb6445a34f9f318dd56d950b60d0265c745",
+      "source": "art-library/action-vfx/manual-recovery/178-Headwind.png",
+      "src": "assets/vfx/action/178-Headwind.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 179,
+      "sha256": "2a170c250fcee1f1acddde25a974578d9a11242ed054a5089d37e36db928257f",
+      "source": "art-library/action-vfx/manual-recovery/179-Gale-Dive.png",
+      "src": "assets/vfx/action/179-Gale-Dive.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 180,
+      "sha256": "1b82605645e0a070d235118a910b0d55fa18f1e1e9cf1503383f4458cdfd2902",
+      "source": "art-library/action-vfx/manual-recovery/180-Pinion-Scissor.png",
+      "src": "assets/vfx/action/180-Pinion-Scissor.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 182,
+      "sha256": "387ca98bcfaf1f787d6bf4850ce86701f09407dd6fe9e54e8f627a03ba01fcfa",
+      "source": "art-library/action-vfx/manual-recovery/182-Crosswind-Resonance.png",
+      "src": "assets/vfx/action/182-Crosswind-Resonance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 188,
+      "sha256": "c604b70a3459bbf6a3388352bbb9ee7a1e478f372cd0f553b9ab8814b5f7c2e6",
+      "source": "art-library/action-vfx/manual-recovery/188-Updraft.png",
+      "src": "assets/vfx/action/188-Updraft.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 190,
+      "sha256": "ad8d2449c45e05b522b1dff596ca84a7df9dd2fdb0e0b955def0e28d063bbef4",
+      "source": "art-library/action-vfx/manual-recovery/190-Mind-over-Matter.png",
+      "src": "assets/vfx/action/190-Mind-over-Matter.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 193,
+      "sha256": "51f58e743f927756fa675b7e22bf3e91eaff86fcfc948607cdd1bcbef2d2c64a",
+      "source": "art-library/action-vfx/manual-recovery/193-Unspoken-Threat.png",
+      "src": "assets/vfx/action/193-Unspoken-Threat.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 196,
+      "sha256": "0967910e5218d163005d6464dea6d35538e26e215da42f48f2c1f5566e67ba0e",
+      "source": "art-library/action-vfx/manual-recovery/196-Mnemonic-Resonance.png",
+      "src": "assets/vfx/action/196-Mnemonic-Resonance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 197,
+      "sha256": "433ede8bde651f38848d6cc21188c997e5a208a4546949fa20b0c07fa52a0bd0",
+      "source": "art-library/action-vfx/manual-recovery/197-Aura-Wave.png",
+      "src": "assets/vfx/action/197-Aura-Wave.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 199,
+      "sha256": "996e1bc3b600fc1957e77b6f3f99d4ce3342e2c59ad72278999c7b443a2d78fa",
+      "source": "art-library/action-vfx/manual-recovery/199-Future-Read.png",
+      "src": "assets/vfx/action/199-Future-Read.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 201,
+      "sha256": "60c9b655c40feef0dc029eebeb8148a3ccce0ef4bf33c10180cbf88e930f1a32",
+      "source": "art-library/action-vfx/manual-recovery/201-Prism-Fracture.png",
+      "src": "assets/vfx/action/201-Prism-Fracture.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 202,
+      "sha256": "e0b693bf3ec46e882192e36b45eb828798e0363d4865f056aeb4dc92fda35f9a",
+      "source": "art-library/action-vfx/manual-recovery/202-Mind-Crush.png",
+      "src": "assets/vfx/action/202-Mind-Crush.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 205,
+      "sha256": "9bbd86b47a3f48a4b1bba1a3abc6b0fcdf25ecd457389fd184a52143e6b317a7",
+      "source": "art-library/action-vfx/manual-recovery/205-Mind-Ring.png",
+      "src": "assets/vfx/action/205-Mind-Ring.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 207,
+      "sha256": "632d8894b7c807d12988a86179d17f87287468bdb0b4e26dbbb329d4f7192f60",
+      "source": "art-library/action-vfx/manual-recovery/207-Oracle-Torrent.png",
+      "src": "assets/vfx/action/207-Oracle-Torrent.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 208,
+      "sha256": "6fe13efdac365679e3207c042bfc9e85908b6c967b9c2b988eb04a148bd1b74e",
+      "source": "art-library/action-vfx/manual-recovery/208-Mind-Wave.png",
+      "src": "assets/vfx/action/208-Mind-Wave.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 213,
+      "sha256": "377102936c214c1d6abbac17b25a714ee4ffa9b34e2c261f189349a3a825a679",
+      "source": "art-library/action-vfx/manual-recovery/213-Chitin-Rattle.png",
+      "src": "assets/vfx/action/213-Chitin-Rattle.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 220,
+      "sha256": "29c3479c5602b598106b9deaf6d22376661793206eebb5ca1e4e76f6f7e52a4c",
+      "source": "art-library/action-vfx/manual-recovery/220-Shed-Shell.png",
+      "src": "assets/vfx/action/220-Shed-Shell.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 221,
+      "sha256": "b3dffa65553c45a9f48c37883b86f7425fe13d2bb48cac400ea6a0ec6c2e6f10",
+      "source": "art-library/action-vfx/manual-recovery/221-Silk-Guard.png",
+      "src": "assets/vfx/action/221-Silk-Guard.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 222,
+      "sha256": "1447a447563d5e697707059f7ebebcb32e1aa2472f97d44851d18f31c37fe41e",
+      "source": "art-library/action-vfx/manual-recovery/222-Swarm-Cut.png",
+      "src": "assets/vfx/action/222-Swarm-Cut.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 19
+    },
+    {
+      "id": 223,
+      "sha256": "81675f74add0c6aa21bc9990131343e23cfdb6b82728a1781f713bb908836cdb",
+      "source": "art-library/action-vfx/manual-recovery/223-Bedrock-Calm.png",
+      "src": "assets/vfx/action/223-Bedrock-Calm.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 35
+    },
+    {
+      "id": 224,
+      "sha256": "456972d01288a3e2f708c0487fc7393582a1e9ab8a231fb1b7e964db9a4e67c1",
+      "source": "art-library/action-vfx/manual-recovery/224-Cairn-Ward.png",
+      "src": "assets/vfx/action/224-Cairn-Ward.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 229,
+      "sha256": "554b0f6d50691ac749924707539020971358b58ceb0371414a8e60d41efe02dd",
+      "source": "art-library/action-vfx/manual-recovery/229-Basalt-Lunge.png",
+      "src": "assets/vfx/action/229-Basalt-Lunge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 230,
+      "sha256": "7d038771e1839d761d0581e91393a5c586385921ed2a3d557bab403e171f00e6",
+      "source": "art-library/action-vfx/manual-recovery/230-Bedrock-Reply.png",
+      "src": "assets/vfx/action/230-Bedrock-Reply.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 231,
+      "sha256": "59afe194e4102d4ef01aa19fdd9ee5f3153b183cdc41f1eb447a727b86ad78a9",
+      "source": "art-library/action-vfx/manual-recovery/231-Gravelock.png",
+      "src": "assets/vfx/action/231-Gravelock.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 232,
+      "sha256": "59f06ace211edd7c82def396b99bab8e69ba66c4d35d10e502259cee56d6f0cd",
+      "source": "art-library/action-vfx/manual-recovery/232-Flint-Hammer.png",
+      "src": "assets/vfx/action/232-Flint-Hammer.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 35
+    },
+    {
+      "id": 234,
+      "sha256": "85b22830f4458c8cee19aef17114e91dbc19bdcb533d2ef41dda7f5be62407cb",
+      "source": "art-library/action-vfx/manual-recovery/234-Granite-Reap.png",
+      "src": "assets/vfx/action/234-Granite-Reap.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 236,
+      "sha256": "9c0a9ba375cc0262dad0931954b866e3bc1afe058bf4f5c46276ae3376624122",
+      "source": "art-library/action-vfx/manual-recovery/236-Shard-Screen.png",
+      "src": "assets/vfx/action/236-Shard-Screen.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 237,
+      "sha256": "41778909c1a585bc22186f9d5ffad99074a2200604c3d21a10e7c36a86a3b4b7",
+      "source": "art-library/action-vfx/manual-recovery/237-Stone-Break.png",
+      "src": "assets/vfx/action/237-Stone-Break.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 22
+    },
+    {
+      "id": 238,
+      "sha256": "2f28e96a020e138c55b06cd8019280df7bb58c0216c1b73a77dfb629292f7645",
+      "source": "art-library/action-vfx/manual-recovery/238-Meteor-Resonance.png",
+      "src": "assets/vfx/action/238-Meteor-Resonance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 239,
+      "sha256": "e119ccc046e40a15fd9ad1367bc49115415a5f30f085080b486531b434b32bd4",
+      "source": "art-library/action-vfx/manual-recovery/239-Shale-Gouge.png",
+      "src": "assets/vfx/action/239-Shale-Gouge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 244,
+      "sha256": "501d55e33bc28dd8fa3c3f31da20427f41b300b63c4ca9288518b50fa63fd494",
+      "source": "art-library/action-vfx/manual-recovery/244-Stone-Skin.png",
+      "src": "assets/vfx/action/244-Stone-Skin.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 245,
+      "sha256": "da51fa2a9997717f4a81cf2deae293178c687712d7c1875af55c2eff404314c3",
+      "source": "art-library/action-vfx/manual-recovery/245-Fossil-Awakening.png",
+      "src": "assets/vfx/action/245-Fossil-Awakening.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 249,
+      "sha256": "500a4d16f6e360ceec11a656fdf5532caebe7620a05139ae0c9ee6d3a64eb6bc",
+      "source": "art-library/action-vfx/manual-recovery/249-Graveside-Murmur.png",
+      "src": "assets/vfx/action/249-Graveside-Murmur.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 34
+    },
+    {
+      "id": 250,
+      "sha256": "1a0209ba9edd29ce78caa7b912db4edbe976ed7180e0ad2d2227ac2c64dd30e2",
+      "source": "art-library/action-vfx/manual-recovery/250-Grave-Silence.png",
+      "src": "assets/vfx/action/250-Grave-Silence.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 251,
+      "sha256": "7f8f3239fa816813bd37d6c34c97e2008ea284a44c9560d7fb5565e2d1bafa9c",
+      "source": "art-library/action-vfx/manual-recovery/251-Hollow-Knell.png",
+      "src": "assets/vfx/action/251-Hollow-Knell.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 253,
+      "sha256": "078b0c18c635dd2b6bb414daa62238347e354f752a15597cbe55de07f3e860bb",
+      "source": "art-library/action-vfx/manual-recovery/253-Spectral-Rend.png",
+      "src": "assets/vfx/action/253-Spectral-Rend.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 255,
+      "sha256": "d1c927303a05706049763bb48204ef6efae0822cd38353e93f1aa79861923f7a",
+      "source": "art-library/action-vfx/manual-recovery/255-Shade-Lash.png",
+      "src": "assets/vfx/action/255-Shade-Lash.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 258,
+      "sha256": "ca6d9b78a7071afb993049d5b25be3d9a6e5805a2ea36de1d003a510110fcfad",
+      "source": "art-library/action-vfx/manual-recovery/258-Phantom-Discharge.png",
+      "src": "assets/vfx/action/258-Phantom-Discharge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 259,
+      "sha256": "f91df73c5e08c7034edc717a53b3cb14ad8d640f663dd7a6540027615164d454",
+      "source": "art-library/action-vfx/manual-recovery/259-Spirit-Veil.png",
+      "src": "assets/vfx/action/259-Spirit-Veil.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 260,
+      "sha256": "8f2ae4c3a78349a5b9c1dd0414793474d72b416f89c1f7fe0fa2a6b0cc97beb2",
+      "source": "art-library/action-vfx/manual-recovery/260-Haunted-Torrent.png",
+      "src": "assets/vfx/action/260-Haunted-Torrent.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 22
+    },
+    {
+      "id": 262,
+      "sha256": "209dfa1e19226a9f6e801a2f41540da45f974bc8330cea029f713442260cb927",
+      "source": "art-library/action-vfx/manual-recovery/262-Wraith-Cry.png",
+      "src": "assets/vfx/action/262-Wraith-Cry.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 263,
+      "sha256": "de6ea0a256803e25350032c094a4f72109510c3418872d1348081579790918de",
+      "source": "art-library/action-vfx/manual-recovery/263-Shroud-Lunge.png",
+      "src": "assets/vfx/action/263-Shroud-Lunge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 34
+    },
+    {
+      "id": 264,
+      "sha256": "c241e07613d483447e727b35ae73b7219898325576c32057c3da2dbee72ccdd1",
+      "source": "art-library/action-vfx/manual-recovery/264-Wraith-Lash.png",
+      "src": "assets/vfx/action/264-Wraith-Lash.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 266,
+      "sha256": "1292f58dca2ac19b3ea0e2bd015f54f5f6f7373b41a54551565632e2833856d6",
+      "source": "art-library/action-vfx/manual-recovery/266-Revenant-Refraction.png",
+      "src": "assets/vfx/action/266-Revenant-Refraction.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 267,
+      "sha256": "41562040fa9536d2a1f3b8bfae5f059d1409c2282f5612d1970b983cd679de26",
+      "source": "art-library/action-vfx/manual-recovery/267-Funeral-Reverberation.png",
+      "src": "assets/vfx/action/267-Funeral-Reverberation.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 272,
+      "sha256": "64a9caedbd1e8f04b6d3586653729d15dd30f886518829cfc169e33852ceaa6f",
+      "source": "art-library/action-vfx/manual-recovery/272-Drakescale-Rend.png",
+      "src": "assets/vfx/action/272-Drakescale-Rend.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 20
+    },
+    {
+      "id": 273,
+      "sha256": "0889a2589069282f04f65d0c55c0ec4ab83963819bf7419328de9bbc6b569d4a",
+      "source": "art-library/action-vfx/manual-recovery/273-Wyrmtooth-Hook.png",
+      "src": "assets/vfx/action/273-Wyrmtooth-Hook.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 274,
+      "sha256": "b53e025a84fa1ee3832211bdde3e1a4950cf55b7ee456eb91cf81b0348656818",
+      "source": "art-library/action-vfx/manual-recovery/274-Wyvern-Scissor.png",
+      "src": "assets/vfx/action/274-Wyvern-Scissor.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 275,
+      "sha256": "dffb6fafe80ee608e13cf6c86f1f3e4c97b8224965200d48a7622b3bd7bf3c1f",
+      "source": "art-library/action-vfx/manual-recovery/275-Drake-Roar.png",
+      "src": "assets/vfx/action/275-Drake-Roar.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 277,
+      "sha256": "6288617f10004ce67961d02d32408ac7f2ba7059fcf8c8614b0022607a597824",
+      "source": "art-library/action-vfx/manual-recovery/277-Draconic-Resonance.png",
+      "src": "assets/vfx/action/277-Draconic-Resonance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 279,
+      "sha256": "2bad120ab45615cd70c4fcf19921da894e8c80fb15f3735ae19c76fdd1738814",
+      "source": "art-library/action-vfx/manual-recovery/279-Scale-Guard.png",
+      "src": "assets/vfx/action/279-Scale-Guard.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 281,
+      "sha256": "617a154029a0db45d7708a49ac53bee03a54c75bbbafe914b69611be1fe23acb",
+      "source": "art-library/action-vfx/manual-recovery/281-Wyrmfire-Discharge.png",
+      "src": "assets/vfx/action/281-Wyrmfire-Discharge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 282,
+      "sha256": "e9a2bd60a4939c1504d74ea57d74fbd598b8c4da4e4531a2d5337089b433c5fd",
+      "source": "art-library/action-vfx/manual-recovery/282-Drakescale-Hammer.png",
+      "src": "assets/vfx/action/282-Drakescale-Hammer.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 284,
+      "sha256": "b4d02810304e1a622d60c8c91f4c3b0314880f125551ff1955a0785aca70cf81",
+      "source": "art-library/action-vfx/manual-recovery/284-Wyvern-Gouge.png",
+      "src": "assets/vfx/action/284-Wyvern-Gouge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 285,
+      "sha256": "cff1def8c33c72e8ebacfc928027047c6001502c43a6f7512cb2c1235cc10eda",
+      "source": "art-library/action-vfx/manual-recovery/285-Wyrm-Roar.png",
+      "src": "assets/vfx/action/285-Wyrm-Roar.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 287,
+      "sha256": "169f6212df8232219e3a8b2b8c5c9e3ea4aa3bc0532d0bb9302e08ae28cf7239",
+      "source": "art-library/action-vfx/manual-recovery/287-Primal-Torrent.png",
+      "src": "assets/vfx/action/287-Primal-Torrent.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 293,
+      "sha256": "5fc4bc53e95c472e8cd6d2eb25c5f9c17445e5022f728384265bab4686da35dd",
+      "source": "art-library/action-vfx/manual-recovery/293-Cutpurse-Hook.png",
+      "src": "assets/vfx/action/293-Cutpurse-Hook.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 295,
+      "sha256": "bf11049492071d2472994cb35757f659375760c146e5ee7f6d30109ba7fd07b7",
+      "source": "art-library/action-vfx/manual-recovery/295-Night-Lash.png",
+      "src": "assets/vfx/action/295-Night-Lash.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 297,
+      "sha256": "9853f70d40318990b4cfe11e5cd322f596367a172209894734c11d504c9c7a27",
+      "source": "art-library/action-vfx/manual-recovery/297-Night-Slash.png",
+      "src": "assets/vfx/action/297-Night-Slash.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 298,
+      "sha256": "175bf930154ba7386ceac2b93563715f064eb3d4be283acb971837aff03e2a5c",
+      "source": "art-library/action-vfx/manual-recovery/298-Night-Strike.png",
+      "src": "assets/vfx/action/298-Night-Strike.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 299,
+      "sha256": "65c7791d02fed2c0d8945e9682aae6236295ea9f382f951aad2688c34e4c0af9",
+      "source": "art-library/action-vfx/manual-recovery/299-Night-Veil.png",
+      "src": "assets/vfx/action/299-Night-Veil.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 300,
+      "sha256": "6f6c3612a26dc30d6cdff396a1b9f4384ee506a92c5387c9533544b03c502c23",
+      "source": "art-library/action-vfx/manual-recovery/300-Eclipse-Resonance.png",
+      "src": "assets/vfx/action/300-Eclipse-Resonance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 301,
+      "sha256": "c98fd8953bba9a1b197d26d41f2d1a99d5c7995194829feb21eed409538dd708",
+      "source": "art-library/action-vfx/manual-recovery/301-Ambush-Lunge.png",
+      "src": "assets/vfx/action/301-Ambush-Lunge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 302,
+      "sha256": "c49c5eb499e4be47309ea85750f878e0978c3bc328a699349647d7e1be205f15",
+      "source": "art-library/action-vfx/manual-recovery/302-Nightblade-Hammer.png",
+      "src": "assets/vfx/action/302-Nightblade-Hammer.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 34
+    },
+    {
+      "id": 305,
+      "sha256": "5ebbdd28c82d1f49a1a78c8940a4b26506a1fce38775d1ff7148abe6588db931",
+      "source": "art-library/action-vfx/manual-recovery/305-Rogue-Slash.png",
+      "src": "assets/vfx/action/305-Rogue-Slash.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 306,
+      "sha256": "c349d51f8afa5ba6167800bc094b9bdc08201b2ffb8e374ec18c86835cb3a8c0",
+      "source": "art-library/action-vfx/manual-recovery/306-Rogue-Step.png",
+      "src": "assets/vfx/action/306-Rogue-Step.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 311,
+      "sha256": "c629260332c759a359d43286faa06ca9c16c5b388623788e6b7ec6ef580b5f44",
+      "source": "art-library/action-vfx/manual-recovery/311-Temper-the-Frame.png",
+      "src": "assets/vfx/action/311-Temper-the-Frame.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 35
+    },
+    {
+      "id": 312,
+      "sha256": "027b0ac6a2ed5bd911c84cf1fd88f2f302fc41564c1fb25a7e50259321104211",
+      "source": "art-library/action-vfx/manual-recovery/312-Magnetic-Detonation.png",
+      "src": "assets/vfx/action/312-Magnetic-Detonation.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 313,
+      "sha256": "cb0e3791ceff3d15959511744af2046b7241aa5441f845235507de1edcc0f607",
+      "source": "art-library/action-vfx/manual-recovery/313-Anvil-Answer.png",
+      "src": "assets/vfx/action/313-Anvil-Answer.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 36
+    },
+    {
+      "id": 314,
+      "sha256": "3baffb193d830516304e581cb91e5028ab014fd059a8ee2aac8e4712383e6b97",
+      "source": "art-library/action-vfx/manual-recovery/314-Cleaver-Hook.png",
+      "src": "assets/vfx/action/314-Cleaver-Hook.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 315,
+      "sha256": "fd735e5a70ce23ca10d4e3f773a77c2270378226d3ca0427a6caa168a22915c0",
+      "source": "art-library/action-vfx/manual-recovery/315-Iron-Cut.png",
+      "src": "assets/vfx/action/315-Iron-Cut.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 44
+    },
+    {
+      "id": 317,
+      "sha256": "02cf643a1c09f62fe9cf592cbd986b4025535e9c471cc9e4f772eec732f5e990",
+      "source": "art-library/action-vfx/manual-recovery/317-Sawtooth-Scissor.png",
+      "src": "assets/vfx/action/317-Sawtooth-Scissor.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 318,
+      "sha256": "aa063b413ba8bb77a336f79c25ac52b69c8a231928d1a3de362c4ed5e1d84bd5",
+      "source": "art-library/action-vfx/manual-recovery/318-Iron-Spire.png",
+      "src": "assets/vfx/action/318-Iron-Spire.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 22
+    },
+    {
+      "id": 321,
+      "sha256": "8d2e0d9340c561b9c302273511ed22adafff7c60e1ef17dfc9d2762a4f13983e",
+      "source": "art-library/action-vfx/manual-recovery/321-Plate-Guard.png",
+      "src": "assets/vfx/action/321-Plate-Guard.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 322,
+      "sha256": "72d107420d4b135432734bfac9f2e3082dc41befa3692779166a14f3537f6007",
+      "source": "art-library/action-vfx/manual-recovery/322-Alloy-Resonance.png",
+      "src": "assets/vfx/action/322-Alloy-Resonance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 323,
+      "sha256": "860c0fe2b03d1ac30887b06551e0b5e9bb8232a4584bb92827fe4bcfb262ef56",
+      "source": "art-library/action-vfx/manual-recovery/323-Ironheel-Lunge.png",
+      "src": "assets/vfx/action/323-Ironheel-Lunge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 327,
+      "sha256": "83d5aa9b65b4ae4158d1a8d4ff6031c93026f2a0ce3610b1bbc188a1f481497d",
+      "source": "art-library/action-vfx/manual-recovery/327-Cleaver-Reap.png",
+      "src": "assets/vfx/action/327-Cleaver-Reap.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 328,
+      "sha256": "eed4b74ecc78dce59ea5fc89b628d139ccb10cbfb0c67a6b048076cbbfddb567",
+      "source": "art-library/action-vfx/manual-recovery/328-Steel-Spire.png",
+      "src": "assets/vfx/action/328-Steel-Spire.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 329,
+      "sha256": "4ab177a441bc42d4703365597648ec6737d3b3af32742f489615369e25c1bf56",
+      "source": "art-library/action-vfx/manual-recovery/329-Tempered-Body.png",
+      "src": "assets/vfx/action/329-Tempered-Body.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 332,
+      "sha256": "5b1d2b2ee2e39b18c12430b7eb6595b6984b2d0372d3593fb056c11c37649976",
+      "source": "art-library/action-vfx/manual-recovery/332-Borrowed-Starlight.png",
+      "src": "assets/vfx/action/332-Borrowed-Starlight.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 36
+    },
+    {
+      "id": 334,
+      "sha256": "0a15741e10b1018595e0d452d0448450a443bf69dd0e0c1330ef5bf7453b68fc",
+      "source": "art-library/action-vfx/manual-recovery/334-Charm-Kiss.png",
+      "src": "assets/vfx/action/334-Charm-Kiss.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 39
+    },
+    {
+      "id": 340,
+      "sha256": "f07e76469bca61793af1f6682aabbbc82fe9f39d4787e3bc3394481ad96dbab0",
+      "source": "art-library/action-vfx/manual-recovery/340-Fable-Discharge.png",
+      "src": "assets/vfx/action/340-Fable-Discharge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 341,
+      "sha256": "324a678534b94b39a2e9cb11f9b716d6e564dd473a942b618a9c32b293411beb",
+      "source": "art-library/action-vfx/manual-recovery/341-Glimmer-Dance.png",
+      "src": "assets/vfx/action/341-Glimmer-Dance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 34
+    },
+    {
+      "id": 344,
+      "sha256": "f78e0f0727f68ef0d7283f7264e7f99d159ed9d54f9f51979fb49e6b84db9c75",
+      "source": "art-library/action-vfx/manual-recovery/344-Glimmer-Lance.png",
+      "src": "assets/vfx/action/344-Glimmer-Lance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 345,
+      "sha256": "b3403198317cb83c74e4350ba3503b41ebb42b241f4e88b9ab5954f8ac3eb2f5",
+      "source": "art-library/action-vfx/manual-recovery/345-Glimmer-Pulse.png",
+      "src": "assets/vfx/action/345-Glimmer-Pulse.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 347,
+      "sha256": "b92f08d4c97ded1e2ed2775833b0d5cdac660751b33ed2ade35b1e2c24c296f1",
+      "source": "art-library/action-vfx/manual-recovery/347-Glamour-Torrent.png",
+      "src": "assets/vfx/action/347-Glamour-Torrent.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 349,
+      "sha256": "7a43c715d6552d3b20674cdcfc4faf76277a3884868cd535d66ef0d098805e77",
+      "source": "art-library/action-vfx/manual-recovery/349-Starlit-Refraction.png",
+      "src": "assets/vfx/action/349-Starlit-Refraction.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 355,
+      "sha256": "3b9cf0f48daea05ed5eaac85a8c6bd39aafc3f78d2a7595aef25d8c0aab1fd0d",
+      "source": "art-library/action-vfx/manual-recovery/355-Ember-Snap.png",
+      "src": "assets/vfx/action/355-Ember-Snap.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 356,
+      "sha256": "d0e033a29b00e3efaa7624ae5da672daef818859cca78c4483c4d2f05a1b9689",
+      "source": "art-library/action-vfx/manual-recovery/356-Jet-Skim.png",
+      "src": "assets/vfx/action/356-Jet-Skim.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 357,
+      "sha256": "a25bcfe491b881b9a598410170e4024f1671738089549f5f2cf470f7ac7675d0",
+      "source": "art-library/action-vfx/manual-recovery/357-Flash-Circuit.png",
+      "src": "assets/vfx/action/357-Flash-Circuit.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 358,
+      "sha256": "8708a444aa216b09448d18bca1e0615017c032a989c162a2158a88422f71a366",
+      "source": "art-library/action-vfx/manual-recovery/358-Briar-Flick.png",
+      "src": "assets/vfx/action/358-Briar-Flick.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 360,
+      "sha256": "6fb9c6802e831758f83a8a1bb53e687642f3d065a0418cb14c6084fcfc88eb10",
+      "source": "art-library/action-vfx/manual-recovery/360-Needle-Ambush.png",
+      "src": "assets/vfx/action/360-Needle-Ambush.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 471,
+      "sha256": "57dc00e1ec59c365ba134cce7cba10f81b5c1903791bb3a4c3243442c323a2dd",
+      "source": "art-library/action-vfx/manual-recovery/471-Prism-Ward.png",
+      "src": "assets/vfx/action/471-Prism-Ward.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 472,
+      "sha256": "f7879f2441923fcd6223518812a3b420587e34628b62a9398ea4cb036352dd21",
+      "source": "art-library/action-vfx/manual-recovery/472-Beacon-Bolt.png",
+      "src": "assets/vfx/action/472-Beacon-Bolt.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 473,
+      "sha256": "7fc48fa2f3187fdcdedad93c1e6b1b212a29a50e3f2c7b44f739b6bebb4119c6",
+      "source": "art-library/action-vfx/manual-recovery/473-Quiet-Passage.png",
+      "src": "assets/vfx/action/473-Quiet-Passage.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 500,
+      "sha256": "e2870fa49b3e1b0fa8a31a8e9b756af1e82b576cfa8898b1a158730dd21e7c66",
+      "source": "art-library/action-vfx/manual-recovery/500-Bramble-Swoop.png",
+      "src": "assets/vfx/action/500-Bramble-Swoop.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 501,
+      "sha256": "3f0264b7b3e718a88af26fdab2580fb488fb0a756c571698223a8ee93b410d6c",
+      "source": "art-library/action-vfx/manual-recovery/501-Thunder-Draft.png",
+      "src": "assets/vfx/action/501-Thunder-Draft.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 502,
+      "sha256": "9fbdd107d2baeca2effae58ceb96e1ad28b2f19d008cc9ae50f473e906faff39",
+      "source": "art-library/action-vfx/manual-recovery/502-Pennant-Break.png",
+      "src": "assets/vfx/action/502-Pennant-Break.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 504,
+      "sha256": "603371e5684715d7e7560a50128e4a96b60d96881fb711f3f0e1635c19d2b0df",
+      "source": "art-library/action-vfx/manual-recovery/504-Cascade-Lance.png",
+      "src": "assets/vfx/action/504-Cascade-Lance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 22
+    },
+    {
+      "id": 506,
+      "sha256": "57812d2ae73a32ea57251f4aea3a9bd54262790c5985d254e3512f76c027c3a4",
+      "source": "art-library/action-vfx/manual-recovery/506-Gloaming-Plunder.png",
+      "src": "assets/vfx/action/506-Gloaming-Plunder.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 512,
+      "sha256": "5cdf60d0bc2ac235ce63f1321932feb8d8110f420c8d197aa92dfc39221b87d7",
+      "source": "art-library/action-vfx/manual-recovery/512-Venom-Flight.png",
+      "src": "assets/vfx/action/512-Venom-Flight.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 514,
+      "sha256": "f35dd3aa59d51fb660d01362f70367bda9779f0878b7a696db5b357e5bc1db6f",
+      "source": "art-library/action-vfx/manual-recovery/514-Rimewake-Dive.png",
+      "src": "assets/vfx/action/514-Rimewake-Dive.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 516,
+      "sha256": "c8bba9fd49cc20df1f6092212d385f6bb7211c9af226473c7ed7d1deec40f2dd",
+      "source": "art-library/action-vfx/manual-recovery/516-Dawn-Crescendo.png",
+      "src": "assets/vfx/action/516-Dawn-Crescendo.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 517,
+      "sha256": "df7f75a7e47551deead9b8368161edc48c8f871a38de42615e48e23258e8af11",
+      "source": "art-library/action-vfx/manual-recovery/517-Zephyr-Relay.png",
+      "src": "assets/vfx/action/517-Zephyr-Relay.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 518,
+      "sha256": "7ae88af0458f2b873983b1e917bf574cd8bac24654d6c5dc9e7358adbbe2a6d6",
+      "source": "art-library/action-vfx/manual-recovery/518-Slumber-Mist.png",
+      "src": "assets/vfx/action/518-Slumber-Mist.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 520,
+      "sha256": "33603c5b00e9c9d8762e5fb28292b3381baf76a1396dff48becf2895bff44f44",
+      "source": "art-library/action-vfx/manual-recovery/520-Nerve-Spark.png",
+      "src": "assets/vfx/action/520-Nerve-Spark.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 38
+    },
+    {
+      "id": 521,
+      "sha256": "3174deb8c8ff763cbd058baf0a8d3d427e7d7bf0d7e35fa571f0039f0e0ca3de",
+      "source": "art-library/action-vfx/manual-recovery/521-Venom-Mark.png",
+      "src": "assets/vfx/action/521-Venom-Mark.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 522,
+      "sha256": "89e0c566db7538092810b26d6b3c60b5d3c3581ad165b16632163386ac824d2e",
+      "source": "art-library/action-vfx/manual-recovery/522-Cinder-Hex.png",
+      "src": "assets/vfx/action/522-Cinder-Hex.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 36
+    },
+    {
+      "id": 523,
+      "sha256": "1544e1147b5ee6831b1ac4a5e5346070ca9aef56bebb8718c6fd98c1f0e4b6f7",
+      "source": "art-library/action-vfx/manual-recovery/523-Poison-Haze.png",
+      "src": "assets/vfx/action/523-Poison-Haze.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 524,
+      "sha256": "9837bf30550416b55eaf6aab211ba55753a00b72a95ec79b5f780f193d6cddda",
+      "source": "art-library/action-vfx/manual-recovery/524-Hoarfrost-Hex.png",
+      "src": "assets/vfx/action/524-Hoarfrost-Hex.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 526,
+      "sha256": "e53acde553caad8fc5c1b44cf1a991197c4fde7eaf86fd305a8578b41f632ed7",
+      "source": "art-library/action-vfx/manual-recovery/526-Carillon-Cannon.png",
+      "src": "assets/vfx/action/526-Carillon-Cannon.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 551,
+      "sha256": "e87fdae5ccda1cda1775780c0f013c2069ef5c84fc616a73abcf4191d44fbf7d",
+      "source": "art-library/action-vfx/manual-recovery/551-Coordinated-Focus.png",
+      "src": "assets/vfx/action/551-Coordinated-Focus.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 552,
+      "sha256": "de1050d49fdaf489d475348cc640937783a82251cc4a93398f438eedfb6477f3",
+      "source": "art-library/action-vfx/manual-recovery/552-Overcharge-Protocol.png",
+      "src": "assets/vfx/action/552-Overcharge-Protocol.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 554,
+      "sha256": "3f725020efeacff37f185becff80cad5ac546c88fa7ca44599ecab991ccebfe5",
+      "source": "art-library/action-vfx/manual-recovery/554-Furnace-Lockdown.png",
+      "src": "assets/vfx/action/554-Furnace-Lockdown.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 556,
+      "sha256": "e0de33e44295f7ec6e029d991bba8ea696461a361be490c2087072731bd4ebf2",
+      "source": "art-library/action-vfx/manual-recovery/556-Second-Tide.png",
+      "src": "assets/vfx/action/556-Second-Tide.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 557,
+      "sha256": "8b72082aa77bc9facd6bd666c96605c7d8e0d2866e2c0cbba9495a1a71316115",
+      "source": "art-library/action-vfx/manual-recovery/557-Entropic-Ritual.png",
+      "src": "assets/vfx/action/557-Entropic-Ritual.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 558,
+      "sha256": "a4f1f3509f470554bc47321cf3e026f101354ac4e9dc6cefb048dd9ecdbd29ee",
+      "source": "art-library/action-vfx/manual-recovery/558-Anchored-Artillery.png",
+      "src": "assets/vfx/action/558-Anchored-Artillery.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 560,
+      "sha256": "d763db4269ddc638c274b71c395f2960812ced5e4885dbb4f8d309d8d0c8e5e9",
+      "source": "art-library/action-vfx/manual-recovery/560-Last-Bastion.png",
+      "src": "assets/vfx/action/560-Last-Bastion.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 561,
+      "sha256": "0e9c01cde5aa12b276288c23a9c71057c24e2673f79cfd933d6df31731556683",
+      "source": "art-library/action-vfx/manual-recovery/561-Battle-Rally.png",
+      "src": "assets/vfx/action/561-Battle-Rally.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 563,
+      "sha256": "868980bb30cf30218fc039191b38123a7cbab22a4276b7c6d8a43b08fc68b20d",
+      "source": "art-library/action-vfx/manual-recovery/563-Ember-Attrition.png",
+      "src": "assets/vfx/action/563-Ember-Attrition.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 564,
+      "sha256": "d73667a37eaf358129abba042ebb4d4cdc868d814e49b50e0e539dcffc7a11dd",
+      "source": "art-library/action-vfx/manual-recovery/564-Rime-Halo.png",
+      "src": "assets/vfx/action/564-Rime-Halo.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 700,
+      "sha256": "9c27c4015d08934f80e942360e5f236a57320eae415fe1f1177d23fc762aa918",
+      "source": "art-library/action-vfx/manual-recovery/700-Holdfast.png",
+      "src": "assets/vfx/action/700-Holdfast.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 703,
+      "sha256": "5ee27bfbe73a399e9a45c43a74fbbe08b050542ad836e3415e8724fcac6bc2e3",
+      "source": "art-library/action-vfx/manual-recovery/703-Gutter-the-Sky.png",
+      "src": "assets/vfx/action/703-Gutter-the-Sky.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 706,
+      "sha256": "c6d20a33ddbd07879c22877c5952b1c64ea9b53302c70fe52533b52a3bc28aa4",
+      "source": "art-library/action-vfx/manual-recovery/706-Dune-Toll.png",
+      "src": "assets/vfx/action/706-Dune-Toll.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 710,
+      "sha256": "e76d57420cfa606a2e388ca7238ccb039365e3dc400dbcb3b882df79255c80cc",
+      "source": "art-library/action-vfx/manual-recovery/710-Mercy-Ray.png",
+      "src": "assets/vfx/action/710-Mercy-Ray.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 711,
+      "sha256": "0b6571986032aa2e7afc17bd2b64ba2fca0d6adbf9baa2cf7414238f8ca15a91",
+      "source": "art-library/action-vfx/manual-recovery/711-Full-Release.png",
+      "src": "assets/vfx/action/711-Full-Release.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 714,
+      "sha256": "e8b48fc7b0b870f244b5a8e913653306521ded358e0fdc250d3841f4126d3862",
+      "source": "art-library/action-vfx/manual-recovery/714-Flowing-Palm.png",
+      "src": "assets/vfx/action/714-Flowing-Palm.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
     }
   ],
   "bindings": 615,
-  "dedicated": 371,
-  "shared": 244,
-  "battlePlayback": "pending"
+  "dedicated": 507,
+  "shared": 108,
+  "battlePlayback": "Sampled live battle checks passed; see verification.json for exact IDs and limits."
 }

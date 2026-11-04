@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import {DATA} from '../dist/data.js';
 import {ORCHARD_REACTIONS} from '../dist/tide-orchard-data.js';
-import {ACTION_ART,pixelImpactTimes} from '../dist/action-vfx.js';
+import {ACTION_ART,pixelImpactTimes,pixelPlacement} from '../dist/action-vfx.js';
 import {effectHTML,effectSpec} from '../dist/effects.js';
 const manifest=JSON.parse(fs.readFileSync('art-library/action-vfx/integration-2026-11-04/manifest.json'));
 const checks=JSON.parse(fs.readFileSync('art-library/action-vfx/integration-2026-11-04/technical-checks.json'));
@@ -12,7 +12,8 @@ const moves=[...DATA.moves,...Object.values(ORCHARD_REACTIONS)];
 assert.equal(moves.length,615);assert.equal(Object.keys(ACTION_ART).length,moves.length);
 const cache=fs.readFileSync('dist/offline-assets.js','utf8'),digests=new Set();
 for(const [id,s] of sources){
- const a=ACTION_ART[id];assert.equal(a.src,s.art.src);assert.equal(a.sourceId,id);assert(!a.shared);
+ const a=ACTION_ART[id];for(const cellSize of [192,256])for(const [x,y] of [[20,460],[340,20],[180,240]]){const shift=pixelPlacement({id},{x,y,width:360,height:500,cellSize}),b=a.frameBounds,scale=cellSize/192;assert(x+shift.x+(b[0]-96)*scale>=3.99);assert(y+shift.y+(b[1]-96)*scale>=3.99);assert(x+shift.x+(b[2]-96)*scale<=356.01);assert(y+shift.y+(b[3]-96)*scale<=496.01);}
+ assert.equal(a.src,s.art.src);assert.equal(a.sourceId,id);assert(!a.shared);
  const digest=crypto.createHash('sha256').update(fs.readFileSync('dist/'+a.src)).digest('hex');
  assert.equal(digest,s.sha256,'approved content hash '+id);assert(!digests.has(digest),'duplicate source content '+id);digests.add(digest);
  assert(cache.includes(JSON.stringify(a.src)),'offline source '+id);
