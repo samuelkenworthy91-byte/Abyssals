@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {DATA} from '../dist/data.js';
 import {EVOLUTIONS} from '../dist/evolution-data.js';
-import {ACTION_ART,actionFrames} from '../dist/action-vfx.js';
+import {ACTION_ART,actionFrames,readableDuration} from '../dist/action-vfx.js';
 import {effectSpec,effectHTML} from '../dist/effects.js';
 import {relearnPool,levelMoves} from '../dist/evolution.js';
 import {applyRelearn} from '../dist/move-relearning.js';
@@ -13,18 +13,20 @@ import {instance,applyMove} from '../dist/engine.js';
 import {beginAbilities} from '../dist/abilities.js';
 const species=id=>DATA.species.find(s=>s.id===id),move=id=>DATA.moves.find(m=>m.id===id);
 const unit=(id='517',level=60)=>{const u=instance(species(id),level,[]);u.uid=id;u.hp=u.maxHp=5000;u.stats={hp:5000,attack:80,defence:100,sp_attack:100,sp_defence:100,speed:80};return u;};
-const protectedOriginals=Object.values(ACTION_ART).filter(a=>!a.batch);
+const protectedOriginals=Object.values(ACTION_ART).filter(a=>!a.batch&&!a.shared);
 const firstNewBatch=Object.values(ACTION_ART).filter(a=>a.batch==='01');
 assert.equal(protectedOriginals.length,63,'the original separately approved effects must not change');
 assert.equal(firstNewBatch.length,12,'all batch-one canonical move effects are registered');
 const batches=fs.readdirSync('art-library/action-vfx').filter(f=>/^batch-\d+\.json$/.test(f)).flatMap(f=>JSON.parse(fs.readFileSync('art-library/action-vfx/'+f)).moves);
 for(const m of batches)assert.equal(ACTION_ART[m.id].src,'assets/vfx/action/'+m.filename);
-const expectedCount=63+batches.length+1;assert.equal(Object.keys(ACTION_ART).length,expectedCount);
-assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,expectedCount);
+const scope=JSON.parse(fs.readFileSync(JSON.parse(fs.readFileSync('release-config.json')).artwork_scope_path));
+assert.equal(Object.keys(ACTION_ART).length,scope.expectedBindings??scope.expectedDedicatedSheets);
+assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,scope.expectedDedicatedSheets);
 for(const art of Object.values(ACTION_ART)){
  assert(fs.existsSync('dist/'+art.src),art.name);
  const m=move(art.id)||{id:art.id,type_id:'WATER',category:'SPECIAL',power:50};
- assert(effectSpec(m).pixel,art.name);assert.equal(effectSpec(m).duration,Math.round(art.duration*1.35));
+ if(m.salvation&&m.id!==710){assert.equal(effectSpec(m).style,'salvation');continue;}
+ assert(effectSpec(m).pixel,art.name);assert.equal(effectSpec(m).duration,readableDuration(m,art.duration));
  const html=effectHTML(m);assert(html.includes('data-action-art='),art.name);assert(!html.includes('<svg'),art.name);
  assert.equal(art.frames,16);assert.equal(art.logicalCell,192);
 }

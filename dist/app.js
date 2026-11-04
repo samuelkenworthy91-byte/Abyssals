@@ -159,6 +159,7 @@ import {cleanName,escapeHTML,unitName} from './names.js?v=0.90.53';
 import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.90.53';
 import {ROUTE} from './route-data.js?v=0.90.53';
 import {phaseAt,pickEncounter,capturePreview,formatCaptureChance,resolveCapture,settleStarter,completeStarterReturn,captureMilestones} from './route-rules.js?v=0.90.53';
+import {pixelImpactTimes} from './action-vfx.js?v=0.90.53';
 import {effectSpec,effectHTML} from './effects.js?v=0.90.53';
 import {readSave,writeSave,clearSave,selectSlot,currentSlot,listSlots,migrateLegacy,writeImportedSave} from './save.js?v=0.90.53';
 import {createTitle,chapterCard} from './title.js?v=0.90.53';
@@ -436,9 +437,9 @@ async function animateResult(who,result,move,context=null){
  $('#fx').innerHTML=`<div class="fx-anchor" data-fx-actor="${escapeHTML(context?.actor?.uid||'')}" data-fx-target="${escapeHTML(targetModel?.uid||'')}" style="left:${x}px;top:${y}px;--source-x:${dx}px;--source-y:${dy}px;--travel-angle:${Math.atan2(-dy,-dx)*180/Math.PI}deg">${effectHTML(visual,{...result,targetArt:combatArtSrc(targetModel||(enemyTarget?current.enemies[current.index??0]:current.player))})}</div>`;
  if(spec.hit&&move?.power&&who==='enemy')enemy?.classList.add('charging');
  if(spec.pixel&&result.strikes?.length){
-  let elapsed=0;const frames=move.id===790?(result.strikes.length===1?[1]:result.strikes.length===2?[1,4]:[1,4,7]):[spec.impact*16],frameCount=move.id===790?(result.strikes.length===1?12:result.strikes.length===2?15:16):16;
+  let elapsed=0;const impacts=pixelImpactTimes(move,result,spec);
   for(let i=0;i<result.strikes.length;i++){
-   const at=frames[i]/frameCount*spec.duration;await delay(reducedMotion()?0:Math.max(0,at-elapsed));if(battle!==current)return;
+   const at=impacts[i];await delay(reducedMotion()?0:Math.max(0,at-elapsed));if(battle!==current)return;
    const impacted=enemyTarget?enemy:target;impacted?.classList.remove(enemyTarget?'hit':'hud-impact');void impacted?.offsetWidth;
    if(result.strikes[i].damage){impacted?.classList.add(enemyTarget?'hit':'hud-impact');blip(who==='enemy'?180:620);}
    await drainHealth(result.strikes[i],120);elapsed=at+120;

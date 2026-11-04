@@ -29,7 +29,7 @@ def validate(scope,cfg,coverage,environments):
   assert m['status']=='approved' and not m['technicalIssues'],'Environment approval incomplete'
   assert e['sha256']==m['sha256']==hashlib.sha256((ROOT/m['source']).read_bytes()).hexdigest(),'Environment art changed'
   assert e['geometrySha256']==m['geometrySha256'],'Environment geometry changed'
- return {'version':cfg['version'],'dedicated':len(installed),'playable':coverage['totals']['total'],'redesignedMaps':len(expected_ids),'pendingVisualReview':sum(m['status']!='approved' for m in installed.values())}
+ return {'version':cfg['version'],'dedicated':coverage['totals']['dedicated'],'playable':coverage['totals']['total'],'redesignedMaps':len(expected_ids),'pendingVisualReview':sum(m['status']!='approved' for m in installed.values())}
 
 def main():
  cfg=read('release-config.json');mode=cfg.get('artwork_release_mode','full')
