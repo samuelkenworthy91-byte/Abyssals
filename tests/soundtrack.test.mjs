@@ -42,5 +42,7 @@ update('battle');assert(players[0].paused);music.stop();
 const fades=createMusicController({fadeMs:30,createAudio:()=>{const a={currentTime:0,paused:true,volume:.35,play(){this.paused=false;return Promise.resolve();},pause(){this.paused=true;}};players.push(a);return a;}});
 fades.update({cue:'execution',active:true,enabled:true});fades.update({cue:'battle',active:true,enabled:true});assert(players.filter(a=>!a.paused).length<=1);
 await new Promise(r=>setTimeout(r,70));assert.equal(players.filter(a=>!a.paused).length,1);assert(players.find(a=>!a.paused).src.endsWith('BattleTheme1.mp3'));fades.stop();
+const immediate=createMusicController({fadeMs:1000,createAudio:()=>{const a={paused:true,currentTime:0,pause(){this.paused=true;},play(){this.paused=false;return Promise.resolve();}};players.push(a);return a;}});
+immediate.update({active:true,enabled:true,cue:'overworld'});immediate.update({active:true,enabled:true,cue:'execution',immediate:true});assert(players.find(a=>!a.paused).src.endsWith('event-pate-trade-execution.mp3'),'mandatory cue starts before first dialogue without waiting for exploration fade');immediate.stop();
 assert.equal(Object.keys(SOUNDTRACK).length,15);assert(!Object.values(MUSIC_TRACKS).some(p=>p.endsWith('.m4a')));
 console.log('PASS: nine towns/interiors, routes, complete execution/guards/Fatima, legacy saves, mountain, Darius, funeral/aftermath, positions and nonoverlapping fade.');

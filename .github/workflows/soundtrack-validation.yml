@@ -26,6 +26,8 @@ jobs:
           node-version: '22'
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
+      - name: Install whole-stream audio decoder
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Verify source and runtime checksums, decode all supplied streams
         run: python3 scripts/verify-soundtrack.py
       - name: JavaScript and offline regression suites

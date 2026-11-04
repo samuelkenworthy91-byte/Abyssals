@@ -50,7 +50,7 @@ redistribution; the original cover attribution is retained in the manifest.
 ## Exact boundaries
 
 - **Execution:** `playBotruneBeat()` durably records `soundtrack.executionStarted`
-  before showing the first charges. All nine beats share one looping player.
+  before showing the first charges. Mandatory execution/funeral onset bypasses the exploration fade so its playback request precedes the dialogue. All nine beats share one looping player.
   Trial completion does not end the cue. Guard battles, dialogue and menus keep
   it. Botrune lower streets, square, interiors and shelter share this context.
   Leaving these places suspends playback; returning resumes its position.

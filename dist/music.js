@@ -29,7 +29,7 @@ export function createMusicController({createAudio=()=>new Audio(),tracks=MUSIC_
   }catch{blocked=true;}
  }
  return {
-  update({active=false,battle=false,enabled=false,hidden=false,cue=null}={}){
+  update({active=false,battle=false,enabled=false,hidden=false,cue=null,immediate=false}={}){
    const next=active?(tracks[cue]?cue:battle?'battle':'overworld'):null;
    const nextSignature=[next,!!enabled,!!hidden].join(':');
    if(nextSignature===signature)return;
@@ -39,7 +39,7 @@ export function createMusicController({createAudio=()=>new Audio(),tracks=MUSIC_
    if(mode==='battle'&&next!=='battle')reset('battle');
    mode=next;const target=enabled&&!hidden?mode:null;blocked=false;
    const outgoing=players.get(previous);
-   if(fadeMs>0&&target&&previous!==target&&outgoing&&!outgoing.paused){
+   if(!immediate&&fadeMs>0&&target&&previous!==target&&outgoing&&!outgoing.paused){
     wanted=null;fade(outgoing,0,()=>{outgoing.pause();outgoing.volume=volume;wanted=target;play();});
    }else{wanted=target;play();}
   },
