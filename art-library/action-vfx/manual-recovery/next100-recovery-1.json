@@ -1,0 +1,130 @@
+{
+  "purpose": "Approved Next100 batch-one recovery; source artwork uploaded for deliberate runtime installation",
+  "assets": [
+    {
+      "id": 172,
+      "filename": "172-Island-Crown.png",
+      "sha256": "237cc082d1003e94aea973f679c8a7dafc6d6c15a4063671962e3fab96cc409a"
+    },
+    {
+      "id": 189,
+      "filename": "189-Pilgrim-Echo.png",
+      "sha256": "b2a2854e59b339562bcaf29a296b065d75d9f11857bd8014da75e7224646276c"
+    },
+    {
+      "id": 209,
+      "filename": "209-Long-Game.png",
+      "sha256": "1f8f8f4928ec1c0672e71bf38754ac0fa4f289189c89e88a21385562f0b642f7"
+    },
+    {
+      "id": 210,
+      "filename": "210-Sultan-s-Measure.png",
+      "sha256": "33e1cd4b6651cd78d9d14bbededb2558029bb69db4f40aef84d64d8ad030e7f5"
+    },
+    {
+      "id": 247,
+      "filename": "247-Glacier-Fossil.png",
+      "sha256": "aa777c657f0775bae684d45ea0f5231ed0ed1d50627c6ab298f03d9410a4e591"
+    },
+    {
+      "id": 248,
+      "filename": "248-Sickle-Talon.png",
+      "sha256": "1d4a239eb3164a36d1a49e946cd913668e2401041e87d7d38203e65933b96f46"
+    },
+    {
+      "id": 268,
+      "filename": "268-Uncrowned-Quills.png",
+      "sha256": "d7e2f0957c3a0f1a34da022f941ad00d156b58ccb8d46cd6bd82f6aa594b0550"
+    },
+    {
+      "id": 288,
+      "filename": "288-Silent-Ambition.png",
+      "sha256": "e3ec37c329b21f1d99cf0523285d9a5ce8c5d16308a28d8edcb993a28fda3eb3"
+    },
+    {
+      "id": 308,
+      "filename": "308-Broken-Alliance.png",
+      "sha256": "9a31ef645f029e9a5ade84c7564fea778b4cfaa91177f798f11d381a11f5c70c"
+    },
+    {
+      "id": 310,
+      "filename": "310-Rebellious-Jab.png",
+      "sha256": "0e3dba353a1028a54ba666b48eef22b0514bb85cd4df0bffb7d56a8caf6de062"
+    },
+    {
+      "id": 330,
+      "filename": "330-Blade-Tail-Oath.png",
+      "sha256": "eda002cd3f2796465f141dbc0a4970d08602723dc57bbbfe03ab6378f2340252"
+    },
+    {
+      "id": 378,
+      "filename": "378-Spirit-Bastion.png",
+      "sha256": "a5e03a1334ba1289cf838e1e2c8d7516db278b6588197fa0ff39a716bdb679f9"
+    },
+    {
+      "id": 379,
+      "filename": "379-Surge-Skitter.png",
+      "sha256": "1353a3128d5e931699c362764a542e0304e658a165b3a7556049ba27285feac7"
+    },
+    {
+      "id": 380,
+      "filename": "380-Lace-Lullaby.png",
+      "sha256": "14d0575f1f1bd2b7f38c478ec6f312ea84df56cda62ef243a156578f055fee90"
+    },
+    {
+      "id": 381,
+      "filename": "381-Brineglass.png",
+      "sha256": "6e85af62743d572d24d8b34e5efa5834c0f3cbc8b91ab86cf77c301fe937e30f"
+    },
+    {
+      "id": 382,
+      "filename": "382-Wyvern-Shear.png",
+      "sha256": "ec95fb1e297a3cce07e66de541470df29d99bc0b5e3d1e4a3c52c24f7a09a6fc"
+    },
+    {
+      "id": 385,
+      "filename": "385-Emberbloom.png",
+      "sha256": "be73c37bc9e4dbd8c5e8f6a81b991c7ad2ad6c00c0cd5217d3f6723ef20866c9"
+    },
+    {
+      "id": 386,
+      "filename": "386-Ember-Quilt.png",
+      "sha256": "ecef1c19027e7e4a45a57266e7a6ed119f2a3f6ded59281c1db65b9e866546f3"
+    },
+    {
+      "id": 387,
+      "filename": "387-Rain-Mantle.png",
+      "sha256": "baeea0898db8f21458b27f01b8a18851833054a6f1c2b5f0575afcb0390b5945"
+    },
+    {
+      "id": 389,
+      "filename": "389-Fleece-Freeze.png",
+      "sha256": "533cb09e7dcc63de6b4dd5c39a0095d85d9b6101c10df1725ff95361f3d5a6a6"
+    },
+    {
+      "id": 391,
+      "filename": "391-Bitter-Ink.png",
+      "sha256": "c05000d059eec22f16486b18a2e39ade1c81f412e8cb1c7f92acd45789ca11ae"
+    },
+    {
+      "id": 392,
+      "filename": "392-Clay-Burrow.png",
+      "sha256": "3f975de8bb5e6dd45b211946ec9f0267037b78080706a2ebaa6f2af5e12bf71a"
+    },
+    {
+      "id": 394,
+      "filename": "394-Milestone-Roll.png",
+      "sha256": "dfbb5c6910e8b23499be02bc62ea0506a732208a4cea2a01e6978e60d8e3023a"
+    },
+    {
+      "id": 395,
+      "filename": "395-Fable-Echo.png",
+      "sha256": "c61615972f6609d0db666c46d3cd7e293678e54ec7d7ae0573cab85b48f730c7"
+    },
+    {
+      "id": 396,
+      "filename": "396-Hushed-Retrieval.png",
+      "sha256": "bacca0e377ce3f9d9b0c7953ce79280f2d2106219ed7b2b31bdd03d0fdbecce0"
+    }
+  ]
+}
