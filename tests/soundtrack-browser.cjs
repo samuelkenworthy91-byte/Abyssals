@@ -57,13 +57,16 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  await page.evaluate(()=>__soundtrackQA.title());assert.equal((await playing()).length,0);assert.deepEqual(errors,[]);results.story='PASS';console.log('PASS: Fatima takeover and funeral/aftermath reloads.');
  // Every original audio stream is decoded and actually played, including uncertain sources.
  results.audio=[];
- for(const file of [...Object.values(data.tracks), 'music-m4a/city-leader-UNVERIFIED.m4a','music-m4a/catching-up-UNCLASSIFIED.m4a']){
+ // Release browser jobs check out dist only; source-only auditions belong to the
+ // dedicated soundtrack job, which also requires all sources via verify-soundtrack.py.
+ const sourceAuditions=['music-m4a/city-leader-UNVERIFIED.m4a','music-m4a/catching-up-UNCLASSIFIED.m4a'].filter(file=>fs.existsSync(path.join(root,file)));
+ for(const file of [...Object.values(data.tracks),...sourceAuditions]){
   const r=await page.evaluate(async file=>{const a=new Audio(file);a.volume=.01;await a.play();await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(Error('No advancing audio: '+file)),15000);const poll=()=>{if(a.error){clearTimeout(t);reject(Error(a.error.message));}else if(a.currentTime>.08){clearTimeout(t);resolve();}else setTimeout(poll,30);};poll();});const result={file,duration:a.duration,time:a.currentTime,error:a.error?.code||null};a.pause();return result;},file);results.audio.push(r);
  }
- console.log('PASS: all 17 actual audio decodes/playbacks.');
+ console.log('PASS: '+results.audio.length+' actual audio decodes/playbacks.');
  // Full runtime precache, offline reload, audio range responses and real offline playback.
  const offline=await browser.newContext({serviceWorkers:'allow'}),op=await offline.newPage();await op.goto(base,{waitUntil:'load'});await op.waitForFunction(()=>navigator.serviceWorker.controller,null,{timeout:240000});await offline.setOffline(true);await op.reload({waitUntil:'networkidle'});await op.locator('body').click({position:{x:5,y:5}});
  results.offline=await op.evaluate(async tracks=>{const result=[];for(const file of tracks){const r=await fetch(file);if(!r.ok)throw Error('Missing offline '+file);const range=await fetch(file,{headers:{Range:'bytes=1024-2047'}});if(range.status!==206||(await range.arrayBuffer()).byteLength!==1024)throw Error('Bad range '+file);const a=new Audio(file);await a.play();await new Promise(r=>setTimeout(r,160));if(a.paused||a.error||a.currentTime===0)throw Error('Offline decode '+file);a.pause();result.push(file);}return result;},Object.values(data.tracks));
- await offline.close();fs.writeFileSync('build/music-qa/browser-results.json',JSON.stringify(results,null,2));console.log('PASS: real soundtrack playback, nine beats/three guard boundaries/Fatima, saved reloads, departure, towns/interiors/routes, Darius, funeral/gifts/reload, mute/visibility/title, 17 decodes, full offline cache and 15 offline audio/range checks.');
+ await offline.close();fs.writeFileSync('build/music-qa/browser-results.json',JSON.stringify(results,null,2));console.log('PASS: real soundtrack playback, nine beats/three guard boundaries/Fatima, saved reloads, departure, towns/interiors/routes, Darius, funeral/gifts/reload, mute/visibility/title, runtime/source decodes, full offline cache and 15 offline audio/range checks.');
  }finally{await browser.close();server.close();}
 })().catch(e=>{console.error(e);process.exit(1)});
