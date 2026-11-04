@@ -1,0 +1,15 @@
+{
+  "auditedMain": "979da37ab80eda5ea4a7fd1bb3cc6700e87163a8",
+  "expectedMissing": 50,
+  "newlyAvailable": 0,
+  "remainingMissing": 50,
+  "method": "Every tracked PNG checked against all50 approved prepared SHA-256 values",
+  "bindings": 615,
+  "sources": 507,
+  "shared": 108,
+  "releaseVersion": "0.90.53",
+  "versionCode": 148,
+  "originalPackage": "uk.co.abyssals.game",
+  "expectedCertificateSha256": "6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac",
+  "status": "Awaiting workflow signing and publication verification"
+}

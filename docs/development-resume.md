@@ -83,3 +83,13 @@ Evidence: art-library/action-vfx/integration-2026-11-04/{manifest,technical-chec
 Presentation fixes: finite timestamps for each non-rabbit multi-hit strike; per-sheet alpha-content bounds keep lower-HUD effects inside the viewport while preserving true recipient anchors. Original Mercy Edge renderer stays intact; newly supplied Mercy Ray now uses its own sheet with mercy feedback. Save schema, stable IDs, combat rules, package/signing identity and reserved source version0.90.53/code148 are unchanged. No signed APK build or physical-device verification is claimed. Offline PWA packaging is checked separately against all507 source hashes.
 
 Next: upload the exact50 files in missing-uploads.md; re-audit remote hashes and extend the manifest/installer deliberately. Do not apply the all-unique final production map to any of the outstanding58 sheets.
+
+
+## 4 November 2026 — signed animation playtest release preparation
+
+Rechecked the exact50 missing prepared SHA-256 values against every tracked PNG on remote main979da37; none are newly available. Coverage remains507 dedicated source sheets,108 direct shared bindings and615 total action bindings. The existing50-filename list remains authoritative.
+
+The automatic workflow41832615806 failed before validation because the default Python3.14 runner could not install Pillow11.1.0. Pin release validation to Python3.12. Prepare reserved version0.90.53/code148 as Animation Playtest; last published version is0.90.52/code147. Keep the existing package and original signing secrets/certificate. Signing/publication must be verified from the workflow and released assets before an APK download is claimed.
+
+
+Release CI preparation also refreshes the stale generated environment QA report from the already-committed review ledger (no maps/art changed); includes docs in browser checkout for the hash-bound scope; and installs Pillow under Python3.12 in browser jobs that render review sheets. All signing, validation, browser and action-batch release gates remain enabled.

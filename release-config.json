@@ -1,9 +1,9 @@
 {
   "version": "0.90.53",
   "version_code": 148,
-  "filename": "Abyssals-v0.90.53-Dossier-Roster.apk",
-  "title": "Abyssals v0.90.53 \u2014 Balanced Dossier Roster",
-  "notes": "Main source integration: 54 dossier species, approved bat portraits and soundtrack, leader-fate evolutions, and 615 registered animation bindings using 507 verified uploaded sheets. 108 bindings retain shared art: 50 dedicated uploads are missing and 58 sheets remain outstanding. Preserves saves, stable move/species IDs, package and original signing identity. Fresh gameplay visual checks are sampled; no blanket artistic approval or APK verification is claimed.",
+  "filename": "Abyssals-v0.90.53-Animation-Playtest.apk",
+  "title": "Abyssals v0.90.53 \u2014 Animation Playtest",
+  "notes": "Signed playtest from verified main: all 615 action bindings covered by 507 dedicated uploaded sheets and 108 shared bindings. Includes the balanced dossier roster, approved bat portraits, soundtrack and leader-fate evolutions. Multi-hit timing and lower-HUD animation clipping repaired. Exactly 50 approved Next100 batch-one uploads remain missing and 58 dedicated sheets remain outstanding. Original Mercy Edge renderer preserved. Uses original uk.co.abyssals.game package and signing certificate; existing saves retained. Production/static checks, regression tests and sampled live battle verification passed; this is an interim playtest, not individual final visual approval for every animation.",
   "pwa_filename": "Abyssals-v0.90.53-PWA.zip",
   "artwork_release_mode": "interim",
   "artwork_scope_path": "docs/releases/v0.90.53-art-scope.json"
