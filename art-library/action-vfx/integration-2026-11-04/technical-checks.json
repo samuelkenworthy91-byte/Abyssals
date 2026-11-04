@@ -1,5 +1,5 @@
 {
-  "stage": 0,
+  "stage": 1,
   "sources": [
     {
       "id": 1,
@@ -3210,10 +3210,510 @@
       "distinctFrames": 16,
       "nonemptyFrames": 16,
       "minimumGutter": 35
+    },
+    {
+      "id": 399,
+      "sha256": "6cdafc8d0b949cae3d221ff149d5b9e28fd93112374d642a84310a8755ce76b6",
+      "source": "art-library/action-vfx/manual-recovery/399-Kiln-Kick.png",
+      "src": "assets/vfx/action/399-Kiln-Kick.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 403,
+      "sha256": "7f26adbba8566a2aa67f56d0535cadd5170377933c013817de127deeb1778c26",
+      "source": "art-library/action-vfx/manual-recovery/403-Regal-Heat.png",
+      "src": "assets/vfx/action/403-Regal-Heat.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 19
+    },
+    {
+      "id": 404,
+      "sha256": "f1fcf4c676b59e97b21c89768b4d0c15b701653b23eb65afbf6c34dbc808610c",
+      "source": "art-library/action-vfx/manual-recovery/404-Brackish-Bloom.png",
+      "src": "assets/vfx/action/404-Brackish-Bloom.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 405,
+      "sha256": "f376ec1150e7802b1a7b24f1ed91ba0e5941135bcfe4401d82b529345e4dac93",
+      "source": "art-library/action-vfx/manual-recovery/405-Sail-Skim.png",
+      "src": "assets/vfx/action/405-Sail-Skim.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 406,
+      "sha256": "2755414e9bc58fb10b1c3c409802584ba3ca3499353144cb5c7ae5f8fbc57bad",
+      "source": "art-library/action-vfx/manual-recovery/406-Bubble-Oar.png",
+      "src": "assets/vfx/action/406-Bubble-Oar.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 408,
+      "sha256": "e8b5650ce4572c1d97c17f1f344bee786306187ad3f691d2dfd86cfb38215469",
+      "source": "art-library/action-vfx/manual-recovery/408-Lightless-Wake.png",
+      "src": "assets/vfx/action/408-Lightless-Wake.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 35
+    },
+    {
+      "id": 409,
+      "sha256": "35cddebc61222ec7551f7ea07523c2159f5e0242eef71e54e01cc531c6b07714",
+      "source": "art-library/action-vfx/manual-recovery/409-Pearl-Reverie.png",
+      "src": "assets/vfx/action/409-Pearl-Reverie.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 46
+    },
+    {
+      "id": 411,
+      "sha256": "865648f5f9f44af40b57e1a116255b46af80c6cc7c3336674d25c46a680104fc",
+      "source": "art-library/action-vfx/manual-recovery/411-Frozen-Rhythm.png",
+      "src": "assets/vfx/action/411-Frozen-Rhythm.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 413,
+      "sha256": "a63cb5d7815b51f9cf9bb1097c163be15822f87827bf55a1f9149c3780c4a920",
+      "source": "art-library/action-vfx/manual-recovery/413-Dune-Discharge.png",
+      "src": "assets/vfx/action/413-Dune-Discharge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 414,
+      "sha256": "57ae718900563b358234095ccea518afc3082250abfcdaee4966b662a76dbbaa",
+      "source": "art-library/action-vfx/manual-recovery/414-Kite-Conductor.png",
+      "src": "assets/vfx/action/414-Kite-Conductor.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 418,
+      "sha256": "d976f77082137a7b520a007d6b741a8eeed83475fe871e5ddd1724481c87dba9",
+      "source": "art-library/action-vfx/manual-recovery/418-Husk-Bridge.png",
+      "src": "assets/vfx/action/418-Husk-Bridge.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 419,
+      "sha256": "127438480b437791a590de0c859f90f4aef9a384823bd275584028b1f1798cce",
+      "source": "art-library/action-vfx/manual-recovery/419-Lichen-Pulse.png",
+      "src": "assets/vfx/action/419-Lichen-Pulse.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 421,
+      "sha256": "203c30fba42f098d1ee71ba992504fe8b1c92a1ed79f5cd6550753520fce1bd9",
+      "source": "art-library/action-vfx/manual-recovery/421-Bramble-Cache.png",
+      "src": "assets/vfx/action/421-Bramble-Cache.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 422,
+      "sha256": "132bda5c8dd3bf19867e35d75f7845acdf5259792702122bdbfaedb1c64161a8",
+      "source": "art-library/action-vfx/manual-recovery/422-Permafrost-Delve.png",
+      "src": "assets/vfx/action/422-Permafrost-Delve.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 38
+    },
+    {
+      "id": 423,
+      "sha256": "6521845a0a3716260b03ecee420a3bc8b749866d03f31b62f740fb6989b2f7a6",
+      "source": "art-library/action-vfx/manual-recovery/423-Aurora-Glide.png",
+      "src": "assets/vfx/action/423-Aurora-Glide.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 424,
+      "sha256": "09c32f9d11d6eac5ac6c1b675659096f863baceff8eeac0ec92cebef632fd98e",
+      "source": "art-library/action-vfx/manual-recovery/424-Prism-Memory.png",
+      "src": "assets/vfx/action/424-Prism-Memory.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 425,
+      "sha256": "68e5804cc14e1e3f5f9ed468cd2adb72dfb62865fdc4c22d22ba4032e6013f3f",
+      "source": "art-library/action-vfx/manual-recovery/425-Frost-Stitch.png",
+      "src": "assets/vfx/action/425-Frost-Stitch.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 36
+    },
+    {
+      "id": 426,
+      "sha256": "486518c63a093e1cc67ff1c2b82d27b9830449326e90d9e8b4a10f9cb889be66",
+      "source": "art-library/action-vfx/manual-recovery/426-Lost-Winter.png",
+      "src": "assets/vfx/action/426-Lost-Winter.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 428,
+      "sha256": "1da20711e2c11e94968b1581404fd2e7dbebaaad4d41673e193bec12e675b3e6",
+      "source": "art-library/action-vfx/manual-recovery/428-Pincer-Clinch.png",
+      "src": "assets/vfx/action/428-Pincer-Clinch.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 430,
+      "sha256": "2535e3e049bacad41b42a4c707dbabab01680e88148f7b203fea955479e51974",
+      "source": "art-library/action-vfx/manual-recovery/430-Talon-Feint.png",
+      "src": "assets/vfx/action/430-Talon-Feint.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 36
+    },
+    {
+      "id": 432,
+      "sha256": "bf21130900fae30a49c2e820e6b95f4d31453af1e64d1c22a3079e94a0b74110",
+      "source": "art-library/action-vfx/manual-recovery/432-Clay-Seal.png",
+      "src": "assets/vfx/action/432-Clay-Seal.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 16
+    },
+    {
+      "id": 434,
+      "sha256": "52cb21c122d95ec9b7ecdd57dd2715752fb751240c702093da8ab0cbee5ff90d",
+      "source": "art-library/action-vfx/manual-recovery/434-Poison-Memory.png",
+      "src": "assets/vfx/action/434-Poison-Memory.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 436,
+      "sha256": "5a599922bb44436f21820863ce7913d183b9930811f66241f2eb8539f2093dd6",
+      "source": "art-library/action-vfx/manual-recovery/436-Silver-Seal.png",
+      "src": "assets/vfx/action/436-Silver-Seal.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 437,
+      "sha256": "abfa507143390326255a81930b31db7e8eb0863f35819c0b1e7738a2d099af01",
+      "source": "art-library/action-vfx/manual-recovery/437-Dune-Skimming.png",
+      "src": "assets/vfx/action/437-Dune-Skimming.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 20
+    },
+    {
+      "id": 438,
+      "sha256": "dfbb904ce5181d7681849b63ab4aaaa037660dbec035a6851501a81cbe8eee3e",
+      "source": "art-library/action-vfx/manual-recovery/438-Drainage-Drill.png",
+      "src": "assets/vfx/action/438-Drainage-Drill.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 441,
+      "sha256": "355f9750d8e6504b408701fa2f706011e94928ea47e58e2318deff5746d98449",
+      "source": "art-library/action-vfx/manual-recovery/441-Petal-Footprint.png",
+      "src": "assets/vfx/action/441-Petal-Footprint.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 442,
+      "sha256": "a184aee5a5bbd0fb18995b888b26a5592f4f23d45a31bce85f1c96d53ae3f4c7",
+      "source": "art-library/action-vfx/manual-recovery/442-Helix-Flight.png",
+      "src": "assets/vfx/action/442-Helix-Flight.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 445,
+      "sha256": "7cbf934fe67f23637b870fea33c05279f5150ce8f0efd586df64ea2b79a940a3",
+      "source": "art-library/action-vfx/manual-recovery/445-Memory-Trail.png",
+      "src": "assets/vfx/action/445-Memory-Trail.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 447,
+      "sha256": "c7e2ea3a8e6068d5eaa207b7c409c3328cfed57ad1329bb5b30dc249889804fb",
+      "source": "art-library/action-vfx/manual-recovery/447-Flint-Polish.png",
+      "src": "assets/vfx/action/447-Flint-Polish.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 42
+    },
+    {
+      "id": 450,
+      "sha256": "7354969d5b137fa2ef5f295d1964b33ce39efd5cd1b5e43fbb1d8c15cd1aead4",
+      "source": "art-library/action-vfx/manual-recovery/450-Opal-Heart.png",
+      "src": "assets/vfx/action/450-Opal-Heart.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 451,
+      "sha256": "3900acba991e10ef0487a3e34b79b93a7905e5fc0c29ad42384255c10f2a6a6a",
+      "source": "art-library/action-vfx/manual-recovery/451-River-Requiem.png",
+      "src": "assets/vfx/action/451-River-Requiem.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 453,
+      "sha256": "9f3539c123f98fd91e8eeebcba6e64fed4671c658cc7e36180325b75c0e564d9",
+      "source": "art-library/action-vfx/manual-recovery/453-Latch-Pounce.png",
+      "src": "assets/vfx/action/453-Latch-Pounce.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 38
+    },
+    {
+      "id": 454,
+      "sha256": "c19cab1fc1f74729d92ad7c1060de101c3b8aec44ce1ef6ba78414c1cfc10800",
+      "source": "art-library/action-vfx/manual-recovery/454-Furnace-Quills.png",
+      "src": "assets/vfx/action/454-Furnace-Quills.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 457,
+      "sha256": "5d8e9be2a93f516a794de21ef9bf563afcfb1ab42da42b67f4e345661e3e107a",
+      "source": "art-library/action-vfx/manual-recovery/457-Furnace-Knuckle.png",
+      "src": "assets/vfx/action/457-Furnace-Knuckle.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 458,
+      "sha256": "8bca53906761cef9c0ed166d26cad37671cf769e20fb58a269ca6f163ecf15d6",
+      "source": "art-library/action-vfx/manual-recovery/458-Thunderclap-Maul.png",
+      "src": "assets/vfx/action/458-Thunderclap-Maul.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 466,
+      "sha256": "1ee3539b644ab197fab1047f77cc887bb058eae284fa3634cbc8f71b775ec2cc",
+      "source": "art-library/action-vfx/manual-recovery/466-Gravel-Gape.png",
+      "src": "assets/vfx/action/466-Gravel-Gape.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 467,
+      "sha256": "3011c5f1634e4027044f04760aafa636a3544243926a9b4ea88cd118b70a2212",
+      "source": "art-library/action-vfx/manual-recovery/467-Oracle-Ray.png",
+      "src": "assets/vfx/action/467-Oracle-Ray.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 468,
+      "sha256": "1e9db3fc4199103e22da01e8a676d5dc7d7bcc80408912a7c06ba6ee4e9103a8",
+      "source": "art-library/action-vfx/manual-recovery/468-Solar-Flare.png",
+      "src": "assets/vfx/action/468-Solar-Flare.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 469,
+      "sha256": "ef2a6a716274881b76519e31d76a0439d3d596be36621215af891ad4549107b7",
+      "source": "art-library/action-vfx/manual-recovery/469-Prayer-Reap.png",
+      "src": "assets/vfx/action/469-Prayer-Reap.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 478,
+      "sha256": "91a64ba39111c4af27e0e5d2d9e8ac3fe3b23d1714c4ee823a1d71e55935533c",
+      "source": "art-library/action-vfx/manual-recovery/478-Moonlit-Grasp.png",
+      "src": "assets/vfx/action/478-Moonlit-Grasp.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 479,
+      "sha256": "1f96d4233f7ab843806ba993fed246542fbbe7b57961f8169deaae53feb1c516",
+      "source": "art-library/action-vfx/manual-recovery/479-Chorus-of-Tides.png",
+      "src": "assets/vfx/action/479-Chorus-of-Tides.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 19
+    },
+    {
+      "id": 480,
+      "sha256": "ca88c83700e5504a0a17dc6418c5eecedf67c2eee0a26190ed9e8096a1228b74",
+      "source": "art-library/action-vfx/manual-recovery/480-Prismatic-Procession.png",
+      "src": "assets/vfx/action/480-Prismatic-Procession.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 484,
+      "sha256": "8ee83562fb07ee99bdb524711bb2656382e878c3ed1d237f38312354efdf1b9a",
+      "source": "art-library/action-vfx/manual-recovery/484-Glacier-Hammer.png",
+      "src": "assets/vfx/action/484-Glacier-Hammer.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 485,
+      "sha256": "9518ec9206431914b67b65cf050ef497e78810ee0e55b60a73d95c949d5cb2ce",
+      "source": "art-library/action-vfx/manual-recovery/485-Bamboo-Reprisal.png",
+      "src": "assets/vfx/action/485-Bamboo-Reprisal.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 487,
+      "sha256": "2d3f666982558711d29ade29070c1291abf7d11b7090a4e6aab623d50eb5b676",
+      "source": "art-library/action-vfx/manual-recovery/487-Durandal-Pounce.png",
+      "src": "assets/vfx/action/487-Durandal-Pounce.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 489,
+      "sha256": "be74a1692260ba1bd010be196d9fd1a3e251535e45d1fbcc7780f5828a7cef82",
+      "source": "art-library/action-vfx/manual-recovery/489-Benediction.png",
+      "src": "assets/vfx/action/489-Benediction.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 490,
+      "sha256": "5ee205f4dc7655536e69882f395edfb93541542dfba2fe7b8bb540311263036f",
+      "source": "art-library/action-vfx/manual-recovery/490-Glacier-Vigil.png",
+      "src": "assets/vfx/action/490-Glacier-Vigil.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 491,
+      "sha256": "254bbf8e926cb5197312391a5ff6e60ced0b797e60ecd65755b1535b3bec3406",
+      "source": "art-library/action-vfx/manual-recovery/491-Montauban-Rush.png",
+      "src": "assets/vfx/action/491-Montauban-Rush.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 495,
+      "sha256": "9965fed971c05991604adc12bb41f7db4aade53d26dc4b41b65ee0c742a08790",
+      "source": "art-library/action-vfx/manual-recovery/495-Oberon-s-Passage.png",
+      "src": "assets/vfx/action/495-Oberon-s-Passage.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 498,
+      "sha256": "cc56b26de738ff9616afbfa27ddee08b684482f279f33615da99369c256cd6a0",
+      "source": "art-library/action-vfx/manual-recovery/498-Roncesvalles-Feint.png",
+      "src": "assets/vfx/action/498-Roncesvalles-Feint.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
     }
   ],
   "bindings": 615,
-  "dedicated": 321,
-  "shared": 294,
+  "dedicated": 371,
+  "shared": 244,
   "battlePlayback": "pending"
 }
