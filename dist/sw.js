@@ -24,7 +24,19 @@ self.addEventListener('fetch',event=>{
  if(!navigation&&!ALLOWED.has(url.pathname))return;
  event.respondWith((async()=>{
   const cache=await caches.open(CACHE),key=navigation?new URL('index.html',ROOT).href:request;
-  const stored=await cache.match(key,{ignoreSearch:true});if(stored)return stored;
+  const stored=await cache.match(key,{ignoreSearch:true});if(stored){
+   // Android WebView and browsers seek MP3/AAC using byte ranges, including offline.
+   const range=request.headers.get('range');
+   if(range&&url.pathname.includes('/assets/music/')){
+    const bytes=await stored.arrayBuffer(),size=bytes.byteLength,m=/^bytes=(\d*)-(\d*)$/.exec(range);
+    let start=m?.[1]?Number(m[1]):0,end=m?.[2]?Number(m[2]):size-1;
+    if(m&&!m[1]&&m[2]){start=Math.max(0,size-Number(m[2]));end=size-1;}
+    if(!m||!m[1]&&!m[2]||!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start>=size||end<start)return new Response(null,{status:416,headers:{'Content-Range':'bytes */'+size}});
+    end=Math.min(end,size-1);const headers=new Headers(stored.headers);headers.set('Content-Range',`bytes ${start}-${end}/${size}`);headers.set('Content-Length',String(end-start+1));headers.set('Accept-Ranges','bytes');
+    return new Response(bytes.slice(start,end+1),{status:206,headers});
+   }
+   return stored;
+  }
   return fetch(request);
  })());
 });

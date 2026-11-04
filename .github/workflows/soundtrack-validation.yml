@@ -1,0 +1,48 @@
+name: Validate soundtrack without Android release
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  soundtrack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            dist
+            tests
+            scripts
+            docs
+            music-mp3s
+            music-m4a
+            release
+            art-library/action-vfx
+            art-library/finale
+            art-library/reviews/item-branches-2026-10-26
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Verify source and runtime checksums, decode all supplied streams
+        run: python3 scripts/verify-soundtrack.py
+      - name: JavaScript and offline regression suites
+        run: |
+          for test in tests/*.test.mjs; do node "$test"; done
+          python3 scripts/validate-game.py
+          python3 tests/android-manifest.test.py
+      - name: Real music and story browser checks
+        run: |
+          node tests/music-portraits-browser.cjs
+          node tests/soundtrack-browser.cjs
+          python3 -m http.server 8765 --directory dist > build/music-qa/server.log 2>&1 &
+          node tests/botrune-browser.cjs
+          node tests/thunderplain-browser.cjs
+          node tests/finale-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: soundtrack-verification-${{ github.sha }}
+          path: build/music-qa
