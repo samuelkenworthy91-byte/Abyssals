@@ -30,6 +30,6 @@ for(const m of moves){
   assert.equal(times.length,count);assert(times.every(Number.isFinite));assert(times.every((x,i)=>x>=0&&x<=effectSpec(m).duration&&(!i||x>=times[i-1])));
  }
 }
-assert.equal(manifest.missingUploads.length,50);assert.equal(manifest.rejectedArenaPilotsInstalled,false);
+assert.equal(manifest.missingUploads.length,0);assert.equal(manifest.recoveredUploads.length,50);assert.equal(manifest.outstandingArtIds.length,58);assert.equal(sources.size,557);assert.equal(manifest.rejectedArenaPilotsInstalled,false);
 assert.equal(new Set(Object.values(ACTION_ART).map(a=>a.src)).size,checks.dedicated);
 console.log('PASS: stable action inventory, hash-bound direct assignments, unique uploaded sources, offline references, Mercy preservation and finite multi-hit clocks.');

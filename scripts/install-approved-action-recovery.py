@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 P=ROOT/'art-library/action-vfx/integration-2026-11-04'
-args=argparse.ArgumentParser();args.add_argument('--stage',type=int,choices=[0,1,2],required=True);args=args.parse_args()
+args=argparse.ArgumentParser();args.add_argument('--stage',type=int,choices=[0,1,2,3],required=True);args=args.parse_args()
 manifest=json.loads((P/'manifest.json').read_text());sources={str(x['id']):x for x in manifest['sources'] if x['stage']<=args.stage}
 art={};checks=[]
 for id,s in sources.items():

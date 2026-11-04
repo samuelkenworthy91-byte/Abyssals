@@ -1,5 +1,5 @@
 {
-  "stage": 2,
+  "stage": 3,
   "sources": [
     {
       "id": 1,
@@ -5070,10 +5070,510 @@
       "distinctFrames": 16,
       "nonemptyFrames": 16,
       "minimumGutter": 25
+    },
+    {
+      "id": 247,
+      "sha256": "aa777c657f0775bae684d45ea0f5231ed0ed1d50627c6ab298f03d9410a4e591",
+      "source": "art-library/action-vfx/manual-recovery/247-Glacier-Fossil.png",
+      "src": "assets/vfx/action/247-Glacier-Fossil.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 22
+    },
+    {
+      "id": 429,
+      "sha256": "e427745e97c1f4db87e755b8ba9db414ca032b88b4066389e5c584879c1bfc6a",
+      "source": "art-library/action-vfx/manual-recovery/429-Granite-Hook.png",
+      "src": "assets/vfx/action/429-Granite-Hook.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 33
+    },
+    {
+      "id": 210,
+      "sha256": "33e1cd4b6651cd78d9d14bbededb2558029bb69db4f40aef84d64d8ad030e7f5",
+      "source": "art-library/action-vfx/manual-recovery/210-Sultan-s-Measure.png",
+      "src": "assets/vfx/action/210-Sultan-s-Measure.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 391,
+      "sha256": "c05000d059eec22f16486b18a2e39ade1c81f412e8cb1c7f92acd45789ca11ae",
+      "source": "art-library/action-vfx/manual-recovery/391-Bitter-Ink.png",
+      "src": "assets/vfx/action/391-Bitter-Ink.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 400,
+      "sha256": "b9a0ad44fca931aa7c46d643b21ccd963d83dc4b328793080e1e5d785d7f187e",
+      "source": "art-library/action-vfx/manual-recovery/400-Censer-Coil.png",
+      "src": "assets/vfx/action/400-Censer-Coil.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 420,
+      "sha256": "73c5e40ac56715bd85621de885588544033af426945fdd9be90d3680920e172e",
+      "source": "art-library/action-vfx/manual-recovery/420-Arbor-Coil.png",
+      "src": "assets/vfx/action/420-Arbor-Coil.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 444,
+      "sha256": "ac5cd3265d27facccd7a628972ba9027342617a875fc6a495eed2ef54058dc35",
+      "source": "art-library/action-vfx/manual-recovery/444-Folded-Gale.png",
+      "src": "assets/vfx/action/444-Folded-Gale.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 459,
+      "sha256": "96bcc9b1122cc9e9e9b7bd77b4fc00233120d06e692d628c7ad8d8e7f909cc70",
+      "source": "art-library/action-vfx/manual-recovery/459-Glacier-Impale.png",
+      "src": "assets/vfx/action/459-Glacier-Impale.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 475,
+      "sha256": "19e83c3c795187f1fa1e31ceff401fa193eb3ad22516a9112884bd12e956510d",
+      "source": "art-library/action-vfx/manual-recovery/475-Gorgon-s-Breath.png",
+      "src": "assets/vfx/action/475-Gorgon-s-Breath.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 533,
+      "sha256": "2e02a613718435332e14890fdc6ce52763a3b92a3ea68a378a2d813d7be8bc59",
+      "source": "art-library/action-vfx/manual-recovery/533-Mindsteel-Cleave.png",
+      "src": "assets/vfx/action/533-Mindsteel-Cleave.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 739,
+      "sha256": "3737fa77c4467b37beec5d72abcaa5aef4861d77f0b2659e14648b610e3d72fe",
+      "source": "art-library/action-vfx/manual-recovery/739-Quiet-Arrangement.png",
+      "src": "assets/vfx/action/739-Quiet-Arrangement.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 394,
+      "sha256": "dfbb5c6910e8b23499be02bc62ea0506a732208a4cea2a01e6978e60d8e3023a",
+      "source": "art-library/action-vfx/manual-recovery/394-Milestone-Roll.png",
+      "src": "assets/vfx/action/394-Milestone-Roll.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 398,
+      "sha256": "3147a7d5e59af3b93440d560c5d394a8745414abd523dcec9e5cc1504c6e65e9",
+      "source": "art-library/action-vfx/manual-recovery/398-Thermal-Crossing.png",
+      "src": "assets/vfx/action/398-Thermal-Crossing.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 407,
+      "sha256": "1546a75b29c589bcef2c95cfb06f729047c8430aef99fb24e2b887d87281d63c",
+      "source": "art-library/action-vfx/manual-recovery/407-Reef-Ribbon.png",
+      "src": "assets/vfx/action/407-Reef-Ribbon.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 415,
+      "sha256": "36f1f88a7e3fd43c68048faad38fae5325c21424e469acf16bb2b37c8e570b93",
+      "source": "art-library/action-vfx/manual-recovery/415-Lattice-Thought.png",
+      "src": "assets/vfx/action/415-Lattice-Thought.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 417,
+      "sha256": "03cb21b0200f1c9a99452d1f0d79c381137e3c2221ea1899ef2d222c3793d838",
+      "source": "art-library/action-vfx/manual-recovery/417-Clover-Vision.png",
+      "src": "assets/vfx/action/417-Clover-Vision.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 427,
+      "sha256": "cca24f78b2ede1f0c6d29732562b485aa6a8e3c510b53080b9dab6d58907a07d",
+      "source": "art-library/action-vfx/manual-recovery/427-Palm-Resolve.png",
+      "src": "assets/vfx/action/427-Palm-Resolve.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 435,
+      "sha256": "4b7bac4f780190c040da5fe4ed2657d01eaa811758a5393d8ad313f050975bd3",
+      "source": "art-library/action-vfx/manual-recovery/435-Bitter-Ambush.png",
+      "src": "assets/vfx/action/435-Bitter-Ambush.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 29
+    },
+    {
+      "id": 439,
+      "sha256": "b098bd0d020e3010be50cd35eafd450a791dce500c7d50dc3fd43ee4dcca6743",
+      "source": "art-library/action-vfx/manual-recovery/439-Buried-Seed.png",
+      "src": "assets/vfx/action/439-Buried-Seed.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 452,
+      "sha256": "ec6abc4d3882b2e30c2699403661355a389874385de32718138c4e5fe3225292",
+      "source": "art-library/action-vfx/manual-recovery/452-Keepsake-Circle.png",
+      "src": "assets/vfx/action/452-Keepsake-Circle.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 456,
+      "sha256": "06e34b38fbd11078d36d810104a8bd7680652b84806ca172a4d386efae57bba0",
+      "source": "art-library/action-vfx/manual-recovery/456-Vigil-Sever.png",
+      "src": "assets/vfx/action/456-Vigil-Sever.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 493,
+      "sha256": "249680ad0d276c4189d786a249b6e97dcfdeb39a9f604eeb921e89daf4d0932c",
+      "source": "art-library/action-vfx/manual-recovery/493-Reliquary-Flame.png",
+      "src": "assets/vfx/action/493-Reliquary-Flame.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 503,
+      "sha256": "aeb9422a3e252f0b1a843e2c2e8405e2b27367da77d8001db9d49c4ba842eb02",
+      "source": "art-library/action-vfx/manual-recovery/503-Ember-Updraft.png",
+      "src": "assets/vfx/action/503-Ember-Updraft.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 505,
+      "sha256": "a3dc80b25dba4d21faa468f7fed9a3720608efc71924755c8115f5ab4927eac8",
+      "source": "art-library/action-vfx/manual-recovery/505-Pinion-Pierce.png",
+      "src": "assets/vfx/action/505-Pinion-Pierce.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
+    },
+    {
+      "id": 507,
+      "sha256": "6d9c6d57749052f727cc0249036264736c265138b569f14d973ae436b408f0c5",
+      "source": "art-library/action-vfx/manual-recovery/507-Lantern-Requiem.png",
+      "src": "assets/vfx/action/507-Lantern-Requiem.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 18
+    },
+    {
+      "id": 525,
+      "sha256": "fff8896c8317eab5e5bf01a7876ed4c9f3e7856031083a83863268f8a499364a",
+      "source": "art-library/action-vfx/manual-recovery/525-Masterwork-Riposte.png",
+      "src": "assets/vfx/action/525-Masterwork-Riposte.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 28
+    },
+    {
+      "id": 535,
+      "sha256": "1295923fbec04a00ff1b6cfede714f1de4aff15753fdb0024701a2f48da387d3",
+      "source": "art-library/action-vfx/manual-recovery/535-Astral-Rend.png",
+      "src": "assets/vfx/action/535-Astral-Rend.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 716,
+      "sha256": "c0e6ba5a83982b1eb6a5e05ea9ffcbb1abeca955ce5ffbdf0976afd5eec9ccc1",
+      "source": "art-library/action-vfx/manual-recovery/716-Briar-Bequest.png",
+      "src": "assets/vfx/action/716-Briar-Bequest.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 25
+    },
+    {
+      "id": 731,
+      "sha256": "e9821c58cf65ff2299c65f6e5df158afeda0f34043c904221a8d94b4c0e51688",
+      "source": "art-library/action-vfx/manual-recovery/731-Look-Upon-Me.png",
+      "src": "assets/vfx/action/731-Look-Upon-Me.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 172,
+      "sha256": "237cc082d1003e94aea973f679c8a7dafc6d6c15a4063671962e3fab96cc409a",
+      "source": "art-library/action-vfx/manual-recovery/172-Island-Crown.png",
+      "src": "assets/vfx/action/172-Island-Crown.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 20
+    },
+    {
+      "id": 189,
+      "sha256": "b2a2854e59b339562bcaf29a296b065d75d9f11857bd8014da75e7224646276c",
+      "source": "art-library/action-vfx/manual-recovery/189-Pilgrim-Echo.png",
+      "src": "assets/vfx/action/189-Pilgrim-Echo.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 209,
+      "sha256": "1f8f8f4928ec1c0672e71bf38754ac0fa4f289189c89e88a21385562f0b642f7",
+      "source": "art-library/action-vfx/manual-recovery/209-Long-Game.png",
+      "src": "assets/vfx/action/209-Long-Game.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 34
+    },
+    {
+      "id": 248,
+      "sha256": "1d4a239eb3164a36d1a49e946cd913668e2401041e87d7d38203e65933b96f46",
+      "source": "art-library/action-vfx/manual-recovery/248-Sickle-Talon.png",
+      "src": "assets/vfx/action/248-Sickle-Talon.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 38
+    },
+    {
+      "id": 268,
+      "sha256": "d7e2f0957c3a0f1a34da022f941ad00d156b58ccb8d46cd6bd82f6aa594b0550",
+      "source": "art-library/action-vfx/manual-recovery/268-Uncrowned-Quills.png",
+      "src": "assets/vfx/action/268-Uncrowned-Quills.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 22
+    },
+    {
+      "id": 288,
+      "sha256": "e3ec37c329b21f1d99cf0523285d9a5ce8c5d16308a28d8edcb993a28fda3eb3",
+      "source": "art-library/action-vfx/manual-recovery/288-Silent-Ambition.png",
+      "src": "assets/vfx/action/288-Silent-Ambition.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 26
+    },
+    {
+      "id": 308,
+      "sha256": "9a31ef645f029e9a5ade84c7564fea778b4cfaa91177f798f11d381a11f5c70c",
+      "source": "art-library/action-vfx/manual-recovery/308-Broken-Alliance.png",
+      "src": "assets/vfx/action/308-Broken-Alliance.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 19
+    },
+    {
+      "id": 310,
+      "sha256": "0e3dba353a1028a54ba666b48eef22b0514bb85cd4df0bffb7d56a8caf6de062",
+      "source": "art-library/action-vfx/manual-recovery/310-Rebellious-Jab.png",
+      "src": "assets/vfx/action/310-Rebellious-Jab.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 27
+    },
+    {
+      "id": 330,
+      "sha256": "eda002cd3f2796465f141dbc0a4970d08602723dc57bbbfe03ab6378f2340252",
+      "source": "art-library/action-vfx/manual-recovery/330-Blade-Tail-Oath.png",
+      "src": "assets/vfx/action/330-Blade-Tail-Oath.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 30
+    },
+    {
+      "id": 378,
+      "sha256": "a5e03a1334ba1289cf838e1e2c8d7516db278b6588197fa0ff39a716bdb679f9",
+      "source": "art-library/action-vfx/manual-recovery/378-Spirit-Bastion.png",
+      "src": "assets/vfx/action/378-Spirit-Bastion.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 379,
+      "sha256": "1353a3128d5e931699c362764a542e0304e658a165b3a7556049ba27285feac7",
+      "source": "art-library/action-vfx/manual-recovery/379-Surge-Skitter.png",
+      "src": "assets/vfx/action/379-Surge-Skitter.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 32
+    },
+    {
+      "id": 380,
+      "sha256": "14d0575f1f1bd2b7f38c478ec6f312ea84df56cda62ef243a156578f055fee90",
+      "source": "art-library/action-vfx/manual-recovery/380-Lace-Lullaby.png",
+      "src": "assets/vfx/action/380-Lace-Lullaby.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 381,
+      "sha256": "6e85af62743d572d24d8b34e5efa5834c0f3cbc8b91ab86cf77c301fe937e30f",
+      "source": "art-library/action-vfx/manual-recovery/381-Brineglass.png",
+      "src": "assets/vfx/action/381-Brineglass.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 382,
+      "sha256": "ec95fb1e297a3cce07e66de541470df29d99bc0b5e3d1e4a3c52c24f7a09a6fc",
+      "source": "art-library/action-vfx/manual-recovery/382-Wyvern-Shear.png",
+      "src": "assets/vfx/action/382-Wyvern-Shear.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 385,
+      "sha256": "be73c37bc9e4dbd8c5e8f6a81b991c7ad2ad6c00c0cd5217d3f6723ef20866c9",
+      "source": "art-library/action-vfx/manual-recovery/385-Emberbloom.png",
+      "src": "assets/vfx/action/385-Emberbloom.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 386,
+      "sha256": "ecef1c19027e7e4a45a57266e7a6ed119f2a3f6ded59281c1db65b9e866546f3",
+      "source": "art-library/action-vfx/manual-recovery/386-Ember-Quilt.png",
+      "src": "assets/vfx/action/386-Ember-Quilt.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 20
+    },
+    {
+      "id": 387,
+      "sha256": "baeea0898db8f21458b27f01b8a18851833054a6f1c2b5f0575afcb0390b5945",
+      "source": "art-library/action-vfx/manual-recovery/387-Rain-Mantle.png",
+      "src": "assets/vfx/action/387-Rain-Mantle.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 23
+    },
+    {
+      "id": 389,
+      "sha256": "533cb09e7dcc63de6b4dd5c39a0095d85d9b6101c10df1725ff95361f3d5a6a6",
+      "source": "art-library/action-vfx/manual-recovery/389-Fleece-Freeze.png",
+      "src": "assets/vfx/action/389-Fleece-Freeze.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 21
+    },
+    {
+      "id": 392,
+      "sha256": "3f975de8bb5e6dd45b211946ec9f0267037b78080706a2ebaa6f2af5e12bf71a",
+      "source": "art-library/action-vfx/manual-recovery/392-Clay-Burrow.png",
+      "src": "assets/vfx/action/392-Clay-Burrow.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 24
+    },
+    {
+      "id": 395,
+      "sha256": "c61615972f6609d0db666c46d3cd7e293678e54ec7d7ae0573cab85b48f730c7",
+      "source": "art-library/action-vfx/manual-recovery/395-Fable-Echo.png",
+      "src": "assets/vfx/action/395-Fable-Echo.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 34
+    },
+    {
+      "id": 396,
+      "sha256": "bacca0e377ce3f9d9b0c7953ce79280f2d2106219ed7b2b31bdd03d0fdbecce0",
+      "source": "art-library/action-vfx/manual-recovery/396-Hushed-Retrieval.png",
+      "src": "assets/vfx/action/396-Hushed-Retrieval.png",
+      "frames": 16,
+      "distinctFrames": 16,
+      "nonemptyFrames": 16,
+      "minimumGutter": 31
     }
   ],
   "bindings": 615,
-  "dedicated": 507,
-  "shared": 108,
-  "battlePlayback": "Sampled live battle checks passed; see verification.json for exact IDs and limits."
+  "dedicated": 557,
+  "shared": 58,
+  "battlePlayback": "pending"
 }

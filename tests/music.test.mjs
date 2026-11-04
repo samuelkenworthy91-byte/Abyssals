@@ -18,3 +18,15 @@ controller.stop();assert(players.every(a=>a.paused));
 deferBattle=true;controller.update({...context,battle:true});controller.update(context);release();await tick();assert(players[1].paused,'late play resolution cannot overlap the new scene');assert(!players[0].paused);
 controller.stop();
 console.log('PASS: scene routing, looping, no render restarts, resumed overworld, fresh battles, mute/hidden pause, autoplay recovery and late-play isolation.');
+
+// A hide/show transition can interrupt an unresolved play on the SAME track.
+// Its stale AbortError must neither block nor lose the newer resume request.
+let abortFirst;
+const interruptedAudio={paused:true,calls:0,pause(){this.paused=true;},play(){this.calls++;this.paused=false;return this.calls===1?new Promise((resolve,reject)=>{abortFirst=reject;}):Promise.resolve();}};
+const resumed=createMusicController({createAudio:()=>interruptedAudio});
+resumed.update(context);resumed.update({...context,hidden:true});resumed.update(context);
+assert.equal(interruptedAudio.calls,1,'wait for interrupted play to settle before retrying');
+abortFirst(Error('AbortError: play interrupted by pause'));await tick();
+assert.equal(interruptedAudio.calls,2,'newer visible request is retried');assert(!interruptedAudio.paused,'same track resumes without another gesture');
+resumed.stop();
+console.log('PASS: immediate hide/show during pending same-track playback recovers from stale AbortError.');

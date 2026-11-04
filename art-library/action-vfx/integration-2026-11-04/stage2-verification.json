@@ -1,0 +1,79 @@
+{
+  "startingCommit": "0504381bcef725d5d44e1ad82bcc4a8bda6ef737",
+  "verifiedRemoteCheckpoints": [
+    "551f28d7bb1d7a2eff4aa4d50aaad0a66f12d921",
+    "e0a464822140149b57c016d4b6f5ee1edb8a362d"
+  ],
+  "inventory": {
+    "registeredMoves": 611,
+    "engineReactions": 4,
+    "retiredSaveAliasesNotCountedAgain": 32
+  },
+  "coverage": {
+    "plannedProductionSourcesExisting": 557,
+    "uploadedSelectedSources": 507,
+    "wiredBindings": 615,
+    "dedicatedSources": 507,
+    "sharedBindings": 108,
+    "missingUploads": 50,
+    "outstandingArt": 58,
+    "newlyWiredSources": 335,
+    "newlyCoveredBindings": 443,
+    "replacedExistingSourceIds": [
+      70,
+      71,
+      75,
+      810
+    ]
+  },
+  "validation": {
+    "javascriptRegressionSuites": 50,
+    "status": "passed",
+    "browserDecodeBindings": 615,
+    "uniqueDecodedSources": 507,
+    "liveBattleSampleIds": [
+      71,
+      96,
+      162,
+      194,
+      196,
+      198,
+      199,
+      219,
+      257,
+      316,
+      353,
+      374,
+      399,
+      414,
+      428,
+      701,
+      703,
+      710,
+      736,
+      738,
+      742,
+      760,
+      762,
+      790,
+      810
+    ],
+    "newRasterTechnicalChecks": "768x768; 4x4; 16 distinct occupied frames; alpha zero gutters; every new 136 has at least 18px gutter",
+    "offlineAssets": 2572,
+    "duplicateSelectedSourceHashes": 0,
+    "missingRuntimeReferences": 0,
+    "rejectedArenaPilotsInstalled": false,
+    "layout": "16 full-motion actor/target cases at 390x844 and 1280x900; exact double recipient anchors and alpha-content frame bounds; eight leaders; reduced motion; chosen-ally healing; rabbit retaliation",
+    "mechanics": "Existing full JavaScript regression suite and real applyMove/turn playback; saves, IDs, damage rules and Android identity preserved",
+    "offlinePackage": "Built and zip-tested locally; all 507 source SHA-256 values and final registry matched the offline PWA.",
+    "offlinePackageSha256": "acf9cad82652a5d1d5cd76453c747ca86e63f162a8655cf2678ca96eb10f1dc3"
+  },
+  "limitations": [
+    "Live battles sampled, not an individual gameplay visual approval for all 507 sheets.",
+    "Original Mercy Edge uses its protected renderer; Mercy Ray uses the uploaded sheet and mercy label.",
+    "Historical originals may touch cell boundaries; Leafbound Exit 783 has one empty recovery frame. Their approved bytes were retained.",
+    "No physical Android-device install test or signed APK verification was performed.",
+    "50 approved Next100 batch-one files remain absent from remote main by SHA-256; see missing-uploads.md.",
+    "58 dedicated sheets remain outstanding; see outstanding-art.md."
+  ]
+}

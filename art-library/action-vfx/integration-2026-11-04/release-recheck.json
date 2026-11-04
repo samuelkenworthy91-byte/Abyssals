@@ -1,15 +1,15 @@
 {
-  "auditedMain": "979da37ab80eda5ea4a7fd1bb3cc6700e87163a8",
+  "auditedMain": "b33f367",
   "expectedMissing": 50,
-  "newlyAvailable": 0,
-  "remainingMissing": 50,
-  "method": "Every tracked PNG checked against all50 approved prepared SHA-256 values",
+  "newlyAvailable": 50,
+  "remainingMissing": 0,
+  "method": "Browser upload then git fetch; all 50 source and runtime SHA-256 values must match the approved keyed manifest",
   "bindings": 615,
-  "sources": 507,
-  "shared": 108,
+  "sources": 557,
+  "shared": 58,
   "releaseVersion": "0.90.53",
   "versionCode": 148,
   "originalPackage": "uk.co.abyssals.game",
   "expectedCertificateSha256": "6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac",
-  "status": "Awaiting workflow signing and publication verification"
+  "status": "Source integration; awaiting workflow signing/publication verification"
 }

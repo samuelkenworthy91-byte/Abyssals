@@ -1,0 +1,21 @@
+RUN ['node', 'tests/approved-action-recovery.test.mjs']
+PASS: stable action inventory, hash-bound direct assignments, unique uploaded sources, offline references, Mercy preservation and finite multi-hit clocks.
+RUN ['python3', 'scripts/audit-action-art.py']
+PASS: 63 committed pixel animations and all 22 high-detail atlases.
+PASS: 108 additional 192px animation sheets have unique frame content; artistic approval is tracked separately
+RUN ['node', 'scripts/build-art-coverage.mjs', '--check']
+{"originalCatalogue":354,"registered":611,"battleReactions":4,"total":615,"wired":615,"sources":557,"shared":58,"dedicated":557,"missing":58,"approved":39,"originalCatalogueStillRegistered":325,"originalCatalogueDedicated":325}
+RUN ['node', 'scripts/build-environment-qa.mjs', '--check']
+{"maps":25,"approved":15,"technicalIssues":0}
+RUN ['python3', 'scripts/verify-art-release-scope.py']
+{"version": "0.90.53", "dedicated": 557, "playable": 615, "redesignedMaps": 6, "pendingVisualReview": 576}
+RUN ['python3', 'tests/interim-art-scope.test.py']
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.171s
+
+OK
+RUN ['python3', 'tests/android-manifest.test.py']
+PASS: Android UTF-16 pool sizes, string offsets, package and versionCode for multi-digit patch versions
+RUN ['python3', 'scripts/validate-game.py']
+PASS: 2622 offline assets and all local module imports

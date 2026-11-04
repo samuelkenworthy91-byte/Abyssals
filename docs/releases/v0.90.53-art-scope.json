@@ -5,8 +5,8 @@
   "requestedByUser": true,
   "request": "Wire available approved uploaded sheets on main; retain direct shared bindings for absent sheets.",
   "expectedPlayableActions": 615,
-  "expectedDedicatedSheets": 507,
-  "remainingWithoutDedicatedSheets": 108,
+  "expectedDedicatedSheets": 557,
+  "remainingWithoutDedicatedSheets": 58,
   "moves": [
     {
       "id": 1,
@@ -1460,10 +1460,10 @@
     {
       "id": 172,
       "name": "Island Crown",
-      "src": "assets/vfx/action/159-seismic-detonation.png",
-      "sha256": "0001260df5351598e0b3e4f8e0d7a72610f45de4438e211cfbbcc81cd07d7cfa",
-      "sourceId": 159,
-      "shared": true,
+      "src": "assets/vfx/action/172-Island-Crown.png",
+      "sha256": "237cc082d1003e94aea973f679c8a7dafc6d6c15a4063671962e3fab96cc409a",
+      "sourceId": 172,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -1604,10 +1604,10 @@
     {
       "id": 189,
       "name": "Pilgrim Echo",
-      "src": "assets/vfx/action/401-Updraft-Ember.png",
-      "sha256": "22a2994b3c877e92ddd37c0932412ef764ae4f6a7f285de214b31700bd7fd996",
-      "sourceId": 401,
-      "shared": true,
+      "src": "assets/vfx/action/189-Pilgrim-Echo.png",
+      "sha256": "b2a2854e59b339562bcaf29a296b065d75d9f11857bd8014da75e7224646276c",
+      "sourceId": 189,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -1757,19 +1757,19 @@
     {
       "id": 209,
       "name": "Long Game",
-      "src": "assets/vfx/action/198-calm-thought.png",
-      "sha256": "96c8f4d6007044497f152f6f2441b384119a7ba40d3886d01c77a2c526df543d",
-      "sourceId": 198,
-      "shared": true,
+      "src": "assets/vfx/action/209-Long-Game.png",
+      "sha256": "1f8f8f4928ec1c0672e71bf38754ac0fa4f289189c89e88a21385562f0b642f7",
+      "sourceId": 209,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 210,
       "name": "Sultan's Measure",
-      "src": "assets/vfx/action/446-dream-ripple.png",
-      "sha256": "2ec2b4700ed121a5493c62af0d0bccbd8292c82c20a81e1301e91bfa3f4cce5b",
-      "sourceId": 446,
-      "shared": true,
+      "src": "assets/vfx/action/210-Sultan-s-Measure.png",
+      "sha256": "33e1cd4b6651cd78d9d14bbededb2558029bb69db4f40aef84d64d8ad030e7f5",
+      "sourceId": 210,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -2081,19 +2081,19 @@
     {
       "id": 247,
       "name": "Glacier Fossil",
-      "src": "assets/vfx/action/271-Elder-Detonation.png",
-      "sha256": "056da16b03481079aa15d3d91c7b01b6574391376ddc0c0d955ca8c122d35285",
-      "sourceId": 271,
-      "shared": true,
+      "src": "assets/vfx/action/247-Glacier-Fossil.png",
+      "sha256": "aa777c657f0775bae684d45ea0f5231ed0ed1d50627c6ab298f03d9410a4e591",
+      "sourceId": 247,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 248,
       "name": "Sickle Talon",
-      "src": "assets/vfx/action/243-Granite-Cleave.png",
-      "sha256": "a5e96571a30a3ccda43ae315172cb8498d5555757b96f88e2fa04a47626b930d",
-      "sourceId": 243,
-      "shared": true,
+      "src": "assets/vfx/action/248-Sickle-Talon.png",
+      "sha256": "1d4a239eb3164a36d1a49e946cd913668e2401041e87d7d38203e65933b96f46",
+      "sourceId": 248,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -2243,10 +2243,10 @@
     {
       "id": 268,
       "name": "Uncrowned Quills",
-      "src": "assets/vfx/action/366-Spectral-Touch.png",
-      "sha256": "506abd3281131f42d52b5bca7936f079f77f1951a7fa901f504ded2ede17b7f7",
-      "sourceId": 366,
-      "shared": true,
+      "src": "assets/vfx/action/268-Uncrowned-Quills.png",
+      "sha256": "d7e2f0957c3a0f1a34da022f941ad00d156b58ccb8d46cd6bd82f6aa594b0550",
+      "sourceId": 268,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -2414,10 +2414,10 @@
     {
       "id": 288,
       "name": "Silent Ambition",
-      "src": "assets/vfx/action/269-Wyrmwhisper.png",
-      "sha256": "61cd9568dc9a53d36c08910f2a629d5549a7e6ff0c175ac62a14a43f7a312138",
-      "sourceId": 269,
-      "shared": true,
+      "src": "assets/vfx/action/288-Silent-Ambition.png",
+      "sha256": "e3ec37c329b21f1d99cf0523285d9a5ce8c5d16308a28d8edcb993a28fda3eb3",
+      "sourceId": 288,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -2585,10 +2585,10 @@
     {
       "id": 308,
       "name": "Broken Alliance",
-      "src": "assets/vfx/action/748-nightwater-pulse.png",
-      "sha256": "33807f8d842b8e523ba20b512628d62694ef13eb1b4df7af73bbd8d795d9a530",
-      "sourceId": 748,
-      "shared": true,
+      "src": "assets/vfx/action/308-Broken-Alliance.png",
+      "sha256": "9a31ef645f029e9a5ade84c7564fea778b4cfaa91177f798f11d381a11f5c70c",
+      "sourceId": 308,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -2603,10 +2603,10 @@
     {
       "id": 310,
       "name": "Rebellious Jab",
-      "src": "assets/vfx/action/712-Latent-Power.png",
-      "sha256": "3ac5cad3905b56a87b76df10aa7785fdff2b3adb682283e782c1c0445c85ac4f",
-      "sourceId": 712,
-      "shared": true,
+      "src": "assets/vfx/action/310-Rebellious-Jab.png",
+      "sha256": "0e3dba353a1028a54ba666b48eef22b0514bb85cd4df0bffb7d56a8caf6de062",
+      "sourceId": 310,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -2765,10 +2765,10 @@
     {
       "id": 330,
       "name": "Blade-Tail Oath",
-      "src": "assets/vfx/action/397-Rivet-Gnaw.png",
-      "sha256": "b8a9fdcfb43f819274701e3d03f9e1455f1049473655c743bc91d46413cdb5a9",
-      "sourceId": 397,
-      "shared": true,
+      "src": "assets/vfx/action/330-Blade-Tail-Oath.png",
+      "sha256": "eda002cd3f2796465f141dbc0a4970d08602723dc57bbbfe03ab6378f2340252",
+      "sourceId": 330,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3143,46 +3143,46 @@
     {
       "id": 378,
       "name": "Spirit Bastion",
-      "src": "assets/vfx/action/366-Spectral-Touch.png",
-      "sha256": "506abd3281131f42d52b5bca7936f079f77f1951a7fa901f504ded2ede17b7f7",
-      "sourceId": 366,
-      "shared": true,
+      "src": "assets/vfx/action/378-Spirit-Bastion.png",
+      "sha256": "a5e03a1334ba1289cf838e1e2c8d7516db278b6588197fa0ff39a716bdb679f9",
+      "sourceId": 378,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 379,
       "name": "Surge Skitter",
-      "src": "assets/vfx/action/66-spark-dash.png",
-      "sha256": "3da1f351a73fe0038f4f03dd2d8e5a4bc9bc8c17fa5ace28d39e3a52297d99d4",
-      "sourceId": 66,
-      "shared": true,
+      "src": "assets/vfx/action/379-Surge-Skitter.png",
+      "sha256": "1353a3128d5e931699c362764a542e0304e658a165b3a7556049ba27285feac7",
+      "sourceId": 379,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 380,
       "name": "Lace Lullaby",
-      "src": "assets/vfx/action/511-Silken-Spiral.png",
-      "sha256": "f28d7bafbe94c8f60697f47ffca5137600f279edcc6101d4f96d8633a38e8414",
-      "sourceId": 511,
-      "shared": true,
+      "src": "assets/vfx/action/380-Lace-Lullaby.png",
+      "sha256": "14d0575f1f1bd2b7f38c478ec6f312ea84df56cda62ef243a156578f055fee90",
+      "sourceId": 380,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 381,
       "name": "Brineglass",
-      "src": "assets/vfx/action/113-rime-shard.png",
-      "sha256": "23dd909de710040166fcde44d6182ad8b457300fb4c96b0faba78982081f0140",
-      "sourceId": 113,
-      "shared": true,
+      "src": "assets/vfx/action/381-Brineglass.png",
+      "sha256": "6e85af62743d572d24d8b34e5efa5834c0f3cbc8b91ab86cf77c301fe937e30f",
+      "sourceId": 381,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 382,
       "name": "Wyvern Shear",
-      "src": "assets/vfx/action/217-Scythe-Scissor.png",
-      "sha256": "03c582427da1cbe24b7a3d74cf6c099d2cb467646d1ef841e888d1fe7d5ee062",
-      "sourceId": 217,
-      "shared": true,
+      "src": "assets/vfx/action/382-Wyvern-Shear.png",
+      "sha256": "ec95fb1e297a3cce07e66de541470df29d99bc0b5e3d1e4a3c52c24f7a09a6fc",
+      "sourceId": 382,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3206,28 +3206,28 @@
     {
       "id": 385,
       "name": "Emberbloom",
-      "src": "assets/vfx/action/20-pyre-detonation.png",
-      "sha256": "df5fe6f2112e5495ca1e288bda99e06467c2a6e97d7b7bd034bce35e80af05ba",
-      "sourceId": 20,
-      "shared": true,
+      "src": "assets/vfx/action/385-Emberbloom.png",
+      "sha256": "be73c37bc9e4dbd8c5e8f6a81b991c7ad2ad6c00c0cd5217d3f6723ef20866c9",
+      "sourceId": 385,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 386,
       "name": "Ember Quilt",
-      "src": "assets/vfx/action/20-pyre-detonation.png",
-      "sha256": "df5fe6f2112e5495ca1e288bda99e06467c2a6e97d7b7bd034bce35e80af05ba",
-      "sourceId": 20,
-      "shared": true,
+      "src": "assets/vfx/action/386-Ember-Quilt.png",
+      "sha256": "ecef1c19027e7e4a45a57266e7a6ed119f2a3f6ded59281c1db65b9e866546f3",
+      "sourceId": 386,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 387,
       "name": "Rain Mantle",
-      "src": "assets/vfx/action/40-deepwater-brace.png",
-      "sha256": "435b3cbb002c786276471277c39f0e3e73bac6766ec9f412dc85db11ed7bf40e",
-      "sourceId": 40,
-      "shared": true,
+      "src": "assets/vfx/action/387-Rain-Mantle.png",
+      "sha256": "baeea0898db8f21458b27f01b8a18851833054a6f1c2b5f0575afcb0390b5945",
+      "sourceId": 387,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3242,10 +3242,10 @@
     {
       "id": 389,
       "name": "Fleece Freeze",
-      "src": "assets/vfx/action/101-whiteout-detonation.png",
-      "sha256": "781e5db753f3dc6403471346242b12f7f8ecb57fa97aa2f5bf832ee43f3036fa",
-      "sourceId": 101,
-      "shared": true,
+      "src": "assets/vfx/action/389-Fleece-Freeze.png",
+      "sha256": "533cb09e7dcc63de6b4dd5c39a0095d85d9b6101c10df1725ff95361f3d5a6a6",
+      "sourceId": 389,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3260,19 +3260,19 @@
     {
       "id": 391,
       "name": "Bitter Ink",
-      "src": "assets/vfx/action/140-toxin-spray.png",
-      "sha256": "95d6342989cb3b6e010268fccd696a87cc5a75587fb27b6b6553fb56b5158fe5",
-      "sourceId": 140,
-      "shared": true,
+      "src": "assets/vfx/action/391-Bitter-Ink.png",
+      "sha256": "c05000d059eec22f16486b18a2e39ade1c81f412e8cb1c7f92acd45789ca11ae",
+      "sourceId": 391,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 392,
       "name": "Clay Burrow",
-      "src": "assets/vfx/action/160-dune-surge.png",
-      "sha256": "cd760066724e9bcf70ab1dca3a792c35ee7783a262e184c3e1af422a806ee6a5",
-      "sourceId": 160,
-      "shared": true,
+      "src": "assets/vfx/action/392-Clay-Burrow.png",
+      "sha256": "3f975de8bb5e6dd45b211946ec9f0267037b78080706a2ebaa6f2af5e12bf71a",
+      "sourceId": 392,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3287,28 +3287,28 @@
     {
       "id": 394,
       "name": "Milestone Roll",
-      "src": "assets/vfx/action/270-Scalequake.png",
-      "sha256": "2ccf05ea5b3f50b012f023b900f44a2b9a859170ca4a1843932b90d16c15c9ea",
-      "sourceId": 270,
-      "shared": true,
+      "src": "assets/vfx/action/394-Milestone-Roll.png",
+      "sha256": "dfbb5c6910e8b23499be02bc62ea0506a732208a4cea2a01e6978e60d8e3023a",
+      "sourceId": 394,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 395,
       "name": "Fable Echo",
-      "src": "assets/vfx/action/286-Dragonhorn-Tackle.png",
-      "sha256": "687749533622f9097297b69f0ec35c440f487be510fb0603aa682ed43cbc47c1",
-      "sourceId": 286,
-      "shared": true,
+      "src": "assets/vfx/action/395-Fable-Echo.png",
+      "sha256": "c61615972f6609d0db666c46d3cd7e293678e54ec7d7ae0573cab85b48f730c7",
+      "sourceId": 395,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
       "id": 396,
       "name": "Hushed Retrieval",
-      "src": "assets/vfx/action/309-Devilish-Encore.png",
-      "sha256": "943ddf491cd3a394cb5d6dd694f693306ebc1c49674cad116bd83e45b80337a2",
-      "sourceId": 309,
-      "shared": true,
+      "src": "assets/vfx/action/396-Hushed-Retrieval.png",
+      "sha256": "bacca0e377ce3f9d9b0c7953ce79280f2d2106219ed7b2b31bdd03d0fdbecce0",
+      "sourceId": 396,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3323,10 +3323,10 @@
     {
       "id": 398,
       "name": "Thermal Crossing",
-      "src": "assets/vfx/action/367-Drake-Spark.png",
-      "sha256": "e4641a3b1f913ffec22623255c1a113c56748a110d981b9f9f15a6455b16fb51",
-      "sourceId": 367,
-      "shared": true,
+      "src": "assets/vfx/action/398-Thermal-Crossing.png",
+      "sha256": "3147a7d5e59af3b93440d560c5d394a8745414abd523dcec9e5cc1504c6e65e9",
+      "sourceId": 398,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3341,10 +3341,10 @@
     {
       "id": 400,
       "name": "Censer Coil",
-      "src": "assets/vfx/action/22-scorchwhip.png",
-      "sha256": "a5ae732bb53ea79913026e2893b0378dd10678d41d72764ad91f6ff1d2cdc0ad",
-      "sourceId": 22,
-      "shared": true,
+      "src": "assets/vfx/action/400-Censer-Coil.png",
+      "sha256": "b9a0ad44fca931aa7c46d643b21ccd963d83dc4b328793080e1e5d785d7f187e",
+      "sourceId": 400,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3404,10 +3404,10 @@
     {
       "id": 407,
       "name": "Reef Ribbon",
-      "src": "assets/vfx/action/214-Chitin-Hook.png",
-      "sha256": "9c781042fbffaf2fa2998738a07423c42faf516c16ce983ffb003e5479110ebf",
-      "sourceId": 214,
-      "shared": true,
+      "src": "assets/vfx/action/407-Reef-Ribbon.png",
+      "sha256": "1546a75b29c589bcef2c95cfb06f729047c8430aef99fb24e2b887d87281d63c",
+      "sourceId": 407,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3476,10 +3476,10 @@
     {
       "id": 415,
       "name": "Lattice Thought",
-      "src": "assets/vfx/action/483-Starfall-Echo.png",
-      "sha256": "14c28d116437e84c16dfcca7739a02f53ff6834fd701ef481e3f2e9b50194709",
-      "sourceId": 483,
-      "shared": true,
+      "src": "assets/vfx/action/415-Lattice-Thought.png",
+      "sha256": "36f1f88a7e3fd43c68048faad38fae5325c21424e469acf16bb2b37c8e570b93",
+      "sourceId": 415,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3494,10 +3494,10 @@
     {
       "id": 417,
       "name": "Clover Vision",
-      "src": "assets/vfx/action/565-Duality-Crest.png",
-      "sha256": "4bf4181c92d3518c2205321eac895a37117adb06d22da16aa3cdd4fbe2ea53b0",
-      "sourceId": 565,
-      "shared": true,
+      "src": "assets/vfx/action/417-Clover-Vision.png",
+      "sha256": "03cb21b0200f1c9a99452d1f0d79c381137e3c2221ea1899ef2d222c3793d838",
+      "sourceId": 417,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3521,10 +3521,10 @@
     {
       "id": 420,
       "name": "Arbor Coil",
-      "src": "assets/vfx/action/82-leaf-lash.png",
-      "sha256": "e5b417ee357c73de024c864a358a8d2308a44fa09351c494d8d0e12cbb87f4e4",
-      "sourceId": 82,
-      "shared": true,
+      "src": "assets/vfx/action/420-Arbor-Coil.png",
+      "sha256": "73c5e40ac56715bd85621de885588544033af426945fdd9be90d3680920e172e",
+      "sourceId": 420,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3584,10 +3584,10 @@
     {
       "id": 427,
       "name": "Palm Resolve",
-      "src": "assets/vfx/action/384-Bower-Bash.png",
-      "sha256": "4ed9d237c7d5c4b07e5998188c873eeee64ef9970b9338a1676c999efc59155b",
-      "sourceId": 384,
-      "shared": true,
+      "src": "assets/vfx/action/427-Palm-Resolve.png",
+      "sha256": "cca24f78b2ede1f0c6d29732562b485aa6a8e3c510b53080b9dab6d58907a07d",
+      "sourceId": 427,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3602,10 +3602,10 @@
     {
       "id": 429,
       "name": "Granite Hook",
-      "src": "assets/vfx/action/271-Elder-Detonation.png",
-      "sha256": "056da16b03481079aa15d3d91c7b01b6574391376ddc0c0d955ca8c122d35285",
-      "sourceId": 271,
-      "shared": true,
+      "src": "assets/vfx/action/429-Granite-Hook.png",
+      "sha256": "e427745e97c1f4db87e755b8ba9db414ca032b88b4066389e5c584879c1bfc6a",
+      "sourceId": 429,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3656,10 +3656,10 @@
     {
       "id": 435,
       "name": "Bitter Ambush",
-      "src": "assets/vfx/action/443-Bridge-Veil.png",
-      "sha256": "81e5cd512f7c35dd93102708a3e09104c89390d7ee619804801cde0863d6e168",
-      "sourceId": 443,
-      "shared": true,
+      "src": "assets/vfx/action/435-Bitter-Ambush.png",
+      "sha256": "4b7bac4f780190c040da5fe4ed2657d01eaa811758a5393d8ad313f050975bd3",
+      "sourceId": 435,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3692,10 +3692,10 @@
     {
       "id": 439,
       "name": "Buried Seed",
-      "src": "assets/vfx/action/212-Swarm-Detonation.png",
-      "sha256": "079185ff819f6d6f7e39b86b9e81c5e787c756bc127d14a22ada230ad268bb19",
-      "sourceId": 212,
-      "shared": true,
+      "src": "assets/vfx/action/439-Buried-Seed.png",
+      "sha256": "b098bd0d020e3010be50cd35eafd450a791dce500c7d50dc3fd43ee4dcca6743",
+      "sourceId": 439,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3737,10 +3737,10 @@
     {
       "id": 444,
       "name": "Folded Gale",
-      "src": "assets/vfx/action/183-Sky-Cut.png",
-      "sha256": "46dcacddd6277b90bcbfd1ce5c2df3c520c47c73a8e14e8dde575ffce58126d7",
-      "sourceId": 183,
-      "shared": true,
+      "src": "assets/vfx/action/444-Folded-Gale.png",
+      "sha256": "ac5cd3265d27facccd7a628972ba9027342617a875fc6a495eed2ef54058dc35",
+      "sourceId": 444,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3809,10 +3809,10 @@
     {
       "id": 452,
       "name": "Keepsake Circle",
-      "src": "assets/vfx/action/212-Swarm-Detonation.png",
-      "sha256": "079185ff819f6d6f7e39b86b9e81c5e787c756bc127d14a22ada230ad268bb19",
-      "sourceId": 212,
-      "shared": true,
+      "src": "assets/vfx/action/452-Keepsake-Circle.png",
+      "sha256": "ec6abc4d3882b2e30c2699403661355a389874385de32718138c4e5fe3225292",
+      "sourceId": 452,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3845,10 +3845,10 @@
     {
       "id": 456,
       "name": "Vigil Sever",
-      "src": "assets/vfx/action/346-Moonthorn-Hook.png",
-      "sha256": "984c2631a6325756d60c8e35a64bf64edd1d14c497ef3a847b732b16e6077c3c",
-      "sourceId": 346,
-      "shared": true,
+      "src": "assets/vfx/action/456-Vigil-Sever.png",
+      "sha256": "06e34b38fbd11078d36d810104a8bd7680652b84806ca172a4d386efae57bba0",
+      "sourceId": 456,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -3872,10 +3872,10 @@
     {
       "id": 459,
       "name": "Glacier Impale",
-      "src": "assets/vfx/action/107-frost-spire.png",
-      "sha256": "35339074ffb4b42f542906ca409399c59955774aa8f46d03dc422fdf29653b3f",
-      "sourceId": 107,
-      "shared": true,
+      "src": "assets/vfx/action/459-Glacier-Impale.png",
+      "sha256": "96bcc9b1122cc9e9e9b7bd77b4fc00233120d06e692d628c7ad8d8e7f909cc70",
+      "sourceId": 459,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4016,10 +4016,10 @@
     {
       "id": 475,
       "name": "Gorgon's Breath",
-      "src": "assets/vfx/action/135-noxious-cloud.png",
-      "sha256": "0a064ffb376be8ee9884335858f8abf5c784b420e90b6c67e23a292df8809e79",
-      "sourceId": 135,
-      "shared": true,
+      "src": "assets/vfx/action/475-Gorgon-s-Breath.png",
+      "sha256": "19e83c3c795187f1fa1e31ceff401fa193eb3ad22516a9112884bd12e956510d",
+      "sourceId": 475,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4178,10 +4178,10 @@
     {
       "id": 493,
       "name": "Reliquary Flame",
-      "src": "assets/vfx/action/496-Lance-in-Bloom.png",
-      "sha256": "a4d7dcd965eb807ffe8261de652386fe6009a898f90196a201c2659774c985e3",
-      "sourceId": 496,
-      "shared": true,
+      "src": "assets/vfx/action/493-Reliquary-Flame.png",
+      "sha256": "249680ad0d276c4189d786a249b6e97dcfdeb39a9f604eeb921e89daf4d0932c",
+      "sourceId": 493,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4268,10 +4268,10 @@
     {
       "id": 503,
       "name": "Ember Updraft",
-      "src": "assets/vfx/action/496-Lance-in-Bloom.png",
-      "sha256": "a4d7dcd965eb807ffe8261de652386fe6009a898f90196a201c2659774c985e3",
-      "sourceId": 496,
-      "shared": true,
+      "src": "assets/vfx/action/503-Ember-Updraft.png",
+      "sha256": "aeb9422a3e252f0b1a843e2c2e8405e2b27367da77d8001db9d49c4ba842eb02",
+      "sourceId": 503,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4286,10 +4286,10 @@
     {
       "id": 505,
       "name": "Pinion Pierce",
-      "src": "assets/vfx/action/242-Stone-Lance.png",
-      "sha256": "48ed998cef6aab7ae5d0079ab38d174ca0bddc9deab8099bc9fbf12fb9e662f1",
-      "sourceId": 242,
-      "shared": true,
+      "src": "assets/vfx/action/505-Pinion-Pierce.png",
+      "sha256": "a3dc80b25dba4d21faa468f7fed9a3720608efc71924755c8115f5ab4927eac8",
+      "sourceId": 505,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4304,10 +4304,10 @@
     {
       "id": 507,
       "name": "Lantern Requiem",
-      "src": "assets/vfx/action/218-Silken-Resonance.png",
-      "sha256": "01e4f5091a9402877634a09417a84a3026985f4df20770ffab65773f79d2b069",
-      "sourceId": 218,
-      "shared": true,
+      "src": "assets/vfx/action/507-Lantern-Requiem.png",
+      "sha256": "6d9c6d57749052f727cc0249036264736c265138b569f14d973ae436b408f0c5",
+      "sourceId": 507,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4466,10 +4466,10 @@
     {
       "id": 525,
       "name": "Masterwork Riposte",
-      "src": "assets/vfx/action/214-Chitin-Hook.png",
-      "sha256": "9c781042fbffaf2fa2998738a07423c42faf516c16ce983ffb003e5479110ebf",
-      "sourceId": 214,
-      "shared": true,
+      "src": "assets/vfx/action/525-Masterwork-Riposte.png",
+      "sha256": "fff8896c8317eab5e5bf01a7876ed4c9f3e7856031083a83863268f8a499364a",
+      "sourceId": 525,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4538,10 +4538,10 @@
     {
       "id": 533,
       "name": "Mindsteel Cleave",
-      "src": "assets/vfx/action/200-mind-arc.png",
-      "sha256": "51785b33f0afec5e1a0971231232603862c7906a1d45f6f2efe5d0688c1564d2",
-      "sourceId": 200,
-      "shared": true,
+      "src": "assets/vfx/action/533-Mindsteel-Cleave.png",
+      "sha256": "2e02a613718435332e14890fdc6ce52763a3b92a3ea68a378a2d813d7be8bc59",
+      "sourceId": 533,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4556,10 +4556,10 @@
     {
       "id": 535,
       "name": "Astral Rend",
-      "src": "assets/vfx/action/215-Chitin-Cut.png",
-      "sha256": "6362ad0efd7b7e9b640b8a27bc75a8dc1b9a0ab742a691665c43d520825adc05",
-      "sourceId": 215,
-      "shared": true,
+      "src": "assets/vfx/action/535-Astral-Rend.png",
+      "sha256": "1295923fbec04a00ff1b6cfede714f1de4aff15753fdb0024701a2f48da387d3",
+      "sourceId": 535,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -4988,10 +4988,10 @@
     {
       "id": 716,
       "name": "Briar Bequest",
-      "src": "assets/vfx/action/702-standard-relay.png",
-      "sha256": "553b96f84251af3eb4adf6bd01e6a7c2dc18c5d6a464300ee11d102ee4915b4a",
-      "sourceId": 702,
-      "shared": true,
+      "src": "assets/vfx/action/716-Briar-Bequest.png",
+      "sha256": "c0e6ba5a83982b1eb6a5e05ea9ffcbb1abeca955ce5ffbdf0976afd5eec9ccc1",
+      "sourceId": 716,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -5015,10 +5015,10 @@
     {
       "id": 731,
       "name": "Look Upon Me",
-      "src": "assets/vfx/action/508-Sanctuary-Breeze.png",
-      "sha256": "2c44a0772b7d9bb5e2d5a75e0c862cdb479fc43efd04075ed1b5e6c834c69cbd",
-      "sourceId": 508,
-      "shared": true,
+      "src": "assets/vfx/action/731-Look-Upon-Me.png",
+      "sha256": "e9821c58cf65ff2299c65f6e5df158afeda0f34043c904221a8d94b4c0e51688",
+      "sourceId": 731,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {
@@ -5087,10 +5087,10 @@
     {
       "id": 739,
       "name": "Quiet Arrangement",
-      "src": "assets/vfx/action/446-dream-ripple.png",
-      "sha256": "2ec2b4700ed121a5493c62af0d0bccbd8292c82c20a81e1301e91bfa3f4cce5b",
-      "sourceId": 446,
-      "shared": true,
+      "src": "assets/vfx/action/739-Quiet-Arrangement.png",
+      "sha256": "3737fa77c4467b37beec5d72abcaa5aef4861d77f0b2659e14648b610e3d72fe",
+      "sourceId": 739,
+      "shared": false,
       "reviewStatus": "requires-review"
     },
     {

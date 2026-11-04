@@ -93,3 +93,12 @@ The automatic workflow41832615806 failed before validation because the default P
 
 
 Release CI preparation also refreshes the stale generated environment QA report from the already-committed review ledger (no maps/art changed); includes docs in browser checkout for the hash-bound scope; and installs Pillow under Python3.12 in browser jobs that render review sheets. All signing, validation, browser and action-batch release gates remain enabled.
+
+
+## 4 November 2026 — recovered Next100 batch-one integration, stage 3
+
+Recovered all 50 approved PNGs from Abyssals_Next100_Batch_01_50_Sheets.zip and verified their expected SHA-256 values. Browser uploads were committed in two groups of 25 (541cb21, b33f367). Re-fetched main and checked the actual uploaded bytes before installation. No missing approved uploads remain. The keyed installer now supports stage3: 557 dedicated sources,58 direct shared bindings,615 total action bindings; the58 outstanding production IDs remain shared. Source prompts/intents and recovery manifests are preserved. No new art was generated; Arena pilots remain excluded.
+
+The existing signed build on e660ff7 passed source validation but its evolution-shop browser check expected29 items; current dossier stock has30 including Thunder Shard. Update the expected catalogue count and assert Thunder Shard is present, retaining the purchase, save/reload and evolution assertions. Add representative stage3 real-playback cases (247,387,533,525,731) on both phone/desktop viewports. Original signing key, package, stable IDs, save code and reserved0.90.53/code148 remain. Source tests and fresh release verification are pending until recorded; do not claim a published APK before successful release assets and certificate checks.
+
+Stage3 local verification passed:50 JavaScript suites; all557 source hashes and browser decodes;615 bindings/58 shared; raster, offline, scope and Android manifest checks;26 real phone/desktop actor-target battle cases including Glacier Fossil, Rain Mantle (with its required active rain), Mindsteel Cleave, Masterwork Riposte and Look Upon Me. Music and shop browser suites pass. The hide/show playback race is repaired with a stale-request guard and a focused regression. No signing secrets, native package, combat rules or save schema changed. Fresh signed release CI and physical-device install remain unverified at this checkpoint.
