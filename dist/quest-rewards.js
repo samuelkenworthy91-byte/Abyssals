@@ -1,13 +1,29 @@
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.54';
-import {DATA} from './data.js?v=0.90.54';
-import {ABILITIES} from './ability-data.js?v=0.90.54';
-import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.54';
-import {RELIC_ITEMS} from './relic-family.js?v=0.90.54';
-import {rootForm} from './route-roster.js?v=0.90.54';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.55';
+import {DATA} from './data.js?v=0.90.55';
+import {ABILITIES} from './ability-data.js?v=0.90.55';
+import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.55';
+import {RELIC_ITEMS} from './relic-family.js?v=0.90.55';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.55';
 export {QUEST_REWARDS,SECRET_MOVES};
 export function rewardPending(state,key){return !!state.sideCampaigns?.[key]?.claimed&&!state.sideCampaigns[key].rewardVersion;}
-// Fixed offers are saved before selection; no gift is generated again on reopen.
-export function nurseryOffers(state){const q=state.sideCampaigns?.marchMeadow;if(!q)return [];return q.giftOffers??=(['361','060','222'].map(rootForm).filter((id,i,a)=>a.indexOf(id)===i));}
+// Use actual evolution edges: no evolved forms or species without an evolution.
+export function nurseryCandidatePool(){
+ const parents=new Set(EVOLUTIONS.map(e=>e.from_species_id));
+ const children=new Set(EVOLUTIONS.map(e=>e.to_species_id));
+ return DATA.species.filter(s=>parents.has(s.id)&&!children.has(s.id)&&!s.legendaryRoamer&&!/legendary|mythic/i.test((s.power_class||'')+' '+(s.role||''))).map(s=>s.id);
+}
+// Save once before selection. Existing claimed rewards remain authoritative;
+// unclaimed legacy fixed offers receive one random selection after updating.
+export function nurseryOffers(state,random=Math.random){
+ const q=state.sideCampaigns?.marchMeadow;if(!q)return [];
+ if(q.rewardVersion)return q.giftOffers||[];
+ if(q.giftOfferVersion===2)return q.giftOffers;
+ const pool=nurseryCandidatePool();
+ if(pool.length<3)throw Error('Insufficient eligible nursery companions');
+ for(let i=0;i<3;i++){const j=i+Math.floor(random()*(pool.length-i));[pool[i],pool[j]]=[pool[j],pool[i]];}
+ q.giftOffers=pool.slice(0,3);q.giftOfferVersion=2;
+ return q.giftOffers;
+}
 export function grantQuestReward(state,key,{gift=null,core=null}={}){
  const q=state.sideCampaigns?.[key],r=QUEST_REWARDS[key];if(!q?.claimed||q.rewardVersion||!r)return false;
  if(r.kind==='gift'&&(!gift||!nurseryOffers(state).includes(gift.species.id)||gift.level!==5||gift.hp<=0))return false;

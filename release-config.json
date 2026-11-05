@@ -1,10 +1,10 @@
 {
-  "version": "0.90.54",
-  "version_code": 149,
-  "filename": "Abyssals-v0.90.54-Individual-Move-Animations.apk",
-  "title": "Abyssals v0.90.54 \u2014 Individual Move Animations",
-  "notes": "All 615 action bindings now use their own dedicated animation source: 611 selectable move IDs plus four engine reactions. Final 58 sheets uploaded in two independently verified browser commits. Preserves original package/signing identity, saves, non-lethal Mercy rules and existing game content. Technical checks and sampled gameplay verification are recorded separately from final individual artistic approval.",
-  "pwa_filename": "Abyssals-v0.90.54-PWA.zip",
+  "version": "0.90.55",
+  "version_code": 150,
+  "filename": "Abyssals-v0.90.55-Random-Nursery.apk",
+  "title": "Abyssals v0.90.55 \u2014 Random Nursery Companions",
+  "notes": "The Winter Nursery offers three distinct random first-stage Abyssals with at least one evolution. Mythics, legendaries, evolved forms and single-stage species are excluded. Offers persist across reopening and reload; completed rewards are preserved. Original package, signing identity and saves are preserved.",
+  "pwa_filename": "Abyssals-v0.90.55-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.54-art-scope.json"
+  "artwork_scope_path": "docs/releases/v0.90.55-art-scope.json"
 }

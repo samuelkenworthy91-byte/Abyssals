@@ -1,5 +1,5 @@
-import {installDossierTrades} from './dossier-encounters.js?v=0.90.54';
-import {FORT_POOLS} from './encounter-pools.js?v=0.90.54';
+import {installDossierTrades} from './dossier-encounters.js?v=0.90.55';
+import {FORT_POOLS} from './encounter-pools.js?v=0.90.55';
 // Optional exploration content. Ordinary evolutions remain level-based.
 export const SIDE_CONTENT=[
  ['marchMeadow','Nest keeper Alice de Beaumont','010','361','Sheltered pine nests keep young Abyssals warm. Pricklet is shy; I raised this one away from the road.',{bread:4,poultices:2},'hedgerow'],

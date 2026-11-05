@@ -1,8 +1,8 @@
-import {tradeReceiptKey} from './dossier-encounters.js?v=0.90.54';
-import {rimebunCaveSlots} from './rimebun.js?v=0.90.54';
-import {DATA} from './data.js?v=0.90.54';
-import {legalForm} from './route-roster.js?v=0.90.54';
-import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.54';
+import {tradeReceiptKey} from './dossier-encounters.js?v=0.90.55';
+import {rimebunCaveSlots} from './rimebun.js?v=0.90.55';
+import {DATA} from './data.js?v=0.90.55';
+import {legalForm} from './route-roster.js?v=0.90.55';
+import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.55';
 export function explorationState(state){return state.exploration??={claims:[],trades:[],finds:[],quests:[],mythic:null};}
 export function grantExplorationReward(state,reward){for(const [key,value]of Object.entries(reward)){if(key==='held'){state.heldItems??={};state.heldItems[value]=(state.heldItems[value]||0)+1;}else state[key]=(state[key]||0)+value;}}
 export function claimExplorationCache(state,id){const content=SIDE_CONTENT.find(c=>c.id+'-cache'===id),floor=CAVE_FLOORS.find(f=>f.room+'-cache'===id),q=explorationState(state);if(q.claims.includes(id)||(!content&&!floor))return false;q.claims.push(id);grantExplorationReward(state,content?.reward||floor.reward);return true;}

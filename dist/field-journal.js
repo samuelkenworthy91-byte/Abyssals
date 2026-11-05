@@ -1,11 +1,11 @@
-import {hasVisitedTown} from './fast-travel.js?v=0.90.54';
-import {DATA} from './data.js?v=0.90.54';
-import {JOURNAL_HABITATS} from './journal-habitats.js?v=0.90.54';
-import {SIDE_CONTENT} from './exploration-data.js?v=0.90.54';
-import {FOSSILS} from './mountain-quests.js?v=0.90.54';
-import {BREEDING_ONLY_FIRST_FORMS} from './encounter-access.js?v=0.90.54';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.54';
-import {growthPercent,STAT_KEYS,STAT_LABELS,unitGrowthRates} from './progression.js?v=0.90.54';
+import {hasVisitedTown} from './fast-travel.js?v=0.90.55';
+import {DATA} from './data.js?v=0.90.55';
+import {JOURNAL_HABITATS} from './journal-habitats.js?v=0.90.55';
+import {SIDE_CONTENT} from './exploration-data.js?v=0.90.55';
+import {FOSSILS} from './mountain-quests.js?v=0.90.55';
+import {BREEDING_ONLY_FIRST_FORMS} from './encounter-access.js?v=0.90.55';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.55';
+import {growthPercent,STAT_KEYS,STAT_LABELS,unitGrowthRates} from './progression.js?v=0.90.55';
 
 // Small, append-only observations. A captured species stays registered after
 // evolution, rehoming or permanent death. Ownership is calculated from the
