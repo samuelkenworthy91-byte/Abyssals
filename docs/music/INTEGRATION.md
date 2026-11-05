@@ -1,4 +1,4 @@
-# Soundtrack integration — 4 November 2026
+# Soundtrack integration — corrected 5 November 2026
 
 Baseline main: `06bda7c3cae18ff2f556a85463cccd354a40a074`.
 No Android version, package, signing configuration or release is changed. Commits use
@@ -20,25 +20,37 @@ codec, duration and SHA-256. Runtime copies are byte-identical; no transcoding.
 | town-philomere.mp3 | Philomere, hospice and interiors |
 | town-cybressa.mp3 | Cybressa and interiors |
 | town-cossenne.mp3 | Cossenne and interiors |
-| town-botrune.mp3 | Botrune square, lower streets and shelter, outside mandatory events |
+| town-botrune.mp3 | Retained without a current scene assignment; Ancient Shadows supersedes its Botrune assignment |
 | town-cayfen.mp3 | Cayfen and interiors |
 | town-ramelle.mp3 | Ramelle and interiors |
-| route-journey-across-the-realm.mp3 | Ordinary routes after the early roads, including Willowmere |
-| route-ancient-shadows.mp3 | Service tunnels, dangerous side habitats, old court, Sunken Fort, Thunderplain and Sporefall |
+| route-journey-across-the-realm.mp3 | Kyvton / Civeton starting town (`town`) and its interiors |
+| route-ancient-shadows.mp3 | Botrune square, lower streets, interiors and shelter outside mandatory events; never an ordinary route |
 | character-darius-idealists-burden.mp3 | Early Darius dialogue groups and REV/MR/COURT Darius encounters |
 | event-darius-descent.mp3 | All three Thunder Crown mountain maps, conversations, encounters and Darius/Tianzhar battles until Tianzhar's fate is recorded |
 | event-pate-trade-execution.mp3 | Abbey-square execution through Fatima battle onset |
 | event-pate-trade-burial.mp3 | Remembering Tree funeral through companion gift aftermath |
-| city-leader-UNVERIFIED.m4a | Source-only: leader identity not positively established |
-| catching-up-UNCLASSIFIED.m4a | Source-only: purpose not positively established |
+| city-leader-UNVERIFIED.m4a | Owner-confirmed City Leader; runtime `battle-city-leader.m4a` for all eight leaders and rematches |
+| catching-up-UNCLASSIFIED.m4a | Owner-confirmed ordinary route theme; runtime `route-catching-up.m4a` |
 
-The two M4As have generic encoder tags only. Decoding/playback can establish
-technical compatibility but cannot establish intended narrative identity. Neither
-is assigned by its filename alone. Auditory identification remains outstanding.
-All eight leaders retain `BattleTheme1.mp3`; ordinary battles do too. Civeton,
-Marasen, evolution and dedicated epic boss cues remain missing. Civeton/Marasen
-and unknown places retain `adventure1.mp3`. Early March/scrub/hospice roads keep
-that original exploration theme. Darius's final Sporefall encounter depicts a
+On 5 November 2026 the owner explicitly corrected four roles: Catching Up is
+an ordinary route theme; City Leader is the town-leader boss theme; Journey
+Across the Realm belongs to the starting town (Kyvton, internally `town` /
+Civeton); Ancient Shadows belongs to Botrune, where Pate and Trade are executed.
+The M4As are now runtime copies with clear names and unchanged bytes. The original
+source filenames and hashes remain preserved for provenance. Stable song IDs
+`journey` and `dark` retain their saved playback positions across this reassignment.
+The former `town-botrune.mp3` is retained without an invented replacement role.
+
+City Leader begins only when an actual leader battle starts, including all eight
+leaders' supervised rematches, and resets for each new encounter. Ordinary
+battles retain `BattleTheme1.mp3`. The execution cue still outranks guard fights;
+Fatima's actual battle ends it and fades into City Leader. A leader rematch
+outside a mandatory ceremony takes priority over regional mountain music.
+Marasen, evolution and dedicated epic boss cues remain missing. Marasen and
+unknown places retain `adventure1.mp3`; early March/scrub/hospice roads keep that
+original exploration theme. Other previously assigned travelling/dangerous routes
+now use Catching Up, including Willowmere, Thunderplain and Sporefall. Ancient
+Shadows is never assigned to those routes. Darius's final Sporefall encounter depicts a
 separate last-company crisis with Cruxwyrm; it retains existing battle music,
 without automatically reusing the mountain theme.
 
@@ -56,7 +68,7 @@ redistribution; the original cover attribution is retained in the manifest.
   Leaving these places suspends playback; returning resumes its position.
   `showBattleSurface()` records `executionEnded` when the actual trainer ID is
   `LDR-06`, before selecting battle music. The old cue fades over 600ms, then the
-  battle track starts, with no overlap. Challenge dialogue alone does not end it.
+  City Leader track starts, with no overlap. Challenge dialogue alone does not end it.
   Defeat, escape, retries and later visits cannot retrigger the execution.
   Legacy saves infer active context from saved trial cursor/gauntlet and infer
   completion from Fatima's defeat/fate. Existing story/death history is unchanged.
@@ -78,7 +90,7 @@ redistribution; the original cover attribution is retained in the manifest.
 
 `dist/soundtrack.js` owns the registry and pure selection rules. Town interiors
 resolve through canonical door parents. Priority is silent title/mute/hidden,
-mandatory execution/burial, mountain crisis, early Darius, battles, towns, routes.
+mandatory execution/burial, town-leader battles, mountain crisis, early Darius, ordinary battles, towns, routes.
 The explicit Fatima exception ends the execution context. There is no music
 selection in `draw()`; refresh/navigation, dialogue, battle, input, visibility and
 sound events update a signature-guarded controller.
@@ -93,13 +105,13 @@ service worker serves cached audio byte ranges for browser/WebView seeking.
 
 ## Verification
 
-`scripts/verify-soundtrack.py`: 15 hashes, 13 runtime byte comparisons, all 15
-whole-stream ffmpeg decodes. `tests/soundtrack.test.mjs`: town/interior mappings,
+`scripts/verify-soundtrack.py`: 15 hashes, 15 runtime byte comparisons, all 15
+whole-stream ffmpeg decodes. `tests/soundtrack.test.mjs`: all eight leader battles/rematches, corrected starting-town and Botrune roles, no Ancient Shadows on routes, fresh boss playback, town/interior mappings,
 route selection, all execution beats/guards/Fatima, legacy saves, mountain scope,
 Darius, funeral/gifts, position restore and nonoverlapping fading.
 `tests/soundtrack-browser.cjs` exercises the actual game dialogue and music
-boundaries, saved reloads, sound/visibility, 17 stream playbacks (including both
-original tracks and the two source-only M4As), full offline install/reload and
+boundaries, saved reloads, sound/visibility, all 17 registered runtime streams (including both
+original tracks and the newly confirmed M4As), plus source checks when available, full offline install/reload and
 cached audio ranges. It stages guard victories to isolate soundtrack routing;
 existing Botrune/Thunderplain/finale browser suites cover story/combat behavior.
 Physical Android-device playback is not established by Chromium or ffmpeg tests.

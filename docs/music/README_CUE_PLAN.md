@@ -1,3 +1,5 @@
+> **Owner correction, 5 November 2026:** Catching Up is a route theme; City Leader is the town-leader battle theme; Journey Across the Realm belongs to Kyvton / Civeton, the starting town; Ancient Shadows belongs to Botrune. The original plan below is retained as historical provenance. Current assignments and boundaries are in `INTEGRATION.md` and `TRACK_MANIFEST.json`.
+
 # Abyssals audio handoff
 
 Prepared from three user-provided ZIPs on 4 Nov 2026. **No audio was edited, transcoded, truncated or normalised**; only filenames were simplified. All 15 tracks have individual checksums in `TRACK_MANIFEST.json`.

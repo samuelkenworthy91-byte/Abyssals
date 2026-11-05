@@ -36,7 +36,7 @@ export function createMusicController({createAudio=()=>new Audio(),tracks=MUSIC_
    signature=nextSignature;requestVersion++;cancelFade();
    const previous=mode;
    // Battle themes restart per encounter; story and exploration positions survive interruptions.
-   if(mode==='battle'&&next!=='battle')reset('battle');
+   if(['battle','leader'].includes(mode)&&next!==mode)reset(mode);
    mode=next;const target=enabled&&!hidden?mode:null;blocked=false;
    const outgoing=players.get(previous);
    if(!immediate&&fadeMs>0&&target&&previous!==target&&outgoing&&!outgoing.paused){

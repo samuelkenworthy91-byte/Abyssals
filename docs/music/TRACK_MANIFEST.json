@@ -7,9 +7,8 @@
     "music-mp3s/adventure1.mp3",
     "music-mp3s/BattleTheme1.mp3"
   ],
-  "mapping_caveat": "13 title-grounded mappings. City leader is a plausible leader-battle candidate only; catching up unknown. Listen/confirm both before runtime wiring.",
+  "mapping_caveat": "Assignments corrected by the owner on 2026-11-05: Catching Up is a route theme; City Leader is the town-leader battle theme; Across the Realm belongs to the starting town (Kyvton / Civeton); Ancient Shadows belongs to Botrune. Original audio bytes and source filenames retained.",
   "not_identified_in_uploaded_audio": [
-    "Civeton town theme",
     "Marasen water city theme",
     "adventure2 (earlier newly requested)",
     "dedicated evolution cue",
@@ -20,29 +19,31 @@
       "original_filename": "Journey Across the Realm (Take 2).mp3",
       "package_path": "music-mp3s/route-journey-across-the-realm.mp3",
       "proposed_runtime_path": "dist/assets/music/route-journey-across-the-realm.mp3",
-      "cue_id": "route_joy",
-      "intended_use": "Route Adventure 3",
-      "confidence": "verified_from_title",
+      "cue_id": "journey",
+      "intended_use": "Starting town Kyvton / Civeton and its interiors",
+      "confidence": "confirmed_by_owner_2026_11_05",
       "duration_seconds": 171.41,
       "bytes": 3767092,
       "sha256": "0498cd6c2609124b2c3eb2fe0726789e88b8a25c3b43ec141a419e2c6139b9e2",
       "codec": "mp3",
       "channels": 2,
-      "sample_rate": "48000"
+      "sample_rate": "48000",
+      "assignment_confirmed_on": "2026-11-05"
     },
     {
       "original_filename": "Ancient Shadows.mp3",
       "package_path": "music-mp3s/route-ancient-shadows.mp3",
       "proposed_runtime_path": "dist/assets/music/route-ancient-shadows.mp3",
-      "cue_id": "route_dark",
-      "intended_use": "Route Adventure 4",
-      "confidence": "verified_from_title",
+      "cue_id": "dark",
+      "intended_use": "Botrune town, lower streets and interiors, outside mandatory story events",
+      "confidence": "confirmed_by_owner_2026_11_05",
       "duration_seconds": 105.77,
       "bytes": 2642689,
       "sha256": "cf182cb21a8d36d15d9456b5ec09c2e0789b6ec99cc4d13577cdb4fbd40bfc50",
       "codec": "mp3",
       "channels": 2,
-      "sample_rate": "48000"
+      "sample_rate": "48000",
+      "assignment_confirmed_on": "2026-11-05"
     },
     {
       "original_filename": "Bastion of the Weathered.mp3",
@@ -105,14 +106,15 @@
       "package_path": "music-mp3s/town-botrune.mp3",
       "proposed_runtime_path": "dist/assets/music/town-botrune.mp3",
       "cue_id": "town_botrune",
-      "intended_use": "Botrune",
+      "intended_use": "Retained for review; previous Botrune assignment superseded by owner-confirmed Ancient Shadows",
       "confidence": "verified_from_title",
       "duration_seconds": 159.62,
       "bytes": 3498163,
       "sha256": "e1ce9533c7264cb770ce52deb515215df3b30461aa2276167669403fc96c830d",
       "codec": "mp3",
       "channels": 2,
-      "sample_rate": "48000"
+      "sample_rate": "48000",
+      "runtime_assigned": false
     },
     {
       "original_filename": "Studios Above the Sea (Take 2).mp3",
@@ -201,30 +203,32 @@
     {
       "original_filename": "City leader.m4a",
       "package_path": "music-m4a/city-leader-UNVERIFIED.m4a",
-      "proposed_runtime_path": null,
-      "cue_id": "leader_battle_candidate",
-      "intended_use": "Candidate city leader battle",
-      "confidence": "needs_listening_confirmation",
+      "proposed_runtime_path": "dist/assets/music/battle-city-leader.m4a",
+      "cue_id": "leader",
+      "intended_use": "All eight city-leader battles and rematches",
+      "confidence": "confirmed_by_owner_2026_11_05",
       "duration_seconds": 202.0,
       "bytes": 3261071,
       "sha256": "cf7b6ab284f01cb43d576651e4128dca18c2ee5f8cf2d1190c0f56ab00ed4ffb",
       "codec": "aac",
       "channels": 1,
-      "sample_rate": "44100"
+      "sample_rate": "44100",
+      "assignment_confirmed_on": "2026-11-05"
     },
     {
       "original_filename": "catching up.m4a",
       "package_path": "music-m4a/catching-up-UNCLASSIFIED.m4a",
-      "proposed_runtime_path": null,
-      "cue_id": "unknown",
-      "intended_use": "Unknown: listen before assignment",
-      "confidence": "needs_listening_confirmation",
+      "proposed_runtime_path": "dist/assets/music/route-catching-up.m4a",
+      "cue_id": "route",
+      "intended_use": "Ordinary travelling routes",
+      "confidence": "confirmed_by_owner_2026_11_05",
       "duration_seconds": 215.0,
       "bytes": 3473595,
       "sha256": "e1badb3d9d79150349402d616c395b8929d3d64d33b5a1a557ae82b5faad4494",
       "codec": "aac",
       "channels": 1,
-      "sample_rate": "44100"
+      "sample_rate": "44100",
+      "assignment_confirmed_on": "2026-11-05"
     }
   ]
 }

@@ -13,14 +13,14 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  await page.waitForFunction(()=>window.__musicQA);await page.locator('body').click({position:{x:5,y:5}});await page.evaluate(()=>window.__musicQA.boot());
  const playing=()=>page.evaluate(()=>window.__musicElements.filter(a=>!a.paused).map(a=>({src:a.src,time:a.currentTime,loop:a.loop,error:a.error?.code})));
  await page.waitForFunction(()=>window.__musicElements.some(a=>!a.paused&&a.currentTime>.15));
- assert((await playing())[0].src.endsWith('adventure1.mp3'));assert((await playing())[0].loop);
+ assert((await playing())[0].src.endsWith('route-journey-across-the-realm.mp3'));assert((await playing())[0].loop);
  const adventureTime=(await playing())[0].time;
  for(const kind of ['wild','practice','trainer']){
   await page.evaluate(kind=>window.__musicQA.begin(kind),kind);
   await page.waitForFunction(()=>window.__musicElements.some(a=>a.src.endsWith('BattleTheme1.mp3')&&!a.paused&&a.currentTime>.1));
   assert.equal((await playing()).length,1,'battle replaces overworld');assert((await playing())[0].src.endsWith('BattleTheme1.mp3'));
   if(kind==='wild'||kind==='practice'){fs.mkdirSync('build/dossier-qa',{recursive:true});await page.screenshot({path:'build/dossier-qa/approved-'+(kind==='wild'?'carrionyx':'thimbril')+'-live-battle.png'});}
-  await page.evaluate(()=>window.__musicQA.end());await page.waitForFunction(()=>window.__musicElements.some(a=>a.src.endsWith('adventure1.mp3')&&!a.paused));
+  await page.evaluate(()=>window.__musicQA.end());await page.waitForFunction(()=>window.__musicElements.some(a=>a.src.endsWith('route-journey-across-the-realm.mp3')&&!a.paused));
  }
  assert((await playing())[0].time>=adventureTime,'overworld track resumes');
  await page.evaluate(()=>window.__musicQA.settings());await page.locator('#menu-sound').click();assert.equal((await playing()).length,0,'Sound off pauses music');await page.locator('#menu-sound').click();await page.waitForFunction(()=>window.__musicElements.some(a=>!a.paused));

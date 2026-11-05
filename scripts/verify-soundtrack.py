@@ -17,4 +17,4 @@ for entry in manifest['files']:
     results.append({'source':entry['package_path'],'sha256':entry['sha256'],'runtime':runtime,'decode':'PASS'})
 output=root/'build/music-qa';output.mkdir(parents=True,exist_ok=True)
 (output/'source-verification.json').write_text(json.dumps(results,indent=2)+'\n')
-print('PASS: 15 source hashes, 13 identical runtime copies and 15 complete-stream decodes; two unassigned M4A sources excluded from runtime.')
+print(f"PASS: {len(results)} source hashes, {sum(r['runtime'] is not None for r in results)} identical runtime copies and {len(results)} complete-stream decodes.")
