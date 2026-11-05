@@ -1,8 +1,8 @@
-import {ACTION_ART,pixelSceneHTML,readableDuration} from './action-vfx.js?v=0.90.55';
-import {ORCHARD_SCORES,orchardSceneHTML} from './tide-orchard-vfx.js?v=0.90.55';
-import {salvationHTML} from './salvation.js?v=0.90.55';
-import {MOVE_SCENES,moveSceneHTML} from './move-scene-renderer.js?v=0.90.55';
-import {SIGNATURE_EFFECTS,signatureHTML} from './signature-effects.js?v=0.90.55';
+import {ACTION_ART,pixelSceneHTML,readableDuration} from './action-vfx.js?v=0.90.56';
+import {ORCHARD_SCORES,orchardSceneHTML} from './tide-orchard-vfx.js?v=0.90.56';
+import {salvationHTML} from './salvation.js?v=0.90.56';
+import {MOVE_SCENES,moveSceneHTML} from './move-scene-renderer.js?v=0.90.56';
+import {SIGNATURE_EFFECTS,signatureHTML} from './signature-effects.js?v=0.90.56';
 export const PALETTES={NORMAL:'#ffe7b4',FIRE:'#ff7848',WATER:'#65cfff',ELECTRIC:'#ffe45b',GRASS:'#a4ed75',ICE:'#b6f5ff',FIGHTING:'#ffab6b',POISON:'#dc8bff',GROUND:'#d6a36b',FLYING:'#b3e8ff',PSYCHIC:'#ff92de',BUG:'#d0f077',ROCK:'#dabf95',GHOST:'#b9a0ff',DRAGON:'#9f8bff',DARK:'#c36de4',STEEL:'#c3e8ee',FAIRY:'#ffb7e8'};
 const usesPixelMercy=move=>move?.salvation&&ACTION_ART[move.id]?.sourceId===move.id&&!ACTION_ART[move.id]?.shared;
 const symbols={NORMAL:'M0,-12 4,-4 13,0 4,4 0,13 -4,4 -13,0 -4,-4Z',FIRE:'M0,-17Q15,-3 7,11Q0,20 -9,9Q-16,0 -6,-9Q-8,4 0,3Z',WATER:'M0,-16Q18,5 8,13Q0,21 -9,12Q-17,4 0,-16Z',ELECTRIC:'M3,-19 -11,3 -1,3 -4,20 12,-4 3,-4Z',GRASS:'M-12,13Q-18,-15 15,-15Q16,12 -12,13ZM-10,10 10,-10',ICE:'M0,-17 10,-5 8,10 0,18 -8,10 -10,-5Z M0,-17V18 M-10,-5 10,-5 M-8,10 8,10',FIGHTING:'M-12,-8 -8,-15 -2,-14 3,-17 10,-12 14,-3 10,13 -9,13 -15,2Z',POISON:'M0,-14A14,14 0 1,0 0,14A14,14 0 1,0 0,-14Z M-5,-3A2,2 0 1,0 -5,1 M5,-3A2,2 0 1,0 5,1 M-6,7Q0,3 6,7',GROUND:'M-15,10 -10,-6 0,-14 13,-4 16,12 -4,16Z',FLYING:'M-13,15Q-14,-16 15,-16Q17,7 -13,15ZM-10,11 12,-13M-5,4 8,4',PSYCHIC:'M-18,0Q0,-22 18,0Q0,22 -18,0ZM0,-7A7,7 0 1,0 0,7A7,7 0 1,0 0,-7',BUG:'M0,-9Q-16,-21 -15,-3Q-14,6 0,2Q14,6 15,-3Q16,-21 0,-9ZM0,-9V16',ROCK:'M-14,-7 -2,-15 15,-8 10,12 -6,17 -16,5Z M-2,-15 1,2 10,12 M1,2 -16,5',GHOST:'M-13,15V-2Q-13,-18 0,-18Q13,-18 13,-2V15L6,9 0,16 -6,9Z',DRAGON:'M0,-18 6,-8 16,-12 12,0 18,7 5,8 0,18 -5,8 -18,7 -12,0 -16,-12 -6,-8Z',DARK:'M8,-17Q-13,-9 -3,9Q0,17 14,14Q-17,25 -17,-1Q-16,-20 8,-17Z',STEEL:'M-4,17 -8,10 7,-17 14,-20 14,-10 0,13Z',FAIRY:'M0,-18 5,-5 18,0 5,5 0,18 -5,5 -18,0 -5,-5Z'};

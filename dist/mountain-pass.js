@@ -1,8 +1,8 @@
-import {mountainTileName} from './mountain-art.js?v=0.90.55';
-import {DATA} from './data.js?v=0.90.55';
-import {legalForm} from './route-roster.js?v=0.90.55';
-import {installMountainQuests} from './mountain-quests.js?v=0.90.55';
-import {registerBiome} from './biome-world.js?v=0.90.55';
+import {mountainTileName} from './mountain-art.js?v=0.90.56';
+import {DATA} from './data.js?v=0.90.56';
+import {legalForm} from './route-roster.js?v=0.90.56';
+import {installMountainQuests} from './mountain-quests.js?v=0.90.56';
+import {registerBiome} from './biome-world.js?v=0.90.56';
 
 // A seven-screen crossing; old endpoint IDs remain valid for existing saves.
 export const PASS_SPINE=['rivercause','passFoothills','passLowerTunnel','passUpperTunnel','passRidge','passEastSlope','rivercause2'];

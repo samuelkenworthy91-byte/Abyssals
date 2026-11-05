@@ -1,7 +1,7 @@
-import {normalizeTeamcraftUnit} from './teamcraft-progress.js?v=0.90.55';
-import {DATA} from './data.js?v=0.90.55';
-import {relearnPool} from './evolution.js?v=0.90.55';
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.55';
+import {normalizeTeamcraftUnit} from './teamcraft-progress.js?v=0.90.56';
+import {DATA} from './data.js?v=0.90.56';
+import {relearnPool} from './evolution.js?v=0.90.56';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.56';
 // Revalidate at confirmation; never charge money or refresh unrelated moves.
 export function applyRelearn(unit,moveId,slot){
  if(!unit||unit.dead||unit.hp<=0)return false;

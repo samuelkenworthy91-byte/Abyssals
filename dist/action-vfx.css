@@ -13,3 +13,12 @@
 
 .signature-fx{filter:none}.sig-ring{box-shadow:none;border-radius:0;clip-path:polygon(20% 0,80% 0,100% 20%,100% 80%,80% 100%,20% 100%,0 80%,0 20%)}
 
+
+/* Grinding mode skips effect rendering and cosmetic combat motion. */
+:root[data-battle-animations="off"] #battle *,
+:root[data-battle-animations="off"] #battle *::before,
+:root[data-battle-animations="off"] #battle *::after{animation:none!important;transition:none!important}
+:root[data-battle-animations="off"] #viewport.power-hit{animation:none!important}
+
+.quick-hit{position:absolute;left:-44px;top:-24px;min-width:88px;text-align:center;color:#fff5d2;font:bold 14px system-ui;text-shadow:0 1px 3px #000;background:#263846e8;border:1px solid #d9cc9a;border-radius:5px;padding:5px;box-sizing:border-box}
+.quick-hit small{display:block;font-size:16px;color:#fff}

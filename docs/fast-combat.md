@@ -1,0 +1,9 @@
+# Battle animation setting — v0.90.56
+
+Settings has a saved Battle animations On/Off button immediately after Game audio. On retains the authored sheets. Off shows a brief generic HIT (or miss/block/status feedback), then updates HP immediately. It skips sheet loading, long move/HP animations, trainer entrance waits and capture presentation waits. Wild, supervised practice and double combat use the same switch. Combat resolution, RNG, PP, status, damage, capture outcomes, rewards and save transactions are unchanged. Story choices and story timers retain their existing behaviour.
+
+The preference is device/browser-wide under `abyssals-battle-animations`, defaults to On and survives reload independently of the existing motion/accessibility preference. The latter still supports Device setting, Full and Reduced. To see full sheets in a browser whose computer requests reduced motion, choose Full. No accessibility preference is silently overwritten.
+
+Browser investigation: the published v0.90.55 PWA serves the new Avalon Cleave sheet and applies its pixel keyframes with a 1.823-second clock. The reported user's exact browser failure has not been reproduced. Device reduced-motion and a waiting offline update can both prevent the expected full presentation. PWA status now identifies an older controlling offline version and explicitly says to close all browser tabs and installed PWA windows before reopening. Never clear site storage to update; it contains saves.
+
+Validation: the setting unit suite verifies persistence and independence from accessibility settings. The browser suite compares deterministic real wild, practice and double turns in both modes, including PP, HP, RNG and battle history; checks advancing desktop sheet frames in On mode, quick feedback with no sheet requests in Off mode, enabled next-turn commands, and settings persistence after reload. Full release tests and signing/publication run separately in GitHub Actions.

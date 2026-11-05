@@ -1,6 +1,6 @@
-import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.90.55';
-import {MARASEN_RECORDS,MARASEN_BRANCHES,MARASEN_TRAINERS,VERDANT_ROAD,marasenRoute} from './marasen-data.js?v=0.90.55';
-import * as r from './marasen-rules.js?v=0.90.55';
+import {marasenExtraInteract} from './marasen-activities-ui.js?v=0.90.56';
+import {MARASEN_RECORDS,MARASEN_BRANCHES,MARASEN_TRAINERS,VERDANT_ROAD,marasenRoute} from './marasen-data.js?v=0.90.56';
+import * as r from './marasen-rules.js?v=0.90.56';
 export function marasenInteract(id,a){
  if(marasenExtraInteract(id,a))return true;
  const {state,room,AREA_GATES,line,showDialogue,openModal,$,document,warp,rewardTransaction,escapeHTML,challengeTrainer,startWild,shop}=a;

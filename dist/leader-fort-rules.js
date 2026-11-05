@@ -1,10 +1,10 @@
-import {COSSENNE_TRAINERS} from './cossenne-data.js?v=0.90.55';
-import {cossenneReady} from './cossenne-rules.js?v=0.90.55';
-import {warehouseReady} from './cybressa-rules.js?v=0.90.55';
-import {DATA} from './data.js?v=0.90.55';
-import {legalForm,legalMoves} from './route-roster.js?v=0.90.55';
-import {hospiceReady} from './hospice-quest.js?v=0.90.55';
-import {LEADER_FORTS,FORT_STONE_BOARD,fortForRoom,fortForLeader} from './leader-fort-data.js?v=0.90.55';
+import {COSSENNE_TRAINERS} from './cossenne-data.js?v=0.90.56';
+import {cossenneReady} from './cossenne-rules.js?v=0.90.56';
+import {warehouseReady} from './cybressa-rules.js?v=0.90.56';
+import {DATA} from './data.js?v=0.90.56';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.56';
+import {hospiceReady} from './hospice-quest.js?v=0.90.56';
+import {LEADER_FORTS,FORT_STONE_BOARD,fortForRoom,fortForLeader} from './leader-fort-data.js?v=0.90.56';
 export function leaderFortState(state,key){state.leaderForts??={};const f=LEADER_FORTS.find(f=>f.key===key);if(!f)return null;const p=state.leaderForts[key]??={};if(p.version!==1)Object.assign(p,{version:1,solved:!!state.fates?.[f.leaderId]||!!state.defeatedTrainers?.includes(f.leaderId),stones:FORT_STONE_BOARD.stones.map(p=>[...p]),rings:[...(f.initial||[0,0,0])],moves:0,cache:false});return p;}
 export function fortAlreadyCleared(state,f){return !!state.fates?.[f.leaderId]||!!state.defeatedTrainers?.includes(f.leaderId);}
 export function fortGuardDefeated(state,f,n){return fortAlreadyCleared(state,f)||!!state.defeatedTrainers?.includes(f.guardIds[n]);}

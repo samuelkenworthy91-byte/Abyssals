@@ -1,9 +1,9 @@
-import {DATA} from './data.js?v=0.90.55';
-import {participantExpMultiplier} from './relic-family.js?v=0.90.55';
-import {trainingGrowthBonus} from './training-draughts.js?v=0.90.55';
-import {experienceMultiplier} from './opening-balance.js?v=0.90.55';
-import {inheritedGrowthBonus,prodigyMultiplier} from './prodigy-growth.js?v=0.90.55';
-export {inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './prodigy-growth.js?v=0.90.55';
+import {DATA} from './data.js?v=0.90.56';
+import {participantExpMultiplier} from './relic-family.js?v=0.90.56';
+import {trainingGrowthBonus} from './training-draughts.js?v=0.90.56';
+import {experienceMultiplier} from './opening-balance.js?v=0.90.56';
+import {inheritedGrowthBonus,prodigyMultiplier} from './prodigy-growth.js?v=0.90.56';
+export {inheritedGrowthRate,inheritedGrowthBonus,prodigyMultiplier,prodigyGrowthBonus} from './prodigy-growth.js?v=0.90.56';
 // Authored BST-derived percentages; standard overflow plus one bounded bonus.
 // Each increment is +10 HP or +1 other stat. Rolls are independent of combat RNG.
 export const GROWTH_RULES_VERSION=3;

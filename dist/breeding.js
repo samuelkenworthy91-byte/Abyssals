@@ -1,10 +1,10 @@
-import {eggCapacity,validatePouch} from './egg-pouch.js?v=0.90.55';
-import {prepareBreedingEffects,validBreedingEffects,validateNurseryItems} from './breeding-items.js?v=0.90.55';
-import {rollShiny} from './shinies.js?v=0.90.55';
-import {rollInheritance,validateInheritance,availableProdigyStats} from './breeding-inheritance.js?v=0.90.55';
-import {DATA} from './data.js?v=0.90.55';
-import {rootForm} from './route-roster.js?v=0.90.55';
-import {inheritedGrowthBonus,hashSeed} from './progression.js?v=0.90.55';
+import {eggCapacity,validatePouch} from './egg-pouch.js?v=0.90.56';
+import {prepareBreedingEffects,validBreedingEffects,validateNurseryItems} from './breeding-items.js?v=0.90.56';
+import {rollShiny} from './shinies.js?v=0.90.56';
+import {rollInheritance,validateInheritance,availableProdigyStats} from './breeding-inheritance.js?v=0.90.56';
+import {DATA} from './data.js?v=0.90.56';
+import {rootForm} from './route-roster.js?v=0.90.56';
+import {inheritedGrowthBonus,hashSeed} from './progression.js?v=0.90.56';
 export const EGG_ICON='assets/items/abyssal-egg.webp';
 export const BREEDING_FEE=1000,EGG_STEPS=512,EGG_CAPACITY=3;
 const protectedFamilies=new Set(DATA.species.filter(s=>s.legendaryRoamer||/legendary|mythic/i.test(s.power_class||'')||/^(mythic|mythical|legendary)$/i.test(s.role||'')).map(s=>rootForm(s.id)));

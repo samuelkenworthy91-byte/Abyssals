@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+const saved=new Map([['abyssals-motion','full']]);
+globalThis.localStorage={getItem:key=>saved.get(key)??null,setItem:(key,value)=>saved.set(key,value)};
+globalThis.document={documentElement:{dataset:{}}};
+globalThis.matchMedia=()=>({matches:true,addEventListener(){}});
+const m=await import('../dist/motion.js?setting-test');
+assert(m.battleAnimationsEnabled());
+assert.equal(m.isReducedMotion(),false,'explicit Full overrides computer reduced motion');
+assert(m.setBattleAnimations(false));assert.equal(saved.get('abyssals-battle-animations'),'off');
+assert.equal(m.motionPreference(),'full','grinding switch does not change accessibility/world settings');
+assert.equal(document.documentElement.dataset.battleAnimations,'off');
+const reloaded=await import('../dist/motion.js?setting-reload');
+assert.equal(reloaded.battleAnimationsEnabled(),false,'saved setting survives reload');
+assert.equal(reloaded.isReducedMotion(),false);
+assert.equal(reloaded.setBattleAnimations('off'),false);
+reloaded.setBattleAnimations(true);assert.equal(saved.get('abyssals-battle-animations'),'on');
+reloaded.setMotionPreference('auto');assert(reloaded.isReducedMotion());assert(reloaded.battleAnimationsEnabled());
+console.log('PASS: saved battle toggle, reload, independence from accessibility settings, and explicit Full on reduced-motion computers.');

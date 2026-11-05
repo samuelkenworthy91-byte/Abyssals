@@ -1,9 +1,9 @@
-import {healDossierMove} from './dossier-battle.js?v=0.90.55';
-import {ORCHARD_IDS as I,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.55';
-import {has,heldInfo,consumedBerry,activateHeldRecovery,abilityBattle,restoreHP,changeStage,canSwitch} from './abilities.js?v=0.90.55';
-import {menagerieParty} from './menagerie-rules.js?v=0.90.55';
-import {selectedAlly} from './teamcraft-battle.js?v=0.90.55';
-import {unitName} from './names.js?v=0.90.55';
+import {healDossierMove} from './dossier-battle.js?v=0.90.56';
+import {ORCHARD_IDS as I,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.56';
+import {has,heldInfo,consumedBerry,activateHeldRecovery,abilityBattle,restoreHP,changeStage,canSwitch} from './abilities.js?v=0.90.56';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.56';
+import {selectedAlly} from './teamcraft-battle.js?v=0.90.56';
+import {unitName} from './names.js?v=0.90.56';
 const ms=u=>u.moveState??={};
 const alive=u=>u&&u.hp>0&&!u.dead&&!u.captured;
 const sameSide=(a,b)=>a===b||a.side&&a.side===b.side;
