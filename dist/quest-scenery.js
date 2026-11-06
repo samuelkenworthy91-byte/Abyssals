@@ -1,5 +1,5 @@
-import {drawAncientBellGate} from './bell-scenery.js?v=0.90.56';
-import {questPropSprite} from './quest-prop-art.js?v=0.90.56';
+import {drawAncientBellGate} from './bell-scenery.js?v=0.90.57';
+import {questPropSprite} from './quest-prop-art.js?v=0.90.57';
 // Animated map-native artwork shares the world's tile coordinates and puzzle state.
 export const MECHANISM_ART={marchMeadow:'hearth',burrowHollow:'counterweight',glassSluice:'sluice',emberQuarry:'foundry',stormBluffs:'beacon',orchardCanopy:'irrigation',reedSanctuary:'reedfilter',coralGrotto:'tidegate',moonlitDepths:'mourninglamp',relicCrags:'witnessseal',philomereBackwaters:'floodlock',smugglersWeir:'ferrylamp',saltFlats:'ledger',rescueGlade:'signalbell',anglersReach:'netwinch'};
 const rect=(c,x,y,w,h,fill)=>{c.fillStyle=fill;c.fillRect(x,y,w,h);};

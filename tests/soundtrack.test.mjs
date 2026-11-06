@@ -44,7 +44,7 @@ fades.update({cue:'execution',active:true,enabled:true});fades.update({cue:'lead
 await new Promise(r=>setTimeout(r,70));assert.equal(players.filter(a=>!a.paused).length,1);assert(players.find(a=>!a.paused).src.endsWith('battle-city-leader.m4a'));fades.stop();
 const immediate=createMusicController({fadeMs:1000,createAudio:()=>{const a={paused:true,currentTime:0,pause(){this.paused=true;},play(){this.paused=false;return Promise.resolve();}};players.push(a);return a;}});
 immediate.update({active:true,enabled:true,cue:'overworld'});immediate.update({active:true,enabled:true,cue:'execution',immediate:true});assert(players.find(a=>!a.paused).src.endsWith('event-pate-trade-execution.mp3'),'mandatory cue starts before first dialogue without waiting for exploration fade');immediate.stop();
-assert.equal(Object.keys(SOUNDTRACK).length,17);assert.equal(Object.values(MUSIC_TRACKS).filter(p=>p.endsWith('.m4a')).length,2);
+assert.equal(Object.keys(SOUNDTRACK).length,25);assert.equal(Object.values(MUSIC_TRACKS).filter(p=>p.endsWith('.m4a')).length,10);
 for(let n=1;n<=8;n++)for(const trainer of [{id:'LDR-0'+n},{id:'REMATCH-LDR-0'+n,rematchOf:'LDR-0'+n}])assert.equal(cue({state:{},room:'town',battle:{trainer}}),'leader','all town leaders and rematches');
 assert.equal(cue({state:{},room:'stormDariusCrown',battle:{trainer:{id:'LDR-01'}}}),'leader','leader rematches take their boss theme even on the mountain');
 assert.equal(cue({state:{},room:'town',battle:{trainer:{id:'TRN-C01-001'}}}),'battle','ordinary battles retain the original music');

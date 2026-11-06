@@ -1,174 +1,174 @@
-import {selectSoundtrack,soundtrackState} from './soundtrack.js?v=0.90.56';
-import {createMusicController} from './music.js?v=0.90.56';
-import {tradeReceiptKey} from './dossier-encounters.js?v=0.90.56';
-import {attemptDossierSwitch} from './dossier-battle.js?v=0.90.56';
-import {THUNDER_SHARD} from './dossier-data.js?v=0.90.56';
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.56';
-import {eliteIdentity,lockVisitedLeaderTeams} from './elite-leaders.js?v=0.90.56';
-import {ensureFieldJournal,recordFieldBattle} from './field-journal.js?v=0.90.56';
-import {createFieldJournalUI} from './field-journal-ui.js?v=0.90.56';
-import {eggArtHTML} from './egg-art.js?v=0.90.56';
-import {itemIcon,codexIcon} from './item-art.js?v=0.90.56';
-import {evolutionOutlook,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.56';
-import {eggCapacity,nextPouchUpgrade,sellsPouchUpgrades,buyPouchUpgrade} from './egg-pouch.js?v=0.90.56';
-import {isPromenade,PROMENADE_SCALE,PROMENADE_Y_OFFSET,roomGrid,promenadeTap,promenadeTravelDuration,PROMENADE_PLAYER_SIZE,PROMENADE_COMPANION_SIZE} from './promenade.js?v=0.90.56';
-import {bulkCareMenu} from './bulk-care-ui.js?v=0.90.56';
-import {NURSERY_ITEMS,nurseryItemCount,prepareBreedingEffects} from './breeding-items.js?v=0.90.56';
-import {withTrainerProdigies,trainerProdigyWarning,initializeTrainerGrowth} from './trainer-prodigies.js?v=0.90.56';
-import {specialistAIPool,selectedAlly} from './teamcraft-battle.js?v=0.90.56';
-import {canonicalMoveId,codexCompatible,TEAMCRAFT_IDS} from './teamcraft-data.js?v=0.90.56';
-import {normalizeTeamcraftUnit,migrateTeamcraftState,maximumPP} from './teamcraft-progress.js?v=0.90.56';
-import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.56';
-import {evolutionStage,matchesPartner} from './partner-filters.js?v=0.90.56';
-import {holdCapturedPartner,placeCapturedPartner} from './capture-placement.js?v=0.90.56';
-import {completedBattleOpponents,battleExperienceRecipients} from './battle-experience.js?v=0.90.56';
-import {arenaRoundMarks,isArenaBossRound,chooseArenaBossAction,switchArenaBoss,orderArenaBossReplacement} from './arena-bosses.js?v=0.90.56';
-import {createModalViewMemory} from './modal-view.js?v=0.90.56';
-import {levelTonicQuote,queueLevelTonics} from './training-tonics.js?v=0.90.56';
-import {FINALE_TRAINERS,FINAL_DARIUS,BURIAL_LINES,finaleRoute,installFinaleTrainers} from './finale-data.js?v=0.90.56';
-import {finaleState,finaleSpots,finaleUnlocked,finaleObjective,finaleJournal,finishBurialLine,grantMemorialPartners,settleFinalUnique,settleDariusFinale,canFightFinale} from './finale-rules.js?v=0.90.56';
-import {handleFinale,finaleFateMenu} from './finale-ui.js?v=0.90.56';
-import {drawFinaleCreatures} from './finale-art.js?v=0.90.56';
-import {refillDoubleFoes} from './relic-double.js?v=0.90.56';
-import {installStormTrainers,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.56';
-import {stormState,recordStormVictory,settleStormDragon,stormBound,stormMedicineAllowed,chooseStormMove,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.56';
-import {drawStormScreen} from './storm-weather.js?v=0.90.56';
-import {BOTRUNE_TRAINERS,BOTRUNE_GUARDS,TRIAL_BEATS,installBotruneTrainers,botruneRoute} from './botrune-data.js?v=0.90.56';
-import {botruneState,finishTrialBeat,botruneCanFight,botruneBlocked,botruneSpots,botruneObjective,botruneJournal} from './botrune-rules.js?v=0.90.56';
-import {handleBotrune,botruneFateMenu} from './botrune-ui.js?v=0.90.56';
-import {drawBotrunePeople,drawStormWeather,drawStormDragon} from './botrune-art.js?v=0.90.56';
-import {siteTabletHit,siteTabletJournalHTML} from './site-tablets.js?v=0.90.56';
-import {advanceFarm,farmActors,farmAnimalBlocked,farmAnimalHit} from './cossenne-farm.js?v=0.90.56';
-import {permanentRates,rehomeable,stewardshipCost,stewardshipQuote,rehomePartners,applyStewardship} from './stewardship.js?v=0.90.56';
-import {drawMarasenLife} from './marasen-art.js?v=0.90.56';
-import {marasenInteract as handleMarasen} from './marasen-ui.js?v=0.90.56';
-import {installMarasenTrainers,marasenRoute,MARASEN_TRAINERS,MARASEN_BRANCHES,VERDANT_ROAD} from './marasen-data.js?v=0.90.56';
-import {marasenBlocked,marasenJournal,marasenObjective,settleMarasenEncounter,marasenState,marasenLeaderReady} from './marasen-rules.js?v=0.90.56';
-import {handleCourtTrial} from './court-trials-ui.js?v=0.90.56';
-import {trialState,trialsReady} from './court-trials.js?v=0.90.56';
-import {COURT_RAIDERS,COURT_DARIUS,DARIUS_COURT_ARRIVAL,courtRaidCleared} from './court-raiders.js?v=0.90.56';
-import {cossenneServiceObjective,reliefJournal} from './cossenne-services.js?v=0.90.56';
-import {handleCossenneService} from './cossenne-services-ui.js?v=0.90.56';
-import {SPECIALIST_FOODS,SPECIALIST_MEDICINES,specialistFood,specialistStrength,medicinePreview,useSpecialistMedicine,specialistBagHTML} from './specialist-supplies.js?v=0.90.56';
-import {assignShiny,shinySummaryHTML} from './shinies.js?v=0.90.56';
-import {breedingPlanHTML,inheritanceSummaryHTML,availableProdigyStats} from './breeding-inheritance.js?v=0.90.56';
-import {drawRevoltDocuments} from './revolt-world.js?v=0.90.56';
-import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,revoltState,canReadRevolt,recordRevolt,revoltLines,revoltAid,installRevoltTrainers,revoltJournal} from './revolt.js?v=0.90.56';
-import {CHOICE_REWARDS,outcomeState,choiceRewardText,rewardText} from './choice-rewards.js?v=0.90.56';
-import {EXECUTION_BOUNTIES,leaderAceBaby,leaderOutcomeState,settleLeaderRewards,settleLeaderFateEvolutions,makeLeaderRematch,completeLeaderRematch} from './leader-outcomes.js?v=0.90.56';
-import {EGG_ICON,BREEDING_FEE,EGG_STEPS,nurseryState,breedingUnlocked,breedable,breedingPair,createBreedingEgg,breedingBatchLimit,createBreedingBatch,advanceEggSteps,hatchBreedingEgg} from './breeding.js?v=0.90.56';
-import {FRESH_MEAT,FRESH_MEAT_MODIFIER} from './fresh-meat.js?v=0.90.56';
-import {FORTIFIED_RATION,FORTIFIED_RATION_MODIFIER} from './fortified-ration.js?v=0.90.56';
+import {selectSoundtrack,soundtrackState,musicPlaylist,evolutionMusicToken,linkEvolutionMusicCards} from './soundtrack.js?v=0.90.57';
+import {createMusicController} from './music.js?v=0.90.57';
+import {tradeReceiptKey} from './dossier-encounters.js?v=0.90.57';
+import {attemptDossierSwitch} from './dossier-battle.js?v=0.90.57';
+import {THUNDER_SHARD} from './dossier-data.js?v=0.90.57';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.57';
+import {eliteIdentity,lockVisitedLeaderTeams} from './elite-leaders.js?v=0.90.57';
+import {ensureFieldJournal,recordFieldBattle} from './field-journal.js?v=0.90.57';
+import {createFieldJournalUI} from './field-journal-ui.js?v=0.90.57';
+import {eggArtHTML} from './egg-art.js?v=0.90.57';
+import {itemIcon,codexIcon} from './item-art.js?v=0.90.57';
+import {evolutionOutlook,rememberLegacyRenewalMoves} from './evolution-renewal.js?v=0.90.57';
+import {eggCapacity,nextPouchUpgrade,sellsPouchUpgrades,buyPouchUpgrade} from './egg-pouch.js?v=0.90.57';
+import {isPromenade,PROMENADE_SCALE,PROMENADE_Y_OFFSET,roomGrid,promenadeTap,promenadeTravelDuration,PROMENADE_PLAYER_SIZE,PROMENADE_COMPANION_SIZE} from './promenade.js?v=0.90.57';
+import {bulkCareMenu} from './bulk-care-ui.js?v=0.90.57';
+import {NURSERY_ITEMS,nurseryItemCount,prepareBreedingEffects} from './breeding-items.js?v=0.90.57';
+import {withTrainerProdigies,trainerProdigyWarning,initializeTrainerGrowth} from './trainer-prodigies.js?v=0.90.57';
+import {specialistAIPool,selectedAlly} from './teamcraft-battle.js?v=0.90.57';
+import {canonicalMoveId,codexCompatible,TEAMCRAFT_IDS} from './teamcraft-data.js?v=0.90.57';
+import {normalizeTeamcraftUnit,migrateTeamcraftState,maximumPP} from './teamcraft-progress.js?v=0.90.57';
+import {enduranceTonicMenu} from './teamcraft-ui.js?v=0.90.57';
+import {evolutionStage,matchesPartner} from './partner-filters.js?v=0.90.57';
+import {holdCapturedPartner,placeCapturedPartner} from './capture-placement.js?v=0.90.57';
+import {completedBattleOpponents,battleExperienceRecipients} from './battle-experience.js?v=0.90.57';
+import {arenaRoundMarks,isArenaBossRound,chooseArenaBossAction,switchArenaBoss,orderArenaBossReplacement} from './arena-bosses.js?v=0.90.57';
+import {createModalViewMemory} from './modal-view.js?v=0.90.57';
+import {levelTonicQuote,queueLevelTonics} from './training-tonics.js?v=0.90.57';
+import {FINALE_TRAINERS,FINAL_DARIUS,BURIAL_LINES,finaleRoute,installFinaleTrainers} from './finale-data.js?v=0.90.57';
+import {finaleState,finaleSpots,finaleUnlocked,finaleObjective,finaleJournal,finishBurialLine,grantMemorialPartners,settleFinalUnique,settleDariusFinale,canFightFinale} from './finale-rules.js?v=0.90.57';
+import {handleFinale,finaleFateMenu} from './finale-ui.js?v=0.90.57';
+import {drawFinaleCreatures} from './finale-art.js?v=0.90.57';
+import {refillDoubleFoes} from './relic-double.js?v=0.90.57';
+import {installStormTrainers,DARIUS_STORM_ID} from './thunderplain-data.js?v=0.90.57';
+import {stormState,recordStormVictory,settleStormDragon,stormBound,stormMedicineAllowed,chooseStormMove,releaseStormDragon,stormDragonEncounter} from './thunderplain-rules.js?v=0.90.57';
+import {drawStormScreen} from './storm-weather.js?v=0.90.57';
+import {BOTRUNE_TRAINERS,BOTRUNE_GUARDS,TRIAL_BEATS,installBotruneTrainers,botruneRoute} from './botrune-data.js?v=0.90.57';
+import {botruneState,finishTrialBeat,botruneCanFight,botruneBlocked,botruneSpots,botruneObjective,botruneJournal} from './botrune-rules.js?v=0.90.57';
+import {handleBotrune,botruneFateMenu} from './botrune-ui.js?v=0.90.57';
+import {drawBotrunePeople,drawStormWeather,drawStormDragon} from './botrune-art.js?v=0.90.57';
+import {siteTabletHit,siteTabletJournalHTML} from './site-tablets.js?v=0.90.57';
+import {advanceFarm,farmActors,farmAnimalBlocked,farmAnimalHit} from './cossenne-farm.js?v=0.90.57';
+import {permanentRates,rehomeable,stewardshipCost,stewardshipQuote,rehomePartners,applyStewardship} from './stewardship.js?v=0.90.57';
+import {drawMarasenLife} from './marasen-art.js?v=0.90.57';
+import {marasenInteract as handleMarasen} from './marasen-ui.js?v=0.90.57';
+import {installMarasenTrainers,marasenRoute,MARASEN_TRAINERS,MARASEN_BRANCHES,VERDANT_ROAD} from './marasen-data.js?v=0.90.57';
+import {marasenBlocked,marasenJournal,marasenObjective,settleMarasenEncounter,marasenState,marasenLeaderReady} from './marasen-rules.js?v=0.90.57';
+import {handleCourtTrial} from './court-trials-ui.js?v=0.90.57';
+import {trialState,trialsReady} from './court-trials.js?v=0.90.57';
+import {COURT_RAIDERS,COURT_DARIUS,DARIUS_COURT_ARRIVAL,courtRaidCleared} from './court-raiders.js?v=0.90.57';
+import {cossenneServiceObjective,reliefJournal} from './cossenne-services.js?v=0.90.57';
+import {handleCossenneService} from './cossenne-services-ui.js?v=0.90.57';
+import {SPECIALIST_FOODS,SPECIALIST_MEDICINES,specialistFood,specialistStrength,medicinePreview,useSpecialistMedicine,specialistBagHTML} from './specialist-supplies.js?v=0.90.57';
+import {assignShiny,shinySummaryHTML} from './shinies.js?v=0.90.57';
+import {breedingPlanHTML,inheritanceSummaryHTML,availableProdigyStats} from './breeding-inheritance.js?v=0.90.57';
+import {drawRevoltDocuments} from './revolt-world.js?v=0.90.57';
+import {REVOLT_CAST,REVOLT_ART_IDS,REVOLT_EVENTS,revoltState,canReadRevolt,recordRevolt,revoltLines,revoltAid,installRevoltTrainers,revoltJournal} from './revolt.js?v=0.90.57';
+import {CHOICE_REWARDS,outcomeState,choiceRewardText,rewardText} from './choice-rewards.js?v=0.90.57';
+import {EXECUTION_BOUNTIES,leaderAceBaby,leaderOutcomeState,settleLeaderRewards,settleLeaderFateEvolutions,makeLeaderRematch,completeLeaderRematch} from './leader-outcomes.js?v=0.90.57';
+import {EGG_ICON,BREEDING_FEE,EGG_STEPS,nurseryState,breedingUnlocked,breedable,breedingPair,createBreedingEgg,breedingBatchLimit,createBreedingBatch,advanceEggSteps,hatchBreedingEgg} from './breeding.js?v=0.90.57';
+import {FRESH_MEAT,FRESH_MEAT_MODIFIER} from './fresh-meat.js?v=0.90.57';
+import {FORTIFIED_RATION,FORTIFIED_RATION_MODIFIER} from './fortified-ration.js?v=0.90.57';
 
-import {ORCHARD_ROUTES,orchardRoute,installCossenneTrainers} from './cossenne-data.js?v=0.90.56';
-import {handleCossenne,orchardHistoryHTML} from './cossenne-ui.js?v=0.90.56';
-import {cossenneState,cossenneEvent,cossenneReady,cossenneObjective,cossenneJournal,settleCossenneFate} from './cossenne-rules.js?v=0.90.56';
-import {drawOrchardLife} from './cossenne-art.js?v=0.90.56';
-import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.90.56';
-import {CAELYNX_ENCOUNTER,CAELYNX_ID,SCHOLAR,FOSSILS,WATCH_RECORD,BED_TEXT,QUEST_SPOTS,mountainQuestState,mountainFind,canMeetCaelynx,resolveCaelynx,reviveMountainFossil,mountainQuestHint,drawMountainQuestScene} from './mountain-quests.js?v=0.90.56';
-import {PASS_NPCS,passRecordHTML} from './mountain-pass.js?v=0.90.56';
-import {trainerPortraitId,trainerBattleArtId,dialoguePortraitId} from './side-trainer-art.js?v=0.90.56';
-import {courtState,rollCourtEncounter,courtEnemy,storeRoamer,courtRound,courtJournal} from './paladin-roaming.js?v=0.90.56';
-import {COURT_ROOMS,COURT_COMMANDER,COURT_INSCRIPTIONS,readCourtInscription,pressCourtSeal,acceptCourt,prepareCourtRelease,finishCourtRelease,courtGateOpen,courtGateHint,courtBlocked,courtObjective,courtSpots,courtRoute,installCourtTrainers} from './paladin-quest.js?v=0.90.56';
-import {COURT_DIALOGUE} from './paladin-dialogue.js?v=0.90.56';
-import {courtFrame,drawCourtScene,drawCourtHuman,prepareCourtArt} from './paladin-art.js?v=0.90.56';
-import {paladinEncounterRoute,jungleRoute} from './paladin-encounters.js?v=0.90.56';
-import {bindMenagerieParty} from './menagerie-rules.js?v=0.90.56';
-import {drawBoulder,drawQuestMechanism} from './quest-scenery.js?v=0.90.56';
-import {jettyFor,nextJettyEncounter,keepContestBait,canOfferRiverBait,spendRiverBait} from './jetty-fishing.js?v=0.90.56';
-import {QUEST_REWARDS,rewardPending,nurseryOffers,grantQuestReward,SECRET_MOVES,canLearnSecret,teachSecret,distinctAbilitySlots,abilityOptions,awakenAbility,selectAbility} from './quest-rewards.js?v=0.90.56';
-import {preserveStrength,WINTER_PRESERVE} from './quest-rewards-data.js?v=0.90.56';
-import {SIDE_CAMPAIGNS,campaignRoom,campaignArea,campaignState,campaignGuard,campaignGiver,campaignGiverSpot,campaignObjective,campaignReminder,campaignControlHelp,campaignPages,campaignRecordHTML,campaignParagraphs,campaignJournal,campaignGateOpen,campaignBlocked,campaignClue,campaignPuzzle,campaignReset,campaignAffinity,campaignAssist,campaignChoose,claimCampaign,campaignRoute,installCampaignTrainers,drawCampaignScene} from './side-campaigns.js?v=0.90.56';
-import {SALVATION_MOVE,SALVATION_ID,resolveSalvationMove,teachSalvation} from './salvation.js?v=0.90.56';
-import {variableEarlyTrainer} from './trainer-team-variety.js?v=0.90.56';
-import {drawBellLantern,drawAncientBellGate,bellLanternHit} from './bell-scenery.js?v=0.90.56';
-import {makeSaveFile,parseSaveFile,saveFileName,SAVE_FILE_LIMIT} from './save-transfer.js?v=0.90.56';
-import {BELL_GUARDS,BELL_SWITCHES,BELL_CORE_PRICE,bellPathBlocked,bellGateOpen,turnBellSwitch,defeatBellGuard,buyQuestCore,relicQuestState,collectBellFragment,restoreRelicBell,claimQuestCore,claimRescuedRivet,relicQuestSpots,relicQuestObjective,RELIC_RESCUE_OPPONENTS,RIVET_STANDOFF,relicRescueBlocked,relicRescueNearby,relicRescueHit} from './relic-quest.js?v=0.90.56';
-import {doubleRound,doubleLivingTargets} from './relic-double.js?v=0.90.56';
-import {RELIC_ITEMS,RELIC_BRANCHES,RIVET_ID,markWarbond} from './relic-family.js?v=0.90.56';
-import {promoteUsingItem} from './evolution.js?v=0.90.56';
-import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS,cybressaRoute,installCybressaTrainers} from './cybressa-data.js?v=0.90.56';
-import {cybressaUnlocked,cybressaState,acceptWarehouseQuest,warehouseReady,recordWarehouseEvidence,allocateCybressaGrain,receiveWatercraft,startCybressaQuest,cybressaQuestFinds,claimCybressaCache,finishCybressaQuest,cybressaObjective,cybressaJournal,createCybressaTrial,registerCybressaTrial,completeCybressaTrial,continueCybressaTrial,finishCybressaTrialRun} from './cybressa-rules.js?v=0.90.56';
-import {activeDraughts,draughtQuote,buyTrainingDraught,trainingBattleUids,settleTrainingBattle} from './training-draughts.js?v=0.90.56';
-import {migrateCanonicalBattle} from './canonical-character-names.js?v=0.90.56';
-import {migrateBattleCharacterNames} from './character-names.js?v=0.90.56';
-import {LIFE_EMBER,LIFE_EMBER_PICKUPS,livesRemaining,lifeCapacity,grantExtraLife,claimLifeEmber} from './extra-lives.js?v=0.90.56';
-import {HUMAN_MEMORIAL,companionHumanMemorial,memorialState,visitMemorialTown,resurrectionQuote,resurrectPartner} from './memorial.js?v=0.90.56';
-import {TRAVEL_HUBS,fastTravelUnlocked,travelQuote,payTravelFare,recordTravelVisit,travelDestinations,visitedTravelRooms} from './fast-travel.js?v=0.90.56';
-import {applyRelearn} from './move-relearning.js?v=0.90.56';
-import {battleDoubloonQuote} from './expedition-abilities.js?v=0.90.56';
-import {installFieldVoices,healFortParty,CACHE_LORE} from './field-polish.js?v=0.90.56';
-import {isRouteSign,signContains} from './route-signposts.js?v=0.90.56';
-import {biomeEncounterHint} from './biome-world.js?v=0.90.56';
-import {defeatExpMultiplier,rimebunWildMove} from './rimebun.js?v=0.90.56';
-import {activateBinoculars} from './binoculars.js?v=0.90.56';
-import {startingMoveIds} from './moveset-identity.js?v=0.90.56';
-import {pickupCollected,pickupFieldSpots,drawWorldPickups} from './world-pickups.js?v=0.90.56';
-import {LEADER_FORTS,FORT_SYMBOLS,fortForRoom,fortForLeader} from './leader-fort-data.js?v=0.90.56';
-import {leaderFortState,fortGateOpen,leaderFortBlocked,fortStoneAt,pushFortStone,resetFortPuzzle,turnFortRing,canChallengeFortLeader,fortGuardAvailable,claimFortCache,leaderFortObjective,leaderFortJournal,installLeaderFortTrainers} from './leader-fort-rules.js?v=0.90.56';
-import {drawLeaderFortState} from './leader-fort-world.js?v=0.90.56';
-import {huntFrame,prepareHuntArt,drawHuntActor,drawHuntScene,playHunt,shouldStartHunt} from './waran-hunt.js?v=0.90.56';
-import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.56';
-import {explorationState,claimExplorationCache,tradeCandidates,exchangeAbyssal,questFinds,recordExplorationFind,finishExplorationQuest,canMeetMythic,resolveCaveMythic,caveRoute,installExplorationTrainers,explorationJournal} from './exploration-rules.js?v=0.90.56';
-import {EXPANSION_HABITATS} from './full-encounters.js?v=0.90.56';
-import {expandEncounterRoute} from './roster-encounters.js?v=0.90.56';
-import {isReducedMotion,battleAnimationsEnabled,setBattleAnimations,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.90.56';
-import {RESCUE_GIFTS,rescueGiftPool,chooseRescueTypes,validRescueTypes,rescueGiftChoices,RESCUE_SOLDIERS,GAME_DAY_MS,FISH_DAYLIGHT_MS,fishingDeadline,fishingClosed,fishingCanSubmit,fishingReadyAt,canEnterCompetition,FISH_ENTRY_FEE,FISH_PRIZES,adventureState,gameDay,rescueReady,completeRescue,claimRescueGift,receiveRod,enterCompetition,nextFishingEncounter,waterBaitModifier,canUseWaterBait,recordFishingCatch,fishScore,finishCompetition,fishingResults,availableFishingPrizes,claimFishingPrize,canLearnScroll,sideObjective,sideJournal} from './side-adventures.js?v=0.90.56';
-import {sideFieldSpots} from './side-world.js?v=0.90.56';
-import {MEDICINE_GUARD,migrateHospiceQuest,hospiceQuest,requestHospiceMedicine,canFightMedicineGuard,defeatMedicineGuard,carryingHospiceMedicine,deliverHospiceMedicine,hospiceReady,hospiceFieldSpots,hospiceObjective,journalSummary} from './hospice-quest.js?v=0.90.56';
-import {createCompanion,resetCompanion,syncCompanion,followPlayerStep,advanceCompanion,recordCompanionStep,talkToCompanion,drawCompanion} from './companion.js?v=0.90.56';
-import {signatureArtReady} from './signature-effects.js?v=0.90.56';
-import {healthKey,captureHealth,healthChanges,presentedHP} from './health-presentation.js?v=0.90.56';
-import {statusHTML} from './battle-status.js?v=0.90.56';
-import {learnTreeHTML} from './learn-tree.js?v=0.90.56';
-import {moveUsable,movePriority} from './move-rules.js?v=0.90.56';
+import {ORCHARD_ROUTES,orchardRoute,installCossenneTrainers} from './cossenne-data.js?v=0.90.57';
+import {handleCossenne,orchardHistoryHTML} from './cossenne-ui.js?v=0.90.57';
+import {cossenneState,cossenneEvent,cossenneReady,cossenneObjective,cossenneJournal,settleCossenneFate} from './cossenne-rules.js?v=0.90.57';
+import {drawOrchardLife} from './cossenne-art.js?v=0.90.57';
+import {MOUNTAIN_NPC_IDS} from './mountain-art.js?v=0.90.57';
+import {CAELYNX_ENCOUNTER,CAELYNX_ID,SCHOLAR,FOSSILS,WATCH_RECORD,BED_TEXT,QUEST_SPOTS,mountainQuestState,mountainFind,canMeetCaelynx,resolveCaelynx,reviveMountainFossil,mountainQuestHint,drawMountainQuestScene} from './mountain-quests.js?v=0.90.57';
+import {PASS_NPCS,passRecordHTML} from './mountain-pass.js?v=0.90.57';
+import {trainerPortraitId,trainerBattleArtId,dialoguePortraitId} from './side-trainer-art.js?v=0.90.57';
+import {courtState,rollCourtEncounter,courtEnemy,storeRoamer,courtRound,courtJournal} from './paladin-roaming.js?v=0.90.57';
+import {COURT_ROOMS,COURT_COMMANDER,COURT_INSCRIPTIONS,readCourtInscription,pressCourtSeal,acceptCourt,prepareCourtRelease,finishCourtRelease,courtGateOpen,courtGateHint,courtBlocked,courtObjective,courtSpots,courtRoute,installCourtTrainers} from './paladin-quest.js?v=0.90.57';
+import {COURT_DIALOGUE} from './paladin-dialogue.js?v=0.90.57';
+import {courtFrame,drawCourtScene,drawCourtHuman,prepareCourtArt} from './paladin-art.js?v=0.90.57';
+import {paladinEncounterRoute,jungleRoute} from './paladin-encounters.js?v=0.90.57';
+import {bindMenagerieParty} from './menagerie-rules.js?v=0.90.57';
+import {drawBoulder,drawQuestMechanism} from './quest-scenery.js?v=0.90.57';
+import {jettyFor,nextJettyEncounter,keepContestBait,canOfferRiverBait,spendRiverBait} from './jetty-fishing.js?v=0.90.57';
+import {QUEST_REWARDS,rewardPending,nurseryOffers,grantQuestReward,SECRET_MOVES,canLearnSecret,teachSecret,distinctAbilitySlots,abilityOptions,awakenAbility,selectAbility} from './quest-rewards.js?v=0.90.57';
+import {preserveStrength,WINTER_PRESERVE} from './quest-rewards-data.js?v=0.90.57';
+import {SIDE_CAMPAIGNS,campaignRoom,campaignArea,campaignState,campaignGuard,campaignGiver,campaignGiverSpot,campaignObjective,campaignReminder,campaignControlHelp,campaignPages,campaignRecordHTML,campaignParagraphs,campaignJournal,campaignGateOpen,campaignBlocked,campaignClue,campaignPuzzle,campaignReset,campaignAffinity,campaignAssist,campaignChoose,claimCampaign,campaignRoute,installCampaignTrainers,drawCampaignScene} from './side-campaigns.js?v=0.90.57';
+import {SALVATION_MOVE,SALVATION_ID,resolveSalvationMove,teachSalvation} from './salvation.js?v=0.90.57';
+import {variableEarlyTrainer} from './trainer-team-variety.js?v=0.90.57';
+import {drawBellLantern,drawAncientBellGate,bellLanternHit} from './bell-scenery.js?v=0.90.57';
+import {makeSaveFile,parseSaveFile,saveFileName,SAVE_FILE_LIMIT} from './save-transfer.js?v=0.90.57';
+import {BELL_GUARDS,BELL_SWITCHES,BELL_CORE_PRICE,bellPathBlocked,bellGateOpen,turnBellSwitch,defeatBellGuard,buyQuestCore,relicQuestState,collectBellFragment,restoreRelicBell,claimQuestCore,claimRescuedRivet,relicQuestSpots,relicQuestObjective,RELIC_RESCUE_OPPONENTS,RIVET_STANDOFF,relicRescueBlocked,relicRescueNearby,relicRescueHit} from './relic-quest.js?v=0.90.57';
+import {doubleRound,doubleLivingTargets} from './relic-double.js?v=0.90.57';
+import {RELIC_ITEMS,RELIC_BRANCHES,RIVET_ID,markWarbond} from './relic-family.js?v=0.90.57';
+import {promoteUsingItem} from './evolution.js?v=0.90.57';
+import {CYBRESSA_QUESTS,CYBRESSA_CACHE_REWARDS,cybressaRoute,installCybressaTrainers} from './cybressa-data.js?v=0.90.57';
+import {cybressaUnlocked,cybressaState,acceptWarehouseQuest,warehouseReady,recordWarehouseEvidence,allocateCybressaGrain,receiveWatercraft,startCybressaQuest,cybressaQuestFinds,claimCybressaCache,finishCybressaQuest,cybressaObjective,cybressaJournal,createCybressaTrial,registerCybressaTrial,completeCybressaTrial,continueCybressaTrial,finishCybressaTrialRun} from './cybressa-rules.js?v=0.90.57';
+import {activeDraughts,draughtQuote,buyTrainingDraught,trainingBattleUids,settleTrainingBattle} from './training-draughts.js?v=0.90.57';
+import {migrateCanonicalBattle} from './canonical-character-names.js?v=0.90.57';
+import {migrateBattleCharacterNames} from './character-names.js?v=0.90.57';
+import {LIFE_EMBER,LIFE_EMBER_PICKUPS,livesRemaining,lifeCapacity,grantExtraLife,claimLifeEmber} from './extra-lives.js?v=0.90.57';
+import {HUMAN_MEMORIAL,companionHumanMemorial,memorialState,visitMemorialTown,resurrectionQuote,resurrectPartner} from './memorial.js?v=0.90.57';
+import {TRAVEL_HUBS,fastTravelUnlocked,travelQuote,payTravelFare,recordTravelVisit,travelDestinations,visitedTravelRooms} from './fast-travel.js?v=0.90.57';
+import {applyRelearn} from './move-relearning.js?v=0.90.57';
+import {battleDoubloonQuote} from './expedition-abilities.js?v=0.90.57';
+import {installFieldVoices,healFortParty,CACHE_LORE} from './field-polish.js?v=0.90.57';
+import {isRouteSign,signContains} from './route-signposts.js?v=0.90.57';
+import {biomeEncounterHint} from './biome-world.js?v=0.90.57';
+import {defeatExpMultiplier,rimebunWildMove} from './rimebun.js?v=0.90.57';
+import {activateBinoculars} from './binoculars.js?v=0.90.57';
+import {startingMoveIds} from './moveset-identity.js?v=0.90.57';
+import {pickupCollected,pickupFieldSpots,drawWorldPickups} from './world-pickups.js?v=0.90.57';
+import {LEADER_FORTS,FORT_SYMBOLS,fortForRoom,fortForLeader} from './leader-fort-data.js?v=0.90.57';
+import {leaderFortState,fortGateOpen,leaderFortBlocked,fortStoneAt,pushFortStone,resetFortPuzzle,turnFortRing,canChallengeFortLeader,fortGuardAvailable,claimFortCache,leaderFortObjective,leaderFortJournal,installLeaderFortTrainers} from './leader-fort-rules.js?v=0.90.57';
+import {drawLeaderFortState} from './leader-fort-world.js?v=0.90.57';
+import {huntFrame,prepareHuntArt,drawHuntActor,drawHuntScene,playHunt,shouldStartHunt} from './waran-hunt.js?v=0.90.57';
+import {SIDE_CONTENT,CAVE_FLOORS,CAVE_MYTHIC,EXPLORATION_QUESTS} from './exploration-data.js?v=0.90.57';
+import {explorationState,claimExplorationCache,tradeCandidates,exchangeAbyssal,questFinds,recordExplorationFind,finishExplorationQuest,canMeetMythic,resolveCaveMythic,caveRoute,installExplorationTrainers,explorationJournal} from './exploration-rules.js?v=0.90.57';
+import {EXPANSION_HABITATS} from './full-encounters.js?v=0.90.57';
+import {expandEncounterRoute} from './roster-encounters.js?v=0.90.57';
+import {isReducedMotion,battleAnimationsEnabled,setBattleAnimations,motionPreference,setMotionPreference,motionDescription} from './motion.js?v=0.90.57';
+import {RESCUE_GIFTS,rescueGiftPool,chooseRescueTypes,validRescueTypes,rescueGiftChoices,RESCUE_SOLDIERS,GAME_DAY_MS,FISH_DAYLIGHT_MS,fishingDeadline,fishingClosed,fishingCanSubmit,fishingReadyAt,canEnterCompetition,FISH_ENTRY_FEE,FISH_PRIZES,adventureState,gameDay,rescueReady,completeRescue,claimRescueGift,receiveRod,enterCompetition,nextFishingEncounter,waterBaitModifier,canUseWaterBait,recordFishingCatch,fishScore,finishCompetition,fishingResults,availableFishingPrizes,claimFishingPrize,canLearnScroll,sideObjective,sideJournal} from './side-adventures.js?v=0.90.57';
+import {sideFieldSpots} from './side-world.js?v=0.90.57';
+import {MEDICINE_GUARD,migrateHospiceQuest,hospiceQuest,requestHospiceMedicine,canFightMedicineGuard,defeatMedicineGuard,carryingHospiceMedicine,deliverHospiceMedicine,hospiceReady,hospiceFieldSpots,hospiceObjective,journalSummary} from './hospice-quest.js?v=0.90.57';
+import {createCompanion,resetCompanion,syncCompanion,followPlayerStep,advanceCompanion,recordCompanionStep,talkToCompanion,drawCompanion} from './companion.js?v=0.90.57';
+import {signatureArtReady} from './signature-effects.js?v=0.90.57';
+import {healthKey,captureHealth,healthChanges,presentedHP} from './health-presentation.js?v=0.90.57';
+import {statusHTML} from './battle-status.js?v=0.90.57';
+import {learnTreeHTML} from './learn-tree.js?v=0.90.57';
+import {moveUsable,movePriority} from './move-rules.js?v=0.90.57';
 let presentationHealth=null;
 const shownHP=u=>presentationHealth?.[healthKey(u)]??u.hp;
-import {growthSummaryHTML} from './growth-summary.js?v=0.90.56';
-import {ESCORT_STEPS,PRIEST_RETURNS,rememberPriestRest,evacDestination,activateEscort,advanceEscortStep,consumeEvac} from './field-items.js?v=0.90.56';
-import {evacHorses,drawEvacHorse} from './evac-horses.js?v=0.90.56';
-import {territoryBloom} from './expansion-world.js?v=0.90.56';
-import {worldPortrait,portraitBounds,drawWorldCharacter,WORLD_WALK_IDS} from './world-characters.js?v=0.90.56';
-import {enterTrainerArea,trainerStandingDown,standDownTrainer} from './trainer-stand-down.js?v=0.90.56';
-import {wildEscape} from './escape-rules.js?v=0.90.56';
-import {SHOPKEEPERS,SHOP_STOCK,shopStock,unlockGeneralStore,purchaseQuote,buySupplies} from './shopkeepers.js?v=0.90.56';
-import {recordFarewell} from './farewells.js?v=0.90.56';
-import {routeStage} from './route-progression.js?v=0.90.56';
-import {installRouteTrainers} from './route-roster.js?v=0.90.56';
-import {abilityInfo,abilityName,abilityMemory,abilityImmunity,beginAbilities,resumeAbilities,enterAbility,leaveAbility,canSwitch,heldInfo,healingMultiplier} from './abilities.js?v=0.90.56';
-import {HELD_ITEMS} from './held-data.js?v=0.90.56';
-import {tunedEvolution} from './evolution-tuning.js?v=0.90.56';
-import {BOARD,onBoard,boardWall,stoneAt,pushStone,resetStones,puzzleState,PUZZLE_CLUE} from './tunnel-puzzle.js?v=0.90.56';
-import {createTrainers,updateTrainers} from './trainer-actors.js?v=0.90.56';
-import {typeChartHTML,matchupHTML} from './type-chart.js?v=0.90.56';
-import {TYPES,TYPE_COLORS,typeEffectiveness,effectivenessLabel,effectivenessClass,categorySymbol,categoryLabel} from './type-rules.js?v=0.90.56';
-import {openingTrainer,starterCare,leaderVariant,restoreMove} from './opening-balance.js?v=0.90.56';
-import {migrateStats} from './stat-balance.js?v=0.90.56';
-import {migrateProgress} from './save-migration.js?v=0.90.56';
-import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.56';
-import {eligibleEvolutions,promote,levelMoves,entryMoves,relearnPool} from './evolution.js?v=0.90.56';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.56';
-import {trainerPayout,claimTrainerPayout,TRAINER_VOICES} from './trainer-rewards.js?v=0.90.56';
-import {NEW_MAPS,NEW_DOORS,isNewInterior} from './expansion-world.js?v=0.90.56';
-import {EXPANSION} from './expansion-data.js?v=0.90.56';
-import {revealLevel} from './level-reveal.js?v=0.90.56';
-import {nextCommand} from './menu-navigation.js?v=0.90.56';
-import {PLAYER_SPRITE} from './player-sprite.js?v=0.90.56';
-import {normalizeProgress,initializeProgress,growLevel,rewardsFor,STAT_KEYS,STAT_LABELS,permanentGrowthMultiplier,inheritedGrowthBonus} from './progression.js?v=0.90.56';
-import {createResidents,residentBlocks,updateResidents} from './residents.js?v=0.90.56';
-import {cleanName,escapeHTML,unitName} from './names.js?v=0.90.56';
-import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.90.56';
-import {ROUTE} from './route-data.js?v=0.90.56';
-import {phaseAt,pickEncounter,capturePreview,formatCaptureChance,resolveCapture,settleStarter,completeStarterReturn,captureMilestones} from './route-rules.js?v=0.90.56';
-import {pixelImpactTimes,pixelPlacement} from './action-vfx.js?v=0.90.56';
-import {effectSpec,effectHTML} from './effects.js?v=0.90.56';
-import {readSave,writeSave,clearSave,selectSlot,currentSlot,listSlots,migrateLegacy,writeImportedSave} from './save.js?v=0.90.56';
-import {createTitle,chapterCard} from './title.js?v=0.90.56';
-import {DATA} from './data.js?v=0.90.56';
-import {DOORS,AREA_GATES,gateAt,spotsFor,roomName,isBlocked,drawMap,drawWorldAsset,isEncounterTerrain,nearestWalkable} from './world.js?v=0.90.56';
-import {beginStep,advanceStep,walkFrame,travelDuration} from './movement.js?v=0.90.56';
-import {detailsHTML} from './move-details.js?v=0.90.56';
-import {instance,rng,turnOrder,applyMove,cleanupRound,heal,pathfind,stageMultiplier} from './engine.js?v=0.90.56';
+import {growthSummaryHTML} from './growth-summary.js?v=0.90.57';
+import {ESCORT_STEPS,PRIEST_RETURNS,rememberPriestRest,evacDestination,activateEscort,advanceEscortStep,consumeEvac} from './field-items.js?v=0.90.57';
+import {evacHorses,drawEvacHorse} from './evac-horses.js?v=0.90.57';
+import {territoryBloom} from './expansion-world.js?v=0.90.57';
+import {worldPortrait,portraitBounds,drawWorldCharacter,WORLD_WALK_IDS} from './world-characters.js?v=0.90.57';
+import {enterTrainerArea,trainerStandingDown,standDownTrainer} from './trainer-stand-down.js?v=0.90.57';
+import {wildEscape} from './escape-rules.js?v=0.90.57';
+import {SHOPKEEPERS,SHOP_STOCK,shopStock,unlockGeneralStore,purchaseQuote,buySupplies} from './shopkeepers.js?v=0.90.57';
+import {recordFarewell} from './farewells.js?v=0.90.57';
+import {routeStage} from './route-progression.js?v=0.90.57';
+import {installRouteTrainers} from './route-roster.js?v=0.90.57';
+import {abilityInfo,abilityName,abilityMemory,abilityImmunity,beginAbilities,resumeAbilities,enterAbility,leaveAbility,canSwitch,heldInfo,healingMultiplier} from './abilities.js?v=0.90.57';
+import {HELD_ITEMS} from './held-data.js?v=0.90.57';
+import {tunedEvolution} from './evolution-tuning.js?v=0.90.57';
+import {BOARD,onBoard,boardWall,stoneAt,pushStone,resetStones,puzzleState,PUZZLE_CLUE} from './tunnel-puzzle.js?v=0.90.57';
+import {createTrainers,updateTrainers} from './trainer-actors.js?v=0.90.57';
+import {typeChartHTML,matchupHTML} from './type-chart.js?v=0.90.57';
+import {TYPES,TYPE_COLORS,typeEffectiveness,effectivenessLabel,effectivenessClass,categorySymbol,categoryLabel} from './type-rules.js?v=0.90.57';
+import {openingTrainer,starterCare,leaderVariant,restoreMove} from './opening-balance.js?v=0.90.57';
+import {migrateStats} from './stat-balance.js?v=0.90.57';
+import {migrateProgress} from './save-migration.js?v=0.90.57';
+import {EVOLUTION_ITEMS} from './evolution-items.js?v=0.90.57';
+import {eligibleEvolutions,promote,levelMoves,entryMoves,relearnPool} from './evolution.js?v=0.90.57';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.57';
+import {trainerPayout,claimTrainerPayout,TRAINER_VOICES} from './trainer-rewards.js?v=0.90.57';
+import {NEW_MAPS,NEW_DOORS,isNewInterior} from './expansion-world.js?v=0.90.57';
+import {EXPANSION} from './expansion-data.js?v=0.90.57';
+import {revealLevel} from './level-reveal.js?v=0.90.57';
+import {nextCommand} from './menu-navigation.js?v=0.90.57';
+import {PLAYER_SPRITE} from './player-sprite.js?v=0.90.57';
+import {normalizeProgress,initializeProgress,growLevel,rewardsFor,STAT_KEYS,STAT_LABELS,permanentGrowthMultiplier,inheritedGrowthBonus} from './progression.js?v=0.90.57';
+import {createResidents,residentBlocks,updateResidents} from './residents.js?v=0.90.57';
+import {cleanName,escapeHTML,unitName} from './names.js?v=0.90.57';
+import {preloadCombatArt,battleArtReady,combatArtSrc,combatArtReady} from './combat-art.js?v=0.90.57';
+import {ROUTE} from './route-data.js?v=0.90.57';
+import {phaseAt,pickEncounter,capturePreview,formatCaptureChance,resolveCapture,settleStarter,completeStarterReturn,captureMilestones} from './route-rules.js?v=0.90.57';
+import {pixelImpactTimes,pixelPlacement} from './action-vfx.js?v=0.90.57';
+import {effectSpec,effectHTML} from './effects.js?v=0.90.57';
+import {readSave,writeSave,clearSave,selectSlot,currentSlot,listSlots,migrateLegacy,writeImportedSave} from './save.js?v=0.90.57';
+import {createTitle,chapterCard} from './title.js?v=0.90.57';
+import {DATA} from './data.js?v=0.90.57';
+import {DOORS,AREA_GATES,gateAt,spotsFor,roomName,isBlocked,drawMap,drawWorldAsset,isEncounterTerrain,nearestWalkable} from './world.js?v=0.90.57';
+import {beginStep,advanceStep,walkFrame,travelDuration} from './movement.js?v=0.90.57';
+import {detailsHTML} from './move-details.js?v=0.90.57';
+import {instance,rng,turnOrder,applyMove,cleanupRound,heal,pathfind,stageMultiplier} from './engine.js?v=0.90.57';
 const $=s=>document.querySelector(s), byId=id=>DATA.species.find(x=>x.id===id), moveId=id=>DATA.moves.find(x=>x.id===canonicalMoveId(id));
 preloadCombatArt(['001','004','007','010','012','014','018','033']);
 installRouteTrainers(EXPANSION,TRAINER_VOICES);
@@ -210,14 +210,14 @@ let phaseElapsed=0,worldRandom=rng(2460317),lastClock=performance.now(),encounte
 function hydrate(raw){if(!raw)return null;rememberLegacyRenewalMoves(raw);const species=byId(raw.species?.id);if(!species)throw Error('Save species unavailable');const unit={...raw,species};if(!['primary','secondary','hidden'].includes(unit.abilitySlot))unit.abilitySlot='primary';normalizeTeamcraftUnit(unit,DATA.moves);starterCare(normalizeProgress(migrateStats(unit)));if(unit.uid?.startsWith('LDR-01-'))leaderVariant(unit,'LDR-01',Number(unit.uid.split('-').at(-1)));return unit;}
 function lead(){return state.party.find(u=>u.uid===state.leadUid&&u.hp>0)||state.party.find(u=>u.hp>0);}
 function newUnit(species,level,encounterSeed=null){const moves=startingMoveIds(DATA,species,level).map(moveId);const u=instance(species,level,moves);const uid='unit-'+state.nextUnitId++;u.uid=encounterSeed||uid;return assignShiny(initializeProgress(u));}
-function persist(){if(restarting||currentSlot()===null||!state.begun)return false;try{soundtrackState(state).positions=music.positions();ensureFieldJournal(state);recordFieldBattle(state,battle,room);migrateTeamcraftState(state,DATA.moves);writeSave({state,room,returnDoor,player:{x:player.x,y:player.y,facing:player.facing},phaseElapsed,worldRandom:worldRandom.state(),battle:battle?.kind==='wild'?{...battle,playerUid:battle.player.uid,player:null,random:null,randomState:battle.random.state(),busy:false}:null});saveFailed=false;return true;}catch{saveFailed=true;toast('Browser saving is unavailable. Expedition changes are paused until saving works.');return false;}}
+function persist(){if(restarting||currentSlot()===null||!state.begun)return false;try{Object.assign(soundtrackState(state),music.snapshot());ensureFieldJournal(state);recordFieldBattle(state,battle,room);migrateTeamcraftState(state,DATA.moves);writeSave({state,room,returnDoor,player:{x:player.x,y:player.y,facing:player.facing},phaseElapsed,worldRandom:worldRandom.state(),battle:battle?.kind==='wild'?{...battle,playerUid:battle.player.uid,player:null,random:null,randomState:battle.random.state(),busy:false}:null});saveFailed=false;return true;}catch{saveFailed=true;toast('Browser saving is unavailable. Expedition changes are paused until saving works.');return false;}}
 function tickWorld(){if(state.begun&&!presentationLocked&&!battle&&!modal&&!dialogue&&!state.wiped)autoHatchReadyEggs();const escort=$('#escort-counter');escort.hidden=!(state.escortSteps>0||state.binocularBattles>0||state.nursery?.eggs?.length);escort.textContent=[state.escortSteps>0?'Armed Escort · '+state.escortSteps+' steps':null,state.binocularBattles>0?'Binoculars · '+state.binocularBattles+' battles':null,state.nursery?.eggs?.length?(state.nursery.eggs.some(e=>e.remaining===0)?'Egg ready to hatch':'Egg · '+Math.min(...state.nursery.eggs.map(e=>e.remaining))+' steps'):null].filter(Boolean).join(' · ');$('#console-run').textContent=state.running?'Run: On':'Run: Off';$('#console-run').setAttribute('aria-pressed',Boolean(state.running));$('#game-menu').disabled=!state.begun||presentationLocked||modal;const now=performance.now();if(commandHeld&&now>=commandHeld.next){consoleFocus(commandHeld.dir);commandHeld.next=now+150;}if(!document.hidden&&state.begun)phaseElapsed+=Math.max(0,now-lastClock);lastClock=now;const phase=phaseAt(phaseElapsed);const fishClock=$('#fishing-time-left');if(fishClock)fishClock.textContent=fishingDayClock();const fishEntry=$('#fish-enter');if(fishEntry)fishEntry.disabled=!lead()||!canEnterCompetition(state,phaseElapsed);const weighIn=$('#fish-weigh-in');if(weighIn)weighIn.disabled=!fishingCanSubmit(state.sideAdventures?.fishing?.contest,phaseElapsed);$('#phase').textContent=roomName(room)+' · '+(!['town','march',...Object.keys(NEW_MAPS)].includes(room)?'Indoors':phase==='DAY'?'Day':'Night');$('#viewport').classList.toggle('night',phase==='NIGHT');}
 let dialogue=null,battle=null,modal=false,held=null,lastTime=0,toastTimer,autoInteract=false,audioCtx=null;
 const music=createMusicController({fadeMs:600});
-function syncMusic(){const cue=selectSoundtrack({state,room,battle,dialogue,doors:DOORS,maps:NEW_MAPS});music.update({enabled:state.sound,active:state.begun&&!state.wiped||!!battle,battle:!!battle,cue,immediate:cue==='execution'||cue==='burial',hidden:document.hidden});}
+function syncMusic(){const cue=selectSoundtrack({state,room,battle,dialogue,doors:DOORS,maps:NEW_MAPS}),evolution=evolutionMusicToken(state.rewardQueue?.[0]);music.update({enabled:state.sound,active:state.begun&&!state.wiped||!!battle,battle:!!battle,encounter:battle,cue,playlist:musicPlaylist({cue,battle,room,doors:DOORS}),evolution,immediate:!!evolution||cue==='execution'||cue==='burial',hidden:document.hidden});}
 for(const event of ['pointerdown','keydown'])document.addEventListener(event,()=>{syncMusic();music.unlock();},{capture:true});
-document.addEventListener('visibilitychange',syncMusic);
-window.addEventListener('pagehide',()=>music.stop());
+document.addEventListener('visibilitychange',()=>{syncMusic();if(document.hidden)persist();});
+window.addEventListener('pagehide',()=>{persist();music.suspend();});
 window.addEventListener('pageshow',syncMusic);
 function blip(freq=480){if(!state.sound)return;try{audioCtx??=new AudioContext();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);o.frequency.value=freq;g.gain.setValueAtTime(.025,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+.1);o.start();o.stop(audioCtx.currentTime+.1);}catch{}}
 function toast(t){$('#toast').textContent=t;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500);}
@@ -246,7 +246,7 @@ function refresh(){syncMusic();syncHellPortal();const chapterNode=$('#brand-chap
  renderFortLift();$('#party-button').textContent=`Expedition · ${state.party.filter(u=>u.hp>0).length} / 6`;for(const spot of spots){const el=$(`[data-spot="${spot.id}"]`);if(el){el.classList.toggle('current',(spot.id==='pate'&&!state.pate)||(spot.id==='trade'&&state.pate&&!state.trade)||(spot.id==='kurg'&&state.trade&&(!state.starter&&!state.starterChosen))||(spot.id==='aeric'&&state.starter&&!state.blessing)||(spot.id==='beric'&&state.blessing&&!state.test)||(spot.id==='exit'&&state.test));el.classList.toggle('complete',Boolean(state[spot.id]||(spot.id==='beric'&&state.test)||(spot.id==='aeric'&&state.blessing)));}}
 }
 function showDialogue(lines,onEnd){stopMovement();dialogue={lines,index:0,onEnd};syncMusic();$('#dialogue').hidden=false;renderDialogue();blip();}
-function renderDialogue(){const current=dialogue,line=current.lines[current.index],subject=line.abyssalUnit||line.abyssalId,portrait=dialoguePortraitId(line.portrait,EXPANSION.trainers);const centre={"CHR-AIMON":35.6,"CHR-KURG":53.1,"CHR-AERIC":51.2,"TRN-C01-001":44.6,"bystander":55.5}[portrait]??50;$('#dialogue').innerHTML=`<div class="dialogue-box fade ${portrait||line.abyssalId?'has-bust':''}">${line.abyssalId?`<div class="dialogue-bust companion-bust ${line.farmBust?'farm-bust':''}">${line.farmBust?`<svg viewBox="${line.farmBust.join(' ')}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeHTML(line.speaker)}, battle portrait"><image href="assets/${line.abyssalId}.webp?v=0.90.56" width="512" height="512"/></svg>`:`<img class="dialogue-creature-art" src="${combatArtSrc(subject)}" alt="${escapeHTML(line.speaker)}">`}</div>`:''}${portrait?`<div class="dialogue-bust" style="--portrait-centre:${centre}%"><img class="${portrait==='bystander'?'bystander-bust':''}" src="${portrait==='bystander'?'assets/bystander-bust.webp':imageCache[portrait]?.src||'assets/'+portrait+'.webp'}" alt="${escapeHTML(line.speaker)}, speaker portrait"></div>`:''}<div class="dialogue-content"><div class="speaker">${escapeHTML(line.speaker==='Aimon'?state.playerName:line.speaker)}</div>${line.mood?`<span class="companion-mood">Mood · ${escapeHTML(line.mood)}</span>`:''}<p class="dialogue-text">${escapeHTML(line.text.replace(/\bAimon\b/g,state.playerName))}</p><div class="dialogue-actions"><span class="line-counter">${current.index+1} / ${current.lines.length}</span>${line.choices?line.choices.map((c,i)=>`<button data-choice="${i}" class="${i===0?'primary':''}">${c.text}</button>`).join(''):`<button id="next-line" class="primary">${current.index===current.lines.length-1?'Continue':'Next'} <kbd>↵</kbd></button>`}</div></div></div>`;
+function renderDialogue(){const current=dialogue,line=current.lines[current.index],subject=line.abyssalUnit||line.abyssalId,portrait=dialoguePortraitId(line.portrait,EXPANSION.trainers);const centre={"CHR-AIMON":35.6,"CHR-KURG":53.1,"CHR-AERIC":51.2,"TRN-C01-001":44.6,"bystander":55.5}[portrait]??50;$('#dialogue').innerHTML=`<div class="dialogue-box fade ${portrait||line.abyssalId?'has-bust':''}">${line.abyssalId?`<div class="dialogue-bust companion-bust ${line.farmBust?'farm-bust':''}">${line.farmBust?`<svg viewBox="${line.farmBust.join(' ')}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeHTML(line.speaker)}, battle portrait"><image href="assets/${line.abyssalId}.webp?v=0.90.57" width="512" height="512"/></svg>`:`<img class="dialogue-creature-art" src="${combatArtSrc(subject)}" alt="${escapeHTML(line.speaker)}">`}</div>`:''}${portrait?`<div class="dialogue-bust" style="--portrait-centre:${centre}%"><img class="${portrait==='bystander'?'bystander-bust':''}" src="${portrait==='bystander'?'assets/bystander-bust.webp':imageCache[portrait]?.src||'assets/'+portrait+'.webp'}" alt="${escapeHTML(line.speaker)}, speaker portrait"></div>`:''}<div class="dialogue-content"><div class="speaker">${escapeHTML(line.speaker==='Aimon'?state.playerName:line.speaker)}</div>${line.mood?`<span class="companion-mood">Mood · ${escapeHTML(line.mood)}</span>`:''}<p class="dialogue-text">${escapeHTML(line.text.replace(/\bAimon\b/g,state.playerName))}</p><div class="dialogue-actions"><span class="line-counter">${current.index+1} / ${current.lines.length}</span>${line.choices?line.choices.map((c,i)=>`<button data-choice="${i}" class="${i===0?'primary':''}">${c.text}</button>`).join(''):`<button id="next-line" class="primary">${current.index===current.lines.length-1?'Continue':'Next'} <kbd>↵</kbd></button>`}</div></div></div>`;
  if(line.abyssalId&&!line.farmBust)void battleArtReady(subject).then(()=>{if(dialogue!==current||current.lines[current.index]!==line)return;const img=$('#dialogue .dialogue-creature-art');if(img)img.src=combatArtSrc(subject);});
  for(const img of $('#dialogue').querySelectorAll('img'))img.onerror=()=>{img.hidden=true;img.parentElement.classList.add('portrait-unavailable');};
  if(line.choices)document.querySelectorAll('[data-choice]').forEach(el=>el.onclick=()=>{const c=line.choices[+el.dataset.choice];closeDialogue();c.action();});else $('#next-line').onclick=nextLine;}
@@ -286,10 +286,10 @@ function openModal(title,content,onClose=null){modalOnClose=onClose;if(presentat
 function closeModal(){if(presentationLocked||state.rewardQueue?.length||state.pendingFate||[...state.party,...state.reserve].some(u=>u.capturePlacementPending))return;if($('#fn-legacy-continue')){if(!rewardTransaction(()=>{soundtrackState(state).burialActive=false;}))return;queueMicrotask(syncMusic);}modalViews.remember($('.modal'),document.activeElement);modal=false;$('#modal-root').innerHTML='';held=null;const afterClose=modalOnClose;modalOnClose=null;afterClose?.();if(modalReturnFocus?.isConnected)modalReturnFocus.focus();}
 function chooseStarter(){
  const desc={'001':'Quick and elusive. Dark attacks reward decisive play.','004':'A thoughtful partner. Build special attack, then strike.','007':'A sturdy fighter. Powerful blows, with limited PP.'};
- openModal('Choose your first partner',`<p>Scarimp, Calibrit or Ruffurn. The other two will accompany Pate and Trade. Your original partner has three lives.</p><div class="starters">${['001','004','007'].map(id=>`<button class="starter selection-idle" data-starter="${id}"><img src="assets/${id}.webp?v=0.90.56" alt="${byId(id).name}"><h3>${byId(id).name}</h3><span>${byId(id).types[0]}</span><p>${desc[id]}</p></button>`).join('')}</div>`);
+ openModal('Choose your first partner',`<p>Scarimp, Calibrit or Ruffurn. The other two will accompany Pate and Trade. Your original partner has three lives.</p><div class="starters">${['001','004','007'].map(id=>`<button class="starter selection-idle" data-starter="${id}"><img src="assets/${id}.webp?v=0.90.57" alt="${byId(id).name}"><h3>${byId(id).name}</h3><span>${byId(id).types[0]}</span><p>${desc[id]}</p></button>`).join('')}</div>`);
  document.querySelectorAll('[data-starter]').forEach(btn=>btn.onclick=()=>confirmStarter(btn.dataset.starter));
 }
-function confirmStarter(id){if(state.starterChosen)return;const s=byId(id);openModal(s.name,`<p>You’ll set out with ${s.name}. Pate and Trade will take the remaining partners.</p><div class="partner-mini"><img src="assets/${id}.webp?v=0.90.56" alt="${s.name}"><div><b>${s.name}</b><small>${s.types.join(' / ')} · Three original lives</small></div></div><div class="modal-actions"><button id="back-starters">Back</button><button class="primary" id="confirm-starter">Choose ${s.name}</button></div>`);$('#back-starters').onclick=chooseStarter;$('#confirm-starter').onclick=async()=>{if(presentationLocked)return;presentationLocked=true;document.querySelectorAll('#modal-root button').forEach(b=>b.disabled=true);$('.modal').classList.add('partner-confirmed');$('.partner-mini').classList.add('bond-animation');$('.partner-mini').insertAdjacentHTML('afterend',`<p class="bond-caption">${s.name} joins your expedition.</p>`);await delay(reducedMotion()?100:850);const moves=startingMoveIds(DATA,s,8).map(moveId);state.starter=instance(s,8,moves);state.starter.uid='unit-'+state.nextUnitId++;initializeProgress(state.starter);state.starter.originalStarter=true;state.starterChosen=true;state.starter.lives=3;starterCare(state.starter);state.party=[state.starter];state.leadUid=state.starter.uid;persist();presentationLocked=false;closeModal();refresh();nicknamePrompt(state.starter,()=>showDialogue([line('Aimon',`All right, ${unitName(state.starter)}. We’re going to catch up with them.`,'CHR-AIMON'),line('General William de Montfort','Walter first. Geoffrey second. Don’t make me repeat myself.','CHR-KURG')]));};}
+function confirmStarter(id){if(state.starterChosen)return;const s=byId(id);openModal(s.name,`<p>You’ll set out with ${s.name}. Pate and Trade will take the remaining partners.</p><div class="partner-mini"><img src="assets/${id}.webp?v=0.90.57" alt="${s.name}"><div><b>${s.name}</b><small>${s.types.join(' / ')} · Three original lives</small></div></div><div class="modal-actions"><button id="back-starters">Back</button><button class="primary" id="confirm-starter">Choose ${s.name}</button></div>`);$('#back-starters').onclick=chooseStarter;$('#confirm-starter').onclick=async()=>{if(presentationLocked)return;presentationLocked=true;document.querySelectorAll('#modal-root button').forEach(b=>b.disabled=true);$('.modal').classList.add('partner-confirmed');$('.partner-mini').classList.add('bond-animation');$('.partner-mini').insertAdjacentHTML('afterend',`<p class="bond-caption">${s.name} joins your expedition.</p>`);await delay(reducedMotion()?100:850);const moves=startingMoveIds(DATA,s,8).map(moveId);state.starter=instance(s,8,moves);state.starter.uid='unit-'+state.nextUnitId++;initializeProgress(state.starter);state.starter.originalStarter=true;state.starterChosen=true;state.starter.lives=3;starterCare(state.starter);state.party=[state.starter];state.leadUid=state.starter.uid;persist();presentationLocked=false;closeModal();refresh();nicknamePrompt(state.starter,()=>showDialogue([line('Aimon',`All right, ${unitName(state.starter)}. We’re going to catch up with them.`,'CHR-AIMON'),line('General William de Montfort','Walter first. Geoffrey second. Don’t make me repeat myself.','CHR-KURG')]));};}
 function lifeEmberBagHTML(){return `<section class="field-supply"><div class="bag-item-heading"><h3>${itemIcon('lifeEmbers')}Life Ember</h3><b>× ${state.lifeEmbers||0}</b></div><p>${LIFE_EMBER.text}</p><button id="bag-use-life-ember" ${battle||state.wiped||!state.lifeEmbers?'disabled':''}>Give one extra life</button></section>`;}
 function lifeEmberTarget(){
  if(battle||presentationLocked||state.wiped||!state.lifeEmbers)return;
@@ -568,7 +568,7 @@ $('#console-a').onclick=()=>{if(presentationLocked)return;const scope=modal?$('#
 // Click/touch activation is left native; selection is retained independently of button focus.
 $('#console-b').onclick=()=>{if(modal){const cancel=$('#cancel-evolution')||$('#defer-evolution');if(cancel&&!cancel.disabled){cancel.click();return;}const back=$('.menu-back button');if(back)back.click();else closeModal();}else if(dialogue)nextLine();else if(battle&&battle.commandMenu){battle.commandMenu=null;renderBattle();}else hideMoveDetails();};
 function resumeSnapshot(restored){
-music.restore(restored.state.soundtrack?.positions);
+music.restore(restored.state.soundtrack?.positions,restored.state.soundtrack);
 const hydrated={...restored.state,party:restored.state.party.map(hydrate),reserve:(restored.state.reserve||[]).map(hydrate),dead:(restored.state.dead||[]).map(hydrate)};
 migrateProgress(hydrated);for(const key of Object.keys(state))delete state[key];Object.assign(state,JSON.parse(JSON.stringify(initialExpeditionState)),hydrated);ensureFieldJournal(state);syncLeaderRewards();registerLeaderRematches();returnDoor=DOORS[restored.room]||restored.returnDoor||null;registerCybressaTrial(state,EXPANSION,TRAINER_VOICES,!!restored.battle);state.farewellNotices=hydrated.farewellNotices||[];state.openingDone=restored.state.openingDone!==false;state.starter=state.party.concat(state.reserve,state.dead).find(u=>u.originalStarter)||null;
 phaseElapsed=restored.phaseElapsed||0;worldRandom=rng(restored.worldRandom||2460317);lastClock=performance.now();title.hide();room=['town','pate','trade','shop','march',...Object.keys(NEW_MAPS),...Object.keys(NEW_DOORS)].includes(restored.room)?restored.room:'town';const safe=nearestWalkable(room,restored.player?.x??24,restored.player?.y??23);if(relicRescueBlocked(state,room,...safe)){const free=[[safe[0]-1,safe[1]],[safe[0]+1,safe[1]],[safe[0],safe[1]+1],[safe[0],safe[1]-1]].find(p=>!isBlocked(room,...p)&&!relicRescueBlocked(state,room,...p));safe.splice(0,2,...(free||[3,17]));}if(fortForRoom(room)&&leaderFortBlocked(state,room,...safe))safe.splice(0,2,4,17);if(room==='tunnels'&&!puzzleState(state).solved&&safe[0]>=42)safe.splice(0,2,41,17);if(room==='tunnels'&&stoneAt(state,...safe)>=0){const options=[[safe[0]-1,safe[1]],[safe[0]+1,safe[1]],[safe[0],safe[1]-1],[safe[0],safe[1]+1]];const free=options.find(p=>!isBlocked(room,...p)&&!boardWall(...p)&&stoneAt(state,...p)<0);safe.splice(0,2,...(free||[30,17]));}if(room==='stormWatch'&&!state.defeatedTrainers.includes(DARIUS_STORM_ID)&&safe[0]>=43&&safe[1]>=15&&safe[1]<=19)safe.splice(0,2,41,17);enterTrainerArea(state,room);setPlayer(...safe,restored.player?.facing||'up');$('#location').textContent=roomName(room);buildMarkers();if(restored.battle){const saved=migrateCanonicalBattle(migrateBattleCharacterNames(restored.battle));battle={...saved,player:state.party.find(u=>u.uid===saved.playerUid)||state.dead.find(u=>u.uid===saved.playerUid)||lead(),enemies:saved.enemies.map(hydrate),...(saved.alliedRivet?{alliedRivet:hydrate(saved.alliedRivet)}:{}),random:rng(saved.randomState),busy:false};if(battle.player){recordFieldBattle(state,battle,room);resumeAbilities(battle.player,battle.enemies,battle.alliedRivet?[...state.party,battle.alliedRivet]:state.party);showBattleSurface();battle.busy=true;battle.artReady=false;renderBattle();const resumed=battle;void battleArtReady(resumed.player,...resumed.enemies,...(resumed.alliedRivet?[resumed.alliedRivet]:[])).then(async()=>{if(battle!==resumed)return;resumed.artReady=true;renderBattle();await showLifeNotices();await showFarewells();if(battle!==resumed)return;resumed.busy=false;renderBattle();if(resumed.outcome)void finishWild(resumed.outcome);});}else battle=null;}
@@ -747,7 +747,7 @@ function showLeaderFateEvolutionResults(){
  showRewards();return true;
 }
 function advanceReward(){if(!rewardTransaction(()=>state.rewardQueue.shift()))return;modal=false;$('#modal-root').innerHTML='';showRewards();}
-function showRewards(){const pending=[...state.party,...state.reserve].find(u=>u.capturePlacementPending);if(pending){capturePlacementPrompt(pending);return;}state.rewardQueue??=[];let card=state.rewardQueue[0];
+function showRewards(){linkEvolutionMusicCards(state.rewardQueue);syncMusic();const pending=[...state.party,...state.reserve].find(u=>u.capturePlacementPending);if(pending){capturePlacementPrompt(pending);return;}state.rewardQueue??=[];let card=state.rewardQueue[0];
  if(card?.kind==='tonic-grow'){
   if(!rewardTransaction(()=>{
    state.rewardQueue.shift();const unit=[...state.party,...state.reserve].find(u=>u.uid===card.uid);
@@ -764,7 +764,7 @@ if(card?.kind==='grow'){if(!rewardTransaction(()=>{state.rewardQueue.shift();con
  const u=[...state.party,...state.reserve].find(u=>u.uid===card.uid);if(!u){advanceReward();return;}if(card.kind==='choose-evolution'){const paths=eligibleEvolutions(u,state);if(!paths.length){advanceReward();return;}openModal('Choose an evolution',`<p>${escapeHTML(unitName(u))} has reached an evolution level. Choose its next form. No item is required.</p>${pebbettleBranchesHTML(u)}<div class="learning-choices">${paths.map(p=>`<button data-evolution-path="${p.id}"><img width="72" height="72" src="${combatArtSrc({species:byId(p.to_species_id),shiny:u.shiny})}" alt="">${escapeHTML(byId(p.to_species_id).name)} · Lv. ${p.condition.minimum_level}</button>`).join('')}</div><button id="defer-evolution">Keep current form for now</button>`);$('#close-modal').hidden=true;document.querySelectorAll('[data-evolution-path]').forEach(b=>b.onclick=()=>{const path=eligibleEvolutions(u,state).find(p=>p.id===b.dataset.evolutionPath);if(!path)return;if(rewardTransaction(()=>{state.rewardQueue[0]={kind:'evolution-pending',uid:u.uid,from:u.species.id,to:path.to_species_id,pathId:path.id};}))showRewards();});$('#defer-evolution').onclick=()=>{if(rewardTransaction(()=>{u.evolutionDeferredLevel=u.level;state.rewardQueue.shift();}))showRewards();};$('.learning-choices button')?.focus();return;}else if(card.kind==='exp'){openModal('Battle experience',`<div class="reward-hero"><img src="${combatArtSrc(u)}" alt=""><div><h3>${escapeHTML(unitName(u))}</h3><p>Lv. ${u.level} · <b>+${card.amount} EXP</b></p></div></div>${card.ability?'<p><b>Warbond · participant EXP ×2</b></p>':''}<p>EXP ${Math.min(card.before,100)} / 100 → ${Math.min(card.after,100)} / 100${card.after>=100?`<br>${Math.floor(card.after/100)} level${card.after>=200?'s':''} earned · ${card.after%100} EXP carried forward`: ''}</p><progress max="100" value="${Math.min(card.after,100)}"></progress><button id="reward-next" class="primary">Continue</button>`);$('#reward-next').onclick=advanceReward;}
  else if(card.kind==='level'){openModal(`LEVEL UP — Lv. ${card.level}`,`<div class="reward-hero"><img src="${combatArtSrc(u)}" alt=""><h3>${escapeHTML(unitName(u))}</h3></div><div class="growth-rows">${card.rows.map(r=>`<div data-growth-row><span>${STAT_LABELS[r.key]}</span><b>${r.before} → <em data-growth-value>${r.before}</em></b><strong data-growth-gain></strong></div>`).join('')}</div><p>EXP ${Math.min(u.exp,100)} / 100</p><progress max="100" value="${Math.min(u.exp,100)}"></progress><button id="reward-next" class="primary">Continue</button>`);const reveal=revealLevel($('.reward-modal')||$('.modal'),card.rows,{reduced:reducedMotion(),tick:()=>blip(820)});$('#reward-next').onclick=()=>reveal.done?advanceReward():reveal.finish();}
  else if(card.kind==='evolved'||card.kind==='evolution-pending'){showEvolutionCard(card,u);}
- else if(card.kind==='evolution-stats'){openModal('EVOLUTION CHANGES',`<div class="reward-hero"><img src="${combatArtSrc({species:byId(card.to),shiny:u.shiny})}" alt=""><h3>${escapeHTML(unitName(u))}</h3></div><p>Fixed changes from evolution · Lv. ${u.level}</p><div class="growth-rows">${card.rows.map(r=>`<div><span>${STAT_LABELS[r.key]}</span><b>${r.before} → ${r.after}</b><strong>${r.gain>0?'+':''}${r.gain||'—'}</strong></div>`).join('')}</div><p>HP percentage and remaining lives are preserved.</p><button id="reward-next" class="primary">Continue</button>`);$('#reward-next').onclick=advanceReward;}
+ else if(card.kind==='evolution-stats'){openModal('EVOLUTION CHANGES',`<div class="reward-hero"><img src="${combatArtSrc({species:byId(card.to),shiny:u.shiny})}" alt=""><h3>${escapeHTML(unitName(u))}</h3></div>${abilitySummaryHTML(u)}<p>Fixed changes from evolution · Lv. ${u.level}</p><div class="growth-rows">${card.rows.map(r=>`<div><span>${STAT_LABELS[r.key]}</span><b>${r.before} → ${r.after}</b><strong>${r.gain>0?'+':''}${r.gain||'—'}</strong></div>`).join('')}</div><p>HP percentage and remaining lives are preserved.</p><button id="reward-next" class="primary">Continue</button>`);$('#reward-next').onclick=advanceReward;}
  else if(card.kind==='learn'){const m=moveId(card.moveId);if(!m){advanceReward();return;}moveLearning(u,m,{locked:true,finish:index=>{if(!rewardTransaction(()=>{if(index!==null){const current=[...state.party,...state.reserve].find(unit=>unit.uid===card.uid),learned={...m,left:m.pp};if(index===-1)current.moves.push(learned);else current.moves[index]=learned;}state.rewardQueue.shift();}))return;modal=false;$('#modal-root').innerHTML='';showRewards();}});}
  $('#close-modal').hidden=true;$('.modal').classList.add('reward-modal');$('.modal button.primary, .modal button:not(#close-modal)')?.focus();
 }
@@ -1042,21 +1042,29 @@ function relicForgeMenu(){openModal('Rivet and relic armour',`<p><a href="relic-
 
 function showEvolutionCard(card,u){
  const pending=card.kind==='evolution-pending',source=byId(card.from),target=byId(card.to);
- openModal('A NEW FORM AWAKENS',`<div id="evolution-art" class="evolution-stage evolution-cinema ${reducedMotion()?'motion-reduced':''}" aria-hidden="true"><div class="evolution-halo"></div><div class="evolution-orbit"></div><div class="evolution-motes">${Array.from({length:16},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div><img src="${combatArtSrc({species:byId(card.from),shiny:u.shiny})}" alt=""><span class="evolution-sigil">✧</span></div><p class="evolution-eyebrow">THE ABYSS STIRS</p>${card.leaderId?`<p>The leader was ${card.fate==='SPARED'?'spared':'executed'}. ${escapeHTML(unitName(u))} has responded to your judgement.</p>`:''}<h3 id="evolution-name">${escapeHTML(source.name)}</h3><p id="evolution-caption" role="status">${pending?'A new form is gathering. You can still stop the evolution.':'Your partner has evolved.'}</p><div class="modal-actions">${pending?'<button id="cancel-evolution">Cancel evolution · B / Esc</button>':''}<button id="reward-next" class="primary" disabled>Continue to stat changes</button></div>`);
+ openModal('A NEW FORM AWAKENS',`<div id="evolution-art" class="evolution-stage evolution-cinema ${reducedMotion()?'motion-reduced':''}" aria-hidden="true"><div class="evolution-halo"></div><div class="evolution-orbit"></div><div class="evolution-motes">${Array.from({length:16},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div><img src="${combatArtSrc({species:byId(card.from),shiny:u.shiny})}" alt=""><span class="evolution-sigil">✧</span></div><p class="evolution-eyebrow">THE ABYSS STIRS</p>${card.leaderId?`<p>The leader was ${card.fate==='SPARED'?'spared':'executed'}. ${escapeHTML(unitName(u))} has responded to your judgement.</p>`:''}<h3 id="evolution-name">${escapeHTML(source.name)}</h3><p id="evolution-caption" role="status">${pending?'A new form is ready. Begin when you are ready, or keep the current form.':'Your partner has evolved.'}</p><div class="modal-actions">${pending?'<button id="cancel-evolution">Cancel evolution · B / Esc</button>':''}<button id="reward-next" class="primary" disabled>Continue to stat changes</button></div>`);
  $('#close-modal').hidden=true;$('.modal').classList.add('reward-modal','evolution-modal');
  const panel=$('#evolution-art'),button=$('#reward-next');button.hidden=pending;let stopped=false;
  const cancel=$('#cancel-evolution');if(cancel){cancel.onclick=()=>{if(stopped)return;const live=[...state.party,...state.reserve].find(x=>x.uid===card.uid);if(rewardTransaction(()=>{live.evolutionDeferredLevel=live.level;state.rewardQueue.shift();})){stopped=true;toast(source.name+(card.itemId?' kept its form and core. Use the Evolution bag when ready.':' kept its current form. You can evolve later from its summary.'));showRewards();}else{$('#evolution-caption').textContent='Could not save the cancellation. Your original form is safe; try again.';}};cancel.focus();}
  button.onclick=()=>{if(rewardTransaction(()=>{state.rewardQueue[0]={...state.rewardQueue[0],kind:'evolution-stats'};}))showRewards();};
  const active=()=>!stopped&&panel.isConnected;
- async function finish(){if(!active())return;let committed=card;
-  if(pending){const live=[...state.party,...state.reserve].find(x=>x.uid===card.uid),path=eligibleEvolutions(live,{...state,evolutionRoom:room},card.itemId||null).find(p=>p.id===card.pathId);if(!path){cancel?.click();return;}
-   if(!rewardTransaction(()=>{committed=card.itemId?promoteUsingItem(live,path,{...state,evolutionRoom:room}):promote(live,path);if(!committed)throw Error('Evolution unavailable');delete live.evolutionDeferredLevel;state.rewardQueue.splice(0,1,committed,...entryMoves(live).filter(l=>!live.moves.some(m=>m.id===l.move_id)&&moveId(l.move_id)?.category).map(l=>({kind:'learn',uid:live.uid,moveId:l.move_id,entry:true})),{kind:'evolve',uid:live.uid});})){
-    panel.classList.remove('gathering');$('#evolution-caption').textContent='The evolution could not be saved. Your original form is safe.';button.hidden=false;button.disabled=false;button.textContent='Retry evolution';button.onclick=()=>showRewards();return;
+ function commitEvolution(){let committed=card;
+  if(pending){const live=[...state.party,...state.reserve].find(x=>x.uid===card.uid),path=eligibleEvolutions(live,{...state,evolutionRoom:room},card.itemId||null).find(p=>p.id===card.pathId);if(!path){cancel?.click();return false;}
+   if(!rewardTransaction(()=>{committed=card.itemId?promoteUsingItem(live,path,{...state,evolutionRoom:room}):promote(live,path);if(!committed)throw Error('Evolution unavailable');delete live.evolutionDeferredLevel;const evolutionFlow=evolutionMusicToken(committed);committed.evolutionFlow=evolutionFlow;state.rewardQueue.splice(0,1,committed,...entryMoves(live).filter(l=>!live.moves.some(m=>m.id===l.move_id)&&moveId(l.move_id)?.category).map(l=>({kind:'learn',uid:live.uid,moveId:l.move_id,entry:true,evolutionFlow})),{kind:'evolve',uid:live.uid});})){
+    panel.classList.remove('gathering');$('#evolution-caption').textContent='The evolution could not be saved. Your original form is safe.';button.hidden=false;button.disabled=false;button.textContent='Retry evolution';button.onclick=()=>showRewards();return false;
    }
   }
-  if(cancel){cancel.disabled=true;cancel.hidden=true;}button.hidden=false;panel.classList.remove('gathering');panel.classList.add('revealed');const art=panel.querySelector('img');art.src=combatArtSrc({species:byId(card.to),shiny:u.shiny});$('#evolution-name').textContent=target.name;$('#evolution-caption').textContent=source.name+' evolved into '+target.name+'!';blip(980);await delay(reducedMotion()?100:1200);if(active()){button.disabled=false;button.focus({preventScroll:true});refresh();}
+  return true;
  }
- void Promise.all([combatArtReady({species:byId(card.from),shiny:u.shiny}),combatArtReady({species:byId(card.to),shiny:u.shiny})]).then(async ()=>{if(!active())return;panel.classList.add('gathering');blip(420);await delay(reducedMotion()?2500:6500);await finish();}).catch(()=>{if(active()){panel.querySelector('img').hidden=true;void finish();}});
+ async function finish(){if(!active())return;
+  if(cancel){cancel.disabled=true;cancel.hidden=true;}button.hidden=false;button.textContent='Continue to stat changes';button.onclick=()=>{if(rewardTransaction(()=>{state.rewardQueue[0]={...state.rewardQueue[0],kind:'evolution-stats'};}))showRewards();};panel.classList.remove('gathering');panel.classList.add('revealed');const art=panel.querySelector('img');art.src=combatArtSrc({species:byId(card.to),shiny:u.shiny});$('#evolution-name').textContent=target.name;$('#evolution-caption').textContent=source.name+' evolved into '+target.name+'!';blip(980);await delay(reducedMotion()?100:1200);if(active()){button.disabled=false;button.focus({preventScroll:true});refresh();}
+ }
+ function begin(){if(!active())return;if(pending&&!commitEvolution())return;
+  if(cancel){cancel.disabled=true;cancel.hidden=true;}button.hidden=true;button.disabled=true;syncMusic();persist();
+  void Promise.all([combatArtReady({species:byId(card.from),shiny:u.shiny}),combatArtReady({species:byId(card.to),shiny:u.shiny})]).then(async ()=>{if(!active())return;panel.classList.add('gathering');blip(420);await delay(reducedMotion()?2500:6500);await finish();}).catch(()=>{if(active()){panel.querySelector('img').hidden=true;void finish();}});
+ }
+ if(pending){button.hidden=false;button.disabled=false;button.textContent='Begin evolution';button.onclick=()=>{button.onclick=null;begin();};}
+ else begin();
 }
 let trainerGrace=0,alertTrainer=null;
 function canAutoChallengeFieldTrainer(n){

@@ -1,11 +1,11 @@
-import {wildCollectionForm} from './collection-access.js?v=0.90.56';
-import {isReducedMotion} from './motion.js?v=0.90.56';
-import {DATA} from './data.js?v=0.90.56';
-import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.56';
-import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.90.56';
-import {legalForm,rootForm} from './route-roster.js?v=0.90.56';
-import {encounterWeights} from './expedition-abilities.js?v=0.90.56';
-import {hashSeed} from './progression.js?v=0.90.56';
+import {wildCollectionForm} from './collection-access.js?v=0.90.57';
+import {isReducedMotion} from './motion.js?v=0.90.57';
+import {DATA} from './data.js?v=0.90.57';
+import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.57';
+import {CYBRESSA_ROUTES} from './cybressa-data.js?v=0.90.57';
+import {legalForm,rootForm} from './route-roster.js?v=0.90.57';
+import {encounterWeights} from './expedition-abilities.js?v=0.90.57';
+import {hashSeed} from './progression.js?v=0.90.57';
 export const JETTIES=[
  ['medicinePath','Floodplain jetty',['051','079','139'],10,14],
  ['glassSluice','Mineral-water jetty',['051','139'],10,16],

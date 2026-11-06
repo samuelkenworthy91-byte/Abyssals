@@ -1,4 +1,4 @@
-import {repairSaveStats} from './save-stat-repair.js?v=0.90.56';
+import {repairSaveStats} from './save-stat-repair.js?v=0.90.57';
 export function saveStorage(){const n=globalThis.AbyssalsNative;if(!n)return localStorage;return {getItem:key=>n.getSave(key),setItem:(key,value)=>{if(!n.setSave(key,value))throw Error('Native save failed');},removeItem:key=>{if(!n.removeSave(key))throw Error('Native save failed');}};}
 const LEGACY='abyssals-civeton-march-prototype-v1';
 const PREFIX='abyssals-expedition-slot-';

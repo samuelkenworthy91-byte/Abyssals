@@ -17,8 +17,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  const adventureTime=(await playing())[0].time;
  for(const kind of ['wild','practice','trainer']){
   await page.evaluate(kind=>window.__musicQA.begin(kind),kind);
-  await page.waitForFunction(()=>window.__musicElements.some(a=>a.src.endsWith('BattleTheme1.mp3')&&!a.paused&&a.currentTime>.1));
-  assert.equal((await playing()).length,1,'battle replaces overworld');assert((await playing())[0].src.endsWith('BattleTheme1.mp3'));
+  await page.waitForFunction(()=>window.__musicElements.some(a=>(/(BattleTheme1\.mp3|battle0[234]-[^/]+\.m4a)$/.test(a.src))&&!a.paused&&a.currentTime>.1));
+  assert.equal((await playing()).length,1,'battle replaces overworld');assert((/(BattleTheme1\.mp3|battle0[234]-[^/]+\.m4a)$/.test((await playing())[0].src)));
   if(kind==='wild'||kind==='practice'){fs.mkdirSync('build/dossier-qa',{recursive:true});await page.screenshot({path:'build/dossier-qa/approved-'+(kind==='wild'?'carrionyx':'thimbril')+'-live-battle.png'});}
   await page.evaluate(()=>window.__musicQA.end());await page.waitForFunction(()=>window.__musicElements.some(a=>a.src.endsWith('route-journey-across-the-realm.mp3')&&!a.paused));
  }

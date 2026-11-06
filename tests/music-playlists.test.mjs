@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {createMusicController,MUSIC_TRACKS} from '../dist/music.js';
+import {ROUTE_PLAYLIST,BATTLE_PLAYLIST,musicPlaylist,evolutionMusicToken,linkEvolutionMusicCards} from '../dist/soundtrack.js';
+const tick=()=>new Promise(r=>setImmediate(r)),audios=[];
+const make=()=>{const a={paused:true,currentTime:0,calls:0,events:{},pause(){this.paused=true;},play(){this.calls++;this.paused=false;return Promise.resolve();},addEventListener(k,fn){this.events[k]=fn;}};audios.push(a);return a;};
+const c=createMusicController({createAudio:make,random:()=>.41}),ctx={active:true,enabled:true,cue:'route',playlist:'route'};
+const live=()=>audios.find(a=>!a.paused),id=()=>Object.keys(MUSIC_TRACKS).find(k=>MUSIC_TRACKS[k]===live()?.src);
+c.update(ctx);await tick();const first=id(),route=live();route.currentTime=37.125;
+for(const cue of ['route','overworld','route']){c.update({...ctx,cue});assert.equal(live(),route);assert.equal(route.currentTime,37.125);}
+assert.equal(route.loop,false);
+const bag=c.snapshot().bags.route.slice(),battle={};c.update({...ctx,battle:true,encounter:battle,cue:'battle',playlist:'battle'});await tick();assert(route.paused);const battleTrack=id();const battleAudio=live();battleAudio.currentTime=9.25;
+const token='u:001:002';c.update({...ctx,battle:true,encounter:battle,cue:'battle',playlist:'battle',evolution:token});await tick();const evolution=live();assert.equal(id(),'evolution');assert(evolution.loop);evolution.currentTime=62.805;evolution.events.ended();await tick();assert.equal(live(),evolution);assert.equal(evolution.currentTime,0,'end loops same track with UI open');
+evolution.currentTime=18.5;for(let i=0;i<10;i++)c.update({...ctx,battle:true,encounter:battle,cue:'battle',playlist:'battle',evolution:token});assert.equal(evolution.currentTime,18.5,'reveal/stats/ability/move pages do not reset');
+c.update({...ctx,battle:true,encounter:battle,cue:'battle',playlist:'battle'});await tick();assert.equal(id(),battleTrack);assert.equal(live().currentTime,9.25,'battle suspended by evolution resumes exactly');
+c.update(ctx);await tick();assert.equal(live(),route);assert.equal(route.currentTime,37.125);assert.deepEqual(c.snapshot().bags.route,bag);
+const seen=[first];for(let n=1;n<6;n++){live().events.ended();await tick();seen.push(id());}assert.deepEqual(new Set(seen),new Set(ROUTE_PLAYLIST),'complete six-track round');const last=id();live().events.ended();await tick();assert.notEqual(id(),last,'no round-boundary repeat');
+const fights=[];for(let i=0;i<4;i++){c.update({...ctx,battle:true,cue:'battle',playlist:'battle',encounter:{}});await tick();fights.push(id());c.update(ctx);await tick();}assert.equal(new Set(fights).size,4,'independent complete battle round');assert(fights.every(id=>BATTLE_PLAYLIST.includes(id)));
+live().currentTime=41.375;c.update({...ctx,evolution:'one'});await tick();live().currentTime=27;const saved=c.snapshot();c.stop();c.restore(saved.positions,saved);c.update({...ctx,evolution:'one'});await tick();assert.equal(id(),'evolution');assert.equal(live().currentTime,27,'mid-flow reload resumes');
+c.update({...ctx,evolution:'one',enabled:false});assert(audios.every(a=>a.paused));c.unlock();assert(audios.every(a=>a.paused));c.update({...ctx,evolution:'one',hidden:true});assert(audios.every(a=>a.paused));c.update({...ctx,evolution:'one'});await tick();assert.equal(live().currentTime,27);
+c.update({...ctx,evolution:'two'});await tick();assert.equal(live().currentTime,0,'consecutive new sequence starts at zero');c.update(ctx);await tick();assert.equal(live().currentTime,41.375);assert(audios.filter(a=>!a.paused).length===1);
+for(const room of ['sunBank','march','sporeRim','glassSluice2'])assert.equal(musicPlaylist({cue:'route',room}),'route');for(const room of ['town','botrune','marasen'])assert.equal(musicPlaylist({cue:'overworld',room}),null);for(const cue of ['execution','burial','descent','leader','darius'])assert.equal(musicPlaylist({cue,battle:{},room:'march'}),null);
+const q=[{kind:'evolved',uid:'one',from:'001',to:'002'},{kind:'learn',uid:'one',entry:true},{kind:'evolved',uid:'two',from:'003',to:'004'}];linkEvolutionMusicCards(q);assert.equal(evolutionMusicToken(q[0]),evolutionMusicToken(q[1]));assert.notEqual(evolutionMusicToken(q[1]),evolutionMusicToken(q[2]));for(const kind of ['level','exp','choose-evolution','evolution-pending'])assert.equal(evolutionMusicToken({kind}),null);
+c.stop();console.log('PASS: six/four independent shuffle rounds, natural endings, exact route/battle resume, complete evolution ownership/loop, consecutive flows, mute/background/reload, story exclusions and legacy linked pages.');

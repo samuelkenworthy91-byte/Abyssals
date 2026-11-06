@@ -1,0 +1,76 @@
+# Abyssals — upload eight soundtrack additions and implement organic, randomised music playlists and the evolution cue
+
+Work directly in GitHub repository `samuelkenworthy91-byte/Abyssals`, using your Cloud Browser for file uploads and repository verification. I am attaching `Abyssals_Adventure_Battle_Evolution_Complete.zip`. Extract it and READ `TRACK_MANIFEST.json` and `README_CUE_PLAN.md` before changing anything. The eight renamed M4As under `music/` are the exact masters to install, including the supplied evolution theme. The AAC bitstreams have already been verified identical to my original uploads. Do not recompress, transcode, normalise or shorten them.
+
+TASK 1 — VERIFY MAIN FIRST
+
+Check the latest remote `main` head and `AGENTS.md`. Inspect `dist/soundtrack.js`, `dist/music.js`, the app's `syncMusic` usage, existing `docs/music/TRACK_MANIFEST.json`, service-worker/offline asset lists, save/reload hooks, `tests/soundtrack.test.mjs`, and the release workflow. Distinguish files/changes already published from work still pending. Existing main has a 17-cue registry (at the time the earlier pack was created); the target is 25 cues including this evolution track; preserve it and add new cues without clobbering existing city, story, battle or other changes. Report starting commit and current music coverage.
+
+TASK 2 — UPLOAD ALL EIGHT THROUGH THE GITHUB CLOUD BROWSER
+
+Upload the eight audio files individually, in batches of roughly 3–4 with verified commits and checksums, to `dist/assets/music/` and any source/provenance directory the repo conventions require. Do not upload the ZIP as if GitHub would extract it. Retain exact final filenames from the manifest, and check for existing identical content by SHA-256 before copying. Add/update a track manifest and runtime cache/offline asset registration. Ensure no unoptimised duplicate or embedded album-art masters bloat the APK. Preserve all pre-existing tracks.
+
+Register these stable IDs in the existing `SOUNDTRACK` map:
+- `adventure05`: adventure05-where-the-sky-meets-the-sea.m4a (original: Shores of the Unknown)
+- `adventure06`: adventure06-beneath-a-restless-heaven.m4a (original: Through Storms & Ruins)
+- `adventure07`: adventure07-the-unseen-presence.m4a (original: Sequenced Abyss)
+- `adventure08`: adventure08-the-emerald-apocalypse.m4a (original: Ancient Ruins Beneath the Canopy)
+- `battle02`: battle02-ironblood-rebellion.m4a (original: Gravel & Iron)
+- `battle03`: battle03-teeth-of-the-abyss.m4a (original: Jagged Edge)
+- `battle04`: battle04-furious-rhythms.m4a (original: Furious Rhythms)
+- `evolution`: event-abyssal-evolution.m4a (original: Metamorphosis Triumph)
+
+All three new battle themes must remain selectable; none is a rejected take.
+
+TASK 3 — REPLACE FIXED REGIONAL GENERAL MUSIC WITH ORGANIC PLAYLIST ROTATION
+
+Create an ordinary-ROUTE shuffle bag with eligible cues: `overworld` (existing adventure1), `route` (existing Catching Up), plus `adventure05`, `adventure06`, `adventure07`, `adventure08`. All six can play anywhere on ordinary travelling paths, including the early game, late game, open roads and side shoots. No ordinary adventure track is permanently tied to one route or biome. Avoid immediate repeats and, preferably, play all tracks in a shuffled round before repeating any.
+
+Most importantly, do NOT switch/restart music merely because the player transitions between maps, advances dialogue, enters a menu, takes a step or enters a connected side shoot. Preserve the SAME current song and position across an entire linked side-route sequence. Only choose the next random adventure track when the previous track ACTUALLY ENDS. After choosing the next, allow it to finish too. When ordinary combat interrupts the route song, PAUSE that song and resume at the same timestamp when combat ends; do not silently draw a new route song every time.
+
+Do NOT add the existing `journey`/Across the Realm track to general shuffle: it is the dedicated STARTING TOWN (Kyvton, internally `town`) theme. Do NOT add `dark`/Ancient Shadows to the general shuffle: it is Botrune's town theme. Keep all other town music and town/interior boundaries as the current main specifies. Dedicated towns should loop their named theme rather than shuffle.
+
+TASK 4 — INDEPENDENT REGULAR BATTLE PLAYLIST
+
+Create an ordinary battle shuffle bag containing `battle` (existing BattleTheme1), `battle02` (Gravel & Iron), `battle03` (Jagged Edge), `battle04` (Furious Rhythms). Choose a fresh track at the start of each ordinary wild/trainer/practice battle irrespective of location, but avoid immediate repeats and use a shuffled cycle. Keep that track uninterrupted throughout the fight: turns, move animations, doubles targeting and UI rerenders must never restart it. If an unusually long fight outlasts the song, select the next shuffled battle song only when the current one ends. On battle exit stop/pause the battle music and RESUME the temporarily paused route track, never overlap them. Do not randomise city leaders, fixed boss encounters or scripted gauntlets.
+
+TASK 5 — CRITICAL STORY PRIORITY / EXISTING MUSIC MUST SURVIVE
+
+Preserve current dedicated cues, battle exclusions, saved progress and event routing. In particular:
+- Botrune execution: starts at the public sentencing cutscene, continues without interruption across ALL nine execution beats, Pate/Trade deaths, subsequent dialogue, and three guard/captain battles. Does not end until the ACTUAL Fatima city-leader fight begins, where the leader theme takes over. Re-entry/reload must not replay the execution.
+- Darius's descent: persist through the specified mountain approach and related battles, until the crisis resolves or the player leaves the event area.
+- Pate and Trade burial: plays during the graveside event and aftermath, no retrigger on revisits.
+- All eight leader battles and their rematches use the dedicated leader theme. All towns retain dedicated cues. Ordinary playlists must rank BELOW these special cues.
+
+Suggested precedence: mandatory story / execution / burial > dedicated boss / city leader > normal battle playlist > dedicated towns > ordinary adventure playlist. Preserve the already implemented exceptions, including the execution track overriding the guard fights and the leader fight overriding the execution track.
+
+
+TASK 5A — EIGHTH TRACK: EVOLUTION THEME — MUST COVER ENTIRE EVOLUTION + RANK-UP UI
+
+The eighth audio file IS PROVIDED in this archive as `music/event-abyssal-evolution.m4a`. The user's original file was `Metamorphosis Triumph.m4a`; the actual recording lasts 62.805 seconds (rather than the earlier requested 20–25 seconds). It was optimised with lossless AAC stream-copy and its checksums appear in `TRACK_MANIFEST.json`. No generation, approval request, re-encoding or shortening is needed.
+
+Upload this included eighth file with the other seven, register stable ID `evolution` in `dist/soundtrack.js`, and keep it out of both random playlists. Inspect the REAL playable evolution UX and state transitions in `dist/app.js` and its evolution modules, including normal level evolution, special/item evolution, leader-fate evolution notices, chained evolutions, stat-rank-up/results and new ability/move panels. Do not infer event timing from the filename or a single generic `promote()` call.
+
+START: exactly when an actual Abyssal evolution sequence begins; start this track from 0 and pause whichever song was playing, saving that song's exact currentTime and shuffle state.
+
+CONTINUATION (CRITICAL): play the SAME evolution track throughout ALL linked evolution UI screens: transformation animation, transformed-form reveal, increased-stat/ability-rank-up display and any move/ability result pages that belong to this evolution. Advancing between these panels MUST NOT pause, restart, replace or fade the evolution song. The rank-up is part of evolution, not a new music context.
+
+END: stop/reset the evolution song ONLY when the player exits/dismisses the LAST evolution-related panel and returns to ordinary gameplay or the prior story context. Restore the interrupted song from the exact saved timestamp. Do not stop because the 62.805-second file ends or the creature transformation completes. If the player remains on these screens longer than the song, loop the evolution song itself. If the player skips or exits early, stop at that moment. The audio must never gate user interaction.
+
+Priority: the active evolution UI briefly takes precedence over all scene/town/battle/story cues, including a queued evolution after the Botrune gauntlet or a town-leader fate. The underlying execution/leader/story music must resume correctly once that evolution sequence is dismissed, as long as its original story condition still applies; do not mistakenly restart completed execution cues. Consecutive evolved members get their own serial cue beginning from 0 after the prior member's UI finishes; no overlap. Ordinary level-ups without evolution and simple summary re-opening do NOT trigger the song. Save/load retains correct pending-notice receipts and avoids duplicate replays.
+
+Add tests with audio playback and precise UI screen lifecycle assertions: transformation -> reveal -> rank-up/ability pages -> final exit; no early audio stop/restart; song end while UI remains open loops itself; quick skipping; ordinary evolutions; item evolutions; leader-fate evolution(s); multiple queued evolutions; reloading during and after the UI; Sound off/on; background pause/resume; no overlapping players; interrupted route music resumes at its original timestamp and preserves its shuffle bag; interrupted scripted music resumes only if still applicable.
+
+TASK 6 — IMPLEMENT ROBUSTLY
+
+The current controller historically sets `audio.loop=true` on each song. Change this for playlist-based music so natural `ended` events can advance the shuffle bag without polling every render. Preserve event-based routing; keep only one audible source. Handle audio unlock/autoplay, muted/hidden state, Android audio decoding, stale `play()` promises, fade/crossfade without overlapping songs, save/load positions, and old save compatibility. Save a bounded playlist cursor/bag and current song/position in a backwards-compatible soundtrack field, not a replacement of existing game state. Ensure mobile and offline PWA play all eight M4A assets.
+
+TASK 7 — TEST AND PUBLISH
+
+Update existing test assertions that expect exactly 17 soundtrack entries; don't delete useful tests. Add unit and real-browser tests for all 8 decoders/files; 6-route shuffle bag; 4-battle shuffle bag; nonrepetition; natural-end changes; map/side-shoot continuity; pause/resume on ordinary battles; no forced mid-song change; town themes; and exact priority for execution, guards, Fatima, Darius mountain, burial, leader rematches, mute, hidden app, reload and offline PWA. Run relevant full regressions and verify unchanged story/saves. If tests pass, commit changes to `main` in small verified batches, update release version/code as AGENTS.md requires, run the original GitHub Actions signed release workflow, and publish the matching PWA. Preserve existing package `uk.co.abyssals.game`, signing certificate and installed saves. Verify the actual published APK and give me its GitHub Release URL and PWA URL. If signing/release isn't possible, report the blocker and don't pretend publication succeeded.
+
+Final report must state: starting and ending main SHA; uploaded files + hashes; final registered total; exact route and battle playlist membership; current song continuity design; story overrides verified; tests run; the release/PWA URLs if truly published; and remaining blockers. Do not report a task merely 'in progress' as complete.
+
+The desired player experience is organic: I might hear any of the six general adventure tracks while walking any route, but the song keeps playing naturally across every map of a side shoot until its own ending. Battles likewise draw from all four regular battle tracks rather than depending on region, while important authored story and leader cues retain control.
+
+TRACK COUNT ACCEPTANCE: Eight new audio files in this package. On the inspected 17-cue baseline, target 25 registered cues (17+8), but verify current `main` instead of blindly trusting the old count. Do not claim a signed APK/PWA release until Actions and deployment actually succeed.

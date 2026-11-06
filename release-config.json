@@ -1,10 +1,10 @@
 {
-  "version": "0.90.56",
-  "version_code": 151,
-  "filename": "Abyssals-v0.90.56-Fast-Combat.apk",
-  "title": "Abyssals v0.90.56 \u2014 Fast Combat",
-  "notes": "Adds a saved Off \u00b7 fast combat animation setting on the title screen and in Settings for Android and PWA. Skips battle effects and presentation waits while retaining combat outcomes and rewards. Clarifies browser reduced-motion and pending offline updates. Includes random nursery companions and corrected music assignments. Preserves original signing, package identity and saves.",
-  "pwa_filename": "Abyssals-v0.90.56-PWA.zip",
+  "version": "0.90.57",
+  "version_code": 152,
+  "filename": "Abyssals-v0.90.57-Soundtrack.apk",
+  "title": "Abyssals v0.90.57 \u2014 Living Soundtrack",
+  "notes": "25 soundtrack cues: six shuffled route themes, four independent ordinary battle themes, and the full evolution theme across transformation, stat/ability and move results. Exact interrupted music positions and shuffle state resume. Dedicated story, towns and city leaders preserved. Original signing identity and saves retained.",
+  "pwa_filename": "Abyssals-v0.90.57-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.56-art-scope.json"
+  "artwork_scope_path": "docs/releases/v0.90.57-art-scope.json"
 }

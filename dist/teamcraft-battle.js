@@ -1,8 +1,8 @@
-import {healDossierMove} from './dossier-battle.js?v=0.90.56';
-import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.56';
-import {restoreHP as healRelayHP} from './abilities.js?v=0.90.56';
-import {menagerieParty} from './menagerie-rules.js?v=0.90.56';
-import {unitName} from './names.js?v=0.90.56';
+import {healDossierMove} from './dossier-battle.js?v=0.90.57';
+import {orchardInvalid} from './tide-orchard-battle.js?v=0.90.57';
+import {restoreHP as healRelayHP} from './abilities.js?v=0.90.57';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.57';
+import {unitName} from './names.js?v=0.90.57';
 export const PASS_STATS=['attack','defence','sp_attack','sp_defence','speed'];
 const has=(u,n)=>u?.species?.ability_names?.[u.abilitySlot||'primary']===n;
 const battle=u=>(u.abilityBattle??={flags:{},turn:0});

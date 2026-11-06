@@ -11,7 +11,6 @@
   "not_identified_in_uploaded_audio": [
     "Marasen water city theme",
     "adventure2 (earlier newly requested)",
-    "dedicated evolution cue",
     "dedicated epic boss cue"
   ],
   "files": [
@@ -229,6 +228,78 @@
       "channels": 1,
       "sample_rate": "44100",
       "assignment_confirmed_on": "2026-11-05"
+    },
+    {
+      "original_filename": "Shores of the Unknown (Take 2).m4a",
+      "package_path": "dist/assets/music/adventure05-where-the-sky-meets-the-sea.m4a",
+      "proposed_runtime_path": "dist/assets/music/adventure05-where-the-sky-meets-the-sea.m4a",
+      "cue_id": "adventure05",
+      "bytes": 2214792,
+      "sha256": "52fa21eca892dcd95e9f30bb6f973636d1bf3627f6af174abb15302f1464f704",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Through Storms & Ruins (Take 2).m4a",
+      "package_path": "dist/assets/music/adventure06-beneath-a-restless-heaven.m4a",
+      "proposed_runtime_path": "dist/assets/music/adventure06-beneath-a-restless-heaven.m4a",
+      "cue_id": "adventure06",
+      "bytes": 2198157,
+      "sha256": "401768902c5adcac7f838cc79b91cecc922899980629a1c88c22d32eaf4b6d0c",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Sequenced Abyss (Take 1).m4a",
+      "package_path": "dist/assets/music/adventure07-the-unseen-presence.m4a",
+      "proposed_runtime_path": "dist/assets/music/adventure07-the-unseen-presence.m4a",
+      "cue_id": "adventure07",
+      "bytes": 1612162,
+      "sha256": "f21bcb488e3a38071b404d6f2b5db3c81fc52d8ad0399b92e63ed605eedf0c58",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Ancient Ruins Beneath the Canopy.m4a",
+      "package_path": "dist/assets/music/adventure08-the-emerald-apocalypse.m4a",
+      "proposed_runtime_path": "dist/assets/music/adventure08-the-emerald-apocalypse.m4a",
+      "cue_id": "adventure08",
+      "bytes": 2039032,
+      "sha256": "19e0f1f32a65dd4e4d1a48b14893d6ce253e7dafc3090d2307cc80347514b186",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Gravel & Iron (Take 1).m4a",
+      "package_path": "dist/assets/music/battle02-ironblood-rebellion.m4a",
+      "proposed_runtime_path": "dist/assets/music/battle02-ironblood-rebellion.m4a",
+      "cue_id": "battle02",
+      "bytes": 2136362,
+      "sha256": "a4f1a92adc7055bb0434787742183a5657a201c8dda586bec1008a6fb85b4c9f",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Jagged Edge (Take 1).m4a",
+      "package_path": "dist/assets/music/battle03-teeth-of-the-abyss.m4a",
+      "proposed_runtime_path": "dist/assets/music/battle03-teeth-of-the-abyss.m4a",
+      "cue_id": "battle03",
+      "bytes": 2035056,
+      "sha256": "972aeeaeb9283770d34e3a2da9615c3c7b4f61b348fb3938b00c2c09a392b8c2",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Furious Rhythms (Take 2).m4a",
+      "package_path": "dist/assets/music/battle04-furious-rhythms.m4a",
+      "proposed_runtime_path": "dist/assets/music/battle04-furious-rhythms.m4a",
+      "cue_id": "battle04",
+      "bytes": 1601376,
+      "sha256": "5a599b8e2faa45c633f57b40076b942606fc1a1f4f055a69e6585c902d0debfb",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
+    },
+    {
+      "original_filename": "Metamorphosis Triumph.m4a",
+      "package_path": "dist/assets/music/event-abyssal-evolution.m4a",
+      "proposed_runtime_path": "dist/assets/music/event-abyssal-evolution.m4a",
+      "cue_id": "evolution",
+      "bytes": 719029,
+      "sha256": "864d5a52be05ab38400c519386f7233ea225ad93e004e769563b8a623387c422",
+      "note": "Exact optimised user-supplied AAC master; full duration; no recompression; see EIGHT_TRACK_ADDITIONS.json"
     }
   ]
 }

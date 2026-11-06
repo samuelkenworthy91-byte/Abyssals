@@ -1,4 +1,4 @@
-import {DOSSIER_SPECIES} from './dossier-data.js?v=0.90.56';
+import {DOSSIER_SPECIES} from './dossier-data.js?v=0.90.57';
 // Explicit family colour directions; outlines, whites, lightness and alpha remain intact.
 const families={
  "FAMILY-001": {

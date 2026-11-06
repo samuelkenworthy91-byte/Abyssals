@@ -1,6 +1,6 @@
-import {ARMOURY_BRANCHES,ARMOURY_MOVES} from './relic-armoury.js?v=0.90.56';
-import {TACTICAL_MOVES,TACTICAL_BRANCH_LEARNSETS} from './tactical-moves.js?v=0.90.56';
-import {RELIC_ART} from './relic-art.js?v=0.90.56';
+import {ARMOURY_BRANCHES,ARMOURY_MOVES} from './relic-armoury.js?v=0.90.57';
+import {TACTICAL_MOVES,TACTICAL_BRANCH_LEARNSETS} from './tactical-moves.js?v=0.90.57';
+import {RELIC_ART} from './relic-art.js?v=0.90.57';
 // Six original branches plus twelve approved armoury branches. Existing IDs and rules remain stable.
 export const RIVET_ID='365';
 const keys=['hp','attack','defence','sp_attack','sp_defence','speed'];
