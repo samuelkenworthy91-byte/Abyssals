@@ -5,9 +5,6 @@ import {EVOLUTION_ITEMS} from '../dist/evolution-items.js';
 import {eligibleEvolutions,promote,promoteUsingItem,relearnPool} from '../dist/evolution.js';
 import {instance,applyMove} from '../dist/engine.js';
 import {beginAbilities,enterAbility,leaveAbility,abilityMemory} from '../dist/abilities.js';
-import {readFileSync} from 'node:fs';
-const {version:runtimeVersion}=JSON.parse(readFileSync(new URL('../release-config.json',import.meta.url),'utf8'));
-const {bindMenagerieParty}=await import('../dist/menagerie-rules.js?v='+runtimeVersion);
 import {secondaryChance,prepareSpecialistMove} from '../dist/teamcraft-battle.js';
 import {RENEWAL_MOVE_PATCHES} from '../dist/evolution-renewal-data.js';
 import {migrateRenewalEconomy,rememberLegacyRenewalMoves} from '../dist/evolution-renewal.js';
@@ -24,7 +21,9 @@ leaveAbility(counter,{switching:true});enterAbility(counter,attacker,{party:[cou
 counter=make('116','Countercurrent');attacker=make();beginAbilities(counter,[attacker],[counter],{});counter.moveState={decoy:{hp:100,maxHp:100}};hit(attacker,counter);assert(!counter.stages.sp_attack,'decoy absorbs actual HP damage');delete counter.moveState.decoy;hit(attacker,counter,{contact:false});assert(!counter.stages.sp_attack,'non-contact neutral damage');counter.hp=1;hit(attacker,counter);assert.equal(counter.hp,0);assert(!counter.stages.sp_attack,'no posthumous boost');
 // Entry uses unmodified earned stats, normal drop protection, and never both offences.
 let ready=make('059','Battle Readiness'),foe=make();ready.stats.attack=30;ready.stats.sp_attack=40;ready.stages.attack=6;ready.heldDefinition={effect:{operation:'effective_stat',stat:'attack',multiplier:99}};enterAbility(ready,foe,{party:[ready],field:{}});assert.equal(ready.stages.sp_attack,1);assert.equal(ready.stages.attack,6);ready=make('059','Battle Readiness');ready.stats.attack=ready.stats.sp_attack=40;enterAbility(ready,foe);assert.equal(ready.stages.attack,1);assert(!ready.stages.sp_attack);
-const dread=make('059','Dread Presence'),protectedFoe=make('115','Stable Core'),other=make(),bench=make();other.abilityState={flags:{}};bindMenagerieParty([protectedFoe,other,bench]);enterAbility(dread,protectedFoe,{party:[dread],field:{}});assert.equal(protectedFoe.stages.attack||0,0);assert.equal(other.stages.attack,-1);assert.equal(bench.stages.attack||0,0);
+const dread=make('059','Dread Presence'),protectedFoe=make('115','Stable Core'),other=make(),bench=make();// Initialise the target team through the live ability module, so its WeakMap
+// is the same instance used by Dread Presence regardless of release version.
+enterAbility(protectedFoe,dread,{party:[protectedFoe,other,bench],field:{}});other.abilityState={flags:{}};enterAbility(dread,protectedFoe,{party:[dread],field:{}});assert.equal(protectedFoe.stages.attack||0,0);assert.equal(other.stages.attack,-1);assert.equal(bench.stages.attack||0,0);
 // Censmoke: five actual stats grouped to three branches; HP and battle stages excluded.
 const c=instance(species('057'),30,[]);c.evolutionBlockedLevel=29;c.stats={hp:99999,attack:15,defence:13,sp_attack:39,sp_defence:24,speed:20};c.stages={attack:6};assert.deepEqual(eligibleEvolutions(c).map(p=>p.to_species_id),['059']);c.stats.sp_defence=44;assert.deepEqual(eligibleEvolutions(c).map(p=>p.to_species_id),['058']);c.stats.attack=c.stats.sp_attack=c.stats.sp_defence=44;assert.deepEqual(eligibleEvolutions(c).map(p=>p.to_species_id).sort(),['058','059','504']);c.level=29;assert.equal(eligibleEvolutions(c).length,0);c.level=30;c.evolutionBlockedLevel=30;assert.equal(eligibleEvolutions(c).length,0);c.evolutionBlockedLevel=29;c.dead=true;assert.equal(eligibleEvolutions(c).length,0);c.dead=false;c.stats={...c.stats,attack:10,sp_defence:10,sp_attack:60};assert.equal(promote(c,EVOLUTIONS.find(p=>p.to_species_id==='504')),null,'cannot directly force a non-winning stat branch');
 // Item-only choice and consumption; captured-above-threshold items need no extra level.
