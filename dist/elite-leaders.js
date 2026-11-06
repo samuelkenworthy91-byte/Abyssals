@@ -1,9 +1,9 @@
-import {DATA} from './data.js?v=0.90.57';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.57';
-import {tunedEvolution} from './evolution-tuning.js?v=0.90.57';
-import {legalMoves} from './route-roster.js?v=0.90.57';
-import {rng} from './engine.js?v=0.90.57';
-import {typeEffectiveness,TYPES} from './type-rules.js?v=0.90.57';
+import {DATA} from './data.js?v=0.90.58';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.58';
+import {tunedEvolution} from './evolution-tuning.js?v=0.90.58';
+import {legalMoves} from './route-roster.js?v=0.90.58';
+import {rng} from './engine.js?v=0.90.58';
+import {typeEffectiveness,TYPES} from './type-rules.js?v=0.90.58';
 
 // Identity, specialty and level curve are authored; only the saved roster varies.
 export const ELITE_LEADERS={

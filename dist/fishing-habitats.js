@@ -1,9 +1,9 @@
-import {wildCollectionForm} from './collection-access.js?v=0.90.57';
-import {DATA} from './data.js?v=0.90.57';
-import {FULL_ENCOUNTERS} from './full-encounters.js?v=0.90.57';
-import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.57';
-import {rootForm,legalForm} from './route-roster.js?v=0.90.57';
-import {encounterWeights} from './expedition-abilities.js?v=0.90.57';
+import {wildCollectionForm} from './collection-access.js?v=0.90.58';
+import {DATA} from './data.js?v=0.90.58';
+import {FULL_ENCOUNTERS} from './full-encounters.js?v=0.90.58';
+import {SIDE_POOLS,ROAD_POOLS} from './encounter-pools.js?v=0.90.58';
+import {rootForm,legalForm} from './route-roster.js?v=0.90.58';
+import {encounterWeights} from './expedition-abilities.js?v=0.90.58';
 export const FISH_LEVEL_MIN=8,FISH_LEVEL_MAX=12;
 export const FISH_ENTRY_FEE=500;
 const aquaticRooms=['glassSluice','reedSanctuary','coralGrotto','moonlitDepths'];

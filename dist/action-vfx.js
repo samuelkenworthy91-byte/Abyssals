@@ -1,4 +1,4 @@
-import {ACTION_ART} from './action-vfx-data.js?v=0.90.57';
+import {ACTION_ART} from './action-vfx-data.js?v=0.90.58';
 export {ACTION_ART};
 // Keep the render clock and battle impact clock identical. Mercy's original
 // First Light scene deliberately retains its authored timing.

@@ -1,11 +1,11 @@
-import {branchEvolutionAllowed} from './branch-families.js?v=0.90.57';
-import {relearnMoveIds} from './learning-access.js?v=0.90.57';
-import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.57';
-import {tunedEvolution} from './evolution-tuning.js?v=0.90.57';
-import {startingStats,migrateStats} from './stat-balance.js?v=0.90.57';
-import {DATA} from './data.js?v=0.90.57';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.57';
-import {STAT_KEYS} from './progression.js?v=0.90.57';
+import {branchEvolutionAllowed} from './branch-families.js?v=0.90.58';
+import {relearnMoveIds} from './learning-access.js?v=0.90.58';
+import {statEvolutionAllowed} from './evolution-renewal.js?v=0.90.58';
+import {tunedEvolution} from './evolution-tuning.js?v=0.90.58';
+import {startingStats,migrateStats} from './stat-balance.js?v=0.90.58';
+import {DATA} from './data.js?v=0.90.58';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.58';
+import {STAT_KEYS} from './progression.js?v=0.90.58';
 
 export function eligibleEvolutions(unit,state={},itemId=null){
  if(!unit||unit.dead||unit.hp<=0||(unit.evolutionHistory||[]).some(e=>e.level===unit.level))return [];
