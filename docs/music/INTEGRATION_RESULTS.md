@@ -3,7 +3,7 @@
 Starting main: `4c0e1978de26de448079738f1ce484750152b1fb` (17 registered cues).
 
 Audio browser commits: `16029ba` (four adventure files), `997edfc0340d35d52036ea801bbdc29311f6ad96` (three battle files and evolution).
-Runtime/release source: `5ac37ab3f66f84b0ee2e1e9872cd61ceddd874e0`.
+Runtime implementation: `5ac37ab3f66f84b0ee2e1e9872cd61ceddd874e0`. Corrected regression/release source: `2fe345f4e24dfd70ab4cb5648eca9ba0905da5f1` (runtime byte-identical).
 Version: **0.90.57 / Android versionCode 152**. Registered cues: **25**.
 
 ## Verified uploaded masters
@@ -46,7 +46,7 @@ Local checks completed:
 - Runtime cache identities, 2,704 offline assets, Android manifest/version handling and original package identity passed.
 - Existing artwork scope remains 615 dedicated / 615 playable actions, with no artwork changes or new approval claims.
 
-The focused real-browser evolution, branch evolution and ordinary music/portrait checks passed locally using the project's verified Playwright1.62.1 headless runtime. The broader story/offline check and final release gate cover:
+The focused real-browser evolution, branch evolution, ordinary music/portrait and full soundtrack/story/offline checks passed locally using the project's verified Playwright1.62.1 headless runtime. All 25 runtime cues plus two source auditions played/decoded. All 25 runtime files passed offline fetch, Range responses and real offline playback; all eight new browser durations match the supplied manifest, including exactly62.805s for evolution. Phone stat/ability layout was visually checked. The final release gate also covers:
 
 - Actual six-track route endings, exact battle interruption/resume and side-route continuity.
 - Real item/level/queued leader-fate evolution, cancellation, transformation/reveal, stat/ability and entry-move pages, loop beyond natural duration, consecutive evolution restart, muted/background state and reload during/after results.
@@ -55,8 +55,8 @@ The focused real-browser evolution, branch evolution and ordinary music/portrait
 
 ## Publication status
 
-Release workflow: https://github.com/samuelkenworthy91-byte/Abyssals/actions/runs/42272150125
+Release workflow: https://github.com/samuelkenworthy91-byte/Abyssals/actions/runs/42276046512
 
-**Not published at this checkpoint.** Run42272150125 passed source validation but correctly blocked signing on two browser fixture failures. The fixtures are corrected and focused browser checks pass locally; a fresh complete release run is required. Final browser, signing and Pages results will be recorded after it completes.
+**Not published at this checkpoint.** Run42272150125 passed source validation but correctly blocked signing on two browser fixture failures. The fixtures are corrected and all focused browser checks pass locally. Fresh full release run42276046512 is in progress. Final browser, signing and Pages results will be recorded after it completes.
 
 The original package `uk.co.abyssals.game`, Actions-held signing key and expected certificate `6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac` remain unchanged. Signing and alignment gates are retained. No physical-device installation test is claimed.
