@@ -53,10 +53,27 @@ The focused real-browser evolution, branch evolution, ordinary music/portrait an
 - Existing Darius, mountain descent, nine Botrune execution beats, three guards, actual Fatima takeover, all town/interior themes, burial/gifts and saved aftermath.
 - Actual playback/decoding of all 25 runtime cues; offline reload, all 25 music fetches and byte-range playback.
 
-## Publication status
+## Verified publication
 
-Release workflow: https://github.com/samuelkenworthy91-byte/Abyssals/actions/runs/42276046512
+**Complete — 6 November 2026.** All54 JavaScript suites, all37 browser suites and all9 actual-battle animation batch jobs passed on release commit `2fe345f4e24dfd70ab4cb5648eca9ba0905da5f1`. The signed-release and Pages jobs both completed successfully in [workflow42276046512](https://github.com/samuelkenworthy91-byte/Abyssals/actions/runs/42276046512). No required gate was disabled.
 
-**Not published at this checkpoint.** Run42272150125 passed source validation but correctly blocked signing on two browser fixture failures. The fixtures are corrected and all focused browser checks pass locally. Fresh full release run42276046512 is in progress. Final browser, signing and Pages results will be recorded after it completes.
+- [APK release page — v0.90.57](https://github.com/samuelkenworthy91-byte/Abyssals/releases/tag/v0.90.57)
+- [Live PWA](https://samuelkenworthy91-byte.github.io/Abyssals/)
+- [Published signature receipt](https://github.com/samuelkenworthy91-byte/Abyssals/releases/download/v0.90.57/signature-verification-0.90.57.txt)
 
-The original package `uk.co.abyssals.game`, Actions-held signing key and expected certificate `6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac` remain unchanged. Signing and alignment gates are retained. No physical-device installation test is claimed.
+The APK was published at19:23:55 UTC. Pages deployed the same `2fe345f4e24dfd70ab4cb5648eca9ba0905da5f1` source successfully at19:25:46 UTC. The live title menu was opened in the browser and displays **v0.90.57**. Existing PWA windows should be closed once to let a waiting offline update activate; saves do not need clearing.
+
+| Published artifact | Bytes | SHA-256 |
+| --- | ---: | --- |
+| Abyssals-v0.90.57-Soundtrack.apk | 448464845 | `90af2ad7e5810abe81515b76bd6df5290dcd7d523a14c24532ddd78c40e89ea0` |
+| Abyssals-v0.90.57-PWA.zip | 441498483 | `cafadfc41492dad0b726b8166f4b4bf28574bd8e2a529ce022a6a0237f61f4ea` |
+
+The published checksum files match GitHub's uploaded-asset SHA-256 digests. The published signature receipt verifies APK Signature Schemes v2 and v3, one signer, and the original release certificate SHA-256:
+
+`6dafd2bf38549cb39acd54811ee21cf71eb9af37a115154a5c551fc85edc92ac`
+
+Package `uk.co.abyssals.game`, the original Actions-held signing key, native wrapper, saves and gameplay rules are preserved. This supports update-over-install compatibility. No physical-device installation test is claimed.
+
+The first attempt42272150125 correctly blocked signing on two browser-fixture assumptions. Those fixtures were repaired and the entire original pipeline reran successfully; no runtime workaround or test gate bypass was used. The final verification-record commit only updates documentation and does not change the APK/PWA runtime from the released source.
+
+Remaining blockers: **none**.
