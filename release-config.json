@@ -1,10 +1,10 @@
 {
-  "version": "0.90.57",
-  "version_code": 152,
-  "filename": "Abyssals-v0.90.57-Soundtrack.apk",
-  "title": "Abyssals v0.90.57 \u2014 Living Soundtrack",
-  "notes": "25 soundtrack cues: six shuffled route themes, four independent ordinary battle themes, and the full evolution theme across transformation, stat/ability and move results. Exact interrupted music positions and shuffle state resume. Dedicated story, towns and city leaders preserved. Original signing identity and saves retained.",
-  "pwa_filename": "Abyssals-v0.90.57-PWA.zip",
+  "version": "0.90.58",
+  "version_code": 153,
+  "filename": "Abyssals-v0.90.58-Dynamic-Aces.apk",
+  "title": "Abyssals v0.90.58 — Dynamic Leader Aces",
+  "notes": "Execution choice text and rewards now agree with each leader's randomized, saved ace, including its first-stage nursery species. All eight leader previews follow the locked team; existing gifted companions and saves remain unchanged. The full v0.90.57 soundtrack, graphics, animation settings and all 615 move art bindings are retained. Signed with the original APK identity.",
+  "pwa_filename": "Abyssals-v0.90.58-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.57-art-scope.json"
+  "artwork_scope_path": "docs/releases/v0.90.58-art-scope.json"
 }
