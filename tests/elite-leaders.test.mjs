@@ -10,7 +10,7 @@ import {initializeTrainerGrowth,trainerProdigyWarning} from '../dist/trainer-pro
 import {unitGrowthRates,growthPercent,prodigyGrowthBonus} from '../dist/progression.js';
 import {beginAbilities} from '../dist/abilities.js';
 import {chooseArenaBossAction,chooseArenaBossMove,switchArenaBoss,expectedDamage} from '../dist/arena-bosses.js';
-import {makeLeaderRematch,settleLeaderRewards,leaderAceBaby,completeLeaderRematch} from '../dist/leader-outcomes.js';
+import {makeLeaderRematch,settleLeaderRewards,leaderAceBaby,leaderRewardBaby,completeLeaderRematch} from '../dist/leader-outcomes.js';
 import {recordFieldBattle,fieldJournalStatus,fieldJournalRumours} from '../dist/field-journal.js';
 const originals=[...EXPANSION.trainers,...BOTRUNE_TRAINERS,...FINALE_TRAINERS].filter(t=>ELITE_LEADERS[t.id]);
 assert.equal(originals.length,8);
@@ -22,6 +22,12 @@ for(const raw of originals){
  assert(t.eliteLeader);assert.equal(t.specialty,spec.type);assert.deepEqual(t.team.map(s=>s.level),spec.levels);assert.equal(t.team.length,6);
  assert.deepEqual(t.team,openingTrainer(raw,JSON.parse(JSON.stringify(state))).team,'persist exact roster, set and ace');
  assert.equal(t.team.filter(s=>s.ace).length,1);assert(t.team[5].ace);assert.equal(state.leaderTeams[t.id].aceSpeciesId,t.team[5].species_id);
+ const advertised=leaderRewardBaby(state,raw);
+ assert.equal(advertised,leaderAceBaby(t),'execution preview follows the locked randomized ace');
+ assert.equal(leaderRewardBaby(JSON.parse(JSON.stringify(state)),raw),advertised,'preview survives save and reload');
+ const alternate=JSON.parse(JSON.stringify(state));
+ alternate.leaderTeams[t.id].team[5].species_id=t.team[0].species_id;
+ assert.equal(leaderRewardBaby(alternate,raw),leaderAceBaby({team:alternate.leaderTeams[t.id].team}),'preview must not read the authored static leader team');
  variants+=JSON.stringify(t.team.map(s=>s.species_id))!==JSON.stringify(other.team.map(s=>s.species_id));
  assert(new Set(t.team.map(s=>find(s.species_id).family_id)).size===6,'distinct families');
  assert(new Set(t.team.flatMap(s=>find(s.species_id).types)).size>=4,'secondary type diversity');
@@ -40,7 +46,12 @@ for(const raw of originals){
  state.fates[t.id]='SPARED';const rematch=makeLeaderRematch(state,t);assert(rematch.eliteLeader);assert.deepEqual(rematch.team.map(s=>find(s.species_id).family_id),t.team.map(s=>find(s.species_id).family_id));assert(rematch.team.every(s=>find(s.species_id).types.includes(spec.type)));assert.deepEqual(state.leaderTeams[t.id].team,t.team,'rematches leave locked roster unchanged');assert(rematch.nonlethal);
  state.defeatedTrainers.push(rematch.id);state.trainerPayouts=[rematch.id];assert(completeLeaderRematch(state,rematch.id));assert(!completeLeaderRematch(state,rematch.id));
  state.fates[t.id]='EXECUTED';state.money=0;settleLeaderRewards(state,raw,(id,l,uid)=>({uid,species:find(id),level:l,hp:10}));
- assert.equal(state.leaderOutcomes.gifts[t.id].speciesId,leaderAceBaby(t));const money=state.money,count=state.party.length+state.reserve.length;settleLeaderRewards(state,raw,()=>assert.fail('duplicate nursery'));assert.equal(state.money,money);assert.equal(state.party.length+state.reserve.length,count);
+ assert.equal(state.leaderOutcomes.gifts[t.id].speciesId,leaderAceBaby(t));
+ assert.equal(leaderRewardBaby(state,raw),advertised,'execution grant and displayed baby agree');
+ const claimed=JSON.parse(JSON.stringify(state));
+ claimed.leaderTeams[t.id].team[5].species_id=t.team[0].species_id;
+ assert.equal(leaderRewardBaby(claimed,raw),advertised,'completed gift receipt remains authoritative');
+ const money=state.money,count=state.party.length+state.reserve.length;settleLeaderRewards(state,raw,()=>assert.fail('duplicate nursery'));assert.equal(state.money,money);assert.equal(state.party.length+state.reserve.length,count);
 }
 assert(variants>=6);assert.equal(JSON.stringify(originals),plain,'canonical story roster not mutated');
 const legacy={playerName:'Old save',party:[{uid:'stable',growthSeed:773}],fates:{'LDR-01':'SPARED'}};
