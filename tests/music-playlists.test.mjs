@@ -28,3 +28,25 @@ for(const cue of ['journey','dark','descent','execution','burial','darius','lead
 }
 const failed=createMusicController({createAudio:()=>({paused:true,pause(){},play(){throw Error('Decoder unavailable');}})});assert.doesNotThrow(()=>failed.update({...ctx,evolution:'failure'}));failed.stop();
 console.log('PASS: all dedicated story/town/leader interruptions resume exactly, page suspension preserves sequence, null legacy metadata and decoder failure remain safe.');
+
+
+// A failed AAC/MP3 must skip to the next valid route track, not silence all routes.
+const failedAudios=[],audioFactory=()=>{const a={src:'',paused:true,currentTime:0,calls:0,events:{},error:null,pause(){this.paused=true;},play(){this.calls++;if(this.src==='broken.mp3')return Promise.reject(Object.assign(new Error('Unsupported audio'),{name:'NotSupportedError'}));this.paused=false;return Promise.resolve();},addEventListener(k,fn){this.events[k]=fn;}};failedAudios.push(a);return a;};
+const recovered=createMusicController({createAudio:audioFactory,tracks:{overworld:'broken.mp3',route:'working.m4a'},random:()=>.99});
+recovered.update(ctx);await tick();await tick();
+assert.equal(failedAudios.find(a=>!a.paused)?.src,'working.m4a','rejected route audio falls forward');
+assert.equal(recovered.snapshot().selected.route,'route');
+recovered.stop();
+const eventAudios=[],eventFactory=()=>{const a={src:'',paused:true,currentTime:0,events:{},error:null,pause(){this.paused=true;},play(){this.paused=false;return Promise.resolve();},addEventListener(k,fn){this.events[k]=fn;}};eventAudios.push(a);return a;};
+const errorRecovery=createMusicController({createAudio:eventFactory,tracks:{overworld:'broken.mp3',route:'working.m4a'},random:()=>.99});
+errorRecovery.update(ctx);await tick();
+const brokenAudio=eventAudios.find(a=>a.src==='broken.mp3');
+assert(brokenAudio,'exercise media-error path');brokenAudio.error={code:4};brokenAudio.events.error();
+await tick();assert.equal(eventAudios.find(a=>!a.paused)?.src,'working.m4a','media error advances playlist');errorRecovery.stop();
+let allowSound=false;
+const gestureAudios=[],gestureRecovery=createMusicController({createAudio:()=>{const a={src:'',paused:true,currentTime:0,calls:0,pause(){this.paused=true;},play(){this.calls++;if(!allowSound)return Promise.reject(Object.assign(new Error('Gesture required'),{name:'NotAllowedError'}));this.paused=false;return Promise.resolve();}};gestureAudios.push(a);return a;},tracks:{overworld:'gesture.mp3'},random:()=>.99});
+gestureRecovery.update(ctx);await tick();assert.equal(gestureAudios.length,1,'autoplay denial should not advance to another song');allowSound=true;gestureRecovery.unlock();await tick();assert.equal(gestureAudios.length,1);assert.equal(gestureAudios[0].paused,false,'gesture unlock retries same song');gestureRecovery.stop();
+let rejectedCalls=0;
+const noAudio=createMusicController({createAudio:()=>({paused:true,pause(){},play(){rejectedCalls++;return Promise.reject(Object.assign(new Error('Unsupported'),{name:'NotSupportedError'}));}}),tracks:{overworld:'broken-one.mp3',route:'broken-two.mp3'},random:()=>.99});
+noAudio.update(ctx);for(let i=0;i<8;i++)await tick();assert.equal(rejectedCalls,2,'all-unplayable playlist stops instead of retrying forever');noAudio.stop();
+console.log('PASS: route decode errors, media error events, autoplay recovery and bounded all-failed fallback.');
