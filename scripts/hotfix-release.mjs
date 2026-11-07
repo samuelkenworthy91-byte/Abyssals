@@ -22,7 +22,7 @@ export const PROFILES=Object.freeze({
     browser:['tests/browser-smoke.cjs','tests/battle-animation-setting-browser.cjs']
   }
 });
-export const ALWAYS_UNIT=['tests/runtime-cache-consistency.test.mjs','tests/offline-redirects.test.mjs','tests/hotfix-mode.test.mjs'];
+export const ALWAYS_UNIT=['tests/runtime-cache-consistency.test.mjs','tests/offline-redirects.test.mjs','tests/permanent-growth.test.mjs','tests/field-journal.test.mjs','tests/hotfix-mode.test.mjs'];
 export function unitTests(focus){
   assert(PROFILES[focus],'Unknown hotfix focus: '+focus);
   return [...new Set([...ALWAYS_UNIT,...PROFILES[focus].unit])];
