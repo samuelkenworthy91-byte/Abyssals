@@ -1,10 +1,10 @@
 {
-  "version": "0.90.58",
-  "version_code": 153,
-  "filename": "Abyssals-v0.90.58-Dynamic-Aces.apk",
-  "title": "Abyssals v0.90.58 — Dynamic Leader Aces",
-  "notes": "Execution choice text and rewards now agree with each leader's randomized, saved ace, including its first-stage nursery species. All eight leader previews follow the locked team; existing gifted companions and saves remain unchanged. The full v0.90.57 soundtrack, graphics, animation settings and all 615 move art bindings are retained. Signed with the original APK identity.",
-  "pwa_filename": "Abyssals-v0.90.58-PWA.zip",
+  "version": "0.90.59",
+  "version_code": 154,
+  "filename": "Abyssals-v0.90.59-Cup-Audio-Hotfix.apk",
+  "title": "Abyssals v0.90.59 — Supervised Cup & Route Audio Hotfix",
+  "notes": "Small, isolated gameplay fix: supervised battles now settle at the 1-HP surrender threshold before Pilgrim Cup or similar end-turn healing. Routes skip a failing adventure track instead of staying silent, while a browser autoplay restriction still waits for an unlock gesture. Reuses byte-identical music and artwork from an installed v0.90.58 PWA cache to avoid downloading those unchanged binaries again. No gameplay artwork, audio, save formats, package identity or signing key changed. Android still requires a complete signed update APK.",
+  "pwa_filename": "Abyssals-v0.90.59-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.58-art-scope.json"
+  "artwork_scope_path": "docs/releases/v0.90.59-art-scope.json"
 }
