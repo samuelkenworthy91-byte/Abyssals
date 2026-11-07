@@ -4,11 +4,21 @@ on:
     branches: [main]
     paths:
       - 'dist/**'
-      - 'scripts/**'
-      - 'tests/**'
       - 'release-config.json'
-      - '.github/workflows/android-release.yml'
   workflow_dispatch:
+    inputs:
+      validation_mode:
+        description: 'Full suite or safe source-only hotfix tests'
+        type: choice
+        required: true
+        default: full
+        options: [full, hotfix]
+      hotfix_focus:
+        description: 'Hotfix area: battle, audio, offline or UI'
+        type: choice
+        required: true
+        default: battle
+        options: [battle, audio, offline, ui]
 permissions:
   contents: read
 concurrency:
@@ -19,6 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     outputs:
+      mode: ${{ steps.profile.outputs.mode }}
+      focus: ${{ steps.profile.outputs.focus }}
       browser-groups: ${{ steps.inventory.outputs.browser-groups }}
       batches: ${{ steps.inventory.outputs.batches }}
     steps:
@@ -40,7 +52,49 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Choose full or hotfix validation
+        id: profile
+        env:
+          MANUAL_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.validation_mode || '' }}
+          MANUAL_FOCUS: ${{ github.event_name == 'workflow_dispatch' && inputs.hotfix_focus || '' }}
+        run: |
+          python3 - <<'PY'
+          import json,os
+          cfg=json.load(open('release-config.json'))
+          mode=os.environ['MANUAL_MODE'] or cfg.get('validation_mode','full')
+          focus=os.environ['MANUAL_FOCUS'] or cfg.get('hotfix_focus','battle')
+          if mode not in ('full','hotfix'):raise SystemExit('validation_mode must be full or hotfix')
+          if focus not in ('battle','audio','offline','ui'):raise SystemExit('hotfix_focus must be battle, audio, offline or ui')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('mode='+mode+'\nfocus='+focus+'\n')
+          print('Release validation:',mode,'focus:',focus)
+          PY
+      - name: Enforce safe, code-only hotfix and new release version
+        if: steps.profile.outputs.mode == 'hotfix'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/hotfix-release.mjs verify '${{ steps.profile.outputs.focus }}'
+      - name: Run safety and focused hotfix unit tests
+        if: steps.profile.outputs.mode == 'hotfix'
+        env:
+          HOTFIX_FOCUS: ${{ steps.profile.outputs.focus }}
+        run: |
+          python3 -m pip install --quiet Pillow==11.1.0
+          for file in dist/*.js; do node --check "$file"; done
+          python3 scripts/validate-game.py
+          python3 tests/android-manifest.test.py
+          python3 scripts/verify-art-release-scope.py
+          python3 tests/interim-art-scope.test.py
+          node --input-type=module <<'NODE'
+          import {spawnSync} from 'node:child_process';
+          import {unitTests} from './scripts/hotfix-release.mjs';
+          for(const test of unitTests(process.env.HOTFIX_FOCUS)){
+            console.log('HOTFIX UNIT '+test);
+            const result=spawnSync('node',[test],{stdio:'inherit'});
+            if(result.status!==0)process.exit(result.status||1);
+          }
+          NODE
       - name: Validate game, saves, graphics and declared release scope
+        if: steps.profile.outputs.mode == 'full'
         run: |
           python3 -m pip install --quiet Pillow==11.1.0
           python3 scripts/audit-action-art.py
@@ -56,14 +110,21 @@ jobs:
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
           python3 tests/android-manifest.test.py
-      - name: Discover all browser suites and animation batches
+      - name: Discover selected browser suites and animation batches
         id: inventory
+        env:
+          TEST_MODE: ${{ steps.profile.outputs.mode }}
+          HOTFIX_FOCUS: ${{ steps.profile.outputs.focus }}
         run: |
           node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
           import fs from 'node:fs';
+          import {PROFILES} from './scripts/hotfix-release.mjs';
+          const hotfix=process.env.TEST_MODE==='hotfix';
           const files=fs.readdirSync('tests').filter(f=>f.endsWith('-browser.cjs')||f==='browser-smoke.cjs').filter(f=>f!=='art-revision-browser.cjs').sort();
-          const groups=Array.from({length:6},(_,i)=>({name:'group-'+(i+1),tests:files.filter((_,n)=>n%6===i).map(f=>'tests/'+f)})).filter(g=>g.tests.length);
-          const batches=fs.readdirSync('art-library/action-vfx').filter(f=>/^batch-\d+\.json$/.test(f)).map(f=>JSON.parse(fs.readFileSync('art-library/action-vfx/'+f)).batch).sort();
+          const groups=hotfix
+            ? [{name:'hotfix-'+process.env.HOTFIX_FOCUS,tests:PROFILES[process.env.HOTFIX_FOCUS].browser}]
+            : Array.from({length:6},(_,i)=>({name:'group-'+(i+1),tests:files.filter((_,n)=>n%6===i).map(f=>'tests/'+f)})).filter(g=>g.tests.length);
+          const batches=hotfix?[]:fs.readdirSync('art-library/action-vfx').filter(f=>/^batch-\d+\.json$/.test(f)).map(f=>JSON.parse(fs.readFileSync('art-library/action-vfx/'+f)).batch).sort();
           console.log('browser-groups='+JSON.stringify(groups));
           console.log('batches='+JSON.stringify(batches));
           NODE
@@ -120,6 +181,7 @@ jobs:
           if-no-files-found: ignore
   action-batches:
     needs: validate
+    if: needs.validate.outputs.mode == 'full'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -158,6 +220,7 @@ jobs:
           if-no-files-found: ignore
   release:
     needs: [validate, browsers, action-batches]
+    if: ${{ always() && github.ref == 'refs/heads/main' && needs.validate.result == 'success' && needs.browsers.result == 'success' && ((needs.validate.outputs.mode == 'hotfix' && needs.action-batches.result == 'skipped') || (needs.validate.outputs.mode == 'full' && needs.action-batches.result == 'success')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -170,7 +233,7 @@ jobs:
             scripts
             release
       - name: Build from the fully verified commit
-        run: echo "All source and browser checks passed for $GITHUB_SHA"
+        run: echo "Selected release validation and browser checks passed for $GITHUB_SHA"
       - name: Read release configuration
         id: config
         run: |
