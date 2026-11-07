@@ -1,5 +1,5 @@
 import {selectSoundtrack,soundtrackState,musicPlaylist,evolutionMusicToken,linkEvolutionMusicCards} from './soundtrack.js?v=0.90.58';
-import {createMusicController} from './music.js?v=0.90.58';
+import {createMusicController} from './music.js?v=0.90.59';
 import {tradeReceiptKey} from './dossier-encounters.js?v=0.90.58';
 import {attemptDossierSwitch} from './dossier-battle.js?v=0.90.58';
 import {THUNDER_SHARD} from './dossier-data.js?v=0.90.58';

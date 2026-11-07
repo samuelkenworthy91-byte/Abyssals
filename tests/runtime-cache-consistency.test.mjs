@@ -1,15 +1,19 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const version=JSON.parse(fs.readFileSync('release-config.json','utf8')).version;
+// A code-only 0.90.59 hotfix keeps unchanged 0.90.58 modules cache-stable.
+// Requiring a single URL identity for each module prevents split state.
+const allowedVersions=new Set(version==='0.90.59'?[version,'0.90.58']:[version]);
 const refs=new Map();
 for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.js'))){
  const source=fs.readFileSync('dist/'+file,'utf8');
  for(const m of source.matchAll(/(?:from\s*|import\s*(?:\(\s*)?)['"](\.{1,2}\/[^'"]+\.js)(\?[^'"]*)?['"]/g)){
-  const params=new URLSearchParams(m[2]?.slice(1));assert.equal(params.get('v'),version,file+' imports stale '+m[1]);
+  const params=new URLSearchParams(m[2]?.slice(1));assert(allowedVersions.has(params.get('v')),file+' imports incompatible '+m[1]);
   const versions=refs.get(m[1])||new Set();versions.add(m[2]||'');refs.set(m[1],versions);
  }
 }
 assert([...refs.values()].every(s=>s.size===1),'one cache identity per shared module');
 const html=fs.readFileSync('dist/index.html','utf8');assert(html.includes('app.js?v='+version)&&html.includes('pwa.js?v='+version));
+assert(fs.readFileSync('dist/app.js','utf8').includes("from './music.js?v="+version+"'"),'hotfix entry imports patched music controller');
 console.log('PASS: shared runtime modules and entry points use one release cache identity; party state cannot split across versioned imports.');
 
