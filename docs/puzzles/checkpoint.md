@@ -59,3 +59,7 @@ Difficulty and enjoyment are design estimates out of 10. The browser checks exer
 The original crossing screenshot showed a flat grid against the summit scenery. The revised ravine uses Windscar's existing rock and snow sprites around pixel-drawn cliff faces, shaded stepping stones and layered mist. A brief frost puff marks a missed step. After a fall, flakes can gather on the next nearby safe stone, drawing on the way snow hints at hidden paths in [Dark Souls' Crystal Cave](https://darksouls.wikidot.com/crystal-cave). Reduced motion holds the visual cues in place, and the inscription still provides a deliberate hint.
 
 The fifteen mechanism panels use their themed pixel-art props. The spawning channel uses textured tiles with symbols and text labels for the nets, nest, rocks and outlet. The browser check verifies that each illustration loads and records representative panel and crossing screenshots.
+
+## Veilroot Bastion exterior
+
+The water outside the Sunken Fort now uses a continuous coastal texture, a depth tint, broken foam along the shore and causeway, and slow tide highlights. The renderer uses the existing walkable mask. The browser check captures the shoreline from the approach and the model verifies that the paving and entrance remain clear.

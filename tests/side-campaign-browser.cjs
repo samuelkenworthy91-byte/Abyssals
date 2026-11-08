@@ -69,6 +69,7 @@ window.campaignQA={
  },
  solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;},
  async crossingBoot(){this.boot('marchMeadow','marchMeadow',0);await warp(CROSSING_ROOM,...CROSSING_ENTRY,'up');},
+ async fortCoastBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('scrub2',38,28,'left');},
  crossingSnapshot(){return {room,x:player.x,y:player.y,...crossingState(state),cost:[state.escortSteps,state.money,state.party.map(unit=>unit.hp),state.dead.length]};},
  restoreCrossing(){resumeSnapshot(JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')));},
  tile(x,y){
@@ -155,6 +156,9 @@ window.campaignQA={
   for(const cell of [...route,CROSSING_EXIT]){await tapTile(cell);await at(cell);}
   assert((await page.evaluate(()=>campaignQA.crossingSnapshot())).solved);
   await page.locator('#viewport').screenshot({path:'build/qa/windscar-mist-crossing.png'});
+  stageLabel='Sunken Fort shoreline';
+  await page.evaluate(()=>campaignQA.fortCoastBoot());
+  await page.locator('#viewport').screenshot({path:'build/qa/sunken-fort-shoreline.png'});
   assert.deepEqual(errors,[]);
   console.log('PASS',inventory.length,'mobile reading props via both inputs and save persistence');
  }catch(error){

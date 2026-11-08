@@ -9,7 +9,56 @@ export function drawFortTile(c,m,x,y,walk,encounter,asset,channel=true){const px
  if(encounter){rect(c,i<2?'#386d7155':'#204e6577',px,py,16,16);if((x+y)%3===0){rect(c,'#8bc1b3',px+2,py+6,6,1);rect(c,'#568d91',px+9,py+12,4,1);}if((x*3+y)%7===0){rect(c,'#38564d',px+4,py+9,2,5);rect(c,'#59776a',px+8,py+10,2,4);}}
  else if(i>1)rect(c,'#23455322',px,py,16,16);
 }
-export function drawFortCoast(c,m,walkable,asset){for(let y=26;y<32;y++)for(let x=16;x<=47;x++){if(walkable(x,y)){rect(c,'#a59b7d',x*16,y*16,16,16);tile(c,asset,'fortFloor',x,y);}else water(c,x*16,y*16,1);} }
+const coastDirections=[[0,-1],[1,0],[0,1],[-1,0]];
+const coastShade=['#346b73','#286071','#1f4d64','#193e56'];
+const coastTint=['#39776855','#25546466','#173e5a88','#102d4c99'];
+function shoreDepth(land,x,y){
+ for(let depth=1;depth<=3;depth++){
+  for(let dx=-depth;dx<=depth;dx++){
+   const dy=depth-Math.abs(dx);
+   if(land(x+dx,y-dy)||land(x+dx,y+dy))return depth-1;
+  }
+ }
+ return 3;
+}
+function shoreFoam(c,x,y,edge,seed){
+ c.save();c.translate(x*16+8,y*16+8);c.rotate(edge*Math.PI/2);
+ rect(c,'#7aada694',-8,-8,16,2);
+ for(let p=-8;p<8;p+=4){
+  const shift=(seed+p+8)%3;
+  rect(c,'#b4cfcaa0',p,-8+shift,3,1);
+  rect(c,'#8ebcb59c',p+1,-5+shift,2,1);
+ }
+ c.restore();
+}
+export function drawFortCoast(c,m,walkable,asset){
+ const land=(x,y)=>x>=0&&x<48&&y>=0&&y<32&&(!fortCoastTile(m,x,y)||walkable(x,y));
+ for(let y=26;y<32;y++)for(let x=16;x<48;x++){
+  if(walkable(x,y)){
+   rect(c,'#a59b7d',x*16,y*16,16,16);tile(c,asset,'fortFloor',x,y);
+   continue;
+  }
+  const depth=shoreDepth(land,x,y);
+  rect(c,coastShade[depth],x*16,y*16,16,16);
+  if(asset)asset(c,'verdantWaterC',x,y,1,1,{x:x%8*16,y:y%8*16,w:16,h:16});
+  rect(c,coastTint[depth],x*16,y*16,16,16);
+  for(const [edge,[dx,dy]] of coastDirections.entries()){
+   if(land(x+dx,y+dy))shoreFoam(c,x,y,edge,(x*5+y*3)%7);
+  }
+ }
+}
+export function drawFortTide(c,m,walkable,time,reduced){
+ if(!m?.fortExterior)return;
+ const tick=reduced?0:Math.floor(time/145);
+ for(let i=0;i<21;i++){
+  const x=16+(i*11+3)%32,y=28+(i*7)%4;
+  if(walkable(x,y))continue;
+  const shift=(tick+i*13)%11,left=x*16+shift,top=y*16+(i*5)%13;
+  rect(c,'#a2ceca40',left,top,5,1);
+  rect(c,'#c3ddce52',left+2,top,2,1);
+  rect(c,'#68a4af55',left+1,top+2,4,1);
+ }
+}
 export function drawFortExterior(c,asset){
  if(asset)asset(c,'fortBastion',32,19,14,8);
  // Bright paved causeway stays south of the building and clear of the main road.
