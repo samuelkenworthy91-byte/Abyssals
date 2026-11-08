@@ -187,7 +187,7 @@ const barges={
 };
 const echoes=[[0,2,1],[0,2,1,2],[0,2,1,2,0]],bells=['Low triangle','Middle square','High circle'];
 const bellEcho={
- initial:[0,0,0],
+ initial:[0,0,0],replayAction:3,
  actions:[
   ...bells.map((label,index)=>({label:'Ring '+label,step:([round,progress])=>{
    if(round>=echoes.length)return [round,0,0];
@@ -198,6 +198,7 @@ const bellEcho={
  ],
  inspect:([round,progress,show])=>({
   solved:round===echoes.length,
+  tones:show?echoes[round]?.map(index=>[392,494,659][index]):null,
   lines:round===echoes.length?['All three echoes returned.']:[
    'Echo '+(round+1)+' of 3 · '+progress+' of '+echoes[round].length+' matched',
    show?echoes[round].map(index=>bells[index]).join(' → '):'The shore is quiet. Replay the echo when you need it.'
@@ -228,16 +229,14 @@ const netCurrent={
  }})),
  inspect:board=>({
   solved:board.every(cell=>cell===pond.outlet),
-  lines:[
-   ...Array.from({length:4},(_,row)=>'Row '+(row+1)+' · '+Array.from({length:4},(_,col)=>{
-    const cell=row*4+col;
-    if(cell===pond.rock)return 'Rock';
-    if(cell===pond.nest)return 'Nest';
-    if(cell===pond.outlet)return 'Outlet';
-    return board.includes(cell)?'Net':'Water';
-   }).join(' | ')),
-   'Nets cleared: '+board.filter(cell=>cell===pond.outlet).length+' / 2'
-  ]
+  grid:Array.from({length:4},(_,row)=>Array.from({length:4},(_,col)=>{
+   const cell=row*4+col;
+   if(cell===pond.rock)return 'Rock';
+   if(cell===pond.nest)return 'Nest';
+   if(cell===pond.outlet)return 'Outlet';
+   return board.includes(cell)?'Net':'Water';
+  })),
+  lines:['Nets cleared: '+board.filter(cell=>cell===pond.outlet).length+' / 2']
  })
 };
 

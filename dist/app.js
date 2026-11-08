@@ -988,9 +988,16 @@ function campaignMechanism(c){const q=campaignState(state,c);if(!q.accepted||!q.
  const board=campaignMechanismPanel(state,c);
  if(board){
   const cleared=q.solved||q.claimed;
-  openModal(c.title+' · '+c.mechanism.title,`<p>${escapeHTML(c.mechanism.note)}</p><p>${escapeHTML(c.mechanism.rules)}</p><div aria-live="polite">${cleared?'<b>Route restored</b>':'<ul>'+board.lines.map(line=>'<li>'+escapeHTML(line)+'</li>').join('')+'</ul>'}</div>${cleared?'':`<div class="modal-actions">${board.actions.map((action,n)=>`<button data-sc-control="${n}">${escapeHTML(action)}</button>`).join('')}<button id="sc-reset">Reset mechanism</button></div>${board.hint?`<p>${escapeHTML(board.hint)}</p>`:''}${board.canHint?'<button id="sc-hint">Ask for a hint</button>':''}${campaignAffinity(state,c)&&!board.hint?`<button id="sc-assist">Ask a ${c.affinity}-type partner for a hint</button>`:''}`}`);
+  const grid=board.grid?`<table class="expedition-board" aria-label="Current and spawning channel"><tbody>${board.grid.map(row=>'<tr>'+row.map(cell=>'<td>'+escapeHTML(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table>`:'';
+  openModal(c.title+' · '+c.mechanism.title,`<p>${escapeHTML(c.mechanism.note)}</p><p>${escapeHTML(c.mechanism.rules)}</p><div aria-live="polite">${cleared?'<b>Route restored</b>':grid+'<ul>'+board.lines.map(line=>'<li>'+escapeHTML(line)+'</li>').join('')+'</ul>'}</div>${cleared?'':`<div class="modal-actions">${board.actions.map((action,n)=>`<button data-sc-control="${n}">${escapeHTML(action)}</button>`).join('')}<button id="sc-reset">Reset mechanism</button></div>${board.hint?`<p>${escapeHTML(board.hint)}</p>`:''}${board.canHint?'<button id="sc-hint">Ask for a hint</button>':''}${campaignAffinity(state,c)&&!board.hint?`<button id="sc-assist">Ask a ${c.affinity}-type partner for a hint</button>`:''}`}`);
   const apply=change=>{if(rewardTransaction(change)){refresh();campaignMechanism(c);}};
-  document.querySelectorAll('[data-sc-control]').forEach(button=>button.onclick=()=>apply(()=>campaignPuzzle(state,c,+button.dataset.scControl)));
+  document.querySelectorAll('[data-sc-control]').forEach(button=>button.onclick=()=>{
+   const index=+button.dataset.scControl;
+   apply(()=>campaignPuzzle(state,c,index));
+   if(index===c.mechanism.replayAction){
+    campaignMechanismPanel(state,c).tones?.forEach((frequency,n)=>setTimeout(()=>blip(frequency),n*220));
+   }
+  });
   $('#sc-reset')?.addEventListener('click',()=>apply(()=>campaignReset(state,c)));
   $('#sc-hint')?.addEventListener('click',()=>apply(()=>campaignHint(state,c)));
   $('#sc-assist')?.addEventListener('click',()=>apply(()=>campaignAssist(state,c)));
