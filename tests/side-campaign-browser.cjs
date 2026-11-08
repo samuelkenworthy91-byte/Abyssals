@@ -74,6 +74,12 @@ window.campaignQA={
  async fortCoastBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('scrub2',38,28,'left');$('#toast').classList.remove('visible');},
  async shadowBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('relicGrove2',18,6,'up');},
  shadowSnapshot(){return {room,x:player.x,y:player.y,puzzle:state.shadowBridge};},
+ shadowEntranceStatus(){
+  const gate=AREA_GATES[room]?.find(g=>g.id==='shadow-bridge-entry');
+  const [x,y]=this.tile(18,3);
+  return {...this.shadowSnapshot(),locked:presentationLocked,blocked:blocked(18,4),
+   target:document.elementFromPoint(x,y)?.id,path:player.path,gate,context:$('#context').textContent};
+ },
  crossingSnapshot(){return {room,x:player.x,y:player.y,...crossingState(state),cost:[state.escortSteps,state.money,state.party.map(unit=>unit.hp),state.dead.length]};},
  restoreCrossing(){resumeSnapshot(JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')));},
  tile(x,y){
@@ -161,9 +167,17 @@ window.campaignQA={
   await page.locator('#viewport').screenshot({path:'build/qa/windscar-mist-crossing.png'});
   stageLabel='Briarbell Wood Shadow Bridge';
   await page.evaluate(()=>campaignQA.shadowBoot());
-  await tapTile([18,4]);
-  await page.waitForFunction(()=>campaignQA.location()==='shadowBridge');
   await page.locator('#world-warp').waitFor({state:'hidden'});
+  await page.waitForFunction(()=>campaignQA.shadowEntranceStatus().target==='world');
+  await tapTile([18,3]);
+  try{
+   await page.waitForFunction(()=>campaignQA.location()==='shadowBridge',null,{timeout:5000});
+  }catch(error){
+   console.error('Shadow Bridge entrance:',await page.evaluate(()=>campaignQA.shadowEntranceStatus()));
+   throw error;
+  }
+  await page.locator('#world-warp').waitFor({state:'hidden'});
+  await page.locator('#viewport').screenshot({path:'build/qa/shadow-bridge-entry.png'});
   await tapTile([5,16]);await at([5,16]);
   const nearTablet=await page.evaluate(()=>campaignQA.point('shadow-bridge-inscription'));
   await page.touchscreen.tap(nearTablet.x,nearTablet.y);

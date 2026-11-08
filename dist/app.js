@@ -580,7 +580,9 @@ canvas.onclick=e=>{if(!state.begun||state.wiped||dialogue||battle||modal||presen
  if(!player.step&&Math.abs(x-player.x)+Math.abs(y-player.y)===1){stopMovement();player.path=[[x,y]];}
  else toast('Stand next to the pillar to push it.');
  return;
-}if(crossingTile(room,x,y)||crossingTile(room,player.x,player.y)){
+}const shadowEntrance=AREA_GATES[room]?.find(g=>g.action==='shadow-bridge-travel'&&g.entrance&&x>=g.entrance.x&&x<g.entrance.x+g.entrance.w&&y>=g.entrance.y&&y<g.entrance.y+g.entrance.h);
+if(shadowEntrance){approach(shadowEntrance);return;}
+if(crossingTile(room,x,y)||crossingTile(room,player.x,player.y)){
  if(!player.step&&Math.abs(x-player.x)+Math.abs(y-player.y)===1&&!blocked(x,y)){stopMovement();player.path=[[x,y]];}
  else toast('Choose one neighbouring stone at a time.');
  return;
