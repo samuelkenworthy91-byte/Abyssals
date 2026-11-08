@@ -13,3 +13,9 @@ The strongest source-based estimates in the handoff were Shared Spring (difficul
 ## Verification status
 
 On the deployed v0.90.59 PWA, a synthetic accepted Snowbreak Hollow save at (15, 13), facing north, showed the player sprite covering the clue prop. The objective label remained visible and pressing E read the evidence and advanced the objective to the warden. This reproduces an obscured prop. The reported hard deadlock remains unconfirmed. The patch draws the reading lectern after actors to keep the prop visible from that approach. Browser fixtures distinguish input and persistence checks from terrain coverage. The signed Android and offline PWA release are gated on the complete overhaul and full QA.
+
+## First mechanism batch
+
+Snowbreak Hollow's hearth now models heat and smoke. The Buried Water Road uses coupled counterweights and a level carriage. The Water That Remembers uses four connected pipe sections. Ashes Owed uses a turn-based heat and pressure window. Stormwatch uses a three-mirror light relay. The Cossenne objective now reads the garden drum target from the same data as the lock.
+
+These boards keep separate save state and preserve finished legacy expeditions. The mechanism tests search each board for a solution, resume a partially solved save, and check reset, hints and cleared saves. The mobile suite also operates each upgraded board through its buttons.

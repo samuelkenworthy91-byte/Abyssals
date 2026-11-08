@@ -1,4 +1,5 @@
 // Readable site records, evidence and individual warden conversations for side expeditions.
+import {expeditionMechanisms} from './side-campaign-mechanisms.js?v=0.90.58';
 export const SIDE_CAMPAIGNS = [
   {
     "key": "marchMeadow",
@@ -1336,3 +1337,13 @@ export const SIDE_CAMPAIGNS = [
     ]
   }
 ];
+
+for(const campaign of SIDE_CAMPAIGNS){
+ const mechanism=expeditionMechanisms[campaign.key];
+ if(!mechanism)continue;
+ campaign.mechanism=mechanism;
+ campaign.clues[1]=mechanism.note;
+ campaign.signs[1]=mechanism.note;
+ campaign.puzzleClue=mechanism.rules;
+ campaign.recordTitles[1]=mechanism.title;
+}

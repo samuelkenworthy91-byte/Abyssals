@@ -4,6 +4,7 @@ import {
  SIDE_CAMPAIGNS,campaignRoom,campaignState,campaignGuard,campaignGiverSpot,campaignClueId,
  campaignBlocked,campaignGateOpen,campaignClue,campaignPuzzle,campaignChoose,claimCampaign,drawCampaignClue
 } from '../dist/side-campaigns.js?v=0.90.58';
+import {mechanismPath} from '../dist/side-campaign-mechanisms.js?v=0.90.58';
 import {siteTabletHit} from '../dist/site-tablets.js?v=0.90.58';
 
 const cardinal=[[0,1],[0,-1],[1,0],[-1,0]];
@@ -71,7 +72,7 @@ for(const c of SIDE_CAMPAIGNS){
   state.defeatedTrainers.push(campaignGuard(c,stage));
   if(stage===1){
    assert(!campaignGateOpen(state,c,stage),room+' mechanism required');
-   const actions=c.puzzleKind==='weights'?c.solution.flatMap((n,i)=>Array(n).fill(i)):
+   const actions=c.mechanism?mechanismPath(c.mechanism,c.mechanism.initial):c.puzzleKind==='weights'?c.solution.flatMap((n,i)=>Array(n).fill(i)):
     c.puzzleKind==='lanterns'?c.solution.map((v,i)=>c.solution.slice(0,i+1).filter(Boolean).length%2?i:null).filter(i=>i!==null):c.solution;
    for(const action of actions)assert(campaignPuzzle(state,c,action));
    assert(campaign().solved);

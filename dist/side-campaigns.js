@@ -3,6 +3,7 @@ import {menagerieEncounterRoute} from './menagerie-encounters.js?v=0.90.58';
 import {isReducedMotion} from './motion.js?v=0.90.58';
 import {MECHANISM_ART,drawQuestMechanism,drawExpeditionGate} from './quest-scenery.js?v=0.90.58';
 import {drawSiteTablet} from './site-tablets.js?v=0.90.58';
+import {mechanismState,mechanismPath} from './side-campaign-mechanisms.js?v=0.90.58';
 import {SIDE_CAMPAIGNS} from './side-campaign-data.js?v=0.90.58';
 import {SIDE_CONTENT} from './exploration-data.js?v=0.90.58';
 import {SIDE_POOLS} from './encounter-pools.js?v=0.90.58';
@@ -26,18 +27,41 @@ export function campaignGuardDone(state,c,stage){return campaignState(state,c).c
 export function campaignGateOpen(state,c,stage){const q=campaignState(state,c);return q.claimed||(q.accepted&&q.clues.includes(stage)&&campaignGuardDone(state,c,stage)&&(stage!==1||q.solved));}
 export function campaignBlocked(state,room,x,y){const a=campaignArea(room);return !!a&&(x===35&&y===18||a.stage<2&&x===44&&y>=16&&y<=18&&!campaignGateOpen(state,a.c,a.stage));}
 export function campaignClue(state,c,stage){const q=campaignState(state,c);if(!q.accepted||q.clues.includes(stage))return false;q.clues.push(stage);return true;}
-export function campaignPuzzle(state,c,index){const q=campaignState(state,c);if(!q.accepted||q.solved||!Number.isInteger(index)||index<0||index>2)return false;
+export function campaignPuzzle(state,c,index){const q=campaignState(state,c);if(!q.accepted||q.solved||q.claimed||!q.clues.includes(1)||!Number.isInteger(index)||index<0)return false;
+ if(c.mechanism){
+  const action=c.mechanism.actions[index];if(!action)return false;
+  const board=mechanismState(q,c.mechanism);
+  board.board=action.step(board.board);board.moves++;board.hint=0;
+  q.solved=c.mechanism.inspect(board.board).solved;
+  return true;
+ }
+ if(index>2)return false;
  if(c.puzzleKind==='lanterns'){q.lights[index]=!q.lights[index];if(index<2)q.lights[index+1]=!q.lights[index+1];q.solved=q.lights.every((v,i)=>v===c.solution[i]);}
  else if(c.puzzleKind==='weights'){q.weights[index]=(q.weights[index]+1)%4;q.solved=q.weights.every((v,i)=>v===c.solution[i]);}
  else{q.puzzle.push(index);if(q.puzzle.at(-1)!==c.solution[q.puzzle.length-1])q.puzzle=[];if(q.puzzle.length===3)q.solved=true;}
  return true;
 }
-export function campaignReset(state,c){const q=campaignState(state,c);if(q.solved)return false;q.puzzle=[];q.lights=[false,false,false];q.weights=[0,0,0];return true;}
+export function campaignReset(state,c){const q=campaignState(state,c);if(q.solved||q.claimed)return false;if(c.mechanism){const board=mechanismState(q,c.mechanism);board.board=[...c.mechanism.initial];board.hint=0;return true;}q.puzzle=[];q.lights=[false,false,false];q.weights=[0,0,0];return true;}
 export function campaignAffinity(state,c){return (state.party||[]).some(u=>u.hp>0&&!u.dead&&u.species.types.includes(c.affinity));}
-export function campaignAssist(state,c){const q=campaignState(state,c);if(!q.accepted||q.solved||!q.clues.includes(1)||!campaignAffinity(state,c))return false;q.solved=true;q.assisted=true;return true;}
+export function campaignAssist(state,c){const q=campaignState(state,c);if(!q.accepted||q.solved||q.claimed||!q.clues.includes(1)||!campaignAffinity(state,c))return false;if(c.mechanism){const board=mechanismState(q,c.mechanism);board.hint=Math.max(1,board.hint);return true;}q.solved=true;q.assisted=true;return true;}
+export function campaignMechanismPanel(state,c){
+ const q=campaignState(state,c),definition=c.mechanism;
+ if(!definition)return null;
+ const saved=q.mechanism?.version===1?q.mechanism:{board:definition.initial,moves:0,hint:0};
+ const hint=saved.hint>=2?mechanismPath(definition,saved.board)?.[0]:undefined;
+ return {...definition.inspect(saved.board),actions:definition.actions.map(action=>action.label),canHint:saved.moves>=3&&saved.hint<2,
+  hint:hint!==undefined?'Try this next: '+definition.actions[hint].label:saved.hint?'Check the board after each action. '+definition.rules:''};
+}
+export function campaignHint(state,c){
+ const q=campaignState(state,c);
+ if(!c.mechanism||!q.accepted||q.solved||q.claimed||!q.clues.includes(1))return false;
+ const board=mechanismState(q,c.mechanism);
+ if(board.moves<3||board.hint>=2)return false;
+ board.hint++;return true;
+}
 export function campaignChoose(state,c,choice){const q=campaignState(state,c);if(!['a','b'].includes(choice)||q.choice||!q.clues.includes(2)||!campaignGuardDone(state,c,2))return false;q.choice=choice;return true;}
 export function claimCampaign(state,c){const q=campaignState(state,c);if(!q.choice||q.claimed)return false;for(const [k,v]of Object.entries(c.reward)){if(Number.isFinite(v))state[k]=(state[k]||0)+v;}q.claimed=true;state.storyChoices??={};state.storyChoices['side_'+c.key]=q.choice;claimChoiceReward(state,c.key,q.choice);return true;}
-export function campaignObjective(state,room){const a=campaignArea(room);if(!a)return null;const {c,stage}=a,q=campaignState(state,c);if(q.claimed)return q.rewardVersion?null:{spot:campaignGiverSpot(c),text:'Collect your expedition prize · '+c.title};if(!q.accepted||q.choice)return {spot:campaignGiverSpot(c),text:!q.accepted?'Speak to '+campaignGiver(c)+' at '+c.stages[0]:'Report your decision to '+campaignGiver(c)+' at '+c.stages[0]};if(!q.clues.includes(stage))return {spot:campaignClueId(c,stage),text:'Examine the '+['trail evidence','repair inscription','site register'][stage]+' · '+c.stages[stage]};if(stage===1&&!q.solved)return {spot:'sc-'+c.key+'-mechanism-0',text:c.objective[1]+' · use the three named controls'};if(!campaignGuardDone(state,c,stage))return {spot:campaignGuard(c,stage),text:'Win the path warden’s challenge · '+c.stages[stage]};return {spot:'sc-'+c.key+(stage<2?'-forward-'+stage:'-resolution'),text:stage<2?'Take the eastern gate to '+c.stages[stage+1]:'Choose this area’s future at the decision register'};}
+export function campaignObjective(state,room){const a=campaignArea(room);if(!a)return null;const {c,stage}=a,q=campaignState(state,c);if(q.claimed)return q.rewardVersion?null:{spot:campaignGiverSpot(c),text:'Collect your expedition prize · '+c.title};if(!q.accepted||q.choice)return {spot:campaignGiverSpot(c),text:!q.accepted?'Speak to '+campaignGiver(c)+' at '+c.stages[0]:'Report your decision to '+campaignGiver(c)+' at '+c.stages[0]};if(!q.clues.includes(stage))return {spot:campaignClueId(c,stage),text:'Examine the '+['trail evidence','repair inscription','site register'][stage]+' · '+c.stages[stage]};if(stage===1&&!q.solved)return {spot:'sc-'+c.key+'-mechanism-0',text:c.objective[1]+(c.mechanism?' · inspect the mechanism':' · use the three named controls')};if(!campaignGuardDone(state,c,stage))return {spot:campaignGuard(c,stage),text:'Win the path warden’s challenge · '+c.stages[stage]};return {spot:'sc-'+c.key+(stage<2?'-forward-'+stage:'-resolution'),text:stage<2?'Take the eastern gate to '+c.stages[stage+1]:'Choose this area’s future at the decision register'};}
 export const campaignParagraphs=text=>String(text||'').split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean);
 export function campaignPages(text,maxWords=55){
  const pages=[];
@@ -63,12 +87,13 @@ export function campaignReminder(state,c){
  if(q.choice)return 'Return to '+giver+' at '+c.stages[0]+' and report your decision.';
  for(let stage=0;stage<3;stage++){
   if(!q.clues.includes(stage))return 'At '+c.stages[stage]+', examine the '+['trail evidence','repair inscription','site register'][stage]+' beside the path. '+c.objective[stage]+'.';
-  if(stage===1&&!q.solved)return 'At '+c.stages[1]+', use the three named controls. '+c.puzzleClue;
+  if(stage===1&&!q.solved)return 'At '+c.stages[1]+(c.mechanism?', inspect the mechanism. ':', use the three named controls. ')+c.puzzleClue;
   if(!campaignGuardDone(state,c,stage))return 'Speak to the path warden at '+c.stages[stage]+' and win the challenge to continue.';
  }
  return 'At '+c.stages[2]+', use the decision register beyond the last warden. Choose who will care for this place, then report to '+giver+'.';
 }
 export function campaignControlHelp(c){
+ if(c.mechanism)return c.mechanism.rules;
  const named=c.controlLabels.map((label,i)=>(i+1)+' '+label);
  if(c.puzzleKind==='lanterns')return 'The chains are linked: control 1 reverses lamps 1 and 2; control 2 reverses lamps 2 and 3; control 3 reverses only lamp 3. Leave '+named.map((n,i)=>n+' '+(c.solution[i]?'lit':'dark')).join(', ')+'. Reset puts every lamp out.';
  if(c.puzzleKind==='weights')return 'Each drum cycles 0 → 1 → 2 → 3 → 0. Set '+named.map((n,i)=>n+' to '+c.solution[i]).join(', ')+'.';

@@ -46,11 +46,21 @@ window.campaignQA={
  },
  read(key,stage){return state.sideCampaigns[key].clues.includes(stage);},
  saved(key,stage){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].clues.includes(stage);},
- clearRead(key){state.sideCampaigns[key].clues=[];}
+ clearRead(key){state.sideCampaigns[key].clues=[];},
+ atMechanism(key){
+  closeDialogue();
+  const control=spots.find(s=>s.id==='sc-'+key+'-mechanism-0');
+  const direction=Object.entries(dirs).find(([, [dx,dy]])=>!blocked(control.x-dx,control.y-dy));
+  const [facing,[dx,dy]]=direction;
+  setPlayer(control.x-dx,control.y-dy,facing);
+ },
+ solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;}
+
 };`});
   });
   await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.campaignQA);
+  const {expeditionMechanisms,mechanismPath}=await import('../dist/side-campaign-mechanisms.js');
   const inventory=await page.evaluate(()=>campaignQA.inventory());
   fs.mkdirSync('build/qa',{recursive:true});
   for(const [key,room,stage] of inventory){
@@ -69,6 +79,14 @@ window.campaignQA={
    await page.touchscreen.tap(point.x,point.y);
    await page.waitForFunction(([key,stage])=>campaignQA.read(key,stage),[key,stage],{timeout:4000});
    assert(await page.evaluate(([key,stage])=>campaignQA.saved(key,stage),[key,stage]),room+' canvas tap saved');
+   if(stage===1&&expeditionMechanisms[key]){
+    const definition=expeditionMechanisms[key];
+    await page.evaluate(key=>campaignQA.atMechanism(key),key);
+    await page.locator('#console-a').tap();
+    for(const n of mechanismPath(definition,definition.initial))await page.locator('[data-sc-control="'+n+'"]').tap();
+    assert(await page.evaluate(key=>campaignQA.solved(key),key),room+' mechanism solved and saved');
+    await page.locator('#modal-root').getByText('Route restored',{exact:true}).waitFor();
+   }
    console.log('PASS',room,id,'A and canvas tap');
   }
   assert.deepEqual(errors,[]);
