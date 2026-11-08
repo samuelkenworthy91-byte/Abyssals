@@ -1,7 +1,7 @@
 import {drawAncientBellGate} from './bell-scenery.js?v=0.90.60';
 import {questPropSprite} from './quest-prop-art.js?v=0.90.60';
 // Animated map-native artwork shares the world's tile coordinates and puzzle state.
-export const MECHANISM_ART={marchMeadow:'hearth',burrowHollow:'counterweight',glassSluice:'sluice',emberQuarry:'foundry',stormBluffs:'beacon',orchardCanopy:'irrigation',reedSanctuary:'reedfilter',coralGrotto:'tidegate',moonlitDepths:'mourninglamp',relicCrags:'witnessseal',philomereBackwaters:'floodlock',smugglersWeir:'ferrylamp',saltFlats:'ledger',rescueGlade:'signalbell',anglersReach:'netwinch'};
+export const MECHANISM_ART={marchMeadow:'hearth',burrowHollow:'counterweight',glassSluice:'sluice',emberQuarry:'foundry',stormBluffs:'beacon',orchardCanopy:'irrigation',reedSanctuary:'reedfilter',coralGrotto:'tidegate',moonlitDepths:'mourninglamp',relicCrags:'witnessseal',philomereBackwaters:'floodlock',smugglersWeir:'signalbell',saltFlats:'ledger',rescueGlade:'signalbell',anglersReach:'netwinch'};
 const rect=(c,x,y,w,h,fill)=>{c.fillStyle=fill;c.fillRect(x,y,w,h);};
 function stone(c,x,y,w=36,h=32){rect(c,x-2,y+3,w+4,h+3,'#182b2e88');rect(c,x,y,w,h,'#314b4e');rect(c,x+2,y+2,w-4,h-4,'#708883');rect(c,x+3,y+2,w-6,3,'#b4c0a0');rect(c,x+3,y+h-6,w-6,4,'#415b58');for(let n=0;n<3;n++)rect(c,x+4+n*10,y+9+(n%2)*10,6,1,'#415b58');rect(c,x+w-7,y+4,4,6,'#627d40');}
 function wood(c,x,y,w,h){rect(c,x-1,y-1,w+2,h+2,'#34291f');rect(c,x,y,w,h,'#956d43');for(let n=0;n<h;n+=5){rect(c,x+1,y+n,w-2,1,'#cfac75');rect(c,x+3,y+n+2,w-6,1,'#6f5035');}rect(c,x+2,y+2,2,2,'#c7b894');rect(c,x+w-4,y+h-4,2,2,'#c7b894');}

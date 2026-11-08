@@ -106,6 +106,12 @@ window.campaignQA={
     const definition=expeditionMechanisms[key];
     await page.evaluate(key=>campaignQA.atMechanism(key),key);
     await page.locator('#console-a').tap();
+    const artwork=page.locator('.expedition-mechanism-art');
+    await artwork.waitFor();
+    await page.waitForFunction(()=>document.querySelector('.expedition-mechanism-art')?.naturalWidth>0);
+    if(['marchMeadow','stormBluffs','smugglersWeir','anglersReach'].includes(key)){
+     await page.locator('#modal-root .modal').screenshot({path:'build/qa/expedition-mechanism-'+key+'.png'});
+    }
     for(const n of mechanismPath(definition,definition.initial))await page.locator('[data-sc-control="'+n+'"]').tap();
     assert(await page.evaluate(key=>campaignQA.solved(key),key),room+' mechanism solved and saved');
     await page.locator('#modal-root').getByText('Route restored',{exact:true}).waitFor();
@@ -126,6 +132,7 @@ window.campaignQA={
   const {CROSSING_EXIT,crossingRoute}=await import('../dist/invisible-crossing.js');
   await page.evaluate(()=>campaignQA.crossingBoot());
   const initial=await page.evaluate(()=>campaignQA.crossingSnapshot());
+  await page.locator('#viewport').screenshot({path:'build/qa/windscar-mist-crossing-entry.png'});
   assert.equal(initial.room,'passSummit');
   const route=crossingRoute(initial.seed);
   async function tapTile(cell){await page.touchscreen.tap(...await page.evaluate(cell=>campaignQA.tile(...cell),cell));}

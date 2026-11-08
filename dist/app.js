@@ -1,4 +1,4 @@
-import {CROSSING_ROOM,CROSSING_SIGN,CROSSING_ENTRY,CROSSING_EXIT,crossingTile,crossingState,crossingSafe,recordCrossingStep,revealCrossingHint,drawInvisibleCrossing} from './invisible-crossing.js?v=0.90.60';
+import {CROSSING_ROOM,CROSSING_SIGN,CROSSING_ENTRY,CROSSING_EXIT,crossingTile,crossingState,crossingSafe,recordCrossingStep,revealCrossingHint,drawInvisibleCrossing,markCrossingFall} from './invisible-crossing.js?v=0.90.60';
 import {selectSoundtrack,soundtrackState,musicPlaylist,evolutionMusicToken,linkEvolutionMusicCards} from './soundtrack.js?v=0.90.60';
 import {createMusicController} from './music.js?v=0.90.60';
 import {tradeReceiptKey} from './dossier-encounters.js?v=0.90.60';
@@ -75,7 +75,8 @@ import {COURT_DIALOGUE} from './paladin-dialogue.js?v=0.90.60';
 import {courtFrame,drawCourtScene,drawCourtHuman,prepareCourtArt} from './paladin-art.js?v=0.90.60';
 import {paladinEncounterRoute,jungleRoute} from './paladin-encounters.js?v=0.90.60';
 import {bindMenagerieParty} from './menagerie-rules.js?v=0.90.60';
-import {drawBoulder,drawQuestMechanism} from './quest-scenery.js?v=0.90.60';
+import {MECHANISM_ART,drawBoulder,drawQuestMechanism} from './quest-scenery.js?v=0.90.60';
+import {QUEST_PROP_ART} from './quest-prop-art.js?v=0.90.60';
 import {jettyFor,nextJettyEncounter,keepContestBait,canOfferRiverBait,spendRiverBait} from './jetty-fishing.js?v=0.90.60';
 import {QUEST_REWARDS,rewardPending,nurseryOffers,grantQuestReward,SECRET_MOVES,canLearnSecret,teachSecret,distinctAbilitySlots,abilityOptions,awakenAbility,selectAbility} from './quest-rewards.js?v=0.90.60';
 import {preserveStrength,WINTER_PRESERVE} from './quest-rewards-data.js?v=0.90.60';
@@ -513,7 +514,7 @@ function updateMovement(dt){
    if(room==='tunnels'&&stoneAt(state,nx,ny)>=0){if(!rewardTransaction(()=>pushStone(state,nx,ny,nx-player.x,ny-player.y)))return;refresh();}
    if(blocked(nx,ny))return;
    if(crossingTile(room,nx,ny)&&!crossingSafe(state,nx,ny)){
-    crossingState(state).falls++;
+    crossingState(state).falls++;markCrossingFall(nx,ny);
     setPlayer(...CROSSING_ENTRY,'up');
     persist();toast('The stone gives way. You are back at the entrance.');return;
    }
@@ -547,7 +548,7 @@ function draw(t){advanceFarm(room,t,{paused:!state.begun||state.wiped||!!dialogu
  if(!battle&&!dialogue&&!modal&&!presentationLocked&&state.begun&&!state.wiped&&finaleState(state).dariusFollowup)finaleDariusFollowup();
  const focus=room==='botrune'&&botruneState(state).phase==='trial'?{px:26*16,py:10*16}:courtPresentation?.camera?{px:courtPresentation.camera.x*16+8,py:courtPresentation.camera.y*16+8}:caveHuntPresentation?.camera?{px:caveHuntPresentation.camera.x*16+8,py:caveHuntPresentation.camera.y*16+8}:player;
  const mobile=view.w<600&&!courtPresentation&&!isPromenade(room);view.scale=mobile?Math.max(view.w/480,view.h/512):view.w/768;const ww=768*view.scale,hh=512*view.scale;view.ox=mobile?Math.max(view.w-ww,Math.min(0,view.w/2-focus.px*view.scale)):0;view.oy=mobile?Math.max(view.h-hh,Math.min(0,view.h/2-focus.py*view.scale)):(view.h-hh)/2;if(isPromenade(room)){view.scale=Math.min(view.w/768,view.h/512);view.ox=(view.w-768*view.scale)/2;view.oy=(view.h-512*view.scale)/2;}
- ctx.clearRect(0,0,view.w,view.h);ctx.save();ctx.translate(view.ox,view.oy);ctx.scale(view.scale,view.scale);drawMap(ctx,room);drawInvisibleCrossing(ctx,state,room);drawMarasenLife(ctx,state,room,t,reducedMotion(),byId,drawWorldAsset,NEW_MAPS[room],(x,y)=>!isBlocked(room,x,y));drawOrchardLife(ctx,state,room,t,reducedMotion(),byId,NEW_MAPS[room],drawWorldAsset,(x,y)=>!isBlocked(room,x,y));drawCourtScene(ctx,state,room,t,reducedMotion(),courtPresentation);drawRelicQuestScene(ctx);drawCampaignScene(ctx,state,room);drawMountainQuestScene(ctx,state,room);if(room==='passSummit'&&canMeetCaelynx(state)&&!battle)drawHuntActor(ctx,{x:40,y:5,facing:'down'},byId('164'),t,reducedMotion());drawWorldPickups(ctx,spots,state,drawWorldAsset);drawRevoltDocuments(ctx,spots);drawLeaderFortState(ctx,state,room,drawWorldAsset);if(room==='tunnels'){for(const [x,y] of BOARD.goals){ctx.fillStyle='#73b9b0';ctx.fillRect(x*16+2,y*16+2,12,12);ctx.strokeStyle='#183934';ctx.strokeRect(x*16+4,y*16+4,8,8);}for(const [index,[x,y]] of puzzleState(state).stones.entries()){drawBoulder(ctx,x,y,index,reducedMotion());ctx.strokeStyle='#b0a38b';ctx.strokeRect(x*16+1,y*16+1,14,14);}}if(room==='tunnels')drawQuestMechanism(ctx,'sluice',42,17,{solved:puzzleState(state).solved,time:performance.now(),reduced:reducedMotion()});if((room==='dorelem'&&state.fates['LDR-01'])||(room==='philomere'&&state.fates['LDR-02'])){const x=room==='dorelem'?39:37;ctx.fillStyle='#d9d6c1';ctx.fillRect(x*16,5*16,16,36);ctx.fillStyle='#284f80';ctx.fillRect(x*16+6,5*16+4,4,24);ctx.fillRect(x*16+2,5*16+12,12,4);}
+ ctx.clearRect(0,0,view.w,view.h);ctx.save();ctx.translate(view.ox,view.oy);ctx.scale(view.scale,view.scale);drawMap(ctx,room);drawInvisibleCrossing(ctx,state,room,player,t,reducedMotion(),drawWorldAsset);drawMarasenLife(ctx,state,room,t,reducedMotion(),byId,drawWorldAsset,NEW_MAPS[room],(x,y)=>!isBlocked(room,x,y));drawOrchardLife(ctx,state,room,t,reducedMotion(),byId,NEW_MAPS[room],drawWorldAsset,(x,y)=>!isBlocked(room,x,y));drawCourtScene(ctx,state,room,t,reducedMotion(),courtPresentation);drawRelicQuestScene(ctx);drawCampaignScene(ctx,state,room);drawMountainQuestScene(ctx,state,room);if(room==='passSummit'&&canMeetCaelynx(state)&&!battle)drawHuntActor(ctx,{x:40,y:5,facing:'down'},byId('164'),t,reducedMotion());drawWorldPickups(ctx,spots,state,drawWorldAsset);drawRevoltDocuments(ctx,spots);drawLeaderFortState(ctx,state,room,drawWorldAsset);if(room==='tunnels'){for(const [x,y] of BOARD.goals){ctx.fillStyle='#73b9b0';ctx.fillRect(x*16+2,y*16+2,12,12);ctx.strokeStyle='#183934';ctx.strokeRect(x*16+4,y*16+4,8,8);}for(const [index,[x,y]] of puzzleState(state).stones.entries()){drawBoulder(ctx,x,y,index,reducedMotion());ctx.strokeStyle='#b0a38b';ctx.strokeRect(x*16+1,y*16+1,14,14);}}if(room==='tunnels')drawQuestMechanism(ctx,'sluice',42,17,{solved:puzzleState(state).solved,time:performance.now(),reduced:reducedMotion()});if((room==='dorelem'&&state.fates['LDR-01'])||(room==='philomere'&&state.fates['LDR-02'])){const x=room==='dorelem'?39:37;ctx.fillStyle='#d9d6c1';ctx.fillRect(x*16,5*16,16,36);ctx.fillStyle='#284f80';ctx.fillRect(x*16+6,5*16+4,4,24);ctx.fillRect(x*16+2,5*16+12,12,4);}
  if(room==='waranCave5'&&!state.exploration?.mythic&&!battle){if(caveHuntPresentation)drawHuntScene(ctx,caveHuntPresentation,byId,t,reducedMotion());else{drawHuntActor(ctx,{x:37,y:17,facing:state.exploration?.huntSeen?'left':'right'},byId('185'),t,reducedMotion());if(!state.exploration?.huntSeen)drawHuntActor(ctx,{x:40,y:17,facing:'left'},byId('184'),t,reducedMotion());}}
  drawFinaleCreatures(ctx,state,room,(c,u,x,y,size)=>{const id=u.species.id,im=getFinaleCreatureImage(u);if(im?.complete&&im.naturalWidth){c.save();c.imageSmoothingEnabled=false;c.drawImage(im,x*16-size/2,y*16-size+12,size,size);c.restore();}});
  drawStormDragon(ctx,state,room,t,reducedMotion());
@@ -981,15 +982,18 @@ function sideCampaignInteract(id){
 }
 function openCrossingSign(){
  const crossing=crossingState(state);
- openModal('Windscar Mist Crossing',`<p>Follow the porters’ stones one step at a time. The first stones are marked. Every safe stone you step on stays marked.</p><p>A fall returns you to this side with your progress. Your Abyssals and supplies are safe.</p><p>${crossing.solved?'Crossing completed.':crossing.discoveredSafeCells.length+' safe stones found.'}</p>${crossing.falls>=2&&!crossing.solved?'<button id="mist-crossing-hint">Reveal the next unknown safe stone</button>':''}`);
+ openModal('Windscar Mist Crossing',`<p>Follow the porters’ stones one step at a time. The first stones are marked. Every safe stone you step on keeps its frost mark. After a fall, look for snow settling on a nearby safe stone.</p><p>A fall returns you to this side with your progress. Your Abyssals and supplies are safe.</p><p>${crossing.solved?'Crossing completed.':crossing.discoveredSafeCells.length+' safe stones found.'}</p>${crossing.falls>=2&&!crossing.solved?'<button id="mist-crossing-hint">Reveal the next unknown safe stone</button>':''}`);
  $('#mist-crossing-hint')?.addEventListener('click',()=>{if(rewardTransaction(()=>revealCrossingHint(state)))openCrossingSign();});
 }
 function campaignMechanism(c){const q=campaignState(state,c);if(!q.accepted||!q.clues.includes(1)){showDialogue([line('Mechanism','Read the inscription on this stretch first.')]);return;}
  const board=campaignMechanismPanel(state,c);
  if(board){
   const cleared=q.solved||q.claimed;
-  const grid=board.grid?`<table class="expedition-board" aria-label="Current and spawning channel"><tbody>${board.grid.map(row=>'<tr>'+row.map(cell=>'<td>'+escapeHTML(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table>`:'';
-  openModal(c.title+' · '+c.mechanism.title,`<p>${escapeHTML(c.mechanism.note)}</p><p>${escapeHTML(c.mechanism.rules)}</p><div aria-live="polite">${cleared?'<b>Route restored</b>':grid+'<ul>'+board.lines.map(line=>'<li>'+escapeHTML(line)+'</li>').join('')+'</ul>'}</div>${cleared?'':`<div class="modal-actions">${board.actions.map((action,n)=>`<button data-sc-control="${n}">${escapeHTML(action)}</button>`).join('')}<button id="sc-reset">Reset mechanism</button></div>${board.hint?`<p>${escapeHTML(board.hint)}</p>`:''}${board.canHint?'<button id="sc-hint">Ask for a hint</button>':''}${campaignAffinity(state,c)&&!board.hint?`<button id="sc-assist">Ask a ${c.affinity}-type partner for a hint</button>`:''}`}`);
+  const tileIcons={Water:'≈',Net:'▦',Rock:'◆',Nest:'◉',Outlet:'↓'};
+  const grid=board.grid?`<table class="expedition-board" aria-label="Current and spawning channel"><tbody>${board.grid.map(row=>'<tr>'+row.map(cell=>`<td data-channel="${cell.toLowerCase()}"><span aria-hidden="true">${tileIcons[cell]}</span>${escapeHTML(cell)}</td>`).join('')+'</tr>').join('')}</tbody></table>`:'';
+  const art=QUEST_PROP_ART[MECHANISM_ART[c.key]];
+  const illustration=art?`<img class="expedition-mechanism-art" src="assets/quest-props/${art.webp}" alt="">`:'';
+  openModal(c.title+' · '+c.mechanism.title,`<div class="expedition-mechanism-note">${illustration}<div><p>${escapeHTML(c.mechanism.note)}</p><p>${escapeHTML(c.mechanism.rules)}</p></div></div><div aria-live="polite">${cleared?'<b>Route restored</b>':grid+'<ul>'+board.lines.map(line=>'<li>'+escapeHTML(line)+'</li>').join('')+'</ul>'}</div>${cleared?'':`<div class="modal-actions">${board.actions.map((action,n)=>`<button data-sc-control="${n}">${escapeHTML(action)}</button>`).join('')}<button id="sc-reset">Reset mechanism</button></div>${board.hint?`<p>${escapeHTML(board.hint)}</p>`:''}${board.canHint?'<button id="sc-hint">Ask for a hint</button>':''}${campaignAffinity(state,c)&&!board.hint?`<button id="sc-assist">Ask a ${c.affinity}-type partner for a hint</button>`:''}`}`);
   const apply=change=>{if(rewardTransaction(change)){refresh();campaignMechanism(c);}};
   document.querySelectorAll('[data-sc-control]').forEach(button=>button.onclick=()=>{
    const index=+button.dataset.scControl;
