@@ -4,8 +4,8 @@
   "mode": "interim",
   "requestedByUser": true,
   "request": "Install all58 final approved sheets on main with keyed individual animations and verified actual battle playback.",
-  "expectedPlayableActions": 615,
-  "expectedDedicatedSheets": 615,
+  "expectedPlayableActions": 616,
+  "expectedDedicatedSheets": 616,
   "remainingWithoutDedicatedSheets": 0,
   "moves": [
     {
@@ -5540,6 +5540,15 @@
       "src": "assets/vfx/action/810-nectarbane.png",
       "sha256": "ec7cdd13ce8ebe8a3d33141bc3ea5b019be45b19896ceaf74d0c86ee8166ef18",
       "sourceId": 810,
+      "shared": false,
+      "reviewStatus": "requires-review"
+    },
+    {
+      "id": 811,
+      "name": "Phantom Falchion",
+      "src": "assets/vfx/action/811-phantom-falchion.png",
+      "sha256": "f08fc47f0acffca1890f7e1f18b7f182f926eb19cc6f4da6bde95b85fcc55ed8",
+      "sourceId": 811,
       "shared": false,
       "reviewStatus": "requires-review"
     }

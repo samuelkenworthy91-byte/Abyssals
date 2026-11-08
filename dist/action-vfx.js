@@ -1,8 +1,9 @@
 import {ACTION_ART} from './action-vfx-data.js?v=0.90.60';
+import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.60';
 export {ACTION_ART};
 // Keep the render clock and battle impact clock identical. Mercy's original
 // First Light scene deliberately retains its authored timing.
-export const readableDuration=(move,duration)=>move?.salvation?duration:Math.round(duration*1.35);
+export const readableDuration=(move,duration)=>move?.salvation||move?.id===PHANTOM_FALCHION_ID?duration:Math.round(duration*1.35);
 export function pixelPlacement(move,{x,y,width,height,cellSize}){
  const b=ACTION_ART[move?.id]?.frameBounds||[0,0,192,192],scale=cellSize/192;
  const offset=(at,min,max,limit)=>Math.min(Math.max(0,4-at-(min-96)*scale),limit-4-at-(max-96)*scale);
@@ -35,9 +36,11 @@ export function actionFrames(move,result={}){
 export function pixelSceneHTML(move,result={}){
  const s=ACTION_ART[move.id];if(!s)return '';
  const frames=actionFrames(move,result);if(!frames.length)return '<div class="fx-message">'+(result.missed?'MISS':result.blocked?'BLOCKED':result.skipped?'INTERRUPTED':'NO EFFECT')+'</div>';
+ const charge=result.phantomCharge||0;
+ const phantom=s.id===PHANTOM_FALCHION_ID?' data-phantom-charge="'+(charge>=8?'full':charge>=4?'strong':charge>0?'gathered':'base')+'"':'';
  const key='pixel-'+s.id+'-'+frames.length;
  const position=i=>((i%4)*100/3)+'% '+(Math.floor(i/4)*100/3)+'%';
  const css=frames.map((frame,i)=>(i*100/frames.length).toFixed(3)+'%{background-position:'+position(frame)+'}').join('')+'100%{background-position:'+position(frames.at(-1))+'}';
- return '<div class="pixel-action of-'+s.key+'" data-fx-move="'+s.id+'" data-action-art="'+s.key+'" '+(s.orchard?'data-orchard-art="'+s.key+'" ':'')+'data-hit-count="'+(result.hitCount??'')+'" style="--pixel-duration:'+readableDuration(move,s.duration)+'ms"><style>@keyframes '+key+'{'+css+'}</style><i class="pixel-move-art '+(s.orchard?'orchard-ink':'')+'" aria-hidden="true" style="background-image:url('+s.src+');animation-name:'+key+'"></i></div>';
+ return '<div class="pixel-action of-'+s.key+'" data-fx-move="'+s.id+'" data-action-art="'+s.key+'" '+phantom+' '+(s.orchard?'data-orchard-art="'+s.key+'" ':'')+'data-hit-count="'+(result.hitCount??'')+'" style="--pixel-duration:'+readableDuration(move,s.duration)+'ms"><style>@keyframes '+key+'{'+css+'}</style><i class="pixel-move-art '+(s.orchard?'orchard-ink':'')+'" aria-hidden="true" style="background-image:url('+s.src+');animation-name:'+key+'"></i></div>';
 }
 
