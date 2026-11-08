@@ -38,6 +38,12 @@ window.campaignQA={
   return spot.id;
  },
  target:()=>closestInteract()?.id,
+ location:()=>room,
+ atGate(stage,defeated){
+  closeDialogue();closeModal();
+  if(defeated)state.defeatedTrainers.push(campaignGuard(campaignArea(room).c,stage));
+  setPlayer(43,17,'right');
+ },
  close:closeDialogue,
  rendered:room=>renderedLecterns.has(room),
  visible(id){
@@ -103,6 +109,16 @@ window.campaignQA={
     assert(await page.evaluate(key=>campaignQA.solved(key),key),room+' mechanism solved and saved');
     await page.locator('#modal-root').getByText('Route restored',{exact:true}).waitFor();
    }
+   if(stage<2){
+    await page.evaluate(stage=>campaignQA.atGate(stage,false),stage);
+    await page.locator('#console-a').tap();
+    await page.locator('#dialogue').getByText(/win the challenge/i).waitFor();
+    assert.equal(await page.evaluate(()=>campaignQA.location()),room,room+' remains gated before the warden is defeated');
+    await page.evaluate(stage=>campaignQA.atGate(stage,true),stage);
+    await page.locator('#console-a').tap();
+    await page.waitForFunction(next=>campaignQA.location()===next,key+'Trail'+(stage+2),{timeout:4000});
+    await page.locator('#world-warp').waitFor({state:'hidden'});
+   }
    console.log('PASS',room,id,'A and canvas tap');
   }
   const {CROSSING_EXIT,crossingRoute}=await import('../dist/invisible-crossing.js');
@@ -114,7 +130,10 @@ window.campaignQA={
   async function at(cell){await page.waitForFunction(([x,y])=>{const p=campaignQA.crossingSnapshot();return p.x===x&&p.y===y;},cell);}
   await tapTile(route[2]);
   assert.equal((await page.evaluate(()=>campaignQA.crossingSnapshot())).discoveredSafeCells.length,0);
-  await tapTile(route[0]);await at(route[0]);
+  await page.keyboard.down('ArrowUp');
+  await page.waitForTimeout(50);
+  await page.keyboard.up('ArrowUp');
+  await at(route[0]);
   await tapTile([4,9]);await at([5,10]);
   const fell=await page.evaluate(()=>campaignQA.crossingSnapshot());
   assert.equal(fell.falls,1);

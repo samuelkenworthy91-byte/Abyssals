@@ -31,3 +31,25 @@ The first mobile run passed the 45 clue interactions. A subsequent check samplin
 An optional pocket on the Summit Cairns map has a five-by-seven grid and two deterministic, mirrored safe paths. Falls return the player to the near landing without consuming health, lives, inventory or escort steps. Discovery and hints persist. Loading a save on the grid starts the player at the near landing, and canvas taps within the puzzle are limited to adjacent tiles.
 
 The model verifies both routes, isolation from normal pathfinding and save continuity. The mobile test covers distant taps, a fall, mid-grid reload and completion. False Witness is part of Relic Crags. Shadow Bridge, Mirror Chamber, Flooded Vault and Vanishing Runes are deferred optional modules.
+
+## Expedition inventory
+
+Difficulty and enjoyment are design estimates out of 10. The browser checks exercise interaction and progression. Human playtest scores are pending.
+
+| Expedition | Rebuilt mechanism | Baseline difficulty / enjoyment | Target difficulty / enjoyment |
+| --- | --- | --- | --- |
+| The Winter Nursery | Airflow & shelter heat | 4 / 5 | 4 / 5 |
+| The Buried Water Road | Interlocked counterweight lift | 1 / 2 | 5 / 6 |
+| The Water That Remembers | Water sediment trace | 1 / 2 | 5 / 7 |
+| Ashes Owed | Forge heat balance | 1 / 2 | 6 / 7 |
+| The Broken Stormwatch | Beacon line of sight | 1 / 3 | 5 / 7 |
+| Roots for the Hungry | Limited-water irrigation network | 1 / 2 | 5 / 7 |
+| The Black Reed Trail | Filter chain construction | 1 / 2 | 6 / 7 |
+| The Reef Toll | Pressure equalisation lock | 1 / 2 | 6 / 7 |
+| Names Beneath the Tide | Memorial light constellation | 3 / 4 | 5 / 7 |
+| The Witness in Stone | Contradictory testimony | 1 / 3 | 6 / 8 |
+| The Three Missing Barges | Three cargo boats & crossing | 1 / 2 | 6 / 7 |
+| A Bell for the Uncounted | Echo sequence memory | 3 / 4 | 4 / 7 |
+| The Measure of Thirst | Ledger reconciliation deduction | 1 / 3 | 6 / 8 |
+| After the Banners Fall | Evacuation scheduling | 1 / 2 | 5 / 7 |
+| The Net Beneath the Contest | Current-directed net removal | 1 / 2 | 6 / 8 |
