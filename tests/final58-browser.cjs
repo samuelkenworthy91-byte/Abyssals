@@ -1,5 +1,7 @@
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const fs=require('node:fs'),assert=require('node:assert/strict');
+const release=JSON.parse(fs.readFileSync('release-config.json','utf8'));
+const {expectedDedicatedSheets}=JSON.parse(fs.readFileSync(release.artwork_scope_path,'utf8'));
 const fixture=String.raw`
 window.__recoveryQA={
  async play(id,side,targetIndex=0){
@@ -8,7 +10,7 @@ window.__recoveryQA={
   for(const u of [b.player,b.alliedRivet,...b.enemies]){u.species={...u.species,types:['GRASS'],ability_names:{primary:'Plain'}};u.hp=u.maxHp=5000;u.stats={hp:5000,attack:50,sp_attack:50,defence:150,sp_defence:150,speed:100};u.stages={};u.status=null;u.confusion=0;u.heldItem=null;u.moveState={};}
   initializeBattleAbilities(b);if(id===387){actor.field??={};actor.field.weather='RAIN';}renderBattle();const result=applyMove(actor,target,{...m,left:m.pp},()=>.25,{floor:0});holdBeforeImpact(result);
   const context={actor,target};const expected=['SELF','ACTIVE_SIDE'].includes(m.target)?actor:target;
-  const {ACTION_ART}=await import('./action-vfx.js?v=0.90.54');const bounds=ACTION_ART[id].frameBounds;const seen=[];let saved='';const observer=new MutationObserver(()=>{const anchor=document.querySelector('#fx .fx-anchor'),node=anchor?.querySelector('[data-fx-move="'+id+'"]');if(!node)return;const r=battleUnitNode(expected)?.getBoundingClientRect(),v=document.querySelector('#viewport').getBoundingClientRect();const pixel=node.querySelector('.pixel-move-art').getBoundingClientRect(),visible=[pixel.left+bounds[0]/192*pixel.width-v.left,pixel.top+bounds[1]/192*pixel.height-v.top,pixel.left+bounds[2]/192*pixel.width-v.left,pixel.top+bounds[3]/192*pixel.height-v.top];seen.push({visible,viewport:[v.width,v.height],actor:anchor.dataset.fxActor,target:anchor.dataset.fxTarget,delta:r?[parseFloat(anchor.style.left)-(r.left+r.width/2-v.left),parseFloat(anchor.style.top)-(r.top+r.height/2-v.top)]:null});saved=anchor.outerHTML;});observer.observe(document.querySelector('#fx'),{subtree:true,childList:true});
+  const {ACTION_ART}=await import('./action-vfx.js?v=${release.version}');const bounds=ACTION_ART[id].frameBounds;const seen=[];let saved='';const observer=new MutationObserver(()=>{const anchor=document.querySelector('#fx .fx-anchor'),node=anchor?.querySelector('[data-fx-move="'+id+'"]');if(!node)return;const r=battleUnitNode(expected)?.getBoundingClientRect(),v=document.querySelector('#viewport').getBoundingClientRect();const pixel=node.querySelector('.pixel-move-art').getBoundingClientRect(),visible=[pixel.left+bounds[0]/192*pixel.width-v.left,pixel.top+bounds[1]/192*pixel.height-v.top,pixel.left+bounds[2]/192*pixel.width-v.left,pixel.top+bounds[3]/192*pixel.height-v.top];seen.push({visible,viewport:[v.width,v.height],actor:anchor.dataset.fxActor,target:anchor.dataset.fxTarget,delta:r?[parseFloat(anchor.style.left)-(r.left+r.width/2-v.left),parseFloat(anchor.style.top)-(r.top+r.height/2-v.top)]:null});saved=anchor.outerHTML;});observer.observe(document.querySelector('#fx'),{subtree:true,childList:true});
   const start=performance.now();await animateResult(side,result,m,context);observer.disconnect();
   // Keep a labelled, paused impact rendering after real playback has completed,
   // so screenshot latency cannot capture an already-cleared effect container.
@@ -34,7 +36,7 @@ window.__recoveryQA={
   await page.screenshot({path:'build/qa/final58/paused-impact-'+id+'-'+side+'-'+width+'.png'});await page.evaluate(()=>window.__recoveryQA.clear());
  }
  }
- const decoded=await page.evaluate(async()=>{const {ACTION_ART}=await import('./action-vfx.js?v=0.90.54');const sources=[...new Set(Object.values(ACTION_ART).map(x=>x.src))];for(const src of sources){const im=new Image();im.src=src;await im.decode();if(im.naturalWidth!==768||im.naturalHeight!==768)throw Error(src+' dimensions');}return sources.length;});assert.equal(decoded,615);assert.equal(results.length,67);
+ const decoded=await page.evaluate(async version=>{const {ACTION_ART}=await import('./action-vfx.js?v='+version);const sources=[...new Set(Object.values(ACTION_ART).map(x=>x.src))];for(const src of sources){const im=new Image();im.src=src;await im.decode();if(im.naturalWidth!==768||im.naturalHeight!==768)throw Error(src+' dimensions');}return sources.length;},release.version);assert.equal(decoded,expectedDedicatedSheets);assert.equal(results.length,67);
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);fs.writeFileSync('build/qa/final58/playback.json',JSON.stringify({decoded,results,errors,missing,screenshots:'Paused impact rendered after completed real playback; screenshots are not proof of full motion.'},null,2));
- await browser.close();console.log('PASS: every final58 move played in a real phone battle, nine desktop crosschecks, all615 sheets decoded, exact actor/recipient anchors and no frame clipping.');
+ await browser.close();console.log('PASS: every final58 move played in a real phone battle, nine desktop crosschecks, '+decoded+' sheets decoded, exact actor/recipient anchors and no frame clipping.');
 })().catch(e=>{console.error(e);process.exit(1)});
