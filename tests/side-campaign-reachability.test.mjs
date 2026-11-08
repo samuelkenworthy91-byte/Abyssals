@@ -3,9 +3,9 @@ import {NEW_MAPS,newBlocked,newSpots} from '../dist/expansion-world.js';
 import {
  SIDE_CAMPAIGNS,campaignRoom,campaignState,campaignGuard,campaignGiverSpot,campaignClueId,
  campaignBlocked,campaignGateOpen,campaignClue,campaignPuzzle,campaignChoose,claimCampaign,drawCampaignClue
-} from '../dist/side-campaigns.js?v=0.90.58';
-import {mechanismPath} from '../dist/side-campaign-mechanisms.js?v=0.90.58';
-import {siteTabletHit} from '../dist/site-tablets.js?v=0.90.58';
+} from '../dist/side-campaigns.js?v=0.90.60';
+import {mechanismPath} from '../dist/side-campaign-mechanisms.js?v=0.90.60';
+import {siteTabletHit} from '../dist/site-tablets.js?v=0.90.60';
 
 const cardinal=[[0,1],[0,-1],[1,0],[-1,0]];
 const key=(x,y)=>x+','+y;

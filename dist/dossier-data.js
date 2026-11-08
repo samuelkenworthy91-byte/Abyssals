@@ -1,5 +1,5 @@
-import {DOSSIER_CONFIG as C} from './dossier-config.js?v=0.90.58';
-import {canonicalMoveId} from './teamcraft-data.js?v=0.90.58';
+import {DOSSIER_CONFIG as C} from './dossier-config.js?v=0.90.60';
+import {canonicalMoveId} from './teamcraft-data.js?v=0.90.60';
 
 export const DOSSIER_SPECIES=C.species;
 export const DOSSIER_EVOLUTIONS=C.evolutions;

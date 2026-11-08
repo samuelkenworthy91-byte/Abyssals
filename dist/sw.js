@@ -8,9 +8,9 @@ const CACHE='abyssals-'+self.ABYSSALS_OFFLINE_VERSION+(self.ABYSSALS_OFFLINE_REV
 const ROOT=new URL('./',self.location.href);
 const URLS=self.ABYSSALS_OFFLINE_ASSETS.map(path=>new URL(path,ROOT).href);
 const ALLOWED=new Set(URLS.map(url=>new URL(url).pathname));
-// v0.90.59 changes code only: reuse byte-identical artwork and audio from a verified v0.90.58 PWA cache.
+// Reuse byte-identical artwork and audio from the preceding verified PWA cache.
 // Fresh installs and missing cache entries still download normally.
-const PREVIOUS_ASSET_CACHE='abyssals-0.90.58-r15';
+const PREVIOUS_ASSET_CACHE='abyssals-0.90.59-r1';
 const REUSE_BINARY=path=>/^(?:assets\/|icons\/).*\.(?:webp|png|jpg|jpeg|gif|svg|mp3|m4a|ogg|avif)$/i.test(path);
 self.addEventListener('install',event=>event.waitUntil((async()=>{
  const cache=await caches.open(CACHE),previous=await caches.open(PREVIOUS_ASSET_CACHE);let cursor=0;

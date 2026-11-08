@@ -1,10 +1,11 @@
 {
-  "version": "0.90.59",
-  "version_code": 154,
-  "filename": "Abyssals-v0.90.59-Cup-Audio-Hotfix.apk",
-  "title": "Abyssals v0.90.59 — Supervised Cup & Route Audio Hotfix",
-  "notes": "Small, isolated gameplay fix: supervised battles now settle at the 1-HP surrender threshold before Pilgrim Cup or similar end-turn healing. Routes skip a failing adventure track instead of staying silent, while a browser autoplay restriction still waits for an unlock gesture. Reuses byte-identical music and artwork from an installed v0.90.58 PWA cache to avoid downloading those unchanged binaries again. No gameplay artwork, audio, save formats, package identity or signing key changed. Android still requires a complete signed update APK.",
-  "pwa_filename": "Abyssals-v0.90.59-PWA.zip",
+  "version": "0.90.60",
+  "version_code": 155,
+  "filename": "Abyssals-v0.90.60-Expedition-Puzzles.apk",
+  "title": "Abyssals v0.90.60 — Expedition Puzzles and Mist Crossing",
+  "notes": "Read distinct stone lecterns on all 45 side-expedition stages. Fifteen rebuilt mechanisms use observation, planning and safe retries. Try the optional Mist Crossing at Windscar Summit. The Cossenne garden objective now shows the correct drum settings. Existing quest completions, choices and rewards carry forward.",
+  "pwa_filename": "Abyssals-v0.90.60-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.59-art-scope.json"
+  "artwork_scope_path": "docs/releases/v0.90.60-art-scope.json",
+  "validation_mode": "full"
 }
