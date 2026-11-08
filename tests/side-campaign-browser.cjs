@@ -72,7 +72,7 @@ window.campaignQA={
  solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;},
  async crossingBoot(){this.boot('marchMeadow','marchMeadow',0);await warp(CROSSING_ROOM,...CROSSING_ENTRY,'up');},
  async fortCoastBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('scrub2',38,28,'left');$('#toast').classList.remove('visible');},
- async shadowBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('relicGrove2',18,6,'up');},
+ async shadowBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('relicGrove2',18,6,'up');$('#toast').classList.remove('visible');},
  shadowSnapshot(){return {room,x:player.x,y:player.y,puzzle:state.shadowBridge};},
  shadowEntranceStatus(){
   const gate=AREA_GATES[room]?.find(g=>g.id==='shadow-bridge-entry');
@@ -194,7 +194,7 @@ window.campaignQA={
   await tapTile([22,18]);await at([22,18]);
   await page.locator('#viewport').screenshot({path:'build/qa/shadow-bridge.png'});
   await tapTile([28,19]);await at([28,19]);
-  await tapTile([35,17]);await at([35,17]);
+  await tapTile([35,18]);await at([35,18]);
   const farTablet=await page.evaluate(()=>campaignQA.point('shadow-bridge-far-stone'));
   await page.touchscreen.tap(farTablet.x,farTablet.y);
   await page.waitForFunction(()=>campaignQA.shadowSnapshot().puzzle?.complete);
