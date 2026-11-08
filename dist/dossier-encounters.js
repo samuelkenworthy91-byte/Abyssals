@@ -1,4 +1,4 @@
-import {DOSSIER_CONFIG as C} from './dossier-config.js?v=0.90.60';
+import {DOSSIER_CONFIG as C} from './dossier-config.js?v=0.90.61';
 export const DOSSIER_TRADE_ONLY=new Set([C.ids.Brookisk,C.ids.Torravyr,C.ids.Mindlarv,C.ids.Omenluna]);
 // Apply last, after all biome and collection overlays. Existing residents retain
 // their relative shares, protected Rimebun weights remain exact, totals stay 100.

@@ -1,11 +1,11 @@
 {
-  "version": "0.90.60",
-  "version_code": 155,
-  "filename": "Abyssals-v0.90.60-Expedition-Puzzles.apk",
-  "title": "Abyssals v0.90.60 — Expedition Puzzles and Mist Crossing",
-  "notes": "Read distinct stone lecterns on all 45 side-expedition stages. Fifteen rebuilt mechanisms use observation, planning and safe retries. Try the optional Mist Crossing at Windscar Summit, with frosted stepping stones and snowfall cues. The Sunken Fort shoreline has textured water, foam and tide highlights. The Cossenne garden objective now shows the correct drum settings. Existing quest completions, choices and rewards carry forward.",
-  "pwa_filename": "Abyssals-v0.90.60-PWA.zip",
+  "version": "0.90.61",
+  "version_code": 156,
+  "filename": "Abyssals-v0.90.61-Shadow-Bridge-and-Merrigami.apk",
+  "title": "Abyssals v0.90.61 — Shadow Bridge and Merrigami",
+  "notes": "Find the optional Shadow Bridge off Bellroot Walk in Briarbell Wood. Align two rail-mounted pillars with the shrouded torches to cross both ravines. Merrigami appears in Tenrec Hollow with Ancestral Aid and its signature Phantom Falchion, complete with dedicated pixel artwork. Includes the expedition puzzle overhaul, Windscar Mist Crossing and refreshed Sunken Fort shoreline from v0.90.60. Existing saves carry forward.",
+  "pwa_filename": "Abyssals-v0.90.61-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.60-art-scope.json",
+  "artwork_scope_path": "docs/releases/v0.90.61-art-scope.json",
   "validation_mode": "full"
 }

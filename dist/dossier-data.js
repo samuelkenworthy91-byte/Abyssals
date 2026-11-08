@@ -1,5 +1,5 @@
-import {DOSSIER_CONFIG as C} from './dossier-config.js?v=0.90.60';
-import {canonicalMoveId} from './teamcraft-data.js?v=0.90.60';
+import {DOSSIER_CONFIG as C,PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.61';
+import {canonicalMoveId} from './teamcraft-data.js?v=0.90.61';
 
 export const DOSSIER_SPECIES=C.species;
 export const DOSSIER_EVOLUTIONS=C.evolutions;
@@ -7,6 +7,7 @@ export const DOSSIER_IDS=C.ids;
 export const NECTARBANE_ID=810;
 export const THUNDER_SHARD={id:'ITEM_DOSSIER_THUNDER_SHARD',name:'Thunder Shard',category:'evolution',buy_price:3500,currency:'STANDARD',stack_limit:99,effect_text:'Voltisl → Thunderaze at Lv. 30+.',effect:{operation:'evolve',from_species_id:C.ids.Voltisl,to_species_id:C.ids.Thunderaze,minimum_level:30,consumed:true},guaranteed_source:'Stormglass Bluffs traveller; one guaranteed gift',renewable_source:'Marasen department store'};
 export const DOSSIER_ABILITIES=[
+ ['Ancestral Aid','After a damaging special move hits, gains one Special Attack stage. Grants up to three stages before switching out or using Phantom Falchion. Phantom Falchion itself grants no stage.'],
  ['Floodplain','If rain begins while active or is present on entry, raises Defence one stage, once per switch-in.'],
  ['Palimpsest','After taking direct damage from a move, further hits from the same move ID deal 25% less damage until switching out.'],
  ['Symbiotic Bloom','Doubles move-based recovery on its active side, capped at 75% of each recipient’s maximum HP per selected move. Opposing damaging statuses gain 10%; multiple bearers do not stack.'],
@@ -47,6 +48,14 @@ export function installDossiers(data){
  for(const s of C.species){if(data.species.some(x=>x.id===s.id||x.name===s.name))throw Error('Dossier species collision: '+s.name);data.species.push({...s,base_stats:{...s.base_stats},growth_percent:{...s.growth_percent},abilities:Object.fromEntries(Object.entries(s.ability_names).map(([k,n])=>[k,'ABILITY_'+n.toUpperCase().replace(/[^A-Z0-9]+/g,'_')])),growth_balance_version:1});}
  if(data.moves.some(m=>m.id===NECTARBANE_ID))throw Error('Nectarbane ID collision');
  data.moves.push({id:NECTARBANE_ID,name:'Nectarbane',type_id:'POISON',category:'STATUS',power:null,accuracy:90,pp:10,priority:0,target:'SINGLE_FOE',effects:[{effect_id:'nectarbane'}],effect_text:'Inflict ordinary poison on one foe. Only a newly inflicted poison restores 1/8 max HP; Symbiotic Bloom doubles this to 1/4.',signature_owner_family:'FAMILY-520',dossierMove:true});
+ if(data.moves.some(m=>m.id===PHANTOM_FALCHION_ID))throw Error('Phantom Falchion ID collision');
+ data.moves.push({
+  id:PHANTOM_FALCHION_ID, name:'Phantom Falchion', type_id:'GHOST', category:'SPECIAL',
+  power:70, accuracy:100, pp:10, priority:0, target:'SINGLE_FOE', effects:[],
+  effect_text:'Gains 10 power per positive stat stage. After execution, clears positive stages and resets Ancestral Aid, even on a miss, block or immunity.',
+  signature_owner_family:'FAMILY-574', dossierMove:true,
+  authored_visual_action:'Ancestral shades gather in the falchion, then a hooked crescent flies to the chosen foe and shatters.'
+ });
  for(const s of C.species){
   const rows=overrides[s.id]||C.learnsets[s.id];const seen=new Set();
   for(const [level,oldId]of rows){let move_id=oldId===0&&s.family_id==='FAMILY-520'?NECTARBANE_ID:canonicalMoveId(corrections[oldId]??oldId);

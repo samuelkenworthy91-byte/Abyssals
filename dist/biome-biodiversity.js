@@ -1,5 +1,5 @@
-import {legalForm} from './route-roster.js?v=0.90.60';
-import {routeStage} from './route-progression.js?v=0.90.60';
+import {legalForm} from './route-roster.js?v=0.90.61';
+import {routeStage} from './route-progression.js?v=0.90.61';
 // Shared stretches retain their habitat identity. These are ordinary capturable
 // residents, not a catalogue-wide roll or an arena simulation.
 export const BIOME_ADDITIONS={

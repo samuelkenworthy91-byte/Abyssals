@@ -1,4 +1,4 @@
-import {DOSSIER_SPECIES} from './dossier-data.js?v=0.90.60';
+import {DOSSIER_SPECIES} from './dossier-data.js?v=0.90.61';
 // Explicit family colour directions; outlines, whites, lightness and alpha remain intact.
 const families={
  "FAMILY-001": {
@@ -1742,3 +1742,6 @@ for(const id of ['518','519'])SHINY_PALETTES[id]=orchardShiny;
 
 const dossierShinyFamilies=new Map();
 for(const s of DOSSIER_SPECIES){if(dossierShinyFamilies.has(s.family_id)){SHINY_PALETTES[s.id]=dossierShinyFamilies.get(s.family_id);continue;}const sourceHue=({GRASS:130,FIRE:25,WATER:185,BUG:80,ICE:200,GHOST:270,DRAGON:270,ROCK:35,ELECTRIC:55,PSYCHIC:285,GROUND:35,FLYING:270})[s.types[0]]||130;SHINY_PALETTES[s.id]={family:s.family_id,name:s.name,sourceHue,targetHue:(sourceHue+170)%360,chroma:.88,neutralTint:0};dossierShinyFamilies.set(s.family_id,SHINY_PALETTES[s.id]);}
+
+// Rotate the scarf's orange and the blade's violet together, preserving the neutral fur.
+SHINY_PALETTES['574']={family:'FAMILY-574',name:'Merrigami',sourceHue:24,targetHue:163,chroma:.88,neutralTint:0};

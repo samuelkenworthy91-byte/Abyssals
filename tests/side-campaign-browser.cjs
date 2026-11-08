@@ -72,6 +72,14 @@ window.campaignQA={
  solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;},
  async crossingBoot(){this.boot('marchMeadow','marchMeadow',0);await warp(CROSSING_ROOM,...CROSSING_ENTRY,'up');},
  async fortCoastBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('scrub2',38,28,'left');$('#toast').classList.remove('visible');},
+ async shadowBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('relicGrove2',18,6,'up');$('#toast').classList.remove('visible');},
+ shadowSnapshot(){return {room,x:player.x,y:player.y,puzzle:state.shadowBridge};},
+ shadowEntranceStatus(){
+  const gate=AREA_GATES[room]?.find(g=>g.id==='shadow-bridge-entry');
+  const [x,y]=this.tile(18,3);
+  return {...this.shadowSnapshot(),locked:presentationLocked,blocked:blocked(18,4),
+   target:document.elementFromPoint(x,y)?.id,path:player.path,gate,context:$('#context').textContent};
+ },
  crossingSnapshot(){return {room,x:player.x,y:player.y,...crossingState(state),cost:[state.escortSteps,state.money,state.party.map(unit=>unit.hp),state.dead.length]};},
  restoreCrossing(){resumeSnapshot(JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')));},
  tile(x,y){
@@ -138,7 +146,7 @@ window.campaignQA={
   assert.equal(initial.room,'passSummit');
   const route=crossingRoute(initial.seed);
   async function tapTile(cell){await page.touchscreen.tap(...await page.evaluate(cell=>campaignQA.tile(...cell),cell));}
-  async function at(cell){await page.waitForFunction(([x,y])=>{const p=campaignQA.crossingSnapshot();return p.x===x&&p.y===y;},cell);}
+  async function at(cell){await page.waitForFunction(([x,y])=>{const p=campaignQA.shadowSnapshot();return p.x===x&&p.y===y;},cell);}
   await tapTile(route[2]);
   assert.equal((await page.evaluate(()=>campaignQA.crossingSnapshot())).discoveredSafeCells.length,0);
   await page.keyboard.down('ArrowUp');
@@ -157,6 +165,45 @@ window.campaignQA={
   for(const cell of [...route,CROSSING_EXIT]){await tapTile(cell);await at(cell);}
   assert((await page.evaluate(()=>campaignQA.crossingSnapshot())).solved);
   await page.locator('#viewport').screenshot({path:'build/qa/windscar-mist-crossing.png'});
+  stageLabel='Briarbell Wood Shadow Bridge';
+  await page.evaluate(()=>campaignQA.shadowBoot());
+  await page.locator('#world-warp').waitFor({state:'hidden'});
+  await page.waitForFunction(()=>campaignQA.shadowEntranceStatus().target==='world');
+  await tapTile([18,3]);
+  try{
+   await page.waitForFunction(()=>campaignQA.location()==='shadowBridge',null,{timeout:5000});
+  }catch(error){
+   console.error('Shadow Bridge entrance:',await page.evaluate(()=>campaignQA.shadowEntranceStatus()));
+   throw error;
+  }
+  await page.locator('#world-warp').waitFor({state:'hidden'});
+  await page.locator('#viewport').screenshot({path:'build/qa/shadow-bridge-entry.png'});
+  await tapTile([5,16]);await at([5,16]);
+  const nearTablet=await page.evaluate(()=>campaignQA.point('shadow-bridge-inscription'));
+  await page.touchscreen.tap(nearTablet.x,nearTablet.y);
+  await page.getByRole('heading',{name:'Shadow Bridge inscription'}).waitFor();
+  await page.locator('#shadow-bridge-reset').tap();
+  await tapTile([10,18]);await at([10,18]);
+  await tapTile([10,17]);await at([10,17]);
+  await tapTile([10,16]);await at([10,16]);
+  await tapTile([16,15]);await at([16,15]);
+  await page.evaluate(()=>campaignQA.restoreCrossing());
+  await at([16,15]);
+  await tapTile([22,16]);await at([22,16]);
+  await tapTile([22,17]);await at([22,17]);
+  await tapTile([22,18]);await at([22,18]);
+  await page.locator('#viewport').screenshot({path:'build/qa/shadow-bridge.png'});
+  await tapTile([28,19]);await at([28,19]);
+  await tapTile([35,18]);await at([35,18]);
+  const farTablet=await page.evaluate(()=>campaignQA.point('shadow-bridge-far-stone'));
+  await page.touchscreen.tap(farTablet.x,farTablet.y);
+  await page.waitForFunction(()=>campaignQA.shadowSnapshot().puzzle?.complete);
+  await page.evaluate(()=>campaignQA.close());
+  for(const cell of [[30,19],[22,17],[16,15],[9,17]]){await tapTile(cell);await at(cell);}
+  await tapTile([1,17]);
+  await page.waitForFunction(()=>campaignQA.location()==='relicGrove2');
+  await page.locator('#world-warp').waitFor({state:'hidden'});
+  console.log('PASS Shadow Bridge tablet, touch pushing, two spans, save reload and return gate');
   stageLabel='Sunken Fort shoreline';
   await page.evaluate(()=>campaignQA.fortCoastBoot());
   await page.locator('#viewport').screenshot({path:'build/qa/sunken-fort-shoreline.png'});

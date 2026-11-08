@@ -63,3 +63,9 @@ The fifteen mechanism panels use their themed pixel-art props. The spawning chan
 ## Veilroot Bastion exterior
 
 The water outside the Sunken Fort now uses a continuous coastal texture, a depth tint, broken foam along the shore and causeway, and slow tide highlights. The renderer uses the existing walkable mask. The browser check captures the shoreline from the approach and the model verifies that the paving and entrance remain clear.
+
+## Shadow Bridge follow-up
+
+The optional Bellroot Walk branch uses two track-mounted pillars and two shrouded torches. Each beam turns the shadow over its own ravine into a walkable span. Both pillars and the far-bank inscription persist in saves. The near-bank tablet resets the pillars without removing a recorded completion. The rendering uses the existing authored woodland, water and stone sprites, with new pixel overlays for the torchlight, rails and safe shadow edges.
+
+The arch can be tapped across its visible face. Inscription taps take priority when a companion overlaps a tablet. The portrait test covers touch entry, both pillar pushes, reload, the final inscription and the walk back through the arch.

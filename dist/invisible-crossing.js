@@ -1,4 +1,4 @@
-import {atlasCell} from './mountain-art.js?v=0.90.60';
+import {atlasCell} from './mountain-art.js?v=0.90.61';
 
 export const CROSSING_ROOM='passSummit';
 export const CROSSING_SIGN='windscar-crossing-inscription';

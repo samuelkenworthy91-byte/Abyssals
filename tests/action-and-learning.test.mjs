@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {DATA} from '../dist/data.js';
+import {PHANTOM_FALCHION_ID} from '../dist/dossier-config.js';
 import {EVOLUTIONS} from '../dist/evolution-data.js';
 import {ACTION_ART,actionFrames,readableDuration} from '../dist/action-vfx.js';
 import {effectSpec,effectHTML} from '../dist/effects.js';
@@ -13,7 +14,7 @@ import {instance,applyMove} from '../dist/engine.js';
 import {beginAbilities} from '../dist/abilities.js';
 const species=id=>DATA.species.find(s=>s.id===id),move=id=>DATA.moves.find(m=>m.id===id);
 const unit=(id='517',level=60)=>{const u=instance(species(id),level,[]);u.uid=id;u.hp=u.maxHp=5000;u.stats={hp:5000,attack:80,defence:100,sp_attack:100,sp_defence:100,speed:80};return u;};
-const protectedOriginals=Object.values(ACTION_ART).filter(a=>!a.batch&&!a.shared);
+const protectedOriginals=Object.values(ACTION_ART).filter(a=>!a.batch&&!a.shared&&a.id!==PHANTOM_FALCHION_ID);
 const firstNewBatch=Object.values(ACTION_ART).filter(a=>a.batch==='01');
 assert.equal(protectedOriginals.length,63,'the original separately approved effects must not change');
 assert.equal(firstNewBatch.length,12,'all batch-one canonical move effects are registered');

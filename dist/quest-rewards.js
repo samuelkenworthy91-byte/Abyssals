@@ -1,9 +1,9 @@
-import {rememberOwnedMoves} from './learning-access.js?v=0.90.60';
-import {DATA} from './data.js?v=0.90.60';
-import {ABILITIES} from './ability-data.js?v=0.90.60';
-import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.60';
-import {RELIC_ITEMS} from './relic-family.js?v=0.90.60';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.60';
+import {rememberOwnedMoves} from './learning-access.js?v=0.90.61';
+import {DATA} from './data.js?v=0.90.61';
+import {ABILITIES} from './ability-data.js?v=0.90.61';
+import {QUEST_REWARDS,SECRET_MOVES} from './quest-rewards-data.js?v=0.90.61';
+import {RELIC_ITEMS} from './relic-family.js?v=0.90.61';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.61';
 export {QUEST_REWARDS,SECRET_MOVES};
 export function rewardPending(state,key){return !!state.sideCampaigns?.[key]?.claimed&&!state.sideCampaigns[key].rewardVersion;}
 // Use actual evolution edges: no evolved forms or species without an evolution.

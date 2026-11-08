@@ -1,0 +1,16 @@
+{
+  "speciesId": "574",
+  "signatureMoveId": 811,
+  "prompts": {
+    "portrait": "Create the final transparent battle portrait for Abyssals from the supplied Merrigami design reference. Faithful exact subject and silhouette, scar over closed eye, one amber eye, silver hair with orange accents, navy-orange scarf and cape, gold ornate hilt and broad curved blue-violet ghost falchion. Recreate as high-end traditional hand-clustered 32-bit RPG pixel art at an apparent 192 pixel raster with crisp square visible pixels, selectively outlined, rich matte restrained shading, no soft glow. Compact full body silhouette, sword, tail and cape entirely within a square safe area with 8% margins, no ground, shadow, text or backdrop. Single centered creature. Transparent alpha.",
+    "effect": "Create a production-ready sprite sheet of an original traditional 32-bit pixel-art battle spell Phantom Falchion. Exactly 4 columns x 4 rows of equal square cells in a square sheet, each cell centered at the same anchor, clear transparent gutters; no dividers, lettering or character sprites. Left to right then down, 16 sequential distinctly evolving frames: 1 faint violet glint, 2 small curved ancestral glyph, 3 faint abstract ancient swordsman shadows, 4 silhouettes converge into central violet ember, 5 short ethereal curved falchion blade, 6 broad heavy curved periwinkle falchion with widened hooked tip, 7 fully charged solid ghost falchion silhouette, 8 starts diagonal swing, 9 expanding hooked crescent slash, 10 broad diagonal crescent climax, 11 thin cyan impact rim, 12 curved blade cracks into six irregular shards, 13 shards separating around tiny ancestral sigil, 14 drifting embers, 15 dim violet flecks, 16 a few fading sparks. Consistent matte blue-violet / muted periwinkle / small pale cyan rims and dark indigo shadows. Crisp high-end clustered pixel art with real visible square pixels, no neon, no background, no glow bloom, no smooth vector style, no beams, no scenery, no hands. Source image is weapon design reference only. True transparent alpha. Every effect stays inside its own cell with 10% margins."
+  },
+  "files": {
+    "art-library/dossiers/Merrigami_Abyssals_Dossier_2026-11-08.zip": "2117d74e483233fe98adbc75b0f5d0d8472af31feb73f5f22d8121427969acf9",
+    "art-library/dossiers/Merrigami_Pixel_Portrait_Source.png": "27863fd225593bb79c624403ad5559300989576b3da4bdb87bb6d97c4d2de4db",
+    "art-library/dossiers/Phantom_Falchion_Source.png": "a3a79330ce47294f07ac4839edc51938e51cdbbbd9cd96c687fbed92cc88a265",
+    "dist/assets/574.webp": "1def4949691c0b54fb1c5ef224d247563f81865865efa3717a5963828ba0f157",
+    "dist/assets/vfx/action/811-phantom-falchion.png": "f08fc47f0acffca1890f7e1f18b7f182f926eb19cc6f4da6bde95b85fcc55ed8"
+  },
+  "packing": "Repository transparent-gutter extraction, 16 frames of 192 × 192. Lossless WebP battle portrait."
+}

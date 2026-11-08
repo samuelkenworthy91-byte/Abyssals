@@ -57,13 +57,13 @@
   ],
   "totals": {
     "originalCatalogue": 354,
-    "registered": 611,
+    "registered": 612,
     "battleReactions": 4,
-    "total": 615,
-    "wired": 615,
-    "sources": 615,
+    "total": 616,
+    "wired": 616,
+    "sources": 616,
     "shared": 0,
-    "dedicated": 615,
+    "dedicated": 616,
     "missing": 0,
     "approved": 39,
     "originalCatalogueStillRegistered": 325,
@@ -229,7 +229,8 @@
           "552",
           "564",
           "565",
-          "566"
+          "566",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -352,7 +353,8 @@
           "467",
           "477",
           "478",
-          "479"
+          "479",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -1676,7 +1678,8 @@
           "503",
           "520",
           "521",
-          "522"
+          "522",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -8755,7 +8758,8 @@
           "423",
           "556",
           "557",
-          "558"
+          "558",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -10748,7 +10752,8 @@
           "509",
           "510",
           "512",
-          "513"
+          "513",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -17330,7 +17335,8 @@
           "514",
           "541",
           "542",
-          "543"
+          "543",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -17665,7 +17671,8 @@
           "054",
           "542",
           "543",
-          "546"
+          "546",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -20866,7 +20873,8 @@
           "538",
           "539",
           "557",
-          "558"
+          "558",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -21412,7 +21420,8 @@
           "356",
           "358",
           "366",
-          "367"
+          "367",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -21640,7 +21649,8 @@
           "448",
           "449",
           "538",
-          "539"
+          "539",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -21870,7 +21880,8 @@
           "539",
           "556",
           "557",
-          "558"
+          "558",
+          "574"
         ],
         "tutor": true,
         "registered": true,
@@ -24947,7 +24958,8 @@
           "374",
           "375",
           "393",
-          "424"
+          "424",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -35460,7 +35472,8 @@
           "316",
           "382",
           "383",
-          "384"
+          "384",
+          "574"
         ],
         "tutor": false,
         "registered": true,
@@ -46006,6 +46019,56 @@
         ],
         "sequence": "Textured opposed thorn vines close; shaded dark lotus opens at poison contact; violet spores disperse and an amber sap droplet returns. Sixteen authored pixel-art phases; gameplay still gates recovery on successful new poison.",
         "registeredName": "Nectarbane"
+      },
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": 811,
+      "name": "Phantom Falchion",
+      "originalCatalogue": false,
+      "sourceFiles": [
+        "dist/dossier-data.js"
+      ],
+      "provenance": null,
+      "acquisition": {
+        "learnsetSpecies": [
+          "574"
+        ],
+        "tutor": false,
+        "registered": true,
+        "battleReaction": false
+      },
+      "category": "SPECIAL",
+      "type": "GHOST",
+      "target": "SINGLE_FOE",
+      "allyTarget": false,
+      "power": 70,
+      "pp": 10,
+      "accuracy": 100,
+      "priority": 0,
+      "contact": false,
+      "hits": {
+        "min": 1,
+        "max": 1
+      },
+      "effects": [],
+      "authoredAction": "Ancestral shades gather in the falchion, then a hooked crescent flies to the chosen foe and shatters.",
+      "art": {
+        "src": "assets/vfx/action/811-phantom-falchion.png",
+        "sourceId": 811,
+        "shared": false,
+        "exists": true,
+        "sha256": "f08fc47f0acffca1890f7e1f18b7f182f926eb19cc6f4da6bde95b85fcc55ed8",
+        "frames": 16,
+        "logicalCell": 192,
+        "duration": 850,
+        "impact": 0.625,
+        "beats": [
+          0.625
+        ],
+        "sequence": "Ancestral shades gather → hooked falchion extends → flying crescent → shards and embers",
+        "registeredName": "Phantom Falchion"
       },
       "status": "requires-review",
       "review": null

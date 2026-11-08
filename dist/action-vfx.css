@@ -22,3 +22,31 @@
 
 .quick-hit{position:absolute;left:-44px;top:-24px;min-width:88px;text-align:center;color:#fff5d2;font:bold 14px system-ui;text-shadow:0 1px 3px #000;background:#263846e8;border:1px solid #d9cc9a;border-radius:5px;padding:5px;box-sizing:border-box}
 .quick-hit small{display:block;font-size:16px;color:#fff}
+
+.of-phantom-falchion .pixel-move-art.pixel-move-art{
+ transform:scaleX(var(--phantom-facing,1));
+}
+:root:not([data-motion="reduced"]) .of-phantom-falchion{
+ animation:phantom-crossing var(--pixel-duration) linear both;
+}
+.of-phantom-falchion[data-phantom-charge="base"]{opacity:.76}
+.of-phantom-falchion[data-phantom-charge="gathered"]{opacity:.88}
+.of-phantom-falchion[data-phantom-charge="full"] .pixel-move-art.pixel-move-art{filter:brightness(1.13)}
+@keyframes phantom-crossing{
+ 0%,48%{transform:translate(var(--source-x,0px),var(--source-y,0px))}
+ 62.5%,100%{transform:translate(var(--pixel-shift-x,0px),var(--pixel-shift-y,0px))}
+}
+@media(prefers-reduced-motion:reduce){
+ :root:not([data-motion="full"]) .of-phantom-falchion{animation:none}
+}
+
+.ancestral-aid-glint{
+ position:absolute;left:-48px;top:-58px;width:96px;height:96px;
+ background:url('assets/vfx/action/811-phantom-falchion.png') 0 0 / 400% 400%;
+ image-rendering:pixelated;animation:ancestral-aid-glint 270ms ease-out both;
+}
+@keyframes ancestral-aid-glint{
+ 0%{opacity:0;transform:translateY(4px)}
+ 25%{opacity:1}
+ 100%{opacity:0;transform:translateY(-10px)}
+}
