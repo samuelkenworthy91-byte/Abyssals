@@ -56,5 +56,8 @@ for(const id of ['515','516','517','518','519'])RELIC_ART[id]={file:id+'.webp',r
 
 for(const id of ["520", "521", "522", "523", "524", "525", "526", "527", "528", "529", "530", "531", "532", "533", "534", "535", "536", "537", "538", "539", "540", "541", "542", "543", "544", "545", "546", "547", "548", "549", "550", "551", "552", "553", "554", "555", "556", "557", "558", "559", "560", "561", "562", "563", "564", "565", "566", "567", "568", "569", "570", "571", "572", "573"])RELIC_ART[id]={file:id+'.webp',root:true,facesLeft:true,rect:null};
 
+// Merrigami uses the approved portrait for the animated field companion.
+RELIC_ART['574']={file:'574.webp',root:true,facesLeft:false,rect:null};
+
 // Approved standalone bat portraits: Thimbril's three-quarter view faces right.
 RELIC_ART['568'].facesLeft=false;

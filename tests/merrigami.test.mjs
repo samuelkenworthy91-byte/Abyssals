@@ -8,10 +8,12 @@ import {doubleRound} from '../dist/relic-double.js';
 import {readSave,selectSlot,writeSave} from '../dist/save.js';
 import {growLevel} from '../dist/progression.js';
 import {JOURNAL_HABITATS} from '../dist/journal-habitats.js';
+import {relicArtPath} from '../dist/relic-art.js';
 import {ACTION_ART} from '../dist/action-vfx.js';
 import {effectHTML,effectSpec} from '../dist/effects.js';
 
 const species=DATA.species.find(s=>s.name==='Merrigami');
+assert.equal(relicArtPath(species.id),'assets/574.webp','the field companion uses the approved portrait');
 const move=id=>{const m=DATA.moves.find(m=>m.id===id);return {...m,left:m.pp};};
 const use=(a,b,m,roll=.9,options={})=>applyMove(a,b,m,()=>roll,{floor:0,...options});
 function fixture(type='FIGHTING'){
