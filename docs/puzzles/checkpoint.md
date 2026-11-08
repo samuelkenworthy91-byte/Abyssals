@@ -24,7 +24,7 @@ These boards keep separate save state and preserve finished legacy expeditions. 
 
 The remaining ten expeditions now use finite irrigation, a layered filter, paired pressure chambers, a memorial constellation, conflicting testimony, a capacity-limited ferry, three shore echoes, ledger reconciliation, evacuation routes and a current-driven two-net grid. The model test searches all 15 start boards and verifies that each finishes through its normal campaign rules.
 
-The first mobile run passed the 45 clue interactions. A subsequent check sampling one exact canvas pixel timed out in Burrow Hollow even though the clue target was present. The browser test now checks that each actual canvas draws the lectern face and keeps the foreground pixel check on the reproduced Snowbreak approach.
+The first mobile run passed the 45 clue interactions. A subsequent check sampling one exact canvas pixel timed out in Burrow Hollow even though the clue target was present. The current browser test samples the full face of each lectern on the actual canvas. It also captures representative screenshots, including the reproduced Snowbreak approach.
 
 ## Windscar Mist Crossing
 

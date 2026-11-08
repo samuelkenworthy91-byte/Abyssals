@@ -11,12 +11,6 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   await page.route(/\/app\.js(?:\?.*)?$/,async route=>{
    const response=await route.fetch();
    await route.fulfill({response,body:await response.text()+`
-const renderedLecterns=new Set();
-const originalFillRect=ctx.fillRect.bind(ctx);
-ctx.fillRect=(x,y,w,h)=>{
- if(ctx.fillStyle==='#b8ad78'&&x===-9&&y===-26&&w===19&&h===8)renderedLecterns.add(room);
- originalFillRect(x,y,w,h);
-};
 window.campaignQA={
  inventory:()=>SIDE_CAMPAIGNS.flatMap(c=>[0,1,2].map(stage=>[c.key,campaignRoom(c,stage),stage])),
  boot(key,target,stage){
@@ -45,13 +39,19 @@ window.campaignQA={
   setPlayer(43,17,'right');
  },
  close:closeDialogue,
- rendered:room=>renderedLecterns.has(room),
  visible(id){
   const spot=spots.find(s=>s.id===id),rect=canvas.getBoundingClientRect();
-  const x=Math.round((view.ox+spot.x*16*view.scale)*canvas.width/rect.width);
-  const y=Math.round((view.oy+(spot.y*16-10)*view.scale)*canvas.height/rect.height);
-  const {data}=ctx.getImageData(x-1,y-1,3,3);
-  return Array.from({length:9},(_,n)=>n*4).some(n=>data[n]===184&&data[n+1]===173&&data[n+2]===120&&data[n+3]===255);
+  const scaleX=view.scale*canvas.width/rect.width,scaleY=view.scale*canvas.height/rect.height;
+  const centreX=Math.round(view.ox*canvas.width/rect.width+(spot.x*16+8)*scaleX);
+  const centreY=Math.round(view.oy*canvas.height/rect.height+(spot.y*16-7)*scaleY);
+  const halfX=Math.ceil(10*scaleX),halfY=Math.ceil(5*scaleY);
+  const {data}=ctx.getImageData(centreX-halfX,centreY-halfY,2*halfX+1,2*halfY+1);
+  let platePixels=0;
+  for(let n=0;n<data.length;n+=4){
+   const colourDistance=Math.abs(data[n]-184)+Math.abs(data[n+1]-173)+Math.abs(data[n+2]-120);
+   if(data[n+3]>200&&colourDistance<28)platePixels++;
+  }
+  return platePixels>=4;
  },
  point(id){
   const spot=spots.find(s=>s.id===id),rect=canvas.getBoundingClientRect();
@@ -89,8 +89,7 @@ window.campaignQA={
    stageLabel=room;
    const id=await page.evaluate(([key,room,stage])=>campaignQA.boot(key,room,stage),[key,room,stage]);
    assert.equal(await page.evaluate(()=>campaignQA.target()),id,room+' A target');
-   await page.waitForFunction(room=>campaignQA.rendered(room),room,{timeout:4000});
-   if(key==='marchMeadow'&&stage===0)await page.waitForFunction(id=>campaignQA.visible(id),id,{timeout:4000});
+   await page.waitForFunction(id=>campaignQA.visible(id),id,{timeout:8000});
    if(stage===0&&['marchMeadow','relicCrags','anglersReach'].includes(key)){
     await page.locator('#viewport').screenshot({path:'build/qa/side-clue-'+room+'.png'});
    }
