@@ -71,7 +71,7 @@ window.campaignQA={
  },
  solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;},
  async crossingBoot(){this.boot('marchMeadow','marchMeadow',0);await warp(CROSSING_ROOM,...CROSSING_ENTRY,'up');},
- async fortCoastBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('scrub2',38,28,'left');},
+ async fortCoastBoot(){this.boot('marchMeadow','marchMeadow',0);await warp('scrub2',38,28,'left');$('#toast').classList.remove('visible');},
  crossingSnapshot(){return {room,x:player.x,y:player.y,...crossingState(state),cost:[state.escortSteps,state.money,state.party.map(unit=>unit.hp),state.dead.length]};},
  restoreCrossing(){resumeSnapshot(JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')));},
  tile(x,y){
