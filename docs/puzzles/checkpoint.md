@@ -25,3 +25,9 @@ These boards keep separate save state and preserve finished legacy expeditions. 
 The remaining ten expeditions now use finite irrigation, a layered filter, paired pressure chambers, a memorial constellation, conflicting testimony, a capacity-limited ferry, three shore echoes, ledger reconciliation, evacuation routes and a current-driven two-net grid. The model test searches all 15 start boards and verifies that each finishes through its normal campaign rules.
 
 The first mobile run passed the 45 clue interactions. A subsequent check sampling one exact canvas pixel timed out in Burrow Hollow even though the clue target was present. The browser test now checks that each actual canvas draws the lectern face and keeps the foreground pixel check on the reproduced Snowbreak approach.
+
+## Windscar Mist Crossing
+
+An optional pocket on the Summit Cairns map has a five-by-seven grid and two deterministic, mirrored safe paths. Falls return the player to the near landing without consuming health, lives, inventory or escort steps. Discovery and hints persist. Loading a save on the grid starts the player at the near landing, and canvas taps within the puzzle are limited to adjacent tiles.
+
+The model verifies both routes, isolation from normal pathfinding and save continuity. The mobile test covers distant taps, a fall, mid-grid reload and completion. False Witness is part of Relic Crags. Shadow Bridge, Mirror Chamber, Flooded Vault and Vanishing Runes are deferred optional modules.

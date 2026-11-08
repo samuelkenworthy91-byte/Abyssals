@@ -1,3 +1,4 @@
+import {installInvisibleCrossing} from './invisible-crossing.js?v=0.90.58';
 import {mountainTileName} from './mountain-art.js?v=0.90.58';
 import {DATA} from './data.js?v=0.90.58';
 import {legalForm} from './route-roster.js?v=0.90.58';
@@ -50,6 +51,7 @@ export function installMountainPass(maps){
  const ridge=maps.passRidge;ridge.sidePaths.push({gateId:'pass-summit-entry',points:[[19,8],[25,8],[25,4]]});ridge.gates.push(gate('pass-summit-entry','Optional · Summit Cairns',25,4,'passSummit',[3,17,'right']));maps.passSummit.gates=[gate('pass-summit-back','Return to Windscar Pass',1,17,'passRidge',[25,6,'down'])];
  for(const [room,id,x,y]of [['passFoothills','pass-stonecutter',14,23],['passUpperTunnel','pass-guiding-cord',27,22],['passSummit','pass-summit-porter',33,10]])branchTo(maps[room],{id,label:PASS_NPCS[id].name,x,y,sprite:'bystander'});
  installMountainQuests(maps,branchTo);
+ installInvisibleCrossing(maps);
  for(const [room,id,x,y,label]of [['passLowerTunnel','pass-adit-cache',36,24,'Abandoned miners’ supplies'],['passCrystalPocket','pass-crystal-cache',39,14,'Surveyor’s mineral charm'],['passSummit','pass-summit-cache',39,17,'Porter’s summit chest'],['passEastSlope','pass-scree-cache',39,24,'Old escort provisions']])branchTo(maps[room],{id,label,x,y});
 }
 export function passObjective(room){const r=PASS_ROUTES[room];if(!r)return null;return {spot:PASS_SPINE.includes(room)?room+'-forward':room==='passSummit'?'pass-summit-back':'pass-crystal-back',text:PASS_SPINE.includes(room)?'Mountain crossing '+(PASS_SPINE.indexOf(room)+1)+'/7 · '+(room==='passEastSlope'?'Descend east to Market Approach':room==='passUpperTunnel'?'Climb east to Windscar Pass':room==='passLowerTunnel'?'Follow the eastern gallery uphill':'Follow the eastward through-route to Cybressa'):'Optional '+(room==='passSummit'?'summit':'crystal cavern')+' · return west to the crossing'};}

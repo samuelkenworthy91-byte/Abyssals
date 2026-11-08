@@ -61,7 +61,15 @@ window.campaignQA={
   const [facing,[dx,dy]]=direction;
   setPlayer(control.x-dx,control.y-dy,facing);
  },
- solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;}
+ solved(key){return JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')).state.sideCampaigns[key].solved;},
+ async crossingBoot(){this.boot('marchMeadow','marchMeadow',0);await warp(CROSSING_ROOM,...CROSSING_ENTRY,'up');},
+ crossingSnapshot(){return {room,x:player.x,y:player.y,...crossingState(state),cost:[state.escortSteps,state.money,state.party.map(unit=>unit.hp),state.dead.length]};},
+ restoreCrossing(){resumeSnapshot(JSON.parse(localStorage.getItem('abyssals-expedition-slot-1')));},
+ tile(x,y){
+  const rect=canvas.getBoundingClientRect();
+  return [rect.left+view.ox+(x*16+8)*view.scale,rect.top+view.oy+(y*16+8)*view.scale];
+ }
+
 
 };`});
   });
@@ -97,6 +105,28 @@ window.campaignQA={
    }
    console.log('PASS',room,id,'A and canvas tap');
   }
+  const {CROSSING_EXIT,crossingRoute}=await import('../dist/invisible-crossing.js');
+  await page.evaluate(()=>campaignQA.crossingBoot());
+  const initial=await page.evaluate(()=>campaignQA.crossingSnapshot());
+  assert.equal(initial.room,'passSummit');
+  const route=crossingRoute(initial.seed);
+  async function tapTile(cell){await page.touchscreen.tap(...await page.evaluate(cell=>campaignQA.tile(...cell),cell));}
+  async function at(cell){await page.waitForFunction(([x,y])=>{const p=campaignQA.crossingSnapshot();return p.x===x&&p.y===y;},cell);}
+  await tapTile(route[2]);
+  assert.equal((await page.evaluate(()=>campaignQA.crossingSnapshot())).discoveredSafeCells.length,0);
+  await tapTile(route[0]);await at(route[0]);
+  await tapTile([4,9]);await at([5,10]);
+  const fell=await page.evaluate(()=>campaignQA.crossingSnapshot());
+  assert.equal(fell.falls,1);
+  assert.equal(fell.discoveredSafeCells.length,1);
+  assert.deepEqual(fell.cost,initial.cost,'fall consumed no HP, supplies or lives');
+  await tapTile(route[0]);await at(route[0]);
+  await page.evaluate(()=>campaignQA.restoreCrossing());
+  await at([5,10]);
+  assert.equal((await page.evaluate(()=>campaignQA.crossingSnapshot())).discoveredSafeCells.length,1);
+  for(const cell of [...route,CROSSING_EXIT]){await tapTile(cell);await at(cell);}
+  assert((await page.evaluate(()=>campaignQA.crossingSnapshot())).solved);
+  await page.locator('#viewport').screenshot({path:'build/qa/windscar-mist-crossing.png'});
   assert.deepEqual(errors,[]);
   console.log('PASS',inventory.length,'mobile reading props via both inputs and save persistence');
  }finally{await browser.close();}
