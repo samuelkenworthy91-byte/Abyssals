@@ -5,6 +5,8 @@ import {unitName} from './names.js?v=0.90.60';
 const alive=u=>u&&u.hp>0&&!u.dead&&!u.captured;
 const opposite=(a,b)=>a!==b&&(!a.side||!b.side||a.side!==b.side);
 const active=(u,extra=[])=>[...new Set([u,...menagerieParty(u),...extra])].filter(x=>alive(x)&&(x===u||x.abilityState));
+import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.60';
+
 const memory=u=>abilityMemory(u).dossier??={};
 const flags=u=>abilityBattle(u).dossier??={};
 const note=(u,s)=>`${unitName(u)}: ${s}`;
@@ -57,8 +59,27 @@ export function dossierDamaged(actor,target,move,damage,{floor=0,random=Math.ran
   if(alive(target)&&has(target,'Whiteout Pelt')&&t.veil>0&&random()<.3)changeStage(actor,'speed',-1,target,messages);
  }
 }
+export function grantAncestralAid(actor,target,move,result,context){
+ if(context.deferAncestralAid||context.ancestralAidGranted||result.damage<=0||move.id===PHANTOM_FALCHION_ID||move.category!=='SPECIAL'||!opposite(actor,target)||!alive(actor)||!has(actor,'Ancestral Aid'))return;
+ const m=memory(actor);
+ if((m.ancestralAid||0)>=3||changeStage(actor,'sp_attack',1,actor,result.messages)<=0)return;
+ m.ancestralAid=(m.ancestralAid||0)+1;
+ context.ancestralAidGranted=true;
+ result.ancestralAid=true;
+ result.messages.push(note(actor,'Ancestral Aid lends its strength.'));
+}
 export function finishDossierAction(actor,target,move,result,{actorHP,targetHP,context={}}={}){
  const m=memory(actor),messages=result.messages,success=!result.skipped&&!result.missed&&!result.immune&&!result.blocked;
+ const usedMove=result.visualMove||move;
+ if(context.phantomCharge!==undefined){
+  for(const key of Object.keys(actor.stages))if(actor.stages[key]>0)actor.stages[key]=0;
+  m.ancestralAid=0;
+  result.phantomCharge=context.phantomCharge;
+  if(context.phantomCharge){
+   result.phantomSpentMessage=note(actor,'Phantom Falchion spent its positive stat stages.');
+   messages.push(result.phantomSpentMessage);
+  }
+ }else if(success)grantAncestralAid(actor,target,usedMove,result,context);
  if(!success){m.chain=0;m.chainMove=null;}
  else if(move.power&&result.damage>0&&opposite(actor,target)){
   if(has(actor,'Assassin’s Cadence')){m.chain=Math.min(3,(m.chainMove===move.id?m.chain:0)+1);m.chainMove=move.id;}
