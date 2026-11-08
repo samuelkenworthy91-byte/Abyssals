@@ -18,7 +18,8 @@ export function installShadowBridge(maps){
  const parent=maps.relicGrove2;
  const entry='shadow-bridge-entry';
  parent.sidePaths.push({gateId:entry,points:[[13,7],[18,7],[18,4]]});
- parent.gates.push({id:entry,label:'Optional · Shadow Bridge',x:18,y:4,to:SHADOW_ROOM,arrival:[...SHADOW_ENTRY,'right'],door:true,action:'shadow-bridge-travel'});
+ parent.gates.push({id:entry,label:'Optional · Shadow Bridge',x:18,y:4,to:SHADOW_ROOM,arrival:[...SHADOW_ENTRY,'right'],door:true,action:'shadow-bridge-travel',
+  entrance:{asset:'fortArch',x:17,y:2,w:3,h:3}});
  maps[SHADOW_ROOM]={
   name:'Briarbell Wood · Shadow Bridge',area:'SHADOW-BRIDGE',terrain:'ridge',bloom:false,
   road:[[1,17],[36,17]],sidePaths:[],grass:[],props:[],
