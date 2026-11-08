@@ -115,7 +115,7 @@ export function installCampaignWorld(maps){
    registerCampaignBiome(room,c.key);m.campaign={key:c.key,stage};m.sidePaths??=[];
    m.sidePaths.push({points:[[8,17],[20,17]]},{points:[[35,17],[46,17]]},{points:[[20,17],[20,12],[15,12]]},{points:[[35,17],[35,18]]});
    m.spots.push({id:campaignClueId(c,stage),label:['Read trail evidence','Read repair inscription','Read site register'][stage],x:15,y:12,siteTablet:true,questProp:true},{id:campaignGuard(c,stage),label:campaignGuardianName(c,stage)+' · challenge',x:35,y:18,sprite:2,portraitId:campaignGuard(c,stage)});
-   if(stage===1)for(let n=0;n<3;n++){const [x,y]=[[12,8],[25,25],[38,8]][n];m.sidePaths.push({points:[[x,17],[x,y]]});m.spots.push({id:'sc-'+c.key+'-mechanism-'+n,label:c.controlLabels[n]+' · '+(n+1),x,y});}
+   if(stage===1)for(let n=0;n<3;n++){const [x,y]=[[12,8],[25,25],[38,8]][n];m.sidePaths.push({points:[[x,17],[x,y]]});m.spots.push({id:'sc-'+c.key+'-mechanism-'+n,label:(c.mechanism?'Inspect '+c.mechanism.title:c.controlLabels[n])+' · '+(n+1),x,y});}
    if(stage<2)m.gates.push({id:'sc-'+c.key+'-forward-'+stage,label:'Continue · '+c.stages[stage+1],x:46,y:17,to:campaignRoom(c,stage+1),arrival:[3,17,'right'],action:'side-campaign-gate',door:true});
    else {m.gates.push({id:'sc-'+c.key+'-home',label:'Return along the expedition trail',x:46,y:17,to:campaignRoom(c,1),arrival:[43,17,'left'],door:true});m.spots.push({id:'sc-'+c.key+'-resolution',label:'Settle the claim · '+c.title,x:40,y:17});}
   }

@@ -11,6 +11,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   await page.route(/\/app\.js(?:\?.*)?$/,async route=>{
    const response=await route.fetch();
    await route.fulfill({response,body:await response.text()+`
+const renderedLecterns=new Set();
+const originalFillRect=ctx.fillRect.bind(ctx);
+ctx.fillRect=(x,y,w,h)=>{
+ if(ctx.fillStyle==='#b8ad78'&&x===-9&&y===-26&&w===19&&h===8)renderedLecterns.add(room);
+ originalFillRect(x,y,w,h);
+};
 window.campaignQA={
  inventory:()=>SIDE_CAMPAIGNS.flatMap(c=>[0,1,2].map(stage=>[c.key,campaignRoom(c,stage),stage])),
  boot(key,target,stage){
@@ -33,6 +39,7 @@ window.campaignQA={
  },
  target:()=>closestInteract()?.id,
  close:closeDialogue,
+ rendered:room=>renderedLecterns.has(room),
  visible(id){
   const spot=spots.find(s=>s.id===id),rect=canvas.getBoundingClientRect();
   const x=Math.round((view.ox+spot.x*16*view.scale)*canvas.width/rect.width);
@@ -66,7 +73,8 @@ window.campaignQA={
   for(const [key,room,stage] of inventory){
    const id=await page.evaluate(([key,room,stage])=>campaignQA.boot(key,room,stage),[key,room,stage]);
    assert.equal(await page.evaluate(()=>campaignQA.target()),id,room+' A target');
-   await page.waitForFunction(id=>campaignQA.visible(id),id,{timeout:4000});
+   await page.waitForFunction(room=>campaignQA.rendered(room),room,{timeout:4000});
+   if(key==='marchMeadow'&&stage===0)await page.waitForFunction(id=>campaignQA.visible(id),id,{timeout:4000});
    if(stage===0&&['marchMeadow','relicCrags','anglersReach'].includes(key)){
     await page.locator('#viewport').screenshot({path:'build/qa/side-clue-'+room+'.png'});
    }

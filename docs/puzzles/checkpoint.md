@@ -19,3 +19,9 @@ On the deployed v0.90.59 PWA, a synthetic accepted Snowbreak Hollow save at (15,
 Snowbreak Hollow's hearth now models heat and smoke. The Buried Water Road uses coupled counterweights and a level carriage. The Water That Remembers uses four connected pipe sections. Ashes Owed uses a turn-based heat and pressure window. Stormwatch uses a three-mirror light relay. The Cossenne objective now reads the garden drum target from the same data as the lock.
 
 These boards keep separate save state and preserve finished legacy expeditions. The mechanism tests search each board for a solution, resume a partially solved save, and check reset, hints and cleared saves. The mobile suite also operates each upgraded board through its buttons.
+
+## Remaining expedition mechanisms
+
+The remaining ten expeditions now use finite irrigation, a layered filter, paired pressure chambers, a memorial constellation, conflicting testimony, a capacity-limited ferry, three shore echoes, ledger reconciliation, evacuation routes and a current-driven two-net grid. The model test searches all 15 start boards and verifies that each finishes through its normal campaign rules.
+
+The first mobile run passed the 45 clue interactions. A subsequent check sampling one exact canvas pixel timed out in Burrow Hollow even though the clue target was present. The browser test now checks that each actual canvas draws the lectern face and keeps the foreground pixel check on the reproduced Snowbreak approach.
