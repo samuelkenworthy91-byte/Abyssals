@@ -46,9 +46,11 @@ window.campaignQA={
   const centreY=Math.round(view.oy*canvas.height/rect.height+(spot.y*16-7)*scaleY);
   const halfX=Math.ceil(10*scaleX),halfY=Math.ceil(5*scaleY);
   const {data}=ctx.getImageData(centreX-halfX,centreY-halfY,2*halfX+1,2*halfY+1);
+  // Storm lighting overlays the plate with the region's blue-grey tint.
+  const [red,green,blue]=room.startsWith('storm')?[151,144,106]:[184,173,120];
   let platePixels=0;
   for(let n=0;n<data.length;n+=4){
-   const colourDistance=Math.abs(data[n]-184)+Math.abs(data[n+1]-173)+Math.abs(data[n+2]-120);
+   const colourDistance=Math.abs(data[n]-red)+Math.abs(data[n+1]-green)+Math.abs(data[n+2]-blue);
    if(data[n+3]>200&&colourDistance<28)platePixels++;
   }
   return platePixels>=4;
@@ -90,7 +92,7 @@ window.campaignQA={
    const id=await page.evaluate(([key,room,stage])=>campaignQA.boot(key,room,stage),[key,room,stage]);
    assert.equal(await page.evaluate(()=>campaignQA.target()),id,room+' A target');
    await page.waitForFunction(id=>campaignQA.visible(id),id,{timeout:8000});
-   if(stage===0&&['marchMeadow','relicCrags','anglersReach'].includes(key)){
+   if(stage===0&&['marchMeadow','stormBluffs','relicCrags','anglersReach'].includes(key)){
     await page.locator('#viewport').screenshot({path:'build/qa/side-clue-'+room+'.png'});
    }
    await page.locator('#console-a').tap();
