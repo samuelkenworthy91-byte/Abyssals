@@ -33,6 +33,13 @@ window.campaignQA={
  },
  target:()=>closestInteract()?.id,
  close:closeDialogue,
+ visible(id){
+  const spot=spots.find(s=>s.id===id),rect=canvas.getBoundingClientRect();
+  const x=Math.round((view.ox+spot.x*16*view.scale)*canvas.width/rect.width);
+  const y=Math.round((view.oy+(spot.y*16-10)*view.scale)*canvas.height/rect.height);
+  const {data}=ctx.getImageData(x-1,y-1,3,3);
+  return Array.from({length:9},(_,n)=>n*4).some(n=>data[n]===184&&data[n+1]===173&&data[n+2]===120&&data[n+3]===255);
+ },
  point(id){
   const spot=spots.find(s=>s.id===id),rect=canvas.getBoundingClientRect();
   return {x:rect.left+view.ox+(spot.x*16+8)*view.scale,y:rect.top+view.oy+(spot.y*16-5)*view.scale};
@@ -49,6 +56,7 @@ window.campaignQA={
   for(const [key,room,stage] of inventory){
    const id=await page.evaluate(([key,room,stage])=>campaignQA.boot(key,room,stage),[key,room,stage]);
    assert.equal(await page.evaluate(()=>campaignQA.target()),id,room+' A target');
+   await page.waitForFunction(id=>campaignQA.visible(id),id,{timeout:4000});
    if(stage===0&&['marchMeadow','relicCrags','anglersReach'].includes(key)){
     await page.locator('#viewport').screenshot({path:'build/qa/side-clue-'+room+'.png'});
    }

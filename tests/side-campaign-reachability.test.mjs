@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {NEW_MAPS,newBlocked,newSpots} from '../dist/expansion-world.js';
 import {
  SIDE_CAMPAIGNS,campaignRoom,campaignState,campaignGuard,campaignGiverSpot,campaignClueId,
- campaignBlocked,campaignGateOpen,campaignClue,campaignPuzzle,campaignChoose,claimCampaign,drawCampaignScene
+ campaignBlocked,campaignGateOpen,campaignClue,campaignPuzzle,campaignChoose,claimCampaign,drawCampaignClue
 } from '../dist/side-campaigns.js?v=0.90.58';
 import {siteTabletHit} from '../dist/site-tablets.js?v=0.90.58';
 
@@ -23,11 +23,11 @@ function flood(state,room,arrival){
  return seen;
 }
 
-function assertClueDrawn(state,room,spots,clue){
+function assertClueDrawn(room,spots,clue){
  const translations=[];
  const canvas=new Proxy({}, {get:(_,property)=>property==='translate'?
-  (x,y)=>translations.push([x,y]):()=>({addColorStop(){}})});
- drawCampaignScene(canvas,state,room,spots);
+  (x,y)=>translations.push([x,y]):()=>{}});
+ drawCampaignClue(canvas,spots);
  assert(translations.some(([x,y])=>x===clue.x*16+8&&y===clue.y*16+14),room+' clue lectern draw');
 }
 
@@ -45,7 +45,7 @@ for(const c of SIDE_CAMPAIGNS){
   assert.equal(spots.filter(s=>s.x===clue.x&&s.y===clue.y).length,1,clueId+' collision');
   assert(siteTabletHit(clue,clue.x,clue.y-1)&&siteTabletHit(clue,clue.x,clue.y));
   assert(!siteTabletHit(clue,clue.x,clue.y-2));
-  assertClueDrawn(state,room,spots,clue);
+  assertClueDrawn(room,spots,clue);
   const arrivals=Object.values(NEW_MAPS).flatMap(m=>m.gates.filter(g=>g.to===room).map(g=>g.arrival));
   assert(arrivals.length,room+' inbound routes');
   for(const arrival of arrivals){

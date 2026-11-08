@@ -12,4 +12,4 @@ The strongest source-based estimates in the handoff were Shared Spring (difficul
 
 ## Verification status
 
-The user-reported deadlock remains unconfirmed in the original install. Browser fixtures distinguish input and persistence checks from terrain coverage. The signed Android and offline PWA release are gated on the complete overhaul and full QA.
+On the deployed v0.90.59 PWA, a synthetic accepted Snowbreak Hollow save at (15, 13), facing north, showed the player sprite covering the clue prop. The objective label remained visible and pressing E read the evidence and advanced the objective to the warden. This reproduces an obscured prop. The reported hard deadlock remains unconfirmed. The patch draws the reading lectern after actors to keep the prop visible from that approach. Browser fixtures distinguish input and persistence checks from terrain coverage. The signed Android and offline PWA release are gated on the complete overhaul and full QA.
