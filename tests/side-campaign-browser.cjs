@@ -4,9 +4,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 
 (async()=>{
  const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH,args:['--no-sandbox']});
+ const errors=[];let page,stageLabel='game start';
  try{
-  const page=await browser.newPage({viewport:{width:430,height:932},hasTouch:true,serviceWorkers:'block'});
-  const errors=[];
+  page=await browser.newPage({viewport:{width:430,height:932},hasTouch:true,serviceWorkers:'block'});
   page.on('pageerror',error=>errors.push(error.message));
   await page.route(/\/app\.js(?:\?.*)?$/,async route=>{
    const response=await route.fetch();
@@ -79,12 +79,13 @@ window.campaignQA={
 
 };`});
   });
-  await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'domcontentloaded'});
+  await page.goto(process.env.TEST_URL||'http://127.0.0.1:8765',{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.campaignQA);
   const {expeditionMechanisms,mechanismPath}=await import('../dist/side-campaign-mechanisms.js');
   const inventory=await page.evaluate(()=>campaignQA.inventory());
   fs.mkdirSync('build/qa',{recursive:true});
   for(const [key,room,stage] of inventory){
+   stageLabel=room;
    const id=await page.evaluate(([key,room,stage])=>campaignQA.boot(key,room,stage),[key,room,stage]);
    assert.equal(await page.evaluate(()=>campaignQA.target()),id,room+' A target');
    await page.waitForFunction(room=>campaignQA.rendered(room),room,{timeout:4000});
@@ -121,6 +122,7 @@ window.campaignQA={
    }
    console.log('PASS',room,id,'A and canvas tap');
   }
+  stageLabel='Windscar Mist Crossing';
   const {CROSSING_EXIT,crossingRoute}=await import('../dist/invisible-crossing.js');
   await page.evaluate(()=>campaignQA.crossingBoot());
   const initial=await page.evaluate(()=>campaignQA.crossingSnapshot());
@@ -148,5 +150,9 @@ window.campaignQA={
   await page.locator('#viewport').screenshot({path:'build/qa/windscar-mist-crossing.png'});
   assert.deepEqual(errors,[]);
   console.log('PASS',inventory.length,'mobile reading props via both inputs and save persistence');
+ }catch(error){
+  console.error('Browser stage:',stageLabel,'Page errors:',errors);
+  if(page){fs.mkdirSync('build/qa',{recursive:true});await page.screenshot({path:'build/qa/expedition-check-failure.png',timeout:4000}).catch(()=>{});}
+  throw error;
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});
