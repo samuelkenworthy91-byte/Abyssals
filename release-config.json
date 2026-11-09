@@ -1,11 +1,11 @@
 {
-  "version": "0.90.61",
-  "version_code": 156,
-  "filename": "Abyssals-v0.90.61-Shadow-Bridge-and-Merrigami.apk",
-  "title": "Abyssals v0.90.61 — Shadow Bridge and Merrigami",
-  "notes": "Find the optional Shadow Bridge off Bellroot Walk in Briarbell Wood. Align two rail-mounted pillars with the shrouded torches to cross both ravines. Find Merrigami in Tenrec Hollow and bring it along as a field companion. It uses Ancestral Aid and its signature Phantom Falchion, complete with dedicated pixel artwork. Includes the expedition puzzle overhaul, Windscar Mist Crossing and refreshed Sunken Fort shoreline from v0.90.60. Existing saves carry forward.",
-  "pwa_filename": "Abyssals-v0.90.61-PWA.zip",
+  "version": "0.90.62",
+  "version_code": 157,
+  "filename": "Abyssals-v0.90.62-Triskit-Branches.apk",
+  "title": "Abyssals v0.90.62 — Triskit Branches",
+  "notes": "Five new Triskit evolutions join Marasen’s Evolution Atelier. Find Winter Key, Winkbell, Quarry Husk, Nightstill Vial and Reverie Fan. The update adds the five battle abilities and a one-use Quarry Spill entry hazard. Existing saves carry forward.",
+  "pwa_filename": "Abyssals-v0.90.62-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.61-art-scope.json",
+  "artwork_scope_path": "docs/releases/v0.90.62-art-scope.json",
   "validation_mode": "full"
 }
