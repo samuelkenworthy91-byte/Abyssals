@@ -1,3 +1,12 @@
+# Triskit evolution branch checkpoint
+
+- v0.90.62 candidate, version code 157. Coldsmith, Ampish, Grubstake, Toxiturn and Kipnotic use species IDs 575–579. The original Triskit paths and save identifiers are preserved.
+- Approved battle portraits and distinct item icons were prepared as transparent WebP and uploaded through GitHub. The original review covered a frost-armoured quadruped, a lightning-lit bell fairy, a digging rock scarab, a low venom stalker and a lavender dream dragon. The approved 4-paw Coldsmith edit is used. The field companion uses the existing animated portrait renderer.
+- Each item costs 4,500 doubloons in Marasen’s Evolution Atelier and evolves a living Lv. 30+ Triskit. No dedicated move-animation coverage changes.
+- Quarry rubble lives on the battle field, is cleared by Clearcut Breeze, and consumes one grounded entrance. The first implementation keeps damage at or above 1 HP and honours higher supervised floors.
+- The five primaries are installed. Slow Read and Curtain Fall are available for future assignments in the ability registry.
+- Run `node tests/triskit-branches.test.mjs` to verify the data, shop, evolution and battle contracts.
+
 # Resume after the interim artwork APK
 
 Branch: main; PR7 merged. The user explicitly requested an interim build containing all currently made move artwork and six redesigned areas, then to finish the remainder later.
