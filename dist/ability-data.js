@@ -1,3 +1,4 @@
+import {TRISKIT_ABILITIES} from './triskit-branches.js?v=0.90.61';
 import {DOSSIER_ABILITIES} from './dossier-data.js?v=0.90.61';
 import {ORCHARD_ABILITIES} from './tide-orchard-data.js?v=0.90.61';
 import {BRANCH_ABILITIES} from './branch-families.js?v=0.90.61';
@@ -478,3 +479,4 @@ ABILITIES.push(...ORCHARD_ABILITIES);
 
 
 ABILITIES.push(...DOSSIER_ABILITIES);
+ABILITIES.push(...TRISKIT_ABILITIES);

@@ -1,5 +1,6 @@
 import {dossierEnter,dossierEvasion,dossierCritBonus,dossierIncomingCritStage,dossierMultiplier,dossierDamaged,tagDossierStatus,dossierStatusFactor,endDossierRound} from './dossier-battle.js?v=0.90.61';
-import {endOrchard} from './tide-orchard-battle.js?v=0.90.61';
+import {endOrchard,orchardGrounded} from './tide-orchard-battle.js?v=0.90.61';
+import {enterHazards,placeEntryHazard} from './entry-hazards.js?v=0.90.61';
 import {departTeamcraft,damagedTeamcraft} from './teamcraft-battle.js?v=0.90.61';
 import {randomStatusDuration} from './status-rules.js?v=0.90.61';
 import {birdRecordMove,birdMultiplier,birdAfterDamage,birdAfterStatus,birdLeave} from './bird-abilities.js?v=0.90.61';
@@ -23,7 +24,18 @@ export function speedFactor(u,opponent){const w=u.field?.weather,suppressed=weat
 export function enterAbility(u,foe,{party=[u],field={},afterFaint=false,newBattle=false}={}){
  bindMenagerieParty(party);u.abilitySlot??='primary';u.abilityState={types:[],moves:[],flags:{},charges:0,dealt:0,hits:0};if(newBattle)u.abilityBattle={flags:{},turn:0};abilityBattle(u);u.field=field;
  u.abilityState.allies=Math.max(0,party.filter(p=>p.hp>0&&!p.dead).length-1);u.abilityState.primaryTypes=new Set(party.filter(p=>p.hp>0&&!p.dead).map(p=>p.species.types[0])).size;
- const messages=[];delete u.fixerBoost;if(triggerSunWrath(u))messages.push(note(u,"Sun God’s Wrath: transformed; all six stats boosted by 25%."));const raise=(keys,text)=>{for(const k of keys)stage(u,k,1);messages.push(note(u,text));};
+ const messages=[];
+ for(const event of enterHazards(u,field,{grounded:orchardGrounded(u),removeLayer:has(u,'Waystone Master'),damageFor:n=>hazardDamage(u,n)})){
+  if(event.removed)messages.push(note(u,'removed one entry-hazard layer.'));
+  else messages.push(unitName(u)+' crossed Quarry Spill rubble'+(event.damage?' and lost '+event.damage+' HP.':'.'));
+ }
+ if(has(u,'Curtain Fall')&&!abilityBattle(u).flags.curtainFall){
+  abilityBattle(u).flags.curtainFall=true;
+  if(Object.values(field.screens||{}).some(side=>Object.values(side).some(turns=>turns>0))){
+   field.screens={};messages.push(note(u,'damage screens on both sides fell.'));
+  }
+ }
+ delete u.fixerBoost;if(triggerSunWrath(u))messages.push(note(u,"Sun God’s Wrath: transformed; all six stats boosted by 25%."));const raise=(keys,text)=>{for(const k of keys)stage(u,k,1);messages.push(note(u,text));};
  if(!newBattle&&!afterFaint){if(heldInfo(u)?.effect?.condition==='switch')abilityBattle(u).flags.defenderReady=true;if(has(u,'Tidal Footwork')&&!abilityBattle(u).flags.tidalFootwork){abilityBattle(u).flags.tidalFootwork=true;raise(['speed'],'voluntary switch raised Speed.');}}
  if(has(u,'Clear Judgment')){for(const k in u.stages)if(u.stages[k]<0)u.stages[k]=0;messages.push(note(u,'negative stages cleared; opposing evasion boosts blocked.'));}
  messages.push(...paladinEnter(u));
@@ -70,9 +82,46 @@ export function changeWeather(weather,units,turns=5){const messages=[];const old
 }
 export function isContact(m){return m.contact??(m.category==='PHYSICAL'&&!/shot|arrow|projectile|launch|beam|wave|pulse/i.test(m.name));}
 export function isSound(m){return m.sound??(/roar|cry|call|chorus|song|chant|howl|chime|echo|shriek|resonance|sound|sonic/i.test(m.name));}
-export function inflictStatus(u,status,messages=[],random=Math.random,source=null){if(u.hp<=0)return false;if(u.field?.orchardSafeguard?.[u.side||'player']>0||status==='SLEEP'&&(u.moveState?.wakeful>0||u.field?.terrain==='ELECTRIC'&&!u.species.types.includes('FLYING')&&!has(u,'Hovercore')))return false;if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
- if(u.status||u.statusImmunity?.[status]||has(u,'Toxinproof')&&['POISON','BAD_POISON'].includes(status)||has(u,'Coldproof')&&status==='FREEZE'||['POISON','BAD_POISON'].includes(status)&&u.species.types.some(t=>['POISON','STEEL'].includes(t))||status==='BURN'&&u.species.types.includes('FIRE')||['FREEZE','FROSTBITE'].includes(status)&&u.species.types.includes('ICE')||status==='PARALYSIS'&&u.species.types.includes('ELECTRIC'))return false;
+export function canInflictStatus(u,status,{etching=false}={}){
+ if(u.hp<=0||u.dead||u.field?.orchardSafeguard?.[u.side||'player']>0||
+  status==='SLEEP'&&(u.moveState?.wakeful>0||u.field?.terrain==='ELECTRIC'&&!u.species.types.includes('FLYING')&&!has(u,'Hovercore')))return false;
+ if(status==='CONFUSION')return true;
+ const poison=['POISON','BAD_POISON'].includes(status),types=u.species.types;
+ return !(u.status||u.statusImmunity?.[status]||poison&&(has(u,'Toxinproof')||!etching&&types.some(t=>['POISON','STEEL'].includes(t)))||
+  has(u,'Coldproof')&&status==='FREEZE'||status==='BURN'&&types.includes('FIRE')||
+  ['FREEZE','FROSTBITE'].includes(status)&&types.includes('ICE')||status==='PARALYSIS'&&types.includes('ELECTRIC'));
+}
+export function inflictStatus(u,status,messages=[],random=Math.random,source=null,options={}){
+ if(!canInflictStatus(u,status,options))return false;
+ if(status==='CONFUSION'){u.confusion=randomStatusDuration(random);messages.push(`${unitName(u)} is confused.`);messages.push(...activateHeldRecovery(u));return true;}
  delete u.dossierBloomStatus;tagDossierStatus(u,source);u.status=status;u.statusTurns=status==='SLEEP'?randomStatusDuration(random):0;u.toxicCounter=0;messages.push(`${unitName(u)} is ${status.toLowerCase().replace('_',' ')}.`);messages.push(...activateHeldRecovery(u));return true;
+}
+export function moveStatus(actor,target,move,status,messages,random){
+ const directed=actor!==target&&actor.side!==target.side&&move.category==='STATUS'&&move.target==='SINGLE_FOE';
+ const options={etching:directed&&has(actor,'Etching Venom')};
+ if(directed&&status!=='CONFUSION'&&has(target,'Dream Rebound')&&!abilityBattle(target).flags.dreamRebound&&canInflictStatus(target,status,options)){
+  abilityBattle(target).flags.dreamRebound=true;
+  messages.push(note(target,'reflected the status at '+unitName(actor)+'.'));
+  inflictStatus(actor,status,messages,random,target);
+  return;
+ }
+ inflictStatus(target,status,messages,random,actor,options);
+}
+export function blockPriorityAttack(actor,target,move,priority,activeUnits,messages){
+ if(actor.side===target.side||!move.power||move.target!=='SINGLE_FOE'||priority<=0)return false;
+ const bearer=[target,...activeUnits].find(u=>u.side===target.side&&u.hp>(u.combatFloor??0)&&!u.dead&&!u.withdrawn&&!u.captured&&has(u,'Wink Ward')&&!abilityBattle(u).flags.winkWard);
+ if(!bearer)return false;
+ abilityBattle(bearer).flags.winkWard=true;
+ messages.push(note(bearer,'blocked '+move.name+'.'));
+ return true;
+}
+export function scatterQuarryRubble(actor,target,move,damage,messages){
+ if(damage<=0||target.hp<=(target.combatFloor??0)||target.dead||actor.side===target.side||
+  move.category!=='PHYSICAL'||!isContact(move)||!has(target,'Quarry Spill')||abilityBattle(target).flags.quarrySpill)return;
+ if(placeEntryHazard(target.field,actor.side,'quarry-rubble')){
+  abilityBattle(target).flags.quarrySpill=true;
+  messages.push(note(target,'scattered rubble on the opposing side.'));
+ }
 }
 export function blockedByAbility(actor,target,move,messages=[]){
  let why=null;if(has(target,'Hovercore')&&move.type_id==='GROUND')why='Ground immunity';if(has(target,'Soundproof')&&isSound(move))why='sound immunity';
@@ -97,6 +146,7 @@ export function abilityMultiplier(actor,target,move,{effectiveness=1,critical=fa
  if(has(actor,'Improviser')&&previous&&previous!==move.type_id)multiplier*=1.15;
  if(has(actor,'Ambush')&&!a.flags.attack)multiplier*=1.1;
  if(has(actor,'First Strike')&&movedFirst)multiplier*=1.1;
+ if(has(actor,'Slow Read')&&target.actedThisRound)multiplier*=1.2;
  if(has(actor,'Chorus','Oath Roar')&&isSound(move))multiplier*=1.2;
  if(has(actor,'Mimic Ear')&&a.flags.echo&&isSound(move))multiplier*=1.5;
  if(has(actor,'Opportunist')&&target.hp<=target.maxHp/2)multiplier*=1.15;
@@ -112,6 +162,7 @@ export function abilityMultiplier(actor,target,move,{effectiveness=1,critical=fa
  if(has(actor,'Pursuit Instinct')&&switching)multiplier*=1.3;
  if(actor.field?.weather==='TEMPEST')multiplier*=move.type_id==='ELECTRIC'?1.2:move.type_id==='DRAGON'?1.1:1;
  if(has(target,'Bulwark')&&isContact(move))multiplier*=.8;
+ if(has(target,'Lamellar Frost')&&actor.side!==target.side&&move.category==='SPECIAL')multiplier*=.8;
  if(has(target,'Thick Pelt')&&['FIRE','ICE'].includes(move.type_id))multiplier*=.75;
  if(has(target,'Steamheart')&&move.type_id==='WATER')multiplier*=.5;
  if(has(target,'Pack Guard')&&t.allies>0)multiplier*=.9;

@@ -1,3 +1,4 @@
+import {TRISKIT_EVOLUTIONS} from './triskit-branches.js?v=0.90.61';
 import {DOSSIER_EVOLUTIONS} from './dossier-data.js?v=0.90.61';
 import {TIDE_ORCHARD_EVOLUTIONS} from './tide-orchard-data.js?v=0.90.61';
 import {BRANCH_EVOLUTIONS} from './branch-families.js?v=0.90.61';
@@ -34,3 +35,4 @@ EVOLUTIONS.push(...TIDE_ORCHARD_EVOLUTIONS);
 
 
 EVOLUTIONS.push(...DOSSIER_EVOLUTIONS);
+EVOLUTIONS.push(...TRISKIT_EVOLUTIONS);

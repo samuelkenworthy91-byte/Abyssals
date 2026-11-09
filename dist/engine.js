@@ -4,7 +4,7 @@ import {ORCHARD_IDS,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.61';
 import {orchardPrepare,orchardEffect,brineVeil,orchardHit} from './tide-orchard-battle.js?v=0.90.61';
 import {heldSurvival,finishHeldMove,activateHeldRecovery} from './abilities.js?v=0.90.61';
 import {secondaryChance,prepareSpecialistMove,stabMultiplier,actionInvalid,beginAction,blocksTarget,strikeBarrier,teamcraftEffect,endTeamcraft,selectedAlly} from './teamcraft-battle.js?v=0.90.61';
-import {enterAbility,leaveAbility} from './abilities.js?v=0.90.61';
+import {enterAbility,leaveAbility,moveStatus,blockPriorityAttack,scatterQuarryRubble} from './abilities.js?v=0.90.61';
 import {statusAttackFactor} from './status-rules.js?v=0.90.61';
 import {birdPrepareMove,birdAccuracy,birdGroundImmunity,birdThreshold} from './bird-abilities.js?v=0.90.61';
 import {menagerieParty} from './menagerie-rules.js?v=0.90.61';
@@ -24,7 +24,8 @@ export function instance(species,level,moves){const stats=startingStats(species)
 export function stageMultiplier(stage){const s=Math.max(-6,Math.min(6,stage||0));return s>=0?(2+s)/2:2/(2-s);}
 export function priority(move,unit){return movePriority(move,unit);}
 export function turnOrder(player,enemy,pm,em,random){const pp=priority(pm,player),ep=priority(em,enemy);if(pp!==ep)return pp>ep?['player','enemy']:['enemy','player'];const ps=player.stats.speed*stageMultiplier(effectiveStage(player,'speed',enemy))*speedFactor(player,enemy),es=enemy.stats.speed*stageMultiplier(effectiveStage(enemy,'speed',player))*speedFactor(enemy,player);return ps===es?(random()<.5?['player','enemy']:['enemy','player']):(ps>es?['player','enemy']:['enemy','player']);}
-function resolveMove(actor,target,move,random,{floor=1,continuation=false,procContext={}}={}){
+function resolveMove(actor,target,move,random,{floor=1,continuation=false,procContext={},activeUnits=[]}={}){
+ const effectivePriority=movePriority(move,actor);
  const selfFloor=actor.combatFloor??floor;procContext.startedFullHP??=actor.hp===actor.maxHp;const messages=[],reactions=[];const movedFirst=!target.actedThisRound;actor.actedThisRound=true;if(actor.hp<=0||target.hp<=0)return {damage:0,messages:['No living target.'],skipped:true};if(!continuation&&actor.flinched){actor.flinched=false;return {damage:0,messages:[`${unitName(actor)} flinched.`],skipped:true};}
  if(!continuation&&!moveUsable(actor,move))return {damage:0,messages:[move.left<=0?'No PP remains.':!canPayMoveHP(actor,move)?`${unitName(actor)} needs more HP to use ${move.name}.`:'That move is sealed.'],skipped:true};
  if(!continuation&&actor.status==='SLEEP'&&move.id!==ORCHARD_IDS.sleepTalk){if(actor.statusTurns>0){actor.statusTurns--;return {damage:0,skipped:true,messages:[`${unitName(actor)} is asleep.`]};}actor.status=null;}
@@ -46,6 +47,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
  if(blocksTarget(actor,target,move,messages))return {damage:0,blocked:true,messages};
  let damage=0,barrierBlocked=false,critical=false,effectiveness=move.power?typeEffectiveness(move.type_id,target.species.types):1;
  if(move.power&&effectiveness===0){failedMove(actor,move);return {damage:0,critical:false,effectiveness,immune:true,messages:[`${unitName(actor)} used ${move.name}. No effect! ${unitName(target)} is immune to ${move.type_id} (0×).`,...birdGroundImmunity(target,move,{changeStage})]};}
+ if(blockPriorityAttack(actor,target,move,effectivePriority,activeUnits,messages))return {damage:0,blocked:true,messages};
   let hitCount=0;
  if(move.id===ORCHARD_IDS.mirror){const previous=target&&actor.moveState?.lastSpecial,valid=previous?.turn===abilityBattle(actor).turn&&previous.attacker===(target.uid||target.species.id);if(!valid)return {damage:0,messages:['Moonlit Reprisal has no special hit to return.']};effectiveness=typeEffectiveness('PSYCHIC',target.species.types);if(!effectiveness)return {damage:0,immune:true,effectiveness:0,messages:['The foe is immune to Moonlit Reprisal.']};const hit=strikeBarrier(actor,target,move,Math.min(Math.max(0,target.hp-floor),previous.damage*2),{floor},messages);damage=heldSurvival(target,hit.damage,messages);target.hp-=damage;messages.push(...afterDamage(actor,target,move,damage,{effectiveness,floor:selfFloor,random}));const replies=orchardHit(actor,target,move,damage);for(const reply of replies)reactions.push(tideReply(target,actor,reply,random,selfFloor));recordMove(actor,move);messages.push(`Moonlit Reprisal returns ${damage} damage.`);return {damage,effectiveness,messages,reactions};}
   if(move.power){
@@ -83,7 +85,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
    if(e.effect_id==='stat_stage'){if(who.hp<=0||who.dead)continue;let copied=false;for(const stat of e.stats||[e.stat])if(stat){if(who===actor&&stat==='evasion'&&e.stages>0&&blocksEvasion(target)){messages.push(`${unitName(target)} blocks evasion boosts.`);continue;}const gain=changeStage(who,stat,e.stages,actor,messages);if(gain>0&&who===actor&&has(target,'Covetous Mirror')&&!abilityMemory(target).flags.mirror&&!copied){const n=gain;changeStage(target,stat,n,target,messages);abilityMemory(target).flags.mirror=true;copied=true;messages.push(`${unitName(target)} · Covetous Mirror: copied ${stat.replaceAll('_',' ')}.`);}}}
   if(e.effect_id==='flinch'&&!who.actedThisRound&&!who.immuneFlinch&&!has(who,'Unfazed'))who.flinched=true;
   if(e.effect_id==='nectarbane')nectarbane(actor,target,messages,random,procContext);
-  if(e.effect_id==='inflict_status')inflictStatus(who,e.status,messages,random,actor);
+  if(e.effect_id==='inflict_status')moveStatus(actor,who,move,e.status,messages,random);
   if(e.effect_id==='status_immunity'){who.statusImmunity??={};who.statusImmunity[e.status]=e.turns||5;}
   if(e.effect_id==='prevent_switch'&&!has(who,'Bindproof','Wayfarer'))who.trapped=e.turns||3;
   if(e.effect_id==='prevent_forced_switch')who.preventForcedSwitch=e.turns||5;
@@ -98,6 +100,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
  }
  if(move.orchardRule==='MARK_DRAIN'&&damage>0&&target.moveState?.drowned){const n=heal(actor,Math.floor(damage/4));messages.push(`Blackwater Requiem restores ${n} HP.`);}
  if(move.id===737&&(actor.stages.speed||0)<0){actor.stages.speed=0;messages.push('Hold the Burh restored lowered Speed.');}
+ scatterQuarryRubble(actor,target,move,damage,messages);
  if(move.power&&!move.hits)messages.push(...afterDamage(actor,target,move,damage,{effectiveness,critical,floor:selfFloor,random,counterContext:procContext}));else if(!move.power)messages.push(...afterStatusMove(actor,target));
  if(!move.hits)messages.push(...contactReaction(actor,target,move,damage,random,{floor:selfFloor}));messages.push(...finishHeldMove(actor,target,move,damage,{floor:selfFloor}));recordMove(actor,move);if(move.nonlethal){target.hp=Math.max(1,target.hp);messages.push('First Light Salvation holds back · the target remains alive.');}return {damage,critical,effectiveness,messages,hitCount,category:move.category,remainingHp:target.hp,reactions};
 }

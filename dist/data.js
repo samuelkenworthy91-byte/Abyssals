@@ -1,3 +1,4 @@
+import {installTriskitBranches} from './triskit-branches.js?v=0.90.61';
 import {installDossiers} from './dossier-data.js?v=0.90.61';
 import {installProgressionRenewal} from './progression-renewal.js?v=0.90.61';
 import {EVOLUTIONS as PROGRESSION_EVOLUTIONS} from './evolution-data.js?v=0.90.61';
@@ -81,3 +82,4 @@ installProgressionRenewal(DATA);
 delete DATA.progressionEvolutionParents;
 
 installDossiers(DATA);
+installTriskitBranches(DATA);

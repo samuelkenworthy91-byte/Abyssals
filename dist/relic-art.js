@@ -61,3 +61,6 @@ RELIC_ART['574']={file:'574.webp',root:true,facesLeft:false,rect:null};
 
 // Approved standalone bat portraits: Thimbril's three-quarter view faces right.
 RELIC_ART['568'].facesLeft=false;
+
+// Triskit branch portraits also supply the existing field companion renderer.
+for(const id of ['575','576','577','578','579'])RELIC_ART[id]={file:id+'.webp',root:true,facesLeft:true,rect:null};
