@@ -1745,3 +1745,6 @@ for(const s of DOSSIER_SPECIES){if(dossierShinyFamilies.has(s.family_id)){SHINY_
 
 // Rotate the scarf's orange and the blade's violet together, preserving the neutral fur.
 SHINY_PALETTES['574']={family:'FAMILY-574',name:'Merrigami',sourceHue:24,targetHue:163,chroma:.88,neutralTint:0};
+
+// New Triskit branches use the same palette direction as the rest of the family.
+for(const id of ['575','576','577','578','579'])SHINY_PALETTES[id]=families['FAMILY-115'];
