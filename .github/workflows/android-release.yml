@@ -101,6 +101,7 @@ jobs:
           node tests/runtime-cache-consistency.test.mjs
           node tests/triskit-branches.test.mjs
           node tests/evolution-renewal.test.mjs
+          node tests/teamcraft.test.mjs
           python3 scripts/audit-action-art.py
           node scripts/build-art-coverage.mjs --check
           node scripts/build-environment-qa.mjs --check
