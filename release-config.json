@@ -1,11 +1,11 @@
 {
-  "version": "0.90.64",
-  "version_code": 159,
-  "filename": "Abyssals-v0.90.64-Preview-Rollback.apk",
-  "title": "Abyssals v0.90.64 — Preview rollback to v0.90.62 gameplay",
-  "notes": "Forward-rollback of v0.90.63 preview to the published v0.90.62 gameplay, with an Android versionCode of 159 so it installs over preview 158 without uninstalling. Retains inert Spindle item identifiers and accepts already-created Spindle eggs in saves. Export a JSON save backup first. Original signing identity is unchanged. The old game does not generate new Spindle eggs. Branch-only prerelease: main and production PWA are unchanged.",
-  "pwa_filename": "Abyssals-v0.90.64-Preview-Rollback-PWA.zip",
+  "version": "0.90.66",
+  "version_code": 161,
+  "filename": "Abyssals-v0.90.66-Safe-Rollback.apk",
+  "title": "Abyssals v0.90.66 — Safe rollback from shared-type Spindle preview",
+  "notes": "Optional forward rollback to v0.90.62 gameplay, signed with the unchanged release certificate and Android versionCode 161 so it updates over v0.90.65 preview (160). Save compatibility supports preview Spindle eggs with or without Heirloom Charm and inert Spindle inventory. Export JSON before installation and do not uninstall.",
+  "pwa_filename": "Abyssals-v0.90.66-Safe-Rollback-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.64-art-scope.json",
+  "artwork_scope_path": "docs/releases/v0.90.66-art-scope.json",
   "validation_mode": "full"
 }
