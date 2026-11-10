@@ -260,14 +260,14 @@ export const TRISKIT_EVOLUTIONS = FORMS.map(form => ({
   id: 'EVOLUTION-TRISKIT-' + form.id,
   from_species_id: '115',
   to_species_id: form.id,
-  condition: {method:'ITEM', minimum_level:30, item_id:form.itemId, consumed:true},
+  condition: {method:'ITEM', item_id:form.itemId, consumed:true},
   approvedExpansion:true,
 }));
 
 export const TRISKIT_ITEMS = FORMS.map(form => ({
   id:form.itemId, name:form.item, category:'evolution', buy_price:4500,
   currency:'STANDARD', stack_limit:99, effect_text:'Triskit → ' + form.name,
-  effect:{operation:'evolve', from_species_id:'115', to_species_id:form.id, minimum_level:30, consumed:true},
+  effect:{operation:'evolve', from_species_id:'115', to_species_id:form.id, consumed:true},
   guaranteed_source:'Marasen Evolution Atelier',
 }));
 
