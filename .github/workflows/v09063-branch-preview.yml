@@ -1,0 +1,114 @@
+name: Build isolated v0.90.63 preview (signed APK and PWA)
+on:
+  push:
+    branches: ['feature/v0.90.63-citadel-interior-confluence-sort']
+    paths:
+      - '.github/workflows/v09063-branch-preview.yml'
+      - 'dist/**'
+      - 'tests/**'
+      - 'release-config.json'
+      - 'docs/releases/v0.90.63-*'
+permissions:
+  contents: write
+concurrency:
+  group: v09063-preview-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/workflows
+            dist
+            scripts
+            tests
+            docs
+            release
+            art-library/reviews/item-branches-2026-10-26
+            art-library/action-vfx
+            art-library/finale
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preview identity and safety gates
+        run: |
+          python3 - <<'PY'
+          import json
+          c=json.load(open('release-config.json'))
+          assert c['version']=='0.90.63' and c['version_code']==158
+          assert c['validation_mode']=='full'
+          assert 'Preview' in c['filename']
+          print('Isolated candidate: version',c['version'],'code',c['version_code'])
+          PY
+          python3 -m pip install --quiet Pillow==11.1.0
+          for file in dist/*.js; do node --check "$file"; done
+          python3 scripts/validate-game.py
+          python3 scripts/verify-art-release-scope.py
+          python3 tests/android-manifest.test.py
+      - name: Focused regression and backward-compatibility tests
+        run: |
+          node tests/confluence-spindle.test.mjs
+          node tests/highwater-hall.test.mjs
+          node tests/nursery-care.test.mjs
+          node tests/prodigy-breeding.test.mjs
+          node tests/marasen-navigation.test.mjs
+          node tests/marasen-store.test.mjs
+          node tests/runtime-cache-consistency.test.mjs
+          node tests/offline-redirects.test.mjs
+          node tests/permanent-growth.test.mjs
+          node tests/collection-access.test.mjs
+      - name: Install test browser and start offline game
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install chromium
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-preview-http.log 2>&1 &
+      - name: Exercise breeding, Marasen and pixel-art rendering in Chromium
+        run: |
+          node tests/nursery-care-browser.cjs
+          node tests/marasen-browser.cjs
+          node tests/highwater-preview-browser.cjs
+      - name: Reconstruct preserved Android wrapper
+        run: python3 scripts/reconstruct-base.py
+      - name: Build installable candidate APK and zipped offline PWA
+        run: |
+          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.63 --version-code 158 --output build/unsigned-0.90.63.apk
+          python3 scripts/build-pwa.py
+      - name: Install Android verification tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y apksigner zipalign
+      - name: Sign and verify with the unchanged original release certificate
+        env:
+          ABYSSALS_KEYSTORE_BASE64: ${{ secrets.ABYSSALS_KEYSTORE_BASE64 }}
+          ABYSSALS_STORE_PASSWORD: ${{ secrets.ABYSSALS_STORE_PASSWORD }}
+          ABYSSALS_KEY_ALIAS: ${{ secrets.ABYSSALS_KEY_ALIAS }}
+        run: python3 scripts/sign-update.py
+      - name: Preserve QA evidence and preview payloads
+        uses: actions/upload-artifact@v4
+        with:
+          name: v09063-verified-preview-${{ github.sha }}
+          path: |
+            build/Abyssals-v0.90.63-Preview.apk
+            build/Abyssals-v0.90.63-Preview.apk.sha256
+            build/Abyssals-v0.90.63-Preview-PWA.zip
+            build/Abyssals-v0.90.63-Preview-PWA.zip.sha256
+            build/signature-verification-0.90.63.txt
+            build/qa/highwater-hall-preview.png
+          retention-days: 14
+          if-no-files-found: error
+      - name: Publish non-production GitHub prerelease from branch SHA
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v0.90.63-preview.${{ github.run_number }}"
+          gh release create "$TAG" --target "$GITHUB_SHA" --prerelease --title "Abyssals v0.90.63 · isolated preview ${{ github.run_number }}" --notes "Signed TEST build from the unmerged Confluence/Highwater feature branch. Export a v0.90.62 JSON save first, do not uninstall the current app, and read docs/releases/v0.90.63-preview-rollback.md. No live PWA deployment or main merge."
+          gh release upload "$TAG" \
+            build/Abyssals-v0.90.63-Preview.apk build/Abyssals-v0.90.63-Preview.apk.sha256 \
+            build/Abyssals-v0.90.63-Preview-PWA.zip build/Abyssals-v0.90.63-Preview-PWA.zip.sha256 \
+            build/signature-verification-0.90.63.txt
