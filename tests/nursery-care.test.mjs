@@ -6,8 +6,8 @@ import {NURSERY_ITEMS,buyNurseryItem,inheritanceChance,prepareBreedingEffects,va
 import {rollFamilyProdigies,availableProdigyStats} from '../dist/breeding-inheritance.js';
 import {createBreedingEgg,hatchBreedingEgg,validateNurserySnapshot,advanceEggSteps} from '../dist/breeding.js';
 import {stewardshipQuote,applyStewardship,rehomePartners,permanentRates} from '../dist/stewardship.js';
-assert.deepEqual(NURSERY_ITEMS.map(i=>i.price),[20000,500000,35000,15000,200000]);
-const shop={money:1_000_000};for(const item of NURSERY_ITEMS)assert(buyNurseryItem(shop,item.id));assert.equal(shop.money,230000);assert(!buyNurseryItem(shop,'heirloomCharm'));assert(!buyNurseryItem(shop,'missing'));assert(!buyNurseryItem({money:0},'familySeal'));validateNurseryItems(shop);assert.throws(()=>validateNurseryItems({nurseryItems:{heirloomCharm:2}}));assert.throws(()=>validateNurseryItems({nurseryItems:{prodigyFeed:-1}}));
+assert.deepEqual(NURSERY_ITEMS.map(i=>i.price),[20000,500000,35000,15000,200000,750000]);
+const shop={money:2_000_000};for(const item of NURSERY_ITEMS)assert(buyNurseryItem(shop,item.id));assert.equal(shop.money,480000);assert(!buyNurseryItem(shop,'heirloomCharm'));assert(!buyNurseryItem(shop,'missing'));assert(!buyNurseryItem({money:0},'familySeal'));validateNurseryItems(shop);assert.throws(()=>validateNurseryItems({nurseryItems:{heirloomCharm:2}}));assert.throws(()=>validateNurseryItems({nurseryItems:{prodigyFeed:-1}}));
 assert(Math.abs(inheritanceChance('speed',{charm:true})-.4)<1e-12);assert(Math.abs(inheritanceChance('speed',{charm:true,enhancer:'feed'})-(.45+.4-BASE_PRODIGY_CHANCE))<1e-12);assert(Math.abs(inheritanceChance('speed',{charm:true,enhancer:'thread',threadStat:'speed'})-(.65+.4-BASE_PRODIGY_CHANCE))<1e-12);assert.equal(inheritanceChance('attack',{charm:true,enhancer:'thread',threadStat:'speed'}),.4);
 assert(!prepareBreedingEffects({}, {charm:true}).ok);assert(!prepareBreedingEffects(shop,{enhancer:'both'}).ok);assert(!prepareBreedingEffects(shop,{sealParent:0},['001','001']).ok);
 const bird=DATA.species.find(s=>s.name==='Wickowl');assert(bird&&rootForm(bird.id)===bird.id);
