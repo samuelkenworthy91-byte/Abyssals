@@ -16,13 +16,13 @@ const run = (a,t,m,options={}) => applyMove(a,t,m,()=>0.5,{floor:0,...options});
 const basic = {id:-1,name:'Test Strike',type_id:'NORMAL',category:'PHYSICAL',target:'SINGLE_FOE',contact:true,priority:0,power:50,accuracy:100,effects:[],left:10};
 
 for(const [i,path] of TRISKIT_EVOLUTIONS.entries()){
- const triskit=instance(species('115'),30,[]);
+ const triskit=instance(species('115'),1,[]);
  const item=EVOLUTION_ITEMS.find(x=>x.id===path.condition.item_id);
  assert.equal(item.buy_price,4500);
  assert.equal(item.guaranteed_source,'Marasen Evolution Atelier');
  assert.equal(item.effect.to_species_id,path.to_species_id);
  const state={evolutionItems:{[item.id]:1}};
- assert.equal(eligibleEvolutions({...triskit,level:29},state,item.id).length,0);
+ assert.equal(eligibleEvolutions({...triskit,level:1},state,item.id).length,1);\n assert.equal(path.condition.minimum_level,undefined);\n assert.equal(item.effect.minimum_level,undefined);
  assert.equal(eligibleEvolutions(triskit,state).length,0);
  assert.equal(eligibleEvolutions(triskit,state,item.id).length,1);
  assert.equal(promoteUsingItem(triskit,path,state).to,String(575+i));
