@@ -1,7 +1,7 @@
 name: Build isolated v0.90.65 preview (signed APK and PWA)
 on:
   push:
-    branches: ['feature/v0.90.65-citadel-interior-confluence-sort']
+    branches: ['feature/v0.90.63-citadel-interior-confluence-sort']
     paths:
       - '.github/workflows/v09063-branch-preview.yml'
       - 'dist/**'
