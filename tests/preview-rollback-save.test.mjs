@@ -5,7 +5,8 @@ import {validateNurseryItems,validBreedingEffects,prepareBreedingEffects,NURSERY
 import {validateNurserySnapshot,hatchBreedingEgg} from '../dist/breeding.js';
 const bird=DATA.species.find(s=>s.name==='Wickowl');assert(bird);
 const stats=STAT_KEYS.map(stat=>({stat,baseline:growthPercent(bird,stat),rate:growthPercent(bird,stat)+40}));
-const effect={version:1,charm:false,warmer:false,enhancer:'spindle',threadStat:null,sealParent:null};
+const effect={version:1,charm:true,warmer:false,enhancer:'spindle',threadStat:null,sealParent:null};
+assert(validBreedingEffects({...effect,charm:false}),'legacy preview Spindle eggs without Charm remain accepted');
 assert(validBreedingEffects(effect),'preview Spindle egg effects must remain recognized');
 assert(!prepareBreedingEffects({nurseryItems:{confluenceSpindle:1}},{enhancer:'spindle'}).ok,'rollback must not offer new Spindle eggs');
 assert(!NURSERY_ITEMS.some(i=>i.id==='confluenceSpindle'),'rollback removes new purchasable item');
