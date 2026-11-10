@@ -17,7 +17,7 @@ export function validateNurseryItems(state){
  const bag=state.nurseryItems;if(bag===undefined)return true;
  if(!bag||typeof bag!=='object'||Array.isArray(bag)||Object.entries(bag).some(([id,n])=>(!NURSERY_ITEMS.some(i=>i.id===id)&&id!=='confluenceSpindle')||!Number.isSafeInteger(n)||n<0||NURSERY_ITEMS.find(i=>i.id===id)?.reusable&&n>1))throw Error('Nursery supplies are invalid.');return true;
 }
-export function validBreedingEffects(e){return !!e&&e.version===1&&typeof e.charm==='boolean'&&typeof e.warmer==='boolean'&&['none','feed','thread','spindle'].includes(e.enhancer)&&!(e.enhancer==='spindle'&&e.charm)&&(e.enhancer==='thread'?STAT_KEYS.includes(e.threadStat):e.threadStat===null)&&(e.sealParent===null||[0,1].includes(e.sealParent));}
+export function validBreedingEffects(e){return !!e&&e.version===1&&typeof e.charm==='boolean'&&typeof e.warmer==='boolean'&&['none','feed','thread','spindle'].includes(e.enhancer)&&(e.enhancer==='thread'?STAT_KEYS.includes(e.threadStat):e.threadStat===null)&&(e.sealParent===null||[0,1].includes(e.sealParent));}
 export function prepareBreedingEffects(state,options={},forms=[]){
  if(!options||typeof options!=='object')return {ok:false,reason:'Choose valid nursery options.'};
  const e={version:1,charm:options.charm??nurseryItemCount(state,'heirloomCharm')>0,warmer:options.warmer??nurseryItemCount(state,'broodingWarmer')>0,enhancer:options.enhancer??'none',threadStat:options.enhancer==='thread'?options.threadStat:null,sealParent:options.sealParent??null};
