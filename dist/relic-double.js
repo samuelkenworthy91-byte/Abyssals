@@ -23,7 +23,7 @@ export function doubleRound(b,playerMove=null,targetIndex=0){
   let remaining=null,lastDamagingEvent;const procContext={deferAncestralAid:targets.length>1};
   for(const victim of targets){
    // One action and one PP expenditure, with independent hit checks per opponent.
-   const result=applyMove(p.actor,victim,p.move,b.random,{floor:victim===b.alliedRivet||victim.boundSovereign?1:0,continuation:remaining!==null,procContext});
+   const result=applyMove(p.actor,victim,p.move,b.random,{floor:victim===b.alliedRivet||victim.boundSovereign?1:0,continuation:remaining!==null,procContext,activeUnits:[b.player,b.alliedRivet,...doubleLivingTargets(b).map(t=>t.u)]});
    if(remaining===null)remaining=p.move.left;else p.move.left=remaining;
    if(result.replacementUid){const next=menagerieParty(p.actor).find(u=>u.uid===result.replacementUid);if(next){if(p.actor===b.player)b.player=next;else if(p.actor===b.alliedRivet)b.alliedRivet=next;else{const i=b.enemies.indexOf(p.actor),j=b.enemies.indexOf(next);if(i>=0&&j>=0)[b.enemies[i],b.enemies[j]]=[next,p.actor];}for(const plan of plans)if(plan.target===p.actor)plan.target=next;}}events.push({...p,target:victim,result});
    if(victim===b.alliedRivet&&victim.hp===1)result.messages.push(b.finaleDouble?'Hasan withdraws his wounded partner behind the line.':'Rivet retreats behind your partner, its armour barely holding.');if(victim.boundSovereign&&victim.hp<=1){victim.withdrawn=true;result.messages.push('Cruxwyrm breaks Darius’s command and withdraws from the company.');}

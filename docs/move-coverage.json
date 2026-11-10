@@ -19,6 +19,7 @@
     "dist/dossier-config.js",
     "dist/dossier-data.js",
     "dist/encounter-pools.js",
+    "dist/entry-hazards.js",
     "dist/evolution-data.js",
     "dist/evolution-renewal-data.js",
     "dist/exchange-techniques.js",
@@ -53,7 +54,8 @@
     "dist/teamcraft-battle.js",
     "dist/teamcraft-data.js",
     "dist/tide-orchard-battle.js",
-    "dist/tide-orchard-data.js"
+    "dist/tide-orchard-data.js",
+    "dist/triskit-branches.js"
   ],
   "totals": {
     "originalCatalogue": 354,
@@ -5879,7 +5881,8 @@
           "560",
           "561",
           "570",
-          "573"
+          "573",
+          "576"
         ],
         "tutor": false,
         "registered": true,
@@ -5946,7 +5949,8 @@
           "560",
           "561",
           "570",
-          "573"
+          "573",
+          "576"
         ],
         "tutor": false,
         "registered": true,
@@ -6628,7 +6632,8 @@
           "560",
           "561",
           "570",
-          "573"
+          "573",
+          "576"
         ],
         "tutor": false,
         "registered": true,
@@ -6791,7 +6796,8 @@
           "371",
           "560",
           "561",
-          "563"
+          "563",
+          "576"
         ],
         "tutor": false,
         "registered": true,
@@ -9011,7 +9017,8 @@
           "540",
           "556",
           "557",
-          "558"
+          "558",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -9094,7 +9101,8 @@
           "540",
           "547",
           "548",
-          "549"
+          "549",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -11991,7 +11999,8 @@
           "394",
           "395",
           "568",
-          "569"
+          "569",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -12484,7 +12493,8 @@
           "387",
           "388",
           "394",
-          "395"
+          "395",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -16764,7 +16774,8 @@
           "524",
           "532",
           "542",
-          "543"
+          "543",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -16864,7 +16875,8 @@
           "514",
           "532",
           "542",
-          "543"
+          "543",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -17062,7 +17074,8 @@
           "514",
           "542",
           "543",
-          "546"
+          "546",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -17980,7 +17993,8 @@
           "539",
           "548",
           "549",
-          "570"
+          "570",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -18157,7 +18171,8 @@
           "535",
           "548",
           "549",
-          "570"
+          "570",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -18230,7 +18245,8 @@
           "548",
           "549",
           "570",
-          "573"
+          "573",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -19231,7 +19247,8 @@
         "learnsetSpecies": [
           "015",
           "551",
-          "552"
+          "552",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -19326,7 +19343,8 @@
           "457",
           "458",
           "551",
-          "552"
+          "552",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -20069,7 +20087,8 @@
           "550",
           "551",
           "552",
-          "567"
+          "567",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -20396,7 +20415,8 @@
           "026",
           "432",
           "433",
-          "434"
+          "434",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -22363,7 +22383,8 @@
           "402",
           "403",
           "422",
-          "532"
+          "532",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -22813,7 +22834,8 @@
           "173",
           "401",
           "402",
-          "403"
+          "403",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -23069,7 +23091,8 @@
           "401",
           "402",
           "403",
-          "532"
+          "532",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -23907,7 +23930,8 @@
           "417",
           "444",
           "445",
-          "446"
+          "446",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -24055,7 +24079,8 @@
           "392",
           "393",
           "424",
-          "510"
+          "510",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -24430,7 +24455,8 @@
           "424",
           "509",
           "568",
-          "569"
+          "569",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -24825,7 +24851,8 @@
           "295",
           "296",
           "359",
-          "360"
+          "360",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -26087,7 +26114,8 @@
           "512",
           "534",
           "535",
-          "567"
+          "567",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -26309,7 +26337,8 @@
           "481",
           "483",
           "487",
-          "512"
+          "512",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -26458,7 +26487,8 @@
           "487",
           "489",
           "491",
-          "497"
+          "497",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -26572,7 +26602,8 @@
           "501",
           "511",
           "534",
-          "535"
+          "535",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -26781,7 +26812,8 @@
           "497",
           "499",
           "501",
-          "503"
+          "503",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -27144,7 +27176,8 @@
           "358",
           "394",
           "395",
-          "425"
+          "425",
+          "576"
         ],
         "tutor": false,
         "registered": true,
@@ -27746,7 +27779,8 @@
           "358",
           "394",
           "395",
-          "425"
+          "425",
+          "576"
         ],
         "tutor": false,
         "registered": true,
@@ -28947,7 +28981,8 @@
         "learnsetSpecies": [
           "026",
           "498",
-          "499"
+          "499",
+          "577"
         ],
         "tutor": false,
         "registered": true,
@@ -29123,7 +29158,8 @@
         "learnsetSpecies": [
           "001",
           "002",
-          "003"
+          "003",
+          "578"
         ],
         "tutor": false,
         "registered": true,
@@ -29206,7 +29242,8 @@
           "500",
           "501",
           "502",
-          "503"
+          "503",
+          "575"
         ],
         "tutor": false,
         "registered": true,
@@ -29739,7 +29776,8 @@
           "514",
           "518",
           "519",
-          "524"
+          "524",
+          "579"
         ],
         "tutor": false,
         "registered": true,
@@ -38685,7 +38723,9 @@
         "authoring": "User-requested department-store status lessons, 21 October 2026"
       },
       "acquisition": {
-        "learnsetSpecies": [],
+        "learnsetSpecies": [
+          "578"
+        ],
         "tutor": true,
         "registered": true,
         "battleReaction": false
@@ -40324,7 +40364,8 @@
           "496",
           "497",
           "502",
-          "503"
+          "503",
+          "576"
         ],
         "tutor": true,
         "registered": true,
@@ -41595,7 +41636,8 @@
           "516",
           "517",
           "518",
-          "519"
+          "519",
+          "576"
         ],
         "tutor": true,
         "registered": true,
@@ -43812,7 +43854,8 @@
       "acquisition": {
         "learnsetSpecies": [
           "516",
-          "517"
+          "517",
+          "579"
         ],
         "tutor": true,
         "registered": true,

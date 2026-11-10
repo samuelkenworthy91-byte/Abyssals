@@ -1,3 +1,4 @@
+import {TRISKIT_ITEM_ART} from './triskit-branches.js?v=0.90.61';
 import {BROAD_HELD_ITEMS} from './broad-held-data.js?v=0.90.61';
 import {TYPE_COLORS} from './type-rules.js?v=0.90.61';
 const ROOT='assets/items/';
@@ -15,7 +16,8 @@ export function itemArt(key){
  if(key.startsWith('HELD_TYPE_SIGIL_'))return {src:ROOT+'type-sigil.webp',type:key.slice(16)};
  if(key.startsWith('ITEM_RELIC_')){const t=key.slice(11);return {src:ROOT+'relic-core.webp',type:coreTypes[t]||t};}
  const ev={ITEM_EVOLUTION_TIDE_PEARL:'tide-pearl',ITEM_EVOLUTION_MOURNING_BRIAR:'mourning-briar',ITEM_EVOLUTION_SUNSCAR_GLASS:'sunscar-glass'};
- return ev[key]?{src:ROOT+ev[key]+'.webp'}:null;
+ const item = ev[key] || TRISKIT_ITEM_ART[key];
+ return item?{src:ROOT+item+'.webp'}:null;
 }
 export function itemIcon(key){const a=itemArt(key);if(!a)return '';return `<span class="item-art${a.type?' typed-item-art':''}"${a.type?` style="--item-type:${TYPE_COLORS[a.type]||'#b9b4a0'}" title="${esc(a.type)}"`:''}><img src="${a.src}" alt=""${a.type?` style="filter:hue-rotate(${(hues[a.type]||0)-205}deg)"`:''}></span>`;}
 export function codexIcon(move){const type=move?.type_id||'NORMAL';return `<span class="item-art typed-item-art" style="--item-type:${TYPE_COLORS[type]||'#b9b4a0'}" title="${esc(type)} move codex"><img src="${ROOT}codex.webp" alt="" style="filter:hue-rotate(${(hues[type]||0)-205}deg)"></span>`;}
