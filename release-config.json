@@ -1,11 +1,11 @@
 {
-  "version": "0.90.63",
-  "version_code": 158,
-  "filename": "Abyssals-v0.90.63-Preview.apk",
-  "title": "Abyssals v0.90.63 Preview — Highwater Hall & Confluence Spindle",
-  "notes": "PREVIEW from isolated feature branch. Redrawn Highwater Citadel interior (exterior unchanged); Confluence Spindle: 750,000 doubloons, 46.416% per distinct original Prodigy stat, exactly 1% for all six, cross-type breeding; reserve Prodigy sorting. Save export strongly recommended before installing; do not uninstall the app. Approval and rollback compatibility are pending.",
-  "pwa_filename": "Abyssals-v0.90.63-Preview-PWA.zip",
+  "version": "0.90.65",
+  "version_code": 160,
+  "filename": "Abyssals-v0.90.65-Shared-Type-Spindle-Preview.apk",
+  "title": "Abyssals v0.90.65 — Shared-Type Spindle Preview",
+  "notes": "Corrected preview from isolated branch. Parents must share at least one type for every egg; Spindle requires different species, combines stronger original Prodigy bonuses, has 1% chance all-six without Heirloom Charm and about 2.277% with Charm. No Feed/Thread stacking. Contains Highwater Hall interior and sorting changes. Export current save before installing; use v0.90.66 forward rollback to revert.",
+  "pwa_filename": "Abyssals-v0.90.65-Shared-Type-Spindle-PWA.zip",
   "artwork_release_mode": "interim",
-  "artwork_scope_path": "docs/releases/v0.90.63-art-scope.json",
+  "artwork_scope_path": "docs/releases/v0.90.65-art-scope.json",
   "validation_mode": "full"
 }
