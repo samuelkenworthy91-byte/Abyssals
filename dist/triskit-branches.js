@@ -1,4 +1,5 @@
 // Approved Triskit branches, with save-stable species and item IDs.
+// All eight Triskit forms evolve by their matching item alone, with no minimum level.
 const FORMS = [
   {
     "id": "575",
