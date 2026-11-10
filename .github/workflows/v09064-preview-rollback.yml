@@ -1,9 +1,9 @@
 name: Build v0.90.66 forward rollback of v0.90.65 preview
 on:
   push:
-    branches: ['rollback/v0.90.66-preview-restoration']
+    branches: ['rollback/v0.90.64-preview-restoration']
     paths:
-      - '.github/workflows/v09066-preview-rollback.yml'
+      - '.github/workflows/v09064-preview-rollback.yml'
       - 'dist/**'
       - 'tests/**'
       - 'release-config.json'
@@ -41,7 +41,7 @@ jobs:
           python3 - <<'PY'
           import json
           c=json.load(open('release-config.json'))
-          assert c['version']=='0.90.66' and c['version_code']==159
+          assert c['version']=='0.90.66' and c['version_code']==161
           assert c['validation_mode']=='full'
           assert 'Rollback' in c['filename']
           print('Forward rollback candidate: version',c['version'],'code',c['version_code'])
@@ -76,7 +76,7 @@ jobs:
       - name: Reconstruct original native wrapper and package gameplay
         run: |
           python3 scripts/reconstruct-base.py
-          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.66 --version-code 159 --output build/unsigned-0.90.66.apk
+          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.66 --version-code 161 --output build/unsigned-0.90.66.apk
           python3 scripts/build-pwa.py
       - name: Install signing verification tools
         run: |
