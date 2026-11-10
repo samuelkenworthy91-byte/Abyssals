@@ -1,5 +1,5 @@
-import {ACTION_ART} from './action-vfx-data.js?v=0.90.61';
-import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.61';
+import {ACTION_ART} from './action-vfx-data.js?v=0.90.62';
+import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.62';
 export {ACTION_ART};
 // Keep the render clock and battle impact clock identical. Mercy's original
 // First Light scene deliberately retains its authored timing.

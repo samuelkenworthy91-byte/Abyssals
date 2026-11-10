@@ -97,6 +97,10 @@ jobs:
         if: steps.profile.outputs.mode == 'full'
         run: |
           python3 -m pip install --quiet Pillow==11.1.0
+          # Cheap preflight first; catches cache and evolution regressions before lengthy raster audits.
+          node tests/runtime-cache-consistency.test.mjs
+          node tests/triskit-branches.test.mjs
+          node tests/evolution-renewal.test.mjs
           python3 scripts/audit-action-art.py
           node scripts/build-art-coverage.mjs --check
           node scripts/build-environment-qa.mjs --check
@@ -106,7 +110,17 @@ jobs:
           node scripts/build-journal-habitats.mjs
           git diff --exit-code -- dist/journal-habitats.js
           node scripts/audit-shiny-art.mjs
-          for test in tests/*.test.mjs; do node "$test"; done
+          # Finish all unit suites and report every failure in one CI run.
+          failures=()
+          for test in tests/*.test.mjs; do
+            echo "::group::Unit test $test"
+            if ! node "$test"; then failures+=("$test"); fi
+            echo "::endgroup::"
+          done
+          if (("${#failures[@]}" > 0)); then
+            printf '::error::Failed unit suites: %s\n' "${failures[*]}"
+            exit 1
+          fi
           for file in dist/*.js; do node --check "$file"; done
           python3 scripts/validate-game.py
           python3 tests/android-manifest.test.py

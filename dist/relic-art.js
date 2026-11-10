@@ -1,6 +1,6 @@
-import {BIRD_ART} from './bird-art.js?v=0.90.61';
-import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.61';
-import {clippedAtlasPanel} from './atlas-clip.js?v=0.90.61';
+import {BIRD_ART} from './bird-art.js?v=0.90.62';
+import {CORRECTED_BIRD_ART} from './bird-corrections.js?v=0.90.62';
+import {clippedAtlasPanel} from './atlas-clip.js?v=0.90.62';
 // Approved creature panels are drawn from untouched transparent imagegen atlases.
 export const RELIC_ART={
  "376":{"file": "shark.png", "folder": "approved-aquatic", "rect": [0, 0, 960, 724]},

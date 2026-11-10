@@ -1,4 +1,4 @@
-import {registerBiome} from './biome-world.js?v=0.90.61';
+import {registerBiome} from './biome-world.js?v=0.90.62';
 
 export const SHADOW_ROOM='shadowBridge';
 export const SHADOW_SIGN='shadow-bridge-inscription';
