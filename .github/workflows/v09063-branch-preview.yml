@@ -3,7 +3,7 @@ on:
   push:
     branches: ['feature/v0.90.65-citadel-interior-confluence-sort']
     paths:
-      - '.github/workflows/v09065-branch-preview.yml'
+      - '.github/workflows/v09063-branch-preview.yml'
       - 'dist/**'
       - 'tests/**'
       - 'release-config.json'
@@ -41,7 +41,7 @@ jobs:
           python3 - <<'PY'
           import json
           c=json.load(open('release-config.json'))
-          assert c['version']=='0.90.65' and c['version_code']==158
+          assert c['version']=='0.90.65' and c['version_code']==160
           assert c['validation_mode']=='full'
           assert 'Preview' in c['filename']
           print('Isolated candidate: version',c['version'],'code',c['version_code'])
@@ -79,7 +79,7 @@ jobs:
         run: python3 scripts/reconstruct-base.py
       - name: Build installable candidate APK and zipped offline PWA
         run: |
-          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.65 --version-code 158 --output build/unsigned-0.90.65.apk
+          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.65 --version-code 160 --output build/unsigned-0.90.65.apk
           python3 scripts/build-pwa.py
       - name: Install Android verification tools
         run: |
