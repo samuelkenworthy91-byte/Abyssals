@@ -1,3 +1,4 @@
+import {TRISKIT_ITEMS} from './triskit-branches.js?v=0.90.61';
 import {THUNDER_SHARD} from './dossier-data.js?v=0.90.61';
 import {BRANCH_ITEMS} from './branch-families.js?v=0.90.61';
 import {RELIC_ITEMS} from './relic-family.js?v=0.90.61';
@@ -13,3 +14,4 @@ for(let i=EVOLUTION_ITEMS.length-1;i>=0;i--)if(!EVOLUTION_ITEMS[i].id.startsWith
 EVOLUTION_ITEMS.push(...BRANCH_ITEMS);
 
 EVOLUTION_ITEMS.push(THUNDER_SHARD);
+EVOLUTION_ITEMS.push(...TRISKIT_ITEMS);
