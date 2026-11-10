@@ -22,7 +22,9 @@ for(const [i,path] of TRISKIT_EVOLUTIONS.entries()){
  assert.equal(item.guaranteed_source,'Marasen Evolution Atelier');
  assert.equal(item.effect.to_species_id,path.to_species_id);
  const state={evolutionItems:{[item.id]:1}};
- assert.equal(eligibleEvolutions({...triskit,level:1},state,item.id).length,1);\n assert.equal(path.condition.minimum_level,undefined);\n assert.equal(item.effect.minimum_level,undefined);
+ assert.equal(eligibleEvolutions({...triskit,level:1},state,item.id).length,1);
+ assert.equal(path.condition.minimum_level,undefined);
+ assert.equal(item.effect.minimum_level,undefined);
  assert.equal(eligibleEvolutions(triskit,state).length,0);
  assert.equal(eligibleEvolutions(triskit,state,item.id).length,1);
  assert.equal(promoteUsingItem(triskit,path,state).to,String(575+i));
