@@ -1,17 +1,17 @@
-name: Build v0.90.64 forward rollback of v0.90.63 preview
+name: Build v0.90.66 forward rollback of v0.90.65 preview
 on:
   push:
-    branches: ['rollback/v0.90.64-preview-restoration']
+    branches: ['rollback/v0.90.66-preview-restoration']
     paths:
-      - '.github/workflows/v09064-preview-rollback.yml'
+      - '.github/workflows/v09066-preview-rollback.yml'
       - 'dist/**'
       - 'tests/**'
       - 'release-config.json'
-      - 'docs/releases/v0.90.64-*'
+      - 'docs/releases/v0.90.66-*'
 permissions:
   contents: write
 concurrency:
-  group: v09064-preview-rollback-${{ github.ref }}
+  group: v09066-preview-rollback-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   rollback:
@@ -41,7 +41,7 @@ jobs:
           python3 - <<'PY'
           import json
           c=json.load(open('release-config.json'))
-          assert c['version']=='0.90.64' and c['version_code']==159
+          assert c['version']=='0.90.66' and c['version_code']==159
           assert c['validation_mode']=='full'
           assert 'Rollback' in c['filename']
           print('Forward rollback candidate: version',c['version'],'code',c['version_code'])
@@ -76,7 +76,7 @@ jobs:
       - name: Reconstruct original native wrapper and package gameplay
         run: |
           python3 scripts/reconstruct-base.py
-          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.64 --version-code 159 --output build/unsigned-0.90.64.apk
+          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.66 --version-code 159 --output build/unsigned-0.90.66.apk
           python3 scripts/build-pwa.py
       - name: Install signing verification tools
         run: |
@@ -91,22 +91,22 @@ jobs:
       - name: Retain verified APK, PWA and signing details
         uses: actions/upload-artifact@v4
         with:
-          name: v09064-forward-rollback-${{ github.sha }}
+          name: v09066-forward-rollback-${{ github.sha }}
           path: |
-            build/Abyssals-v0.90.64-Preview-Rollback.apk
-            build/Abyssals-v0.90.64-Preview-Rollback.apk.sha256
-            build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip
-            build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip.sha256
-            build/signature-verification-0.90.64.txt
+            build/Abyssals-v0.90.66-Safe-Rollback.apk
+            build/Abyssals-v0.90.66-Safe-Rollback.apk.sha256
+            build/Abyssals-v0.90.66-Safe-Rollback-PWA.zip
+            build/Abyssals-v0.90.66-Safe-Rollback-PWA.zip.sha256
+            build/signature-verification-0.90.66.txt
           if-no-files-found: error
           retention-days: 14
       - name: Publish separate forward-rollback prerelease
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="v0.90.64-rollback.${{ github.run_number }}"
-          gh release create "$TAG" --target "$GITHUB_SHA" --prerelease --title "Abyssals · signed v0.90.64 forward rollback" --notes "Optional signed restore to v0.90.62 GAMEPLAY with v0.90.64 Android identity (versionCode 159), installable directly over v0.90.63 preview. Includes inert preview Spindle item/egg record compatibility. Export JSON save before installing. This is NOT production main or Pages."
+          TAG="v0.90.66-rollback.${{ github.run_number }}"
+          gh release create "$TAG" --target "$GITHUB_SHA" --prerelease --title "Abyssals · signed v0.90.66 forward rollback" --notes "Optional signed restore to v0.90.62 GAMEPLAY with v0.90.66 Android identity (versionCode 161), installable directly over v0.90.65 preview. Includes inert preview Spindle item/egg record compatibility. Export JSON save before installing. This is NOT production main or Pages."
           gh release upload "$TAG" \
-            build/Abyssals-v0.90.64-Preview-Rollback.apk build/Abyssals-v0.90.64-Preview-Rollback.apk.sha256 \
-            build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip.sha256 \
-            build/signature-verification-0.90.64.txt
+            build/Abyssals-v0.90.66-Safe-Rollback.apk build/Abyssals-v0.90.66-Safe-Rollback.apk.sha256 \
+            build/Abyssals-v0.90.66-Safe-Rollback-PWA.zip build/Abyssals-v0.90.66-Safe-Rollback-PWA.zip.sha256 \
+            build/signature-verification-0.90.66.txt
