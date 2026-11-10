@@ -1,6 +1,7 @@
 import {drawSiteTablet} from './site-tablets.js?v=0.90.62';
 import {AQUATIC_ASSETS,drawAquaticSurface,drawAquaticDetails} from './marasen-aquatic.js?v=0.90.62';
 import {drawCompanion} from './companion.js?v=0.90.62';
+import {drawHighwaterHallTile,drawHighwaterHallDecor} from './highwater-hall.js?v=0.90.62';
 export const MARASEN_ASSETS=Object.fromEntries(['Tree','Gate','Keep','Market','Apothecary','Archive','Mill','Binding'].map(n=>['marasen'+n,'marasen-'+n.toLowerCase()+'-v082.webp']));
 Object.assign(MARASEN_ASSETS,AQUATIC_ASSETS);
 for(const name of ['Potions','Books','Armour','Stairs','Counter'])MARASEN_ASSETS['exchange'+name]='exchange-'+name.toLowerCase()+'-v09012.webp';
@@ -19,7 +20,7 @@ export function marasenSurface(m,x,y,{road,walk,grass}){
  if(!walk&&['falls','brook','cascades','watermeadow','rapids'].includes(m.verdantKind)&&Math.abs(x-(24+Math.floor(4*Math.sin(y/4))))<=4)return 'bank';
  return !walk&&['fern','canopy'].includes(m.verdantKind)?'floor':'lawn';
 }
-export function drawMarasenDetails(c,m,asset,walkable,time=0){if(!m?.verdantKind)return;if(m.aquaticCity){drawAquaticDetails(c,m,asset);return;}const kind=m.verdantKind;c.save();
+export function drawMarasenDetails(c,m,asset,walkable,time=0){if(!m?.verdantKind)return;if(m.highwaterInterior){drawHighwaterHallDecor(c);return;}if(m.aquaticCity){drawAquaticDetails(c,m,asset);return;}const kind=m.verdantKind;c.save();
  for(let x=0;x<48;x+=4){asset(c,(x%8===0?'verdantOak':'verdantWillow'),x,-1,3.8,4.3);asset(c,(x%8===0?'verdantWillow':'verdantOak'),x,29,3.8,4.3);}
  // Deliberately separate green terraces, blue headwaters and pink sanctuary petals.
  for(let y=3;y<29;y+=4)for(let x=3;x<44;x+=4){if(['falls','brook','cascades','watermeadow','rapids'].includes(kind)&&Math.abs(x-(24+Math.floor(4*Math.sin(y/4))))<=4)continue;if(![0,1,2].every(dx=>[0,1,2,3].every(dy=>!walkable(x+dx,y+dy)))||m.props.some(p=>x<p.x+p.w&&x+3>p.x&&y<p.y+p.h&&y+4>p.y))continue;asset(c,['brook','falls'].includes(kind)?'verdantWillow':'verdantOak',x-.1,y-.3,3.2,4.2);}
@@ -76,7 +77,7 @@ export function drawMarasenLife(c,state,room,time,reduced,species,asset=null,map
  drawCompanion(c,{unit:{species:species(key==='peach'?'184':'165')},px:38*16+8,py:22*16+8,facing:'left',stride:0,reactionUntil:0,step:null},time,reduced);
 }
 export function drawMarasenTile(c,m,x,y,flags,asset=null){
- if(!m.verdantKind)return false;if(m.aquaticCity){drawAquaticSurface(c,m,x,y,flags,asset);return true;}
+ if(!m.verdantKind)return false;if(m.highwaterInterior){drawHighwaterHallTile(c,x,y);return true;}if(m.aquaticCity){drawAquaticSurface(c,m,x,y,flags,asset);return true;}
  const surface=marasenSurface(m,x,y,flags),seed=(x*71+y*139+x*y*13)>>>0;
  c.save();
  if(surface==='fort'){
