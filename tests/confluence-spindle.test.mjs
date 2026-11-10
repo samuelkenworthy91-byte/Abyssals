@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {DATA} from '../dist/data.js';
+import {STAT_KEYS,growthPercent,inheritedGrowthBonus} from '../dist/progression.js';
+import {rootForm} from '../dist/route-roster.js';
+import {CONFLUENCE_CHANCE,prepareBreedingEffects} from '../dist/breeding-items.js';
+import {breedingPair,createBreedingEgg,validateNurserySnapshot} from '../dist/breeding.js';
+import {confluenceProdigyOptions,rollInheritance} from '../dist/breeding-inheritance.js';
+assert(Math.abs(CONFLUENCE_CHANCE**6-0.01)<1e-14);
+const primary=DATA.species.find(s=>s.name==='Wickowl');assert(primary);
+const other=DATA.species.find(s=>s.id===rootForm(s.id)&&s.id!==primary.id&&s.types.every(t=>!primary.types.includes(t))&&!s.legendaryRoamer&&!/legendary|mythic/i.test(s.power_class||'')&&!/^(mythic|mythical|legendary)$/i.test(s.role||''));assert(other);
+const parent=(uid,species,bonuses)=>({uid,species,hp:100,maxHp:100,level:20,moves:[],abilitySlot:'primary',breedingInheritance:{version:2,speciesId:species.id,donorIndex:1,growth:null,lineageGrowth:Object.entries(bonuses).map(([stat,bonus])=>({stat,baseline:growthPercent(species,stat),rate:growthPercent(species,stat)+bonus})),moveId:null}});
+const a=parent('spindle-a',primary,Object.fromEntries(STAT_KEYS.map(stat=>[stat,40]))),b=parent('spindle-b',other,{attack:70});
+assert(!breedingPair(a,b).ok,'types without overlap remain incompatible ordinarily');
+assert(breedingPair(a,b,{allowCrossType:true}).ok);
+const rows=confluenceProdigyOptions(primary,b,a);assert.equal(rows.length,6);
+assert.equal(rows.find(row=>row.stat==='attack').rate-growthPercent(primary,'attack'),70,'use strongest original bonus, not addition or evolution copies');
+const fx={version:1,charm:false,warmer:false,enhancer:'spindle',threadStat:null,sealParent:null};
+let calls=0;const inherited=rollInheritance(primary,b,1,{stat:'',moveId:null},()=>{calls++;return .45;},a,fx);
+assert(inherited);assert.equal(calls,6,'one independent roll per eligible stat, even with overlap');assert.equal(inherited.lineageGrowth.length,6);
+assert.equal(inheritedGrowthBonus({breedingInheritance:inherited},'attack'),70);
+assert.equal(rollInheritance(primary,b,1,{stat:'',moveId:null},()=>.47,a,fx).lineageGrowth.length,0);
+const state={money:2_000_000,fates:{'LDR-02':'SPARED'},party:[a,b],reserve:[],nursery:{version:1,serial:0,eggs:[],hatched:[]},nurseryItems:{confluenceSpindle:1}};
+const prepared=prepareBreedingEffects(state,{enhancer:'spindle',charm:true});assert(prepared.ok);assert.equal(prepared.effects.charm,false,'owned Charm cannot stack with Spindle');
+assert.equal(createBreedingEgg(state,a.uid,b.uid,{breedingOptions:{enhancer:'none'}}),null);
+const egg=createBreedingEgg(state,a.uid,b.uid,{random:()=>0,inheritancePlans:[{stat:'',moveId:null},{stat:'',moveId:null}],breedingOptions:{enhancer:'spindle',charm:true}});
+assert(egg);assert.equal(egg.inheritance.lineageGrowth.length,6);assert.equal(state.nurseryItems.confluenceSpindle,0);assert.equal(state.money,1_999_000);
+validateNurserySnapshot(JSON.parse(JSON.stringify(state)));
+assert.equal(createBreedingEgg(state,a.uid,b.uid,{breedingOptions:{enhancer:'spindle'}}),null,'spent Spindle cannot be reused');
+// Stable seeded Monte Carlo measures the actual six independent roll behaviour.
+let seed=1234567,wins=0;const rand=()=>((seed=(1664525*seed+1013904223)>>>0)/4294967296);
+for(let i=0;i<100000;i++){let all=true;for(let n=0;n<6;n++)if(rand()>=CONFLUENCE_CHANCE)all=false;if(all)wins++;}
+assert(wins>800&&wins<1200,'all-six rate stays close to one in one hundred; observed '+wins);
+console.log('PASS: Confluence Spindle cross-type safety, original bonuses, one roll/stat, exact 1% design, purchase consumption, save validation and seed simulation ('+wins+'/100000)');
