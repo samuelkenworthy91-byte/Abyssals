@@ -1,9 +1,9 @@
-import {DATA} from './data.js?v=0.90.61';
-import {EVOLUTIONS} from './evolution-data.js?v=0.90.61';
-import {tunedEvolution} from './evolution-tuning.js?v=0.90.61';
-import {startingStats} from './stat-balance.js?v=0.90.61';
-import {growLevel,normalizeProgress,initializeProgress,growthPercent} from './progression.js?v=0.90.61';
-import {promote} from './evolution.js?v=0.90.61';
+import {DATA} from './data.js?v=0.90.62';
+import {EVOLUTIONS} from './evolution-data.js?v=0.90.62';
+import {tunedEvolution} from './evolution-tuning.js?v=0.90.62';
+import {startingStats} from './stat-balance.js?v=0.90.62';
+import {growLevel,normalizeProgress,initializeProgress,growthPercent} from './progression.js?v=0.90.62';
+import {promote} from './evolution.js?v=0.90.62';
 
 // Sparse introductions before the afterlife. These are fixed rosters, not rolls
 // made when the challenge is accepted, so warning and encounter always agree.
