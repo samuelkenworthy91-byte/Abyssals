@@ -21,6 +21,7 @@ export function validBreedingEffects(e){return !!e&&e.version===1&&typeof e.char
 export function prepareBreedingEffects(state,options={},forms=[]){
  if(!options||typeof options!=='object')return {ok:false,reason:'Choose valid nursery options.'};
  const e={version:1,charm:options.charm??nurseryItemCount(state,'heirloomCharm')>0,warmer:options.warmer??nurseryItemCount(state,'broodingWarmer')>0,enhancer:options.enhancer??'none',threadStat:options.enhancer==='thread'?options.threadStat:null,sealParent:options.sealParent??null};
+ if(e.enhancer==='spindle')return {ok:false,reason:'Confluence Spindle is unavailable in restoration mode. Previously created eggs are preserved.'};
  if(!validBreedingEffects(e))return {ok:false,reason:'Choose valid nursery options.'};
  const used=[];if(e.charm&&!nurseryItemCount(state,'heirloomCharm')||e.warmer&&!nurseryItemCount(state,'broodingWarmer'))return {ok:false,reason:'A reusable nursery item is not owned.'};
  if(e.enhancer!=='none')used.push(e.enhancer==='feed'?'prodigyFeed':'inheritanceThread');
