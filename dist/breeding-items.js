@@ -7,7 +7,7 @@ export const NURSERY_ITEMS=[
  {id:'prodigyFeed',name:'Prodigy Feed',price:35000,reusable:false,description:'Single use. 45% per parent carrying an eligible Prodigy stat, or 51.824% with the Charm. Use Feed or Thread per egg.'},
  {id:'inheritanceThread',name:'Inheritance Thread',price:15000,reusable:false,description:'Single use. Each parent carrying the chosen Prodigy stat gets a 65% roll, or 71.824% with the Charm. Other stats keep their normal or Charm odds.'},
  {id:'broodingWarmer',name:'Brooding Warmer',price:200000,reusable:true,description:'Reusable. New eggs need 384 steps instead of 512. Existing eggs keep their original requirements.'},
- {id:'confluenceSpindle',name:'Confluence Spindle',price:750000,reusable:false,description:'Single use, for parents of different species only. Allows different types, pools the strongest original Prodigy bonus for each distinct stat, then rolls independently at 46.416% per stat (1% all six). Stacks with reusable Heirloom Charm for 53.240% per stat (about 2.28% all six); cannot stack with Feed or Thread.'}
+ {id:'confluenceSpindle',name:'Confluence Spindle',price:750000,reusable:false,description:'Single use, only for parents of different species that share at least one type. Pools the strongest original Prodigy bonus from each parent per distinct stat, then rolls independently at 46.416% per stat (1% all six). Heirloom Charm stacks for 53.240% per stat (about 2.28% all six); Feed and Thread cannot stack.'}
 ];
 export const nurseryItemCount=(state,id)=>state.nurseryItems?.[id]||0;
 export function buyNurseryItem(state,id){
