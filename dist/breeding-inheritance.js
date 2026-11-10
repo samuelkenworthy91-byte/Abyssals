@@ -23,6 +23,15 @@ export function familyProdigyOptions(species,donor,parent){
  if(!parent||rootForm(parent.species.id)!==species.id||rootForm(donor.species.id)!==species.id)return [];
  return STAT_KEYS.map(stat=>{const baseline=growthPercent(species,stat),parentBonuses=[inheritedGrowthBonus(parent,stat),inheritedGrowthBonus(donor,stat)].filter(bonus=>bonus>0),bonus=Math.max(0,...parentBonuses);return {stat,baseline,rate:Math.round((baseline+bonus)*10)/10,parentBonuses};}).filter(g=>g.rate>g.baseline);
 }
+// Confluence Spindle: the strongest ORIGINAL bonus per stat from either parent,
+// regardless of their families. Exactly one independent roll for each stat.
+export function confluenceProdigyOptions(species,donor,parent){
+ if(!parent||!donor)return [];
+ return STAT_KEYS.map(stat=>{
+  const baseline=growthPercent(species,stat),bonus=Math.max(0,inheritedGrowthBonus(parent,stat),inheritedGrowthBonus(donor,stat));
+  return {stat,baseline,rate:Math.round((baseline+bonus)*10)/10,parentBonuses:bonus>0?[bonus]:[]};
+ }).filter(row=>row.parentBonuses.length);
+}
 // Temporary draughts cannot become permanent through breeding. Rescue and
 // previously inherited permanent rates remain legitimate donor strengths.
 export function inheritanceOptions(species,donor){
@@ -34,7 +43,8 @@ export function inheritanceOptions(species,donor){
  const moves=[...new Set((donor.moves||[]).map(m=>m.id))].map(id=>DATA.moves.find(m=>m.id===id)).filter(m=>ordinary(m)&&!natural.has(m.id)).map(move=>{const coverage=move.power>0&&!species.types.includes(move.type_id),answers=move.power>0?weaknesses.filter(t=>typeEffectiveness(move.type_id,[t])>1&&!naturalAttacks.some(m=>typeEffectiveness(m.type_id,[t])>1)):[];return {move,coverage,answers};}).sort((a,b)=>b.answers.length-a.answers.length||Number(b.coverage)-Number(a.coverage)||(b.move.power||0)-(a.move.power||0)||a.move.id-b.move.id);
  return {growth,moves};
 }
-export function availableProdigyStats(species,donor,parent,plan={}){
+export function availableProdigyStats(species,donor,parent,plan={},effects={}){
+ if(effects.enhancer==='spindle')return confluenceProdigyOptions(species,donor,parent).map(row=>row.stat);
  const pool=familyProdigyOptions(species,donor,parent);if(pool.length||parent&&rootForm(donor.species.id)===species.id&&rootForm(parent.species.id)===species.id)return pool.map(g=>g.stat);
  const options=inheritanceOptions(species,donor),selected=plan.stat===undefined?options.growth[0]?.stat:plan.stat;
  return STAT_KEYS.filter(stat=>inheritedGrowthBonus(parent||{},stat)>0||selected===stat&&inheritedGrowthBonus(donor,stat)>0);
@@ -45,13 +55,15 @@ export function rollInheritance(species,donor,donorIndex,plan={},random=Math.ran
  if(stat&&!g||moveId&&!m)return null;
  // Roll once at egg creation. A missed Prodigy transfer leaves normal species
  // growth; it never silently substitutes another stat or rerolls at hatching.
- const family=familyProdigyOptions(species,donor,parent),pooled=new Set(family.map(row=>row.stat));
+ const family=effects.enhancer==='spindle'?confluenceProdigyOptions(species,donor,parent):familyProdigyOptions(species,donor,parent),pooled=new Set(family.map(row=>row.stat));
  const inherited=g&&!pooled.has(g.stat)&&(!g.prodigy||random()<inheritanceChance(g.stat,effects));
  const growth=inherited?{...g,rate:g.prodigy?g.donorRate:Math.round((g.donorRate+Math.floor(Math.max(0,Math.min(.999999999,random()))*11))*10)/10}:null;
  // Same-family parents each roll their original bonus independently per stat.
  // Keep the strongest successful transfer once; never inherit evolution copies.
  const lineageGrowth=[];
- if(parent&&rootForm(parent.species.id)===species.id&&rootForm(donor.species.id)===species.id){
+ if(effects.enhancer==='spindle'){
+  lineageGrowth.push(...rollFamilyProdigies(family,random,effects));
+ }else if(parent&&rootForm(parent.species.id)===species.id&&rootForm(donor.species.id)===species.id){
   lineageGrowth.push(...rollFamilyProdigies(family,random,effects));
  }else if(parent&&rootForm(parent.species.id)===species.id){
   // Cross-family pairings retain the family parent's existing carryover path.
@@ -82,12 +94,12 @@ export function inheritanceSummaryHTML(unit){
 }
 
 export function breedingPlanHTML(species,donor,index,parent=null,effects={},speciesChance=50,plan={}){
- const options=inheritanceOptions(species,donor),family=familyProdigyOptions(species,donor,parent),pooled=new Set(family.map(g=>g.stat)),growth=options.growth.filter(g=>!pooled.has(g.stat));
- const sameFamily=parent&&rootForm(parent.species.id)===species.id&&rootForm(donor.species.id)===species.id;
+ const options=inheritanceOptions(species,donor),family=effects.enhancer==='spindle'?confluenceProdigyOptions(species,donor,parent):familyProdigyOptions(species,donor,parent),pooled=new Set(family.map(g=>g.stat)),growth=options.growth.filter(g=>!pooled.has(g.stat));
+ const sameFamily=effects.enhancer==='spindle'||parent&&rootForm(parent.species.id)===species.id&&rootForm(donor.species.id)===species.id;
  const lineage=parent&&!sameFamily?STAT_KEYS.map(stat=>({stat,rate:growthPercent(species,stat)+inheritedGrowthBonus(parent,stat)})).filter(g=>g.rate>growthPercent(species,g.stat)):[];
  const available=sameFamily?family:availableProdigyStats(species,donor,parent,plan).map(stat=>({stat}));
  const distinct=[...new Set(available.map(g=>g.stat))],chanceFor=stat=>sameFamily?familyProdigyChance(family.find(row=>row.stat===stat),effects):inheritanceChance(stat,effects),allChance=distinct.reduce((n,stat)=>n*chanceFor(stat),1);
  const odds=distinct.length?`<p>Available Prodigy odds: ${distinct.map(stat=>STAT_LABELS[stat]+' '+(chanceFor(stat)*100).toFixed(3)+'%').join('; ')}. ${sameFamily?`All ${distinct.length} together: about 1 in ${(1/allChance).toFixed(distinct.length===6?0:1)} eggs.`:'Cross-family inheritance still uses the chosen donor stat and the family parent’s carryover.'}</p>`:'';
- return `<fieldset class="breeding-plan"><legend>${speciesChance}% ${esc(species.name)} · donor ${esc(donor.species.name)}</legend><p>${sameFamily?(family.length?`Available Prodigy inheritance from both parents (maximum original rates): ${family.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each parent independently rolls 33.176% per Prodigy they carry before item boosts. A shared stat has a 55.345% chance without items. Keep the stronger successful original bonus once; a weaker parent can still pass theirs if the stronger misses. All six with one carrier each and no items: 1 in 750 eggs.`:'Neither parent has an existing Prodigy bonus to pass down.'):(lineage.length?`Family Prodigy growth: ${lineage.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each has a separate 33.176% chance before item boosts, alongside your donor choice.`:'No existing family Prodigy growth to carry over.')}</p>${odds}<label for="breed-stat-${index}">One additional donor growth</label><select id="breed-stat-${index}">${growth.map(g=>`<option value="${g.stat}">${STAT_LABELS[g.stat]}: ${g.donorRate}${g.prodigy?'':'–'+Math.round((g.donorRate+10)*10)/10}% (normal ${g.baseline}%)${g.prodigy?' · '+chanceLabel(g.stat,effects)+' inheritance chance; otherwise normal growth':''}</option>`).join('')}<option value="">${growth.length?'No additional donor growth':'No additional donor growth available'}</option></select><label for="breed-move-${index}">One move outside its normal pool</label><select id="breed-move-${index}">${options.moves.map(({move:m,coverage,answers})=>`<option value="${m.id}">${esc(m.name)} · ${esc(m.type_id)} · ${esc(m.category)}${answers.length?' · covers weakness: '+answers.join(', '):coverage?' · new type coverage':''}</option>`).join('')}<option value="">${options.moves.length?'No inherited move':'No eligible donor move outside this species’ pool'}</option></select></fieldset>`;
+ return `<fieldset class="breeding-plan"><legend>${speciesChance}% ${esc(species.name)} · donor ${esc(donor.species.name)}</legend><p>${sameFamily?(family.length?`Available Prodigy inheritance from both parents (maximum original rates): ${family.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. ${effects.enhancer==='spindle'?'The Spindle takes the strongest original bonus per stat from either parent, regardless of family. Each available stat has ONE 46.416% inheritance roll; all six together succeed exactly 1 in 100 eggs. Feed, Thread and Charm do not stack.':'Each parent independently rolls 33.176% per Prodigy they carry before item boosts. A shared stat has a 55.345% chance without items. Keep the stronger successful original bonus once; a weaker parent can still pass theirs if the stronger misses. All six with one carrier each and no items: 1 in 750 eggs.'}`:'Neither parent has an existing Prodigy bonus to pass down.'):(lineage.length?`Family Prodigy growth: ${lineage.map(g=>`${STAT_LABELS[g.stat]} ${g.rate}%`).join('; ')}. Each has a separate 33.176% chance before item boosts, alongside your donor choice.`:'No existing family Prodigy growth to carry over.')}</p>${odds}<label for="breed-stat-${index}">One additional donor growth</label><select id="breed-stat-${index}">${growth.map(g=>`<option value="${g.stat}">${STAT_LABELS[g.stat]}: ${g.donorRate}${g.prodigy?'':'–'+Math.round((g.donorRate+10)*10)/10}% (normal ${g.baseline}%)${g.prodigy?' · '+chanceLabel(g.stat,effects)+' inheritance chance; otherwise normal growth':''}</option>`).join('')}<option value="">${growth.length?'No additional donor growth':'No additional donor growth available'}</option></select><label for="breed-move-${index}">One move outside its normal pool</label><select id="breed-move-${index}">${options.moves.map(({move:m,coverage,answers})=>`<option value="${m.id}">${esc(m.name)} · ${esc(m.type_id)} · ${esc(m.category)}${answers.length?' · covers weakness: '+answers.join(', '):coverage?' · new type coverage':''}</option>`).join('')}<option value="">${options.moves.length?'No inherited move':'No eligible donor move outside this species’ pool'}</option></select></fieldset>`;
 }
 
