@@ -186,7 +186,9 @@ jobs:
           import {spawnSync} from 'node:child_process';
           const files=JSON.parse(process.env.TEST_FILES);
           if(files.includes('tests/item-review-browser.cjs')){const r=spawnSync('python3',['art-library/reviews/item-branches-2026-10-26/build_review.py'],{stdio:'inherit'});if(r.status!==0)process.exit(r.status||1);}
-          for(const file of files){console.log('VERIFY '+file);const r=spawnSync('timeout',['300s','node',file],{stdio:'inherit'});if(r.status!==0)process.exit(r.status||1);}
+          const failed=[];
+          for(const file of files){console.log('VERIFY '+file);const r=spawnSync('timeout',['300s','node',file],{stdio:'inherit'});if(r.status!==0)failed.push(file+' (exit '+(r.status||r.signal||'unknown')+')');}
+          if(failed.length){console.error('::error::Failed browser suites: '+failed.join(', '));process.exit(1);}
           NODE
       - uses: actions/upload-artifact@v4
         if: always()
