@@ -1,4 +1,4 @@
-import {SOUNDTRACK,ROUTE_PLAYLIST,BATTLE_PLAYLIST} from './soundtrack.js?v=0.90.61';
+import {SOUNDTRACK,ROUTE_PLAYLIST,BATTLE_PLAYLIST} from './soundtrack.js?v=0.90.62';
 export const MUSIC_TRACKS=Object.fromEntries(Object.entries(SOUNDTRACK).map(([id,file])=>[id,'assets/music/'+file]));
 
 // Each player retains its actual media position. Only natural endings consume a bag.
