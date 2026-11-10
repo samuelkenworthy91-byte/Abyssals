@@ -1,5 +1,5 @@
-import {BROAD_HELD_ITEMS} from './broad-held-data.js?v=0.90.61';
-import {QUEST_HELD_ITEMS} from './quest-rewards-data.js?v=0.90.61';
+import {BROAD_HELD_ITEMS} from './broad-held-data.js?v=0.90.62';
+import {QUEST_HELD_ITEMS} from './quest-rewards-data.js?v=0.90.62';
 // Authored Checklist 06 held items.
 export const HELD_ITEMS=[
   {
