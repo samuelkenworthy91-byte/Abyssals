@@ -1,17 +1,17 @@
-name: Build isolated v0.90.63 preview (signed APK and PWA)
+name: Build isolated v0.90.65 preview (signed APK and PWA)
 on:
   push:
-    branches: ['feature/v0.90.63-citadel-interior-confluence-sort']
+    branches: ['feature/v0.90.65-citadel-interior-confluence-sort']
     paths:
-      - '.github/workflows/v09063-branch-preview.yml'
+      - '.github/workflows/v09065-branch-preview.yml'
       - 'dist/**'
       - 'tests/**'
       - 'release-config.json'
-      - 'docs/releases/v0.90.63-*'
+      - 'docs/releases/v0.90.65-*'
 permissions:
   contents: write
 concurrency:
-  group: v09063-preview-${{ github.ref }}
+  group: v09065-preview-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   preview:
@@ -41,7 +41,7 @@ jobs:
           python3 - <<'PY'
           import json
           c=json.load(open('release-config.json'))
-          assert c['version']=='0.90.63' and c['version_code']==158
+          assert c['version']=='0.90.65' and c['version_code']==158
           assert c['validation_mode']=='full'
           assert 'Preview' in c['filename']
           print('Isolated candidate: version',c['version'],'code',c['version_code'])
@@ -79,7 +79,7 @@ jobs:
         run: python3 scripts/reconstruct-base.py
       - name: Build installable candidate APK and zipped offline PWA
         run: |
-          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.63 --version-code 158 --output build/unsigned-0.90.63.apk
+          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.65 --version-code 158 --output build/unsigned-0.90.65.apk
           python3 scripts/build-pwa.py
       - name: Install Android verification tools
         run: |
@@ -94,13 +94,13 @@ jobs:
       - name: Preserve QA evidence and preview payloads
         uses: actions/upload-artifact@v4
         with:
-          name: v09063-verified-preview-${{ github.sha }}
+          name: v09065-verified-preview-${{ github.sha }}
           path: |
-            build/Abyssals-v0.90.63-Preview.apk
-            build/Abyssals-v0.90.63-Preview.apk.sha256
-            build/Abyssals-v0.90.63-Preview-PWA.zip
-            build/Abyssals-v0.90.63-Preview-PWA.zip.sha256
-            build/signature-verification-0.90.63.txt
+            build/Abyssals-v0.90.65-Shared-Type-Spindle-Preview.apk
+            build/Abyssals-v0.90.65-Shared-Type-Spindle-Preview.apk.sha256
+            build/Abyssals-v0.90.65-Shared-Type-Spindle-PWA.zip
+            build/Abyssals-v0.90.65-Shared-Type-Spindle-PWA.zip.sha256
+            build/signature-verification-0.90.65.txt
             build/qa/highwater-hall-preview.png
           retention-days: 14
           if-no-files-found: error
@@ -108,9 +108,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="v0.90.63-preview.${{ github.run_number }}"
-          gh release create "$TAG" --target "$GITHUB_SHA" --prerelease --title "Abyssals v0.90.63 · isolated preview ${{ github.run_number }}" --notes "Signed TEST build from the unmerged Confluence/Highwater feature branch. Export a v0.90.62 JSON save first, do not uninstall the current app, and read docs/releases/v0.90.63-preview-rollback.md. No live PWA deployment or main merge."
+          TAG="v0.90.65-preview.${{ github.run_number }}"
+          gh release create "$TAG" --target "$GITHUB_SHA" --prerelease --title "Abyssals v0.90.65 · isolated preview ${{ github.run_number }}" --notes "Signed TEST build from the unmerged Confluence/Highwater feature branch. Export a v0.90.62 JSON save first, do not uninstall the current app, and read docs/releases/v0.90.65-preview-rollback.md. No live PWA deployment or main merge."
           gh release upload "$TAG" \
-            build/Abyssals-v0.90.63-Preview.apk build/Abyssals-v0.90.63-Preview.apk.sha256 \
-            build/Abyssals-v0.90.63-Preview-PWA.zip build/Abyssals-v0.90.63-Preview-PWA.zip.sha256 \
-            build/signature-verification-0.90.63.txt
+            build/Abyssals-v0.90.65-Shared-Type-Spindle-Preview.apk build/Abyssals-v0.90.65-Shared-Type-Spindle-Preview.apk.sha256 \
+            build/Abyssals-v0.90.65-Shared-Type-Spindle-PWA.zip build/Abyssals-v0.90.65-Shared-Type-Spindle-PWA.zip.sha256 \
+            build/signature-verification-0.90.65.txt
