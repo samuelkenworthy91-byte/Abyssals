@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {NEW_MAPS,newBlocked,newWalkable} from '../dist/expansion-world.js';
+import {drawHighwaterHallTile,drawHighwaterHallDecor} from '../dist/highwater-hall.js';
+const room=NEW_MAPS.marasenHall,city=NEW_MAPS.marasenCitadel;
+assert(room.highwaterInterior,'only the leader interior opts into the visual replacement');
+assert(!city.highwaterInterior&&city.aquaticCity,'exterior Highwater Citadel stays on existing art');
+assert(room.spots.some(s=>s.id==='mr-leader'&&s.x===38&&s.y===22),'Khalid retains exact position');
+assert(room.spots.some(s=>s.id==='TRN-MR-INNER'&&s.x===24&&s.y===16),'guard remains unchanged');
+assert(!newBlocked('marasenHall',1,17)&&!newBlocked('marasenHall',46,17),'both existing gates accessible');
+assert(newWalkable('marasenHall',38,22),'leader remains in reachable walkable area');
+let pixels=0;const canvas=new Proxy({},{get:(obj,key)=>key==='fillRect'?()=>pixels++:['save','restore','beginPath','arc','stroke'].includes(key)?()=>{}:obj[key],set:(obj,key,value)=>(obj[key]=value,true)});
+for(const [x,y] of [[0,0],[14,9],[25,17],[38,22]])drawHighwaterHallTile(canvas,x,y);
+drawHighwaterHallDecor(canvas);assert(pixels>350,'rich authored pixel clusters are rendered, rather than empty hall art');
+console.log('PASS: Highwater interior only; original city exterior, guard/leader, gates, collision and drawing remain');
