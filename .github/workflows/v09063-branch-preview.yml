@@ -63,6 +63,8 @@ jobs:
           node tests/offline-redirects.test.mjs
           node tests/permanent-growth.test.mjs
           node tests/collection-access.test.mjs
+          node tests/bag-lift.test.mjs
+          node tests/item-review.test.mjs
       - name: Install test browser and start offline game
         run: |
           npm install --no-save --package-lock=false playwright@1.62.1
