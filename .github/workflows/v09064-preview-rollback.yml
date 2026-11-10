@@ -1,0 +1,112 @@
+name: Build v0.90.64 forward rollback of v0.90.63 preview
+on:
+  push:
+    branches: ['rollback/v0.90.64-preview-restoration']
+    paths:
+      - '.github/workflows/v09064-preview-rollback.yml'
+      - 'dist/**'
+      - 'tests/**'
+      - 'release-config.json'
+      - 'docs/releases/v0.90.64-*'
+permissions:
+  contents: write
+concurrency:
+  group: v09064-preview-rollback-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/workflows
+            dist
+            scripts
+            tests
+            docs
+            release
+            art-library/reviews/item-branches-2026-10-26
+            art-library/action-vfx
+            art-library/finale
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check safe forward-rollback identity
+        run: |
+          python3 - <<'PY'
+          import json
+          c=json.load(open('release-config.json'))
+          assert c['version']=='0.90.64' and c['version_code']==159
+          assert c['validation_mode']=='full'
+          assert 'Rollback' in c['filename']
+          print('Forward rollback candidate: version',c['version'],'code',c['version_code'])
+          PY
+          python3 -m pip install --quiet Pillow==11.1.0
+          for file in dist/*.js; do node --check "$file"; done
+          python3 scripts/validate-game.py
+          python3 scripts/verify-art-release-scope.py
+          python3 tests/android-manifest.test.py
+      - name: Test legacy gameplay and save-safe rollback compatibility
+        run: |
+          node tests/preview-rollback-save.test.mjs
+          node tests/nursery-care.test.mjs
+          node tests/prodigy-breeding.test.mjs
+          node tests/marasen-navigation.test.mjs
+          node tests/marasen-store.test.mjs
+          node tests/runtime-cache-consistency.test.mjs
+          node tests/offline-redirects.test.mjs
+          node tests/permanent-growth.test.mjs
+          node tests/collection-access.test.mjs
+          node tests/playtest-polish.test.mjs
+      - name: Install browser and start game
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install chromium
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist > /tmp/abyssals-rollback-http.log 2>&1 &
+      - name: Test old nursery, existing Marasen and basic live game
+        run: |
+          node tests/nursery-care-browser.cjs
+          node tests/marasen-browser.cjs
+          node tests/browser-smoke.cjs
+      - name: Reconstruct original native wrapper and package gameplay
+        run: |
+          python3 scripts/reconstruct-base.py
+          python3 scripts/build-update.py --base build/Abyssals-v0.89.1-Marasen-Rebuilt.apk --version 0.90.64 --version-code 159 --output build/unsigned-0.90.64.apk
+          python3 scripts/build-pwa.py
+      - name: Install signing verification tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y apksigner zipalign
+      - name: Sign forward rollback using the ORIGINAL release keystore
+        env:
+          ABYSSALS_KEYSTORE_BASE64: ${{ secrets.ABYSSALS_KEYSTORE_BASE64 }}
+          ABYSSALS_STORE_PASSWORD: ${{ secrets.ABYSSALS_STORE_PASSWORD }}
+          ABYSSALS_KEY_ALIAS: ${{ secrets.ABYSSALS_KEY_ALIAS }}
+        run: python3 scripts/sign-update.py
+      - name: Retain verified APK, PWA and signing details
+        uses: actions/upload-artifact@v4
+        with:
+          name: v09064-forward-rollback-${{ github.sha }}
+          path: |
+            build/Abyssals-v0.90.64-Preview-Rollback.apk
+            build/Abyssals-v0.90.64-Preview-Rollback.apk.sha256
+            build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip
+            build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip.sha256
+            build/signature-verification-0.90.64.txt
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish separate forward-rollback prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v0.90.64-rollback.${{ github.run_number }}"
+          gh release create "$TAG" --target "$GITHUB_SHA" --prerelease --title "Abyssals · signed v0.90.64 forward rollback" --notes "Optional signed restore to v0.90.62 GAMEPLAY with v0.90.64 Android identity (versionCode 159), installable directly over v0.90.63 preview. Includes inert preview Spindle item/egg record compatibility. Export JSON save before installing. This is NOT production main or Pages."
+          gh release upload "$TAG" \
+            build/Abyssals-v0.90.64-Preview-Rollback.apk build/Abyssals-v0.90.64-Preview-Rollback.apk.sha256 \
+            build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip build/Abyssals-v0.90.64-Preview-Rollback-PWA.zip.sha256 \
+            build/signature-verification-0.90.64.txt
