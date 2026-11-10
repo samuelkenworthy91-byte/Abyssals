@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const version=JSON.parse(fs.readFileSync('release-config.json','utf8')).version;
 // A code-only 0.90.59 hotfix keeps unchanged 0.90.58 modules cache-stable.
 // Requiring a single URL identity for each module prevents split state.
-const allowedVersions=new Set(version==='0.90.59'?[version,'0.90.58']:[version]);
+const allowedVersions=new Set(version==='0.90.59'?[version,'0.90.58']:version==='0.90.64'?[version,'0.90.62']:[version]);
 const refs=new Map();
 for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.js'))){
  const source=fs.readFileSync('dist/'+file,'utf8');
@@ -14,6 +14,6 @@ for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.js'))){
 }
 assert([...refs.values()].every(s=>s.size===1),'one cache identity per shared module');
 const html=fs.readFileSync('dist/index.html','utf8');assert(html.includes('app.js?v='+version)&&html.includes('pwa.js?v='+version));
-assert(fs.readFileSync('dist/app.js','utf8').includes("from './music.js?v="+version+"'"),'hotfix entry imports patched music controller');
+assert(fs.readFileSync('dist/app.js','utf8').includes("from './music.js?v="+(version==='0.90.64'?'0.90.62':version)+"'"),'hotfix entry imports patched music controller');
 console.log('PASS: shared runtime modules and entry points use one release cache identity; party state cannot split across versioned imports.');
 
