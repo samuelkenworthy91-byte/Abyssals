@@ -9,7 +9,7 @@ import {STAT_KEYS} from './progression.js?v=0.90.61';
 
 export function eligibleEvolutions(unit,state={},itemId=null){
  if(!unit||unit.dead||unit.hp<=0||(unit.evolutionHistory||[]).some(e=>e.level===unit.level))return [];
- return EVOLUTIONS.map(e=>tunedEvolution(e,DATA.species.find(s=>s.id===e.from_species_id))).filter(e=>{const c=e.condition;if(e.from_species_id!==unit.species.id||unit.level<c.minimum_level)return false;
+ return EVOLUTIONS.map(e=>tunedEvolution(e,DATA.species.find(s=>s.id===e.from_species_id))).filter(e=>{const c=e.condition;if(e.from_species_id!==unit.species.id||(c.minimum_level!=null&&unit.level<c.minimum_level))return false;
   if(c.method==='STAT')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0)&&statEvolutionAllowed(unit,e);
   if(c.method==='LEVEL')return !itemId&&unit.level>(unit.evolutionBlockedLevel??0);
   if(c.method==='ITEM')return branchEvolutionAllowed(e,state)&&c.item_id===itemId&&(state.evolutionItems?.[itemId]||0)>0;
@@ -23,7 +23,7 @@ export function eligibleEvolutions(unit,state={},itemId=null){
 }
 export function promote(unit,path,{leaderFate=false}={}){
  const eventGate=leaderFate&&path.condition.method==='STORY_CHOICE'&&['070','073','092'].includes(path.from_species_id);
- if(!statEvolutionAllowed(unit,path)||unit.dead||unit.hp<=0||unit.species.id!==path.from_species_id||unit.level<path.condition.minimum_level||(unit.evolutionHistory||[]).some(e=>e.level===unit.level)||(path.condition.method!=='ITEM'&&!eventGate&&unit.level<=(unit.evolutionBlockedLevel??0)))return null;
+ if(!statEvolutionAllowed(unit,path)||unit.dead||unit.hp<=0||unit.species.id!==path.from_species_id||(path.condition.minimum_level!=null&&unit.level<path.condition.minimum_level)||(unit.evolutionHistory||[]).some(e=>e.level===unit.level)||(path.condition.method!=='ITEM'&&!eventGate&&unit.level<=(unit.evolutionBlockedLevel??0)))return null;
  const target=DATA.species.find(s=>s.id===path.to_species_id);if(!target)return null;
  migrateStats(unit);
  const from=unit.species.id,oldHp=unit.hp,oldMax=unit.maxHp;
