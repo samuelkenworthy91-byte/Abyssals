@@ -1,3 +1,9 @@
+# Vantis Eldrin portal checkpoint
+
+- Development branch `vantis-first-circle`. The portal presentation uses the new Vantis Eldrin name, dialogue portrait and 32×48 front-facing sprite. The historical event receipt and save keys are retained.
+- Full source artwork is under `art-library/characters/ready/`. It was generated from a dark medieval pixel-art brief for a charcoal-coated archivist with teal lining, pale clasp, ink-stained hands and a vellum ledger. The sprite brief specified the same silhouette at 32×48, with a top-down three-quarter forward idle pose. Runtime portraits and the portal sprite were prepared as transparent WebP.
+- The First Circle encounter and puzzle specification is in `docs/pale-gate-plan.md`. The quay, crossing, hall, Prince fight and directional field sprites are pending implementation. This is a development checkpoint before any release version is assigned.
+
 # Triskit evolution branch checkpoint
 
 - v0.90.62 candidate, version code 157. Coldsmith, Ampish, Grubstake, Toxiturn and Kipnotic use species IDs 575–579. The original Triskit paths and save identifiers are preserved.

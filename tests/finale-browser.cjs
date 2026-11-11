@@ -14,8 +14,8 @@ for(const id of ['LDR-07','LDR-08']){
  if(id==='LDR-08'){
   for(let i=0;i<6&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
   await page.waitForSelector('#hell-portal',{timeout:15000});
-  assert.equal(await page.locator('#hell-portal img').getAttribute('src'),'assets/finale/severin-guide.svg');
-  await page.screenshot({path:'build/qa/finale-severin-portal.png'});
+  assert.equal(await page.locator('#hell-portal img').getAttribute('src'),'assets/finale/vantis-eldrin-portal.webp');
+  await page.screenshot({path:'build/qa/finale-vantis-portal.png'});
   await page.waitForSelector('#dialogue:not([hidden])',{timeout:12000});
   for(let i=0;i<18&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
   await page.waitForFunction(()=>window.__fnQA.copy().state.finale.mirrorArrivalSeen,{timeout:10000});
@@ -28,7 +28,9 @@ assert.equal((await page.evaluate(()=>window.__fnQA.copy())).state.fates['LDR-08
 for(let i=0;i<6&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
 await page.waitForSelector('#hell-portal',{timeout:15000});
 await page.waitForSelector('#dialogue:not([hidden])',{timeout:12000});
-assert((await page.locator('#dialogue').innerText()).includes('Severin')||await page.locator('#hell-portal img').count()===1);
+await page.locator('#next-line').click();
+assert.equal(await page.locator('#dialogue .speaker').innerText(),'Vantis Eldrin');
+await page.waitForFunction(()=>document.querySelector('#dialogue .dialogue-bust img')?.naturalWidth>0);
 for(let i=0;i<18&&await page.locator('#dialogue').isVisible();i++)await page.locator('#next-line').click();
 await page.waitForFunction(()=>window.__fnQA.copy().state.finale.mirrorArrivalSeen);
 assert.equal((await page.evaluate(()=>window.__fnQA.copy())).state.fates['LDR-08'],'EXECUTED');

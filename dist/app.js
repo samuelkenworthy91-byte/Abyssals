@@ -1535,20 +1535,20 @@ async function startMirrorDescent(fate){
  await warp('afterlifeThreshold',24,23,'up');
  if(room!=='afterlifeThreshold')return;
  let portal=document.getElementById('hell-portal');if(portal)portal.remove();
- portal=document.createElement('div');portal.id='hell-portal';portal.setAttribute('role','img');portal.setAttribute('aria-label','The Hell Mirror opens into a dark portal; Severin Vale steps through.');
- portal.innerHTML='<img src="assets/finale/severin-guide.svg" alt="">';
+ portal=document.createElement('div');portal.id='hell-portal';portal.setAttribute('role','img');portal.setAttribute('aria-label','The Hell Mirror opens. Vantis Eldrin steps through.');
+ portal.innerHTML='<img src="assets/finale/vantis-eldrin-portal.webp" alt="">';
  $('#viewport').appendChild(portal);
  await delay(reducedMotion()?40:1000);
  const guideLines=[
-  line('Beneath Ramelle','The old mirror ripples. Its reflection empties until there is only a dark opening. A narrow figure steps through, his fingers stained with ink.'),
-  line('Severin Vale','Aimon. I wondered whether you would find the door without me. My name is Severin Vale. Do you want comfort, or directions?'),
-  line('Aimon','I want Pate and Trade. Are they really beyond that?','CHR-AIMON'),
-  line(fate==='SPARED'?'Hierophant Hasan':'The fortress custodian',fate==='SPARED'?'No. Severin Vale? That name appears in our oldest forbidden records. You cannot be standing here.':'Severin Vale? The Hierophant kept your name sealed in the oldest records. Nobody believed you were real.',fate==='SPARED'?'LDR-08':undefined),
-  line('Severin Vale','The dead do not vanish at once. For a time, a person remains themselves. Your friends may still be reached.'),
-  line('Severin Vale','But it is no simple resurrection. You must cross the underworld, find them before their identities fade, and return. Its ruler does not let people leave freely.'),
-  line('Walter','I cannot promise what that means for them. Nor can I call it sacrilege simply because I do not understand it.','CHR-AERIC'),
-  line('Aimon','Then I need to know how to get in.','CHR-AIMON'),
-  line('Severin Vale','The passage is open. First, prepare your partners. If you die below, no one is coming after you.')
+  line('Beneath Ramelle','The mirror empties. An ink-stained hand grips the frame from the far side. A man in a travelling coat steps onto the stone, a ledger tucked under his arm.'),
+  line('Vantis Eldrin','Aimon. Your friends’ names came through before you did. Mine is Vantis Eldrin.','SEVERIN-VALE'),
+  line('Aimon','Pate and Trade? Where are they?','CHR-AIMON'),
+  line(fate==='SPARED'?'Hierophant Hasan':'The fortress custodian',fate==='SPARED'?'Eldrin. I have read that signature on burial records older than this fortress.':'Eldrin. That signature is all over the records the Hierophant kept under seal.',fate==='SPARED'?'LDR-08':undefined),
+  line('Vantis Eldrin','I used to copy the names of the newly dead. A clean entry was supposed to help a person keep hold of who they were. Eventually the clerks started treating the entry as the person.','SEVERIN-VALE'),
+  line('Vantis Eldrin','Pate and Trade may still remember themselves. I can show you the road they took. If you find them, you’ll have to ask whether they want to come back.','SEVERIN-VALE'),
+  line('Walter','And who decides if they’re allowed to leave?','CHR-AERIC'),
+  line('Vantis Eldrin','The first man who’ll try is the Keeper of Names. He’ll say you’re going the wrong way. By his reckoning, you are.','SEVERIN-VALE'),
+  line('Aimon','Then I’ll ask them myself.','CHR-AIMON')
  ];
  showDialogue(guideLines,()=>{
   rewardTransaction(()=>{const q=finaleState(state);q.mirrorArrivalSeen=true;q.severinRevealed=true;q.rescueWindowExplained=true;q.gateRevealed=true;state.storyHistory??=[];if(!state.storyHistory.some(h=>h.id==='FN-MIRROR-SEVERIN-20261028'))state.storyHistory.push({id:'FN-MIRROR-SEVERIN-20261028',place:'Beneath Ramelle',people:['CHR-AIMON','SEVERIN-VALE','CHR-AERIC']});});
