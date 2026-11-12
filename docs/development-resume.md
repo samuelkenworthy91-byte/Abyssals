@@ -1,8 +1,16 @@
+# Pale Gate winter route checkpoint
+
+- Branch `vantis-first-circle`. The First Circle is now wired from the Answering Mirror to the Circle II threshold. The playable route contains six maps, a timed ferry, a ledger deduction, two demon battles, the Keeper under Namefog, and the Winter Orchard and Frostreed Landing side missions.
+- Six runtime winter environments, six actor assets including Vantis’s four-direction walk atlas, seven props and five portraits are registered offline. Art source and briefs are committed under `art-library/pale-gate/`.
+- The Keeper uses the locked WRD-01 roster, ability rules and Namefog modifiers. Held roles were placed on slots 1, 2 and 6 because the source leaves their allocation open. The Underway Relay connects the quay and terrace after victory, and read clues and the orchard memorial appear in the Expedition Journal.
+- Run `node tests/pale-gate.test.mjs`, `node tests/finale.test.mjs` and `node tests/finale-double.test.mjs`. The ferry intentionally divides the river map into two walkable components. The generated environment audit checks both arrivals. A live browser run remains a release verification step.
+- The design and route map are in `docs/pale-gate-plan.md`. Circle II itself begins in a later chapter. This is a development commit before release numbering and APK packaging.
+
 # Vantis Eldrin portal checkpoint
 
 - Development branch `vantis-first-circle`. The portal presentation uses the new Vantis Eldrin name, dialogue portrait and 32×48 front-facing sprite. The historical event receipt and save keys are retained.
 - Full source artwork is under `art-library/characters/ready/`. It was generated from a dark medieval pixel-art brief for a charcoal-coated archivist with teal lining, pale clasp, ink-stained hands and a vellum ledger. The sprite brief specified the same silhouette at 32×48, with a top-down three-quarter forward idle pose. Runtime portraits and the portal sprite were prepared as transparent WebP.
-- The First Circle encounter and puzzle specification is in `docs/pale-gate-plan.md`. The quay, crossing, hall, Prince fight and directional field sprites are pending implementation. This is a development checkpoint before any release version is assigned.
+- The First Circle encounter and puzzle specification is in `docs/pale-gate-plan.md`. The winter-route checkpoint above records the continuation.
 
 # Triskit evolution branch checkpoint
 

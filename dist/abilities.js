@@ -71,11 +71,11 @@ export function blocksEvasion(u){return has(u,'Clear Judgment')||u.field?.decree
 export function canSwitch(u,{forced=false}={}){return forced?!has(u,'Firm Stance','World Anchor')&&!u.preventForcedSwitch:!u.trapped||has(u,'Wayfarer','Bindproof');}
 export function canRemoveHeld(u){return !has(u,'Safekeep');}
 export function canChangeTerrain(units){return !units.some(u=>u.hp>0&&has(u,'World Anchor'));}
-export function setTerrain(terrain,units){if(!canChangeTerrain(units))return false;for(const u of units)u.field.terrain=terrain;return true;}
+export function setTerrain(terrain,units){if(!canChangeTerrain(units))return false;if(terrain&&units[0]?.field?.nativeField&&units[0].field.weather)changeWeather(null,units,0);for(const u of units)u.field.terrain=terrain;return true;}
 export function hazardDamage(u,amount){return Math.floor(amount*(has(u,'Trailblazer','Waystone Master')?.5:1));}
 export function bindingDamage(u,amount){return Math.floor(amount*(has(u,'Bindproof')?.5:1));}
 export function screenTurns(u,turns=5){return turns+(has(u,'Screenmender')?2:0);}
-export function changeWeather(weather,units,turns=5){const messages=[];const old=units[0]?.field?.weather;for(const u of units){u.field??={};u.field.weather=weather;u.field.weatherTurns=turns;const a=abilityMemory(u);
+export function changeWeather(weather,units,turns=5){const messages=[];const old=units[0]?.field?.weather;for(const u of units){u.field??={};if(weather&&u.field.nativeField){u.field.terrain=null;u.field.terrainTurns=0;delete u.field.orchardCarpet;}u.field.weather=weather;u.field.weatherTurns=turns;const a=abilityMemory(u);
  if(old!==weather&&has(u,'Stormsense')&&!a.flags.weather){stage(u,'speed',1);a.flags.weather=true;messages.push(note(u,'weather changed; Speed rose.'));}
  if(weather==='RAIN'&&has(u,'Floodplain')&&!a.flags.flood){stage(u,'defence',1);a.flags.flood=true;messages.push(note(u,'rain raised Defence.'));}}
  return messages;

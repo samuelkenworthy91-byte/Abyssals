@@ -1,3 +1,4 @@
+import {installPaleGate} from './pale-gate.js?v=0.90.62';
 import {SUN_ROAD,SPORE_ROAD} from './finale-data.js?v=0.90.62';
 const gate=(id,label,x,y,to,arrival,action='finale-gate')=>({id,label,x,y,to,arrival,action,door:true});
 const npc=(id,label,x,y,revoltCharacter)=>({id,label,x,y,sprite:0,revoltCharacter});
@@ -102,4 +103,5 @@ export function installFinaleWorld(maps,doors){
  maps.sporeGrotto.gates[0].arrival=[24,14,'down'];maps.sporeCanopy.gates[0].arrival=[24,13,'down'];
  // All town caravan arrivals lie on the broad central boulevard.
 
+ installPaleGate(maps);
 }

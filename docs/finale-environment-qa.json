@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "policy": "Connectivity checks do not grant visual approval. Review must inspect authored floor alignment, depth, lighting, actors and exits in day/night at phone scale.",
   "totals": {
-    "maps": 25,
+    "maps": 31,
     "approved": 15,
     "technicalIssues": 0
   },
@@ -3174,6 +3174,717 @@
         ],
         "current": true
       }
+    },
+    {
+      "id": "paleQuay",
+      "name": "Pale Gate · Arrival Quay",
+      "source": "dist/assets/finale/env-pale-quay.webp",
+      "sha256": "bb08f1183292b954c050f442e75686c19c851f0ca88856b842d51bdb47a9f610",
+      "geometrySha256": "c1b4bb11b87bbee2fefb8b6341a0b6bf9256e727e6c287d690d632b2791fc8d6",
+      "reachableTiles": 332,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            18,
+            46,
+            22
+          ],
+          [
+            9,
+            16,
+            38,
+            23
+          ],
+          [
+            22,
+            22,
+            26,
+            28
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "pg-mirror-back",
+            "label": "Return to the Answering Mirror",
+            "x": 1,
+            "y": 19,
+            "to": "afterlifeThreshold",
+            "arrival": [
+              24,
+              13,
+              "down"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-river",
+            "label": "The Countercurrent",
+            "x": 46,
+            "y": 19,
+            "to": "paleRiver",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-orchard",
+            "label": "Winter Orchard",
+            "x": 24,
+            "y": 28,
+            "to": "paleOrchard",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "spots": [
+          {
+            "id": "pg-guide",
+            "label": "Vantis Eldrin",
+            "x": 14,
+            "y": 18,
+            "paleArt": "vantis",
+            "questProp": true
+          },
+          {
+            "id": "pg-blue",
+            "label": "A soldier at the quay",
+            "x": 29,
+            "y": 18,
+            "paleArt": "blue",
+            "questProp": true
+          },
+          {
+            "id": "pg-red",
+            "label": "A soldier mending her scarf",
+            "x": 32,
+            "y": 21,
+            "paleArt": "red",
+            "questProp": true
+          },
+          {
+            "id": "pg-rest",
+            "label": "Quay shelter",
+            "x": 8,
+            "y": 18,
+            "paleArt": "bell",
+            "questProp": true
+          },
+          {
+            "id": "pg-relay-east",
+            "label": "Underway Relay",
+            "x": 18,
+            "y": 21,
+            "paleArt": "arch",
+            "questProp": true
+          },
+          {
+            "id": "pg-mirror-back",
+            "label": "Return to the Answering Mirror",
+            "x": 1,
+            "y": 19,
+            "to": "afterlifeThreshold",
+            "arrival": [
+              24,
+              13,
+              "down"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-river",
+            "label": "The Countercurrent",
+            "x": 46,
+            "y": 19,
+            "to": "paleRiver",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-orchard",
+            "label": "Winter Orchard",
+            "x": 24,
+            "y": 28,
+            "to": "paleOrchard",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "paleRiver",
+      "name": "Pale Gate · The Countercurrent",
+      "source": "dist/assets/finale/env-pale-river.webp",
+      "sha256": "1fd32c6b39e5fe994e17aa4434acb2be49682a1e89a78a39ba79d97f4571316b",
+      "geometrySha256": "c966cb9ecf4718df555c5e011336f2a0c248bf9784aa0bd7f201bd0ca2015c02",
+      "reachableTiles": 250,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            16,
+            15,
+            24
+          ],
+          [
+            32,
+            16,
+            46,
+            24
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "pg-quay",
+            "label": "Arrival Quay",
+            "x": 1,
+            "y": 19,
+            "to": "paleQuay",
+            "arrival": [
+              44,
+              19,
+              "left"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-hall",
+            "label": "Hall of Misfiled Names",
+            "x": 46,
+            "y": 19,
+            "to": "paleHall",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "spots": [
+          {
+            "id": "pg-launch",
+            "label": "Read the ferry riddle and launch",
+            "x": 14,
+            "y": 19,
+            "paleArt": "bell",
+            "questProp": true
+          },
+          {
+            "id": "pg-ferry-back",
+            "label": "Cross back to the quay",
+            "x": 33,
+            "y": 21,
+            "paleArt": "ferry",
+            "questProp": true
+          },
+          {
+            "id": "pg-reeds",
+            "label": "Frostreed Landing",
+            "x": 41,
+            "y": 23,
+            "paleArt": "buoy",
+            "questProp": true
+          },
+          {
+            "id": "pg-bailiff",
+            "label": "The Toll Bailiff",
+            "x": 42,
+            "y": 18,
+            "paleArt": "bailiff",
+            "questProp": true
+          },
+          {
+            "id": "pg-quay",
+            "label": "Arrival Quay",
+            "x": 1,
+            "y": 19,
+            "to": "paleQuay",
+            "arrival": [
+              44,
+              19,
+              "left"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-hall",
+            "label": "Hall of Misfiled Names",
+            "x": 46,
+            "y": 19,
+            "to": "paleHall",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "paleHall",
+      "name": "Pale Gate · Hall of Misfiled Names",
+      "source": "dist/assets/finale/env-pale-hall.webp",
+      "sha256": "b8e095ed730696c798ce2e19fc64d9144209d3ea3a3d022ada83ad25bae4c8e2",
+      "geometrySha256": "deade8ebfa3391ed849bc57a652fdbfe3ffbb55d039ca5fc2993ebb95b55df6a",
+      "reachableTiles": 306,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            18,
+            46,
+            22
+          ],
+          [
+            9,
+            16,
+            38,
+            23
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "pg-river-back",
+            "label": "The Countercurrent",
+            "x": 1,
+            "y": 19,
+            "to": "paleRiver",
+            "arrival": [
+              44,
+              19,
+              "left"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-prince",
+            "label": "The Keeper’s Terrace",
+            "x": 46,
+            "y": 19,
+            "to": "palePrince",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "spots": [
+          {
+            "id": "pg-file-a",
+            "label": "Intake docket A",
+            "x": 12,
+            "y": 17,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-file-b",
+            "label": "Intake docket B",
+            "x": 20,
+            "y": 17,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-file-c",
+            "label": "Intake docket C",
+            "x": 28,
+            "y": 17,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-receipt",
+            "label": "Ferry receipts",
+            "x": 34,
+            "y": 22,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-audit",
+            "label": "Correct the intake ledger",
+            "x": 39,
+            "y": 19,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-hound",
+            "label": "Ledger Hound",
+            "x": 33,
+            "y": 18,
+            "paleArt": "hound",
+            "questProp": true
+          },
+          {
+            "id": "pg-river-back",
+            "label": "The Countercurrent",
+            "x": 1,
+            "y": 19,
+            "to": "paleRiver",
+            "arrival": [
+              44,
+              19,
+              "left"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          },
+          {
+            "id": "pg-prince",
+            "label": "The Keeper’s Terrace",
+            "x": 46,
+            "y": 19,
+            "to": "palePrince",
+            "arrival": [
+              3,
+              19,
+              "right"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "palePrince",
+      "name": "Pale Gate · The Keeper’s Terrace",
+      "source": "dist/assets/finale/env-pale-prince.webp",
+      "sha256": "c7e8b1770658e87dd1fdd012d0492d7a2c58d7d4933a3d7860472f9161091c92",
+      "geometrySha256": "d24848ce6c5ef2089a49f9e2be4c1b040b67f8da07dee3c163e01b42a45b814e",
+      "reachableTiles": 336,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            18,
+            46,
+            22
+          ],
+          [
+            9,
+            16,
+            38,
+            23
+          ],
+          [
+            42,
+            11,
+            45,
+            18
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "pg-hall-back",
+            "label": "Hall of Misfiled Names",
+            "x": 1,
+            "y": 19,
+            "to": "paleHall",
+            "arrival": [
+              44,
+              19,
+              "left"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "spots": [
+          {
+            "id": "pg-keeper",
+            "label": "Hugh FitzAlan, Keeper of Names",
+            "x": 30,
+            "y": 19,
+            "paleArt": "keeper",
+            "questProp": true
+          },
+          {
+            "id": "pg-beyond",
+            "label": "The road to the second Circle",
+            "x": 44,
+            "y": 11,
+            "questProp": true
+          },
+          {
+            "id": "pg-relay-west",
+            "label": "Underway Relay",
+            "x": 38,
+            "y": 21,
+            "paleArt": "arch",
+            "questProp": true
+          },
+          {
+            "id": "pg-hall-back",
+            "label": "Hall of Misfiled Names",
+            "x": 1,
+            "y": 19,
+            "to": "paleHall",
+            "arrival": [
+              44,
+              19,
+              "left"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "paleOrchard",
+      "name": "Pale Gate · The Winter Orchard",
+      "source": "dist/assets/finale/env-pale-orchard.webp",
+      "sha256": "ef6a27533bceeb7cc44efe5c907e039f6047a49410d56359f0f5fbf0e6101948",
+      "geometrySha256": "8b29b376bc0fa01a5d217a2902a7e8742c1924f44370ea177dbe74c8dab3ece4",
+      "reachableTiles": 307,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            18,
+            46,
+            22
+          ],
+          [
+            9,
+            16,
+            38,
+            23
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "pg-orchard-back",
+            "label": "Arrival Quay",
+            "x": 1,
+            "y": 19,
+            "to": "paleQuay",
+            "arrival": [
+              24,
+              25,
+              "up"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "spots": [
+          {
+            "id": "pg-bell-tag",
+            "label": "A bell tag",
+            "x": 11,
+            "y": 20,
+            "paleArt": "bell",
+            "questProp": true
+          },
+          {
+            "id": "pg-bowl",
+            "label": "A chipped feeding bowl",
+            "x": 21,
+            "y": 17,
+            "paleArt": "bowl",
+            "questProp": true
+          },
+          {
+            "id": "pg-roster",
+            "label": "The orchard watch roster",
+            "x": 29,
+            "y": 20,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-return-name",
+            "label": "Return a Name",
+            "x": 38,
+            "y": 19,
+            "paleArt": "red",
+            "questProp": true
+          },
+          {
+            "id": "pg-orchard-back",
+            "label": "Arrival Quay",
+            "x": 1,
+            "y": 19,
+            "to": "paleQuay",
+            "arrival": [
+              24,
+              25,
+              "up"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
+    },
+    {
+      "id": "paleReeds",
+      "name": "Pale Gate · Frostreed Landing",
+      "source": "dist/assets/finale/env-pale-reeds.webp",
+      "sha256": "0f6320f871a3a6aab0c7b6fda90b6e0174d204afd5752a3d5e5d560dd81a2f2a",
+      "geometrySha256": "f0c9a8edc44b1ec56d2e1bc346981354ea0cb16f02c69a0d95b59f2586a93f07",
+      "reachableTiles": 306,
+      "geometry": {
+        "walk": [
+          [
+            1,
+            18,
+            46,
+            22
+          ],
+          [
+            9,
+            16,
+            38,
+            23
+          ]
+        ],
+        "solids": [],
+        "gates": [
+          {
+            "id": "pg-reeds-back",
+            "label": "The Countercurrent",
+            "x": 1,
+            "y": 19,
+            "to": "paleRiver",
+            "arrival": [
+              40,
+              22,
+              "up"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "spots": [
+          {
+            "id": "pg-reed-note",
+            "label": "An old ferryman’s note",
+            "x": 12,
+            "y": 20,
+            "paleArt": "tablet",
+            "questProp": true
+          },
+          {
+            "id": "pg-lamp-north",
+            "label": "north lamp",
+            "x": 19,
+            "y": 18,
+            "paleArt": "buoy",
+            "questProp": true
+          },
+          {
+            "id": "pg-lamp-middle",
+            "label": "middle lamp",
+            "x": 25,
+            "y": 18,
+            "paleArt": "buoy",
+            "questProp": true
+          },
+          {
+            "id": "pg-lamp-south",
+            "label": "south lamp",
+            "x": 31,
+            "y": 18,
+            "paleArt": "buoy",
+            "questProp": true
+          },
+          {
+            "id": "pg-reed-cache",
+            "label": "Flood marker",
+            "x": 38,
+            "y": 19,
+            "paleArt": "cache",
+            "questProp": true
+          },
+          {
+            "id": "pg-reeds-back",
+            "label": "The Countercurrent",
+            "x": 1,
+            "y": 19,
+            "to": "paleRiver",
+            "arrival": [
+              40,
+              22,
+              "up"
+            ],
+            "door": true,
+            "action": "pale-gate"
+          }
+        ],
+        "grass": [],
+        "sidePaths": []
+      },
+      "technicalIssues": [],
+      "status": "requires-review",
+      "review": null
     }
   ]
 }

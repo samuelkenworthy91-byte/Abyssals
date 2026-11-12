@@ -34,6 +34,7 @@ assert(['cayfen','ramelle'].every(room=>NEW_MAPS[room].spots.filter(p=>p.id.star
 const flood=(room,start)=>{const q=[start],seen=new Set();for(let i=0;i<q.length;i++){const [x,y]=q[i],k=x+','+y;if(seen.has(k)||newBlocked(room,x,y))continue;seen.add(k);q.push([x-1,y],[x+1,y],[x,y-1],[x,y+1]);}return seen;};
 for(const [room,m]of Object.entries(NEW_MAPS).filter(([,m])=>m.finale)){
  const seen=flood(room,m.finaleInterior||room==='afterlifeThreshold'?[24,24]:[3,m.road[0][1]]);assert(seen.size>30,room);
+ if(room==='paleRiver')for(const tile of flood(room,[39,19]))seen.add(tile);
  for(const g of m.gates){assert(seen.has(g.x+','+g.y),room+' gate '+g.id);assert(!newBlocked(g.to,...g.arrival.slice(0,2)),g.id+' safe arrival');}
  for(const p of newSpots(room))assert([[1,0],[-1,0],[0,1],[0,-1]].some(([dx,dy])=>seen.has((p.x+dx)+','+(p.y+dy))),room+' interact '+p.id);
 }

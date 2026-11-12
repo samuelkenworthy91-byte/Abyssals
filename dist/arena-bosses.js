@@ -4,6 +4,7 @@ import {statusAttackFactor} from './status-rules.js?v=0.90.62';
 import {DATA} from './data.js?v=0.90.62';
 import {legalForm,legalMoves} from './route-roster.js?v=0.90.62';
 import {typeEffectiveness} from './type-rules.js?v=0.90.62';
+import {namefogMultiplier} from './pale-gate.js?v=0.90.62';
 import {stageMultiplier,damageScale} from './engine.js?v=0.90.62';
 import {moveUsable,moveDamageMultiplier} from './move-rules.js?v=0.90.62';
 import {canSwitch,leaveAbility,enterAbility,abilityName,abilityImmunity,heldStat,abilityMultiplier} from './abilities.js?v=0.90.62';
@@ -38,7 +39,7 @@ export function expectedDamage(actor,target,move){
  if(move.type_id==='GROUND'&&['Hovercore','Levitate'].includes(abilityName(target)))effectiveness=0;
  const special=move.category==='SPECIAL',a=special?'sp_attack':'attack',d=special?'sp_defence':'defence';
  const attack=(actor.stats[a]||1)*stageMultiplier(actor.stages?.[a])*heldStat(actor,a),defence=(target.stats[d]||1)*stageMultiplier(target.stages?.[d])*heldStat(target,d);
- return ((2*actor.level/5+2)*move.power*attack/Math.max(1,defence)/50+2)*effectiveness*stabMultiplier(actor,move)*damageScale(actor.level)*moveDamageMultiplier(actor,target,move)*abilityMultiplier(actor,target,move,{effectiveness})*statusAttackFactor(actor,special)*(move.accuracy==='ALWAYS'?1:(move.accuracy??100)/100)*.925;
+ return ((2*actor.level/5+2)*move.power*attack/Math.max(1,defence)/50+2)*effectiveness*stabMultiplier(actor,move)*damageScale(actor.level)*moveDamageMultiplier(actor,target,move)*namefogMultiplier(actor.field,move.type_id)*abilityMultiplier(actor,target,move,{effectiveness})*statusAttackFactor(actor,special)*(move.accuracy==='ALWAYS'?1:(move.accuracy??100)/100)*.925;
 }
 const pressure=(a,b)=>Math.max(0,...usable(a).map(m=>expectedDamage(a,b,m)))/Math.max(1,b.hp);
 export function chooseArenaBossMove(b,actor,target,pool=usable(actor)){
@@ -72,7 +73,7 @@ export function chooseArenaBossAction(b){
  // Switching spends the whole enemy action. A two-turn cooldown prevents loops.
  if(canSwitch(actor)&&(b.lastBossSwitchRound??-10)<=b.round-2&&(!b.trainer.eliteLeader||(b.leaderSwitchCount||0)<8)){
   const relay=abilityName(actor)==='Relay Plumage'&&Object.values(actor.stages||{}).filter(v=>v>0).reduce((n,v)=>n+v,0)>=2;
-  const candidates=b.enemies.map((u,index)=>({u,index})).filter(({u,index})=>index>0&&u.hp>0&&!u.dead).map(({u,index})=>({u,index,threat:pressure(target,u),attack:pressure(relay?{...u,stages:{...u.stages,...actor.stages}}:u,target)}));
+  const candidates=b.enemies.map((u,index)=>({u,index})).filter(({u,index})=>index>0&&u.hp>0&&!u.dead&&!(b.trainer.nativeField&&u.leaderAce)).map(({u,index})=>({u,index,threat:pressure(target,u),attack:pressure(relay?{...u,stages:{...u.stages,...actor.stages}}:u,target)}));
   candidates.sort((a,c)=>(c.attack-c.threat)-(a.attack-a.threat));
   const best=candidates[0];
   if(best&&(relay&&best.threat<.75||threat>=.8&&best.threat<threat*.6||attack===0&&best.attack>0&&best.threat<.9)&&(relay||best.attack-best.threat>attack-threat+.35))return {kind:'switch',index:best.index};
@@ -92,5 +93,5 @@ export function switchArenaBoss(b,index){
  messages.push(...enterAbility(next,b.player,{party:b.enemies,field}));
  return messages;
 }
-export function orderArenaBossReplacement(b){if(!(b.trainer?.arenaBoss||b.trainer?.eliteLeader)||b.enemies.length<2)return;const ranked=b.enemies.map((u,index)=>({index,score:pressure(u,b.player)-pressure(b.player,u)})).sort((a,c)=>c.score-a.score||a.index-c.index);if(b.trainer.eliteLeader&&b.enemies.length>2)for(const row of ranked)if(b.enemies[row.index].leaderAce)row.score-=.5;ranked.sort((a,c)=>c.score-a.score||a.index-c.index);const index=ranked[0].index;if(index>0)[b.enemies[0],b.enemies[index]]=[b.enemies[index],b.enemies[0]];}
+export function orderArenaBossReplacement(b){if(!(b.trainer?.arenaBoss||b.trainer?.eliteLeader)||b.enemies.length<2)return;const ranked=b.enemies.map((u,index)=>({index,score:pressure(u,b.player)-pressure(b.player,u)})).filter(({index})=>!(b.trainer.nativeField&&b.enemies[index].leaderAce)).sort((a,c)=>c.score-a.score||a.index-c.index);if(b.trainer.eliteLeader&&b.enemies.length>2)for(const row of ranked)if(b.enemies[row.index].leaderAce)row.score-=.5;ranked.sort((a,c)=>c.score-a.score||a.index-c.index);const index=ranked[0].index;if(index>0)[b.enemies[0],b.enemies[index]]=[b.enemies[index],b.enemies[0]];}
 

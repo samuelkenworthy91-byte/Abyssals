@@ -494,3 +494,18 @@ button.console-selected{outline:2px solid #ead39c;outline-offset:1px;border-colo
 @keyframes portal-pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
 @media(max-width:690px){#battle .relic-double-arena.double-standard{padding:5px}#battle .double-standard .double-meta{max-width:100%;padding:3px 5px}#battle .double-standard .double-partner-portrait{width:28px;height:33px}#battle .double-standard .double-enemy-zone{inset:12% 0 47%;gap:1%}#battle .double-standard .double-foe{width:49%}#battle .double-standard .double-foe .combat-hud{padding:3px 5px}#battle .double-standard .double-foe .combat-hud b{font-size:12px}#battle .double-standard .double-foe .combat-hud small,#battle .double-standard .double-foe .combat-hud .hp-numbers{font-size:10px}#battle .double-standard .double-bottom{grid-template-columns:31% 69%;gap:3px}#battle .double-standard .double-friendly-unit .combat-hud{padding:4px 5px}#battle .double-standard .double-friendly-unit .combat-hud b{font-size:12px}#battle .double-standard .double-friendly-unit .combat-hud .battle-ability,#battle .double-standard .double-friendly-unit .combat-hud .life-label,#battle .double-standard .double-friendly-unit .combat-hud .hud-types{display:none}#battle .double-standard .double-partner{grid-template-columns:25px 1fr}#battle .double-standard .double-partner>img{width:25px;height:32px}#battle .double-standard .battle-panel{padding:5px}#battle .double-standard .battle-actions{gap:3px}#battle .double-standard .double-target-menu{gap:3px}#battle .double-standard .double-target-menu button{padding:4px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){#hell-portal,#hell-portal::before{animation:none;opacity:1}}
+
+/* The Countercurrent */
+#pg-ferry-track{position:relative;min-height:110px;overflow:hidden;border:1px solid #7994a1;border-radius:8px;background:#274757 url('assets/finale/env-pale-river.webp') center 58%/cover;}
+#pg-ferry-track.aligned{outline:2px solid #ffdb87;outline-offset:2px;}
+#pg-ferry-track img{position:absolute;width:48px;height:31px;object-fit:contain;left:calc(10% + 72% * var(--crossing,0));top:calc(5px + 18px * var(--lane,1));image-rendering:pixelated;}
+#pg-ferry-track progress{position:absolute;left:5%;bottom:8px;width:90%;height:8px;accent-color:#ffdb87;}
+#pg-ferry-signal{position:absolute;left:8px;bottom:20px;padding:3px 6px;border-radius:4px;background:#152b36;color:#f1f6f7;}
+.pg-lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:10px 0;}
+.pg-lanes [aria-pressed=true]{outline:2px solid #ffdb87;outline-offset:-2px;}
+.pg-field{display:block;color:#deebfa;font-size:.76rem;}
+#battle[data-pale-battle]{background:linear-gradient(#202e3f5c,#142131d9),var(--pg-battle-art) center/cover;}
+#battle[data-pale-battle=pale-prince]{--pg-battle-art:url('assets/finale/env-pale-prince.webp');}
+#battle[data-pale-battle=pale-river]{--pg-battle-art:url('assets/finale/env-pale-river.webp');}
+#battle[data-pale-battle=pale-hall]{--pg-battle-art:url('assets/finale/env-pale-hall.webp');}
+#battle[data-pale-battle=pale-reeds]{--pg-battle-art:url('assets/finale/env-pale-reeds.webp');}

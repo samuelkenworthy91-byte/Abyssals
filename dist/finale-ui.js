@@ -1,7 +1,9 @@
+import {handlePaleGate} from './pale-gate-ui.js?v=0.90.62';
 import {BURIAL_LINES,FINALE_TRAINERS,PEACH_FINAL,GALLERY_WORKS,COMMISSIONS} from './finale-data.js?v=0.90.62';
 import {finaleState,finaleUnlocked,peachQuest,acceptPeachQuest,readPeachClue,turnOathRune,turnBridgeWeight,finalUniqueEncounter,canFightFinale,createCommission,settleFinalLeader} from './finale-rules.js?v=0.90.62';
 const clues={guan:'Shelter the traveller first. Keep faith when the road is empty. Hold the crossing last. Touch the three named seals in the order of the promise. Defeat the requisitioner before approaching the guardian.',fei:'Three windlasses hold the old bridge. The west needs one turn, the middle three, and the east two. Each dial has four positions: 0, 1, 2, 3, then 0 again. The toll captain must release the crossing first.'};
-export function handleFinale(id,a){const {state:s,room,line,showDialogue,warp,rewardTransaction:commit,buildMarkers,openModal,closeModal,escapeHTML:e,challengeTrainer,startWild,species,$}=a,q=finaleState(s),say=(n,t,p)=>showDialogue([line(n,t,p)]),gate=a.AREA_GATES[room]?.find(g=>g.id===id);
+export function handleFinale(id,a){
+ if(handlePaleGate(id,a))return true;const {state:s,room,line,showDialogue,warp,rewardTransaction:commit,buildMarkers,openModal,closeModal,escapeHTML:e,challengeTrainer,startWild,species,$}=a,q=finaleState(s),say=(n,t,p)=>showDialogue([line(n,t,p)]),gate=a.AREA_GATES[room]?.find(g=>g.id===id);
  if(gate?.action==='finale-entry'){if(!finaleUnlocked(s))say('Walter','Come back to Pate and Trade on the platform. We must see them cared for before leaving.','CHR-AERIC');else showDialogue([line('Walter','I have arranged a wagon. There is an old tree above the river, away from the road. I will meet you there.','CHR-AERIC')],()=>void warp(gate.to,...gate.arrival));return true;}
  if(gate?.action==='finale-gate'){
   if(room==='burialGrove'&&id.endsWith('-forward')&&!q.buried){say('Walter','Stay a little longer. We have not said goodbye.','CHR-AERIC');return true;}
@@ -28,7 +30,16 @@ export function handleFinale(id,a){const {state:s,room,line,showDialogue,warp,re
  if(['fn-art-commission','fn-gallery-curator','fn-gallery-collection'].includes(id)){if(id==='fn-gallery-collection'){showCollection(a);return true;}openModal('The Shared Hand',`<p>People and Abyssals work here together. Choose a living partner and make a picture for one of the town’s commissions.</p><div class="modal-actions"><button id="fn-create" class="primary">Create with a partner</button><button id="fn-collection">Your collection · ${q.commissions.length}</button></div>`);$('#fn-create').onclick=()=>commissionPartner(a);$('#fn-collection').onclick=()=>showCollection(a);return true;}
  if(id==='fn-inn-rest'){showDialogue([line('The innkeeper','There is a room ready. Rest as long as you need; your living partners can recover here.')],()=>{a.rest();});return true;}
  if(id==='fn-fortress-below'){if(!q.gateRevealed)say('The old stair','Hasan has promised to show you the way below after your formal challenge.');else if(!q.mirrorArrivalSeen)void a.descent(s.fates?.['LDR-08']);else void warp('afterlifeThreshold',24,24,'up');return true;}
- if(id==='fn-afterlife'){if(q.mirrorArrivalSeen){showDialogue([line('Vantis Eldrin','Make what preparations you need above. When you come back, remember who you came to find.','SEVERIN-VALE')]);return true;}showDialogue([line('The answering mirror','The glass reflects the chamber, but not quite the people standing in it. Beyond the surface is a road without a sky.'),line('Aimon','Pate. Trade. If you’re there, I’m coming.','CHR-AIMON'),line('Walter','I am here with you. We will learn what this asks of us before we step through.','CHR-AERIC'),line('The threshold','The way into the afterlife has been found. The descent and its wardens begin in the next arc. You can still return to the living world.')],()=>{commit(()=>{q.thresholdSeen=true;});buildMarkers();});return true;}
+ if(id==='fn-afterlife'){
+  if(q.gateRevealed&&!q.mirrorArrivalSeen){void a.descent(s.fates?.['LDR-08']);return true;}
+  if(q.mirrorArrivalSeen){
+   showDialogue([{...line('Vantis Eldrin','The quay is just beyond the glass. The road back to Ramelle stays open.','SEVERIN-VALE'),choices:[
+    {text:'Step through the mirror.',action:()=>{if(commit(()=>{q.thresholdSeen=true;}))void warp('paleQuay',3,19,'right');}},
+    {text:'Prepare above.',action:()=>{}}
+   ]}]);
+  }else say('The answering mirror','The glass reflects an empty road. Speak to the keeper of the old stair.');
+  return true;
+ }
 
  const errands={
   'fn-cayfen-courier':{name:'Canvas courier',story:'A travelling painter needs a covering that will protect a fresh river wash on the windy road. Which material should go closest to the wet canvas?',choices:['Dry spacer frame','Rough wool blanket','Dusty grain sack'],answer:0,reward:350,food:1,thanks:'You keep the fabric off the wet pigment. The courier leaves safely for the next village.'},

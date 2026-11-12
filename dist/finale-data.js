@@ -1,10 +1,31 @@
 import {DATA} from './data.js?v=0.90.62';
 import {legalForm,legalMoves} from './route-roster.js?v=0.90.62';
+import {NAMEFOG,PRINCE_ID} from './pale-gate.js?v=0.90.62';
 export const SUN_ROAD=[['sunBank','Willowmere · The Quiet Bank',78,81,'road'],['burialGrove','Willowmere · The Remembering Tree',79,82,'burial'],['sunFalls','Willowmere · Silverwater Crossing',81,85,'falls'],['sunTerraces','Cayfen · The Flowering Terraces',83,87,'terraces']];
 export const SPORE_ROAD=[['sporeRim','Sporefall · Hanging Roots',89,93,'spore'],['sporeDepths','Sporefall · The Lantern Shelves',91,95,'spore'],['sporeBridge','Sporefall · Broken Companies',93,97,'spore'],['sporeCrown','Sporefall · The Last Crossing',95,99,'darius']];
 export const PEACH_FINAL={guan:{id:'183',name:'Guanrong',title:'The Oath at the Crossing',guard:'TRN-FN-GUAN',level:87},fei:{id:'175',name:'Feirong',title:'The Strength to Hold',guard:'TRN-FN-FEI',level:88},crux:{id:'174',name:'Cruxwyrm',level:102},gehennuar:{id:'166',name:'Gehennuar',level:96},suncub:{id:'186',name:'Suncub',level:90}};
 export const LEGACY_POOLS={pate:['169','172','161','393'],trade:['346','356','151','358']};
 const trainer=(id,name,portraitId,ids,levels,before,after,extra={})=>({id,name,portraitId,faction:'Dawn Bloom',role:id.startsWith('LDR-')?'leader':'Expedition challenger',runtimeAuthored:true,expeditionTeam:true,ai_tier:'Advanced',before,after,team:ids.map((s,i)=>{const level=levels[i],species_id=legalForm(s,level);return {slot:i+1,species_id,level,current_form_legal_move_ids:legalMoves(species_id,level)};}),...extra});
+const keeper=trainer(PRINCE_ID,'Hugh FitzAlan, Keeper of Names','PG-KEEPER',
+ ['132','098','065','063','064','072'],[105,106,107,108,109,110],
+ 'Every name in this book belongs to somebody. I cannot send the living upstream and pretend the current will hold.',
+ 'I will open the inner gate. If you find your friends, let them answer for themselves.',
+ {character_id:'WRD-01',arc:'hell',ai_tier:'Warden',nativeField:NAMEFOG,arenaBoss:true,prodigies:false,sourceHeldRoles:[
+  {slot:1,role:'STATUS'},{slot:2,role:'SPEED'},{slot:6,role:'STATUS'}
+ ]});
+const keeperLoadouts=[
+ ['secondary',[174,257,376,187]],['primary',[291,257,190,307]],['hidden',[343,257,206,312]],
+ ['primary',[312,257,376,190]],['secondary',[262,190,250,331]],['hidden',[301,283,30,278]]
+];
+keeper.team.forEach((slot,i)=>{
+ const [abilitySlot,battle_move_ids]=keeperLoadouts[i];
+ Object.assign(slot,{abilitySlot,battle_move_ids,ace:i===keeper.team.length-1});
+});
+export const PALE_TRAINERS=[
+ trainer('TRN-PG-BAILIFF','The Toll Bailiff','PG-BAILIFF',['352','193','358'],[103,104,105],'I can let one traveller cross back. Show me you can get past my partners first.','Go on, then. Keep your feet under you.',{arc:'hell',arenaBoss:true}),
+ trainer('TRN-PG-HOUND','The Ledger Hound','PG-HOUND',['350','169','371'],[104,105,106],'The records are closed. My partners will see that they stay closed.','The receipt is yours to read.',{arc:'hell'}),
+ keeper
+];
 export const FINALE_TRAINERS=[
  trainer('TRN-FN-ROAD','Willowmere ranger Alice','TRN-SC-orchardCanopy-0',['193','274','346','169'],[80,80,81,82],'We keep the crossings open for everyone. A road challenge, if you are ready.','The old tree is beyond the next bank. Walter has already taken the wagon there.'),
  trainer('TRN-FN-TERRACE','Terrace keeper Zaynab','TRN-SC-orchardCanopy-1',['193','151','358','393'],[84,84,85,86],'The studios send their apprentices out here to learn to look. A battle can teach that too.','Cayfen is east. Follow the tiled road, not the orchard paths.'),
@@ -17,7 +38,7 @@ export const FINALE_TRAINERS=[
  trainer('TRN-FN-DARIUS','Darius · The Last Peace','REV-DARIUS-FINAL',['174','371','352','169','356','393'],[102,97,96,98,99,100],'Every peace ends with another child learning which banner to hate. There will be no next war when there is no one left to wage it.','The crossing is quiet. Cruxwyrm no longer answers him.',{finaleDouble:true})
 ];
 export const FINAL_DARIUS=FINALE_TRAINERS.at(-1);
-export function installFinaleTrainers(expansion,voices={}){for(const t of FINALE_TRAINERS){if(!expansion.trainers.some(x=>x.id===t.id))expansion.trainers.push(t);voices[t.id]={before:t.before,after:t.after,repeat:'The challenge is recorded.'};}}
+export function installFinaleTrainers(expansion,voices={}){for(const t of [...FINALE_TRAINERS,...PALE_TRAINERS]){if(!expansion.trainers.some(x=>x.id===t.id))expansion.trainers.push(t);voices[t.id]={before:t.before,after:t.after,repeat:'The challenge is recorded.'};}}
 const daySun=['274','193','161','346','169','172'],nightSun=['358','356','393','350','151','193'];
 const daySpore=['193','310','350','352','346','172'],nightSpore=['356','358','393','352','350','169'];
 export function finaleRoute(room){const r=[...SUN_ROAD,...SPORE_ROAD].find(r=>r[0]===room)||(['guanApproach','guanShrine','feiApproach','feiCrossing'].includes(room)?[room,'Peach Grove · '+(room.startsWith('guan')?'The Oath Crossing':'The Held Bridge'),83,87]:['sporeGrotto','sporeCanopy'].includes(room)?[room,room==='sporeGrotto'?'Sporefall · Moonpool Grotto':'Sporefall · Crown of Roots',92,97]:null);if(!r)return null;const dark=room.startsWith('spore');return {room,explorationTable:true,encounterPacing:true,area:{id:room,name:r[1],rate:room==='burialGrove'?'LOW':'NORMAL'},tables:['DAY','NIGHT'].map((phase,n)=>({id:room+'-'+phase,area_id:room,phase,slots:(dark?(n?nightSpore:daySpore):(n?nightSun:daySun)).map((id,i)=>({species_id:legalForm(id,r[2]),min_level:r[2],max_level:r[3],weight:[28,23,19,14,10,6][i],rarity:i<3?'Common':i<5?'Uncommon':'Rare',authoredSlot:true}))}))};}

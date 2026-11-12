@@ -1,3 +1,4 @@
+import {namefogMultiplier} from './pale-gate.js?v=0.90.62';
 import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.62';
 import {prepareDossierAction,finishDossierAction,grantAncestralAid,healDossierMove,nectarbane} from './dossier-battle.js?v=0.90.62';
 import {ORCHARD_IDS,ORCHARD_REACTIONS} from './tide-orchard-data.js?v=0.90.62';
@@ -61,7 +62,7 @@ function resolveMove(actor,target,move,random,{floor=1,continuation=false,procCo
     const defenceStage=strikeCritical||ignoresDefence(actor,target)||move.ignorePositiveDefence?Math.min(0,target.stages[def]||0):target.stages[def];
     const d=target.stats[def]*stageMultiplier(defenceStage)*heldStat(target,def);
     const sameType=stabMultiplier(actor,move);
-    let strikeDamage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(strikeCritical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical:strikeCritical,movedFirst})*abilityMultiplier(actor,target,move,{effectiveness,critical:strikeCritical,movedFirst,switching:!!target.switching})));
+    let strikeDamage=Math.max(1,Math.floor((Math.floor((2*actor.level/5+2)*move.power*a/Math.max(1,d)/50)+2)*sameType*(strikeCritical?2:1)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,move,{critical:strikeCritical,movedFirst})*namefogMultiplier(actor.field,move.type_id)*abilityMultiplier(actor,target,move,{effectiveness,critical:strikeCritical,movedFirst,switching:!!target.switching})));
     if(has(target,'Ghost Hull')&&target.hp===target.maxHp&&strikeDamage>=target.hp&&!abilityBattle(target).flags.hull){strikeDamage=target.hp-1;abilityBattle(target).flags.hull=true;messages.push(`${unitName(target)} · Ghost Hull: held on at 1 HP.`);}
     strikeDamage=Math.max(0,Math.min(target.hp-floor,strikeDamage));
     const barrier=strikeBarrier(actor,target,move,strikeDamage,{floor},messages);barrierBlocked=barrierBlocked||barrier.blocked;strikeDamage=heldSurvival(target,barrier.damage,messages);target.hp-=strikeDamage;damage+=strikeDamage;critical=critical||strikeCritical;hitCount++;
@@ -118,7 +119,7 @@ function tideReply(actor,target,reply,random,fallbackFloor=0){const messages=[],
   const effectiveness=typeEffectiveness('WATER',target.species.types);if(!effectiveness)break;
   const a=actor.stats.sp_attack*stageMultiplier(actor.stages.sp_attack)*heldStat(actor,'sp_attack')*statusAttackFactor(actor,true),d=target.stats.sp_defence*stageMultiplier(target.stages.sp_defence)*heldStat(target,'sp_defence');
   const base=Math.floor((2*actor.level/5+2)*m.power*a/Math.max(1,d)/50)+2;
-  const amount=Math.max(1,Math.floor(base*stabMultiplier(actor,m)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,m,{movedFirst:false})*abilityMultiplier(actor,target,m,{effectiveness,movedFirst:false})));
+  const amount=Math.max(1,Math.floor(base*stabMultiplier(actor,m)*(.85+random()*.15)*damageScale(actor.level)*effectiveness*moveDamageMultiplier(actor,target,m,{movedFirst:false})*namefogMultiplier(actor.field,m.type_id)*abilityMultiplier(actor,target,m,{effectiveness,movedFirst:false})));
   const beforeStrike=captureHealth(actor,target);const barrier=strikeBarrier(actor,target,m,Math.min(Math.max(0,target.hp-floor),amount),{floor},messages),n=heldSurvival(target,barrier.damage,messages);target.hp-=n;total+=n;hits++;consumeWard(target,m,n);messages.push(...afterDamage(actor,target,m,n,{effectiveness,floor:actor.combatFloor??0,random}),...activateHeldRecovery(target));strikes.push({damage:n,effectiveness,hpChanges:healthChanges(beforeStrike,actor,target)});
  }
  messages.push(`${unitName(actor)} · ${m.name}: ${hits} slash${hits===1?'':'es'}, ${total} damage.`);
