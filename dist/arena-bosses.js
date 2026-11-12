@@ -1,13 +1,13 @@
-import {attemptDossierSwitch} from './dossier-battle.js?v=0.90.62';
-import {prepareSpecialistMove,stabMultiplier} from './teamcraft-battle.js?v=0.90.62';
-import {statusAttackFactor} from './status-rules.js?v=0.90.62';
-import {DATA} from './data.js?v=0.90.62';
-import {legalForm,legalMoves} from './route-roster.js?v=0.90.62';
-import {typeEffectiveness} from './type-rules.js?v=0.90.62';
-import {namefogMultiplier} from './pale-gate.js?v=0.90.62';
-import {stageMultiplier,damageScale} from './engine.js?v=0.90.62';
-import {moveUsable,moveDamageMultiplier} from './move-rules.js?v=0.90.62';
-import {canSwitch,leaveAbility,enterAbility,abilityName,abilityImmunity,heldStat,abilityMultiplier} from './abilities.js?v=0.90.62';
+import {attemptDossierSwitch} from './dossier-battle.js?v=0.90.67';
+import {prepareSpecialistMove,stabMultiplier} from './teamcraft-battle.js?v=0.90.67';
+import {statusAttackFactor} from './status-rules.js?v=0.90.67';
+import {DATA} from './data.js?v=0.90.67';
+import {legalForm,legalMoves} from './route-roster.js?v=0.90.67';
+import {typeEffectiveness} from './type-rules.js?v=0.90.67';
+import {namefogMultiplier} from './pale-gate.js?v=0.90.67';
+import {stageMultiplier,damageScale} from './engine.js?v=0.90.67';
+import {moveUsable,moveDamageMultiplier} from './move-rules.js?v=0.90.67';
+import {canSwitch,leaveAbility,enterAbility,abilityName,abilityImmunity,heldStat,abilityMultiplier} from './abilities.js?v=0.90.67';
 export const isArenaBossRound=round=>Number.isSafeInteger(round)&&round>0&&round%5===0;
 export const arenaRoundMarks=round=>isArenaBossRound(round)?round*10:round+2;
 // Species, four preferred legal techniques, ability slot and held-item role.

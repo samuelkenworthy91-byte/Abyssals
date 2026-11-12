@@ -1,5 +1,5 @@
-import {DOSSIER_CONFIG as C,PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.62';
-import {canonicalMoveId} from './teamcraft-data.js?v=0.90.62';
+import {DOSSIER_CONFIG as C,PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.67';
+import {canonicalMoveId} from './teamcraft-data.js?v=0.90.67';
 
 export const DOSSIER_SPECIES=C.species;
 export const DOSSIER_EVOLUTIONS=C.evolutions;

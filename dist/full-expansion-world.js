@@ -1,4 +1,4 @@
-import {EXPANSION_HABITATS} from './full-encounters.js?v=0.90.62';
+import {EXPANSION_HABITATS} from './full-encounters.js?v=0.90.67';
 export function installExpansionHabitats(maps){
  for(const h of EXPANSION_HABITATS){
   const parent=maps[h.parent],[x,y]=h.anchor,gateId='habitat-'+h.room;

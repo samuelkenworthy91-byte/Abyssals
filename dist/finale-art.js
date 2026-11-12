@@ -1,5 +1,5 @@
-import {PALE_ART,PALE_ACTORS,PALE_PROPS,paleState} from './pale-gate.js?v=0.90.62';
-import {finaleState,canMeetFinalUnique} from './finale-rules.js?v=0.90.62';
+import {PALE_ART,PALE_ACTORS,PALE_PROPS,paleState} from './pale-gate.js?v=0.90.67';
+import {finaleState,canMeetFinalUnique} from './finale-rules.js?v=0.90.67';
 const keys=['spore-rim','spore-depths','spore-bridge','spore-grotto','spore-canopy','road','burial','falls','terraces','guan','fei','cayfen','gallery','spore','darius','ramelle','fortress','mirror','shop','inn','sanctuary','cayfen-hall'];
 const props=['rune-shelter','rune-faith','rune-crossing','windlass','inscription'];
 export const FINALE_ASSETS=Object.fromEntries([...[...keys,...PALE_ART].map(k=>['finale-'+k,'../finale/env-'+k+'.webp']),...props.map(k=>['finale-prop-'+k,'../finale/prop-'+k+'.webp']),...PALE_ACTORS.map(k=>['pg-actor-'+k,'../finale/pg-actor-'+k+'.webp']),...PALE_PROPS.map(k=>['pg-prop-'+k,'../finale/pg-prop-'+k+'.webp'])]);

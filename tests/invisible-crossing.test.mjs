@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {NEW_MAPS,newBlocked} from '../dist/expansion-world.js';
-import {CROSSING_ROOM,CROSSING_ENTRY,CROSSING_EXIT,CROSSING_SIGN,crossingTile,crossingRoute,crossingSafe,crossingState,recordCrossingStep,revealCrossingHint} from '../dist/invisible-crossing.js?v=0.90.62';
+import {CROSSING_ROOM,CROSSING_ENTRY,CROSSING_EXIT,CROSSING_SIGN,crossingTile,crossingRoute,crossingSafe,crossingState,recordCrossingStep,revealCrossingHint} from '../dist/invisible-crossing.js?v=0.90.67';
 
 const cardinal=[[0,1],[0,-1],[1,0],[-1,0]];
 const distance=([x,y],[a,b])=>Math.abs(x-a)+Math.abs(y-b);

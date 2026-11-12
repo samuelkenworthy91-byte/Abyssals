@@ -1,11 +1,11 @@
-import {has,abilityMemory,abilityBattle,changeStage,restoreHP,healingMultiplier,isContact,inflictStatus,changeWeather,setTerrain,weatherSuppressed,heldInfo} from './abilities.js?v=0.90.62';
-import {menagerieParty} from './menagerie-rules.js?v=0.90.62';
-import {unitName} from './names.js?v=0.90.62';
+import {has,abilityMemory,abilityBattle,changeStage,restoreHP,healingMultiplier,isContact,inflictStatus,changeWeather,setTerrain,weatherSuppressed,heldInfo} from './abilities.js?v=0.90.67';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.67';
+import {unitName} from './names.js?v=0.90.67';
 
 const alive=u=>u&&u.hp>0&&!u.dead&&!u.captured;
 const opposite=(a,b)=>a!==b&&(!a.side||!b.side||a.side!==b.side);
 const active=(u,extra=[])=>[...new Set([u,...menagerieParty(u),...extra])].filter(x=>alive(x)&&(x===u||x.abilityState));
-import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.62';
+import {PHANTOM_FALCHION_ID} from './dossier-config.js?v=0.90.67';
 
 const memory=u=>abilityMemory(u).dossier??={};
 const flags=u=>abilityBattle(u).dossier??={};

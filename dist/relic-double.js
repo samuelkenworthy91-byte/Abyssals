@@ -1,10 +1,10 @@
-import {grantAncestralAid} from './dossier-battle.js?v=0.90.62';
-import {menagerieParty} from './menagerie-rules.js?v=0.90.62';
-import {specialistAIPool} from './teamcraft-battle.js?v=0.90.62';
-import {applyMove,cleanupRound,priority,stageMultiplier} from './engine.js?v=0.90.62';
-import {effectiveStage,speedFactor} from './abilities.js?v=0.90.62';
-import {moveUsable} from './move-rules.js?v=0.90.62';
-import {captureHealth,healthChanges} from './health-presentation.js?v=0.90.62';
+import {grantAncestralAid} from './dossier-battle.js?v=0.90.67';
+import {menagerieParty} from './menagerie-rules.js?v=0.90.67';
+import {specialistAIPool} from './teamcraft-battle.js?v=0.90.67';
+import {applyMove,cleanupRound,priority,stageMultiplier} from './engine.js?v=0.90.67';
+import {effectiveStage,speedFactor} from './abilities.js?v=0.90.67';
+import {moveUsable} from './move-rules.js?v=0.90.67';
+import {captureHealth,healthChanges} from './health-presentation.js?v=0.90.67';
 // Four simultaneous combatants, one selected player target, one independent AI action per other actor.
 export function doubleLivingTargets(b){return b.enemies.map((u,i)=>({u,i})).filter(({u,i})=>(!b.activeEnemyIndices||b.activeEnemyIndices.includes(i))&&u.hp>0&&!u.captured&&!u.withdrawn&&!(u.boundSovereign&&u.hp<=1));}
 export function refillDoubleFoes(b){if(!b.activeEnemyIndices)return;const active=new Set(doubleLivingTargets(b).map(t=>t.i));for(let slot=0;slot<b.activeEnemyIndices.length;slot++){if(active.has(b.activeEnemyIndices[slot]))continue;while(b.reserveCursor<b.enemies.length&&b.enemies[b.reserveCursor].hp<=0)b.reserveCursor++;b.activeEnemyIndices[slot]=b.reserveCursor<b.enemies.length?b.reserveCursor++:-1;}if(!doubleLivingTargets(b).some(t=>t.i===b.targetIndex))b.targetIndex=doubleLivingTargets(b)[0]?.i??0;}

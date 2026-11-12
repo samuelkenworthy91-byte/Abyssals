@@ -40,6 +40,7 @@
     "dist/paladin-abilities.js",
     "dist/paladin-data.js",
     "dist/paladin-honours.js",
+    "dist/pale-gate.js",
     "dist/progression-renewal.js",
     "dist/quest-rewards-data.js",
     "dist/relic-armoury.js",

@@ -1,5 +1,5 @@
-import {FERRY_FORKS,ferryWindow,paleState,PRINCE_ID} from './pale-gate.js?v=0.90.62';
-import {PALE_TRAINERS} from './finale-data.js?v=0.90.62';
+import {FERRY_FORKS,ferryWindow,paleState,PRINCE_ID} from './pale-gate.js?v=0.90.67';
+import {PALE_TRAINERS} from './finale-data.js?v=0.90.67';
 
 const records={
  'file-a':'Docket A · Nell | ash token | 3rd bell | Witness stamp only | Departed.',

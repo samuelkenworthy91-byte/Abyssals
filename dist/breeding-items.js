@@ -1,4 +1,5 @@
-import {STAT_KEYS} from './progression.js?v=0.90.62';
+// Save compatibility for Spindle inventory and eggs created in the preview.
+import {STAT_KEYS} from './progression.js?v=0.90.67';
 export const BASE_PRODIGY_CHANCE=Math.pow(1/750,1/6);
 export const NURSERY_ITEMS=[
  {id:'familySeal',name:'Family Seal',price:20000,reusable:false,description:'Single use. Choose either parent’s base species for the egg. Cannot be used when both parents have the same base species.'},
@@ -14,12 +15,13 @@ export function buyNurseryItem(state,id){
 }
 export function validateNurseryItems(state){
  const bag=state.nurseryItems;if(bag===undefined)return true;
- if(!bag||typeof bag!=='object'||Array.isArray(bag)||Object.entries(bag).some(([id,n])=>!NURSERY_ITEMS.some(i=>i.id===id)||!Number.isSafeInteger(n)||n<0||NURSERY_ITEMS.find(i=>i.id===id).reusable&&n>1))throw Error('Nursery supplies are invalid.');return true;
+ if(!bag||typeof bag!=='object'||Array.isArray(bag)||Object.entries(bag).some(([id,n])=>(!NURSERY_ITEMS.some(i=>i.id===id)&&id!=='confluenceSpindle')||!Number.isSafeInteger(n)||n<0||NURSERY_ITEMS.find(i=>i.id===id)?.reusable&&n>1))throw Error('Nursery supplies are invalid.');return true;
 }
-export function validBreedingEffects(e){return !!e&&e.version===1&&typeof e.charm==='boolean'&&typeof e.warmer==='boolean'&&['none','feed','thread'].includes(e.enhancer)&&(e.enhancer==='thread'?STAT_KEYS.includes(e.threadStat):e.threadStat===null)&&(e.sealParent===null||[0,1].includes(e.sealParent));}
+export function validBreedingEffects(e){return !!e&&e.version===1&&typeof e.charm==='boolean'&&typeof e.warmer==='boolean'&&['none','feed','thread','spindle'].includes(e.enhancer)&&(e.enhancer==='thread'?STAT_KEYS.includes(e.threadStat):e.threadStat===null)&&(e.sealParent===null||[0,1].includes(e.sealParent));}
 export function prepareBreedingEffects(state,options={},forms=[]){
  if(!options||typeof options!=='object')return {ok:false,reason:'Choose valid nursery options.'};
  const e={version:1,charm:options.charm??nurseryItemCount(state,'heirloomCharm')>0,warmer:options.warmer??nurseryItemCount(state,'broodingWarmer')>0,enhancer:options.enhancer??'none',threadStat:options.enhancer==='thread'?options.threadStat:null,sealParent:options.sealParent??null};
+ if(e.enhancer==='spindle')return {ok:false,reason:'Confluence Spindle is unavailable in this release. Previously created eggs are preserved.'};
  if(!validBreedingEffects(e))return {ok:false,reason:'Choose valid nursery options.'};
  const used=[];if(e.charm&&!nurseryItemCount(state,'heirloomCharm')||e.warmer&&!nurseryItemCount(state,'broodingWarmer'))return {ok:false,reason:'A reusable nursery item is not owned.'};
  if(e.enhancer!=='none')used.push(e.enhancer==='feed'?'prodigyFeed':'inheritanceThread');

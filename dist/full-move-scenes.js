@@ -1,5 +1,5 @@
-import {EXPANSION_MOVES} from './full-expansion.js?v=0.90.62';
-import {TACTICAL_MOVES} from './tactical-moves.js?v=0.90.62';
+import {EXPANSION_MOVES} from './full-expansion.js?v=0.90.67';
+import {TACTICAL_MOVES} from './tactical-moves.js?v=0.90.67';
 const f=(at,x,y,sx,sy=sx,turn=0,opacity=1,px=0)=>({at,x,y,sx,sy,turn,opacity,px});
 export function installExpansionScenes(scenes,moves=EXPANSION_MOVES){
  for(const m of (moves===EXPANSION_MOVES?[...moves,...TACTICAL_MOVES]:moves)){

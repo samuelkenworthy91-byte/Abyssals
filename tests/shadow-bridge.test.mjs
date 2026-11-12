@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {NEW_MAPS,newBlocked} from '../dist/expansion-world.js';
-import {bellPathBlocked} from '../dist/relic-quest.js?v=0.90.62';
-import {SHADOW_ROOM,SHADOW_SIGN,SHADOW_END,SHADOW_ENTRY,shadowBridgeBlocked,pushShadowPillar,resetShadowBridge,finishShadowBridge,shadowBridgeObjective} from '../dist/shadow-bridge.js?v=0.90.62';
+import {bellPathBlocked} from '../dist/relic-quest.js?v=0.90.67';
+import {SHADOW_ROOM,SHADOW_SIGN,SHADOW_END,SHADOW_ENTRY,shadowBridgeBlocked,pushShadowPillar,resetShadowBridge,finishShadowBridge,shadowBridgeObjective} from '../dist/shadow-bridge.js?v=0.90.67';
 
 const adjacent=[[1,0],[-1,0],[0,1],[0,-1]];
 function reachable(start,blocked){
